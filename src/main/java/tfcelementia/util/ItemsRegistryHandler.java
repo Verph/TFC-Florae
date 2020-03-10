@@ -79,8 +79,8 @@ import static net.dries007.tfc.util.Helpers.getNull;
 @GameRegistry.ObjectHolder(MOD_ID)
 public final class ItemsRegistryHandler
 {
-    @GameRegistry.ObjectHolder("crop/product/mud")
-    public static final ItemMisc MUD = getNull();
+    public static final ItemMisc MUDBALL = getNull();
+    
     @GameRegistry.ObjectHolder("crop/product/agave")
     public static final ItemMisc AGAVE = getNull();
     @GameRegistry.ObjectHolder("crop/product/cotton_boll")
@@ -116,6 +116,11 @@ public final class ItemsRegistryHandler
     @GameRegistry.ObjectHolder("crop/product/black_tea")
     public static final ItemMisc BLACK_TEA = getNull();
 
+    @GameRegistry.ObjectHolder("ceramics/unfired/mud_brick")
+    public static final ItemPottery UNFIRED_MUD_BRICK = getNull();
+    @GameRegistry.ObjectHolder("ceramics/fired/mud_brick")
+    public static final ItemPottery FIRED_MUD_BRICK = getNull();
+    
     @GameRegistry.ObjectHolder("powder/sea_salt")
     public static final ItemPowder SEA_SALT = getNull();
     @GameRegistry.ObjectHolder("powder/calcium")
@@ -193,7 +198,6 @@ public final class ItemsRegistryHandler
         }
         
         //Products
-        simpleItems.add(register(r, "crop/product/mud", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/agave", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/cotton_boll", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/cotton_cloth", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
