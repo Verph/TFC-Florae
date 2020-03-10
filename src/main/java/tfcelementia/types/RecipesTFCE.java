@@ -13,6 +13,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import net.dries007.tfc.api.capability.forge.CapabilityForgeable;
@@ -68,8 +69,11 @@ import net.dries007.tfc.util.forge.ForgeRule;
 import net.dries007.tfc.util.fuel.FuelManager;
 import net.dries007.tfc.util.skills.SmithingSkill;
 
+import tfcelementia.objects.GemTFCE;
+import tfcelementia.objects.PowderTFCE;
+import tfcelementia.objects.items.ItemPowderTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
-import tfcelementia.util.OreDictionaryHelperTFCE;
+//import tfcelementia.util.OreDictionaryHelperTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.objects.fluids.FluidsTFCE;
 import tfcelementia.objects.items.ItemFoodTFCE;
@@ -79,6 +83,7 @@ import static net.dries007.tfc.api.types.Metal.ItemType.*;
 import static net.dries007.tfc.objects.CreativeTabsTFC.CT_MISC;
 import static net.dries007.tfc.objects.fluids.FluidsTFC.*;
 import static net.dries007.tfc.types.DefaultMetals.*;
+import static net.dries007.tfc.util.Helpers.getNull;
 import static net.dries007.tfc.util.forge.ForgeRule.*;
 import static net.dries007.tfc.util.skills.SmithingSkill.Type.*;
 
@@ -120,7 +125,9 @@ public final class RecipesTFCE
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.JUNIPER_BERRY)), new FluidStack(FluidsTFCE.GIN.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("gin"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemsRegistryHandler.AGAVE), new FluidStack(FluidsTFCE.TEQUILA.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("tequila"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.RED_GRAPES)), new FluidStack(FluidsTFC.RED_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("red_wine"),
-            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.GREEN_GRAPES)), new FluidStack(FluidsTFC.WHITE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_wine")
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.GREEN_GRAPES)), new FluidStack(FluidsTFC.WHITE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_wine"),
+
+            new BarrelRecipeTemperature(IIngredient.of(DISTILLED_WATER.get(), 1), 50).setRegistryName("distilled_water_cooling")
         );
     }
 
@@ -142,25 +149,6 @@ public final class RecipesTFCE
     public static void onRegisterLoomRecipeEvent(RegistryEvent.Register<LoomRecipe> event)
     {
         IForgeRegistry<LoomRecipe> r = event.getRegistry();
-
-        //Products
-        simpleItems.add(register(r, "crop/product/agave", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/cotton_boll", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/cotton_cloth", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/cotton_yarn", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/flax", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/flax_fiber", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/hemp", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/hemp_fiber", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/linen_cloth", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/linen_string", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/madder", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/sisal_fiber", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/weld", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/woad", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/white_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/green_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
-        simpleItems.add(register(r, "crop/product/black_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         
         r.registerAll(
             new LoomRecipe(new ResourceLocation(MOD_ID, "cotton_cloth"), IIngredient.of(ItemsRegistryHandler.COTTON_YARN, 12), new ItemStack(ItemsRegistryHandler.COTTON_CLOTH), 12, new ResourceLocation(MOD_ID, "textures/blocks/devices/loom/product/burlap.png")),
@@ -175,54 +163,12 @@ public final class RecipesTFCE
         IForgeRegistry<QuernRecipe> r = event.getRegistry();
 
         r.registerAll(
-            //Grain
-            new QuernRecipe(IIngredient.of("grainBarley"), new ItemStack(ItemFoodTFC.get(Food.BARLEY_FLOUR), 1)).setRegistryName("barley"),
-            new QuernRecipe(IIngredient.of("grainOat"), new ItemStack(ItemFoodTFC.get(Food.OAT_FLOUR), 1)).setRegistryName("oat"),
-            new QuernRecipe(IIngredient.of("grainRice"), new ItemStack(ItemFoodTFC.get(Food.RICE_FLOUR), 1)).setRegistryName("rice"),
-            new QuernRecipe(IIngredient.of("grainRye"), new ItemStack(ItemFoodTFC.get(Food.RYE_FLOUR), 1)).setRegistryName("rye"),
-            new QuernRecipe(IIngredient.of("grainWheat"), new ItemStack(ItemFoodTFC.get(Food.WHEAT_FLOUR), 1)).setRegistryName("wheat"),
-            new QuernRecipe(IIngredient.of("maize"), new ItemStack(ItemFoodTFC.get(Food.CORNMEAL_FLOUR), 1)).setRegistryName("maize"),
-
-            //Flux
-            new QuernRecipe(IIngredient.of("gemBorax"), new ItemStack(ItemPowder.get(Powder.FLUX), 6)).setRegistryName("boarx"),
-            new QuernRecipe(IIngredient.of("rockFlux"), new ItemStack(ItemPowder.get(Powder.FLUX), 2)).setRegistryName("flux"),
-
-            //Redstone
-            new QuernRecipe(IIngredient.of("gemCinnabar"), new ItemStack(Items.REDSTONE, 8)).setRegistryName("cinnabar"),
-            new QuernRecipe(IIngredient.of("gemCryolite"), new ItemStack(Items.REDSTONE, 8)).setRegistryName("cryolite"),
-
-            //Hematite
-            new QuernRecipe(IIngredient.of(ItemSmallOre.get(Ore.HEMATITE, 1)), new ItemStack(ItemPowder.get(Powder.HEMATITE), 2)).setRegistryName("hematite_powder_from_small"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.HEMATITE, Ore.Grade.POOR, 1)), new ItemStack(ItemPowder.get(Powder.HEMATITE), 3)).setRegistryName("hematite_powder_from_poor"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.HEMATITE, Ore.Grade.NORMAL, 1)), new ItemStack(ItemPowder.get(Powder.HEMATITE), 5)).setRegistryName("hematite_powder_from_normal"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.HEMATITE, Ore.Grade.RICH, 1)), new ItemStack(ItemPowder.get(Powder.HEMATITE), 7)).setRegistryName("hematite_powder_from_rich"),
-
-            //Limonite
-            new QuernRecipe(IIngredient.of(ItemSmallOre.get(Ore.LIMONITE, 1)), new ItemStack(ItemPowder.get(Powder.LIMONITE), 2)).setRegistryName("limonite_powder_from_small"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.LIMONITE, Ore.Grade.POOR, 1)), new ItemStack(ItemPowder.get(Powder.LIMONITE), 3)).setRegistryName("limonite_powder_from_poor"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.LIMONITE, Ore.Grade.NORMAL, 1)), new ItemStack(ItemPowder.get(Powder.LIMONITE), 5)).setRegistryName("limonite_powder_from_normal"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.LIMONITE, Ore.Grade.RICH, 1)), new ItemStack(ItemPowder.get(Powder.LIMONITE), 7)).setRegistryName("limonite_powder_from_rich"),
-
-            //Malachite
-            new QuernRecipe(IIngredient.of(ItemSmallOre.get(Ore.MALACHITE, 1)), new ItemStack(ItemPowder.get(Powder.MALACHITE), 2)).setRegistryName("malachite_powder_from_small"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.MALACHITE, Ore.Grade.POOR, 1)), new ItemStack(ItemPowder.get(Powder.MALACHITE), 3)).setRegistryName("malachite_powder_from_poor"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.MALACHITE, Ore.Grade.NORMAL, 1)), new ItemStack(ItemPowder.get(Powder.MALACHITE), 5)).setRegistryName("malachite_powder_from_normal"),
-            new QuernRecipe(IIngredient.of(ItemOreTFC.get(Ore.MALACHITE, Ore.Grade.RICH, 1)), new ItemStack(ItemPowder.get(Powder.MALACHITE), 7)).setRegistryName("malachite_powder_from_rich"),
-
-            //Bone meal
-            new QuernRecipe(IIngredient.of("bone"), new ItemStack(Items.DYE, 3, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("bone_meal_from_bone"),
-            new QuernRecipe(IIngredient.of(Blocks.BONE_BLOCK), new ItemStack(Items.DYE, 9, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("bone_meal_from_bone_block"),
-
-            //Misc
-            new QuernRecipe(IIngredient.of("gemSylvite"), new ItemStack(ItemPowder.get(Powder.FERTILIZER), 4)).setRegistryName("sylvite"),
-            new QuernRecipe(IIngredient.of("gemSulfur"), new ItemStack(ItemPowder.get(Powder.SULFUR), 4)).setRegistryName("sulfur"),
-            new QuernRecipe(IIngredient.of("gemSaltpeter"), new ItemStack(ItemPowder.get(Powder.SALTPETER), 4)).setRegistryName("saltpeter"),
-            new QuernRecipe(IIngredient.of("rockRocksalt"), new ItemStack(ItemPowder.get(Powder.SALT), 4)).setRegistryName("rocksalt"),
-            new QuernRecipe(IIngredient.of(Items.BLAZE_ROD), new ItemStack(Items.BLAZE_POWDER, 2)).setRegistryName("blaze_powder"),
-            new QuernRecipe(IIngredient.of("gemLapisLazuli"), new ItemStack(ItemPowder.get(Powder.LAPIS_LAZULI), 4)).setRegistryName("lapis_lazuli"),
-            new QuernRecipe(IIngredient.of("gemGraphite"), new ItemStack(ItemPowder.get(Powder.GRAPHITE), 4)).setRegistryName("graphite_powder"),
-            new QuernRecipe(IIngredient.of("gemKaolinite"), new ItemStack(ItemPowder.get(Powder.KAOLINITE), 4)).setRegistryName("kaolinite_powder"),
-            new QuernRecipeRandomGem(IIngredient.of("gemKimberlite"), Gem.DIAMOND).setRegistryName("diamonds")
+            //Powders
+            new QuernRecipe(IIngredient.of("gemCalcium"), new ItemStack(ItemPowderTFCE.get(PowderTFCE.CALCIUM), 4)).setRegistryName("calcium_powder"),
+            new QuernRecipe(IIngredient.of("gemFluorite"), new ItemStack(ItemPowderTFCE.get(PowderTFCE.FLUORITE), 4)).setRegistryName("fluorite_powder"),
+            new QuernRecipe(IIngredient.of("gemPhorphorite"), new ItemStack(ItemPowderTFCE.get(PowderTFCE.PHOSPHORITE), 4)).setRegistryName("phosphorite_powder"),
+            new QuernRecipe(IIngredient.of("gemSelenide"), new ItemStack(ItemPowderTFCE.get(PowderTFCE.SELENIDE), 4)).setRegistryName("selenide_powder"),
+            new QuernRecipe(IIngredient.of("gemIodate"), new ItemStack(ItemPowderTFCE.get(PowderTFCE.IODATE), 4)).setRegistryName("iodate_powder")
         );
     }
 }
