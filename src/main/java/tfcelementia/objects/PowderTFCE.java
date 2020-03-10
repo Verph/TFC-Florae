@@ -4,11 +4,10 @@ import tfcelementia.TFCElementia;
 
 public enum PowderTFCE
 {
-	WOOD_ASH,
-    SEA_SALT,
     CALCIUM,
     FLUORITE,
+    IODATE,
     PHOSPHORITE,
+    SEA_SALT,
     SELENIDE,
-    IODATE
 }

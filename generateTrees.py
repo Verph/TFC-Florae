@@ -52,25 +52,26 @@ def fruit_tree(ftree):
 
 
 WOOD_TYPES = {
-    'acacia': 'acacia',
-    'ash': 'normal',
-    'aspen': 'normal',
-    'birch': 'normal',
-    'blackwood': 'tall',
-    'chestnut': 'normal',
-    'douglas_fir': 'tallXL',
-    'hickory': 'normal',
-    'maple': 'normal',
-    'oak': 'tallXL',
-    'palm': 'tropical',
-    'pine': 'conifer',
-    'rosewood': 'tall',
-    'sequoia': 'sequoia',
-    'spruce': 'conifer',
-    'sycamore': 'normal',
-    'white_cedar': 'tall',
-    'willow': 'willow',
-    'kapok': 'jungle'
+    'alder': 'tallXL',
+    'bamboo': 'normal',
+    'baobab': 'jungle',
+    'beech': 'tallXL',
+    'cinnamon': 'tallXL',
+    'ebony': 'tallXL',
+    'eucalyptus': 'tallXL',
+    'fever': 'acacia',
+    'fruitwood': 'tallXL',
+    'gingko': 'tallXL',
+    'larch': 'normal',
+    'hawthorn': 'normal',
+    'juniper': 'normal',
+    'mahogany': 'jungle',
+    'poplar': 'tallXL',
+    'redwood': 'sequoia',
+    'rowan': 'normal',
+    'teak': 'normal',
+    'white_elm': 'tallXL',
+    'yew': 'willow'
 }
 
 for wood, key in WOOD_TYPES.items():
@@ -123,15 +124,15 @@ for wood, key in WOOD_TYPES.items():
         tree('structure_templates/normal_overlay', wood, 'overlay')
 
 FRUIT_TREES = [
-    'banana',
-    'cherry',
-    'olive',
-    'red_apple',
-    'green_apple',
-    'lemon',
-    'orange',
-    'peach',
-    'plum'
+    'cacao',
+    'date',
+    'papaya',
+    'almond',
+    'cashew',
+    'coconut',
+    'hazelnut',
+    'macadamia',
+    'pistachio'
 ]
 
 for tree in FRUIT_TREES:
