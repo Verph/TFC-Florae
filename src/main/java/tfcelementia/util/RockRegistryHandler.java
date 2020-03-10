@@ -23,7 +23,7 @@ public final class RockRegistryHandler
 {
     public static final ResourceLocation BRECCIA = new ResourceLocation(MOD_ID, "breccia");
     public static final ResourceLocation FOIDOLITE = new ResourceLocation(MOD_ID, "foidolite");
-    public static final ResourceLocation PORPHYRY = new ResourceLocation(MOD_ID, "porphyry ");
+    public static final ResourceLocation PORPHYRY = new ResourceLocation(MOD_ID, "porphyry");
     public static final ResourceLocation PERIDOTITE = new ResourceLocation(MOD_ID, "peridotite");
     public static final ResourceLocation MUDSTONE = new ResourceLocation(MOD_ID, "mudstone");
     public static final ResourceLocation SANDSTONE = new ResourceLocation(MOD_ID, "sandstone");

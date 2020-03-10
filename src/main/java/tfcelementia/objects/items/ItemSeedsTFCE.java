@@ -20,8 +20,10 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
 import net.dries007.tfc.api.types.ICrop;
-import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
+//import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
 import net.dries007.tfc.objects.blocks.stone.BlockFarmlandTFC;
+
+import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
 
 public class ItemSeedsTFCE extends Item implements IPlantable
 {
@@ -55,7 +57,7 @@ public class ItemSeedsTFCE extends Item implements IPlantable
         IBlockState state = worldIn.getBlockState(pos);
         if (facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, itemstack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()) && state.getBlock() instanceof BlockFarmlandTFC)
         {
-            worldIn.setBlockState(pos.up(), BlockCropTFC.get(crop).getDefaultState());
+            worldIn.setBlockState(pos.up(), BlockCropTFCE.get(crop).getDefaultState());
 
             if (player instanceof EntityPlayerMP)
             {
@@ -81,10 +83,10 @@ public class ItemSeedsTFCE extends Item implements IPlantable
     public IBlockState getPlant(IBlockAccess world, BlockPos pos)
     {
         IBlockState state = world.getBlockState(pos);
-        if (state.getBlock() instanceof BlockCropTFC && ((BlockCropTFC) state.getBlock()).getCrop() == this.crop)
+        if (state.getBlock() instanceof BlockCropTFCE && ((BlockCropTFCE) state.getBlock()).getCrop() == this.crop)
         {
             return state;
         }
-        return BlockCropTFC.get(crop).getDefaultState();
+        return BlockCropTFCE.get(crop).getDefaultState();
     }
 }

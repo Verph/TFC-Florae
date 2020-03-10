@@ -8,10 +8,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 import net.dries007.tfc.api.types.ICrop;
-import net.dries007.tfc.objects.blocks.agriculture.BlockCropDead;
-import net.dries007.tfc.objects.blocks.agriculture.BlockCropSimple;
-import net.dries007.tfc.objects.blocks.agriculture.BlockCropSpreading;
-import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
+//import net.dries007.tfc.objects.blocks.agriculture.BlockCropDead;
+//import net.dries007.tfc.objects.blocks.agriculture.BlockCropSimple;
+//import net.dries007.tfc.objects.blocks.agriculture.BlockCropSpreading;
+//import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
 //import net.dries007.tfc.objects.items.ItemsTFC;
 //import net.dries007.tfc.objects.items.food.ItemFoodTFC;
 import net.dries007.tfc.util.calendar.CalendarTFC;
@@ -19,6 +19,11 @@ import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.skills.Skill;
 import net.dries007.tfc.util.skills.SkillTier;
 
+import tfcelementia.objects.blocks.agriculture.BlockCropDeadTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockCropSimpleTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockCropSpreadingTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
+import tfcelementia.util.agriculture.FoodTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.objects.items.ItemFoodTFCE;
 
@@ -33,15 +38,15 @@ public enum CropTFCE implements ICrop
     // these definitions are defined in the spreadsheet at
     // https://docs.google.com/spreadsheets/d/1Ghw3dCmVO5Gv0MMGBydUxox_nwLYmmcZkGSbbf0QSAE/edit#gid=893781093
     // It should be modified first, and then the resulting definitions copied to this space here
-	BLACK_EYED_PEAS(ItemFoodTFCE.BLACK_EYED_PEAS, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
-    CAYENNE_PEPPER(() -> new ItemStack(ItemFoodTFCE.get(FoodRegistryHandler.RED_CAYENNE_PEPPER)), () -> new ItemStack(ItemFoodTFCE.get(FoodRegistryHandler.GREEN_CAYENNE_PEPPER)), 4f, 12f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
-    CELERY(ItemFoodTFCE.CELERY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    GINGER(ItemFoodTFCE.GINGER, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    //GINSENG(ItemFoodTFCE.GINSENG, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    LETTUCE(ItemFoodTFCE.LETTUCE, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    PEANUT(ItemFoodTFCE.PEANUT, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    RUTABAGA(ItemFoodTFCE.RUTABAGA, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    SWEET_POTATO(ItemFoodTFCE.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+	BLACK_EYED_PEAS(FoodTFCE.BLACK_EYED_PEAS, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
+    CAYENNE_PEPPER(() -> new ItemStack(ItemFoodTFCE.get(FoodTFCE.RED_CAYENNE_PEPPER)), () -> new ItemStack(ItemFoodTFCE.get(FoodTFCE.GREEN_CAYENNE_PEPPER)), 4f, 12f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
+    CELERY(FoodTFCE.CELERY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    GINGER(FoodTFCE.GINGER, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    //GINSENG(FoodTFCE.GINSENG, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    LETTUCE(FoodTFCE.LETTUCE, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    PEANUT(FoodTFCE.PEANUT, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    RUTABAGA(FoodTFCE.RUTABAGA, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    SWEET_POTATO(FoodTFCE.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     AGAVE(() -> new ItemStack(ItemsRegistryHandler.AGAVE), () -> ItemStack.EMPTY, 12f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     COTTON(() -> new ItemStack(ItemsRegistryHandler.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     FLAX(() -> new ItemStack(ItemsRegistryHandler.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
@@ -156,22 +161,22 @@ public enum CropTFCE implements ICrop
         return ItemStack.EMPTY;
     }
 
-    public BlockCropTFC createGrowingBlock()
+    public BlockCropTFCE createGrowingBlock()
     {
         if (type == SIMPLE || type == PICKABLE)
         {
-            return BlockCropSimple.create(this, type == PICKABLE);
+            return BlockCropSimpleTFCE.create(this, type == PICKABLE);
         }
         else if (type == SPREADING)
         {
-            return BlockCropSpreading.create(this);
+            return BlockCropSpreadingTFCE.create(this);
         }
         throw new IllegalStateException("Invalid growthstage property " + growthStages + " for crop");
     }
 
-    public BlockCropDead createDeadBlock()
+    public BlockCropDeadTFCE createDeadBlock()
     {
-        return new BlockCropDead(this);
+        return new BlockCropDeadTFCE(this);
     }
 
     enum CropType
