@@ -1,8 +1,8 @@
-# TFC-Metallum
-Addon for TerraFirmaCraft: The New Generation
+# TFC Elementia
+Addon for TerraFirmaCraft: The New Generation (TFC:TNG), called TFC Elementia.
 
 ## Goal
-Add metals, ores and alloys from other to TFC:TNG
+The incentive is to add all the elements and metals from the periodic table, and their respective ores and minerals; more tree sorts for broader usability cases and variety; as well as more alloys making more mods useable with TFC. 
 
 ## Contributing
 
