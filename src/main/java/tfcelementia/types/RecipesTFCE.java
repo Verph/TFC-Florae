@@ -164,10 +164,8 @@ public final class RecipesTFCE
         
         r.registerAll(
             new LoomRecipe(new ResourceLocation(MOD_ID, "cotton_cloth"), IIngredient.of(ItemsRegistryHandler.COTTON_YARN, 12), new ItemStack(ItemsRegistryHandler.COTTON_CLOTH), 12, new ResourceLocation(MOD_ID, "textures/blocks/devices/loom/product/burlap.png")),
-            new LoomRecipe(new ResourceLocation(MOD_ID, "linen_cloth"), IIngredient.of(ItemsRegistryHandler.LINEN_STRING, 16), new ItemStack(ItemsRegistryHandler.LINEN_CLOTH), 16, new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png")),
-            new LoomRecipe(new ResourceLocation(MOD_ID, "silk_cloth"), IIngredient.of(Items.STRING, 24), new ItemStack(ItemsTFC.SILK_CLOTH), 24, new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png")),
-
-            new LoomRecipe(new ResourceLocation(MOD_ID, "wool_block"), IIngredient.of(ItemsTFC.WOOL_CLOTH, 4), new ItemStack(Blocks.WOOL), 4, new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png"))
+            new LoomRecipe(new ResourceLocation(MOD_ID, "linen_cloth"), IIngredient.of(ItemsRegistryHandler.LINEN_STRING, 12), new ItemStack(ItemsRegistryHandler.LINEN_CLOTH), 12, new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png")),
+            new LoomRecipe(new ResourceLocation(MOD_ID, "sisal_cloth"), IIngredient.of(ItemsRegistryHandler.SISAL_FIBER, 12), new ItemStack(ItemsTFC.BURLAP_CLOTH), 12, new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png"))
         );
     }
 
