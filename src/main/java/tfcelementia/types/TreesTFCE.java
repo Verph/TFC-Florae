@@ -67,9 +67,9 @@ public final class TreesTFCE
         r.register(new Tree.Builder(FEVER, 10f, 250f, 14f, 50f, GEN_ACACIA).setHeight(13).setGrowthTime(10).setBushes().setDensity(0.25f, 2f).setBurnInfo(590f, 1000).build());
         r.register(new Tree.Builder(FRUITWOOD, 180f, 550f, 10f, 30f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(9).setDensity(0.25f, 2f).setBurnInfo(720f, 1000).build());
         r.register(new Tree.Builder(GINGKO, 290f, 550f, 10f, 30f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
-        r.register(new Tree.Builder(LARCH, 150f, 430f, -4f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setConifer().setDensity(0.25f, 2f).setBurnInfo(632f, 1250).build());
         r.register(new Tree.Builder(HAWTHORN, 180f, 430f, -8f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(683f, 1500).build());
         r.register(new Tree.Builder(JUNIPER, 50f, 450f, -8f, 30f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setConifer().setDensity(0.25f, 0.75f).setBurnInfo(632f, 1750).build());
+        r.register(new Tree.Builder(LARCH, 150f, 430f, -4f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setConifer().setDensity(0.25f, 2f).setBurnInfo(632f, 1250).build());
         r.register(new Tree.Builder(LIMBA, 290f, 550f, 18f, 40f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(9).setBushes().setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
         r.register(new Tree.Builder(MAHOGANY, 210f, 700f, 18f, 40f, GEN_KAPOK_COMPOSITE).setDominance(15f).setRadius(3).setHeight(24).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.6f, 7f).setBurnInfo(773f, 1000).build());
         r.register(new Tree.Builder(POPLAR, 140f, 430f, -2f, 18f, GEN_TALL).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(609f, 1000).build());
