@@ -140,8 +140,9 @@ public final class RecipesTFCE
         r.registerAll(
         	
             // Fired Mud Pottery - doesn't burn up
-            new HeatRecipeSimple(IIngredient.of(ItemsRegistryHandler.UNFIRED_MUD_BRICK), new ItemStack(ItemsRegistryHandler.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_mud_brick")
-            
+            new HeatRecipeSimple(IIngredient.of(ItemsRegistryHandler.UNFIRED_MUD_BRICK), new ItemStack(ItemsRegistryHandler.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("unfired_mud_brick"),
+            new HeatRecipeSimple(IIngredient.of(ItemsRegistryHandler.FIRED_MUD_BRICK), new ItemStack(ItemsRegistryHandler.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_mud_brick"),
+             
         );
     }
 
