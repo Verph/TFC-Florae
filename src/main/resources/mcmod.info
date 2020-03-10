@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "tfcelementia",
+    "name": "TFC Elementia",
+    "description": "Adds the whole periodic table of elements, as well as ingots and ores to base TerraFirmaCraft.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "logoFile": "/assets/tfc/textures/gui/logo.png",
+    "authorList": [
+      "Verph"
+    ],
+    "credits": "The TFC dev team for making TerraFirmaCraft."
+  }
+]
