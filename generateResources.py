@@ -397,6 +397,8 @@ FOODS = [
     'cashew',
     'coconut',
     'juniper_berry',
+    'green_grapes',
+    'red_grapes',
     'hazelnut',
     'macadamia',
     'pistachio',
@@ -1146,6 +1148,12 @@ item(('ceramics', 'unfired', 'mud_brick'), 'tfc:items/ceramics/unfired/mud_brick
 item(('ceramics', 'fired', 'mud_brick'), 'tfc:items/ceramics/fired/mud_brick')
 
 item(('ceramics', 'fire_clay'), 'tfc:items/ceramics/fire_clay')
+
+# MUD BALL
+item(('misc', 'mud_ball'), 'tfc:items/mud_ball')
+
+# CINNAMON BARK
+item(('misc', 'cinnamon_bark'), 'tfc:items/cinnamon_bark')
 
 # FLAT
 for rock_cat in ROCK_TYPES:
