@@ -1,4 +1,4 @@
-package tfcelementia.util;
+package tfcelementia.types;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -19,7 +19,7 @@ import static net.dries007.tfc.types.DefaultRocks.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
-public final class RockRegistryHandler
+public final class RocksTFCE
 {
     public static final ResourceLocation BRECCIA = new ResourceLocation(MOD_ID, "breccia");
     public static final ResourceLocation FOIDOLITE = new ResourceLocation(MOD_ID, "foidolite");

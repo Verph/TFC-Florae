@@ -37,6 +37,7 @@ import net.dries007.tfc.objects.blocks.wood.BlockDoorTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockLogTFC;
 import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.items.*;
+import net.dries007.tfc.objects.items.ceramics.*;
 import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.objects.items.ceramics.*;
 import net.dries007.tfc.objects.items.food.ItemFoodTFC;
@@ -61,8 +62,7 @@ import tfcelementia.objects.blocks.BlockMud;
 import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.PowderTFCE;
 import tfcelementia.objects.items.*;
-//import tfcelementia.util.CropRegistryHandler;
-import tfcelementia.util.FluidRegistryHandler;
+import tfcelementia.objects.fluids.FluidsTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.util.OreDictionaryHelper;
 import tfcelementia.util.agriculture.FoodTFCE;
@@ -79,7 +79,8 @@ import static net.dries007.tfc.util.Helpers.getNull;
 @GameRegistry.ObjectHolder(MOD_ID)
 public final class ItemsRegistryHandler
 {
-    public static final ItemMisc MUDBALL = getNull();
+    public static final ItemMisc MUD_BALL = getNull();
+    public static final ItemMisc CINNAMON_BARK = getNull();
     
     @GameRegistry.ObjectHolder("crop/product/agave")
     public static final ItemMisc AGAVE = getNull();
@@ -95,6 +96,8 @@ public final class ItemsRegistryHandler
     public static final ItemMisc FLAX_FIBER = getNull();
     @GameRegistry.ObjectHolder("crop/product/hemp")
     public static final ItemMisc HEMP = getNull();
+    @GameRegistry.ObjectHolder("crop/product/hemp_fiber")
+    public static final ItemMisc HEMP_FIBER = getNull();
     @GameRegistry.ObjectHolder("crop/product/linen_cloth")
     public static final ItemMisc LINEN_CLOTH = getNull();
     @GameRegistry.ObjectHolder("crop/product/linen_string")
@@ -196,6 +199,13 @@ public final class ItemsRegistryHandler
         {
             simpleItems.add(register(r, "food/" + food.name().toLowerCase(), new ItemFoodTFCE(food), CT_FOOD));
         }
+
+        
+        { // POTTERY
+            simpleItems.add(register(r, "mud_ball", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_MISC));
+        	simpleItems.add(register(r, "ceramics/unfired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/fired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        }
         
         //Products
         simpleItems.add(register(r, "crop/product/agave", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
@@ -205,6 +215,7 @@ public final class ItemsRegistryHandler
         simpleItems.add(register(r, "crop/product/flax", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/flax_fiber", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/hemp", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/hemp_fiber", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/linen_cloth", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/linen_string", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/madder", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
@@ -215,6 +226,34 @@ public final class ItemsRegistryHandler
         simpleItems.add(register(r, "crop/product/green_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/black_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
 
+        simpleItems.add(register(r, "cinnamon_bark", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_MISC));
+        
+        /*
+        { // POTTERY
+            simpleItems.add(register(r, "mud_ball", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM, "mud", "mud_ball"), CT_MISC));
+        	simpleItems.add(register(r, "ceramics/unfired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_MISC));
+        	simpleItems.add(register(r, "ceramics/fired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM, "mud_brick"), CT_MISC));
+        }
+        
+        //Products
+        simpleItems.add(register(r, "crop/product/agave", new ItemMisc(Size.TINY, Weight.LIGHT, "cropAgave"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/cotton_boll", new ItemMisc(Size.TINY, Weight.LIGHT, "cotton"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/cotton_cloth", new ItemMisc(Size.TINY, Weight.LIGHT, "cloth"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/cotton_yarn", new ItemMisc(Size.TINY, Weight.LIGHT, "yarn"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/flax", new ItemMisc(Size.TINY, Weight.LIGHT, "cropFlax"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/flax_fiber", new ItemMisc(Size.TINY, Weight.LIGHT, "fiber"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/hemp", new ItemMisc(Size.TINY, Weight.LIGHT, "cropHemp"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/linen_cloth", new ItemMisc(Size.TINY, Weight.LIGHT, "cloth"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/linen_string", new ItemMisc(Size.TINY, Weight.LIGHT, "string"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/madder", new ItemMisc(Size.TINY, Weight.LIGHT, "cropMadder"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/sisal_fiber", new ItemMisc(Size.TINY, Weight.LIGHT, "fiber"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/weld", new ItemMisc(Size.TINY, Weight.LIGHT, "cropWeld"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/woad", new ItemMisc(Size.TINY, Weight.LIGHT, "cropWoad"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/white_tea", new ItemMisc(Size.TINY, Weight.LIGHT, "cropTea"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/green_tea", new ItemMisc(Size.TINY, Weight.LIGHT, "cropTea"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/black_tea", new ItemMisc(Size.TINY, Weight.LIGHT, "cropTea"), CT_MISC));
+        */
+        
         //Powders
         //simpleItems.add(register(r, "powder/sea_salt", new ItemMisc(Size.SMALL, Weight.LIGHT, "dustSalt"), CT_MISC));
         //simpleItems.add(register(r, "powder/calcium", new ItemMisc(Size.SMALL, Weight.LIGHT, "dustCalcium"), CT_MISC));

@@ -168,6 +168,7 @@ WOOD_TYPES = [
     'fruitwood',
     'gingko',
     'larch',
+    'limba',
     'hawthorn',
     'juniper',
     'mahogany',

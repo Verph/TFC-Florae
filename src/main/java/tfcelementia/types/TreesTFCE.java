@@ -1,4 +1,4 @@
-package tfcelementia.util;
+package tfcelementia.types;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -17,7 +17,7 @@ import static net.dries007.tfc.types.DefaultTrees.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
-public final class TreeRegistryHandler
+public final class TreesTFCE
 {
     public static final ResourceLocation ALDER = new ResourceLocation(MOD_ID, "alder");
     public static final ResourceLocation BAMBOO = new ResourceLocation(MOD_ID, "bamboo");

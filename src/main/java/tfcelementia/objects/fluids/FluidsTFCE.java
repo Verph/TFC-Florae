@@ -1,5 +1,9 @@
-package tfcelementia.util;
+package tfcelementia.objects.fluids;
 
+import javax.annotation.Nonnull;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
 import com.google.common.collect.HashBiMap;
@@ -24,13 +28,12 @@ import net.dries007.tfc.objects.fluids.properties.MetalProperty;
 import net.dries007.tfc.objects.fluids.properties.PreservingProperty;
 import net.dries007.tfc.objects.inventory.ingredient.IIngredient;
 import net.dries007.tfc.objects.inventory.ingredient.IngredientItemFoodTrait;
-import net.dries007.tfc.TerraFirmaCraft;
-import tfcelementia.TFCElementia;
 
-import static net.dries007.tfc.objects.fluids.FluidsTFC.*;
+import tfcelementia.util.OreDictionaryHelper;
+
 import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 
-public final class FluidRegistryHandler
+public final class FluidsTFCE
 {
     private static final ResourceLocation STILL = new ResourceLocation(MOD_ID, "blocks/fluid_still");
     private static final ResourceLocation FLOW = new ResourceLocation(MOD_ID, "blocks/fluid_flow");
@@ -47,7 +50,8 @@ public final class FluidRegistryHandler
     // Alcohols
     public static FluidWrapper GIN;
     public static FluidWrapper TEQUILA;
-    public static FluidWrapper WINE;
+    public static FluidWrapper RED_WINE;
+    public static FluidWrapper WHITE_WINE;
 
     private static ImmutableSet<FluidWrapper> allAlcoholsFluids;
     private static ImmutableSet<FluidWrapper> allTeaFluids;
@@ -103,7 +107,8 @@ public final class FluidRegistryHandler
             .add(
             	GIN = registerFluid(new Fluid("gin", STILL, FLOW, 0xFFDCDCDC).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
             	TEQUILA = registerFluid(new Fluid("tequila", STILL, FLOW, 0xFFDCDCDC).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
-            	WINE = registerFluid(new Fluid("wine", STILL, FLOW, 0xFF5E1224).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty)
+            	RED_WINE = registerFluid(new Fluid("red_wine", STILL, FLOW, 0xFF5E1224).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
+                WHITE_WINE = registerFluid(new Fluid("white_wine", STILL, FLOW, 0xFFFCF1D2).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty)
             )
             .build();
     }

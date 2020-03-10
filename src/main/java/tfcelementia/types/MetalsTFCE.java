@@ -1,4 +1,4 @@
-package tfcelementia.util;
+package tfcelementia.types;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -19,7 +19,7 @@ import static net.dries007.tfc.types.DefaultMetals.*;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
-public final class RegistryHandler
+public final class MetalsTFCE
 {
 	//Ores
     //Reactive nonmetals
