@@ -166,7 +166,7 @@ WOOD_TYPES = [
     'eucalyptus',
     'fever',
     'fruitwood',
-    'gingko',
+    'ginkgo',
     'hawthorn',
     'juniper',
     'larch',

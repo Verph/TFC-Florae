@@ -28,7 +28,7 @@ public final class TreesTFCE
     public static final ResourceLocation EUCALYPTUS = new ResourceLocation(MOD_ID, "eucalyptus");
     public static final ResourceLocation FEVER = new ResourceLocation(MOD_ID, "fever");
     public static final ResourceLocation FRUITWOOD = new ResourceLocation(MOD_ID, "fruitwood");
-    public static final ResourceLocation GINGKO = new ResourceLocation(MOD_ID, "gingko");
+    public static final ResourceLocation GINKGO = new ResourceLocation(MOD_ID, "ginkgo");
     public static final ResourceLocation HAWTHORN = new ResourceLocation(MOD_ID, "hawthorn");
     public static final ResourceLocation JUNIPER = new ResourceLocation(MOD_ID, "juniper");
     public static final ResourceLocation LARCH = new ResourceLocation(MOD_ID, "larch");
@@ -51,33 +51,56 @@ public final class TreesTFCE
     public static final ITreeGenerator GEN_KAPOK = new TreeGenKapok();
     public static final ITreeGenerator GEN_SEQUOIA = new TreeGenSequoia();
     public static final ITreeGenerator GEN_KAPOK_COMPOSITE = new TreeGenComposite().add(0.4f, GEN_TALL).add(0.6f, GEN_KAPOK);
+
+    // Custom Tree Models
+    public static final ITreeGenerator GEN_ALDER = new TreeGenVariants(true, 9);
+    //public static final ITreeGenerator GEN_BAMBOO = new TreeGenVariants(true, 10);
+    public static final ITreeGenerator GEN_BAOBAB = new TreeGenVariants(true, 4);
+    public static final ITreeGenerator GEN_BEECH = new TreeGenVariants(true, 9);
+    public static final ITreeGenerator GEN_CINNAMON = new TreeGenVariants(true, 4);
+    public static final ITreeGenerator GEN_EBONY = new TreeGenVariants(true, 6);
+    public static final ITreeGenerator GEN_EUCALYPTUS = new TreeGenVariants(true, 4);
+    public static final ITreeGenerator GEN_FEVER = new TreeGenVariants(true, 6);
+    public static final ITreeGenerator GEN_FRUITWOOD = new TreeGenVariants(true, 3);
+    public static final ITreeGenerator GEN_GINKGO = new TreeGenVariants(true, 10);
+    public static final ITreeGenerator GEN_HAWTHORN = new TreeGenVariants(true, 5);
+    public static final ITreeGenerator GEN_JUNIPER = new TreeGenVariants(true, 7);
+    public static final ITreeGenerator GEN_LARCH = new TreeGenVariants(true, 9);
+    public static final ITreeGenerator GEN_LIMBA = new TreeGenVariants(true, 4);
+    public static final ITreeGenerator GEN_MAHOGANY = new TreeGenVariants(true, 13);
+    public static final ITreeGenerator GEN_POPLAR = new TreeGenVariants(true, 11);
+    public static final ITreeGenerator GEN_REDWOOD = new TreeGenVariants(true, 10);
+    public static final ITreeGenerator GEN_ROWAN = new TreeGenVariants(true, 5);
+    public static final ITreeGenerator GEN_TEAK = new TreeGenVariants(true, 4);
+    public static final ITreeGenerator GEN_WHITE_ELM = new TreeGenVariants(true, 11);
+    public static final ITreeGenerator GEN_YEW = new TreeGenVariants(true, 6);
     
     @SubscribeEvent
     public static void onPreRegisterRockCategory(TFCRegistryEvent.RegisterPreBlock<Tree> event)
     {
         IForgeRegistry<Tree> r = event.getRegistry();
 
-        r.register(new Tree.Builder(ALDER, 150f, 450f, -2f, 18f, GEN_TALL).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(601f, 1000).build());
-	    r.register(new Tree.Builder(BAMBOO, 200f, 420f, 13f, 35f, GEN_MEDIUM).setRadius(1).setHeight(18).setDecayDist(6).setGrowthTime(3).setDensity(0.6f, 10f).setBurnInfo(420f, 1000).build());
-	    r.register(new Tree.Builder(BAOBAB, 20f, 200f, 21f, 40f, GEN_KAPOK).setRadius(4).setHeight(9).setDecayDist(6).setGrowthTime(20).setDensity(0.4f, 1f).setBurnInfo(478f, 1000).build());
-        r.register(new Tree.Builder(BEECH, 220f, 550f, 2f, 22f, GEN_TALL).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(703f, 1750).build());
-	    r.register(new Tree.Builder(CINNAMON, 180f, 550f, 15f, 30f, GEN_TALL).setDominance(1f).setHeight(13).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(795f, 1000).build());
-	    r.register(new Tree.Builder(EBONY, 180f, 550f, 20f, 38f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(8).setBushes().setDensity(0.25f, 2f).setBurnInfo(795f, 1000).build());
-	    r.register(new Tree.Builder(EUCALYPTUS, 10f, 300f, 20f, 42f, GEN_TALL).setDominance(1.5f).setHeight(13).setGrowthTime(8).setBushes().setDensity(0.25f, 2f).setBurnInfo(705f, 1000).build());
-        r.register(new Tree.Builder(FEVER, 10f, 250f, 14f, 50f, GEN_ACACIA).setHeight(13).setGrowthTime(10).setBushes().setDensity(0.25f, 2f).setBurnInfo(590f, 1000).build());
-        r.register(new Tree.Builder(FRUITWOOD, 180f, 550f, 10f, 30f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(9).setDensity(0.25f, 2f).setBurnInfo(720f, 1000).build());
-        r.register(new Tree.Builder(GINGKO, 290f, 550f, 10f, 30f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
-        r.register(new Tree.Builder(HAWTHORN, 180f, 430f, -8f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(683f, 1500).build());
-        r.register(new Tree.Builder(JUNIPER, 50f, 450f, -8f, 30f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setConifer().setDensity(0.25f, 0.75f).setBurnInfo(632f, 1750).build());
-        r.register(new Tree.Builder(LARCH, 150f, 430f, -4f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setConifer().setDensity(0.25f, 2f).setBurnInfo(632f, 1250).build());
-        r.register(new Tree.Builder(LIMBA, 290f, 550f, 18f, 40f, GEN_TALL).setDominance(2f).setHeight(13).setGrowthTime(9).setBushes().setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
-        r.register(new Tree.Builder(MAHOGANY, 210f, 700f, 18f, 40f, GEN_KAPOK_COMPOSITE).setDominance(15f).setRadius(3).setHeight(24).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.6f, 7f).setBurnInfo(773f, 1000).build());
-        r.register(new Tree.Builder(POPLAR, 140f, 430f, -2f, 18f, GEN_TALL).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(609f, 1000).build());
-	    r.register(new Tree.Builder(REDWOOD, 200f, 400f, 2f, 24f, GEN_SEQUOIA).setRadius(2).setHeight(30).setDecayDist(6).setGrowthTime(18).setConifer().setBushes().setTannin().setDensity(0.4f, 1.5f).setBurnInfo(618f, 1750).build());
-        r.register(new Tree.Builder(ROWAN, 180f, 430f, -2f, 18f, GEN_MEDIUM).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(645f, 2000).build());
-        r.register(new Tree.Builder(TEAK, 180f, 430f, 17f, 40f, GEN_MEDIUM).setDominance(2f).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(695f, 1000).build());
-        r.register(new Tree.Builder(WHITE_ELM, 120f, 290f, 4f, 30f, GEN_TALL).setHeight(16).setBurnInfo(653f, 1750).build());
-        r.register(new Tree.Builder(YEW, 180f, 430f, -4f, 16f, GEN_WILLOW).setHeight(16).setBurnInfo(813f, 2150).build());
+        r.register(new Tree.Builder(ALDER, 150f, 450f, -2f, 18f, GEN_ALDER).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(601f, 1000).build());
+	    r.register(new Tree.Builder(BAMBOO, 200f, 420f, 13f, 35f, GEN_TALL).setHeight(18).setDecayDist(6).setGrowthTime(3).setDensity(0.6f, 10f).setBurnInfo(420f, 1000).build());
+	    r.register(new Tree.Builder(BAOBAB, 20f, 200f, 21f, 40f, GEN_BAOBAB).setHeight(9).setDecayDist(6).setGrowthTime(20).setDensity(0.4f, 1f).setBurnInfo(478f, 1000).build());
+        r.register(new Tree.Builder(BEECH, 220f, 550f, 2f, 22f, GEN_BEECH).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(703f, 1750).build());
+	    r.register(new Tree.Builder(CINNAMON, 180f, 550f, 15f, 30f, GEN_CINNAMON).setDominance(0.5f).setHeight(13).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(795f, 1000).build());
+	    r.register(new Tree.Builder(EBONY, 180f, 550f, 20f, 38f, GEN_EBONY).setHeight(13).setGrowthTime(8).setBushes().setBushes().setDensity(0.25f, 2f).setBurnInfo(795f, 1000).build());
+	    r.register(new Tree.Builder(EUCALYPTUS, 10f, 300f, 20f, 42f, GEN_EUCALYPTUS).setHeight(13).setGrowthTime(8).setBushes().setDensity(0.25f, 2f).setBurnInfo(705f, 1000).build());
+        r.register(new Tree.Builder(FEVER, 10f, 250f, 14f, 50f, GEN_FEVER).setGrowthTime(10).setBushes().setDensity(0.25f, 2f).setBurnInfo(590f, 1000).build());
+        r.register(new Tree.Builder(FRUITWOOD, 180f, 550f, 10f, 30f, GEN_FRUITWOOD).setDominance(0.5f).setHeight(13).setGrowthTime(9).setDensity(0.25f, 2f).setBurnInfo(720f, 1000).build());
+        r.register(new Tree.Builder(GINKGO, 290f, 550f, 10f, 30f, GEN_GINKGO).setHeight(13).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
+        r.register(new Tree.Builder(HAWTHORN, 180f, 430f, -8f, 18f, GEN_HAWTHORN).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(683f, 1500).build());
+        r.register(new Tree.Builder(JUNIPER, 50f, 450f, -8f, 30f, GEN_JUNIPER).setGrowthTime(8).setConifer().setDensity(0.25f, 0.75f).setBurnInfo(632f, 1750).build());
+        r.register(new Tree.Builder(LARCH, 150f, 430f, -4f, 18f, GEN_LARCH).setGrowthTime(8).setConifer().setDensity(0.25f, 2f).setBurnInfo(632f, 1250).build());
+        r.register(new Tree.Builder(LIMBA, 290f, 550f, 18f, 40f, GEN_LIMBA).setHeight(13).setGrowthTime(9).setBushes().setDensity(0.25f, 2f).setBurnInfo(710f, 1000).build());
+        r.register(new Tree.Builder(MAHOGANY, 210f, 700f, 18f, 40f, GEN_MAHOGANY).setDominance(15f).setRadius(3).setHeight(24).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.6f, 7f).setBurnInfo(773f, 1000).build());
+        r.register(new Tree.Builder(POPLAR, 140f, 430f, -2f, 18f, GEN_POPLAR).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(609f, 1000).build());
+	    r.register(new Tree.Builder(REDWOOD, 200f, 400f, 2f, 24f, GEN_REDWOOD).setDecayDist(6).setGrowthTime(18).setConifer().setBushes().setTannin().setDensity(0.4f, 1.5f).setBurnInfo(618f, 1750).build());
+        r.register(new Tree.Builder(ROWAN, 180f, 430f, -2f, 18f, GEN_ROWAN).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(645f, 2000).build());
+        r.register(new Tree.Builder(TEAK, 180f, 430f, 17f, 40f, GEN_TEAK).setHeight(16).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(695f, 1000).build());
+        r.register(new Tree.Builder(WHITE_ELM, 120f, 290f, 4f, 30f, GEN_WHITE_ELM).setGrowthTime(8).setBurnInfo(653f, 1750).build());
+        r.register(new Tree.Builder(YEW, 180f, 430f, -4f, 16f, GEN_YEW).setGrowthTime(10).setBushes().setBurnInfo(813f, 2150).build());
     }
 }
 

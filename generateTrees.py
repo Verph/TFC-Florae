@@ -52,29 +52,63 @@ def fruit_tree(ftree):
 
 
 WOOD_TYPES = {
-    'alder': 'tallXL',
-    'bamboo': 'normal',
-    'baobab': 'jungle',
-    'beech': 'tallXL',
-    'cinnamon': 'tallXL',
-    'ebony': 'tallXL',
-    'eucalyptus': 'tallXL',
-    'fever': 'acacia',
-    'fruitwood': 'tallXL',
-    'gingko': 'tallXL',
-    'larch': 'normal',
-    'hawthorn': 'normal',
-    'juniper': 'normal',
-    'mahogany': 'jungle',
-    'poplar': 'tallXL',
-    'redwood': 'sequoia',
-    'rowan': 'normal',
-    'teak': 'normal',
-    'white_elm': 'tallXL',
-    'yew': 'willow'
+    'alder': 'alder',
+    'bamboo': 'bamboo',
+    'baobab': 'baobab',
+    'beech': 'beech',
+    'cinnamon': 'cinnamon',
+    'ebony': 'ebony',
+    'eucalyptus': 'eucalyptus',
+    'fever': 'fever',
+    'fruitwood': 'fruitwood',
+    'ginkgo': 'ginkgo',
+    'larch': 'larch',
+    'hawthorn': 'hawthorn',
+    'juniper': 'juniper',
+    'mahogany': 'mahogany',
+    'poplar': 'poplar',
+    'redwood': 'redwood',
+    'rowan': 'rowan',
+    'teak': 'teak',
+    'white_elm': 'white_elm',
+    'yew': 'yew'
 }
 
 for wood, key in WOOD_TYPES.items():
+
+    # alder
+    if key == 'alder':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+            tree('structure_templates/alder/' + s, wood, s)
+
+    # baobab
+    if key == 'baobab':
+        for s in ['1', '2', '3', '4']:
+            tree('structure_templates/baobab/' + s, wood, s)
+
+    # beech
+    if key == 'beech':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+            tree('structure_templates/beech/' + s, wood, s)
+
+    # cinnamon
+    if key == 'cinnamon':
+        for s in ['1', '2', '3', '4']:
+            tree('structure_templates/cinnamon/' + s, wood, s)
+
+    # ebony
+    if key == 'ebony':
+        for s in ['1', '2', '3', '4', '5', '6']:
+            tree('structure_templates/ebony/' + s, wood, s)
+
+    # eucalyptus
+    if key == 'eucalyptus':
+        for s in ['1', '2', '3', '4']:
+            tree('structure_templates/eucalyptus/' + s, wood, s)
+
+
+
+
     # normal (vanilla oak)
     if key == 'normal':
         tree('structure_templates/normal', wood, 'base')

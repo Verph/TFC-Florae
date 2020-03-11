@@ -192,7 +192,7 @@ public final class ItemsRegistryHandler
         
         for (CropTFCE crop : CropTFCE.values())
         {
-            simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFC(crop), CT_FOOD));
+            simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFCE(crop), CT_FOOD));
         }
         
         for (FoodTFCE food : FoodTFCE.values())
