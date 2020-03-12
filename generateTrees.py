@@ -83,7 +83,7 @@ for wood, key in WOOD_TYPES.items():
 
     # baobab
     if key == 'baobab':
-        for s in ['1', '2', '3', '4']:
+        for s in ['1', '2']:
             tree('structure_templates/baobab/' + s, wood, s)
 
     # beech
