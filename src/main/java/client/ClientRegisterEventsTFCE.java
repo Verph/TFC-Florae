@@ -9,14 +9,18 @@ import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.capability.food.CapabilityFood;
 import net.dries007.tfc.api.capability.food.IFood;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.item.*;
 import net.minecraft.item.ItemFood;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -58,6 +62,23 @@ public final class ClientRegisterEventsTFCE
         for (ItemGemTFCE item : ItemsRegistryHandler.getAllGemTFCEItems())
             for (GemTFCE.Grade grade : GemTFCE.Grade.values())
                 registerEnumBasedMetaItems("gem", grade, item);
+        
+     // Blocks with Ignored Properties
+        for (Block block : BlocksTFCE.getAllFluidBlocks())
+            ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockFluidBase.LEVEL).build());
+        
+        
+    }
+	
+	@SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public static void registerColorHandlerBlocks(ColorHandlerEvent.Block event)
+    {
+		BlockColors blockColors = event.getBlockColors();
+		
+		blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) ->
+        	worldIn != null && pos != null ? BiomeColorHelper.getWaterColorAtPos(worldIn, pos) : 0,
+        		BlocksTFCE.getAllFluidBlocks().stream().filter(x -> x.getDefaultState().getMaterial() == Material.WATER).toArray(BlockFluidBase[]::new));
     }
 	
 	@SubscribeEvent

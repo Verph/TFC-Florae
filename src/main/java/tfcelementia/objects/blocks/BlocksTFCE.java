@@ -21,10 +21,10 @@ import net.minecraftforge.registries.IForgeRegistry;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.*;
+import net.dries007.tfc.objects.blocks.BlockFluidTFC;
 import net.dries007.tfc.objects.blocks.devices.*;
 import net.dries007.tfc.objects.blocks.stone.*;
 import net.dries007.tfc.objects.blocks.wood.*;
-import net.dries007.tfc.objects.fluids.FluidsTFC;
 import net.dries007.tfc.objects.fluids.properties.FluidWrapper;
 import net.dries007.tfc.objects.items.itemblock.*;
 
@@ -50,6 +50,8 @@ public final class BlocksTFCE
     private static ImmutableList<BlockCropTFCE> allCropBlocks;
     private static ImmutableList<BlockCropDeadTFCE> allDeadCropBlocks;
     
+    private static ImmutableList<BlockFluidBase> allFluidBlocks;
+    
     public static ImmutableList<BlockCropTFCE> getAllCropBlocks()
     {
         return allCropBlocks;
@@ -60,10 +62,17 @@ public final class BlocksTFCE
         return allDeadCropBlocks;
     }
     
+    public static ImmutableList<BlockFluidBase> getAllFluidBlocks()
+    {
+        return allFluidBlocks;
+    }
+    
     @SubscribeEvent
     @SuppressWarnings("ConstantConditions")
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
+    	FluidsTFCE.registerFluids();
+    	
     	IForgeRegistry<Block> r = event.getRegistry();
     	
     
@@ -87,6 +96,31 @@ public final class BlocksTFCE
             }
 
             allDeadCropBlocks = b.build();
+        }
+        
+        {
+            Builder<BlockFluidBase> b = ImmutableList.builder();
+            // We always want to register our water variants, as they absolutely need special subclasses
+            /*b.add(
+                register(r, "fluid/hot_water", new BlockFluidHotWater()),
+                register(r, "fluid/fresh_water", new BlockFluidWater(FluidsTFC.FRESH_WATER.get(), Material.WATER, false)),
+                register(r, "fluid/salt_water", new BlockFluidWater(FluidsTFC.SALT_WATER.get(), Material.WATER, true))
+            );*/
+            for (FluidWrapper wrapper : FluidsTFCE.getAllAlcoholsFluids())
+            {
+                if (wrapper.isDefault())
+                {
+                    b.add(register(r, "fluid/" + wrapper.get().getName(), new BlockFluidTFC(wrapper.get(), Material.WATER)));
+                }
+            }
+            for (FluidWrapper wrapper : FluidsTFCE.getAllTeaFluids())
+            {
+                if (wrapper.isDefault())
+                {
+                    b.add(register(r, "fluid/" + wrapper.get().getName(), new BlockFluidTFC(wrapper.get(), Material.WATER)));
+                }
+            }
+            allFluidBlocks = b.build();
         }
 
         register(TECropBaseTFCE.class, "crop_base_tfce");
