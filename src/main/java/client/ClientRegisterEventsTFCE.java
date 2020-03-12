@@ -3,6 +3,8 @@ package client;
 import java.util.Arrays;
 import javax.annotation.Nonnull;
 
+import com.google.common.base.Strings;
+
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.capability.food.CapabilityFood;
 import net.dries007.tfc.api.capability.food.IFood;
@@ -26,6 +28,7 @@ import static net.dries007.tfc.objects.blocks.BlockPlacedHide.SIZE;
 import static net.dries007.tfc.objects.blocks.agriculture.BlockCropDead.MATURE;
 import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
 
+import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.blocks.BlocksTFCE;
 import tfcelementia.objects.items.ItemGemTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
@@ -50,6 +53,11 @@ public final class ClientRegisterEventsTFCE
 
         for (Block block : BlocksTFCE.getAllDeadCropBlocks())
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(MATURE).build());
+        
+     // Gems
+        for (ItemGemTFCE item : ItemsRegistryHandler.getAllGemTFCEItems())
+            for (GemTFCE.Grade grade : GemTFCE.Grade.values())
+                registerEnumBasedMetaItems("gem", grade, item);
     }
 	
 	@SubscribeEvent
@@ -67,5 +75,19 @@ public final class ClientRegisterEventsTFCE
             }
             return 0xFFFFFF;
         }, ForgeRegistries.ITEMS.getValuesCollection().stream().filter(x -> x instanceof ItemFood).toArray(Item[]::new));
+    }
+	
+    @SideOnly(Side.CLIENT)
+    private static void registerEnumBasedMetaItems(String prefix, Enum e, Item item)
+    {
+        //noinspection ConstantConditions
+        String registryName = item.getRegistryName().getPath();
+        StringBuilder path = new StringBuilder(MOD_ID).append(':');
+        if (!Strings.isNullOrEmpty(prefix)) path.append(prefix).append('/');
+        path.append(e.name());
+        if (!Strings.isNullOrEmpty(prefix))
+            path.append(registryName.replace(prefix, "")); // There well be a '/' at the start of registryName due to the prefix, so don't add an extra one.
+        else path.append('/').append(registryName);
+        ModelLoader.setCustomModelResourceLocation(item, e.ordinal(), new ModelResourceLocation(path.toString().toLowerCase()));
     }
 }

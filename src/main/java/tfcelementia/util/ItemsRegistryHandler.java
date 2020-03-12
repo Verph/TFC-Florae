@@ -139,7 +139,6 @@ public final class ItemsRegistryHandler
 
     private static ImmutableList<Item> allSimpleItems;
     private static ImmutableList<ItemOreTFC> allOreItems;
-    private static ImmutableList<ItemGem> allGemItems;
     private static ImmutableList<ItemGemTFCE> allGemTFCEItems;
     private static ImmutableList<Item> allMetalItems;
     private static ImmutableList<Item> allCeramicMoldItems;
@@ -152,11 +151,6 @@ public final class ItemsRegistryHandler
     public static ImmutableList<ItemOreTFC> getAllOreItems()
     {
         return allOreItems;
-    }
-
-    public static ImmutableList<ItemGem> getAllGemItems()
-    {
-        return allGemItems;
     }
 
     public static ImmutableList<ItemGemTFCE> getAllGemTFCEItems()
