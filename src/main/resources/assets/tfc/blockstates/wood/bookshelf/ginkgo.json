@@ -4,8 +4,8 @@
   "defaults": {
     "model": "tfc:bookshelf",
     "textures": {
-      "all": "tfc:blocks/wood/planks/gingko",
-      "particle": "tfc:blocks/wood/planks/gingko",
+      "all": "tfc:blocks/wood/planks/ginkgo",
+      "particle": "tfc:blocks/wood/planks/ginkgo",
       "north": "tfc:blocks/wood/bookshelf",
       "south": "tfc:blocks/wood/bookshelf",
       "east": "tfc:blocks/wood/bookshelf",

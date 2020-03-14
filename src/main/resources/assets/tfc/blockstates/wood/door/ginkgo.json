@@ -3,8 +3,8 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "bottom": "tfc:blocks/wood/door/lower/gingko",
-      "top": "tfc:blocks/wood/door/upper/gingko"
+      "bottom": "tfc:blocks/wood/door/lower/ginkgo",
+      "top": "tfc:blocks/wood/door/upper/ginkgo"
     }
   },
   "variants": {

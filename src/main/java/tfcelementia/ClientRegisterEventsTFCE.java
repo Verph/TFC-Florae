@@ -1,4 +1,4 @@
-package client;
+package tfcelementia;
 
 import java.util.Arrays;
 import javax.annotation.Nonnull;
@@ -58,12 +58,12 @@ public final class ClientRegisterEventsTFCE
         for (Block block : BlocksTFCE.getAllDeadCropBlocks())
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(MATURE).build());
         
-     // Gems
+        // Gems
         for (ItemGemTFCE item : ItemsRegistryHandler.getAllGemTFCEItems())
             for (GemTFCE.Grade grade : GemTFCE.Grade.values())
                 registerEnumBasedMetaItems("gem", grade, item);
         
-     // Blocks with Ignored Properties
+        // Blocks with Ignored Properties
         for (Block block : BlocksTFCE.getAllFluidBlocks())
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockFluidBase.LEVEL).build());
         

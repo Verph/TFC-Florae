@@ -4,8 +4,8 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/saplings/gingko",
-      "layer0": "tfc:blocks/saplings/gingko"
+      "cross": "tfc:blocks/saplings/ginkgo",
+      "layer0": "tfc:blocks/saplings/ginkgo"
     }
   },
   "variants": {

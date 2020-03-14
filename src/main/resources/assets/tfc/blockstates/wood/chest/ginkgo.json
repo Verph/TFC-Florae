@@ -4,8 +4,8 @@
   "defaults": {
     "model": "tfc:chest",
     "textures": {
-      "texture": "tfc:entity/chests/chest/gingko",
-      "particle": "tfc:entity/chests/chest/gingko"
+      "texture": "tfc:entity/chests/chest/ginkgo",
+      "particle": "tfc:entity/chests/chest/ginkgo"
     }
   },
   "variants": {

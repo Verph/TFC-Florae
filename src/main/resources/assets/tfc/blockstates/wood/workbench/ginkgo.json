@@ -4,8 +4,8 @@
   "defaults": {
     "model": "tfc:workbench",
     "textures": {
-      "all": "tfc:blocks/wood/planks/gingko",
-      "particle": "tfc:blocks/wood/planks/gingko",
+      "all": "tfc:blocks/wood/planks/ginkgo",
+      "particle": "tfc:blocks/wood/planks/ginkgo",
       "top": "tfc:blocks/wood/workbench_top",
       "north": "tfc:blocks/wood/workbench_front",
       "south": "tfc:blocks/wood/workbench_front",

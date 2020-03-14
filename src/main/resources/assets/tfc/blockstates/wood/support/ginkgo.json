@@ -4,8 +4,8 @@
   "defaults": {
     "model": "tfc:support/vertical",
     "textures": {
-      "texture": "tfc:blocks/wood/sheets/gingko",
-      "particle": "tfc:blocks/wood/sheets/gingko"
+      "texture": "tfc:blocks/wood/sheets/ginkgo",
+      "particle": "tfc:blocks/wood/sheets/ginkgo"
     }
   },
   "variants": {

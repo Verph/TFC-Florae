@@ -3,7 +3,7 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "texture": "tfc:blocks/wood/trapdoor/gingko"
+      "texture": "tfc:blocks/wood/trapdoor/ginkgo"
     }
   },
   "variants": {

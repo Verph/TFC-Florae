@@ -4,9 +4,9 @@
   "defaults": {
     "model": "tfc:barrel",
     "textures": {
-      "particle": "tfc:blocks/wood/planks/gingko",
-      "planks": "tfc:blocks/wood/planks/gingko",
-      "sheet": "tfc:blocks/wood/sheets/gingko",
+      "particle": "tfc:blocks/wood/planks/ginkgo",
+      "planks": "tfc:blocks/wood/planks/ginkgo",
+      "sheet": "tfc:blocks/wood/sheets/ginkgo",
       "hoop": "tfc:blocks/barrelhoop"
     }
   },
