@@ -68,16 +68,16 @@ def tree(origin, wood, nameout):
             block['Properties'] = Compound({
                 'small': String('false'),
                 'placed': String('false'),
-                'axis': prop['axis']
+                'axis': String('none')
             })
             
         if block['Name'] == 'byg:baobabfruitblock':
-            block['Name'] = String('tfc:wood/log/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'small': String('false'),
                 'placed': String('false'),
-                'axis': prop['axis']
+                'axis': String('none')
             })
 
         if block['Name'] == 'minecraft:planks':  # Planks indicate bark blocks
@@ -138,12 +138,6 @@ def tree(origin, wood, nameout):
             
         if block['Name'] == 'byg:structurecheckblock':
             block['Name'] = String('tfc:wood/log/' + wood)
-            prop = block['Properties']
-            block['Properties'] = Compound({
-                'small': String('false'),
-                'placed': String('false'),
-                'axis': prop['axis']
-            })
 
     if not os.path.exists('src/main/resources/assets/tfc/structures/' + wood):
         os.makedirs('src/main/resources/assets/tfc/structures/' + wood)
@@ -192,33 +186,103 @@ for wood, key in WOOD_TYPES.items():
 
     # alder
     if key == 'alder':
-        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
-            tree('structure_templates/alder/' + s, wood, s)
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+            tree('structure_templates/alder/alder_' + s, wood, s)
 
     # baobab
     if key == 'baobab':
         for s in ['1', '2']:
-            tree('structure_templates/baobab/' + s, wood, s)
+            tree('structure_templates/baobab/baobab_' + s, wood, s)
 
     # beech
     if key == 'beech':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
-            tree('structure_templates/beech/' + s, wood, s)
+            tree('structure_templates/beech/beech_' + s, wood, s)
 
     # cinnamon
     if key == 'cinnamon':
         for s in ['1', '2', '3', '4']:
-            tree('structure_templates/cinnamon/' + s, wood, s)
+            tree('structure_templates/cinnamon/cinnamon_' + s, wood, s)
 
     # ebony
     if key == 'ebony':
-        for s in ['1', '2', '3', '4', '5', '6']:
-            tree('structure_templates/ebony/' + s, wood, s)
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+            tree('structure_templates/ebony/ebony_' + s, wood, s)
 
     # eucalyptus
     if key == 'eucalyptus':
         for s in ['1', '2', '3', '4']:
-            tree('structure_templates/eucalyptus/' + s, wood, s)
+            tree('structure_templates/eucalyptus/eucalyptus_' + s, wood, s)
+
+    # fever
+    if key == 'fever':
+        for s in ['1', '2', '3', '4', '5', '6']:
+            tree('structure_templates/fever/fever_' + s, wood, s)
+
+    # fruitwood
+    if key == 'fruitwood':
+        for s in ['1', '2', '3']:
+            tree('structure_templates/fruitwood/fruitwood_' + s, wood, s)
+
+    # ginkgo
+    if key == 'ginkgo':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']:
+            tree('structure_templates/ginkgo/ginkgo_' + s, wood, s)
+
+    # hawthorn
+    if key == 'hawthorn':
+        for s in ['1', '2', '3', '4', '5']:
+            tree('structure_templates/hawthorn/hawthorn_' + s, wood, s)
+
+    # juniper
+    if key == 'juniper':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+            tree('structure_templates/juniper/juniper_' + s, wood, s)
+
+    # larch
+    if key == 'larch':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+            tree('structure_templates/larch/larch_' + s, wood, s)
+
+    # limba
+    if key == 'limba':
+        for s in ['1', '2', '3', '4', '5', '6', '7']:
+            tree('structure_templates/limba/limba_' + s, wood, s)
+
+    # mahogany
+    if key == 'mahogany':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/mahogany/mahogany_' + s, wood, s)
+
+    # poplar
+    if key == 'poplar':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+            tree('structure_templates/poplar/poplar_' + s, wood, s)
+
+    # redwood
+    if key == 'redwood':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']:
+            tree('structure_templates/redwood/redwood_' + s, wood, s)
+
+    # rowan
+    if key == 'rowan':
+        for s in ['1', '2', '3', '4', '5']:
+            tree('structure_templates/rowan/rowan_' + s, wood, s)
+
+    # teak
+    if key == 'teak':
+        for s in ['1', '2', '3', '4', '5', '6', '7']:
+            tree('structure_templates/teak/teak_' + s, wood, s)
+
+    # white_elm
+    if key == 'white_elm':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14']:
+            tree('structure_templates/white_elm/white_elm_' + s, wood, s)
+
+    # yew
+    if key == 'yew':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+            tree('structure_templates/yew/yew_' + s, wood, s)
 
 FRUIT_TREES = [
     'cacao',
