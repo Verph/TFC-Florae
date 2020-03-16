@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/wood/planks/gingko"
+      "all": "tfc:blocks/wood/planks/ginkgo"
     }
   },
   "variants": {

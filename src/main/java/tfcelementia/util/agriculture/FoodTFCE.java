@@ -16,7 +16,7 @@ public enum FoodTFCE
     COCONUT(FRUIT, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     JUNIPER_BERRY(FRUIT, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     GREEN_GRAPES(FRUIT, 0.4f, 5f, 0f, 0f, 0f, 0.5f, 0f, 4.5f),
-    RED_GRAPES(FRUIT, 0.4f, 5f, 0f, 0f, 0f, 0.5f, 0f, 4.5f),
+    PURPLE_GRAPES(FRUIT, 0.4f, 5f, 0f, 0f, 0f, 0.5f, 0f, 4.5f),
     HAZELNUT(FRUIT, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     MACADAMIA(FRUIT, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     PISTACHIO(FRUIT, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),

@@ -30,7 +30,7 @@
       "none": {
         "model": "cube_column",
         "textures": {
-          "end": "tfc:blocks/wood/log/fever"
+          "end": "tfc:blocks/wood/log/bamboo"
         }
       }
     },

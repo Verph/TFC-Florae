@@ -62,6 +62,7 @@ import tfcelementia.objects.blocks.BlockMud;
 import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.PowderTFCE;
 import tfcelementia.objects.items.*;
+import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.objects.fluids.FluidsTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.util.OreDictionaryHelper;
@@ -79,7 +80,21 @@ import static net.dries007.tfc.util.Helpers.getNull;
 @GameRegistry.ObjectHolder(MOD_ID)
 public final class ItemsRegistryHandler
 {
+    @GameRegistry.ObjectHolder("ceramics/mud_ball")
     public static final ItemMisc MUD_BALL = getNull();
+
+    @GameRegistry.ObjectHolder("crop/product/malt_barley")
+    public static final ItemMisc MALT_BARLEY = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_corn")
+    public static final ItemMisc MALT_CORN = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_rice")
+    public static final ItemMisc MALT_RICE = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_rye")
+    public static final ItemMisc MALT_RYE = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_wheat")
+    public static final ItemMisc MALT_WHEAT = getNull();
+    
+    @GameRegistry.ObjectHolder("crop/product/cinnamon_bark")
     public static final ItemMisc CINNAMON_BARK = getNull();
     
     @GameRegistry.ObjectHolder("crop/product/agave")
@@ -98,6 +113,8 @@ public final class ItemsRegistryHandler
     public static final ItemMisc HEMP = getNull();
     @GameRegistry.ObjectHolder("crop/product/hemp_fiber")
     public static final ItemMisc HEMP_FIBER = getNull();
+    @GameRegistry.ObjectHolder("crop/product/indigo")
+    public static final ItemMisc INDIGO = getNull();
     @GameRegistry.ObjectHolder("crop/product/linen_cloth")
     public static final ItemMisc LINEN_CLOTH = getNull();
     @GameRegistry.ObjectHolder("crop/product/linen_string")
@@ -119,6 +136,10 @@ public final class ItemsRegistryHandler
     @GameRegistry.ObjectHolder("crop/product/black_tea")
     public static final ItemMisc BLACK_TEA = getNull();
 
+    @GameRegistry.ObjectHolder("ceramics/unfired/clay_brick")
+    public static final ItemPottery UNFIRED_CLAY_BRICK = getNull();
+    @GameRegistry.ObjectHolder("ceramics/fired/clay_brick")
+    public static final ItemPottery FIRED_CLAY_BRICK = getNull();
     @GameRegistry.ObjectHolder("ceramics/unfired/mud_brick")
     public static final ItemPottery UNFIRED_MUD_BRICK = getNull();
     @GameRegistry.ObjectHolder("ceramics/fired/mud_brick")
@@ -174,6 +195,34 @@ public final class ItemsRegistryHandler
         IForgeRegistry<Item> r = event.getRegistry();
         ImmutableList.Builder<Item> simpleItems = ImmutableList.builder();
 
+        ImmutableList.Builder<Item> metalItems = ImmutableList.builder();
+
+        for (Metal metal : TFCRegistries.METALS.getValuesCollection())
+        {
+            //noinspection deprecation
+            if (ReflectionHelper.getPrivateValue(Metal.class, metal, "usable").equals(false))
+                continue;
+            //noinspection ConstantConditions
+            metalItems.add(register(r, "metal/" + metal.getRegistryName().getPath().toLowerCase() + "_plate", ItemMetalTFCE.ItemType.create(metal, ItemMetalTFCE.ItemType.PLATE), CT_METAL));
+        }
+
+        allMetalItems = metalItems.build();
+        
+        //Register oredict for metal item components
+        for (Item metalItem : allMetalItems)
+        {
+            if (metalItem instanceof ItemMetalTFCE)
+            {
+            	ItemMetalTFCE techMetal = (ItemMetalTFCE) metalItem;
+                OreDictionary.registerOre(OreDictionaryHelper.toString(techMetal.getType(), techMetal.getMetal(ItemStack.EMPTY)), new ItemStack(metalItem, 1, 0));
+            }
+            else
+            {
+                Metal metal = ((IMetalItem) metalItem).getMetal(ItemStack.EMPTY);
+                OreDictionary.registerOre(OreDictionaryHelper.toString("plate"), new ItemStack(metalItem, 1, 0));
+            }
+        }
+        
         {
             Builder<ItemGemTFCE> b = new Builder<>();
             for (GemTFCE gem : GemTFCE.values())
@@ -196,7 +245,9 @@ public final class ItemsRegistryHandler
 
         
         { // POTTERY
-            simpleItems.add(register(r, "mud_ball", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_MISC));
+            simpleItems.add(register(r, "ceramics/mud_ball", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_MISC));
+        	simpleItems.add(register(r, "ceramics/unfired/clay_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/fired/clay_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         	simpleItems.add(register(r, "ceramics/unfired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         	simpleItems.add(register(r, "ceramics/fired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         }
@@ -219,8 +270,17 @@ public final class ItemsRegistryHandler
         simpleItems.add(register(r, "crop/product/white_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/green_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/black_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/indigo", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
 
-        simpleItems.add(register(r, "cinnamon_bark", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_MISC));
+        //Other
+        simpleItems.add(register(r, "crop/product/cinnamon_bark", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_MISC));
+        
+        //Malted grains
+        simpleItems.add(register(r, "crop/product/malt_barley", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_corn", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_rice", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_rye", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_wheat", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
         
         /*
         { // POTTERY

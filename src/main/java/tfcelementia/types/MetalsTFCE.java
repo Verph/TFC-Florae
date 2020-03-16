@@ -123,7 +123,7 @@ public final class MetalsTFCE
 	public static final ResourceLocation CHROMIUM = new ResourceLocation(MOD_ID, "chromium");
 	public static final ResourceLocation MANGANESE = new ResourceLocation(MOD_ID, "manganese");
     public static final ResourceLocation COBALT = new ResourceLocation(MOD_ID, "cobalt");
-	public static final ResourceLocation YTTRIUM = new ResourceLocation(MOD_ID, "ytterium");
+	public static final ResourceLocation YTTRIUM = new ResourceLocation(MOD_ID, "yttrium");
 	public static final ResourceLocation ZIRCONIUM = new ResourceLocation(MOD_ID, "zirconium");
 	public static final ResourceLocation NIOBIUM = new ResourceLocation(MOD_ID, "niobium");
 	public static final ResourceLocation MOLYBDENUM = new ResourceLocation(MOD_ID, "molybdenum");

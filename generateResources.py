@@ -346,6 +346,7 @@ METAL_ITEMS = {
     'boots': True,
     'unfinished_helmet': True,
     'helmet': True,
+    'plate': False,
 }
 STEEL = {
     'steel',
@@ -370,53 +371,48 @@ FLUIDS = {
 
 # all crops
 CROPS = {
+    'agave': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 6},
     'black_eyed_peas': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'cayenne_pepper': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'celery': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'ginger': {'model': 'crop', 'texture': 'crop', 'stages': 7},
-    'ginseng': {'model': 'crop', 'texture': 'crop', 'stages': 5},
-    'lettuce': {'model': 'crop', 'texture': 'crop', 'stages': 6},
-    'peanut': {'model': 'crop', 'texture': 'crop', 'stages': 6},
-    'rutabuga': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'sweet_potato': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'agave': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 6},
     'cotton': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 6},
     'flax': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'ginger': {'model': 'crop', 'texture': 'crop', 'stages': 7},
+    'ginseng': {'model': 'crop', 'texture': 'crop', 'stages': 5},
+    'green_grapes': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
     'hemp': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 5},
     'hops': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
+    'lettuce': {'model': 'crop', 'texture': 'crop', 'stages': 6},
     'madder': {'model': 'crop', 'texture': 'crop', 'stages': 5},
+    'peanut': {'model': 'crop', 'texture': 'crop', 'stages': 6},
+    'purple_grapes': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
+    'rutabuga': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'sweet_potato': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'weld': {'model': 'crop', 'texture': 'crop', 'stages': 5},
     'woad': {'model': 'crop', 'texture': 'crop', 'stages': 6}
 }
 
 FOODS = [
-    'cacao_pod',
-    'date',
-    'papaya',
-    'almond',
-    'cashew',
-    'coconut',
-    'juniper_berry',
-    'green_grapes',
-    'red_grapes',
-    'hazelnut',
-    'macadamia',
-    'pistachio',
     'acorn',
-    'chestnut',
-    'pecan',
-    'pine_nut',
-    'walnut',
-    'rutabaga',
+    'almond',
     'black_eyed_peas',
-    'green_cayenne_pepper',
-    'red_cayenne_pepper',
+    'cacao_pod',
+    'cashew',
+    'celery',
+    'chestnut',
+    'coconut',
+    'date',
     'ginger',
     'ginseng',
-    'celery',
+    'green_cayenne_pepper',
+    'green_grapes',
+    'hazelnut',
+    'juniper_berry',
     'lettuce',
+    'macadamia',
+    'papaya',
     'peanut',
-    'sweet_potato',
+    'pecan',
     'pie',
     'pie_apple',
     'pie_blackberry',
@@ -427,6 +423,13 @@ FOODS = [
     'pie_pumpkin',
     'pie_raspberry',
     'pie_strawberry',
+    'pine_nut',
+    'pistachio',
+    'purple_grapes',
+    'red_cayenne_pepper',
+    'rutabaga',
+    'sweet_potato',
+    'walnut',
 ]
 
 # Special 'hardcoded' cases
@@ -1145,15 +1148,17 @@ item(('ceramics', 'unfired', 'fire_brick'), 'tfc:items/ceramics/unfired/fire_bri
 item(('ceramics', 'fired', 'fire_brick'), 'tfc:items/ceramics/fired/fire_brick')
 item(('ceramics', 'unfired', 'jug'), 'tfc:items/ceramics/unfired/jug')
 item(('ceramics', 'unfired', 'mud_brick'), 'tfc:items/ceramics/unfired/mud_brick')
-item(('ceramics', 'fired', 'mud_brick'), 'tfc:items/ceramics/fired/mud_brick')
+item(('ceramics', 'fired', 'mud_brick'), 'tfc:items/ceramics/fired/mud_brick',
+     'tfc:items/ceramics/mud_brick_overlay')
+item(('ceramics', 'unfired', 'clay_brick'), 'tfc:items/ceramics/unfired/clay_brick')
 
 item(('ceramics', 'fire_clay'), 'tfc:items/ceramics/fire_clay')
 
 # MUD BALL
-item(('misc', 'mud_ball'), 'tfc:items/mud_ball')
+item(('misc', 'mud_ball'), 'tfc:items/ceramics/mud_ball')
 
 # CINNAMON BARK
-item(('misc', 'cinnamon_bark'), 'tfc:items/cinnamon_bark')
+item(('misc', 'cinnamon_bark'), 'tfc:items/crop/product/cinnamon_bark')
 
 # FLAT
 for rock_cat in ROCK_TYPES:

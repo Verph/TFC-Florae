@@ -1,0 +1,6 @@
+{
+    "parent": "tfc:blocks/plants/bamboo/tinted_cross",
+    "textures": {
+        "cross": "tfc:blocks/plants/bamboo/bamboo_stage0"
+    }
+}

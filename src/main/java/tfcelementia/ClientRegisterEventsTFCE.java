@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.item.*;
 import net.minecraft.item.ItemFood;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -35,6 +36,7 @@ import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
 import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.blocks.BlocksTFCE;
 import tfcelementia.objects.items.ItemGemTFCE;
+import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.TFCElementia;
 
@@ -66,8 +68,16 @@ public final class ClientRegisterEventsTFCE
         // Blocks with Ignored Properties
         for (Block block : BlocksTFCE.getAllFluidBlocks())
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockFluidBase.LEVEL).build());
-        
-        
+
+        // Metals
+        for (Item item : ItemsRegistryHandler.getAllMetalItems())
+        {
+            if (item instanceof ItemMetalTFCE)
+            {
+            	ItemMetalTFCE metalItem = (ItemMetalTFCE) item;
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(MOD_ID, "metal/" + metalItem.getType().name().toLowerCase()), "inventory"));
+            }
+        }        
     }
 	
 	@SubscribeEvent

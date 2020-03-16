@@ -52,6 +52,7 @@ public enum CropTFCE implements ICrop
     FLAX(() -> new ItemStack(ItemsRegistryHandler.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     HEMP(() -> new ItemStack(ItemsRegistryHandler.HEMP), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     HOPS(() -> new ItemStack(ItemsRegistryHandler.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    INDIGO(() -> new ItemStack(ItemsRegistryHandler.INDIGO), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     MADDER(() -> new ItemStack(ItemsRegistryHandler.MADDER), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     WELD(() -> new ItemStack(ItemsRegistryHandler.WELD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     WOAD(() -> new ItemStack(ItemsRegistryHandler.WOAD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE);
