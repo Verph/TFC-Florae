@@ -174,6 +174,7 @@ WOOD_TYPES = {
     'hawthorn': 'hawthorn',
     'juniper': 'juniper',
     'mahogany': 'mahogany',
+    'norway_spruce': 'norway_spruce',
     'poplar': 'poplar',
     'redwood': 'redwood',
     'rowan': 'rowan',
@@ -236,7 +237,7 @@ for wood, key in WOOD_TYPES.items():
 
     # juniper
     if key == 'juniper':
-        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']:
             tree('structure_templates/juniper/juniper_' + s, wood, s)
 
     # larch
@@ -253,6 +254,11 @@ for wood, key in WOOD_TYPES.items():
     if key == 'mahogany':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
             tree('structure_templates/mahogany/mahogany_' + s, wood, s)
+
+    # norway_spruce
+    if key == 'norway_spruce':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/norway_spruce/norway_spruce_' + s, wood, s)
 
     # poplar
     if key == 'poplar':

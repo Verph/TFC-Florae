@@ -172,6 +172,7 @@ WOOD_TYPES = [
     'larch',
     'limba',
     'mahogany',
+    'norway_spruce',
     'poplar',
     'redwood',
     'rowan',
