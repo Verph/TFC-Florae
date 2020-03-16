@@ -94,7 +94,7 @@ public final class TreesTFCE
         r.register(new Tree.Builder(JUNIPER, 50f, 450f, -8f, 30f, GEN_JUNIPER).setGrowthTime(8).setBushes().setConifer().setDensity(0.25f, 0.75f).setBurnInfo(632f, 1750).build());
         r.register(new Tree.Builder(LARCH, 150f, 430f, -4f, 18f, GEN_LARCH).setGrowthTime(8).setConifer().setDensity(1.7f, 1f).setBurnInfo(632f, 1250).build());
         r.register(new Tree.Builder(LIMBA, 290f, 550f, 17f, 40f, GEN_LIMBA).setGrowthTime(9).setBushes().setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build());
-        r.register(new Tree.Builder(MAHOGANY, 210f, 700f, 17f, 40f, GEN_MAHOGANY).setDominance(10f).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(1.5f, 2f).setBurnInfo(773f, 1000).build());
+        r.register(new Tree.Builder(MAHOGANY, 210f, 700f, 17f, 40f, GEN_MAHOGANY).setDominance(10f).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.9f, 2f).setBurnInfo(773f, 1000).build());
         r.register(new Tree.Builder(POPLAR, 140f, 430f, -2f, 18f, GEN_POPLAR).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(609f, 1000).build());
 	    r.register(new Tree.Builder(REDWOOD, 200f, 400f, 2f, 18f, GEN_REDWOOD).setDecayDist(6).setGrowthTime(18).setConifer().setBushes().setTannin().setDensity(0.4f, 1.7f).setBurnInfo(618f, 1750).build());
         r.register(new Tree.Builder(ROWAN, 180f, 430f, -2f, 18f, GEN_ROWAN).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(645f, 2000).build());
