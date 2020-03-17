@@ -5,7 +5,7 @@
     "model": "tfc:workbench",
     "textures": {
       "all": "tfc:blocks/wood/planks/white_elm",
-      "particle": "tfc:blocks/wood/planks/bamboo",
+      "particle": "tfc:blocks/wood/planks/white_elm",
       "top": "tfc:blocks/wood/workbench_top",
       "north": "tfc:blocks/wood/workbench_front",
       "south": "tfc:blocks/wood/workbench_front",

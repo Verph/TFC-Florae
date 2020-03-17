@@ -4,8 +4,8 @@
   "defaults": {
     "model": "tfc:loom",
     "textures": {
-      "texture": "tfc:blocks/wood/planks/bamboo",
-      "particle": "tfc:blocks/wood/planks/bamboo"
+      "texture": "tfc:blocks/wood/planks/mahogany",
+      "particle": "tfc:blocks/wood/planks/mahogany"
     }
   },
   "variants": {

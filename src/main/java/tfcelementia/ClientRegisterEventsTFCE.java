@@ -6,8 +6,11 @@ import javax.annotation.Nonnull;
 import com.google.common.base.Strings;
 
 import net.dries007.tfc.ConfigTFC;
+import net.dries007.tfc.api.capability.IMoldHandler;
 import net.dries007.tfc.api.capability.food.CapabilityFood;
 import net.dries007.tfc.api.capability.food.IFood;
+import net.dries007.tfc.api.capability.metal.IMetalItem;
+import net.dries007.tfc.api.types.Metal;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -76,6 +79,12 @@ public final class ClientRegisterEventsTFCE
             {
             	ItemMetalTFCE metalItem = (ItemMetalTFCE) item;
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(MOD_ID, "metal/" + metalItem.getType().name().toLowerCase()), "inventory"));
+                if (((ItemMetalTFCE) item).getType() == ItemMetalTFCE.ItemType.PLATE)
+                {
+                    for (int i = 1; i <= 4; i++)
+                        ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(new ResourceLocation(MOD_ID, "metal/plate/" + metalItem.getType().name().toLowerCase()), "inventory"));
+
+                }
             }
         }        
     }

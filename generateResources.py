@@ -31,7 +31,7 @@ if not os.path.isdir('assets_backups'):
             file=f)
         print('*', file=f)
 
-zipfolder('assets_backups/{}.zip'.format(int(time.time())), 'src/main/resources/assets/tfc')
+#zipfolder('assets_backups/{}.zip'.format(int(time.time())), 'src/main/resources/assets/tfc')
 
 os.chdir('src/main/resources/assets/tfc/')
 
@@ -87,12 +87,50 @@ FULLBLOCK_TYPES = [
     'dirt',
     'clay',
 	'mud',
+	'podzol',
+	'mossy_cobble',
 ]
 GRASS_TYPES = [
     'grass',
     'dry_grass',
+	'podzol',
 ]
 ORE_TYPES = {
+    'native_copper': True,
+    'native_gold': True,
+    'native_platinum': True,
+    'hematite': True,
+    'native_silver': True,
+    'cassiterite': True,
+    'galena': True,
+    'bismuthinite': True,
+    'garnierite': True,
+    'malachite': True,
+    'magnetite': True,
+    'limonite': True,
+    'sphalerite': True,
+    'tetrahedrite': True,
+    'bituminous_coal': False,
+    'lignite': False,
+    'kaolinite': False,
+    'gypsum': False,
+    'satinspar': False,
+    'selenite': False,
+    'graphite': False,
+    'kimberlite': False,
+    'petrified_wood': False,
+    'sulfur': False,
+    'jet': False,
+    'microcline': False,
+    'pitchblende': False,
+    'cinnabar': False,
+    'cryolite': False,
+    'saltpeter': False,
+    'serpentine': False,
+    'sylvite': False,
+    'borax': False,
+    'olivine': False,
+    'lapis_lazuli': False,
 	'fluorite': False,
 	'phosphorite': False,
 	'selenide': False,
@@ -147,6 +185,7 @@ ORE_TYPES = {
 	'fergusonite': True,
 	'thorianite': True,
 	'uraninite': True,
+	'native_ardite': True,
 }
 POWDERS = [
     'calcium',
@@ -259,7 +298,7 @@ METAL_TYPES = {
 	'astatine': False,
 	'lanthanum': False,
 	'cerium': False,
-	'prasedymium': False,
+	'praseodymium': False,
 	'neodymium': False,
 	'promethium': False,
 	'samarium': False,
@@ -297,8 +336,17 @@ METAL_TYPES = {
 	'orichalcum': False,
 	'red_alloy': False,
 	'tungsten_steel': True,
+	'stainless_steel': True,
+	'lockalloy': False,
+	'manganin': False,
+	'galinstan': False,
+	'crown_gold': False,
+	'white_gold': False,
+	'solder': False,
+	'magnox': False,
+	'platinum_sterling': False,
+	'titanium_gold': True,
 	'ardite': False,
-	'native_ardite': False,
 }  # + unknown
 METAL_ITEMS = {
     # 'unshaped': False, Special
@@ -309,6 +357,7 @@ METAL_ITEMS = {
     'nugget': False,
     'sheet': False,
     'double_sheet': False,
+    'plate': False,
     'anvil': True,
     'tuyere': True,
     'lamp': False,
@@ -347,7 +396,6 @@ METAL_ITEMS = {
     'boots': True,
     'unfinished_helmet': True,
     'helmet': True,
-    'plate': False,
 }
 STEEL = {
     'steel',
@@ -390,7 +438,11 @@ CROPS = {
     'rutabuga': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'sweet_potato': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'weld': {'model': 'crop', 'texture': 'crop', 'stages': 5},
-    'woad': {'model': 'crop', 'texture': 'crop', 'stages': 6}
+    'woad': {'model': 'crop', 'texture': 'crop', 'stages': 6},
+    'black_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'green_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'white_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'indigo': {'model': 'crop', 'texture': 'crop', 'stages': 5}
 }
 
 FOODS = [
@@ -1148,18 +1200,39 @@ item(('ceramics', 'fired', 'bowl'), 'tfc:items/ceramics/fired/bowl')
 item(('ceramics', 'unfired', 'fire_brick'), 'tfc:items/ceramics/unfired/fire_brick')
 item(('ceramics', 'fired', 'fire_brick'), 'tfc:items/ceramics/fired/fire_brick')
 item(('ceramics', 'unfired', 'jug'), 'tfc:items/ceramics/unfired/jug')
-item(('ceramics', 'unfired', 'mud_brick'), 'tfc:items/ceramics/unfired/mud_brick')
+item(('ceramics', 'unfired', 'mud_brick'), 'tfc:items/ceramics/unfired/mud_brick',
+     'tfc:items/ceramics/mud_brick_overlay')
 item(('ceramics', 'fired', 'mud_brick'), 'tfc:items/ceramics/fired/mud_brick',
      'tfc:items/ceramics/mud_brick_overlay')
+item(('ceramics', 'unfired', 'clay_brick'), 'tfc:items/ceramics/fired/clay_brick')
 item(('ceramics', 'unfired', 'clay_brick'), 'tfc:items/ceramics/unfired/clay_brick')
 
 item(('ceramics', 'fire_clay'), 'tfc:items/ceramics/fire_clay')
 
 # MUD BALL
-item(('misc', 'mud_ball'), 'tfc:items/ceramics/mud_ball')
+item(('ceramics', 'mud_ball'), 'tfc:items/ceramics/mud_ball')
 
 # CINNAMON BARK
-item(('misc', 'cinnamon_bark'), 'tfc:items/crop/product/cinnamon_bark')
+item(('crop/product', 'cinnamon_bark'), 'tfc:items/crop/product/cinnamon_bark')
+
+# OTHER
+item(('crop/product', 'black_tea'), 'tfc:items/crop/product/black_tea')
+item(('crop/product', 'green_tea'), 'tfc:items/crop/product/green_tea')
+item(('crop/product', 'white_tea'), 'tfc:items/crop/product/white_tea')
+item(('crop/product', 'dried_black_tea'), 'tfc:items/crop/product/dried_black_tea')
+item(('crop/product', 'dried_green_tea'), 'tfc:items/crop/product/dried_green_tea')
+item(('crop/product', 'dried_white_tea'), 'tfc:items/crop/product/dried_white_tea')
+item(('crop/product', 'malt_barley'), 'tfc:items/crop/product/malt_barley')
+item(('crop/product', 'malt_corn'), 'tfc:items/crop/product/malt_corn')
+item(('crop/product', 'malt_rice'), 'tfc:items/crop/product/malt_rice')
+item(('crop/product', 'malt_rye'), 'tfc:items/crop/product/malt_rye')
+item(('crop/product', 'malt_wheat'), 'tfc:items/crop/product/malt_wheat')
+item(('crop/product', 'cotton_cloth'), 'tfc:items/crop/product/cotton_cloth')
+item(('crop/product', 'cotton_yarn'), 'tfc:items/crop/product/cotton_yarn')
+item(('crop/product', 'flax_fiber'), 'tfc:items/crop/product/flax_fiber')
+item(('crop/product', 'linen_string'), 'tfc:items/crop/product/linen_string')
+item(('crop/product', 'linen_cloth'), 'tfc:items/crop/product/linen_cloth')
+item(('crop/product', 'sisal_fiber'), 'tfc:items/crop/product/sisal_fiber')
 
 # FLAT
 for rock_cat in ROCK_TYPES:

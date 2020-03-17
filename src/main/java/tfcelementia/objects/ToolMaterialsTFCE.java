@@ -15,4 +15,6 @@ public class ToolMaterialsTFCE
     public static final Item.ToolMaterial OSMIUM = EnumHelper.addToolMaterial("tfce_osmium", 4, 7000, 20, 9.0f, 24);
     public static final Item.ToolMaterial TUNGSTEN = EnumHelper.addToolMaterial("tfce_tungsten", 4, 6600, 18, 10.0f, 24);
     public static final Item.ToolMaterial TUNGSTEN_STEEL = EnumHelper.addToolMaterial("tfce_tungsten_steel", 5, 9200, 20, 11.5f, 24);
+    public static final Item.ToolMaterial STAINLESS_STEEL = EnumHelper.addToolMaterial("tfce_stainless_steel", 3, 4200, 16, 10.25f, 12);
+    public static final Item.ToolMaterial TITANIUM_GOLD = EnumHelper.addToolMaterial("tfce_titanium_gold", 6, 13500, 25, 13f, 28);
 }

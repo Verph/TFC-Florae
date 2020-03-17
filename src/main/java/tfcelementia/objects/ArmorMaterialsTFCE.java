@@ -19,5 +19,7 @@ public final class ArmorMaterialsTFCE
     public static final IArmorMaterialTFC OSMIUM = new ArmorMaterialTFC(EnumHelper.addArmorMaterial("tfce_osmium", TerraFirmaCraft.MOD_ID + ":osmium", 102, new int[] {3, 6, 8, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0F), 55, 57, 62);
     public static final IArmorMaterialTFC TUNGSTEN = new ArmorMaterialTFC(EnumHelper.addArmorMaterial("tfce_tungsten", TerraFirmaCraft.MOD_ID + ":tungsten", 100, new int[] {3, 6, 8, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0F), 65, 65, 65);
     public static final IArmorMaterialTFC TUNGSTEN_STEEL = new ArmorMaterialTFC(EnumHelper.addArmorMaterial("tfce_tungsten_steel", TerraFirmaCraft.MOD_ID + ":tungsten_steel", 120, new int[] {3, 6, 8, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 8.0F), 70, 70, 70);
+    public static final IArmorMaterialTFC STAINLESS_STEEL = new ArmorMaterialTFC(EnumHelper.addArmorMaterial("tfce_stainless_steel", TerraFirmaCraft.MOD_ID + ":stainless_steel", 50, new int[] {2, 5, 6, 2}, 17, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F), 45, 50, 35);
+    public static final IArmorMaterialTFC TITANIUM_GOLD = new ArmorMaterialTFC(EnumHelper.addArmorMaterial("tfce_titanium_gold", TerraFirmaCraft.MOD_ID + ":titanium_gold", 150, new int[] {6, 9, 11, 6}, 28, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 12.0F), 120, 122.5f, 120);
 
 }
