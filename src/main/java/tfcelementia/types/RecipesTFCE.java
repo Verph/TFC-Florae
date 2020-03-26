@@ -76,7 +76,7 @@ import tfcelementia.util.agriculture.FoodTFCE;
 //import tfcelementia.util.OreDictionaryHelperTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.objects.fluids.FluidsTFCE;
-import tfcelementia.objects.items.ItemFoodTFCE;
+import tfcelementia.objects.items.food.ItemFoodTFCE;
 
 import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.api.types.Metal.ItemType.*;

@@ -62,6 +62,7 @@ import tfcelementia.objects.blocks.BlockMud;
 import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.PowderTFCE;
 import tfcelementia.objects.items.*;
+import tfcelementia.objects.items.food.ItemFoodTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.objects.fluids.FluidsTFCE;
 import tfcelementia.util.ItemsRegistryHandler;

@@ -4,18 +4,19 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 
+import net.dries007.tfc.api.capability.food.*;
+import net.dries007.tfc.api.capability.food.CapabilityFood;
+import net.dries007.tfc.api.capability.food.FoodData;
+import net.dries007.tfc.api.capability.food.FoodTrait;
+import net.dries007.tfc.api.capability.food.IFood;
 import net.dries007.tfc.api.capability.heat.CapabilityItemHeat;
 import net.dries007.tfc.api.capability.heat.ItemHeatHandler;
-import net.dries007.tfc.api.capability.food.FoodTrait;
-import net.dries007.tfc.api.capability.food.Nutrient;
-import net.dries007.tfc.api.capability.food.IFood;
-import net.dries007.tfc.api.capability.food.CapabilityFood;
+import net.dries007.tfc.util.agriculture.Food;
 
 import tfcelementia.util.agriculture.FoodTFCE;
 
@@ -31,28 +32,22 @@ public class FoodHeatHandlerTFCE extends ItemHeatHandler implements IFood, ICapa
 
     public FoodHeatHandlerTFCE()
     {
-        this(null, new float[] {0f, 0f, 0f, 0f, 0f}, 0.5f, 0f, 1f, 1, 100);
+        this(null, new FoodData(), 1, 100);
     }
 
     public FoodHeatHandlerTFCE(@Nullable NBTTagCompound nbt, @Nonnull FoodTFCE food)
     {
-        this(nbt, food.getNutrients(), food.getCalories(), food.getWater(), food.getDecayModifier(), food.getHeatCapacity(), food.getCookingTemp());
+        this(nbt, food.getData(), food.getHeatCapacity(), food.getCookingTemp());
     }
 
-    public FoodHeatHandlerTFCE(@Nullable NBTTagCompound nbt, float[] nutrients, float calories, float water, float decayModifier, float heatCapacity, float meltTemp)
+    public FoodHeatHandlerTFCE(@Nullable NBTTagCompound nbt, FoodData data, float heatCapacity, float meltTemp)
     {
         this.heatCapacity = heatCapacity;
         this.meltTemp = meltTemp;
 
-        this.internalFoodCap = new FoodHandlerTFCE(nbt, nutrients, calories, water, decayModifier);
+        this.internalFoodCap = new FoodHandlerTFCE(nbt, data);
 
         deserializeNBT(nbt);
-    }
-
-    @Override
-    public float getNutrient(ItemStack stack, Nutrient nutrient)
-    {
-        return internalFoodCap.getNutrient(stack, nutrient);
     }
 
     @Override
@@ -73,16 +68,11 @@ public class FoodHeatHandlerTFCE extends ItemHeatHandler implements IFood, ICapa
         return internalFoodCap.getRottenDate();
     }
 
+    @Nonnull
     @Override
-    public float getWater()
+    public FoodData getData()
     {
-        return internalFoodCap.getWater();
-    }
-
-    @Override
-    public float getCalories()
-    {
-        return internalFoodCap.getCalories();
+        return internalFoodCap.getData();
     }
 
     @Override

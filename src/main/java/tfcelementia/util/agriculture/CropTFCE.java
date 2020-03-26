@@ -25,7 +25,7 @@ import tfcelementia.objects.blocks.agriculture.BlockCropSpreadingTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
-import tfcelementia.objects.items.ItemFoodTFCE;
+import tfcelementia.objects.items.food.ItemFoodTFCE;
 
 import static tfcelementia.util.agriculture.CropTFCE.CropType.*;
 

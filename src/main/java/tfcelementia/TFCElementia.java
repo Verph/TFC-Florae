@@ -54,7 +54,7 @@ public class TFCElementia
     public static final String NAME = "TFC Elementia";
     public static final String VERSION = "@VERSION@";
     public static final String SIGNING_KEY = "@FINGERPRINT@";
-    public static final String DEPENDENCIES = "required-after:tfc@[0.29.4,)";
+    public static final String DEPENDENCIES = "required-after:tfc@[0.30.3,)";
 
     @Mod.Instance
     private static TFCElementia instance = null;

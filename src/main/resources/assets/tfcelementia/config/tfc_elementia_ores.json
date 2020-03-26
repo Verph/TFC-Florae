@@ -1,6 +1,7 @@
 {
   "stibnite": {
     "ore": "tfc:stibnite",
+    "loose": "tfc:stibnite",
     "width": 20,
     "height": 30,
     "shape": "cluster",
@@ -14,6 +15,7 @@
   },
   "surface_stibnite": {
     "ore": "tfc:stibnite",
+    "loose": "tfc:stibnite",
     "width": 12,
     "height": 20,
     "shape": "cluster",
@@ -27,6 +29,7 @@
   },
   "cobaltite": {
     "ore": "tfc:cobaltite",
+    "loose": "tfc:cobaltite",
     "width": 16,
     "height": 30,
     "shape": "cluster",
@@ -42,6 +45,7 @@
   },
   "wolframite": {
     "ore": "tfc:wolframite",
+    "loose": "tfc:wolframite",
     "width": 16,
     "height": 30,
     "shape": "cluster",
@@ -56,6 +60,7 @@
   },
   "bauxite": {
     "ore": "tfc:bauxite",
+    "loose": "tfc:bauxite",
     "width": 14,
     "height": 20,
     "shape": "cluster",
@@ -69,6 +74,7 @@
   },
   "native_osmium": {
     "ore": "tfc:native_osmium",
+    "loose": "tfc:native_osmium",
     "width": 5,
     "height": 10,
     "shape": "cluster",
@@ -84,6 +90,7 @@
   },
   "native_ardite": {
     "ore": "tfc:native_ardite",
+    "loose": "tfc:native_ardite",
     "width": 5,
     "height": 10,
     "shape": "cluster",

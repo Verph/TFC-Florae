@@ -138,6 +138,9 @@ def tree(origin, wood, nameout):
             
         if block['Name'] == 'byg:structurecheckblock':
             block['Name'] = String('tfc:wood/log/' + wood)
+            
+        if block['Name'] == 'minecraft:cocoa':
+            block['Name'] = String('minecraft:air' + wood)
 
     if not os.path.exists('src/main/resources/assets/tfc/structures/' + wood):
         os.makedirs('src/main/resources/assets/tfc/structures/' + wood)
@@ -292,6 +295,7 @@ for wood, key in WOOD_TYPES.items():
 
 FRUIT_TREES = [
     'cacao',
+    'coffea',
     'date',
     'papaya',
     'almond',
