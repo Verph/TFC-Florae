@@ -35,10 +35,15 @@ import static net.dries007.tfc.util.Helpers.getNull;
 
 import tfcelementia.objects.blocks.agriculture.BlockCropDeadTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockFruitTreeBranchTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockFruitTreeLeavesTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockFruitTreeSaplingTFCE;
+import tfcelementia.objects.blocks.agriculture.BlockFruitTreeTrunkTFCE;
 import tfcelementia.objects.items.*;
 import tfcelementia.objects.fluids.FluidsTFCE;
-import tfcelementia.util.agriculture.FoodTFCE;
 import tfcelementia.util.agriculture.CropTFCE;
+import tfcelementia.util.agriculture.FoodTFCE;
+import tfcelementia.util.agriculture.FruitTreeTFCE;
 import tfcelementia.objects.te.*;
 import tfcelementia.TFCElementia;
 
@@ -47,10 +52,22 @@ import tfcelementia.TFCElementia;
 @GameRegistry.ObjectHolder(MOD_ID)
 public final class BlocksTFCE 
 {
+    private static ImmutableList<ItemBlock> allInventoryItemBlocks;
+    
     private static ImmutableList<BlockCropTFCE> allCropBlocks;
     private static ImmutableList<BlockCropDeadTFCE> allDeadCropBlocks;
     
     private static ImmutableList<BlockFluidBase> allFluidBlocks;
+
+    private static ImmutableList<BlockFruitTreeSaplingTFCE> allFruitTreeSaplingBlocks;
+    private static ImmutableList<BlockFruitTreeTrunkTFCE> allFruitTreeTrunkBlocks;
+    private static ImmutableList<BlockFruitTreeBranchTFCE> allFruitTreeBranchBlocks;
+    private static ImmutableList<BlockFruitTreeLeavesTFCE> allFruitTreeLeavesBlocks;
+
+    public static ImmutableList<ItemBlock> getAllInventoryItemBlocks()
+    {
+        return allInventoryItemBlocks;
+    }
     
     public static ImmutableList<BlockCropTFCE> getAllCropBlocks()
     {
@@ -66,6 +83,26 @@ public final class BlocksTFCE
     {
         return allFluidBlocks;
     }
+
+    public static ImmutableList<BlockFruitTreeSaplingTFCE> getAllFruitTreeSaplingBlocks()
+    {
+        return allFruitTreeSaplingBlocks;
+    }
+
+    public static ImmutableList<BlockFruitTreeTrunkTFCE> getAllFruitTreeTrunkBlocks()
+    {
+        return allFruitTreeTrunkBlocks;
+    }
+
+    public static ImmutableList<BlockFruitTreeBranchTFCE> getAllFruitTreeBranchBlocks()
+    {
+        return allFruitTreeBranchBlocks;
+    }
+
+    public static ImmutableList<BlockFruitTreeLeavesTFCE> getAllFruitTreeLeavesBlocks()
+    {
+        return allFruitTreeLeavesBlocks;
+    }
     
     @SubscribeEvent
     @SuppressWarnings("ConstantConditions")
@@ -74,29 +111,8 @@ public final class BlocksTFCE
     	FluidsTFCE.registerFluids();
     	
     	IForgeRegistry<Block> r = event.getRegistry();
-    	
-    
-    	{
-            Builder<BlockCropTFCE> b = ImmutableList.builder();
 
-            for (CropTFCE crop : CropTFCE.values())
-            {
-                b.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
-            }
-
-            allCropBlocks = b.build();
-        }
-
-        {
-            Builder<BlockCropDeadTFCE> b = ImmutableList.builder();
-
-            for (CropTFCE crop : CropTFCE.values())
-            {
-                b.add(register(r, "dead_crop/" + crop.name().toLowerCase(), crop.createDeadBlock()));
-            }
-
-            allDeadCropBlocks = b.build();
-        }
+        Builder<ItemBlock> inventoryItemBlocks = ImmutableList.builder();
         
         {
             Builder<BlockFluidBase> b = ImmutableList.builder();
@@ -121,6 +137,52 @@ public final class BlocksTFCE
                 }
             }
             allFluidBlocks = b.build();
+        }
+    
+    	{
+            Builder<BlockCropTFCE> b = ImmutableList.builder();
+
+            for (CropTFCE crop : CropTFCE.values())
+            {
+                b.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
+            }
+
+            allCropBlocks = b.build();
+        }
+
+        {
+            Builder<BlockCropDeadTFCE> b = ImmutableList.builder();
+
+            for (CropTFCE crop : CropTFCE.values())
+            {
+                b.add(register(r, "dead_crop/" + crop.name().toLowerCase(), crop.createDeadBlock()));
+            }
+
+            allDeadCropBlocks = b.build();
+        }
+        
+        {
+            Builder<BlockFruitTreeSaplingTFCE> fSaplings = ImmutableList.builder();
+            Builder<BlockFruitTreeTrunkTFCE> fTrunks = ImmutableList.builder();
+            Builder<BlockFruitTreeBranchTFCE> fBranches = ImmutableList.builder();
+            Builder<BlockFruitTreeLeavesTFCE> fLeaves = ImmutableList.builder();
+
+            for (FruitTreeTFCE tree : FruitTreeTFCE.values())
+            {
+                fSaplings.add(register(r, "fruit_trees/sapling/" + tree.name().toLowerCase(), new BlockFruitTreeSaplingTFCE(tree), CT_WOOD));
+                fTrunks.add(register(r, "fruit_trees/trunk/" + tree.name().toLowerCase(), new BlockFruitTreeTrunkTFCE(tree)));
+                fBranches.add(register(r, "fruit_trees/branch/" + tree.name().toLowerCase(), new BlockFruitTreeBranchTFCE(tree)));
+                fLeaves.add(register(r, "fruit_trees/leaves/" + tree.name().toLowerCase(), new BlockFruitTreeLeavesTFCE(tree), CT_WOOD));
+            }
+
+            allFruitTreeSaplingBlocks = fSaplings.build();
+            allFruitTreeTrunkBlocks = fTrunks.build();
+            allFruitTreeBranchBlocks = fBranches.build();
+            allFruitTreeLeavesBlocks = fLeaves.build();
+            
+            //Add ItemBlocks
+            allFruitTreeSaplingBlocks.forEach(x -> inventoryItemBlocks.add(new ItemBlockTFC(x)));
+            allFruitTreeLeavesBlocks.forEach(x -> inventoryItemBlocks.add(new ItemBlockTFC(x)));
         }
 
         register(TECropBaseTFCE.class, "crop_base_tfce");

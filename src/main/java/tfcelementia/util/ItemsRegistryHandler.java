@@ -257,6 +257,10 @@ public final class ItemsRegistryHandler
         	simpleItems.add(register(r, "ceramics/fired/clay_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         	simpleItems.add(register(r, "ceramics/unfired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         	simpleItems.add(register(r, "ceramics/fired/mud_brick", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/unfired/tea_cup", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/fired/tea_cup", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/unfired/teapot", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
+        	simpleItems.add(register(r, "ceramics/fired/teapot", new ItemMisc(Size.VERY_SMALL, Weight.MEDIUM), CT_POTTERY));
         }
         
         //Products

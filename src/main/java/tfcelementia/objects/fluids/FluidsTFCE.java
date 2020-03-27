@@ -46,6 +46,8 @@ public final class FluidsTFCE
     public static FluidWrapper WHITE_TEA;
     public static FluidWrapper GREEN_TEA;
     public static FluidWrapper BLACK_TEA;
+    public static FluidWrapper CHAMOMILE_TEA;
+    public static FluidWrapper DANDELION_TEA;
     
     // Alcohols
     public static FluidWrapper GIN;
@@ -81,7 +83,7 @@ public final class FluidsTFCE
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
                 if (Constants.RNG.nextFloat() < 0.25f)
                 {
-                    player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1));
+                    player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 1200, 1));
                 }
             }
         };
@@ -89,7 +91,9 @@ public final class FluidsTFCE
                 .add(
                 	WHITE_TEA = registerFluid(new Fluid("white_tea", STILL, FLOW, 0xFFC48E69).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
                 	GREEN_TEA = registerFluid(new Fluid("green_tea", STILL, FLOW, 0xFFD9D08F).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
-                	BLACK_TEA = registerFluid(new Fluid("black_tea", STILL, FLOW, 0xFF923C01).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty)
+                	BLACK_TEA = registerFluid(new Fluid("black_tea", STILL, FLOW, 0xFF923C01).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
+                	CHAMOMILE_TEA = registerFluid(new Fluid("chamomile_tea", STILL, FLOW, 0xFFFFE089).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
+                	DANDELION_TEA = registerFluid(new Fluid("dandelion_tea", STILL, FLOW, 0xFFE3BA66).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty)
                 )
                 .build();   
 

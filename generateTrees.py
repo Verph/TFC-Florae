@@ -260,7 +260,7 @@ for wood, key in WOOD_TYPES.items():
 
     # norway_spruce
     if key == 'norway_spruce':
-        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             tree('structure_templates/norway_spruce/norway_spruce_' + s, wood, s)
 
     # poplar

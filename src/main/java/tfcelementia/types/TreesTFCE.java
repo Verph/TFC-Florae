@@ -70,7 +70,7 @@ public final class TreesTFCE
     public static final ITreeGenerator GEN_LARCH = new TreeGenVariants(true, 9);
     public static final ITreeGenerator GEN_LIMBA = new TreeGenVariants(true, 7);
     public static final ITreeGenerator GEN_MAHOGANY = new TreeGenVariants(true, 13);
-    public static final ITreeGenerator GEN_NORWAY_SPRUCE = new TreeGenVariants(true, 13);
+    public static final ITreeGenerator GEN_NORWAY_SPRUCE = new TreeGenVariants(true, 9);
     public static final ITreeGenerator GEN_POPLAR = new TreeGenVariants(true, 8);
     public static final ITreeGenerator GEN_REDWOOD = new TreeGenVariants(true, 10);
     public static final ITreeGenerator GEN_ROWAN = new TreeGenVariants(true, 5);
