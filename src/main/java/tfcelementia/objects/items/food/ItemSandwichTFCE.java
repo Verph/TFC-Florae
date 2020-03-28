@@ -30,7 +30,7 @@ public class ItemSandwichTFCE extends ItemFoodTFCE
         return new SandwichHandler(nbt, food.getData());
     }
 
-    public static class SandwichHandler extends FoodHandler
+    public static class SandwichHandler extends FoodHandlerTFCE
     {
         private final FoodData rootData;
 

@@ -560,6 +560,13 @@ FOODS = [
     'wild_rice_dough',
     'wild_rice_bread',
     'hash_muffin',
+    'amaranth_bread_sandwich',
+    'buckwheat_bread_sandwich',
+    'fonio_bread_sandwich',
+    'millet_bread_sandwich',
+    'quinoa_bread_sandwich',
+    'spelt_bread_sandwich',
+    'wild_rice_bread_sandwich',
 ]
 
 # Special 'hardcoded' cases

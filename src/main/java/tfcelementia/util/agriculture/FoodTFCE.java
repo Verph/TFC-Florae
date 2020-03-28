@@ -91,7 +91,14 @@ public enum FoodTFCE
     PIE_PEACH(FRUIT, 4, 1.2f, 0f, 2f, 0.5f, 0.5f, 0.5f, 0f, 0.8f, 1f, 480f),
     PIE_PUMPKIN(VEGETABLE, 4, 1.2f, 0f, 2f, 0.5f, 1f, 1f, 0f, 0.8f, 1f, 480f),
     PIE_RASPBERRY(FRUIT, 4, 1.2f, 0f, 2f, 0.5f, 0.5f, 0.5f, 0f, 0.8f, 1f, 480f),
-    PIE_STRAWBERRY(FRUIT, 4, 1.2f, 0f, 2f, 0.5f, 0.5f, 1f, 0f, 0.8f, 1f, 480f);
+    PIE_STRAWBERRY(FRUIT, 4, 1.2f, 0f, 2f, 0.5f, 0.5f, 1f, 0f, 0.8f, 1f, 480f),
+    AMARANTH_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    BUCKWHEAT_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    FONIO_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    MILLET_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    QUINOA_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    SPELT_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich"),
+    WILD_RICE_BREAD_SANDWICH(MEAL, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f, "sandwich");
 
     private final Category category;
     private final FoodData foodData;
