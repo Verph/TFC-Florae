@@ -49,6 +49,10 @@ public final class FluidsTFCE
     public static FluidWrapper CHAMOMILE_TEA;
     public static FluidWrapper DANDELION_TEA;
     
+    // Coffee
+    public static FluidWrapper COFFEE;
+    
+    
     // Alcohols
     public static FluidWrapper GIN;
     public static FluidWrapper TEQUILA;
@@ -57,6 +61,7 @@ public final class FluidsTFCE
 
     private static ImmutableSet<FluidWrapper> allAlcoholsFluids;
     private static ImmutableSet<FluidWrapper> allTeaFluids;
+    private static ImmutableSet<FluidWrapper> allCoffeeFluids;
 
     public static ImmutableSet<FluidWrapper> getAllAlcoholsFluids()
     {
@@ -66,6 +71,11 @@ public final class FluidsTFCE
     public static ImmutableSet<FluidWrapper> getAllTeaFluids()
     {
         return allTeaFluids;
+    }
+
+    public static ImmutableSet<FluidWrapper> getAllCoffeeFluids()
+    {
+        return allCoffeeFluids;
     }
     
     public static void registerFluids()
@@ -94,6 +104,22 @@ public final class FluidsTFCE
                 	BLACK_TEA = registerFluid(new Fluid("black_tea", STILL, FLOW, 0xFF923C01).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
                 	CHAMOMILE_TEA = registerFluid(new Fluid("chamomile_tea", STILL, FLOW, 0xFFFFE089).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty),
                 	DANDELION_TEA = registerFluid(new Fluid("dandelion_tea", STILL, FLOW, 0xFFE3BA66).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, teaProperty)
+                )
+                .build();  
+
+        DrinkableProperty coffeeProperty = player -> {
+            if (player.getFoodStats() instanceof FoodStatsTFC)
+            {
+                ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
+                if (Constants.RNG.nextFloat() < 0.25f)
+                {
+                    player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1));
+                }
+            }
+        };
+        allCoffeeFluids = ImmutableSet.<FluidWrapper>builder()
+                .add(
+                	COFFEE = registerFluid(new Fluid("coffee", STILL, FLOW, 0xFF6F4E37).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, coffeeProperty)
                 )
                 .build();   
 

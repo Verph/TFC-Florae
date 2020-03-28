@@ -94,6 +94,20 @@ public final class ItemsRegistryHandler
     public static final ItemMisc MALT_RYE = getNull();
     @GameRegistry.ObjectHolder("crop/product/malt_wheat")
     public static final ItemMisc MALT_WHEAT = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_amaranth")
+    public static final ItemMisc MALT_AMARANTH = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_buckwheat")
+    public static final ItemMisc MALT_BUCKWHEAT = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_fonio")
+    public static final ItemMisc MALT_FONIO = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_millet")
+    public static final ItemMisc MALT_MILLET = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_quinoa")
+    public static final ItemMisc MALT_QUINOA = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_spelt")
+    public static final ItemMisc MALT_SPELT = getNull();
+    @GameRegistry.ObjectHolder("crop/product/malt_wild_rice")
+    public static final ItemMisc MALT_WILD_RICE = getNull();
     
     @GameRegistry.ObjectHolder("crop/product/cinnamon_bark")
     public static final ItemMisc CINNAMON_BARK = getNull();
@@ -130,6 +144,34 @@ public final class ItemsRegistryHandler
     public static final ItemMisc WOAD = getNull();
     @GameRegistry.ObjectHolder("crop/product/hops")
     public static final ItemMisc HOPS = getNull();
+    @GameRegistry.ObjectHolder("crop/product/rape_seed")
+    public static final ItemMisc RAPE_SEED = getNull();
+    @GameRegistry.ObjectHolder("crop/product/rape_flower")
+    public static final ItemMisc RAPE_FLOWER = getNull();
+    @GameRegistry.ObjectHolder("crop/product/tobacco_leaf")
+    public static final ItemMisc TOBACCO_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_tobacco_leaf")
+    public static final ItemMisc DRIED_TOBACCO_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/coca_leaf")
+    public static final ItemMisc COCA_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_coca_leaf")
+    public static final ItemMisc DRIED_COCA_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/cannabis_bud")
+    public static final ItemMisc CANNABIS_BUD = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_cannabis_bud")
+    public static final ItemMisc DRIED_CANNABIS_BUD = getNull();
+    @GameRegistry.ObjectHolder("crop/product/cannabis_leaf")
+    public static final ItemMisc CANNABIS_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_cannabis_leaf")
+    public static final ItemMisc DRIED_CANNABIS_LEAF = getNull();
+    @GameRegistry.ObjectHolder("crop/product/opium_poppy_bulb")
+    public static final ItemMisc OPIUM_POPPY_BULB = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_opium_poppy_bulb")
+    public static final ItemMisc DRIED_OPIUM_POPPY_BULB = getNull();
+    @GameRegistry.ObjectHolder("crop/product/sunflower_head")
+    public static final ItemMisc SUNFLOWER_HEAD = getNull();
+    @GameRegistry.ObjectHolder("crop/product/dried_sunflower_head")
+    public static final ItemMisc DRIED_SUNFLOWER_HEAD = getNull();
     @GameRegistry.ObjectHolder("crop/product/black_tea")
     public static final ItemMisc BLACK_TEA = getNull();
     @GameRegistry.ObjectHolder("crop/product/green_tea")
@@ -285,6 +327,20 @@ public final class ItemsRegistryHandler
         simpleItems.add(register(r, "crop/product/dried_green_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/dried_white_tea", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
         simpleItems.add(register(r, "crop/product/indigo", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/rape_seed", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/rape_flower", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/sunflower_head", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_sunflower_head", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/tobacco_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_tobacco_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/coca_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_coca_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/cannabis_bud", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_cannabis_bud", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/cannabis_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_cannabis_leaf", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/opium_poppy_bulb", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried_opium_poppy_bulb", new ItemMisc(Size.TINY, Weight.LIGHT), CT_MISC));
 
         //Other
         simpleItems.add(register(r, "crop/product/cinnamon_bark", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_MISC));
@@ -295,6 +351,13 @@ public final class ItemsRegistryHandler
         simpleItems.add(register(r, "crop/product/malt_rice", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_rye", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_wheat", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_amaranth", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_buckwheat", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_fonio", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_millet", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_quinoa", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_spelt", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
+        simpleItems.add(register(r, "crop/product/malt_wild_rice", new ItemMisc(Size.VERY_SMALL, Weight.LIGHT), CT_FOOD));
 
         /*
         { // POTTERY

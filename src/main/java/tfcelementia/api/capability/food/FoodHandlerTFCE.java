@@ -17,11 +17,7 @@ import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.util.agriculture.Food;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
-import net.dries007.tfc.api.capability.food.FoodData;
-import net.dries007.tfc.api.capability.food.FoodTrait;
-import net.dries007.tfc.api.capability.food.Nutrient;
-import net.dries007.tfc.api.capability.food.IFood;
-import net.dries007.tfc.api.capability.food.CapabilityFood;
+import net.dries007.tfc.api.capability.food.*;
 
 import tfcelementia.util.agriculture.FoodTFCE;
 
@@ -192,7 +188,7 @@ public class FoodHandlerTFCE implements IFood, ICapabilitySerializable<NBTTagCom
     }
 
     /**
-     * This marks if the food data should be serialized. For normal food items, it isn't, because all values are provided on construction via CapabilityFood. Only mark this is food data will change per item stack
+     * This marks if the food data should be serialized. For normal food items, it isn't, because all values are provided on construction via CapabilityFoodTFCE. Only mark this is food data will change per item stack
      */
     protected boolean isDynamic()
     {
