@@ -41,6 +41,8 @@ import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.CapabilityChunkData;
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import net.dries007.tfc.util.OreDictionaryHelper;
+import tfcelementia.api.capability.food.CapabilityFoodTFCE;
+import tfcelementia.api.capability.food.FoodHandlerTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.util.VeinLoader;
 
@@ -89,6 +91,8 @@ public class TFCElementia
         {
             logger.error("INVALID FINGERPRINT DETECTED! This means this jar file has been compromised and is not supported.");
         }
+
+        CapabilityFoodTFCE.preInit();
     }
 
     @EventHandler
@@ -100,5 +104,13 @@ public class TFCElementia
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+    }
+
+    @Mod.EventHandler
+    public void onLoadComplete(FMLLoadCompleteEvent event)
+    {
+        // This is the latest point that we can possibly stop creating non-decaying stacks on both server + client
+        // It should be safe to use as we're only using it internally
+        FoodHandlerTFCE.setNonDecaying(false);
     }
 }

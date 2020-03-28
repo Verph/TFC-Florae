@@ -19,6 +19,7 @@ import net.dries007.tfc.api.capability.heat.ItemHeatHandler;
 import net.dries007.tfc.util.agriculture.Food;
 
 import tfcelementia.util.agriculture.FoodTFCE;
+import tfcelementia.api.capability.food.IFoodTFCE;
 
 /**
  * This is a combined capability class that delegates to two implementations:
@@ -26,7 +27,7 @@ import tfcelementia.util.agriculture.FoodTFCE;
  * - internalFoodCap = FoodHandler
  */
 
-public class FoodHeatHandlerTFCE extends ItemHeatHandler implements IFood, ICapabilitySerializable<NBTTagCompound>
+public class FoodHeatHandlerTFCE extends ItemHeatHandler implements IFoodTFCE, ICapabilitySerializable<NBTTagCompound>
 {
     private final FoodHandlerTFCE internalFoodCap;
 

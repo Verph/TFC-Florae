@@ -19,6 +19,8 @@ import net.dries007.tfc.api.capability.food.IFood;
 import net.dries007.tfc.util.agriculture.Food;
 
 import tfcelementia.api.capability.food.FoodHandlerTFCE;
+import tfcelementia.api.capability.food.IFoodTFCE;
+import tfcelementia.api.capability.food.CapabilityFoodTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
 
 @ParametersAreNonnullByDefault
@@ -40,7 +42,7 @@ public class ItemDynamicBowlFoodTFCE extends ItemFoodTFCE
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
-        IFood food = stack.getCapability(CapabilityFood.CAPABILITY, null);
+        IFoodTFCE food = stack.getCapability(CapabilityFoodTFCE.CAPABILITY, null);
         if (food instanceof DynamicFoodHandlerTFCE)
         {
             ItemStack bowlStack = ((DynamicFoodHandlerTFCE) food).getBowlStack().copy();

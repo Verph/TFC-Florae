@@ -103,7 +103,7 @@ import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 
 
 @SuppressWarnings("unused")
-@Mod.EventBusSubscriber(modid = MOD_ID)
+@Mod.EventBusSubscriber(modid = TFCElementia.MODID)
 public final class CommonEventHandlerTFCE
 {
 	// Maybe when adding podzol?
@@ -138,7 +138,7 @@ public final class CommonEventHandlerTFCE
         if (!stack.isEmpty())
         {
             // Size
-            if (CapabilityItemSize.getIItemSize(stack) == null)
+            /*if (CapabilityItemSize.getIItemSize(stack) == null)
             {
                 ICapabilityProvider sizeHandler = CapabilityItemSize.getCustomSize(stack);
                 event.addCapability(CapabilityItemSize.KEY, sizeHandler);
@@ -152,20 +152,20 @@ public final class CommonEventHandlerTFCE
                         item.setMaxStackSize(((IItemSize) sizeHandler).getStackSize(stack));
                     }
                 }
-            }
+            }*/
 
             // Food
             if (stack.getItem() instanceof ItemFoodTFCE)
             {
-                ICapabilityProvider foodHandler = CapabilityFood.getCustomFood(stack);
-                if (foodHandler != null)
+                ICapabilityProvider foodHandlerTFCE = CapabilityFoodTFCE.getCustomFood(stack);
+                if (foodHandlerTFCE != null)
                 {
-                    event.addCapability(CapabilityFood.KEY, foodHandler);
+                    event.addCapability(CapabilityFoodTFCE.KEY, foodHandlerTFCE);
                 }
                 else
                 {
-                    foodHandler = new FoodHandlerTFCE(stack.getTagCompound(), new FoodData());
-                    event.addCapability(CapabilityFood.KEY, foodHandler);
+                    foodHandlerTFCE = new FoodHandlerTFCE(stack.getTagCompound(), new FoodData());
+                    event.addCapability(CapabilityFoodTFCE.KEY, foodHandlerTFCE);
                 }
             }
             

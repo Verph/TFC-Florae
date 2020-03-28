@@ -42,6 +42,8 @@ import tfcelementia.objects.items.ItemGemTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.util.ItemsRegistryHandler;
 import tfcelementia.TFCElementia;
+import tfcelementia.api.capability.food.IFoodTFCE;
+import tfcelementia.api.capability.food.CapabilityFoodTFCE;
 
 @SideOnly(Side.CLIENT)
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = TFCElementia.MODID)
@@ -96,7 +98,7 @@ public final class ClientRegisterEventsTFCE
 		ItemColors itemColors = event.getItemColors();
 		
 		itemColors.registerItemColorHandler((stack, tintIndex) -> {
-            IFood food = stack.getCapability(CapabilityFood.CAPABILITY, null);
+            IFoodTFCE food = stack.getCapability(CapabilityFoodTFCE.CAPABILITY, null);
             if (food != null)
             {
                 return food.isRotten() ? ConfigTFC.CLIENT.rottenFoodOverlayColor : 0xFFFFFF;

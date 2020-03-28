@@ -21,7 +21,7 @@ import net.dries007.tfc.api.capability.food.*;
 
 import tfcelementia.util.agriculture.FoodTFCE;
 
-public class FoodHandlerTFCE implements IFood, ICapabilitySerializable<NBTTagCompound>
+public class FoodHandlerTFCE implements IFoodTFCE, ICapabilitySerializable<NBTTagCompound>
 {
     private static final long ROTTEN_DATE = Long.MIN_VALUE;
     private static final long NEVER_DECAY_DATE = Long.MAX_VALUE;

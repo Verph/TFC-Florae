@@ -17,6 +17,15 @@ def tree(origin, wood, nameout):
                 'axis': prop['axis']
             })
             
+        if block['Name'] == 'minecraft:oak_log':
+            block['Name'] = String('tfc:wood/log/' + wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'small': String('false'),
+                'placed': String('false'),
+                'axis': prop['axis']
+            })
+            
         if block['Name'] == 'minecraft:spruce_log':
             block['Name'] = String('tfc:wood/log/' + wood)
             prop = block['Properties']
