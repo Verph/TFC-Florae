@@ -80,7 +80,7 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
         switch (type)
         {
             case PLATE:
-                return Weight.HEAVY;
+                return Weight.LIGHT;
             default:
                 return Weight.MEDIUM;
         }

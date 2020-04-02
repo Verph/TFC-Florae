@@ -74,11 +74,11 @@ import tfcelementia.objects.PowderTFCE;
 import tfcelementia.objects.items.ItemPowderTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
 //import tfcelementia.util.OreDictionaryHelperTFCE;
-import tfcelementia.util.ItemsRegistryHandler;
+import tfcelementia.util.ItemsTFCE;
 import tfcelementia.objects.fluids.FluidsTFCE;
 import tfcelementia.objects.items.food.ItemFoodTFCE;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+//import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.api.types.Metal.ItemType.*;
 import static net.dries007.tfc.objects.CreativeTabsTFC.CT_MISC;
 import static net.dries007.tfc.objects.fluids.FluidsTFC.*;
@@ -87,6 +87,7 @@ import static net.dries007.tfc.util.Helpers.getNull;
 import static net.dries007.tfc.util.forge.ForgeRule.*;
 import static net.dries007.tfc.util.skills.SmithingSkill.Type.*;
 
+import static tfcelementia.TFCElementia.MODID;
 import static tfcelementia.objects.fluids.FluidsTFCE.*;
 import static tfcelementia.types.MetalsTFCE.*;
 import static tfcelementia.util.agriculture.FoodTFCE.Category.FRUIT;
@@ -97,7 +98,7 @@ import static tfcelementia.util.agriculture.FoodTFCE.Category.VEGETABLE;
  * In 1.14+, every line in here needs to be a json file. Yay, but also ugh.
  */
 @SuppressWarnings("unused")
-@Mod.EventBusSubscriber(modid = MOD_ID)
+@Mod.EventBusSubscriber(modid = MODID)
 public final class RecipesTFCE
 {
     @SubscribeEvent
@@ -106,24 +107,25 @@ public final class RecipesTFCE
         event.getRegistry().registerAll(
         		
         	// Misc
-            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.AGAVE), null, new ItemStack(ItemsRegistryHandler.SISAL_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sisal_fiber"),
-            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.FLAX), null, new ItemStack(ItemsRegistryHandler.FLAX_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("flax_fiber"),
-            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.HEMP), null, new ItemStack(ItemsRegistryHandler.HEMP_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("hemp_fiber"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsTFCE.AGAVE), null, new ItemStack(ItemsTFCE.SISAL_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sisal_fiber"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsTFCE.FLAX), null, new ItemStack(ItemsTFCE.FLAX_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("flax_fiber"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of(ItemsTFCE.HEMP), null, new ItemStack(ItemsTFCE.HEMP_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("hemp_fiber"),
             
             // Teas
-            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.WHITE_TEA, 2), new FluidStack(FluidsTFCE.WHITE_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_tea"),
-            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.GREEN_TEA, 2), new FluidStack(FluidsTFCE.GREEN_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("green_tea"),
-            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsRegistryHandler.BLACK_TEA, 2), new FluidStack(FluidsTFCE.BLACK_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("black_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsTFCE.WHITE_TEA, 2), new FluidStack(FluidsTFCE.WHITE_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsTFCE.GREEN_TEA, 2), new FluidStack(FluidsTFCE.GREEN_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("green_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(ItemsTFCE.BLACK_TEA, 2), new FluidStack(FluidsTFCE.BLACK_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("black_tea"),
 
             // Dyes
-            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get()), IIngredient.of(ItemsRegistryHandler.AGAVE, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.GREEN.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("green_dye"),
-            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get()), IIngredient.of(ItemsRegistryHandler.MADDER, 2), null, new ItemStack(Items.DYE,1, EnumDyeColor.RED.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("red_dye"),
-            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get()), IIngredient.of(ItemsRegistryHandler.WELD, 2), null, new ItemStack(Items.DYE,11, EnumDyeColor.YELLOW.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("yellow_dye"),
-            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get()), IIngredient.of(ItemsRegistryHandler.WOAD, 2), null, new ItemStack(Items.DYE,4, EnumDyeColor.BLUE.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("blue_dye"),
+            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get(), FluidsTFCE.GIN.get(), FluidsTFCE.TEQUILA.get()), IIngredient.of(ItemsTFCE.AGAVE, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.GREEN.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("green_dye"),
+            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get(), FluidsTFCE.GIN.get(), FluidsTFCE.TEQUILA.get()), IIngredient.of(ItemsTFCE.MADDER, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.RED.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("red_dye"),
+            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get(), FluidsTFCE.GIN.get(), FluidsTFCE.TEQUILA.get()), IIngredient.of(ItemsTFCE.WELD, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.YELLOW.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("yellow_dye"),
+            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get(), FluidsTFCE.GIN.get(), FluidsTFCE.TEQUILA.get()), IIngredient.of(ItemsTFCE.WOAD, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.BLUE.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("blue_dye"),
+            new BarrelRecipe(IIngredient.of(250, FluidsTFC.BEER.get(), FluidsTFC.CIDER.get(), FluidsTFC.RUM.get(), FluidsTFC.SAKE.get(), FluidsTFC.VODKA.get(), FluidsTFC.WHISKEY.get(), FluidsTFC.CORN_WHISKEY.get(), FluidsTFC.RYE_WHISKEY.get(), FluidsTFCE.GIN.get(), FluidsTFCE.TEQUILA.get()), IIngredient.of(ItemsTFCE.INDIGO, 2), null, new ItemStack(Items.DYE,2, EnumDyeColor.PURPLE.getDyeDamage()), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("purple_dye"),
             
             // Alcohol - Classic created 1000mb with 4oz, which would be 8 items per full barrel at 5 oz/item. Instead we now require 20 items, so conversion is 2 oz/item here
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.JUNIPER_BERRY)), new FluidStack(FluidsTFCE.GIN.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("gin"),
-            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemsRegistryHandler.AGAVE), new FluidStack(FluidsTFCE.TEQUILA.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("tequila"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemsTFCE.AGAVE), new FluidStack(FluidsTFCE.TEQUILA.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("tequila"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.PURPLE_GRAPES)), new FluidStack(FluidsTFCE.RED_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("red_wine"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of(ItemFoodTFCE.get(FoodTFCE.GREEN_GRAPES)), new FluidStack(FluidsTFCE.WHITE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_wine"),
 
@@ -140,8 +142,8 @@ public final class RecipesTFCE
         r.registerAll(
         	
             // Fired Mud Pottery - doesn't burn up
-            new HeatRecipeSimple(IIngredient.of(ItemsRegistryHandler.UNFIRED_MUD_BRICK), new ItemStack(ItemsRegistryHandler.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("unfired_mud_brick"),
-            new HeatRecipeSimple(IIngredient.of(ItemsRegistryHandler.FIRED_MUD_BRICK), new ItemStack(ItemsRegistryHandler.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_mud_brick")
+            new HeatRecipeSimple(IIngredient.of(ItemsTFCE.UNFIRED_MUD_BRICK), new ItemStack(ItemsTFCE.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("unfired_mud_brick"),
+            new HeatRecipeSimple(IIngredient.of(ItemsTFCE.FIRED_MUD_BRICK), new ItemStack(ItemsTFCE.FIRED_MUD_BRICK), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_mud_brick")
              
         );
     }
@@ -152,9 +154,9 @@ public final class RecipesTFCE
         IForgeRegistry<LoomRecipe> r = event.getRegistry();
         
         r.registerAll(
-            new LoomRecipe(new ResourceLocation(MOD_ID, "cotton_cloth"), IIngredient.of(ItemsRegistryHandler.COTTON_YARN, 12), new ItemStack(ItemsRegistryHandler.COTTON_CLOTH), 12, new ResourceLocation(MOD_ID, "textures/blocks/devices/loom/product/burlap.png")),
-            new LoomRecipe(new ResourceLocation(MOD_ID, "linen_cloth"), IIngredient.of(ItemsRegistryHandler.LINEN_STRING, 12), new ItemStack(ItemsRegistryHandler.LINEN_CLOTH), 12, new ResourceLocation(MOD_ID, "textures/blocks/devices/loom/product/burlap.png")),
-            new LoomRecipe(new ResourceLocation(MOD_ID, "sisal_cloth"), IIngredient.of(ItemsRegistryHandler.SISAL_FIBER, 12), new ItemStack(ItemsTFC.BURLAP_CLOTH), 12, new ResourceLocation(MOD_ID, "textures/blocks/devices/loom/product/burlap.png"))
+            new LoomRecipe(new ResourceLocation(MODID, "cotton_cloth"), IIngredient.of(ItemsTFCE.COTTON_YARN, 12), new ItemStack(ItemsTFCE.COTTON_CLOTH), 12, new ResourceLocation(MODID, "textures/blocks/devices/loom/product/burlap.png")),
+            new LoomRecipe(new ResourceLocation(MODID, "linen_cloth"), IIngredient.of(ItemsTFCE.LINEN_STRING, 12), new ItemStack(ItemsTFCE.LINEN_CLOTH), 12, new ResourceLocation(MODID, "textures/blocks/devices/loom/product/burlap.png")),
+            new LoomRecipe(new ResourceLocation(MODID, "sisal_cloth"), IIngredient.of(ItemsTFCE.SISAL_FIBER, 12), new ItemStack(ItemsTFC.BURLAP_CLOTH), 12, new ResourceLocation(MODID, "textures/blocks/devices/loom/product/burlap.png"))
         );
     }
 

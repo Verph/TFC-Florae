@@ -16,10 +16,10 @@ public enum FruitTreeTFCE implements IFruitTree
     CACAO(FoodTFCE.CACAO_POD, Month.APRIL, 2, Month.OCTOBER, 2, 5f, 35f, 100f, 400f, 0.33f),
     COFFEA(FoodTFCE.COFFEE_CHERRIES, Month.APRIL, 2, Month.OCTOBER, 2, 5f, 35f, 100f, 400f, 0.33f),
     PAPAYA(FoodTFCE.PAPAYA, Month.MAY, 2, Month.SEPTEMBER, 2, 5f, 35f, 100f, 400f, 0.33f),
-    DATE(FoodTFCE.DATE, Month.APRIL, 2, Month.SEPTEMBER, 2, 5f, 35f, 100f, 400f, 0.33f),
+    //DATE(FoodTFCE.DATE, Month.APRIL, 2, Month.SEPTEMBER, 2, 5f, 35f, 100f, 400f, 0.33f),
     ALMOND(FoodTFCE.ALMOND, Month.MARCH, 1, Month.OCTOBER, 1, 5f, 35f, 100f, 400f, 0.33f),
     CASHEW(FoodTFCE.CASHEW, Month.DECEMBER, 1, Month.MAY, 1, 5f, 35f, 100f, 400f, 0.33f),
-    COCONUT(FoodTFCE.COCONUT, Month.APRIL, 1, Month.JULY, 2, 5f, 35f, 100f, 400f, 0.33f),
+    //COCONUT(FoodTFCE.COCONUT, Month.APRIL, 1, Month.JULY, 2, 5f, 35f, 100f, 400f, 0.33f),
     HAZELNUT(FoodTFCE.HAZELNUT, Month.DECEMBER, 1, Month.OCTOBER, 1, 5f, 35f, 100f, 400f, 0.33f),
     MACADAMIA(FoodTFCE.MACADAMIA, Month.MARCH, 1, Month.SEPTEMBER, 1, 5f, 35f, 100f, 400f, 0.33f),
     PISTACHIO(FoodTFCE.PISTACHIO, Month.APRIL, 1, Month.OCTOBER, 1, 5f, 35f, 100f, 400f, 0.33f);

@@ -14,25 +14,27 @@ import tfcelementia.TFCElementia;
 import tfcelementia.objects.ArmorMaterialsTFCE;
 import tfcelementia.objects.ToolMaterialsTFCE;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+//import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.types.DefaultRocks.*;
+
+import static tfcelementia.TFCElementia.MODID;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
 public final class RocksTFCE
 {
-    public static final ResourceLocation BRECCIA = new ResourceLocation(MOD_ID, "breccia");
-    public static final ResourceLocation FOIDOLITE = new ResourceLocation(MOD_ID, "foidolite");
-    public static final ResourceLocation PORPHYRY = new ResourceLocation(MOD_ID, "porphyry");
-    public static final ResourceLocation PERIDOTITE = new ResourceLocation(MOD_ID, "peridotite");
-    public static final ResourceLocation MUDSTONE = new ResourceLocation(MOD_ID, "mudstone");
-    public static final ResourceLocation SANDSTONE = new ResourceLocation(MOD_ID, "sandstone");
-    public static final ResourceLocation SILTSTONE = new ResourceLocation(MOD_ID, "siltstone");
-    public static final ResourceLocation BLUESCHIST = new ResourceLocation(MOD_ID, "blueschist");
-    public static final ResourceLocation GREENSCHIST = new ResourceLocation(MOD_ID, "greenschist");
-    public static final ResourceLocation NOVACULITE = new ResourceLocation(MOD_ID, "novaculite");
-    public static final ResourceLocation SOAPSTONE = new ResourceLocation(MOD_ID, "soapstone");
-    public static final ResourceLocation KOMATIITE = new ResourceLocation(MOD_ID, "komatiite");
+    public static final ResourceLocation BRECCIA = new ResourceLocation(MODID, "breccia");
+    public static final ResourceLocation FOIDOLITE = new ResourceLocation(MODID, "foidolite");
+    public static final ResourceLocation PORPHYRY = new ResourceLocation(MODID, "porphyry");
+    public static final ResourceLocation PERIDOTITE = new ResourceLocation(MODID, "peridotite");
+    public static final ResourceLocation MUDSTONE = new ResourceLocation(MODID, "mudstone");
+    public static final ResourceLocation SANDSTONE = new ResourceLocation(MODID, "sandstone");
+    public static final ResourceLocation SILTSTONE = new ResourceLocation(MODID, "siltstone");
+    public static final ResourceLocation BLUESCHIST = new ResourceLocation(MODID, "blueschist");
+    public static final ResourceLocation GREENSCHIST = new ResourceLocation(MODID, "greenschist");
+    public static final ResourceLocation NOVACULITE = new ResourceLocation(MODID, "novaculite");
+    public static final ResourceLocation SOAPSTONE = new ResourceLocation(MODID, "soapstone");
+    public static final ResourceLocation KOMATIITE = new ResourceLocation(MODID, "komatiite");
 
     @SubscribeEvent
     public static void onPreRegisterRock(TFCRegistryEvent.RegisterPreBlock<Rock> event)

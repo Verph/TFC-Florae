@@ -26,6 +26,8 @@ import net.dries007.tfc.api.types.*;
 import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.api.registries.TFCRegistryNames.*;
 
+//import static tfcelementia.TFCElementia.MODID;
+
 @Mod.EventBusSubscriber(modid = MOD_ID)
 public final class RegistriesTFCE
 {

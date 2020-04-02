@@ -214,17 +214,17 @@ for wood, key in WOOD_TYPES.items():
 
     # cinnamon
     if key == 'cinnamon':
-        for s in ['1', '2', '3', '4']:
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             tree('structure_templates/cinnamon/cinnamon_' + s, wood, s)
 
     # ebony
     if key == 'ebony':
-        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19']:
             tree('structure_templates/ebony/ebony_' + s, wood, s)
 
     # eucalyptus
     if key == 'eucalyptus':
-        for s in ['1', '2', '3', '4']:
+        for s in ['1', '2', '3', '4', '5', '6', '7']:
             tree('structure_templates/eucalyptus/eucalyptus_' + s, wood, s)
 
     # fever
@@ -299,7 +299,7 @@ for wood, key in WOOD_TYPES.items():
 
     # yew
     if key == 'yew':
-        for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17']:
             tree('structure_templates/yew/yew_' + s, wood, s)
 
 FRUIT_TREES = [

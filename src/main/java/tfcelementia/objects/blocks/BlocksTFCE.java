@@ -28,32 +28,39 @@ import net.dries007.tfc.objects.blocks.wood.*;
 import net.dries007.tfc.objects.fluids.properties.FluidWrapper;
 import net.dries007.tfc.objects.items.itemblock.*;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+//import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.api.types.Rock.Type.*;
 import static net.dries007.tfc.objects.CreativeTabsTFC.*;
 import static net.dries007.tfc.util.Helpers.getNull;
 
+import tfcelementia.api.types.RockTFCE;
+import tfcelementia.api.registries.TFCERegistries;
+import tfcelementia.objects.blocks.stone.*;
 import tfcelementia.objects.blocks.agriculture.BlockCropDeadTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockFruitTreeBranchTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockFruitTreeLeavesTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockFruitTreeSaplingTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockFruitTreeTrunkTFCE;
-import tfcelementia.objects.items.*;
 import tfcelementia.objects.fluids.FluidsTFCE;
+import tfcelementia.objects.items.*;
+import tfcelementia.objects.te.*;
 import tfcelementia.util.agriculture.CropTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
 import tfcelementia.util.agriculture.FruitTreeTFCE;
-import tfcelementia.objects.te.*;
 import tfcelementia.TFCElementia;
+
+import static tfcelementia.api.types.RockTFCE.Type.*;
+import static tfcelementia.TFCElementia.MODID;
 
 @SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
-@GameRegistry.ObjectHolder(MOD_ID)
+@GameRegistry.ObjectHolder(MODID)
 public final class BlocksTFCE 
 {
-    private static ImmutableList<ItemBlock> allInventoryItemBlocks;
-    
+	private static ImmutableList<ItemBlock> allInventoryItemBlocks;
+
+    private static ImmutableList<BlockRockVariantTFCE> allBlockRockVariants;
     private static ImmutableList<BlockCropTFCE> allCropBlocks;
     private static ImmutableList<BlockCropDeadTFCE> allDeadCropBlocks;
     
@@ -67,6 +74,11 @@ public final class BlocksTFCE
     public static ImmutableList<ItemBlock> getAllInventoryItemBlocks()
     {
         return allInventoryItemBlocks;
+    }
+
+    public static ImmutableList<BlockRockVariantTFCE> getAllBlockRockVariants()
+    {
+        return allBlockRockVariants;
     }
     
     public static ImmutableList<BlockCropTFCE> getAllCropBlocks()
@@ -138,6 +150,17 @@ public final class BlocksTFCE
             }
             allFluidBlocks = b.build();
         }
+
+        {
+            Builder<BlockRockVariantTFCE> b = ImmutableList.builder();
+            
+            for (RockTFCE.Type type : RockTFCE.Type.values())
+            {
+                for (RockTFCE rock : TFCERegistries.ROCKS.getValuesCollection())
+                    b.add(register(r, type.name().toLowerCase() + "/" + rock.getRegistryName().getPath(), BlockRockVariantTFCE.create(rock, type), CT_ROCK_BLOCKS));
+            }
+            allBlockRockVariants = b.build();
+		}
     
     	{
             Builder<BlockCropTFCE> b = ImmutableList.builder();
@@ -189,6 +212,34 @@ public final class BlocksTFCE
         register(TECropSpreadingTFCE.class, "crop_spreading_tfce");
     }
     
+    public static boolean isSoil(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariantTFCE)) return false;
+        RockTFCE.Type type = ((BlockRockVariantTFCE) current.getBlock()).getType();
+        return type == PODZOL;
+    }
+
+    public static boolean isGrowableSoil(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariantTFCE)) return false;
+        RockTFCE.Type type = ((BlockRockVariantTFCE) current.getBlock()).getType();
+        return type == PODZOL;
+    }
+
+    public static boolean isGrass(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariantTFCE)) return false;
+        RockTFCE.Type type = ((BlockRockVariantTFCE) current.getBlock()).getType();
+        return type.isGrass;
+    }
+
+    public static boolean isGround(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariantTFCE)) return false;
+        RockTFCE.Type type = ((BlockRockVariantTFCE) current.getBlock()).getType();
+        return type == PODZOL;
+    }
+    
     private static <T extends Block> T register(IForgeRegistry<Block> r, String name, T block, CreativeTabs ct)
     {
         block.setCreativeTab(ct);
@@ -197,15 +248,15 @@ public final class BlocksTFCE
     
     private static <T extends Block> T register(IForgeRegistry<Block> r, String name, T block)
     {
-        block.setRegistryName(MOD_ID, name);
-        block.setTranslationKey(MOD_ID + "." + name.replace('/', '.'));
+        block.setRegistryName(MODID, name);
+        block.setTranslationKey(MODID + "." + name.replace('/', '.'));
         r.register(block);
         return block;
     }
     
     private static <T extends TileEntity> void register(Class<T> te, String name)
     {
-        TileEntity.register(MOD_ID + ":" + name, te);
+        TileEntity.register(MODID + ":" + name, te);
     }
 
 }

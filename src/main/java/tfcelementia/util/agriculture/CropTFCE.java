@@ -24,7 +24,7 @@ import tfcelementia.objects.blocks.agriculture.BlockCropSimpleTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockCropSpreadingTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockCropTFCE;
 import tfcelementia.util.agriculture.FoodTFCE;
-import tfcelementia.util.ItemsRegistryHandler;
+import tfcelementia.util.ItemsTFCE;
 import tfcelementia.objects.items.food.ItemFoodTFCE;
 
 import static tfcelementia.util.agriculture.CropTFCE.CropType.*;
@@ -56,20 +56,20 @@ public enum CropTFCE implements ICrop
     TURNIP(FoodTFCE.TURNIP, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     MUSTARD(FoodTFCE.MUSTARD, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     SWEET_POTATO(FoodTFCE.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    SUNFLOWER(() -> new ItemStack(ItemsRegistryHandler.SUNFLOWER_HEAD), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    AGAVE(() -> new ItemStack(ItemsRegistryHandler.AGAVE), () -> ItemStack.EMPTY, 12f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    COTTON(() -> new ItemStack(ItemsRegistryHandler.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
-    FLAX(() -> new ItemStack(ItemsRegistryHandler.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    HEMP(() -> new ItemStack(ItemsRegistryHandler.HEMP), () -> new ItemStack(ItemsRegistryHandler.CANNABIS_BUD), 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    HOPS(() -> new ItemStack(ItemsRegistryHandler.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    INDIGO(() -> new ItemStack(ItemsRegistryHandler.INDIGO), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    MADDER(() -> new ItemStack(ItemsRegistryHandler.MADDER), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    WELD(() -> new ItemStack(ItemsRegistryHandler.WELD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    WOAD(() -> new ItemStack(ItemsRegistryHandler.WOAD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    RAPE(() -> new ItemStack(ItemsRegistryHandler.RAPE_SEED), () -> new ItemStack(ItemsRegistryHandler.RAPE_FLOWER), 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    TOBACCO(() -> new ItemStack(ItemsRegistryHandler.TOBACCO_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    COCA(() -> new ItemStack(ItemsRegistryHandler.COCA_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    OPIUM_POPPY(() -> new ItemStack(ItemsRegistryHandler.OPIUM_POPPY_BULB), () -> ItemStack.EMPTY, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE);
+    SUNFLOWER(() -> new ItemStack(ItemsTFCE.SUNFLOWER_HEAD), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    AGAVE(() -> new ItemStack(ItemsTFCE.AGAVE), () -> ItemStack.EMPTY, 12f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    COTTON(() -> new ItemStack(ItemsTFCE.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
+    FLAX(() -> new ItemStack(ItemsTFCE.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    HEMP(() -> new ItemStack(ItemsTFCE.HEMP), () -> new ItemStack(ItemsTFCE.CANNABIS_BUD), 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    HOPS(() -> new ItemStack(ItemsTFCE.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    INDIGO(() -> new ItemStack(ItemsTFCE.INDIGO), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    MADDER(() -> new ItemStack(ItemsTFCE.MADDER), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    WELD(() -> new ItemStack(ItemsTFCE.WELD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    WOAD(() -> new ItemStack(ItemsTFCE.WOAD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    RAPE(() -> new ItemStack(ItemsTFCE.RAPE), () -> new ItemStack(ItemsTFCE.RAPE_FLOWER), 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    TOBACCO(() -> new ItemStack(ItemsTFCE.TOBACCO_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    COCA(() -> new ItemStack(ItemsTFCE.COCA_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    OPIUM_POPPY(() -> new ItemStack(ItemsTFCE.OPIUM_POPPY_BULB), () -> ItemStack.EMPTY, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE);
 
     /**
      * the count to add to the amount of food dropped when applying the skill bonus

@@ -8,7 +8,8 @@ import org.apache.commons.io.FileUtils;
 
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+//import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+import static tfcelementia.TFCElementia.MODID;
 
 public enum VeinLoader
 {
@@ -18,7 +19,7 @@ public enum VeinLoader
 
     public void preInit(File dir)
     {
-        File tfcDir = new File(dir, MOD_ID);
+        File tfcDir = new File(dir, MODID);
         if (!tfcDir.exists() && !tfcDir.mkdir())
         {
             throw new Error("Problem creating TFC extra config directory.");

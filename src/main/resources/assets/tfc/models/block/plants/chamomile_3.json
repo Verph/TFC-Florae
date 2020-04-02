@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/chamomile/chamomile_3",
+    "particle": "tfc:blocks/plants/chamomile/chamomile_3"
+  }
+}

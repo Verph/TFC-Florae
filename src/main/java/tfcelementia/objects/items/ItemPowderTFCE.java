@@ -45,14 +45,14 @@ public class ItemPowderTFCE extends ItemTFC
     @Override
     public Size getSize(ItemStack stack)
     {
-        return Size.TINY;
+        return Size.SMALL;
     }
 
     @Nonnull
     @Override
     public Weight getWeight(ItemStack stack)
     {
-        return Weight.LIGHT;
+        return Weight.VERY_LIGHT;
     }
 
     @Nonnull

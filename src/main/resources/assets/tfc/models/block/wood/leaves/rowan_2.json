@@ -1,0 +1,6 @@
+	{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "tfc:blocks/wood/leaves/rowan_2"
+    }
+}

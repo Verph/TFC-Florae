@@ -1,0 +1,11 @@
+{
+    "variants": {
+				"": [
+            { "model": "tfc:blocks/wood/leaves/rowan_0", "weight": 12 },
+            { "model": "tfc:blocks/wood/leaves/rowan_1", "weight": 5 },
+            { "model": "tfc:blocks/wood/leaves/rowan_2", "weight": 4 },
+            { "model": "tfc:blocks/wood/leaves/rowan_3", "weight": 6 },
+            { "model": "tfc:blocks/wood/leaves/rowan_4", "weight": 8 }
+        ]
+    }
+}
