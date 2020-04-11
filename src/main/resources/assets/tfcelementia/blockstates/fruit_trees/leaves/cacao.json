@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/cacao"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/cacao"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/cacao",
-          "texture": "tfc:blocks/fruit_trees/flowers/cacao"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/cacao",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/cacao"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/cacao",
-          "texture": "tfc:blocks/fruit_trees/fruit/cacao"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/cacao",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/cacao"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

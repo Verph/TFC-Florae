@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/madder_dead"
+      "crop": "tfcelementia:blocks/crop/madder_dead"
     }
   },
   "variants": {

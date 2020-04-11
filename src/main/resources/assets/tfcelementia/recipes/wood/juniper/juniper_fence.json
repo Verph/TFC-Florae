@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/juniper"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/juniper"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/juniper",
+    "count": 8
+  }
+}

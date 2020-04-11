@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfc:items/crop/product/woad"
+    "layer0": "tfcelementia:items/crop/product/woad"
   }
 }

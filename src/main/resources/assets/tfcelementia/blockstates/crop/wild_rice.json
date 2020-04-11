@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/wild_rice_0"
+      "crop": "tfcelementia:blocks/crop/wild_rice_0"
     }
   },
   "variants": {
@@ -14,42 +14,42 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_0"
+          "crop": "tfcelementia:blocks/crop/wild_rice_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_1"
+          "crop": "tfcelementia:blocks/crop/wild_rice_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_2"
+          "crop": "tfcelementia:blocks/crop/wild_rice_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_3"
+          "crop": "tfcelementia:blocks/crop/wild_rice_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_4"
+          "crop": "tfcelementia:blocks/crop/wild_rice_4"
         }
       },
       "5": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_5"
+          "crop": "tfcelementia:blocks/crop/wild_rice_5"
         }
       },
       "6": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_6"
+          "crop": "tfcelementia:blocks/crop/wild_rice_6"
         }
       },
       "7": {
         "textures": {
-          "crop": "tfc:blocks/crop/wild_rice_7"
+          "crop": "tfcelementia:blocks/crop/wild_rice_7"
         }
       }
     }

@@ -36,11 +36,6 @@ import net.dries007.tfc.api.capability.metal.IMetalItem;
 import net.dries007.tfc.api.types.Metal;
 import net.dries007.tfc.util.climate.ClimateTFC;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
-import static net.dries007.tfc.objects.blocks.BlockPlacedHide.SIZE;
-import static net.dries007.tfc.objects.blocks.agriculture.BlockCropDead.MATURE;
-import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
-
 import tfcelementia.TFCElementia;
 import tfcelementia.api.capability.food.IFoodTFCE;
 import tfcelementia.api.capability.food.CapabilityFoodTFCE;
@@ -48,8 +43,15 @@ import tfcelementia.objects.GemTFCE;
 import tfcelementia.objects.blocks.agriculture.BlockFruitTreeLeavesTFCE;
 import tfcelementia.objects.blocks.BlocksTFCE;
 import tfcelementia.objects.items.ItemGemTFCE;
+import tfcelementia.objects.items.ItemsTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
-import tfcelementia.util.ItemsTFCE;
+
+import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+import static net.dries007.tfc.objects.blocks.BlockPlacedHide.SIZE;
+import static net.dries007.tfc.objects.blocks.agriculture.BlockCropDead.MATURE;
+import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
+
+import static tfcelementia.TFCElementia.MODID;
 
 @SideOnly(Side.CLIENT)
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = TFCElementia.MODID)
@@ -82,7 +84,7 @@ public final class ClientRegisterEventsTFCE
         // Blocks with Ignored Properties
         for (Block block : BlocksTFCE.getAllFluidBlocks())
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockFluidBase.LEVEL).build());
-
+        
         // Metals
         for (Item item : ItemsTFCE.getAllMetalItems())
         	ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));       
@@ -150,7 +152,7 @@ public final class ClientRegisterEventsTFCE
     {
         //noinspection ConstantConditions
         String registryName = item.getRegistryName().getPath();
-        StringBuilder path = new StringBuilder(MOD_ID).append(':');
+        StringBuilder path = new StringBuilder(MODID).append(':');
         if (!Strings.isNullOrEmpty(prefix)) path.append(prefix).append('/');
         path.append(e.name());
         if (!Strings.isNullOrEmpty(prefix))

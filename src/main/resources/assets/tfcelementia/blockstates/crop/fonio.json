@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/fonio_0"
+      "crop": "tfcelementia:blocks/crop/fonio_0"
     }
   },
   "variants": {
@@ -14,42 +14,42 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_0"
+          "crop": "tfcelementia:blocks/crop/fonio_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_1"
+          "crop": "tfcelementia:blocks/crop/fonio_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_2"
+          "crop": "tfcelementia:blocks/crop/fonio_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_3"
+          "crop": "tfcelementia:blocks/crop/fonio_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_4"
+          "crop": "tfcelementia:blocks/crop/fonio_4"
         }
       },
       "5": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_5"
+          "crop": "tfcelementia:blocks/crop/fonio_5"
         }
       },
       "6": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_6"
+          "crop": "tfcelementia:blocks/crop/fonio_6"
         }
       },
       "7": {
         "textures": {
-          "crop": "tfc:blocks/crop/fonio_7"
+          "crop": "tfcelementia:blocks/crop/fonio_7"
         }
       }
     }

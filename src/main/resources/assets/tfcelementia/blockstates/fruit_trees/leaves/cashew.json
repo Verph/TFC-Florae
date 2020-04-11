@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/cashew"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/cashew"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/cashew",
-          "texture": "tfc:blocks/fruit_trees/flowers/cashew"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/cashew",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/cashew"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/cashew",
-          "texture": "tfc:blocks/fruit_trees/fruit/cashew"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/cashew",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/cashew"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

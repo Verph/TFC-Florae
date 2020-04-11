@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/almond"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/almond"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/almond",
-          "texture": "tfc:blocks/fruit_trees/flowers/almond"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/almond",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/almond"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/almond",
-          "texture": "tfc:blocks/fruit_trees/fruit/almond"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/almond",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/almond"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

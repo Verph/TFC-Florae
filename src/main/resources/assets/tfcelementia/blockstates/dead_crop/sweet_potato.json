@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/crop/sweet_potato_dead"
+      "cross": "tfcelementia:blocks/crop/sweet_potato_dead"
     }
   },
   "variants": {

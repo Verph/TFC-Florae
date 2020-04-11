@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/hawthorn"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/hawthorn"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/hawthorn",
+    "count": 8
+  }
+}

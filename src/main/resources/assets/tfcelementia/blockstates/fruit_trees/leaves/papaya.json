@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/papaya"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/papaya"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/papaya",
-          "texture": "tfc:blocks/fruit_trees/flowers/papaya"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/papaya",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/papaya"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/papaya",
-          "texture": "tfc:blocks/fruit_trees/fruit/papaya"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/papaya",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/papaya"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

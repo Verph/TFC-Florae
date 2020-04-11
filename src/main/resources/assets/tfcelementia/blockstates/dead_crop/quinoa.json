@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/quinoa_dead"
+      "crop": "tfcelementia:blocks/crop/quinoa_dead"
     }
   },
   "variants": {

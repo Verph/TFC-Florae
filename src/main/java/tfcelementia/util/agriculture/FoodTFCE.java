@@ -6,21 +6,24 @@ import javax.annotation.Nullable;
 import net.minecraft.item.ItemStack;
 
 import net.dries007.tfc.api.capability.food.FoodData;
-import net.dries007.tfc.util.OreDictionaryHelper;
+//import net.dries007.tfc.util.OreDictionaryHelper;
+
+import tfcelementia.util.OreDictionaryHelper;
 
 import static tfcelementia.util.agriculture.FoodTFCE.Category.*;
 
 public enum FoodTFCE 
 {
     CACAO_POD(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropCacao", "cropCocoa", "cocoa", "cacao"),
-    COFFEE_CHERRIES(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropCoffee"),
-    DRIED_COFFEE_CHERRIES(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropDriedCoffee"),
-    ROASTED_COFFEE_BEANS(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropRoastedCoffee"),
+    //COFFEE_CHERRIES(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropCoffee"),
+    //DRIED_COFFEE_CHERRIES(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropDriedCoffee"),
+    //ROASTED_COFFEE_BEANS(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f, "cropRoastedCoffee"),
     DATE(FRUIT, 4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 2.25f),
     PAPAYA(FRUIT, 4, 0.4f, 5f, 0.5f, 0f, 0f, 0.5f, 0f, 3.75f),
     ALMOND(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     CASHEW(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     COCONUT(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
+    PEAR(FRUIT, 4, 0f, 0f, 0f, 0f, 1.5f, 0f, 0f, 3.75f, "pear"),
     JUNIPER_BERRY(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     GREEN_GRAPES(FRUIT, 4, 0.4f, 5f, 0f, 0f, 0f, 0.5f, 0f, 4.5f, "cropGreenGrapes", "cropGrapes"),
     PURPLE_GRAPES(FRUIT, 4, 0.4f, 5f, 0f, 0f, 0f, 0.5f, 0f, 4.5f, "cropPurpleGrapes", "cropGrapes"),
@@ -32,7 +35,6 @@ public enum FoodTFCE
     PECAN(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     PINE_NUT(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
     WALNUT(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f),
-    SUNFLOWER_SEED(FRUIT, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropSunflowerSeed"),
     AMARANTH(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, "amaranth"),
     AMARANTH_GRAIN(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.4f, "grain_amaranth", "grain"),
     AMARANTH_FLOUR(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, "flour_amaranth", "flour"),
@@ -68,8 +70,16 @@ public enum FoodTFCE
     WILD_RICE_FLOUR(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, "flour_wild_rice", "flour"),
     WILD_RICE_DOUGH(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, 1f, 200f),
     WILD_RICE_BREAD(BREAD, 4, 0f, 0f, 1.7f, 0f, 0f, 0f, 0f, 0.8f, 1f, 480f),
-    OPIUM_POPPY_SEEDS(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, "opium_poppy", "opium", "poppy"),
+    LINSEED(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropFlaxSeed"),
+    LINSEED_PASTE(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropLinseedPaste"),
+    RAPE_SEED(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropRapeSeed"),
+    RAPE_SEED_PASTE(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropRapeSeedPaste"),
+    SUNFLOWER_SEED(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropSunflowerSeed"),
+    SUNFLOWER_SEED_PASTE(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropSunflowerSeedPaste"),
+    OPIUM_POPPY_SEED(GRAIN, 4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f, "cropOpiumPoppy"),
+    OPIUM_POPPY_SEED_PASTE(GRAIN, 4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f, "cropOpiumPoppySeedPaste"),
     HASH_MUFFIN(BREAD, 4, 1f, 0f, 1f, 0f, 0f, 0f, 0f, 0.8f, 1f, 480f),
+    PEYOTE(VEGETABLE, 4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f, "peyote"),
     RUTABAGA(VEGETABLE, 4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f, "cropRutabaga"),
     TURNIP(VEGETABLE, 4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f, "cropTurnip"),
     MUSTARD(VEGETABLE, 4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f, "cropMustard"),
@@ -82,6 +92,12 @@ public enum FoodTFCE
     LETTUCE(VEGETABLE, 4, 0.4f, 5f, 0f, 0f, 0f, 1f, 0f, 2.5f, "cropLettuce"),
     PEANUT(VEGETABLE, 4, 0.6f, 3f, 0f, 1.5f, 2f, 0.5f, 0.5f, 2.5f, "cropPeanut"),
     SWEET_POTATO(VEGETABLE, 4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f, "cropSweetPotato"),
+    SUGAR_BEET(VEGETABLE, 4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f, "cropSugarBeet"),
+    MASHED_SUGAR_BEET(VEGETABLE, 4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f, "mashedSugarBeet"),
+    SOYBEAN_PASTE(VEGETABLE, 4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f, "pasteSoybean"),
+    //BLACK_TEA_LEAF(FRUIT, 0, 0.5f, 0f, 0f, 0f, 0f,0f, 0f, 0.5f, "cropTea"),
+    //GREEN_TEA_LEAF(FRUIT, 0, 0.5f, 0f, 0f, 0f, 0f,0f, 0f, 0.5f, "cropTea"),
+    //WHITE_TEA_LEAF(FRUIT, 0, 0.5f, 0f, 0f, 0f, 0f,0f, 0f, 0.5f, "cropTea"),
     PIE(GRAIN, 4, 0.8f, 0f, 2f, 0.5f, 0.5f, 0f, 0f, 0.8f, 1f, 480f),
     PIE_APPLE(FRUIT, 4, 1.2f, 0f, 2.5f, 0.5f, 0.5f, 0.5f, 0f, 0.8f, 1f, 480f),
     PIE_BLACKBERRY(FRUIT, 4, 1.2f, 0f, 2f, 0.5f, 0.5f, 0.5f, 0f, 0.8f, 1f, 480f),

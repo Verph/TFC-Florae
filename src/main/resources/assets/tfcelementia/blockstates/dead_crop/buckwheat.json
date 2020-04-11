@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/buckwheat_dead"
+      "crop": "tfcelementia:blocks/crop/buckwheat_dead"
     }
   },
   "variants": {

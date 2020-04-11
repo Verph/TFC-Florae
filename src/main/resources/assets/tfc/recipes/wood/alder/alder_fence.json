@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/alder"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/alder"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/alder",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/eucalyptus"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence_gate/eucalyptus",
+    "count": 2
+  }
+}

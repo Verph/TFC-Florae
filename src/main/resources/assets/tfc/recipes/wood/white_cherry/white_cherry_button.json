@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/white_cherry"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/white_cherry",
+    "count": 1
+  }
+}

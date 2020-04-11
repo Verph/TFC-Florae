@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/macadamia"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/macadamia"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/macadamia",
-          "texture": "tfc:blocks/fruit_trees/flowers/macadamia"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/macadamia",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/macadamia"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/macadamia",
-          "texture": "tfc:blocks/fruit_trees/fruit/macadamia"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/macadamia",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/macadamia"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

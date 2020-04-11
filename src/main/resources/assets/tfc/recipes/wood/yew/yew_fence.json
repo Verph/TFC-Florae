@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/yew"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/yew"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/yew",
+    "count": 8
+  }
+}

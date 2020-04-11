@@ -45,11 +45,19 @@ public class ItemGemTFCE extends ItemTFC
         setHasSubtypes(true);
         for (GemTFCE.Grade grade : GemTFCE.Grade.values())
         {
+            OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", grade, gem);
+            OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", grade);
+            OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", gem);
+            /*
             if (grade == GemTFCE.Grade.NORMAL)
             {
                 OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", gem);
             }
-            OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", grade);
+            else
+            {
+                OreDictionaryHelper.registerMeta(this, grade.ordinal(), "gem", grade, gem);
+            }
+            */
         }
     }
 

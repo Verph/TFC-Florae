@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/ebony"
+    }
+  },
+  "result": {
+    "item": "tfc:slab/wood/ebony",
+    "data": 0,
+    "count": 6
+  }
+}

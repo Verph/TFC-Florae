@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/limba"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/workbench/limba",
+    "count": 1
+  }
+}

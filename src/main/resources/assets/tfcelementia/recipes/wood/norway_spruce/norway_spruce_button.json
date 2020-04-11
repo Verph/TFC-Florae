@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/norway_spruce"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/norway_spruce",
+    "count": 1
+  }
+}

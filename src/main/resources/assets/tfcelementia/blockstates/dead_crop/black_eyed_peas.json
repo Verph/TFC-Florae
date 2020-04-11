@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/crop/black_eyed_peas_dead"
+      "cross": "tfcelementia:blocks/crop/black_eyed_peas_dead"
     }
   },
   "variants": {

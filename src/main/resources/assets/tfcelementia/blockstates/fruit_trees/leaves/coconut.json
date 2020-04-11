@@ -1,11 +1,11 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "tfc:leaves_palm",
+    "model": "tfcelementia:leaves_palm",
     "textures": {
-      "side": "tfc:blocks/fruit_trees/leaves/coconut_side",
-      "end": "tfc:blocks/fruit_trees/leaves/coconut_end",
-      "cross": "tfc:blocks/fruit_trees/fruit/coconut"
+      "side": "tfcelementia:blocks/fruit_trees/leaves/coconut_side",
+      "end": "tfcelementia:blocks/fruit_trees/leaves/coconut_end",
+      "cross": "tfcelementia:blocks/fruit_trees/fruit/coconut"
     }
   },
   "variants": {
@@ -13,24 +13,24 @@
       {}
     ],
     "inventory": {
-      "model": "tfc:leaves_palm",
+      "model": "tfcelementia:leaves_palm",
       "transform": "forge:default-block"
     },
     "state": {
       "normal": {
-        "model": "tfc:leaves_palm"
+        "model": "tfcelementia:leaves_palm"
       },
       "flowering": {
-        "model": "tfc:leaves_palm",
+        "model": "tfcelementia:leaves_palm",
         "textures": {
-          "cross": "tfc:blocks/fruit_trees/flowers/coconut"
+          "cross": "tfcelementia:blocks/fruit_trees/flowers/coconut"
         },
         "submodel": "cross"
       },
       "fruit": {
-        "model": "tfc:leaves_palm",
+        "model": "tfcelementia:leaves_palm",
         "textures": {
-          "cross": "tfc:blocks/fruit_trees/fruit/coconut"
+          "cross": "tfcelementia:blocks/fruit_trees/fruit/coconut"
         },
         "submodel": "cross"
       }

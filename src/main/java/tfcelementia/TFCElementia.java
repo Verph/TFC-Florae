@@ -43,8 +43,7 @@ import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import net.dries007.tfc.util.OreDictionaryHelper;
 import tfcelementia.api.capability.food.CapabilityFoodTFCE;
 import tfcelementia.api.capability.food.FoodHandlerTFCE;
-import tfcelementia.api.registries.TFCERegistries;
-import tfcelementia.util.ItemsTFCE;
+import tfcelementia.objects.items.ItemsTFCE;
 //import tfcelementia.util.OreDictionaryHelper;
 import tfcelementia.util.VeinLoader;
 
@@ -101,7 +100,6 @@ public class TFCElementia
     public void init(FMLInitializationEvent event)
     {
     	ItemsTFCE.init();
-        CapabilityFoodTFCE.init();
     }
 
     @EventHandler

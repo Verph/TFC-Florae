@@ -1,0 +1,39 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfcelementia:blocks/fruit_trees/leaves/pear"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcelementia:blocks/fruit_trees/leaves/pear",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/pear"
+        },
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcelementia:blocks/fruit_trees/leaves/pear",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/pear"
+        },
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
+      }
+    }
+  }
+}

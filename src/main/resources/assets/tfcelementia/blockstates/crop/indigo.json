@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/indigo_0"
+      "crop": "tfcelementia:blocks/crop/indigo_0"
     }
   },
   "variants": {
@@ -14,27 +14,27 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/indigo_0"
+          "crop": "tfcelementia:blocks/crop/indigo_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/indigo_1"
+          "crop": "tfcelementia:blocks/crop/indigo_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/indigo_2"
+          "crop": "tfcelementia:blocks/crop/indigo_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/indigo_3"
+          "crop": "tfcelementia:blocks/crop/indigo_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/indigo_4"
+          "crop": "tfcelementia:blocks/crop/indigo_4"
         }
       }
     }

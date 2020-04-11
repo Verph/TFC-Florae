@@ -3,8 +3,8 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/fruit_trees/sapling/pistachio",
-      "layer0": "tfc:blocks/fruit_trees/sapling/pistachio"
+      "cross": "tfcelementia:blocks/fruit_trees/sapling/pistachio",
+      "layer0": "tfcelementia:blocks/fruit_trees/sapling/pistachio"
     }
   },
   "variants": {

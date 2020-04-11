@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/woad_dead"
+      "crop": "tfcelementia:blocks/crop/woad_dead"
     }
   },
   "variants": {

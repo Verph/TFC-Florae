@@ -188,7 +188,7 @@ public class FoodHandlerTFCE implements IFoodTFCE, ICapabilitySerializable<NBTTa
     }
 
     /**
-     * This marks if the food data should be serialized. For normal food items, it isn't, because all values are provided on construction via CapabilityFoodTFCE. Only mark this is food data will change per item stack
+     * This marks if the food data should be serialized. For normal food items, it isn't, because all values are provided on construction via CapabilityFoodTFCE. Only mark this if food data will change per item stack
      */
     protected boolean isDynamic()
     {

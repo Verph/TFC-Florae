@@ -89,6 +89,8 @@ FULLBLOCK_TYPES = [
 	'mud',
 	'podzol',
 	'mossy_cobble',
+	'mossy_bricks',
+	'cracked_bricks',
 ]
 GRASS_TYPES = [
     'grass',
@@ -195,6 +197,35 @@ POWDERS = [
     'sea_salt',
     'selenide',
 ]
+GEM_POWDER_TYPES = [
+    'agate',
+    'amethyst',
+    'beryl',
+    'diamond',
+    'emerald',
+    'garnet',
+    'jade',
+    'jasper',
+    'opal',
+    'ruby',
+    'sapphire',
+    'topaz',
+    'tourmaline',
+    'apatite',
+	'bromargyrite',
+	'citrine',
+	'heliodor',
+	'iodargyrite',
+	'kyanite',
+	'moldavite',
+	'moonstone',
+	'pyromorphite',
+	'quartz',
+	'spinel',
+	'sunstone',
+	'tanzanite',
+	'zircon',
+]
 WOOD_TYPES = [
     'alder',
     'bamboo',
@@ -207,21 +238,38 @@ WOOD_TYPES = [
     'fruitwood',
     'ginkgo',
     'hawthorn',
+    'jacaranda',
     'juniper',
     'larch',
     'limba',
     'mahogany',
     'norway_spruce',
+    'pink_cherry',
     'poplar',
     'redwood',
     'rowan',
     'teak',
+    'white_cherry',
     'white_elm',
     'yew',
 ]
 BERRY_TYPES = {
 }
 GEM_TYPES = [
+    'agate',
+    'amethyst',
+    'beryl',
+    'diamond',
+    'emerald',
+    'garnet',
+    'jade',
+    'jasper',
+    'opal',
+    'ruby',
+    'sapphire',
+    'topaz',
+    'tourmaline',
+    'apatite',
 	'bromargyrite',
 	'citrine',
 	'heliodor',
@@ -367,18 +415,27 @@ METAL_TYPES = {
 	'magnox': False,
 	'platinum_sterling': False,
 	'titanium_gold': True,
+	'cast_iron': False,
+	'pewter': False,
 	'ardite': False,
 }  # + unknown
 METAL_ITEMS = {
     # 'unshaped': False, Special
     'ingot': False,
     'double_ingot': False,
+    'triple_ingot': False,
+    'quadruple_ingot': False,
     'scrap': False,
     'dust': False,
     'nugget': False,
     'sheet': False,
     'double_sheet': False,
+    'triple_sheet': False,
+    'quadruple_sheet': False,
     'plate': False,
+    'double_plate': False,
+    'triple_plate': False,
+    'quadruple_plate': False,
     'anvil': True,
     'tuyere': True,
     'lamp': False,
@@ -428,79 +485,186 @@ TOOLS = [
     'pick', 'propick', 'shovel', 'axe', 'hoe', 'chisel', 'sword', 'mace', 'saw', 'shears', 'javelin', 'hammer', 'knife',
     'scythe'
 ]
+
 FLUIDS = {
-	'distilled_water': 'distilled_water',
-	'white_tea': 'white_tea',
-	'green_tea': 'green_tea',
-	'black_tea': 'black_tea',
-	'gin': 'gin',
-	'red_wine': 'red_wine',
-	'white_wine': 'white_wine',
-	'tequila': 'tequila',
+    'agave_wine': 'agave_wine',
+    'banana_brandy': 'banana_brandy',
+    'banana_wine': 'banana_wine',
+    'barley_wine': 'barley_wine',
+    'beer_amaranth': 'beer_amaranth',
+    'beer_barley': 'beer_barley',
+    'beer_buckwheat': 'beer_buckwheat',
+    'beer_corn': 'beer_corn',
+    'beer_fonio': 'beer_fonio',
+    'beer_millet': 'beer_millet',
+    'beer_quinoa': 'beer_quinoa',
+    'beer_rye': 'beer_rye',
+    'beer_spelt': 'beer_spelt',
+    'beer_wheat': 'beer_wheat',
+    'berry_brandy': 'berry_brandy',
+    'berry_wine': 'berry_wine',
+    'black_tea': 'black_tea',
+    'brandy': 'brandy',
+    'calvados': 'calvados',
+    'chamomile_tea': 'chamomile_tea',
+    'cherry_brandy': 'cherry_brandy',
+    'cherry_wine': 'cherry_wine',
+    'coffee': 'coffee',
+    'cognac': 'cognac',
+    'dandelion_tea': 'dandelion_tea',
+    'distilled_water': 'distilled_water',
+    'gin': 'gin',
+    'green_tea': 'green_tea',
+    'honey_water': 'honey_water',
+    'juice_agave': 'juice_agave',
+    'juice_apple': 'juice_apple',
+    'juice_banana': 'juice_banana',
+    'juice_blackberry': 'juice_blackberry',
+    'juice_blueberry': 'juice_blueberry',
+    'juice_bunch_berry': 'juice_bunch_berry',
+    'juice_cherry': 'juice_cherry',
+    'juice_cloud_berry': 'juice_cloud_berry',
+    'juice_cranberry': 'juice_cranberry',
+    'juice_elderberry': 'juice_elderberry',
+    'juice_gooseberry': 'juice_gooseberry',
+    'juice_green_grape': 'juice_green_grape',
+    'juice_juniper': 'juice_juniper',
+    'juice_lemon': 'juice_lemon',
+    'juice_orange': 'juice_orange',
+    'juice_papaya': 'juice_papaya',
+    'juice_peach': 'juice_peach',
+    'juice_pear': 'juice_pear',
+    'juice_plum': 'juice_plum',
+    'juice_purple_grape': 'juice_purple_grape',
+    'juice_raspberry': 'juice_raspberry',
+    'juice_snow_berry': 'juice_snow_berry',
+    'juice_strawberry': 'juice_strawberry',
+    'juice_wintergreen_berry': 'juice_wintergreen_berry',
+    'juniper_wine': 'juniper_wine',
+    'labrador_tea': 'labrador_tea',
+    'lemon_brandy': 'lemon_brandy',
+    'lemon_wine': 'lemon_wine',
+    'mead': 'mead',
+    'orange_brandy': 'orange_brandy',
+    'orange_wine': 'orange_wine',
+    'papaya_brandy': 'papaya_brandy',
+    'papaya_wine': 'papaya_wine',
+    'peach_brandy': 'peach_brandy',
+    'peach_wine': 'peach_wine',
+    'pear_brandy': 'pear_brandy',
+    'pear_wine': '',
+    'plum_brandy': 'plum_brandy',
+    'plum_wine': 'plum_wine',
+    'red_wine': 'red_wine',
+    'rice_water': 'rice_water',
+    'shochu': 'shochu',
+    'soy_milk': 'soy_milk',
+    'sugar_water': 'sugar_water',
+    'tequila': 'tequila',
+    'wheat_wine': 'wheat_wine',
+    'white_tea': 'white_tea',
+    'white_wine': 'white_wine',
+    'wort': 'wort',
 }
 
 # all crops
 CROPS = {
-    'amaranth': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
-    'buckwheat': {'model': 'crop', 'texture': 'crop', 'stages': 8},
-    'fonio': {'model': 'crop', 'texture': 'crop', 'stages': 8},
-    'millet': {'model': 'crop', 'texture': 'crop', 'stages': 8},
-    'quinoa': {'model': 'crop', 'texture': 'crop', 'stages': 8},
-    'spelt': {'model': 'crop', 'texture': 'crop', 'stages': 8},
-    'wild_rice': {'model': 'crop', 'texture': 'crop', 'stages': 8},
     'agave': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 6},
+    'amaranth': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
     'black_eyed_peas': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'black_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'buckwheat': {'model': 'crop', 'texture': 'crop', 'stages': 8},
     'cayenne_pepper': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'celery': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'coca': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 5},
     'cotton': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 6},
     'flax': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'fonio': {'model': 'crop', 'texture': 'crop', 'stages': 8},
     'ginger': {'model': 'crop', 'texture': 'crop', 'stages': 7},
     'ginseng': {'model': 'crop', 'texture': 'crop', 'stages': 5},
     'green_grapes': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
+    'green_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
     'hemp': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 5},
     'hops': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
+    'indigo': {'model': 'crop', 'texture': 'crop', 'stages': 5},
     'lettuce': {'model': 'crop', 'texture': 'crop', 'stages': 6},
     'madder': {'model': 'crop', 'texture': 'crop', 'stages': 5},
+    'millet': {'model': 'crop', 'texture': 'crop', 'stages': 8},
+    'mustard': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'opium_poppy': {'model': 'crop', 'texture': 'crop', 'stages': 6},
     'peanut': {'model': 'crop', 'texture': 'crop', 'stages': 6},
     'purple_grapes': {'model': 'tfc:large_cross', 'texture': 'cross', 'stages': 8},
-    'rutabuga': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'turnip': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'mustard': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'sweet_potato': {'model': 'cross', 'texture': 'cross', 'stages': 7},
-    'weld': {'model': 'crop', 'texture': 'crop', 'stages': 5},
-    'woad': {'model': 'crop', 'texture': 'crop', 'stages': 6},
-    'black_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
-    'green_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
-    'white_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
-    'indigo': {'model': 'crop', 'texture': 'crop', 'stages': 5},
+    'quinoa': {'model': 'crop', 'texture': 'crop', 'stages': 8},
     'rape': {'model': 'crop', 'texture': 'crop', 'stages': 6},
+    'rape': {'model': 'crop', 'texture': 'crop', 'stages': 6},
+    'rutabuga': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'spelt': {'model': 'crop', 'texture': 'crop', 'stages': 8},
+    'sugar_beet': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'sunflower': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'sweet_potato': {'model': 'cross', 'texture': 'cross', 'stages': 7},
     'tobacco': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 5},
-    'coca': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 5},
-    'opium_poppy': {'model': 'crop', 'texture': 'crop', 'stages': 6},
-    'sunflower': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6}
+    'turnip': {'model': 'cross', 'texture': 'cross', 'stages': 7},
+    'weld': {'model': 'crop', 'texture': 'crop', 'stages': 5},
+    'white_tea': {'model': 'tfc:crop_tall', 'texture': 'crop', 'stages': 6},
+    'wild_rice': {'model': 'crop', 'texture': 'crop', 'stages': 8},
+    'woad': {'model': 'crop', 'texture': 'crop', 'stages': 6}
 }
 
 FOODS = [
     'acorn',
     'almond',
+    'amaranth',
+    'amaranth_bread',
+    'amaranth_bread_sandwich',
+    'amaranth_dough',
+    'amaranth_flour',
+    'amaranth_grain',
     'black_eyed_peas',
+    'buckwheat',
+    'buckwheat_bread',
+    'buckwheat_bread_sandwich',
+    'buckwheat_dough',
+    'buckwheat_flour',
+    'buckwheat_grain',
     'cacao_pod',
     'cashew',
     'celery',
     'chestnut',
     'coconut',
     'date',
+    'dried_coffee_cherries',
+    'fonio',
+    'fonio_bread',
+    'fonio_bread_sandwich',
+    'fonio_dough',
+    'fonio_flour',
+    'fonio_grain',
     'ginger',
     'ginseng',
     'green_cayenne_pepper',
     'green_grapes',
+    'hash_muffin',
     'hazelnut',
     'juniper_berry',
     'lettuce',
+    'linseed',
+    'linseed_paste',
     'macadamia',
+    'mashed_sugar_beet',
+    'millet',
+    'millet_bread',
+    'millet_bread_sandwich',
+    'millet_dough',
+    'millet_flour',
+    'millet_grain',
+    'mustard',
+    'opium_poppy_seed',
+    'opium_poppy_seed_paste',
     'papaya',
     'peanut',
+    'pear',
     'pecan',
+    'peyote',
     'pie',
     'pie_apple',
     'pie_blackberry',
@@ -514,59 +678,36 @@ FOODS = [
     'pine_nut',
     'pistachio',
     'purple_grapes',
-    'red_cayenne_pepper',
-    'rutabaga',
-    'turnip',
-    'mustard',
-    'sweet_potato',
-    'walnut',
-    'opium_poppy_seeds',
-    'sunflower_seed',
-    'dried_coffee_cherries',
-    'roasted_coffee_cherries',
-    'amaranth',
-    'amaranth_grain',
-    'amaranth_flour',
-    'amaranth_dough',
-    'amaranth_bread',
-    'buckwheat',
-    'buckwheat_grain',
-    'buckwheat_flour',
-    'buckwheat_dough',
-    'buckwheat_bread',
-    'fonio',
-    'fonio_grain',
-    'fonio_flour',
-    'fonio_dough',
-    'fonio_bread',
-    'millet',
-    'millet_grain',
-    'millet_flour',
-    'millet_dough',
-    'millet_bread',
     'quinoa',
-    'quinoa_grain',
-    'quinoa_flour',
-    'quinoa_dough',
     'quinoa_bread',
-    'spelt',
-    'spelt_grain',
-    'spelt_flour',
-    'spelt_dough',
-    'spelt_bread',
-    'wild_rice',
-    'wild_rice_grain',
-    'wild_rice_flour',
-    'wild_rice_dough',
-    'wild_rice_bread',
-    'hash_muffin',
-    'amaranth_bread_sandwich',
-    'buckwheat_bread_sandwich',
-    'fonio_bread_sandwich',
-    'millet_bread_sandwich',
     'quinoa_bread_sandwich',
+    'quinoa_dough',
+    'quinoa_flour',
+    'quinoa_grain',
+    'rape_seed',
+    'rape_seed_paste',
+    'red_cayenne_pepper',
+    'roasted_coffee_cherries',
+    'rutabaga',
+    'soybean_paste',
+    'spelt',
+    'spelt_bread',
     'spelt_bread_sandwich',
+    'spelt_dough',
+    'spelt_flour',
+    'spelt_grain',
+    'sugar_beet',
+    'sunflower_seed',
+    'sunflower_seed_paste',
+    'sweet_potato',
+    'turnip',
+    'walnut',
+    'wild_rice',
+    'wild_rice_bread',
     'wild_rice_bread_sandwich',
+    'wild_rice_dough',
+    'wild_rice_flour',
+    'wild_rice_grain',
 ]
 
 # Special 'hardcoded' cases
@@ -871,8 +1012,8 @@ for rock_type in ROCK_TYPES:
         'top': 'tfc:blocks/stonetypes/farmland/%s' % rock_type,
     })
 
-    # WALLS (smooth, cobble, bricks)
-    for block_type in ['smooth', 'cobble', 'bricks']:
+    # WALLS (smooth, cobble, bricks, mossy_bricks, cracked_bricks, mossy_cobble)
+    for block_type in ['smooth', 'cobble', 'bricks', 'mossy_bricks', 'cracked_bricks', 'mossy_cobble']:
         blockstate(('wall', block_type, rock_type), 'tfc:empty', textures={
             ('wall', 'particle'): 'tfc:blocks/stonetypes/%s/%s' % (block_type, rock_type),
         }, variants={
@@ -895,7 +1036,7 @@ for rock_type in ROCK_TYPES:
     })
 
     # (ROCK) STAIRS & SLABS
-    for block_type in ['smooth', 'cobble', 'bricks']:
+    for block_type in ['smooth', 'cobble', 'bricks', 'mossy_bricks', 'cracked_bricks', 'mossy_cobble']:
         blockstate(('stairs', block_type, rock_type), None, textures={
             ('top', 'bottom', 'side'): 'tfc:blocks/stonetypes/%s/%s' % (block_type, rock_type),
         }, variants=STAIR_VARIANTS, uvlock=True)
@@ -1232,6 +1373,10 @@ for rock_cat in ROCK_CATEGORIES:
 for powder in POWDERS:
     item(('powder', powder), 'tfc:items/powder/%s' % powder)
 
+# GEM_POWDER_TYPES
+for powder in GEM_POWDER_TYPES:
+    item(('powder/gems', powder), 'tfc:items/powder/gems/%s' % powder)
+    
 # GOLDPAN
 for type in ['empty', 'sand', 'gravel', 'clay', 'dirt']:
     item(('goldpan', type), 'tfc:items/goldpan/%s' % type)
@@ -1301,44 +1446,56 @@ item(('crop/product', 'cinnamon_bark'), 'tfc:items/crop/product/cinnamon_bark')
 
 # OTHER
 item(('crop/product', 'black_tea'), 'tfc:items/crop/product/black_tea')
-item(('crop/product', 'green_tea'), 'tfc:items/crop/product/green_tea')
-item(('crop/product', 'white_tea'), 'tfc:items/crop/product/white_tea')
+item(('crop/product', 'cannabis_bud'), 'tfc:items/crop/product/cannabis_bud')
+item(('crop/product', 'cannabis_leaf'), 'tfc:items/crop/product/cannabis_leaf')
+item(('crop/product', 'chamomile_head'), 'tfc:items/crop/product/chamomile_head')
+item(('crop/product', 'coca_leaf'), 'tfc:items/crop/product/coca_leaf')
+item(('crop/product', 'cotton_boll'), 'tfc:items/crop/product/cotton_boll')
+item(('crop/product', 'cotton_cloth'), 'tfc:items/crop/product/cotton_cloth')
+item(('crop/product', 'cotton_yarn'), 'tfc:items/crop/product/cotton_yarn')
+item(('crop/product', 'dandelion_head'), 'tfc:items/crop/product/dandelion_head')
 item(('crop/product', 'dried_black_tea'), 'tfc:items/crop/product/dried_black_tea')
+item(('crop/product', 'dried_cannabis_bud'), 'tfc:items/crop/product/dried_cannabis_bud')
+item(('crop/product', 'dried_cannabis_leaf'), 'tfc:items/crop/product/dried_cannabis_leaf')
+item(('crop/product', 'dried_chamomile_head'), 'tfc:items/crop/product/dried_chamomile_head')
+item(('crop/product', 'dried_coca_leaf'), 'tfc:items/crop/product/dried_coca_leaf')
+item(('crop/product', 'dried_dandelion_head'), 'tfc:items/crop/product/dried_dandelion_head')
 item(('crop/product', 'dried_green_tea'), 'tfc:items/crop/product/dried_green_tea')
+item(('crop/product', 'dried_opium_poppy_bulb'), 'tfc:items/crop/product/dried_opium_poppy_bud')
+item(('crop/product', 'dried_sunflower_head'), 'tfc:items/crop/product/dried_sunflower_head')
+item(('crop/product', 'dried_tobacco_leaf'), 'tfc:items/crop/product/dried_tobacco_leaf')
 item(('crop/product', 'dried_white_tea'), 'tfc:items/crop/product/dried_white_tea')
-item(('crop/product', 'malt_barley'), 'tfc:items/crop/product/malt_barley')
-item(('crop/product', 'malt_corn'), 'tfc:items/crop/product/malt_corn')
-item(('crop/product', 'malt_rice'), 'tfc:items/crop/product/malt_rice')
-item(('crop/product', 'malt_rye'), 'tfc:items/crop/product/malt_rye')
-item(('crop/product', 'malt_wheat'), 'tfc:items/crop/product/malt_wheat')
+item(('crop/product', 'flax'), 'tfc:items/crop/product/flax')
+item(('crop/product', 'flax_fiber'), 'tfc:items/crop/product/flax_fiber')
+item(('crop/product', 'green_tea'), 'tfc:items/crop/product/green_tea')
+item(('crop/product', 'hemp'), 'tfc:items/crop/product/hemp')
+item(('crop/product', 'hemp_cloth'), 'tfc:items/crop/product/hemp_cloth')
+item(('crop/product', 'hemp_fiber'), 'tfc:items/crop/product/hemp_fiber')
+item(('crop/product', 'hemp_string'), 'tfc:items/crop/product/hemp_string')
+item(('crop/product', 'indigo'), 'tfc:items/crop/product/indigo')
+item(('crop/product', 'linen_cloth'), 'tfc:items/crop/product/linen_cloth')
+item(('crop/product', 'linen_string'), 'tfc:items/crop/product/linen_string')
 item(('crop/product', 'malt_amaranth'), 'tfc:items/crop/product/malt_barley')
+item(('crop/product', 'malt_barley'), 'tfc:items/crop/product/malt_barley')
 item(('crop/product', 'malt_buckwheat'), 'tfc:items/crop/product/malt_corn')
+item(('crop/product', 'malt_corn'), 'tfc:items/crop/product/malt_corn')
 item(('crop/product', 'malt_fonio'), 'tfc:items/crop/product/malt_rice')
 item(('crop/product', 'malt_millet'), 'tfc:items/crop/product/malt_rye')
 item(('crop/product', 'malt_quinoa'), 'tfc:items/crop/product/malt_wheat')
+item(('crop/product', 'malt_rice'), 'tfc:items/crop/product/malt_rice')
+item(('crop/product', 'malt_rye'), 'tfc:items/crop/product/malt_rye')
 item(('crop/product', 'malt_spelt'), 'tfc:items/crop/product/malt_rye')
+item(('crop/product', 'malt_wheat'), 'tfc:items/crop/product/malt_wheat')
 item(('crop/product', 'malt_wild_rice'), 'tfc:items/crop/product/malt_wheat')
-item(('crop/product', 'cotton_cloth'), 'tfc:items/crop/product/cotton_cloth')
-item(('crop/product', 'cotton_yarn'), 'tfc:items/crop/product/cotton_yarn')
-item(('crop/product', 'flax_fiber'), 'tfc:items/crop/product/flax_fiber')
-item(('crop/product', 'linen_string'), 'tfc:items/crop/product/linen_string')
-item(('crop/product', 'linen_cloth'), 'tfc:items/crop/product/linen_cloth')
-item(('crop/product', 'sisal_fiber'), 'tfc:items/crop/product/sisal_fiber')
-item(('crop/product', 'indigo'), 'tfc:items/crop/product/indigo')
-item(('crop/product', 'sunflower_head'), 'tfc:items/crop/product/sunflower_head')
-item(('crop/product', 'dried_sunflower_head'), 'tfc:items/crop/product/dried_sunflower_head')
-item(('crop/product', 'rape_seed'), 'tfc:items/crop/product/rape_seed')
+item(('crop/product', 'opium_poppy_bulb'), 'tfc:items/crop/product/opium_poppy_bud')
+item(('crop/product', 'rape'), 'tfc:items/crop/product/rape')
 item(('crop/product', 'rape_flower'), 'tfc:items/crop/product/rape_flower')
+item(('crop/product', 'sisal_cloth'), 'tfc:items/crop/product/sisal_cloth')
+item(('crop/product', 'sisal_fiber'), 'tfc:items/crop/product/sisal_fiber')
+item(('crop/product', 'sisal_string'), 'tfc:items/crop/product/sisal_string')
+item(('crop/product', 'sunflower_head'), 'tfc:items/crop/product/sunflower_head')
 item(('crop/product', 'tobacco_leaf'), 'tfc:items/crop/product/tobacco_leaf')
-item(('crop/product', 'dried_tobacco_leaf'), 'tfc:items/crop/product/dried_tobacco_leaf')
-item(('crop/product', 'coca_leaf'), 'tfc:items/crop/product/coca_leaf')
-item(('crop/product', 'dried_coca_leaf'), 'tfc:items/crop/product/dried_coca_leaf')
-item(('crop/product', 'cannabis_bud'), 'tfc:items/crop/product/cannabis_bud')
-item(('crop/product', 'dried_cannabis_bud'), 'tfc:items/crop/product/dried_cannabis_bud')
-item(('crop/product', 'cannabis_leaf'), 'tfc:items/crop/product/cannabis_leaf')
-item(('crop/product', 'dried_cannabis_leaf'), 'tfc:items/crop/product/dried_cannabis_leaf')
-item(('crop/product', 'opium_poppy_bud'), 'tfc:items/crop/product/opium_poppy_bud')
-item(('crop/product', 'dried_opium_poppy_bud'), 'tfc:items/crop/product/dried_opium_poppy_bud')
+item(('crop/product', 'white_tea'), 'tfc:items/crop/product/white_tea')
 
 # FLAT
 for rock_cat in ROCK_TYPES:

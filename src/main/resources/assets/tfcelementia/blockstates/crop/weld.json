@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/weld_0"
+      "crop": "tfcelementia:blocks/crop/weld_0"
     }
   },
   "variants": {
@@ -14,27 +14,27 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/weld_0"
+          "crop": "tfcelementia:blocks/crop/weld_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/weld_1"
+          "crop": "tfcelementia:blocks/crop/weld_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/weld_2"
+          "crop": "tfcelementia:blocks/crop/weld_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/weld_3"
+          "crop": "tfcelementia:blocks/crop/weld_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/weld_4"
+          "crop": "tfcelementia:blocks/crop/weld_4"
         }
       }
     }

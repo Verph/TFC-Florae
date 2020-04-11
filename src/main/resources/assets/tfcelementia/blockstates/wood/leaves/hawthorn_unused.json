@@ -1,9 +1,0 @@
-{
-    "variants": {
-				"": [
-            { "model": "tfc:blocks/wood/leaves/hawthorn_0", "weight": 12 },
-            { "model": "tfc:blocks/wood/leaves/hawthorn_1", "weight": 4 },
-            { "model": "tfc:blocks/wood/leaves/hawthorn_2", "weight": 5 }
-        ]
-    }
-}

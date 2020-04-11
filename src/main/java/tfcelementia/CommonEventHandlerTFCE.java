@@ -95,7 +95,9 @@ import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.util.skills.SmithingSkill;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
-import tfcelementia.objects.blocks.BlocksTFCE;
+//import tfcelementia.api.types.RockTFCE;
+//import tfcelementia.objects.blocks.BlocksTFCE;
+//import tfcelementia.objects.blocks.stone.BlockRockVariantTFCE;
 import tfcelementia.objects.items.food.ItemFoodTFCE;
 import tfcelementia.api.capability.food.*;
 
@@ -106,7 +108,6 @@ import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
 public final class CommonEventHandlerTFCE
 {
-	// Maybe when adding podzol?
 	/*
     @SubscribeEvent
     public static void onUseHoe(UseHoeEvent event)
@@ -115,21 +116,22 @@ public final class CommonEventHandlerTFCE
         BlockPos pos = event.getPos();
         IBlockState state = world.getBlockState(pos);
 
-        if (state.getBlock() instanceof BlockRockVariant)
+        if (state.getBlock() instanceof BlockRockVariantTFCE)
         {
-            BlockRockVariant blockRock = (BlockRockVariant) state.getBlock();
-            if (blockRock.getType() == Rock.Type.GRASS || blockRock.getType() == Rock.Type.DIRT)
+            BlockRockVariantTFCE blockRock = (BlockRockVariantTFCE) state.getBlock();
+            if (blockRock.getType() == RockTFCE.Type.PODZOL)
             {
                 if (!world.isRemote)
                 {
                     world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                    world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.FARMLAND).getDefaultState());
+                    world.setBlockState(pos, BlockRockVariantTFCE.get(blockRock.getRock(), Rock.Type.FARMLAND).getDefaultState());
                 }
                 event.setResult(Event.Result.ALLOW);
             }
         }
-    }*/
-	
+    }
+	*/
+    
     @SubscribeEvent
     public static void attachItemCapabilities(AttachCapabilitiesEvent<ItemStack> event)
     {

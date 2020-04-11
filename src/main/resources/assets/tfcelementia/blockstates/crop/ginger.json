@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/ginger_0"
+      "crop": "tfcelementia:blocks/crop/ginger_0"
     }
   },
   "variants": {
@@ -14,37 +14,37 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_0"
+          "crop": "tfcelementia:blocks/crop/ginger_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_1"
+          "crop": "tfcelementia:blocks/crop/ginger_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_2"
+          "crop": "tfcelementia:blocks/crop/ginger_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_3"
+          "crop": "tfcelementia:blocks/crop/ginger_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_4"
+          "crop": "tfcelementia:blocks/crop/ginger_4"
         }
       },
       "5": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_5"
+          "crop": "tfcelementia:blocks/crop/ginger_5"
         }
       },
       "6": {
         "textures": {
-          "crop": "tfc:blocks/crop/ginger_6"
+          "crop": "tfcelementia:blocks/crop/ginger_6"
         }
       }
     }

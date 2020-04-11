@@ -48,11 +48,6 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
         }
         TABLE.get(metal).put(type, this);
         setNoRepair();
-
-        /*if (type == Metal.ItemType.PLATE)
-        {
-            OreDictionaryHelper.register(this, "plate", metal.getRegistryName().getPath());
-        }*/
     }
 
     public ItemType getType()
@@ -67,6 +62,13 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
         switch (type)
         {
             case PLATE:
+            case DOUBLE_PLATE:
+            case TRIPLE_PLATE:
+            case QUADRUPLE_PLATE:
+            case TRIPLE_INGOT:
+            case TRIPLE_SHEET:
+            case QUADRUPLE_INGOT:
+            case QUADRUPLE_SHEET:
                 return Size.NORMAL;
             default:
                 return Size.LARGE;
@@ -80,7 +82,16 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
         switch (type)
         {
             case PLATE:
+            case DOUBLE_PLATE:
+            case TRIPLE_PLATE:
+            case QUADRUPLE_PLATE:
+            case TRIPLE_INGOT:
+            case QUADRUPLE_INGOT:
                 return Weight.LIGHT;
+            case TRIPLE_SHEET:
+                return Weight.MEDIUM;
+            case QUADRUPLE_SHEET:
+                return Weight.HEAVY;
             default:
                 return Weight.MEDIUM;
         }
@@ -108,7 +119,14 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
 
     public enum ItemType
     {
-        PLATE(100);
+        PLATE(100),
+        DOUBLE_PLATE(200),
+        TRIPLE_PLATE(300),
+        QUADRUPLE_PLATE(400),
+    	TRIPLE_INGOT(300),
+    	TRIPLE_SHEET(600),
+    	QUADRUPLE_INGOT(400),
+    	QUADRUPLE_SHEET(800);
 
         public static Item create(Metal metal, ItemType type)
         {

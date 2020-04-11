@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/limba"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/limba"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/limba",
+    "count": 8
+  }
+}

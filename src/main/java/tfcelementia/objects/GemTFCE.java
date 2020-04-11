@@ -11,6 +11,7 @@ import net.dries007.tfc.util.collections.WeightedCollection;
 
 public enum GemTFCE
 {
+    APATITE(true),
     BROMARGYRITE(true),
     CITRINE(true),
     HELIODOR(true),

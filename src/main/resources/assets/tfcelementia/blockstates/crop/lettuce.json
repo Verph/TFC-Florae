@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfc:blocks/crop/lettuce_0"
+      "crop": "tfcelementia:blocks/crop/lettuce_0"
     }
   },
   "variants": {
@@ -14,32 +14,32 @@
     "stage": {
       "0": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_0"
+          "crop": "tfcelementia:blocks/crop/lettuce_0"
         }
       },
       "1": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_1"
+          "crop": "tfcelementia:blocks/crop/lettuce_1"
         }
       },
       "2": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_2"
+          "crop": "tfcelementia:blocks/crop/lettuce_2"
         }
       },
       "3": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_3"
+          "crop": "tfcelementia:blocks/crop/lettuce_3"
         }
       },
       "4": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_4"
+          "crop": "tfcelementia:blocks/crop/lettuce_4"
         }
       },
       "5": {
         "textures": {
-          "crop": "tfc:blocks/crop/lettuce_5"
+          "crop": "tfcelementia:blocks/crop/lettuce_5"
         }
       }
     }

@@ -3,8 +3,8 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/fruit_trees/sapling/almond",
-      "layer0": "tfc:blocks/fruit_trees/sapling/almond"
+      "cross": "tfcelementia:blocks/fruit_trees/sapling/almond",
+      "layer0": "tfcelementia:blocks/fruit_trees/sapling/almond"
     }
   },
   "variants": {

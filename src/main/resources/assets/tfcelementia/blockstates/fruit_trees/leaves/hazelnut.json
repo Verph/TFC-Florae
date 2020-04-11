@@ -3,7 +3,7 @@
   "defaults": {
     "model": "leaves",
     "textures": {
-      "all": "tfc:blocks/fruit_trees/leaves/hazelnut"
+      "all": "tfcelementia:blocks/fruit_trees/leaves/hazelnut"
     }
   },
   "variants": {
@@ -21,18 +21,18 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/hazelnut",
-          "texture": "tfc:blocks/fruit_trees/flowers/hazelnut"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/hazelnut",
+          "texture": "tfcelementia:blocks/fruit_trees/flowers/hazelnut"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       },
       "fruit": {
         "model": "leaves",
         "textures": {
-          "all": "tfc:blocks/fruit_trees/leaves/hazelnut",
-          "texture": "tfc:blocks/fruit_trees/fruit/hazelnut"
+          "all": "tfcelementia:blocks/fruit_trees/leaves/hazelnut",
+          "texture": "tfcelementia:blocks/fruit_trees/fruit/hazelnut"
         },
-        "submodel": "tfc:fruit_trees/leaves_overlay"
+        "submodel": "tfcelementia:fruit_trees/leaves_overlay"
       }
     }
   }

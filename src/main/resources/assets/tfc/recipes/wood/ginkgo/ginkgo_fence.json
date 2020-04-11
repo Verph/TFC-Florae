@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/ginkgo"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/ginkgo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/ginkgo",
+    "count": 8
+  }
+}

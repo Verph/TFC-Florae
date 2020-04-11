@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/crop/rutabuga_0"
+      "cross": "tfcelementia:blocks/crop/rutabuga_0"
     }
   },
   "variants": {
@@ -14,37 +14,37 @@
     "stage": {
       "0": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_0"
+          "cross": "tfcelementia:blocks/crop/rutabuga_0"
         }
       },
       "1": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_1"
+          "cross": "tfcelementia:blocks/crop/rutabuga_1"
         }
       },
       "2": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_2"
+          "cross": "tfcelementia:blocks/crop/rutabuga_2"
         }
       },
       "3": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_3"
+          "cross": "tfcelementia:blocks/crop/rutabuga_3"
         }
       },
       "4": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_4"
+          "cross": "tfcelementia:blocks/crop/rutabuga_4"
         }
       },
       "5": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_5"
+          "cross": "tfcelementia:blocks/crop/rutabuga_5"
         }
       },
       "6": {
         "textures": {
-          "cross": "tfc:blocks/crop/rutabuga_6"
+          "cross": "tfcelementia:blocks/crop/rutabuga_6"
         }
       }
     }

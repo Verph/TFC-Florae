@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/crop/mustard_dead"
+      "cross": "tfcelementia:blocks/crop/mustard_dead"
     }
   },
   "variants": {

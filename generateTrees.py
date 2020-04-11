@@ -184,13 +184,17 @@ WOOD_TYPES = {
     'ginkgo': 'ginkgo',
     'larch': 'larch',
     'hawthorn': 'hawthorn',
+    'iroko': 'iroko',
+    'jacaranda': 'jacaranda',
     'juniper': 'juniper',
     'mahogany': 'mahogany',
     'norway_spruce': 'norway_spruce',
+    'pink_cherry': 'pink_cherry',
     'poplar': 'poplar',
     'redwood': 'redwood',
     'rowan': 'rowan',
     'teak': 'teak',
+    'white_cherry': 'white_cherry',
     'white_elm': 'white_elm',
     'yew': 'yew'
 }
@@ -247,6 +251,16 @@ for wood, key in WOOD_TYPES.items():
         for s in ['1', '2', '3', '4', '5']:
             tree('structure_templates/hawthorn/hawthorn_' + s, wood, s)
 
+    # iroko
+    if key == 'iroko':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/iroko/iroko_' + s, wood, s)
+
+    # jacaranda
+    if key == 'jacaranda':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/jacaranda/jacaranda_' + s, wood, s)
+
     # juniper
     if key == 'juniper':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']:
@@ -272,6 +286,11 @@ for wood, key in WOOD_TYPES.items():
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             tree('structure_templates/norway_spruce/norway_spruce_' + s, wood, s)
 
+    # pink_cherry
+    if key == 'pink_cherry':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/pink_cherry/pink_cherry_' + s, wood, s)
+
     # poplar
     if key == 'poplar':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8']:
@@ -291,6 +310,11 @@ for wood, key in WOOD_TYPES.items():
     if key == 'teak':
         for s in ['1', '2', '3', '4', '5', '6', '7']:
             tree('structure_templates/teak/teak_' + s, wood, s)
+
+    # white_cherry
+    if key == 'white_cherry':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/white_cherry/white_cherry_' + s, wood, s)
 
     # white_elm
     if key == 'white_elm':

@@ -13,7 +13,7 @@ import net.dries007.tfc.api.types.Ore;
 import tfcelementia.TFCElementia;
 import tfcelementia.objects.ArmorMaterialsTFCE;
 import tfcelementia.objects.ToolMaterialsTFCE;
-import tfcelementia.util.ItemsTFCE;
+import tfcelementia.objects.items.ItemsTFCE;
 
 //import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.types.DefaultMetals.*;
@@ -24,6 +24,9 @@ import static tfcelementia.TFCElementia.MODID;
 @Mod.EventBusSubscriber(modid = TFCElementia.MODID)
 public final class MetalsTFCE
 {
+	//Coal
+    public static final ResourceLocation ANTHRACITE = new ResourceLocation(MODID, "anthracite");
+	
 	//Ores
     //Reactive nonmetals
     public static final ResourceLocation FLUORITE = new ResourceLocation(MODID, "fluorite");
@@ -223,6 +226,7 @@ public final class MetalsTFCE
     public static final ResourceLocation PLATINUM_STERLING = new ResourceLocation(MODID, "platinum_sterling");
     public static final ResourceLocation TITANIUM_GOLD = new ResourceLocation(MODID, "titanium_gold");
     public static final ResourceLocation CAST_IRON = new ResourceLocation(MODID, "cast_iron");
+    public static final ResourceLocation PEWTER = new ResourceLocation(MODID, "pewter");
 
     //Fantasy
     public static final ResourceLocation MITHRIL = new ResourceLocation(MODID, "mithril");
@@ -362,6 +366,7 @@ public final class MetalsTFCE
         r.register(new Metal(PLATINUM_STERLING, Metal.Tier.TIER_V, true, 0.35f, 1730, 0xFF9DADC0, null, null));
         r.register(new Metal(TITANIUM_GOLD, Metal.Tier.TIER_VI, true, 0.35f, 1768, 0xFFECD940, ToolMaterialsTFCE.TITANIUM_GOLD, ArmorMaterialsTFCE.TITANIUM_GOLD));
         r.register(new Metal(CAST_IRON, Metal.Tier.TIER_II, true, 0.35f, 1535, 0xFF5F5F5F, null, null));
+        r.register(new Metal(PEWTER, Metal.Tier.TIER_II, true, 0.35f, 230, 0xFF51707B, null, null));
         
         //Fantasy
         r.register(new Metal(MITHRIL, Metal.Tier.TIER_II, true, 0.35f, 940, 0xFF8ADAF6, ToolMaterialsTFCE.MITHRIL, ArmorMaterialsTFCE.MITHRIL));
@@ -373,6 +378,9 @@ public final class MetalsTFCE
     public static void onPreRegisterOre(TFCRegistryEvent.RegisterPreBlock<Ore> event)
     {
         IForgeRegistry<Ore> r = event.getRegistry();
+
+        //Reactive nonmetals
+        r.register(new Ore(ANTHRACITE)); //Coal
         
         //Reactive nonmetals
         r.register(new Ore(FLUORITE));
@@ -531,5 +539,7 @@ public final class MetalsTFCE
         r.register(new AlloyRecipe.Builder(MAGNOX).add(MAGNESIUM, 0.98, 0.96).add(ALUMINIUM, 0.01, 0.02).add(BERYLLIUM, 0.01, 0.02).build());
         r.register(new AlloyRecipe.Builder(PLATINUM_STERLING).add(SILVER, 0.95, 0.90).add(PLATINUM, 0.05, 0.10).build());
         r.register(new AlloyRecipe.Builder(TITANIUM_GOLD).add(TITANIUM, 0.80, 0.70).add(GOLD, 0.20, 0.30).build());
+        r.register(new AlloyRecipe.Builder(PEWTER).add(TIN, 0.92, 0.84).add(ANTIMONY, 0.05, 0.10).add(COPPER, 0.01, 0.02).add(BISMUTH, 0.01, 0.02).add(SILVER, 0.01, 0.02).build());
+        //r.register(new AlloyRecipe.Builder(PEWTER).add(TIN, 0.90, 0.80).add(COPPER, 0.05, 0.10).add(LEAD, 0.05, 0.10).build());
     }
 }

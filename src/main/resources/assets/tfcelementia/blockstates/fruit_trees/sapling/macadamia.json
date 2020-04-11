@@ -3,8 +3,8 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/fruit_trees/sapling/macadamia",
-      "layer0": "tfc:blocks/fruit_trees/sapling/macadamia"
+      "cross": "tfcelementia:blocks/fruit_trees/sapling/macadamia",
+      "layer0": "tfcelementia:blocks/fruit_trees/sapling/macadamia"
     }
   },
   "variants": {

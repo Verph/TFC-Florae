@@ -13,10 +13,17 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.api.capability.damage.DamageType;
-import net.dries007.tfc.api.types.Rock;
+import net.dries007.tfc.objects.Gem;
+import net.dries007.tfc.objects.items.ItemGem;
+//import net.dries007.tfc.api.types.Rock;
+import tfcelementia.objects.PowderGemTFCE;
+//import tfcelementia.api.types.RockTFCE;
+import tfcelementia.objects.PowderTFCE;
+import tfcelementia.objects.items.ItemPowderGemTFCE;
+import tfcelementia.objects.items.ItemPowderTFCE;
+import tfcelementia.types.MetalsTFCE;
 
 public class OreDictionaryHelper 
 {
@@ -55,10 +62,12 @@ public class OreDictionaryHelper
         register(new Thing(thing, meta), parts);
     }
 
-    public static void registerRockType(Block thing, Rock.Type type, Object... prefixParts)
+    /*
+    public static void registerRockType(Block thing, RockTFCE.Type type, Object... prefixParts)
     {
         registerRockType(new Thing(thing), type, prefixParts);
     }
+    */
 
     public static void registerDamageType(Item thing, DamageType type)
     {
@@ -72,13 +81,81 @@ public class OreDictionaryHelper
         MAP.clear(); // No need to keep this stuff around
 
         // Vanilla ore dict values
+        /*
         OreDictionary.registerOre("clay", Items.CLAY_BALL);
         OreDictionary.registerOre("gemCoal", new ItemStack(Items.COAL, 1, 0));
         OreDictionary.registerOre("charcoal", new ItemStack(Items.COAL, 1, 1));
         OreDictionary.registerOre("fireStarter", new ItemStack(Items.FLINT_AND_STEEL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("fireStarter", new ItemStack(Items.FIRE_CHARGE));
         OreDictionary.registerOre("bowl", Items.BOWL);
-
+        */
+        
+        //oredict support for TFC dyes
+        OreDictionary.registerOre("dyeWhite", new ItemStack(ItemPowderTFCE.get(PowderTFCE.CALCIUM)));
+        OreDictionary.registerOre("dyeGreen", new ItemStack(ItemPowderTFCE.get(PowderTFCE.FLUORITE)));
+        OreDictionary.registerOre("dyePurple", new ItemStack(ItemPowderTFCE.get(PowderTFCE.IODATE)));
+        OreDictionary.registerOre("dyeYellow", new ItemStack(ItemPowderTFCE.get(PowderTFCE.PHOSPHORITE)));
+        OreDictionary.registerOre("dyeRed", new ItemStack(ItemPowderTFCE.get(PowderTFCE.SELENIDE)));
+        
+        /*
+        //oredict support for TFC gem dusts
+        OreDictionary.registerOre("dustAgate", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.AGATE)));
+        OreDictionary.registerOre("dustAmethyst", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.AMETHYST)));
+        OreDictionary.registerOre("dustBeryl", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.BERYL)));
+        OreDictionary.registerOre("dustDiamond", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.DIAMOND)));
+        OreDictionary.registerOre("dustEmerald", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.EMERALD)));
+        OreDictionary.registerOre("dustGarnet", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.GARNET)));
+        OreDictionary.registerOre("dustJade", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.JADE)));
+        OreDictionary.registerOre("dustJasper", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.JASPER)));
+        OreDictionary.registerOre("dustOpal", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.OPAL)));
+        OreDictionary.registerOre("dustRuby", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.RUBY)));
+        OreDictionary.registerOre("dustSapphire", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SAPPHIRE)));
+        OreDictionary.registerOre("dustTopaz", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TOPAZ)));
+        OreDictionary.registerOre("dustTourmaline", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TOURMALINE)));
+        OreDictionary.registerOre("dustApatite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.APATITE)));
+        OreDictionary.registerOre("dustBromargyrite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.BROMARGYRITE)));
+        OreDictionary.registerOre("dustCitrine", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.CITRINE)));
+        OreDictionary.registerOre("dustHeliodor", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.HELIODOR)));
+        OreDictionary.registerOre("dustIodargyrite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.IODARGYRITE)));
+        OreDictionary.registerOre("dustKyanite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.KYANITE)));
+        OreDictionary.registerOre("dustMoldavite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.MOLDAVITE)));
+        OreDictionary.registerOre("dustMoonstone", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.MOONSTONE)));
+        OreDictionary.registerOre("dustPyromorphite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.PYROMORPHITE)));
+        OreDictionary.registerOre("dustQuartz", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.QUARTZ)));
+        OreDictionary.registerOre("dustSpinel", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SPINEL)));
+        OreDictionary.registerOre("dustSunstone", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SUNSTONE)));
+        OreDictionary.registerOre("dustTanzanite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TANZANITE)));
+        OreDictionary.registerOre("dustZircon", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.ZIRCON)));
+        
+        OreDictionary.registerOre("powderAgate", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.AGATE)));
+        OreDictionary.registerOre("powderAmethyst", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.AMETHYST)));
+        OreDictionary.registerOre("powderBeryl", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.BERYL)));
+        OreDictionary.registerOre("powderDiamond", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.DIAMOND)));
+        OreDictionary.registerOre("powderEmerald", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.EMERALD)));
+        OreDictionary.registerOre("powderGarnet", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.GARNET)));
+        OreDictionary.registerOre("powderJade", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.JADE)));
+        OreDictionary.registerOre("powderJasper", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.JASPER)));
+        OreDictionary.registerOre("powderOpal", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.OPAL)));
+        OreDictionary.registerOre("powderRuby", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.RUBY)));
+        OreDictionary.registerOre("powderSapphire", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SAPPHIRE)));
+        OreDictionary.registerOre("powderTopaz", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TOPAZ)));
+        OreDictionary.registerOre("powderTourmaline", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TOURMALINE)));
+        OreDictionary.registerOre("powderApatite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.APATITE)));
+        OreDictionary.registerOre("powderBromargyrite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.BROMARGYRITE)));
+        OreDictionary.registerOre("powderCitrine", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.CITRINE)));
+        OreDictionary.registerOre("powderHeliodor", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.HELIODOR)));
+        OreDictionary.registerOre("powderIodargyrite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.IODARGYRITE)));
+        OreDictionary.registerOre("powderKyanite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.KYANITE)));
+        OreDictionary.registerOre("powderMoldavite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.MOLDAVITE)));
+        OreDictionary.registerOre("powderMoonstone", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.MOONSTONE)));
+        OreDictionary.registerOre("powderPyromorphite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.PYROMORPHITE)));
+        OreDictionary.registerOre("powderQuartz", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.QUARTZ)));
+        OreDictionary.registerOre("powderSpinel", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SPINEL)));
+        OreDictionary.registerOre("powderSunstone", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.SUNSTONE)));
+        OreDictionary.registerOre("powderTanzanite", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.TANZANITE)));
+        OreDictionary.registerOre("powderZircon", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.ZIRCON)));
+        */
+        
         // Register a name without any items
         OreDictionary.getOres("infiniteFire", true);
     }
@@ -108,39 +185,25 @@ public class OreDictionaryHelper
         MAP.put(thing, toString(parts));
     }
 
-    private static void registerRockType(Thing thing, Rock.Type type, Object... prefixParts)
+    /*
+    private static void registerRockType(Thing thing, RockTFCE.Type type, Object... prefixParts)
     {
         switch (type)
         {
-            case RAW:
-                MAP.put(thing, toString(prefixParts, "stone"));
-                break;
-            case SMOOTH:
-                MAP.put(thing, toString(prefixParts, "stone"));
-                MAP.put(thing, toString(prefixParts, "stone", "polished"));
-                break;
-            case COBBLE:
+            case MOSSY_COBBLE:
                 MAP.put(thing, toString(prefixParts, "cobblestone"));
                 break;
-            case BRICKS:
+            case MOSSY_BRICKS:
+            case CRACKED_BRICKS:
                 MAP.put(thing, toString(prefixParts, "stone", "brick"));
                 break;
-            case DRY_GRASS:
-                MAP.put(thing, toString(prefixParts, type, "dry"));
+            case PODZOL:
                 break;
-            case CLAY:
-            case CLAY_GRASS:
-                MAP.put(thing, toString(prefixParts, "block", type));
-                MAP.put(thing, toString(prefixParts, "block", type));
-                break;
-            case SAND:
-            case GRAVEL:
-            case DIRT:
-            case GRASS:
             default:
                 MAP.put(thing, toString(prefixParts, type));
         }
     }
+    */
 
     private static class Thing
     {

@@ -3,8 +3,8 @@
   "defaults": {
     "model": "cross",
     "textures": {
-      "cross": "tfc:blocks/fruit_trees/sapling/hazelnut",
-      "layer0": "tfc:blocks/fruit_trees/sapling/hazelnut"
+      "cross": "tfcelementia:blocks/fruit_trees/sapling/hazelnut",
+      "layer0": "tfcelementia:blocks/fruit_trees/sapling/hazelnut"
     }
   },
   "variants": {

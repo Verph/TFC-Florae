@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/iroko"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/iroko",
+    "count": 1
+  }
+}

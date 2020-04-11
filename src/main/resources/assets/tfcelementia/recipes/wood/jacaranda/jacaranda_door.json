@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberJacaranda"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/door/jacaranda",
+    "count": 2
+  }
+}

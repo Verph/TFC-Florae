@@ -1,0 +1,15 @@
+{
+  "type": "tfc:damage_item_food_recipe",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "item": "tfcelementia:crop/product/flax"
+    }
+  ],
+  "result": {
+    "item": "tfcelementia:food/linseed"
+  }
+}

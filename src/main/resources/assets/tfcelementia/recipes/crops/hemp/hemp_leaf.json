@@ -1,0 +1,15 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "item": "tfcelementia:crop/product/hemp"
+    }
+  ],
+  "result": {
+    "item": "tfcelementia:crop/product/cannabis_leaf"
+  }
+}
