@@ -1,0 +1,70 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/temperate_shrub_dead",
+          "weight": 10
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_1",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_2",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_3",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_4",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_5",
+          "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/temperate_shrub_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_1",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_2",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_3",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_4",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/temperate_shrub_5",
+          "weight": 1
+		}
+      ]
+    }
+  ]
+}

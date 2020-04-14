@@ -67,7 +67,7 @@ public class ItemDynamicBowlFoodTFCE extends ItemFoodTFCE
 
         public void initCreationDataAndBowl(ItemStack bowlStack, FoodData data)
         {
-            this.bowlStack = bowlStack;
+            this.bowlStack = bowlStack.copy();
             this.data = data;
         }
 

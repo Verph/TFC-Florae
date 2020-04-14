@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    " X ",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcelementia:crop/product/hemp_fiber"
+    }
+  },
+  "result": {
+    "item": "tfcelementia:crop/product/hemp_net",
+    "count": 1
+  }
+}

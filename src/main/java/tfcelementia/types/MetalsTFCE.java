@@ -525,7 +525,7 @@ public final class MetalsTFCE
         r.register(new AlloyRecipe.Builder(ELECTRUM).add(GOLD, 0.4, 0.6).add(SILVER, 0.4, 0.6).build());
         r.register(new AlloyRecipe.Builder(INVAR).add(WROUGHT_IRON, 0.6, 0.7).add(NICKEL, 0.3, 0.4).build());
         r.register(new AlloyRecipe.Builder(MANYULLYN).add(COBALT, 0.4, 0.6).add(ARDITE, 0.4, 0.6).build());
-        r.register(new AlloyRecipe.Builder(MITHRIL).add(COPPER, 0.88, 0.92).add(ANTIMONY, 0.08, 0.12).build());
+        r.register(new AlloyRecipe.Builder(MITHRIL).add(COPPER, 0.85, 0.90).add(ANTIMONY, 0.08, 0.1).add(MERCURY, 0.02, 0.05).build());
         r.register(new AlloyRecipe.Builder(ORICHALCUM).add(COPPER, 0.75, 0.8).add(ZINC, 0.20, 0.25).build());
         r.register(new AlloyRecipe.Builder(NICKEL_SILVER).add(COPPER, 0.50, 0.65).add(ZINC, 0.1, 0.3).add(NICKEL, 0.1, 0.3).build());
         r.register(new AlloyRecipe.Builder(TUNGSTEN_STEEL).add(TUNGSTEN, 0.02, 0.18).add(STEEL, 0.72, 0.98).build());

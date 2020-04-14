@@ -1,0 +1,19 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+	    {
+          "model": "tfc:plants/deciduous_leaf_litter_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/deciduous_leaf_litter_1",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/sunflower/placeholder",
+    "particle": "tfc:blocks/plants/sunflower/placeholder"
+  }
+}

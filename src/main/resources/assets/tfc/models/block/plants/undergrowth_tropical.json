@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/tropical_undergrowth/tropical_undergrowth",
+    "particle": "tfc:blocks/plants/tropical_undergrowth/tropical_undergrowth"
+  }
+}

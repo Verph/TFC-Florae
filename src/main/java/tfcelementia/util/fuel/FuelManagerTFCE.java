@@ -44,8 +44,10 @@ public final class FuelManagerTFCE
     {
         // Coals
         FUELS.add(new Fuel(IIngredient.of("gemAnthracite"), 2800, 2710f, true, false));
+        FUELS.add(new Fuel(IIngredient.of("coalAnthracite"), 2800, 2710f, true, false));
         FUELS.add(new Fuel(IIngredient.of("gemCoke"), 2400, 2500f, true, false));
         FUELS.add(new Fuel(IIngredient.of("coalCoke"), 2400, 2500f, true, false));
+        FUELS.add(new Fuel(IIngredient.of("fuelCoke"), 2400, 2500f, true, false));
         
         // Firewood
         FUELS.add(new Fuel(IIngredient.of("firewood"), 2500, 800));

@@ -1,6 +1,7 @@
 package tfcelementia.objects.items;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import net.minecraft.item.ItemStack;
 
@@ -8,11 +9,14 @@ import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 //import net.dries007.tfc.util.OreDictionaryHelper;
+import net.dries007.tfc.objects.items.ItemMisc;
 
 import tfcelementia.objects.items.ItemMiscTFCE;
 import tfcelementia.objects.items.ItemTFCE;
 import tfcelementia.util.OreDictionaryHelper;
 
+@SuppressWarnings("WeakerAccess")
+//public class ItemMiscTFCE extends ItemMisc
 public class ItemMiscTFCE extends ItemTFCE implements IItemSize
 {
     private final Size size;
@@ -50,4 +54,26 @@ public class ItemMiscTFCE extends ItemTFCE implements IItemSize
     {
         return weight;
     }
+
+	/*
+    private String oreDictionary;
+
+    public ItemMiscTFCE(Size size, Weight weight, String oreDictionary)
+    {
+        super(size, weight);
+        this.oreDictionary = oreDictionary;
+    }
+
+    public ItemMiscTFCE(Size size, Weight weight)
+    {
+        super(size, weight);
+        oreDictionary = null;
+    }
+
+    @Nullable
+    public String getOreDictionary()
+    {
+        return oreDictionary;
+    }
+    */
 }

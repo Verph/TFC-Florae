@@ -69,7 +69,7 @@ public enum CropTFCE implements ICrop
     RAPE(() -> new ItemStack(ItemsTFCE.RAPE), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     WELD(() -> new ItemStack(ItemsTFCE.WELD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     WOAD(() -> new ItemStack(ItemsTFCE.WOAD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    SUNFLOWER(() -> new ItemStack(ItemsTFCE.SUNFLOWER_HEAD), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    //SUNFLOWER(() -> new ItemStack(ItemsTFCE.SUNFLOWER_HEAD), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     TOBACCO(() -> new ItemStack(ItemsTFCE.TOBACCO_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE);
 
     /**

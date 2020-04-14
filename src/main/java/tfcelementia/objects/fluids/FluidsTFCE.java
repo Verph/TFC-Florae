@@ -110,7 +110,17 @@ public final class FluidsTFCE
     public static FluidWrapper SUGAR_WATER;
     public static FluidWrapper HONEY_WATER;
     public static FluidWrapper RICE_WATER;
+    public static FluidWrapper SOYBEAN_WATER;
+    public static FluidWrapper LINSEED_WATER;
+    public static FluidWrapper RAPE_SEED_WATER;
+    public static FluidWrapper SUNFLOWER_SEED_WATER;
+    public static FluidWrapper OPIUM_POPPY_SEED_WATER;
+    public static FluidWrapper SUGAR_BEET_WATER;
     public static FluidWrapper SOY_MILK;
+    public static FluidWrapper LINSEED_OIL;
+    public static FluidWrapper RAPE_SEED_OIL;
+    public static FluidWrapper SUNFLOWER_SEED_OIL;
+    public static FluidWrapper OPIUM_POPPY_SEED_OIL;
     public static FluidWrapper WORT;
 
     // Juice - Berries
@@ -247,7 +257,17 @@ public final class FluidsTFCE
             	SUGAR_WATER = registerFluid(new Fluid("sugar_water", STILL, FLOW, 0xFFEEEFDF).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
                 HONEY_WATER = registerFluid(new Fluid("honey_water", STILL, FLOW, 0xFFFBE2A1).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
             	RICE_WATER = registerFluid(new Fluid("rice_water", STILL, FLOW, 0xFFEFE0CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                SOYBEAN_WATER = registerFluid(new Fluid("soybean_water", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                LINSEED_WATER = registerFluid(new Fluid("linseed_water", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                RAPE_SEED_WATER = registerFluid(new Fluid("rape_seed_water", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                SUNFLOWER_SEED_WATER = registerFluid(new Fluid("sunflower_seed_water", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                OPIUM_POPPY_SEED_WATER = registerFluid(new Fluid("opium_poppy_seed_water", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                SUGAR_BEET_WATER = registerFluid(new Fluid("sugar_beet_water", STILL, FLOW, 0xFFEEEFDF).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
                 SOY_MILK = registerFluid(new Fluid("soy_milk", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                LINSEED_OIL = registerFluid(new Fluid("linseed_oil", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                RAPE_SEED_OIL = registerFluid(new Fluid("rape_seed_oil", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                SUNFLOWER_SEED_OIL = registerFluid(new Fluid("sunflower_seed_oil", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
+                OPIUM_POPPY_SEED_OIL = registerFluid(new Fluid("opium_poppy_seed_oil", STILL, FLOW, 0xFFDBD7CB).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty),
             	WORT = registerFluid(new Fluid("wort", STILL, FLOW, 0xFF654321).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, miscFluidsProperty)
             )
             .build();     

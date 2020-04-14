@@ -1,0 +1,28 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/tropical_undergrowth/tropical_undergrowth_upper_0",
+		"cross": "tfc:blocks/plants/tropical_undergrowth/tropical_undergrowth_upper_0"
+	},
+	"elements": [
+		{
+			"from": [-0.5, 0, 8],
+			"to": [17.5, 18, 8],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [8, 0, -0.5],
+			"to": [8, 18, 17.5],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		}
+	]
+}

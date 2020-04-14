@@ -1,0 +1,52 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"neck": "tfc:blocks/plants/sunflower/sunflower_upper_6_neck",
+		"cross": "tfc:blocks/plants/sunflower/sunflower_upper_6",
+		"back": "tfc:blocks/plants/sunflower/sunflower_back_6",
+		"particle": "tfc:blocks/plants/sunflower/sunflower_front_6",
+		"front": "tfc:blocks/plants/sunflower/sunflower_front_6"
+	},
+	"elements": [
+		{
+			"from": [-7.2, 0, 8],
+			"to": [23.2, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [8, 0, -7.2],
+			"to": [8, 16, 23.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 8], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-7.2, 6, 8],
+			"to": [23.2, 22, 8],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#neck"},
+				"south": {"uv": [16, 0, 0, 8], "texture": "#neck"}
+			}
+		},
+		{
+			"from": [9.12446, -0.14389, -8],
+			"to": [9.12446, 31.85611, 24],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#front"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#back"}
+			}
+		}
+	]
+}

@@ -10,4 +10,5 @@ public enum PowderTFCE
     PHOSPHORITE,
     SEA_SALT,
     SELENIDE,
+    ASH,
 }

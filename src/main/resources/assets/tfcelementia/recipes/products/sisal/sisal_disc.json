@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "XXX",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcelementia:crop/product/sisal_fiber"
+    }
+  },
+  "result": {
+    "item": "tfcelementia:crop/product/sisal_disc",
+    "count": 1
+  }
+}

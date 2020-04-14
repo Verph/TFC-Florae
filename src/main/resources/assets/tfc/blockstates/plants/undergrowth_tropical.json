@@ -1,0 +1,102 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/small/undergrowth_tropical_single"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/micro/undergrowth_tropical_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/tiny/undergrowth_tropical_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/small/undergrowth_tropical_lower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/medium/undergrowth_tropical_lower_3"
+        }
+      ]
+    }
+    {
+      "when": {
+        "stage": "0",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/micro/undergrowth_tropical_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/tiny/undergrowth_tropical_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/small/undergrowth_tropical_lower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_tropical/medium/undergrowth_tropical_lower_3"
+        }
+      ]
+    }
+  ]
+}
