@@ -82,7 +82,7 @@ public final class PlantsTFCE
             //new Plant(DRY_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
             //new Plant(LUSH_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
             //new Plant(TEMPERATE_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, -20f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
-            new Plant(CHAPARRAL_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 10f, 40f, 0f, 50f, 70f, 150f, 12, 15, 1, 0.2D, "shrub"),
+            new Plant(CHAPARRAL_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 10f, 40f, 0f, 50f, 100f, 250f, 12, 15, 1, 0.2D, "shrub"),
             new Plant(SHRUB, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.2D, "shrub"),
             new Plant(LEAF_LITTER, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -20f, 50f, -30f, 50f, 70f, 500f, 6, 14, 1, 0.9D, "litter_leaf"),
             new Plant(LOW_UNDERGROWTH, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 1, 0.9D, "undergrowth_low")
