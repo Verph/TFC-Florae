@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "ringMeshCastIron"
+    }
+  },
+  "result": {
+    "item": "tfc:metal/boots/chain_mail",
+    "count": 1
+  }
+}

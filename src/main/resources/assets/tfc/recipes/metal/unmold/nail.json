@@ -1,0 +1,9 @@
+{
+  "type": "tfcelementia:unmold_recipe",
+  "ingredients": [
+    {
+      "item": "tfcelementia:ceramics/fired/mold/nail"
+    }
+  ],
+  "result": "nail"
+}

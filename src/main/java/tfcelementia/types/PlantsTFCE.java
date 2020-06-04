@@ -18,12 +18,11 @@ public final class PlantsTFCE
     /**
      * Default Plant ResourceLocations
      */
-    public static final ResourceLocation BAMBOO = new ResourceLocation(MODID, "bamboo");
     public static final ResourceLocation CATTAIL = new ResourceLocation(MODID, "cattail");
     public static final ResourceLocation CHAMOMILE = new ResourceLocation(MODID, "chamomile");
     public static final ResourceLocation LAVANDULA = new ResourceLocation(MODID, "lavandula");
     public static final ResourceLocation LILY_OF_THE_VALLEY = new ResourceLocation(MODID, "lily_of_the_valley");
-    public static final ResourceLocation PEYOTE = new ResourceLocation(MODID, "peyote");
+    //public static final ResourceLocation PEYOTE = new ResourceLocation(MODID, "peyote");
     public static final ResourceLocation PEONY = new ResourceLocation(MODID, "peony");
     /*
     public static final ResourceLocation ORANGE_PEONY = new ResourceLocation(MODID, "orange_peony");
@@ -50,13 +49,26 @@ public final class PlantsTFCE
     public static final ResourceLocation LEAF_LITTER = new ResourceLocation(MODID, "leaf_litter");
     public static final ResourceLocation LOW_UNDERGROWTH = new ResourceLocation(MODID, "undergrowth_low");
     public static final ResourceLocation TROPICAL_UNDERGROWTH = new ResourceLocation(MODID, "undergrowth_tropical");
+    
+    //Bamboo
+    public static final ResourceLocation ARROW_BAMBOO = new ResourceLocation(MODID, "arrow_bamboo");
+    public static final ResourceLocation BLACK_BAMBOO = new ResourceLocation(MODID, "black_bamboo");
+    public static final ResourceLocation BLUE_BAMBOO = new ResourceLocation(MODID, "blue_bamboo");
+    public static final ResourceLocation DRAGON_BAMBOO = new ResourceLocation(MODID, "dragon_bamboo");
+    public static final ResourceLocation GIANT_TIMBER_BAMBOO = new ResourceLocation(MODID, "giant_timber_bamboo");
+    public static final ResourceLocation GOLDEN_BAMBOO = new ResourceLocation(MODID, "golden_bamboo");
+    public static final ResourceLocation NARROW_LEAF_BAMBOO = new ResourceLocation(MODID, "narrow_leaf_bamboo");
+    public static final ResourceLocation TEMPLE_BAMBOO = new ResourceLocation(MODID, "temple_bamboo");
+    public static final ResourceLocation THORNY_BAMBOO = new ResourceLocation(MODID, "thorny_bamboo");
+    public static final ResourceLocation TIMBER_BAMBOO = new ResourceLocation(MODID, "timber_bamboo");
+    public static final ResourceLocation TINWA_BAMBOO = new ResourceLocation(MODID, "tinwa_bamboo");
+    public static final ResourceLocation WEAVERS_BAMBOO = new ResourceLocation(MODID, "weavers_bamboo");
 
     @SubscribeEvent
     public static void onPreRegisterPlant(TFCRegistryEvent.RegisterPreBlock<Plant> event)
     {
         event.getRegistry().registerAll(
-            new Plant(BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "bamboo"),
-            new Plant(PEYOTE, Plant.PlantType.CACTUS, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 0}, false, false, 18f, 40f, -6f, 50f, 0f, 75f, 12, 15, 3, 0D, "peyote"),
+            //new Plant(PEYOTE, Plant.PlantType.CACTUS, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 0}, false, false, 18f, 40f, -6f, 50f, 0f, 75f, 12, 15, 3, 0D, "peyote"),
             new Plant(CATTAIL, Plant.PlantType.FLOATING, new int[] {4, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3, 0}, false, false, 0f, 30f, -12f, 36f, 100f, 500f, 9, 15, 1, 1, 1, 0.8D, "cattail"),
             new Plant(CHAMOMILE, Plant.PlantType.STANDARD, new int[] {6, 6, 7, 0, 1, 1, 2, 2, 3, 4, 5, 6}, false, false, 5f, 25f, -40f, 40f, 75f, 400f, 10, 15, 1, 0.9D, "chamomile"),
             new Plant(LAVANDULA, Plant.PlantType.STANDARD, new int[] {5, 5, 0, 0, 1, 2, 2, 3, 3, 3, 3, 4}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 9, 15, 1, 0.8D, "lavender"),
@@ -82,11 +94,26 @@ public final class PlantsTFCE
             //new Plant(DRY_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
             //new Plant(LUSH_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
             //new Plant(TEMPERATE_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, -20f, 50f, 70f, 500f, 12, 15, 1, 0.1D, "shrub"),
-            new Plant(CHAPARRAL_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 10f, 40f, 0f, 50f, 100f, 250f, 12, 15, 1, 0.2D, "shrub"),
-            new Plant(SHRUB, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 0.2D, "shrub"),
+            new Plant(CHAPARRAL_SHRUB, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 10f, 40f, 0f, 50f, 100f, 250f, 12, 15, 1, 2.2D, "shrub"),
+            new Plant(SHRUB, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 12, 15, 1, 2.2D, "shrub"),
             new Plant(LEAF_LITTER, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -20f, 50f, -30f, 50f, 70f, 500f, 6, 14, 1, 0.9D, "litter_leaf"),
-            new Plant(LOW_UNDERGROWTH, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 1, 0.9D, "undergrowth_low")
-            //new Plant(TROPICAL_UNDERGROWTH, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 4, 0.7D, "undergrowth_tropical")
+            new Plant(LOW_UNDERGROWTH, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 1, 0.9D, "undergrowth_low"),
+            //new Plant(TROPICAL_UNDERGROWTH, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 4, 0.7D, "undergrowth_tropical"),
+            
+            //Bamboo
+            new Plant(ARROW_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 260f, 500f, 9, 15, 20, 0D, "arrow_bamboo"),
+            new Plant(BLACK_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 280f, 500f, 9, 15, 20, 0D, "black_bamboo"),
+            new Plant(BLUE_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 230f, 500f, 9, 15, 20, 0D, "blue_bamboo"),
+            new Plant(DRAGON_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "dragon_bamboo"),
+            new Plant(GIANT_TIMBER_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "giant_timber_bamboo"),
+            new Plant(GOLDEN_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "golden_bamboo"),
+            new Plant(NARROW_LEAF_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "narrow_leaf_bamboo"),
+            new Plant(TEMPLE_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "temple_bamboo"),
+            new Plant(THORNY_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "thorny_bamboo"),
+            new Plant(TIMBER_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "timber_bamboo"),
+            new Plant(TINWA_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "tinwa_bamboo"),
+            new Plant(WEAVERS_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 20, 0D, "weavers_bamboo")
+            
         );
     }
 }

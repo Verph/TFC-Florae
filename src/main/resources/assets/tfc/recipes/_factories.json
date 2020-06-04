@@ -1,0 +1,5 @@
+{
+  "recipes": {
+    "unmold_recipe": "tfcelementia.objects.recipes.UnmoldRecipe$Factory"
+  }
+}

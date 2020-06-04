@@ -43,14 +43,23 @@ public final class FuelManagerTFCE
     public static void postInit()
     {
         // Coals
-        FUELS.add(new Fuel(IIngredient.of("gemAnthracite"), 2800, 2710f, true, false));
-        FUELS.add(new Fuel(IIngredient.of("coalAnthracite"), 2800, 2710f, true, false));
-        FUELS.add(new Fuel(IIngredient.of("gemCoke"), 2400, 2500f, true, false));
-        FUELS.add(new Fuel(IIngredient.of("coalCoke"), 2400, 2500f, true, false));
-        FUELS.add(new Fuel(IIngredient.of("fuelCoke"), 2400, 2500f, true, false));
+        FUELS.add(new Fuel(IIngredient.of("gemAnthracite"), 2800, 2710f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("coalAnthracite"), 2800, 2710f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("itemAnthracite"), 2800, 2710f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("fuelAnthracite"), 2800, 2710f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("anthracite"), 2800, 2710f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("gemCoke"), 2400, 2500f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("coalCoke"), 2400, 2500f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("itemCoke"), 2400, 2500f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("fuelCoke"), 2400, 2500f, true, true));
+        FUELS.add(new Fuel(IIngredient.of("coke"), 2400, 2500f, true, true));
         
         // Firewood
-        FUELS.add(new Fuel(IIngredient.of("firewood"), 2500, 800));
+        FUELS.add(new Fuel(IIngredient.of("lumberFirewood"), 2500, 800, true, false));
+        FUELS.add(new Fuel(IIngredient.of("woodFirewood"), 2500, 800, true, false));
+        FUELS.add(new Fuel(IIngredient.of("itemFirewood"), 2500, 800, true, false));
+        FUELS.add(new Fuel(IIngredient.of("fuelFirewood"), 2500, 800, true, false));
+        FUELS.add(new Fuel(IIngredient.of("firewood"), 2500, 800, true, false));
     }
 
     /**

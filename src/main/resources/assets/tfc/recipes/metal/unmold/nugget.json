@@ -1,0 +1,9 @@
+{
+  "type": "tfc:unmold_recipe",
+  "ingredients": [
+    {
+      "item": "tfcelementia:ceramics/fired/mold/nugget"
+    }
+  ],
+  "result": "nugget"
+}

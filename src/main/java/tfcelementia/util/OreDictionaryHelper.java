@@ -17,10 +17,13 @@ import net.minecraftforge.oredict.OreDictionary;
 
 //import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.api.capability.damage.DamageType;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Metal;
 import net.dries007.tfc.api.types.Ore;
 import net.dries007.tfc.objects.Gem;
+import net.dries007.tfc.objects.Powder;
 import net.dries007.tfc.objects.items.ItemGem;
+import net.dries007.tfc.objects.items.ItemPowder;
 //import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.objects.items.metal.ItemOreTFC;
 import tfcelementia.TFCElementia;
@@ -93,6 +96,11 @@ public class OreDictionaryHelper
         OreDictionary.registerOre("dyePurple", new ItemStack(ItemPowderTFCE.get(PowderTFCE.IODATE)));
         OreDictionary.registerOre("dyeYellow", new ItemStack(ItemPowderTFCE.get(PowderTFCE.PHOSPHORITE)));
         OreDictionary.registerOre("dyeRed", new ItemStack(ItemPowderTFCE.get(PowderTFCE.SELENIDE)));
+        OreDictionary.registerOre("dyeWhite", new ItemStack(ItemPowderTFCE.get(PowderTFCE.AMMONIUM_CHLORIDE)));
+
+        OreDictionary.registerOre("dustKaoliniteSub", new ItemStack(ItemPowderGemTFCE.get(PowderGemTFCE.KYANITE)));
+        OreDictionary.registerOre("dustKaoliniteSub", new ItemStack(ItemPowder.get(Powder.KAOLINITE)));
+        OreDictionary.registerOre("dustCoalCoke", new ItemStack(ItemPowder.get(Powder.COKE)));
         
         // Register a name without any items
         OreDictionary.getOres("infiniteFire", true);

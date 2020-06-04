@@ -61,14 +61,19 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
     {
         switch (type)
         {
+        	case NAIL:
+    		case RING:
+    		case RING_MESH:
+    		case CHAIN:
+        		return Size.SMALL;
             case PLATE:
-            case DOUBLE_PLATE:
-            case TRIPLE_PLATE:
-            case QUADRUPLE_PLATE:
-            case TRIPLE_INGOT:
-            case TRIPLE_SHEET:
-            case QUADRUPLE_INGOT:
-            case QUADRUPLE_SHEET:
+            case PLATE_DOUBLE:
+            case PLATE_TRIPLE:
+            case PLATE_QUADRUPLE:
+            case INGOT_TRIPLE:
+            case SHEET_TRIPLE:
+            case INGOT_QUADRUPLE:
+            case SHEET_QUADRUPLE:
                 return Size.NORMAL;
             default:
                 return Size.LARGE;
@@ -81,16 +86,21 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
     {
         switch (type)
         {
+    		case NAIL:
+    		case RING:
+    		case RING_MESH:
+    		case CHAIN:
+    			return Weight.VERY_LIGHT;
             case PLATE:
-            case DOUBLE_PLATE:
-            case TRIPLE_PLATE:
-            case QUADRUPLE_PLATE:
-            case TRIPLE_INGOT:
-            case QUADRUPLE_INGOT:
+            case PLATE_DOUBLE:
+            case PLATE_TRIPLE:
+            case PLATE_QUADRUPLE:
+            case INGOT_TRIPLE:
+            case INGOT_QUADRUPLE:
                 return Weight.LIGHT;
-            case TRIPLE_SHEET:
+            case SHEET_TRIPLE:
                 return Weight.MEDIUM;
-            case QUADRUPLE_SHEET:
+            case SHEET_QUADRUPLE:
                 return Weight.HEAVY;
             default:
                 return Weight.MEDIUM;
@@ -119,14 +129,18 @@ public class ItemMetalTFCE extends ItemTFC implements IMetalItem
 
     public enum ItemType
     {
+        NAIL(10, true),
+        RING(10, true),
+        CHAIN(40),
+        RING_MESH(80),
         PLATE(100),
-        DOUBLE_PLATE(200),
-        TRIPLE_PLATE(300),
-        QUADRUPLE_PLATE(400),
-    	TRIPLE_INGOT(300),
-    	TRIPLE_SHEET(600),
-    	QUADRUPLE_INGOT(400),
-    	QUADRUPLE_SHEET(800);
+        PLATE_DOUBLE(200),
+        PLATE_TRIPLE(300),
+        PLATE_QUADRUPLE(400),
+        INGOT_TRIPLE(300),
+        SHEET_TRIPLE(600),
+        INGOT_QUADRUPLE(400),
+        SHEET_QUADRUPLE(800);
 
         public static Item create(Metal metal, ItemType type)
         {

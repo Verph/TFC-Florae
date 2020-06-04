@@ -41,15 +41,16 @@ import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.CapabilityChunkData;
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import net.dries007.tfc.util.OreDictionaryHelper;
-import tfcelementia.api.capability.food.CapabilityFoodTFCE;
-import tfcelementia.api.capability.food.FoodHandlerTFCE;
+
 import tfcelementia.objects.items.ItemsTFCE;
+import tfcelementia.proxy.CommonProxy;
+import tfcelementia.proxy.ClientProxy;
 //import tfcelementia.util.OreDictionaryHelper;
 import tfcelementia.util.VeinLoader;
 
 import static tfcelementia.TFCElementia.MODID;
 
-@SuppressWarnings("WeakerAccess")
+@SuppressWarnings({ "WeakerAccess", "unused" })
 @Mod(modid = TFCElementia.MODID, name = TFCElementia.NAME, version = TFCElementia.VERSION, dependencies = TFCElementia.DEPENDENCIES, certificateFingerprint = TFCElementia.SIGNING_KEY)
 public class TFCElementia
 {
@@ -63,6 +64,9 @@ public class TFCElementia
     private static TFCElementia instance = null;
     private static Logger logger;
     private static boolean signedBuild = true;
+
+    @SidedProxy(serverSide = "tfcelementia.proxy.CommonProxy", clientSide = "tfcelementia.proxy.ClientProxy")
+    public static CommonProxy proxy;
 
     public static Logger getLog()
     {
@@ -92,19 +96,20 @@ public class TFCElementia
         {
             logger.error("INVALID FINGERPRINT DETECTED! This means this jar file has been compromised and is not supported.");
         }
-
-        CapabilityFoodTFCE.preInit();
+        proxy.preInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
     	ItemsTFCE.init();
+		proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        proxy.postInit(event);
     }
 
     @Mod.EventHandler
@@ -112,6 +117,5 @@ public class TFCElementia
     {
         // This is the latest point that we can possibly stop creating non-decaying stacks on both server + client
         // It should be safe to use as we're only using it internally
-        FoodHandlerTFCE.setNonDecaying(false);
     }
 }

@@ -20,7 +20,7 @@ import static net.dries007.tfc.types.DefaultRocks.*;
 import static tfcelementia.TFCElementia.MODID;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
-@Mod.EventBusSubscriber(modid = TFCElementia.MODID)
+@Mod.EventBusSubscriber(modid = MODID)
 public final class RocksTFCE
 {
     public static final ResourceLocation BRECCIA = new ResourceLocation(MODID, "breccia");
@@ -31,6 +31,7 @@ public final class RocksTFCE
     public static final ResourceLocation SANDSTONE = new ResourceLocation(MODID, "sandstone");
     public static final ResourceLocation SILTSTONE = new ResourceLocation(MODID, "siltstone");
     public static final ResourceLocation BLUESCHIST = new ResourceLocation(MODID, "blueschist");
+    public static final ResourceLocation CATLINITE = new ResourceLocation(MODID, "catlinite");
     public static final ResourceLocation GREENSCHIST = new ResourceLocation(MODID, "greenschist");
     public static final ResourceLocation NOVACULITE = new ResourceLocation(MODID, "novaculite");
     public static final ResourceLocation SOAPSTONE = new ResourceLocation(MODID, "soapstone");
@@ -49,6 +50,7 @@ public final class RocksTFCE
 	    r.register(new Rock(SANDSTONE, SEDIMENTARY, false));
 	    r.register(new Rock(SILTSTONE, SEDIMENTARY, false));
 	    r.register(new Rock(BLUESCHIST, METAMORPHIC, false));
+	    r.register(new Rock(CATLINITE, METAMORPHIC, false));
 	    r.register(new Rock(GREENSCHIST, METAMORPHIC, false));
 	    r.register(new Rock(NOVACULITE, METAMORPHIC, false));
 	    r.register(new Rock(SOAPSTONE, METAMORPHIC, false));
