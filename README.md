@@ -2,10 +2,10 @@
 Addon for TerraFirmaCraft: The New Generation (TFC:TNG), called TFC Elementia.
 
 ## Goal
-The primary incentive is to add all the elements and metals from the periodic table, and their respective ores and minerals; more tree sorts for broader usability cases and variety; as well as more alloys making more mods useable with TFC.
-Short term goal is to add more rocktypes (the strata rocks you can find).
-Mid term and long term goals are to enhance the world of TerraFirmaCraft, by introducing a greater variety of trees, fruit trees, plants, crops, food and more. 
-Very long term is to add more actual rock types such as mossy and cracked variants of bricks and cobblestone. Podzol is also planned at some point.
++ The primary incentive is to add all the elements and metals from the periodic table, and their respective ores and minerals; more tree sorts for broader usability cases and variety; as well as more alloys making more mods useable with TFC.
++ Short term goal is to add more rocktypes (the strata rocks you can find).
++ Mid term and long term goals are to enhance the world of TerraFirmaCraft, by introducing a greater variety of trees, fruit trees, plants, crops, food and more. 
++ Very long term is to add more actual rock types such as mossy and cracked variants of bricks and cobblestone. Podzol is also planned at some point.
 
 ## Contributing
 
