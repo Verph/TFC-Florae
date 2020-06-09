@@ -1,0 +1,35 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/medium_thorny_bamboo"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/medium_thorny_bamboo_small_leaves"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/medium_thorny_bamboo_top",
+          "y": 180
+        }
+      ]
+    }
+  ]
+}

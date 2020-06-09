@@ -172,7 +172,6 @@ public class RecipesMetalTFCE
         registry.register(new BlastFurnaceRecipe(TFCRegistries.METALS.getValue(WROUGHT_IRON), TFCRegistries.METALS.getValue(CAST_IRON_PHOSPHORUS), IIngredient.of("dustFlux")));
         
         // Transition metals
-        registry.register(new BlastFurnaceRecipe(TFCRegistries.METALS.getValue(OSMIUM), TFCRegistries.METALS.getValue(OSMIUM), IIngredient.of("dustFlux")));
         registry.register(new BlastFurnaceRecipe(TFCRegistries.METALS.getValue(SCANDIUM), TFCRegistries.METALS.getValue(SCANDIUM), IIngredient.of("dustFlux")));
         registry.register(new BlastFurnaceRecipe(TFCRegistries.METALS.getValue(TITANIUM), TFCRegistries.METALS.getValue(TITANIUM), IIngredient.of("dustFlux")));
         registry.register(new BlastFurnaceRecipe(TFCRegistries.METALS.getValue(VANADIUM), TFCRegistries.METALS.getValue(VANADIUM), IIngredient.of("dustFlux")));

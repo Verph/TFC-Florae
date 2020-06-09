@@ -57,9 +57,9 @@ public final class TreesTFCE
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":black_bamboo") public static final Tree BLACK_BAMBOO = getNull(); //Phyllostachys nigra
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":blue_bamboo") public static final Tree BLUE_BAMBOO = getNull(); //Himalayacalamus hookerianus
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":dragon_bamboo") public static final Tree DRAGON_BAMBOO = getNull(); //Dendrocalamus giganteus
-    @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":giant_timber_bamboo") public static final Tree GIANT_TIMBER_BAMBOO = getNull(); //Bambusa oldhamii
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":golden_bamboo") public static final Tree GOLDEN_BAMBOO = getNull(); //Alphonse Karr
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":narrow_leaf_bamboo") public static final Tree NARROW_LEAF_BAMBOO = getNull(); //Guadua angustifolia
+    @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":red_bamboo") public static final Tree RED_BAMBOO = getNull(); //Fargesia nitida ‘Jiuzhaigou’
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":temple_bamboo") public static final Tree TEMPLE_BAMBOO = getNull(); //Semiarundinaria fastuosa
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":thorny_bamboo") public static final Tree THORNY_BAMBOO = getNull(); //Chimonobambusa pachystachys
     @GameRegistry.ObjectHolder(TerraFirmaCraft.MOD_ID + ":timber_bamboo") public static final Tree TIMBER_BAMBOO = getNull(); //Phyllostachys vivax
@@ -99,9 +99,9 @@ public final class TreesTFCE
     public static final ITreeGenerator GEN_BLACK_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_BLUE_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_DRAGON_BAMBOO = new TreeGenVariants(true, 1);
-    public static final ITreeGenerator GEN_GIANT_TIMBER_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_GOLDEN_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_NARROW_LEAF_BAMBOO = new TreeGenVariants(true, 1);
+    public static final ITreeGenerator GEN_RED_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_TEMPLE_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_THORNY_BAMBOO = new TreeGenVariants(true, 1);
     public static final ITreeGenerator GEN_TIMBER_BAMBOO = new TreeGenVariants(true, 1);
@@ -123,18 +123,18 @@ public final class TreesTFCE
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ginkgo"), 290f, 550f, 10f, 30f, GEN_GINKGO).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hawthorn"), 180f, 400f, -8f, 14f, GEN_HAWTHORN).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "iroko"), 220f, 500f, 20f, 43f, GEN_IROKO).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.2f, 2f).setBurnInfo(785f, 1200).build());
-	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "jacaranda"), 180f, 400f, 15f, 30f, GEN_JACARANDA).setDominance(0f).setGrowthTime(8).setDensity(0f, 0f).setBurnInfo(795f, 1250).build());
+	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "jacaranda"), 180f, 400f, 15f, 30f, GEN_JACARANDA).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(795f, 1250).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "juniper"), 50f, 450f, -8f, 20f, GEN_JUNIPER).setGrowthTime(8).setConifer().setDensity(0.25f, 0.75f).setBurnInfo(632f, 1750).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "larch"), 150f, 400f, -11f, 15f, GEN_LARCH).setGrowthTime(8).setConifer().setDensity(0.9f, 1.5f).setBurnInfo(632f, 1250).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "limba"), 290f, 550f, 17f, 40f, GEN_LIMBA).setGrowthTime(9).setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "mahogany"), 210f, 500f, 21f, 42f, GEN_MAHOGANY).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.2f, 2f).setBurnInfo(773f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "norway_spruce"), 100f, 380f, -16f, 7f, GEN_NORWAY_SPRUCE).setGrowthTime(8).setConifer().setDensity(0.1f, 0.9f).setBurnInfo(628f, 1500).build());
-	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "pink_cherry"), 180f, 400f, 15f, 30f, GEN_PINK_CHERRY).setDominance(0f).setGrowthTime(8).setDensity(0f, 0f).setBurnInfo(795f, 1250).build());
+	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "pink_cherry"), 180f, 400f, 15f, 30f, GEN_PINK_CHERRY).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(795f, 1250).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "poplar"), 140f, 400f, -4f, 16f, GEN_POPLAR).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(609f, 1000).build());
 	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "redwood"), 200f, 400f, 0f, 17f, GEN_REDWOOD).setDecayDist(6).setGrowthTime(18).setConifer().setBushes().setTannin().setDensity(0.4f, 2f).setBurnInfo(618f, 1750).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "rowan"), 180f, 400f, -4f, 14f, GEN_ROWAN).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(645f, 2000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "teak"), 180f, 430f, 17f, 35f, GEN_TEAK).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(695f, 1000).build());
-	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_cherry"), 180f, 400f, 15f, 30f, GEN_WHITE_CHERRY).setDominance(0f).setGrowthTime(8).setDensity(0f, 0f).setBurnInfo(795f, 1250).build());
+	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_cherry"), 180f, 400f, 15f, 30f, GEN_WHITE_CHERRY).setGrowthTime(8).setDensity(0.25f, 2f).setBurnInfo(795f, 1250).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_elm"), 120f, 290f, 4f, 30f, GEN_WHITE_ELM).setGrowthTime(8).setBurnInfo(653f, 1750).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "yew"), 180f, 400f, -8f, 14f, GEN_YEW).setGrowthTime(10).setBushes().setBurnInfo(813f, 2150).build());
     
@@ -142,10 +142,10 @@ public final class TreesTFCE
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "arrow_bamboo"), 200f, 420f, 13f, 35f, GEN_ARROW_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "black_bamboo"), 220f, 420f, 13f, 35f, GEN_BLACK_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "blue_bamboo"), 180f, 420f, 10f, 35f, GEN_BLUE_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
-        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "dragon_bamboo"), 200f, 420f, 13f, 35f, GEN_DRAGON_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
-        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "giant_timber_bamboo"), 200f, 420f, 13f, 35f, GEN_GIANT_TIMBER_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
+        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "dragon_bamboo"), 200f, 420f, 13f, 35f, GEN_DRAGON_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setDensity(0.9f, 2f).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "golden_bamboo"), 200f, 420f, 13f, 35f, GEN_GOLDEN_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "narrow_leaf_bamboo"), 200f, 420f, 13f, 35f, GEN_NARROW_LEAF_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
+        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "red_bamboo"), 200f, 420f, 13f, 35f, GEN_RED_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "temple_bamboo"), 200f, 420f, 13f, 35f, GEN_TEMPLE_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "thorny_bamboo"), 200f, 420f, 13f, 35f, GEN_THORNY_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "timber_bamboo"), 200f, 420f, 13f, 35f, GEN_TIMBER_BAMBOO).setDominance(0f).setDecayDist(6).setGrowthTime(3).setBurnInfo(420f, 1000).build());

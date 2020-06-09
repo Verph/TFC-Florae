@@ -1,0 +1,35 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower|middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/weavers_bamboo_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper|single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/weavers_bamboo_upper"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper|single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/weavers_bamboo_upper",
+          "y": 180
+        }
+      ]
+    }
+  ]
+}
