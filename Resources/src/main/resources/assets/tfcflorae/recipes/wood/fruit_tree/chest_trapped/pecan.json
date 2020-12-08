@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/chest/pecan"
+    },
+    {
+      "item": "minecraft:tripwire_hook"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/chest_trap/pecan",
+    "count": 1
+  }
+}

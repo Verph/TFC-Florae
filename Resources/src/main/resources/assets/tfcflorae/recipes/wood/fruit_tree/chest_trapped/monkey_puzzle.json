@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/chest/monkey_puzzle"
+    },
+    {
+      "item": "minecraft:tripwire_hook"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/chest_trap/monkey_puzzle",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/log/beechnut"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/lumber/beechnut",
+    "count": 8
+  }
+}

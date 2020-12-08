@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/peruvian_pepper"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/peruvian_pepper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/peruvian_pepper",
+    "count": 8
+  }
+}

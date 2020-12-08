@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/buddha_hand"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/pole/buddha_hand"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate_log/buddha_hand",
+    "count": 8
+  }
+}

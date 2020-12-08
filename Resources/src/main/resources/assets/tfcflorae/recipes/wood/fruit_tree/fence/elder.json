@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/elder"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/elder"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/elder",
+    "count": 8
+  }
+}

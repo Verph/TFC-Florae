@@ -1,0 +1,19 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cross",
+    "textures": {
+      "cross": "tfcflorae:blocks/wood/fruit_tree/sapling/allspice",
+      "layer0": "tfcflorae:blocks/wood/fruit_tree/sapling/allspice"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "builtin/generated",
+      "transform": "forge:default-item"
+    }
+  }
+}

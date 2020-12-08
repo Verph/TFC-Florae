@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/wenge"
+    },
+    "B": {
+      "item": "tfc:wood/log/wenge"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/wenge",
+    "count": 8
+  }
+}

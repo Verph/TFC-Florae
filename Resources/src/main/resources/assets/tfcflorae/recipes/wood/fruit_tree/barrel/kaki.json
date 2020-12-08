@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/kaki"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/barrel/kaki",
+    "data": 0,
+    "count": 1
+  }
+}

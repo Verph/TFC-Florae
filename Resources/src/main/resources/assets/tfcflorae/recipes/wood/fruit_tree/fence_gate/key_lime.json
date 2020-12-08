@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/key_lime"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/key_lime"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/key_lime",
+    "count": 2
+  }
+}

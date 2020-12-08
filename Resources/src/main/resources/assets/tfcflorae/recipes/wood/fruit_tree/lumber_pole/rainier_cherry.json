@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/rainier_cherry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/lumber/rainier_cherry",
+    "count": 8
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "tfcflorae:items/crop/product/dirty_linen_net"
+  }
+}

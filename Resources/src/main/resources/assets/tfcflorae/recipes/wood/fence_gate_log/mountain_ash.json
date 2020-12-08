@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/mountain_ash"
+    },
+    "B": {
+      "item": "tfc:wood/log/mountain_ash"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/mountain_ash",
+    "count": 8
+  }
+}

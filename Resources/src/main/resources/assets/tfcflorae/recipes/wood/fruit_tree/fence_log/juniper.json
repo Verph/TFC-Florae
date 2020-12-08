@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/juniper"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/juniper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/juniper",
+    "count": 8
+  }
+}

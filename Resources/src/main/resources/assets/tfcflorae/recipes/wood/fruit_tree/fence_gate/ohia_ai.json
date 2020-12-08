@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/ohia_ai"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/ohia_ai"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/ohia_ai",
+    "count": 2
+  }
+}

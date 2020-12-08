@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "tfcflorae:items/food/dried/osage_orange"
+  }
+}

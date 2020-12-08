@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/black_pepper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/black_pepper",
+    "count": 2
+  }
+}

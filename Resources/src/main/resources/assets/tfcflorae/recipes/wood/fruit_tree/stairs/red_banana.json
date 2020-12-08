@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/red_banana"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/fruit_tree/wood/red_banana",
+    "count": 8
+  }
+}

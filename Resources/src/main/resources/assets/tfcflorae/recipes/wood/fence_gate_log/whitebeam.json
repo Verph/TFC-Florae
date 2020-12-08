@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/whitebeam"
+    },
+    "B": {
+      "item": "tfc:wood/log/whitebeam"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/whitebeam",
+    "count": 8
+  }
+}

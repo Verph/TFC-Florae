@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/almond"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/pressure_plate/almond",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/zebrawood"
+    },
+    "B": {
+      "item": "tfc:wood/log/zebrawood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/zebrawood",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/pink_ivory"
+    },
+    "B": {
+      "item": "tfc:wood/log/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/pink_ivory",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/tropical_apricot"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/tropical_apricot"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/tropical_apricot",
+    "count": 8
+  }
+}

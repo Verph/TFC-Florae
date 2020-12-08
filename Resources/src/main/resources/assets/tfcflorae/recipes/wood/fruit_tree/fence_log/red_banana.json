@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/red_banana"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/red_banana"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/red_banana",
+    "count": 8
+  }
+}

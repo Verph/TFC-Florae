@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/planks/sour_cherry"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/button/sour_cherry",
+    "count": 1
+  }
+}

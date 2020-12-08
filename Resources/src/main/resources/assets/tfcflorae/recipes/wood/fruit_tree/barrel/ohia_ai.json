@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/ohia_ai"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/barrel/ohia_ai",
+    "data": 0,
+    "count": 1
+  }
+}

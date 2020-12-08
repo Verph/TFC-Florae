@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/mamey_sapote"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/barrel/mamey_sapote",
+    "data": 0,
+    "count": 1
+  }
+}

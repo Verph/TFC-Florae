@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/planks/red_apple"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/button/red_apple",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/hornbeam"
+    },
+    "B": {
+      "item": "tfc:wood/log/hornbeam"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/hornbeam",
+    "count": 8
+  }
+}

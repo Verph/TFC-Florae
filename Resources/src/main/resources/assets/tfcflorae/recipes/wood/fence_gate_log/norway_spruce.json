@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/norway_spruce"
+    },
+    "B": {
+      "item": "tfc:wood/log/norway_spruce"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/norway_spruce",
+    "count": 8
+  }
+}

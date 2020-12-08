@@ -1,0 +1,20 @@
+{
+  "type": "tfc:damage_item_shaped",
+  "pattern": [
+    "XB",
+    " B"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/log/cacao"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/support/cacao",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/amla"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/amla"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/amla",
+    "count": 8
+  }
+}

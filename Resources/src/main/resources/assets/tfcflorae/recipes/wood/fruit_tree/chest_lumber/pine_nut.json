@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/pine_nut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/chest/pine_nut",
+    "count": 1
+  }
+}

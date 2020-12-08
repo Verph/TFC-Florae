@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/orange"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/workbench/orange",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/planks/peach"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/button/peach",
+    "count": 1
+  }
+}
