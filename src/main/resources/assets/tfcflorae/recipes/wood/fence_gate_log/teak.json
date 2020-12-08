@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/teak"
+    },
+    "B": {
+      "item": "tfc:wood/log/teak"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/teak",
+    "count": 8
+  }
+}

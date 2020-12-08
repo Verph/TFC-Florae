@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/black_walnut"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/tool_rack/black_walnut",
+    "count": 1
+  }
+}

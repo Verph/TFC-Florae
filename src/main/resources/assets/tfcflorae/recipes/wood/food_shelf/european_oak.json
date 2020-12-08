@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/european_oak"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/european_oak"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/european_oak",
+    "count": 1
+  }
+}

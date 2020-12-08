@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/red_currant"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/tool_rack/red_currant",
+    "count": 1
+  }
+}

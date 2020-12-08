@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/ginkgo"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/ginkgo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/ginkgo",
+    "count": 8
+  }
+}

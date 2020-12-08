@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/hemlock"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/hemlock",
+    "count": 1
+  }
+}

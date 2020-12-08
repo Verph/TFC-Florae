@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/pink_ivory"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/pink_ivory",
+    "count": 8
+  }
+}

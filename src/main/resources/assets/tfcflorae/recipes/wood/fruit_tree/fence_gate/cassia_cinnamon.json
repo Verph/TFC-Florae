@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/cassia_cinnamon"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/cassia_cinnamon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/cassia_cinnamon",
+    "count": 2
+  }
+}

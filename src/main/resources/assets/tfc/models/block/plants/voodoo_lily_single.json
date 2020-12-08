@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/voodoo_lily/voodoo_lily_single",
+    "particle": "tfc:blocks/plants/voodoo_lily/voodoo_lily_single"
+  }
+}

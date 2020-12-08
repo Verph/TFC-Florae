@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bones_0",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/bones_1",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/bones_2",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/bones_3",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/bones_4",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}

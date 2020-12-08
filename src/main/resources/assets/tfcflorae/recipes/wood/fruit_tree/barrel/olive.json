@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/olive"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/barrel/olive",
+    "data": 0,
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/hemlock"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/hemlock"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/hemlock",
+    "count": 8
+  }
+}

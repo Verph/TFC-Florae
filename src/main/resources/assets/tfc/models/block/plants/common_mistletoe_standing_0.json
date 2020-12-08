@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/common_mistletoe/common_mistletoe_0",
+    "particle": "tfc:blocks/plants/common_mistletoe/common_mistletoe_0"
+  }
+}

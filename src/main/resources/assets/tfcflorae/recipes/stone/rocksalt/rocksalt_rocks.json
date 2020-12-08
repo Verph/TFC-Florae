@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/rocks_rocksalt"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/rocksalt",
+    "count": 1
+  }
+}

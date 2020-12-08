@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_red_cedar"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_red_cedar",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_red_cedar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_red_cedar",
+      "y": 270
+    }
+  }
+}

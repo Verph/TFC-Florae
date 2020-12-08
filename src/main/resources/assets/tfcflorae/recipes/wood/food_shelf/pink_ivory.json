@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/pink_ivory"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/pink_ivory",
+    "count": 1
+  }
+}

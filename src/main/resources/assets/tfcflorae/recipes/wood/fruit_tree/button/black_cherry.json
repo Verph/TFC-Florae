@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/planks/black_cherry"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/button/black_cherry",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/hemlock"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/hemlock"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/hemlock",
+    "count": 1
+  }
+}

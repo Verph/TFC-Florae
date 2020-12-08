@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_white_cherry"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_white_cherry",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_white_cherry",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_white_cherry",
+      "y": 270
+    }
+  }
+}

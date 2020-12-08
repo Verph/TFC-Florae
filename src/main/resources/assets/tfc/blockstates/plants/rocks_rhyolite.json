@@ -1,0 +1,123 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_1",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_2",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_2_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_2_none",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_2_nse",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_3",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_3_n",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_3_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_3_none",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_4",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_5",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_5_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_5_none",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_5_nse",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_6",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_6_n",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_6_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_6_nse",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7_n",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7_none",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7_ns",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_7_nse",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_8",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_8_n",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_8_ne",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/rocktypes/rhyolite/rock_8_none",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}

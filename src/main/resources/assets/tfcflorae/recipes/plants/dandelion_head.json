@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/dandelion"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/dandelion_head",
+    "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/black_walnut"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/black_walnut"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence_gate/black_walnut",
+    "count": 2
+  }
+}

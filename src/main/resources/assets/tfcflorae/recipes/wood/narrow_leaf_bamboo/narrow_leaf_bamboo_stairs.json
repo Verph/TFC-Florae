@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/narrow_leaf_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/wood/narrow_leaf_bamboo",
+    "count": 8
+  }
+}

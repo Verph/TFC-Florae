@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/ceylon_cinnamon"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/ceylon_cinnamon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/ceylon_cinnamon",
+    "count": 8
+  }
+}

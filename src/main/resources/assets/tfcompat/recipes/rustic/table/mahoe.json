@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "B B"
+  ],
+  "key": {
+    "A": {
+      "item": "tfc:wood/planks/mahoe"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  },
+  "result": {
+    "item": "tfcompat:table_mahoe",
+    "count": 2
+  }
+}

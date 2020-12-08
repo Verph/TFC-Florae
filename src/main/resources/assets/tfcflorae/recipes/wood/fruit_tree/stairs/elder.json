@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/elder"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/fruit_tree/wood/elder",
+    "count": 8
+  }
+}

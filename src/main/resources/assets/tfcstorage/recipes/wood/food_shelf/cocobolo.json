@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/cocobolo"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/cocobolo"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/cocobolo",
+    "count": 1
+  }
+}

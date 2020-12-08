@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/breadnut"
+    }
+  },
+  "result": {
+    "item": "tfc:slab/fruit_tree/wood/breadnut",
+    "data": 0,
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/indigo"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/indigo",
+    "count": 4
+  }
+}

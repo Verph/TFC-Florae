@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/trapdoor/pink_ivory",
+    "count": 4
+  }
+}

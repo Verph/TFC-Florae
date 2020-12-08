@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/golden_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/planks/golden_bamboo",
+    "count": 1
+  }
+}

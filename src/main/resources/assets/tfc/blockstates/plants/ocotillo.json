@@ -1,0 +1,49 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/ocotillo_0",
+          "weight": 4
+        },
+        {
+          "model": "tfc:plants/ocotillo_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/ocotillo_1",
+          "weight": 4
+        },
+        {
+          "model": "tfc:plants/ocotillo_2",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/ocotillo_2",
+          "weight": 4
+        },
+        {
+          "model": "tfc:plants/ocotillo_1",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

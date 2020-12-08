@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/timber_bamboo"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "axe"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/lumber/timber_bamboo",
+    "count": 2
+  }
+}

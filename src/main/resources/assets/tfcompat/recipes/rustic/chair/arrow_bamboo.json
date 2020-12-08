@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "AAA",
+    "B B"
+  ],
+  "key": {
+    "A": {
+      "item": "tfc:wood/planks/arrow_bamboo"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  },
+  "result": {
+    "item": "tfcompat:chair_arrow_bamboo",
+    "count": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/fruit_tree/planks/jackfruit"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/button/jackfruit",
+    "count": 1
+  }
+}

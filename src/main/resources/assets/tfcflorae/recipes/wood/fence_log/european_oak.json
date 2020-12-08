@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/european_oak"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/european_oak"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/european_oak",
+    "count": 8
+  }
+}

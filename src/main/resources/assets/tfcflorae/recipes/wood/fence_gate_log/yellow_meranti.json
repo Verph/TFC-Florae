@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/yellow_meranti"
+    },
+    "B": {
+      "item": "tfc:wood/log/yellow_meranti"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/yellow_meranti",
+    "count": 8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/bael"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/lumber/bael",
+    "count": 8
+  }
+}

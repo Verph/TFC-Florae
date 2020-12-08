@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/tinwa_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/wood/tinwa_bamboo",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/persian_lime"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/persian_lime"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/persian_lime",
+    "count": 8
+  }
+}

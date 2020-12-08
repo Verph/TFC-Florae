@@ -1,0 +1,20 @@
+{
+  "type": "tfc:damage_item_shaped",
+  "pattern": [
+    "XB",
+    " B"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/log/walnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/support/walnut",
+    "count": 8
+  }
+}

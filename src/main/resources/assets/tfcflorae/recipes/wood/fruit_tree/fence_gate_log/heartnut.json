@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/heartnut"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/pole/heartnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate_log/heartnut",
+    "count": 8
+  }
+}

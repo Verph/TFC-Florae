@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_iroko"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_iroko",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_iroko",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_iroko",
+      "y": 270
+    }
+  }
+}

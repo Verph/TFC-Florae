@@ -1,0 +1,112 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/woolly_bush_big",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/woolly_bush_short",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shorter",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shortest",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/woolly_bush_big",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/woolly_bush_short",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shorter",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shortest",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/woolly_bush_big",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/woolly_bush_short",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shorter",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shortest",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/woolly_bush_big",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/woolly_bush_short",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shorter",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/woolly_bush_shortest",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

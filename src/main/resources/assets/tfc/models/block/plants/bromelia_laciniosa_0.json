@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/bromelia_laciniosa/bromelia_laciniosa_0",
+    "particle": "tfc:blocks/plants/bromelia_laciniosa/bromelia_laciniosa_0"
+  }
+}

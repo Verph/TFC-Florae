@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/red_cedar"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/red_cedar"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/red_cedar",
+    "count": 8
+  }
+}

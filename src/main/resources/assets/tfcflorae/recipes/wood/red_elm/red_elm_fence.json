@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/red_elm"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/red_elm"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/red_elm",
+    "count": 8
+  }
+}

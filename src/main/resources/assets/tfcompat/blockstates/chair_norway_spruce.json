@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_norway_spruce"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_norway_spruce",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_norway_spruce",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_norway_spruce",
+      "y": 270
+    }
+  }
+}

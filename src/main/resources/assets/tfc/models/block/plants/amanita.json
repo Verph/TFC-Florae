@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/amanita/amanita",
+    "particle": "tfc:blocks/plants/amanita/amanita"
+  }
+}

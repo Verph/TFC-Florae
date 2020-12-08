@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/red_bamboo"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/red_bamboo",
+    "count": 1
+  }
+}

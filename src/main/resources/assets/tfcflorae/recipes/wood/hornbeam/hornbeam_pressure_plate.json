@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/hornbeam"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/pressure_plate/hornbeam",
+    "count": 1
+  }
+}

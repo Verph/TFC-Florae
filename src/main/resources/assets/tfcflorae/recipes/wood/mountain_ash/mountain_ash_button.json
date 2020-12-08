@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/mountain_ash"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/mountain_ash",
+    "count": 1
+  }
+}

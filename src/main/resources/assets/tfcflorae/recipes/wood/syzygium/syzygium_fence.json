@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/syzygium"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/syzygium"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/syzygium",
+    "count": 8
+  }
+}

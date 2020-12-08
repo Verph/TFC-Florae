@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/hazelnut"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/hazelnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/hazelnut",
+    "count": 2
+  }
+}

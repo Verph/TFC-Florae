@@ -1,0 +1,15 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/reed_mannagrass_0",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

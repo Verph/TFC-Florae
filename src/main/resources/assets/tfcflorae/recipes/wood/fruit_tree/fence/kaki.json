@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/kaki"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/kaki"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/kaki",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/sweetgum"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/sweetgum"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/sweetgum",
+    "count": 8
+  }
+}

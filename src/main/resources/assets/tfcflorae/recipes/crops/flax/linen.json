@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "spindle"
+    },
+    {
+      "item": "tfcflorae:crop/product/flax_fiber"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/linen_string",
+    "count": 8
+  }
+}

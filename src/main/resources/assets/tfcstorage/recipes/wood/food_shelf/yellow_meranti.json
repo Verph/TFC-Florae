@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/yellow_meranti"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/yellow_meranti"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/yellow_meranti",
+    "count": 1
+  }
+}

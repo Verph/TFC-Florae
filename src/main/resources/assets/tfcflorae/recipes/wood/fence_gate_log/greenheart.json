@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/greenheart"
+    },
+    "B": {
+      "item": "tfc:wood/log/greenheart"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/greenheart",
+    "count": 8
+  }
+}

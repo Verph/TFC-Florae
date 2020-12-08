@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/blackthorn"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/blackthorn"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/blackthorn",
+    "count": 8
+  }
+}

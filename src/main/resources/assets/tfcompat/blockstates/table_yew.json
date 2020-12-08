@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcompat:table_yew_top"
+      }
+    },
+    {
+      "when": {
+        "nw": "true"
+      },
+      "apply": {
+        "model": "tfcompat:table_yew_leg_nw"
+      }
+    },
+    {
+      "when": {
+        "ne": "true"
+      },
+      "apply": {
+        "model": "tfcompat:table_yew_leg_nw",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "se": "true"
+      },
+      "apply": {
+        "model": "tfcompat:table_yew_leg_nw",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "sw": "true"
+      },
+      "apply": {
+        "model": "tfcompat:table_yew_leg_nw",
+        "y": 270
+      }
+    }
+  ]
+}

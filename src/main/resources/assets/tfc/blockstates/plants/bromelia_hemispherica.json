@@ -1,0 +1,15 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bromelia_hemispherica_0",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

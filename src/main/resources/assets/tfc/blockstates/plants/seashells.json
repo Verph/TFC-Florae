@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/seashells_0",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/seashells_1",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/seashells_2",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/seashells_3",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/seashells_4",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}

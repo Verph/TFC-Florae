@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/rocks_slate"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/slate",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/black_powderpuff/black_powderpuff",
+    "particle": "tfc:blocks/plants/black_powderpuff/black_powderpuff"
+  }
+}

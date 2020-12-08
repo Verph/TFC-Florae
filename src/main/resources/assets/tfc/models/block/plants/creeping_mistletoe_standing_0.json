@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/creeping_mistletoe/creeping_mistletoe_0",
+		"cross": "tfc:blocks/plants/creeping_mistletoe/creeping_mistletoe_0"
+	},
+	"elements": [
+		{
+			"from": [3, -1, 7.6],
+			"to": [19, 15, 7.6],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [10.2, -1, 7.6]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [2, -3, 8.4],
+			"to": [18, 13, 8.4],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [1, -2, 3.4]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		}
+	]
+}

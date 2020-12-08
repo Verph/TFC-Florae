@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/purpleheart"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/purpleheart"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/purpleheart",
+    "count": 8
+  }
+}

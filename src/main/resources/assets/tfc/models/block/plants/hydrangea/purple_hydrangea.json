@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/cross",
-  "textures": {
-    "cross": "tfc:blocks/plants/hydrangea/placeholder",
-    "particle": "tfc:blocks/plants/hydrangea/placeholder"
-  }
-}

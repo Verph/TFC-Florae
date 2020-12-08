@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/ice_cream_bean"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/tool_rack/ice_cream_bean",
+    "count": 1
+  }
+}

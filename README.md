@@ -1,5 +1,5 @@
-# TFC Elementia
-Addon for TerraFirmaCraft: The New Generation (TFC:TNG), called TFC Elementia.
+# TFC Florae
+Addon for TerraFirmaCraft: The New Generation (TFC:TNG), called TFC Florae.
 
 ## Goal
 + The primary incentive is to add all the elements and metals from the periodic table, and their respective ores and minerals; more tree sorts for broader usability cases and variety; as well as more alloys making more mods useable with TFC.

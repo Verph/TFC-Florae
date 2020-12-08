@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberPinkIvory"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/chest/pink_ivory",
+    "count": 1
+  }
+}

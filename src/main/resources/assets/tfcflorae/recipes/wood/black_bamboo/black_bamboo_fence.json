@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/black_bamboo"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/black_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/black_bamboo",
+    "count": 8
+  }
+}

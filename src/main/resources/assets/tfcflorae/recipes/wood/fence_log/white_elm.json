@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/white_elm"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/white_elm"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/white_elm",
+    "count": 8
+  }
+}

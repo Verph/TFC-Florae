@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberMountainAsh"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/boat/mountain_ash",
+    "count": 1
+  }
+}

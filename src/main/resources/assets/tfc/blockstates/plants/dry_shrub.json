@@ -32,6 +32,30 @@
         {
           "model": "tfc:plants/dry_shrub_5",
           "weight": 1
+		},
+        {
+          "model": "tfc:plants/dry_shrub_6",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_7",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_8",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_9",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_10",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_11",
+          "weight": 1
 		}
       ]
     },
@@ -62,6 +86,30 @@
         },
         {
           "model": "tfc:plants/dry_shrub_5",
+          "weight": 1
+		},
+        {
+          "model": "tfc:plants/dry_shrub_6",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_7",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_8",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_9",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_10",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/dry_shrub_11",
           "weight": 1
 		}
       ]

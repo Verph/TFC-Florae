@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/log/star_anise"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/star_anise"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_log/star_anise",
+    "count": 8
+  }
+}

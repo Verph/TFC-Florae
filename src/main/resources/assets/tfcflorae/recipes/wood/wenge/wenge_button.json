@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/wenge"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/wenge",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/brazilwood"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/trapdoor/brazilwood",
+    "count": 4
+  }
+}

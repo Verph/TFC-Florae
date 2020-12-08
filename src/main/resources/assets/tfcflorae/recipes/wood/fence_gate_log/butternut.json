@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/butternut"
+    },
+    "B": {
+      "item": "tfc:wood/log/butternut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/butternut",
+    "count": 8
+  }
+}

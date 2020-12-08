@@ -1,0 +1,17 @@
+
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/log/thorny_bamboo"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/lumber/thorny_bamboo",
+    "count": 8
+  }
+}

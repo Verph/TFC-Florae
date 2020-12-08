@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/agave"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/agave",
+    "count": 4
+  }
+}

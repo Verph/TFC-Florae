@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XSX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/blue_bamboo"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/loom/blue_bamboo",
+    "count": 1
+  }
+}

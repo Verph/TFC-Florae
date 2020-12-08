@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "rockMarble"
+    }
+  },
+  "result": {
+    "item": "tfc:cobble/marble",
+    "count": 1
+  }
+}

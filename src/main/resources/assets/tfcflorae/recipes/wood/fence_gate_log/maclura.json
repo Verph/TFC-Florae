@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/maclura"
+    },
+    "B": {
+      "item": "tfc:wood/log/maclura"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/maclura",
+    "count": 8
+  }
+}

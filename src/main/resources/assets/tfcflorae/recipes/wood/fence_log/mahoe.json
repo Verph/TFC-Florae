@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/mahoe"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/mahoe"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/mahoe",
+    "count": 8
+  }
+}

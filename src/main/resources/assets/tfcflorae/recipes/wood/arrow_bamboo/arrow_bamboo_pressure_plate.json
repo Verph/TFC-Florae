@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/arrow_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/pressure_plate/arrow_bamboo",
+    "count": 1
+  }
+}

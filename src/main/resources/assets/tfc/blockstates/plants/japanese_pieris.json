@@ -1,0 +1,19 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/japanese_pieris_single",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/japanese_pieris_0",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

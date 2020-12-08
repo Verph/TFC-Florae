@@ -12,10 +12,10 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 if (System.getenv('VERSION') != null) {
     version = System.getenv('VERSION')
 } else {
-    version = "1.0"
+    version = "1.1"
 }
-group = "tfcelementia"
-archivesBaseName = "TFC-Elementia"
+group = "tfcflorae"
+archivesBaseName = "TFC-Florae"
 
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
@@ -29,7 +29,7 @@ minecraft {
 	
 	replace("@VERSION@", project.version)
 	replace("@FINGERPRINT@", project.findProperty("signSHA1"))
-    replaceIn("TFCElementia.java")
+    replaceIn("TFCFlorae.java")
 }
 
 repositories {

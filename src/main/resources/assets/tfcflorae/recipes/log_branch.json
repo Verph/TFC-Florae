@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "hammer"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "logWood"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:branch",
+    "count": 3
+  }
+}

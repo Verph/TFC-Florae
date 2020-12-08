@@ -1,0 +1,28 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/quartz_crystal/quartz_crystal",
+		"layer0": "tfc:blocks/plants/quartz_crystal/quartz_crystal"
+	},
+	"elements": [
+		{
+			"from": [5.48, -0.02, 5.55],
+			"to": [21.52, 16.02, 5.55],
+			"rotation": {"angle": 45, "axis": "y", "origin": [13.5, 8, 13.5]},
+			"faces": {
+				"north": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#layer0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#layer0"}
+			}
+		},
+		{
+			"from": [5.55, -0.02, -5.77],
+			"to": [5.55, 16.02, 10.27],
+			"rotation": {"angle": 45, "axis": "y", "origin": [13.5, 8, 2.25]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#layer0"},
+				"west": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#layer0"}
+			}
+		}
+	]
+}

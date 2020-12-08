@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/african_padauk"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/african_padauk"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/african_padauk",
+    "count": 1
+  }
+}

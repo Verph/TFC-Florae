@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/mountain_ash"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/workbench/mountain_ash",
+    "count": 1
+  }
+}

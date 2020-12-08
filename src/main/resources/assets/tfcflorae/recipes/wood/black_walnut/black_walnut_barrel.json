@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberBlackWalnut"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/barrel/black_walnut",
+    "data": 0,
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "rockClaystone"
+    }
+  },
+  "result": {
+    "item": "tfc:cobble/claystone",
+    "count": 1
+  }
+}

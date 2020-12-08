@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/greenheart"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/greenheart"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/greenheart",
+    "count": 1
+  }
+}

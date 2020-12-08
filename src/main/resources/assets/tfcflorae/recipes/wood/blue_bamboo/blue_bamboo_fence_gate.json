@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/blue_bamboo"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/blue_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence_gate/blue_bamboo",
+    "count": 2
+  }
+}

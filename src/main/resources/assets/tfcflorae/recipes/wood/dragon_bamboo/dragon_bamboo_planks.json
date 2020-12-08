@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/dragon_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/planks/dragon_bamboo",
+    "count": 1
+  }
+}

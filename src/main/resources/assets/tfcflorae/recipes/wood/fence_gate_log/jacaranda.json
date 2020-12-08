@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/jacaranda"
+    },
+    "B": {
+      "item": "tfc:wood/log/jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/jacaranda",
+    "count": 8
+  }
+}

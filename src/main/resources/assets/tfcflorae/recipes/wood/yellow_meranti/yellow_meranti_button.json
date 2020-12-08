@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/yellow_meranti"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/yellow_meranti",
+    "count": 1
+  }
+}

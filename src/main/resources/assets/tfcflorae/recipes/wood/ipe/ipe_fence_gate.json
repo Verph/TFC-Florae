@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/ipe"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/ipe"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence_gate/ipe",
+    "count": 2
+  }
+}

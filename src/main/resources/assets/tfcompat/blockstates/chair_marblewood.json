@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_marblewood"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_marblewood",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_marblewood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_marblewood",
+      "y": 270
+    }
+  }
+}

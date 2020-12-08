@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "tfc:blocks/wood/leaves/larch_opaque"
+	}
+}

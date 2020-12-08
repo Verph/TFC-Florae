@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "spindle"
+    },
+    {
+      "item": "tfcflorae:crop/product/cotton_boll"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/cotton_yarn",
+    "count": 8
+  }
+}

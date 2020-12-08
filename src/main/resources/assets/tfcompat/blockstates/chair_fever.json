@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_fever"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_fever",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_fever",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_fever",
+      "y": 270
+    }
+  }
+}

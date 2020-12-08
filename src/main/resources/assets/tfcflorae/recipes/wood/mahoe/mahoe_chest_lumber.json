@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberMahoe"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/chest/mahoe",
+    "count": 1
+  }
+}

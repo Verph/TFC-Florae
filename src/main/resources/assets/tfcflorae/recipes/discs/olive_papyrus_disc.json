@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "discPapyrus"
+    },
+    {
+      "item": "tfc:food/olive_paste"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/olive_papyrus_disc",
+    "count": 1
+  }
+}

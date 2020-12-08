@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/persimmon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/persimmon",
+    "count": 2
+  }
+}

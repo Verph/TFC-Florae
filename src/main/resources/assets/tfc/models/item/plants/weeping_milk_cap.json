@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/weeping_milk_cap/weeping_milk_cap"
+  }
+}

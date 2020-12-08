@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/rocks_granite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/granite",
+    "count": 1
+  }
+}

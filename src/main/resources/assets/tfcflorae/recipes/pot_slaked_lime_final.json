@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/pot_slaked_lime"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:powder/slaked_lime",
+    "count": 4
+  }
+}

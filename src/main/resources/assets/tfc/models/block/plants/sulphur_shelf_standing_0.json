@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "tfc:blocks/plants/sulphur_shelf/sulphur_shelf_1",
+		"1": "tfc:blocks/plants/sulphur_shelf/sulphur_shelf_0",
+		"particle": "tfc:blocks/plants/sulphur_shelf/sulphur_shelf_1"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 9],
+			"to": [17, 16, 9],
+			"rotation": {"angle": 0, "axis": "x", "origin": [9, 8, 9]},
+			"faces": {
+				"north": {"uv": [16, 16, 0, 0], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [-1, 0, 7],
+			"to": [15, 16, 7],
+			"rotation": {"angle": 0, "axis": "x", "origin": [7, 8, 7]},
+			"faces": {
+				"north": {"uv": [16, 16, 0, 0], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {}
+}

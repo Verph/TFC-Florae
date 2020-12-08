@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/rocks_phyllite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/phyllite",
+    "count": 1
+  }
+}

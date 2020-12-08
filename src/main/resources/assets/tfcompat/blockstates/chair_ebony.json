@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tfcompat:chair_ebony"
+    },
+    "facing=east": {
+      "model": "tfcompat:chair_ebony",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tfcompat:chair_ebony",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcompat:chair_ebony",
+      "y": 270
+    }
+  }
+}

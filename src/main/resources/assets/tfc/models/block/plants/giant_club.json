@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/giant_club/giant_club",
+    "particle": "tfc:blocks/plants/giant_club/giant_club"
+  }
+}

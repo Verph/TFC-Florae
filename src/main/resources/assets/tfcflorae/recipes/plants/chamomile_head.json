@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/chamomile"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/chamomile_head",
+    "count": 2
+  }
+}

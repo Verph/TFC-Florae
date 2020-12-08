@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/lantern_of_the_forest/lantern_of_the_forest_1",
+		"cross": "tfc:blocks/plants/lantern_of_the_forest/lantern_of_the_forest_1"
+	},
+	"elements": [
+		{
+			"from": [3, 0.8, 9],
+			"to": [19, 15.2, 9],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [4, 3, 1]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-2, 1.8, 8],
+			"to": [14, 16.2, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [-1, 17, 3]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#cross"}
+			}
+		}
+	]
+}

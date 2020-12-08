@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/lumber/whitebeam"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/planks/whitebeam",
+    "count": 1
+  }
+}

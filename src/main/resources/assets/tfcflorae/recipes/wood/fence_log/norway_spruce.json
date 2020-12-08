@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/norway_spruce"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/norway_spruce"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/norway_spruce",
+    "count": 8
+  }
+}

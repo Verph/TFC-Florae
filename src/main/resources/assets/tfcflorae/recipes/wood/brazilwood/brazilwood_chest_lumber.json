@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberBrazilwood"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/chest/brazilwood",
+    "count": 1
+  }
+}

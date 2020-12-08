@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/messmate"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/messmate"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/messmate",
+    "count": 8
+  }
+}

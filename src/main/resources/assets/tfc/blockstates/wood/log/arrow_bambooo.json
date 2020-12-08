@@ -1,0 +1,26 @@
+{
+	"forge_marker" : 1,
+	"defaults": {
+		"model": "cube_all",
+		"textures": {
+			"all": "tfc:blocks/wood/log/arrow_bamboo", 
+			"particle": "tfc:blocks/wood/log/arrow_bamboo",
+			"layer0": "tfc:items/wood/log/arrow_bamboo"
+		}
+	},
+    "variants": {
+    "wood":{
+    	    "arrow_bamboo":  { 
+				"textures": {
+					"particle": "tfc:blocks/wood/log/arrow_bamboo",
+					"side": "tfc:blocks/wood/log/arrow_bamboo",
+					"end": "tfc:blocks/wood/top/arrow_bamboo"
+					}, 
+				"model" : "tfc:block/wood/log/arrow_bamboo" 
+			}
+        },
+		"inventory": [{
+            "transform": "forge:default-block"
+        }]
+    }
+}

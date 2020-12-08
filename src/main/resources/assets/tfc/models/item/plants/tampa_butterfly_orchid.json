@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/tampa_butterfly_orchid/tampa_butterfly_orchid_1"
+  }
+}

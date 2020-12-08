@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/olive"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/olive"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/olive",
+    "count": 8
+  }
+}

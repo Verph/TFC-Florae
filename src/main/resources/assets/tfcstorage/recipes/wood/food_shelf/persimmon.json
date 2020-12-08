@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/persimmon"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/persimmon"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/persimmon",
+    "count": 1
+  }
+}

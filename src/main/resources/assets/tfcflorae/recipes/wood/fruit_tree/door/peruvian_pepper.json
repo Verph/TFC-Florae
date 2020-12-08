@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/peruvian_pepper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/peruvian_pepper",
+    "count": 2
+  }
+}

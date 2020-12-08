@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberEuropeanOak"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/door/european_oak",
+    "count": 2
+  }
+}

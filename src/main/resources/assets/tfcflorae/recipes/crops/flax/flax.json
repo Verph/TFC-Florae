@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:plants/flax"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/flax",
+    "count": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood/planks/angelim"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood/button/angelim",
+    "count": 1
+  }
+}

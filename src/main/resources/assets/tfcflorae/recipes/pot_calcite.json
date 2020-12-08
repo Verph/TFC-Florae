@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustCalcite"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustChalk"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustFlux"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustCalcite"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustChalk"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustFlux"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustCalcite"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustChalk"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustFlux"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustCalcite"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustChalk"
+		},
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustFlux"
+		}
+	],
+    {
+      "item": "tfc:ceramics/fired/pot"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/pot_calcite",
+    "count": 1
+  }
+}

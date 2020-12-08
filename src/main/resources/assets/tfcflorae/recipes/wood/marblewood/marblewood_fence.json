@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/marblewood"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/marblewood"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/fence/marblewood",
+    "count": 8
+  }
+}

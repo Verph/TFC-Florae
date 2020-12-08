@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/tinted_cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/cinnamon_fern/cinnamon_fern_single",
+    "particle": "tfc:blocks/plants/cinnamon_fern/cinnamon_fern_single"
+  }
+}

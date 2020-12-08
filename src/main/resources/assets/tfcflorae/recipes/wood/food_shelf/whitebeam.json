@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LLL",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfc:wood/planks/whitebeam"
+    },
+    "L": {
+      "item": "tfc:wood/lumber/whitebeam"
+    }
+  },
+  "result": {
+    "item": "tfcstorage:wood/food_shelf/whitebeam",
+    "count": 1
+  }
+}

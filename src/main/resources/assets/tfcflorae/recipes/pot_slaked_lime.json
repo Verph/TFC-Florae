@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "dustQuicklime"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dustQuicklime"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dustQuicklime"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "dustQuicklime"
+    },
+    {
+      "item": "tfc:ceramics/fired/pot"
+    },
+    [
+      {
+        "type": "minecraft:item_nbt",
+        "item": "forge:bucketFilled",
+        "nbt": {
+          "FluidName": "fresh_water",
+          "Amount": 1000
+        }
+      },
+      {
+        "type": "minecraft:item_nbt",
+        "item": "tfc:wooden_bucket",
+        "data": 0,
+        "nbt": {
+          "Fluid": {
+            "FluidName": "fresh_water",
+            "Amount": 1000
+          }
+        }
+      }
+    ]
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/pot_slaked_lime",
+    "count": 1
+  }
+}

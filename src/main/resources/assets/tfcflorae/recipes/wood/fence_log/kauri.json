@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/kauri"
+    },
+    "B": {
+      "item": "tfc:wood/lumber/kauri"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:wood/fence_log/kauri",
+    "count": 8
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/wood_blewit/wood_blewit",
+    "particle": "tfc:blocks/plants/wood_blewit/wood_blewit"
+  }
+}

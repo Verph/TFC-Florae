@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/large_foot_dendrobium/large_foot_dendrobium_0",
+    "particle": "tfc:blocks/plants/large_foot_dendrobium/large_foot_dendrobium_0"
+  }
+}

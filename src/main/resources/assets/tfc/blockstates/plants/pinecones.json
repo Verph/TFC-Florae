@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/pinecones_0",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/pinecones_1",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/pinecones_2",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/pinecones_3",
+          "weight": 20
+        },
+        {
+          "model": "tfc:plants/pinecones_4",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}

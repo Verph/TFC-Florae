@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/planks/kauri"
+    }
+  },
+  "result": {
+    "item": "tfc:slab/wood/kauri",
+    "data": 0,
+    "count": 6
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumberBlackBamboo"
+    }
+  },
+  "result": {
+    "item": "tfc:wood/chest/black_bamboo",
+    "count": 1
+  }
+}

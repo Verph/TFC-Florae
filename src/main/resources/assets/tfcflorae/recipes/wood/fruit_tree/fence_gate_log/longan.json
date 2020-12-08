@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/longan"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/pole/longan"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate_log/longan",
+    "count": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/ice_cream_bean"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/ice_cream_bean"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/ice_cream_bean",
+    "count": 2
+  }
+}

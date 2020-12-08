@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/rainier_cherry"
+    },
+    "B": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/rainier_cherry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence_gate/rainier_cherry",
+    "count": 2
+  }
+}
