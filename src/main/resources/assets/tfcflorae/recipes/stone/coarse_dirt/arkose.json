@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelArkose"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtArkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/arkose",
+    "count": 4
+  }
+}

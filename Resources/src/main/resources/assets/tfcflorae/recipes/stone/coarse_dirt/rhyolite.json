@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelrhyolite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtrhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/rhyolite",
+    "count": 4
+  }
+}

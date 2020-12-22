@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelMarble"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtMarble"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/marble",
+    "count": 4
+  }
+}

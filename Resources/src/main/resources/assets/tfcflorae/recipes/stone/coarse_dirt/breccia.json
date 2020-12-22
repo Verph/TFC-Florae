@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelbreccia"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtbreccia"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/breccia",
+    "count": 4
+  }
+}

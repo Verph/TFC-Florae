@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelporphyry"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtporphyry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/porphyry",
+    "count": 4
+  }
+}

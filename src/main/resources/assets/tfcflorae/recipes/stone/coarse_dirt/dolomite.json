@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelDolomite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtDolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/dolomite",
+    "count": 4
+  }
+}

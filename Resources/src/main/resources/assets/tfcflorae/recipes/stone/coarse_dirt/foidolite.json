@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelfoidolite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtfoidolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/foidolite",
+    "count": 4
+  }
+}

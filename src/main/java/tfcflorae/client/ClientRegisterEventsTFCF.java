@@ -47,10 +47,13 @@ import tfcflorae.objects.blocks.*;
 import tfcflorae.objects.blocks.BlockStemCrop;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.FruitWood.*;
+import tfcflorae.objects.blocks.blocktype.BlockRockRawTFCF;
+import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.client.render.VanillaStemStateMapper;
 import tfcflorae.objects.te.*;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.stateproperty.StatePropertiesTFCF;
 import tfcflorae.objects.GemTFCF;
@@ -126,6 +129,22 @@ public class ClientRegisterEventsTFCF
         ModelLoader.setCustomStateMapper(BlocksTFCF.CEYLON_CINNAMON_LOG, new StateMap.Builder().ignore(StatePropertiesTFCF.CAN_GROW).build());
         ModelLoader.setCustomStateMapper(BlocksTFCF.CEYLON_CINNAMON_LEAVES, new StateMap.Builder().ignore(BlockLeaves.DECAYABLE).build());
         ModelLoader.setCustomStateMapper(BlocksTFCF.CEYLON_CINNAMON_SAPLING, new StateMap.Builder().ignore(BlockSaplingTFC.STAGE).build());
+
+        /*
+        BlocksTypeTFCF.getAllBlockRockVariantsTFCF().forEach(e -> {
+            if (e.getType() == RockTFCF.MOSSY_RAW)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockRockRawTFCF.CAN_FALL).build());
+            }
+        });
+        */
+
+        BlocksTFCF.getAllBlockRockVariantsTFCF().forEach(e -> {
+            if (e.getType() == RockTFCF.MOSSY_RAW)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockRockRawTFCF.CAN_FALL).build());
+            }
+        });
     }
 
     @SuppressWarnings("deprecation")
@@ -135,6 +154,16 @@ public class ClientRegisterEventsTFCF
     {
         ItemColors itemColors = event.getItemColors();
 
+        /*
+        itemColors.registerItemColorHandler((stack, tintIndex) ->
+                event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
+            BlocksTypeTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
+        */
+
+        itemColors.registerItemColorHandler((stack, tintIndex) ->
+                event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
+
         itemColors.registerItemColorHandler((stack, tintIndex) ->
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.getAllFruitLeaves().toArray(new BlockFruitTreeLeaves[0])
@@ -143,12 +172,12 @@ public class ClientRegisterEventsTFCF
         itemColors.registerItemColorHandler((stack, tintIndex) ->
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.CASSIA_CINNAMON_LEAVES);
-            
+
         itemColors.registerItemColorHandler((stack, tintIndex) ->
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.CEYLON_CINNAMON_LEAVES);
     }
-	
+
     @SideOnly(Side.CLIENT)
     private static void registerEnumBasedMetaItems(String prefix, Enum e, Item item)
     {
@@ -168,8 +197,11 @@ public class ClientRegisterEventsTFCF
     public static void registerColorHandlerBlocks(ColorHandlerEvent.Block event)
     {
         BlockColors blockColors = event.getBlockColors();
+        IBlockColor grassColor = GrassColorHandler::computeGrassColor;
         IBlockColor foliageColor = GrassColorHandler::computeGrassColor;
 
+        //blockColors.registerBlockColorHandler(grassColor, BlocksTypeTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
+        blockColors.registerBlockColorHandler(grassColor, BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.getAllFruitLeaves().toArray(new Block[0]));
 
         //use vanilla stem coloring for stemcrops

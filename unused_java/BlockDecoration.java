@@ -29,9 +29,19 @@ public class BlockDecoration extends Block implements IItemSize
     public static BlockDecoration create(Rock rock, BlockTypesTFCF rockTFCF)
     {
         if(rockTFCF.isFallable()) return new BlockFallable(rock, rockTFCF);
-        if(rockTFCF == BlockTypesTFCF.PODZOL) return new BlockSoil(rock, rockTFCF);
-        if(rockTFCF == BlockTypesTFCF.COARSE_DIRT) return new BlockSoil(rock, rockTFCF);
-        if(rockTFCF == BlockTypesTFCF.MUD) return new BlockSoil(rock, rockTFCF);
+        /*
+        if(rockTFCF == BlockTypesTFCF.LOAMY_SAND) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SANDY_LOAM) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SANDY_CLAY_LOAM) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SANDY_CLAY) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.LOAM) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.CLAY_LOAM) return new BlockDecoration(rock, rockTFCF);
+        //if(rockTFCF == BlockTypesTFCF.CLAY) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SILTY_CLAY) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SILTY_CLAY_LOAM) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SILT_LOAM) return new BlockDecoration(rock, rockTFCF);
+        if(rockTFCF == BlockTypesTFCF.SILT) return new BlockDecoration(rock, rockTFCF);
+        */
         return new BlockDecoration(rock, rockTFCF);
     }
 

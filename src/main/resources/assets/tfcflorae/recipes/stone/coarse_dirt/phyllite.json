@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelPhyllite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtPhyllite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/phyllite",
+    "count": 4
+  }
+}

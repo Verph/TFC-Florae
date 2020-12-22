@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelCataclasite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtCataclasite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/cataclasite",
+    "count": 4
+  }
+}

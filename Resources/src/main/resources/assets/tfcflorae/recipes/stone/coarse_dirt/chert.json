@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelchert"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtchert"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/chert",
+    "count": 4
+  }
+}

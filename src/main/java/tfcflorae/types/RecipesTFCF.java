@@ -91,16 +91,19 @@ import net.dries007.tfc.util.forge.ForgeRule;
 import net.dries007.tfc.util.fuel.FuelManager;
 import net.dries007.tfc.util.skills.SmithingSkill;
 import net.dries007.tfc.util.skills.SmithingSkill.Type;
+
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.recipes.CrackingRecipe;
 import tfcflorae.api.recipes.NutRecipe;
 import tfcflorae.objects.PowderTFCF;
-import tfcflorae.objects.blocks.blocktype.BlockDecoration;
+import tfcflorae.objects.blocks.blocktype.*;
 import tfcflorae.objects.fluids.FluidsTFCF;
 import tfcflorae.objects.items.ItemPowderTFCF;
 import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.types.PlantsTFCF;
+import tfcflorae.types.BlockTypesTFCF;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 //import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
@@ -122,20 +125,30 @@ import static tfcflorae.TFCFlorae.MODID;
 public final class RecipesTFCF
 {
     @SubscribeEvent
-    public static void onRegisterBarrelRecipeEvent(RegistryEvent.Register<BarrelRecipe> event)
+    public static void onRegisterBarrelRecipeEventMoss(RegistryEvent.Register<BarrelRecipe> event)
     {
         for(Rock rock : TFCRegistries.ROCKS.getValuesCollection())
         {
             event.getRegistry().registerAll(
-                    new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(BlockRockVariant.get(rock, Rock.Type.RAW)), new FluidStack(FRESH_WATER.get(), 50), new ItemStack(BlockDecoration.get(rock, BlockTypesTFCF.MOSSY_RAW), 1), 8* ICalendar.TICKS_IN_HOUR).setRegistryName(TFCFlorae.MODID, "mossy_raw_"+rock.getRegistryName().getPath())
+                //new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(BlockRockVariant.get(rock, Rock.Type.RAW)), new FluidStack(FRESH_WATER.get(), 50), new ItemStack(BlockDecoration.get(rock, BlockTypesTFCF.MOSSY_RAW), 1), 8* ICalendar.TICKS_IN_HOUR).setRegistryName(TFCFlorae.MODID, "mossy_raw_"+rock.getRegistryName().getPath())
+                new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of(BlockRockVariant.get(rock, Rock.Type.RAW)), new FluidStack(FRESH_WATER.get(), 50), new ItemStack(BlockRockVariantTFCF.get(rock, BlockTypesTFCF.RockTFCF.MOSSY_RAW), 1), 8* ICalendar.TICKS_IN_HOUR).setRegistryName(TFCFlorae.MODID, "mossy_raw_"+rock.getRegistryName().getPath())
             );
         }
-        
-        event.getRegistry().registerAll(
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBarrelRecipeEvent(RegistryEvent.Register<BarrelRecipe> event)
+    {
+        IForgeRegistry<BarrelRecipe> r = event.getRegistry();
+
+        r.registerAll(
+
             // Limewater
+            /*
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("dustCalcite"), new FluidStack(LIMEWATER.get(), 500), ItemStack.EMPTY, 0).setRegistryName("limewater_from_calcite"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("dustQuicklime"), new FluidStack(LIMEWATER.get(), 500), ItemStack.EMPTY, 0).setRegistryName("limewater_from_quicklime"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("dustSlakedLime"), new FluidStack(LIMEWATER.get(), 500), ItemStack.EMPTY, 0).setRegistryName("limewater_from_slaked_lime"),
+            */
 
             // Sugar
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 600), IIngredient.of("sugarcane", 5), null, new ItemStack(Items.SUGAR), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sugar_from_sugar_cane"),
@@ -281,9 +294,11 @@ public final class RecipesTFCF
             HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_WALNUT_NUT), 480).setRegistryName("burned_walnut"),
 
             // Quicklime
+            /*
             new HeatRecipeSimple(IIngredient.of(new ItemStack(ItemsTFCF.CALCITE_POT)), new ItemStack(ItemsTFCF.QUICKLIME_POT, 1), 1000f, Metal.Tier.TIER_I).setRegistryName("quicklime_pot"),
             new HeatRecipeSimple(IIngredient.of("dustPearl"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.QUICKLIME), 1), 1000f, Metal.Tier.TIER_I).setRegistryName("quicklime_pearl"),
             new HeatRecipeSimple(IIngredient.of("dustBlackPearl"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.QUICKLIME), 1), 1000f, Metal.Tier.TIER_I).setRegistryName("quicklime_black_pearl"),
+            /*
 
         	// Ash
             new HeatRecipeSimple(IIngredient.of("pinecone"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.ASH), 1), 425, 850).setRegistryName("burnt_pinecone"),
@@ -338,13 +353,15 @@ public final class RecipesTFCF
             new QuernRecipe(IIngredient.of(ItemsTFCF.ROASTED_COCOA_BEANS), new ItemStack(ItemsTFCF.COCOA_POWDER, 2)).setRegistryName("ground_cocoa_beans"),
             new QuernRecipe(IIngredient.of(ItemsTFCF.ROASTED_COFFEE_BEANS), new ItemStack(ItemsTFCF.COFFEE_POWDER, 2)).setRegistryName("ground_coffee_beans"),
 
-        	// Calcite	
+            // Calcite
+            /*	
             new QuernRecipe(IIngredient.of("seashell"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.CALCITE), 2)).setRegistryName("calcite_powder_from_seashells"),
             //new QuernRecipe(IIngredient.of("conch"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.CALCITE), 2)).setRegistryName("calcite_powder_from_conchs"),
             //new QuernRecipe(IIngredient.of("clam"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.CALCITE), 2)).setRegistryName("calcite_powder_from_clams"),
             //new QuernRecipe(IIngredient.of("scallop"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.CALCITE), 2)).setRegistryName("calcite_powder_from_scallops"),
             //new QuernRecipe(IIngredient.of("starfish"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.CALCITE), 2)).setRegistryName("calcite_powder_from_starfish"),
-            
+            */
+                        
             // Pearl
             new QuernRecipe(IIngredient.of("pearl"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.PEARL), 1)).setRegistryName("crushed_pearl"),
             new QuernRecipe(IIngredient.of("pearlBlack"), new ItemStack(ItemPowderTFCF.get(PowderTFCF.BLACK_PEARL), 1)).setRegistryName("crushed_black_pearl"),

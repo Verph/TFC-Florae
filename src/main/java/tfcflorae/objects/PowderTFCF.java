@@ -5,9 +5,9 @@ import tfcflorae.TFCFlorae;
 public enum PowderTFCF
 {
     ASH,
-    CALCITE,
-    QUICKLIME,
-    SLAKED_LIME,
+    //CALCITE,
+    //QUICKLIME,
+    //SLAKED_LIME,
     PEARL,
     BLACK_PEARL,
 }

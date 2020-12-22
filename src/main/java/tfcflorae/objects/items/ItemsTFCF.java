@@ -71,6 +71,8 @@ import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.FruitWood.*;
 import tfcflorae.objects.items.*;
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.objects.items.rock.ItemMud;
+import tfcflorae.objects.items.rock.ItemMudBrick;
 import tfcflorae.util.agriculture.*;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.TFCFlorae;
@@ -645,12 +647,14 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("food/sheep_cheese")
     public static final ItemFoodTFCF SHEEP_CHEESE = Helpers.getNull();
 
+    /*
     @GameRegistry.ObjectHolder("ceramics/pot_calcite")
     public static final ItemPottery CALCITE_POT = Helpers.getNull();
     @GameRegistry.ObjectHolder("ceramics/pot_quicklime")
     public static final ItemPottery QUICKLIME_POT = Helpers.getNull();
     @GameRegistry.ObjectHolder("ceramics/pot_slaked_lime")
     public static final ItemPottery SLAKED_LIME_POT = Helpers.getNull();
+    */
 
     @GameRegistry.ObjectHolder("items/logwood_chips")
     public static final ItemMiscTFCF LOGWOOD_CHIPS = Helpers.getNull();
@@ -998,6 +1002,14 @@ public final class ItemsTFCF
         ImmutableList.Builder<ItemFruitDoor> fruitDoors = ImmutableList.builder();
         //ImmutableList.Builder<ItemFruitPressurePlate> fruitPressurePlate = ImmutableList.builder();
         
+        // Rock Type Items
+        {
+            for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                simpleItems.add(register(r, "mud/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMud(rock), CT_ROCK_ITEMS));
+            for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                simpleItems.add(register(r, "mud_brick/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMudBrick(rock), CT_ROCK_ITEMS));
+        }
+
         // Gems
         {
             Builder<ItemGemTFCF> b = new Builder<>();
@@ -1009,6 +1021,7 @@ public final class ItemsTFCF
         for (PowderTFCF powder : PowderTFCF.values())
             simpleItems.add(register(r, "powder/" + powder.name().toLowerCase(), new ItemPowderTFCF(powder), CT_MISC));
 
+        /*
         simpleItems.add(register(r, "ceramics/pot_calcite", new ItemPottery(), CT_MISC));
         simpleItems.add(register(r, "ceramics/pot_quicklime", new ItemPottery()
         {
@@ -1041,6 +1054,7 @@ public final class ItemsTFCF
                 return true;
             }
         }, CT_MISC));
+        */
 
         // Foods
         simpleItems.add(register(r, "food/cocoa_beans", new ItemFoodTFCF(FoodDataTFCF.COCOA_BEANS), CT_FOOD));

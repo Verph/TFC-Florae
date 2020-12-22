@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelboninite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtboninite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/boninite",
+    "count": 4
+  }
+}

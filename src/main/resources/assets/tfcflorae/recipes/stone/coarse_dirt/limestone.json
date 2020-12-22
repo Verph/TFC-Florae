@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelLimestone"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtLimestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/limestone",
+    "count": 4
+  }
+}

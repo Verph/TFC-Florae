@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelBasalt"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtBasalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/basalt",
+    "count": 4
+  }
+}

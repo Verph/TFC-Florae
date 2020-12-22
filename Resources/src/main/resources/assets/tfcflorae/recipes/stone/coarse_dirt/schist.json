@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelschist"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/schist",
+    "count": 4
+  }
+}

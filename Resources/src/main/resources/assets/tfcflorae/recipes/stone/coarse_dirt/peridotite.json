@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelperidotite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtperidotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/peridotite",
+    "count": 4
+  }
+}

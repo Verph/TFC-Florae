@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravelandesite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "dirtandesite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/andesite",
+    "count": 4
+  }
+}

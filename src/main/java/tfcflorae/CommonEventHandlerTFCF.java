@@ -38,6 +38,7 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.GameRuleChangeEvent;
@@ -60,6 +61,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.damage.CapabilityDamageResistance;
 import net.dries007.tfc.api.capability.damage.DamageType;
@@ -114,7 +116,9 @@ import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -151,6 +155,81 @@ public final class CommonEventHandlerTFCF
             Item pole = ItemMisc.getByNameOrId(poleName);
             if (pole != null)
                 event.getDrops().add(new ItemStack(pole));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onBreakProgressEvent(BreakSpeed event)
+    {
+        EntityPlayer player = event.getEntityPlayer();
+        if (player != null)
+        {
+            ItemStack stack = player.getHeldItemMainhand();
+            float skillModifier = SmithingSkill.getSkillBonus(stack, SmithingSkill.Type.TOOLS);
+            if (skillModifier > 0)
+            {
+                // Up to 2x modifier for break speed for skill bonuses on tools
+                // New speed, so it will take into account other mods' modifications
+                event.setNewSpeed(event.getNewSpeed() + (event.getNewSpeed() * skillModifier));
+            }
+        }
+        if (event.getState().getBlock() instanceof BlockRockVariantTFCF)
+        {
+            event.setNewSpeed((float) (event.getNewSpeed() / ConfigTFC.General.MISC.rockMiningTimeModifier));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onUseHoe(UseHoeEvent event)
+    {
+        World world = event.getWorld();
+        BlockPos pos = event.getPos();
+        IBlockState state = world.getBlockState(pos);
+
+        if (ConfigTFC.General.OVERRIDES.enableHoeing)
+        {
+            if (state.getBlock() instanceof BlockRockVariantTFCF)
+            {
+                BlockRockVariantTFCF blockRock = (BlockRockVariantTFCF) state.getBlock();
+                if 
+                    (
+                        blockRock.getType() == RockTFCF.COARSE_DIRT || 
+                        blockRock.getType() == RockTFCF.LOAMY_SAND || 
+                        blockRock.getType() == RockTFCF.SANDY_LOAM || 
+                        blockRock.getType() == RockTFCF.LOAM || 
+                        blockRock.getType() == RockTFCF.SILT_LOAM || 
+                        blockRock.getType() == RockTFCF.SILT || 
+                        blockRock.getType() == RockTFCF.COARSE_LOAMY_SAND || 
+                        blockRock.getType() == RockTFCF.COARSE_SANDY_LOAM || 
+                        blockRock.getType() == RockTFCF.COARSE_LOAM || 
+                        blockRock.getType() == RockTFCF.COARSE_SILT_LOAM || 
+                        blockRock.getType() == RockTFCF.COARSE_SILT || 
+                        blockRock.getType() == RockTFCF.PODZOL || 
+                        blockRock.getType() == RockTFCF.LOAMY_SAND_GRASS || 
+                        blockRock.getType() == RockTFCF.LOAMY_SAND_PODZOL || 
+                        blockRock.getType() == RockTFCF.SANDY_LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.SANDY_LOAM_PODZOL || 
+                        blockRock.getType() == RockTFCF.LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.LOAM_PODZOL || 
+                        blockRock.getType() == RockTFCF.SILT_LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.SILT_LOAM_PODZOL || 
+                        blockRock.getType() == RockTFCF.SILT_GRASS || 
+                        blockRock.getType() == RockTFCF.SILT_PODZOL || 
+                        blockRock.getType() == RockTFCF.DRY_LOAMY_SAND_GRASS || 
+                        blockRock.getType() == RockTFCF.DRY_SANDY_LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.DRY_LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.DRY_SILT_LOAM_GRASS || 
+                        blockRock.getType() == RockTFCF.DRY_SILT_GRASS
+                    )
+                {
+                    if (!world.isRemote)
+                    {
+                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                        world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.FARMLAND).getDefaultState());
+                    }
+                    event.setResult(Event.Result.ALLOW);
+                }
+            }
         }
     }
 }

@@ -23,6 +23,8 @@ import tfcflorae.objects.blocks.blockRock.BlockRockVariantTFCF;
 import tfcflorae.types.BlocksRockTFCF;
 import tfcflorae.types.BlocksRockTFCF.TypeTFCF;
 */
+import tfcflorae.types.BlockTypesTFCF;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
 public class OreDictionaryHelper 
 {
@@ -61,12 +63,10 @@ public class OreDictionaryHelper
         register(new Thing(thing, meta), parts);
     }
 
-    /*
-    public static void registerRockType(Block thing, BlocksRockTFCF.TypeTFCF type, Object... prefixParts)
+    public static void registerRockType(Block thing, RockTFCF rockTFCF, Object... prefixParts)
     {
-        registerRockType(new Thing(thing), type, prefixParts);
+        registerRockType(new Thing(thing), rockTFCF, prefixParts);
     }
-    */
 
     public static void registerDamageType(Item thing, DamageType type)
     {
@@ -108,22 +108,71 @@ public class OreDictionaryHelper
         MAP.put(thing, toString(parts));
     }
 
-    /*
-    private static void registerRockType(Thing thing, BlocksRockTFCF.TypeTFCF type, Object... prefixParts)
+    private static void registerRockType(Thing thing, RockTFCF rockTFCF, Object... prefixParts)
     {
-        switch (type)
+        switch (rockTFCF)
         {
+
             case MOSSY_RAW:
                 MAP.put(thing, toString(prefixParts, "stone"));
                 break;
             case COARSE_DIRT:
+            case COARSE_LOAMY_SAND:
+            case COARSE_SANDY_LOAM:
+            case COARSE_SANDY_CLAY_LOAM:
+            case COARSE_SANDY_CLAY:
+            case COARSE_LOAM:
+            case COARSE_CLAY_LOAM:
+            case COARSE_CLAY:
+            case COARSE_SILTY_CLAY:
+            case COARSE_SILTY_CLAY_LOAM:
+            case COARSE_SILT_LOAM:
+            case COARSE_SILT:
+                MAP.put(thing, toString(prefixParts, rockTFCF, "coarse"));
+                break;
+            case LOAMY_SAND:
+            case SANDY_LOAM:
+            case SANDY_CLAY_LOAM:
+            case SANDY_CLAY:
+            case LOAM:
+            case CLAY_LOAM:
+            case SILTY_CLAY:
+            case SILTY_CLAY_LOAM:
+            case SILT_LOAM:
+            case SILT:
+                MAP.put(thing, toString(prefixParts, "block", rockTFCF, "dirt"));
+                break;
+            case LOAMY_SAND_GRASS:
+            case SANDY_LOAM_GRASS:
+            case SANDY_CLAY_LOAM_GRASS:
+            case SANDY_CLAY_GRASS:
+            case LOAM_GRASS:
+            case CLAY_LOAM_GRASS:
+            case SILTY_CLAY_GRASS:
+            case SILTY_CLAY_LOAM_GRASS:
+            case SILT_LOAM_GRASS:
+            case SILT_GRASS:
+                MAP.put(thing, toString(prefixParts, "block", rockTFCF));
+                break;
             case PODZOL:
+            case LOAMY_SAND_PODZOL:
+            case SANDY_LOAM_PODZOL:
+            case SANDY_CLAY_LOAM_PODZOL:
+            case SANDY_CLAY_PODZOL:
+            case LOAM_PODZOL:
+            case CLAY_LOAM_PODZOL:
+            case CLAY_PODZOL:
+            case SILTY_CLAY_PODZOL:
+            case SILTY_CLAY_LOAM_PODZOL:
+            case SILT_LOAM_PODZOL:
+            case SILT_PODZOL:
+                MAP.put(thing, toString(prefixParts, rockTFCF, "podzol"));
+                break;
+            case MUD:
             default:
-                MAP.put(thing, toString(prefixParts, type));
+                MAP.put(thing, toString(prefixParts, rockTFCF));
         }
     }
-    */
-
     private static class Thing
     {
         private final Block block;

@@ -11,8 +11,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import tfcflorae.objects.blocks.BlocksTypeTFCF;
+import tfcflorae.objects.blocks.BlocksTFCF;
+//import tfcflorae.objects.blocks.BlocksTypeTFCF;
 import tfcflorae.TFCFlorae;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
@@ -30,6 +30,7 @@ public class ClientProxy extends CommonProxy
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
+        /*
         for(Block block : BlocksTypeTFCF.getNormalBlocks())
         {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "normal"));
@@ -38,5 +39,6 @@ public class ClientProxy extends CommonProxy
         {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
         }
+        */
     }
 }
