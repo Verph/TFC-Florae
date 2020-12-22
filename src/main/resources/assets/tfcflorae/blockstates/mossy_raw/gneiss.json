@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/gneiss",
-      "particle": "tfc:blocks/stonetypes/raw/gneiss",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/gneiss"
     }
   },
   "variants": {

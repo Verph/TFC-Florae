@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/schist",
-      "particle": "tfc:blocks/stonetypes/raw/schist",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/schist"
     }
   },
   "variants": {

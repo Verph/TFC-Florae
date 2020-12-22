@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/andesite",
-      "particle": "tfc:blocks/stonetypes/raw/andesite",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/andesite"
     }
   },
   "variants": {

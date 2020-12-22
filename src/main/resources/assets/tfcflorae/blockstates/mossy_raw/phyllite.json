@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/phyllite",
-      "particle": "tfc:blocks/stonetypes/raw/phyllite",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/phyllite"
     }
   },
   "variants": {

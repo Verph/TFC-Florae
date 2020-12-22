@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/dolomite",
-      "particle": "tfc:blocks/stonetypes/raw/dolomite",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/dolomite"
     }
   },
   "variants": {

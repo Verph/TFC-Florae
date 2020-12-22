@@ -993,6 +993,7 @@ public final class ItemsTFCF
         return driedFruits.get(fruit);
     }
     
+    @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
@@ -1528,10 +1529,10 @@ public final class ItemsTFCF
         BlocksTFCF.getAllNormalItemBlocks().forEach(x -> registerItemBlock(r, x));
         BlocksTFCF.getAllInventoryItemBlocks().forEach(x -> registerItemBlock(r, x));
         */
-        
+
         allSimpleItems = simpleItems.build();
         allFruitDoors = fruitDoors.build();
-        
+
         OreDictionaryHelper.init();
     }
     

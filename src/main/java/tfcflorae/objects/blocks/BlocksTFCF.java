@@ -884,6 +884,8 @@ public class BlocksTFCF
     {
         if (!(current.getBlock() instanceof BlockRockVariantTFCF)) return false;
         RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
+        return rockTFCF.isGrass;
+        /*
         return
         rockTFCF == RockTFCF.PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND_GRASS || 
@@ -918,6 +920,7 @@ public class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
         rockTFCF == RockTFCF.DRY_SILT_GRASS;
+        */
     }
 
     public static boolean isDryGrass(IBlockState current)
@@ -1001,6 +1004,7 @@ public class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILT_GRASS;
     }
 
+    /*
     public static BlockRockVariantTFCF registerBlock(IForgeRegistry<Block> r, String name, Rock rock, RockTFCF rockTFCF)
     {
         BlockRockVariantTFCF block = BlockRockVariantTFCF.create(rock, rockTFCF);
@@ -1010,6 +1014,7 @@ public class BlocksTFCF
         r.register(block);
         return block;
     }
+    */
 
     public static Block registerWoodBlock(IForgeRegistry<Block> r, String name, Block block)
     {

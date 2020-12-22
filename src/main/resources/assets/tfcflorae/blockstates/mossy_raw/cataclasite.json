@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/raw/cataclasite",
-      "particle": "tfc:blocks/stonetypes/raw/cataclasite",
-      "moss": "tfcflorae:blocks/stonetypes/moss_overlay"
+      "all": "tfcflorae:blocks/stonetypes/mossy_raw/cataclasite"
     }
   },
   "variants": {
