@@ -21,7 +21,7 @@ ImgContrastLast = 180.0
 ImgBrightnessLast = 80.0
 ImgColorLast = 80.0
 
-useGrayscaleContrast = True
+useGrayscaleContrast = False
 
 #Source: https://github.com/python-pillow/Pillow/blob/2d6e51e26c7683f067d29bd69f4fdf8eef003643/src/PIL/ImageOps.py
 def _color(color, mode):
