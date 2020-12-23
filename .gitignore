@@ -5,8 +5,6 @@ bin
 .metadata
 .classpath
 .project
-.vscode
-unused_java
 
 # idea
 out
@@ -22,3 +20,5 @@ build
 # other
 eclipse
 run
+.vscode
+unused_java
