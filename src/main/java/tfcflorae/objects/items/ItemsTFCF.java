@@ -1006,9 +1006,9 @@ public final class ItemsTFCF
         // Rock Type Items
         {
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                simpleItems.add(register(r, "mud/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMud(rock), CT_ROCK_ITEMS));
+                simpleItems.add(register(r, "mud_item/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMud(rock), CT_ROCK_ITEMS));
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                simpleItems.add(register(r, "mud_brick/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMudBrick(rock), CT_ROCK_ITEMS));
+                simpleItems.add(register(r, "mud_brick_item/" + rock.getRegistryName().getPath().toLowerCase(), new ItemMudBrick(rock), CT_ROCK_ITEMS));
         }
 
         // Gems
