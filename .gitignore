@@ -5,6 +5,8 @@ bin
 .metadata
 .classpath
 .project
+.vscode
+unused_java
 
 # idea
 out
