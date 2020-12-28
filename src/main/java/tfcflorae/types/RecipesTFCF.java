@@ -160,13 +160,86 @@ public final class RecipesTFCF
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("cropAgave"), null, new ItemStack(ItemsTFCF.SISAL_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sisal_fiber"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("cropFlax"), null, new ItemStack(ItemsTFCF.FLAX_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("flax_fiber"),
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("cropHemp"), null, new ItemStack(ItemsTFCF.HEMP_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("hemp_fiber"),
+            
             // Fluidproduction from paste
+
             // Olive
             new BarrelRecipe(IIngredient.of(OLIVE_OIL_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(OLIVE_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("olive_oil_sisal"),
             new BarrelRecipe(IIngredient.of(OLIVE_OIL_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(OLIVE_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("olive_oil_silk"),
             new BarrelRecipe(IIngredient.of(OLIVE_OIL_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(OLIVE_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("olive_oil_cotton"),
             new BarrelRecipe(IIngredient.of(OLIVE_OIL_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(OLIVE_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("olive_oil_linen"),
             new BarrelRecipe(IIngredient.of(OLIVE_OIL_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(OLIVE_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("olive_oil_hemp"),
+
+            // Soybean
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("pasteSoybean"), new FluidStack(FluidsTFCF.SOYBEAN_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("soybean_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("soy_milk_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("soy_milk_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("soy_milk_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("soy_milk_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("soy_milk_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SOYBEAN_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.SOY_MILK.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("soy_milk_hemp"),
+
+            new BarrelRecipeFluidMixing(IIngredient.of(FluidsTFCF.SOY_MILK.get(), 9), new IngredientFluidItem(VINEGAR.get(), 1), new FluidStack(MILK_VINEGAR.get(), 10), 0).setRegistryName("soy_milk_vinegar"),
+
+            // Linseed
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("pasteLinseed"), new FluidStack(FluidsTFCF.LINSEED_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("linseed_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(),25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("linseed_oil_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("linseed_oil_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("linseed_oil_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("linseed_oil_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("linseed_oil_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LINSEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.LINSEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("linseed_oil_hemp"),
+
+            // Rape Seed
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("pasteRapeSeed"), new FluidStack(FluidsTFCF.RAPE_SEED_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("rape_seed_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(),25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("rape_seed_oil_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("rape_seed_oil_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("rape_seed_oil_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("rape_seed_oil_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("rape_seed_oil_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RAPE_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.RAPE_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("rape_seed_oil_hemp"),
+
+            // Sunflower Seed
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("pasteSunflowerSeed"), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("sunflower_seed_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(),25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("sunflower_seed_oil_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("sunflower_seed_oil_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("sunflower_seed_oil_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("sunflower_seed_oil_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("sunflower_seed_oil_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUNFLOWER_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.SUNFLOWER_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("sunflower_seed_oil_hemp"),
+
+            // Opium Poppy Seed
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("pasteOpiumPoppySeed"), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("opium_poppy_seed_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(),25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("opium_poppy_seed_oil_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("opium_poppy_seed_oil_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("opium_poppy_seed_oil_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("opium_poppy_seed_oil_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("opium_poppy_seed_oil_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.OPIUM_POPPY_SEED_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.OPIUM_POPPY_SEED_OIL.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("opium_poppy_seed_oil_hemp"),
+
+            // Sugar Beet Water
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 125), IIngredient.of("mashedSugarBeet"), new FluidStack(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("sugar_beet_water"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFC.JUTE_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(),25), new ItemStack(ItemsTFC.DIRTY_JUTE_NET), 0).setRegistryName("sugar_water_jute"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFCF.SISAL_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SISAL_NET), 0).setRegistryName("sugar_water_sisal"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFCF.SILK_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(), 25), new ItemStack(ItemsTFCF.DIRTY_SILK_NET), 0).setRegistryName("sugar_water_silk"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFCF.COTTON_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(), 25), new ItemStack(ItemsTFCF.DIRTY_COTTON_NET), 0).setRegistryName("sugar_water_cotton"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFCF.LINEN_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(), 25), new ItemStack(ItemsTFCF.DIRTY_LINEN_NET), 0).setRegistryName("sugar_water_linen"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_BEET_WATER.get(), 125), IIngredient.of(ItemsTFCF.HEMP_NET), new FluidStack(FluidsTFCF.SUGAR_WATER.get(), 25), new ItemStack(ItemsTFCF.DIRTY_HEMP_NET), 0).setRegistryName("sugar_water_hemp"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.SUGAR_WATER.get(), 125), null, null, new ItemStack(Items.SUGAR), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sugar_from_sugar_water"),
+
+			// Honey Water
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("itemHoney"), new FluidStack(FluidsTFCF.HONEY_WATER.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("honey_water_from_item_honey"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("itemHoneycomb"), new FluidStack(FluidsTFCF.HONEY_WATER.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("honey_water_from_item_honeycomb"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("materialHoneycomb"), new FluidStack(FluidsTFCF.HONEY_WATER.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("honey_water_from_material_honeycomb"),
+
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.HONEY_WATER.get(), 125), null, null, new ItemStack(Items.SUGAR), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sugar_from_honey_water"),
 
             // Dirty Nets
             new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 125), IIngredient.of(ItemsTFCF.DIRTY_SISAL_NET), null, new ItemStack(ItemsTFCF.SISAL_NET), ICalendar.TICKS_IN_HOUR).setRegistryName("clean_net_sisal"),
@@ -184,7 +257,97 @@ public final class RecipesTFCF
             new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 1000), IIngredient.of("boneCharred"), new FluidStack(FluidsTFC.getFluidFromDye(EnumDyeColor.BLACK).get(), 1000), ItemStack.EMPTY, ICalendar.TICKS_IN_HOUR).setRegistryName("black_dye_charred_bones"),
             new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 1000), IIngredient.of("dustBlackPearl"), new FluidStack(FluidsTFC.getFluidFromDye(EnumDyeColor.BLACK).get(), 1000), ItemStack.EMPTY, ICalendar.TICKS_IN_HOUR).setRegistryName("black_dye_black_pearl_powder"),
             new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 1000), IIngredient.of("dustPearl"), new FluidStack(FluidsTFC.getFluidFromDye(EnumDyeColor.PINK).get(), 1000), ItemStack.EMPTY, ICalendar.TICKS_IN_HOUR).setRegistryName("pink_dye_pearl_powder"),
-            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 1000), IIngredient.of("dustLogwood"), new FluidStack(FluidsTFC.getFluidFromDye(EnumDyeColor.PURPLE).get(), 1000), ItemStack.EMPTY, ICalendar.TICKS_IN_HOUR).setRegistryName("purple_dye_logwood_powder")
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 1000), IIngredient.of("dustLogwood"), new FluidStack(FluidsTFC.getFluidFromDye(EnumDyeColor.PURPLE).get(), 1000), ItemStack.EMPTY, ICalendar.TICKS_IN_HOUR).setRegistryName("purple_dye_logwood_powder"),
+            
+            // Teas
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedWhiteTea", 2), new FluidStack(FluidsTFCF.WHITE_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedGreenTea", 2), new FluidStack(FluidsTFCF.GREEN_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("green_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedBlackTea", 2), new FluidStack(FluidsTFCF.BLACK_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("black_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedChamomile", 2), new FluidStack(FluidsTFCF.CHAMOMILE_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("chamomile_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedDandelion", 2), new FluidStack(FluidsTFCF.DANDELION_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("dandelion_tea"),
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("driedLabradorTea", 2), new FluidStack(FluidsTFCF.LABRADOR_TEA.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("labrador_tea"),
+
+            // Coffee
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 200), IIngredient.of("roastedCoffee", 2), new FluidStack(FluidsTFCF.COFFEE.get(), 200), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("coffee"),
+            
+            // Wort
+            new BarrelRecipe(IIngredient.of(HOT_WATER.get(), 500), IIngredient.of("hops"), new FluidStack(FluidsTFCF.WORT.get(), 500), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("wort"),
+            
+            // Fermented Alcohol
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_AGAVE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.AGAVE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("agave_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_BANANA.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BANANA_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("banana_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_CHERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.CHERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("cherry_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_GREEN_GRAPE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.WHITE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("white_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_JUNIPER.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.JUNIPER_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("juniper_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_LEMON.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.LEMON_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("lemon_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.HONEY_WATER.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.MEAD.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("mead"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_ORANGE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.ORANGE_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("orange_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_PAPAYA.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PAPAYA_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("papaya_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_PEACH.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PEACH_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("peach_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_PEAR.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PEAR_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("pear_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_PLUM.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PLUM_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("plum_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_PURPLE_GRAPE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.RED_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("red_wine"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RICE_WATER.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFC.SAKE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("sake_rice_water"),
+
+            // Berry Wine
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_BLACKBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_blackberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_BLUEBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_blueberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_BUNCH_BERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_bunch_berry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_CLOUD_BERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_cloud_berry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_CRANBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_cranberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_ELDERBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_elderberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_GOOSEBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_gooseberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_RASPBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_raspberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_SNOW_BERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_snow_berry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_STRAWBERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_strawberry"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUICE_WINTERGREEN_BERRY.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_WINE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_wine_wintergreen_berry"),
+
+            // Distilled Alcohol
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.AGAVE_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.TEQUILA.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("tequila"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BANANA_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BANANA_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("banana_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BERRY_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BERRY_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("berry_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFC.CIDER.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.CALVADOS.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("calvados"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.CHERRY_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.CHERRY_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("cherry_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.JUNIPER_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.GIN.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("gin"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.LEMON_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.LEMON_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("lemon_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.ORANGE_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.ORANGE_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("orange_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.PAPAYA_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PAPAYA_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("papaya_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.PEACH_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PEACH_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("peach_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.PEAR_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PEAR_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("pear_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.PLUM_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.PLUM_BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("plum_brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.RED_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.BRANDY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("brandy"),
+            new BarrelRecipe(IIngredient.of(FluidsTFC.SAKE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.SHOCHU.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("shochu"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WHITE_WINE.get(), 500), IIngredient.of("sugar"), new FluidStack(FluidsTFCF.COGNAC.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("cognac"),
+
+            // Malted Grain
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainBarley"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_barley"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainMaize"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_corn"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainRye"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_rye"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainRice"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_rice"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainWheat"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_wheat"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainAmaranth"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_amaranth"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainBuckwheat"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_buckwheat"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainFonio"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_fonio"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainMillet"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_millet"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainQuinoa"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_quinoa"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 200), IIngredient.of("grainSpelt"), null, new ItemStack(ItemsTFCF.MALT_BARLEY), 4 * ICalendar.TICKS_IN_HOUR).setRegistryName("malt_spelt"),
+
+            // Beer
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltBarley"), new FluidStack(FluidsTFCF.BEER_BARLEY.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_barley"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltCorn"), new FluidStack(FluidsTFCF.BEER_CORN.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_corn"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltRye"), new FluidStack(FluidsTFCF.BEER_RYE.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_rye"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltWheat"), new FluidStack(FluidsTFCF.BEER_WHEAT.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_wheat"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltAmaranth"), new FluidStack(FluidsTFCF.BEER_AMARANTH.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_amaranth"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltBuckwheat"), new FluidStack(FluidsTFCF.BEER_BUCKWHEAT.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_buckwheat"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltFonio"), new FluidStack(FluidsTFCF.BEER_FONIO.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_fonio"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltMillet"), new FluidStack(FluidsTFCF.BEER_MILLET.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_millet"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltQuinoa"), new FluidStack(FluidsTFCF.BEER_QUINOA.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_quinoa"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.WORT.get(), 500), IIngredient.of("maltSpelt"), new FluidStack(FluidsTFCF.BEER_SPELT.get(), 500), ItemStack.EMPTY, 72 * ICalendar.TICKS_IN_HOUR).setRegistryName("beer_spelt"),
+
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("rice"), new FluidStack(FluidsTFCF.RICE_WATER.get(), 500), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("rice_water"),
+            new BarrelRecipe(IIngredient.of(FRESH_WATER.get(), 500), IIngredient.of("wildRice"), new FluidStack(FluidsTFCF.RICE_WATER.get(), 500), ItemStack.EMPTY, 2 * ICalendar.TICKS_IN_HOUR).setRegistryName("wild_rice_water"),
+
+            new BarrelRecipeTemperature(IIngredient.of(FluidsTFCF.DISTILLED_WATER.get(), 1), 50).setRegistryName("distilled_water_cooling")
         );
     }
     
