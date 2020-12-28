@@ -328,6 +328,10 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_SILTY_CLAY_GRASS:
             case DRY_SILTY_CLAY_LOAM_GRASS:
                 return Items.CLAY_BALL;
+            case COARSE_DIRT:
+                return Item.getItemFromBlock(get(rock, RockTFCF.COARSE_DIRT));
+            case PODZOL:
+                return Item.getItemFromBlock(get(rock, RockTFCF.PODZOL));
             /*
             case COARSE_DIRT:
             case PODZOL:

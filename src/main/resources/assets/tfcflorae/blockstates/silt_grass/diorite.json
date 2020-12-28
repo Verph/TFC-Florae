@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/silt/diorite",
+      "all": "tfcflorae:blocks/stonetypes/silt/diorite",
       "particle": "tfc:blocks/grass_top",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",

@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/loam/phyllite",
+      "all": "tfcflorae:blocks/stonetypes/loam/phyllite",
       "particle": "tfc:blocks/grass_top",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",

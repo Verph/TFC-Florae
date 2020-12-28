@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/loamy_sand/granite",
+      "all": "tfcflorae:blocks/stonetypes/loamy_sand/granite",
       "particle": "tfc:blocks/grass_top",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",

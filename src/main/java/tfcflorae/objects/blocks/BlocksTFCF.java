@@ -349,6 +349,47 @@ public class BlocksTFCF
         ImmutableList.Builder<BlockStairsTFCF> blockStairsTFC = new Builder<>();
         ImmutableList.Builder<BlockSlabTFCF.Half> blockSlabTFCF = new Builder<>();
 
+        foodItemBlocks.add(register(r, "plants/pumpkin_fruit", new BlockStemFruit(), CT_FOOD));
+        foodItemBlocks.add(register(r, "plants/melon_fruit", new BlockStemFruit(), CT_FOOD));
+
+        {
+            Builder<BlockCropTFC> b = ImmutableList.builder();
+
+            for (CropTFCF crop : CropTFCF.values())
+            {
+                cropBlocksTFC.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
+            }
+        }
+
+        {
+            Builder<BlockCropDead> b = ImmutableList.builder();
+
+            for (CropTFCF crop : CropTFCF.values())
+            {
+                deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), crop.createDeadBlock()));
+            }
+        }
+
+        for (StemCrop crop : StemCrop.values())
+        {
+            deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), new BlockCropDead(crop)));
+            cropBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), BlockStemCrop.create(crop)));
+        }
+
+        Builder<BlockBerryBush> fBerry = ImmutableList.builder();
+
+        for (BerryBushTFCF bush : BerryBushTFCF.values())
+        {
+            fBerry.add(register(r, "berry_bush/" + bush.name().toLowerCase(), new BlockBerryBush(bush), CT_FOOD));
+        }
+
+        allBerryBushBlocks = fBerry.build();
+        allBerryBushBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        allCropBlocksTFC = cropBlocksTFC.build();
+        allDeadCrops = deadCrops.build();
+        allCropBlocks = cropBlocks.build();
+
+        register(TEStemCrop.class, "stem_crop");
 
         for (RockTFCF rockTFCF : RockTFCF.values())
             {
@@ -488,33 +529,6 @@ public class BlocksTFCF
         inventoryItemBlocks.add(register(r, "wood/fruit_tree/leaves/ceylon_cinnamon", new BlockCeylonCinnamonLeaves(), CT_WOOD));
         inventoryItemBlocks.add(register(r, "wood/fruit_tree/sapling/ceylon_cinnamon", new BlockCeylonCinnamonSapling(), CT_WOOD));
 
-        foodItemBlocks.add(register(r, "plants/pumpkin_fruit", new BlockStemFruit(), CT_FOOD));
-        foodItemBlocks.add(register(r, "plants/melon_fruit", new BlockStemFruit(), CT_FOOD));
-
-        {
-            Builder<BlockCropTFC> b = ImmutableList.builder();
-
-            for (CropTFCF crop : CropTFCF.values())
-            {
-                cropBlocksTFC.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
-            }
-        }
-
-        {
-            Builder<BlockCropDead> b = ImmutableList.builder();
-
-            for (CropTFCF crop : CropTFCF.values())
-            {
-                deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), crop.createDeadBlock()));
-            }
-        }
-
-        for (StemCrop crop : StemCrop.values())
-        {
-            deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), new BlockCropDead(crop)));
-            cropBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), BlockStemCrop.create(crop)));
-        }
-
         ImmutableList.Builder<BlockFluidBase> fluids = ImmutableList.builder();
         for (FluidWrapper wrapper : FluidsTFCF.getAllFiniteFluids())
         {
@@ -525,16 +539,6 @@ public class BlocksTFCF
         {
             inventoryItemBlocks.add(registerWoodBlock(r, "wood/fence_gate_log/"+tree.getRegistryName().getPath(), new BlockFenceGateLog(tree)));
         }
-
-        Builder<BlockBerryBush> fBerry = ImmutableList.builder();
-
-        for (BerryBushTFCF bush : BerryBushTFCF.values())
-        {
-            fBerry.add(register(r, "berry_bush/" + bush.name().toLowerCase(), new BlockBerryBush(bush), CT_FOOD));
-        }
-
-        allBerryBushBlocks = fBerry.build();
-        allBerryBushBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
 
         allFluidBlocks = fluids.build();
 
@@ -650,11 +654,6 @@ public class BlocksTFCF
         });
 
         allNormalItemBlocks = normalItemBlocks.build();
-        allCropBlocksTFC = cropBlocksTFC.build();
-        allDeadCrops = deadCrops.build();
-        allCropBlocks = cropBlocks.build();
-
-        register(TEStemCrop.class, "stem_crop");
 
         FluidsTFC.getWrapper(FluidsTFCF.COCONUT_MILK.get());
     }

@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/silt/boninite",
+      "all": "tfcflorae:blocks/stonetypes/silt/boninite",
       "particle": "tfc:blocks/grass_top",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",

@@ -4,7 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfcflorae:blocks/stonetypes/silt_loam/andesite"
+      "all": "tfcflorae:blocks/stonetypes/silty_loam/andesite"
     }
   },
   "variants": {

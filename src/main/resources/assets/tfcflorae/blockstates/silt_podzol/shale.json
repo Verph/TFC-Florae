@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/silt/shale",
+      "all": "tfcflorae:blocks/stonetypes/silt/shale",
       "particle": "tfcflorae:blocks/podzol_top",
       "top": "tfcflorae:blocks/podzol_top",
       "north": "tfcflorae:blocks/podzol_side",

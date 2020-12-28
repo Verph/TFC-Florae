@@ -222,8 +222,12 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                 case SILT_GRASS:
                 case SILT_PODZOL:
                     return SILT;
+                case DRY_CLAY_GRASS:
+                    return DRY_CLAY_GRASS;
+                case CLAY_PODZOL:
+                    return CLAY_PODZOL;
                 /*
-                case DRY_CLAY_GRASS
+                case DRY_CLAY_GRASS:
                 case CLAY_PODZOL:
                     return CLAY;
                 case PODZOL:

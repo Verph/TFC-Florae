@@ -1516,14 +1516,14 @@ public final class ItemsTFCF
             simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFC(crop), CT_FOOD));
         }
 
-        BlocksTFCF.getAllNormalItemBlocks().forEach((x) -> {
-            registerItemBlock(r, x);
-        });
-
         for (StemCrop crop : StemCrop.values())
         {
             simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFC(crop), CT_FOOD));
         }
+
+        BlocksTFCF.getAllNormalItemBlocks().forEach((x) -> {
+            registerItemBlock(r, x);
+        });
 
         /*
         BlocksTFCF.getAllNormalItemBlocks().forEach(x -> registerItemBlock(r, x));
