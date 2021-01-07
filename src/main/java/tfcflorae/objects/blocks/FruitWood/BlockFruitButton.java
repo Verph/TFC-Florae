@@ -15,7 +15,8 @@ public class BlockFruitButton extends BlockButtonWood
     {
         setHardness(0.5F);
         setSoundType(SoundType.WOOD);
-        OreDictionaryHelper.register(this, "button", "button_wood", "button_fruit", "button_wood_fruit");
+        OreDictionaryHelper.register(this, "button");
+        OreDictionaryHelper.register(this, "button", "wood");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 }

@@ -34,7 +34,7 @@ public class BlockFruitDoor extends BlockDoor
         super(Material.WOOD);
         setHardness(3.0F);
         disableStats();
-        OreDictionaryHelper.register(this, "door", "door_fruit");
+        OreDictionaryHelper.register(this, "door");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 

@@ -35,7 +35,7 @@ public abstract class BlockFruitDoubleSlabBase extends BlockSlab
         setHarvestLevel("axe", 0);
         setHardness(2.0F)
         .setResistance(5.0F);
-        OreDictionaryHelper.register(this, "slab_double", "slab_double_fruit", "slab_wood_double", "slab_wood_double_fruit");
+        OreDictionaryHelper.register(this, "slab_double");
         Blocks.FIRE.setFireInfo(this, 5, 20);
 		this.useNeighborBrightness = true;
         setSoundType(SoundType.WOOD);

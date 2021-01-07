@@ -44,7 +44,7 @@ import net.dries007.tfc.objects.blocks.metal.BlockIngotPile;
 import net.dries007.tfc.objects.blocks.metal.BlockMetalLamp;
 import net.dries007.tfc.objects.blocks.metal.BlockMetalSheet;
 import net.dries007.tfc.objects.blocks.plants.BlockFloatingWaterTFC;
-import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
+//import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
 import net.dries007.tfc.objects.blocks.stone.*;
 import net.dries007.tfc.objects.blocks.wood.*;
 import net.dries007.tfc.objects.fluids.FluidsTFC;
@@ -57,6 +57,8 @@ import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.FruitTree;
 import net.dries007.tfc.util.Helpers;
 
+import tfcflorae.api.registries.TFCFRegistries;
+import tfcflorae.api.types.PlantTFCF;
 import tfcflorae.objects.blocks.*;
 import tfcflorae.objects.blocks.FruitTree.*;
 import tfcflorae.objects.blocks.FruitWood.*;
@@ -67,6 +69,7 @@ import tfcflorae.objects.items.ItemFoodTFCF;
 import tfcflorae.objects.te.TEStemCrop;
 import tfcflorae.util.agriculture.*;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
+import tfcflorae.objects.blocks.plants.BlockPlantTFCF;
 import tfcflorae.objects.blocks.blocktype.*;
 import tfcflorae.types.BlockTypesTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
@@ -82,7 +85,7 @@ import static tfcflorae.TFCFlorae.MODID;
 @SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = MODID)
 @GameRegistry.ObjectHolder(MODID)
-public class BlocksTFCF
+public final class BlocksTFCF
 {
     @GameRegistry.ObjectHolder("plants/pumpkin_fruit")
     public static final BlockStemFruit PUMPKIN_FRUIT = Helpers.getNull();
@@ -106,6 +109,7 @@ public class BlocksTFCF
     private static ImmutableList<ItemBlock> allNormalItemBlocks;
     private static ImmutableList<Block> allInventoryItemBlocks;
     private static ImmutableList<Block> allFoodItemBlocks = Helpers.getNull();
+    private static ImmutableList<BlockFenceGateLog> allFenceGateLogBlocks = Helpers.getNull();
     private static ImmutableList<BlockFruitTreeLeaves> allFruitLeaves = Helpers.getNull();
     private static ImmutableList<BlockFruitTreeSapling> allFruitSapling = Helpers.getNull();
     private static ImmutableList<BlockFruitBarrel> allFruitBarrel = Helpers.getNull();
@@ -137,6 +141,7 @@ public class BlocksTFCF
     private static ImmutableList<BlockWallTFCF> allWallBlocks = Helpers.getNull();
     private static ImmutableList<BlockStairsTFCF> allStairsBlocks = Helpers.getNull();
     private static ImmutableList<BlockSlabTFCF.Half> allSlabBlocks = Helpers.getNull();
+    private static ImmutableList<BlockPlantTFCF> allPlantBlocks;
 
     public static ImmutableList<ItemBlock> getAllNormalItemBlocks()
     {
@@ -151,6 +156,11 @@ public class BlocksTFCF
     public static ImmutableList<Block> getAllFoodIBs()
     {
         return allFoodItemBlocks;
+    }
+
+    public static ImmutableList<BlockFenceGateLog> getAllFenceGateLogBlocks()
+    {
+        return allFenceGateLogBlocks;
     }
 
     public static ImmutableList<BlockFruitTreeLeaves> getAllFruitLeaves()
@@ -302,6 +312,11 @@ public class BlocksTFCF
         return allSlabBlocks;
     }
 
+    public static ImmutableList<BlockPlantTFCF> getAllPlantBlocks()
+    {
+        return allPlantBlocks;
+    }
+
     @SubscribeEvent
     @SuppressWarnings("ConstantConditions")
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -318,6 +333,7 @@ public class BlocksTFCF
         ImmutableList.Builder<ItemBlock> normalItemBlocks = ImmutableList.builder();
         ImmutableList.Builder<Block> inventoryItemBlocks = ImmutableList.builder();
         ImmutableList.Builder<Block> foodItemBlocks = ImmutableList.builder();
+        ImmutableList.Builder<BlockFenceGateLog> fenceGatesLog = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTreeLeaves> fruitLeaves = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTreeSapling> fruitSapling = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitBarrel> fruitBarrel = ImmutableList.builder();
@@ -348,6 +364,7 @@ public class BlocksTFCF
         ImmutableList.Builder<BlockWallTFCF> blockWallTFCF = ImmutableList.builder();
         ImmutableList.Builder<BlockStairsTFCF> blockStairsTFC = new Builder<>();
         ImmutableList.Builder<BlockSlabTFCF.Half> blockSlabTFCF = new Builder<>();
+        ImmutableList.Builder<BlockPlantTFCF> plants = ImmutableList.builder();
 
         foodItemBlocks.add(register(r, "plants/pumpkin_fruit", new BlockStemFruit(), CT_FOOD));
         foodItemBlocks.add(register(r, "plants/melon_fruit", new BlockStemFruit(), CT_FOOD));
@@ -431,7 +448,21 @@ public class BlocksTFCF
         allSlabBlocks = blockSlabTFCF.build();
         allWallBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
         allStairsBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        allSlabBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
 
+        /*
+        {
+            for (PlantTFCF plantTFCF : TFCFRegistries.PLANTS_TFCF.getValuesCollection())
+            {
+                plants.add(register(r, "plants/" + plantTFCF.getRegistryName().getPath(), plantTFCF.getPlantType().create(plantTFCF), CT_FLORA));
+            }
+            allPlantBlocks = plants.build();
+            for (BlockPlantTFCF blockPlant : allPlantBlocks)
+            {
+                normalItemBlocks.add(new ItemBlockTFC(blockPlant));
+            }
+        }
+        */
 
         for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
         {
@@ -535,9 +566,9 @@ public class BlocksTFCF
             fluids.add(register(r, wrapper.get().getName(), new BlockFluidTFC(wrapper.get(), Material.WATER)));
         }
         
-        for(Tree tree : TFCRegistries.TREES.getValuesCollection())
+        for(Tree wood : TFCRegistries.TREES.getValuesCollection())
         {
-            inventoryItemBlocks.add(registerWoodBlock(r, "wood/fence_gate_log/"+tree.getRegistryName().getPath(), new BlockFenceGateLog(tree)));
+            fenceGatesLog.add(register(r, "wood/fence_gate_log/" + wood.getRegistryName().getPath(), new BlockFenceGateLog(wood), CT_DECORATIONS));
         }
 
         allFluidBlocks = fluids.build();
@@ -550,6 +581,11 @@ public class BlocksTFCF
         allFoodItemBlocks = foodItemBlocks.build();
         allFoodItemBlocks.forEach((x) -> {
             normalItemBlocks.add(new ItemBlockRot(x));
+        });
+
+        allFenceGateLogBlocks = fenceGatesLog.build();
+        allFenceGateLogBlocks.forEach((x) -> {
+            normalItemBlocks.add(new ItemBlockTFC(x));
         });
 
         allFruitLeaves = fruitLeaves.build();
@@ -662,7 +698,12 @@ public class BlocksTFCF
     {
         if (!(current.getBlock() instanceof BlockRockVariantTFCF)) return false;
         RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
-        return rockTFCF == RockTFCF.MOSSY_RAW;
+        Rock.Type type = ((BlockRockVariant) current.getBlock()).getType();
+        return
+        rockTFCF == RockTFCF.MOSSY_RAW || 
+        type == Rock.Type.RAW || 
+        type == Rock.Type.COBBLE || 
+        type == Rock.Type.SMOOTH;
     }
 
     public static boolean isClay(IBlockState current)
@@ -716,6 +757,13 @@ public class BlocksTFCF
         rockTFCF == RockTFCF.COARSE_LOAM || 
         rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
         rockTFCF == RockTFCF.COARSE_SILT;
+    }
+
+    public static boolean isSand(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariant)) return false;
+        Rock.Type type = ((BlockRockVariant) current.getBlock()).getType();
+        return type == DIRT;
     }
     
     public static boolean isSoil(IBlockState current)

@@ -22,7 +22,7 @@ public class BlockFruitPlanks extends Block
         setHarvestLevel("axe", 0);
         setHardness(2.0F)
         .setResistance(5.0F);
-        OreDictionaryHelper.register(this, "planks", "planks_fruit", "wood", "wood_fruit");
+        OreDictionaryHelper.register(this, "planks");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 }

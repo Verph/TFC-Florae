@@ -15,6 +15,6 @@ public class BlockFruitTrapDoor extends BlockTrapDoor
     {
         super(Material.WOOD);
         setHardness(0.5F);
-        OreDictionaryHelper.register(this, "trapdoor", "trapdoor_fruit");
+        OreDictionaryHelper.register(this, "trapdoor");
     }
 }

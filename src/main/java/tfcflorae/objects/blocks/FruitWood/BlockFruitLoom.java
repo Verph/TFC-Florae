@@ -52,7 +52,7 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
         setHardness(0.5f);
         setResistance(3f);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        OreDictionaryHelper.register(this, "loom", "loom_fruit");
+        OreDictionaryHelper.register(this, "loom");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 

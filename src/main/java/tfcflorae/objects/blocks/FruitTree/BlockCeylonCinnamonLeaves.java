@@ -25,15 +25,13 @@ public class BlockCeylonCinnamonLeaves extends BlockLeavesTFC
 {
     public BlockCeylonCinnamonLeaves()
     {
-        // LOOK AWAY!!!!
-        // Is this necessary? I don't know
         super(TreesTFCF.CEYLON_CINNAMON_TREE);
     }
 
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
-        int chance = 10; // this should be config
+        int chance = 10;
         if (RANDOM.nextInt(101) < chance)
         {
             drops.add(new ItemStack(BlocksTFCF.CEYLON_CINNAMON_SAPLING));

@@ -31,8 +31,9 @@ public class BlockFenceGateLog extends BlockFenceGate
         setHardness(2.0F); // match vanilla
         setResistance(15.0F);
         OreDictionaryHelper.register(this, "fence", "gate", "wood");
-        //noinspection ConstantConditions
         OreDictionaryHelper.register(this, "fence", "gate", "wood", wood.getRegistryName().getPath());
+        OreDictionaryHelper.register(this, "fence", "gate", "log", "wood");
+        OreDictionaryHelper.register(this, "fence", "gate", "log", "wood", wood.getRegistryName().getPath());
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 }

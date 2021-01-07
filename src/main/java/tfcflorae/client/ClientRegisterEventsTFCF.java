@@ -49,6 +49,7 @@ import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.FruitWood.*;
 import tfcflorae.objects.blocks.blocktype.BlockRockRawTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
+import tfcflorae.objects.blocks.plants.BlockPlantTFCF;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.client.render.VanillaStemStateMapper;
@@ -164,6 +165,12 @@ public class ClientRegisterEventsTFCF
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
 
+        /*
+        itemColors.registerItemColorHandler((stack, tintIndex) ->
+                event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
+            BlocksTFCF.getAllGrassBlocks().toArray(new BlockPlantTFCF[0]));
+        */
+
         itemColors.registerItemColorHandler((stack, tintIndex) ->
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.getAllFruitLeaves().toArray(new BlockFruitTreeLeaves[0])
@@ -203,6 +210,10 @@ public class ClientRegisterEventsTFCF
         //blockColors.registerBlockColorHandler(grassColor, BlocksTypeTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
         blockColors.registerBlockColorHandler(grassColor, BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType().isGrass).toArray(BlockRockVariantTFCF[]::new));
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.getAllFruitLeaves().toArray(new Block[0]));
+
+        // This is talking about tall grass vs actual grass blocks
+        //blockColors.registerBlockColorHandler(grassColor, BlocksTFCF.getAllGrassBlocks().toArray(new BlockPlantTFCF[0]));
+        //blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.getAllPlantBlocks().toArray(new BlockPlantTFCF[0]));
 
         //use vanilla stem coloring for stemcrops
         for (BlockStemCrop block : BlocksTFCF.getAllCropBlocks())

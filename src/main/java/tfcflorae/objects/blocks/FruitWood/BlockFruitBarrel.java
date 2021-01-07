@@ -81,7 +81,7 @@ public class BlockFruitBarrel extends Block implements IItemSize
         setSoundType(SoundType.WOOD);
         setHardness(2F);
         setDefaultState(blockState.getBaseState().withProperty(SEALED, false));
-        OreDictionaryHelper.register(this, "barrel", "barrel_fruit");
+        OreDictionaryHelper.register(this, "barrel");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 

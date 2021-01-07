@@ -136,7 +136,7 @@ public class BlockFruitSupport extends Block
         setHardness(2.0F);
         setHarvestLevel("axe", 0);
         setSoundType(SoundType.WOOD);
-        OreDictionaryHelper.register(this, "support", "support_fruit");
+        OreDictionaryHelper.register(this, "support");
         Blocks.FIRE.setFireInfo(this, 5, 20);
         setDefaultState(blockState.getBaseState().withProperty(AXIS, EnumFacing.Axis.Y).withProperty(NORTH, false).withProperty(SOUTH, false).withProperty(EAST, false).withProperty(WEST, false));
     }

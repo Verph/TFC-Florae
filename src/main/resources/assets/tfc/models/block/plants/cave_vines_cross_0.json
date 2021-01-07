@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/cave_vines/cave_vines_0",
+    "particle": "tfc:blocks/plants/cave_vines/cave_vines_0"
+  }
+}

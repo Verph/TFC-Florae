@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/plants/icicle_0",
+  "textures": {
+    "particle": "tfc:blocks/plants/icicle/icicle_1",
+    "layer0": "tfc:blocks/plants/icicle/icicle_1"
+  }
+}

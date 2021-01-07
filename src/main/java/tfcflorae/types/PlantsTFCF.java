@@ -3,11 +3,11 @@ package tfcflorae.types;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import tfcflorae.TFCFlorae;
+
 import net.dries007.tfc.api.registries.TFCRegistryEvent;
 import net.dries007.tfc.api.types.Plant;
 
-//import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
+import tfcflorae.TFCFlorae;
 
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -59,6 +59,10 @@ public final class PlantsTFCF
     public static final ResourceLocation WOOLLY_BUSH = new ResourceLocation(MODID, "woolly_bush");
     public static final ResourceLocation CINNAMON_FERN = new ResourceLocation(MODID, "cinnamon_fern");
     public static final ResourceLocation JAPANESE_PIERIS = new ResourceLocation(MODID, "japanese_pieris");
+    public static final ResourceLocation CAVE_VINES = new ResourceLocation(MODID, "cave_vines");
+    public static final ResourceLocation GLOW_VINES = new ResourceLocation(MODID, "glow_vines");
+    public static final ResourceLocation ROOTS = new ResourceLocation(MODID, "roots");
+    public static final ResourceLocation ICICLE = new ResourceLocation(MODID, "icicle");
     
     // Epiphytes
     public static final ResourceLocation APACHE_DWARF = new ResourceLocation(MODID, "apache_dwarf");
@@ -181,6 +185,11 @@ public final class PlantsTFCF
             new Plant(CINNAMON_FERN, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 25f, -29f, 30f, 220f, 500f, 6, 15, 1, 0.5D, null),
             new Plant(JAPANESE_PIERIS, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 25f, -29f, 30f, 220f, 500f, 6, 15, 1, 0.5D, null),
 
+            //new Plant(CAVE_VINES, Plant.PlantType.HANGING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 32, 0.7D, null),
+            //new Plant(GLOW_VINES, Plant.PlantType.HANGING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 32, 0.7D, null),
+            //new Plant(ROOTS, Plant.PlantType.HANGING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 2, 0.9D, null),
+            //new Plant(ICICLE, Plant.PlantType.HANGING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 0f, -50f, 0f, 0f, 500f, 0, 15, 2, 0.9D, null),
+
             // Epiphytes
             new Plant(APACHE_DWARF, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 0f, 40f, 5f, 50f, 100f, 500f, 4, 14, 1, 0.8D, null),
             new Plant(ARTISTS_CONK, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, null),
@@ -242,7 +251,7 @@ public final class PlantsTFCF
             new Plant(SEASHELLS, Plant.PlantType.DESERT_TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -40f, 40f, -50f, 50f, 0f, 500f, 5, 15, 1, 0.9D, "seashell"),
             new Plant(TWIGS, Plant.PlantType.STANDARD, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -40f, 40f, -50f, 50f, 0f, 500f, 5, 15, 1, 0.9D, "twig"),
 
-			// Crystals
+            // Crystals
 			new Plant(QUARTZ_CRYSTAL, Plant.PlantType.CREEPING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 1, 0.5D, "gem_quartz"),
 
             // Bamboo

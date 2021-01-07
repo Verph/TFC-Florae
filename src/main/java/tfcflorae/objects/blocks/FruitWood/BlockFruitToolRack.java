@@ -52,7 +52,7 @@ public class BlockFruitToolRack extends Block implements IItemSize
         setHardness(0.5f);
         setResistance(3f);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        OreDictionaryHelper.register(this, "tool_rack", "tool_rack_fruit");
+        OreDictionaryHelper.register(this, "tool_rack");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 

@@ -1,0 +1,7 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "tfc:blocks/plants/quartz_crystal/quartz_crystal_3",
+		"particle": "tfc:blocks/plants/quartz_crystal/quartz_crystal_3"
+	}
+}

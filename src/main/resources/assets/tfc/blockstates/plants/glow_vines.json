@@ -1,0 +1,224 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_cross_0",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_cross_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "down": "false",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_cross_2",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_cross_3",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "false",
+        "east": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "x": 270,
+          "y": 90,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "x": 270,
+          "y": 90,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "false",
+        "north": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "x": 270,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "x": 270,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "false",
+        "south": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "x": 270,
+          "y": 180,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "x": 270,
+          "y": 180,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "x": 180,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "x": 180,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "false",
+        "west": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_0",
+          "x": 270,
+          "y": 270,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_1",
+          "x": 270,
+          "y": 270,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "true",
+        "east": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_2",
+          "x": 270,
+          "y": 90,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_3",
+          "x": 270,
+          "y": 270,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "true",
+        "north": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_2",
+          "x": 270,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_3",
+          "x": 270,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "true",
+        "south": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_2",
+          "x": 270,
+          "y": 180,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_3",
+          "x": 270,
+          "y": 180,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "bottom": "true",
+        "west": "true"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vines_2",
+          "x": 270,
+          "y": 270,
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/glow_vines_3",
+          "x": 270,
+          "y": 270,
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

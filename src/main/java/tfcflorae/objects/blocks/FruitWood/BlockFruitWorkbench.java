@@ -31,7 +31,7 @@ import net.dries007.tfc.objects.blocks.wood.BlockWorkbenchTFC;
 import net.dries007.tfc.objects.container.ContainerWorkbenchTFC;
 
 import tfcflorae.util.OreDictionaryHelper;
-
+import tfcflorae.util.agriculture.FruitTreeTFCF;
 import tfcflorae.objects.container.ContainerFruitWorkbench;
 
 public class BlockFruitWorkbench extends BlockWorkbench
@@ -41,8 +41,7 @@ public class BlockFruitWorkbench extends BlockWorkbench
         setSoundType(SoundType.WOOD);
         setHardness(2.0F).setResistance(5.0F);
         setHarvestLevel("axe", 0);
-        OreDictionaryHelper.register(this, "workbench", "workbench_fruit");
-        OreDictionaryHelper.register(this, "crafting", "crafting_fruit", "table", "table_fruit", "wood", "wood_fruit");
+        OreDictionaryHelper.register(this, "workbench");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 

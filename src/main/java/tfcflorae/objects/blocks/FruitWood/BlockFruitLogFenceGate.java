@@ -18,7 +18,8 @@ public class BlockFruitLogFenceGate extends BlockFenceGate
         setHarvestLevel("axe", 0);
         setHardness(2.0F);
         setResistance(15.0F);
-        OreDictionaryHelper.register(this, "fence_gate", "fence_gate_fruit", "fence_gate_log", "fence_gate_log_fruit");
+        OreDictionaryHelper.register(this, "fence_gate");
+        OreDictionaryHelper.register(this, "fence_gate", "log");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 }

@@ -17,7 +17,8 @@ public class BlockFruitPressurePlate extends BlockPressurePlate
         super(Material.WOOD, Sensitivity.EVERYTHING);
         setHardness(0.5F);
         setSoundType(SoundType.WOOD);
-        OreDictionaryHelper.register(this, "pressure_plate", "pressure_plate_wood", "pressure_plate_wood_fruit");
+        OreDictionaryHelper.register(this, "pressure_plate");
+        OreDictionaryHelper.register(this, "pressure_plate", "wood");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 }
