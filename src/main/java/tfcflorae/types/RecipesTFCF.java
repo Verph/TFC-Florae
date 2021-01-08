@@ -358,7 +358,41 @@ public final class RecipesTFCF
 
         // Standard / Simple recipes
         r.registerAll(
-        	// Food
+            // Epiphytes
+            new HeatRecipeSimple(IIngredient.of("epiphyteArtistsConk"), new ItemStack(ItemsTFCF.ROASTED_ARTISTS_CONK, 1), 200, 480).setRegistryName("roasted_artists_conk"),
+            new HeatRecipeSimple(IIngredient.of("epiphyteSulphurShelf"), new ItemStack(ItemsTFCF.ROASTED_SULPHUR_SHELF, 1), 200, 480).setRegistryName("roasted_sulphur_shelf"),
+            new HeatRecipeSimple(IIngredient.of("epiphyteTurkeyTail"), new ItemStack(ItemsTFCF.ROASTED_TURKEY_TAIL, 1), 200, 480).setRegistryName("roasted_turkey_tail"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_ARTISTS_CONK), 480).setRegistryName("burned_artists_conk"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_SULPHUR_SHELF), 480).setRegistryName("burned_sulphur_shelf"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_TURKEY_TAIL), 480).setRegistryName("burned_turkey_tail"),
+
+            // Mushrooms
+            new HeatRecipeSimple(IIngredient.of("mushroomPorcini"), new ItemStack(ItemsTFCF.ROASTED_PORCINI, 1), 200, 480).setRegistryName("roasted_porcini"),
+            new HeatRecipeSimple(IIngredient.of("mushroomBrown"), new ItemStack(ItemsTFCF.ROASTED_PORCINI, 1), 200, 480).setRegistryName("roasted_porcini_mushroom_brown"),
+            new HeatRecipeSimple(IIngredient.of("mushroomAmanita"), new ItemStack(ItemsTFCF.ROASTED_AMANITA, 1), 200, 480).setRegistryName("roasted_amanita"),
+            new HeatRecipeSimple(IIngredient.of("mushroomRed"), new ItemStack(ItemsTFCF.ROASTED_AMANITA, 1), 200, 480).setRegistryName("roasted_amanita_mushroom_brown"),
+            new HeatRecipeSimple(IIngredient.of("mushroomBlackPowderpuff"), new ItemStack(ItemsTFCF.ROASTED_BLACK_POWDERPUFF, 1), 200, 480).setRegistryName("roasted_black_powderpuff"),
+            new HeatRecipeSimple(IIngredient.of("mushroomChanterelle"), new ItemStack(ItemsTFCF.ROASTED_CHANTERELLE, 1), 200, 480).setRegistryName("roasted_chanterelle"),
+            new HeatRecipeSimple(IIngredient.of("mushroomDeathCap"), new ItemStack(ItemsTFCF.ROASTED_DEATH_CAP, 1), 200, 480).setRegistryName("roasted_death_cap"),
+            new HeatRecipeSimple(IIngredient.of("mushroomGiantClub"), new ItemStack(ItemsTFCF.ROASTED_GIANT_CLUB, 1), 200, 480).setRegistryName("roasted_giant_club"),
+            new HeatRecipeSimple(IIngredient.of("mushroomParasolMushroom"), new ItemStack(ItemsTFCF.ROASTED_PARASOL_MUSHROOM, 1), 200, 480).setRegistryName("roasted_parasol_mushroom"),
+            new HeatRecipeSimple(IIngredient.of("mushroomStinkhorn"), new ItemStack(ItemsTFCF.ROASTED_STINKHORN, 1), 200, 480).setRegistryName("roasted_stinkhorn"),
+            new HeatRecipeSimple(IIngredient.of("mushroomWeepingMilkCap"), new ItemStack(ItemsTFCF.ROASTED_WEEPING_MILK_CAP, 1), 200, 480).setRegistryName("roasted_weeping_milk_cap"),
+            new HeatRecipeSimple(IIngredient.of("mushroomWoodBlewit"), new ItemStack(ItemsTFCF.ROASTED_WOOD_BLEWIT, 1), 200, 480).setRegistryName("roasted_wood_blewit"),
+            new HeatRecipeSimple(IIngredient.of("mushroomWoollyGomphus"), new ItemStack(ItemsTFCF.ROASTED_WOOLLY_GOMPHUS, 1), 200, 480).setRegistryName("roasted_woolly_gomphus"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_PORCINI), 480).setRegistryName("burned_porcini"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_AMANITA), 480).setRegistryName("burned_amanita"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_BLACK_POWDERPUFF), 480).setRegistryName("burned_black_powderpuff"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_CHANTERELLE), 480).setRegistryName("burned_chanterelle"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_DEATH_CAP), 480).setRegistryName("burned_death_cap"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_GIANT_CLUB), 480).setRegistryName("burned_giant_club"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_PARASOL_MUSHROOM), 480).setRegistryName("burned_parasol_mushroom"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_STINKHORN), 480).setRegistryName("burned_stinkhorn"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_WEEPING_MILK_CAP), 480).setRegistryName("burned_weeping_milk_cap"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_WOOD_BLEWIT), 480).setRegistryName("burned_wood_blewit"),
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.ROASTED_WOOLLY_GOMPHUS), 480).setRegistryName("burned_woolly_gomphus"),
+
+            // Food
             new HeatRecipeSimple(IIngredient.of("clamRaw"), new ItemStack(ItemsTFCF.COOKED_CLAM, 1), 200, 480).setRegistryName("cooked_clam"),
             new HeatRecipeSimple(IIngredient.of("scallopRaw"), new ItemStack(ItemsTFCF.COOKED_SCALLOP, 1), 200, 480).setRegistryName("cooked_scallop"),
             new HeatRecipeSimple(IIngredient.of("starfishRaw"), new ItemStack(ItemsTFCF.COOKED_STARFISH, 1), 200, 480).setRegistryName("cooked_starfish"),

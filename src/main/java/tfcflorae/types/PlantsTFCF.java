@@ -192,7 +192,7 @@ public final class PlantsTFCF
 
             // Epiphytes
             new Plant(APACHE_DWARF, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 0f, 40f, 5f, 50f, 100f, 500f, 4, 14, 1, 0.8D, null),
-            new Plant(ARTISTS_CONK, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, null),
+            new Plant(ARTISTS_CONK, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, "epiphyte_artists_conk"),
             new Plant(CLIMBING_CACTUS, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 11f, 31f, -29f, 34f, 0f, 150f, 4, 14, 1, 0.8D, null),
             new Plant(CRIMSON_CATTLEYA, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 4, 14, 1, 0.8D, null),
             new Plant(CREEPING_MISTLETOE, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 4, 14, 1, 0.8D, null),
@@ -205,9 +205,9 @@ public final class PlantsTFCF
             new Plant(LARGE_FOOT_DENDROBIUM, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 0f, 40f, -5f, 50f, 190f, 500f, 4, 14, 1, 0.8D, null),
             new Plant(COMMON_MISTLETOE, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 4, 14, 1, 0.8D, null),
             new Plant(SKY_PLANT, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 15f, 40f, 10f, 50f, 130f, 300f, 4, 14, 1, 0.8D, null),
-            new Plant(SULPHUR_SHELF, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, null),
+            new Plant(SULPHUR_SHELF, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, "epiphyte_sulphur_shelf"),
             new Plant(TAMPA_BUTTERFLY_ORCHID, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 0f, 40f, -5f, 50f, 190f, 500f, 4, 14, 1, 0.8D, null),
-            new Plant(TURKEY_TAIL, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, null),
+            new Plant(TURKEY_TAIL, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 40f, -12f, 50f, 200f, 500f, 4, 14, 1, 0.8D, "epiphyte_turkey_tail"),
             new Plant(WILDFIRE, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}, false, false, 15f, 40f, 10f, 50f, 130f, 300f, 4, 14, 1, 0.8D, null),
 
             // Mushrooms

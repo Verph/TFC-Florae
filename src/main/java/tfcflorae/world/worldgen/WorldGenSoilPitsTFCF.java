@@ -10,8 +10,10 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 //import tfcflorae.objects.blocks.blocktype.BlockGrass;
 import tfcflorae.types.BlockTypesTFCF;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Plant;
@@ -33,7 +35,6 @@ import net.dries007.tfc.world.classic.worldgen.WorldGenSoilPits;
  */
 public class WorldGenSoilPitsTFCF extends WorldGenSoilPits
 {
-    /*
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
@@ -51,154 +52,208 @@ public class WorldGenSoilPitsTFCF extends WorldGenSoilPits
 
         pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
         generateMud(world, random, pos);
+
+        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+        generateLoam(world, random, pos);
     }
     
-    private boolean generatePodzol(World world, Random rng, BlockPos start)
+    private void generatePodzol(World world, Random rng, BlockPos start)
     {
         // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
         // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
         int radius = rng.nextInt(4) + 4;
         int depth = rng.nextInt(2) + 2;
 
-        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return false;
+        if (rng.nextInt(ConfigTFC.General.WORLD.clayRarity) != 0 || start.getY() > WorldTypeTFC.SEALEVEL + 6) return;
+        if (ChunkDataTFC.getRainfall(world, start) < ConfigTFC.General.WORLD.clayRainfallThreshold) return;
+
+        /*
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL + 1) return;
         ChunkDataTFC data = ChunkDataTFC.get(world, start);
         if (data.isInitialized() && data.getRainfall() <= 180f && data.getFloraDiversity() <= 0.5f && data.getFloraDensity() <= 0.5f && data.getAverageTemp() <= 0f  && data.getAverageTemp() >= 10f )
-            return false;
+            return;
+        */
 
-        for (int x = -radius; x <= radius; ++x)
+        for (int x = -radius; x <= radius; x++)
         {
-            for (int z = -radius; z <= radius; ++z)
+            for (int z = -radius; z <= radius; z++)
             {
                 if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
 
-                for (int y = -depth; y <= depth; ++y)
+                boolean flag = false;
+                for (int y = -depth; y <= +depth; y++)
                 {
-                    final BlockPos pos = start.add(x, y, z);
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
                     final IBlockState current = world.getBlockState(pos);
-
-                    if (BlocksTFC.isGrass(current))
-                    {
-                        world.setBlockState(pos, BlockGrass.get(ChunkDataTFC.getRockHeight(world, pos), BlockTypesTFCF.PODZOL).getDefaultState(), 2);
-                    }
-                    else if (BlocksTFC.isDirt(current))
+                    if (BlocksTFC.isDirt(current))
                     {
                         world.setBlockState(pos, BlockRockVariant.get(ChunkDataTFC.getRockHeight(world, pos), Rock.Type.DIRT).getDefaultState(), 2);
+                        flag = true;
+                    }
+                    else if (BlocksTFC.isGrass(current))
+                    {
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                        flag = true;
                     }
                 }
             }
         }
-        return true;
     }
 
-    private boolean generateCoarseDirtAverage(World world, Random rng, BlockPos start)
+    private void generateCoarseDirtAverage(World world, Random rng, BlockPos start)
     {
         // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
         // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
         int radius = rng.nextInt(4) + 4;
         int depth = rng.nextInt(2) + 2;
 
-        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return false;
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return;
         ChunkDataTFC data = ChunkDataTFC.get(world, start);
         if (data.isInitialized() && data.getRainfall() <= 180f && data.getFloraDiversity() <= 0.5f && data.getFloraDensity() <= 0.5f && data.getAverageTemp() <= 0f  && data.getAverageTemp() >= 10f )
-            return false;
+            return;
 
-        for (int x = -radius; x <= radius; ++x)
+        for (int x = -radius; x <= radius; x++)
         {
-            for (int z = -radius; z <= radius; ++z)
+            for (int z = -radius; z <= radius; z++)
             {
                 if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
 
-                for (int y = -depth; y <= depth; ++y)
+                boolean flag = false;
+                for (int y = -depth; y <= +depth; y++)
                 {
-                    final BlockPos pos = start.add(x, y, z);
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
                     final IBlockState current = world.getBlockState(pos);
-
-                    if (BlocksTFC.isGrass(current))
-                    {
-                        world.setBlockState(pos, BlockGrass.get(ChunkDataTFC.getRockHeight(world, pos), BlockTypesTFCF.COARSE_DIRT).getDefaultState(), 2);
-                    }
-                    else if (BlocksTFC.isDirt(current))
+                    if (BlocksTFC.isDirt(current))
                     {
                         world.setBlockState(pos, BlockRockVariant.get(ChunkDataTFC.getRockHeight(world, pos), Rock.Type.DIRT).getDefaultState(), 2);
+                        flag = true;
+                    }
+                    else if (BlocksTFC.isGrass(current))
+                    {
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_DIRT).getDefaultState(), 2);
+                        flag = true;
                     }
                 }
             }
         }
-        return true;
     }
 
-    private boolean generateCoarseDirtDry(World world, Random rng, BlockPos start)
+    private void generateCoarseDirtDry(World world, Random rng, BlockPos start)
     {
         // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
         // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
         int radius = rng.nextInt(4) + 4;
         int depth = rng.nextInt(2) + 2;
 
-        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return false;
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return;
         ChunkDataTFC data = ChunkDataTFC.get(world, start);
         if (data.isInitialized() && data.getRainfall() >= 100f && data.getAverageTemp() <= 17f)
-            return false;
+            return;
 
-        for (int x = -radius; x <= radius; ++x)
+        for (int x = -radius; x <= radius; x++)
         {
-            for (int z = -radius; z <= radius; ++z)
+            for (int z = -radius; z <= radius; z++)
             {
                 if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
 
-                for (int y = -depth; y <= depth; ++y)
+                boolean flag = false;
+                for (int y = -depth; y <= +depth; y++)
                 {
-                    final BlockPos pos = start.add(x, y, z);
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
                     final IBlockState current = world.getBlockState(pos);
-
-                    if (BlocksTFC.isGrass(current))
-                    {
-                        world.setBlockState(pos, BlockGrass.get(ChunkDataTFC.getRockHeight(world, pos), BlockTypesTFCF.COARSE_DIRT).getDefaultState(), 2);
-                    }
-                    else if (BlocksTFC.isDirt(current))
+                    if (BlocksTFC.isDirt(current))
                     {
                         world.setBlockState(pos, BlockRockVariant.get(ChunkDataTFC.getRockHeight(world, pos), Rock.Type.DIRT).getDefaultState(), 2);
+                        flag = true;
+                    }
+                    else if (BlocksTFC.isGrass(current))
+                    {
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_DIRT).getDefaultState(), 2);
+                        flag = true;
                     }
                 }
             }
         }
-        return true;
     }
 
-    private boolean generateMud(World world, Random rng, BlockPos start)
+    private void generateMud(World world, Random rng, BlockPos start)
+    {
+        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
+        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
+        int radius = rng.nextInt(4) + 4;
+        int depth = rng.nextInt(2) + 1;
+
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return;
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+        if (data.isInitialized() && data.getRainfall() <= 150f && data.getFloraDiversity() <= 0.5f && data.getFloraDensity() <= 0.5f && data.getAverageTemp() <= 7f)
+            return;
+
+        for (int x = -radius; x <= radius; x++)
+        {
+            for (int z = -radius; z <= radius; z++)
+            {
+                if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
+
+                boolean flag = false;
+                for (int y = -depth; y <= +depth; y++)
+                {
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
+                    final IBlockState current = world.getBlockState(pos);
+                    if (BlocksTFC.isDirt(current))
+                    {
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.MUD).getDefaultState(), 2);
+                        flag = true;
+                    }
+                    else if (BlocksTFC.isGrass(current))
+                    {
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.MUD).getDefaultState(), 2);
+                        flag = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    private void generateLoam(World world, Random rng, BlockPos start)
     {
         // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
         // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
         int radius = rng.nextInt(4) + 4;
         int depth = rng.nextInt(2) + 2;
 
-        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return false;
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL + 1) return;
         ChunkDataTFC data = ChunkDataTFC.get(world, start);
-        if (data.isInitialized() && data.getRainfall() <= 150f && data.getFloraDiversity() <= 0.5f && data.getFloraDensity() <= 0.5f && data.getAverageTemp() <= 7f)
-            return false;
+        if (data.isInitialized() && data.getRainfall() <= 180f && data.getFloraDiversity() <= 0.5f && data.getFloraDensity() <= 0.5f && data.getAverageTemp() <= 0f  && data.getAverageTemp() >= 10f )
+            return;
 
-        for (int x = -radius; x <= radius; ++x)
+        for (int x = -radius; x <= radius; x++)
         {
-            for (int z = -radius; z <= radius; ++z)
+            for (int z = -radius; z <= radius; z++)
             {
                 if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
 
-                for (int y = -depth; y <= depth; ++y)
+                boolean flag = false;
+                for (int y = -depth; y <= +depth; y++)
                 {
-                    final BlockPos pos = start.add(x, y, z);
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
                     final IBlockState current = world.getBlockState(pos);
-
-                    if (BlocksTFC.isGrass(current))
+                    if (BlocksTFC.isDirt(current))
                     {
-                        world.setBlockState(pos, BlockGrass.get(ChunkDataTFC.getRockHeight(world, pos), BlockTypesTFCF.MUD).getDefaultState(), 2);
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM).getDefaultState(), 2);
+                        flag = true;
                     }
-                    else if (BlocksTFC.isDirt(current))
+                    else if (BlocksTFC.isGrass(current))
                     {
-                        world.setBlockState(pos, BlockRockVariant.get(ChunkDataTFC.getRockHeight(world, pos), Rock.Type.DIRT).getDefaultState(), 2);
+                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM_GRASS).getDefaultState(), 2);
+                        flag = true;
                     }
                 }
             }
         }
-        return true;
     }
-    */
 }

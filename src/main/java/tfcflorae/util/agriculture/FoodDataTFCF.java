@@ -163,6 +163,24 @@ public class FoodDataTFCF
     public static final FoodData RAW_STARFISH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_STARFISH = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
 
+    // Epiphytes
+    public static final FoodData ROASTED_ARTISTS_CONK = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_SULPHUR_SHELF = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_TURKEY_TAIL = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+
+    // Mushrooms
+    public static final FoodData ROASTED_PORCINI = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_AMANITA = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_BLACK_POWDERPUFF = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_CHANTERELLE = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_DEATH_CAP = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_GIANT_CLUB = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_PARASOL_MUSHROOM = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_STINKHORN = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_WEEPING_MILK_CAP = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_WOOD_BLEWIT = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+    public static final FoodData ROASTED_WOOLLY_GOMPHUS = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
+
     // Normal foods
     public static final FoodData PUMPKIN = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData MELON = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
