@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveskukui",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/kukui",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/kukui"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

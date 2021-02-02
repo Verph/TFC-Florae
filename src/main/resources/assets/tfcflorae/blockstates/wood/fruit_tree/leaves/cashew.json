@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavescashew",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/cashew",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/cashew"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

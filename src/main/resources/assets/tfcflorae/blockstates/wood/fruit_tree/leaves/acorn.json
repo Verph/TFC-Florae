@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesacorn",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/acorn",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/acorn"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

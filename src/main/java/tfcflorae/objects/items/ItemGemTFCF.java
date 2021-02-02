@@ -12,9 +12,7 @@ import net.minecraft.util.NonNullList;
 import mcp.MethodsReturnNonnullByDefault;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-//import net.dries007.tfc.objects.Gem;
 import net.dries007.tfc.objects.items.ItemTFC;
-//import net.dries007.tfc.util.OreDictionaryHelper;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.objects.GemTFCF;
 

@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/swedish_ivy_0",
+  "textures": {
+    "particle": "tfc:blocks/plants/swedish_ivy/swedish_ivy_1",
+    "layer0": "tfc:blocks/plants/swedish_ivy/swedish_ivy_1",
+	"overlay": "tfc:blocks/plants/swedish_ivy/swedish_ivy_1b"
+  }
+}

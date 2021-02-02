@@ -7,8 +7,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import tfcflorae.objects.blocks.FruitWood.BlockFruitWorkbench;
+import tfcflorae.objects.blocks.fruitwood.BlockFruitWorkbench;
 
 @ParametersAreNonnullByDefault
 public class ContainerFruitWorkbench extends ContainerWorkbench

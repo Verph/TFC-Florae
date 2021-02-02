@@ -8,12 +8,10 @@ import net.minecraft.item.ItemStack;
 
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.objects.Powder;
 import net.dries007.tfc.objects.items.ItemTFC;
-//import net.dries007.tfc.util.OreDictionaryHelper;
+
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.objects.PowderTFCF;
-import tfcflorae.TFCFlorae;
 
 @SuppressWarnings("WeakerAccess")
 @ParametersAreNonnullByDefault

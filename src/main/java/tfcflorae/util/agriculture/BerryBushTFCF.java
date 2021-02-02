@@ -3,7 +3,6 @@ package tfcflorae.util.agriculture;
 import net.minecraft.item.ItemStack;
 
 import net.dries007.tfc.api.types.IBerryBush;
-import net.dries007.tfc.objects.items.food.ItemFoodTFC;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
@@ -19,8 +18,8 @@ public enum BerryBushTFCF implements IBerryBush
     ALLSPICE(ItemsTFCF.ALLSPICE, Month.AUGUST, 2, 0f, 35f, 100f, 400f, 0.8f, LARGE, false),
     CLOVE(ItemsTFCF.CLOVE, Month.AUGUST, 2, 0f, 35f, 100f, 400f, 0.8f, LARGE, false),
     CURRY_LEAF(ItemsTFCF.CURRY_LEAF, Month.AUGUST, 2, 5f, 45f, 100f, 400f, 0.8f, LARGE, false),
-    STAR_ANISE(ItemsTFCF.STAR_ANISE, Month.AUGUST, 2, 0f, 25f, 100f, 400f, 0.8f, LARGE, false),
-    LIQUORICE_ROOT(ItemsTFCF.LIQUORICE_ROOT, Month.AUGUST, 2, -5f, 25f, 100f, 400f, 0.8f, LARGE, false);
+    STAR_ANISE(ItemsTFCF.STAR_ANISE, Month.AUGUST, 2, 0f, 25f, 100f, 400f, 0.8f, LARGE, false);
+    //LIQUORICE_ROOT(ItemsTFCF.LIQUORICE_ROOT, Month.AUGUST, 2, -5f, 25f, 100f, 400f, 0.8f, LARGE, false);
 
     static
     {

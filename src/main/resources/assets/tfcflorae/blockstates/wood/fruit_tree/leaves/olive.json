@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesolive",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/olive",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/olive"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

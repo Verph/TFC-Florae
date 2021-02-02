@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveslychee",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/lychee",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/lychee"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

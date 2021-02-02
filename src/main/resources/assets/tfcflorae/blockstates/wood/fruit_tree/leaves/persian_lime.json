@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavespersian_lime",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/persian_lime",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/persian_lime"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

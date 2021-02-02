@@ -1,0 +1,58 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_single"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_upper_1"
+        }
+      ]
+    }
+  ]
+}

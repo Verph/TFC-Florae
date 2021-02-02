@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesapricot",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/apricot",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/apricot"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

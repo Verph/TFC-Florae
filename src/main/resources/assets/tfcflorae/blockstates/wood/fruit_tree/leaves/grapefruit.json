@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesgrapefruit",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/grapefruit",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/grapefruit"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

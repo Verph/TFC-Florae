@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesnutmeg",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/nutmeg",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/nutmeg"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

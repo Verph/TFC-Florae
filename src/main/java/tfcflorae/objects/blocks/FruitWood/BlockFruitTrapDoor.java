@@ -1,10 +1,7 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.dries007.tfc.api.types.IFruitTree;
 import net.minecraft.block.BlockTrapDoor;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
 import tfcflorae.util.OreDictionaryHelper;
@@ -15,6 +12,7 @@ public class BlockFruitTrapDoor extends BlockTrapDoor
     {
         super(Material.WOOD);
         setHardness(0.5F);
+        setSoundType(SoundType.WOOD);
         OreDictionaryHelper.register(this, "trapdoor");
     }
 }

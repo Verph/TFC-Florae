@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesdamson_plum",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/damson_plum",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/damson_plum"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

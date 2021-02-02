@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveskola",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/kola",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/kola"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

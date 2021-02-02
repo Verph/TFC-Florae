@@ -14,7 +14,6 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
@@ -24,10 +23,7 @@ import net.minecraft.world.World;
 import mcp.MethodsReturnNonnullByDefault;
 
 import net.dries007.tfc.api.types.Rock;
-import net.dries007.tfc.api.types.Tree;
-import net.dries007.tfc.objects.blocks.wood.BlockPlanksTFC;
 
-import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 

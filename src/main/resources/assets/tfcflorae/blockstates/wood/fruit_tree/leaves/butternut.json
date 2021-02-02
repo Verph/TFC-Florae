@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesbutternut",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/butternut",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/butternut"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

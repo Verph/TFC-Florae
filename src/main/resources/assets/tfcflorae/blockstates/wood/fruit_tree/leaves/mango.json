@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesmango",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/mango",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/mango"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

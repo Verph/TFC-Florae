@@ -1,7 +1,5 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -26,12 +24,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import mcp.MethodsReturnNonnullByDefault;
 
-import net.dries007.tfc.api.types.Tree;
-import net.dries007.tfc.objects.blocks.wood.BlockWorkbenchTFC;
-import net.dries007.tfc.objects.container.ContainerWorkbenchTFC;
-
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
 import tfcflorae.objects.container.ContainerFruitWorkbench;
 
 public class BlockFruitWorkbench extends BlockWorkbench
@@ -41,6 +34,7 @@ public class BlockFruitWorkbench extends BlockWorkbench
         setSoundType(SoundType.WOOD);
         setHardness(2.0F).setResistance(5.0F);
         setHarvestLevel("axe", 0);
+        setSoundType(SoundType.WOOD);
         OreDictionaryHelper.register(this, "workbench");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }

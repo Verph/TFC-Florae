@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"leaves": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_0",
+		"particle": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_0"
+	},
+	"elements": [
+		{
+			"from": [-7.2, 0, 8],
+			"to": [23.2, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, -7.2],
+			"to": [8, 16, 23.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 8, 16, 16], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#leaves", "tintindex": 0}
+			}
+		}
+	]
+}

@@ -9,21 +9,13 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-//import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.api.capability.damage.DamageType;
+
 import tfcflorae.TFCFlorae;
-/*
-import tfcflorae.objects.blocks.blockRock.BlockRockVariantTFCF;
-import tfcflorae.types.BlocksRockTFCF;
-import tfcflorae.types.BlocksRockTFCF.TypeTFCF;
-*/
-import tfcflorae.types.BlockTypesTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
 public class OreDictionaryHelper 

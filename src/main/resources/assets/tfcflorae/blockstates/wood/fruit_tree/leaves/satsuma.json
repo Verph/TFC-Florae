@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavessatsuma",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/satsuma",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/satsuma"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

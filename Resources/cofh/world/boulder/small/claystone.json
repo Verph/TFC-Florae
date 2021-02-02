@@ -1,0 +1,105 @@
+{
+  "populate": {
+    "small_boulder_claystone": {
+      "distribution": "surface",
+      "generator": {
+        "type": "boulder",
+        "block": [
+          {
+            "name": "tfc_decoration:mossy_cobble/claystone",
+            "weight": 20
+          },
+          {
+            "name": "tfcflorae:mossy_raw/claystone",
+            "weight": 20
+          },
+          {
+            "name": "tfc:cobble/claystone",
+            "weight": 25
+          },
+          {
+            "name": "tfc:raw/claystone",
+            "weight": 35
+          }
+        ],
+        "material": [
+          "tfc:grass/claystone",
+          "tfc:dry_grass/claystone",
+          "tfc:dirt/claystone",
+          "tfc:gravel/claystone",
+          "tfcflorae:podzol/claystone"
+        ],
+        "diameter": 1,
+        "size-variance": 1,
+        "count": 1,
+        "count-variance": 2
+      },
+      "chunk-chance": 20,
+      "cluster-count": 10,
+      "min-height": 50,
+      "max-height": 170,
+      "material": [
+        "minecraft:air",
+        "tfc:grass/claystone",
+        "tfc:dry_grass/claystone",
+        "tfc:dirt/claystone",
+        "tfc:gravel/claystone",
+        "tfcflorae:podzol/claystone"
+      ],
+      "follow-terrain": true,
+      "retrogen": false,
+      "biome": {
+        "restriction": "whitelist",
+        "value": [
+          {
+            "type": "dictionary",
+            "entry": "FROZEN"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SNOWY"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SANDY"
+          },
+          {
+            "type": "dictionary",
+            "entry": "FOREST"
+          },
+          {
+            "type": "dictionary",
+            "entry": "MOUNTAIN"
+          },
+          {
+            "type": "dictionary",
+            "entry": "CONIFEROUS"
+          },
+          {
+            "type": "dictionary",
+            "entry": "PLAINS"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SWAMP"
+          },
+          {
+            "type": "dictionary",
+            "entry": "LUSH"
+          },
+          {
+            "type": "dictionary",
+            "entry": "HILLS"
+          }
+        ]
+      },
+      "dimension": {
+        "restriction": "blacklist",
+        "value": [
+          -1,
+          1
+        ]
+      }
+    }
+  }
+}

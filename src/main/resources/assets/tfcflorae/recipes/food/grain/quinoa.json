@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_food_recipe",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "quinoa"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:food/quinoa_grain"
+  }
+}

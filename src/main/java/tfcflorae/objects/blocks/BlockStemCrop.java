@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStem;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
@@ -46,6 +47,7 @@ public abstract class BlockStemCrop extends BlockCropSimple
     public BlockStemCrop(StemCrop crop)
     {
         super(crop, false);
+        setSoundType(SoundType.PLANT);
         setDefaultState(getDefaultState().withProperty(FACING, EnumFacing.UP));
     }
 

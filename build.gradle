@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 if (System.getenv('VERSION') != null) {
     version = System.getenv('VERSION')
 } else {
-    version = "1.1"
+    version = "1.1.1"
 }
 group = "tfcflorae"
 archivesBaseName = "TFC-Florae"
@@ -39,6 +39,10 @@ repositories {
         name 'tterrag maven'
         url "https://maven.tterrag.com/"
     }
+	maven {
+		name "Craftweaker"
+        url "https://maven.blamejared.com"
+    }
     maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
@@ -54,7 +58,9 @@ repositories {
 }
 
 dependencies {
-    deobfProvided "mezz.jei:jei_1.12.2:4.15.0.291"
+	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.615"
+    deobfProvided "mezz.jei:jei_1.12.2:4.16.1.302"
+	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.11.169-deobf.jar")
     compile fileTree(include: ["*.jar"], dir: "libs")
 }
 

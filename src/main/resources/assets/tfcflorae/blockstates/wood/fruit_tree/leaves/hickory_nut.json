@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveshickory_nut",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/hickory_nut",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/hickory_nut"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

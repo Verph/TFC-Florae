@@ -1,0 +1,105 @@
+{
+  "populate": {
+    "medium_boulder_jaspillite": {
+      "distribution": "surface",
+      "generator": {
+        "type": "boulder",
+        "block": [
+          {
+            "name": "tfc_decoration:mossy_cobble/jaspillite",
+            "weight": 20
+          },
+          {
+            "name": "tfcflorae:mossy_raw/jaspillite",
+            "weight": 20
+          },
+          {
+            "name": "tfc:cobble/jaspillite",
+            "weight": 25
+          },
+          {
+            "name": "tfc:raw/jaspillite",
+            "weight": 35
+          }
+        ],
+        "material": [
+          "tfc:grass/jaspillite",
+          "tfc:dry_grass/jaspillite",
+          "tfc:dirt/jaspillite",
+          "tfc:gravel/jaspillite",
+          "tfcflorae:podzol/jaspillite"
+        ],
+        "diameter": 2,
+        "size-variance": 1,
+        "count": 1,
+        "count-variance": 2
+      },
+      "chunk-chance": 30,
+      "cluster-count": 10,
+      "min-height": 50,
+      "max-height": 170,
+      "material": [
+        "minecraft:air",
+        "tfc:grass/jaspillite",
+        "tfc:dry_grass/jaspillite",
+        "tfc:dirt/jaspillite",
+        "tfc:gravel/jaspillite",
+        "tfcflorae:podzol/jaspillite"
+      ],
+      "follow-terrain": true,
+      "retrogen": false,
+      "biome": {
+        "restriction": "whitelist",
+        "value": [
+          {
+            "type": "dictionary",
+            "entry": "FROZEN"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SNOWY"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SANDY"
+          },
+          {
+            "type": "dictionary",
+            "entry": "FOREST"
+          },
+          {
+            "type": "dictionary",
+            "entry": "MOUNTAIN"
+          },
+          {
+            "type": "dictionary",
+            "entry": "CONIFEROUS"
+          },
+          {
+            "type": "dictionary",
+            "entry": "PLAINS"
+          },
+          {
+            "type": "dictionary",
+            "entry": "SWAMP"
+          },
+          {
+            "type": "dictionary",
+            "entry": "LUSH"
+          },
+          {
+            "type": "dictionary",
+            "entry": "HILLS"
+          }
+        ]
+      },
+      "dimension": {
+        "restriction": "blacklist",
+        "value": [
+          -1,
+          1
+        ]
+      }
+    }
+  }
+}

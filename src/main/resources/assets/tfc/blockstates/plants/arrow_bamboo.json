@@ -2,6 +2,16 @@
   "multipart": [
     {
       "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/arrow_bamboo_single"
+        }
+      ]
+    },
+    {
+      "when": {
         "part": "lower"
       },
       "apply": [
@@ -16,7 +26,20 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/small_arrow_bamboo_small_leaves"
+          "model": "tfc:plants/small_arrow_bamboo",
+          "weight": 2
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_single_leaf",
+          "weight": 2
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_small_leaves",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_large_leaves",
+          "weight": 1
         }
       ]
     },

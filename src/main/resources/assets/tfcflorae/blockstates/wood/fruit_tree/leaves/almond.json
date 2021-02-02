@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesalmond",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/almond",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/almond"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/swedish_ivy/swedish_ivy_item"
+  }
+}

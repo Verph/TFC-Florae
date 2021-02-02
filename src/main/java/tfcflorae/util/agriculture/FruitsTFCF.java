@@ -8,7 +8,6 @@ import net.dries007.tfc.util.agriculture.Food;
 
 import tfcflorae.objects.items.*;
 import tfcflorae.objects.items.ItemsTFCF;
-import tfcflorae.util.agriculture.*;
 
 import static tfcflorae.util.agriculture.FoodDataTFCF.*;
 
@@ -111,9 +110,11 @@ public enum FruitsTFCF
     TAMARILLO(ItemFoodTFCF.get(ItemsTFCF.TAMARILLO), true, DRIED_FRUIT_DECAY),
     TANGERINE(ItemFoodTFCF.get(ItemsTFCF.TANGERINE), true, DRIED_FRUIT_SATURATION),
     TROPICAL_APRICOT(ItemFoodTFCF.get(ItemsTFCF.TROPICAL_APRICOT), true, DRIED_FRUIT_SATURATION),
+    VANILLA(ItemFoodTFCF.get(ItemsTFCF.VANILLA), true, DRIED_FRUIT_DECAY),
     WILD_CHERRY(ItemFoodTFCF.get(ItemsTFCF.WILD_CHERRY), true, DRIED_FRUIT_DECAY),
     YEW_BERRY(ItemFoodTFCF.get(ItemsTFCF.YEW_BERRY), true, DRIED_FRUIT_DECAY),
-    GRAPES(ItemFoodTFCF.get(ItemsTFCF.GRAPES), true, DRIED_FRUIT_DECAY);
+    PURPLE_GRAPE(ItemFoodTFCF.get(ItemsTFCF.PURPLE_GRAPE), true, DRIED_FRUIT_DECAY),
+    GREEN_GRAPE(ItemFoodTFCF.get(ItemsTFCF.GREEN_GRAPE), true, DRIED_FRUIT_DECAY);
 
     private final Item fruit;
     private final boolean dry;

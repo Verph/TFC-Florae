@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesfig",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/fig",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/fig"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

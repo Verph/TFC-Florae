@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/variegated_persian_ivy/variegated_persian_ivy_item"
+  }
+}

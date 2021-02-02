@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesblack_pepper",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/black_pepper",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/black_pepper"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

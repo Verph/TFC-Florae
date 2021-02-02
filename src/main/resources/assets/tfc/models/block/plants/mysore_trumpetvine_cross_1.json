@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/mysore_trumpetvine_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_1",
+    "particle": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_1",
+	"overlay": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_1b"
+  }
+}

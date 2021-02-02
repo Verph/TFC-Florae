@@ -41,11 +41,11 @@ import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.CapabilityChunkData;
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import net.dries007.tfc.util.OreDictionaryHelper;
-
+import tfcflorae.client.GuiHandler;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
+import tfcflorae.util.HelpersTFCF;
 import tfcflorae.proxy.ClientProxy;
-//import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -60,9 +60,9 @@ public class TFCFlorae
     public static final String DEPENDENCIES = "required-after:tfc@[1.0,)";
 
     @Mod.Instance
-    private static TFCFlorae instance = null;
-    private static Logger logger;
-    private static boolean signedBuild = true;
+    public static TFCFlorae instance;
+    public static Logger logger;
+    public static boolean signedBuild = true;
 
     @SidedProxy(serverSide = "tfcflorae.proxy.CommonProxy", clientSide = "tfcflorae.proxy.ClientProxy")
     public static CommonProxy proxy;
@@ -76,7 +76,7 @@ public class TFCFlorae
     {
         return instance;
     }
-    
+
     @EventHandler
     public void onFingerprintViolation(FMLFingerprintViolationEvent event)
     {
@@ -92,15 +92,18 @@ public class TFCFlorae
         logger = event.getModLog();
         if (!signedBuild)
         {
-            logger.error("INVALID FINGERPRINT DETECTED! This means this jar file has been compromised and is not supported.");
+            logger.error("INVALID FINGERPRINT DETECTED!");
         }
+
         proxy.preInit(event);
+
+        HelpersTFCF.insertWhitelistFluids();
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	//ItemsTFCF.init();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		proxy.init(event);
     }
 

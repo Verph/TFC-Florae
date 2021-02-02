@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/mountain_cabbage_tree/mountain_cabbage_tree_item"
+  }
+}

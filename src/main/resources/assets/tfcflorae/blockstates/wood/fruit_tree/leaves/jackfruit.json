@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesjackfruit",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/jackfruit",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/jackfruit"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

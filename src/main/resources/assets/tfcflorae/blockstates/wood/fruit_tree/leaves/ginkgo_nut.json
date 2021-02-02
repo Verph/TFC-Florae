@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesginkgo_nut",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/ginkgo_nut",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/ginkgo_nut"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesfinger_lime",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/finger_lime",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/finger_lime"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

@@ -1,28 +1,16 @@
 package tfcflorae.util.agriculture;
 
-import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import net.dries007.tfc.api.types.ICrop;
-import net.dries007.tfc.objects.blocks.agriculture.*;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropDead;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropSimple;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropSpreading;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
-//import net.dries007.tfc.objects.items.ItemsTFC;
-//import net.dries007.tfc.objects.items.food.ItemFoodTFC;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.skills.Skill;
@@ -36,10 +24,7 @@ import static tfcflorae.util.agriculture.CropTFCF.CropType.*;
 
 public enum CropTFCF implements ICrop
 {
-    // these definitions are defined in the spreadsheet at
-    // https://docs.google.com/spreadsheets/d/1Ghw3dCmVO5Gv0MMGBydUxox_nwLYmmcZkGSbbf0QSAE/edit#gid=893781093
-    // It should be modified first, and then the resulting definitions copied to this space here
-    AMARANTH(ItemsTFCF.AMARANTH, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    AMARANTH(ItemsTFCF.AMARANTH, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
     BUCKWHEAT(ItemsTFCF.BUCKWHEAT, -5f, 0f, 30f, 35f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
     FONIO(ItemsTFCF.MILLET, 7f, 15f, 40f, 50f, 50f, 70f, 200f, 250f, 8, 0.5f, SIMPLE),
     MILLET(ItemsTFCF.MILLET, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 8, 0.5f, SIMPLE),
@@ -54,24 +39,26 @@ public enum CropTFCF implements ICrop
     LETTUCE(ItemsTFCF.LETTUCE, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     PEANUT(ItemsTFCF.PEANUT, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     RUTABAGA(ItemsTFCF.RUTABAGA, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    TURNIP(ItemsTFCF.TURNIP, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    TURNIP(ItemsTFCF.TURNIP, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
     MUSTARD(ItemsTFCF.MUSTARD, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     SWEET_POTATO(ItemsTFCF.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     SUGAR_BEET(ItemsTFCF.SUGAR_BEET, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-	GRAPES(ItemsTFCF.GRAPES, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
+	PURPLE_GRAPE(ItemsTFCF.PURPLE_GRAPE, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
+	GREEN_GRAPE(ItemsTFCF.GREEN_GRAPE, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
+    LIQUORICE_ROOT(ItemsTFCF.LIQUORICE_ROOT, -20f, -1f, 18f, 26f, 50f, 60f, 310f, 340f, 8, 0.5f, SIMPLE),
     AGAVE(() -> new ItemStack(ItemsTFCF.AGAVE), () -> ItemStack.EMPTY, 12f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    COCA(() -> new ItemStack(ItemsTFCF.COCA_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
+    COCA(() -> new ItemStack(ItemsTFCF.COCA_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     COTTON(() -> new ItemStack(ItemsTFCF.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     FLAX(() -> new ItemStack(ItemsTFCF.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    HEMP(() -> new ItemStack(ItemsTFCF.HEMP), () -> new ItemStack(ItemsTFCF.CANNABIS_BUD), 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    HOPS(() -> new ItemStack(ItemsTFCF.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    HEMP(() -> new ItemStack(ItemsTFCF.HEMP), () -> new ItemStack(ItemsTFCF.CANNABIS_BUD), 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, PICKABLE),
+    HOPS(() -> new ItemStack(ItemsTFCF.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
     INDIGO(() -> new ItemStack(ItemsTFCF.INDIGO), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     MADDER(() -> new ItemStack(ItemsTFCF.MADDER), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    OPIUM_POPPY(() -> new ItemStack(ItemsTFCF.OPIUM_POPPY_BULB), () -> ItemStack.EMPTY, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    OPIUM_POPPY(() -> new ItemStack(ItemsTFCF.OPIUM_POPPY_BULB), () -> ItemStack.EMPTY, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     RAPE(() -> new ItemStack(ItemsTFCF.RAPE), () -> ItemStack.EMPTY, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     WELD(() -> new ItemStack(ItemsTFCF.WELD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     WOAD(() -> new ItemStack(ItemsTFCF.WOAD), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
-    TOBACCO(() -> new ItemStack(ItemsTFCF.TOBACCO_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE);
+    TOBACCO(() -> new ItemStack(ItemsTFCF.TOBACCO_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE);
 
     static
     {

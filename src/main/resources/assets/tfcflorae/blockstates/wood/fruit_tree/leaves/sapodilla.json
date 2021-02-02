@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavessapodilla",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/sapodilla",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/sapodilla"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

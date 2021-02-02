@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/pygmy_date_palm/pygmy_date_palm_item"
+  }
+}

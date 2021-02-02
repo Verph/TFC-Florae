@@ -1,17 +1,14 @@
 package tfcflorae.objects.items;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 import net.minecraft.item.ItemStack;
 
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.objects.items.ItemMisc;
 
 import tfcflorae.objects.items.ItemMiscTFCF;
-import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @SuppressWarnings("WeakerAccess")
@@ -53,26 +50,4 @@ public class ItemMiscTFCF extends ItemTFCF implements IItemSize
     {
         return weight;
     }
-
-	/*
-    private String oreDictionary;
-
-    public ItemMiscTFCF(Size size, Weight weight, String oreDictionary)
-    {
-        super(size, weight);
-        this.oreDictionary = oreDictionary;
-    }
-
-    public ItemMiscTFCF(Size size, Weight weight)
-    {
-        super(size, weight);
-        oreDictionary = null;
-    }
-
-    @Nullable
-    public String getOreDictionary()
-    {
-        return oreDictionary;
-    }
-    */
 }

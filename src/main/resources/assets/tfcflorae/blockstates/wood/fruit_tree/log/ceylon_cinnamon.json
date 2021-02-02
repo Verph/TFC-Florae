@@ -1,0 +1,39 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"side": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon",
+			"top": "tfcflorae:blocks/wood/fruit_tree/top/ceylon_cinnamon",
+			"particle": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon"
+		},
+		"model": "tfcflorae:wood/fruit_tree/log/log_thin"
+	},
+	"variants": {
+		"grown": {
+			"true": {
+				"textures": {
+					"particle": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon",
+					"side": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon"
+				}
+			},
+			"false": {
+				"textures": {
+					"particle": "tfcflorae:blocks/wood/fruit_tree/sheets/ceylon_cinnamon",
+					"side": "tfcflorae:blocks/wood/fruit_tree/sheets/ceylon_cinnamon"
+				},
+				"model": "tfcflorae:wood/fruit_tree/log/log_stripped"
+			}
+		},
+		"connected": {
+			"true": {
+				"model": "tfcflorae:wood/fruit_tree/log/log_connected"
+			},
+			"false": {}
+		},
+		"inventory": [{}],
+		"normal": [{
+			"transform": "forge:default-block",
+			"model": "tfcflorae:wood/fruit_tree/log/log_thin"
+		}]
+	}
+}

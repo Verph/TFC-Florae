@@ -28,8 +28,6 @@ import net.dries007.tfc.objects.items.ItemGem;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.ICollapsableBlock;
 
-import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
-import tfcflorae.objects.blocks.blocktype.BlockRockVariantFallableTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 

@@ -1,13 +1,10 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Random;
 
-import org.apache.commons.lang3.ObjectUtils;
-
 import net.minecraft.block.BlockDoor;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,23 +16,22 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.init.Blocks;
 
-
-import net.dries007.tfc.api.types.IFruitTree;
-
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
-import tfcflorae.util.OreDictionaryHelper;
 
 public class BlockFruitDoor extends BlockDoor
 {
-    public BlockFruitDoor()
+    public String Name;
+
+    public BlockFruitDoor(String Name)
     {
         super(Material.WOOD);
         setHardness(3.0F);
         disableStats();
-        OreDictionaryHelper.register(this, "door");
+        setSoundType(SoundType.WOOD);
         Blocks.FIRE.setFireInfo(this, 5, 20);
+        this.Name = Name;
     }
 
     public Item getItem() //From the way we build the ImmutableLists these two should always be sorted

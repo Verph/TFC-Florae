@@ -1,11 +1,8 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.dries007.tfc.api.types.IFruitTree;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.SoundType;
 import net.minecraft.init.Blocks;
 
 import tfcflorae.util.OreDictionaryHelper;
@@ -18,6 +15,7 @@ public class BlockFruitFenceGate extends BlockFenceGate
         setHarvestLevel("axe", 0);
         setHardness(2.0F);
         setResistance(15.0F);
+        setSoundType(SoundType.WOOD);
         OreDictionaryHelper.register(this, "fence_gate");
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }

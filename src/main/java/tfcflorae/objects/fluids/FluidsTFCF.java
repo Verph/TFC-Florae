@@ -1,46 +1,25 @@
 package tfcflorae.objects.fluids;
 
-import java.awt.*;
-import java.util.Arrays;
-import java.util.EnumMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
 import com.google.common.collect.HashBiMap;
-import com.google.common.collect.ImmutableCollection;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
-import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.food.FoodData;
 import net.dries007.tfc.api.capability.food.FoodStatsTFC;
 import net.dries007.tfc.api.capability.food.IFoodStatsTFC;
-import net.dries007.tfc.api.capability.player.CapabilityPlayerData;
-import net.dries007.tfc.api.capability.player.IPlayerData;
-import net.dries007.tfc.api.registries.TFCRegistries;
-import net.dries007.tfc.api.types.Metal;
 import net.dries007.tfc.objects.fluids.properties.DrinkableProperty;
 import net.dries007.tfc.objects.fluids.properties.FluidWrapper;
-import net.dries007.tfc.objects.fluids.properties.MetalProperty;
-import net.dries007.tfc.objects.potioneffects.PotionEffectsTFC;
-import net.dries007.tfc.util.calendar.ICalendar;
 
 import net.dries007.tfc.TerraFirmaCraft;
-import net.dries007.tfc.objects.fluids.FluidsTFC;
 
-import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
-
-//duplicating the fluid registration logic from TFC as not to create conflicts
 public final class FluidsTFCF
 {
     private static final ResourceLocation STILL = new ResourceLocation(TerraFirmaCraft.MOD_ID, "blocks/fluid_still");
@@ -59,8 +38,9 @@ public final class FluidsTFCF
     public static FluidWrapper DANDELION_TEA;
     public static FluidWrapper LABRADOR_TEA;
 
-    // Coffee
+    // Coffee & Coke
     public static FluidWrapper COFFEE;
+    public static FluidWrapper FIRMA_COLA; //Obviously a reference to Coca Cola.
 
     // Fermented Alcohols
     public static FluidWrapper AGAVE_WINE;
@@ -96,6 +76,7 @@ public final class FluidsTFCF
     public static FluidWrapper BERRY_BRANDY;
     public static FluidWrapper BRANDY;
     public static FluidWrapper COGNAC;
+    public static FluidWrapper GRAPPA;
 
     // Beer
     public static FluidWrapper BEER_BARLEY;
@@ -263,11 +244,13 @@ public final class FluidsTFCF
                 }
             }
         };
+
         allCoffeeFluids = ImmutableSet.<FluidWrapper>builder()
-                .add(
-                	COFFEE = registerFluid(new Fluid("coffee", STILL, FLOW, 0xFF6F4E37).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, coffeeProperty)
-                )
-                .build();        
+            .add(
+                COFFEE = registerFluid(new Fluid("coffee", STILL, FLOW, 0xFF6F4E37).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, coffeeProperty),
+            	FIRMA_COLA = registerFluid(new Fluid("firma_cola", STILL, FLOW, 0xFF521810).setRarity(EnumRarity.RARE)).with(DrinkableProperty.DRINKABLE, coffeeProperty)
+            )
+            .build();        
 
         DrinkableProperty miscFluidsProperty = player -> {
             if (player.getFoodStats() instanceof FoodStatsTFC)
@@ -332,7 +315,7 @@ public final class FluidsTFCF
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(10);
                 if (Constants.RNG.nextFloat() < 0.25f)
                 {
-                    player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 1200, 1));
+                    player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 1200, 2));
                 }
             }
         };
@@ -352,7 +335,8 @@ public final class FluidsTFCF
             	PEAR_BRANDY = registerFluid(new Fluid("pear_brandy", STILL, FLOW, 0xFFCC9A48).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
             	PLUM_BRANDY = registerFluid(new Fluid("plum_brandy", STILL, FLOW, 0xFF941254).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
                 SHOCHU = registerFluid(new Fluid("shochu", STILL, FLOW, 0xFFF8F9F9).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
-            	TEQUILA = registerFluid(new Fluid("tequila", STILL, FLOW, 0xFFF7D0A1).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty)
+            	TEQUILA = registerFluid(new Fluid("tequila", STILL, FLOW, 0xFFF7D0A1).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty),
+            	GRAPPA = registerFluid(new Fluid("grappa", STILL, FLOW, 0xFFF7D0A1).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, alcoholProperty)
             )
             .build();
 

@@ -77,6 +77,7 @@ public class FoodDataTFCF
     public static final FoodData TAMARILLO = new FoodData(4, 0.5f, 5f, 0f, 1.5f, 0f, 0f, 0f, 3.5f);
     public static final FoodData TANGERINE = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
     public static final FoodData TROPICAL_APRICOT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
+    public static final FoodData VANILLA = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData WILD_CHERRY = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
     public static final FoodData YEW_BERRY = new FoodData(4, 0f, 1f, 0f, 0f, 0f, 0f, 0f, 4f);
 
@@ -246,7 +247,8 @@ public class FoodDataTFCF
     public static final FoodData PEANUT = new FoodData(4, 0.6f, 3f, 0f, 1.5f, 2f, 0.5f, 0.5f, 2f);
     public static final FoodData SWEET_POTATO = new FoodData(4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f);
     public static final FoodData SUGAR_BEET = new FoodData(4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
-    public static final FoodData GRAPES = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
+    public static final FoodData PURPLE_GRAPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
+    public static final FoodData GREEN_GRAPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
     public static final FoodData LINSEED_PASTE = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData RAPE_SEED_PASTE = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData SUNFLOWER_SEED_PASTE = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
@@ -264,4 +266,7 @@ public class FoodDataTFCF
     public static final FoodData QUINOA_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
     public static final FoodData SPELT_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
     public static final FoodData WILD_RICE_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    
+    public static final FoodData CARAMEL = new FoodData(4, 0.0F, 0.5F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 10F);
+    public static final FoodData NUTMEG_POWDER = new FoodData(4, 0.0F, 0.3F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.0F);
 }

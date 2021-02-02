@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesperuvian_pepper",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/peruvian_pepper",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/peruvian_pepper"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

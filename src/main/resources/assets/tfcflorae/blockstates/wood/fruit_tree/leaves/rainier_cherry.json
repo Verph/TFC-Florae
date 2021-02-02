@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesrainier_cherry",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/rainier_cherry",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/rainier_cherry"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

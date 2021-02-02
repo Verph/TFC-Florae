@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesred_currant",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/red_currant",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/red_currant"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

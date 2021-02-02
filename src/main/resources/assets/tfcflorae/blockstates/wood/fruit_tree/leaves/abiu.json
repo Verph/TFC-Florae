@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesabiu",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/abiu",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/abiu"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

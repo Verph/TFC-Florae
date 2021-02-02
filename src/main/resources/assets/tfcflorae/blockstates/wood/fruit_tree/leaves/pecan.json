@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavespecan",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/pecan",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/pecan"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

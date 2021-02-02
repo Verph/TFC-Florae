@@ -1,0 +1,19 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/burning_bush_single",
+          "weight": 4
+        },
+        {
+          "model": "tfc:plants/burning_bush_0",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

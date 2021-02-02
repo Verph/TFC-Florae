@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/madeira_vine_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/madeira_vine/madeira_vine_1",
+    "particle": "tfc:blocks/plants/madeira_vine/madeira_vine_1",
+	"overlay": "tfc:blocks/plants/madeira_vine/madeira_vine_1b"
+  }
+}

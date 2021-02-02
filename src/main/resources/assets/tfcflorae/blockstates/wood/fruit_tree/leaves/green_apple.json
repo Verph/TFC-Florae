@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesgreen_apple",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/green_apple",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/green_apple"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

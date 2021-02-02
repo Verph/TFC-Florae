@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveskaki",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/kaki",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/kaki"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

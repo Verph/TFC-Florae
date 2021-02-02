@@ -13,7 +13,6 @@ import net.minecraft.util.NonNullList;
 
 import net.dries007.tfc.api.types.Rock;
 
-import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 

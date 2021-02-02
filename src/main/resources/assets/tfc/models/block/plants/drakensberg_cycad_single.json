@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"leaves": "tfc:blocks/plants/drakensberg_cycad/drakensberg_cycad_single_0",
+		"particle": "tfc:blocks/plants/drakensberg_cycad/drakensberg_cycad_item"
+	},
+	"elements": [
+		{
+			"from": [0.8, 0, 8],
+			"to": [15.2, 20, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, 0.8],
+			"to": [8, 20, 15.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#leaves", "tintindex": 0}
+			}
+		}
+	]
+}

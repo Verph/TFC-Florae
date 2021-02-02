@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/blue_skyflower_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/blue_skyflower/blue_skyflower_1",
+    "particle": "tfc:blocks/plants/blue_skyflower/blue_skyflower_1",
+	"overlay": "tfc:blocks/plants/blue_skyflower/blue_skyflower_1b"
+  }
+}

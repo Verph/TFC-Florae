@@ -1,8 +1,5 @@
 package tfcflorae.objects.items;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -14,9 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.api.types.IFruitTree;
 
-import tfcflorae.objects.blocks.FruitWood.BlockFruitDoor;
+import tfcflorae.objects.blocks.fruitwood.BlockFruitDoor;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/jade_vine_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/jade_vine/jade_vine_1",
+    "particle": "tfc:blocks/plants/jade_vine/jade_vine_1",
+	"overlay": "tfc:blocks/plants/jade_vine/jade_vine_1b"
+  }
+}

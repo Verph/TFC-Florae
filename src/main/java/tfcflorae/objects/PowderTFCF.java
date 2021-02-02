@@ -1,7 +1,5 @@
 package tfcflorae.objects;
 
-import tfcflorae.TFCFlorae;
-
 public enum PowderTFCF
 {
     ASH,

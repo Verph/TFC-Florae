@@ -1,0 +1,39 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfcflorae:blocks/wood/fruit_tree/leaves/bergamot"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/bergamot",
+          "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/bergamot"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/bergamot",
+          "texture": "tfcflorae:blocks/wood/fruit_tree/fruit/bergamot"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_item"
+  }
+}

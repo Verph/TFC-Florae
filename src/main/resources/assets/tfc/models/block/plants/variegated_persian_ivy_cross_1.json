@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/variegated_persian_ivy_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/variegated_persian_ivy/variegated_persian_ivy_1",
+    "particle": "tfc:blocks/plants/variegated_persian_ivy/variegated_persian_ivy_1",
+	"overlay": "tfc:blocks/plants/variegated_persian_ivy/variegated_persian_ivy_1b"
+  }
+}

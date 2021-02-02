@@ -1,4 +1,4 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
 import java.util.*;
 import javax.annotation.Nonnull;

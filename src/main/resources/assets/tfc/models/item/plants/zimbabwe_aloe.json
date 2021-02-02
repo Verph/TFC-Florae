@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/zimbabwe_aloe/zimbabwe_aloe_item"
+  }
+}

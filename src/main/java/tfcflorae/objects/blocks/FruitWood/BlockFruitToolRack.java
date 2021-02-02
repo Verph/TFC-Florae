@@ -1,4 +1,4 @@
-package tfcflorae.objects.blocks.FruitWood;
+package tfcflorae.objects.blocks.fruitwood;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

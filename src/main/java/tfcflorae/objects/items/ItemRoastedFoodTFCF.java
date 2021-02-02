@@ -4,7 +4,6 @@ import javax.annotation.Nonnull;
 
 import net.minecraft.item.ItemStack;
 
-import tfcflorae.objects.items.ItemsTFCF;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.objects.items.ItemMisc;

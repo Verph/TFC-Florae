@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/japanese_ivy_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/japanese_ivy/japanese_ivy_1",
+    "particle": "tfc:blocks/plants/japanese_ivy/japanese_ivy_1",
+	"overlay": "tfc:blocks/plants/japanese_ivy/japanese_ivy_1b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/plants/silvervein_creeper_cross_0",
+  "textures": {
+    "particle": "tfc:blocks/plants/silvervein_creeper/silvervein_creeper_1b",
+	"overlay": "tfc:blocks/plants/silvervein_creeper/silvervein_creeper_1b"
+  }
+}

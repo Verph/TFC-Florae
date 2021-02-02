@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavessour_cherry",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/sour_cherry",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/sour_cherry"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

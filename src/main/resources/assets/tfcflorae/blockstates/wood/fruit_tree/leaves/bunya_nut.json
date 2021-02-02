@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesbunya_nut",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/bunya_nut",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/bunya_nut"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

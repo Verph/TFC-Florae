@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_item"
+  }
+}

@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesosage_orange",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/osage_orange",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/osage_orange"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

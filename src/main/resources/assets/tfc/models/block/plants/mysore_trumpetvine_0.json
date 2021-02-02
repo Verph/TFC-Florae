@@ -1,0 +1,27 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_0",
+		"layer0": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_0",
+		"overlay": "tfc:blocks/plants/mysore_trumpetvine/mysore_trumpetvine_0b"
+	},
+	"elements": [
+		{
+			"from": [-0.05, 0.05, -0.05],
+			"to": [16.05, 0.05, 16.05],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#layer0", "tintindex": 0},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#layer0", "tintindex": 0}
+			}
+		},
+		{
+			"from": [-0.05, 0.05, -0.05],
+			"to": [16.05, 0.05, 16.05],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#overlay"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#overlay"}
+			}
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"side": "tfc:blocks/wood/log/arrow_bamboo",
+			"top": "tfc:blocks/wood/top/arrow_bamboo",
+			"particle": "tfc:blocks/wood/log/arrow_bamboo"
+		},
+		"model": "tfcflorae:wood/fruit_tree/log/log_thin"
+	},
+	"variants": {
+		"grown": {
+			"true": {
+				"textures": {
+					"particle": "tfc:blocks/wood/log/arrow_bamboo",
+					"side": "tfc:blocks/wood/log/arrow_bamboo"
+				}
+			},
+			"false": {
+				"textures": {
+					"particle": "tfc:blocks/wood/sheets/arrow_bamboo",
+					"side": "tfc:blocks/wood/sheets/arrow_bamboo"
+				},
+				"model": "tfcflorae:wood/fruit_tree/log/log_stripped"
+			}
+		},
+		"connected": {
+			"true": {
+				"model": "tfcflorae:wood/fruit_tree/log/log_connected"
+			},
+			"false": {}
+		},
+		"inventory": [{}],
+		"normal": [{
+			"transform": "forge:default-block",
+			"model": "tfcflorae:wood/fruit_tree/log/log_thin"
+		}]
+	}
+}

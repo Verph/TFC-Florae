@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesavocado",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/avocado",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/avocado"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesmacadamia",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/macadamia",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/macadamia"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

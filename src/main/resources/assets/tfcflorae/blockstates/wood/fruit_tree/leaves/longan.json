@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leaveslongan",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/longan",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/longan"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

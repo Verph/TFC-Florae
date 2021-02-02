@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesjuniper",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/juniper",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/juniper"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

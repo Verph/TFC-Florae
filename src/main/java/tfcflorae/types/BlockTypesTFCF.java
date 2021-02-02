@@ -1,22 +1,15 @@
 package tfcflorae.types;
 
-import java.util.function.Function;
 import javax.annotation.Nonnull;
 
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.*;
-import net.dries007.tfc.api.types.Rock.Type;
-import net.dries007.tfc.objects.items.rock.*;
 import net.dries007.tfc.util.Helpers;
-
-import tfcflorae.objects.items.rock.*;
 
 import static tfcflorae.types.BlockTypesTFCF.FallingBlockType.*;
 import static tfcflorae.TFCFlorae.MODID;
@@ -153,7 +146,48 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
         DRY_SILTY_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         DRY_SILTY_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         DRY_SILT_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
-        DRY_SILT_GRASS(Material.GRASS, FALL_HORIZONTAL, true);
+        DRY_SILT_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
+        HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
+        DRY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
+        CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
+        CLAY_HUMUS_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_CLAY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
+        
+        // Kaolinite Clays
+        KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        SANDY_KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_SANDY_KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        SANDY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        SANDY_KAOLINITE_CLAY_LOAM_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        SANDY_KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_SANDY_KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        SANDY_KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        SANDY_KAOLINITE_CLAY_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        KAOLINITE_CLAY_LOAM_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        COARSE_KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        KAOLINITE_CLAY_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        SILTY_KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_SILTY_KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
+        SILTY_KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        SILTY_KAOLINITE_CLAY_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        SILTY_KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_SILTY_KAOLINITE_CLAY_LOAM(Material.GROUND, FALL_HORIZONTAL, false),
+        SILTY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        SILTY_KAOLINITE_CLAY_LOAM_PODZOL(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_SANDY_KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_SILTY_KAOLINITE_CLAY_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        KAOLINITE_CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
+        KAOLINITE_CLAY_HUMUS_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
+        DRY_KAOLINITE_CLAY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true);
 
         public final Material material;
         public final boolean isGrass;
@@ -194,10 +228,18 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                 case SANDY_CLAY_LOAM_GRASS:
                 case SANDY_CLAY_LOAM_PODZOL:
                     return SANDY_CLAY_LOAM;
+                case DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS:
+                case SANDY_KAOLINITE_CLAY_LOAM_GRASS:
+                case SANDY_KAOLINITE_CLAY_LOAM_PODZOL:
+                    return SANDY_KAOLINITE_CLAY_LOAM;
                 case DRY_SANDY_CLAY_GRASS:
                 case SANDY_CLAY_GRASS:
                 case SANDY_CLAY_PODZOL:
                     return SANDY_CLAY;
+                case DRY_SANDY_KAOLINITE_CLAY_GRASS:
+                case SANDY_KAOLINITE_CLAY_GRASS:
+                case SANDY_KAOLINITE_CLAY_PODZOL:
+                    return SANDY_KAOLINITE_CLAY;
                 case DRY_LOAM_GRASS:
                 case LOAM_GRASS:
                 case LOAM_PODZOL:
@@ -206,14 +248,26 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                 case CLAY_LOAM_GRASS:
                 case CLAY_LOAM_PODZOL:
                     return CLAY_LOAM;
+                case DRY_KAOLINITE_CLAY_LOAM_GRASS:
+                case KAOLINITE_CLAY_LOAM_GRASS:
+                case KAOLINITE_CLAY_LOAM_PODZOL:
+                    return KAOLINITE_CLAY_LOAM;
                 case DRY_SILTY_CLAY_GRASS:
                 case SILTY_CLAY_GRASS:
                 case SILTY_CLAY_PODZOL:
                     return SILTY_CLAY;
+                case DRY_SILTY_KAOLINITE_CLAY_GRASS:
+                case SILTY_KAOLINITE_CLAY_GRASS:
+                case SILTY_KAOLINITE_CLAY_PODZOL:
+                    return SILTY_KAOLINITE_CLAY;
                 case DRY_SILTY_CLAY_LOAM_GRASS:
                 case SILTY_CLAY_LOAM_GRASS:
                 case SILTY_CLAY_LOAM_PODZOL:
                     return SILTY_CLAY_LOAM;
+                case DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
+                case SILTY_KAOLINITE_CLAY_LOAM_GRASS:
+                case SILTY_KAOLINITE_CLAY_LOAM_PODZOL:
+                    return SILTY_KAOLINITE_CLAY_LOAM;
                 case DRY_SILT_LOAM_GRASS:
                 case SILT_LOAM_GRASS:
                 case SILT_LOAM_PODZOL:
@@ -226,6 +280,25 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                     return DRY_CLAY_GRASS;
                 case CLAY_PODZOL:
                     return CLAY_PODZOL;
+                case KAOLINITE_CLAY:
+                case KAOLINITE_CLAY_GRASS:
+                case DRY_KAOLINITE_CLAY_GRASS:
+                case KAOLINITE_CLAY_PODZOL:
+                    return KAOLINITE_CLAY;
+                case HUMUS:
+                case HUMUS_GRASS:
+                case DRY_HUMUS_GRASS:
+                    return HUMUS;
+                case CLAY_HUMUS:
+                case CLAY_HUMUS_GRASS:
+                case DRY_CLAY_HUMUS_GRASS:
+                    return CLAY_HUMUS;
+                case KAOLINITE_CLAY_HUMUS:
+                case KAOLINITE_CLAY_HUMUS_GRASS:
+                case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
+                    return KAOLINITE_CLAY_HUMUS;
+                case PODZOL:
+                    return LOAMY_SAND;
                 /*
                 case DRY_CLAY_GRASS:
                 case CLAY_PODZOL:
@@ -262,6 +335,26 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                     return spreader == DRY_SILT_LOAM_GRASS ? DRY_SILT_LOAM_GRASS : SILT_LOAM_GRASS;
                 case SILT:
                     return spreader == DRY_SILT_GRASS ? DRY_SILT_GRASS : SILT_GRASS;
+                case HUMUS:
+                    return spreader == DRY_HUMUS_GRASS ? DRY_HUMUS_GRASS : HUMUS_GRASS;
+                case CLAY_HUMUS:
+                    return spreader == DRY_CLAY_HUMUS_GRASS ? DRY_CLAY_HUMUS_GRASS : CLAY_HUMUS_GRASS;
+
+                // Kaolinite Clay
+                case KAOLINITE_CLAY:
+                    return spreader == DRY_KAOLINITE_CLAY_GRASS ? DRY_KAOLINITE_CLAY_GRASS : KAOLINITE_CLAY_GRASS;
+                case SANDY_KAOLINITE_CLAY_LOAM:
+                    return spreader == DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS ? DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS : SANDY_KAOLINITE_CLAY_LOAM_GRASS;
+                case SANDY_KAOLINITE_CLAY:
+                    return spreader == DRY_SANDY_KAOLINITE_CLAY_GRASS ? DRY_SANDY_KAOLINITE_CLAY_GRASS : SANDY_KAOLINITE_CLAY_GRASS;
+                case KAOLINITE_CLAY_LOAM:
+                    return spreader == DRY_KAOLINITE_CLAY_LOAM_GRASS ? DRY_KAOLINITE_CLAY_LOAM_GRASS : KAOLINITE_CLAY_LOAM_GRASS;
+                case SILTY_KAOLINITE_CLAY:
+                    return spreader == DRY_SILTY_KAOLINITE_CLAY_GRASS ? DRY_SILTY_KAOLINITE_CLAY_GRASS : SILTY_KAOLINITE_CLAY_GRASS;
+                case SILTY_KAOLINITE_CLAY_LOAM:
+                    return spreader == DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS ? DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS : SILTY_KAOLINITE_CLAY_LOAM_GRASS;
+                case KAOLINITE_CLAY_HUMUS:
+                    return spreader == DRY_KAOLINITE_CLAY_HUMUS_GRASS ? DRY_KAOLINITE_CLAY_HUMUS_GRASS : KAOLINITE_CLAY_HUMUS_GRASS;
             }
             throw new IllegalArgumentException("You cannot get grass from rock types.");
         }
@@ -274,93 +367,3 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
         FALL_HORIZONTAL
     }
 }
-
-    /*
-    MOSSY_RAW(Material.ROCK, SoundType.STONE, 5, false),
-    MUD_BRICK(Material.ROCK, SoundType.STONE, 4, false),
-    MUD(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_DIRT(Material.GROUND, SoundType.GROUND, 2, true),
-    PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    LOAMY_SAND(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_LOAMY_SAND(Material.GROUND, SoundType.GROUND, 2, true),
-    LOAMY_SAND_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    LOAMY_SAND_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SANDY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    SANDY_LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SANDY_CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    SANDY_CLAY_LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_CLAY_LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SANDY_CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    SANDY_CLAY_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SANDY_CLAY_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    CLAY_LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    CLAY_LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    //CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    //CLAY_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    CLAY_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SILTY_CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SILTY_CLAY(Material.GROUND, SoundType.GROUND, 2, true),
-    SILTY_CLAY_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SILTY_CLAY_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SILTY_CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SILTY_CLAY_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    SILTY_CLAY_LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SILTY_CLAY_LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SILT_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SILT_LOAM(Material.GROUND, SoundType.GROUND, 2, true),
-    SILT_LOAM_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SILT_LOAM_PODZOL(Material.GRASS, SoundType.PLANT, 2, true),
-    SILT(Material.GROUND, SoundType.GROUND, 2, true),
-    COARSE_SILT(Material.GROUND, SoundType.GROUND, 2, true),
-    SILT_GRASS(Material.GRASS, SoundType.PLANT, 2, true),
-    SILT_PODZOL(Material.GRASS, SoundType.PLANT, 2, true);
-
-    private Material material;
-    private SoundType soundType;
-    private int hardness;
-    private boolean fallable;
-
-    BlockTypesTFCF(Material material, SoundType soundType, int hardness, boolean isFallable)
-    {
-        this.soundType = soundType;
-        this.material = material;
-        this.hardness = hardness;
-        this.fallable = isFallable;
-    }
-
-    public Material getMaterial() 
-    {
-        return material;
-    }
-
-    public SoundType getSoundType() 
-    {
-        return soundType;
-    }
-    */
-
-    /* Soundtypes:
-    static SoundType	ANVIL
-    static SoundType	CLOTH
-    static SoundType	GLASS
-    static SoundType	GROUND
-    static SoundType	LADDER
-    static SoundType	METAL
-    static SoundType	PLANT
-    static SoundType	SAND
-    static SoundType	SLIME
-    static SoundType	SNOW
-    static SoundType	STONE
-    static SoundType	WOOD
-    */

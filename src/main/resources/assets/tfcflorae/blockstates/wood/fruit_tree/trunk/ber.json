@@ -3,8 +3,8 @@
   "defaults": {
     "model": "tfc:fruit_trees/trunk",
     "textures": {
-      "texture": "tfcflorae:blocks/wood/fruit_tree/log/ber",
-      "particle": "tfcflorae:blocks/wood/fruit_tree/log/ber"
+      "texture": "tfcflorae:blocks/wood/fruit_tree/log/bergamot",
+      "particle": "tfcflorae:blocks/wood/fruit_tree/log/bergamot"
     }
   },
   "variants": {

@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavespeach",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/peach",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/peach"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

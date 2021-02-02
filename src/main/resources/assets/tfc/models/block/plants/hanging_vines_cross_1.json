@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/hanging_vines_cross_0",
+  "textures": {
+    "cross": "tfc:blocks/plants/hanging_vines/hanging_vines_1",
+    "particle": "tfc:blocks/plants/hanging_vines/hanging_vines_1",
+	"overlay": "tfc:blocks/plants/hanging_vines/hanging_vines_1b"
+  }
+}

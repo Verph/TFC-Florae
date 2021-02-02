@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "dustCoffee"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "vanilla"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "cocaLeaf"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "citrus"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "lime"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "sugar"
+		}
+	],
+	[
+		{
+		  "type": "forge:ore_dict",
+		  "ore": "caramel"
+		}
+	]
+  ],
+  "result": {
+    "item": "tfcflorae:firma_cola_mix",
+    "count": 1
+  }
+}

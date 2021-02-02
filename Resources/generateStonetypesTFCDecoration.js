@@ -34,7 +34,7 @@ let STONE_TYPES = {
     'slate': 'slate',
     'travertine': 'travertine',
     'wackestone': 'wackestone',
-	  'breccia': 'breccia',
+	'breccia': 'breccia',
     'porphyry': 'porphyry',
     'peridotite': 'peridotite',
     'mudstone': 'mudstone',
@@ -165,4 +165,325 @@ function generateRecipes(stoneType)
     fs.writeFileSync(`./src/main/resources/assets/tfc_decoration/models/item/mud_ball/${stoneType}.json`, JSON.stringify(mud_ball_itemJSON, null, 2))
     fs.writeFileSync(`./src/main/resources/assets/tfc_decoration/models/item/mud_brick/${stoneType}.json`, JSON.stringify(mud_brick_itemJSON, null, 2))
     fs.writeFileSync(`./src/main/resources/assets/tfc_decoration/models/item/mud_bricks/${stoneType}.json`, JSON.stringify(mud_bricks_itemJSON, null, 2))
+	
+    let small_boulderJSON = {
+		"populate":{
+			`small_boulder_${stoneType}`:{
+				"distribution":"surface",
+				"generator":{
+					"type":"boulder",
+					"block":[
+						{
+							"name":`tfc_decoration:mossy_cobble/${stoneType}`,
+							"weight":20
+						},
+						{
+							"name":`tfcflorae:mossy_raw/${stoneType}`,
+							"weight":20
+						},
+						{
+							"name":`tfc:cobble/${stoneType}`,
+							"weight":25
+						},
+						{
+							"name":`tfc:raw/${stoneType}`,
+							"weight":35
+						}
+					],
+					"material":[
+						`tfc:grass/${stoneType}`,
+						`tfc:dry_grass/${stoneType}`,
+						`tfc:dirt/${stoneType}`,
+						`tfc:gravel/${stoneType}`,
+						`tfcflorae:podzol/${stoneType}`
+					],
+					"diameter":1,
+					"size-variance":1,
+					"count":1,
+					"count-variance":2
+				},
+				"chunk-chance":20,
+				"cluster-count":10,
+				"min-height":50,
+				"max-height":170,
+				"material":[
+					"minecraft:air",
+					`tfc:grass/${stoneType}`,
+					`tfc:dry_grass/${stoneType}`,
+					`tfc:dirt/${stoneType}`,
+					`tfc:gravel/${stoneType}`,
+					`tfcflorae:podzol/${stoneType}`
+				],
+				"follow-terrain":true,
+				"retrogen":false,
+				"biome":{
+					"restriction":"whitelist",
+					"value":[
+						{
+							"type":"dictionary",
+							"entry":"FROZEN"
+						},
+						{
+							"type":"dictionary",
+							"entry":"SNOWY"
+						},
+						{
+							"type":"dictionary",
+							"entry":"SANDY"
+						},
+						{
+							"type":"dictionary",
+							"entry":"FOREST"
+						},
+						{
+							"type":"dictionary",
+							"entry":"MOUNTAIN"
+						},
+						{
+							"type":"dictionary",
+							"entry":"CONIFEROUS"
+						},
+						{
+							"type":"dictionary",
+							"entry":"PLAINS"
+						},
+						{
+							"type":"dictionary",
+							"entry":"SWAMP"
+						},
+						{
+							"type":"dictionary",
+							"entry":"LUSH"
+						},
+						{
+							"type":"dictionary",
+							"entry":"HILLS"
+						}
+					]
+				},
+				"dimension":{
+					"restriction":"blacklist",
+					"value":[
+						-1,
+						1
+					]
+				}
+			}
+		}
+	}
+    let medium_boulderJSON = {
+		"populate": {	
+			`medium_boulder_${stoneType}`: {
+				"distribution": "surface",
+				"generator": {
+					"type": "boulder",
+					"block": [
+						{
+							"name": `tfc_decoration:mossy_cobble/${stoneType}`
+							"weight": 20
+						},
+						{
+							"name": `tfcflorae:mossy_raw/${stoneType}`,
+							"weight": 20
+						},
+						{
+							"name": `tfc:cobble/${stoneType}`,
+							"weight": 25
+						},
+						{
+							"name": `tfc:raw/${stoneType}`,
+							"weight": 35
+						}
+					],
+					"material": [
+						`tfc:grass/${stoneType}`,
+						`tfc:dry_grass/${stoneType}`,
+						`tfc:dirt/${stoneType}`,
+						`tfc:gravel/${stoneType}`,
+						`tfcflorae:podzol/${stoneType}`
+					],
+					"diameter": 2,
+					"size-variance": 1,
+					"count": 1,
+					"count-variance": 2
+				},
+				"chunk-chance": 30,
+				"cluster-count": 10,
+				"min-height": 50,
+				"max-height": 170,
+				"material": [
+					"minecraft:air",
+					`tfc:grass/${stoneType}`,
+					`tfc:dry_grass/${stoneType}`,
+					`tfc:dirt/${stoneType}`,
+					`tfc:gravel/${stoneType}`,
+					`tfcflorae:podzol/${stoneType}`
+				],
+				"follow-terrain": true,
+				"retrogen": false,
+				"biome": {
+					"restriction": "whitelist",
+					"value": [
+						{
+							"type": "dictionary",
+							"entry": "FROZEN"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "SNOWY"
+						},
+						{
+							"type": "dictionary",
+							"entry": "SANDY"
+						},
+						{
+							"type": "dictionary",
+							"entry": "FOREST"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "MOUNTAIN"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "CONIFEROUS"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "PLAINS"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "SWAMP"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "LUSH"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "HILLS"
+						}
+					]
+				},
+				"dimension": {
+					"restriction": "blacklist",
+					"value": [
+						-1,
+						1
+					]
+				}
+			}
+		}
+	}
+    let large_boulderJSON = {
+		"populate": {	
+			`large_boulder_${stoneType}`: {
+				"distribution": "surface",
+				"generator": {
+					"type": "boulder",
+					"block": [
+						{
+							"name": `tfc_decoration:mossy_cobble/${stoneType}`
+							"weight": 20
+						},
+						{
+							"name": `tfcflorae:mossy_raw/${stoneType}`,
+							"weight": 20
+						},
+						{
+							"name": `tfc:cobble/${stoneType}`,
+							"weight": 25
+						},
+						{
+							"name": `tfc:raw/${stoneType}`,
+							"weight": 35
+						}
+					],
+					"material": [
+						`tfc:grass/${stoneType}`,
+						`tfc:dry_grass/${stoneType}`,
+						`tfc:dirt/${stoneType}`,
+						`tfc:gravel/${stoneType}`,
+						`tfcflorae:podzol/${stoneType}`
+					],
+					"diameter": 2,
+					"size-variance": 1,
+					"count": 1,
+					"count-variance": 2
+				},
+				"chunk-chance": 40,
+				"cluster-count": 10,
+				"min-height": 50,
+				"max-height": 170,
+				"material": [
+					"minecraft:air",
+					`tfc:grass/${stoneType}`,
+					`tfc:dry_grass/${stoneType}`,
+					`tfc:dirt/${stoneType}`,
+					`tfc:gravel/${stoneType}`,
+					`tfcflorae:podzol/${stoneType}`
+				],
+				"follow-terrain": true,
+				"retrogen": false,
+				"biome": {
+					"restriction": "whitelist",
+					"value": [
+						{
+							"type": "dictionary",
+							"entry": "FROZEN"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "SNOWY"
+						},
+						{
+							"type": "dictionary",
+							"entry": "SANDY"
+						},
+						{
+							"type": "dictionary",
+							"entry": "FOREST"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "MOUNTAIN"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "CONIFEROUS"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "PLAINS"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "SWAMP"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "LUSH"
+						}, 
+						{
+							"type": "dictionary",
+							"entry": "HILLS"
+						}
+					]
+				},
+				"dimension": {
+					"restriction": "blacklist",
+					"value": [
+						-1,
+						1
+					]
+				}
+			}
+		}
+	}
+	
+    // Boulders
+    fs.writeFileSync(`./cofh/world/boulder/small/${stoneType}.json`, JSON.stringify(small_boulderJSON, null, 2))
+    fs.writeFileSync(`./cofh/world/boulder/medium/${stoneType}.json`, JSON.stringify(medium_boulderJSON, null, 2))
+    fs.writeFileSync(`./cofh/world/boulder/large/${stoneType}.json`, JSON.stringify(large_boulderJSON, null, 2))
 }

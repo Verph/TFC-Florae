@@ -10,18 +10,18 @@ outputDir = 'Output'
 
 imageFormat = 'png'
 
-blackPoint = 0
-middlePoint = 127
-whitePoint = 255
+blackPoint = 70
+middlePoint = 105
+whitePoint = 200
 
-ImgColorFirst = 15.0
-ImgContrastFirst = 500.0
-ImgBrightnessFirst = 110.0
-ImgContrastLast = 180.0
+ImgColorFirst = 20.0
+ImgContrastFirst = 300.0
+ImgBrightnessFirst = 150.0
+ImgContrastLast = 200.0
 ImgBrightnessLast = 80.0
 ImgColorLast = 80.0
 
-useGrayscaleContrast = False
+useGrayscaleContrast = True
 
 #Source: https://github.com/python-pillow/Pillow/blob/2d6e51e26c7683f067d29bd69f4fdf8eef003643/src/PIL/ImageOps.py
 def _color(color, mode):

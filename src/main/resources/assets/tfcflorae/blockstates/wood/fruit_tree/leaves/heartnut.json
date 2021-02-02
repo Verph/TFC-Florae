@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesheartnut",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/heartnut",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/heartnut"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

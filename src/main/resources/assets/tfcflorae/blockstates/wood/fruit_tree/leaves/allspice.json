@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesallspice",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/allspice",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/allspice"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

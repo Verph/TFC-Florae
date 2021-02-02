@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavessand_pear",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/sand_pear",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/sand_pear"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

@@ -148,7 +148,7 @@ public final class CommonEventHandlerTFCF
         {
             event.getDrops().add(new ItemStack(ItemsTFCF.FRUIT_LEAF, 2 + Constants.RNG.nextInt(4)));
         }
-        else if (block instanceof BlockFruitTreeTrunk) //todo: implement this without strings
+        else if (block instanceof BlockFruitTreeTrunk)
         {
             IFruitTree tree = ((BlockFruitTreeTrunk) block).getTree();
             String poleName = MODID + "wood/fruit_tree/pole" + tree.getName().toLowerCase();

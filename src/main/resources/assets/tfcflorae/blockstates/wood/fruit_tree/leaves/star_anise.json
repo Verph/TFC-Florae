@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavesstar_anise",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/star_anise",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/star_anise"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"

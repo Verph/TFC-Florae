@@ -21,7 +21,7 @@
       "flowering": {
         "model": "leaves",
         "textures": {
-          "all": "tfcflorae:blocks/wood/fruit_tree/leavestamarillo",
+          "all": "tfcflorae:blocks/wood/fruit_tree/leaves/tamarillo",
           "texture": "tfcflorae:blocks/wood/fruit_tree/flowers/tamarillo"
         },
         "submodel": "tfc:fruit_trees/leaves_overlay"
