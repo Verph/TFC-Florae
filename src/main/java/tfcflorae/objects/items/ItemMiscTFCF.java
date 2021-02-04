@@ -7,13 +7,14 @@ import net.minecraft.item.ItemStack;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
+import net.dries007.tfc.objects.items.ItemTFC;
 
 import tfcflorae.objects.items.ItemMiscTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @SuppressWarnings("WeakerAccess")
 //public class ItemMiscTFCF extends ItemMisc
-public class ItemMiscTFCF extends ItemTFCF implements IItemSize
+public class ItemMiscTFCF extends ItemTFC implements IItemSize
 {
     private final Size size;
     private final Weight weight;

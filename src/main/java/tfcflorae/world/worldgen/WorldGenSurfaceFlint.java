@@ -39,12 +39,11 @@ public class WorldGenSurfaceFlint implements IWorldGenerator
 
         if (chunkGenerator instanceof ChunkGenTFC && world.provider.getDimension() == 0)
         {
-            //if (chunkBlockPos.getY() < 146 || chunkBlockPos.getY() > 170 || baseChunkData.getRainfall() < 90) return;
 
             int xoff = chunkX * 16 + 8;
             int zoff = chunkZ * 16 + 8;
 
-            for (int i = 0; i < 7 * factor; i++)
+            for (int i = 0; i < 10 * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),
@@ -58,13 +57,15 @@ public class WorldGenSurfaceFlint implements IWorldGenerator
     
     private void generateRock(World world, BlockPos pos)
     {
-        /*
-        IBlockState stateDown = world.getBlockState(pos.down());
-        if (world.isAirBlock(pos) && stateDown.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isSoilOrGravel(stateDown))
-        */
-        if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down()))))
+        if (pos.getY() > 146 && pos.getY() < 170)
         {
-            world.setBlockState(pos, BlocksTFCF.FLINT.getDefaultState());
+            if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP))
+            {
+                if (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down())))
+                {
+                    world.setBlockState(pos, BlocksTFCF.FLINT.getDefaultState());
+                }
+            }
         }
     }
 }

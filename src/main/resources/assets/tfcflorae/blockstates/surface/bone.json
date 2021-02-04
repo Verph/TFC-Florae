@@ -4,7 +4,7 @@
   "defaults": {
     "model": "item/generated",
     "textures": {
-	    "particle": "blocks/bone_block_side",
+	  "particle": "blocks/bone_block_side",
       "0": "blocks/bone_block_side",
       "layer0": "tfcflorae:items/bones"
     }

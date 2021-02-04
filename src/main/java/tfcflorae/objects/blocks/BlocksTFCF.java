@@ -120,10 +120,55 @@ public final class BlocksTFCF
     @GameRegistry.ObjectHolder("wood/fruit_tree/sapling/ceylon_cinnamon")
     public static final BlockCeylonCinnamonSapling CEYLON_CINNAMON_SAPLING = Helpers.getNull();
 
+    // Bamboo Blocks
     @GameRegistry.ObjectHolder("wood/log/arrow_bamboo")
     public static final BlockBambooLog ARROW_BAMBOO_LOG = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/leaves/arrow_bamboo")
     public static final BlockBambooLeaves ARROW_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/black_bamboo")
+    public static final BlockBambooLog BLACK_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/black_bamboo")
+    public static final BlockBambooLeaves BLACK_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/blue_bamboo")
+    public static final BlockBambooLog BLUE_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/blue_bamboo")
+    public static final BlockBambooLeaves BLUE_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/dragon_bamboo")
+    public static final BlockBambooLog DRAGON_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/dragon_bamboo")
+    public static final BlockBambooLeaves DRAGON_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/golden_bamboo")
+    public static final BlockBambooLog GOLDEN_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/golden_bamboo")
+    public static final BlockBambooLeaves GOLDEN_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/narrow_leaf_bamboo")
+    public static final BlockBambooLog NARROW_LEAF_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/narrow_leaf_bamboo")
+    public static final BlockBambooLeaves NARROW_LEAF_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/red_bamboo")
+    public static final BlockBambooLog RED_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/red_bamboo")
+    public static final BlockBambooLeaves RED_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/temple_bamboo")
+    public static final BlockBambooLog TEMPLE_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/temple_bamboo")
+    public static final BlockBambooLeaves TEMPLE_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/thorny_bamboo")
+    public static final BlockBambooLog THORNY_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/thorny_bamboo")
+    public static final BlockBambooLeaves THORNY_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/timber_bamboo")
+    public static final BlockBambooLog TIMBER_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/timber_bamboo")
+    public static final BlockBambooLeaves TIMBER_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/tinwa_bamboo")
+    public static final BlockBambooLog TINWA_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/tinwa_bamboo")
+    public static final BlockBambooLeaves TINWA_BAMBOO_LEAVES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/log/weavers_bamboo")
+    public static final BlockBambooLog WEAVERS_BAMBOO_LOG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wood/leaves/weavers_bamboo")
+    public static final BlockBambooLeaves WEAVERS_BAMBOO_LEAVES = Helpers.getNull();
 
     // All these are for use in model registration. Do not use for block lookups.
     // Use the static get methods in the classes instead.
@@ -169,6 +214,7 @@ public final class BlocksTFCF
     private static ImmutableList<Block> allBambooLog = Helpers.getNull();
     private static ImmutableList<Block> allBambooLeaves = Helpers.getNull();
     private static ImmutableList<Block> allBambooSapling = Helpers.getNull();
+    private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
     private static Tree[] bambooTrees = {TreesTFCF.ARROW_BAMBOO, TreesTFCF.BLACK_BAMBOO, TreesTFCF.BLUE_BAMBOO, TreesTFCF.DRAGON_BAMBOO, TreesTFCF.GOLDEN_BAMBOO, TreesTFCF.NARROW_LEAF_BAMBOO, TreesTFCF.RED_BAMBOO, TreesTFCF.TEMPLE_BAMBOO, TreesTFCF.THORNY_BAMBOO, TreesTFCF.TIMBER_BAMBOO, TreesTFCF.TINWA_BAMBOO, TreesTFCF.WEAVERS_BAMBOO};
@@ -383,6 +429,11 @@ public final class BlocksTFCF
         return allBambooSapling;
     }
 
+    public static ImmutableList<BlockSurfaceOreDeposit> getAllSurfaceOreBlocks()
+    {
+        return allSurfaceOreBlocks;
+    }
+
     @SubscribeEvent
     @SuppressWarnings("ConstantConditions")
     public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -432,6 +483,7 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockSlabTFC.Half> blockSlabTFC = new Builder<>();
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
+        ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_clay_block", new BlockKaoliniteClay(), CT_ROCK_BLOCKS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
@@ -492,6 +544,15 @@ public final class BlocksTFCF
         allBlockRockVariantsTFCF.forEach((x) -> {
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
+
+        {
+            for (Ore ore : TFCRegistries.ORES.getValuesCollection())
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                surfaceOreBlocks.add(register(r, ("surface/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
+
+            allSurfaceOreBlocks = surfaceOreBlocks.build();
+            allSurfaceOreBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
 
         {
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())

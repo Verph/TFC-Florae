@@ -51,7 +51,7 @@ public enum CropTFCF implements ICrop
     COTTON(() -> new ItemStack(ItemsTFCF.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     FLAX(() -> new ItemStack(ItemsTFCF.FLAX), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     HEMP(() -> new ItemStack(ItemsTFCF.HEMP), () -> new ItemStack(ItemsTFCF.CANNABIS_BUD), 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, PICKABLE),
-    HOPS(() -> new ItemStack(ItemsTFCF.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
+    HOP(() -> new ItemStack(ItemsTFCF.HOPS), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     INDIGO(() -> new ItemStack(ItemsTFCF.INDIGO), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     MADDER(() -> new ItemStack(ItemsTFCF.MADDER), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
     OPIUM_POPPY(() -> new ItemStack(ItemsTFCF.OPIUM_POPPY_BULB), () -> ItemStack.EMPTY, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),

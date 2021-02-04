@@ -39,7 +39,6 @@ public class WorldGenSurfaceBones implements IWorldGenerator
 
         if (chunkGenerator instanceof ChunkGenTFC && world.provider.getDimension() == 0)
         {
-            if (chunkBlockPos.getY() < 146 || chunkBlockPos.getY() > 170 || baseChunkData.getRainfall() >= 60) return;
 
             int xoff = chunkX * 16 + 8;
             int zoff = chunkZ * 16 + 8;
@@ -58,13 +57,13 @@ public class WorldGenSurfaceBones implements IWorldGenerator
     
     private void generateRock(World world, BlockPos pos)
     {
-        /*
-        IBlockState stateDown = world.getBlockState(pos.down());
-        if (world.isAirBlock(pos) && stateDown.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGround(stateDown))
-        */
-        if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down()))))
+        ChunkDataTFC data = ChunkDataTFC.get(world, pos);
+        if (pos.getY() < 146 && pos.getY() > 170 && data.getRainfall() >= 60)
         {
-            world.setBlockState(pos, BlocksTFCF.BONES.getDefaultState());
+            if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down()))))
+            {
+                world.setBlockState(pos, BlocksTFCF.BONES.getDefaultState());
+            }
         }
     }
 }

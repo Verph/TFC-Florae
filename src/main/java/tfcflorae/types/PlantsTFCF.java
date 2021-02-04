@@ -199,7 +199,7 @@ public final class PlantsTFCF
             new Plant(SUNFLOWER, Plant.PlantType.TALL_PLANT, new int[] {9, 0, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9}, false, false, 8f, 31f, -29f, 34f, 100f, 300f, 10, 15, 2, 0.9D, "sunflower"),
             new Plant(TACKWEED, Plant.PlantType.CREEPING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -2f, 25f, -10f, 40f, 250f, 500f, 0, 14, 1, 0.7D, "moss"),
             new Plant(TAKAKIA, Plant.PlantType.CREEPING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -2f, 25f, -10f, 40f, 250f, 500f, 0, 14, 1, 0.7D, "moss"),
-            new Plant(LOW_UNDERGROWTH, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 0f, 50f, 260f, 500f, 5, 15, 1, 0.9D, "undergrowth_low"),
+            new Plant(LOW_UNDERGROWTH, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, 10f, 50f, 260f, 500f, 5, 15, 1, 0.9D, "undergrowth_low"),
             new Plant(VOODOO_LILY, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 16f, 45f, 10f, 50f, 270f, 500f, 6, 15, 2, 0.9D, "voodoo_lily"),
             //new Plant(WELD, Plant.PlantType.STANDARD, new int[] {5, 0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5}, false, false, 10f, 25f, -5f, 31f, 100f, 500f, 10, 15, 1, 0.8D, "weld"),
             //new Plant(WOAD, Plant.PlantType.STANDARD, new int[] {6, 0, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6}, false, false, 10f, 25f, -5f, 31f, 100f, 500f, 10, 15, 1, 0.8D, "woad"),

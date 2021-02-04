@@ -21,7 +21,7 @@ public class WorldGenCinnamon extends WorldGenerator
     @Override
     public boolean generate(World world, Random rand, BlockPos pos)
     {
-        if (rand.nextInt(130) != 1)
+        if (rand.nextInt(100) != 1)
             return false;
 
         ChunkDataTFC chunkData = ChunkDataTFC.get(world, pos);
@@ -39,15 +39,15 @@ public class WorldGenCinnamon extends WorldGenerator
         int x = pos.getX() - 7 + rand.nextInt(14);
         int z = pos.getZ() - 7 + rand.nextInt(14);
         BlockPos genPos = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z));
-        if (rain > 300 && temp > 29)
+
+        if (rain > 300 && temp > 29 && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             return generateCassiaCinnamon(world, rand, genPos);
         }
-        if (rain > 300 && temp > 29)
+        if (rain > 300 && temp > 29 && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             return generateCeylonCinnamon(world, rand, genPos);
         }
-
         return false;
     }
 

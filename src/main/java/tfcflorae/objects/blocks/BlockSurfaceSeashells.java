@@ -34,7 +34,6 @@ public class BlockSurfaceSeashells extends Block
 {
     private static final AxisAlignedBB AABB = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.9, 0.6, 0.9);
 
-    Item[] drops = {ItemsTFCF.CLAM, ItemsTFCF.LIVE_CLAM, ItemsTFCF.SCALLOP, ItemsTFCF.LIVE_SCALLOP, ItemsTFCF.LIVE_STARFISH, ItemsTFCF.CONCH, ItemsTFCF.PEARL, ItemsTFCF.BLACK_PEARL};
     int[] chance = {38, 5, 38, 5, 5, 5, 3, 1};
     int[] amount = {2, 1, 2, 1, 1, 1, 1, 1};
     int index = 0;
@@ -52,7 +51,10 @@ public class BlockSurfaceSeashells extends Block
     {
         this.index = index;
         if(chance <= currentNumber)
+        {
+            Item[] drops = {ItemsTFCF.CLAM, ItemsTFCF.LIVE_CLAM, ItemsTFCF.SCALLOP, ItemsTFCF.LIVE_SCALLOP, ItemsTFCF.LIVE_STARFISH, ItemsTFCF.CONCH, ItemsTFCF.PEARL, ItemsTFCF.BLACK_PEARL};
             return drops[index];
+        }
         else
             return getWeightedDrop(chance, index + 1, currentNumber + this.chance[index + 1]);
     }
@@ -69,7 +71,7 @@ public class BlockSurfaceSeashells extends Block
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        int chance = rand.nextInt(100);
+        int chance = rand.nextInt(100) + 1;
         return getWeightedDrop(chance, 0, this.chance[0]);
     }
 

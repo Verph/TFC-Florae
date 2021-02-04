@@ -15,6 +15,7 @@ import tfcflorae.api.knapping.KnappingTypes;
 public class GuiKnappingTFCF extends GuiKnapping
 {
     private KnappingType type = null;
+    private ResourceLocation backgroundTexture;
 
     public GuiKnappingTFCF(Container container, EntityPlayer player, KnappingType type, ResourceLocation buttonTexture)
     {
@@ -22,14 +23,21 @@ public class GuiKnappingTFCF extends GuiKnapping
         this.type = type;
     }
 
+    public GuiKnappingTFCF(Container container, EntityPlayer player, KnappingType type, ResourceLocation buttonTexture, ResourceLocation backgroundTexture)
+    {
+        super(container, player, type, buttonTexture);
+        this.type = type;
+        this.backgroundTexture = backgroundTexture;
+    }
+
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         super.drawGuiContainerBackgroundLayer(partialTicks, mouseX, mouseY);
-        if (type == KnappingTypes.MUD)
+        if (type == KnappingTypes.MUD || type == KnappingTypes.KAOLINITE_CLAY)
         {
             GlStateManager.color(1, 1, 1, 1);
-            if(type == KnappingTypes.MUD) mc.getTextureManager().bindTexture(GuiHandler.MUD_DISABLED_TEXTURE);
+            if(type == KnappingTypes.MUD) mc.getTextureManager().bindTexture(backgroundTexture);
             else if(type == KnappingTypes.KAOLINITE_CLAY) mc.getTextureManager().bindTexture(GuiHandler.KAOLINITE_CLAY_DISABLED_TEXTURE);
             for (GuiButton button : buttonList)
             {

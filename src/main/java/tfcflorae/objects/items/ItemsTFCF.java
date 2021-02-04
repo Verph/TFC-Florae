@@ -724,33 +724,33 @@ public final class ItemsTFCF
     public static final ItemPottery SLAKED_LIME_POT = Helpers.getNull();
     */
 
-    @GameRegistry.ObjectHolder("items/logwood_chips")
+    @GameRegistry.ObjectHolder("logwood_chips")
     public static final ItemMiscTFCF LOGWOOD_CHIPS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/resin")
+    @GameRegistry.ObjectHolder("resin")
     public static final ItemMiscTFCF RESIN = Helpers.getNull();
     /*
-    @GameRegistry.ObjectHolder("items/twig")
+    @GameRegistry.ObjectHolder("twig")
     public static final ItemMiscTFCF TWIG = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/twig_leaves")
+    @GameRegistry.ObjectHolder("twig_leaves")
     public static final ItemMiscTFCF TWIG_LEAVES = Helpers.getNull();
     */
-    @GameRegistry.ObjectHolder("items/charred_bones")
+    @GameRegistry.ObjectHolder("charred_bones")
     public static final ItemMiscTFCF CHARRED_BONES = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/conch")
+    @GameRegistry.ObjectHolder("conch")
     public static final ItemMiscTFCF CONCH = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/clam")
+    @GameRegistry.ObjectHolder("clam")
     public static final ItemMiscTFCF CLAM = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/live_clam")
+    @GameRegistry.ObjectHolder("live_clam")
     public static final ItemMiscTFCF LIVE_CLAM = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/scallop")
+    @GameRegistry.ObjectHolder("scallop")
     public static final ItemMiscTFCF SCALLOP = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/live_scallop")
+    @GameRegistry.ObjectHolder("live_scallop")
     public static final ItemMiscTFCF LIVE_SCALLOP = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/pearl")
+    @GameRegistry.ObjectHolder("pearl")
     public static final ItemMiscTFCF PEARL = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/black_pearl")
+    @GameRegistry.ObjectHolder("black_pearl")
     public static final ItemMiscTFCF BLACK_PEARL = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/live_starfish")
+    @GameRegistry.ObjectHolder("live_starfish")
     public static final ItemMiscTFCF LIVE_STARFISH = Helpers.getNull();
     
     @GameRegistry.ObjectHolder("crop/product/papyrus_pulp")
@@ -1017,15 +1017,15 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("wood/lumber/arrow_bamboo")
     public static final ItemMisc ARROW_BAMBOO_LUMBER = Helpers.getNull();*/
 
-    @GameRegistry.ObjectHolder("items/firma_cola_mix")
+    @GameRegistry.ObjectHolder("firma_cola_mix")
     public static final ItemMiscTFCF FIRMA_COLA_MIX = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/firma_cola_oils")
+    @GameRegistry.ObjectHolder("firma_cola_oils")
     public static final ItemMiscTFCF FIRMA_COLA_OILS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("items/firma_cola_blend")
+    @GameRegistry.ObjectHolder("firma_cola_blend")
     public static final ItemMiscTFCF FIRMA_COLA_BLEND = Helpers.getNull();
 
     // Kaolinite Clay Ceramics
-    @GameRegistry.ObjectHolder("ceramics/kaolinite/clay")
+    @GameRegistry.ObjectHolder("ceramics/kaolinite/kaolinite_clay")
     public static final ItemClayKaolinite KAOLINITE_CLAY = Helpers.getNull();
     @GameRegistry.ObjectHolder("ceramics/kaolinite/unfired/kaolinite_brick")
     public static final ItemPottery UNFIRED_KAOLINITE_BRICK = Helpers.getNull();
@@ -1061,7 +1061,7 @@ public final class ItemsTFCF
     private static ImmutableList<Item> allSimpleItems;
     private static ImmutableList<Item> allFoodItems;
     private static ImmutableList<ItemGemTFCF> allGemTFCFItems;
-
+    private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks;
     private static ImmutableList<ItemFruitDoor> allFruitDoors;
     
 
@@ -1078,6 +1078,11 @@ public final class ItemsTFCF
     public static ImmutableList<ItemGemTFCF> getAllGemTFCFItems()
     {
         return allGemTFCFItems;
+    }
+
+    public static ImmutableList<BlockSurfaceOreDeposit> getAllSurfaceOreBlocks()
+    {
+        return allSurfaceOreBlocks;
     }
 
     public static ImmutableList<ItemFruitDoor> getAllFruitDoors() 
@@ -1098,6 +1103,7 @@ public final class ItemsTFCF
     {
         IForgeRegistry<Item> r = event.getRegistry();
         ImmutableList.Builder<Item> simpleItems = ImmutableList.builder();
+        ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = new Builder<>();
         ImmutableList.Builder<ItemFruitDoor> fruitDoors = ImmutableList.builder();
 
         // Kaolinite Pottery
@@ -1144,6 +1150,21 @@ public final class ItemsTFCF
                 simpleItems.add(register(r, "mud/fired/mud_brick/" + rock.getRegistryName().getPath().toLowerCase(), new ItemFiredMudBrick(unfiredMudBrick), CT_ROCK_ITEMS));
             }
         }
+
+        /*for (BlockSurfaceOreDeposit name : BlocksTFCF.getAllSurfaceOreBlocks())
+            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));*/
+
+        for (BlockSurfaceRock name : BlocksTFCF.getAllSurfaceRocks())
+            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
+
+        for (BlockSurfaceSeashells name : BlocksTFCF.getAllSurfaceSeashells())
+            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_FLORA));
+
+        for (BlockSurfaceFlint name : BlocksTFCF.getAllSurfaceFlint())
+            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
+
+        for (BlockSurfaceBones name : BlocksTFCF.getAllSurfaceBones())
+            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_FLORA));
 
         // Gems
         {
@@ -1759,18 +1780,6 @@ public final class ItemsTFCF
 
         for (BlockSlabTFCF.Half slab : BlocksTFCF.getAllSlabBlocks())
             simpleItems.add(register(r, slab.getRegistryName().getPath(), new ItemSlabTFCF(slab, slab, slab.doubleSlab), CT_DECORATIONS));
-
-        for (BlockSurfaceRock rock : BlocksTFCF.getAllSurfaceRocks())
-            simpleItems.add(register(r, rock.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(rock), CT_ROCK_BLOCKS));
-
-        for (BlockSurfaceSeashells name : BlocksTFCF.getAllSurfaceSeashells())
-            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_FLORA));
-
-        for (BlockSurfaceFlint name : BlocksTFCF.getAllSurfaceFlint())
-            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
-
-        for (BlockSurfaceBones name : BlocksTFCF.getAllSurfaceBones())
-            simpleItems.add(register(r, name.getRegistryName().getPath().toLowerCase(), new ItemBlockTFC(name), CT_FLORA));
 
         allFruitDoors = fruitDoors.build();
 

@@ -69,7 +69,7 @@ public class BlockSurfaceBones extends Block
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        int chance = rand.nextInt(100);
+        int chance = rand.nextInt(100) + 1;
         return getWeightedDrop(chance, 0, this.chance[0]);
     }
 

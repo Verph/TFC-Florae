@@ -36,7 +36,7 @@ import static tfcflorae.api.stateproperty.StatePropertiesTFCF.*;
 public class BlockBambooLog extends Block
 {
     public static final AxisAlignedBB SMALL_LOG = new AxisAlignedBB(0.25, 0, 0.25, 0.75, 1, 0.75);
-    public static final AxisAlignedBB SMALLER_LOG = new AxisAlignedBB(0.375, 0, 0.375, 0.625, 1, 0.625);
+    //public static final AxisAlignedBB SMALLER_LOG = new AxisAlignedBB(0.375, 0, 0.375, 0.625, 1, 0.625);
 
     private ItemMisc drop;
 
@@ -49,80 +49,7 @@ public class BlockBambooLog extends Block
         Blocks.FIRE.setFireInfo(this, 5, 5);
         setTickRandomly(true);
         setSoundType(SoundType.WOOD);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(GROWN, true).withProperty(CAN_GROW, false).withProperty(CONNECTED, false));
-    }
-
-    private boolean hasGoodConditions(World world, BlockPos pos, IBlockState state)
-    {
-        BlockPos checkPos = pos.offset(EnumFacing.UP, 1);
-        IBlockState checkState = world.getBlockState(checkPos);
-        int leafCount = 0;
-        while (checkState.getBlock() instanceof BlockBambooLog)
-        {
-            if (checkState.getValue(CONNECTED))
-            {
-                for (EnumFacing d : EnumFacing.HORIZONTALS)
-                {
-                    if (world.getBlockState(checkPos.offset(d)).getBlock() instanceof BlockBambooLeaves)
-                    {
-                        leafCount++;
-                        if (world.getBlockState(checkPos.offset(d, 2)).getBlock() instanceof BlockBambooLeaves)
-                        {
-                            leafCount++;
-                            if (world.getBlockState(checkPos.offset(d, 3)).getBlock() instanceof BlockBambooLeaves)
-                            {
-                                leafCount++;
-                            }
-                        }
-                    }
-                }
-            }
-            checkPos = checkPos.offset(EnumFacing.UP, 1);
-            checkState = world.getBlockState(checkPos);
-        }
-        return leafCount > 15;
-    }
-
-
-    @Override
-    public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random)
-    {
-        super.updateTick(worldIn, pos, state, random);
-        if (!worldIn.isRemote)
-        {
-            if (!state.getValue(GROWN))
-            {
-                Month month = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
-                if ((month == Month.MARCH || month == Month.OCTOBER) && state.getValue(CAN_GROW) && hasGoodConditions(worldIn, pos, state))
-                {
-                    worldIn.setBlockState(pos, state.withProperty(GROWN, true).withProperty(CAN_GROW, false));
-                }
-                else if (!state.getValue(CAN_GROW) && hasGoodConditions(worldIn, pos, state) && !(month == Month.MARCH || month == Month.OCTOBER))
-                {
-                    worldIn.setBlockState(pos, state.withProperty(CAN_GROW, true));
-                }
-            }
-        }
-    }
-
-    @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        if (!world.isRemote)
-        {
-            ItemStack held = player.getHeldItem(hand);
-            if (OreDictionaryHelper.doesStackMatchOre(held, "knife"))
-            {
-                if (!state.getValue(CONNECTED) && state.getValue(GROWN))
-                {
-                    world.setBlockState(pos, state.withProperty(GROWN, false));
-                    held.damageItem(1, player);
-                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(ItemsTFCF.CASSIA_CINNAMON_BARK, 1));
-                }
-
-            }
-        }
-        return true;
+        this.setDefaultState(this.blockState.getBaseState().withProperty(GROWN, true).withProperty(CONNECTED, false));
     }
 
     @Override
@@ -189,7 +116,7 @@ public class BlockBambooLog extends Block
     @Nonnull
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, GROWN, CAN_GROW, CONNECTED);
+        return new BlockStateContainer(this, GROWN, CONNECTED);
     }
 
     @Override
@@ -197,19 +124,13 @@ public class BlockBambooLog extends Block
     @Nonnull
     public IBlockState getStateFromMeta(int meta)
     {
-        boolean can_grow = false;
         boolean grown = false;
-        if (meta >= 4)
-        {
-            meta -= 4;
-            can_grow = true;
-        }
         if (meta >= 2)
         {
             meta -= 2;
             grown = true;
         }
-        return this.getDefaultState().withProperty(CONNECTED, meta == 1).withProperty(GROWN, grown).withProperty(CAN_GROW, can_grow);
+        return this.getDefaultState().withProperty(CONNECTED, meta == 1).withProperty(GROWN, grown);
     }
 
     @Override
@@ -217,8 +138,7 @@ public class BlockBambooLog extends Block
     {
         int wet = state.getValue(CONNECTED) ? 1 : 0;
         int grown = state.getValue(GROWN) ? 2 : 0;
-        int can_grow = state.getValue(CAN_GROW) ? 4 : 0;
-        return wet + grown + can_grow;
+        return wet + grown;
     }
 
     @Override
@@ -230,10 +150,6 @@ public class BlockBambooLog extends Block
         {
             return FULL_BLOCK_AABB;
         }
-        if (!state.getValue(GROWN))
-        {
-            return SMALLER_LOG;
-        }
         return SMALL_LOG;
     }
 
@@ -244,10 +160,6 @@ public class BlockBambooLog extends Block
         if (state.getValue(CONNECTED))
         {
             return FULL_BLOCK_AABB;
-        }
-        if (!state.getValue(GROWN))
-        {
-            return SMALLER_LOG;
         }
         return SMALL_LOG;
     }

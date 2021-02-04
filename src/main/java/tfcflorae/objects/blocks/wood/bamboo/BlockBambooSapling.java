@@ -26,7 +26,7 @@ public class BlockBambooSapling extends BlockSaplingTFC
     public BlockBambooSapling(Tree bambooTree, Block leaves, Block log)
     {
         super(bambooTree);
-        setSoundType(SoundType.WOOD);
+        setSoundType(SoundType.PLANT);
         this.leaves = leaves;
         this.log = log;
     }

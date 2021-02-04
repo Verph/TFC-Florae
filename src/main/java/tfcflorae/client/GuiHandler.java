@@ -20,6 +20,7 @@ import net.dries007.tfc.objects.container.*;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
+import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.util.OreDictionaryHelper;
 
 public class GuiHandler implements IGuiHandler
@@ -51,7 +52,7 @@ public class GuiHandler implements IGuiHandler
             case MUD:
                 return new ContainerKnapping(KnappingTypes.MUD, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "mud") ? stack : player.getHeldItemOffhand());
             case KAOLINITE_CLAY:
-                return new ContainerKnapping(KnappingTypes.KAOLINITE_CLAY, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "clayKaolinite") ? stack : player.getHeldItemOffhand());
+                return new ContainerKnapping(KnappingTypes.KAOLINITE_CLAY, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "clay_kaolinite") ? stack : player.getHeldItemOffhand());
             default:
                 return null;
         }
@@ -66,7 +67,10 @@ public class GuiHandler implements IGuiHandler
         switch (type)
         {
             case MUD:
-                return new GuiKnappingTFCF(container, player, KnappingTypes.MUD, MUD_TEXTURE);
+                ItemStack stack = player.getHeldItemMainhand();
+                stack = OreDictionaryHelper.doesStackMatchOre(stack, "mud") ? stack : player.getHeldItemOffhand();
+                ItemMud mud = (ItemMud)(stack.getItem());
+                return new GuiKnappingTFCF(container, player, KnappingTypes.MUD, mud.getForegroundTexture(), mud.getBackgroundTexture());
             case KAOLINITE_CLAY:
                 return new GuiKnappingTFCF(container, player, KnappingTypes.KAOLINITE_CLAY, KAOLINITE_CLAY_TEXTURE);
             default :

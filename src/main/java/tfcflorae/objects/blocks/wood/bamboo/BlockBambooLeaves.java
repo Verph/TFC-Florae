@@ -29,7 +29,7 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     public BlockBambooLeaves(Tree tree)
     {
         super(tree);
-        setSoundType(SoundType.WOOD);
+        setSoundType(SoundType.PLANT);
     }
 
     public void setBambooSapling(BlockBambooSapling sapling)
@@ -59,14 +59,15 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     {
         for (EnumFacing d : EnumFacing.VALUES)
         {
-            for (int i = 1; i < 4; i++)
+            for (int i = 3; i < 4; i++)
             {
                 Block offsetBlock = world.getBlockState(pos.offset(d, i)).getBlock();
                 if (offsetBlock instanceof BlockBambooLog)
                     return;
             }
         }
-        world.destroyBlock(pos, true);
+        world.scheduleUpdate(pos, this, 0);
+        //world.destroyBlock(pos, true);
     }
 
     @Override

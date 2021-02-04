@@ -10,9 +10,10 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-
+import scala.reflect.internal.Trees.Return;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.world.classic.ChunkGenTFC;
+import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
@@ -40,38 +41,36 @@ public class WorldGenSurfaceSeashells implements IWorldGenerator
     {
         if (chunkGenerator instanceof ChunkGenTFC && world.provider.getDimension() == 0)
         {
-            final BlockPos chunkBlockPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
-            final ChunkDataTFC baseChunkData = ChunkDataTFC.get(world, chunkBlockPos);
-            final Biome b = world.getBiome(chunkBlockPos);
-
-            if (chunkBlockPos.getY() < 143 || chunkBlockPos.getY() > 147) return;
-            if ((b instanceof BiomeTFC) || b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN)
-                return;
-
-            /*if (!(b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH))
-                return;*/
-
             int xoff = chunkX * 16 + 8;
             int zoff = chunkZ * 16 + 8;
 
-            for (int i = 0; i < 10 * factor; i++)
+            final BlockPos chunkBlockPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
+            final ChunkDataTFC baseChunkData = ChunkDataTFC.get(world, chunkBlockPos);
+
+            for (int i = 0; i < 15 * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),
                     0,
                     zoff + random.nextInt(16)
                 );
-                generateRock(world, pos.up(world.getTopSolidOrLiquidBlock(pos).getY()));
+                generateRock(world, random, pos.up(world.getTopSolidOrLiquidBlock(pos).getY()));
             }
         }
     }
     
-    private void generateRock(World world, BlockPos pos)
+    private void generateRock(World world, Random rand, BlockPos pos)
     {
-        IBlockState stateDown = world.getBlockState(pos.down());
-        if (world.isAirBlock(pos) && stateDown.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGround(stateDown))
+        if (pos.getY() >= WorldTypeTFC.SEALEVEL && pos.getY() < WorldTypeTFC.SEALEVEL + 2)
         {
-            world.setBlockState(pos, BlocksTFCF.SEASHELLS.getDefaultState());
+            final Biome b = world.getBiome(pos);
+            if (b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH)
+            {
+                if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGround(world.getBlockState(pos.down())))
+                {
+                    world.setBlockState(pos, BlocksTFCF.SEASHELLS.getDefaultState());
+                }
+            }
         }
     }
 }

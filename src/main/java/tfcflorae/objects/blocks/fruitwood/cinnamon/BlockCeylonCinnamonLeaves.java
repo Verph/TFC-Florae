@@ -27,7 +27,7 @@ public class BlockCeylonCinnamonLeaves extends BlockLeavesTFC
     public BlockCeylonCinnamonLeaves()
     {
         super(TreesTFCF.CEYLON_CINNAMON_TREE);
-        setSoundType(SoundType.WOOD);
+        setSoundType(SoundType.PLANT);
     }
 
     @Override

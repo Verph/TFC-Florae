@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import mcp.MethodsReturnNonnullByDefault;
@@ -19,8 +20,11 @@ import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.api.types.RockCategory;
 import net.dries007.tfc.api.util.IRockObject;
 import net.dries007.tfc.objects.items.ItemTFC;
+
 import tfcflorae.client.GuiHandler;
 import tfcflorae.util.OreDictionaryHelper;
+
+import static tfcflorae.TFCFlorae.MODID;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -44,10 +48,14 @@ public class ItemMud extends ItemTFC implements IRockObject
     }
 
     private final Rock rock;
+    private final ResourceLocation textureForegroundLocation;
+    private final ResourceLocation textureBackgroundLocation;
 
     public ItemMud(Rock rock)
     {
         this.rock = rock;
+        this.textureForegroundLocation = new ResourceLocation(MODID, "textures/blocks/stonetypes/mud/" + rock + ".png");
+        this.textureBackgroundLocation = new ResourceLocation(MODID, "textures/gui/knapping/mud/" + rock + ".png");
         if (MAP.put(rock, this) != null) throw new IllegalStateException("There can only be one.");
         setMaxDamage(0);
         OreDictionaryHelper.register(this, "mud");
@@ -115,89 +123,13 @@ public class ItemMud extends ItemTFC implements IRockObject
         }
     }
 
-    /*
-    private static final Map<Rock, ItemMud> MAP = new HashMap<>();
-
-    public static ItemMud get(Rock rock)
+    public ResourceLocation getForegroundTexture()
     {
-        return MAP.get(rock);
+        return textureForegroundLocation;
     }
-
-    public static ItemStack get(Rock rock, int amount)
+    
+    public ResourceLocation getBackgroundTexture()
     {
-        return new ItemStack(MAP.get(rock), amount);
+        return textureBackgroundLocation;
     }
-
-    private final Rock rock;
-
-    public ItemMud(Rock rock)
-    {
-        this.rock = rock;
-        if (MAP.put(rock, this) != null) throw new IllegalStateException("There can only be one.");
-        setMaxDamage(0);
-        OreDictionaryHelper.register(this, "mud");
-        OreDictionaryHelper.register(this, "mud", rock);
-        OreDictionaryHelper.register(this, "mud", rock.getRockCategory());
-
-        if (rock.isFluxStone())
-        {
-            OreDictionaryHelper.register(this, "mud", "flux");
-        }
-    }
-
-    @Override
-    @Nonnull
-    public Rock getRock(ItemStack stack)
-    {
-        return rock;
-    }
-
-    @Override
-    @Nonnull
-    public RockCategory getRockCategory(ItemStack stack)
-    {
-        return rock.getRockCategory();
-    }
-
-    @Nonnull
-    @Override
-    public Size getSize(ItemStack stack)
-    {
-        return Size.SMALL; // Stored everywhere
-    }
-
-    @Nonnull
-    @Override
-    public Weight getWeight(ItemStack stack)
-    {
-        return Weight.VERY_LIGHT; // Stacksize = 64
-    }
-
-    @Override
-    @Nonnull
-    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
-    {
-        ItemStack stack = player.getHeldItem(hand);
-        if (!world.isRemote && !player.isSneaking() && stack.getCount() > 0)
-        {
-            GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.MUD);
-        }
-        return new ActionResult<>(EnumActionResult.SUCCESS, stack);
-    }
-
-    @Nonnull
-    public void onRightClick(PlayerInteractEvent.RightClickItem event)
-    {
-        EnumHand hand = event.getHand();
-        if(OreDictionaryHelper.doesStackMatchOre(event.getItemStack(), "mud") && hand == EnumHand.MAIN_HAND)
-        {
-            EntityPlayer player = event.getEntityPlayer();
-            World world = event.getWorld();
-            if (!world.isRemote && !player.isSneaking())
-            {
-                GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.MUD);
-            }
-        }
-    }
-    */
 }

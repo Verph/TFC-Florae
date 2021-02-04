@@ -4,10 +4,10 @@
   "defaults": {
     "model": "tfcflorae:wood/fence/fence_post",
     "textures": {
-      "top": "tfc:blocks/wood/fruit_tree/top/arrow_bamboo",
-      "log": "tfc:blocks/wood/fruit_tree/log/arrow_bamboo",
-      "planks": "tfc:blocks/wood/fruit_tree/planks/arrow_bamboo",
-      "particle": "tfc:blocks/wood/fruit_tree/log/arrow_bamboo"
+      "top": "tfc:blocks/wood/top/arrow_bamboo",
+      "log": "tfc:blocks/wood/log/arrow_bamboo",
+      "planks": "tfc:blocks/wood/planks/arrow_bamboo",
+      "particle": "tfc:blocks/wood/log/arrow_bamboo"
     }
   },
   "variants": {
