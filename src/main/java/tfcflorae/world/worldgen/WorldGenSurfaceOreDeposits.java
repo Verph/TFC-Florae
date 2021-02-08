@@ -22,6 +22,7 @@ import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 import net.dries007.tfc.world.classic.worldgen.WorldGenOreVeins;
 import net.dries007.tfc.world.classic.worldgen.vein.Vein;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlockSurfaceOreDeposit;
 import tfcflorae.objects.blocks.BlocksTFCF;
 
@@ -33,7 +34,7 @@ public class WorldGenSurfaceOreDeposits implements IWorldGenerator
     public WorldGenSurfaceOreDeposits(boolean generateOres)
     {
         this.generateOres = generateOres;
-        factor = 10;
+        factor = 1;
     }
 
     public void setFactor(double factor)
@@ -95,7 +96,7 @@ public class WorldGenSurfaceOreDeposits implements IWorldGenerator
                 }
             }
 
-            for (int i = 0; i < 10 * factor; i++)
+            for (int i = 0; i < 18 * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),
@@ -110,11 +111,11 @@ public class WorldGenSurfaceOreDeposits implements IWorldGenerator
 
     private void generateRock(World world, BlockPos pos, @Nullable Vein vein, Rock rock)
     {
-        //if (vein != null && vein.getType() != null)
+        if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down())) || BlocksTFC.isRawStone(world.getBlockState(pos.down()))))
         {
-            if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down())) || BlocksTFC.isRawStone(world.getBlockState(pos.down()))))
+            if(vein != null && rock != null)
             {
-                world.setBlockState(pos, BlockSurfaceOreDeposit.get(vein.getType().getOre(), rock).getDefaultState());
+                world.setBlockState(pos, BlockSurfaceOreDeposit.get(vein.getType().getOre(), rock).getDefaultState(), 1);
             }
         }
     }

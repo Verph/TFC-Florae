@@ -28,6 +28,7 @@ public class BlockCassiaCinnamonLeaves extends BlockLeavesTFC
     {
         super(TreesTFCF.CASSIA_CINNAMON_TREE);
         setSoundType(SoundType.PLANT);
+        setDefaultState(blockState.getBaseState().withProperty(DECAYABLE, false));
     }
 
     @Override

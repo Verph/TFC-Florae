@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": 
+	{
+      "type": "forge:ore_dict",
+      "ore": "stringCotton"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:crop/bales/cotton/cotton_yarn_bale",
+    "count": 1
+  }
+}

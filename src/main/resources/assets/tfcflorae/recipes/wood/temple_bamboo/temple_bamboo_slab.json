@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/temple_bamboo"
+      "item": "tfcflorae:wood/planks/temple_bamboo"
     }
   },
   "result": {
-    "item": "tfc:slab/wood/temple_bamboo",
+    "item": "tfcflorae:wood/slab/temple_bamboo",
     "data": 0,
     "count": 6
   }

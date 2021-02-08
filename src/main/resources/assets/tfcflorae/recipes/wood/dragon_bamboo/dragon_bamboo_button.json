@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/dragon_bamboo"
+      "item": "tfcflorae:wood/planks/dragon_bamboo"
     }
   ],
   "result": {
-    "item": "tfc:wood/button/dragon_bamboo",
+    "item": "tfcflorae:wood/button/dragon_bamboo",
     "count": 1
   }
 }

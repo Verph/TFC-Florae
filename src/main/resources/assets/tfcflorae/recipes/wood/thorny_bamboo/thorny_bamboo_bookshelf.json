@@ -7,14 +7,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/thorny_bamboo"
+      "item": "tfcflorae:wood/planks/thorny_bamboo"
     },
     "B": {
       "item": "minecraft:book"
     }
   },
   "result": {
-    "item": "tfc:wood/bookshelf/thorny_bamboo",
+    "item": "tfcflorae:wood/bookshelf/thorny_bamboo",
     "count": 1
   }
 }

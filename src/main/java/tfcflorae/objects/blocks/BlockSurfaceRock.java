@@ -12,6 +12,7 @@ import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.entity.Entity;
@@ -66,7 +67,7 @@ public class BlockSurfaceRock extends Block implements IRockObject
         this.rock = rock;
         if (MAP.put(rock, this) != null) throw new IllegalStateException("There can only be one.");
         setSoundType(SoundType.STONE);
-        setHardness(0.5f);
+        setHardness(0.5f).setResistance(5.0F);;
         OreDictionaryHelper.register(this, "rock");
         OreDictionaryHelper.register(this, "rock", rock);
         OreDictionaryHelper.register(this, "rock", rock.getRockCategory());
@@ -116,6 +117,20 @@ public class BlockSurfaceRock extends Block implements IRockObject
     public boolean isNormalCube(IBlockState state)
     {
         return false;
+    }
+
+    @Override
+    public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return false;
+    }
+
+    @Override
+    @Nonnull
+    @SuppressWarnings("deprecation")
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return BlockFaceShape.UNDEFINED;
     }
 
     @Override

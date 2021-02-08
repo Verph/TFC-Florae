@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/temple_bamboo"
+      "item": "tfcflorae:wood/lumber/temple_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/tool_rack/temple_bamboo",
+    "item": "tfcflorae:wood/tool_rack/temple_bamboo",
     "count": 1
   }
 }

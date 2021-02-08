@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/blue_bamboo"
+      "item": "tfcflorae:wood/planks/blue_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/chest/blue_bamboo",
+    "item": "tfcflorae:wood/chest/blue_bamboo",
     "count": 1
   }
 }

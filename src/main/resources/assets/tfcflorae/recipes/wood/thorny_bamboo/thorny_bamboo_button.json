@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/thorny_bamboo"
+      "item": "tfcflorae:wood/planks/thorny_bamboo"
     }
   ],
   "result": {
-    "item": "tfc:wood/button/thorny_bamboo",
+    "item": "tfcflorae:wood/button/thorny_bamboo",
     "count": 1
   }
 }

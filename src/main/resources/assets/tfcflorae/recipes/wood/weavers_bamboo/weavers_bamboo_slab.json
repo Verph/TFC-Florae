@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/weavers_bamboo"
+      "item": "tfcflorae:wood/planks/weavers_bamboo"
     }
   },
   "result": {
-    "item": "tfc:slab/wood/weavers_bamboo",
+    "item": "tfcflorae:slab/wood/weavers_bamboo",
     "data": 0,
     "count": 6
   }

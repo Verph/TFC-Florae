@@ -283,11 +283,13 @@ public final class TreesTFCF
     }
 
     // "Fruit" Trees
-    public static final ITreeGenerator GEN_CASSIA_CINNAMON = new TreeGenVariants(true, 15);
-    public static final ITreeGenerator GEN_CEYLON_CINNAMON = new TreeGenVariants(true, 15);
+    //public static final ITreeGenerator GEN_CASSIA_CINNAMON = new TreeGenVariants(true, 15);
+    //public static final ITreeGenerator GEN_CEYLON_CINNAMON = new TreeGenVariants(true, 15);
+    public static final ITreeGenerator GEN_CASSIA_CINNAMON = new TreeGenNormal(2, 2);
+    public static final ITreeGenerator GEN_CEYLON_CINNAMON = new TreeGenNormal(2, 2);
 
-    public static final Tree CASSIA_CINNAMON_TREE = new Tree(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cassia_cinnamon"), GEN_CASSIA_CINNAMON, 28, 35, 280, 400, 0, 10, 0, 4, 15, 6, false, null, false, 15, 710f, 1000);
-    public static final Tree CEYLON_CINNAMON_TREE = new Tree(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ceylon_cinnamon"), GEN_CEYLON_CINNAMON, 28, 35, 280, 400, 0, 10, 0, 4, 15, 6, false, null, false, 15, 710f, 1000);
+    public static final Tree CASSIA_CINNAMON_TREE = new Tree(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cassia_cinnamon"), GEN_CASSIA_CINNAMON, 20, 35, 250, 400, 0.1f, 1, 2, 4, 15, 6, false, null, false, 15, 710f, 1000);
+    public static final Tree CEYLON_CINNAMON_TREE = new Tree(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ceylon_cinnamon"), GEN_CEYLON_CINNAMON, 20, 35, 250, 400, 0.1f, 1, 2, 4, 15, 6, false, null, false, 15, 710f, 1000);
 
 
     // Bamboo "Tree" Variants

@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/red_bamboo"
+      "item": "tfcflorae:wood/planks/red_bamboo"
     }
   },
   "result": {
-    "item": "tfc:slab/wood/red_bamboo",
+    "item": "tfcflorae:wood/slab/red_bamboo",
     "data": 0,
     "count": 6
   }

@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/narrow_leaf_bamboo"
+      "item": "tfcflorae:wood/planks/narrow_leaf_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/chest/narrow_leaf_bamboo",
+    "item": "tfcflorae:wood/chest/narrow_leaf_bamboo",
     "count": 1
   }
 }

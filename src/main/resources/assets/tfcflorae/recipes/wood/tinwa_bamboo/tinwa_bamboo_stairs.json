@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/tinwa_bamboo"
+      "item": "tfcflorae:wood/planks/tinwa_bamboo"
     }
   },
   "result": {
-    "item": "tfc:stairs/wood/tinwa_bamboo",
+    "item": "tfcflorae:wood/stairs/tinwa_bamboo",
     "count": 8
   }
 }

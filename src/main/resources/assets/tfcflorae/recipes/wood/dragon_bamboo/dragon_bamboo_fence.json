@@ -6,14 +6,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/dragon_bamboo"
+      "item": "tfcflorae:wood/planks/dragon_bamboo"
     },
     "B": {
-      "item": "tfc:wood/lumber/dragon_bamboo"
+      "item": "tfcflorae:wood/lumber/dragon_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/fence/dragon_bamboo",
+    "item": "tfcflorae:wood/fence/dragon_bamboo",
     "count": 8
   }
 }

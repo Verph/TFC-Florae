@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/arrow_bamboo"
+      "item": "tfcflorae:wood/lumber/arrow_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/pressure_plate/arrow_bamboo",
+    "item": "tfcflorae:wood/pressure_plate/arrow_bamboo",
     "count": 1
   }
 }

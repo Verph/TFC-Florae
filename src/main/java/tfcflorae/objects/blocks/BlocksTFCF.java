@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockChest;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -74,6 +75,7 @@ import tfcflorae.objects.blocks.plants.BlockPlantTFCF;
 import tfcflorae.objects.fluids.FluidsTFCF;
 import tfcflorae.objects.items.ItemBlockRot;
 import tfcflorae.objects.items.ItemFoodTFCF;
+import tfcflorae.objects.te.TEFruitChest;
 import tfcflorae.objects.te.TELargeKaoliniteVessel;
 import tfcflorae.objects.te.TEStemCrop;
 import tfcflorae.types.BlockTypesTFCF;
@@ -119,6 +121,34 @@ public final class BlocksTFCF
     public static final BlockCeylonCinnamonLeaves CEYLON_CINNAMON_LEAVES = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/fruit_tree/sapling/ceylon_cinnamon")
     public static final BlockCeylonCinnamonSapling CEYLON_CINNAMON_SAPLING = Helpers.getNull();
+
+    // Bales
+    @GameRegistry.ObjectHolder("crop/bales/cotton/cotton_bale")
+    public static final BlockBale COTTON_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/cotton/cotton_yarn_bale")
+    public static final BlockBale COTTON_YARN_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/flax/flax_bale")
+    public static final BlockBale FLAX_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/flax/flax_fiber_bale")
+    public static final BlockBale FLAX_FIBER_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/hemp/hemp_bale")
+    public static final BlockBale HEMP_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/hemp/hemp_fiber_bale")
+    public static final BlockBale HEMP_FIBER_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/jute/jute_bale")
+    public static final BlockBale JUTE_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/jute/jute_fiber_bale")
+    public static final BlockBale JUTE_FIBER_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/linen/linen_bale")
+    public static final BlockBale LINEN_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/linen/linen_string_bale")
+    public static final BlockBale LINEN_STRING_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/papyrus/papyrus_fiber_bale")
+    public static final BlockBale PAPYRUS_FIBER_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/silk/silk_string_bale")
+    public static final BlockBale SILK_STRING_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/sisal/sisal_fiber_bale")
+    public static final BlockBale SISAL_FIBER_BALE = Helpers.getNull();
 
     // Bamboo Blocks
     @GameRegistry.ObjectHolder("wood/log/arrow_bamboo")
@@ -194,6 +224,7 @@ public final class BlocksTFCF
     private static ImmutableList<BlockFruitToolRack> allFruitToolRack = Helpers.getNull();
     private static ImmutableList<BlockFruitTrapDoor> allFruitTrapDoors = Helpers.getNull();
     private static ImmutableList<BlockFruitWorkbench> allFruitWorkbench = Helpers.getNull();
+    private static ImmutableList<BlockFruitChestTFCF> allFruitChestBlocks = Helpers.getNull();
     private static ImmutableList<BlockFluidBase> allFluidBlocks = Helpers.getNull();
     private static ImmutableList<BlockCropTFC> allCropBlocksTFC = Helpers.getNull();
     private static ImmutableList<BlockCropDead> allDeadCrops = Helpers.getNull();
@@ -217,7 +248,7 @@ public final class BlocksTFCF
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
-    private static Tree[] bambooTrees = {TreesTFCF.ARROW_BAMBOO, TreesTFCF.BLACK_BAMBOO, TreesTFCF.BLUE_BAMBOO, TreesTFCF.DRAGON_BAMBOO, TreesTFCF.GOLDEN_BAMBOO, TreesTFCF.NARROW_LEAF_BAMBOO, TreesTFCF.RED_BAMBOO, TreesTFCF.TEMPLE_BAMBOO, TreesTFCF.THORNY_BAMBOO, TreesTFCF.TIMBER_BAMBOO, TreesTFCF.TINWA_BAMBOO, TreesTFCF.WEAVERS_BAMBOO};
+    public static Tree[] bambooTrees = {TreesTFCF.ARROW_BAMBOO, TreesTFCF.BLACK_BAMBOO, TreesTFCF.BLUE_BAMBOO, TreesTFCF.DRAGON_BAMBOO, TreesTFCF.GOLDEN_BAMBOO, TreesTFCF.NARROW_LEAF_BAMBOO, TreesTFCF.RED_BAMBOO, TreesTFCF.TEMPLE_BAMBOO, TreesTFCF.THORNY_BAMBOO, TreesTFCF.TIMBER_BAMBOO, TreesTFCF.TINWA_BAMBOO, TreesTFCF.WEAVERS_BAMBOO};
 
     public static ImmutableList<ItemBlock> getAllNormalItemBlocks()
     {
@@ -332,6 +363,11 @@ public final class BlocksTFCF
     public static ImmutableList<BlockFruitWorkbench> getAllFruitWorkbench()
     {
         return allFruitWorkbench;
+    }
+
+    public static ImmutableList<BlockFruitChestTFCF> getAllFruitChestBlocks()
+    {
+        return allFruitChestBlocks;
     }
 
     public static ImmutableList<BlockCropTFC> getAllCropBlocksTFC()
@@ -467,6 +503,7 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockFruitToolRack> fruitToolRack = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTrapDoor> fruitTrapdoors = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitWorkbench> fruitWorkbench = ImmutableList.builder();
+        ImmutableList.Builder<BlockFruitChestTFCF> fruitChests = ImmutableList.builder();
         ImmutableList.Builder<BlockCropTFC> cropBlocksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockCropDead> deadCrops = ImmutableList.builder();
         ImmutableList.Builder<BlockStemCrop> cropBlocks = ImmutableList.builder();
@@ -484,6 +521,20 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
+
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/cotton/cotton_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/cotton/cotton_yarn_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/flax/flax_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/flax/flax_fiber_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/hemp/hemp_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/hemp/hemp_fiber_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/jute/jute_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/jute/jute_fiber_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/linen/linen_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/linen/linen_string_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/papyrus/papyrus_fiber_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/silk/silk_string_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/sisal/sisal_fiber_bale", new BlockBale(), CT_DECORATIONS)));
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_clay_block", new BlockKaoliniteClay(), CT_ROCK_BLOCKS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
@@ -548,7 +599,7 @@ public final class BlocksTFCF
         {
             for (Ore ore : TFCRegistries.ORES.getValuesCollection())
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                surfaceOreBlocks.add(register(r, ("surface/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
+                    surfaceOreBlocks.add(register(r, ("surface/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
 
             allSurfaceOreBlocks = surfaceOreBlocks.build();
             allSurfaceOreBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
@@ -621,6 +672,8 @@ public final class BlocksTFCF
             fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
             fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
             fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
         }
 
         for (IFruitTree fruitTree : FruitTree.values())
@@ -643,6 +696,8 @@ public final class BlocksTFCF
             fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
             fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
             fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
         }
 
         // Cassia Cinnamon
@@ -663,6 +718,8 @@ public final class BlocksTFCF
         register(r, "wood/fruit_tree/double_slab/cassia_cinnamon", new BlockSlabTFC.Double(TreesTFCF.CASSIA_CINNAMON_TREE));
         blockSlabTFC.add(register(r, "wood/fruit_tree/slab/cassia_cinnamon", new BlockSlabTFC.Half(TreesTFCF.CASSIA_CINNAMON_TREE), CT_DECORATIONS));
         blockStairTFC.add(register(r, "wood/fruit_tree/stairs/cassia_cinnamon", new BlockStairsTFC(TreesTFCF.CASSIA_CINNAMON_TREE), CT_DECORATIONS));
+        fruitChests.add(register(r, "wood/fruit_tree/chest/cassia_cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, TreesTFCF.CASSIA_CINNAMON_TREE), CT_DECORATIONS));
+        fruitChests.add(register(r, "wood/fruit_tree/chest_trap/cassia_cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, TreesTFCF.CASSIA_CINNAMON_TREE), CT_DECORATIONS));
 
         // Ceylon Cinnamon
         fruitBarrel.add(register(r, "wood/fruit_tree/barrel/ceylon_cinnamon", new BlockFruitBarrel(), CT_DECORATIONS));
@@ -682,6 +739,8 @@ public final class BlocksTFCF
         register(r, "wood/fruit_tree/double_slab/ceylon_cinnamon", new BlockSlabTFC.Double(TreesTFCF.CEYLON_CINNAMON_TREE));
         blockSlabTFC.add(register(r, "wood/fruit_tree/slab/ceylon_cinnamon", new BlockSlabTFC.Half(TreesTFCF.CEYLON_CINNAMON_TREE), CT_DECORATIONS));
         blockStairTFC.add(register(r, "wood/fruit_tree/stairs/ceylon_cinnamon", new BlockStairsTFC(TreesTFCF.CEYLON_CINNAMON_TREE), CT_DECORATIONS));
+        fruitChests.add(register(r, "wood/fruit_tree/chest/ceylon_cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, TreesTFCF.CEYLON_CINNAMON_TREE), CT_DECORATIONS));
+        fruitChests.add(register(r, "wood/fruit_tree/chest_trap/ceylon_cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, TreesTFCF.CEYLON_CINNAMON_TREE), CT_DECORATIONS));
 
         inventoryItemBlocks.add(register(r, "wood/fruit_tree/log/cassia_cinnamon", new BlockCassiaCinnamonLog(), CT_WOOD));
         inventoryItemBlocks.add(register(r, "wood/fruit_tree/leaves/cassia_cinnamon", new BlockCassiaCinnamonLeaves(), CT_WOOD));
@@ -712,6 +771,8 @@ public final class BlocksTFCF
             blockSlabTFC.add(register(r, "wood/slab/" + bamboo[i], new BlockSlabTFC.Half(bambooTrees[i]), CT_DECORATIONS));
             blockStairTFC.add(register(r, "wood/stairs/" + bamboo[i], new BlockStairsTFC(bambooTrees[i]), CT_DECORATIONS));
 
+            fruitChests.add(register(r, "wood/chest/" + bamboo[i], new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, bambooTrees[i]), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/chest_trap/" + bamboo[i], new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, bambooTrees[i]), CT_DECORATIONS));
 
             Block bambooBlock = register(r, "wood/log/" + bamboo[i], new BlockBambooLog(), CT_WOOD);
             BlockBambooLeaves leaves = new BlockBambooLeaves(bambooTrees[i]);
@@ -859,11 +920,17 @@ public final class BlocksTFCF
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
 
+        allFruitChestBlocks = fruitChests.build();
+        allFruitChestBlocks.forEach((x) -> {
+            normalItemBlocks.add(new ItemBlockTFC(x));
+        });
+
         allNormalItemBlocks = normalItemBlocks.build();
 
         FluidsTFC.getWrapper(FluidsTFCF.COCONUT_MILK.get());
         
         register(TELargeKaoliniteVessel.class, "large_kaolinite_vessel");
+        register(TEFruitChest.class, "fruit_chest");
     }
 
     public static boolean isRawStone(IBlockState current)

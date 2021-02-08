@@ -6,14 +6,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/arrow_bamboo"
+      "item": "tfcflorae:wood/planks/arrow_bamboo"
     },
     "B": {
-      "item": "tfc:wood/lumber/arrow_bamboo"
+      "item": "tfcflorae:wood/lumber/arrow_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/fence_gate/arrow_bamboo",
+    "item": "tfcflorae:wood/fence_gate/arrow_bamboo",
     "count": 2
   }
 }

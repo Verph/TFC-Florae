@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/thorny_bamboo"
+      "item": "tfcflorae:wood/planks/thorny_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/chest/thorny_bamboo",
+    "item": "tfcflorae:wood/chest/thorny_bamboo",
     "count": 1
   }
 }

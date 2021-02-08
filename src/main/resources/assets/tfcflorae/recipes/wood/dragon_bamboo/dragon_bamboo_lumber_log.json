@@ -3,7 +3,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/log/dragon_bamboo"
+      "item": "tfcflorae:wood/log/dragon_bamboo"
     },
     {
       "type": "forge:ore_dict",
@@ -11,7 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfc:wood/lumber/dragon_bamboo",
+    "item": "tfcflorae:wood/lumber/dragon_bamboo",
     "count": 8
   }
 }

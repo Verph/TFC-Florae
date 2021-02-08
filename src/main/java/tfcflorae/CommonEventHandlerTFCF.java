@@ -232,4 +232,14 @@ public final class CommonEventHandlerTFCF
             }
         }
     }
+
+    @SubscribeEvent
+    public static void onContainerOpen(PlayerContainerEvent.Open event)
+    {
+        if (event.getEntityPlayer() instanceof EntityPlayerMP)
+        {
+            // Capability Sync Handler
+            CapabilityContainerListener.addTo(event.getContainer(), (EntityPlayerMP) event.getEntityPlayer());
+        }
+    }
 }

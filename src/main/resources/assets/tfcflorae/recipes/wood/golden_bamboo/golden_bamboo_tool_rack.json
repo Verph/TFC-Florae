@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/golden_bamboo"
+      "item": "tfcflorae:wood/lumber/golden_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/tool_rack/golden_bamboo",
+    "item": "tfcflorae:wood/tool_rack/golden_bamboo",
     "count": 1
   }
 }

@@ -30,6 +30,7 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     {
         super(tree);
         setSoundType(SoundType.PLANT);
+        setDefaultState(blockState.getBaseState().withProperty(DECAYABLE, false));
     }
 
     public void setBambooSapling(BlockBambooSapling sapling)

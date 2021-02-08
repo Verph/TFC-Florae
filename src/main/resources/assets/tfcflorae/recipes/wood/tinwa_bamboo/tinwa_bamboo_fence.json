@@ -6,14 +6,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/tinwa_bamboo"
+      "item": "tfcflorae:wood/planks/tinwa_bamboo"
     },
     "B": {
-      "item": "tfc:wood/lumber/tinwa_bamboo"
+      "item": "tfcflorae:wood/lumber/tinwa_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/fence/tinwa_bamboo",
+    "item": "tfcflorae:wood/fence/tinwa_bamboo",
     "count": 8
   }
 }

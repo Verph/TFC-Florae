@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/blue_bamboo"
+      "item": "tfcflorae:wood/planks/blue_bamboo"
     }
   ],
   "result": {
-    "item": "tfc:wood/button/blue_bamboo",
+    "item": "tfcflorae:wood/button/blue_bamboo",
     "count": 1
   }
 }

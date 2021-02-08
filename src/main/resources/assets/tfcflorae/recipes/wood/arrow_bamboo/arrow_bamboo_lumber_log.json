@@ -3,7 +3,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/log/arrow_bamboo"
+      "item": "tfcflorae:wood/log/arrow_bamboo"
     },
     {
       "type": "forge:ore_dict",
@@ -11,7 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfc:wood/lumber/arrow_bamboo",
+    "item": "tfcflorae:wood/lumber/arrow_bamboo",
     "count": 8
   }
 }

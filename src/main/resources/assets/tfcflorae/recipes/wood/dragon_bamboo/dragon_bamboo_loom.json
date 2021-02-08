@@ -7,14 +7,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/dragon_bamboo"
+      "item": "tfcflorae:wood/lumber/dragon_bamboo"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tfc:wood/loom/dragon_bamboo",
+    "item": "tfcflorae:wood/loom/dragon_bamboo",
     "count": 1
   }
 }

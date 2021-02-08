@@ -9,7 +9,7 @@
     }
   },
   "variants": {
-    "inventory": {
+    "normal": {
       "model": "wall_inventory"
     },
     "north": {

@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import tfcflorae.world.worldgen.WorldGenSoilPitsTFCF;
 import tfcflorae.world.worldgen.WorldGenSurfaceBones;
 import tfcflorae.world.worldgen.WorldGenSurfaceFlint;
+import tfcflorae.world.worldgen.WorldGenSurfaceOreDeposits;
 import tfcflorae.world.worldgen.WorldGenSurfaceRocks;
 import tfcflorae.world.worldgen.WorldGenSurfaceSeashells;
 import tfcflorae.world.worldgen.WorldGeneratorTFCF;
@@ -27,6 +28,7 @@ public class CommonProxy
         GameRegistry.registerWorldGenerator(new WorldGenSurfaceSeashells(), 0);
         GameRegistry.registerWorldGenerator(new WorldGenSurfaceFlint(), 0);
         GameRegistry.registerWorldGenerator(new WorldGenSurfaceBones(), 0);
+        GameRegistry.registerWorldGenerator(new WorldGenSurfaceOreDeposits(true), 0);
     }
 
     public void init(FMLInitializationEvent e) 

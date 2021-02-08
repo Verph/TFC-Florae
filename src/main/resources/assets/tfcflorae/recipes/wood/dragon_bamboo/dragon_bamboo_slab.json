@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/dragon_bamboo"
+      "item": "tfcflorae:wood/planks/dragon_bamboo"
     }
   },
   "result": {
-    "item": "tfc:slab/wood/dragon_bamboo",
+    "item": "tfcflorae:wood/slab/dragon_bamboo",
     "data": 0,
     "count": 6
   }

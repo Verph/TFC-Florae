@@ -6,11 +6,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/narrow_leaf_bamboo"
+      "item": "tfcflorae:wood/planks/narrow_leaf_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/trapdoor/narrow_leaf_bamboo",
+    "item": "tfcflorae:wood/trapdoor/narrow_leaf_bamboo",
     "count": 4
   }
 }

@@ -54,8 +54,8 @@ public class ItemMud extends ItemTFC implements IRockObject
     public ItemMud(Rock rock)
     {
         this.rock = rock;
-        this.textureForegroundLocation = new ResourceLocation(MODID, "textures/blocks/stonetypes/mud/" + rock + ".png");
-        this.textureBackgroundLocation = new ResourceLocation(MODID, "textures/gui/knapping/mud/" + rock + ".png");
+        this.textureForegroundLocation = new ResourceLocation(MODID, "textures/gui/knapping/mud_button/" + rock + ".png");
+        this.textureBackgroundLocation = new ResourceLocation(MODID, "textures/gui/knapping/mud_button_disabled/" + rock + ".png");
         if (MAP.put(rock, this) != null) throw new IllegalStateException("There can only be one.");
         setMaxDamage(0);
         OreDictionaryHelper.register(this, "mud");

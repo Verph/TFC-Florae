@@ -7,14 +7,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/thorny_bamboo"
+      "item": "tfcflorae:wood/lumber/thorny_bamboo"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tfc:wood/loom/thorny_bamboo",
+    "item": "tfcflorae:wood/loom/thorny_bamboo",
     "count": 1
   }
 }

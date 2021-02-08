@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/golden_bamboo"
+      "item": "tfcflorae:wood/planks/golden_bamboo"
     }
   ],
   "result": {
-    "item": "tfc:wood/button/golden_bamboo",
+    "item": "tfcflorae:wood/button/golden_bamboo",
     "count": 1
   }
 }

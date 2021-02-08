@@ -25,6 +25,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -50,6 +51,8 @@ import tfcflorae.objects.blocks.wood.BlockFenceGateLog;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.ceramics.ItemKaoliniteMold;
+import tfcflorae.objects.te.TEFruitChest;
+import tfcflorae.client.render.TESRFruitTestTFCF;
 import tfcflorae.client.render.VanillaStemStateMapper;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.TFCFlorae;
@@ -142,6 +145,9 @@ public class ClientRegisterEventsTFCF
             ModelLoader.setCustomStateMapper(block.doubleSlab, new StateMap.Builder().ignore(BlockFruitSlab.VARIANT).build());
         }
 
+        for (Block block : BlocksTFCF.getAllFruitChestBlocks())
+            ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockChest.FACING).build());
+
         for (BlockSlabTFC.Half block : BlocksTFCF.getAllSlabBlocksTFC())
         {
             ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockSlabTFC.VARIANT).build());
@@ -215,6 +221,9 @@ public class ClientRegisterEventsTFCF
                 }
             });
         }
+
+        //TESRs
+        ClientRegistry.bindTileEntitySpecialRenderer(TEFruitChest.class, new TESRFruitTestTFCF());
     }
 
     @SuppressWarnings("deprecation")

@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/golden_bamboo"
+      "item": "tfcflorae:wood/planks/golden_bamboo"
     }
   },
   "result": {
-    "item": "tfc:slab/wood/golden_bamboo",
+    "item": "tfcflorae:wood/slab/golden_bamboo",
     "data": 0,
     "count": 6
   }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/pole/narrow_leaf_bamboo"
+    },
+    "B": {
+      "item": "tfcflorae:wood/lumber/narrow_leaf_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate_log/narrow_leaf_bamboo",
+    "count": 2
+  }
+}

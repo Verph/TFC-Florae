@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/tinwa_bamboo"
+      "item": "tfcflorae:wood/lumber/tinwa_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/tool_rack/tinwa_bamboo",
+    "item": "tfcflorae:wood/tool_rack/tinwa_bamboo",
     "count": 1
   }
 }

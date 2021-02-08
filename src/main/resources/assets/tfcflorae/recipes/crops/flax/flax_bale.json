@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": 
+	{
+      "type": "forge:ore_dict",
+      "ore": "flax"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:crop/bales/flax/flax_bale",
+    "count": 1
+  }
+}

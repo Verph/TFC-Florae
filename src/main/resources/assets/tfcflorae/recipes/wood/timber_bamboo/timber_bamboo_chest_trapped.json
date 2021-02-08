@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/chest/timber_bamboo"
+      "item": "tfcflorae:wood/chest/timber_bamboo"
     },
     {
       "item": "minecraft:tripwire_hook"
     }
   ],
   "result": {
-    "item": "tfc:wood/chest_trap/timber_bamboo",
+    "item": "tfcflorae:wood/chest_trap/timber_bamboo",
     "count": 1
   }
 }

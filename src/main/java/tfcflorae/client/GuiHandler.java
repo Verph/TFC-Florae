@@ -11,6 +11,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.network.IGuiHandler;
@@ -20,6 +21,7 @@ import net.dries007.tfc.objects.container.*;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
+import tfcflorae.objects.blocks.fruitwood.BlockFruitChestTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.util.OreDictionaryHelper;
 
@@ -53,6 +55,14 @@ public class GuiHandler implements IGuiHandler
                 return new ContainerKnapping(KnappingTypes.MUD, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "mud") ? stack : player.getHeldItemOffhand());
             case KAOLINITE_CLAY:
                 return new ContainerKnapping(KnappingTypes.KAOLINITE_CLAY, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "clay_kaolinite") ? stack : player.getHeldItemOffhand());
+            case CHEST:
+                if (world.getBlockState(pos).getBlock() instanceof BlockFruitChestTFCF)
+                {
+                    ILockableContainer chestContainer = ((BlockFruitChestTFCF) world.getBlockState(pos).getBlock()).getLockableContainer(world, pos);
+                    //noinspection ConstantConditions
+                    return new ContainerChestTFC(player.inventory, chestContainer, player);
+                }
+                return null;
             default:
                 return null;
         }
@@ -73,6 +83,12 @@ public class GuiHandler implements IGuiHandler
                 return new GuiKnappingTFCF(container, player, KnappingTypes.MUD, mud.getForegroundTexture(), mud.getBackgroundTexture());
             case KAOLINITE_CLAY:
                 return new GuiKnappingTFCF(container, player, KnappingTypes.KAOLINITE_CLAY, KAOLINITE_CLAY_TEXTURE);
+            case CHEST:
+                if (container instanceof ContainerChestTFC)
+                {
+                    return new GuiChestTFC((ContainerChestTFC) container, player.inventory);
+                }
+                return null;
             default :
                 return null;
         }
@@ -82,6 +98,7 @@ public class GuiHandler implements IGuiHandler
     {
         MUD,
         KAOLINITE_CLAY,
+        CHEST,
         NULL;
 
         private static final Type[] values = values();

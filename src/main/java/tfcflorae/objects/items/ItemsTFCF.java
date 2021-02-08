@@ -469,7 +469,7 @@ public final class ItemsTFCF
 
     // Miscellaneous Food Stuff
     @GameRegistry.ObjectHolder("food/caramel")
-    public static final ItemMiscTFCF CARAMEL = Helpers.getNull();
+    public static final ItemFoodTFCF CARAMEL = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/cocoa_beans")
     public static final ItemFoodTFCF COCOA_BEANS = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/dried/cocoa_beans")
@@ -480,8 +480,6 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF COCOA_POWDER = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/cocoa_butter")
     public static final ItemFoodTFCF COCOA_BUTTER = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/chocolate")
-    public static final ItemFoodTFCF CHOCOLATE = Helpers.getNull();
     @GameRegistry.ObjectHolder("cracked_coconut")
     public static final ItemWoodenBucket CRACKED_COCONUT = Helpers.getNull();
     /*
@@ -498,12 +496,28 @@ public final class ItemsTFCF
     */
     @GameRegistry.ObjectHolder("food/ground_black_pepper")
     public static final ItemFoodTFCF GROUND_BLACK_PEPPER = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("food/dark_chocolate")
+    public static final ItemFoodTFCF DARK_CHOCOLATE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/milk_chocolate")
+    public static final ItemFoodTFCF MILK_CHOCOLATE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/white_chocolate")
+    public static final ItemFoodTFCF WHITE_CHOCOLATE = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("food/dark_chocolate_blend")
+    public static final ItemMiscTFCF DARK_CHOCOLATE_BLEND = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/milk_chocolate_blend")
+    public static final ItemMiscTFCF MILK_CHOCOLATE_BLEND = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/white_chocolate_blend")
+    public static final ItemMiscTFCF WHITE_CHOCOLATE_BLEND = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("peel")
     public static final ItemMiscTFCF PEEL = Helpers.getNull();
     @GameRegistry.ObjectHolder("pomace")
     public static final ItemMiscTFCF POMACE = Helpers.getNull();
     @GameRegistry.ObjectHolder("fruit_leaf")
     public static final ItemMiscTFCF FRUIT_LEAF = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("food/pumpkin")
     public static final ItemFoodTFCF PUMPKIN = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/pumpkin_scooped")
@@ -1669,14 +1683,14 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/dirty_papyrus_net", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "net", "net_papyrus_dirty"), CT_MISC));
         simpleItems.add(register(r, "crop/product/dirty_hemp_net", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "net", "net_hemp_dirty"), CT_MISC));
         
-        simpleItems.add(register(r, "crop/product/chamomile_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "item_chamomile_head", "material_chamomile_head", "chamomile"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/dried/chamomile_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_chamomile", "dried_chamomile_head"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/dandelion_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "item_dandelion_head", "material_dandelion_head", "dandelion"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/dried/dandelion_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_dandelion", "dried_dandelion_head"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/labrador_tea_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "item_labrador_tea_head", "material_labrador_tea_head", "labrador_tea"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/dried/labrador_tea_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_labrador_tea", "dried_labrador_tea_head"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/sunflower_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "crop_sunflower_head", "item_sunflower_head", "material_sunflower_head"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/dried/sunflower_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "item_dried_sunflower_head", "material_dried/sunflower_head"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/chamomile_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "chamomile_head", "chamomile"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried/chamomile_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_chamomile"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dandelion_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dandelion_head", "dandelion"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried/dandelion_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_dandelion"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/labrador_tea_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "labrador_tea_head", "labrador_tea"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried/labrador_tea_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_labrador_tea"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/sunflower_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "sunflower_head", "sunflower"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/dried/sunflower_head", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "dried_sunflower_head"), CT_MISC));
 
         simpleItems.add(register(r, "crop/product/malt_barley", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_barley", "malt", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_corn", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_corn", "malt", "category_grain"), CT_FOOD));
@@ -1719,12 +1733,12 @@ public final class ItemsTFCF
         {
             ItemMisc bambooPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
             simpleItems.add(register(r, "wood/pole/" + BlocksTFCF.bamboo[i], bambooPole, CT_WOOD));
-            OreDictionary.registerOre(OreDictionaryHelper.toString("pole" + BlocksTFCF.bamboo[i]), bambooPole);
+            OreDictionary.registerOre(OreDictionaryHelper.toString("pole_" + BlocksTFCF.bamboo[i]), bambooPole);
             ((BlockBambooLog) BlocksTFCF.getAllBambooLog().get(i)).setDrop(bambooPole);
 
             ItemMisc bambooLumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
             simpleItems.add(register(r, "wood/lumber/" + BlocksTFCF.bamboo[i], bambooLumber, CT_WOOD));
-            OreDictionary.registerOre(OreDictionaryHelper.toString("lumber" + BlocksTFCF.bamboo[i]), bambooLumber);
+            OreDictionary.registerOre(OreDictionaryHelper.toString("lumber_" + BlocksTFCF.bamboo[i]), bambooLumber);
         }
 
 

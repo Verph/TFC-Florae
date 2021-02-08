@@ -1,3 +1,7 @@
+import groovy.json.JsonBuilder
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
 buildscript {
     repositories {
         jcenter()
@@ -6,6 +10,10 @@ buildscript {
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
+}
+plugins {
+    id 'java'
+    id 'idea'
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
@@ -86,9 +94,38 @@ processResources {
     from('.') {
         include "LICENSE.txt"
     }
+
+    // move any Access Transformer (there is/should be only 1, but this is nice and safe) to the right folder.
+    rename '(.+_at.cfg)', 'META-INF/$1'
+
+    // Write the update's json file. This file is kept by jenkins and put in a WWW accessible folder.
+    // For more info on the exact format, see Forge documentation & source code.
+    /*doLast {
+        //noinspection GroovyAssignabilityCheck
+        def updateFile = new File('tfc.json')
+        def json
+        if (updateFile.exists()) {
+            json = new JsonSlurper().parseText(updateFile.getText())
+        } else {
+            def builder = new JsonBuilder()
+            json = builder(homepage: "https://tng.terrafirmacraft.com", promos: new HashMap<>()) // defaults: Again, change if you fork & release
+        }
+        //noinspection GroovyAssignabilityCheck
+        json['promos'][project.minecraft.version + '-latest'] = project.version
+        //noinspection GroovyAssignabilityCheck
+        json['promos'][project.minecraft.version + '-recommended'] = project.version
+        if (!json.containsKey(project.minecraft.version)) json.put(project.minecraft.version, new HashMap<>())
+        //noinspection GroovyAssignabilityCheck
+        def version = json[project.minecraft.version]
+        //version.put(project.version, runGitCommand("log -n 1 --format='%B'"))
+        updateFile.write JsonOutput.prettyPrint(JsonOutput.toJson(json)) // Pretty print cause why not, it's a small file anyway.
+    }*/
 }
 
 project.tasks.withType(Jar) { jarTask -> // For all jar tasks
+    jarTask.manifest {
+        attributes 'FMLAT': 'tfc_at.cfg' // See FML source code
+    }
     jarTask.appendix = "MC" + project.minecraft.version
 }
 

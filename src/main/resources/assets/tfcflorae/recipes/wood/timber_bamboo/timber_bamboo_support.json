@@ -10,11 +10,11 @@
       "ore": "saw"
     },
     "B": {
-      "item": "tfc:wood/log/timber_bamboo"
+      "item": "tfcflorae:wood/pole/timber_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/support/timber_bamboo",
+    "item": "tfcflorae:wood/support/timber_bamboo",
     "count": 8
   }
 }

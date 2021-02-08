@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/weavers_bamboo"
+      "item": "tfcflorae:wood/planks/weavers_bamboo"
     },
     {
       "type": "forge:ore_dict",
@@ -10,7 +10,7 @@
     }
   ],
   "result": {
-    "item": "tfc:wood/lumber/weavers_bamboo",
+    "item": "tfcflorae:wood/lumber/weavers_bamboo",
     "count": 4
   }
 }

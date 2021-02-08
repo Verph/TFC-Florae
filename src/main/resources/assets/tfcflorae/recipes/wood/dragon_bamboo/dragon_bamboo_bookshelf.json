@@ -7,14 +7,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/dragon_bamboo"
+      "item": "tfcflorae:wood/planks/dragon_bamboo"
     },
     "B": {
       "item": "minecraft:book"
     }
   },
   "result": {
-    "item": "tfc:wood/bookshelf/dragon_bamboo",
+    "item": "tfcflorae:wood/bookshelf/dragon_bamboo",
     "count": 1
   }
 }

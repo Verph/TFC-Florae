@@ -6,10 +6,10 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/arrow_bamboo"
+      "item": "tfcflorae:wood/lumber/arrow_bamboo"
     },
     "B": {
-      "item": "tfc:wood/log/arrow_bamboo"
+      "item": "tfcflorae:wood/log/arrow_bamboo"
     }
   },
   "result": {

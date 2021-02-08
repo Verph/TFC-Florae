@@ -9,6 +9,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -16,6 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.dries007.tfc.api.capability.damage.DamageType;
 
 import tfcflorae.TFCFlorae;
+import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
 public class OreDictionaryHelper 
@@ -70,7 +72,24 @@ public class OreDictionaryHelper
         done = true;
         MAP.forEach((t, s) -> OreDictionary.registerOre(s, t.toItemStack()));
         MAP.clear(); // No need to keep this stuff around
-        
+
+        OreDictionary.registerOre("thatch", new ItemStack(Blocks.HAY_BLOCK));
+        OreDictionary.registerOre("bale", new ItemStack(Blocks.HAY_BLOCK));
+        OreDictionary.registerOre("baleHay", new ItemStack(Blocks.HAY_BLOCK));
+        OreDictionary.registerOre("baleCotton", new ItemStack(BlocksTFCF.COTTON_BALE));
+        OreDictionary.registerOre("baleCottonYarn", new ItemStack(BlocksTFCF.COTTON_YARN_BALE));
+        OreDictionary.registerOre("baleFlax", new ItemStack(BlocksTFCF.FLAX_BALE));
+        OreDictionary.registerOre("baleFlaxFiber", new ItemStack(BlocksTFCF.FLAX_FIBER_BALE));
+        OreDictionary.registerOre("baleHemp", new ItemStack(BlocksTFCF.HEMP_BALE));
+        OreDictionary.registerOre("baleHempFiber", new ItemStack(BlocksTFCF.HEMP_FIBER_BALE));
+        OreDictionary.registerOre("baleJute", new ItemStack(BlocksTFCF.JUTE_BALE));
+        OreDictionary.registerOre("baleJuteFiber", new ItemStack(BlocksTFCF.JUTE_FIBER_BALE));
+        OreDictionary.registerOre("baleLinen", new ItemStack(BlocksTFCF.LINEN_BALE));
+        OreDictionary.registerOre("baleLinenString", new ItemStack(BlocksTFCF.LINEN_STRING_BALE));
+        OreDictionary.registerOre("balePapyrusFiber", new ItemStack(BlocksTFCF.PAPYRUS_FIBER_BALE));
+        OreDictionary.registerOre("baleSilkString", new ItemStack(BlocksTFCF.SILK_STRING_BALE));
+        OreDictionary.registerOre("baleSisalFiber", new ItemStack(BlocksTFCF.SISAL_FIBER_BALE));
+
         // Register a name without any items
         OreDictionary.getOres("infiniteFire", true);
     }

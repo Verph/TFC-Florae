@@ -28,15 +28,14 @@ import net.dries007.tfc.objects.items.ItemMisc;
 import net.dries007.tfc.util.OreDictionaryHelper;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.Month;
-
+import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 
 import static tfcflorae.api.stateproperty.StatePropertiesTFCF.*;
 
 public class BlockBambooLog extends Block
 {
-    public static final AxisAlignedBB SMALL_LOG = new AxisAlignedBB(0.25, 0, 0.25, 0.75, 1, 0.75);
-    //public static final AxisAlignedBB SMALLER_LOG = new AxisAlignedBB(0.375, 0, 0.375, 0.625, 1, 0.625);
+    public static final AxisAlignedBB SMALL_LOG = new AxisAlignedBB(0.3, 0, 0.3, 0.7, 1, 0.7);
 
     private ItemMisc drop;
 
@@ -70,7 +69,7 @@ public class BlockBambooLog extends Block
         super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         IBlockState downState = worldIn.getBlockState(pos.down());
         boolean shouldDestroy = true;
-        if (downState.getBlock() instanceof BlockBambooLog || BlocksTFC.isGrowableSoil(downState))
+        if (downState.getBlock() instanceof BlockBambooLog || BlocksTFC.isGrowableSoil(downState) || BlocksTFCF.isGrowableSoil(downState))
             shouldDestroy = false;
         if (shouldDestroy)
         {

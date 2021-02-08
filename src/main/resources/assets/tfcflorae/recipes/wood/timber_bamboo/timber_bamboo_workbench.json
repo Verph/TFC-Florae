@@ -6,11 +6,11 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/planks/timber_bamboo"
+      "item": "tfcflorae:wood/planks/timber_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/workbench/timber_bamboo",
+    "item": "tfcflorae:wood/workbench/timber_bamboo",
     "count": 1
   }
 }

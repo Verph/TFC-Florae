@@ -156,6 +156,7 @@ public final class PlantsTFCF
     public static final ResourceLocation QUARTZ_CRYSTAL = new ResourceLocation(MODID, "quartz_crystal");
     
     // Bamboo
+    public static final ResourceLocation BAMBOO = new ResourceLocation(MODID, "bamboo");
     public static final ResourceLocation ARROW_BAMBOO = new ResourceLocation(MODID, "arrow_bamboo");
     public static final ResourceLocation BLACK_BAMBOO = new ResourceLocation(MODID, "black_bamboo");
     public static final ResourceLocation BLUE_BAMBOO = new ResourceLocation(MODID, "blue_bamboo");
@@ -316,7 +317,7 @@ public final class PlantsTFCF
 			new Plant(QUARTZ_CRYSTAL, Plant.PlantType.CREEPING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 1, 0.5D, "gem_quartz"),
 
             // Bamboo
-            new Plant(ARROW_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 12, 0D, "arrow_bamboo")
+            new Plant(BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 12, 0D, "bamboo")
             /*
             new Plant(BLACK_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 15, 0D, "black_bamboo"),
             new Plant(BLUE_BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 12, 0D, "blue_bamboo"),

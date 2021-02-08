@@ -13,6 +13,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.particle.ParticleManager;
@@ -45,6 +46,7 @@ import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.objects.items.metal.ItemOreTFC;
 import net.dries007.tfc.objects.items.metal.ItemSmallOre;
 import net.dries007.tfc.objects.items.rock.ItemRock;
+import tfcflorae.TFCFlorae;
 import tfcflorae.util.OreDictionaryHelper;
 
 @MethodsReturnNonnullByDefault
@@ -70,19 +72,22 @@ public class BlockSurfaceOreDeposit extends Block
 
     public final Ore ore;
     public final Rock rock;
+    private Ore.Grade grade;
 
     public BlockSurfaceOreDeposit(Ore ore, Rock rock)
     {
-        super(Rock.Type.RAW.material);
+        super(Material.GROUND);
+        //super(Rock.Type.RAW.material);
         if (!TABLE.containsKey(ore))
             TABLE.put(ore, new HashMap<>());
         TABLE.get(ore).put(rock, this);
 
         this.ore = ore;
         this.rock = rock;
+        grade = Ore.Grade.POOR;
         setDefaultState(blockState.getBaseState().withProperty(GRADE, Ore.Grade.POOR));
         setSoundType(SoundType.STONE);
-        setHardness(2f).setResistance(10.0F);
+        setHardness(0.5f).setResistance(5.0F);
         OreDictionaryHelper.register(this, "rock");
         OreDictionaryHelper.register(this, "rock", rock);
         OreDictionaryHelper.register(this, "rock", rock.getRockCategory());
@@ -129,12 +134,13 @@ public class BlockSurfaceOreDeposit extends Block
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return ItemSmallOre.get(ore);
+        return ItemOreTFC.get(ore);
     }
 
     @Override
     public int damageDropped(IBlockState state)
     {
+        TFCFlorae.getLog().info("TFCFlorae: damaged val should be 1: " + getMetaFromState(state));
         return getMetaFromState(state);
     }
 
@@ -215,6 +221,20 @@ public class BlockSurfaceOreDeposit extends Block
     public boolean isNormalCube(IBlockState state)
     {
         return false;
+    }
+
+    @Override
+    public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return false;
+    }
+
+    @Override
+    @Nonnull
+    @SuppressWarnings("deprecation")
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return BlockFaceShape.UNDEFINED;
     }
 
     @Override

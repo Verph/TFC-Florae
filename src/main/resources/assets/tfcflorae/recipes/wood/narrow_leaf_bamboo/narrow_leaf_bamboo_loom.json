@@ -7,14 +7,14 @@
   ],
   "key": {
     "X": {
-      "item": "tfc:wood/lumber/narrow_leaf_bamboo"
+      "item": "tfcflorae:wood/lumber/narrow_leaf_bamboo"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "tfc:wood/loom/narrow_leaf_bamboo",
+    "item": "tfcflorae:wood/loom/narrow_leaf_bamboo",
     "count": 1
   }
 }

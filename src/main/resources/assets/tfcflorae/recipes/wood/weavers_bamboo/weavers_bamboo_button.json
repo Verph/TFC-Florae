@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:wood/planks/weavers_bamboo"
+      "item": "tfcflorae:wood/planks/weavers_bamboo"
     }
   ],
   "result": {
-    "item": "tfc:wood/button/weavers_bamboo",
+    "item": "tfcflorae:wood/button/weavers_bamboo",
     "count": 1
   }
 }

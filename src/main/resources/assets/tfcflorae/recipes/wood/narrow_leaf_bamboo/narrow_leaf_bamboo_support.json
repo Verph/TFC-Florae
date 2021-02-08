@@ -10,11 +10,11 @@
       "ore": "saw"
     },
     "B": {
-      "item": "tfc:wood/log/narrow_leaf_bamboo"
+      "item": "tfcflorae:wood/pole/narrow_leaf_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/support/narrow_leaf_bamboo",
+    "item": "tfcflorae:wood/support/narrow_leaf_bamboo",
     "count": 8
   }
 }

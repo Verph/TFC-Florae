@@ -10,11 +10,11 @@
       "ore": "saw"
     },
     "B": {
-      "item": "tfc:wood/log/thorny_bamboo"
+      "item": "tfcflorae:wood/pole/thorny_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/support/thorny_bamboo",
+    "item": "tfcflorae:wood/support/thorny_bamboo",
     "count": 8
   }
 }

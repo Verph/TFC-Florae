@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/pole/timber_bamboo"
+    },
+    "B": {
+      "item": "tfcflorae:wood/lumber/timber_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_log/timber_bamboo",
+    "count": 8
+  }
+}

@@ -10,11 +10,11 @@
       "ore": "saw"
     },
     "B": {
-      "item": "tfc:wood/log/dragon_bamboo"
+      "item": "tfcflorae:wood/pole/dragon_bamboo"
     }
   },
   "result": {
-    "item": "tfc:wood/support/dragon_bamboo",
+    "item": "tfcflorae:wood/support/dragon_bamboo",
     "count": 8
   }
 }

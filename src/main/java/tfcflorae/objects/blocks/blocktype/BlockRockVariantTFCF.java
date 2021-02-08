@@ -32,7 +32,7 @@ import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
 import net.dries007.tfc.objects.items.rock.ItemRock;
-
+import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
@@ -403,6 +403,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case CLAY_HUMUS:
             case CLAY_HUMUS_GRASS:
             case DRY_CLAY_HUMUS_GRASS:
+                return Items.CLAY_BALL;
             case KAOLINITE_CLAY:
             case SANDY_KAOLINITE_CLAY_LOAM:
             case COARSE_SANDY_KAOLINITE_CLAY_LOAM:
@@ -436,7 +437,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
             case KAOLINITE_CLAY_HUMUS_GRASS:
             case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
-                return Items.CLAY_BALL;
+                return ItemsTFCF.KAOLINITE_CLAY;
             case COARSE_DIRT:
                 return Item.getItemFromBlock(get(rock, RockTFCF.COARSE_DIRT));
             case PODZOL:
