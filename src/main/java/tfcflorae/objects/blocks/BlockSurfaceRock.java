@@ -30,6 +30,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -222,6 +223,17 @@ public class BlockSurfaceRock extends Block implements IRockObject
 
     @Nonnull
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
+    {
+        ItemStack stack = player.getHeldItem(hand);
+        if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
+        {
+            TFCGuiHandler.openGui(world, player.getPosition(), player, TFCGuiHandler.Type.KNAPPING_STONE);
+        }
+        return new ActionResult<>(EnumActionResult.SUCCESS, stack);
+    }
+
+    @Nonnull
+    public ActionResult<ItemStack> onRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)

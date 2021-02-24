@@ -46,13 +46,21 @@ import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockRawTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockHumusFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamySandFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSandyLoamFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltLoamFarmland;
 import tfcflorae.objects.blocks.fruitwood.*;
 import tfcflorae.objects.blocks.wood.BlockFenceGateLog;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.ceramics.ItemKaoliniteMold;
 import tfcflorae.objects.te.TEFruitChest;
-import tfcflorae.client.render.TESRFruitTestTFCF;
+import tfcflorae.objects.te.TEFruitLoom;
+import tfcflorae.client.render.TESRFruitChestTFCF;
+import tfcflorae.client.render.TESRFruitLoomTFCF;
 import tfcflorae.client.render.VanillaStemStateMapper;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.TFCFlorae;
@@ -87,6 +95,10 @@ public class ClientRegisterEventsTFCF
         for (ItemGemTFCF item : ItemsTFCF.getAllGemTFCFItems())
             for (GemTFCF.Grade grade : GemTFCF.Grade.values())
                 registerEnumBasedMetaItems("gem", grade, item);
+
+        // Bows
+        for (Item item : ItemsTFCF.getAllItemBows())
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
 
         //Setting the model resource location for items
         /*for (Item i : ItemsTFCF.getAllSimpleItems())
@@ -181,7 +193,31 @@ public class ClientRegisterEventsTFCF
         ModelLoader.setCustomStateMapper(BlocksTFCF.CEYLON_CINNAMON_SAPLING, new StateMap.Builder().ignore(BlockSaplingTFC.STAGE).build());
 
         BlocksTFCF.getAllBlockRockVariantsTFCF().forEach(e -> {
-            if (e.getType() == RockTFCF.MOSSY_RAW)
+            if (e.getType() == RockTFCF.LOAMY_SAND_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamySandFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.SANDY_LOAM_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSandyLoamFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.LOAM_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.SILT_LOAM_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltLoamFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.SILT_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.HUMUS_FARMLAND)
+            {
+                ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockHumusFarmland.MOISTURE).build());
+            }
+            else if (e.getType() == RockTFCF.MOSSY_RAW)
             {
                 ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockRockRawTFCF.CAN_FALL).build());
             }
@@ -223,7 +259,8 @@ public class ClientRegisterEventsTFCF
         }
 
         //TESRs
-        ClientRegistry.bindTileEntitySpecialRenderer(TEFruitChest.class, new TESRFruitTestTFCF());
+        ClientRegistry.bindTileEntitySpecialRenderer(TEFruitChest.class, new TESRFruitChestTFCF());
+        ClientRegistry.bindTileEntitySpecialRenderer(TEFruitLoom.class, new TESRFruitLoomTFCF());
     }
 
     @SuppressWarnings("deprecation")
@@ -316,6 +353,23 @@ public class ClientRegisterEventsTFCF
 
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CASSIA_CINNAMON_LEAVES);
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CEYLON_CINNAMON_LEAVES);
-        //blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.ARROW_BAMBOO_LEAVES);
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockLoamySandFarmland.TINT[state.getValue(BlockLoamySandFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.LOAMY_SAND_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockSandyLoamFarmland.TINT[state.getValue(BlockSandyLoamFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.SANDY_LOAM_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockLoamFarmland.TINT[state.getValue(BlockLoamFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.LOAM_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockSiltLoamFarmland.TINT[state.getValue(BlockSiltLoamFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.SILT_LOAM_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockSiltFarmland.TINT[state.getValue(BlockSiltFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.SILT_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
+
+        blockColors.registerBlockColorHandler((state, worldIn, pos, tintIndex) -> BlockHumusFarmland.TINT[state.getValue(BlockHumusFarmland.MOISTURE)],
+            BlocksTFCF.getAllBlockRockVariantsTFCF().stream().filter(x -> x.getType() == RockTFCF.HUMUS_FARMLAND).toArray(BlockRockVariantTFCF[]::new));
     }
 }

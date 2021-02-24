@@ -14,20 +14,26 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import net.dries007.tfc.objects.blocks.stone.BlockFarmlandTFC;
-
+import tfcflorae.client.GuiHandler;
 import tfcflorae.util.OreDictionaryHelper;
 
 @ParametersAreNonnullByDefault
@@ -186,5 +192,31 @@ public class BlockSurfaceFlint extends Block
     public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager)
     {
         return true;
+    }
+
+    @Nonnull
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
+    {
+        ItemStack stack = player.getHeldItem(hand);
+        if (!world.isRemote && !player.isSneaking() && stack.getCount() > 0)
+        {
+            GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
+        }
+        return new ActionResult<>(EnumActionResult.SUCCESS, stack);
+    }
+
+    @Nonnull
+    public void onRightClick(PlayerInteractEvent.RightClickItem event)
+    {
+        EnumHand hand = event.getHand();
+        if(OreDictionaryHelper.doesStackMatchOre(event.getItemStack(), "flint") && hand == EnumHand.MAIN_HAND)
+        {
+            EntityPlayer player = event.getEntityPlayer();
+            World world = event.getWorld();
+            if (!world.isRemote && !player.isSneaking())
+            {
+                GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
+            }
+        }
     }
 }

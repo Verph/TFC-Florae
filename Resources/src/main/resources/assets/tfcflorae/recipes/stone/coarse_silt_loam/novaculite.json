@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "tfc:gravel/novaculite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "tfcflorae:silt_loam/novaculite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt_loam/novaculite",
+    "count": 4
+  }
+}

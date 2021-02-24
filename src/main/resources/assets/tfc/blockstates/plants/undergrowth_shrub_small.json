@@ -1,0 +1,484 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_single_0",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_0",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_lower_0",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_0",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_upper_0",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_0",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_single_1",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_1",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_lower_1",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_1",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_upper_1",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_1",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_2",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_2",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_2",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "4",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_single_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "4",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_lower_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "4",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/undergrowth_small_upper_3",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

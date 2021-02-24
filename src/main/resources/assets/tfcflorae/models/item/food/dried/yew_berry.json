@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tfcflorae:items/food/dried/yaw_berry"
+    "layer0": "tfcflorae:items/food/dried/yew_berry"
   }
 }

@@ -41,6 +41,16 @@
         "textures": {
           "crop": "tfcflorae:blocks/crop/lettuce_5"
         }
+      },
+      "6": {
+        "textures": {
+          "crop": "tfcflorae:blocks/crop/lettuce_6"
+        }
+      },
+      "7": {
+        "textures": {
+          "crop": "tfcflorae:blocks/crop/lettuce_7"
+        }
       }
     }
   }

@@ -1,0 +1,5 @@
+{
+  "recipes": {
+    "unmold_recipe_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeTFCF$Factory"
+  }
+}

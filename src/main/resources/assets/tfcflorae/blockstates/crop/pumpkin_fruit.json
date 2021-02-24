@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "tfcflorae:plants/pumpkin_fruit", "x": 90 },
+    "facing=south": { "model": "tfcflorae:plants/pumpkin_fruit", "x": 270 },
+    "facing=west":  { "model": "tfcflorae:plants/pumpkin_fruit", "x": 270, "y": 90 },
+    "facing=east":  { "model": "tfcflorae:plants/pumpkin_fruit", "x": 90, "y": 90 },
+    "facing=up":    { "model": "tfcflorae:plants/pumpkin_fruit" },
+    "facing=down":  { "model": "tfcflorae:plants/pumpkin_fruit", "x": 180 }
+  }
+}

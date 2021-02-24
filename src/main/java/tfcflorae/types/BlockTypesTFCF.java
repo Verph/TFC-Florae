@@ -148,11 +148,13 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
         DRY_SILT_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         DRY_SILT_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
+        COARSE_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
         HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
         DRY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
         CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
         CLAY_HUMUS_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         DRY_CLAY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
+        COARSE_CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
         
         // Kaolinite Clays
         KAOLINITE_CLAY(Material.GROUND, FALL_HORIZONTAL, false),
@@ -187,7 +189,16 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
         DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
         KAOLINITE_CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
         KAOLINITE_CLAY_HUMUS_GRASS(Material.GRASS, FALL_HORIZONTAL, true),
-        DRY_KAOLINITE_CLAY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true);
+        DRY_KAOLINITE_CLAY_HUMUS_GRASS(Material.GROUND, FALL_HORIZONTAL, true),
+        COARSE_KAOLINITE_CLAY_HUMUS(Material.GROUND, FALL_HORIZONTAL, false),
+
+        // Farmland
+        LOAMY_SAND_FARMLAND(Material.GROUND, FALL_VERTICAL, false),
+        SANDY_LOAM_FARMLAND(Material.GROUND, FALL_VERTICAL, false),
+        LOAM_FARMLAND(Material.GROUND, FALL_VERTICAL, false),
+        SILT_LOAM_FARMLAND(Material.GROUND, FALL_VERTICAL, false),
+        SILT_FARMLAND(Material.GROUND, FALL_VERTICAL, false),
+        HUMUS_FARMLAND(Material.GROUND, FALL_VERTICAL, false);
 
         public final Material material;
         public final boolean isGrass;
@@ -276,10 +287,6 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                 case SILT_GRASS:
                 case SILT_PODZOL:
                     return SILT;
-                case DRY_CLAY_GRASS:
-                    return DRY_CLAY_GRASS;
-                case CLAY_PODZOL:
-                    return CLAY_PODZOL;
                 case KAOLINITE_CLAY:
                 case KAOLINITE_CLAY_GRASS:
                 case DRY_KAOLINITE_CLAY_GRASS:
@@ -297,15 +304,24 @@ public class BlockTypesTFCF extends IForgeRegistryEntry.Impl<BlockTypesTFCF>
                 case KAOLINITE_CLAY_HUMUS_GRASS:
                 case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
                     return KAOLINITE_CLAY_HUMUS;
-                case PODZOL:
-                    return LOAMY_SAND;
-                /*
                 case DRY_CLAY_GRASS:
                 case CLAY_PODZOL:
-                    return CLAY;
                 case PODZOL:
-                    return DIRT;
-                */
+                    return null; //This is supposed to happen, because it is expected to run getNonGrassVersionTFC after this one
+            }
+            throw new IllegalStateException("Someone forgot to add enum constants to this switch case...");
+        }
+
+        public Rock.Type getNonGrassVersionTFC()
+        {
+            if(!isGrass) return null;
+            switch(this)
+            {
+                case DRY_CLAY_GRASS:
+                case CLAY_PODZOL:
+                    return Rock.Type.CLAY;
+                case PODZOL:
+                    return Rock.Type.DIRT;
             }
             throw new IllegalStateException("Someone forgot to add enum constants to this switch case...");
         }

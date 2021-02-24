@@ -25,12 +25,17 @@ public class KnappingRecipeWrapperTFCF extends KnappingRecipeWrapper
     private static final ResourceLocation MUD_DISABLED_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/mud_button_disabled.png");
     private static final ResourceLocation KAOLINITE_CLAY_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/kaolinite_clay_button.png");
     private static final ResourceLocation KAOLINITE_CLAY_DISABLED_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/kaolinite_clay_button_disabled.png");
+    private static final ResourceLocation FLINT_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/flint_button.png");
 
     private static ResourceLocation getHighTexture(KnappingType type)
     {
         if(type == KnappingTypes.KAOLINITE_CLAY)
         {
             return KAOLINITE_CLAY_TEXTURE;
+        }
+        if(type == KnappingTypes.FLINT)
+        {
+            return FLINT_TEXTURE;
         }
         return null;
     }

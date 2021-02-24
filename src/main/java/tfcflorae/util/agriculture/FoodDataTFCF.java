@@ -163,6 +163,11 @@ public class FoodDataTFCF
     public static final FoodData COOKED_SCALLOP = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
     public static final FoodData RAW_STARFISH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_STARFISH = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
+    
+    public static final FoodData RAW_SNAIL = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
+    public static final FoodData COOKED_SNAIL = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
+    public static final FoodData RAW_WORM = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
+    public static final FoodData COOKED_WORM = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
 
     // Epiphytes
     public static final FoodData ROASTED_ARTISTS_CONK = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
@@ -184,6 +189,8 @@ public class FoodDataTFCF
 
     // Normal foods
     public static final FoodData PUMPKIN = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
+    public static final FoodData PUMPKIN_SLICE = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
+    public static final FoodData ROASTED_PUMPKIN_SLICE = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData MELON = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData COCOA_BEANS = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
     public static final FoodData DRIED_COCOA_BEANS = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);

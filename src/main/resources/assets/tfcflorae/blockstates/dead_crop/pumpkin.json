@@ -1,7 +1,6 @@
 {
-  "parent": "block/orientable_vertical",
-  "textures": {
-    "front": "blocks/pumpkin_top",
-    "side": "blocks/pumpkin_side"
+  "variants": {
+    "mature=false": { "model": "pumpkin_stem_growth2" },
+    "mature=true": { "model": "pumpkin_stem_growth6" }
   }
 }

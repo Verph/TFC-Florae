@@ -104,6 +104,8 @@ public class KnappingHelperTFCF
                 return KnappingTypes.MUD;
             case "kaolinite_clay":
                 return KnappingTypes.KAOLINITE_CLAY;
+            case "flint":
+                return KnappingTypes.FLINT;
         }
         return null;
     }

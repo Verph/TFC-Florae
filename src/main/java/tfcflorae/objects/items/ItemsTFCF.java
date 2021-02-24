@@ -17,6 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSnow;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
@@ -85,6 +86,14 @@ import tfcflorae.objects.items.food.ItemSandwichTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.objects.items.rock.ItemFiredMudBrick;
 import tfcflorae.objects.items.rock.ItemUnfiredMudBrick;
+import tfcflorae.objects.items.tools.ItemAxeTFCF;
+import tfcflorae.objects.items.tools.ItemHammerTFCF;
+import tfcflorae.objects.items.tools.ItemHoeTFCF;
+import tfcflorae.objects.items.tools.ItemJavelinTFCF;
+import tfcflorae.objects.items.tools.ItemKnifeTFCF;
+import tfcflorae.objects.items.tools.ItemShovelTFCF;
+import tfcflorae.objects.items.tools.ItemBowTFCF;
+import tfcflorae.types.TreesTFCF;
 import tfcflorae.util.agriculture.*;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.TFCFlorae;
@@ -97,6 +106,58 @@ import static tfcflorae.TFCFlorae.MODID;
 @GameRegistry.ObjectHolder(MODID)
 public final class ItemsTFCF
 {
+    //@GameRegistry.ObjectHolder("stone/flint")
+    //public static final ItemFlint FLINT = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("tools/flint/axe/flint")
+    public static final ItemMiscTFCF FLINT_AXE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/hammer/flint")
+    public static final ItemMiscTFCF FLINT_HAMMER = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/hoe/flint")
+    public static final ItemMiscTFCF FLINT_HOE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/javelin/flint")
+    public static final ItemMiscTFCF FLINT_JAVELIN = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/knife/flint")
+    public static final ItemMiscTFCF FLINT_KNIFE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/shovel/flint")
+    public static final ItemMiscTFCF FLINT_SHOVEL = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("tools/flint/axe_head/flint")
+    public static final ItemMiscTFCF FLINT_AXE_HEAD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/hammer_head/flint")
+    public static final ItemMiscTFCF FLINT_HAMMER_HEAD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/hoe_head/flint")
+    public static final ItemMiscTFCF FLINT_HOE_HEAD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/javelin_head/flint")
+    public static final ItemMiscTFCF FLINT_JAVELIN_HEAD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/knife_head/flint")
+    public static final ItemMiscTFCF FLINT_KNIFE_HEAD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/flint/shovel_head/flint")
+    public static final ItemMiscTFCF FLINT_SHOVEL_HEAD = Helpers.getNull();
+    
+    @GameRegistry.ObjectHolder("tools/bows/shortbow/shortbow")
+    public static final ItemBowTFCF SHORTBOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/longbow/longbow")
+    public static final ItemBowTFCF LONGBOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/bonebow/bonebow")
+    public static final ItemBowTFCF BONEBOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/bow_of_lost_souls/bow_of_lost_souls")
+    public static final ItemBowTFCF BOW_OF_LOST_SOULS = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/elite_power_bow/elite_power_bow")
+    public static final ItemBowTFCF ELITE_POWER_BOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/green_menace/green_menace")
+    public static final ItemBowTFCF GREEN_MENACE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/hunting_bow/hunting_bow")
+    public static final ItemBowTFCF HUNTING_BOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/nocturnal_bow/nocturnal_bow")
+    public static final ItemBowTFCF NOCTURNAL_BOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/red_snake/red_snake")
+    public static final ItemBowTFCF RED_SNAKE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/rosebow/rosebow")
+    public static final ItemBowTFCF ROSEBOW = Helpers.getNull();
+    @GameRegistry.ObjectHolder("tools/bows/sabrewing/sabrewing")
+    public static final ItemBowTFCF SABREWING = Helpers.getNull();
+
     // Fruits
     @GameRegistry.ObjectHolder("food/abiu")
     public static final ItemFoodTFCF ABIU = Helpers.getNull();
@@ -424,11 +485,11 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF LIQUORICE_ROOT = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/cassia_cinnamon_bark")
     public static final ItemFoodTFCF CASSIA_CINNAMON_BARK = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/cassia_cinnamon_bark")
+    @GameRegistry.ObjectHolder("food/ground_cassia_cinnamon_bark")
     public static final ItemFoodTFCF GROUND_CASSIA_CINNAMON = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/ceylon_cinnamon_bark")
     public static final ItemFoodTFCF CEYLON_CINNAMON_BARK = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/ceylon_cinnamon_bark")
+    @GameRegistry.ObjectHolder("food/ground_ceylon_cinnamon_bark")
     public static final ItemFoodTFCF GROUND_CEYLON_CINNAMON = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/black_tea")
     public static final ItemFoodTFCF BLACK_TEA = Helpers.getNull();
@@ -511,8 +572,6 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("food/white_chocolate_blend")
     public static final ItemMiscTFCF WHITE_CHOCOLATE_BLEND = Helpers.getNull();
 
-    @GameRegistry.ObjectHolder("peel")
-    public static final ItemMiscTFCF PEEL = Helpers.getNull();
     @GameRegistry.ObjectHolder("pomace")
     public static final ItemMiscTFCF POMACE = Helpers.getNull();
     @GameRegistry.ObjectHolder("fruit_leaf")
@@ -524,6 +583,10 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF PUMPKIN_SCOOPED = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/pumpkin_chunks")
     public static final ItemFoodTFCF PUMPKIN_CHUNKS = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/pumpkin_slice")
+    public static final ItemFoodTFCF PUMPKIN_SLICE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/roasted/pumpkin_slice")
+    public static final ItemFoodTFCF ROASTED_PUMPKIN_SLICE = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/melon")
     public static final ItemFoodTFCF MELON = Helpers.getNull();
 
@@ -580,6 +643,15 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF RAW_STARFISH = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/cooked_starfish")
     public static final ItemFoodTFCF COOKED_STARFISH = Helpers.getNull();
+    
+    @GameRegistry.ObjectHolder("food/raw_snail")
+    public static final ItemFoodTFCF RAW_SNAIL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/cooked_snail")
+    public static final ItemFoodTFCF COOKED_SNAIL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/raw_worm")
+    public static final ItemFoodTFCF RAW_WORM = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/cooked_worm")
+    public static final ItemFoodTFCF COOKED_WORM = Helpers.getNull();
     
     // Normal foods
     @GameRegistry.ObjectHolder("food/amaranth")
@@ -1026,10 +1098,6 @@ public final class ItemsTFCF
     public static final ItemMisc CEYLON_CINNAMON_POLE = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/fruit_tree/lumber/ceylon_cinnamon")
     public static final ItemMisc CEYLON_CINNAMON_LUMBER = Helpers.getNull();
-    /*@GameRegistry.ObjectHolder("wood/pole/arrow_bamboo")
-    public static final ItemMisc ARROW_BAMBOO_POLE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("wood/lumber/arrow_bamboo")
-    public static final ItemMisc ARROW_BAMBOO_LUMBER = Helpers.getNull();*/
 
     @GameRegistry.ObjectHolder("firma_cola_mix")
     public static final ItemMiscTFCF FIRMA_COLA_MIX = Helpers.getNull();
@@ -1073,6 +1141,7 @@ public final class ItemsTFCF
     public static final ItemPottery UNFIRED_KAOLINITE_LARGE_VESSEL = Helpers.getNull();
 
     private static ImmutableList<Item> allSimpleItems;
+    private static ImmutableList<ItemBowTFCF> allItemBows;
     private static ImmutableList<Item> allFoodItems;
     private static ImmutableList<ItemGemTFCF> allGemTFCFItems;
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks;
@@ -1082,6 +1151,11 @@ public final class ItemsTFCF
     public static ImmutableList<Item> getAllSimpleItems()
     {
         return allSimpleItems;
+    }
+
+    public static ImmutableList<ItemBowTFCF> getAllItemBows()
+    {
+        return allItemBows;
     }
 
     public static ImmutableList<Item> getAllFoodItems()
@@ -1117,6 +1191,7 @@ public final class ItemsTFCF
     {
         IForgeRegistry<Item> r = event.getRegistry();
         ImmutableList.Builder<Item> simpleItems = ImmutableList.builder();
+        ImmutableList.Builder<ItemBowTFCF> itemBows = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = new Builder<>();
         ImmutableList.Builder<ItemFruitDoor> fruitDoors = ImmutableList.builder();
 
@@ -1190,6 +1265,35 @@ public final class ItemsTFCF
         
         for (PowderTFCF powder : PowderTFCF.values())
             simpleItems.add(register(r, "powder/" + powder.name().toLowerCase(), new ItemPowderTFCF(powder), CT_MISC));
+
+        // Tools
+        simpleItems.add(register(r, "tools/flint/axe/flint", new ItemAxeTFCF(ToolMaterial.STONE, 3f * 1.25f, 1f, 64, "axe", "axe_flint", "axe_stone", "axe_stone_sedimentary"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/hammer/flint", new ItemHammerTFCF(ToolMaterial.STONE, 3f * 1.25f, 1f, 64, "hammer", "hammer_flint", "hammer_stone", "hammer_stone_sedimentary"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/hoe/flint", new ItemHoeTFCF(ToolMaterial.STONE, 2.75f * 1.25f, 1f, 64, "hoe", "hoe_flint", "hoe_stone", "hoe_stone_sedimentary"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/javelin/flint", new ItemJavelinTFCF(ToolMaterial.STONE, 2.4f * 1.25f, 2.2f, 64, "javelin", "javelin_flint", "javelin_stone", "javelin_stone_sedimentary"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/knife/flint", new ItemKnifeTFCF(ToolMaterial.STONE, 2.08f * 1.25f, 2.5f, 64, "knife", "knife_flint", "knife_stone", "knife_stone_sedimentary"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/shovel/flint", new ItemShovelTFCF(ToolMaterial.STONE, 2.75f * 1.25f, 1f, 64, "shovel", "shovel_flint", "shovel_stone", "shovel_stone_sedimentary"), CT_ROCK_ITEMS));
+
+        // Toolheads
+        simpleItems.add(register(r, "tools/flint/axe_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_axe"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/hammer_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_hammer"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/hoe_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_hoe"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/javelin_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_javelin"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/knife_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_knife"), CT_ROCK_ITEMS));
+        simpleItems.add(register(r, "tools/flint/shovel_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_shovel"), CT_ROCK_ITEMS));
+
+        // Bows
+        itemBows.add(register(r, "tools/bows/shortbow/shortbow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 250, 0, "bow", "bow_shortbow", "bow_wooden_shortbow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/longbow/longbow", new ItemBowTFCF(Size.SMALL, Weight.MEDIUM, 450, 3, "bow", "bow_longbow", "bow_wooden_longbow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/bonebow/bonebow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 320, 2, "bow", "bow_bonebow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/bow_of_lost_souls/bow_of_lost_souls", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 320, 2, "bow", "bow_bow_of_lost_souls"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/elite_power_bow/elite_power_bow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 360, 3, "bow", "bow_elite_power_bow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/green_menace/green_menace", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_green_menace"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/hunting_bow/hunting_bow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_hunting_bow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/nocturnal_bow/nocturnal_bow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_nocturnal_bow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/red_snake/red_snake", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_red_snake"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/rosebow/rosebow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_rosebow"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/sabrewing/sabrewing", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_sabrewing"), CT_MISC));
 
         // Fruits
         simpleItems.add(register(r, "food/abiu", new ItemFoodTFCF(FoodDataTFCF.ABIU, "abiu", "category_fruit"), CT_FOOD));
@@ -1295,6 +1399,8 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/white_chocolate", new ItemFoodTFCF(FoodDataTFCF.CHOCOLATE, "white_chocolate"), CT_FOOD));
         simpleItems.add(register(r, "food/pumpkin_scooped", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN, "pumpkin_scooped", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/pumpkin_chunks", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN, "pumpkin_chunks", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/pumpkin_slice", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN_SLICE, "slice_pumpkin", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/roasted/pumpkin_slice", new ItemFoodTFCF(FoodDataTFCF.ROASTED_PUMPKIN_SLICE, "roasted_slice_pumpkin", "category_vegetable"), CT_FOOD));
 
         // Epiphytes
         simpleItems.add(register(r, "food/roasted/artists_conk", new ItemFoodTFCF(FoodDataTFCF.ROASTED_ARTISTS_CONK, "roasted_artists_conk", "category_vegetable"), CT_FOOD));
@@ -1325,6 +1431,11 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/cooked_scallop", new ItemFoodTFCF(FoodDataTFCF.COOKED_SCALLOP, "cooked_scallop", "category_cooked_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/raw_starfish", new ItemFoodTFCF(FoodDataTFCF.RAW_STARFISH, "raw_starfish", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_starfish", new ItemFoodTFCF(FoodDataTFCF.COOKED_STARFISH, "cooked_starfish", "category_cooked_meat"), CT_FOOD));
+        
+        simpleItems.add(register(r, "food/raw_snail", new ItemFoodTFCF(FoodDataTFCF.RAW_SNAIL, "raw_snail", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/cooked_snail", new ItemFoodTFCF(FoodDataTFCF.COOKED_SNAIL, "cooked_snail", "category_cooked_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/raw_worm", new ItemFoodTFCF(FoodDataTFCF.RAW_WORM, "raw_worm", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/cooked_worm", new ItemFoodTFCF(FoodDataTFCF.COOKED_WORM, "cooked_worm", "category_cooked_meat"), CT_FOOD));
 
         // Nuts
         //simpleItems.add(register(r, "food/coconut", new ItemFoodTFCF(FoodDataTFCF.NUT, "coconut", "category_fruit"), CT_FOOD));
@@ -1546,7 +1657,6 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/milk_chocolate_blend", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "milk_chocolate_blend"), CT_MISC));
         simpleItems.add(register(r, "food/white_chocolate_blend", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "white_chocolate_blend"), CT_MISC));
 
-        simpleItems.add(register(r, "peel", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "peel"), CT_MISC));
         simpleItems.add(register(r, "pomace", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "pomace", "category_fruit"), CT_MISC));
         simpleItems.add(register(r, "fruit_leaf", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "leaf_fruit"), CT_MISC));
 
@@ -1705,6 +1815,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/malt_spelt", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_spelt", "malt", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_wild_rice", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_wild_rice", "malt", "category_grain"), CT_FOOD));
 
+        // Cassia cinnamon
         ItemMisc cassiaPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
         simpleItems.add(register(r, "wood/fruit_tree/pole/cassia_cinnamon", cassiaPole, CT_WOOD));
         OreDictionary.registerOre("poleCassiaCinnamon", cassiaPole);
@@ -1713,6 +1824,9 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "wood/fruit_tree/lumber/cassia_cinnamon", cassiaLumber, CT_WOOD));
         OreDictionary.registerOre("lumberCassiaCinnamon", cassiaLumber);
         
+        simpleItems.add(register(r, "wood/fruit_tree/boat/cassia_cinnamon", new ItemBoatTFCF(TreesTFCF.CASSIA_CINNAMON_TREE), CT_WOOD));
+        
+        // Ceylon cinnamon
         ItemMisc ceylonPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
         simpleItems.add(register(r, "wood/fruit_tree/pole/ceylon_cinnamon", ceylonPole, CT_WOOD));
         OreDictionary.registerOre("poleCeylonCinnamon", ceylonPole);
@@ -1721,13 +1835,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "wood/fruit_tree/lumber/ceylon_cinnamon", ceylonLumber, CT_WOOD));
         OreDictionary.registerOre("lumberCeylonCinnamon", ceylonLumber);
         
-        /*ItemMisc bambooPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
-        simpleItems.add(register(r, "wood/pole/arrow_bamboo", bambooPole, CT_WOOD));
-        OreDictionary.registerOre("poleArrowBamboo", bambooPole);
-
-        ItemMisc bambooLumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
-        simpleItems.add(register(r, "wood/lumber/arrow_bamboo", bambooLumber, CT_WOOD));
-        OreDictionary.registerOre("lumberArrowBamboo", bambooLumber);*/
+        simpleItems.add(register(r, "wood/fruit_tree/boat/ceylon_cinnamon", new ItemBoatTFCF(TreesTFCF.CEYLON_CINNAMON_TREE), CT_WOOD));
 
         for (int i = 0; i < BlocksTFCF.bamboo.length; i++)
         {
@@ -1739,43 +1847,40 @@ public final class ItemsTFCF
             ItemMisc bambooLumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
             simpleItems.add(register(r, "wood/lumber/" + BlocksTFCF.bamboo[i], bambooLumber, CT_WOOD));
             OreDictionary.registerOre(OreDictionaryHelper.toString("lumber_" + BlocksTFCF.bamboo[i]), bambooLumber);
-        }
-
-
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
-        {
-            String name = fruitTree.getName().toLowerCase();
-            ItemMisc pole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
-            simpleItems.add(register(r, "wood/fruit_tree/pole/" + name, pole, CT_WOOD));
-            //todo: Use our OreDict helper
-            OreDictionary.registerOre(OreDictionaryHelper.toString("pole_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), pole);
+            
+            simpleItems.add(register(r, "wood/boat/" + BlocksTFCF.bamboo[i], new ItemBoatTFCF(BlocksTFCF.bambooTrees[i]), CT_WOOD));
         }
 
         for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
         {
-            String name = fruitTree.getName().toLowerCase();
-            ItemMisc lumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
-            simpleItems.add(register(r, "wood/fruit_tree/lumber/" + name, lumber, CT_WOOD));
-            //todo: Use our OreDict helper
-            OreDictionary.registerOre(OreDictionaryHelper.toString("lumber_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), lumber);
-        }
-
-        for (IFruitTree fruitTree : FruitTree.values())
-        {
+            // Poles
             String name = fruitTree.getName().toLowerCase();
             ItemMisc pole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
             simpleItems.add(register(r, "wood/fruit_tree/pole/" + name, pole, CT_WOOD));
-            //todo: Use our OreDict helper
             OreDictionary.registerOre(OreDictionaryHelper.toString("pole_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), pole);
+
+            // Lumber
+            ItemMisc lumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
+            simpleItems.add(register(r, "wood/fruit_tree/lumber/" + name, lumber, CT_WOOD));
+            OreDictionary.registerOre(OreDictionaryHelper.toString("lumber_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), lumber);
+
+            simpleItems.add(register(r, "wood/fruit_tree/boat/" + name, new ItemBoatTFCF(fruitTree), CT_WOOD));
         }
 
         for (IFruitTree fruitTree : FruitTree.values())
         {
+            // Poles
             String name = fruitTree.getName().toLowerCase();
+            ItemMisc pole = new ItemMisc(Size.SMALL, Weight.MEDIUM);
+            simpleItems.add(register(r, "wood/fruit_tree/pole/" + name, pole, CT_WOOD));
+            OreDictionary.registerOre(OreDictionaryHelper.toString("pole_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), pole);
+
+            // Lumber
             ItemMisc lumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
             simpleItems.add(register(r, "wood/fruit_tree/lumber/" + name, lumber, CT_WOOD));
-            //todo: Use our OreDict helper
             OreDictionary.registerOre(OreDictionaryHelper.toString("lumber_" + name.substring(0,1).toLowerCase() + name.substring(1).toLowerCase()), lumber);
+
+            simpleItems.add(register(r, "wood/fruit_tree/boat/" + name, new ItemBoatTFCF(fruitTree), CT_WOOD));
         }
 
         for (BlockFruitDoor blockDoor : BlocksTFCF.getAllFruitDoors())
@@ -1815,8 +1920,20 @@ public final class ItemsTFCF
         });
 
         allSimpleItems = simpleItems.build();
+        allItemBows = itemBows.build();
 
         OreDictionaryHelper.init();
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void registerVanillaOverrides(RegistryEvent.Register<Item> event)
+    {
+        // Vanilla Overrides. Used for small tweaks on vanilla items, rather than replacing them outright
+        TFCFlorae.getLog().info("The below warnings about unintended overrides are normal. The override is intended - deal with it. ;)");
+        event.getRegistry().registerAll(
+            new ItemFlint(Size.VERY_SMALL, Weight.VERY_LIGHT).setRegistryName(Items.FLINT.getRegistryName()).setTranslationKey("flint")
+        );
     }
 
     private static void registerPottery(Builder<Item> items, IForgeRegistry<Item> r, String nameUnfired, String nameFired)

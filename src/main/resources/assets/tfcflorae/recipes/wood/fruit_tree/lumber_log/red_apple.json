@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/red_apple"
+      "item": "tfcflorae:wood/fruit_tree/pole/red_apple"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/red_apple",
-    "count": 8
+    "count": 4
   }
 }

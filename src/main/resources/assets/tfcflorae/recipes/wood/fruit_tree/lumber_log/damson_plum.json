@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/damson_plum"
+      "item": "tfcflorae:wood/fruit_tree/pole/damson_plum"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/damson_plum",
-    "count": 8
+    "count": 4
   }
 }

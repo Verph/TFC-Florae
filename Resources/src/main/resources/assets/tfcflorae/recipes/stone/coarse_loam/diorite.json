@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "tfc:gravel/diorite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "tfcflorae:loam/diorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loam/diorite",
+    "count": 4
+  }
+}

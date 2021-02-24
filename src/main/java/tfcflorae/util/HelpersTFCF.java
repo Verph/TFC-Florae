@@ -27,7 +27,6 @@ public class HelpersTFCF
         ConfigManager.sync(TerraFirmaCraft.MOD_ID, Config.Type.INSTANCE);
 
         // Fluids
-
         String[] fluidAdditions = {
             "distilled_water",
             "white_tea",
@@ -122,15 +121,20 @@ public class HelpersTFCF
             "juice_purple_grape"
         };
         Set<String> woodenBucketSet = new HashSet<>(Arrays.asList(ConfigTFC.General.MISC.woodenBucketWhitelist));
-        for (String a : fluidAdditions) {}
+        for (String a : fluidAdditions)
+        {
+            woodenBucketSet.add(a);
+        }
         ConfigTFC.General.MISC.woodenBucketWhitelist = woodenBucketSet.toArray(new String[] {});
 
         Set<String> barrelSet = new HashSet<>(Arrays.asList(ConfigTFC.Devices.BARREL.fluidWhitelist));
-        for (String a : fluidAdditions) {}
+        for (String a : fluidAdditions)
+        {
+            barrelSet.add(a);
+        }
         ConfigTFC.Devices.BARREL.fluidWhitelist = barrelSet.toArray(new String[] {});
 
         // Oil Fuels
-
         String[] oilAdditions = {
             "linseed_oil",
             "rape_seed_oil",
@@ -139,7 +143,10 @@ public class HelpersTFCF
         };
         
         Set<String> fuelSet = new HashSet<>(Arrays.asList(ConfigTFC.Devices.LAMP.fuels));
-        for (String a : oilAdditions) {}
+        for (String a : oilAdditions)
+        {
+            fuelSet.add(a);
+        }
         ConfigTFC.Devices.LAMP.fuels = fuelSet.toArray(new String[] {});
     }
 }

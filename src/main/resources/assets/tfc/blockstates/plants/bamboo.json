@@ -27,19 +27,83 @@
       "apply": [
         {
           "model": "tfc:plants/small_arrow_bamboo",
-          "weight": 2
+          "weight": 2,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo",
+          "weight": 2,
+          "y": 270
         },
         {
           "model": "tfc:plants/small_arrow_bamboo_single_leaf",
-          "weight": 2
+          "weight": 2,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_single_leaf",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_single_leaf",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_single_leaf",
+          "weight": 2,
+          "y": 270
         },
         {
           "model": "tfc:plants/small_arrow_bamboo_small_leaves",
-          "weight": 1
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_small_leaves",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_small_leaves",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_small_leaves",
+          "weight": 1,
+          "y": 270
         },
         {
           "model": "tfc:plants/small_arrow_bamboo_large_leaves",
-          "weight": 1
+          "weight": 1,
+          "y": 0
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_large_leaves",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_large_leaves",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/small_arrow_bamboo_large_leaves",
+          "weight": 1,
+          "y": 270
         }
       ]
     },

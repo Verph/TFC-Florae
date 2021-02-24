@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/satsuma"
+      "item": "tfcflorae:wood/fruit_tree/pole/satsuma"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/satsuma",
-    "count": 8
+    "count": 4
   }
 }

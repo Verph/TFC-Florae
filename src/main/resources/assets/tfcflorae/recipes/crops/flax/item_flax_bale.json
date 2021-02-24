@@ -1,0 +1,13 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+	{
+      "type": "forge:ore_dict",
+      "ore": "baleFlax"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/flax",
+    "count": 9
+  }
+}

@@ -46,6 +46,11 @@
         "textures": {
           "cross": "tfcflorae:blocks/crop/celery_6"
         }
+      },
+      "7": {
+        "textures": {
+          "cross": "tfcflorae:blocks/crop/celery_7"
+        }
       }
     }
   }

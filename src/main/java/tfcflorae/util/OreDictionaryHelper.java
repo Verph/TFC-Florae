@@ -10,12 +10,13 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import net.dries007.tfc.api.capability.damage.DamageType;
-
+import net.dries007.tfc.api.types.Rock;
 import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
@@ -90,6 +91,10 @@ public class OreDictionaryHelper
         OreDictionary.registerOre("baleSilkString", new ItemStack(BlocksTFCF.SILK_STRING_BALE));
         OreDictionary.registerOre("baleSisalFiber", new ItemStack(BlocksTFCF.SISAL_FIBER_BALE));
 
+        // Flint
+        OreDictionary.registerOre("flint", new ItemStack(Items.FLINT));
+        OreDictionary.registerOre("itemFlint", new ItemStack(Items.FLINT));
+
         // Register a name without any items
         OreDictionary.getOres("infiniteFire", true);
     }
@@ -123,63 +128,194 @@ public class OreDictionaryHelper
     {
         switch (rockTFCF)
         {
-
             case MOSSY_RAW:
                 MAP.put(thing, toString(prefixParts, "stone"));
+                //MAP.put(thing, toString(prefixParts, "stone", rock));
+                MAP.put(thing, toString(prefixParts, "stone_mossy"));
+                //MAP.put(thing, toString(prefixParts, "stone_mossy", rock));
+                break;
+            case MUD:
+                MAP.put(thing, toString(prefixParts, "block", rockTFCF));
+                //MAP.put(thing, toString(prefixParts, "block", rockTFCF, rock));
+                break;
+            case MUD_BRICKS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                //MAP.put(thing, toString(prefixParts, "mud_bricks", rock));
                 break;
             case COARSE_DIRT:
             case COARSE_LOAMY_SAND:
             case COARSE_SANDY_LOAM:
-            case COARSE_SANDY_CLAY_LOAM:
-            case COARSE_SANDY_CLAY:
             case COARSE_LOAM:
-            case COARSE_CLAY_LOAM:
-            case COARSE_CLAY:
-            case COARSE_SILTY_CLAY:
-            case COARSE_SILTY_CLAY_LOAM:
             case COARSE_SILT_LOAM:
             case COARSE_SILT:
-                MAP.put(thing, toString(prefixParts, rockTFCF, "coarse"));
+            case COARSE_HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "coarse_dirt"));
+                //MAP.put(thing, toString(prefixParts, "coarse_dirt", rock));
                 break;
-            case LOAMY_SAND:
-            case SANDY_LOAM:
-            case SANDY_CLAY_LOAM:
-            case SANDY_CLAY:
-            case LOAM:
-            case CLAY_LOAM:
-            case SILTY_CLAY:
-            case SILTY_CLAY_LOAM:
-            case SILT_LOAM:
-            case SILT:
-                MAP.put(thing, toString(prefixParts, "block", rockTFCF, "dirt"));
+            case COARSE_CLAY:
+            case COARSE_SANDY_CLAY_LOAM:
+            case COARSE_SANDY_CLAY:
+            case COARSE_CLAY_LOAM:
+            case COARSE_SILTY_CLAY:
+            case COARSE_SILTY_CLAY_LOAM:
+            case COARSE_CLAY_HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "coarse_dirt"));
+                //MAP.put(thing, toString(prefixParts, "coarse_dirt", rock));
+                MAP.put(thing, toString(prefixParts, "coarse_clay_dirt"));
+                //MAP.put(thing, toString(prefixParts, "coarse_clay_dirt", rock));
+                break;
+            case COARSE_KAOLINITE_CLAY:
+            case COARSE_SANDY_KAOLINITE_CLAY_LOAM:
+            case COARSE_SANDY_KAOLINITE_CLAY:
+            case COARSE_KAOLINITE_CLAY_LOAM:
+            case COARSE_SILTY_KAOLINITE_CLAY:
+            case COARSE_SILTY_KAOLINITE_CLAY_LOAM:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "coarse_dirt"));
+                //MAP.put(thing, toString(prefixParts, "coarse_dirt", rock));
+                MAP.put(thing, toString(prefixParts, "coarse_kaolinite_clay_dirt"));
+                //MAP.put(thing, toString(prefixParts, "coarse_kaolinite_clay_dirt", rock));
                 break;
             case LOAMY_SAND_GRASS:
             case SANDY_LOAM_GRASS:
-            case SANDY_CLAY_LOAM_GRASS:
-            case SANDY_CLAY_GRASS:
             case LOAM_GRASS:
-            case CLAY_LOAM_GRASS:
-            case SILTY_CLAY_GRASS:
-            case SILTY_CLAY_LOAM_GRASS:
             case SILT_LOAM_GRASS:
             case SILT_GRASS:
-                MAP.put(thing, toString(prefixParts, "block", rockTFCF));
+            case HUMUS_GRASS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "grass"));
+                //MAP.put(thing, toString(prefixParts, "grass", rock));
                 break;
             case PODZOL:
             case LOAMY_SAND_PODZOL:
             case SANDY_LOAM_PODZOL:
-            case SANDY_CLAY_LOAM_PODZOL:
-            case SANDY_CLAY_PODZOL:
             case LOAM_PODZOL:
-            case CLAY_LOAM_PODZOL:
-            case CLAY_PODZOL:
-            case SILTY_CLAY_PODZOL:
-            case SILTY_CLAY_LOAM_PODZOL:
             case SILT_LOAM_PODZOL:
             case SILT_PODZOL:
-                MAP.put(thing, toString(prefixParts, rockTFCF, "podzol"));
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "podzol"));
+                //MAP.put(thing, toString(prefixParts, "podzol", rock));
                 break;
-            case MUD:
+            case LOAMY_SAND_FARMLAND:
+            case SANDY_LOAM_FARMLAND:
+            case LOAM_FARMLAND:
+            case SILT_LOAM_FARMLAND:
+            case SILT_FARMLAND:
+            case HUMUS_FARMLAND:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "farmland"));
+                //MAP.put(thing, toString(prefixParts, "farmland", rock));
+                break;
+            case LOAMY_SAND:
+            case SANDY_LOAM:
+            case LOAM:
+            case SILT_LOAM:
+            case SILT:
+            case HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "soil"));
+                //MAP.put(thing, toString(prefixParts, "soil", rock));
+                MAP.put(thing, toString(prefixParts, "dirt"));
+                //MAP.put(thing, toString(prefixParts, "dirt", rock));
+                break;
+            case SANDY_CLAY_LOAM:
+            case SANDY_CLAY:
+            case CLAY_LOAM:
+            case SILTY_CLAY:
+            case SILTY_CLAY_LOAM:
+            case CLAY_HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_clay"));
+                //MAP.put(thing, toString(prefixParts, "block_clay", rock));
+                break;
+            case DRY_CLAY_GRASS:
+            case DRY_SANDY_CLAY_LOAM_GRASS:
+            case DRY_SANDY_CLAY_GRASS:
+            case DRY_CLAY_LOAM_GRASS:
+            case DRY_SILTY_CLAY_GRASS:
+            case DRY_SILTY_CLAY_LOAM_GRASS:
+            case DRY_CLAY_HUMUS_GRASS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_clay_dirt"));
+                //MAP.put(thing, toString(prefixParts, "block_clay_dirt", rock));
+                MAP.put(thing, toString(prefixParts, "dry_grass"));
+                //MAP.put(thing, toString(prefixParts, "dry_grass", rock));
+                break;
+            case SANDY_CLAY_LOAM_GRASS:
+            case SANDY_CLAY_GRASS:
+            case CLAY_LOAM_GRASS:
+            case SILTY_CLAY_GRASS:
+            case SILTY_CLAY_LOAM_GRASS:
+            case CLAY_HUMUS_GRASS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_clay_grass"));
+                //MAP.put(thing, toString(prefixParts, "block_clay_grass", rock));
+                MAP.put(thing, toString(prefixParts, "grass"));
+                //MAP.put(thing, toString(prefixParts, "grass", rock));
+            case CLAY_PODZOL:
+            case SANDY_CLAY_LOAM_PODZOL:
+            case SANDY_CLAY_PODZOL:
+            case CLAY_LOAM_PODZOL:
+            case SILTY_CLAY_PODZOL:
+            case SILTY_CLAY_LOAM_PODZOL:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_clay_podzol"));
+                //MAP.put(thing, toString(prefixParts, "block_clay_podzol", rock));
+                MAP.put(thing, toString(prefixParts, "podzol"));
+                //MAP.put(thing, toString(prefixParts, "podzol", rock));
+                break;
+            case KAOLINITE_CLAY:
+            case SANDY_KAOLINITE_CLAY_LOAM:
+            case SANDY_KAOLINITE_CLAY:
+            case KAOLINITE_CLAY_LOAM:
+            case SILTY_KAOLINITE_CLAY:
+            case SILTY_KAOLINITE_CLAY_LOAM:
+            case KAOLINITE_CLAY_HUMUS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_dirt"));
+                //MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_dirt", rock));
+                break;
+            case DRY_KAOLINITE_CLAY_GRASS:
+            case DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS:
+            case DRY_SANDY_KAOLINITE_CLAY_GRASS:
+            case DRY_KAOLINITE_CLAY_LOAM_GRASS:
+            case DRY_SILTY_KAOLINITE_CLAY_GRASS:
+            case DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
+            case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_dry_kaolinite_clay_grass"));
+                //MAP.put(thing, toString(prefixParts, "block_dry_kaolinite_clay_grass", rock));
+                MAP.put(thing, toString(prefixParts, "dry_grass"));
+                //MAP.put(thing, toString(prefixParts, "dry_grass", rock));
+                break;
+            case KAOLINITE_CLAY_GRASS:
+            case SANDY_KAOLINITE_CLAY_LOAM_GRASS:
+            case SANDY_KAOLINITE_CLAY_GRASS:
+            case KAOLINITE_CLAY_LOAM_GRASS:
+            case SILTY_KAOLINITE_CLAY_GRASS:
+            case SILTY_KAOLINITE_CLAY_LOAM_GRASS:
+            case KAOLINITE_CLAY_HUMUS_GRASS:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_grass"));
+                //MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_grass", rock));
+                MAP.put(thing, toString(prefixParts, "grass"));
+                //MAP.put(thing, toString(prefixParts, "grass", rock));
+                break;
+            case KAOLINITE_CLAY_PODZOL:
+            case SANDY_KAOLINITE_CLAY_LOAM_PODZOL:
+            case SANDY_KAOLINITE_CLAY_PODZOL:
+            case KAOLINITE_CLAY_LOAM_PODZOL:
+            case SILTY_KAOLINITE_CLAY_PODZOL:
+            case SILTY_KAOLINITE_CLAY_LOAM_PODZOL:
+                MAP.put(thing, toString(prefixParts, rockTFCF));
+                MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_podzol"));
+                //MAP.put(thing, toString(prefixParts, "block_kaolinite_clay_podzol", rock));
+                MAP.put(thing, toString(prefixParts, "podzol"));
+                //MAP.put(thing, toString(prefixParts, "podzol", rock));
+                break;
             default:
                 MAP.put(thing, toString(prefixParts, rockTFCF));
         }

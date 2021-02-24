@@ -121,6 +121,9 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
 
         pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
         generateCoarseSilt(world, random, pos);
+
+        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+        generateCoarseHumus(world, random, pos);
     }
 
     /*private void generatePlate(World world, Random rng, BlockPos start, int density)
@@ -2189,6 +2192,101 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
                                 else if (BlocksTFCF.isKaoliniteClayDirt(current))
                                 {
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void generateCoarseHumus(World world, Random rng, BlockPos start)
+    {
+        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
+        {
+            final Biome b = world.getBiome(start);
+            if (b != BiomesTFC.PLAINS)
+            {
+                ChunkDataTFC data = ChunkDataTFC.get(world, start);
+                if (data.isInitialized() && data.getRainfall() >= 190f && data.getFloraDensity() >= 0.4f)
+                {
+                    int length = rng.nextInt(7) + 1;
+                    int depth = rng.nextInt(1) + 1;
+                    float widthMultiplier = rng.nextInt(3) + 1;
+                    int curveHeight = rng.nextInt(3) + 1;
+                    int curveSlope = rng.nextInt(2) + 1;
+                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
+
+                    int z;
+                    int tz;
+                    float tWidth = widthMultiplier / 4;
+
+                    int angle = rng.nextInt(360);
+
+                    int rx;
+                    int rz;
+
+                    for (int x = -length; x <= length; x++)
+                    {
+                        if(x < -length + 3)
+                            tWidth *= 2;
+                        else if(length - x < 3)
+                            tWidth /= 2;
+                        
+
+                        //tx = x + shiftMultiplier;
+                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
+                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
+                        tz = (int)((float)MathHelper.abs(z) * tWidth);
+
+                        for (int width = -tz; width <= tz; width++)
+                        {
+                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
+                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
+
+                            final BlockPos posHorizontal = start.add(rx, 0, rz);
+
+                            for (int y = -depth; y <= +depth; y++)
+                            {
+                                final BlockPos pos = posHorizontal.add(0, y, 0);
+                                final IBlockState current = world.getBlockState(pos);
+
+                                if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_HUMUS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isClayDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isClayGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isClayPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isClayDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_CLAY_HUMUS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS).getDefaultState(), 2);
                                 }
                             }
                         }

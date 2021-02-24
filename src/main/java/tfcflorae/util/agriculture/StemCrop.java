@@ -17,7 +17,7 @@ import static tfcflorae.util.agriculture.StemCrop.*;
 
 public enum StemCrop implements ICrop
 {
-    PUMPKIN(() -> BlocksTFCF.PUMPKIN_FRUIT, 0f, 5f, 30f, 35f, 45f, 90f, 400f, 450f, 8, 0.5f),
+    PUMPKIN(() -> BlocksTFCF.PUMPKIN_FRUIT, 0f, 5f, 30f, 35f, 45f, 90f, 400f, 450f, 6, 0.5f),
     MELON(() -> BlocksTFCF.MELON_FRUIT, 5f, 11f, 35f, 40f, 150f, 200f, 420f, 460f, 8, 0.5f);
 
     static

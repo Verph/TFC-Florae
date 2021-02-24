@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc_decoration:sandstone/mudstone"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:mud_pillar/mudstone",
+    "count": 1
+  }
+}

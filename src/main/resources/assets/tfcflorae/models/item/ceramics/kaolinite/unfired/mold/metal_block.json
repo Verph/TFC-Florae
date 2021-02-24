@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:items/ceramics/kaolinite/unfired/mold/metal_block"
+  }
+}

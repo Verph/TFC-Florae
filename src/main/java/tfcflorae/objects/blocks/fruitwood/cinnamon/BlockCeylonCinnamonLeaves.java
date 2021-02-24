@@ -52,14 +52,14 @@ public class BlockCeylonCinnamonLeaves extends BlockLeavesTFC
     {
         for (EnumFacing d : EnumFacing.VALUES)
         {
-            for (int i = 1; i < 4; i++)
+            for (int i = 3; i < 4; i++)
             {
                 Block offsetBlock = world.getBlockState(pos.offset(d, i)).getBlock();
                 if (offsetBlock instanceof BlockCeylonCinnamonLog)
                     return;
             }
         }
-        world.destroyBlock(pos, true);
+        world.scheduleUpdate(pos, this, 0);
     }
 
     @Override

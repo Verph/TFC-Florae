@@ -1,5 +1,7 @@
 package tfcflorae.objects.blocks.fruitwood;
 
+import java.util.HashMap;
+import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -12,7 +14,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
@@ -26,10 +27,11 @@ import net.minecraft.world.World;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.objects.te.TELoom;
+import net.dries007.tfc.api.types.IFruitTree;
+import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.util.Helpers;
 
-import tfcflorae.util.OreDictionaryHelper;
+import tfcflorae.objects.te.TEFruitLoom;
 
 import static net.minecraft.block.BlockHorizontal.FACING;
 import static net.minecraft.block.material.Material.WOOD;
@@ -42,16 +44,45 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     protected static final AxisAlignedBB LOOM_SOUTH_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.125D, 0.9375D, 1.0D, 0.5625D);
     protected static final AxisAlignedBB LOOM_NORTH_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.4375D, 0.9375D, 1.0D, 0.875D);
 
-    public BlockFruitLoom()
+    private static final Map<IFruitTree, BlockFruitLoom> MAP = new HashMap<>();
+
+    private static final Map<Tree, BlockFruitLoom> MAP_TREE = new HashMap<>();
+
+    public static BlockFruitLoom get(IFruitTree wood)
+    {
+        return MAP.get(wood);
+    }
+
+    public static BlockFruitLoom getTree(Tree tree)
+    {
+        return MAP_TREE.get(tree);
+    }
+
+    public IFruitTree wood = null;
+    public Tree tree = null;
+
+    public BlockFruitLoom(IFruitTree wood)
     {
         super(WOOD, MapColor.AIR);
+        if (MAP.put(wood, this) != null) throw new IllegalStateException("There can only be one.");
+        this.wood = wood;
         setSoundType(SoundType.WOOD);
         setHarvestLevel("axe", 0);
         setHardness(0.5f);
         setResistance(3f);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        OreDictionaryHelper.register(this, "loom");
-        Blocks.FIRE.setFireInfo(this, 5, 20);
+    }
+
+    public BlockFruitLoom(Tree tree)
+    {
+        super(WOOD, MapColor.AIR);
+        if (MAP_TREE.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
+        this.tree = tree;
+        setSoundType(SoundType.WOOD);
+        setHarvestLevel("axe", 0);
+        setHardness(0.5f);
+        setResistance(3f);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
     @Nonnull
@@ -72,7 +103,7 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     @Override
     public TileEntity createNewTileEntity(@Nonnull World worldIn, int meta)
     {
-        return new TELoom();
+        return new TEFruitLoom();
     }
 
     @Override
@@ -133,7 +164,7 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        TELoom te = Helpers.getTE(worldIn, pos, TELoom.class);
+        TEFruitLoom te = Helpers.getTE(worldIn, pos, TEFruitLoom.class);
         if (te != null)
         {
             return te.onRightClick(playerIn);
@@ -171,7 +202,7 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     @Override
     public void breakBlock(World worldIn, @Nonnull BlockPos pos, @Nonnull IBlockState state)
     {
-        TELoom te = Helpers.getTE(worldIn, pos, TELoom.class);
+        TEFruitLoom te = Helpers.getTE(worldIn, pos, TEFruitLoom.class);
         if (te != null)
         {
             te.onBreakBlock(worldIn, pos, state);

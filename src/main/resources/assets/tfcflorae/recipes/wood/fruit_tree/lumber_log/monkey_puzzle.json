@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/monkey_puzzle"
+      "item": "tfcflorae:wood/fruit_tree/pole/monkey_puzzle"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/monkey_puzzle",
-    "count": 8
+    "count": 4
   }
 }

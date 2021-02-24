@@ -25,7 +25,6 @@ import net.dries007.tfc.api.capability.heat.CapabilityItemHeat;
 import net.dries007.tfc.api.capability.metal.CapabilityMetalItem;
 import net.dries007.tfc.api.capability.player.CapabilityPlayerData;
 import net.dries007.tfc.api.capability.size.CapabilityItemSize;
-import net.dries007.tfc.client.ClientEvents;
 import net.dries007.tfc.client.TFCGuiHandler;
 import net.dries007.tfc.client.TFCKeybindings;
 import net.dries007.tfc.client.gui.overlay.PlayerDataOverlay;
@@ -36,12 +35,14 @@ import net.dries007.tfc.objects.entity.EntitiesTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.proxy.IProxy;
 import net.dries007.tfc.util.calendar.CalendarTFC;
-import net.dries007.tfc.util.fuel.FuelManager;
 import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.CapabilityChunkData;
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import net.dries007.tfc.util.OreDictionaryHelper;
+
+import tfcflorae.client.ClientEvents;
 import tfcflorae.client.GuiHandler;
+import tfcflorae.objects.blocks.entity.EntitiesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
 import tfcflorae.util.HelpersTFCF;
@@ -96,6 +97,12 @@ public class TFCFlorae
         }
 
         proxy.preInit(event);
+        EntitiesTFCF.preInit();
+
+        if (event.getSide().isClient())
+        {
+            ClientEvents.preInit();
+        }
 
         HelpersTFCF.insertWhitelistFluids();
     }

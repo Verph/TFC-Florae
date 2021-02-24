@@ -5,9 +5,6 @@
 		"textures":{
 			"side":"tfc:blocks/wood/log/temple_bamboo",
 			"top":"tfc:blocks/wood/top/temple_bamboo",
-			"large_leaves":"tfc:blocks/wood/bamboo_leaves/bamboo_large_leaves",
-			"small_leaves":"tfc:blocks/wood/bamboo_leaves/bamboo_small_leaves",
-			"single_leaf":"tfc:blocks/wood/bamboo_leaves/bamboo_single_leaf",
 			"particle":"tfc:blocks/wood/log/temple_bamboo"
 		}
 	},
@@ -38,36 +35,11 @@
 				
 			}
 		},
-		"inventory":[
-			{
-				
-			}
-		],
+		"inventory":[{}],
 		"normal":[
 			{
 				"transform":"forge:default-block",
-				"model":"tfcflorae:wood/bamboo/log/log_thin",
-				"weight":6
-			},
-			{
-				"transform":"forge:default-block",
-				"model":"tfcflorae:wood/bamboo/log/log_thin_large_leaves",
-				"weight":1
-			},
-			{
-				"transform":"forge:default-block",
-				"model":"tfcflorae:wood/bamboo/log/log_thin_small_leaves",
-				"weight":1
-			},
-			{
-				"transform":"forge:default-block",
-				"model":"tfcflorae:wood/bamboo/log/log_thin_single_leaf_0",
-				"weight":1
-			},
-			{
-				"transform":"forge:default-block",
-				"model":"tfcflorae:wood/bamboo/log/log_thin_single_leaf_1",
-				"weight":1
+				"model":"tfcflorae:wood/bamboo/log/log_thin"
 			}
 		]
 	}

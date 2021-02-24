@@ -22,6 +22,7 @@ import net.dries007.tfc.objects.container.*;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
 import tfcflorae.objects.blocks.fruitwood.BlockFruitChestTFCF;
+import tfcflorae.objects.items.ceramics.ItemClayKaolinite;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.util.OreDictionaryHelper;
 
@@ -31,6 +32,8 @@ public class GuiHandler implements IGuiHandler
     public static final ResourceLocation MUD_DISABLED_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/mud_button_disabled.png");
     public static final ResourceLocation KAOLINITE_CLAY_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/kaolinite_clay_button.png");
     public static final ResourceLocation KAOLINITE_CLAY_DISABLED_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/kaolinite_clay_button_disabled.png");
+    public static final ResourceLocation FLINT_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/flint_button.png");
+    public static final ResourceLocation FLINT_DISABLED_TEXTURE = new ResourceLocation(TFCFlorae.MODID, "textures/gui/knapping/flint_button_disabled.png");
 
     public static void openGui(World world, BlockPos pos, EntityPlayer player, Type type)
     {
@@ -54,7 +57,9 @@ public class GuiHandler implements IGuiHandler
             case MUD:
                 return new ContainerKnapping(KnappingTypes.MUD, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "mud") ? stack : player.getHeldItemOffhand());
             case KAOLINITE_CLAY:
-                return new ContainerKnapping(KnappingTypes.KAOLINITE_CLAY, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "clay_kaolinite") ? stack : player.getHeldItemOffhand());
+                return new ContainerKnapping(KnappingTypes.KAOLINITE_CLAY, player.inventory, OreDictionaryHelper.doesStackMatchOre(stack, "clayKaolinite") ? stack : player.getHeldItemOffhand());
+                case FLINT:
+                    return new ContainerKnapping(KnappingTypes.FLINT, player.inventory,  OreDictionaryHelper.doesStackMatchOre(stack, "flint") ? stack : player.getHeldItemOffhand());
             case CHEST:
                 if (world.getBlockState(pos).getBlock() instanceof BlockFruitChestTFCF)
                 {
@@ -77,12 +82,14 @@ public class GuiHandler implements IGuiHandler
         switch (type)
         {
             case MUD:
-                ItemStack stack = player.getHeldItemMainhand();
-                stack = OreDictionaryHelper.doesStackMatchOre(stack, "mud") ? stack : player.getHeldItemOffhand();
-                ItemMud mud = (ItemMud)(stack.getItem());
+                ItemStack stackMud = player.getHeldItemMainhand();
+                stackMud = OreDictionaryHelper.doesStackMatchOre(stackMud, "mud") ? stackMud : player.getHeldItemOffhand();
+                ItemMud mud = (ItemMud)(stackMud.getItem());
                 return new GuiKnappingTFCF(container, player, KnappingTypes.MUD, mud.getForegroundTexture(), mud.getBackgroundTexture());
             case KAOLINITE_CLAY:
                 return new GuiKnappingTFCF(container, player, KnappingTypes.KAOLINITE_CLAY, KAOLINITE_CLAY_TEXTURE);
+            case FLINT:
+                return new GuiKnappingTFCF(container, player, KnappingTypes.FLINT, FLINT_TEXTURE);
             case CHEST:
                 if (container instanceof ContainerChestTFC)
                 {
@@ -98,6 +105,7 @@ public class GuiHandler implements IGuiHandler
     {
         MUD,
         KAOLINITE_CLAY,
+        FLINT,
         CHEST,
         NULL;
 

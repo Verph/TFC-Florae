@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "tfc:gravel/sandstone"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "tfcflorae:silt_loam/sandstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt_loam/sandstone",
+    "count": 4
+  }
+}

@@ -1,0 +1,46 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"leaves": "tfc:blocks/plants/undergrowth_shrub/undergrowth_leaves_small_0",
+		"particle": "tfc:blocks/plants/undergrowth_shrub/undergrowth_stem_middle_0",
+		"stem": "tfc:blocks/plants/undergrowth_shrub/undergrowth_stem_middle_0"
+	},
+	"elements": [
+		{
+			"from": [8, 0, -8],
+			"to": [8, 16, 24],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 8]},
+			"faces": {
+				"east": {"uv": [16, 8, 0, 16], "texture": "#stem"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#stem"}
+			}
+		},
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 8]},
+			"faces": {
+				"north": {"uv": [16, 8, 0, 16], "texture": "#stem"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#stem"}
+			}
+		},
+		{
+			"from": [-2.21662, -4.31676, -2],
+			"to": [-2.21662, 15.68324, 18],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [-5.21662, 7.46662, 8]},
+			"faces": {
+				"east": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"from": [0, 8.43718, -13.28769],
+			"to": [16, 8.43718, 2.71231],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 8.43718, -5.28769]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#leaves", "tintindex": 0},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#leaves", "tintindex": 0}
+			}
+		}
+	]
+}

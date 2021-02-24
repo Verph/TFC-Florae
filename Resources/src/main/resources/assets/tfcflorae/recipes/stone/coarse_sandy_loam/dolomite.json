@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "tfc:gravel/dolomite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "tfcflorae:sandy_loam/dolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/dolomite",
+    "count": 4
+  }
+}

@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/red_currant"
+      "item": "tfcflorae:wood/fruit_tree/pole/red_currant"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/red_currant",
-    "count": 8
+    "count": 4
   }
 }

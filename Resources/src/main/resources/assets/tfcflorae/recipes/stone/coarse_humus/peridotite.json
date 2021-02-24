@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "tfc:gravel/peridotite"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "tfcflorae:humus/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/peridotite",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+	{
+      "type": "forge:ore_dict",
+      "ore": "baleSisalFiber"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/sisal_fiber",
+    "count": 9
+  }
+}

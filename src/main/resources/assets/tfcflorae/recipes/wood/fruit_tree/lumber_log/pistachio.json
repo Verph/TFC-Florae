@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/pistachio"
+      "item": "tfcflorae:wood/fruit_tree/pole/pistachio"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/pistachio",
-    "count": 8
+    "count": 4
   }
 }

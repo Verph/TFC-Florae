@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/crabapple"
+      "item": "tfcflorae:wood/fruit_tree/pole/crabapple"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/crabapple",
-    "count": 8
+    "count": 4
   }
 }

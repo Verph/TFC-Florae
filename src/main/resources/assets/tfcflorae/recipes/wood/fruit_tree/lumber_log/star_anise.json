@@ -2,7 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/log/star_anise"
+      "item": "tfcflorae:wood/fruit_tree/pole/star_anise"
     },
     {
       "type": "forge:ore_dict",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "tfcflorae:wood/fruit_tree/lumber/star_anise",
-    "count": 8
+    "count": 4
   }
 }

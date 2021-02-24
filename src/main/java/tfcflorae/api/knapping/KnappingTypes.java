@@ -6,4 +6,5 @@ public final class KnappingTypes
 {
     public static final KnappingType MUD = new KnappingType(2, true);
     public static final KnappingType KAOLINITE_CLAY = new KnappingType(2, true);
+    public static final KnappingType FLINT = new KnappingType(2, false);
 }

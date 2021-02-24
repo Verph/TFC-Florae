@@ -30,12 +30,21 @@ import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
 import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
 import net.dries007.tfc.objects.items.rock.ItemRock;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockHumusFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamySandFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSandyLoamFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltLoamFarmland;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
+
+import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -84,7 +93,9 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILT:
             case COARSE_SILT:
             case HUMUS:
+            case COARSE_HUMUS:
             case CLAY_HUMUS:
+            case COARSE_CLAY_HUMUS:
             case KAOLINITE_CLAY:
             case SANDY_KAOLINITE_CLAY_LOAM:
             case COARSE_SANDY_KAOLINITE_CLAY_LOAM:
@@ -98,6 +109,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILTY_KAOLINITE_CLAY_LOAM:
             case COARSE_SILTY_KAOLINITE_CLAY_LOAM:
             case KAOLINITE_CLAY_HUMUS:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
                 return new BlockRockVariantFallableTFCF(rockTFCF, rock);
             case PODZOL:
             case LOAMY_SAND_GRASS:
@@ -157,6 +169,18 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case KAOLINITE_CLAY_HUMUS_GRASS:
             case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
                 return new BlockRockVariantConnectedTFCF(rockTFCF, rock);
+            case LOAMY_SAND_FARMLAND:
+                return new BlockLoamySandFarmland(rockTFCF, rock);
+            case SANDY_LOAM_FARMLAND:
+                return new BlockSandyLoamFarmland(rockTFCF, rock);
+            case LOAM_FARMLAND:
+                return new BlockLoamFarmland(rockTFCF, rock);
+            case SILT_LOAM_FARMLAND:
+                return new BlockSiltLoamFarmland(rockTFCF, rock);
+            case SILT_FARMLAND:
+                return new BlockSiltFarmland(rockTFCF, rock);
+            case HUMUS_FARMLAND:
+                return new BlockHumusFarmland(rockTFCF, rock);
             default:
                 return new BlockRockVariantTFCF(rockTFCF, rock);
         }
@@ -193,6 +217,12 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILT_LOAM:
             case SILT:
             case HUMUS:
+            case LOAMY_SAND_FARMLAND:
+            case SANDY_LOAM_FARMLAND:
+            case LOAM_FARMLAND:
+            case SILT_LOAM_FARMLAND:
+            case SILT_FARMLAND:
+            case HUMUS_FARMLAND:
                 setSoundType(SoundType.GROUND);
                 setHardness(rock.getRockCategory().getHardness() * 0.15F);
                 setHarvestLevel("shovel", 0);
@@ -213,6 +243,8 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case COARSE_SILTY_CLAY_LOAM:
             case COARSE_SILT_LOAM:
             case COARSE_SILT:
+            case COARSE_HUMUS:
+            case COARSE_CLAY_HUMUS:
             case CLAY_HUMUS:
             case KAOLINITE_CLAY:
             case SANDY_KAOLINITE_CLAY_LOAM:
@@ -227,6 +259,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILTY_KAOLINITE_CLAY_LOAM:
             case COARSE_SILTY_KAOLINITE_CLAY_LOAM:
             case KAOLINITE_CLAY_HUMUS:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
                 setSoundType(SoundType.GROUND);
                 setHardness(rock.getRockCategory().getHardness() * 0.2F);
                 setHarvestLevel("shovel", 0);
@@ -295,23 +328,8 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
         }
         //if (rockTFCF != Rock.Type.SPIKE && rockTFCF != Rock.Type.ANVIL) //since spikes and anvils don't generate ItemBlocks
         {
-            OreDictionaryHelper.registerRockType(this, rockTFCF);
+            OreDictionaryHelper.registerRockType(this, rockTFCF, rock);
         }
-        
-        /* Soundtypes:
-        static SoundType	ANVIL
-        static SoundType	CLOTH
-        static SoundType	GLASS
-        static SoundType	GROUND
-        static SoundType	LADDER
-        static SoundType	METAL
-        static SoundType	PLANT
-        static SoundType	SAND
-        static SoundType	SLIME
-        static SoundType	SNOW
-        static SoundType	STONE
-        static SoundType	WOOD
-        */
     }
 
     public BlockRockVariantTFCF getVariant(RockTFCF t)
@@ -326,6 +344,43 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
     {
         switch (this.rockTFCF)
         {
+            case LOAMY_SAND_FARMLAND:
+            case SANDY_LOAM_FARMLAND:
+            case LOAM_FARMLAND:
+            case SILT_LOAM_FARMLAND:
+            case SILT_FARMLAND:
+            case HUMUS_FARMLAND:
+                switch (side)
+                {
+                    case UP:
+                        return true;
+                    case NORTH:
+                    case SOUTH:
+                    case WEST:
+                    case EAST:
+                        IBlockState state = world.getBlockState(pos.offset(side));
+                        Block block = state.getBlock();
+                        if (state.isOpaqueCube()) return false;
+                        if (block instanceof BlockLoamySandFarmland || block instanceof BlockSandyLoamFarmland || block instanceof BlockLoamFarmland || block instanceof BlockSiltLoamFarmland || block instanceof BlockSiltFarmland || block instanceof BlockHumusFarmland) return false;
+                        if (block instanceof BlockRockVariantTFCF)
+                        {
+                            switch (((BlockRockVariantTFCF) block).rockTFCF)
+                            {
+                                case LOAMY_SAND_FARMLAND:
+                                case SANDY_LOAM_FARMLAND:
+                                case LOAM_FARMLAND:
+                                case SILT_LOAM_FARMLAND:
+                                case SILT_FARMLAND:
+                                case HUMUS_FARMLAND:
+                                    return false;
+                                default:
+                                    return true;
+                            }
+                        }
+                        return true;
+                    case DOWN:
+                        return super.shouldSideBeRendered(blockState, world, pos, side);
+                }
             default:
                 return super.shouldSideBeRendered(blockState, world, pos, side);
         }
@@ -383,6 +438,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case COARSE_CLAY:
             case COARSE_SILTY_CLAY:
             case COARSE_SILTY_CLAY_LOAM:
+            case COARSE_CLAY_HUMUS:
             case SANDY_CLAY_LOAM_GRASS:
             case SANDY_CLAY_LOAM_PODZOL:
             case SANDY_CLAY_GRASS:
@@ -417,6 +473,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILTY_KAOLINITE_CLAY_LOAM:
             case COARSE_SILTY_KAOLINITE_CLAY_LOAM:
             case KAOLINITE_CLAY_HUMUS:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
             case KAOLINITE_CLAY_GRASS:
             case SANDY_KAOLINITE_CLAY_LOAM_GRASS:
             case SANDY_KAOLINITE_CLAY_LOAM_PODZOL:
@@ -442,11 +499,6 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 return Item.getItemFromBlock(get(rock, RockTFCF.COARSE_DIRT));
             case PODZOL:
                 return Item.getItemFromBlock(get(rock, RockTFCF.PODZOL));
-            /*
-            case COARSE_DIRT:
-            case PODZOL:
-                return Item.getItemFromBlock(get(rock, Rock.Type.DIRT));
-            */
             default:
                 return super.getItemDropped(state, rand, fortune);
         }
@@ -499,6 +551,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_SILTY_CLAY_GRASS:
             case DRY_SILTY_CLAY_LOAM_GRASS:
             case CLAY_HUMUS:
+            case COARSE_CLAY_HUMUS:
             case CLAY_HUMUS_GRASS:
             case DRY_CLAY_HUMUS_GRASS:
             case KAOLINITE_CLAY:
@@ -514,6 +567,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILTY_KAOLINITE_CLAY_LOAM:
             case COARSE_SILTY_KAOLINITE_CLAY_LOAM:
             case KAOLINITE_CLAY_HUMUS:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
             case KAOLINITE_CLAY_GRASS:
             case SANDY_KAOLINITE_CLAY_LOAM_GRASS:
             case SANDY_KAOLINITE_CLAY_LOAM_PODZOL:
@@ -612,6 +666,8 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                     rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                     rockTFCF == RockTFCF.HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_CLAY_HUMUS || 
                     rockTFCF == RockTFCF.HUMUS_GRASS || 
                     rockTFCF == RockTFCF.DRY_HUMUS_GRASS || 
                     rockTFCF == RockTFCF.CLAY_HUMUS || 
@@ -630,6 +686,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.SILTY_KAOLINITE_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM || 
                     rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS || 
                     rockTFCF == RockTFCF.KAOLINITE_CLAY_GRASS || 
                     rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
                     rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_PODZOL || 
@@ -658,19 +715,21 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.CLAY_LOAM || 
                     rockTFCF == RockTFCF.SILTY_CLAY_LOAM || 
                     rockTFCF == RockTFCF.SILTY_CLAY || 
+                    rockTFCF == RockTFCF.CLAY_HUMUS || 
                     rockTFCF == RockTFCF.COARSE_SANDY_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SANDY_CLAY || 
                     rockTFCF == RockTFCF.COARSE_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_CLAY || 
                     rockTFCF == RockTFCF.COARSE_SILTY_CLAY || 
                     rockTFCF == RockTFCF.COARSE_SILTY_CLAY_LOAM || 
-                    rockTFCF == RockTFCF.CLAY_HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_CLAY_HUMUS || 
                     rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY || 
                     rockTFCF == RockTFCF.COARSE_SANDY_KAOLINITE_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SANDY_KAOLINITE_CLAY || 
                     rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY || 
-                    rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM;
+                    rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM || 
+                    rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS;
                 case DRY_CLAY:
                     return
                     rockTFCF == RockTFCF.COARSE_DIRT || 
@@ -696,6 +755,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.COARSE_SILTY_CLAY_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT || 
+                    rockTFCF == RockTFCF.COARSE_CLAY_HUMUS || 
                     rockTFCF == RockTFCF.PODZOL || 
                     rockTFCF == RockTFCF.LOAMY_SAND_GRASS || 
                     rockTFCF == RockTFCF.LOAMY_SAND_PODZOL || 
@@ -730,6 +790,8 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                     rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                     rockTFCF == RockTFCF.HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS || 
                     rockTFCF == RockTFCF.HUMUS_GRASS || 
                     rockTFCF == RockTFCF.DRY_HUMUS_GRASS || 
                     rockTFCF == RockTFCF.CLAY_HUMUS || 
@@ -782,6 +844,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.COARSE_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
                     rockTFCF == RockTFCF.DRY_LOAMY_SAND_GRASS || 
                     rockTFCF == RockTFCF.DRY_SANDY_LOAM_GRASS || 
                     rockTFCF == RockTFCF.DRY_LOAM_GRASS || 
@@ -804,6 +867,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.COARSE_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
                     rockTFCF == RockTFCF.COARSE_SILT || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
                     rockTFCF == RockTFCF.PODZOL || 
                     rockTFCF == RockTFCF.LOAMY_SAND_GRASS || 
                     rockTFCF == RockTFCF.LOAMY_SAND_PODZOL || 
@@ -854,6 +918,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                     rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                     rockTFCF == RockTFCF.HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
                     rockTFCF == RockTFCF.HUMUS_GRASS || 
                     rockTFCF == RockTFCF.DRY_HUMUS_GRASS;
                 case FRESH_BEACH:
@@ -901,6 +966,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                         rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                         rockTFCF == RockTFCF.HUMUS || 
+                        rockTFCF == RockTFCF.COARSE_HUMUS || 
                         rockTFCF == RockTFCF.HUMUS_GRASS || 
                         rockTFCF == RockTFCF.DRY_HUMUS_GRASS
                     ) && flag;
@@ -947,14 +1013,13 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                         rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                         rockTFCF == RockTFCF.HUMUS || 
+                        rockTFCF == RockTFCF.COARSE_HUMUS || 
                         rockTFCF == RockTFCF.HUMUS_GRASS || 
                         rockTFCF == RockTFCF.DRY_HUMUS_GRASS
                     ) && flag;
                 }
             }
         }
-
-        /*
         else if (plantable instanceof BlockCropTFC)
         {
             IBlockState cropState = world.getBlockState(pos.up());
@@ -966,22 +1031,31 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     if 
                     (
                         rockTFCF == RockTFCF.COARSE_DIRT || 
+                        rockTFCF == RockTFCF.LOAMY_SAND || 
                         rockTFCF == RockTFCF.SANDY_LOAM || 
                         rockTFCF == RockTFCF.LOAM || 
                         rockTFCF == RockTFCF.SILT_LOAM || 
+                        rockTFCF == RockTFCF.SILT || 
                         rockTFCF == RockTFCF.SANDY_CLAY_LOAM || 
                         rockTFCF == RockTFCF.SANDY_CLAY || 
                         rockTFCF == RockTFCF.CLAY_LOAM || 
                         rockTFCF == RockTFCF.SILTY_CLAY_LOAM || 
+                        rockTFCF == RockTFCF.SILTY_CLAY || 
+                        rockTFCF == RockTFCF.COARSE_LOAMY_SAND || 
                         rockTFCF == RockTFCF.COARSE_SANDY_LOAM || 
                         rockTFCF == RockTFCF.COARSE_SANDY_CLAY_LOAM || 
                         rockTFCF == RockTFCF.COARSE_SANDY_CLAY || 
                         rockTFCF == RockTFCF.COARSE_LOAM || 
                         rockTFCF == RockTFCF.COARSE_CLAY_LOAM || 
                         rockTFCF == RockTFCF.COARSE_CLAY || 
+                        rockTFCF == RockTFCF.COARSE_SILTY_CLAY || 
                         rockTFCF == RockTFCF.COARSE_SILTY_CLAY_LOAM || 
                         rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
+                        rockTFCF == RockTFCF.COARSE_SILT || 
+                        rockTFCF == RockTFCF.COARSE_CLAY_HUMUS || 
                         rockTFCF == RockTFCF.PODZOL || 
+                        rockTFCF == RockTFCF.LOAMY_SAND_GRASS || 
+                        rockTFCF == RockTFCF.LOAMY_SAND_PODZOL || 
                         rockTFCF == RockTFCF.SANDY_LOAM_GRASS || 
                         rockTFCF == RockTFCF.SANDY_LOAM_PODZOL || 
                         rockTFCF == RockTFCF.SANDY_CLAY_LOAM_GRASS || 
@@ -993,15 +1067,29 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         rockTFCF == RockTFCF.CLAY_LOAM_GRASS || 
                         rockTFCF == RockTFCF.CLAY_LOAM_PODZOL || 
                         rockTFCF == RockTFCF.CLAY_PODZOL || 
+                        rockTFCF == RockTFCF.SILTY_CLAY_GRASS || 
+                        rockTFCF == RockTFCF.SILTY_CLAY_PODZOL || 
                         rockTFCF == RockTFCF.SILTY_CLAY_LOAM_GRASS || 
                         rockTFCF == RockTFCF.SILTY_CLAY_LOAM_PODZOL || 
                         rockTFCF == RockTFCF.SILT_LOAM_GRASS || 
                         rockTFCF == RockTFCF.SILT_LOAM_PODZOL || 
+                        rockTFCF == RockTFCF.SILT_GRASS || 
+                        rockTFCF == RockTFCF.SILT_PODZOL || 
                         rockTFCF == RockTFCF.DRY_LOAMY_SAND_GRASS || 
                         rockTFCF == RockTFCF.DRY_SANDY_LOAM_GRASS || 
+                        rockTFCF == RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS || 
+                        rockTFCF == RockTFCF.DRY_SANDY_CLAY_GRASS || 
                         rockTFCF == RockTFCF.DRY_LOAM_GRASS || 
+                        rockTFCF == RockTFCF.DRY_CLAY_LOAM_GRASS || 
+                        rockTFCF == RockTFCF.DRY_CLAY_GRASS || 
+                        rockTFCF == RockTFCF.DRY_SILTY_CLAY_GRASS || 
+                        rockTFCF == RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS || 
                         rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                         rockTFCF == RockTFCF.DRY_SILT_GRASS || 
+                        rockTFCF == RockTFCF.HUMUS || 
+                        rockTFCF == RockTFCF.COARSE_HUMUS || 
+                        rockTFCF == RockTFCF.HUMUS_GRASS || 
+                        rockTFCF == RockTFCF.DRY_HUMUS_GRASS || 
                         rockTFCF == RockTFCF.CLAY_HUMUS || 
                         rockTFCF == RockTFCF.CLAY_HUMUS_GRASS || 
                         rockTFCF == RockTFCF.DRY_CLAY_HUMUS_GRASS || 
@@ -1018,6 +1106,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         rockTFCF == RockTFCF.SILTY_KAOLINITE_CLAY_LOAM || 
                         rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM || 
                         rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS || 
+                        rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS || 
                         rockTFCF == RockTFCF.KAOLINITE_CLAY_GRASS || 
                         rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
                         rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_PODZOL || 
@@ -1043,10 +1132,15 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         return true;
                     }
                 }
-                return type == Rock.Type.FARMLAND;
+                return 
+                rockTFCF == RockTFCF.LOAMY_SAND_FARMLAND || 
+                rockTFCF == RockTFCF.SANDY_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_FARMLAND || 
+                rockTFCF == RockTFCF.HUMUS_FARMLAND;
             }
         }
-        */
 
         switch (plantable.getPlantType(world, pos.offset(direction)))
         {
@@ -1075,6 +1169,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 rockTFCF == RockTFCF.COARSE_SILTY_CLAY_LOAM || 
                 rockTFCF == RockTFCF.COARSE_SILT_LOAM || 
                 rockTFCF == RockTFCF.COARSE_SILT || 
+                rockTFCF == RockTFCF.COARSE_CLAY_HUMUS || 
                 rockTFCF == RockTFCF.PODZOL || 
                 rockTFCF == RockTFCF.LOAMY_SAND_GRASS || 
                 rockTFCF == RockTFCF.LOAMY_SAND_PODZOL || 
@@ -1109,6 +1204,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                 rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                 rockTFCF == RockTFCF.HUMUS || 
+                rockTFCF == RockTFCF.COARSE_HUMUS || 
                 rockTFCF == RockTFCF.HUMUS_GRASS || 
                 rockTFCF == RockTFCF.DRY_HUMUS_GRASS || 
                 rockTFCF == RockTFCF.CLAY_HUMUS || 
@@ -1127,6 +1223,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 rockTFCF == RockTFCF.SILTY_KAOLINITE_CLAY_LOAM || 
                 rockTFCF == RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM || 
                 rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS || 
+                rockTFCF == RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS || 
                 rockTFCF == RockTFCF.KAOLINITE_CLAY_GRASS || 
                 rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
                 rockTFCF == RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_PODZOL || 
@@ -1146,7 +1243,21 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
                 rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
                 rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS || 
-                rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+                rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+                rockTFCF == RockTFCF.LOAMY_SAND_FARMLAND || 
+                rockTFCF == RockTFCF.SANDY_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_FARMLAND || 
+                rockTFCF == RockTFCF.HUMUS_FARMLAND;
+            case Crop:
+                return 
+                rockTFCF == RockTFCF.LOAMY_SAND_FARMLAND || 
+                rockTFCF == RockTFCF.SANDY_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_LOAM_FARMLAND || 
+                rockTFCF == RockTFCF.SILT_FARMLAND || 
+                rockTFCF == RockTFCF.HUMUS_FARMLAND;
             case Cave:
                 return true;
             case Water:
@@ -1193,6 +1304,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                     rockTFCF == RockTFCF.DRY_SILT_LOAM_GRASS || 
                     rockTFCF == RockTFCF.DRY_SILT_GRASS || 
                     rockTFCF == RockTFCF.HUMUS || 
+                    rockTFCF == RockTFCF.COARSE_HUMUS || 
                     rockTFCF == RockTFCF.HUMUS_GRASS || 
                     rockTFCF == RockTFCF.DRY_HUMUS_GRASS
                 ) && flag;
@@ -1255,6 +1367,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case COARSE_SILT_LOAM:
             case SILT:
             case COARSE_SILT:
+            case COARSE_CLAY_HUMUS:
             case PODZOL:
             case LOAMY_SAND_GRASS:
             case LOAMY_SAND_PODZOL:
@@ -1289,6 +1402,8 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_SILT_LOAM_GRASS:
             case DRY_SILT_GRASS:
             case HUMUS:
+            case COARSE_HUMUS:
+            case COARSE_KAOLINITE_CLAY_HUMUS:
             case HUMUS_GRASS:
             case DRY_HUMUS_GRASS:
             case CLAY_HUMUS:
@@ -1327,6 +1442,12 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
             case KAOLINITE_CLAY_HUMUS_GRASS:
             case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
+            case LOAMY_SAND_FARMLAND:
+            case SANDY_LOAM_FARMLAND:
+            case LOAM_FARMLAND:
+            case SILT_LOAM_FARMLAND:
+            case SILT_FARMLAND:
+            case HUMUS_FARMLAND:
                 world.playSound(null, pos, TFCSounds.DIRT_SLIDE_SHORT, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 break;
         }

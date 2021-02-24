@@ -24,7 +24,7 @@ import net.dries007.tfc.objects.entity.EntityFallingBlockTFC;
 import net.dries007.tfc.util.IFallingBlock;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
@@ -46,7 +46,18 @@ public class BlockRockVariantConnectedTFCF extends BlockRockVariantFallableTFCF
             if (us.getBlock() instanceof BlockRockVariantTFCF)
             {
                 BlockRockVariantTFCF block = ((BlockRockVariantTFCF) us.getBlock());
-                world.setBlockState(pos, block.getVariant(block.getType().getNonGrassVersion()).getDefaultState());
+                RockTFCF tempRock = block.getType().getNonGrassVersion();
+                if(tempRock == null)
+                {
+                    Rock.Type tempType = block.getType().getNonGrassVersionTFC();
+                    BlockRockVariant variant = BlockRockVariant.get(((BlockRockVariantTFCF) block).rock, tempType);
+                    if(variant != null)
+                        world.setBlockState(pos, variant.getDefaultState());
+                    else
+                        TFCFlorae.getLog().warn("Can't get a rock variant of type: ", tempType);
+                }
+                else
+                    world.setBlockState(pos, block.getVariant(block.getType().getNonGrassVersion()).getDefaultState());
             }
         }
         else
@@ -342,7 +353,18 @@ public class BlockRockVariantConnectedTFCF extends BlockRockVariantFallableTFCF
                 // Replace grass with dirt
                 if (rockTFCF.getNonGrassVersion() != rockTFCF)
                 {
-                    worldIn.setBlockState(pos1, BlockRockVariantTFCF.get(rock, rockTFCF.getNonGrassVersion()).getDefaultState());
+                    RockTFCF tempRock = rockTFCF.getNonGrassVersion();
+                    if(tempRock == null)
+                    {
+                        Rock.Type tempType = rockTFCF.getNonGrassVersionTFC();
+                        BlockRockVariant variant = BlockRockVariant.get(((BlockRockVariantTFCF)state.getBlock()).rock, tempType);
+                        if(variant != null)
+                            worldIn.setBlockState(pos1, variant.getDefaultState());
+                        else
+                            TFCFlorae.getLog().warn("Can't get a rock variant of type: ", tempType);
+                    }
+                    else
+                        worldIn.setBlockState(pos1, BlockRockVariantTFCF.get(rock, tempRock).getDefaultState());
                 }
                 worldIn.spawnEntity(new EntityFallingBlockTFC(worldIn, pos1, this, worldIn.getBlockState(pos1)));
             }

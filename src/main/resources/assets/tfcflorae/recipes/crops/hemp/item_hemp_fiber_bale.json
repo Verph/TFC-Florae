@@ -1,0 +1,13 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+	{
+      "type": "forge:ore_dict",
+      "ore": "baleHempFiber"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/hemp_fiber",
+    "count": 9
+  }
+}
