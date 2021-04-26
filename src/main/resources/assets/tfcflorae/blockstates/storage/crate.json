@@ -1,0 +1,25 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "tfcflorae:storage/crate/crate_closed",
+	"textures": {
+		"side": "tfcflorae:blocks/storage/crate/crate_side_0",
+		"bottom": "tfcflorae:blocks/storage/crate/crate_top",
+		"top": "tfcflorae:blocks/storage/crate/crate_top",
+		"particle": "tfcflorae:blocks/storage/crate/crate_side_0"
+	}
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "sealed": {
+      "true": {
+        "model": "tfcflorae:storage/crate/crate_closed"
+      },
+      "false": {
+        "model": "tfcflorae:storage/crate/crate_open"
+      }
+    }
+  }
+}

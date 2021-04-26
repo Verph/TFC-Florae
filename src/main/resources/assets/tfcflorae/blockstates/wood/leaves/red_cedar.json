@@ -1,0 +1,53 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfcflorae:blocks/wood/leaves/red_cedar"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/red_cedar",
+          "texture": "tfcflorae:blocks/wood/flowers/red_cedar"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/red_cedar",
+          "texture": "tfcflorae:blocks/wood/fruit/red_cedar"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "autumn": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/red_cedar"
+        },
+        "submodel": "leaves"
+      },
+      "winter": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/red_cedar"
+        },
+        "submodel": "leaves"
+      }
+    }
+  }
+}

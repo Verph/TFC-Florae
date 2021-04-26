@@ -1,0 +1,53 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfcflorae:blocks/wood/leaves/maclura"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/maclura",
+          "texture": "tfcflorae:blocks/wood/flowers/maclura"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/maclura",
+          "texture": "tfcflorae:blocks/wood/fruit/maclura"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "autumn": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/maclura"
+        },
+        "submodel": "leaves"
+      },
+      "winter": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/maclura"
+        },
+        "submodel": "leaves"
+      }
+    }
+  }
+}

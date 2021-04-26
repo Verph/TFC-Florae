@@ -6,11 +6,11 @@
     "textures": {
       "all": "tfc:blocks/stonetypes/clay/slate",
       "particle": "tfc:blocks/grass_top",
-      "top": "tfc:blocks/dry_grass_top",
-      "north": "tfc:blocks/dry_grass_side",
-      "south": "tfc:blocks/dry_grass_side",
-      "east": "tfc:blocks/dry_grass_side",
-      "west": "tfc:blocks/dry_grass_side"
+      "top": "tfcflorae:blocks/dry_grass_top",
+      "north": "tfcflorae:blocks/dry_grass_side",
+      "south": "tfcflorae:blocks/dry_grass_side",
+      "east": "tfcflorae:blocks/dry_grass_side",
+      "west": "tfcflorae:blocks/dry_grass_side"
     }
   },
   "variants": {
@@ -20,7 +20,7 @@
     "north": {
       "true": {
         "textures": {
-          "north": "tfc:blocks/dry_grass_top"
+          "north": "tfcflorae:blocks/dry_grass_top"
         }
       },
       "false": {}
@@ -28,7 +28,7 @@
     "south": {
       "true": {
         "textures": {
-          "south": "tfc:blocks/dry_grass_top"
+          "south": "tfcflorae:blocks/dry_grass_top"
         }
       },
       "false": {}
@@ -36,7 +36,7 @@
     "east": {
       "true": {
         "textures": {
-          "east": "tfc:blocks/dry_grass_top"
+          "east": "tfcflorae:blocks/dry_grass_top"
         }
       },
       "false": {}
@@ -44,7 +44,7 @@
     "west": {
       "true": {
         "textures": {
-          "west": "tfc:blocks/dry_grass_top"
+          "west": "tfcflorae:blocks/dry_grass_top"
         }
       },
       "false": {}

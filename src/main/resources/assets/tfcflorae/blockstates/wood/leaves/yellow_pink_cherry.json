@@ -1,0 +1,52 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfcflorae:blocks/wood/leaves/pink_cherry"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/flowers/pink_cherry",
+          "texture": "tfcflorae:blocks/wood/flowers/pink_cherry"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/pink_cherry",
+          "texture": "tfcflorae:blocks/wood/fruit/cherry"
+        },
+        "submodel": "tfc:fruit_trees/leaves_overlay"
+      },
+      "autumn": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/yellow_pink_cherry"
+        },
+        "submodel": "leaves"
+      },
+      "winter": {
+        "model": "tfcflorae:wood/branch/branch",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/branch/branch"
+        }
+      }
+    }
+  }
+}

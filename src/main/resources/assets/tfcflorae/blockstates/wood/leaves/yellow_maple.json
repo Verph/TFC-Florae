@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "leaves",
+    "textures": {
+      "all": "tfc:blocks/wood/leaves/maple"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": {
+      "model": "leaves",
+      "transform": "forge:default-block"
+    },
+    "state": {
+      "normal": {
+        "model": "leaves"
+      },
+      "flowering": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfc:blocks/wood/leaves/maple"
+        },
+        "submodel": "leaves"
+      },
+      "fruit": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfc:blocks/wood/leaves/maple"
+        },
+        "submodel": "leaves"
+      },
+      "autumn": {
+        "model": "leaves",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/leaves/yellow_maple"
+        },
+        "submodel": "leaves"
+      },
+      "winter": {
+        "model": "tfcflorae:wood/branch/branch",
+        "textures": {
+          "all": "tfcflorae:blocks/wood/branch/branch"
+        }
+      }
+    }
+  }
+}

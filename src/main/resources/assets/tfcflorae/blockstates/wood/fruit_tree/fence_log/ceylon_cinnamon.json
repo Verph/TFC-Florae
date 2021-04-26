@@ -4,10 +4,10 @@
   "defaults": {
     "model": "tfcflorae:wood/fence/fence_post",
     "textures": {
-      "top": "tfcflorae:blocks/wood/fruit_tree/top/ceylon_cinnamon",
-      "log": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon",
+      "top": "tfcflorae:blocks/wood/fruit_tree/top/cinnamon",
+      "log": "tfcflorae:blocks/wood/fruit_tree/log/cinnamon",
       "planks": "tfcflorae:blocks/wood/fruit_tree/planks/ceylon_cinnamon",
-      "particle": "tfcflorae:blocks/wood/fruit_tree/log/ceylon_cinnamon"
+      "particle": "tfcflorae:blocks/wood/fruit_tree/log/cinnamon"
     }
   },
   "variants": {
