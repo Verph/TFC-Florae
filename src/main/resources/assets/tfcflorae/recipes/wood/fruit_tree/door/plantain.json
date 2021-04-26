@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/plantain"
+      "type": "forge:ore_dict",
+      "ore": "lumberPlantain"
     }
   },
   "result": {

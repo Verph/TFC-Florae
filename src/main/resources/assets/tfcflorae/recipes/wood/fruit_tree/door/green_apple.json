@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/green_apple"
+      "type": "forge:ore_dict",
+      "ore": "lumberGreenApple"
     }
   },
   "result": {

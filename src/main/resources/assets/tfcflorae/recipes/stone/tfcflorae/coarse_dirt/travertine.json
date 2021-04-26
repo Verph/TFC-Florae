@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/travertine"
+    },
+    "B": {
+      "item": "tfc:dirt/travertine"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/travertine",
+    "count": 4
+  }
+}

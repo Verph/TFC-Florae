@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/cassia_cinnamon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/trapdoor/cassia_cinnamon",
+    "count": 2
+  }
+}

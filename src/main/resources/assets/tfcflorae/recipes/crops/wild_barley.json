@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "item": "tfc:plants/wild_barley"
+    }
+  ],
+  "result": {
+    "item": "tfc:crop/seeds/barley",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:cobble/soapstone"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/soapstone",
+    "count": 4
+  }
+}

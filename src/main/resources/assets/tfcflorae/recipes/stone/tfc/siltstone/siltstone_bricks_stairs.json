@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:bricks/siltstone"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/bricks/siltstone",
+    "count": 8
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:cobble/catlinite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/catlinite",
+    "count": 4
+  }
+}

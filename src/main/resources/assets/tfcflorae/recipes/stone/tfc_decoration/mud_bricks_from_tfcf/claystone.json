@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud_bricks/claystone"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "chisel"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:mud_bricks/claystone",
+    "count": 1
+  }
+}

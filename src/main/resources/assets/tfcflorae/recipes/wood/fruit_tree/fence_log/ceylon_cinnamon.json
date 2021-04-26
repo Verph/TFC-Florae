@@ -6,10 +6,12 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/pole/ceylon_cinnamon"
+      "type": "forge:ore_dict",
+      "ore" : "poleCeylonCinnamon"
     },
     "B": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/ceylon_cinnamon"
+      "type": "forge:ore_dict",
+      "ore" : "lumberCeylonCinnamon"
     }
   },
   "result": {

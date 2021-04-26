@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/granite"
+    },
+    "B": {
+      "item": "tfcflorae:silt_loam/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt_loam/granite",
+    "count": 4
+  }
+}

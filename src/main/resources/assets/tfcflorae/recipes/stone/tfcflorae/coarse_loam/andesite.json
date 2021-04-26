@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/andesite"
+    },
+    "B": {
+      "item": "tfcflorae:loam/andesite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loam/andesite",
+    "count": 4
+  }
+}

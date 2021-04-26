@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "poleWalnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/walnut",
+    "count": 1
+  }
+}

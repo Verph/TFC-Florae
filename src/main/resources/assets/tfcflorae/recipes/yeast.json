@@ -1,0 +1,13 @@
+{
+  "type": "tfc:fluid_food_recipe",
+  "ingredients": [
+    {
+      "type": "tfc:fluid",
+      "fluid": "yeast_starter"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:yeast",
+    "count": 3
+  }
+}

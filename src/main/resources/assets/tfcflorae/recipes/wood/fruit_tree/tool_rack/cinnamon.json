@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/lumber/cinnamon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/tool_rack/cinnamon",
+    "count": 1
+  }
+}

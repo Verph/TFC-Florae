@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/arkose"
+    },
+    "B": {
+      "item": "tfc:dirt/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/arkose",
+    "count": 4
+  }
+}

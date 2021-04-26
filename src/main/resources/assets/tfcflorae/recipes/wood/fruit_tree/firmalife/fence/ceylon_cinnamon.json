@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/ceylon_cinnamon"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore" : "fruitLeaf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/ceylon_cinnamon",
+    "count": 8
+  }
+}

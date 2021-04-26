@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_item_shaped",
+  "pattern": [
+    "XB",
+    " B"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore" : "poleCinnamon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/support/cinnamon",
+    "count": 8
+  }
+}

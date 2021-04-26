@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/catlinite"
+    },
+    "B": {
+      "item": "tfc:dirt/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/catlinite",
+    "count": 4
+  }
+}

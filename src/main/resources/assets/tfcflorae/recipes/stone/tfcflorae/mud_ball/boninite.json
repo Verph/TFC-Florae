@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/boninite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/boninite",
+    "count": 4
+  }
+}

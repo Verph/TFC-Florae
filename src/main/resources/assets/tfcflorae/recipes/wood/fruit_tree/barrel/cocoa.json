@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/planks/cocoa"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/barrel/cocoa",
+    "data": 0,
+    "count": 1
+  }
+}

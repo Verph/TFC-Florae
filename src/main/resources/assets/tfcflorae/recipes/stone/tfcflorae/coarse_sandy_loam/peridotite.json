@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/peridotite"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/peridotite",
+    "count": 4
+  }
+}

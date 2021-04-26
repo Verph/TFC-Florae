@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/wackestone"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/wackestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/wackestone",
+    "count": 4
+  }
+}

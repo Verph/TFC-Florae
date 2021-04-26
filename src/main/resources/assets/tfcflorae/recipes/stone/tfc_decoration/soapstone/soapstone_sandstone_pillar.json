@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc_decoration:sandstone/soapstone"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:sandstone_pillar/soapstone",
+    "count": 1
+  }
+}

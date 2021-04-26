@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/rhyolite"
+    },
+    "B": {
+      "item": "tfc:dirt/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/rhyolite",
+    "count": 4
+  }
+}

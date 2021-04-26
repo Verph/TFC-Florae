@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/phyllite"
+    },
+    "B": {
+      "item": "tfcflorae:loam/phyllite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loam/phyllite",
+    "count": 4
+  }
+}

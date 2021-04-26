@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "mushroomWoollyGomphus"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:food/woolly_gomphus",
+    "count": 1
+  }
+}

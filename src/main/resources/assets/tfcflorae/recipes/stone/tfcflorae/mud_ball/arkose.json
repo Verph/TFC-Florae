@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/arkose",
+    "count": 4
+  }
+}

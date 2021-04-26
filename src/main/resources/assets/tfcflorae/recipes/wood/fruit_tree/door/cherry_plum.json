@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/cherry_plum"
+      "type": "forge:ore_dict",
+      "ore": "lumberCherryPlum"
     }
   },
   "result": {

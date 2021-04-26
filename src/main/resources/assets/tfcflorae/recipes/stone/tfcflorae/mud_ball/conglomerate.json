@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/conglomerate",
+    "count": 4
+  }
+}

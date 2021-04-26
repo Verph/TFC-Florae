@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "poleRainierCherry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/rainier_cherry",
+    "count": 1
+  }
+}

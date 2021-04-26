@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:smooth/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfc:slab/smooth/peridotite",
+    "data": 0,
+    "count": 6
+  }
+}

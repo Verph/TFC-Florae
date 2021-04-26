@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:smooth/siltstone"
+    }
+  },
+  "result": {
+    "item": "tfc:wall/smooth/siltstone",
+    "count": 8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:sand/breccia"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:sandstone/breccia",
+    "count": 1
+  }
+}

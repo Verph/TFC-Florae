@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/claystone"
+    },
+    "B": {
+      "item": "tfc:dirt/claystone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/claystone",
+    "count": 4
+  }
+}

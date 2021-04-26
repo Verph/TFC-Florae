@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/satsuma"
+      "type": "forge:ore_dict",
+      "ore": "lumberSatsuma"
     }
   },
   "result": {

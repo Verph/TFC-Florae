@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/novaculite"
+    },
+    "B": {
+      "item": "tfcflorae:humus/novaculite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/novaculite",
+    "count": 4
+  }
+}

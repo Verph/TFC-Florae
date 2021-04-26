@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/breccia"
+    },
+    "B": {
+      "item": "tfc:dirt/breccia"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/breccia",
+    "count": 4
+  }
+}

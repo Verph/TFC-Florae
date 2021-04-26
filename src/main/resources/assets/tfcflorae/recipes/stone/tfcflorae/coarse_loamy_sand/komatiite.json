@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/komatiite"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/komatiite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/komatiite",
+    "count": 4
+  }
+}

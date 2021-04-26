@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/limestone",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/quartzite"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/quartzite",
+    "count": 4
+  }
+}

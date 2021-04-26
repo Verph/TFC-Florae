@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/blueschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/blueschist",
+    "count": 4
+  }
+}

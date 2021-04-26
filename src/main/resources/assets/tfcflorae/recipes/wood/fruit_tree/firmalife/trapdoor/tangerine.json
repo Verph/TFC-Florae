@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/tangerine"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/trapdoor/tangerine",
+    "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/soapstone"
+    },
+    "B": {
+      "item": "tfc:dirt/soapstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/soapstone",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/conglomerate"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/conglomerate",
+    "count": 4
+  }
+}

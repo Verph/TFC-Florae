@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/granite",
+    "count": 4
+  }
+}

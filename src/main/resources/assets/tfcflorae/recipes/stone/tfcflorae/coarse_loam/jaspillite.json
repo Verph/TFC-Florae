@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/jaspillite"
+    },
+    "B": {
+      "item": "tfcflorae:loam/jaspillite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loam/jaspillite",
+    "count": 4
+  }
+}

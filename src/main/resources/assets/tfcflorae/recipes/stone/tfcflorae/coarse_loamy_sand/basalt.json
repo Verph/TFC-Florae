@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/basalt"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/basalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/basalt",
+    "count": 4
+  }
+}

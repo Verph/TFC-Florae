@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/soursop"
+      "type": "forge:ore_dict",
+      "ore": "lumberSoursop"
     }
   },
   "result": {

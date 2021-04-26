@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/key_lime"
+      "type": "forge:ore_dict",
+      "ore": "lumberKeyLime"
     }
   },
   "result": {

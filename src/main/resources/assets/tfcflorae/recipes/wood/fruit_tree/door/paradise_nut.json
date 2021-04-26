@@ -7,7 +7,8 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/paradise_nut"
+      "type": "forge:ore_dict",
+      "ore": "lumberParadiseNut"
     }
   },
   "result": {

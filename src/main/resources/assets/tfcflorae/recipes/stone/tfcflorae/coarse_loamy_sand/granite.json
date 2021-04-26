@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/granite"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/granite",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/diorite"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/diorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/diorite",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/cataclasite"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/cataclasite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/cataclasite",
+    "count": 4
+  }
+}

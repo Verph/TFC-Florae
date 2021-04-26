@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc_decoration:mud_bricks/breccia"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:mud_pillar/breccia",
+    "count": 1
+  }
+}

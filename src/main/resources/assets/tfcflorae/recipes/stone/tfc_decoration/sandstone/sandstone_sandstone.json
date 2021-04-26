@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:sand/sandstone"
+    }
+  },
+  "result": {
+    "item": "tfc_decoration:sandstone/sandstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/arkose"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/arkose",
+    "count": 4
+  }
+}

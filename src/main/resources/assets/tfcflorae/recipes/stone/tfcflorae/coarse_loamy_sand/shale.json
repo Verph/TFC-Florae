@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/shale"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/shale"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/shale",
+    "count": 4
+  }
+}

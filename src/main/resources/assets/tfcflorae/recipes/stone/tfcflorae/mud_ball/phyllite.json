@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/phyllite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/phyllite",
+    "count": 4
+  }
+}

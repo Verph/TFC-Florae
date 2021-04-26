@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/porphyry"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/porphyry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/porphyry",
+    "count": 4
+  }
+}

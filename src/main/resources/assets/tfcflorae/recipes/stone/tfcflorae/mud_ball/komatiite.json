@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/komatiite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/komatiite",
+    "count": 4
+  }
+}

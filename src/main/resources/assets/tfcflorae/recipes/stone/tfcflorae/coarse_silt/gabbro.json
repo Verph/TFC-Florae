@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/gabbro"
+    },
+    "B": {
+      "item": "tfcflorae:silt/gabbro"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt/gabbro",
+    "count": 4
+  }
+}

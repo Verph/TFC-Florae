@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/novaculite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/novaculite",
+    "count": 4
+  }
+}

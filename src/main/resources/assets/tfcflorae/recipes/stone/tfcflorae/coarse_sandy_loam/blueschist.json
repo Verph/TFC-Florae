@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/blueschist"
+    },
+    "B": {
+      "item": "tfcflorae:sandy_loam/blueschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_sandy_loam/blueschist",
+    "count": 4
+  }
+}

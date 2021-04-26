@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/porphyry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/porphyry",
+    "count": 4
+  }
+}

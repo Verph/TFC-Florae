@@ -2,7 +2,8 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:wood/fruit_tree/pole/banana"
+      "type": "forge:ore_dict",
+      "ore" : "poleBanana"
     },
     {
       "type": "forge:ore_dict",

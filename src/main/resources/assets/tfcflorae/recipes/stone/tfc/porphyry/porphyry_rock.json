@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:cobble/porphyry"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/porphyry",
+    "count": 4
+  }
+}

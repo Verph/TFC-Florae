@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:cobble/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfc:wall/cobble/peridotite",
+    "count": 8
+  }
+}

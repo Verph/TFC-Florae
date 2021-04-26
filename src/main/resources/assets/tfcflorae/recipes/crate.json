@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "X X",
+    "BXB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumber"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "plate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:storage/crate",
+    "count": 1
+  }
+}

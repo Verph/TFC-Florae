@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/blueschist"
+    },
+    "B": {
+      "item": "tfcflorae:humus/blueschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/blueschist",
+    "count": 4
+  }
+}

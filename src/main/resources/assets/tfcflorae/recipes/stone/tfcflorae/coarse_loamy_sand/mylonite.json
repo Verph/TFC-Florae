@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/mylonite"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/mylonite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/mylonite",
+    "count": 4
+  }
+}

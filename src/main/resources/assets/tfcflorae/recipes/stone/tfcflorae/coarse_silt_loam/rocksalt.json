@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/rocksalt"
+    },
+    "B": {
+      "item": "tfcflorae:silt_loam/rocksalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt_loam/rocksalt",
+    "count": 4
+  }
+}

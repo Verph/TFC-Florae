@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:mud/blaimorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:mud/mud_ball/blaimorite",
+    "count": 4
+  }
+}

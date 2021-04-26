@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/peridotite"
+    },
+    "B": {
+      "item": "tfcflorae:humus/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/peridotite",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/conglomerate"
+    },
+    "B": {
+      "item": "tfcflorae:humus/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/conglomerate",
+    "count": 4
+  }
+}

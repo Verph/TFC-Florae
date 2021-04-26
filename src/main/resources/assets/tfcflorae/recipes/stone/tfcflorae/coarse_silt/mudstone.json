@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/mudstone"
+    },
+    "B": {
+      "item": "tfcflorae:silt/mudstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt/mudstone",
+    "count": 4
+  }
+}

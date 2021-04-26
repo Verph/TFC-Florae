@@ -6,10 +6,12 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/pole/green_apple"
+      "type": "forge:ore_dict",
+      "ore" : "poleGreen_apple"
     },
     "B": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/green_apple"
+      "type": "forge:ore_dict",
+      "ore" : "lumberGreenApple"
     }
   },
   "result": {

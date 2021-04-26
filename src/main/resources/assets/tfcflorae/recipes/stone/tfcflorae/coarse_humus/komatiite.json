@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/komatiite"
+    },
+    "B": {
+      "item": "tfcflorae:humus/komatiite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_humus/komatiite",
+    "count": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "gravel"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "loamySand"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:single/coarse_loamy_sand",
+    "count": 4
+  }
+}

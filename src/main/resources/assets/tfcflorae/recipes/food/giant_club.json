@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "knife"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "mushroomGiantClub"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:food/giant_club",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/beechnut"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore" : "fruitLeaf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/beechnut",
+    "count": 8
+  }
+}

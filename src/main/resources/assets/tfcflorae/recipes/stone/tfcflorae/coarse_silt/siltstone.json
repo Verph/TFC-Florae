@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/siltstone"
+    },
+    "B": {
+      "item": "tfcflorae:silt/siltstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt/siltstone",
+    "count": 4
+  }
+}

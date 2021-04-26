@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/dacite"
+    },
+    "B": {
+      "item": "tfcflorae:silt/dacite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_silt/dacite",
+    "count": 4
+  }
+}

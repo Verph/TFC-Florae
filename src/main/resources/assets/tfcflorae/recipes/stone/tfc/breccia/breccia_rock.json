@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:cobble/breccia"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/breccia",
+    "count": 4
+  }
+}

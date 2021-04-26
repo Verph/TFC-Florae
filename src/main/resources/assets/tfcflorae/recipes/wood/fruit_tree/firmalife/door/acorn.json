@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "poleAcorn"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/door/acorn",
+    "count": 1
+  }
+}

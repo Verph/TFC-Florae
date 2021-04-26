@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:smooth/sandstone"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/smooth/sandstone",
+    "count": 8
+  }
+}

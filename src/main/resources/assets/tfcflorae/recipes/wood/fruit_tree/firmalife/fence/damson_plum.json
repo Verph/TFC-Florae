@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX",
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/fruit_tree/pole/damson_plum"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore" : "fruitLeaf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fruit_tree/fence/damson_plum",
+    "count": 8
+  }
+}

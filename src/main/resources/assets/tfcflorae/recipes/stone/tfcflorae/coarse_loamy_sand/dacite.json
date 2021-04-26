@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/dacite"
+    },
+    "B": {
+      "item": "tfcflorae:loamy_sand/dacite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loamy_sand/dacite",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:gravel/carbonatite"
+    },
+    "B": {
+      "item": "tfcflorae:loam/carbonatite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_loam/carbonatite",
+    "count": 4
+  }
+}

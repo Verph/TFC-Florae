@@ -6,10 +6,12 @@
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:wood/fruit_tree/lumber/peach"
+      "type": "forge:ore_dict",
+      "ore" : "lumberPeach"
     },
     "B": {
-      "item": "tfcflorae:wood/fruit_tree/pole/peach"
+      "type": "forge:ore_dict",
+      "ore" : "polePeach"
     }
   },
   "result": {

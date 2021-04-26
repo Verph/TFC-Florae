@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:bricks/porphyry"
+    }
+  },
+  "result": {
+    "item": "tfc:stairs/bricks/porphyry",
+    "count": 8
+  }
+}
