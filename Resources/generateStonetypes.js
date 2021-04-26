@@ -1995,116 +1995,564 @@ function generateRecipes(stoneType)
 		"variants":{
 			"normal":[
 				{
-					"model":"tfcflorae:surface_rock/rock_1",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_1",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_2",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_1",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_2_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_1",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_2_none",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_1",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_2_nse",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_3",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_3_n",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_3_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_3_none",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_ne",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_4",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_ne",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_5",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_ne",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_5_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_ne",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_5_none",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_none",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_5_nse",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_none",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_6",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_none",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_6_n",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_none",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_6_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_nse",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_6_nse",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_nse",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_nse",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7_n",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_2_nse",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7_none",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7_ns",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_7_nse",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3",
+					"weight": 1,
+					"y": 270
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_8",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3_n",
+					"weight": 1,
+					"y": 0
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_8_n",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3_n",
+					"weight": 1,
+					"y": 90
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_8_ne",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3_n",
+					"weight": 1,
+					"y": 180
 				},
 				{
-					"model":"tfcflorae:surface_rock/rock_8_none",
-					"weight":20
+					"model": "tfcflorae:surface/rock/rock_3_n",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_ne",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_ne",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_ne",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_ne",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_none",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_none",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_none",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_3_none",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_4",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_4",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_4",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_4",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_ne",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_ne",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_ne",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_ne",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_none",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_none",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_none",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_none",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_nse",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_nse",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_nse",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_5_nse",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_n",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_n",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_n",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_n",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_ne",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_ne",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_ne",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_ne",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_nse",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_nse",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_nse",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_6_nse",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_n",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_n",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_n",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_n",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ne",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ne",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ne",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ne",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_none",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_none",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_none",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_none",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ns",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ns",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ns",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_ns",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_nse",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_nse",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_nse",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_7_nse",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_n",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_n",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_n",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_n",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_ne",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_ne",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_ne",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_ne",
+					"weight": 1,
+					"y": 270
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_none",
+					"weight": 1,
+					"y": 0
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_none",
+					"weight": 1,
+					"y": 90
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_none",
+					"weight": 1,
+					"y": 180
+				},
+				{
+					"model": "tfcflorae:surface/rock/rock_8_none",
+					"weight": 1,
+					"y": 270
 				}
 			]
 		}
@@ -2479,6 +2927,37 @@ function generateRecipes(stoneType)
 		"count": 8
 	  }
 	}
+    let mud_block_recipeJSON = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+      "XX",
+      "XX"
+      ],
+      "key": {
+      "X": {
+		  "item": `tfcflorae:mud/mud/${stoneType}`
+        }
+      },
+      "result": {
+      "item": `tfcflorae:mud/${stoneType}`,
+      "count": 1
+      }
+    }
+    let mud_brick_slab_recipeJSON = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+      "XXX"
+      ],
+      "key": {
+      "X": {
+		  "item": `tfcflorae:mud_bricks/${stoneType}`
+        }
+      },
+      "result": {
+      "item": `tfcflorae:slab/mud_bricks/${stoneType}`,
+      "count": 1
+      }
+    }
 	
 	
     let coarse_loamy_sand_recipeJSON = {
@@ -2614,6 +3093,7 @@ function generateRecipes(stoneType)
     fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/slab/mud_bricks/${stoneType}.json`, JSON.stringify(mud_bricks_slab_recipeJSON, null, 2))
     fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/stairs/mud_bricks/${stoneType}.json`, JSON.stringify(mud_bricks_stairs_recipeJSON, null, 2))
     fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/wall/mud_bricks/${stoneType}.json`, JSON.stringify(mud_bricks_wall_recipeJSON, null, 2))
+    fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/mud_block/${stoneType}.json`, JSON.stringify(mud_block_recipeJSON, null, 2))
 	
     fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/coarse_loamy_sand/${stoneType}.json`, JSON.stringify(coarse_loamy_sand_recipeJSON, null, 2))
     fs.writeFileSync(`./src/main/resources/assets/tfcflorae/recipes/stone/coarse_sandy_loam/${stoneType}.json`, JSON.stringify(coarse_sandy_loam_recipeJSON, null, 2))

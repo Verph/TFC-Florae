@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "tfcflorae:items/food/bunya_nut_nut"
-  }
-}

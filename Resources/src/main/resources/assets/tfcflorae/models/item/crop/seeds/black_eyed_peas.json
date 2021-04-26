@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "tfcflorae:items/crop/seeds/black_eyed_peas"
-  }
-}

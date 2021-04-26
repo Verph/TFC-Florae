@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "tfcflorae:items/crop/product/olive_cotton_disc"
-  }
-}
