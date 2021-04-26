@@ -1,6 +1,5 @@
 package tfcflorae.objects.blocks.wood.bamboo;
 
-import java.util.Random;
 import javax.annotation.Nonnull;
 
 import net.minecraft.block.Block;
@@ -10,26 +9,21 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.items.ItemMisc;
-import net.dries007.tfc.util.OreDictionaryHelper;
-import net.dries007.tfc.util.calendar.CalendarTFC;
-import net.dries007.tfc.util.calendar.Month;
+
 import tfcflorae.objects.blocks.BlocksTFCF;
-import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.api.stateproperty.StatePropertiesTFCF.*;
 
@@ -49,6 +43,7 @@ public class BlockBambooLog extends Block
         setTickRandomly(true);
         setSoundType(SoundType.WOOD);
         this.setDefaultState(this.blockState.getBaseState().withProperty(GROWN, true).withProperty(CONNECTED, false));
+        OreDictionaryHelper.register(this, "log", "wood");
     }
 
     @Override

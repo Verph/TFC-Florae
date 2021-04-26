@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
-import tfcflorae.TFCFlorae;
+
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.recipes.knapping.KnappingType;
 import net.dries007.tfc.client.TFCGuiHandler;
@@ -31,8 +31,9 @@ import net.dries007.tfc.util.OreDictionaryHelper;
 import net.dries007.tfc.util.interaction.IRightClickBlockAction;
 import net.dries007.tfc.util.interaction.IRightClickItemAction;
 
-import static net.dries007.tfc.objects.blocks.BlockCharcoalPile.LAYERS;
+import tfcflorae.TFCFlorae;
 
+import static net.dries007.tfc.objects.blocks.BlockCharcoalPile.LAYERS;
 import static tfcflorae.TFCFlorae.MODID;
 
 @Mod.EventBusSubscriber(modid = MODID)
@@ -67,30 +68,6 @@ public final class InteractionManagerTFCF
             PROCESSING_INTERACTION.set(false);
         }
     }
-
-    /*@SubscribeEvent(priority = EventPriority.LOWEST)
-    public static void onRightClickItem(PlayerInteractEvent.RightClickItem event)
-    {
-        TFCFlorae.getLog().info("TFCFlorae: Interaction manager working! 12");
-        IRightClickItemAction action = InteractionManagerTFCF.findItemRightClickAction(event.getItemStack());
-        if (action != null)
-        {
-            // Use alternative handling
-            EnumActionResult result;
-            if (event.getSide() == Side.CLIENT)
-            {
-                TFCFlorae.getLog().info("TFCFlorae: Interaction manager working! 3");
-                result = ClientInteractionManagerTFCF.processRightClickItem(event, action);
-            }
-            else
-            {
-                TFCFlorae.getLog().info("TFCFlorae: Interaction manager working! 4");
-                result = ServerInteractionManagerTFCF.processRightClickItem(event, action);
-            }
-            event.setCancellationResult(result);
-            event.setCanceled(true);
-        }
-    }*/
 
     @Nullable
     private static IRightClickBlockAction findItemUseAction(ItemStack stack)

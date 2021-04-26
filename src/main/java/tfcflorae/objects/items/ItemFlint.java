@@ -18,7 +18,7 @@ import net.dries007.tfc.objects.items.ItemTFC;
 import tfcflorae.client.GuiHandler;
 import tfcflorae.util.OreDictionaryHelper;
 
-public class ItemFlint extends ItemTFC implements IItemSize
+public class ItemFlint extends ItemTFCF implements IItemSize
 {
     private final Size size;
     private final Weight weight;

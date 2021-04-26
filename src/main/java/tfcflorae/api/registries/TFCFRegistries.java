@@ -10,16 +10,14 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import tfcflorae.api.recipes.CrackingRecipe;
 import tfcflorae.api.recipes.NutRecipe;
-import tfcflorae.api.types.PlantTFCF;
 
 /**
  * This is where we initialize our registry instances!
  */
 public class TFCFRegistries
 {
-    public static final IForgeRegistry<NutRecipe> NUT_TREES = GameRegistry.findRegistry(NutRecipe.class);
-    public static final IForgeRegistry<CrackingRecipe> CRACKING = GameRegistry.findRegistry(CrackingRecipe.class);
-    public static final IForgeRegistry<PlantTFCF> PLANTS_TFCF = GameRegistry.findRegistry(PlantTFCF.class);
+    public static final IForgeRegistry<NutRecipe> NUT_TREES_REGISTRY = GameRegistry.findRegistry(NutRecipe.class);
+    public static final IForgeRegistry<CrackingRecipe> CRACKING_RECIPE = GameRegistry.findRegistry(CrackingRecipe.class);
 
     /*This is kindly hijacked from TerraFirmCraft TFCRegistries.java*/
     static

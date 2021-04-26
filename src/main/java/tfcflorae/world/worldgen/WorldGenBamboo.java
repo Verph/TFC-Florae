@@ -15,6 +15,7 @@ import net.dries007.tfc.world.classic.biomes.BiomeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
+import tfcflorae.ConfigTFCF;
 import tfcflorae.objects.blocks.BlocksTFCF;
 
 public class WorldGenBamboo extends WorldGenerator
@@ -182,7 +183,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -230,7 +231,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -264,7 +265,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -299,7 +300,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -333,7 +334,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -367,7 +368,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -401,7 +402,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -435,7 +436,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -469,7 +470,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -503,7 +504,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -537,7 +538,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {
@@ -571,7 +572,7 @@ public class WorldGenBamboo extends WorldGenerator
         final float temp = chunkData.getAverageTemp();
         final float rain = chunkData.getRainfall();
 
-        if (rand.nextInt(15) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
+        if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
             if (rain > 240f && temp > 20f && density > 0.2f)
             {

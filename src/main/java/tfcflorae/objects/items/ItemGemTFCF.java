@@ -18,7 +18,7 @@ import tfcflorae.objects.GemTFCF;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class ItemGemTFCF extends ItemTFC
+public class ItemGemTFCF extends ItemTFCF
 {
     private static final EnumMap<GemTFCF, ItemGemTFCF> MAP = new EnumMap<>(GemTFCF.class);
 

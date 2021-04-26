@@ -1,11 +1,11 @@
 [
   {
-    "modid": "tfcelementia",
-    "name": "TFC Elementia",
-    "description": "Adds the whole periodic table of elements, as well as ingots and ores to base TerraFirmaCraft.",
+    "modid": "tfcflorae",
+    "name": "TFC Florae",
+    "description": "Adds a bunch of plants, trees and nother nature decorations to TerraFirmaCraft.",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "logoFile": "/assets/tfc/textures/gui/logo.png",
+    "logoFile": "/assets/tfcflorae/textures/gui/logo.png",
     "authorList": [
       "Verph"
     ],

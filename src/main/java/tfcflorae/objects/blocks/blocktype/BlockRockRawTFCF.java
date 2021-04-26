@@ -12,7 +12,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -20,20 +19,18 @@ import mcp.MethodsReturnNonnullByDefault;
 
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.types.Rock;
+import net.dries007.tfc.api.util.FallingBlockManager;
 import net.dries007.tfc.objects.Gem;
 import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
-import net.dries007.tfc.objects.blocks.stone.BlockRockVariantFallable;
 import net.dries007.tfc.objects.blocks.stone.BlockStoneAnvil;
 import net.dries007.tfc.objects.items.ItemGem;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.ICollapsableBlock;
-
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class BlockRockRawTFCF extends BlockRockVariantTFCF implements ICollapsableBlock
+public class BlockRockRawTFCF extends BlockRockVariantTFCF
 {
     /* This is for the not-surrounded-on-all-sides-pop-off mechanic. It's a dirty fix to the stack overflow caused by placement during water / lava collisions in world gen */
     public static final PropertyBool CAN_FALL = PropertyBool.create("can_fall");
@@ -42,13 +39,11 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF implements ICollapsab
     {
         super(rockTFCF, rock);
 
-        setDefaultState(getBlockState().getBaseState().withProperty(CAN_FALL, true));
-    }
+        FallingBlockManager.Specification spec = new FallingBlockManager.Specification(rockTFCF.getFallingSpecification()); // Copy as each raw stone has an unique resultingState
+        spec.setResultingState(BlockRockVariant.get(rock, Rock.Type.COBBLE).getDefaultState());
+        FallingBlockManager.registerFallable(this, spec);
 
-    @Override
-    public BlockRockVariantFallable getFallingVariant()
-    {
-        return (BlockRockVariantFallable) BlockRockVariant.get(rock, Rock.Type.COBBLE);
+        setDefaultState(getBlockState().getBaseState().withProperty(CAN_FALL, true));
     }
 
     @Override
@@ -71,13 +66,6 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF implements ICollapsab
         }
     }
 
-    @Override
-    public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state)
-    {
-        // Trigger the collapsing mechanic!
-        checkCollapsingArea(worldIn, pos);
-    }
-
     @SuppressWarnings("deprecation")
     @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
@@ -86,10 +74,11 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF implements ICollapsab
         // Raw blocks that can't fall also can't pop off
         if (state.getValue(CAN_FALL))
         {
-            for (EnumFacing face : EnumFacing.values())
+            for (EnumFacing face : EnumFacing.VALUES)
             {
-                IBlockState faceState = worldIn.getBlockState(pos.offset(face));
-                if (faceState.getBlock().isSideSolid(faceState, worldIn, pos.offset(face), face.getOpposite()))
+                BlockPos offsetPos = pos.offset(face);
+                IBlockState faceState = worldIn.getBlockState(offsetPos);
+                if (faceState.getBlock().isSideSolid(faceState, worldIn, offsetPos, face.getOpposite()))
                 {
                     return;
                 }
@@ -98,16 +87,6 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF implements ICollapsab
             // No supporting solid blocks, so pop off as an item
             worldIn.setBlockToAir(pos);
             Helpers.spawnItemStack(worldIn, pos, new ItemStack(state.getBlock(), 1));
-        }
-    }
-
-    @Override
-    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn)
-    {
-        if (ConfigTFC.General.FALLABLE.explosionCausesCollapse)
-        {
-            // Trigger the collapsing mechanic!
-            checkCollapsingArea(worldIn, pos);
         }
     }
 

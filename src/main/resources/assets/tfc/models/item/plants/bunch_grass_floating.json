@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfc:blocks/plants/bunch_grass_reed/bunch_grass_upper_0"
+  }
+}

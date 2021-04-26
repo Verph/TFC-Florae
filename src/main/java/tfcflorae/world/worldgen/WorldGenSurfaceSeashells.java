@@ -1,5 +1,7 @@
 package tfcflorae.world.worldgen;
 
+import scala.reflect.internal.Trees.Return;
+
 import java.util.Random;
 
 import net.minecraft.block.state.IBlockState;
@@ -10,7 +12,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import scala.reflect.internal.Trees.Return;
+
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.world.classic.ChunkGenTFC;
 import net.dries007.tfc.world.classic.WorldTypeTFC;
@@ -18,6 +20,7 @@ import net.dries007.tfc.world.classic.biomes.BiomeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
+import tfcflorae.ConfigTFCF;
 import tfcflorae.objects.blocks.BlocksTFCF;
 
 public class WorldGenSurfaceSeashells implements IWorldGenerator
@@ -47,7 +50,7 @@ public class WorldGenSurfaceSeashells implements IWorldGenerator
             final BlockPos chunkBlockPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
             final ChunkDataTFC baseChunkData = ChunkDataTFC.get(world, chunkBlockPos);
 
-            for (int i = 0; i < 15 * factor; i++)
+            for (int i = 0; i < ((1 + baseChunkData.getRainfall()) / ConfigTFCF.General.WORLD.groundcoverSeashellFrequency) * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),

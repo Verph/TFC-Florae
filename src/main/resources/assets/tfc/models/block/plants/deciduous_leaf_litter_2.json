@@ -1,0 +1,61 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "tfc:blocks/plants/leaf_litter/deciduous_leaf_litter_0",
+		"1": "tfc:blocks/plants/leaf_litter/deciduous_leaf_litter_1",
+		"2": "tfc:blocks/plants/leaf_litter/deciduous_leaf_litter_reddish_3",
+		"3": "tfc:blocks/plants/leaf_litter/deciduous_leaf_litter_4",
+		"particle": "tfc:blocks/plants/leaf_litter/deciduous_leaf_litter_0"
+	},
+	"elements": [
+		{
+			"from": [0, 0.1, 0],
+			"to": [16, 0.1, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 0.25, 0],
+			"to": [16, 0.25, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 0.5, 0],
+			"to": [16, 0.5, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#2"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#2"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#2"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"from": [0, 0.75, 0],
+			"to": [16, 0.75, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+			}
+		}
+	]
+}

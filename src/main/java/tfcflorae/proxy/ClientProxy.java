@@ -12,14 +12,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ClientProxy extends CommonProxy 
 {
     @Override
-    public void preInit(FMLPreInitializationEvent e) 
+    public void preInit(FMLPreInitializationEvent event) 
     {
-        super.preInit(e);
+        super.preInit(event);
     }
     
     @SideOnly(Side.CLIENT)
     @Override
-    public void postInit(FMLPostInitializationEvent e) 
+    public void postInit(FMLPostInitializationEvent event) 
     {
     }
 

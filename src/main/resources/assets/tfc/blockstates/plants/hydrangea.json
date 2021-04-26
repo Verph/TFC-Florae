@@ -2,11 +2,23 @@
   "multipart": [
     {
       "when": {
-        "part": "single"
+        "part": "single",
+        "stage": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/hydrangea_single"
+          "model": "tfc:plants/hydrangea_single_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "single",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/hydrangea_single_1"
         }
       ]
     },

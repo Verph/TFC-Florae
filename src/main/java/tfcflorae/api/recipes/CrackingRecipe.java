@@ -20,7 +20,7 @@ public class CrackingRecipe extends IForgeRegistryEntry.Impl<CrackingRecipe>
     @Nullable
     public static CrackingRecipe get(ItemStack item)
     {
-        return TFCFRegistries.CRACKING.getValuesCollection().stream().filter(x -> x.isValidInput(item)).findFirst().orElse(null);
+        return TFCFRegistries.CRACKING_RECIPE.getValuesCollection().stream().filter(x -> x.isValidInput(item)).findFirst().orElse(null);
     }
 
     public CrackingRecipe(IIngredient<ItemStack> inputItem, ItemStack outputItem, float chance)

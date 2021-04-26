@@ -17,6 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import net.dries007.tfc.api.capability.damage.DamageType;
 import net.dries007.tfc.api.types.Rock;
+
 import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
@@ -120,7 +121,7 @@ public class OreDictionaryHelper
 
     private static void register(Thing thing, Object... parts)
     {
-        if (done) throw new IllegalStateException("Cannot use the helper to register after postInit has past.");
+        if (done) throw new IllegalStateException("Cannot use the helper to register after postInit");
         MAP.put(thing, toString(parts));
     }
 

@@ -17,12 +17,12 @@ import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.api.types.RockCategory;
 import net.dries007.tfc.api.util.IRockObject;
-import net.dries007.tfc.objects.items.ItemTFC;
 
+import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @ParametersAreNonnullByDefault
-public class ItemFiredMudBrick extends ItemTFC implements IRockObject
+public class ItemFiredMudBrick extends ItemTFCF implements IRockObject
 {
     private static final Map<ItemUnfiredMudBrick, ItemFiredMudBrick> MAP = new HashMap<>();
 

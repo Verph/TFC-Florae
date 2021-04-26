@@ -18,7 +18,7 @@ public class NutRecipe extends IForgeRegistryEntry.Impl<NutRecipe>
     @Nullable
     public static NutRecipe get(Block block)
     {
-        return TFCFRegistries.NUT_TREES.getValuesCollection().stream().filter(x -> x.isValidInput(block)).findFirst().orElse(null);
+        return TFCFRegistries.NUT_TREES_REGISTRY.getValuesCollection().stream().filter(x -> x.isValidInput(block)).findFirst().orElse(null);
     }
 
     public NutRecipe(Block inputLog, Block inputLeaves, ItemStack outputItem)

@@ -22,8 +22,9 @@ import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 import net.dries007.tfc.world.classic.worldgen.WorldGenOreVeins;
 import net.dries007.tfc.world.classic.worldgen.vein.Vein;
 
+import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
-import tfcflorae.objects.blocks.BlockSurfaceOreDeposit;
+import tfcflorae.objects.blocks.groundcover.BlockSurfaceOreDeposit;
 import tfcflorae.objects.blocks.BlocksTFCF;
 
 public class WorldGenSurfaceOreDeposits implements IWorldGenerator
@@ -96,7 +97,7 @@ public class WorldGenSurfaceOreDeposits implements IWorldGenerator
                 }
             }
 
-            for (int i = 0; i < 18 * factor; i++)
+            for (int i = 0; i < ConfigTFCF.General.WORLD.groundcoverOreDepositFrequency * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),

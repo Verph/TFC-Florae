@@ -9,6 +9,7 @@ import com.google.common.collect.ImmutableList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -20,6 +21,7 @@ import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.objects.blocks.wood.BlockLeavesTFC;
 
 import tfcflorae.types.TreesTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.objects.blocks.BlocksTFCF;
 
 public class BlockBambooLeaves extends BlockLeavesTFC
@@ -30,7 +32,9 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     {
         super(tree);
         setSoundType(SoundType.PLANT);
-        setDefaultState(blockState.getBaseState().withProperty(DECAYABLE, false));
+        setDefaultState(blockState.getBaseState().withProperty(DECAYABLE, true));
+        OreDictionaryHelper.register(this, "tree", "leaves");
+        OreDictionaryHelper.register(this, "tree", "leaves", wood.getRegistryName().getPath());
     }
 
     public void setBambooSapling(BlockBambooSapling sapling)
@@ -60,15 +64,21 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     {
         for (EnumFacing d : EnumFacing.VALUES)
         {
-            for (int i = 3; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Block offsetBlock = world.getBlockState(pos.offset(d, i)).getBlock();
                 if (offsetBlock instanceof BlockBambooLog)
                     return;
             }
         }
-        world.scheduleUpdate(pos, this, 0);
-        //world.destroyBlock(pos, true);
+        world.destroyBlock(pos, true);
+    }
+
+    @Override
+    @Nonnull
+    protected BlockStateContainer createBlockState()
+    {
+        return new BlockStateContainer(this, DECAYABLE);
     }
 
     @Override

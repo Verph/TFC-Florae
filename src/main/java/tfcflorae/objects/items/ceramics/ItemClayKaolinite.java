@@ -13,13 +13,12 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.objects.items.ItemTFC;
 
 import tfcflorae.client.GuiHandler;
-import tfcflorae.objects.items.ItemMiscTFCF;
+import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
-public class ItemClayKaolinite extends ItemTFC implements IItemSize
+public class ItemClayKaolinite extends ItemTFCF implements IItemSize
 {
     private final Size size;
     private final Weight weight;

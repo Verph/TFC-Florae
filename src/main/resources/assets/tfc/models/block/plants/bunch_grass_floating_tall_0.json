@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/bunch_grass_floating/bunch_grass_tall_0",
+		"cross": "tfc:blocks/plants/bunch_grass_floating/bunch_grass_tall_0"
+	},
+	"elements": [
+		{
+			"from": [-16, -16, 8],
+			"to": [32, 32, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#cross"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [8, -16, -16],
+			"to": [8, 32, 32],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		}
+	]
+}

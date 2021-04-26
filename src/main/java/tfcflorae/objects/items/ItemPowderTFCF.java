@@ -15,7 +15,7 @@ import tfcflorae.objects.PowderTFCF;
 
 @SuppressWarnings("WeakerAccess")
 @ParametersAreNonnullByDefault
-public class ItemPowderTFCF extends ItemTFC
+public class ItemPowderTFCF extends ItemTFCF
 {
     private static final EnumMap<PowderTFCF, ItemPowderTFCF> MAP = new EnumMap<>(PowderTFCF.class);
 

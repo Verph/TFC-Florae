@@ -2,7 +2,8 @@
   "multipart": [
     {
       "when": {
-        "part": "single"
+        "part": "single",
+        "stage": "0|1"
       },
       "apply": [
         {

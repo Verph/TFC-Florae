@@ -4,13 +4,13 @@ import net.dries007.tfc.api.capability.food.FoodData;
 
 public class FoodDataTFCF
 {
+    /*
 	// Fruits
     public static final FoodData ABIU = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData AMLA = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
     public static final FoodData APRICOT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData AVOCADO = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 1.8f);
     public static final FoodData BAEL = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4.9f);
-    public static final FoodData BAOBAB_FRUIT = new FoodData(4, 0.5f, 5f, 0.1f, 0.0f, 0.75f, 0.1f, 0.0f, 1.5f);
     public static final FoodData BAY_LAUREL = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData BER = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2f);
     public static final FoodData BERGAMOT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2f);
@@ -22,8 +22,6 @@ public class FoodDataTFCF
     public static final FoodData CACAO = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData CHERRY_PLUM = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
     public static final FoodData CITRON = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2f);
-    public static final FoodData COCONUT = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
-    public static final FoodData COFFEA_CHERRIES = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData CRABAPPLE = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
     public static final FoodData DAMSON_PLUM = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
     public static final FoodData DATE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
@@ -32,11 +30,9 @@ public class FoodDataTFCF
     public static final FoodData FINGER_LIME = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2f);
     public static final FoodData GRAPEFRUIT = new FoodData(4, 0.4f, 7f, 0f, 0f, 0.6f, 0f, 0f, 2.1f);
     public static final FoodData GUAVA = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.8f);
-    public static final FoodData HAWTHORN = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 1.8f);
     public static final FoodData ICE_CREAM_BEAN = new FoodData(4, 2f, 0f, 0f, 0.5f, 0f, 1f, 0f, 2.5f);
     public static final FoodData JACKFRUIT = new FoodData(4, 2f, 0f, 0f, 0.5f, 0f, 1f, 0f, 2.5f);
     public static final FoodData JUJUBE = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
-    public static final FoodData JUNIPER = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 1.8f);
     public static final FoodData KAKI = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.8f);
     public static final FoodData KEY_LIME = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2f);
     public static final FoodData KLUWAK = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
@@ -51,7 +47,6 @@ public class FoodDataTFCF
     public static final FoodData MANGOSTEEN = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4.9f);
     public static final FoodData NECTARINE = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.8f);
     public static final FoodData OHIA_AI = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
-    public static final FoodData OSAGE_ORANGE = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 1.6f);
     public static final FoodData PAPAYA = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4.9f);
     public static final FoodData PASSION_FRUIT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData PEAR = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
@@ -59,18 +54,14 @@ public class FoodDataTFCF
     public static final FoodData PERUVIAN_PEPPER = new FoodData(4, 1f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
     public static final FoodData PLANTAIN = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData POMEGRANATE = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData PINK_IVORY_DRUPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData POMELO = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
     public static final FoodData QUINCE = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
     public static final FoodData RAINIER_CHERRY = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
     public static final FoodData RED_BANANA = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData RED_CURRANT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData RIBERRY = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData ROWAN_BERRY = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData SAND_PEAR = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
     public static final FoodData SAPODILLA = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.8f);
     public static final FoodData SATSUMA = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
-    public static final FoodData SKY_FRUIT = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData SOUR_CHERRY = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
     public static final FoodData SOURSOP = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData STARFRUIT = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 4.9f);
@@ -78,25 +69,15 @@ public class FoodDataTFCF
     public static final FoodData TANGERINE = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
     public static final FoodData TROPICAL_APRICOT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
     public static final FoodData VANILLA = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData WILD_CHERRY = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
-    public static final FoodData YEW_BERRY = new FoodData(4, 0f, 1f, 0f, 0f, 0f, 0f, 0f, 4f);
 
-    // Deez Nuts
-    public static final FoodData ACORN = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    // Nuts
     public static final FoodData ALMOND = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData BEECHNUT = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 2.5f);
-    public static final FoodData BLACK_WALNUT = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
     public static final FoodData BRAZIL_NUT = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData BREADNUT = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 1.7f);
     public static final FoodData BUNYA_NUT = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 4.9f);
-    public static final FoodData BUTTERNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4.9f);
     public static final FoodData CANDLENUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData CASHEW = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData CHESTNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData GINKGO_NUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData HAZELNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData HEARTNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
-    public static final FoodData HICKORY_NUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData KOLA_NUT = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData KUKUI_NUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData MACADAMIA = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
@@ -104,24 +85,82 @@ public class FoodDataTFCF
     public static final FoodData MONKEY_PUZZLE_NUT = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
     public static final FoodData NUTMEG = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
     public static final FoodData PARADISE_NUT = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
+    public static final FoodData PISTACHIO = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
+    */
+    
+    // Normal Trees Fruits
+    public static final FoodData BAOBAB_FRUIT = new FoodData(4, 0.5f, 5f, 0.1f, 0.0f, 0.75f, 0.1f, 0.0f, 1.5f);
+    //public static final FoodData COCONUT = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
+    public static final FoodData HAWTHORN = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 1.8f);
+    public static final FoodData JUNIPER = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 1.8f);
+    public static final FoodData OSAGE_ORANGE = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 1.6f);
+    public static final FoodData PINK_IVORY_DRUPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData RIBERRY = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData ROWAN_BERRY = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData SKY_FRUIT = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
+    public static final FoodData WILD_CHERRY = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4f);
+    public static final FoodData YEW_BERRY = new FoodData(4, 0f, 1f, 0f, 0f, 0f, 0f, 0f, 4f);
+    
+    // Normal Trees Nuts
+    public static final FoodData ACORN = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData BEECHNUT = new FoodData(4, 0.5f, 0f, 0f, 0f, 1f, 0f, 0f, 2.5f);
+    public static final FoodData BLACK_WALNUT = new FoodData(4, 0.5f, 10f, 0f, 0f, 0.5f, 0f, 0f, 2.2f);
+    public static final FoodData BUTTERNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 1f, 0f, 0f, 4.9f);
+    public static final FoodData CHESTNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData GINKGO_NUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData HAZELNUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
+    public static final FoodData HICKORY_NUT = new FoodData(4, 0.2f, 5f, 0f, 0f, 0.75f, 0f, 0f, 4.9f);
     public static final FoodData PECAN = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
     public static final FoodData PINE_NUT = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
-    public static final FoodData PISTACHIO = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
     public static final FoodData WALNUT = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 2f);
-    
-    // Other Nut & Fruit Stuff
-    public static final FoodData DRIED_FRUIT_SATURATION = new FoodData(4, 0F, 0.5F, 0F, 0.5F, 0F, 0F, 0F, 1.6F);
-    public static final FoodData DRIED_FRUIT_DECAY = new FoodData(4, 0F, 0.2F, 0F, 0.5F, 0F, 0F, 0F, 0.8F);
-    public static final FoodData DRIED_FRUIT_CATEGORY = new FoodData(4, 0F, 0.2F, 0F, 1F, 0F, 0F, 0F, 1.6F);
 
-    public static final FoodData UNCRACKED_NUT = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.0F, 0.0F, 0.4F);
-    public static final FoodData NUT = new FoodData(4, 0.0F, 0.3F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.0F);
-    public static final FoodData ROASTED_NUT = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    //public static final FoodData DOUGH = new FoodData(4, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 3.0F);
-    //public static final FoodData FLOUR = new FoodData(4, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.5F);
-    //public static final FoodData FLATBREAD = new FoodData(4, 1.0F, 0.0F, 1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.0F);
-    
-    // Other
+    // Dried Foods
+    public static final FoodData DRIED_FRUIT_SATURATION = new FoodData(4, 0f, 0.5f, 0f, 0.75f, 0f, 0f, 0f, 0.8F);
+    public static final FoodData DRIED_FRUIT_DECAY = new FoodData(4, 0f, 0.2f, 0f, 1f, 0f, 0f, 0f, 0.8F);
+    public static final FoodData DRIED_FRUIT_CATEGORY = new FoodData(4, 0f, 0.2f, 0f, 0.75f, 0f, 0f, 0f, 0.8F);
+
+    // Cracked & Roasted Nuts
+    public static final FoodData UNCRACKED_NUT = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.0f, 0.0f, 0.4F);
+    public static final FoodData NUT = new FoodData(4, 0.0f, 0.3f, 0.3f, 0.0f, 0.0f, 0.1f, 0.0f, 1.0F);
+    public static final FoodData ROASTED_NUT = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 0.1f, 0.0f, 1.1F);
+
+    // Raw Epiphytes
+    public static final FoodData RAW_ARTISTS_CONK = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_SULPHUR_SHELF = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_TURKEY_TAIL = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+
+    // raw Mushrooms
+    public static final FoodData RAW_PORCINI = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_AMANITA = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_BLACK_POWDERPUFF = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_CHANTERELLE = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_DEATH_CAP = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_GIANT_CLUB = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_PARASOL_MUSHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_STINKHORN = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_WEEPING_MILK_CAP = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_WOOD_BLEWIT = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_WOOLLY_GOMPHUS = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+
+    // Roasted Epiphytes
+    public static final FoodData ROASTED_ARTISTS_CONK = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_SULPHUR_SHELF = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_TURKEY_TAIL = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+
+    // Roasted Mushrooms
+    public static final FoodData ROASTED_PORCINI = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_AMANITA = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_BLACK_POWDERPUFF = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_CHANTERELLE = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_DEATH_CAP = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_GIANT_CLUB = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_PARASOL_MUSHROOM = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_STINKHORN = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_WEEPING_MILK_CAP = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_WOOD_BLEWIT = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+    public static final FoodData ROASTED_WOOLLY_GOMPHUS = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 1f, 0.0f, 1.1F);
+
+    public static final FoodData COFFEA_CHERRIES = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 2f);
     public static final FoodData ALLSPICE = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData CLOVE = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData CURRY_LEAF = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
@@ -131,8 +170,7 @@ public class FoodDataTFCF
     public static final FoodData GROUND_CASSIA_CINNAMON = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData CEYLON_CINNAMON_BARK = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData GROUND_CEYLON_CINNAMON = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
-    //public static final FoodData DRIED_BLACK_PEPPER = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
-    public static final FoodData GROUND_BLACK_PEPPER = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
+    //public static final FoodData GROUND_BLACK_PEPPER = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData BLACK_TEA = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData DRIED_BLACK_TEA = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData GREEN_TEA = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
@@ -152,7 +190,6 @@ public class FoodDataTFCF
     public static final FoodData TOBACCO_LEAF = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
     public static final FoodData DRIED_TOBACCO_LEAF = new FoodData(4, 0.2f, 0f, 0f, 0f, 1f, 0f, 0f, 0.5f);
 
-    // Seafood
     public static final FoodData RAW_EEL = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_EEL = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
     public static final FoodData RAW_CRAB = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
@@ -163,42 +200,25 @@ public class FoodDataTFCF
     public static final FoodData COOKED_SCALLOP = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
     public static final FoodData RAW_STARFISH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_STARFISH = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
-    
     public static final FoodData RAW_SNAIL = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_SNAIL = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
     public static final FoodData RAW_WORM = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0.5f, 0f, 3f);
     public static final FoodData COOKED_WORM = new FoodData(4, 1f, 0f, 0f, 0f, 0f, 1.5f, 0f, 2.25f);
 
-    // Epiphytes
-    public static final FoodData ROASTED_ARTISTS_CONK = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_SULPHUR_SHELF = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_TURKEY_TAIL = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-
-    // Mushrooms
-    public static final FoodData ROASTED_PORCINI = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_AMANITA = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_BLACK_POWDERPUFF = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_CHANTERELLE = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_DEATH_CAP = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_GIANT_CLUB = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_PARASOL_MUSHROOM = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_STINKHORN = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_WEEPING_MILK_CAP = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_WOOD_BLEWIT = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-    public static final FoodData ROASTED_WOOLLY_GOMPHUS = new FoodData(4, 0.0F, 0.5F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.1F);
-
-    // Normal foods
+    /*
+    public static final FoodData CARAMEL = new FoodData(4, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 10F);
+    public static final FoodData NUTMEG_POWDER = new FoodData(4, 0.0f, 0.3f, 0.3f, 0.0f, 0.0f, 0.1f, 0.0f, 1.0F);
     public static final FoodData PUMPKIN = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData PUMPKIN_SLICE = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData ROASTED_PUMPKIN_SLICE = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
     public static final FoodData MELON = new FoodData(4, 1f, 0f, 0f, 1.5f, 0f, 0f, 0f, 1.67f);
-    public static final FoodData COCOA_BEANS = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
-    public static final FoodData DRIED_COCOA_BEANS = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
-    public static final FoodData ROASTED_COCOA_BEANS = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
-    public static final FoodData COCOA_POWDER = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
-    public static final FoodData COCOA_BUTTER = new FoodData(4, 0.0F, 0.1F, 0.1F, 0.0F, 0.0F, 0.1F, 0.0F, 0.5F);
-    public static final FoodData CHOCOLATE = new FoodData(4, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2F, 1.1F);
-    //public static final FoodData DRIED_COFFEA_CHERRIES = new FoodData(4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f);
+    public static final FoodData COCOA_BEANS = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.1f, 0.0f, 0.5F);
+    public static final FoodData DRIED_COCOA_BEANS = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.1f, 0.0f, 0.5F);
+    public static final FoodData ROASTED_COCOA_BEANS = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.1f, 0.0f, 0.5F);
+    public static final FoodData COCOA_POWDER = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.1f, 0.0f, 0.5F);
+    public static final FoodData COCOA_BUTTER = new FoodData(4, 0.0f, 0.1f, 0.1f, 0.0f, 0.0f, 0.1f, 0.0f, 0.5F);
+    public static final FoodData CHOCOLATE = new FoodData(4, 0.0f, 0.2f, 0.0f, 0.0f, 0.0f, 0.0f, 0.2f, 1.1F);
+    */
     public static final FoodData ROASTED_COFFEE_BEANS = new FoodData(4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f);
     public static final FoodData COFFEE_POWDER = new FoodData(4, 0.6f, 5f, 0f, 1f, 0f, 0.5f, 0f, 1.25f);
     public static final FoodData AMARANTH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
@@ -231,11 +251,24 @@ public class FoodDataTFCF
     public static final FoodData SPELT_FLOUR = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData SPELT_DOUGH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData SPELT_BREAD = new FoodData(4, 1f, 0f, 1f, 0f, 0f, 0f, 0f, 0.8f);
+    /*
     public static final FoodData WILD_RICE = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData WILD_RICE_GRAIN = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.4f);
     public static final FoodData WILD_RICE_FLOUR = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData WILD_RICE_DOUGH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData WILD_RICE_BREAD = new FoodData(4, 0f, 0f, 1.7f, 0f, 0f, 0f, 0f, 0.8f);
+    */
+    public static final FoodData AMARANTH_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData BUCKWHEAT_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData FONIO_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData MILLET_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData QUINOA_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData SPELT_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    //public static final FoodData WILD_RICE_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
+    public static final FoodData DOUGH = new FoodData(4, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0F);
+    public static final FoodData FLATBREAD = new FoodData(4, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0F);
+    public static final FoodData SLICE = new FoodData(4, 0.0f, 0.5f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.5F);
+    public static final FoodData SANDWICH = new FoodData(4, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 5f);
     public static final FoodData LINSEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData RAPE_SEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData SUNFLOWER_SEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
@@ -243,16 +276,16 @@ public class FoodDataTFCF
     public static final FoodData HASH_MUFFIN = new FoodData(4, 1f, 0f, 1f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData RUTABAGA = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData TURNIP = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
-    public static final FoodData MUSTARD = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
+    //public static final FoodData MUSTARD = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData BLACK_EYED_PEAS = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 3.5f);
     public static final FoodData GREEN_CAYENNE_PEPPER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData RED_CAYENNE_PEPPER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
-    public static final FoodData GINGER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
+    //public static final FoodData GINGER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData GINSENG = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
-    public static final FoodData CELERY = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
-    public static final FoodData LETTUCE = new FoodData(4, 0.4f, 5f, 0f, 0f, 0f, 1f, 0f, 2.5f);
-    public static final FoodData PEANUT = new FoodData(4, 0.6f, 3f, 0f, 1.5f, 2f, 0.5f, 0.5f, 2f);
-    public static final FoodData SWEET_POTATO = new FoodData(4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f);
+    //public static final FoodData CELERY = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
+    //public static final FoodData LETTUCE = new FoodData(4, 0.4f, 5f, 0f, 0f, 0f, 1f, 0f, 2.5f);
+    //public static final FoodData PEANUT = new FoodData(4, 0.6f, 3f, 0f, 1.5f, 2f, 0.5f, 0.5f, 2f);
+    //public static final FoodData SWEET_POTATO = new FoodData(4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f);
     public static final FoodData SUGAR_BEET = new FoodData(4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
     public static final FoodData PURPLE_GRAPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
     public static final FoodData GREEN_GRAPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);
@@ -263,17 +296,9 @@ public class FoodDataTFCF
     public static final FoodData MASHED_SUGAR_BEET = new FoodData(4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
     public static final FoodData MASHED_SUGAR_CANE = new FoodData(4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
     public static final FoodData SOYBEAN_PASTE = new FoodData(4, 0.8f, 3f, 2f, 0f, 1f, 1f, 0f, 3f);
+    /*
     public static final FoodData COW_CHEESE = new FoodData(4, 2f, 0f, 0f, 0f, 0f, 0f, 3f, 0.3f);
     public static final FoodData GOAT_CHEESE = new FoodData(4, 2f, 0f, 0f, 0f, 0f, 0f, 3f, 0.3f);
     public static final FoodData SHEEP_CHEESE = new FoodData(4, 2f, 0f, 0f, 0f, 0f, 0f, 3f, 0.3f);
-    public static final FoodData AMARANTH_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData BUCKWHEAT_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData FONIO_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData MILLET_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData QUINOA_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData SPELT_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    public static final FoodData WILD_RICE_BREAD_SANDWICH = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 4.5f);
-    
-    public static final FoodData CARAMEL = new FoodData(4, 0.0F, 0.5F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 10F);
-    public static final FoodData NUTMEG_POWDER = new FoodData(4, 0.0F, 0.3F, 0.3F, 0.0F, 0.0F, 0.1F, 0.0F, 1.0F);
+    */
 }

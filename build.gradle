@@ -20,7 +20,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 if (System.getenv('VERSION') != null) {
     version = System.getenv('VERSION')
 } else {
-    version = "1.1.1"
+    version = "1.0"
 }
 group = "tfcflorae"
 archivesBaseName = "TFC-Florae"
@@ -68,7 +68,10 @@ repositories {
 dependencies {
 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.615"
     deobfProvided "mezz.jei:jei_1.12.2:4.16.1.302"
-	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.11.169-deobf.jar")
+	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.17.175-deobf.jar")
+    provided files("./libs/firmalife-0.3.5.jar")
+    provided files("./libs/TFC-Elementia-MC1.12.2-1.0.jar")
+    provided files("./libs/TFC_PH_Compat-1.12.2-1.1.1.jar")
     compile fileTree(include: ["*.jar"], dir: "libs")
 }
 

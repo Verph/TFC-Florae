@@ -11,7 +11,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-
+import net.minecraftforge.registries.ForgeRegistry;
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Plant;
@@ -25,295 +25,102 @@ import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
+import tfcflorae.ConfigTFCF;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
 public class WorldGenSoilPitsTFCF implements IWorldGenerator
 {
+    public static final float RAINFALL_SAND = 75;
+    public static final float RAINFALL_SAND_SANDY_MIX = 125;
+    public static final float RAINFALL_SANDY = 200; // Upper thresholds
+    public static final float RAINFALL_SILTY = 275; // Lower thresholds
+    public static final float RAINFALL_SILT_SILTY_MIX = 350;
+    public static final float RAINFALL_SILT = 400;
+
 	@Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
         if (!(chunkGenerator instanceof ChunkGenTFC)) return;
         final BlockPos chunkBlockPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
 
-        BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateHumus(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generatePodzol(world, random, pos);
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generatePodzol(world, random, pos);
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generatePodzol(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateMud(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateLoamySand(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSandyLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSiltLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSilt(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSandyClay(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSandyClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSiltyClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSiltyClay(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateClayHumus(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateKaoliniteClay(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSandyKaoliniteClay(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSandyKaoliniteClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateKaoliniteClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSiltyKaoliniteClayLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateSiltyKaoliniteClay(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateKaoliniteClayHumus(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseDirt(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseLoamySand(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseSandyLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseSiltLoam(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseSilt(world, random, pos);
-
-        pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
-        generateCoarseHumus(world, random, pos);
-    }
-
-    /*private void generatePlate(World world, Random rng, BlockPos start, int density)
-    {
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(1) == 0 && start.getY() > WorldTypeTFC.SEALEVEL + 1) return;
-        ChunkDataTFC data = ChunkDataTFC.get(world, start);
-        if (data.isInitialized() && data.getRainfall() <= 100f && data.getFloraDensity() <= 0.8f && data.getFloraDiversity() <= 0.8f)
-            return;
-
-        for (int x = -radius; x <= radius; x++)
+        if (ConfigTFCF.General.WORLD.enableAllBlockTypes)
         {
-            for (int z = -radius; z <= radius; z++)
-            {
-                if (x * x + z * z > radius * radius) continue;
-                final BlockPos posHorizontal = start.add(x, 0, z);
+            BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generatePodzol(world, random, pos);
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generatePodzol(world, random, pos);
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generatePodzol(world, random, pos);
 
-                for (int y = -depth; y <= +depth; y++)
-                {
-                    final BlockPos pos = posHorizontal.add(0, y, 0);
-                    final IBlockState current = world.getBlockState(pos);
-                    if (BlocksTFC.isGrass(current))
-                    {
-                        if(rng.nextInt(100) <= density)
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
-                    }
-                }
-            }
-        }
-    }
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateMud(world, random, pos);
 
-    private void fancy(World world, Random rng, BlockPos start, int density)
-    {
-        int Length = rng.nextInt(15) + 1;
-        int depth = rng.nextInt(3) + 1;
-        int widthMultiplier = rng.nextInt(2) + 1;
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateClaySurface(world, random, pos);
 
-        int z;
-        int tz;
-        int angle = rng.nextInt(360);
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateKaoliniteClaySurface(world, random, pos);
 
-        int rx;
-        int rz;
-
-        for (int x = -Length; x <= Length; x++)
-        {
-            z = (int) (0.3 * x * MathHelper.sin((-0.2f + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-            tz = MathHelper.abs(z) * widthMultiplier;
-
-            for (int width = -tz; width <= tz; width++)
-            {
-                rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                for (int y = -depth; y <= +depth; y++)
-                {
-                    final BlockPos pos = posHorizontal.add(0, y, 0);
-                    final IBlockState current = world.getBlockState(pos);
-                    if (BlocksTFC.isGrass(current))
-                    {
-                        if(rng.nextInt(100) <= density)
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
-                    }
-                }
-            }
-        }
-    }*/
-
-    private void generateHumus(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(8) == 0 && start.getY() >= 155 && start.getY() <= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 190f && data.getFloraDensity() >= 0.4f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.HUMUS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_HUMUS_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.HUMUS_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateBogIron(world, random, pos);
         }
     }
 
     private void generatePodzol(World world, Random rng, BlockPos start)
     {
-        if (rng.nextInt(1) == 0 && start.getY() >= 146 && start.getY() <= 175)
+        if (ConfigTFCF.General.WORLD.enableAllBlockTypes)
         {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 90f && data.getFloraDensity() >= 0.5f)
+            if (rng.nextInt(ConfigTFCF.General.WORLD.podzolRarity) == 0 && start.getY() >= 146 && start.getY() <= 175)
             {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
+                ChunkDataTFC data = ChunkDataTFC.get(world, start);
+                if (data.isInitialized() && data.getRainfall() >= 90f && data.getFloraDensity() >= 0.5f)
                 {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
+                    int length = rng.nextInt(4) + 3;
+                    int depth = rng.nextInt(3) + 1;
+                    float widthMultiplier = rng.nextInt(1) + 1f;
+                    int curveHeight = rng.nextInt(4) + 3;
+                    float curveFrequency = (rng.nextInt(1) + 1f) / 10f;
 
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
+                    int z;
+                    int tz;
+                    float tWidth = widthMultiplier / 4;
 
-                    for (int width = -tz; width <= tz; width++)
+                    int angle = rng.nextInt(360);
+
+                    int rx;
+                    int rz;
+
+                    for (int x = -length; x <= length; x++)
                     {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
+                        if(x < -length + 3)
+                            tWidth *= 2;
+                        else if(length - x < 3)
+                            tWidth /= 2;
 
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
+                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
+                        tz = (int)((float)MathHelper.abs(z) * tWidth);
 
-                        for (int y = -depth; y <= +depth; y++)
+                        for (int width = -tz; width <= tz; width++)
                         {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isGrass(current))
+                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
+                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
+
+                            final BlockPos posHorizontal = start.add(rx, 0, rz);
+
+                            for (int y = -depth; y <= +depth; y++)
                             {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                final BlockPos pos = posHorizontal.add(0, y, 0);
+                                final IBlockState current = world.getBlockState(pos);
+                                if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                }
                             }
                         }
                     }
@@ -324,20 +131,19 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
 
     private void generateMud(World world, Random rng, BlockPos start)
     {
-        if (rng.nextInt(8) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 1)
+        if (rng.nextInt(ConfigTFCF.General.WORLD.mudRarity) == 0 && start.getY() >= WorldTypeTFC.SEALEVEL && start.getY() <= 150)
         {
             final Biome b = world.getBiome(start);
             if (b == BiomesTFC.SWAMPLAND)
             {
                 ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() <= 200f)
+                if (data.isInitialized() && data.getRainfall() >= RAINFALL_SAND_SANDY_MIX)
                 {
-                    int length = rng.nextInt(7) + 1;
+                    int length = rng.nextInt(4) + 3;
                     int depth = rng.nextInt(3) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
+                    float widthMultiplier = rng.nextInt(1) + 1f;
+                    int curveHeight = rng.nextInt(4) + 3;
+                    float curveFrequency = (rng.nextInt(1) + 1f) / 10f;
 
                     int z;
                     int tz;
@@ -387,1812 +193,400 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
         }
     }
 
-    private void generateLoamySand(World world, Random rng, BlockPos start)
+    private void generateClaySurface(World world, Random rng, BlockPos start)
     {
-        if (rng.nextInt(8) == 0 && start.getY() <= 146 && start.getY() >= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() <= 125f && data.getRainfall() <= 180f && data.getFloraDensity() <= 0.4f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
 
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_LOAMY_SAND_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSandyLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(8) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 125f && data.getFloraDensity() <= 0.4f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_LOAM_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(8) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 200f && data.getFloraDensity() >= 0.4f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_LOAM_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSiltLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(8) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 275f && data.getRainfall() <= 350f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-        
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-        
-                int angle = rng.nextInt(360);
-        
-                int rx;
-                int rz;
-        
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILT_LOAM_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSilt(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(8) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 350f)
-            {
-                int length = rng.nextInt(7) + 1;
-                int depth = rng.nextInt(3) + 1;
-                float widthMultiplier = rng.nextInt(3) + 1;
-                int curveHeight = rng.nextInt(3) + 1;
-                int curveSlope = rng.nextInt(2) + 1;
-                float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                int z;
-                int tz;
-                float tWidth = widthMultiplier / 4;
-
-                int angle = rng.nextInt(360);
-
-                int rx;
-                int rz;
-
-                for (int x = -length; x <= length; x++)
-                {
-                    if(x < -length + 3)
-                        tWidth *= 2;
-                    else if(length - x < 3)
-                        tWidth /= 2;
-
-                    //tx = x + shiftMultiplier;
-                    z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                    //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                    tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                    for (int width = -tz; width <= tz; width++)
-                    {
-                        rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                        rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                        final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILT_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // Clay Generation
-
-    private void generateSandyClay(World world, Random rng, BlockPos start)
-    {
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() <= 125f && data.getRainfall() <= 180f && data.getFloraDensity() <= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSandyClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 125f && data.getFloraDensity() <= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 200f && data.getFloraDensity() >= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSiltyClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 275f && data.getRainfall() <= 350f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSiltyClay(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 350f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateClayHumus(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(40) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 190f && data.getFloraDensity() >= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_HUMUS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // Kaolinite Clay Generation
-
-    private void generateKaoliniteClay(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
         int radius = rng.nextInt(6) + 2;
         int depth = rng.nextInt(3) + 1;
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            if (ChunkDataTFC.getRainfall(world, start) < ConfigTFC.General.WORLD.clayRainfallThreshold)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
 
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
+        int sandyClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyClayRarity);
+        int sandyClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyClayLoamRarity);
+        int clayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.clayLoamRarity);
+        int siltyClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyClayLoamRarity);
+        int clayHumusRarity = rng.nextInt(ConfigTFCF.General.WORLD.clayHumusRarity);
+        int siltyClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyClayRarity);
+
+        for (int x = -radius; x <= radius; x++)
+        {
+            for (int z = -radius; z <= radius; z++)
+            {
+                if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
+
+                for (int y = -depth; y <= +depth; y++)
+                {
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
+                    final IBlockState current = world.getBlockState(pos);
+
+                    if (data.getRainfall() < RAINFALL_SANDY)
+                    {
+                        if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX)
                         {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
+                            if (sandyClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() > RAINFALL_SAND)
+                        {
+                            if (sandyClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SANDY)
+                    {
+                        if (data.getRainfall() < RAINFALL_SILTY)
+                        {
+                            if (clayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SILTY)
+                    {
+                        if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
+                        {
+                            if (siltyClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() < RAINFALL_SILT)
+                        {
+                            if (clayHumusRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_HUMUS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (siltyClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    if (rng.nextInt(10) == 0)
+                    {
+                        final BlockPos posTop = world.getTopSolidOrLiquidBlock(posHorizontal);
+
+                        for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
+                        {
+                            if (plant.getIsClayMarking())
+                            {
+                                BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                                IBlockState state = plantBlock.getDefaultState();
+                                int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, posTop));
+
+                                if (!world.provider.isNether() && !world.isOutsideBuildHeight(posTop) &&
+                                    plant.isValidLocation(ClimateTFC.getActualTemp(world, posTop), ChunkDataTFC.getRainfall(world, posTop), world.getLightFor(EnumSkyBlock.SKY, posTop)) &&
+                                    world.isAirBlock(posTop) &&
+                                    plantBlock.canBlockStay(world, posTop, state))
+                                {
+                                    if (BlocksTFC.isClay(current) || BlocksTFCF.isClay(current))
+                                    {
+                                        world.setBlockState(posTop, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void generateKaoliniteClaySurface(World world, Random rng, BlockPos start)
+    {
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+
+        int radius = rng.nextInt(5) + 1;
+        int depth = rng.nextInt(3) + 1;
+
+        int sandyKaoliniteClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyKaoliniteClayRarity);
+        int sandyKaoliniteClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyKaoliniteClayLoamRarity);
+        int kaoliniteClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayRarity);
+        int kaoliniteClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayLoamRarity);
+        int siltyKaoliniteClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyKaoliniteClayLoamRarity);
+        int kaoliniteClayHumusRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayHumusRarity);
+        int siltyKaoliniteClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyKaoliniteClayRarity);
+
+        for (int x = -radius; x <= radius; x++)
+        {
+            for (int z = -radius; z <= radius; z++)
+            {
+                if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
+
+                for (int y = -depth; y <= +depth; y++)
+                {
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
+                    final IBlockState current = world.getBlockState(pos);
+
+                    if (data.getRainfall() < RAINFALL_SANDY)
+                    {
+                        if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX)
+                        {
+                            if (sandyKaoliniteClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() > RAINFALL_SAND)
+                        {
+                            if (sandyKaoliniteClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SANDY)
+                    {
+                        if (kaoliniteClayRarity == 0)
+                        {
                             if (BlocksTFC.isDirt(current))
                             {
                                 world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY).getDefaultState(), 2);
-                                flag = true;
                             }
-                            else if (BlocksTFC.isGrass(current))
+                            else if (BlocksTFC.isDryGrass(current))
                             {
                                 world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
                             }
                             else if (BlocksTFC.isGrass(current))
                             {
                                 world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
                             }
                         }
-                        if (flag && rng.nextInt(15) == 0)
+                        if (data.getRainfall() < RAINFALL_SILTY)
                         {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
+                            if (kaoliniteClayLoamRarity == 0)
                             {
-                                if (plant.getIsClayMarking())
+                                if (BlocksTFC.isDirt(current))
                                 {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
                                 }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSandyKaoliniteClay(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() <= 125f && data.getRainfall() <= 180f && data.getFloraDensity() <= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_PODZOL).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
+                                else if (BlocksTFCF.isPodzol(current))
                                 {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
                                 }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSandyKaoliniteClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 125f && data.getFloraDensity() <= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateKaoliniteClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 200f && data.getFloraDensity() >= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSiltyKaoliniteClayLoam(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 275f && data.getRainfall() <= 350f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateSiltyKaoliniteClay(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 350f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFCF.isPodzol(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_PODZOL).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateKaoliniteClayHumus(World world, Random rng, BlockPos start)
-    {
-        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
-        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
-        int radius = rng.nextInt(7) + 1;
-        int depth = rng.nextInt(3) + 1;
-
-        if (rng.nextInt(60) == 0 && start.getY() <= WorldTypeTFC.SEALEVEL + 6)
-        {
-            ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getRainfall() >= 190f && data.getFloraDensity() >= 0.4f)
-            {
-                for (int x = -radius; x <= radius; x++)
-                {
-                    for (int z = -radius; z <= radius; z++)
-                    {
-                        if (x * x + z * z > radius * radius) continue;
-                        final BlockPos posHorizontal = start.add(x, 0, z);
-
-                        boolean flag = false;
-                        for (int y = -depth; y <= +depth; y++)
-                        {
-                            final BlockPos pos = posHorizontal.add(0, y, 0);
-                            final IBlockState current = world.getBlockState(pos);
-                            if (BlocksTFC.isDirt(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_HUMUS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isDryGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                            else if (BlocksTFC.isGrass(current))
-                            {
-                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                flag = true;
-                            }
-                        }
-                        if (flag && rng.nextInt(15) == 0)
-                        {
-                            final BlockPos pos = world.getTopSolidOrLiquidBlock(posHorizontal);
-
-                            for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
-                            {
-                                if (plant.getIsClayMarking())
-                                {
-                                    BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
-                                    IBlockState state = plantBlock.getDefaultState();
-                                    int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, pos));
-
-                                    if (!world.provider.isNether() && !world.isOutsideBuildHeight(pos) &&
-                                        plant.isValidLocation(ClimateTFC.getActualTemp(world, pos), ChunkDataTFC.getRainfall(world, pos), world.getLightFor(EnumSkyBlock.SKY, pos)) &&
-                                        world.isAirBlock(pos) &&
-                                        plantBlock.canBlockStay(world, pos, state))
-                                    {
-                                        world.setBlockState(pos, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // Coarse Soils
-
-    private void generateCoarseDirt(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 100f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
-                    {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
-                        {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
-                            {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_DIRT).getDefaultState(), 2);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateCoarseLoamySand(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() <= 125f && data.getRainfall() <= 180f && data.getFloraDensity() <= 0.4f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
-                    {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
-                        {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
-                            {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_LOAMY_SAND).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SANDY_CLAY).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SANDY_KAOLINITE_CLAY).getDefaultState(), 2);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateCoarseSandyLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 125f && data.getFloraDensity() <= 0.4f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
-                    {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
-                        {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
-                            {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SANDY_LOAM).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SANDY_CLAY_LOAM).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SANDY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateCoarseLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 200f && data.getFloraDensity() >= 0.4f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
-                    {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
-                        {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
-                            {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_LOAM).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_CLAY_LOAM).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
+                                else if (BlocksTFC.isDryGrass(current))
                                 {
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
+                                else if (BlocksTFC.isGrass(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
                                 }
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-
-    private void generateCoarseSiltLoam(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 275f && data.getRainfall() <= 350f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
+                    else if (data.getRainfall() > RAINFALL_SILTY)
                     {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
+                        if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
                         {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
+                            if (siltyKaoliniteClayLoamRarity == 0)
                             {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
+                                if (BlocksTFC.isDirt(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SILT_LOAM).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isClayDryGrass(current))
+                                else if (BlocksTFCF.isPodzol(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SILTY_CLAY_LOAM).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
+                                else if (BlocksTFC.isDryGrass(current))
                                 {
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
+                                else if (BlocksTFC.isGrass(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SILTY_KAOLINITE_CLAY_LOAM).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_LOAM_GRASS).getDefaultState(), 2);
                                 }
                             }
                         }
-                    }
-                }
-            }
-        }
-    }
-
-    private void generateCoarseSilt(World world, Random rng, BlockPos start)
-    {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
-        {
-            final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
-            {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 350f)
-                {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
-                    {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
-
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
+                        else if (data.getRainfall() < RAINFALL_SILT)
                         {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
-
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
+                            if (kaoliniteClayHumusRarity == 0)
                             {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
-
-                                if (BlocksTFC.isGrass(current))
+                                if (BlocksTFC.isDirt(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SILT).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_HUMUS).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isClayDryGrass(current))
+                                else if (BlocksTFC.isDryGrass(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_GRASS).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isClayGrass(current))
+                                else if (BlocksTFC.isGrass(current))
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_GRASS).getDefaultState(), 2);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
                                 }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_SILTY_CLAY).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
+                            }
+                        }
+                        else
+                        {
+                            if (siltyKaoliniteClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
                                 {
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY).getDefaultState(), 2);
                                 }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    if (rng.nextInt(10) == 0)
+                    {
+                        final BlockPos posTop = world.getTopSolidOrLiquidBlock(posHorizontal);
+
+                        for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
+                        {
+                            if (plant.getIsClayMarking())
+                            {
+                                BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                                IBlockState state = plantBlock.getDefaultState();
+                                int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, posTop));
+
+                                if (!world.provider.isNether() && !world.isOutsideBuildHeight(posTop) &&
+                                    plant.isValidLocation(ClimateTFC.getActualTemp(world, posTop), ChunkDataTFC.getRainfall(world, posTop), world.getLightFor(EnumSkyBlock.SKY, posTop)) &&
+                                    world.isAirBlock(posTop) &&
+                                    plantBlock.canBlockStay(world, posTop, state))
+                                {
+                                    if (BlocksTFC.isClay(current) || BlocksTFCF.isClay(current))
+                                    {
+                                        world.setBlockState(posTop, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
+                                    }
+                                }
                             }
                         }
                     }
@@ -2201,92 +595,75 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
         }
     }
 
-    private void generateCoarseHumus(World world, Random rng, BlockPos start)
+    private void generateBogIron(World world, Random rng, BlockPos start)
     {
-        if (rng.nextInt(20) == 0 && start.getY() >= 146 && start.getY() <= 175)
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+        if (rng.nextInt(ConfigTFCF.General.WORLD.bogIronRarity) == 0 && start.getY() <= 150 && data.getAverageTemp() >= 0f)
         {
             final Biome b = world.getBiome(start);
-            if (b != BiomesTFC.PLAINS)
+            if (b == BiomesTFC.SWAMPLAND)
             {
-                ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 190f && data.getFloraDensity() >= 0.4f)
+                int radius = rng.nextInt(5) + 2;
+                int depth = rng.nextInt(3) + 1;
+
+                for (int x = -radius; x <= radius; x++)
                 {
-                    int length = rng.nextInt(7) + 1;
-                    int depth = rng.nextInt(1) + 1;
-                    float widthMultiplier = rng.nextInt(3) + 1;
-                    int curveHeight = rng.nextInt(3) + 1;
-                    int curveSlope = rng.nextInt(2) + 1;
-                    float curveFrequency = (rng.nextInt(9) + 1) / 10;
-
-                    int z;
-                    int tz;
-                    float tWidth = widthMultiplier / 4;
-
-                    int angle = rng.nextInt(360);
-
-                    int rx;
-                    int rz;
-
-                    for (int x = -length; x <= length; x++)
+                    for (int z = -radius; z <= radius; z++)
                     {
-                        if(x < -length + 3)
-                            tWidth *= 2;
-                        else if(length - x < 3)
-                            tWidth /= 2;
-                        
+                        if (x * x + z * z > radius * radius) continue;
+                        final BlockPos posHorizontal = start.add(x, 0, z);
 
-                        //tx = x + shiftMultiplier;
-                        z = (int) (curveHeight + curveFrequency * x * MathHelper.sin((-curveHeight + MathHelper.sin(x))) + MathHelper.sin((float) (x)));
-                        //z = (int) (curveSlope * MathHelper.sin(curveFrequency * x) + curveHeight);
-                        tz = (int)((float)MathHelper.abs(z) * tWidth);
-
-                        for (int width = -tz; width <= tz; width++)
+                        for (int y = -depth; y <= +depth; y++)
                         {
-                            rx = (int) (x * MathHelper.cos(angle) - width * MathHelper.sin(angle));
-                            rz = (int) (x * MathHelper.sin(angle) + width * MathHelper.cos(angle));
+                            final BlockPos pos = posHorizontal.add(0, y, 0);
+                            final IBlockState current = world.getBlockState(pos);
 
-                            final BlockPos posHorizontal = start.add(rx, 0, rz);
-
-                            for (int y = -depth; y <= +depth; y++)
+                            if (data.getRainfall() >= RAINFALL_SAND_SANDY_MIX)
                             {
-                                final BlockPos pos = posHorizontal.add(0, y, 0);
-                                final IBlockState current = world.getBlockState(pos);
+                                if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.BOG_IRON).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.BOG_IRON_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isSparseGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SPARSE_BOG_IRON_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current) || BlocksTFCF.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_BOG_IRON_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current) || BlocksTFCF.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SPARSE_BOG_IRON_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                            if (rng.nextInt(15) == 0)
+                            {
+                                final BlockPos posTop = world.getTopSolidOrLiquidBlock(posHorizontal);
 
-                                if (BlocksTFC.isGrass(current))
+                                for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_HUMUS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_CLAY_HUMUS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDryGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayGrass(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayPodzol(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
-                                }
-                                else if (BlocksTFCF.isKaoliniteClayDirt(current))
-                                {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.COARSE_KAOLINITE_CLAY_HUMUS).getDefaultState(), 2);
+                                    if (plant.getIsClayMarking())
+                                    {
+                                        BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                                        IBlockState state = plantBlock.getDefaultState();
+                                        int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, posTop));
+
+                                        if (!world.provider.isNether() && !world.isOutsideBuildHeight(posTop) &&
+                                            plant.isValidLocation(ClimateTFC.getActualTemp(world, posTop), ChunkDataTFC.getRainfall(world, posTop), world.getLightFor(EnumSkyBlock.SKY, posTop)) &&
+                                            world.isAirBlock(posTop) &&
+                                            plantBlock.canBlockStay(world, posTop, state))
+                                        {
+                                            if (BlocksTFC.isClay(current) || BlocksTFCF.isClay(current))
+                                            {
+                                                world.setBlockState(posTop, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -93,12 +93,12 @@ def tree(origin, wood, nameout):
             })
             
         if block['Name'] == 'byg:baobabfruitblock':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'small': String('false'),
-                'placed': String('false'),
-                'axis': String('none')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:planks':  # Planks indicate bark blocks
@@ -110,57 +110,75 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:leaves2':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:oak_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:spruce_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:birch_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:jungle_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:acacia_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'minecraft:dark_oak_leaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'byg:baobableaves':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
             
         if block['Name'] == 'byg:structurecheckblock':
@@ -175,183 +193,243 @@ def tree(origin, wood, nameout):
             block['Name'] = String('minecraft:vine')
 
         if block['Name'] == 'conquest:leaves_fullbiome_1':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_2':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_3':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_4':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_5':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_6':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_7':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_8':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_9':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_fullbiome_10':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_1':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_2':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_3':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_4':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_5':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_6':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_7':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_8':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_9':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:leaves_full_10':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_1':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_2':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_3':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_4':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_5':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_6':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_7':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_8':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_9':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:plants_nocollision_10':
-            block['Name'] = String('tfc:wood/leaves/' + wood)
+            block['Name'] = String('tfcflorae:wood/leaves/red_' + wood)
             block['Properties'] = Compound({
-                'decayable': String('true')
+                'decayable': String('true'),
+                'harvestable': String('true'),
+                'state': String('normal')
             })
 
         if block['Name'] == 'conquest:wood_fence_1':
@@ -1002,9 +1080,9 @@ def tree(origin, wood, nameout):
                 'axis': String('none')
             })
 
-    if not os.path.exists('src/main/resources/assets/tfc/structures/' + wood):
-        os.makedirs('src/main/resources/assets/tfc/structures/' + wood)
-    f.save('src/main/resources/assets/tfc/structures/' + wood + '/' + nameout + '.nbt')
+    if not os.path.exists('src_trees/main/resources/assets/tfc/structures/' + wood):
+        os.makedirs('src_trees/main/resources/assets/tfc/structures/' + wood)
+    f.save('src_trees/main/resources/assets/tfc/structures/' + wood + '/' + nameout + '.nbt')
 
 
 def fruit_tree(ftree):
@@ -1020,7 +1098,7 @@ def fruit_tree(ftree):
         if block['Name'] == 'minecraft:leaves':
             block['Name'] = String('tfc:fruit_trees/leaves/' + ftree)
             block['Properties'] = Compound({
-                'decayable': String('false'),
+                'decayable': String('true'),
                 'harvestable': String('true'),
                 'state': String('normal')
             })
@@ -1043,7 +1121,7 @@ def fruit_tree(ftree):
         if block['Name'] == 'minecraft:oak_leaves':
             block['Name'] = String('tfc:fruit_trees/leaves/' + ftree)
             block['Properties'] = Compound({
-                'decayable': String('false'),
+                'decayable': String('true'),
                 'harvestable': String('true'),
                 'state': String('normal')
             })
@@ -1063,12 +1141,21 @@ def fruit_tree(ftree):
                 'facing': String('down')
             })
 
-    if not os.path.exists('src/main/resources/assets/tfc/structures/fruit_trees'):
-        os.makedirs('src/main/resources/assets/tfc/structures/fruit_trees')
-    f.save('src/main/resources/assets/tfc/structures/fruit_trees/' + ftree + '.nbt')
+    if not os.path.exists('src_trees/main/resources/assets/tfc/structures/fruit_trees'):
+        os.makedirs('src_trees/main/resources/assets/tfc/structures/fruit_trees')
+    f.save('src_trees/main/resources/assets/tfc/structures/fruit_trees/' + ftree + '.nbt')
 
 
 WOOD_TYPES = {
+    'ash': 'normal',
+    'aspen': 'normal',
+    'birch': 'normal',
+    'chestnut': 'normal',
+    'hickory': 'normal',
+    'maple': 'normal',
+    'oak': 'tallXL',
+    'sycamore': 'normal',
+    'white_cedar': 'tall',
     'african_padauk': 'african_padauk',
     'alder': 'alder',
     'angelim': 'angelim',
@@ -1096,6 +1183,9 @@ WOOD_TYPES = {
     'holly': 'holly',
     'hornbeam': 'hornbeam',
     'ipe': 'ipe',
+    'pink_ipe': 'pink_ipe',
+    'white_ipe': 'white_ipe',
+    'yellow_ipe': 'yellow_ipe',
     'iroko': 'iroko',
     'ironwood': 'ironwood',
     'jacaranda': 'jacaranda',
@@ -1127,8 +1217,12 @@ WOOD_TYPES = {
     'rowan': 'rowan',
     'rubber_fig': 'rubber_fig',
     'sweetgum': 'sweetgum',
+    'yellow_sweetgum': 'yellow_sweetgum',
+    'orange_sweetgum': 'orange_sweetgum',
+    'red_sweetgum': 'red_sweetgum',
     'syzygium': 'syzygium',
     'teak': 'teak',
+    'walnut': 'walnut',
     'wenge': 'wenge',
     'white_cherry': 'white_cherry',
     'white_elm': 'white_elm',
@@ -1140,10 +1234,20 @@ WOOD_TYPES = {
 
 for wood, key in WOOD_TYPES.items():
 
+    # normal (vanilla oak)
+    if key == 'normal':
+        tree('structure_templates/normal', wood, 'base_3')
+        tree('structure_templates/normal_overlay', wood, 'overlay_3')
+
     # tall (tfc douglas fir, but smaller)
     if key == 'tall':
-        tree('structure_templates/tall', wood, 'base')
-        tree('structure_templates/tall_overlay', wood, 'overlay')
+        tree('structure_templates/tall', wood, 'base_3')
+        tree('structure_templates/tall_overlay', wood, 'overlay_3')
+
+    # tallXL (tfc douglas fir, full size-ish)
+    if key == 'tallXL':
+        tree('structure_templates/tall2', wood, 'base_3')
+        tree('structure_templates/tall2_overlay', wood, 'overlay_3')
 
     # arrow_bamboo
     if key == 'arrow_bamboo':
@@ -1267,6 +1371,21 @@ for wood, key in WOOD_TYPES.items():
 
     # ipe
     if key == 'ipe':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']:
+            tree('structure_templates/ipe/ipe_' + s, wood, s)
+
+    # pink_ipe
+    if key == 'pink_ipe':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']:
+            tree('structure_templates/ipe/ipe_' + s, wood, s)
+
+    # white_ipe
+    if key == 'white_ipe':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']:
+            tree('structure_templates/ipe/ipe_' + s, wood, s)
+
+    # yellow_ipe
+    if key == 'yellow_ipe':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']:
             tree('structure_templates/ipe/ipe_' + s, wood, s)
 
@@ -1410,6 +1529,21 @@ for wood, key in WOOD_TYPES.items():
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
             tree('structure_templates/sweetgum/sweetgum_' + s, wood, s)
 
+    # yellow_sweetgum
+    if key == 'yellow_sweetgum':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
+            tree('structure_templates/sweetgum/sweetgum_' + s, wood, s)
+
+    # orange_sweetgum
+    if key == 'orange_sweetgum':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
+            tree('structure_templates/sweetgum/sweetgum_' + s, wood, s)
+
+    # red_sweetgum
+    if key == 'red_sweetgum':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
+            tree('structure_templates/sweetgum/sweetgum_' + s, wood, s)
+
     # syzygium
     if key == 'syzygium':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14']:
@@ -1419,6 +1553,11 @@ for wood, key in WOOD_TYPES.items():
     if key == 'teak':
         for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
             tree('structure_templates/teak/teak_' + s, wood, s)
+
+    # walnut
+    if key == 'walnut':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']:
+            tree('structure_templates/walnut/walnut_' + s, wood, s)
 
     # wenge
     if key == 'wenge':
@@ -1456,101 +1595,7 @@ for wood, key in WOOD_TYPES.items():
             tree('structure_templates/zebrawood/zebrawood_' + s, wood, s)
 
 FRUIT_TREES = [
-    'abiu',
-    'amla',
-    'apricot',
-    'avocado',
-    'bael',
-    'bay_laurel',
-    'ber',
-    'black_cherry',
-    'black_pepper',
-    'blackcurrant',
-    'blackthorn',
-    'buddha_hand',
-    'cacao',
-    'cherry_plum',
-    'citron',
-    'coconut',
-    'coffea',
-    'crabapple',
-    'damson_plum',
-    'date'
-    'elder',
-    'elderberry',
-    'fig',
-    'finger_lime',
-    'grapefruit',
-    'guava',
-    'ice_cream_bean',
-    'jackfruit',
-    'jujube',
-    'juniper',
-    'kaki',
-    'key_lime',
-    'kluwak',
-    'kumquat',
-    'lime',
-    'longan',
-    'loquat',
-    'lychee',
-    'mamey_sapote',
-    'manderin',
-    'mango',
-    'mangosteen',
-    'nectarine',
-    'ohia_ai',
-    'osage_orange',
-    'papaya',
-    'passion_fruit',
-    'pear',
-    'persimmon',
-    'persian_lime',
-    'peruvian_pepper',
-    'plantain',
-    'plum',
-    'pomegranate',
-    'pomelo'
-    'quince',
-    'rainier_cherry',
-    'red_banana',
-    'red_currant',
-    'sand_pear',
-    'sapodilla',
-    'satsuma',
-    'sour_cherry',
-    'soursop',
-    'star_anise',
-    'starfruit',
-    'tamarillo',
-    'tangerine',
-    'tropical_apricot',
-    'wild_cherry',
-    'acorn',
-    'almond',
-    'beechnut',
-    'black_walnut',
-    'brazil_nut',
-    'breadnut',
-    'bunya_nut',
-    'butternut',
-    'candlenut',
-    'cashew',
-    'ginkgo_nut',
-    'hazelnut',
-    'heartnut',
-    'hickory_nut',
-    'kola_nut',
-    'kukui_nut',
-    'macadamia',
-    'mongongo',
-    'monkey_puzzle_nut',
-    'nutmeg',
-    'paradise_nut',
-    'pecan',
-    'pine_nut',
-    'pistachio',
-    'walnut'
+    'abiu'
 ]
 
 for tree in FRUIT_TREES:

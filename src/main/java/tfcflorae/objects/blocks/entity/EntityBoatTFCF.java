@@ -3,6 +3,9 @@ package tfcflorae.objects.blocks.entity;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import com.eerussianguy.firmalife.init.FruitTreeFL;
+import com.eerussianguy.firmalife.init.PlantsFL;
+
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,13 +18,14 @@ import net.minecraft.network.play.client.CPacketSteerBoat;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-
 import mcp.MethodsReturnNonnullByDefault;
+
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.IFruitTree;
 import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.util.agriculture.FruitTree;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemBoatTFCF;
 import tfcflorae.types.TreesTFCF;
@@ -62,6 +66,17 @@ public class EntityBoatTFCF extends EntityBoat
                 return fruitTree;
         }
 
+        if (TFCFlorae.FirmaLifeAdded)
+        {
+            for (FruitTreeFL fruitTree : FruitTreeFL.values())
+            {
+                String name = fruitTree.getName().toLowerCase();
+    
+                if (this.dataManager.get(WOOD_NAME) == name)
+                    return fruitTree;
+            }
+        }
+
         return null;
     }
 
@@ -79,6 +94,12 @@ public class EntityBoatTFCF extends EntityBoat
 
         if (this.dataManager.get(WOOD_NAME) == "ceylon_cinnamon")
             return TreesTFCF.CEYLON_CINNAMON_TREE;
+
+        if (TFCFlorae.FirmaLifeAdded)
+        {
+            if (this.dataManager.get(WOOD_NAME) == "cinnamon")
+                return PlantsFL.CINNAMON_TREE;
+        }
 
         return null;
     }

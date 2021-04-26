@@ -10,8 +10,9 @@ import mcp.MethodsReturnNonnullByDefault;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
+
 import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
-import tfcflorae.objects.blocks.fruitwood.BlockFruitSlab;
+import tfcflorae.objects.blocks.wood.fruitwood.BlockFruitSlab;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

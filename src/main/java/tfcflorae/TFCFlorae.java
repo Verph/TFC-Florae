@@ -7,7 +7,9 @@ import net.minecraft.server.dedicated.DedicatedServer;
 import net.minecraft.server.dedicated.PropertyManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
@@ -42,10 +44,22 @@ import net.dries007.tfc.util.OreDictionaryHelper;
 
 import tfcflorae.client.ClientEvents;
 import tfcflorae.client.GuiHandler;
+import tfcflorae.compat.firmalife.jei.JEIPluginFLCompat;
+import tfcflorae.compat.firmalife.jei.category.CastingCategoryFLCompat;
+import tfcflorae.compat.firmalife.jei.wrappers.CastingRecipeWrapperKaoliniteFL;
+import tfcflorae.compat.firmalife.jei.wrappers.UnmoldRecipeWrapperKaoliniteFL;
+import tfcflorae.compat.firmalife.recipes.UnmoldMalletRecipe;
+import tfcflorae.compat.tfcelementia.ceramics.ItemKaoliniteMoldTFCE;
+import tfcflorae.compat.tfcelementia.ceramics.ItemUnfiredKaoliniteMoldTFCE;
+import tfcflorae.compat.tfcelementia.jei.JEIPluginTFCECompat;
+import tfcflorae.compat.tfcelementia.jei.wrappers.CastingRecipeKaoliniteTFCEWrapper;
+import tfcflorae.compat.tfcelementia.jei.wrappers.UnmoldRecipeKaoliniteTFCEWrapper;
+import tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeKaolinite;
 import tfcflorae.objects.blocks.entity.EntitiesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
 import tfcflorae.util.HelpersTFCF;
+import tfcflorae.util.fuel.FuelManager;
 import tfcflorae.proxy.ClientProxy;
 
 import static tfcflorae.TFCFlorae.MODID;
@@ -58,12 +72,19 @@ public class TFCFlorae
     public static final String NAME = "TFC Florae";
     public static final String VERSION = "@VERSION@";
     public static final String SIGNING_KEY = "@FINGERPRINT@";
-    public static final String DEPENDENCIES = "required-after:tfc@[1.0,)";
+    public static final String DEPENDENCIES = "required-after:tfc@[1.7,);"
+            + "after:firmalife;"
+            + "after:tfcelementia;"
+            + "after:tfc_ph_compat;";
 
     @Mod.Instance
     public static TFCFlorae instance;
     public static Logger logger;
     public static boolean signedBuild = true;
+
+    public static boolean FirmaLifeAdded = false;
+    public static boolean TFCElementiaAdded = false;
+    public static boolean TFCPHCompatAdded = false;
 
     @SidedProxy(serverSide = "tfcflorae.proxy.CommonProxy", clientSide = "tfcflorae.proxy.ClientProxy")
     public static CommonProxy proxy;
@@ -96,6 +117,35 @@ public class TFCFlorae
             logger.error("INVALID FINGERPRINT DETECTED!");
         }
 
+        for (ModContainer Mod : Loader.instance().getActiveModList())
+        {
+            if (Mod.getModId().equals("firmalife"))
+                FirmaLifeAdded = true;
+            if (Mod.getModId().equals("tfcelementia"))
+                TFCElementiaAdded = true;
+            if (Mod.getModId().equals("tfc_ph_compat"))
+                TFCPHCompatAdded = true;
+        }
+        /*
+        if (TFCFlorae.FirmaLifeAdded)
+        {
+            MinecraftForge.EVENT_BUS.register(JEIPluginFLCompat.class);
+            MinecraftForge.EVENT_BUS.register(CastingCategoryFLCompat.class);
+            MinecraftForge.EVENT_BUS.register(CastingRecipeWrapperKaoliniteFL.class);
+            MinecraftForge.EVENT_BUS.register(UnmoldRecipeWrapperKaoliniteFL.class);
+            MinecraftForge.EVENT_BUS.register(UnmoldMalletRecipe.class);
+        }
+        if (TFCFlorae.TFCElementiaAdded)
+        {
+            MinecraftForge.EVENT_BUS.register(ItemKaoliniteMoldTFCE.class);
+            MinecraftForge.EVENT_BUS.register(ItemUnfiredKaoliniteMoldTFCE.class);
+            MinecraftForge.EVENT_BUS.register(JEIPluginTFCECompat.class);
+            MinecraftForge.EVENT_BUS.register(CastingRecipeKaoliniteTFCEWrapper.class);
+            MinecraftForge.EVENT_BUS.register(UnmoldRecipeKaoliniteTFCEWrapper.class);
+            MinecraftForge.EVENT_BUS.register(UnmoldRecipeKaolinite.class);
+        }
+        */
+
         proxy.preInit(event);
         EntitiesTFCF.preInit();
 
@@ -118,6 +168,7 @@ public class TFCFlorae
     public void postInit(FMLPostInitializationEvent event)
     {
         proxy.postInit(event);
+        FuelManager.postInit();
     }
 
     @Mod.EventHandler

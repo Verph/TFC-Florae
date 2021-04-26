@@ -1,10 +1,19 @@
 package tfcflorae.util.agriculture;
 
+import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import net.dries007.tfc.api.types.ICrop;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropDead;
@@ -18,7 +27,7 @@ import net.dries007.tfc.util.skills.SkillTier;
 import net.dries007.tfc.world.classic.worldgen.WorldGenWildCrops;
 
 import tfcflorae.objects.items.ItemsTFCF;
-import tfcflorae.objects.items.ItemFoodTFCF;
+import tfcflorae.objects.items.food.*;
 
 import static tfcflorae.util.agriculture.CropTFCF.CropType.*;
 
@@ -30,22 +39,23 @@ public enum CropTFCF implements ICrop
     MILLET(ItemsTFCF.MILLET, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 8, 0.5f, SIMPLE),
     QUINOA(ItemsTFCF.QUINOA, -10f, -5f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
     SPELT(ItemsTFCF.SPELT, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 8, 0.5f, SIMPLE),
-    WILD_RICE(ItemsTFCF.WILD_RICE, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    //WILD_RICE(ItemsTFCF.WILD_RICE, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
 	BLACK_EYED_PEAS(ItemsTFCF.BLACK_EYED_PEAS, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
     CAYENNE_PEPPER(() -> new ItemStack(ItemFoodTFCF.get(ItemsTFCF.RED_CAYENNE_PEPPER)), () -> new ItemStack(ItemFoodTFCF.get(ItemsTFCF.GREEN_CAYENNE_PEPPER)), 4f, 12f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
-    CELERY(ItemsTFCF.CELERY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    GINGER(ItemsTFCF.GINGER, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    //CELERY(ItemsTFCF.CELERY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    //GINGER(ItemsTFCF.GINGER, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     GINSENG(ItemsTFCF.GINSENG, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 5, 0.5f, SIMPLE),
-    LETTUCE(ItemsTFCF.LETTUCE, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    PEANUT(ItemsTFCF.PEANUT, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    //LETTUCE(ItemsTFCF.LETTUCE, 0f, 10f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
+    //PEANUT(ItemsTFCF.PEANUT, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     RUTABAGA(ItemsTFCF.RUTABAGA, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     TURNIP(ItemsTFCF.TURNIP, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    MUSTARD(ItemsTFCF.MUSTARD, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
-    SWEET_POTATO(ItemsTFCF.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    //MUSTARD(ItemsTFCF.MUSTARD, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
+    //SWEET_POTATO(ItemsTFCF.SWEET_POTATO, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
     SUGAR_BEET(ItemsTFCF.SUGAR_BEET, 0f, 5f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, SIMPLE),
 	PURPLE_GRAPE(ItemsTFCF.PURPLE_GRAPE, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
 	GREEN_GRAPE(ItemsTFCF.GREEN_GRAPE, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, PICKABLE),
     LIQUORICE_ROOT(ItemsTFCF.LIQUORICE_ROOT, -20f, -1f, 18f, 26f, 50f, 60f, 310f, 340f, 8, 0.5f, SIMPLE),
+    COFFEA(() -> new ItemStack(ItemsTFCF.COFFEA_CHERRIES), () -> ItemStack.EMPTY, 7f, 15f, 40f, 50f, 50f, 70f, 200f, 250f, 8, 0.5f, PICKABLE),
     AGAVE(() -> new ItemStack(ItemsTFCF.AGAVE), () -> ItemStack.EMPTY, 12f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
     COCA(() -> new ItemStack(ItemsTFCF.COCA_LEAF), () -> ItemStack.EMPTY, 0f, 18f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
     COTTON(() -> new ItemStack(ItemsTFCF.COTTON_BOLL), () -> ItemStack.EMPTY, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, PICKABLE),
@@ -177,11 +187,11 @@ public enum CropTFCF implements ICrop
 
     public BlockCropTFC createGrowingBlock()
     {
-        if (type == SIMPLE || type == PICKABLE)
+        if (type == CropType.SIMPLE || type == CropType.PICKABLE)
         {
-            return BlockCropSimple.create(this, type == PICKABLE);
+            return BlockCropSimple.create(this, type == CropType.PICKABLE);
         }
-        else if (type == SPREADING)
+        else if (type == CropType.SPREADING)
         {
             return BlockCropSpreading.create(this);
         }
@@ -193,9 +203,7 @@ public enum CropTFCF implements ICrop
         return new BlockCropDead(this);
     }
 
-    /*
     @SideOnly(Side.CLIENT)
-    @Override
     public void addInfo(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
     {
         if (GuiScreen.isShiftKeyDown())
@@ -209,7 +217,6 @@ public enum CropTFCF implements ICrop
             tooltip.add(TextFormatting.GRAY + I18n.format("tfc.tooltip.hold_shift_for_climate_info"));
         }
     }
-    */
 
     enum CropType
     {

@@ -1,0 +1,67 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/goosegrass_0"
+        },
+        {
+          "model": "tfc:plants/goosegrass_0b",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/goosegrass_0",
+          "weight": 2
+        },
+        {
+          "model": "tfc:plants/goosegrass_0b",
+          "weight": 2
+        },
+        {
+          "model": "tfc:plants/goosegrass_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/goosegrass_1",
+          "weight": 5
+        },
+        {
+          "model": "tfc:plants/goosegrass_2",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "3"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/goosegrass_2",
+          "weight": 5
+        },
+        {
+          "model": "tfc:plants/goosegrass_1",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

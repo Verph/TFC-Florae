@@ -24,5 +24,6 @@
         "maclura",
         "mongongo",
         "tfcflorae"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

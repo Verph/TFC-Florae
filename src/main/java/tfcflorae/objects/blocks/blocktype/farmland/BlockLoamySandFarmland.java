@@ -1,7 +1,6 @@
 package tfcflorae.objects.blocks.blocktype.farmland;
 
 import java.util.Random;
-import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.Block;
@@ -28,10 +27,9 @@ import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC;
 import net.dries007.tfc.objects.te.TECropBase;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.IFallingBlock;
 
-import tfcflorae.objects.blocks.blocktype.BlockRockVariantFallableTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -67,6 +65,8 @@ public class BlockLoamySandFarmland extends FarmlandTFCF
         setTickRandomly(true);
         setLightOpacity(255);
         useNeighborBrightness = true;
+        OreDictionaryHelper.register(this, "farmland");
+        OreDictionaryHelper.register(this, "farmland", "loamy", "sand");
     }
 
     @Override
@@ -191,12 +191,12 @@ public class BlockLoamySandFarmland extends FarmlandTFCF
     }
 
     @Override
-    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
+    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos)
     {
-        super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
-        if (worldIn.getBlockState(pos.up()).isSideSolid(worldIn, pos.up(), EnumFacing.DOWN) && !(worldIn.getBlockState(pos.up()).getBlock() instanceof IFallingBlock))
+        super.neighborChanged(state, world, pos, block, fromPos);
+        if (fromPos.getY() == pos.getY() + 1 && world.getBlockState(fromPos).isSideSolid(world, fromPos, EnumFacing.DOWN))
         {
-            turnToDirt(worldIn, pos);
+            turnToDirt(world, pos);
         }
     }
 
@@ -214,18 +214,6 @@ public class BlockLoamySandFarmland extends FarmlandTFCF
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
         return Item.getItemFromBlock(get(rock, RockTFCF.LOAMY_SAND));
-    }
-
-    @Nullable
-    @Override
-    public BlockPos getFallablePos(World world, BlockPos pos)
-    {
-        final BlockPos fallable = super.getFallablePos(world, pos);
-        if (fallable != null)
-        {
-            turnToDirt(world, pos);
-        }
-        return fallable;
     }
 
     private void turnToDirt(World world, BlockPos pos)

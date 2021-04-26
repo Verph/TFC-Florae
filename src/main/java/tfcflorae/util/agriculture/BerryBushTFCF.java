@@ -9,7 +9,7 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.world.classic.worldgen.WorldGenBerryBushes;
 
 import tfcflorae.objects.items.ItemsTFCF;
-import tfcflorae.objects.items.ItemFoodTFCF;
+import tfcflorae.objects.items.food.*;
 
 import static net.dries007.tfc.api.types.IBerryBush.Size.*;
 
@@ -19,7 +19,6 @@ public enum BerryBushTFCF implements IBerryBush
     CLOVE(ItemsTFCF.CLOVE, Month.AUGUST, 2, 0f, 35f, 100f, 400f, 0.8f, LARGE, false),
     CURRY_LEAF(ItemsTFCF.CURRY_LEAF, Month.AUGUST, 2, 5f, 45f, 100f, 400f, 0.8f, LARGE, false),
     STAR_ANISE(ItemsTFCF.STAR_ANISE, Month.AUGUST, 2, 0f, 25f, 100f, 400f, 0.8f, LARGE, false);
-    //LIQUORICE_ROOT(ItemsTFCF.LIQUORICE_ROOT, Month.AUGUST, 2, -5f, 25f, 100f, 400f, 0.8f, LARGE, false);
 
     static
     {

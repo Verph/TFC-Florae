@@ -50,6 +50,9 @@ import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
 import tfcflorae.client.GuiKnappingTFCF;
+import tfcflorae.compat.jei.wrappers.CastingRecipeWrapperTFCF;
+import tfcflorae.compat.jei.wrappers.KnappingRecipeWrapperTFCF;
+import tfcflorae.compat.jei.wrappers.UnmoldRecipeWrapperTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 

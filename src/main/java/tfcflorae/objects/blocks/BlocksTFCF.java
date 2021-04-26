@@ -1,10 +1,7 @@
-/*
- * Work under Copyright. Licensed under the EUPL.
- * See the project README.md and LICENSE.txt for more information.
- */
-
 package tfcflorae.objects.blocks;
 
+import com.eerussianguy.firmalife.init.FruitTreeFL;
+import com.eerussianguy.firmalife.init.PlantsFL;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
 
@@ -37,6 +34,7 @@ import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.*;
+import net.dries007.tfc.api.util.FallingBlockManager;
 import net.dries007.tfc.objects.CreativeTabsTFC;
 import net.dries007.tfc.objects.blocks.BlockFireBrick;
 import net.dries007.tfc.objects.blocks.BlockFluidTFC;
@@ -61,20 +59,25 @@ import net.dries007.tfc.util.agriculture.BerryBush;
 import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.FruitTree;
 import net.dries007.tfc.util.Helpers;
-
+import tfcflorae.ConfigTFCF;
+import tfcflorae.TFCFlorae;
 import tfcflorae.api.registries.TFCFRegistries;
-import tfcflorae.api.types.PlantTFCF;
 import tfcflorae.objects.blocks.*;
-import tfcflorae.objects.blocks.fruitwood.*;
-import tfcflorae.objects.blocks.fruitwood.cinnamon.*;
+import tfcflorae.objects.blocks.groundcover.*;
 import tfcflorae.objects.blocks.wood.*;
 import tfcflorae.objects.blocks.wood.bamboo.*;
+import tfcflorae.objects.blocks.wood.cinnamon.*;
+import tfcflorae.objects.blocks.wood.fruitwood.*;
 import tfcflorae.objects.blocks.blocktype.*;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
-import tfcflorae.objects.blocks.plants.BlockPlantTFCF;
 import tfcflorae.objects.fluids.FluidsTFCF;
-import tfcflorae.objects.items.ItemBlockRot;
-import tfcflorae.objects.items.ItemFoodTFCF;
+import tfcflorae.objects.items.food.*;
+import tfcflorae.objects.items.groundcover.*;
+import tfcflorae.objects.items.itemblock.ItemBlockCrate;
+import tfcflorae.objects.items.itemblock.ItemBlockUrn;
+import tfcflorae.objects.items.itemblock.ItemBlockUrnLoot;
+import tfcflorae.objects.te.TEUrn;
+import tfcflorae.objects.te.TECrate;
 import tfcflorae.objects.te.TEFruitChest;
 import tfcflorae.objects.te.TEFruitLoom;
 import tfcflorae.objects.te.TELargeKaoliniteVessel;
@@ -98,18 +101,35 @@ import static tfcflorae.TFCFlorae.MODID;
 public final class BlocksTFCF
 {
     @GameRegistry.ObjectHolder("ceramics/kaolinite_fired/large_vessel")
-    public static final BlockLargeVessel FIRED_KAOLINITE_LARGE_VESSEL = Helpers.getNull();
+    public static final BlockLargeVessel FIRED_KAOLINITE_LARGE_VESSEL = getNull();
 
-    @GameRegistry.ObjectHolder("surface/bone")
+    @GameRegistry.ObjectHolder("storage/urn")
+    public static final BlockUrn FIRED_URN = getNull();
+    @GameRegistry.ObjectHolder("storage/urn_loot")
+    public static final BlockUrnLoot URN_LOOT = getNull();
+    @GameRegistry.ObjectHolder("storage/crate")
+    public static final BlockCrate CRATE = getNull();
+
+    @GameRegistry.ObjectHolder("groundcover/bone")
     public static final BlockSurfaceBones BONES = Helpers.getNull();
-    @GameRegistry.ObjectHolder("surface/flint")
+    @GameRegistry.ObjectHolder("groundcover/driftwood")
+    public static final BlockDriftwood DRIFTWOOD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("groundcover/flint")
     public static final BlockSurfaceFlint FLINT = Helpers.getNull();
-    @GameRegistry.ObjectHolder("surface/seashell")
+    @GameRegistry.ObjectHolder("groundcover/pinecone")
+    public static final BlockPinecone PINECONE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("groundcover/seashell")
     public static final BlockSurfaceSeashells SEASHELLS = Helpers.getNull();
+    @GameRegistry.ObjectHolder("groundcover/twig")
+    public static final BlockTwig TWIG = Helpers.getNull();
+
+    /*
     @GameRegistry.ObjectHolder("plants/pumpkin_fruit")
     public static final BlockStemFruit PUMPKIN_FRUIT = Helpers.getNull();
     @GameRegistry.ObjectHolder("plants/melon_fruit")
     public static final BlockStemFruit MELON_FRUIT = Helpers.getNull();
+    */
+
     @GameRegistry.ObjectHolder("wood/fruit_tree/log/cassia_cinnamon")
     public static final BlockCassiaCinnamonLog CASSIA_CINNAMON_LOG = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/fruit_tree/leaves/cassia_cinnamon")
@@ -178,7 +198,7 @@ public final class BlocksTFCF
     public static final BlockBambooLeaves NARROW_LEAF_BAMBOO_LEAVES = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/log/red_bamboo")
     public static final BlockBambooLog RED_BAMBOO_LOG = Helpers.getNull();
-    @GameRegistry.ObjectHolder("wood/leaves/red_bamboo")
+    @GameRegistry.ObjectHolder("wood/leaves/rbricked_bamboo")
     public static final BlockBambooLeaves RED_BAMBOO_LEAVES = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/log/temple_bamboo")
     public static final BlockBambooLog TEMPLE_BAMBOO_LOG = Helpers.getNull();
@@ -226,9 +246,9 @@ public final class BlocksTFCF
     private static ImmutableList<BlockFruitChestTFCF> allFruitChestBlocks = Helpers.getNull();
     private static ImmutableList<BlockFruitLoom> allFruitLoomBlocks = Helpers.getNull();
     private static ImmutableList<BlockFluidBase> allFluidBlocks = Helpers.getNull();
-    private static ImmutableList<BlockCropTFC> allCropBlocksTFC = Helpers.getNull();
+    private static ImmutableList<BlockCropTFC> allCropBlocks = Helpers.getNull();
     private static ImmutableList<BlockCropDead> allDeadCrops = Helpers.getNull();
-    private static ImmutableList<BlockStemCrop> allCropBlocks = Helpers.getNull();
+    //private static ImmutableList<BlockStemCrop> allStemCropBlocks = Helpers.getNull();
     private static ImmutableList<BlockBerryBush> allBerryBushBlocks = Helpers.getNull();
     private static ImmutableList<BlockRockVariantTFCF> allBlockRockVariantsTFCF = Helpers.getNull();
     private static ImmutableList<BlockWallTFCF> allWallBlocks = Helpers.getNull();
@@ -237,14 +257,18 @@ public final class BlocksTFCF
     private static ImmutableList<BlockSlabTFC.Half> allSlabBlocksTFC = Helpers.getNull();
     private static ImmutableList<BlockStairsTFC> allStairBlocksTFC = Helpers.getNull();
     private static ImmutableList<BlockPlanksTFC> allPlanksTFC = Helpers.getNull();
-    private static ImmutableList<BlockPlantTFCF> allPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockSurfaceRock> allSurfaceRocks = Helpers.getNull();
     private static ImmutableList<BlockSurfaceSeashells> allSurfaceSeashells = Helpers.getNull();
     private static ImmutableList<BlockSurfaceFlint> allSurfaceFlint = Helpers.getNull();
     private static ImmutableList<BlockSurfaceBones> allSurfaceBones = Helpers.getNull();
+    private static ImmutableList<BlockDriftwood> allSurfaceDriftwood = Helpers.getNull();
+    private static ImmutableList<BlockTwig> allSurfaceTwig = Helpers.getNull();
+    private static ImmutableList<BlockPinecone> allSurfacePinecone = Helpers.getNull();
     private static ImmutableList<Block> allBambooLog = Helpers.getNull();
     private static ImmutableList<Block> allBambooLeaves = Helpers.getNull();
     private static ImmutableList<Block> allBambooSapling = Helpers.getNull();
+    private static ImmutableList<BlockLeavesTFCF> allNormalTreeLeaves = Helpers.getNull();
+    private static ImmutableList<BlockLogTFCF> allNormalTreeLog = Helpers.getNull();
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
@@ -375,9 +399,9 @@ public final class BlocksTFCF
         return allFruitLoomBlocks;
     }
 
-    public static ImmutableList<BlockCropTFC> getAllCropBlocksTFC()
+    public static ImmutableList<BlockCropTFC> getAllCropBlocks()
     {
-        return allCropBlocksTFC;
+        return allCropBlocks;
     }
 
     public static ImmutableList<BlockCropDead> getAllDeadCrops()
@@ -385,11 +409,13 @@ public final class BlocksTFCF
         return allDeadCrops;
     }
 
-    public static ImmutableList<BlockStemCrop> getAllCropBlocks()
+    /*
+    public static ImmutableList<BlockStemCrop> getAllStemCropBlocks()
     {
-        return allCropBlocks;
+        return allStemCropBlocks;
     }
-    
+    */
+
     public static ImmutableList<BlockFluidBase> getAllFluidBlocks()
     {
         return allFluidBlocks;
@@ -430,11 +456,6 @@ public final class BlocksTFCF
         return allStairBlocksTFC;
     }
 
-    public static ImmutableList<BlockPlantTFCF> getAllPlantBlocks()
-    {
-        return allPlantBlocks;
-    }
-
     public static ImmutableList<BlockSurfaceRock> getAllSurfaceRocks()
     {
         return allSurfaceRocks;
@@ -455,6 +476,21 @@ public final class BlocksTFCF
         return allSurfaceBones;
     }
 
+    public static ImmutableList<BlockDriftwood> getAllSurfaceDriftwood()
+    {
+        return allSurfaceDriftwood;
+    }
+
+    public static ImmutableList<BlockTwig> getAllSurfaceTwig()
+    {
+        return allSurfaceTwig;
+    }
+
+    public static ImmutableList<BlockPinecone> getAllSurfacePinecone()
+    {
+        return allSurfacePinecone;
+    }
+
     public static ImmutableList<Block> getAllBambooLog()
     {
         return allBambooLog;
@@ -468,6 +504,16 @@ public final class BlocksTFCF
     public static ImmutableList<Block> getAllBambooSapling()
     {
         return allBambooSapling;
+    }
+    
+    public static ImmutableList<BlockLeavesTFCF> getAllNormalTreeLeaves()
+    {
+        return allNormalTreeLeaves;
+    }
+    
+    public static ImmutableList<BlockLogTFCF> getAllNormalTreeLog()
+    {
+        return allNormalTreeLog;
     }
 
     public static ImmutableList<BlockSurfaceOreDeposit> getAllSurfaceOreBlocks()
@@ -488,6 +534,8 @@ public final class BlocksTFCF
         ImmutableList.Builder<Block> itemBambooLog = ImmutableList.builder();
         ImmutableList.Builder<Block> itemBambooLeaves = ImmutableList.builder();
         ImmutableList.Builder<Block> itemBambooSapling = ImmutableList.builder();
+        ImmutableList.Builder<BlockLeavesTFCF> itemNormalTreeLeaves = ImmutableList.builder();
+        ImmutableList.Builder<BlockLogTFCF> normalTreeLog = ImmutableList.builder();
         ImmutableList.Builder<Block> foodItemBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockFenceGateLog> fenceGatesLog = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTreeLeaves> fruitLeaves = ImmutableList.builder();
@@ -510,19 +558,21 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockFruitWorkbench> fruitWorkbench = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitChestTFCF> fruitChests = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitLoom> fruitLoom = ImmutableList.builder();
-        ImmutableList.Builder<BlockCropTFC> cropBlocksTFC = ImmutableList.builder();
+        ImmutableList.Builder<BlockCropTFC> cropBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockCropDead> deadCrops = ImmutableList.builder();
-        ImmutableList.Builder<BlockStemCrop> cropBlocks = ImmutableList.builder();
+        //ImmutableList.Builder<BlockStemCrop> cropStemBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockBerryBush> cropBerryBushBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockRockVariantTFCF> blockRockVariantsTFCF = ImmutableList.builder();
         ImmutableList.Builder<BlockWallTFCF> blockWallTFCF = ImmutableList.builder();
         ImmutableList.Builder<BlockStairsTFCF> blockStairsTFC = new Builder<>();
         ImmutableList.Builder<BlockSlabTFCF.Half> blockSlabTFCF = new Builder<>();
-        ImmutableList.Builder<BlockPlantTFCF> plants = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceRock> surfaceRock = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceSeashells> surfaceSeashell = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceFlint> surfaceFlint = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceBones> surfaceBone = ImmutableList.builder();
+        ImmutableList.Builder<BlockDriftwood> surfaceDriftwood = ImmutableList.builder();
+        ImmutableList.Builder<BlockTwig> surfaceTwig = ImmutableList.builder();
+        ImmutableList.Builder<BlockPinecone> surfacePinecone = ImmutableList.builder();
         ImmutableList.Builder<BlockSlabTFC.Half> blockSlabTFC = new Builder<>();
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
@@ -546,21 +596,27 @@ public final class BlocksTFCF
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/kaolinite/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
 
+        normalItemBlocks.add(new ItemBlockUrn(register(r, "storage/urn", new BlockUrn(), CT_POTTERY)));
+        normalItemBlocks.add(new ItemBlockUrnLoot(register(r, "storage/urn_loot", new BlockUrnLoot(), CT_POTTERY)));
+        normalItemBlocks.add(new ItemBlockCrate(register(r, "storage/crate", new BlockCrate(), CT_DECORATIONS)));
+
+        /*
         foodItemBlocks.add(register(r, "plants/pumpkin_fruit", new BlockStemFruit(), CT_FOOD));
         foodItemBlocks.add(register(r, "plants/melon_fruit", new BlockStemFruit(), CT_FOOD));
 
         for (StemCrop crop : StemCrop.values())
         {
             deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), new BlockCropDead(crop)));
-            cropBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), BlockStemCrop.create(crop)));
+            cropStemBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), BlockStemCrop.create(crop)));
         }
+        */
 
         {
             Builder<BlockCropTFC> b = ImmutableList.builder();
 
             for (CropTFCF crop : CropTFCF.values())
             {
-                cropBlocksTFC.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
+                cropBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), crop.createGrowingBlock()));
             }
         }
 
@@ -582,18 +638,36 @@ public final class BlocksTFCF
 
         allBerryBushBlocks = fBerry.build();
         allBerryBushBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
-        allCropBlocksTFC = cropBlocksTFC.build();
-        allDeadCrops = deadCrops.build();
         allCropBlocks = cropBlocks.build();
+        allDeadCrops = deadCrops.build();
+        //allStemCropBlocks = cropStemBlocks.build();
 
-        register(TEStemCrop.class, "stem_crop");
+        //register(TEStemCrop.class, "stem_crop");
 
         for (RockTFCF rockTFCF : RockTFCF.values())
         {
-            for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+            if (ConfigTFCF.General.WORLD.enableAllBlockRockTypes || rockTFCF.shouldRockify())
             {
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
                 {
-                    blockRockVariantsTFCF.add(register(r, rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath(), BlockRockVariantTFCF.create(rock, rockTFCF), CT_ROCK_BLOCKS));
+                    if (ConfigTFCF.General.WORLD.enableAllBlockTypes)
+                    {
+                        blockRockVariantsTFCF.add(register(r, rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath(), BlockRockVariantTFCF.create(rock, rockTFCF), CT_ROCK_BLOCKS));
+                    }
+                    else
+                    {
+                        if (rockTFCF == RockTFCF.MOSSY_RAW || rockTFCF == RockTFCF.MUD_BRICKS || rockTFCF == RockTFCF.MUD)
+                        {
+                            blockRockVariantsTFCF.add(register(r, rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath(), BlockRockVariantTFCF.create(rock, rockTFCF), CT_ROCK_BLOCKS));
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (ConfigTFCF.General.WORLD.enableAllBlockTypes)
+                {
+                    blockRockVariantsTFCF.add(register(r, "single/" + rockTFCF.name().toLowerCase(), BlockRockVariantTFCF.create(null, rockTFCF), CT_ROCK_BLOCKS));
                 }
             }
         }
@@ -602,85 +676,152 @@ public final class BlocksTFCF
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
 
+        if (ConfigTFCF.General.WORLD.enableGroundcoverOreDeposit)
         {
             for (Ore ore : TFCRegistries.ORES.getValuesCollection())
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    surfaceOreBlocks.add(register(r, ("surface/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
+                    surfaceOreBlocks.add(register(r, ("groundcover/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
 
             allSurfaceOreBlocks = surfaceOreBlocks.build();
             allSurfaceOreBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
         }
 
+        if (ConfigTFCF.General.WORLD.enableGroundcoverRock)
         {
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
             {
-                surfaceRock.add(register(r, "surface/rock/" + rock.getRegistryName().getPath().toLowerCase(), new BlockSurfaceRock(rock), CT_ROCK_BLOCKS));
+                surfaceRock.add(register(r, "groundcover/rock/" + rock.getRegistryName().getPath().toLowerCase(), new BlockSurfaceRock(rock), CT_ROCK_BLOCKS));
             }
             allSurfaceRocks = surfaceRock.build();
+            allSurfaceRocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
         }
 
-        surfaceSeashell.add(register(r, "surface/seashell", new BlockSurfaceSeashells(), CT_FLORA));
-        allSurfaceSeashells = surfaceSeashell.build();
+        if (ConfigTFCF.General.WORLD.enableGroundcoverBones)
+        {
+            surfaceBone.add(register(r, "groundcover/bone", new BlockSurfaceBones(), CT_FLORA));
+            allSurfaceBones = surfaceBone.build();
+            allSurfaceBones.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
 
-		surfaceFlint.add(register(r, "surface/flint", new BlockSurfaceFlint(), CT_FLORA));
-        allSurfaceFlint = surfaceFlint.build();
+        if (ConfigTFCF.General.WORLD.enableGroundcoverDriftwood)
+        {
+            surfaceDriftwood.add(register(r, "groundcover/driftwood", new BlockDriftwood(), CT_FLORA));
+            allSurfaceDriftwood = surfaceDriftwood.build();
+            allSurfaceDriftwood.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
 
-		surfaceBone.add(register(r, "surface/bone", new BlockSurfaceBones(), CT_FLORA));
-        allSurfaceBones = surfaceBone.build();
+        if (ConfigTFCF.General.WORLD.enableGroundcoverFlint)
+        {
+            surfaceFlint.add(register(r, "groundcover/flint", new BlockSurfaceFlint(), CT_FLORA));
+            allSurfaceFlint = surfaceFlint.build();
+            allSurfaceFlint.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
 
-        // Walls
-        for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+        if (ConfigTFCF.General.WORLD.enableGroundcoverPinecone)
+        {
+            surfacePinecone.add(register(r, "groundcover/pinecone", new BlockPinecone(), CT_FLORA));
+            allSurfacePinecone = surfacePinecone.build();
+            allSurfacePinecone.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
+
+        if (ConfigTFCF.General.WORLD.enableGroundcoverSeashell)
+        {
+            surfaceSeashell.add(register(r, "groundcover/seashell", new BlockSurfaceSeashells(), CT_FLORA));
+            allSurfaceSeashells = surfaceSeashell.build();
+            allSurfaceSeashells.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
+
+        if (ConfigTFCF.General.WORLD.enableGroundcoverTwig)
+        {
+            surfaceTwig.add(register(r, "groundcover/twig", new BlockTwig(), CT_FLORA));
+            allSurfaceTwig = surfaceTwig.build();
+            allSurfaceTwig.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
+
+        {
+            // Walls
+            for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                    blockWallTFCF.add(register(r, ("wall/" + rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
+
+            // Stairs
+            for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                    blockStairsTFC.add(register(r, "stairs/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockStairsTFCF(rock, rockTFCF), CT_DECORATIONS));
+
+            // Full slabs are the same as full blocks, they are not saved to a list, they are kept track of by the halfslab version.
+            for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                    register(r, "double_slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Double(rock, rockTFCF));
+
+            // Slabs
+            for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+                for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+                    blockSlabTFCF.add(register(r, "slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Half(rock, rockTFCF), CT_DECORATIONS));
+
+            allWallBlocks = blockWallTFCF.build();
+            allStairBlocks = blockStairsTFC.build();
+            allSlabBlocks = blockSlabTFCF.build();
+            allWallBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+            allStairBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+        }
+
+        // TFC Stairs
+        for (Rock.Type type : new Rock.Type[] {Rock.Type.RAW})
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                blockWallTFCF.add(register(r, ("wall/" + rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
+                blockStairTFC.add(register(r, "stairs/" + (type.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockStairsTFC(rock, type), CT_DECORATIONS));
 
-        // Stairs
-        for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
-            for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                blockStairsTFC.add(register(r, "stairs/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockStairsTFCF(rock, rockTFCF), CT_DECORATIONS));
-
+        // TFC Double Slabs
         // Full slabs are the same as full blocks, they are not saved to a list, they are kept track of by the halfslab version.
-        for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+        for (Rock.Type type : new Rock.Type[] {Rock.Type.RAW})
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                register(r, "double_slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Double(rock, rockTFCF));
+                register(r, "double_slab/" + (type.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFC.Double(rock, type));
 
-        // Slabs
-        for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
+        // TFC Slabs
+        for (Rock.Type type : new Rock.Type[] {Rock.Type.RAW})
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                blockSlabTFCF.add(register(r, "slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Half(rock, rockTFCF), CT_DECORATIONS));
-
-        allWallBlocks = blockWallTFCF.build();
-        allStairBlocks = blockStairsTFC.build();
-        allSlabBlocks = blockSlabTFCF.build();
-        allWallBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
-        allStairBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
+                blockSlabTFC.add(register(r, "slab/" + (type.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFC.Half(rock, type), CT_DECORATIONS));
 
         for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
         {
-            String name = fruitTree.getName().toLowerCase();
-            register(r, "wood/fruit_tree/branch/" + name, new BlockFruitTreeBranch(fruitTree));
-            fruitLeaves.add(register(r, "wood/fruit_tree/leaves/" + name, new BlockFruitTreeLeaves(fruitTree), CT_WOOD));
-            fruitSapling.add(register(r, "wood/fruit_tree/sapling/" + name, new BlockFruitTreeSapling(fruitTree), CT_WOOD));
-            register(r, "wood/fruit_tree/trunk/" + name, new BlockFruitTreeTrunk(fruitTree));
-            fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
-            fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
-            fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
-            fruitDoors.add(register(r, "wood/fruit_tree/door/" + name, new BlockFruitDoor(name), CT_DECORATIONS));
-            fruitPlanks.add(register(r, "wood/fruit_tree/planks/" + name, new BlockFruitPlanks(fruitTree), CT_WOOD));
-            register(r, "wood/fruit_tree/double_slab/" + name, new BlockFruitSlab.Double(fruitTree));
-            fruitSlab.add(register(r, "wood/fruit_tree/slab/" + name, new BlockFruitSlab.Half(fruitTree), CT_DECORATIONS));
-            fruitStairs.add(register(r, "wood/fruit_tree/stairs/" + name, new BlockFruitStairs(fruitTree), CT_DECORATIONS));
-            fruitPressurePlate.add(register(r, "wood/fruit_tree/pressure_plate/" + name, new BlockFruitPressurePlate(), CT_DECORATIONS));
-            fruitFences.add(register(r, "wood/fruit_tree/fence/" +  name, new BlockFruitFence(), CT_DECORATIONS));
-            fruitFenceGates.add(register(r, "wood/fruit_tree/fence_gate/" + name, new BlockFruitFenceGate(), CT_DECORATIONS));
-            fruitLogFences.add(register(r, "wood/fruit_tree/fence_log/" + name, new BlockFruitLogFence(), CT_DECORATIONS));
-            fruitLogFenceGates.add(register(r, "wood/fruit_tree/fence_gate_log/" + name, new BlockFruitLogFenceGate(), CT_DECORATIONS));
-            fruitSupport.add(register(r, "wood/fruit_tree/support/" +  name, new BlockFruitSupport(), CT_DECORATIONS));
-            fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
-            fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
-            fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
-            fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
-            fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
-            fruitLoom.add(register(r, "wood/fruit_tree/loom/" + name, new BlockFruitLoom(fruitTree), CT_WOOD));
+            if (fruitTree.isNormalTree)
+            {
+                String name = fruitTree.getName().toLowerCase();
+                itemNormalTreeLeaves.add(register(r, "wood/leaves/" + name, new BlockLeavesTFCF(fruitTree.normalTree, fruitTree), CT_WOOD));
+
+                if (fruitTree.isCustomLog)
+                {
+                    normalTreeLog.add(register(r, "wood/log/" + name, new BlockLogTFCF(fruitTree.normalTree, fruitTree), CT_WOOD));
+                }
+            }
+            else
+            {
+                String name = fruitTree.getName().toLowerCase();
+                register(r, "wood/fruit_tree/branch/" + name, new BlockFruitTreeBranch(fruitTree));
+                fruitLeaves.add(register(r, "wood/fruit_tree/leaves/" + name, new BlockFruitTreeLeaves(fruitTree), CT_WOOD));
+                fruitSapling.add(register(r, "wood/fruit_tree/sapling/" + name, new BlockFruitTreeSapling(fruitTree), CT_WOOD));
+                register(r, "wood/fruit_tree/trunk/" + name, new BlockFruitTreeTrunk(fruitTree));
+                fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
+                fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
+                fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
+                fruitDoors.add(register(r, "wood/fruit_tree/door/" + name, new BlockFruitDoor(name), CT_DECORATIONS));
+                fruitPlanks.add(register(r, "wood/fruit_tree/planks/" + name, new BlockFruitPlanks(fruitTree), CT_WOOD));
+                register(r, "wood/fruit_tree/double_slab/" + name, new BlockFruitSlab.Double(fruitTree));
+                fruitSlab.add(register(r, "wood/fruit_tree/slab/" + name, new BlockFruitSlab.Half(fruitTree), CT_DECORATIONS));
+                fruitStairs.add(register(r, "wood/fruit_tree/stairs/" + name, new BlockFruitStairs(fruitTree), CT_DECORATIONS));
+                fruitPressurePlate.add(register(r, "wood/fruit_tree/pressure_plate/" + name, new BlockFruitPressurePlate(), CT_DECORATIONS));
+                fruitFences.add(register(r, "wood/fruit_tree/fence/" +  name, new BlockFruitFence(), CT_DECORATIONS));
+                fruitFenceGates.add(register(r, "wood/fruit_tree/fence_gate/" + name, new BlockFruitFenceGate(), CT_DECORATIONS));
+                fruitLogFences.add(register(r, "wood/fruit_tree/fence_log/" + name, new BlockFruitLogFence(), CT_DECORATIONS));
+                fruitLogFenceGates.add(register(r, "wood/fruit_tree/fence_gate_log/" + name, new BlockFruitLogFenceGate(), CT_DECORATIONS));
+                fruitSupport.add(register(r, "wood/fruit_tree/support/" +  name, new BlockFruitSupport(), CT_DECORATIONS));
+                fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
+                fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
+                fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
+                fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
+                fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
+                fruitLoom.add(register(r, "wood/fruit_tree/loom/" + name, new BlockFruitLoom(fruitTree), CT_WOOD));
+            }
         }
 
         for (IFruitTree fruitTree : FruitTree.values())
@@ -688,20 +829,29 @@ public final class BlocksTFCF
             String name = fruitTree.getName().toLowerCase();
             fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
             fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
-            fruitDoors.add(register(r, "wood/fruit_tree/door/" + name, new BlockFruitDoor(name), CT_DECORATIONS));
+            if (!TFCFlorae.FirmaLifeAdded)
+            {
+                fruitDoors.add(register(r, "wood/fruit_tree/door/" + name, new BlockFruitDoor(name), CT_DECORATIONS));
+            }
             fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
             fruitPlanks.add(register(r, "wood/fruit_tree/planks/" + name, new BlockFruitPlanks(fruitTree), CT_WOOD));
             register(r, "wood/fruit_tree/double_slab/" + name, new BlockFruitSlab.Double(fruitTree));
             fruitSlab.add(register(r, "wood/fruit_tree/slab/" + name, new BlockFruitSlab.Half(fruitTree), CT_DECORATIONS));
             fruitStairs.add(register(r, "wood/fruit_tree/stairs/" + name, new BlockFruitStairs(fruitTree), CT_DECORATIONS));
             fruitPressurePlate.add(register(r, "wood/fruit_tree/pressure_plate/" + name, new BlockFruitPressurePlate(), CT_DECORATIONS));
-            fruitFences.add(register(r, "wood/fruit_tree/fence/" + name, new BlockFruitFence(), CT_DECORATIONS));
-            fruitFenceGates.add(register(r, "wood/fruit_tree/fence_gate/" + name, new BlockFruitFenceGate(), CT_DECORATIONS));
+            if (!TFCFlorae.FirmaLifeAdded)
+            {
+                fruitFences.add(register(r, "wood/fruit_tree/fence/" + name, new BlockFruitFence(), CT_DECORATIONS));
+                fruitFenceGates.add(register(r, "wood/fruit_tree/fence_gate/" + name, new BlockFruitFenceGate(), CT_DECORATIONS));
+            }
             fruitLogFences.add(register(r, "wood/fruit_tree/fence_log/" + name, new BlockFruitLogFence(), CT_DECORATIONS));
             fruitLogFenceGates.add(register(r, "wood/fruit_tree/fence_gate_log/" + name, new BlockFruitLogFenceGate(), CT_DECORATIONS));
             fruitSupport.add(register(r, "wood/fruit_tree/support/" + name, new BlockFruitSupport(), CT_DECORATIONS));
             fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
-            fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
+            if (!TFCFlorae.FirmaLifeAdded)
+            {
+                fruitTrapdoors.add(register(r, "wood/fruit_tree/trapdoor/" + name, new BlockFruitTrapDoor(), CT_DECORATIONS));
+            }
             fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
             fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
             fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
@@ -798,6 +948,49 @@ public final class BlocksTFCF
             itemBambooSapling.add(bambooSapling);
         }
 
+        if (TFCFlorae.FirmaLifeAdded)
+        {
+            // Cocoa
+            for (FruitTreeFL fruitTree : FruitTreeFL.values())
+            {
+                String name = fruitTree.getName().toLowerCase();
+                fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
+                fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
+                fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
+                fruitPlanks.add(register(r, "wood/fruit_tree/planks/" + name, new BlockFruitPlanks(fruitTree), CT_WOOD));
+                register(r, "wood/fruit_tree/double_slab/" + name, new BlockFruitSlab.Double(fruitTree));
+                fruitSlab.add(register(r, "wood/fruit_tree/slab/" + name, new BlockFruitSlab.Half(fruitTree), CT_DECORATIONS));
+                fruitStairs.add(register(r, "wood/fruit_tree/stairs/" + name, new BlockFruitStairs(fruitTree), CT_DECORATIONS));
+                fruitPressurePlate.add(register(r, "wood/fruit_tree/pressure_plate/" + name, new BlockFruitPressurePlate(), CT_DECORATIONS));
+                fruitLogFences.add(register(r, "wood/fruit_tree/fence_log/" + name, new BlockFruitLogFence(), CT_DECORATIONS));
+                fruitLogFenceGates.add(register(r, "wood/fruit_tree/fence_gate_log/" + name, new BlockFruitLogFenceGate(), CT_DECORATIONS));
+                fruitSupport.add(register(r, "wood/fruit_tree/support/" +  name, new BlockFruitSupport(), CT_DECORATIONS));
+                fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/" + name, new BlockFruitToolRack(), CT_DECORATIONS));
+                fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/" + name, new BlockFruitWorkbench(), CT_DECORATIONS));
+                fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
+                fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
+                fruitLoom.add(register(r, "wood/fruit_tree/loom/" + name, new BlockFruitLoom(fruitTree), CT_WOOD));
+            }
+
+            // Cinnamon
+            fruitBarrel.add(register(r, "wood/fruit_tree/barrel/cinnamon", new BlockFruitBarrel(), CT_DECORATIONS));
+            fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/cinnamon", new BlockFruitBookshelves(), CT_DECORATIONS));
+            fruitButton.add(register(r, "wood/fruit_tree/button/cinnamon", new BlockFruitButton(), CT_DECORATIONS));
+            planksTFC.add(register(r, "wood/fruit_tree/planks/cinnamon", new BlockPlanksTFC(PlantsFL.CINNAMON_TREE), CT_WOOD));
+            register(r, "wood/fruit_tree/double_slab/cinnamon", new BlockSlabTFC.Double(PlantsFL.CINNAMON_TREE));
+            blockSlabTFC.add(register(r, "wood/fruit_tree/slab/cinnamon", new BlockSlabTFC.Half(PlantsFL.CINNAMON_TREE), CT_DECORATIONS));
+            blockStairTFC.add(register(r, "wood/fruit_tree/stairs/cinnamon", new BlockStairsTFC(PlantsFL.CINNAMON_TREE), CT_DECORATIONS));
+            fruitPressurePlate.add(register(r, "wood/fruit_tree/pressure_plate/cinnamon", new BlockFruitPressurePlate(), CT_DECORATIONS));
+            fruitLogFences.add(register(r, "wood/fruit_tree/fence_log/cinnamon", new BlockFruitLogFence(), CT_DECORATIONS));
+            fruitLogFenceGates.add(register(r, "wood/fruit_tree/fence_gate_log/cinnamon", new BlockFruitLogFenceGate(), CT_DECORATIONS));
+            fruitSupport.add(register(r, "wood/fruit_tree/support/cinnamon", new BlockFruitSupport(), CT_DECORATIONS));
+            fruitToolRack.add(register(r, "wood/fruit_tree/tool_rack/cinnamon", new BlockFruitToolRack(), CT_DECORATIONS));
+            fruitWorkbench.add(register(r, "wood/fruit_tree/workbench/cinnamon", new BlockFruitWorkbench(), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest/cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, PlantsFL.CINNAMON_TREE), CT_DECORATIONS));
+            fruitChests.add(register(r, "wood/fruit_tree/chest_trap/cinnamon", new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, PlantsFL.CINNAMON_TREE), CT_DECORATIONS));
+            fruitLoom.add(register(r, "wood/fruit_tree/loom/cinnamon", new BlockFruitLoom(PlantsFL.CINNAMON_TREE), CT_WOOD));
+        }
+
         ImmutableList.Builder<BlockFluidBase> fluids = ImmutableList.builder();
         for (FluidWrapper wrapper : FluidsTFCF.getAllFiniteFluids())
         {
@@ -825,6 +1018,13 @@ public final class BlocksTFCF
         allBambooLeaves.forEach((x) -> {
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
+
+        allNormalTreeLeaves = itemNormalTreeLeaves.build();
+        allNormalTreeLeaves.forEach((x) -> {
+            normalItemBlocks.add(new ItemBlockTFC(x));
+        });
+
+        allNormalTreeLog = normalTreeLog.build();
 
         allBambooSapling = itemBambooSapling.build();
         allBambooSapling.forEach((x) -> {
@@ -948,7 +1148,9 @@ public final class BlocksTFCF
         register(TELargeKaoliniteVessel.class, "large_kaolinite_vessel");
         register(TEFruitChest.class, "fruit_chest");
         register(TEFruitLoom.class, "fruit_loom");
-        register(TEStemCrop.class, "stem_crop");
+        register(TEUrn.class, "urn");
+        register(TECrate.class, "crate");
+        //register(TEStemCrop.class, "stem_crop");
     }
 
     public static boolean isRawStone(IBlockState current)
@@ -1032,7 +1234,21 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS || 
-        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
     }
 
     public static boolean isClayGrass(IBlockState current)
@@ -1074,7 +1290,14 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.DRY_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_CLAY_GRASS || 
-        rockTFCF == RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS;
+        rockTFCF == RockTFCF.DRY_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS;
     }
 
     public static boolean isKaoliniteClayDryGrass(IBlockState current)
@@ -1088,7 +1311,14 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
-        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
     }
 
     public static boolean isClayPodzol(IBlockState current)
@@ -1152,6 +1382,7 @@ public final class BlocksTFCF
         RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
         return
         rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.BOG_IRON || 
         rockTFCF == RockTFCF.COARSE_DIRT || 
         rockTFCF == RockTFCF.LOAMY_SAND || 
         rockTFCF == RockTFCF.SANDY_LOAM || 
@@ -1180,6 +1411,11 @@ public final class BlocksTFCF
         return
         rockTFCF == RockTFCF.COARSE_DIRT || 
         rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.BOG_IRON || 
+        rockTFCF == RockTFCF.BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.DRY_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.BOG_IRON_PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND || 
         rockTFCF == RockTFCF.SANDY_LOAM || 
         rockTFCF == RockTFCF.LOAM || 
@@ -1273,7 +1509,28 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS || 
-        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAMY_SAND_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
     }
 
     public static boolean isGrowableSoil(IBlockState current)
@@ -1283,6 +1540,11 @@ public final class BlocksTFCF
         return
         rockTFCF == RockTFCF.COARSE_DIRT || 
         rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.BOG_IRON || 
+        rockTFCF == RockTFCF.BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.DRY_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.BOG_IRON_PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND || 
         rockTFCF == RockTFCF.SANDY_LOAM || 
         rockTFCF == RockTFCF.LOAM || 
@@ -1376,7 +1638,28 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS || 
-        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAMY_SAND_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
     }
 
     public static boolean isSoilOrGravel(IBlockState current)
@@ -1386,6 +1669,11 @@ public final class BlocksTFCF
         return
         rockTFCF == RockTFCF.COARSE_DIRT || 
         rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.BOG_IRON || 
+        rockTFCF == RockTFCF.BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.DRY_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.BOG_IRON_PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND || 
         rockTFCF == RockTFCF.SANDY_LOAM || 
         rockTFCF == RockTFCF.LOAM || 
@@ -1415,7 +1703,14 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.HUMUS || 
         rockTFCF == RockTFCF.COARSE_HUMUS || 
         rockTFCF == RockTFCF.HUMUS_GRASS || 
-        rockTFCF == RockTFCF.DRY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAMY_SAND_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_HUMUS_GRASS;
     }
 
     public static boolean isGrass(IBlockState current)
@@ -1431,6 +1726,7 @@ public final class BlocksTFCF
         RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
         return
         rockTFCF == RockTFCF.PODZOL || 
+        rockTFCF == RockTFCF.BOG_IRON_PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND_PODZOL || 
         rockTFCF == RockTFCF.SANDY_LOAM_PODZOL || 
         rockTFCF == RockTFCF.SANDY_CLAY_LOAM_PODZOL || 
@@ -1450,12 +1746,41 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.SILTY_KAOLINITE_CLAY_LOAM_PODZOL;
     }
 
+    public static boolean isSparseGrass(IBlockState current)
+    {
+        if (!(current.getBlock() instanceof BlockRockVariantTFCF)) return false;
+        RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
+        return
+        rockTFCF == RockTFCF.SPARSE_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAMY_SAND_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
+    }
+
     public static boolean isDryGrass(IBlockState current)
     {
         if (!(current.getBlock() instanceof BlockRockVariantTFCF)) return false;
         RockTFCF rockTFCF = ((BlockRockVariantTFCF) current.getBlock()).getType();
         return
-        rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.DRY_BOG_IRON_GRASS || 
         rockTFCF == RockTFCF.DRY_LOAMY_SAND_GRASS || 
         rockTFCF == RockTFCF.DRY_SANDY_LOAM_GRASS || 
         rockTFCF == RockTFCF.DRY_SANDY_CLAY_LOAM_GRASS || 
@@ -1485,6 +1810,11 @@ public final class BlocksTFCF
         return
         rockTFCF == RockTFCF.COARSE_DIRT || 
         rockTFCF == RockTFCF.MUD || 
+        rockTFCF == RockTFCF.BOG_IRON || 
+        rockTFCF == RockTFCF.BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.DRY_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_BOG_IRON_GRASS || 
+        rockTFCF == RockTFCF.BOG_IRON_PODZOL || 
         rockTFCF == RockTFCF.LOAMY_SAND || 
         rockTFCF == RockTFCF.SANDY_LOAM || 
         rockTFCF == RockTFCF.LOAM || 
@@ -1578,7 +1908,28 @@ public final class BlocksTFCF
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_GRASS || 
         rockTFCF == RockTFCF.DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
         rockTFCF == RockTFCF.KAOLINITE_CLAY_HUMUS_GRASS || 
-        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
+        rockTFCF == RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAMY_SAND_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILT_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_CLAY_HUMUS_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SANDY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS || 
+        rockTFCF == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
     }
 
     public static Block registerWoodBlock(IForgeRegistry<Block> r, String name, Block block)

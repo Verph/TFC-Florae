@@ -2,11 +2,23 @@
   "multipart": [
     {
       "when": {
-        "part": "single"
+        "part": "single",
+        "stage": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/peony_single"
+          "model": "tfc:plants/peony_single_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "single",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/peony_single_1"
         }
       ]
     },

@@ -1,13 +1,7 @@
 package tfcflorae.objects.items.tools;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import javax.swing.Icon;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,15 +14,11 @@ import net.minecraft.stats.StatList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemArrow;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -36,11 +26,7 @@ import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 
-import tfcflorae.TFCFlorae;
-import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.util.OreDictionaryHelper;
-
-import static tfcflorae.TFCFlorae.MODID;
 
 public class ItemBowTFCF extends ItemBow implements IItemSize
 {
@@ -62,8 +48,6 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
             else
                 OreDictionaryHelper.register(this, obj);
         }
-        //OreDictionaryHelper.register(this, "longbow");
-        //OreDictionaryHelper.register(this, "wooden", "longbow");
     }
 
     @Override
@@ -93,6 +77,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
         }
     }
 
+    @Override
     protected boolean isArrow(ItemStack stack)
     {
         return stack.getItem() instanceof ItemArrow;
@@ -214,6 +199,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
         return EnumAction.BOW;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public boolean hasCustomProperties()
     {

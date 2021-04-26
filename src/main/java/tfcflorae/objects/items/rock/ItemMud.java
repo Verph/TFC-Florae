@@ -19,16 +19,16 @@ import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.api.types.RockCategory;
 import net.dries007.tfc.api.util.IRockObject;
-import net.dries007.tfc.objects.items.ItemTFC;
 
 import tfcflorae.client.GuiHandler;
+import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class ItemMud extends ItemTFC implements IRockObject
+public class ItemMud extends ItemTFCF implements IRockObject
 {
     private static final Map<Rock, ItemMud> MAP = new HashMap<>();
 

@@ -2,12 +2,11 @@
   "multipart": [
     {
       "when": {
-        "age": "0"
+        "stage": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/reed_mannagrass_0",
-          "weight": 1
+          "model": "tfc:plants/reed_mannagrass_0"
         }
       ]
     }

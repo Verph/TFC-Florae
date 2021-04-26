@@ -9,13 +9,16 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import tfcflorae.objects.blocks.BlockSurfaceRock;
-import tfcflorae.objects.blocks.BlocksTFCF;
+
 import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.world.classic.ChunkGenTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 import net.dries007.tfc.world.classic.worldgen.vein.Vein;
+
+import tfcflorae.objects.blocks.groundcover.BlockSurfaceRock;
+import tfcflorae.ConfigTFCF;
+import tfcflorae.objects.blocks.BlocksTFCF;
 
 public class WorldGenSurfaceRocks implements IWorldGenerator
 {
@@ -44,7 +47,7 @@ public class WorldGenSurfaceRocks implements IWorldGenerator
             int xoff = chunkX * 16 + 8;
             int zoff = chunkZ * 16 + 8;
 
-            for (int i = 0; i < 10 * factor; i++)
+            for (int i = 0; i < ConfigTFCF.General.WORLD.groundcoverRockFrequency * factor; i++)
             {
                 BlockPos pos = new BlockPos(
                     xoff + random.nextInt(16),
