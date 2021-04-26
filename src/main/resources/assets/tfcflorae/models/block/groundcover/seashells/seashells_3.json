@@ -1,0 +1,160 @@
+{
+	"parent": "block/thin_block",
+	"ambientocclusion": false,
+    "textures": {
+        "particle": "tfc:blocks/stonetypes/raw/chalk",
+        "red_wool": "blocks/wool_colored_red",
+        "prismarine_bricks": "blocks/prismarine_bricks",
+        "chalk": "tfc:blocks/stonetypes/raw/chalk",
+        "andesite": "tfc:blocks/stonetypes/raw/andesite"
+    },
+    "elements": [
+        {
+            "name": "Star1",
+            "from": [ 11.0, 0.0, 7.0 ], 
+            "to": [ 12.0, 1.0, 8.0 ], 
+            "faces": {
+                "north": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "east": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "south": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "west": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "up": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "down": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] }
+            }
+        },
+        {
+            "name": "Star2",
+            "from": [ 10.0, 0.0, 8.0 ], 
+            "to": [ 13.0, 1.0, 9.0 ], 
+            "faces": {
+                "north": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+                "east": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "south": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+                "west": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "up": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+                "down": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 3.0, 1.0 ] }
+            }
+        },
+        {
+            "name": "Star3",
+            "from": [ 11.0, 0.0, 8.0 ], 
+            "to": [ 12.0, 1.0, 10.0 ], 
+            "rotation": { "origin": [ 11.0, 8.0, 9.0 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "east": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "south": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "west": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "up": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+                "down": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Star4",
+            "from": [ 11.5, 0.0, 8.5 ], 
+            "to": [ 12.5, 1.0, 10.5 ], 
+            "rotation": { "origin": [ 11.0, 8.0, 9.0 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "east": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "south": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "west": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "up": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 2.0 ] },
+                "down": { "texture": "#red_wool", "uv": [ 0.0, 0.0, 1.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Random1",
+            "from": [ 2.0, 0.0, 4.0 ], 
+            "to": [ 5.0, 1.0, 5.0 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#prismarine_bricks", "uv": [ 5.0, 3.0, 8.0, 4.0 ] },
+                "east": { "texture": "#prismarine_bricks", "uv": [ 7.0, 2.0, 8.0, 3.0 ] },
+                "south": { "texture": "#prismarine_bricks", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+                "west": { "texture": "#prismarine_bricks", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "up": { "texture": "#prismarine_bricks", "uv": [ 4.0, 2.0, 7.0, 3.0 ] },
+                "down": { "texture": "#prismarine_bricks", "uv": [ 0.0, 0.0, 3.0, 1.0 ] }
+            }
+        },
+        {
+            "name": "Random2",
+            "from": [ 5.0, 0.0, 10.0 ], 
+            "to": [ 7.0, 1.0, 12.0 ], 
+            "faces": {
+                "north": { "texture": "#chalk", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "east": { "texture": "#chalk", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "south": { "texture": "#chalk", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "west": { "texture": "#chalk", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "up": { "texture": "#chalk", "uv": [ 8.0, 13.0, 10.0, 15.0 ] },
+                "down": { "texture": "#chalk", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Clam1",
+            "from": [ 9.0, 3.0, 1.5 ], 
+            "to": [ 13.0, 4.0, 3.5 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "x", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+                "east": { "texture": "#andesite", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "south": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+                "west": { "texture": "#andesite", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "up": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 2.0 ] },
+                "down": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Clam2",
+            "from": [ 9.0, 0.0, 4.0 ], 
+            "to": [ 13.0, 1.0, 6.0 ], 
+            "faces": {
+                "north": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+                "east": { "texture": "#andesite", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "south": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+                "west": { "texture": "#andesite", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },
+                "up": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 2.0 ] },
+                "down": { "texture": "#andesite", "uv": [ 0.0, 0.0, 4.0, 2.0 ] }
+            }
+        }
+    ],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [45, 70, 0],
+			"translation": [1, 5, 3.75],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [45, 70, 0],
+			"translation": [1, 5, 3.75],
+			"scale": [-0.8, 0.8, 0.8]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 5.5, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"translation": [0, 5.5, 0],
+			"scale": [0.8, 0.8, -0.8]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 6, 0],
+			"scale": [1.2, 1.2, 1.2]
+		},
+		"head": {
+			"translation": [0, 16, 0],
+			"scale": [1.2, 1.2, 1.2]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -9.5],
+			"scale": [1.2, 1.2, 1.2]
+		}
+	}
+}
