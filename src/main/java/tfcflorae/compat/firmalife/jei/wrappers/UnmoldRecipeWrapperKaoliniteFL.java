@@ -25,7 +25,7 @@ public class UnmoldRecipeWrapperKaoliniteFL implements IRecipeWrapper
 
     public UnmoldRecipeWrapperKaoliniteFL(Metal metal, String type)
     {
-        this.mold = new ItemStack(ItemsTFCF.malletMold);
+        this.mold = new ItemStack(ItemsTFCF.malletMoldKaolinite);
         IFluidHandler cap = this.mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
         {

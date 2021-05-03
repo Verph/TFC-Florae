@@ -19,8 +19,7 @@ import net.dries007.tfc.api.types.Metal;
 
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
 
-import tfcflorae.compat.tfcelementia.jei.wrappers.CastingRecipeKaoliniteTFCEWrapper;
-import tfcflorae.compat.tfcelementia.jei.wrappers.UnmoldRecipeKaoliniteTFCEWrapper;
+import tfcflorae.compat.tfcelementia.jei.wrappers.*;
 
 @JEIPlugin
 public class JEIPluginTFCECompat implements IModPlugin
@@ -43,8 +42,12 @@ public class JEIPluginTFCECompat implements IModPlugin
         REGISTRY = registry;
 
         // Register metal related stuff (put everything here for performance + sorted registration)
-        List<UnmoldRecipeKaoliniteTFCEWrapper> unmoldList = new ArrayList<>();
-        List<CastingRecipeKaoliniteTFCEWrapper> castingList = new ArrayList<>();
+        List<UnmoldRecipeEarthenwareTFCEWrapper> unmoldListEarthenware = new ArrayList<>();
+        List<CastingRecipeEarthenwareTFCEWrapper> castingListEarthenware = new ArrayList<>();
+        List<UnmoldRecipeKaoliniteTFCEWrapper> unmoldListKaolinite = new ArrayList<>();
+        List<CastingRecipeKaoliniteTFCEWrapper> castingListKaolinite = new ArrayList<>();
+        List<UnmoldRecipeStonewareTFCEWrapper> unmoldListStoneware = new ArrayList<>();
+        List<CastingRecipeStonewareTFCEWrapper> castingListStoneware = new ArrayList<>();
         List<Metal> tierOrdered = TFCRegistries.METALS.getValuesCollection()
             .stream()
             .sorted(Comparator.comparingInt(metal -> metal.getTier().ordinal()))
@@ -53,13 +56,19 @@ public class JEIPluginTFCECompat implements IModPlugin
         {
             for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
             {
-                if (type.hasMold(metal))
+                if (type.hasMold(metal) && type.isTypeActive())
                 {
-                    unmoldList.add(new UnmoldRecipeKaoliniteTFCEWrapper(metal, type));
-                    castingList.add(new CastingRecipeKaoliniteTFCEWrapper(metal, type));
+                    unmoldListEarthenware.add(new UnmoldRecipeEarthenwareTFCEWrapper(metal, type));
+                    castingListEarthenware.add(new CastingRecipeEarthenwareTFCEWrapper(metal, type));
+                    unmoldListKaolinite.add(new UnmoldRecipeKaoliniteTFCEWrapper(metal, type));
+                    castingListKaolinite.add(new CastingRecipeKaoliniteTFCEWrapper(metal, type));
+                    unmoldListStoneware.add(new UnmoldRecipeStonewareTFCEWrapper(metal, type));
+                    castingListStoneware.add(new CastingRecipeStonewareTFCEWrapper(metal, type));
                 }
             }
         }
-        registry.addRecipes(unmoldList, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(unmoldListEarthenware, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(unmoldListKaolinite, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(unmoldListStoneware, VanillaRecipeCategoryUid.CRAFTING);
     }
 }

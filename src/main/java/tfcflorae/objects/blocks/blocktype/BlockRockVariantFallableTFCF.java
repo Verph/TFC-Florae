@@ -79,6 +79,26 @@ public class BlockRockVariantFallableTFCF extends BlockRockVariantTFCF
                 case DRY_HUMUS_GRASS:
                 case CLAY_HUMUS_GRASS:
                 case DRY_CLAY_HUMUS_GRASS:
+                case EARTHENWARE_CLAY_GRASS:
+                case SANDY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case SANDY_EARTHENWARE_CLAY_LOAM_PODZOL:
+                case SANDY_EARTHENWARE_CLAY_GRASS:
+                case SANDY_EARTHENWARE_CLAY_PODZOL:
+                case EARTHENWARE_CLAY_LOAM_GRASS:
+                case EARTHENWARE_CLAY_LOAM_PODZOL:
+                case EARTHENWARE_CLAY_PODZOL:
+                case SILTY_EARTHENWARE_CLAY_GRASS:
+                case SILTY_EARTHENWARE_CLAY_PODZOL:
+                case SILTY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case SILTY_EARTHENWARE_CLAY_LOAM_PODZOL:
+                case DRY_SANDY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case DRY_SANDY_EARTHENWARE_CLAY_GRASS:
+                case DRY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case DRY_EARTHENWARE_CLAY_GRASS:
+                case DRY_SILTY_EARTHENWARE_CLAY_GRASS:
+                case DRY_SILTY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case EARTHENWARE_CLAY_HUMUS_GRASS:
+                case DRY_EARTHENWARE_CLAY_HUMUS_GRASS:
                 case KAOLINITE_CLAY_GRASS:
                 case SANDY_KAOLINITE_CLAY_LOAM_GRASS:
                 case SANDY_KAOLINITE_CLAY_LOAM_PODZOL:
@@ -99,6 +119,26 @@ public class BlockRockVariantFallableTFCF extends BlockRockVariantTFCF
                 case DRY_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
                 case KAOLINITE_CLAY_HUMUS_GRASS:
                 case DRY_KAOLINITE_CLAY_HUMUS_GRASS:
+                case STONEWARE_CLAY_GRASS:
+                case SANDY_STONEWARE_CLAY_LOAM_GRASS:
+                case SANDY_STONEWARE_CLAY_LOAM_PODZOL:
+                case SANDY_STONEWARE_CLAY_GRASS:
+                case SANDY_STONEWARE_CLAY_PODZOL:
+                case STONEWARE_CLAY_LOAM_GRASS:
+                case STONEWARE_CLAY_LOAM_PODZOL:
+                case STONEWARE_CLAY_PODZOL:
+                case SILTY_STONEWARE_CLAY_GRASS:
+                case SILTY_STONEWARE_CLAY_PODZOL:
+                case SILTY_STONEWARE_CLAY_LOAM_GRASS:
+                case SILTY_STONEWARE_CLAY_LOAM_PODZOL:
+                case DRY_SANDY_STONEWARE_CLAY_LOAM_GRASS:
+                case DRY_SANDY_STONEWARE_CLAY_GRASS:
+                case DRY_STONEWARE_CLAY_LOAM_GRASS:
+                case DRY_STONEWARE_CLAY_GRASS:
+                case DRY_SILTY_STONEWARE_CLAY_GRASS:
+                case DRY_SILTY_STONEWARE_CLAY_LOAM_GRASS:
+                case STONEWARE_CLAY_HUMUS_GRASS:
+                case DRY_STONEWARE_CLAY_HUMUS_GRASS:
                 case DRY_CLAY_GRASS:
                 case CLAY_PODZOL:
                 case PODZOL:
@@ -116,6 +156,13 @@ public class BlockRockVariantFallableTFCF extends BlockRockVariantTFCF
                 case SPARSE_SILT_GRASS:
                 case SPARSE_HUMUS_GRASS:
                 case SPARSE_CLAY_HUMUS_GRASS:
+                case SPARSE_SANDY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case SPARSE_SANDY_EARTHENWARE_CLAY_GRASS:
+                case SPARSE_EARTHENWARE_CLAY_LOAM_GRASS:
+                case SPARSE_EARTHENWARE_CLAY_GRASS:
+                case SPARSE_SILTY_EARTHENWARE_CLAY_GRASS:
+                case SPARSE_SILTY_EARTHENWARE_CLAY_LOAM_GRASS:
+                case SPARSE_EARTHENWARE_CLAY_HUMUS_GRASS:
                 case SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS:
                 case SPARSE_SANDY_KAOLINITE_CLAY_GRASS:
                 case SPARSE_KAOLINITE_CLAY_LOAM_GRASS:
@@ -123,6 +170,13 @@ public class BlockRockVariantFallableTFCF extends BlockRockVariantTFCF
                 case SPARSE_SILTY_KAOLINITE_CLAY_GRASS:
                 case SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
                 case SPARSE_KAOLINITE_CLAY_HUMUS_GRASS:
+                case SPARSE_SANDY_STONEWARE_CLAY_LOAM_GRASS:
+                case SPARSE_SANDY_STONEWARE_CLAY_GRASS:
+                case SPARSE_STONEWARE_CLAY_LOAM_GRASS:
+                case SPARSE_STONEWARE_CLAY_GRASS:
+                case SPARSE_SILTY_STONEWARE_CLAY_GRASS:
+                case SPARSE_SILTY_STONEWARE_CLAY_LOAM_GRASS:
+                case SPARSE_STONEWARE_CLAY_HUMUS_GRASS:
                     spec = new FallingBlockManager.Specification(spec);
 
                     RockTFCF tempRock = RockTFCF.getNonGrassVersionStatic(rockTFCF);

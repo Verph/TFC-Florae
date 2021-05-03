@@ -102,8 +102,12 @@ public class KnappingHelperTFCF
         switch (type) {
             case "mud":
                 return KnappingTypes.MUD;
+            case "earthenware_clay":
+                return KnappingTypes.EARTHENWARE_CLAY;
             case "kaolinite_clay":
                 return KnappingTypes.KAOLINITE_CLAY;
+            case "stoneware_clay":
+                return KnappingTypes.STONEWARE_CLAY;
             case "flint":
                 return KnappingTypes.FLINT;
         }

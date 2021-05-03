@@ -18,7 +18,7 @@ public class ConfigTFCF
     {
         if (event.getModID().equals(MODID))
         {
-            TerraFirmaCraft.getLog().warn("Config changed");
+            TFCFlorae.getLog().warn("Config changed");
             ConfigManager.sync(MODID, Config.Type.INSTANCE);
         }
     }
@@ -117,40 +117,110 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.clayHumusRarity")
             public int clayHumusRarity = 40;
 
+            @Config.Comment("The rarity for earthenware clay pits to occur. On average 1 / N chunks will have a earthenware clay deposit, if the chunk in question is valid for earthenware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.earthenwareClayRarity")
+            public int earthenwareClayRarity = 150;
+
+            @Config.Comment("The rarity for sandy earthenware clay pits to occur. On average 1 / N chunks will have a sandy earthenware clay deposit, if the chunk in question is valid for sandy earthenware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.sandyEarthenwareClayRarity")
+            public int sandyEarthenwareClayRarity = 150;
+
+            @Config.Comment("The rarity for sandy earthenware clay loam pits to occur. On average 1 / N chunks will have a sandy earthenware clay loam deposit, if the chunk in question is valid for sandy earthenware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.sandyEarthenwareClayLoamRarity")
+            public int sandyEarthenwareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for earthenware clay loam pits to occur. On average 1 / N chunks will have a earthenware clay loam deposit, if the chunk in question is valid for earthenware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.earthenwareClayLoamRarity")
+            public int earthenwareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for silty earthenware clay loam pits to occur. On average 1 / N chunks will have a silty earthenware clay loam deposit, if the chunk in question is valid for silty earthenware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.siltyEarthenwareClayLoamRarity")
+            public int siltyEarthenwareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for silty earthenware clay pits to occur. On average 1 / N chunks will have a silty earthenware clay deposit, if the chunk in question is valid for silty earthenware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.siltyEarthenwareClayRarity")
+            public int siltyEarthenwareClayRarity = 150;
+
+            @Config.Comment("The rarity for earthenware clay humus pits to occur. On average 1 / N chunks will have a earthenware clay humus deposit, if the chunk in question is valid for earthenware clay humus to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.earthenwareClayHumusRarity")
+            public int earthenwareClayHumusRarity = 150;
+
             @Config.Comment("The rarity for kaolinite clay pits to occur. On average 1 / N chunks will have a kaolinite clay deposit, if the chunk in question is valid for kaolinite clay to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.kaoliniteClayRarity")
-            public int kaoliniteClayRarity = 80;
+            public int kaoliniteClayRarity = 150;
 
             @Config.Comment("The rarity for sandy kaolinite clay pits to occur. On average 1 / N chunks will have a sandy kaolinite clay deposit, if the chunk in question is valid for sandy kaolinite clay to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.sandyKaoliniteClayRarity")
-            public int sandyKaoliniteClayRarity = 80;
+            public int sandyKaoliniteClayRarity = 150;
 
             @Config.Comment("The rarity for sandy kaolinite clay loam pits to occur. On average 1 / N chunks will have a sandy kaolinite clay loam deposit, if the chunk in question is valid for sandy kaolinite clay loam to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.sandyKaoliniteClayLoamRarity")
-            public int sandyKaoliniteClayLoamRarity = 80;
+            public int sandyKaoliniteClayLoamRarity = 150;
 
             @Config.Comment("The rarity for kaolinite clay loam pits to occur. On average 1 / N chunks will have a kaolinite clay loam deposit, if the chunk in question is valid for kaolinite clay loam to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.kaoliniteClayLoamRarity")
-            public int kaoliniteClayLoamRarity = 80;
+            public int kaoliniteClayLoamRarity = 150;
 
             @Config.Comment("The rarity for silty kaolinite clay loam pits to occur. On average 1 / N chunks will have a silty kaolinite clay loam deposit, if the chunk in question is valid for silty kaolinite clay loam to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.siltyKaoliniteClayLoamRarity")
-            public int siltyKaoliniteClayLoamRarity = 80;
+            public int siltyKaoliniteClayLoamRarity = 150;
 
             @Config.Comment("The rarity for silty kaolinite clay pits to occur. On average 1 / N chunks will have a silty kaolinite clay deposit, if the chunk in question is valid for silty kaolinite clay to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.siltyKaoliniteClayRarity")
-            public int siltyKaoliniteClayRarity = 80;
+            public int siltyKaoliniteClayRarity = 150;
 
             @Config.Comment("The rarity for kaolinite clay humus pits to occur. On average 1 / N chunks will have a kaolinite clay humus deposit, if the chunk in question is valid for kaolinite clay humus to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.kaoliniteClayHumusRarity")
-            public int kaoliniteClayHumusRarity = 80;
+            public int kaoliniteClayHumusRarity = 150;
+
+            @Config.Comment("The rarity for stoneware clay pits to occur. On average 1 / N chunks will have a stoneware clay deposit, if the chunk in question is valid for stoneware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.stonewareClayRarity")
+            public int stonewareClayRarity = 150;
+
+            @Config.Comment("The rarity for sandy stoneware clay pits to occur. On average 1 / N chunks will have a sandy stoneware clay deposit, if the chunk in question is valid for sandy stoneware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.sandyStonewareClayRarity")
+            public int sandyStonewareClayRarity = 150;
+
+            @Config.Comment("The rarity for sandy stoneware clay loam pits to occur. On average 1 / N chunks will have a sandy stoneware clay loam deposit, if the chunk in question is valid for sandy stoneware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.sandyStonewareClayLoamRarity")
+            public int sandyStonewareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for stoneware clay loam pits to occur. On average 1 / N chunks will have a stoneware clay loam deposit, if the chunk in question is valid for stoneware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.stonewareClayLoamRarity")
+            public int stonewareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for silty stoneware clay loam pits to occur. On average 1 / N chunks will have a silty stoneware clay loam deposit, if the chunk in question is valid for silty stoneware clay loam to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.siltyStonewareClayLoamRarity")
+            public int siltyStonewareClayLoamRarity = 150;
+
+            @Config.Comment("The rarity for silty stoneware clay pits to occur. On average 1 / N chunks will have a silty stoneware clay deposit, if the chunk in question is valid for silty stoneware clay to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.siltyStonewareClayRarity")
+            public int siltyStonewareClayRarity = 150;
+
+            @Config.Comment("The rarity for stoneware clay humus pits to occur. On average 1 / N chunks will have a stoneware clay humus deposit, if the chunk in question is valid for stoneware clay humus to spawn.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.stonewareClayHumusRarity")
+            public int stonewareClayHumusRarity = 150;
 
             @Config.Comment("The rarity for coarse dirt pits to occur. On average 1 / N chunks will have a coarse dirt deposit, if the chunk in question is valid for coarse dirt to spawn.")
             @Config.RangeInt(min = 1)
@@ -304,12 +374,17 @@ public class ConfigTFCF
             @Config.Comment("Generation chance for stone circle ruins. On average 1 / N chunks will have stone circle ruins.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.structures.spawnChanceRuins")
-            public int spawnChanceRuins = 500;
+            public int spawnChanceRuins = 100;
 
             @Config.Comment("Generation chance for moai statues. On average 1 / N chunks will have moai statues.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.structures.spawnChanceMoai")
-            public int spawnChanceMoai = 500;
+            public int spawnChanceMoai = 100;
+
+            @Config.Comment("Generation chance for mayan temples. On average 1 / N chunks will have mayan temples.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.structures.spawnChanceMaya")
+            public int spawnChanceMaya = 1000;
         }
     }
 }

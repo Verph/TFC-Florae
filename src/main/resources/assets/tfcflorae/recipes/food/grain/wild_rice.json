@@ -7,10 +7,10 @@
     },
     {
       "type": "forge:ore_dict",
-      "ore": "wild_rice"
+      "ore": "wildRice"
     }
   ],
   "result": {
-    "item": "tfcflorae:food/wild_rice_grain"
+    "item": "tfc:food/rice_grain"
   }
 }

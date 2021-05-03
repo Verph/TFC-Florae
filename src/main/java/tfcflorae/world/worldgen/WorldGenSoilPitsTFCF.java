@@ -61,7 +61,13 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
             generateClaySurface(world, random, pos);
 
             pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateEarthenwareClaySurface(world, random, pos);
+
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
             generateKaoliniteClaySurface(world, random, pos);
+
+            pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generateStonewareClaySurface(world, random, pos);
 
             pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
             generateBogIron(world, random, pos);
@@ -386,6 +392,215 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
         }
     }
 
+    private void generateEarthenwareClaySurface(World world, Random rng, BlockPos start)
+    {
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+
+        int radius = rng.nextInt(5) + 1;
+        int depth = rng.nextInt(3) + 1;
+
+        int sandyEarthenwareClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyEarthenwareClayRarity);
+        int sandyEarthenwareClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyEarthenwareClayLoamRarity);
+        int kaoliniteClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayRarity);
+        int kaoliniteClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayLoamRarity);
+        int siltyEarthenwareClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyEarthenwareClayLoamRarity);
+        int kaoliniteClayHumusRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayHumusRarity);
+        int siltyEarthenwareClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyEarthenwareClayRarity);
+
+        for (int x = -radius; x <= radius; x++)
+        {
+            for (int z = -radius; z <= radius; z++)
+            {
+                if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
+
+                for (int y = -depth; y <= +depth; y++)
+                {
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
+                    final IBlockState current = world.getBlockState(pos);
+
+                    if (data.getRainfall() < RAINFALL_SANDY)
+                    {
+                        if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX)
+                        {
+                            if (sandyEarthenwareClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() > RAINFALL_SAND)
+                        {
+                            if (sandyEarthenwareClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SANDY)
+                    {
+                        if (kaoliniteClayRarity == 0)
+                        {
+                            if (BlocksTFC.isDirt(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY).getDefaultState(), 2);
+                            }
+                            else if (BlocksTFC.isDryGrass(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                            }
+                            else if (BlocksTFC.isGrass(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                            }
+                        }
+                        if (data.getRainfall() < RAINFALL_SILTY)
+                        {
+                            if (kaoliniteClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SILTY)
+                    {
+                        if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
+                        {
+                            if (siltyEarthenwareClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() < RAINFALL_SILT)
+                        {
+                            if (kaoliniteClayHumusRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_HUMUS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_EARTHENWARE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.EARTHENWARE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (siltyEarthenwareClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_EARTHENWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    if (rng.nextInt(10) == 0)
+                    {
+                        final BlockPos posTop = world.getTopSolidOrLiquidBlock(posHorizontal);
+
+                        for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
+                        {
+                            if (plant.getIsClayMarking())
+                            {
+                                BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                                IBlockState state = plantBlock.getDefaultState();
+                                int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, posTop));
+
+                                if (!world.provider.isNether() && !world.isOutsideBuildHeight(posTop) &&
+                                    plant.isValidLocation(ClimateTFC.getActualTemp(world, posTop), ChunkDataTFC.getRainfall(world, posTop), world.getLightFor(EnumSkyBlock.SKY, posTop)) &&
+                                    world.isAirBlock(posTop) &&
+                                    plantBlock.canBlockStay(world, posTop, state))
+                                {
+                                    if (BlocksTFC.isClay(current) || BlocksTFCF.isClay(current))
+                                    {
+                                        world.setBlockState(posTop, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     private void generateKaoliniteClaySurface(World world, Random rng, BlockPos start)
     {
         ChunkDataTFC data = ChunkDataTFC.get(world, start);
@@ -561,6 +776,215 @@ public class WorldGenSoilPitsTFCF implements IWorldGenerator
                                 else if (BlocksTFC.isGrass(current))
                                 {
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_KAOLINITE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    if (rng.nextInt(10) == 0)
+                    {
+                        final BlockPos posTop = world.getTopSolidOrLiquidBlock(posHorizontal);
+
+                        for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
+                        {
+                            if (plant.getIsClayMarking())
+                            {
+                                BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                                IBlockState state = plantBlock.getDefaultState();
+                                int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(world, posTop));
+
+                                if (!world.provider.isNether() && !world.isOutsideBuildHeight(posTop) &&
+                                    plant.isValidLocation(ClimateTFC.getActualTemp(world, posTop), ChunkDataTFC.getRainfall(world, posTop), world.getLightFor(EnumSkyBlock.SKY, posTop)) &&
+                                    world.isAirBlock(posTop) &&
+                                    plantBlock.canBlockStay(world, posTop, state))
+                                {
+                                    if (BlocksTFC.isClay(current) || BlocksTFCF.isClay(current))
+                                    {
+                                        world.setBlockState(posTop, state.withProperty(BlockPlantTFC.AGE, plantAge), 2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void generateStonewareClaySurface(World world, Random rng, BlockPos start)
+    {
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+
+        int radius = rng.nextInt(5) + 1;
+        int depth = rng.nextInt(3) + 1;
+
+        int sandyStonewareClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyStonewareClayRarity);
+        int sandyStonewareClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyStonewareClayLoamRarity);
+        int kaoliniteClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayRarity);
+        int kaoliniteClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayLoamRarity);
+        int siltyStonewareClayLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyStonewareClayLoamRarity);
+        int kaoliniteClayHumusRarity = rng.nextInt(ConfigTFCF.General.WORLD.kaoliniteClayHumusRarity);
+        int siltyStonewareClayRarity = rng.nextInt(ConfigTFCF.General.WORLD.siltyStonewareClayRarity);
+
+        for (int x = -radius; x <= radius; x++)
+        {
+            for (int z = -radius; z <= radius; z++)
+            {
+                if (x * x + z * z > radius * radius) continue;
+                final BlockPos posHorizontal = start.add(x, 0, z);
+
+                for (int y = -depth; y <= +depth; y++)
+                {
+                    final BlockPos pos = posHorizontal.add(0, y, 0);
+                    final IBlockState current = world.getBlockState(pos);
+
+                    if (data.getRainfall() < RAINFALL_SANDY)
+                    {
+                        if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX)
+                        {
+                            if (sandyStonewareClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_STONEWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() > RAINFALL_SAND)
+                        {
+                            if (sandyStonewareClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SANDY_STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SANDY)
+                    {
+                        if (kaoliniteClayRarity == 0)
+                        {
+                            if (BlocksTFC.isDirt(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY).getDefaultState(), 2);
+                            }
+                            else if (BlocksTFC.isDryGrass(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_STONEWARE_CLAY_GRASS).getDefaultState(), 2);
+                            }
+                            else if (BlocksTFC.isGrass(current))
+                            {
+                                world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_GRASS).getDefaultState(), 2);
+                            }
+                        }
+                        if (data.getRainfall() < RAINFALL_SILTY)
+                        {
+                            if (kaoliniteClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                    }
+                    else if (data.getRainfall() > RAINFALL_SILTY)
+                    {
+                        if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
+                        {
+                            if (siltyStonewareClayLoamRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY_LOAM).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY_LOAM_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY_LOAM_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else if (data.getRainfall() < RAINFALL_SILT)
+                        {
+                            if (kaoliniteClayHumusRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_HUMUS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_STONEWARE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.STONEWARE_CLAY_HUMUS_GRASS).getDefaultState(), 2);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (siltyStonewareClayRarity == 0)
+                            {
+                                if (BlocksTFC.isDirt(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFCF.isPodzol(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY_PODZOL).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isDryGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.DRY_SILTY_STONEWARE_CLAY_GRASS).getDefaultState(), 2);
+                                }
+                                else if (BlocksTFC.isGrass(current))
+                                {
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILTY_STONEWARE_CLAY_GRASS).getDefaultState(), 2);
                                 }
                             }
                         }

@@ -1,0 +1,10 @@
+{
+  "type": "tfcflorae:unmold_recipe_kaolinite_tfce",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/kaolinite/fired/mold/halberd_blade"
+    }
+  ],
+  "result": "halberd_blade",
+  "chance": 0.95
+}

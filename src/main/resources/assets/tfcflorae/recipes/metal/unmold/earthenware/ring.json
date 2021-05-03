@@ -1,0 +1,10 @@
+{
+  "type": "tfcflorae:unmold_recipe_earthenware_tfce",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/earthenware/fired/mold/ring"
+    }
+  ],
+  "result": "ring",
+  "chance": 0.95
+}

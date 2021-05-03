@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tfc:blocks/plants/turkey_tail_1"
+    "layer0": "tfc:blocks/plants/turkey_tail/turkey_tail_1"
   }
 }

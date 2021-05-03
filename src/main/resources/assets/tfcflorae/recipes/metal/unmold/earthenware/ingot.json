@@ -1,0 +1,10 @@
+{
+  "type": "tfcflorae:unmold_recipe_earthenware_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/earthenware/fired/mold/ingot"
+    }
+  ],
+  "result": "ingot",
+  "chance": 0.95
+}

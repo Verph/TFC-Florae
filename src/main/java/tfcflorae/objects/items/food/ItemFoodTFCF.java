@@ -11,9 +11,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-
+import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.food.FoodData;
 import net.dries007.tfc.api.capability.food.FoodHandler;
+import net.dries007.tfc.api.capability.food.FoodHeatHandler;
 import net.dries007.tfc.api.capability.food.IItemFoodTFC;
 
 import tfcflorae.objects.items.*;
@@ -24,27 +25,7 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
 {
     public FoodData data;
     ArrayList<PotionEffectToHave> PotionEffects = new ArrayList<PotionEffectToHave>();
-    /*Potion EffectToUse = null;
-    int EffectDuration = 0;
-    int EffectPower = 0;*/
 
-    /*public ItemFoodTFCF(FoodData data, String... oreNameParts)
-    {
-        super(0, 0.0F, false);
-        this.setMaxDamage(0);
-        this.data = data;
-
-        for (String str : oreNameParts)
-        {
-            Object obj = str;
-            if (obj instanceof Object[])
-                OreDictionaryHelper.register(this, (Object[]) obj);
-            else
-                OreDictionaryHelper.register(this, obj);
-        }
-    }*/
-
-    //public ItemFoodTFCF(FoodData data, Potion EffectToUse, int EffectDuration, int EffectPower, String... oreNameParts)
     public ItemFoodTFCF(FoodData data, Object... objs)
     {
         super(0, 0.0F, false);
@@ -57,9 +38,6 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
             {
                 PotionEffectToHave Effect = (PotionEffectToHave)obj;
                 PotionEffects.add(Effect);
-                /*this.EffectToUse = Effect.PotionEffect;
-                this.EffectDuration = Effect.Duration;
-                this.EffectPower = Effect.Power;*/
             }
             else if (obj instanceof Object[])
                 OreDictionaryHelper.register(this, (Object[]) obj);
@@ -71,7 +49,7 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
     @Override
     public ICapabilityProvider getCustomFoodHandler()
     {
-        return new FoodHandler(null, data);
+        return new FoodHeatHandler(null, data, 1.0F, 480.0F);
     }
 
     private static final Map<ItemTFCF, ItemFoodTFCF> MAP = new HashMap<>();
@@ -91,6 +69,9 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
     {
         if(!PotionEffects.isEmpty())
             for(PotionEffectToHave Effect : PotionEffects)
-                player.addPotionEffect(new PotionEffect(Effect.PotionEffect, Effect.Duration, Effect.Power));
+            {
+                if (Constants.RNG.nextInt(Effect.chance) == 0)
+                    player.addPotionEffect(new PotionEffect(Effect.PotionEffect, Effect.Duration, Effect.Power));
+            }
     }
 }

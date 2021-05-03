@@ -273,6 +273,92 @@ public class BlockRockVariantConnectedTFCF extends BlockRockVariantFallableTFCF
                     world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
                 }
 
+                // Earthenware Clay Grass
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SANDY_EARTHENWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SANDY_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_SANDY_EARTHENWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SANDY_EARTHENWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.DRY_SANDY_EARTHENWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SANDY_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_SANDY_EARTHENWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.EARTHENWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_EARTHENWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_EARTHENWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.EARTHENWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.EARTHENWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_EARTHENWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SILTY_EARTHENWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SILTY_EARTHENWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_SILTY_EARTHENWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SILTY_EARTHENWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_SILTY_EARTHENWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SILTY_EARTHENWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_SILTY_EARTHENWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.EARTHENWARE_CLAY_HUMUS_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_EARTHENWARE_CLAY_HUMUS_GRASS)
+                        spreader = RockTFCF.DRY_EARTHENWARE_CLAY_HUMUS_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_EARTHENWARE_CLAY_HUMUS_GRASS)
+                        spreader = RockTFCF.SPARSE_EARTHENWARE_CLAY_HUMUS_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
                 // Kaolinite Clay Grass
 
                 if (current.getBlock() instanceof BlockRockVariantTFCF)
@@ -354,6 +440,92 @@ public class BlockRockVariantConnectedTFCF extends BlockRockVariantFallableTFCF
                         spreader = RockTFCF.DRY_KAOLINITE_CLAY_HUMUS_GRASS;
                     else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS)
                         spreader = RockTFCF.SPARSE_KAOLINITE_CLAY_HUMUS_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                // Stoneware Clay Grass
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SANDY_STONEWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SANDY_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_SANDY_STONEWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SANDY_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_SANDY_STONEWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SANDY_STONEWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SANDY_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.DRY_SANDY_STONEWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SANDY_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_SANDY_STONEWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.STONEWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_STONEWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_STONEWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.STONEWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.STONEWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_STONEWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SILTY_STONEWARE_CLAY_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SILTY_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.DRY_SILTY_STONEWARE_CLAY_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SILTY_STONEWARE_CLAY_GRASS)
+                        spreader = RockTFCF.SPARSE_SILTY_STONEWARE_CLAY_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.SILTY_STONEWARE_CLAY_LOAM_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_SILTY_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.DRY_SILTY_STONEWARE_CLAY_LOAM_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_SILTY_STONEWARE_CLAY_LOAM_GRASS)
+                        spreader = RockTFCF.SPARSE_SILTY_STONEWARE_CLAY_LOAM_GRASS;
+
+                    BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
+                    world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());
+                }
+
+                if (current.getBlock() instanceof BlockRockVariantTFCF)
+                {
+                    RockTFCF spreader = RockTFCF.STONEWARE_CLAY_HUMUS_GRASS;
+                    if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.DRY_STONEWARE_CLAY_HUMUS_GRASS)
+                        spreader = RockTFCF.DRY_STONEWARE_CLAY_HUMUS_GRASS;
+                    else if ((us.getBlock() instanceof BlockRockVariantTFCF) && ((BlockRockVariantTFCF) us.getBlock()).getType() == RockTFCF.SPARSE_STONEWARE_CLAY_HUMUS_GRASS)
+                        spreader = RockTFCF.SPARSE_STONEWARE_CLAY_HUMUS_GRASS;
 
                     BlockRockVariantTFCF block = ((BlockRockVariantTFCF) current.getBlock());
                     world.setBlockState(target, block.getVariant(block.getType().getGrassVersion(spreader)).getDefaultState());

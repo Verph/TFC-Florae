@@ -45,21 +45,19 @@ import net.dries007.tfc.util.OreDictionaryHelper;
 import tfcflorae.client.ClientEvents;
 import tfcflorae.client.GuiHandler;
 import tfcflorae.compat.firmalife.jei.JEIPluginFLCompat;
-import tfcflorae.compat.firmalife.jei.category.CastingCategoryFLCompat;
-import tfcflorae.compat.firmalife.jei.wrappers.CastingRecipeWrapperKaoliniteFL;
-import tfcflorae.compat.firmalife.jei.wrappers.UnmoldRecipeWrapperKaoliniteFL;
-import tfcflorae.compat.firmalife.recipes.UnmoldMalletRecipe;
-import tfcflorae.compat.tfcelementia.ceramics.ItemKaoliniteMoldTFCE;
-import tfcflorae.compat.tfcelementia.ceramics.ItemUnfiredKaoliniteMoldTFCE;
+import tfcflorae.compat.firmalife.jei.category.*;
+import tfcflorae.compat.firmalife.jei.wrappers.*;
+import tfcflorae.compat.firmalife.recipes.*;
+import tfcflorae.compat.tfcelementia.ceramics.*;
 import tfcflorae.compat.tfcelementia.jei.JEIPluginTFCECompat;
-import tfcflorae.compat.tfcelementia.jei.wrappers.CastingRecipeKaoliniteTFCEWrapper;
-import tfcflorae.compat.tfcelementia.jei.wrappers.UnmoldRecipeKaoliniteTFCEWrapper;
-import tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeKaolinite;
+import tfcflorae.compat.tfcelementia.jei.wrappers.*;
+import tfcflorae.compat.tfcelementia.recipes.*;
 import tfcflorae.objects.blocks.entity.EntitiesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
+import tfcflorae.util.CapabilityHeatHandler;
 import tfcflorae.util.HelpersTFCF;
-import tfcflorae.util.fuel.FuelManager;
+import tfcflorae.util.fuel.FuelsTFCF;
 import tfcflorae.proxy.ClientProxy;
 
 import static tfcflorae.TFCFlorae.MODID;
@@ -161,14 +159,15 @@ public class TFCFlorae
     public void init(FMLInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+        CapabilityHeatHandler.init();
 		proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        FuelsTFCF.postInit();
         proxy.postInit(event);
-        FuelManager.postInit();
     }
 
     @Mod.EventHandler

@@ -1,0 +1,9 @@
+{
+  "type": "tfcflorae:unmold_recipe_earthenware_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/earthenware/fired/mold/shovel_head"
+    }
+  ],
+  "result": "shovel_head"
+}

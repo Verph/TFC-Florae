@@ -59,6 +59,7 @@ import net.dries007.tfc.util.agriculture.BerryBush;
 import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.FruitTree;
 import net.dries007.tfc.util.Helpers;
+
 import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.registries.TFCFRegistries;
@@ -76,12 +77,7 @@ import tfcflorae.objects.items.groundcover.*;
 import tfcflorae.objects.items.itemblock.ItemBlockCrate;
 import tfcflorae.objects.items.itemblock.ItemBlockUrn;
 import tfcflorae.objects.items.itemblock.ItemBlockUrnLoot;
-import tfcflorae.objects.te.TEUrn;
-import tfcflorae.objects.te.TECrate;
-import tfcflorae.objects.te.TEFruitChest;
-import tfcflorae.objects.te.TEFruitLoom;
-import tfcflorae.objects.te.TELargeKaoliniteVessel;
-import tfcflorae.objects.te.TEStemCrop;
+import tfcflorae.objects.te.*;
 import tfcflorae.types.BlockTypesTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.types.TreesTFCF;
@@ -100,8 +96,12 @@ import static tfcflorae.TFCFlorae.MODID;
 @GameRegistry.ObjectHolder(MODID)
 public final class BlocksTFCF
 {
+    @GameRegistry.ObjectHolder("ceramics/earthenware_fired/large_vessel")
+    public static final BlockLargeVessel FIRED_EARTHENWARE_LARGE_VESSEL = getNull();
     @GameRegistry.ObjectHolder("ceramics/kaolinite_fired/large_vessel")
     public static final BlockLargeVessel FIRED_KAOLINITE_LARGE_VESSEL = getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware_fired/large_vessel")
+    public static final BlockLargeVessel FIRED_STONEWARE_LARGE_VESSEL = getNull();
 
     @GameRegistry.ObjectHolder("storage/urn")
     public static final BlockUrn FIRED_URN = getNull();
@@ -122,13 +122,6 @@ public final class BlocksTFCF
     public static final BlockSurfaceSeashells SEASHELLS = Helpers.getNull();
     @GameRegistry.ObjectHolder("groundcover/twig")
     public static final BlockTwig TWIG = Helpers.getNull();
-
-    /*
-    @GameRegistry.ObjectHolder("plants/pumpkin_fruit")
-    public static final BlockStemFruit PUMPKIN_FRUIT = Helpers.getNull();
-    @GameRegistry.ObjectHolder("plants/melon_fruit")
-    public static final BlockStemFruit MELON_FRUIT = Helpers.getNull();
-    */
 
     @GameRegistry.ObjectHolder("wood/fruit_tree/log/cassia_cinnamon")
     public static final BlockCassiaCinnamonLog CASSIA_CINNAMON_LOG = Helpers.getNull();
@@ -248,7 +241,6 @@ public final class BlocksTFCF
     private static ImmutableList<BlockFluidBase> allFluidBlocks = Helpers.getNull();
     private static ImmutableList<BlockCropTFC> allCropBlocks = Helpers.getNull();
     private static ImmutableList<BlockCropDead> allDeadCrops = Helpers.getNull();
-    //private static ImmutableList<BlockStemCrop> allStemCropBlocks = Helpers.getNull();
     private static ImmutableList<BlockBerryBush> allBerryBushBlocks = Helpers.getNull();
     private static ImmutableList<BlockRockVariantTFCF> allBlockRockVariantsTFCF = Helpers.getNull();
     private static ImmutableList<BlockWallTFCF> allWallBlocks = Helpers.getNull();
@@ -409,13 +401,6 @@ public final class BlocksTFCF
         return allDeadCrops;
     }
 
-    /*
-    public static ImmutableList<BlockStemCrop> getAllStemCropBlocks()
-    {
-        return allStemCropBlocks;
-    }
-    */
-
     public static ImmutableList<BlockFluidBase> getAllFluidBlocks()
     {
         return allFluidBlocks;
@@ -560,7 +545,6 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockFruitLoom> fruitLoom = ImmutableList.builder();
         ImmutableList.Builder<BlockCropTFC> cropBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockCropDead> deadCrops = ImmutableList.builder();
-        //ImmutableList.Builder<BlockStemCrop> cropStemBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockBerryBush> cropBerryBushBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockRockVariantTFCF> blockRockVariantsTFCF = ImmutableList.builder();
         ImmutableList.Builder<BlockWallTFCF> blockWallTFCF = ImmutableList.builder();
@@ -592,24 +576,21 @@ public final class BlocksTFCF
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/silk/silk_string_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/sisal/sisal_fiber_bale", new BlockBale(), CT_DECORATIONS)));
 
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_clay_block", new BlockEarthenwareClay(), CT_ROCK_BLOCKS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/earthenware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_clay_block", new BlockKaoliniteClay(), CT_ROCK_BLOCKS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/kaolinite/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
 
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_clay_block", new BlockStonewareClay(), CT_ROCK_BLOCKS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/stoneware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+
         normalItemBlocks.add(new ItemBlockUrn(register(r, "storage/urn", new BlockUrn(), CT_POTTERY)));
         normalItemBlocks.add(new ItemBlockUrnLoot(register(r, "storage/urn_loot", new BlockUrnLoot(), CT_POTTERY)));
         normalItemBlocks.add(new ItemBlockCrate(register(r, "storage/crate", new BlockCrate(), CT_DECORATIONS)));
-
-        /*
-        foodItemBlocks.add(register(r, "plants/pumpkin_fruit", new BlockStemFruit(), CT_FOOD));
-        foodItemBlocks.add(register(r, "plants/melon_fruit", new BlockStemFruit(), CT_FOOD));
-
-        for (StemCrop crop : StemCrop.values())
-        {
-            deadCrops.add(register(r, "dead_crop/" + crop.name().toLowerCase(), new BlockCropDead(crop)));
-            cropStemBlocks.add(register(r, "crop/" + crop.name().toLowerCase(), BlockStemCrop.create(crop)));
-        }
-        */
 
         {
             Builder<BlockCropTFC> b = ImmutableList.builder();
@@ -640,9 +621,6 @@ public final class BlocksTFCF
         allBerryBushBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
         allCropBlocks = cropBlocks.build();
         allDeadCrops = deadCrops.build();
-        //allStemCropBlocks = cropStemBlocks.build();
-
-        //register(TEStemCrop.class, "stem_crop");
 
         for (RockTFCF rockTFCF : RockTFCF.values())
         {
@@ -742,7 +720,7 @@ public final class BlocksTFCF
             // Walls
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    blockWallTFCF.add(register(r, ("wall/" + rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
+                    blockWallTFCF.add(register(r, "wall/" + rockTFCF.name() + "/" + rock.getRegistryName().getPath().toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
 
             // Stairs
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
@@ -1145,12 +1123,13 @@ public final class BlocksTFCF
 
         FluidsTFC.getWrapper(FluidsTFCF.COCONUT_MILK.get());
         
+        register(TELargeEarthenwareVessel.class, "large_earthenware_vessel");
         register(TELargeKaoliniteVessel.class, "large_kaolinite_vessel");
+        register(TELargeStonewareVessel.class, "large_stoneware_vessel");
         register(TEFruitChest.class, "fruit_chest");
         register(TEFruitLoom.class, "fruit_loom");
         register(TEUrn.class, "urn");
         register(TECrate.class, "crate");
-        //register(TEStemCrop.class, "stem_crop");
     }
 
     public static boolean isRawStone(IBlockState current)

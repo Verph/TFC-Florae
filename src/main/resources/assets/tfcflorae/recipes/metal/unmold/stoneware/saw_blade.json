@@ -1,0 +1,9 @@
+{
+  "type": "tfcflorae:unmold_recipe_stoneware_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/stoneware/fired/mold/saw_blade"
+    }
+  ],
+  "result": "saw_blade"
+}

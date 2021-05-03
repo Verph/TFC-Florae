@@ -1,0 +1,10 @@
+{
+  "type": "tfcflorae:unmold_recipe_kaolinite_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/kaolinite/fired/mold/ingot"
+    }
+  ],
+  "result": "ingot",
+  "chance": 0.95
+}

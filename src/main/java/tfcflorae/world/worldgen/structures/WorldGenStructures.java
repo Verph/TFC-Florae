@@ -33,9 +33,9 @@ public class WorldGenStructures implements IWorldGenerator
             {
 				if (!(world.getBlockState(pos).getBlock() == ChunkGenTFC.FRESH_WATER.getBlock() || world.getBlockState(pos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock() || world.getBlockState(pos).getBlock() == ChunkGenTFC.HOT_WATER.getBlock() || b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.LAKE || b == BiomesTFC.RIVER || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH))
 				{	
-					if (data.isInitialized() && data.getRainfall() >= 120f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceRuins) == 0)
+					if (data.isInitialized() && data.getRainfall() >= 100f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceRuins) == 0)
 					{
-						int chance = random.nextInt(2);
+						int chance = random.nextInt(7);
 
 						if (chance == 0)
 							generateStructure(StructureList.STONE_CIRCLE_RUIN, world, random, pos);
@@ -43,10 +43,18 @@ public class WorldGenStructures implements IWorldGenerator
 							generateStructure(StructureList.STONE_CIRCLE_RUIN_A, world, random, pos);
 						else if (chance == 2)
 							generateStructure(StructureList.STONE_CIRCLE_RUIN_B, world, random, pos);
+						else if (chance == 3)
+							generateStructure(StructureList.RUIN_HOUSE_1A, world, random, pos);
+						else if (chance == 4)
+							generateStructure(StructureList.RUIN_HOUSE_1B, world, random, pos);
+						else if (chance == 5)
+							generateStructure(StructureList.RUIN_TEMPLE_1A, world, random, pos);
+						else if (chance == 6)
+							generateStructure(StructureList.RUIN_TEMPLE_1B, world, random, pos);
 					}
-					else if (data.isInitialized() && data.getRainfall() >= 320f && data.getFloraDensity() >= 0.3f && data.getAverageTemp() >= 9f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceMoai) == 0)
+					if (data.isInitialized() && data.getRainfall() >= 320f && data.getFloraDensity() >= 0.3f && data.getAverageTemp() >= 9f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceMoai) == 0)
 					{
-						int chance = random.nextInt(5);
+						int chance = random.nextInt(6);
 
 						if (chance == 0)
 							generateStructure(StructureList.MOAI_1, world, random, pos);
@@ -60,6 +68,10 @@ public class WorldGenStructures implements IWorldGenerator
 							generateStructure(StructureList.MOAI_2A, world, random, pos);
 						else if (chance == 5)
 							generateStructure(StructureList.MOAI_2B, world, random, pos);
+					}
+					if (data.isInitialized() && data.getRainfall() >= 320f && data.getFloraDensity() >= 0.2f && data.getAverageTemp() >= 18f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceMaya) == 0)
+					{
+						generateStructure(StructureList.MAYAN_TEMPLE_1A, world, random, pos);
 					}
 				}
             }

@@ -1,7 +1,13 @@
 {
   "recipes": {
-    "unmold_recipe_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeTFCF$Factory",
-    "unmold_recipe_tfce": "tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeKaolinite$Factory",
-    "unmold_recipe_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldMalletRecipe$Factory"
+    "unmold_recipe_earthenware_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeEarthenwareTFCF$Factory",
+    "unmold_recipe_kaolinite_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeKaoliniteTFCF$Factory",
+    "unmold_recipe_stoneware_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeStonewareTFCF$Factory",
+    "unmold_recipe_earthenware_tfce": "tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeEarthenware$Factory",
+    "unmold_recipe_kaolinite_tfce": "tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeKaolinite$Factory",
+    "unmold_recipe_stoneware_tfce": "tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeStoneware$Factory",
+    "unmold_recipe_earthenware_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldEarthenwareMalletRecipe$Factory",
+    "unmold_recipe_kaolinite_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldKaoliniteMalletRecipe$Factory",
+    "unmold_recipe_stoneware_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldStonewareMalletRecipe$Factory"
   }
 }

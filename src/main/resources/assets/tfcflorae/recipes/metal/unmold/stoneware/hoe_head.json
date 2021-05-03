@@ -1,0 +1,9 @@
+{
+  "type": "tfcflorae:unmold_recipe_stoneware_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/stoneware/fired/mold/hoe_head"
+    }
+  ],
+  "result": "hoe_head"
+}

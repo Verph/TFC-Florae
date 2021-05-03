@@ -59,7 +59,7 @@ public class WorldGenCinnamon extends WorldGenerator
         int z = pos.getZ() - 7 + rand.nextInt(14);
         BlockPos genPos = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z));
 
-        int gen = rand.nextInt(2);
+        int gen = rand.nextInt(8);
 
         if (gen == 0 && rain > 250 && temp > 20 && density > 0.3f && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down())) || BlocksTFCF.isGround(world.getBlockState(pos.down()))))
         {
@@ -77,7 +77,7 @@ public class WorldGenCinnamon extends WorldGenerator
     private boolean generateCinnamonVariant(World world, Random rand, BlockPos pos, Tree tree, ITreeGenerator CinnamonToGen)
     {
         IBlockState state = world.getBlockState(pos.down());
-        if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGrowableSoil(state) || BlocksTFCF.isGrowableSoil(state)))
+        if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGrowableSoil(state)))
         {
             TemplateManager manager = ((WorldServer) world).getStructureTemplateManager();
             /*String variant = variants[variants.length == 1 ? 0 : rand.nextInt(variants.length)];
@@ -98,7 +98,6 @@ public class WorldGenCinnamon extends WorldGenerator
             StructureHelper.addStructureToWorld(world, pos, structureBase, settings2);*/
 
             CinnamonToGen.generateTree(manager, world, pos, tree, rand, true);
-            TFCFlorae.getLog().warn("TFCFlorae: Generated Cinnamon Tree: ", tree);
             return true;
         }
         return false;

@@ -11,4 +11,9 @@ public class StructureList
     public static final StructureGenerator MOAI_2 = new StructureGenerator("moai_2");
     public static final StructureGenerator MOAI_2A = new StructureGenerator("moai_2a");
     public static final StructureGenerator MOAI_2B = new StructureGenerator("moai_2b");
+    public static final StructureGenerator RUIN_HOUSE_1A = new StructureGenerator("ruin_house_1a");
+    public static final StructureGenerator RUIN_HOUSE_1B = new StructureGenerator("ruin_house_1b");
+    public static final StructureGenerator RUIN_TEMPLE_1A = new StructureGenerator("ruin_temple_1a");
+    public static final StructureGenerator RUIN_TEMPLE_1B = new StructureGenerator("ruin_temple_1b");
+    public static final StructureGenerator MAYAN_TEMPLE_1A = new StructureGenerator("mayan_temple_1a");
 }

@@ -1,0 +1,10 @@
+{
+  "type": "tfcflorae:unmold_recipe_stoneware_tfce",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/fired/mold/nail"
+    }
+  ],
+  "result": "nail",
+  "chance": 0.95
+}

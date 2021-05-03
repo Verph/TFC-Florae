@@ -44,6 +44,7 @@ import net.dries007.tfc.objects.Gem;
 import net.dries007.tfc.objects.Powder;
 import net.dries007.tfc.objects.blocks.BlockSlabTFC;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockDoorTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockLogTFC;
 import net.dries007.tfc.objects.items.ItemMisc;
@@ -67,6 +68,7 @@ import net.dries007.tfc.objects.items.wood.ItemBoatTFC;
 import net.dries007.tfc.objects.items.wood.ItemDoorTFC;
 import net.dries007.tfc.objects.items.wood.ItemLumberTFC;
 import net.dries007.tfc.objects.items.wood.ItemWoodenBucket;
+import net.dries007.tfc.types.DefaultPlants;
 import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.Food;
 import net.dries007.tfc.util.agriculture.FruitTree;
@@ -83,9 +85,7 @@ import tfcflorae.objects.blocks.wood.BlockLogTFCF;
 import tfcflorae.objects.blocks.wood.bamboo.BlockBambooLog;
 import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
 import tfcflorae.objects.items.*;
-import tfcflorae.objects.items.ceramics.ItemClayKaolinite;
-import tfcflorae.objects.items.ceramics.ItemKaoliniteMold;
-import tfcflorae.objects.items.ceramics.ItemUnfiredKaoliniteMold;
+import tfcflorae.objects.items.ceramics.*;
 import tfcflorae.objects.items.ceramics.ItemUnfiredUrn;
 import tfcflorae.objects.items.food.*;
 import tfcflorae.objects.items.rock.ItemMud;
@@ -98,12 +98,13 @@ import tfcflorae.objects.items.tools.ItemJavelinTFCF;
 import tfcflorae.objects.items.tools.ItemKnifeTFCF;
 import tfcflorae.objects.items.tools.ItemShovelTFCF;
 import tfcflorae.objects.items.tools.ItemBowTFCF;
+import tfcflorae.types.PlantsTFCF;
 import tfcflorae.types.TreesTFCF;
 import tfcflorae.util.agriculture.*;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.TFCFlorae;
-import tfcflorae.compat.tfcelementia.ceramics.ItemKaoliniteMoldTFCE;
-import tfcflorae.compat.tfcelementia.ceramics.ItemUnfiredKaoliniteMoldTFCE;
+import tfcflorae.compat.firmalife.ceramics.*;
+import tfcflorae.compat.tfcelementia.ceramics.*;
 
 import static net.dries007.tfc.objects.CreativeTabsTFC.*;
 import static tfcflorae.TFCFlorae.MODID;
@@ -310,10 +311,6 @@ public final class ItemsTFCF
     // Normal Trees Fruits
     @GameRegistry.ObjectHolder("food/baobab_fruit")
     public static final ItemFoodTFCF BAOBAB_FRUIT = Helpers.getNull();
-    /*
-    @GameRegistry.ObjectHolder("food/coconut")
-    public static final ItemFoodTFCF COCONUT = Helpers.getNull();
-    */
     @GameRegistry.ObjectHolder("food/hawthorn")
     public static final ItemFoodTFCF HAWTHORN = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/juniper")
@@ -328,10 +325,6 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF ROWAN_BERRY = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/sky_fruit")
     public static final ItemFoodTFCF SKY_FRUIT = Helpers.getNull();
-    /*
-    @GameRegistry.ObjectHolder("food/wild_cherry")
-    public static final ItemFoodTFCF WILD_CHERRY = Helpers.getNull();
-    */
     @GameRegistry.ObjectHolder("food/yew_berry")
     public static final ItemFoodTFCF YEW_BERRY = Helpers.getNull();
 
@@ -471,59 +464,18 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF DRIED_WHITE_TEA = Helpers.getNull();
 
     // Miscellaneous Food Stuff
-    /*
-    @GameRegistry.ObjectHolder("food/caramel")
-    public static final ItemFoodTFCF CARAMEL = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/cocoa_beans")
-    public static final ItemFoodTFCF COCOA_BEANS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/dried/cocoa_beans")
-    public static final ItemFoodTFCF DRIED_COCOA_BEANS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/roasted/cocoa_beans")
-    public static final ItemFoodTFCF ROASTED_COCOA_BEANS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/cocoa_powder")
-    public static final ItemFoodTFCF COCOA_POWDER = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/cocoa_butter")
-    public static final ItemFoodTFCF COCOA_BUTTER = Helpers.getNull();
-    @GameRegistry.ObjectHolder("cracked_coconut")
-    public static final ItemWoodenBucket CRACKED_COCONUT = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/ground_black_pepper")
-    public static final ItemFoodTFCF GROUND_BLACK_PEPPER = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/dark_chocolate")
-    public static final ItemFoodTFCF DARK_CHOCOLATE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/milk_chocolate")
-    public static final ItemFoodTFCF MILK_CHOCOLATE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/white_chocolate")
-    public static final ItemFoodTFCF WHITE_CHOCOLATE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/dark_chocolate_blend")
-    public static final ItemMiscTFCF DARK_CHOCOLATE_BLEND = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/milk_chocolate_blend")
-    public static final ItemMiscTFCF MILK_CHOCOLATE_BLEND = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/white_chocolate_blend")
-    public static final ItemMiscTFCF WHITE_CHOCOLATE_BLEND = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/pumpkin")
-    public static final ItemFoodTFCF PUMPKIN = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/pumpkin_scooped")
-    public static final ItemFoodTFCF PUMPKIN_SCOOPED = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/pumpkin_chunks")
-    public static final ItemFoodTFCF PUMPKIN_CHUNKS = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/pumpkin_slice")
-    public static final ItemFoodTFCF PUMPKIN_SLICE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/roasted/pumpkin_slice")
-    public static final ItemFoodTFCF ROASTED_PUMPKIN_SLICE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/melon")
-    public static final ItemFoodTFCF MELON = Helpers.getNull();
-    */
     @GameRegistry.ObjectHolder("pomace")
     public static final ItemMiscTFCF POMACE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("fruit_leaf")
-    public static final ItemMiscTFCF FRUIT_LEAF = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/coffea_cherries")
     public static final ItemFoodTFCF COFFEA_CHERRIES = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/dried/coffea_cherries")
+    public static final ItemFoodTFCF DRIED_COFFEA_CHERRIES = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/roasted/coffee_beans")
     public static final ItemFoodTFCF ROASTED_COFFEE_BEANS = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/coffee_powder")
     public static final ItemFoodTFCF COFFEE_POWDER = Helpers.getNull();
 
+    /*
     // Epiphytes
     @GameRegistry.ObjectHolder("food/artists_conk")
     public static final ItemFoodTFCF RAW_ARTISTS_CONK = Helpers.getNull();
@@ -555,6 +507,7 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF RAW_WOOD_BLEWIT = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/woolly_gomphus")
     public static final ItemFoodTFCF RAW_WOOLLY_GOMPHUS = Helpers.getNull();
+    */
 
     // Epiphytes
     @GameRegistry.ObjectHolder("food/roasted/artists_conk")
@@ -690,20 +643,14 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF SPELT_BREAD = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/spelt_flatbread")
     public static final ItemFoodTFCF SPELT_FLATBREAD = Helpers.getNull();
-    /*
+
+    @GameRegistry.ObjectHolder("food/wild_barley")
+    public static final ItemFoodTFCF WILD_BARLEY = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/wild_rice")
     public static final ItemFoodTFCF WILD_RICE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/wild_rice_grain")
-    public static final ItemFoodTFCF WILD_RICE_GRAIN = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/wild_rice_flour")
-    public static final ItemFoodTFCF WILD_RICE_FLOUR = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/wild_rice_dough")
-    public static final ItemFoodTFCF WILD_RICE_DOUGH = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/wild_rice_bread")
-    public static final ItemFoodTFCF WILD_RICE_BREAD = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/wild_rice_flatbread")
-    public static final ItemFoodTFCF WILD_RICE_FLATBREAD = Helpers.getNull();
-    */
+    @GameRegistry.ObjectHolder("food/wild_wheat")
+    public static final ItemFoodTFCF WILD_WHEAT = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("crop/product/malt_barley")
     public static final ItemMiscTFCF MALT_BARLEY = Helpers.getNull();
     @GameRegistry.ObjectHolder("crop/product/malt_corn")
@@ -726,10 +673,6 @@ public final class ItemsTFCF
     public static final ItemMiscTFCF MALT_QUINOA = Helpers.getNull();
     @GameRegistry.ObjectHolder("crop/product/malt_spelt")
     public static final ItemMiscTFCF MALT_SPELT = Helpers.getNull();
-    /*
-    @GameRegistry.ObjectHolder("crop/product/malt_wild_rice")
-    public static final ItemMiscTFCF MALT_WILD_RICE = Helpers.getNull();
-    */
 
     @GameRegistry.ObjectHolder("food/linseed")
     public static final ItemFoodTFCF LINSEED = Helpers.getNull();
@@ -753,20 +696,6 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF RED_CAYENNE_PEPPER = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/ginseng")
     public static final ItemFoodTFCF GINSENG = Helpers.getNull();
-    /*
-    @GameRegistry.ObjectHolder("food/mustard")
-    public static final ItemFoodTFCF MUSTARD = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/ginger")
-    public static final ItemFoodTFCF GINGER = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/celery")
-    public static final ItemFoodTFCF CELERY  = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/lettuce")
-    public static final ItemFoodTFCF LETTUCE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/peanut")
-    public static final ItemFoodTFCF PEANUT = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/sweet_potato")
-    public static final ItemFoodTFCF SWEET_POTATO = Helpers.getNull();
-    */
     @GameRegistry.ObjectHolder("food/sugar_beet")
     public static final ItemFoodTFCF SUGAR_BEET = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/purple_grape")
@@ -787,14 +716,6 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF MASHED_SUGAR_CANE = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/soybean_paste")
     public static final ItemFoodTFCF SOYBEAN_PASTE = Helpers.getNull();
-    /*
-    @GameRegistry.ObjectHolder("food/cow_cheese")
-    public static final ItemFoodTFCF COW_CHEESE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/goat_cheese")
-    public static final ItemFoodTFCF GOAT_CHEESE = Helpers.getNull();
-    @GameRegistry.ObjectHolder("food/sheep_cheese")
-    public static final ItemFoodTFCF SHEEP_CHEESE = Helpers.getNull();
-    */
     @GameRegistry.ObjectHolder("crop/product/chamomile_head")
     public static final ItemMiscTFCF CHAMOMILE_HEAD = Helpers.getNull();
     @GameRegistry.ObjectHolder("crop/product/dried/chamomile_head")
@@ -1135,6 +1056,45 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("wood/fruit_tree/lumber/ceylon_cinnamon")
     public static final ItemMisc CEYLON_CINNAMON_LUMBER = Helpers.getNull();
 
+    // Earthenware Clay Ceramics
+    @GameRegistry.ObjectHolder("ceramics/earthenware/earthenware_clay")
+    public static final ItemClayKaolinite EARTHENWARE_CLAY = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/earthenware_brick")
+    public static final ItemPottery UNFIRED_EARTHENWARE_BRICK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/earthenware_brick")
+    public static final ItemPottery FIRED_EARTHENWARE_BRICK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/vessel")
+    public static final ItemPottery UNFIRED_EARTHENWARE_VESSEL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/vessel")
+    public static final ItemPottery FIRED_EARTHENWARE_VESSEL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/vessel_glazed")
+    public static final ItemPottery UNFIRED_EARTHENWARE_VESSEL_GLAZED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/vessel_glazed")
+    public static final ItemPottery FIRED_EARTHENWARE_VESSEL_GLAZED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/jug")
+    public static final ItemPottery UNFIRED_EARTHENWARE_JUG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/jug")
+    public static final ItemPottery FIRED_EARTHENWARE_JUG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/pot")
+    public static final ItemPottery UNFIRED_EARTHENWARE_POT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/pot")
+    public static final ItemPottery FIRED_EARTHENWARE_POT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/bowl")
+    public static final ItemPottery UNFIRED_EARTHENWARE_BOWL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/bowl")
+    public static final ItemPottery FIRED_EARTHENWARE_BOWL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/spindle")
+    public static final ItemPottery UNFIRED_EARTHENWARE_SPINDLE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/spindle")
+    public static final ItemPottery FIRED_EARTHENWARE_SPINDLE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/large_vessel")
+    public static final ItemPottery UNFIRED_EARTHENWARE_LARGE_VESSEL = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("ceramics/earthenware/unfired/mold/mallet_head")
+    public static final ItemPottery UNFIRED_EARTHENWARE_MALLET_MOLD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/mold/mallet_head")
+    public static final ItemPottery EARTHENWARE_MALLET_MOLD = Helpers.getNull();
+
     // Kaolinite Clay Ceramics
     @GameRegistry.ObjectHolder("ceramics/kaolinite/kaolinite_clay")
     public static final ItemClayKaolinite KAOLINITE_CLAY = Helpers.getNull();
@@ -1169,13 +1129,52 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("ceramics/kaolinite/unfired/large_vessel")
     public static final ItemPottery UNFIRED_KAOLINITE_LARGE_VESSEL = Helpers.getNull();
 
-    @GameRegistry.ObjectHolder("storage/unfired/urn")
-    public static final ItemPottery UNFIRED_URN = Helpers.getNull();
-
     @GameRegistry.ObjectHolder("ceramics/kaolinite/unfired/mold/mallet_head")
     public static final ItemPottery UNFIRED_KAOLINITE_MALLET_MOLD = Helpers.getNull();
     @GameRegistry.ObjectHolder("ceramics/kaolinite/fired/mold/mallet_head")
     public static final ItemPottery KAOLINITE_MALLET_MOLD = Helpers.getNull();
+
+    // Stoneware Clay Ceramics
+    @GameRegistry.ObjectHolder("ceramics/stoneware/stoneware_clay")
+    public static final ItemClayKaolinite STONEWARE_CLAY = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/stoneware_brick")
+    public static final ItemPottery UNFIRED_STONEWARE_BRICK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/stoneware_brick")
+    public static final ItemPottery FIRED_STONEWARE_BRICK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/vessel")
+    public static final ItemPottery UNFIRED_STONEWARE_VESSEL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/vessel")
+    public static final ItemPottery FIRED_STONEWARE_VESSEL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/vessel_glazed")
+    public static final ItemPottery UNFIRED_STONEWARE_VESSEL_GLAZED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/vessel_glazed")
+    public static final ItemPottery FIRED_STONEWARE_VESSEL_GLAZED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/jug")
+    public static final ItemPottery UNFIRED_STONEWARE_JUG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/jug")
+    public static final ItemPottery FIRED_STONEWARE_JUG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/pot")
+    public static final ItemPottery UNFIRED_STONEWARE_POT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/pot")
+    public static final ItemPottery FIRED_STONEWARE_POT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/bowl")
+    public static final ItemPottery UNFIRED_STONEWARE_BOWL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/bowl")
+    public static final ItemPottery FIRED_STONEWARE_BOWL = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/spindle")
+    public static final ItemPottery UNFIRED_STONEWARE_SPINDLE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/spindle")
+    public static final ItemPottery FIRED_STONEWARE_SPINDLE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/large_vessel")
+    public static final ItemPottery UNFIRED_STONEWARE_LARGE_VESSEL = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("ceramics/stoneware/unfired/mold/mallet_head")
+    public static final ItemPottery UNFIRED_STONEWARE_MALLET_MOLD = Helpers.getNull();
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/mold/mallet_head")
+    public static final ItemPottery STONEWARE_MALLET_MOLD = Helpers.getNull();
+
+    @GameRegistry.ObjectHolder("storage/unfired/urn")
+    public static final ItemPottery UNFIRED_URN = Helpers.getNull();
 
     private static ImmutableList<Item> allSimpleItems;
     private static ImmutableList<ItemBowTFCF> allItemBows;
@@ -1183,6 +1182,7 @@ public final class ItemsTFCF
     private static ImmutableList<ItemGemTFCF> allGemTFCFItems;
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks;
     private static ImmutableList<ItemFruitDoor> allFruitDoors;
+    private static ImmutableList<Item> allCeramicMoldItems;
 
     public static ImmutableList<Item> getAllSimpleItems()
     {
@@ -1221,7 +1221,14 @@ public final class ItemsTFCF
         return driedFruits.get(fruit);
     }
 
-    public static ItemPottery malletMold;
+    public static ImmutableList<Item> getAllCeramicMoldItems()
+    {
+        return allCeramicMoldItems;
+    }
+
+    public static ItemEarthenwareMalletMoldFL malletMoldEarthenware;
+    public static ItemKaoliniteMalletMoldFL malletMoldKaolinite;
+    public static ItemStonewareMalletMoldFL malletMoldStoneware;
 
     @SuppressWarnings("ConstantConditions")
     @SubscribeEvent
@@ -1233,6 +1240,7 @@ public final class ItemsTFCF
         ImmutableList.Builder<ItemBowTFCF> itemBows = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = new Builder<>();
         ImmutableList.Builder<ItemFruitDoor> fruitDoors = ImmutableList.builder();
+        ImmutableList.Builder<Item> ceramicItems = ImmutableList.builder();
 
         // Fruit Tree Fruits
         /*
@@ -1303,7 +1311,6 @@ public final class ItemsTFCF
 
         // Normal Tree Fruits
         simpleItems.add(register(r, "food/baobab_fruit", new ItemFoodTFCF(FoodDataTFCF.BAOBAB_FRUIT, "baobab_fruit", "category_fruit"), CT_FOOD));
-        //simpleItems.add(register(r, "food/coconut", new ItemFoodTFCF(FoodDataTFCF.COCONUT, "coconut", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/hawthorn", new ItemFoodTFCF(FoodDataTFCF.HAWTHORN, "hawthorn", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/juniper", new ItemFoodTFCF(FoodDataTFCF.JUNIPER, "juniper", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/osage_orange", new ItemFoodTFCF(FoodDataTFCF.OSAGE_ORANGE, "osage_orange", "citrus", "category_fruit"), CT_FOOD));
@@ -1311,8 +1318,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/riberry", new ItemFoodTFCF(FoodDataTFCF.RIBERRY, "riberry", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/rowan_berry", new ItemFoodTFCF(FoodDataTFCF.ROWAN_BERRY, "rowan_berry", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/sky_fruit", new ItemFoodTFCF(FoodDataTFCF.SKY_FRUIT, "sky_fruit", "category_fruit"), CT_FOOD));
-        //simpleItems.add(register(r, "food/wild_cherry", new ItemFoodTFCF(FoodDataTFCF.WILD_CHERRY, "wild_cherry", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/yew_berry", new ItemFoodTFCF(FoodDataTFCF.YEW_BERRY, new PotionEffectToHave(MobEffects.POISON, 610, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), "yew_berry", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/yew_berry", new ItemFoodTFCF(FoodDataTFCF.YEW_BERRY, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 1, 1), "yew_berry", "category_fruit"), CT_FOOD));
 
         // Dried Berries & Fruits
         for (FruitsTFCF fruit : FruitsTFCF.values())
@@ -1434,8 +1440,6 @@ public final class ItemsTFCF
             simpleItems.add(register(r, "food/roasted/chestnut_nut", new ItemFoodTFCF(FoodDataTFCF.ROASTED_NUT, "roasted_chestnut_nut", "category_fruit"), CT_FOOD));
         }
 
-        //simpleItems.add(register(r, "food/coconut", new ItemFoodTFCF(FoodDataTFCF.NUT, "coconut", "category_fruit"), CT_FOOD));
-
         simpleItems.add(register(r, "food/ginkgo_nut", new ItemFoodTFCF(FoodDataTFCF.UNCRACKED_NUT, "ginkgo_nut", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/ginkgo_nut_nut", new ItemFoodTFCF(FoodDataTFCF.NUT, "ginkgo_nut_nut", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/ginkgo_nut_nut", new ItemFoodTFCF(FoodDataTFCF.ROASTED_NUT, "roasted_ginkgo_nut_nut", "category_fruit"), CT_FOOD));
@@ -1463,24 +1467,26 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/walnut_nut", new ItemFoodTFCF(FoodDataTFCF.NUT, "walnut_nut", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/walnut_nut", new ItemFoodTFCF(FoodDataTFCF.ROASTED_NUT, "roasted_walnut_nut", "category_fruit"), CT_FOOD));
 
+        /*
         // Uncooked Fungi
         // Epiphytes
-        simpleItems.add(register(r, "food/artists_conk", new ItemFoodTFCF(FoodDataTFCF.RAW_ARTISTS_CONK, "raw_artists_conk", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/sulphur_shelf", new ItemFoodTFCF(FoodDataTFCF.RAW_SULPHUR_SHELF, "raw_sulphur_shelf", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/turkey_tail", new ItemFoodTFCF(FoodDataTFCF.RAW_TURKEY_TAIL, "raw_turkey_tail", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/artists_conk", new ItemFoodTFCF(FoodDataTFCF.RAW_ARTISTS_CONK, "raw_artists_conk", "epiphyte_artists_conk", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/sulphur_shelf", new ItemFoodTFCF(FoodDataTFCF.RAW_SULPHUR_SHELF, "raw_sulphur_shelf", "epiphyte_sulphur_shelf", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/turkey_tail", new ItemFoodTFCF(FoodDataTFCF.RAW_TURKEY_TAIL, "raw_turkey_tail", "epiphyte_turkey_tail", "category_vegetable"), CT_FOOD));
 
         // Mushrooms
-        simpleItems.add(register(r, "food/porcini", new ItemFoodTFCF(FoodDataTFCF.RAW_PORCINI, "raw_porcini", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/amanita", new ItemFoodTFCF(FoodDataTFCF.RAW_AMANITA, new PotionEffectToHave(MobEffects.POISON, 610, 2), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1), "raw_amanita", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/black_powderpuff", new ItemFoodTFCF(FoodDataTFCF.RAW_BLACK_POWDERPUFF, "raw_black_powderpuff", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/chanterelle", new ItemFoodTFCF(FoodDataTFCF.RAW_CHANTERELLE, "raw_chanterelle", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/death_cap", new ItemFoodTFCF(FoodDataTFCF.RAW_DEATH_CAP, new PotionEffectToHave(MobEffects.POISON, 610, 2), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1), "raw_death_cap", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/giant_club", new ItemFoodTFCF(FoodDataTFCF.RAW_GIANT_CLUB, "raw_giant_club", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/parasol_mushroom", new ItemFoodTFCF(FoodDataTFCF.RAW_PARASOL_MUSHROOM, "raw_parasol_mushroom", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/stinkhorn", new ItemFoodTFCF(FoodDataTFCF.RAW_STINKHORN, "raw_stinkhorn", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/weeping_milk_cap", new ItemFoodTFCF(FoodDataTFCF.RAW_WEEPING_MILK_CAP, "raw_weeping_milk_cap", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/wood_blewit", new ItemFoodTFCF(FoodDataTFCF.RAW_WOOD_BLEWIT, "raw_wood_blewit", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/woolly_gomphus", new ItemFoodTFCF(FoodDataTFCF.RAW_WOOLLY_GOMPHUS, new PotionEffectToHave(MobEffects.NAUSEA, 800, 1), "raw_woolly_gomphus", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/porcini", new ItemFoodTFCF(FoodDataTFCF.RAW_PORCINI, "raw_porcini", "mushroom_porcini", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/amanita", new ItemFoodTFCF(FoodDataTFCF.RAW_AMANITA, new PotionEffectToHave(MobEffects.POISON, 610, 2, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 1), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1, 2), "raw_amanita", "mushroom_amanita", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/black_powderpuff", new ItemFoodTFCF(FoodDataTFCF.RAW_BLACK_POWDERPUFF, "raw_black_powderpuff", "mushroom_black_powderpuff", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/chanterelle", new ItemFoodTFCF(FoodDataTFCF.RAW_CHANTERELLE, "raw_chanterelle", "mushroom_chanterelle", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/death_cap", new ItemFoodTFCF(FoodDataTFCF.RAW_DEATH_CAP, new PotionEffectToHave(MobEffects.POISON, 610, 2, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 1), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1, 2), "raw_death_cap", "mushroom_death_cap", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/giant_club", new ItemFoodTFCF(FoodDataTFCF.RAW_GIANT_CLUB, "raw_giant_club", "mushroom_giant_club", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/parasol_mushroom", new ItemFoodTFCF(FoodDataTFCF.RAW_PARASOL_MUSHROOM, "raw_parasol_mushroom", "mushroom_parasol_mushroom", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/stinkhorn", new ItemFoodTFCF(FoodDataTFCF.RAW_STINKHORN, "raw_stinkhorn", "mushroom_stinkhorn", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/weeping_milk_cap", new ItemFoodTFCF(FoodDataTFCF.RAW_WEEPING_MILK_CAP, "raw_weeping_milk_cap", "mushroom_weeping_milk_cap", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/wood_blewit", new ItemFoodTFCF(FoodDataTFCF.RAW_WOOD_BLEWIT, "raw_wood_blewit", "mushroom_wood_blewit", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/woolly_gomphus", new ItemFoodTFCF(FoodDataTFCF.RAW_WOOLLY_GOMPHUS, new PotionEffectToHave(MobEffects.NAUSEA, 800, 1, 3), "raw_woolly_gomphus", "mushroom_woolly_gomphus", "category_vegetable"), CT_FOOD));
+        */
 
         // Cooked Fungi
         // Epiphytes
@@ -1490,26 +1496,26 @@ public final class ItemsTFCF
 
         // Mushrooms
         simpleItems.add(register(r, "food/roasted/porcini", new ItemFoodTFCF(FoodDataTFCF.ROASTED_PORCINI, "roasted_porcini", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/amanita", new ItemFoodTFCF(FoodDataTFCF.ROASTED_AMANITA, new PotionEffectToHave(MobEffects.POISON, 610, 2), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1), "roasted_amanita", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/roasted/amanita", new ItemFoodTFCF(FoodDataTFCF.ROASTED_AMANITA, new PotionEffectToHave(MobEffects.POISON, 610, 2, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 1), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1, 2), "roasted_amanita", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/black_powderpuff", new ItemFoodTFCF(FoodDataTFCF.ROASTED_BLACK_POWDERPUFF, "roasted_black_powderpuff", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/chanterelle", new ItemFoodTFCF(FoodDataTFCF.ROASTED_CHANTERELLE, "roasted_chanterelle", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/death_cap", new ItemFoodTFCF(FoodDataTFCF.ROASTED_DEATH_CAP, new PotionEffectToHave(MobEffects.POISON, 610, 2), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1), "roasted_death_cap", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/roasted/death_cap", new ItemFoodTFCF(FoodDataTFCF.ROASTED_DEATH_CAP, new PotionEffectToHave(MobEffects.POISON, 610, 2, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 1), new PotionEffectToHave(MobEffects.INSTANT_DAMAGE, 1, 1, 2), "roasted_death_cap", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/giant_club", new ItemFoodTFCF(FoodDataTFCF.ROASTED_GIANT_CLUB, "roasted_giant_club", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/parasol_mushroom", new ItemFoodTFCF(FoodDataTFCF.ROASTED_PARASOL_MUSHROOM, "roasted_parasol_mushroom", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/stinkhorn", new ItemFoodTFCF(FoodDataTFCF.ROASTED_STINKHORN, "roasted_stinkhorn", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/weeping_milk_cap", new ItemFoodTFCF(FoodDataTFCF.ROASTED_WEEPING_MILK_CAP, "roasted_weeping_milk_cap", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/wood_blewit", new ItemFoodTFCF(FoodDataTFCF.ROASTED_WOOD_BLEWIT, "roasted_wood_blewit", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/woolly_gomphus", new ItemFoodTFCF(FoodDataTFCF.ROASTED_WOOLLY_GOMPHUS, new PotionEffectToHave(MobEffects.NAUSEA, 800, 1), "roasted_woolly_gomphus", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/roasted/woolly_gomphus", new ItemFoodTFCF(FoodDataTFCF.ROASTED_WOOLLY_GOMPHUS, new PotionEffectToHave(MobEffects.NAUSEA, 800, 1, 2), "roasted_woolly_gomphus", "category_vegetable"), CT_FOOD));
 
-        simpleItems.add(register(r, "food/raw_eel", new ItemFoodTFCF(FoodDataTFCF.RAW_EEL, new PotionEffectToHave(MobEffects.POISON, 610, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2), "raw_eel", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/raw_eel", new ItemFoodTFCF(FoodDataTFCF.RAW_EEL, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2, 2), "raw_eel", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_eel", new ItemFoodTFCF(FoodDataTFCF.COOKED_EEL, "cooked_eel", "category_cooked_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/raw_crab", new ItemFoodTFCF(FoodDataTFCF.RAW_CRAB, "raw_crab", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_crab", new ItemFoodTFCF(FoodDataTFCF.COOKED_CRAB, "cooked_crab", "category_cooked_meat"), CT_FOOD));
-        simpleItems.add(register(r, "food/raw_clam", new ItemFoodTFCF(FoodDataTFCF.RAW_CLAM, new PotionEffectToHave(MobEffects.POISON, 610, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2), "raw_clam", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/raw_clam", new ItemFoodTFCF(FoodDataTFCF.RAW_CLAM, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2, 2), "raw_clam", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_clam", new ItemFoodTFCF(FoodDataTFCF.COOKED_CLAM, "cooked_clam", "category_cooked_meat"), CT_FOOD));
-        simpleItems.add(register(r, "food/raw_scallop", new ItemFoodTFCF(FoodDataTFCF.RAW_SCALLOP, new PotionEffectToHave(MobEffects.POISON, 610, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2), "raw_scallop", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/raw_scallop", new ItemFoodTFCF(FoodDataTFCF.RAW_SCALLOP, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2, 2), "raw_scallop", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_scallop", new ItemFoodTFCF(FoodDataTFCF.COOKED_SCALLOP, "cooked_scallop", "category_cooked_meat"), CT_FOOD));
-        simpleItems.add(register(r, "food/raw_starfish", new ItemFoodTFCF(FoodDataTFCF.RAW_STARFISH, new PotionEffectToHave(MobEffects.POISON, 610, 1), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2), "raw_starfish", "category_meat"), CT_FOOD));
+        simpleItems.add(register(r, "food/raw_starfish", new ItemFoodTFCF(FoodDataTFCF.RAW_STARFISH, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 2, 2), "raw_starfish", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_starfish", new ItemFoodTFCF(FoodDataTFCF.COOKED_STARFISH, "cooked_starfish", "category_cooked_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/raw_snail", new ItemFoodTFCF(FoodDataTFCF.RAW_SNAIL, "raw_snail", "category_meat"), CT_FOOD));
         simpleItems.add(register(r, "food/cooked_snail", new ItemFoodTFCF(FoodDataTFCF.COOKED_SNAIL, "cooked_snail", "category_cooked_meat"), CT_FOOD));
@@ -1517,28 +1523,10 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/cooked_worm", new ItemFoodTFCF(FoodDataTFCF.COOKED_WORM, "cooked_worm", "category_cooked_meat"), CT_FOOD));
 
         simpleItems.add(register(r, "food/coffea_cherries", new ItemFoodTFCF(FoodDataTFCF.COFFEA_CHERRIES, "coffea_cherries", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/coffee_beans", new ItemFoodTFCF(FoodDataTFCF.ROASTED_COFFEE_BEANS, "roasted_coffee_beans", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/coffea_cherries", new ItemFoodTFCF(FoodDataTFCF.DRIED_COFFEA_CHERRIES, "dried_coffea_cherries", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/roasted/coffee_beans", new ItemFoodTFCF(FoodDataTFCF.ROASTED_COFFEE_BEANS, "roasted_coffee", "roasted_coffee_beans", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/coffee_powder", new ItemFoodTFCF(FoodDataTFCF.COFFEE_POWDER, "dust_coffee", "powder_coffee", "category_fruit"), CT_FOOD));
-        /*
-        simpleItems.add(register(r, "food/cocoa_beans", new ItemFoodTFCF(FoodDataTFCF.COCOA_BEANS, "cocoa_beans", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/cocoa_beans", new ItemFoodTFCF(FoodDataTFCF.DRIED_COCOA_BEANS, "dried_cocoa_beans", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/cocoa_beans", new ItemFoodTFCF(FoodDataTFCF.ROASTED_COCOA_BEANS, "roasted_cocoa_beans", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/cocoa_powder", new ItemFoodTFCF(FoodDataTFCF.COCOA_POWDER, "powder_cocoa"), CT_FOOD));
-        simpleItems.add(register(r, "food/cocoa_butter", new ItemFoodTFCF(FoodDataTFCF.COCOA_BUTTER, "cocoa_butter"), CT_FOOD));
-        simpleItems.add(register(r, "food/dark_chocolate_blend", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "dark_chocolate_blend"), CT_MISC));
-        simpleItems.add(register(r, "food/milk_chocolate_blend", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "milk_chocolate_blend"), CT_MISC));
-        simpleItems.add(register(r, "food/white_chocolate_blend", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "white_chocolate_blend"), CT_MISC));
-        simpleItems.add(register(r, "food/dark_chocolate", new ItemFoodTFCF(FoodDataTFCF.CHOCOLATE, "dark_chocolate"), CT_FOOD));
-        simpleItems.add(register(r, "food/milk_chocolate", new ItemFoodTFCF(FoodDataTFCF.CHOCOLATE, "milk_chocolate"), CT_FOOD));
-        simpleItems.add(register(r, "food/white_chocolate", new ItemFoodTFCF(FoodDataTFCF.CHOCOLATE, "white_chocolate"), CT_FOOD));
-        simpleItems.add(register(r, "food/pumpkin_scooped", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN, "pumpkin_scooped", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/pumpkin_chunks", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN, "pumpkin_chunks", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/pumpkin_slice", new ItemFoodTFCF(FoodDataTFCF.PUMPKIN_SLICE, "slice_pumpkin", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/roasted/pumpkin_slice", new ItemFoodTFCF(FoodDataTFCF.ROASTED_PUMPKIN_SLICE, "roasted_slice_pumpkin", "category_vegetable"), CT_FOOD));
-        */
 
-        //simpleItems.add(register(r, "food/nutmeg_powder", new ItemFoodTFCF(FoodDataTFCF.NUTMEG_POWDER, "powder_nutmeg", "dust_nutmeg", "category_fruit"), CT_FOOD));
-        //simpleItems.add(register(r, "food/caramel", new ItemFoodTFCF(FoodDataTFCF.CARAMEL, "caramel", "category_other"), CT_FOOD));
         //simpleItems.add(register(r, "food/dried/black_pepper", new ItemFoodTFCF(FoodDataTFCF.DRIED_BLACK_PEPPER, "dried_black_pepper"), CT_FOOD));
         //simpleItems.add(register(r, "food/ground_black_pepper", new ItemFoodTFCF(FoodDataTFCF.GROUND_BLACK_PEPPER, "ground_black_pepper"), CT_FOOD));
         simpleItems.add(register(r, "food/allspice", new ItemFoodTFCF(FoodDataTFCF.ALLSPICE, "allspice", "category_fruit"), CT_FOOD));
@@ -1586,32 +1574,20 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/spelt_flour", new ItemFoodTFCF(FoodDataTFCF.SPELT_FLOUR, "flour_spelt", "flour", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/spelt_dough", new ItemFoodTFCF(FoodDataTFCF.SPELT_DOUGH, "dough_spelt", "dough", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/spelt_bread", new ItemFoodTFCF(FoodDataTFCF.SPELT_BREAD, "bread_spelt", "bread", "category_grain"), CT_FOOD));
-        /*
-        simpleItems.add(register(r, "food/wild_rice", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE, "wild_rice", "category_grain"), CT_FOOD));
-        simpleItems.add(register(r, "food/wild_rice_grain", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE_GRAIN, "grain_wild_rice", "grain", "category_grain"), CT_FOOD));
-        simpleItems.add(register(r, "food/wild_rice_flour", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE_FLOUR, "flour_wild_rice", "flour", "category_grain"), CT_FOOD));
-        simpleItems.add(register(r, "food/wild_rice_dough", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE_DOUGH, "dough_wild_rice", "dough", "category_grain"), CT_FOOD));
-        simpleItems.add(register(r, "food/wild_rice_bread", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE_BREAD, "bread_wild_rice", "bread", "category_grain"), CT_FOOD));
-        */
+        simpleItems.add(register(r, "food/wild_barley", new ItemFoodTFCF(FoodDataTFCF.WILD_BARLEY, "wild_barley", "barley", "category_grain"), CT_FOOD));
+        simpleItems.add(register(r, "food/wild_rice", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE, "wild_rice", "rice", "category_grain"), CT_FOOD));
+        simpleItems.add(register(r, "food/wild_wheat", new ItemFoodTFCF(FoodDataTFCF.WILD_WHEAT, "wild_wheat", "wheat", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/linseed", new ItemFoodTFCF(FoodDataTFCF.LINSEED, "linseed", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/rape_seed", new ItemFoodTFCF(FoodDataTFCF.RAPE_SEED, "rape_seed", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/sunflower_seed", new ItemFoodTFCF(FoodDataTFCF.SUNFLOWER_SEED, "sunflower_seed", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/opium_poppy_seed", new ItemFoodTFCF(FoodDataTFCF.OPIUM_POPPY_SEED, "opium_poppy_seed", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/hash_muffin", new ItemFoodTFCF(FoodDataTFCF.HASH_MUFFIN, new PotionEffectToHave(MobEffects.NAUSEA, 610, 3), "hash_muffin", "category_meal"), CT_FOOD));
+        simpleItems.add(register(r, "food/hash_muffin", new ItemFoodTFCF(FoodDataTFCF.HASH_MUFFIN, new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 2), "hash_muffin", "category_meal"), CT_FOOD));
         simpleItems.add(register(r, "food/rutabaga", new ItemFoodTFCF(FoodDataTFCF.RUTABAGA, "rutabaga", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/turnip", new ItemFoodTFCF(FoodDataTFCF.TURNIP, "turnip", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/black_eyed_peas", new ItemFoodTFCF(FoodDataTFCF.BLACK_EYED_PEAS, "black_eyed_peas", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/green_cayenne_pepper", new ItemFoodTFCF(FoodDataTFCF.GREEN_CAYENNE_PEPPER, "green_cayenne_pepper", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/red_cayenne_pepper", new ItemFoodTFCF(FoodDataTFCF.RED_CAYENNE_PEPPER, "red_cayenne_pepper", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/ginseng", new ItemFoodTFCF(FoodDataTFCF.GINSENG, "ginseng", "category_vegetable"), CT_FOOD));
-        /*
-        simpleItems.add(register(r, "food/mustard", new ItemFoodTFCF(FoodDataTFCF.MUSTARD, "mustard", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/ginger", new ItemFoodTFCF(FoodDataTFCF.GINGER, "ginger", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/celery", new ItemFoodTFCF(FoodDataTFCF.CELERY , "celery", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/lettuce", new ItemFoodTFCF(FoodDataTFCF.LETTUCE, "lettuce", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/peanut", new ItemFoodTFCF(FoodDataTFCF.PEANUT, "peanut", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/sweet_potato", new ItemFoodTFCF(FoodDataTFCF.SWEET_POTATO, "sweet_potato", "category_vegetable"), CT_FOOD));
-        */
         simpleItems.add(register(r, "food/sugar_beet", new ItemFoodTFCF(FoodDataTFCF.SUGAR_BEET, "sugar_beet", "crop_sugar_beet", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/purple_grape", new ItemFoodTFCF(FoodDataTFCF.PURPLE_GRAPE, "purple_grape", "crop_purple_grape", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/green_grape", new ItemFoodTFCF(FoodDataTFCF.GREEN_GRAPE, "green_grape", "crop_green_grape", "category_fruit"), CT_FOOD));
@@ -1622,11 +1598,6 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/mashed_sugar_beet", new ItemFoodTFCF(FoodDataTFCF.MASHED_SUGAR_BEET, "mashed_sugar_beet", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/mashed_sugar_cane", new ItemFoodTFCF(FoodDataTFCF.MASHED_SUGAR_CANE, "mashed_sugar_cane", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/soybean_paste", new ItemFoodTFCF(FoodDataTFCF.SOYBEAN_PASTE, "paste_soybean", "soybean_paste", "category_vegetable"), CT_FOOD));
-        /*
-        simpleItems.add(register(r, "food/cow_cheese", new ItemFoodTFCF(FoodDataTFCF. COW_CHEESE, "cheese_cow", "cow_cheese", "category_dairy"), CT_FOOD));
-        simpleItems.add(register(r, "food/goat_cheese", new ItemFoodTFCF(FoodDataTFCF.GOAT_CHEESE, "cheese_goat", "goat_cheese", "category_dairy"), CT_FOOD));
-        simpleItems.add(register(r, "food/sheep_cheese", new ItemFoodTFCF(FoodDataTFCF.SHEEP_CHEESE, "cheese_sheep", "sheep_cheese", "category_dairy"), CT_FOOD));
-        */
 
         // Sandwiches
         simpleItems.add(register(r, "food/amaranth_bread_sandwich", new ItemSandwichTFCF(FoodDataTFCF.AMARANTH_BREAD_SANDWICH, "sandwich", "category_meal"), CT_FOOD));
@@ -1635,7 +1606,6 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/millet_bread_sandwich", new ItemSandwichTFCF(FoodDataTFCF.MILLET_BREAD_SANDWICH, "sandwich", "category_meal"), CT_FOOD));
         simpleItems.add(register(r, "food/quinoa_bread_sandwich", new ItemSandwichTFCF(FoodDataTFCF.QUINOA_BREAD_SANDWICH, "sandwich", "category_meal"), CT_FOOD));
         simpleItems.add(register(r, "food/spelt_bread_sandwich", new ItemSandwichTFCF(FoodDataTFCF.SPELT_BREAD_SANDWICH, "sandwich", "category_meal"), CT_FOOD));
-        //simpleItems.add(register(r, "food/wild_rice_bread_sandwich", new ItemSandwichTFCF(FoodDataTFCF.WILD_RICE_BREAD_SANDWICH, "sandwich", "category_meal"), CT_FOOD));
 
         if (TFCFlorae.FirmaLifeAdded)
         {
@@ -1651,7 +1621,7 @@ public final class ItemsTFCF
                 OreDictionary.registerOre("flatbread", flatbread);
                 OreDictionary.registerOre("categoryBread", flatbread);
 
-                ItemHeatableFoodTFCF slice = new ItemHeatableFoodTFCF(FoodDataTFCF.SLICE);
+                ItemFoodTFCF slice = new ItemFoodTFCF(FoodDataTFCF.SLICE);
                 simpleItems.add(register(r, "food/" + grain + "_slice", slice, CT_FOOD));
                 OreDictionary.registerOre("slice", slice);
                 OreDictionary.registerOre("categoryBread", slice);
@@ -1659,12 +1629,6 @@ public final class ItemsTFCF
         }
 
         simpleItems.add(register(r, "pomace", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "pomace", "category_fruit"), CT_MISC));
-
-        if (!TFCFlorae.FirmaLifeAdded)
-        {
-            simpleItems.add(register(r, "fruit_leaf", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "leaf_fruit"), CT_MISC));
-        }
-
         simpleItems.add(register(r, "yeast", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "yeast"), CT_MISC));
 
         simpleItems.add(register(r, "firma_cola_mix", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "mix_firma_cola"), CT_MISC));
@@ -1691,34 +1655,125 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/malt_millet", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_millet", "malt", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_quinoa", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_quinoa", "malt", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "crop/product/malt_spelt", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_spelt", "malt", "category_grain"), CT_FOOD));
-        //simpleItems.add(register(r, "crop/product/malt_wild_rice", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "malt_wild_rice", "malt", "category_grain"), CT_FOOD));
 
         for (CropTFCF crop : CropTFCF.values())
         {
             simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFC(crop), CT_FOOD));
         }
 
-        for (StemCrop crop : StemCrop.values())
+        // Pottery
         {
-            simpleItems.add(register(r, "crop/seeds/" + crop.name().toLowerCase(), new ItemSeedsTFC(crop), CT_FOOD));
-        }
+            // Earthenware
 
-        // Normal Items
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    // Not using registerPottery here because the ItemMold uses a custom ItemModelMesher, meaning it can't be in simpleItems
+                    ItemPottery item = new ItemEarthenwareMold(type);
+                    ceramicItems.add(register(r, "ceramics/earthenware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                    simpleItems.add(register(r, "ceramics/earthenware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredEarthenwareMold(type), CT_POTTERY));
+                }
+            }
 
-        // Kaolinite Pottery
-        {
+            if (TFCFlorae.TFCElementiaAdded)
+            {
+                for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+                {
+                    if (type.hasMold(null))
+                    {
+                        ItemPottery item = new ItemEarthenwareMoldTFCE(type, type.getSmeltAmount());
+                        if (ItemMetalTFCE.ItemType.NAIL.isTypeActive() && type == ItemMetalTFCE.ItemType.NAIL)
+                        {
+                            ceramicItems.add(register(r, "ceramics/earthenware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/earthenware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredEarthenwareMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (ItemMetalTFCE.ItemType.RING.isTypeActive() && type == ItemMetalTFCE.ItemType.RING)
+                        {
+                            ceramicItems.add(register(r, "ceramics/earthenware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/earthenware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredEarthenwareMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (type == ItemMetalTFCE.ItemType.HALBERD_BLADE)
+                        {
+                            ceramicItems.add(register(r, "ceramics/earthenware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/earthenware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredEarthenwareMoldTFCE(type), CT_POTTERY));
+                        }
+                    }
+                }
+            }
+
+            if (TFCFlorae.FirmaLifeAdded)
+            {
+                simpleItems.add(register(r, "ceramics/earthenware/unfired/mold/mallet_head", new ItemPottery(), CT_POTTERY));
+                malletMoldEarthenware = register(r, "ceramics/earthenware/fired/mold/mallet_head", new ItemEarthenwareMalletMoldFL("mallet"), CT_POTTERY);
+            }
+
+            simpleItems.add(register(r, "ceramics/earthenware/earthenware_clay", new ItemClayEarthenware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_earthenware"), CT_MISC));
+            registerPottery(simpleItems, r, "ceramics/earthenware/unfired/earthenware_brick", "ceramics/earthenware/fired/earthenware_brick");
+
+            simpleItems.add(register(r, "ceramics/earthenware/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));
+
+            registerPottery(simpleItems, r, "ceramics/earthenware/unfired/vessel", "ceramics/earthenware/fired/vessel", new ItemUnfiredSmallVessel(false), new ItemSmallVessel(false));
+            registerPottery(null, r, "ceramics/earthenware/unfired/vessel_glazed", "ceramics/earthenware/fired/vessel_glazed", new ItemUnfiredSmallVessel(true), new ItemSmallVessel(true));
+
+            ItemPottery firedPotEarthenware = new ItemPottery(Size.LARGE, Weight.LIGHT);
+            registerPottery(simpleItems, r, "ceramics/earthenware/unfired/pot", "ceramics/earthenware/fired/pot", new ItemPottery(Size.LARGE, Weight.LIGHT), firedPotEarthenware);
+            OreDictionaryHelper.register(firedPotEarthenware, "cooking_pot");
+
+            ItemPottery firedBowlEarthenware = new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT);
+            registerPottery(simpleItems, r, "ceramics/earthenware/unfired/bowl", "ceramics/earthenware/fired/bowl", new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT), firedBowlEarthenware);
+            OreDictionaryHelper.register(firedBowlEarthenware, "bowl");
+
+            simpleItems.add(register(r, "ceramics/earthenware/unfired/jug", new ItemPottery(), CT_POTTERY));
+            register(r, "ceramics/earthenware/fired/jug", new ItemJug(), CT_POTTERY);
+
+
+            // Kaolinite
+
             for (Metal.ItemType type : Metal.ItemType.values())
             {
                 if (type.hasMold(null))
                 {
                     // Not using registerPottery here because the ItemMold uses a custom ItemModelMesher, meaning it can't be in simpleItems
                     ItemPottery item = new ItemKaoliniteMold(type);
-                    register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY);
+                    ceramicItems.add(register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
                     simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredKaoliniteMold(type), CT_POTTERY));
                 }
             }
 
-            simpleItems.add(register(r, "ceramics/kaolinite/kaolinite_clay", new ItemClayKaolinite(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay_kaolinite"), CT_MISC));
+            if (TFCFlorae.TFCElementiaAdded)
+            {
+                for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+                {
+                    if (type.hasMold(null))
+                    {
+                        ItemPottery item = new ItemKaoliniteMoldTFCE(type, type.getSmeltAmount());
+                        if (ItemMetalTFCE.ItemType.NAIL.isTypeActive() && type == ItemMetalTFCE.ItemType.NAIL)
+                        {
+                            ceramicItems.add(register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredKaoliniteMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (ItemMetalTFCE.ItemType.RING.isTypeActive() && type == ItemMetalTFCE.ItemType.RING)
+                        {
+                            ceramicItems.add(register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredKaoliniteMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (type == ItemMetalTFCE.ItemType.HALBERD_BLADE)
+                        {
+                            ceramicItems.add(register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredKaoliniteMoldTFCE(type), CT_POTTERY));
+                        }
+                    }
+                }
+            }
+
+            if (TFCFlorae.FirmaLifeAdded)
+            {
+                simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/mallet_head", new ItemPottery(), CT_POTTERY));
+                malletMoldKaolinite = register(r, "ceramics/kaolinite/fired/mold/mallet_head", new ItemKaoliniteMalletMoldFL("mallet"), CT_POTTERY);
+            }
+
+            simpleItems.add(register(r, "ceramics/kaolinite/kaolinite_clay", new ItemClayKaolinite(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_kaolinite"), CT_MISC));
             registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/kaolinite_brick", "ceramics/kaolinite/fired/kaolinite_brick");
 
             simpleItems.add(register(r, "ceramics/kaolinite/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));
@@ -1726,19 +1781,85 @@ public final class ItemsTFCF
             registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/vessel", "ceramics/kaolinite/fired/vessel", new ItemUnfiredSmallVessel(false), new ItemSmallVessel(false));
             registerPottery(null, r, "ceramics/kaolinite/unfired/vessel_glazed", "ceramics/kaolinite/fired/vessel_glazed", new ItemUnfiredSmallVessel(true), new ItemSmallVessel(true));
 
-            ItemPottery firedPot = new ItemPottery(Size.LARGE, Weight.LIGHT);
-            registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/pot", "ceramics/kaolinite/fired/pot", new ItemPottery(Size.LARGE, Weight.LIGHT), firedPot);
-            OreDictionaryHelper.register(firedPot, "cooking_pot");
+            ItemPottery firedPotKaolinite = new ItemPottery(Size.LARGE, Weight.LIGHT);
+            registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/pot", "ceramics/kaolinite/fired/pot", new ItemPottery(Size.LARGE, Weight.LIGHT), firedPotKaolinite);
+            OreDictionaryHelper.register(firedPotKaolinite, "cooking_pot");
 
-            ItemPottery firedBowl = new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT);
-            registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/bowl", "ceramics/kaolinite/fired/bowl", new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT), firedBowl);
-            OreDictionaryHelper.register(firedBowl, "bowl");
+            ItemPottery firedBowlKaolinite = new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT);
+            registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/bowl", "ceramics/kaolinite/fired/bowl", new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT), firedBowlKaolinite);
+            OreDictionaryHelper.register(firedBowlKaolinite, "bowl");
 
             simpleItems.add(register(r, "ceramics/kaolinite/unfired/jug", new ItemPottery(), CT_POTTERY));
             register(r, "ceramics/kaolinite/fired/jug", new ItemJug(), CT_POTTERY);
-        }
 
-        simpleItems.add(register(r, "storage/unfired/urn", new ItemUnfiredUrn(), CT_POTTERY));
+
+            // Stoneware
+
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    // Not using registerPottery here because the ItemMold uses a custom ItemModelMesher, meaning it can't be in simpleItems
+                    ItemPottery item = new ItemStonewareMold(type);
+                    ceramicItems.add(register(r, "ceramics/stoneware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                    simpleItems.add(register(r, "ceramics/stoneware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredStonewareMold(type), CT_POTTERY));
+                }
+            }
+
+            if (TFCFlorae.TFCElementiaAdded)
+            {
+                for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+                {
+                    if (type.hasMold(null))
+                    {
+                        ItemPottery item = new ItemStonewareMoldTFCE(type, type.getSmeltAmount());
+                        if (ItemMetalTFCE.ItemType.NAIL.isTypeActive() && type == ItemMetalTFCE.ItemType.NAIL)
+                        {
+                            ceramicItems.add(register(r, "ceramics/stoneware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/stoneware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredStonewareMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (ItemMetalTFCE.ItemType.RING.isTypeActive() && type == ItemMetalTFCE.ItemType.RING)
+                        {
+                            ceramicItems.add(register(r, "ceramics/stoneware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/stoneware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredStonewareMoldTFCE(type), CT_POTTERY));
+                        }
+                        else if (type == ItemMetalTFCE.ItemType.HALBERD_BLADE)
+                        {
+                            ceramicItems.add(register(r, "ceramics/stoneware/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY));
+                            simpleItems.add(register(r, "ceramics/stoneware/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredStonewareMoldTFCE(type), CT_POTTERY));
+                        }
+                    }
+                }
+            }
+
+            if (TFCFlorae.FirmaLifeAdded)
+            {
+                simpleItems.add(register(r, "ceramics/stoneware/unfired/mold/mallet_head", new ItemPottery(), CT_POTTERY));
+                malletMoldStoneware = register(r, "ceramics/stoneware/fired/mold/mallet_head", new ItemStonewareMalletMoldFL("mallet"), CT_POTTERY);
+            }
+
+            simpleItems.add(register(r, "ceramics/stoneware/stoneware_clay", new ItemClayStoneware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_stoneware"), CT_MISC));
+            registerPottery(simpleItems, r, "ceramics/stoneware/unfired/stoneware_brick", "ceramics/stoneware/fired/stoneware_brick");
+
+            simpleItems.add(register(r, "ceramics/stoneware/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));
+
+            registerPottery(simpleItems, r, "ceramics/stoneware/unfired/vessel", "ceramics/stoneware/fired/vessel", new ItemUnfiredSmallVessel(false), new ItemSmallVessel(false));
+            registerPottery(null, r, "ceramics/stoneware/unfired/vessel_glazed", "ceramics/stoneware/fired/vessel_glazed", new ItemUnfiredSmallVessel(true), new ItemSmallVessel(true));
+
+            ItemPottery firedPotStoneware = new ItemPottery(Size.LARGE, Weight.LIGHT);
+            registerPottery(simpleItems, r, "ceramics/stoneware/unfired/pot", "ceramics/stoneware/fired/pot", new ItemPottery(Size.LARGE, Weight.LIGHT), firedPotStoneware);
+            OreDictionaryHelper.register(firedPotStoneware, "cooking_pot");
+
+            ItemPottery firedBowlStoneware = new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT);
+            registerPottery(simpleItems, r, "ceramics/stoneware/unfired/bowl", "ceramics/stoneware/fired/bowl", new ItemPottery(Size.VERY_SMALL, Weight.VERY_LIGHT), firedBowlStoneware);
+            OreDictionaryHelper.register(firedBowlStoneware, "bowl");
+
+            simpleItems.add(register(r, "ceramics/stoneware/unfired/jug", new ItemPottery(), CT_POTTERY));
+            register(r, "ceramics/stoneware/fired/jug", new ItemJug(), CT_POTTERY);
+
+
+            simpleItems.add(register(r, "storage/unfired/urn", new ItemUnfiredUrn(), CT_POTTERY));
+        }
 
         for (BlockLogTFCF log : BlocksTFCF.getAllNormalTreeLog())
             simpleItems.add(register(r, log.getRegistryName().getPath(), new ItemBlockTFC(log), CT_WOOD));
@@ -1754,32 +1875,6 @@ public final class ItemsTFCF
                 simpleItems.add(register(r, "mud/fired/mud_brick/" + rock.getRegistryName().getPath().toLowerCase(), new ItemFiredMudBrick(unfiredMudBrick), CT_ROCK_ITEMS));
             }
         }
-
-        /*
-        for (BlockSurfaceOreDeposit name : BlocksTFCF.getAllSurfaceOreBlocks())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
-
-        for (BlockSurfaceRock name : BlocksTFCF.getAllSurfaceRocks())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
-
-        for (BlockSurfaceBones name : BlocksTFCF.getAllSurfaceBones())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_FLORA));
-
-        for (BlockDriftwood name : BlocksTFCF.getAllSurfaceDriftwood())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_FLORA));
-
-        for (BlockSurfaceFlint name : BlocksTFCF.getAllSurfaceFlint())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_ROCK_BLOCKS));
-
-        for (BlockPinecone name : BlocksTFCF.getAllSurfacePinecone())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_FLORA));
-
-        for (BlockSurfaceSeashells name : BlocksTFCF.getAllSurfaceSeashells())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_FLORA));
-
-        for (BlockTwig name : BlocksTFCF.getAllSurfaceTwig())
-            simpleItems.add(register(r, name.getRegistryName().getPath(), new ItemBlockTFC(name), CT_FLORA));
-        */
 
         // Gems
         {
@@ -2055,10 +2150,6 @@ public final class ItemsTFCF
 
         if (TFCFlorae.FirmaLifeAdded)
         {
-            // Kaolinite Mallet Molds
-            simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/mallet_head", new ItemPottery(), CT_POTTERY));
-            malletMold = register(r, "ceramics/kaolinite/fired/mold/mallet_head", new ItemMetalMalletMold("mallet"), CT_POTTERY);
-
             // Cinnamon
             ItemMisc cinnamonLumber = new ItemMisc(Size.SMALL, Weight.VERY_LIGHT);
             simpleItems.add(register(r, "wood/fruit_tree/lumber/cinnamon", cinnamonLumber, CT_WOOD));
@@ -2078,23 +2169,7 @@ public final class ItemsTFCF
             }
         }
 
-        if (TFCFlorae.TFCElementiaAdded)
-        {
-            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
-            {
-                if (type.hasMold(null))
-                {
-                    ItemPottery item = new ItemKaoliniteMoldTFCE(type, type.getSmeltAmount());
-                    register(r, "ceramics/kaolinite/fired/mold/" + type.name().toLowerCase(), item, CT_POTTERY);
-                    simpleItems.add(register(r, "ceramics/kaolinite/unfired/mold/" + type.name().toLowerCase(), new ItemUnfiredKaoliniteMoldTFCE(type), CT_POTTERY));
-                }
-            }
-        }
-
         allFruitDoors = fruitDoors.build();
-
-        //uses a separate model loader
-        //register(r, "cracked_coconut", new ItemWoodenBucket(), CT_MISC);
 
         BlocksTFCF.getAllNormalItemBlocks().forEach((x) -> {
             registerItemBlock(r, x);
@@ -2102,6 +2177,7 @@ public final class ItemsTFCF
 
         allSimpleItems = simpleItems.build();
         allItemBows = itemBows.build();
+        allCeramicMoldItems = ceramicItems.build();
 
         OreDictionaryHelper.init();
     }
@@ -2114,6 +2190,7 @@ public final class ItemsTFCF
         TFCFlorae.getLog().info("The below warnings about unintended overrides are normal. The override is intended - deal with it. ;)");
         event.getRegistry().registerAll(
             new ItemFlint(Size.VERY_SMALL, Weight.VERY_LIGHT).setRegistryName(Items.FLINT.getRegistryName()).setTranslationKey("flint")
+            //new ItemFoodTFCF(FoodDataTFCF.ROASTED_PORCINI).setRegistryName(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(DefaultPlants.BARREL_CACTUS)).getRegistryName()).setTranslationKey("barrel_cactus")
         );
     }
 

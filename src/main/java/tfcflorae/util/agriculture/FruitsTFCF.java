@@ -17,6 +17,7 @@ import static tfcflorae.util.agriculture.FoodDataTFCF.*;
 public enum FruitsTFCF
 {
     // TFC Foods
+    /*
     BANANA(ItemFoodTFC.get(Food.BANANA), true, DRIED_FRUIT_DECAY, true),
     BLACKBERRY(ItemFoodTFC.get(Food.BLACKBERRY), true, DRIED_FRUIT_CATEGORY, true),
     BLUEBERRY(ItemFoodTFC.get(Food.BLUEBERRY), true, DRIED_FRUIT_CATEGORY, true),
@@ -39,7 +40,6 @@ public enum FruitsTFCF
     WINTERGREEN_BERRY(ItemFoodTFC.get(Food.WINTERGREEN_BERRY), true, DRIED_FRUIT_CATEGORY, true),
 
     // Fruit Tree Fruits
-    /*
     ABIU(ItemFoodTFCF.get(ItemsTFCF.ABIU), true, DRIED_FRUIT_DECAY, false),
     AMLA(ItemFoodTFCF.get(ItemsTFCF.AMLA), true, DRIED_FRUIT_DECAY, false),
     APRICOT(ItemFoodTFCF.get(ItemsTFCF.APRICOT), true, DRIED_FRUIT_DECAY, false),
@@ -108,18 +108,15 @@ public enum FruitsTFCF
 
     // Normal Tree Fruits
     BAOBAB_FRUIT(ItemFoodTFCF.get(ItemsTFCF.BAOBAB_FRUIT), true, DRIED_FRUIT_DECAY, false),
-    //COCONUT(ItemFoodTFCF.get(ItemsTFCF.COCONUT), true, DRIED_FRUIT_DECAY, false),
     HAWTHORN(ItemFoodTFCF.get(ItemsTFCF.HAWTHORN), true, DRIED_FRUIT_DECAY, false),
     OSAGE_ORANGE(ItemFoodTFCF.get(ItemsTFCF.OSAGE_ORANGE), true, DRIED_FRUIT_DECAY, false),
     PINK_IVORY_DRUPE(ItemFoodTFCF.get(ItemsTFCF.PINK_IVORY_DRUPE), true, DRIED_FRUIT_DECAY, false),
     RIBERRY(ItemFoodTFCF.get(ItemsTFCF.RIBERRY), true, DRIED_FRUIT_DECAY, false),
     ROWAN_BERRY(ItemFoodTFCF.get(ItemsTFCF.ROWAN_BERRY), true, DRIED_FRUIT_DECAY, false),
     SKY_FRUIT(ItemFoodTFCF.get(ItemsTFCF.SKY_FRUIT), true, DRIED_FRUIT_DECAY, false),
-    //WILD_CHERRY(ItemFoodTFCF.get(ItemsTFCF.WILD_CHERRY), true, DRIED_FRUIT_DECAY, false),
     YEW_BERRY(ItemFoodTFCF.get(ItemsTFCF.YEW_BERRY), true, DRIED_FRUIT_DECAY, false),
 
     // Crop Foods
-    COFFEA_CHERRIES(ItemFoodTFCF.get(ItemsTFCF.COFFEA_CHERRIES), true, DRIED_FRUIT_DECAY, false),
     GREEN_GRAPE(ItemFoodTFCF.get(ItemsTFCF.GREEN_GRAPE), true, DRIED_FRUIT_DECAY, false),
     PURPLE_GRAPE(ItemFoodTFCF.get(ItemsTFCF.PURPLE_GRAPE), true, DRIED_FRUIT_DECAY, false);
 

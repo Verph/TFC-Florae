@@ -34,11 +34,13 @@ public class GuiKnappingTFCF extends GuiKnapping
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         super.drawGuiContainerBackgroundLayer(partialTicks, mouseX, mouseY);
-        if (type == KnappingTypes.MUD || type == KnappingTypes.KAOLINITE_CLAY)
+        if (type == KnappingTypes.MUD || type == KnappingTypes.EARTHENWARE_CLAY || type == KnappingTypes.KAOLINITE_CLAY || type == KnappingTypes.STONEWARE_CLAY)
         {
             GlStateManager.color(1, 1, 1, 1);
             if(type == KnappingTypes.MUD) mc.getTextureManager().bindTexture(backgroundTexture);
+            else if(type == KnappingTypes.EARTHENWARE_CLAY) mc.getTextureManager().bindTexture(GuiHandler.EARTHENWARE_CLAY_DISABLED_TEXTURE);
             else if(type == KnappingTypes.KAOLINITE_CLAY) mc.getTextureManager().bindTexture(GuiHandler.KAOLINITE_CLAY_DISABLED_TEXTURE);
+            else if(type == KnappingTypes.STONEWARE_CLAY) mc.getTextureManager().bindTexture(GuiHandler.STONEWARE_CLAY_DISABLED_TEXTURE);
             for (GuiButton button : buttonList)
             {
                 if (!button.visible)

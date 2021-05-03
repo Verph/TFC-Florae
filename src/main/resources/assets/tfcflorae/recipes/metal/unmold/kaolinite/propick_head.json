@@ -1,0 +1,9 @@
+{
+  "type": "tfcflorae:unmold_recipe_kaolinite_tfcf",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/kaolinite/fired/mold/propick_head"
+    }
+  ],
+  "result": "propick_head"
+}

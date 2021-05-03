@@ -50,9 +50,7 @@ import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
 import tfcflorae.client.GuiKnappingTFCF;
-import tfcflorae.compat.jei.wrappers.CastingRecipeWrapperTFCF;
-import tfcflorae.compat.jei.wrappers.KnappingRecipeWrapperTFCF;
-import tfcflorae.compat.jei.wrappers.UnmoldRecipeWrapperTFCF;
+import tfcflorae.compat.jei.wrappers.*;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 
@@ -63,7 +61,9 @@ public class TFCFJEIPlugin implements IModPlugin
 {
     private static IModRegistry REGISTRY;
     public static final String KNAP_MUD_UID = TFCFlorae.MODID + ".knap.mud";
+    public static final String KNAP_EARTHENWARE_CLAY_UID = TFCFlorae.MODID + ".knap.earthenware_clay";
     public static final String KNAP_KAOLINITE_CLAY_UID = TFCFlorae.MODID + ".knap.kaolinite_clay";
+    public static final String KNAP_STONEWARE_CLAY_UID = TFCFlorae.MODID + ".knap.stoneware_clay";
     public static final String KNAP_FLINT_UID = TFCFlorae.MODID + ".knap.flint";
     public static final String CASTING_UID = TFCFlorae.MODID + ".casting";
 
@@ -71,7 +71,9 @@ public class TFCFJEIPlugin implements IModPlugin
     public void registerCategories(IRecipeCategoryRegistration registry)
     {
         registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_MUD_UID));
+        registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_EARTHENWARE_CLAY_UID));
         registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_KAOLINITE_CLAY_UID));
+        registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_STONEWARE_CLAY_UID));
         registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_FLINT_UID));
         registry.addRecipeCategories(new CastingCategory(registry.getJeiHelpers().getGuiHelper(), CASTING_UID));
     }
@@ -104,6 +106,18 @@ public class TFCFJEIPlugin implements IModPlugin
             registry.addRecipeCatalyst(new ItemStack(ItemMud.get(rock)), KNAP_MUD_UID);
         }
 
+        // Knapping Earthenware Clay
+        List<KnappingRecipeWrapperTFCF> clayEarthenwareKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
+                .filter(recipe -> recipe.getType() == KnappingTypes.EARTHENWARE_CLAY)
+                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+                .collect(Collectors.toList());
+        registry.addRecipes(clayEarthenwareKnapRecipes, KNAP_EARTHENWARE_CLAY_UID);
+        ores = OreDictionary.getOres("clayEarthenware");
+        for(ItemStack itemStack : ores)
+        {
+            registry.addRecipeCatalyst(itemStack, KNAP_EARTHENWARE_CLAY_UID);
+        }
+
         // Knapping Kaolinite Clay
         List<KnappingRecipeWrapperTFCF> clayKaoliniteKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
                 .filter(recipe -> recipe.getType() == KnappingTypes.KAOLINITE_CLAY)
@@ -114,6 +128,18 @@ public class TFCFJEIPlugin implements IModPlugin
         for(ItemStack itemStack : ores)
         {
             registry.addRecipeCatalyst(itemStack, KNAP_KAOLINITE_CLAY_UID);
+        }
+
+        // Knapping Stoneware Clay
+        List<KnappingRecipeWrapperTFCF> clayStonewareKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
+                .filter(recipe -> recipe.getType() == KnappingTypes.STONEWARE_CLAY)
+                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+                .collect(Collectors.toList());
+        registry.addRecipes(clayStonewareKnapRecipes, KNAP_STONEWARE_CLAY_UID);
+        ores = OreDictionary.getOres("clayStoneware");
+        for(ItemStack itemStack : ores)
+        {
+            registry.addRecipeCatalyst(itemStack, KNAP_STONEWARE_CLAY_UID);
         }
 
         // Knapping Flint
@@ -127,11 +153,15 @@ public class TFCFJEIPlugin implements IModPlugin
         {
             registry.addRecipeCatalyst(itemStack, KNAP_FLINT_UID);
         }
-        registry.addRecipeClickArea(GuiKnappingTFCF.class, 97, 44, 22, 15, KNAP_MUD_UID, KNAP_KAOLINITE_CLAY_UID, KNAP_FLINT_UID);
+        registry.addRecipeClickArea(GuiKnappingTFCF.class, 97, 44, 22, 15, KNAP_MUD_UID, KNAP_EARTHENWARE_CLAY_UID, KNAP_KAOLINITE_CLAY_UID, KNAP_STONEWARE_CLAY_UID, KNAP_FLINT_UID);
 
         // Register metal related stuff (put everything here for performance + sorted registration)
-        List<UnmoldRecipeWrapperTFCF> unmoldList = new ArrayList<>();
-        List<CastingRecipeWrapperTFCF> castingList = new ArrayList<>();
+        List<UnmoldRecipeWrapperEarthenwareTFCF> unmoldListEarthenware = new ArrayList<>();
+        List<CastingRecipeWrapperEarthenwareTFCF> castingListEarthenware = new ArrayList<>();
+        List<UnmoldRecipeWrapperKaoliniteTFCF> unmoldListKaolinite = new ArrayList<>();
+        List<CastingRecipeWrapperKaoliniteTFCF> castingListKaolinite = new ArrayList<>();
+        List<UnmoldRecipeWrapperStonewareTFCF> unmoldListStoneware = new ArrayList<>();
+        List<CastingRecipeWrapperStonewareTFCF> castingListStoneware = new ArrayList<>();
         List<Metal> tierOrdered = TFCRegistries.METALS.getValuesCollection()
             .stream()
             .sorted(Comparator.comparingInt(metal -> metal.getTier().ordinal()))
@@ -142,13 +172,21 @@ public class TFCFJEIPlugin implements IModPlugin
             {
                 if (type.hasMold(metal))
                 {
-                    unmoldList.add(new UnmoldRecipeWrapperTFCF(metal, type));
-                    castingList.add(new CastingRecipeWrapperTFCF(metal, type));
+                    unmoldListEarthenware.add(new UnmoldRecipeWrapperEarthenwareTFCF(metal, type));
+                    castingListEarthenware.add(new CastingRecipeWrapperEarthenwareTFCF(metal, type));
+                    unmoldListKaolinite.add(new UnmoldRecipeWrapperKaoliniteTFCF(metal, type));
+                    castingListKaolinite.add(new CastingRecipeWrapperKaoliniteTFCF(metal, type));
+                    unmoldListStoneware.add(new UnmoldRecipeWrapperStonewareTFCF(metal, type));
+                    castingListStoneware.add(new CastingRecipeWrapperStonewareTFCF(metal, type));
                 }
             }
         }
-        registry.addRecipes(unmoldList, VanillaRecipeCategoryUid.CRAFTING);
-        registry.addRecipes(castingList, CASTING_UID);
+        registry.addRecipes(unmoldListEarthenware, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(castingListEarthenware, CASTING_UID);
+        registry.addRecipes(unmoldListKaolinite, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(castingListKaolinite, CASTING_UID);
+        registry.addRecipes(unmoldListStoneware, VanillaRecipeCategoryUid.CRAFTING);
+        registry.addRecipes(castingListStoneware, CASTING_UID);
 
         //ContainerInventoryCrafting - Add ability to transfer recipe items
         IRecipeTransferRegistry transferRegistry = registry.getRecipeTransferRegistry();

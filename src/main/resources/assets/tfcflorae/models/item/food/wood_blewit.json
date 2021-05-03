@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tfc:blocks/plants/wood_blewit"
+    "layer0": "tfc:blocks/plants/wood_blewit/wood_blewit"
   }
 }

@@ -8,17 +8,11 @@ import net.dries007.tfc.api.types.Rock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import tfcflorae.api.recipes.CrackingRecipe;
-import tfcflorae.api.recipes.NutRecipe;
-
 /**
  * This is where we initialize our registry instances!
  */
 public class TFCFRegistries
 {
-    public static final IForgeRegistry<NutRecipe> NUT_TREES_REGISTRY = GameRegistry.findRegistry(NutRecipe.class);
-    public static final IForgeRegistry<CrackingRecipe> CRACKING_RECIPE = GameRegistry.findRegistry(CrackingRecipe.class);
-
     /*This is kindly hijacked from TerraFirmCraft TFCRegistries.java*/
     static
     {

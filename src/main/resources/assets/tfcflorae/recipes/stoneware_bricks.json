@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XMX",
+    "MXM",
+    "XMX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:ceramics/stoneware/fired/stoneware_brick"
+    },
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "mortar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:ceramics/stoneware/stoneware_bricks",
+    "count": 2
+  }
+}

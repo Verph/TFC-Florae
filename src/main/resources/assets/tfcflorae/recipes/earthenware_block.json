@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:ceramics/earthenware/earthenware_clay"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:ceramics/earthenware/earthenware_clay_block",
+    "count": 1
+  }
+}
