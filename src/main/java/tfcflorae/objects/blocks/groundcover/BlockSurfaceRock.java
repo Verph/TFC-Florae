@@ -76,9 +76,7 @@ public class BlockSurfaceRock extends Block implements IRockObject
         OreDictionaryHelper.register(this, "rock", rock.getRockCategory());
 
         if (rock.isFluxStone())
-        {
             OreDictionaryHelper.register(this, "rock", "flux");
-        }
     }
 
     @Override
@@ -259,9 +257,8 @@ public class BlockSurfaceRock extends Block implements IRockObject
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
-        {
             TFCGuiHandler.openGui(world, player.getPosition(), player, TFCGuiHandler.Type.KNAPPING_STONE);
-        }
+        
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
 
@@ -270,9 +267,8 @@ public class BlockSurfaceRock extends Block implements IRockObject
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
-        {
             TFCGuiHandler.openGui(world, player.getPosition(), player, TFCGuiHandler.Type.KNAPPING_STONE);
-        }
+        
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
 }

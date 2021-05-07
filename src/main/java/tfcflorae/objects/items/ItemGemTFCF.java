@@ -63,9 +63,8 @@ public class ItemGemTFCF extends ItemTFCF
     {
     	GemTFCF.Grade grade = getGradeFromStack(stack);
         if (grade != null)
-        {
             return super.getTranslationKey(stack) + "." + grade.name().toLowerCase();
-        }
+        
         return super.getTranslationKey(stack);
     }
 
@@ -73,12 +72,8 @@ public class ItemGemTFCF extends ItemTFCF
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)
     {
         if (isInCreativeTab(tab))
-        {
             for (GemTFCF.Grade grade : GemTFCF.Grade.values())
-            {
                 items.add(new ItemStack(this, 1, grade.ordinal()));
-            }
-        }
     }
 
     @Nonnull

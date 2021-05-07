@@ -61,9 +61,7 @@ public class ItemEarthenwareMold extends ItemPottery
     {
         this.type = type;
         if (MAP.put(type, this) != null)
-        {
             throw new IllegalStateException("There can only be one.");
-        }
     }
 
     @Override
@@ -75,9 +73,7 @@ public class ItemEarthenwareMold extends ItemPottery
         {
             IItemHeat cap = stack.getCapability(CapabilityItemHeat.ITEM_HEAT_CAPABILITY, null);
             if (!player.isSneaking() && cap != null && cap.isMolten())
-            {
                 TFCGuiHandler.openGui(world, player, TFCGuiHandler.Type.MOLD);
-            }
 
             if (player.isSneaking())
             {
@@ -170,9 +166,7 @@ public class ItemEarthenwareMold extends ItemPottery
             tank = new FluidTank(100);
 
             if (nbt != null)
-            {
                 deserializeNBT(nbt);
-            }
         }
 
         @Nullable
@@ -192,9 +186,8 @@ public class ItemEarthenwareMold extends ItemPottery
         public IFluidTankProperties[] getTankProperties()
         {
             if (fluidTankProperties == null)
-            {
                 fluidTankProperties = new IFluidTankProperties[] {new FluidTankPropertiesWrapper(tank)};
-            }
+            
             return fluidTankProperties;
         }
 
@@ -209,9 +202,8 @@ public class ItemEarthenwareMold extends ItemPottery
                 {
                     int fillAmount = tank.fill(resource, doFill);
                     if (fillAmount == tank.getFluidAmount())
-                    {
                         updateFluidData();
-                    }
+                    
                     return fillAmount;
                 }
             }
@@ -233,9 +225,8 @@ public class ItemEarthenwareMold extends ItemPottery
             {
                 FluidStack stack = tank.drain(maxDrain, doDrain);
                 if (tank.getFluidAmount() == 0)
-                {
                     updateFluidData();
-                }
+                
                 return stack;
             }
             return null;

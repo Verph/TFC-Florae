@@ -310,9 +310,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
         if (rock != null)
         {
             if (!TABLE.containsKey(rock))
-            {
                 TABLE.put(rock, new EnumMap<>(RockTFCF.class));
-            }
             TABLE.get(rock).put(rockTFCF, this);
         }
         else
@@ -2237,9 +2235,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 {
                     for (int i = 1; i <= beachDistance; i++)
                         if (BlocksTFC.isWater(world.getBlockState(pos.offset(facing, i))))
-                        {
                             flag = true;
-                        }
                 }
                 return 
                 (

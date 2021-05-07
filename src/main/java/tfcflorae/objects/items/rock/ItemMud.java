@@ -63,9 +63,7 @@ public class ItemMud extends ItemTFCF implements IRockObject
         OreDictionaryHelper.register(this, "mud", rock.getRockCategory());
 
         if (rock.isFluxStone())
-        {
             OreDictionaryHelper.register(this, "mud", "flux");
-        }
     }
 
     @Override
@@ -102,9 +100,8 @@ public class ItemMud extends ItemTFCF implements IRockObject
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 0)
-        {
             GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.MUD);
-        }
+        
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
 
@@ -117,9 +114,7 @@ public class ItemMud extends ItemTFCF implements IRockObject
             EntityPlayer player = event.getEntityPlayer();
             World world = event.getWorld();
             if (!world.isRemote && !player.isSneaking())
-            {
                 GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.MUD);
-            }
         }
     }
 

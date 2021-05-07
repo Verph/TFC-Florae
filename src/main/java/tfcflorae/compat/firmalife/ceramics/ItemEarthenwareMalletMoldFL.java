@@ -94,9 +94,7 @@ public class ItemEarthenwareMalletMoldFL extends ItemPottery
         public IFluidTankProperties[] getTankProperties()
         {
             if (fluidTankProperties == null)
-            {
                 fluidTankProperties = new IFluidTankProperties[] {new FluidTankPropertiesWrapper(tank)};
-            }
             return fluidTankProperties;
         }
 
@@ -109,9 +107,7 @@ public class ItemEarthenwareMalletMoldFL extends ItemPottery
                 {
                     int fillAmount = this.tank.fill(resource, doFill);
                     if (fillAmount == this.tank.getFluidAmount())
-                    {
                         this.updateFluidData();
-                    }
 
                     return fillAmount;
                 }
@@ -135,9 +131,7 @@ public class ItemEarthenwareMalletMoldFL extends ItemPottery
             {
                 FluidStack stack = tank.drain(maxDrain, doDrain);
                 if (tank.getFluidAmount() == 0)
-                {
                     updateFluidData();
-                }
                 return stack;
             }
             return null;
@@ -152,9 +146,7 @@ public class ItemEarthenwareMalletMoldFL extends ItemPottery
             {
                 String desc = TextFormatting.DARK_GREEN + I18n.format(Helpers.getTypeName(metal)) + ": " + I18n.format("tfc.tooltip.units", getAmount());
                 if (this.isMolten())
-                {
                     desc += I18n.format("tfc.tooltip.liquid");
-                }
                 text.add(desc);
             }
             IMoldHandler.super.addHeatInfo(stack, text);

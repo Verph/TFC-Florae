@@ -26,9 +26,7 @@ public class CastingRecipeWrapperStonewareTFCF implements IRecipeWrapper
         mold = new ItemStack(ItemStonewareMold.get(type));
         IFluidHandler cap = mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(input, true);
-        }
     }
 
     @Override

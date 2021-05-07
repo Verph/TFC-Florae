@@ -77,9 +77,7 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
         //noinspection ConstantConditions
         OreDictionaryHelper.register(this, "log", "wood", wood.getRegistryName().getPath());
         if (wood.canMakeTannin())
-        {
             OreDictionaryHelper.register(this, "log", "wood", "tannin");
-        }
 
         Blocks.FIRE.setFireInfo(this, 5, 5);
         setTickRandomly(true);
@@ -154,9 +152,7 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
     public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn)
     {
         if (!worldIn.isRemote)
-        {
             removeTree(worldIn, pos, null, ItemStack.EMPTY, false);
-        }
     }
 
     @Override
@@ -177,9 +173,7 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
             player.addExhaustion(0.005F);
 
             if (!worldIn.isRemote)
-            {
                 Helpers.spawnItemStack(worldIn, pos.add(0.5D, 0.5D, 0.5D), new ItemStack(Items.STICK, 1 + (int) (Math.random() * 3)));
-            }
         }
         else if (ConfigTFC.General.TREE.requiresAxe)
         {
@@ -201,13 +195,9 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
         ItemStack stack = ItemStack.EMPTY;
         IPlayerData cap = player.getCapability(CapabilityPlayerData.CAPABILITY, null);
         if (cap != null)
-        {
             stack = cap.getHarvestingTool();
-        }
         if (stack.isEmpty())
-        {
             stack = player.getHeldItemMainhand();
-        }
         final Set<String> toolClasses = stack.getItem().getToolClasses(stack);
         if (toolClasses.contains("axe") && !toolClasses.contains("saw"))
         {
@@ -215,11 +205,10 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
             if (!state.getValue(PLACED) && ConfigTFC.General.TREE.enableFelling)
             {
                 player.setHeldItem(EnumHand.MAIN_HAND, stack); // Reset so we can damage however we want before vanilla
+                // Don't remove the block, the rest of the tree broke instead
                 if (!removeTree(world, pos, player, stack, OreDictionaryHelper.doesStackMatchOre(stack, "axeStone") || OreDictionaryHelper.doesStackMatchOre(stack, "hammerStone")))
-                {
-                    // Don't remove the block, the rest of the tree broke instead
                     return false;
-                }
+                
                 return world.setBlockState(pos, Blocks.AIR.getDefaultState(), world.isRemote ? 11 : 3);
             }
         }
@@ -315,9 +304,7 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
                             checked.add(pos2);
                             IBlockState state = world.getBlockState(pos2);
                             if (state.getBlock() == this && !state.getValue(PLACED))
-                            {
                                 logs.add(pos2);
-                            }
                         }
                     }
                 }
@@ -335,24 +322,19 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
                 if (Constants.RNG.nextFloat() < 0.3)
                 {
                     if (!world.isRemote)
-                    {
                         Helpers.spawnItemStack(world, pos.add(0.5d, 0.5d, 0.5d), new ItemStack(Item.getItemFromBlock(this)));
-                    }
                 }
             }
             else
             {
                 // Stone tools are 60% efficient (default config)
                 if (!stoneTool || Constants.RNG.nextFloat() < ConfigTFC.General.TREE.stoneAxeReturnRate && !world.isRemote)
-                {
                     harvestBlock(world, player, pos1, world.getBlockState(pos1), null, stack);
-                }
+                
                 stack.damageItem(1, player);
             }
             if (!world.isRemote)
-            {
                 world.setBlockToAir(pos1);
-            }
         }
         return maxLogs >= logs.size();
     }

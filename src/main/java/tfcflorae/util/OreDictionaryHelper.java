@@ -117,9 +117,8 @@ public class OreDictionaryHelper
         if (stack.isEmpty()) return false;
         int needle = OreDictionary.getOreID(name);
         for (int id : OreDictionary.getOreIDs(stack))
-        {
             if (id == needle) return true;
-        }
+        
         return false;
     }
 
@@ -360,9 +359,8 @@ public class OreDictionaryHelper
             {
                 int meta = this.meta;
                 if (meta == -1 && item.isDamageable())
-                {
                     meta = OreDictionary.WILDCARD_VALUE;
-                }
+                
                 return new ItemStack(item, 1, meta);
             }
             return ItemStack.EMPTY;

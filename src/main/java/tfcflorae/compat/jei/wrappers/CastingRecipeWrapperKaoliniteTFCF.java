@@ -26,9 +26,7 @@ public class CastingRecipeWrapperKaoliniteTFCF implements IRecipeWrapper
         mold = new ItemStack(ItemKaoliniteMold.get(type));
         IFluidHandler cap = mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(input, true);
-        }
     }
 
     @Override

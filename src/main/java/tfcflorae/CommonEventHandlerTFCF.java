@@ -79,18 +79,17 @@ public final class CommonEventHandlerTFCF
             event.getDrops().clear();
             int chance = Constants.RNG.nextInt(3);
 
-            if (chance == 0)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
-            {
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
+            switch(chance) {
+                case 0:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 1:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 2:
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
+                break;
             }
         }
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
@@ -98,18 +97,17 @@ public final class CommonEventHandlerTFCF
             event.getDrops().clear();
             int chance = Constants.RNG.nextInt(3);
 
-            if (chance == 0)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
-            {
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
+            switch(chance) {
+                case 0:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 1:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 2:
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
+                break;
             }
         }
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
@@ -117,18 +115,17 @@ public final class CommonEventHandlerTFCF
             event.getDrops().clear();
             int chance = Constants.RNG.nextInt(3);
 
-            if (chance == 0)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
-            {
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
+            switch(chance) {
+                case 0:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 1:
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
+                break;
+                case 2:
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
+                break;
             }
         }
 
@@ -189,198 +186,114 @@ public final class CommonEventHandlerTFCF
                 if (state.getBlock() instanceof BlockRockVariantTFCF)
                 {
                     BlockRockVariantTFCF blockRock = (BlockRockVariantTFCF) state.getBlock();
-                    if 
-                        (
-                            blockRock.getType() == RockTFCF.PODZOL ||
-                            blockRock.getType() == RockTFCF.SPARSE_GRASS
-                        )
+                    if (!world.isRemote)
                     {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.FARMLAND).getDefaultState());
+                        switch(blockRock.getType()) {
+                            case RockTFCF.PODZOL:
+                            case RockTFCF.SPARSE_GRASS:
+                                world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.FARMLAND).getDefaultState());
+                            break;
+                            case RockTFCF.COARSE_DIRT:
+                                world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.DIRT).getDefaultState());
+                            break;
+                            case RockTFCF.COARSE_DIRT:
+                                world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.DIRT).getDefaultState());
+                            break;
                         }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if 
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_DIRT
-                        )
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariant.get(blockRock.getRock(), Rock.Type.DIRT).getDefaultState());
+                        if (ConfigTFCF.General.WORLD.enableAllSpecialSoil) {
+                            if (ConfigTFCF.General.WORLD.enableAllFarmland) {
+                                switch(blockRock.getType()) {
+                                    case RockTFCF.LOAMY_SAND:
+                                    case RockTFCF.LOAMY_SAND_GRASS:
+                                    case RockTFCF.LOAMY_SAND_PODZOL:
+                                    case RockTFCF.DRY_LOAMY_SAND_GRASS:
+                                    case RockTFCF.SPARSE_LOAMY_SAND_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAMY_SAND_FARMLAND).getDefaultState());
+                                    break;
+                                    
+                                    case RockTFCF.SANDY_LOAM:
+                                    case RockTFCF.SANDY_LOAM_GRASS:
+                                    case RockTFCF.SANDY_LOAM_PODZOL:
+                                    case RockTFCF.DRY_SANDY_LOAM_GRASS:
+                                    case RockTFCF.SPARSE_SANDY_LOAM_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SANDY_LOAM_FARMLAND).getDefaultState());
+                                    break;
+    
+                                    case RockTFCF.LOAM:
+                                    case RockTFCF.LOAM_GRASS:
+                                    case RockTFCF.LOAM_PODZOL:
+                                    case RockTFCF.DRY_LOAM_GRAS:
+                                    case RockTFCF.SPARSE_LOAM_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAM_FARMLAND).getDefaultState());
+                                    break;
+    
+                                    case RockTFCF.SILT_LOAM:
+                                    case RockTFCF.SILT_LOAM_GRASS:
+                                    case RockTFCF.SILT_LOAM_PODZOL:
+                                    case RockTFCF.DRY_SILT_LOAM_GRASS:
+                                    case RockTFCF.SPARSE_SILT_LOAM_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_LOAM_FARMLAND).getDefaultState());
+                                    break;
+    
+                                    case RockTFCF.SILT:
+                                    case RockTFCF.SILT_GRASS:
+                                    case RockTFCF.SILT_PODZOL:
+                                    case RockTFCF.DRY_SILT_GRASS:
+                                    case RockTFCF.SPARSE_SILT_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_FARMLAND).getDefaultState());
+                                    break;
+    
+                                    case RockTFCF.HUMUS:
+                                    case RockTFCF.HUMUS_GRASS:
+                                    case RockTFCF.DRY_HUMUS_GRAS:
+                                    case RockTFCF.SPARSE_HUMUS_GRASS:
+                                        world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.HUMUS_FARMLAND).getDefaultState());
+                                    break;
+                                }
+                            }
+                            switch(blockRock.getType()) {
+                                case RockTFCF.COARSE_LOAMY_SAND:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAMY_SAND).getDefaultState());
+                                break;
+
+                                case RockTFCF.COARSE_SANDY_LOAM:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SANDY_LOAM).getDefaultState());
+                                break;
+
+                                case RockTFCF.COARSE_LOAM:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAM).getDefaultState());
+                                break;
+
+                                case RockTFCF.COARSE_SILT_LOAM:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_LOAM).getDefaultState());
+                                break;
+
+                                case RockTFCF.COARSE_SILT:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT).getDefaultState());
+                                break;
+
+                                case RockTFCF.COARSE_HUMUS:
+                                    world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                                    world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.HUMUS).getDefaultState());
+                                break;
+                            }
                         }
-                        event.setResult(Event.Result.ALLOW);
                     }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.LOAMY_SAND || 
-                            blockRock.getType() == RockTFCF.LOAMY_SAND_GRASS || 
-                            blockRock.getType() == RockTFCF.LOAMY_SAND_PODZOL || 
-                            blockRock.getType() == RockTFCF.DRY_LOAMY_SAND_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_LOAMY_SAND_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAMY_SAND_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.SANDY_LOAM || 
-                            blockRock.getType() == RockTFCF.SANDY_LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.SANDY_LOAM_PODZOL || 
-                            blockRock.getType() == RockTFCF.DRY_SANDY_LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_SANDY_LOAM_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SANDY_LOAM_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.LOAM || 
-                            blockRock.getType() == RockTFCF.LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.LOAM_PODZOL || 
-                            blockRock.getType() == RockTFCF.DRY_LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_LOAM_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAM_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.SILT_LOAM || 
-                            blockRock.getType() == RockTFCF.SILT_LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.SILT_LOAM_PODZOL || 
-                            blockRock.getType() == RockTFCF.DRY_SILT_LOAM_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_SILT_LOAM_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_LOAM_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.SILT || 
-                            blockRock.getType() == RockTFCF.SILT_GRASS || 
-                            blockRock.getType() == RockTFCF.SILT_PODZOL || 
-                            blockRock.getType() == RockTFCF.DRY_SILT_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_SILT_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.HUMUS || 
-                            blockRock.getType() == RockTFCF.HUMUS_GRASS || 
-                            blockRock.getType() == RockTFCF.DRY_HUMUS_GRASS || 
-                            blockRock.getType() == RockTFCF.SPARSE_HUMUS_GRASS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.HUMUS_FARMLAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_LOAMY_SAND
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAMY_SAND).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_SANDY_LOAM
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SANDY_LOAM).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_LOAM
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.LOAM).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_SILT_LOAM
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT_LOAM).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_SILT
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.SILT).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
-                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
-                        (
-                            blockRock.getType() == RockTFCF.COARSE_HUMUS
-                        ))
-                    {
-                        if (!world.isRemote)
-                        {
-                            world.playSound(null, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                            world.setBlockState(pos, BlockRockVariantTFCF.get(blockRock.getRock(), RockTFCF.HUMUS).getDefaultState());
-                        }
-                        event.setResult(Event.Result.ALLOW);
-                    }
+                    event.setResult(Event.Result.ALLOW);
                 }
             }
         }

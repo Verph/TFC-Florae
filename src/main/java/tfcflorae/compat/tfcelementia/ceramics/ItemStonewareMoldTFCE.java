@@ -65,9 +65,7 @@ public class ItemStonewareMoldTFCE extends ItemPottery
     {
         this.type = type;
         if (MAP.put(type, this) != null)
-        {
             throw new IllegalStateException("There can only be one.");
-        }
     }
 
     public ItemStonewareMoldTFCE(ItemMetalTFCE.ItemType type, int fluidCapacity)
@@ -75,9 +73,7 @@ public class ItemStonewareMoldTFCE extends ItemPottery
         this.type = type;
         this.fluidCapacity = fluidCapacity;
         if (MAP.put(type, this) != null)
-        {
             throw new IllegalStateException("There can only be one.");
-        }
     }
 
     @Override
@@ -89,9 +85,7 @@ public class ItemStonewareMoldTFCE extends ItemPottery
         {
             IItemHeat cap = stack.getCapability(CapabilityItemHeat.ITEM_HEAT_CAPABILITY, null);
             if (!player.isSneaking() && cap != null && cap.isMolten())
-            {
                 TFCGuiHandler.openGui(world, player, TFCGuiHandler.Type.MOLD);
-            }
 
             if (player.isSneaking())
             {
@@ -132,11 +126,9 @@ public class ItemStonewareMoldTFCE extends ItemPottery
         if (capFluidHandler instanceof IMoldHandler)
         {
             Metal metal = ((IMoldHandler) capFluidHandler).getMetal();
+            //noinspection ConstantConditions
             if (metal != null)
-            {
-                //noinspection ConstantConditions
                 return super.getTranslationKey(stack) + "." + metal.getRegistryName().getPath();
-            }
         }
         return super.getTranslationKey(stack);
     }
@@ -189,9 +181,7 @@ public class ItemStonewareMoldTFCE extends ItemPottery
             tank = new FluidTank(capasity);
 
             if (nbt != null)
-            {
                 deserializeNBT(nbt);
-            }
         }
 
         @Nullable
@@ -211,9 +201,8 @@ public class ItemStonewareMoldTFCE extends ItemPottery
         public IFluidTankProperties[] getTankProperties()
         {
             if (fluidTankProperties == null)
-            {
                 fluidTankProperties = new IFluidTankProperties[] {new FluidTankPropertiesWrapper(tank)};
-            }
+            
             return fluidTankProperties;
         }
 
@@ -228,9 +217,8 @@ public class ItemStonewareMoldTFCE extends ItemPottery
                 {
                     int fillAmount = tank.fill(resource, doFill);
                     if (fillAmount == tank.getFluidAmount())
-                    {
                         updateFluidData();
-                    }
+                    
                     return fillAmount;
                 }
             }
@@ -252,9 +240,8 @@ public class ItemStonewareMoldTFCE extends ItemPottery
             {
                 FluidStack stack = tank.drain(maxDrain, doDrain);
                 if (tank.getFluidAmount() == 0)
-                {
                     updateFluidData();
-                }
+                
                 return stack;
             }
             return null;

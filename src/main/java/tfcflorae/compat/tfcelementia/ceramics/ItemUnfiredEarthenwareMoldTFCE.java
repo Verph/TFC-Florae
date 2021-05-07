@@ -21,8 +21,6 @@ public class ItemUnfiredEarthenwareMoldTFCE extends ItemPottery
     {
         this.type = type;
         if (MAP.put(type, this) != null)
-        {
             throw new IllegalStateException("There can only be one.");
-        }
     }
 }

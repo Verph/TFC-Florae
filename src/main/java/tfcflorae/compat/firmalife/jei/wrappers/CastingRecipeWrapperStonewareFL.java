@@ -27,9 +27,7 @@ public class CastingRecipeWrapperStonewareFL implements IRecipeWrapper
         this.mold = new ItemStack(ItemsTFCF.malletMoldStoneware);
         IFluidHandler cap = this.mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(this.input, true);
-        }
     }
 
     public void getIngredients(IIngredients ingredients)

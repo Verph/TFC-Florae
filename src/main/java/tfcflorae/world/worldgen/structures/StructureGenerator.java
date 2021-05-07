@@ -293,17 +293,15 @@ public class StructureGenerator extends WorldGenerator
 
 		//Not accepted positions
 		if (world.getBlockState(pos).getBlock() == ChunkGenTFC.FRESH_WATER.getBlock() || world.getBlockState(pos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock() || world.getBlockState(pos).getBlock() == ChunkGenTFC.HOT_WATER.getBlock())
-        {	
 			y = -99;
-		}
+		
 		if (world.getBlockState(pos).getBlock() == Blocks.LAVA || 
             world.getBlockState(pos).getBlock() == Blocks.AIR || 
             world.getBlockState(pos).getBlock() == Blocks.ICE || 
             world.getBlockState(pos).getBlock() == Blocks.PACKED_ICE || 
             world.getBlockState(pos).getBlock() == BlocksTFC.SEA_ICE)
-        {	
 			y = -99;
-		}
+		
 		return y;		
 	}
 

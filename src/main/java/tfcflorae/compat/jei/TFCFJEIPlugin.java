@@ -95,64 +95,55 @@ public class TFCFJEIPlugin implements IModPlugin
 
         // Knapping Mud
         List<KnappingRecipeWrapperTFCF> mudKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
-                .filter(recipe -> recipe.getType() == KnappingTypes.MUD)
-                .flatMap(recipe -> TFCRegistries.ROCKS.getValuesCollection().stream().map(rock -> new KnappingRecipeWrapperTFCF.Mud(recipe, registry.getJeiHelpers().getGuiHelper(), rock)))
-                //.map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
-                .collect(Collectors.toList());
+            .filter(recipe -> recipe.getType() == KnappingTypes.MUD)
+            .flatMap(recipe -> TFCRegistries.ROCKS.getValuesCollection().stream().map(rock -> new KnappingRecipeWrapperTFCF.Mud(recipe, registry.getJeiHelpers().getGuiHelper(), rock)))
+            //.map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+            .collect(Collectors.toList());
         registry.addRecipes(mudKnapRecipes, KNAP_MUD_UID);
         NonNullList<ItemStack> ores = OreDictionary.getOres("mud");
         for(Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-        {
             registry.addRecipeCatalyst(new ItemStack(ItemMud.get(rock)), KNAP_MUD_UID);
-        }
 
         // Knapping Earthenware Clay
         List<KnappingRecipeWrapperTFCF> clayEarthenwareKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
-                .filter(recipe -> recipe.getType() == KnappingTypes.EARTHENWARE_CLAY)
-                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
-                .collect(Collectors.toList());
+            .filter(recipe -> recipe.getType() == KnappingTypes.EARTHENWARE_CLAY)
+            .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+            .collect(Collectors.toList());
         registry.addRecipes(clayEarthenwareKnapRecipes, KNAP_EARTHENWARE_CLAY_UID);
         ores = OreDictionary.getOres("clayEarthenware");
         for(ItemStack itemStack : ores)
-        {
             registry.addRecipeCatalyst(itemStack, KNAP_EARTHENWARE_CLAY_UID);
-        }
 
         // Knapping Kaolinite Clay
         List<KnappingRecipeWrapperTFCF> clayKaoliniteKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
-                .filter(recipe -> recipe.getType() == KnappingTypes.KAOLINITE_CLAY)
-                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
-                .collect(Collectors.toList());
+            .filter(recipe -> recipe.getType() == KnappingTypes.KAOLINITE_CLAY)
+            .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+            .collect(Collectors.toList());
         registry.addRecipes(clayKaoliniteKnapRecipes, KNAP_KAOLINITE_CLAY_UID);
         ores = OreDictionary.getOres("clayKaolinite");
         for(ItemStack itemStack : ores)
-        {
             registry.addRecipeCatalyst(itemStack, KNAP_KAOLINITE_CLAY_UID);
-        }
 
         // Knapping Stoneware Clay
         List<KnappingRecipeWrapperTFCF> clayStonewareKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
-                .filter(recipe -> recipe.getType() == KnappingTypes.STONEWARE_CLAY)
-                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
-                .collect(Collectors.toList());
+            .filter(recipe -> recipe.getType() == KnappingTypes.STONEWARE_CLAY)
+            .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+            .collect(Collectors.toList());
         registry.addRecipes(clayStonewareKnapRecipes, KNAP_STONEWARE_CLAY_UID);
         ores = OreDictionary.getOres("clayStoneware");
         for(ItemStack itemStack : ores)
-        {
             registry.addRecipeCatalyst(itemStack, KNAP_STONEWARE_CLAY_UID);
-        }
 
         // Knapping Flint
         List<KnappingRecipeWrapperTFCF> flintKnapRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
-                .filter(recipe -> recipe.getType() == KnappingTypes.FLINT)
-                .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
-                .collect(Collectors.toList());
+            .filter(recipe -> recipe.getType() == KnappingTypes.FLINT)
+            .map(recipe -> new KnappingRecipeWrapperTFCF(recipe, registry.getJeiHelpers().getGuiHelper()))
+            .collect(Collectors.toList());
         registry.addRecipes(flintKnapRecipes, KNAP_FLINT_UID);
         ores = OreDictionary.getOres("flint");
         for(ItemStack itemStack : ores)
-        {
             registry.addRecipeCatalyst(itemStack, KNAP_FLINT_UID);
-        }
+
         registry.addRecipeClickArea(GuiKnappingTFCF.class, 97, 44, 22, 15, KNAP_MUD_UID, KNAP_EARTHENWARE_CLAY_UID, KNAP_KAOLINITE_CLAY_UID, KNAP_STONEWARE_CLAY_UID, KNAP_FLINT_UID);
 
         // Register metal related stuff (put everything here for performance + sorted registration)

@@ -267,9 +267,7 @@ public class UnmoldRecipeEarthenwareTFCF extends IForgeRegistryEntry.Impl<IRecip
             //Chance of getting the mold back
             float chance = 0;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
 
             return new UnmoldRecipeEarthenwareTFCF(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }

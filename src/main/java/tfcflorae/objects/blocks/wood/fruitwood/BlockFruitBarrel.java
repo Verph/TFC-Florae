@@ -186,9 +186,7 @@ public class BlockFruitBarrel extends Block implements IItemSize
             if (powered || block.getDefaultState().canProvidePower())
             {
                 if (powered != state.getValue(SEALED))
-                {
                     toggleBarrelSeal(world, pos);
-                }
             }
         }
     }
@@ -198,9 +196,8 @@ public class BlockFruitBarrel extends Block implements IItemSize
     {
         TEBarrel tile = Helpers.getTE(worldIn, pos, TEBarrel.class);
         if (tile != null)
-        {
             tile.onBreakBlock(worldIn, pos, state);
-        }
+        
         super.breakBlock(worldIn, pos, state);
     }
 
@@ -241,9 +238,8 @@ public class BlockFruitBarrel extends Block implements IItemSize
             else
             {
                 if (!worldIn.isRemote)
-                {
                     TFCGuiHandler.openGui(worldIn, pos, playerIn, TFCGuiHandler.Type.BARREL);
-                }
+
                 return true;
             }
         }
@@ -301,9 +297,7 @@ public class BlockFruitBarrel extends Block implements IItemSize
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
         if (!state.getValue(SEALED))
-        {
-            super.getDrops(drops, world, pos, state, fortune);
-        }
+            uper.getDrops(drops, world, pos, state, fortune);
     }
 
     @Override
@@ -322,9 +316,8 @@ public class BlockFruitBarrel extends Block implements IItemSize
         ItemStack stack = new ItemStack(state.getBlock());
         TEBarrel tile = Helpers.getTE(world, pos, TEBarrel.class);
         if (tile != null && tile.isSealed())
-        {
             tile.saveToItemStack(stack);
-        }
+        
         return stack;
     }
 }

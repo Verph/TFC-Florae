@@ -143,9 +143,8 @@ public class BlockFruitToolRack extends Block implements IItemSize
             dropBlockAsItem(worldIn, pos, state, 0);
             TEToolRack te = Helpers.getTE(worldIn, pos, TEToolRack.class);
             if (te != null)
-            {
                 te.onBreakBlock();
-            }
+            
             worldIn.setBlockToAir(pos);
         }
     }
@@ -155,9 +154,8 @@ public class BlockFruitToolRack extends Block implements IItemSize
     {
         TEToolRack te = Helpers.getTE(worldIn, pos, TEToolRack.class);
         if (te != null)
-        {
             te.onBreakBlock();
-        }
+        
         super.breakBlock(worldIn, pos, state);
     }
 
@@ -173,9 +171,7 @@ public class BlockFruitToolRack extends Block implements IItemSize
         {
             TEToolRack te = Helpers.getTE(worldIn, pos, TEToolRack.class);
             if (te != null)
-            {
                 return te.onRightClick(playerIn, hand, getSlotFromPos(state, hitX, hitY, hitZ));
-            }
         }
         return true;
     }
@@ -186,9 +182,8 @@ public class BlockFruitToolRack extends Block implements IItemSize
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         if (facing.getAxis() == EnumFacing.Axis.Y)
-        {
             facing = placer.getHorizontalFacing().getOpposite();
-        }
+        
         return this.getDefaultState().withProperty(FACING, Helpers.getASolidFacing(worldIn, pos, facing, EnumFacing.HORIZONTALS));
     }
 
@@ -225,9 +220,7 @@ public class BlockFruitToolRack extends Block implements IItemSize
             {
                 ItemStack item = te.getItems().get(getSlotFromPos(state, (float) vec.x, (float) vec.y, (float) vec.z));
                 if (!item.isEmpty())
-                {
                     return item;
-                }
             }
         }
         return super.getPickBlock(state, target, world, pos, player);
@@ -237,13 +230,10 @@ public class BlockFruitToolRack extends Block implements IItemSize
     {
         int slot = 0;
         if ((state.getValue(FACING).getAxis().equals(EnumFacing.Axis.Z) ? x : z) > .5f)
-        {
             slot += 1;
-        }
         if (y < 0.5f)
-        {
             slot += 2;
-        }
+        
         return slot;
     }
 }

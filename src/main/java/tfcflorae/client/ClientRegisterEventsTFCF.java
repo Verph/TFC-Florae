@@ -99,17 +99,11 @@ public class ClientRegisterEventsTFCF
         // ITEMS
 
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-        {
             ModelLoader.setCustomModelResourceLocation(ItemsTFCF.FIRED_EARTHENWARE_JUG, 0, new ModelResourceLocation(ItemsTFCF.FIRED_EARTHENWARE_JUG.getRegistryName(), "inventory"));
-        }
         if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-        {
             ModelLoader.setCustomModelResourceLocation(ItemsTFCF.FIRED_KAOLINITE_JUG, 0, new ModelResourceLocation(ItemsTFCF.FIRED_KAOLINITE_JUG.getRegistryName(), "inventory"));
-        }
         if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-        {
             ModelLoader.setCustomModelResourceLocation(ItemsTFCF.FIRED_STONEWARE_JUG, 0, new ModelResourceLocation(ItemsTFCF.FIRED_STONEWARE_JUG.getRegistryName(), "inventory"));
-        }
 
         for (Item item : ItemsTFCF.getAllSimpleItems())
             ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
@@ -272,50 +266,39 @@ public class ClientRegisterEventsTFCF
         if (ConfigTFCF.General.WORLD.enableAllBlockTypes && ConfigTFCF.General.WORLD.enableAllFarmland)
         {
             BlocksTFCF.getAllBlockRockVariantsTFCF().forEach(e -> {
-                if (e.getType() == RockTFCF.LOAMY_SAND_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamySandFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.SANDY_LOAM_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSandyLoamFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.LOAM_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.SILT_LOAM_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltLoamFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.SILT_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.HUMUS_FARMLAND)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockHumusFarmland.MOISTURE).build());
-                }
-                else if (e.getType() == RockTFCF.MOSSY_RAW)
-                {
-                    ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockRockRawTFCF.CAN_FALL).build());
+                switch(e.getType()) {
+                    case RockTFCF.LOAMY_SAND_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamySandFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.SANDY_LOAM_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSandyLoamFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.LOAM_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockLoamFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.SILT_LOAM_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltLoamFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.SILT_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockSiltFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.HUMUS_FARMLAND:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockHumusFarmland.MOISTURE).build());
+                    break;
+                    case RockTFCF.MOSSY_RAW:
+                        ModelLoader.setCustomStateMapper(e, new StateMap.Builder().ignore(BlockRockRawTFCF.CAN_FALL).build());
+                    break;
                 }
             });
         }
 
         // Ceramic Molds
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-        {
             ModelBakery.registerItemVariants(ItemEarthenwareMold.get(Metal.ItemType.INGOT), new ModelResourceLocation(ItemEarthenwareMold.get(Metal.ItemType.INGOT).getRegistryName() + "/unknown"));
-        }
         if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-        {
             ModelBakery.registerItemVariants(ItemKaoliniteMold.get(Metal.ItemType.INGOT), new ModelResourceLocation(ItemKaoliniteMold.get(Metal.ItemType.INGOT).getRegistryName() + "/unknown"));
-        }
         if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-        {
             ModelBakery.registerItemVariants(ItemStonewareMold.get(Metal.ItemType.INGOT), new ModelResourceLocation(ItemStonewareMold.get(Metal.ItemType.INGOT).getRegistryName() + "/unknown"));
-        }
 
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
         {
@@ -336,10 +319,7 @@ public class ClientRegisterEventsTFCF
                         if (cap instanceof IMoldHandler)
                         {
                             Metal metal = ((IMoldHandler) cap).getMetal();
-                            if (metal != null)
-                            {
-                                return FILLED;
-                            }
+                            if (metal != null) return FILLED;
                         }
                         return FALLBACK;
                     }
@@ -367,10 +347,7 @@ public class ClientRegisterEventsTFCF
                         if (cap instanceof IMoldHandler)
                         {
                             Metal metal = ((IMoldHandler) cap).getMetal();
-                            if (metal != null)
-                            {
-                                return FILLED;
-                            }
+                            if (metal != null) return FILLED;
                         }
                         return FALLBACK;
                     }
@@ -398,10 +375,7 @@ public class ClientRegisterEventsTFCF
                         if (cap instanceof IMoldHandler)
                         {
                             Metal metal = ((IMoldHandler) cap).getMetal();
-                            if (metal != null)
-                            {
-                                return FILLED;
-                            }
+                            if (metal != null) return FILLED;
                         }
                         return FALLBACK;
                     }
@@ -416,45 +390,27 @@ public class ClientRegisterEventsTFCF
             if (ItemMetalTFCE.ItemType.NAIL.isTypeActive())
             {
                 if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-                {
                     ModelBakery.registerItemVariants(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL), new ModelResourceLocation(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL).getRegistryName() + "/unknown"));
-                }
                 if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-                {
                     ModelBakery.registerItemVariants(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL), new ModelResourceLocation(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL).getRegistryName() + "/unknown"));
-                }
                 if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-                {
                     ModelBakery.registerItemVariants(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL), new ModelResourceLocation(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.NAIL).getRegistryName() + "/unknown"));
-                }
             }
             if (ItemMetalTFCE.ItemType.RING.isTypeActive())
             {
                 if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-                {
                     ModelBakery.registerItemVariants(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.RING), new ModelResourceLocation(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.RING).getRegistryName() + "/unknown"));
-                }
                 if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-                {
                     ModelBakery.registerItemVariants(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.RING), new ModelResourceLocation(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.RING).getRegistryName() + "/unknown"));
-                }
                 if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-                {
                     ModelBakery.registerItemVariants(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.RING), new ModelResourceLocation(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.RING).getRegistryName() + "/unknown"));
-                }
             }
             if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-            {
                 ModelBakery.registerItemVariants(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE), new ModelResourceLocation(ItemEarthenwareMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE).getRegistryName() + "/unknown"));
-            }
             if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-            {
                 ModelBakery.registerItemVariants(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE), new ModelResourceLocation(ItemKaoliniteMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE).getRegistryName() + "/unknown"));
-            }
             if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-            {
                 ModelBakery.registerItemVariants(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE), new ModelResourceLocation(ItemStonewareMoldTFCE.get(ItemMetalTFCE.ItemType.HALBERD_BLADE).getRegistryName() + "/unknown"));
-            }
 
             if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
             {
@@ -474,10 +430,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -504,10 +457,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -534,10 +484,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -566,10 +513,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -598,10 +542,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -630,10 +571,7 @@ public class ClientRegisterEventsTFCF
                             if (cap instanceof IMoldHandler)
                             {
                                 Metal metal = ((IMoldHandler) cap).getMetal();
-                                if (metal != null)
-                                {
-                                    return FILLED;
-                                }
+                                if (metal != null) return FILLED;
                             }
                             return FALLBACK;
                         }
@@ -662,10 +600,7 @@ public class ClientRegisterEventsTFCF
                         if (cap instanceof IMoldHandler)
                         {
                             Metal metal = ((IMoldHandler) cap).getMetal();
-                            if (metal != null)
-                            {
-                                return FILLED;
-                            }
+                            if (metal != null) return FILLED;
                         }
                         return FALLBACK;
                     }
@@ -741,20 +676,16 @@ public class ClientRegisterEventsTFCF
         ItemColors itemColors = event.getItemColors();
 
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
-        {
             itemColors.registerItemColorHandler((stack, tintIndex) -> tintIndex == 1 ? EnumDyeColor.byDyeDamage(stack.getItemDamage()).getColorValue() : 0xFFFFFF,
                 ItemsTFCF.UNFIRED_EARTHENWARE_VESSEL_GLAZED, ItemsTFCF.FIRED_EARTHENWARE_VESSEL_GLAZED);
-        }
+        
         if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
-        {
             itemColors.registerItemColorHandler((stack, tintIndex) -> tintIndex == 1 ? EnumDyeColor.byDyeDamage(stack.getItemDamage()).getColorValue() : 0xFFFFFF,
                 ItemsTFCF.UNFIRED_KAOLINITE_VESSEL_GLAZED, ItemsTFCF.FIRED_KAOLINITE_VESSEL_GLAZED);
-        }
+        
         if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
-        {
             itemColors.registerItemColorHandler((stack, tintIndex) -> tintIndex == 1 ? EnumDyeColor.byDyeDamage(stack.getItemDamage()).getColorValue() : 0xFFFFFF,
                 ItemsTFCF.UNFIRED_STONEWARE_VESSEL_GLAZED, ItemsTFCF.FIRED_STONEWARE_VESSEL_GLAZED);
-        }
 
         if (ConfigTFCF.General.WORLD.enableAllBlockTypes)
         {

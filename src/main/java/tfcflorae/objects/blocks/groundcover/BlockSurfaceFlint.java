@@ -164,9 +164,7 @@ public class BlockSurfaceFlint extends Block
     {
         super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         if (!worldIn.isSideSolid(pos.down(), EnumFacing.UP) && !(worldIn.getBlockState(pos.down()).getBlock() instanceof BlockFarmlandTFC))
-        {
             worldIn.setBlockToAir(pos);
-        }
     }
 
     @Override
@@ -200,9 +198,8 @@ public class BlockSurfaceFlint extends Block
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 0)
-        {
             GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
-        }
+
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
 
@@ -215,9 +212,7 @@ public class BlockSurfaceFlint extends Block
             EntityPlayer player = event.getEntityPlayer();
             World world = event.getWorld();
             if (!world.isRemote && !player.isSneaking())
-            {
                 GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
-            }
         }
     }
 }

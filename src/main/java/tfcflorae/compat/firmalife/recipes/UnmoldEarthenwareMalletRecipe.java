@@ -59,28 +59,20 @@ public class UnmoldEarthenwareMalletRecipe extends IForgeRegistryEntry.Impl<IRec
             if (!stack.isEmpty())
             {
                 if (!(stack.getItem() instanceof ItemEarthenwareMalletMoldFL))
-                {
                     return false;
-                }
 
                 ItemEarthenwareMalletMoldFL moldItemEarthenware = (ItemEarthenwareMalletMoldFL) stack.getItem();
                 IFluidHandler cap = stack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
                 if (!(cap instanceof IMoldHandler))
-                {
                     return false;
-                }
 
                 IMoldHandler moldHandler = (IMoldHandler) cap;
                 if (moldHandler.isMolten())
-                {
                     return false;
-                }
 
                 Metal metal = moldHandler.getMetal();
                 if (metal == null || !moldItemEarthenware.getToolName().equals(this.type) || foundMold)
-                {
                     return false;
-                }
 
                 foundMold = true;
             }
@@ -100,15 +92,11 @@ public class UnmoldEarthenwareMalletRecipe extends IForgeRegistryEntry.Impl<IRec
             if (!stack.isEmpty())
             {
                 if (!(stack.getItem() instanceof ItemEarthenwareMalletMoldFL))
-                {
                     return ItemStack.EMPTY;
-                }
 
                 ItemEarthenwareMalletMoldFL tmp = (ItemEarthenwareMalletMoldFL) stack.getItem();
                 if (!tmp.getToolName().equals(this.type) || moldStack != null)
-                {
                     return ItemStack.EMPTY;
-                }
 
                 moldStack = stack;
             }
@@ -121,9 +109,7 @@ public class UnmoldEarthenwareMalletRecipe extends IForgeRegistryEntry.Impl<IRec
             {
                 IMoldHandler moldHandler = (IMoldHandler) moldCap;
                 if (!moldHandler.isMolten() && moldHandler.getAmount() == 100)
-                {
                     return this.getOutputItem(moldHandler);
-                }
             }
         }
 
@@ -208,9 +194,7 @@ public class UnmoldEarthenwareMalletRecipe extends IForgeRegistryEntry.Impl<IRec
             ItemStack output = new ItemStack(ItemsFL.getMetalMalletHead(m));
             IItemHeat heat = output.getCapability(CapabilityItemHeat.ITEM_HEAT_CAPABILITY, null);
             if (heat != null)
-            {
                 heat.setTemperature(moldHandler.getTemperature());
-            }
 
             return output;
         }
@@ -234,9 +218,7 @@ public class UnmoldEarthenwareMalletRecipe extends IForgeRegistryEntry.Impl<IRec
             String group = JsonUtils.getString(json, "group", "");
             float chance = 0.0F;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
             return new UnmoldEarthenwareMalletRecipe(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }
     }

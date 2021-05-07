@@ -141,9 +141,8 @@ public class BlockBambooLog extends Block
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
         if (state.getValue(CONNECTED))
-        {
             return FULL_BLOCK_AABB;
-        }
+
         return SMALL_LOG;
     }
 
@@ -152,9 +151,8 @@ public class BlockBambooLog extends Block
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess worldIn, BlockPos pos)
     {
         if (state.getValue(CONNECTED))
-        {
             return FULL_BLOCK_AABB;
-        }
+        
         return SMALL_LOG;
     }
 

@@ -26,9 +26,7 @@ public class ContainerUrn extends ContainerTE<TEUrn> implements IButtonHandler
     {
         // Slot will always be 0, extraNBT will be empty
         if (!tile.getWorld().isRemote)
-        {
             BlockUrn.toggleUrnSeal(tile.getWorld(), tile.getPos());
-        }
     }
 
     @Override
@@ -37,14 +35,8 @@ public class ContainerUrn extends ContainerTE<TEUrn> implements IButtonHandler
         IItemHandler inventory = tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 
         if (inventory != null)
-        {
             for (int y = 0; y < 3; y++)
-            {
                 for (int x = 0; x < 4; x++)
-                {
                     addSlotToContainer(new SlotCallback(inventory, x * 3 + y, 34 + x * 18, 19 + y * 18, tile));
-                }
-            }
-        }
     }
 }

@@ -72,9 +72,7 @@ final class ClientInteractionManagerTFCF
         {
             EnumActionResult ret = itemstack.onItemUseFirst(player, worldIn, pos, hand, direction, hitX, hitY, hitZ);
             if (ret != EnumActionResult.PASS)
-            {
                 return ret;
-            }
 
             IBlockState iblockstate = worldIn.getBlockState(pos);
             boolean bypass = player.getHeldItemMainhand().doesSneakBypassUse(worldIn, pos, player) && player.getHeldItemOffhand().doesSneakBypassUse(worldIn, pos, player);
@@ -83,7 +81,8 @@ final class ClientInteractionManagerTFCF
             {
                 if (event.getUseBlock() != Event.Result.DENY)
                     flag = iblockstate.getBlock().onBlockActivated(worldIn, pos, iblockstate, player, hand, direction, hitX, hitY, hitZ);
-                if (flag) result = EnumActionResult.SUCCESS;
+                if (flag)
+                    result = EnumActionResult.SUCCESS;
             }
 
             if (!flag && itemstack.getItem() instanceof ItemBlock)
@@ -91,9 +90,7 @@ final class ClientInteractionManagerTFCF
                 ItemBlock itemblock = (ItemBlock) itemstack.getItem();
 
                 if (!itemblock.canPlaceBlockOnSide(worldIn, pos, direction, player, itemstack))
-                {
                     return EnumActionResult.FAIL;
-                }
             }
         }
 
@@ -114,9 +111,7 @@ final class ClientInteractionManagerTFCF
                     Block block = ((ItemBlock) itemstack.getItem()).getBlock();
 
                     if (block instanceof BlockCommandBlock || block instanceof BlockStructure)
-                    {
                         return EnumActionResult.FAIL;
-                    }
                 }
 
                 if (controller.getCurrentGameType().isCreative())

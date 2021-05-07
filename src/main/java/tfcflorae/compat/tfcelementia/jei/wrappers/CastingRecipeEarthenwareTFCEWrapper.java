@@ -28,9 +28,7 @@ public class CastingRecipeEarthenwareTFCEWrapper extends net.dries007.tfc.compat
         mold = new ItemStack(ItemEarthenwareMoldTFCE.get(type));
         IFluidHandler cap = mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(input, true);
-        }
     }
 
     @Override

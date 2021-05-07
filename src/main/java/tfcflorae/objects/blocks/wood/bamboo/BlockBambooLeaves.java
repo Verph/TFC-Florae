@@ -47,9 +47,7 @@ public class BlockBambooLeaves extends BlockLeavesTFC
     {
         int chance = 10;
         if (RANDOM.nextInt(101) < chance)
-        {
             drops.add(new ItemStack(sapling));
-        }
     }
 
     @Override

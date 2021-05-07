@@ -79,9 +79,7 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF
                 BlockPos offsetPos = pos.offset(face);
                 IBlockState faceState = worldIn.getBlockState(offsetPos);
                 if (faceState.getBlock().isSideSolid(faceState, worldIn, offsetPos, face.getOpposite()))
-                {
                     return;
-                }
             }
 
             // No supporting solid blocks, so pop off as an item
@@ -101,9 +99,7 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF
                 // Create a stone anvil
                 BlockRockVariant anvil = BlockRockVariant.get(this.rock, Rock.Type.ANVIL);
                 if (anvil instanceof BlockStoneAnvil)
-                {
                     worldIn.setBlockState(pos, anvil.getDefaultState());
-                }
             }
             return true;
         }
@@ -122,9 +118,7 @@ public class BlockRockRawTFCF extends BlockRockVariantTFCF
         super.getDrops(drops, world, pos, state, fortune);
         // Raw rocks drop random gems
         if (RANDOM.nextDouble() < ConfigTFC.General.MISC.stoneGemDropChance)
-        {
             drops.add(ItemGem.get(Gem.getRandomDropGem(RANDOM), Gem.Grade.randomGrade(RANDOM), 1));
-        }
     }
 
     @Override

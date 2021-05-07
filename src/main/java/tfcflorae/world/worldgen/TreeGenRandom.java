@@ -65,9 +65,7 @@ public class TreeGenRandom implements ITreeGenerator
 
         StructureHelper.addStructureToWorld(world, pos, structureBase, settingsFull);
         if (structureOverlay != null)
-        {
             StructureHelper.addStructureToWorld(world, pos, structureOverlay, settingsWeak);
-        }
 
         final IBlockState log = BlockLogTFC.get(tree).getDefaultState().withProperty(PLACED, false);
         for (int i = 0; i < height; i++)

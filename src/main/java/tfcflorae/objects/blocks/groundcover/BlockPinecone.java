@@ -134,9 +134,7 @@ public class BlockPinecone extends Block
     {
         super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         if (!worldIn.isSideSolid(pos.down(), EnumFacing.UP) && !(worldIn.getBlockState(pos.down()).getBlock() instanceof BlockFarmlandTFC))
-        {
             worldIn.setBlockToAir(pos);
-        }
     }
 
     @Override

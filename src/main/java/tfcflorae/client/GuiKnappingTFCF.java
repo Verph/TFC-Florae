@@ -43,10 +43,7 @@ public class GuiKnappingTFCF extends GuiKnapping
             else if(type == KnappingTypes.STONEWARE_CLAY) mc.getTextureManager().bindTexture(GuiHandler.STONEWARE_CLAY_DISABLED_TEXTURE);
             for (GuiButton button : buttonList)
             {
-                if (!button.visible)
-                {
-                    Gui.drawModalRectWithCustomSizedTexture(button.x, button.y, 0, 0, 16, 16, 16, 16);
-                }
+                if (!button.visible) Gui.drawModalRectWithCustomSizedTexture(button.x, button.y, 0, 0, 16, 16, 16, 16);
             }
         }
     }

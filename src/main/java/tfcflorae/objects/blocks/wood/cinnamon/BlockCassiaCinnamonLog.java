@@ -69,9 +69,7 @@ public class BlockCassiaCinnamonLog extends Block
                         {
                             leafCount++;
                             if (world.getBlockState(checkPos.offset(d, 3)).getBlock() instanceof BlockCassiaCinnamonLeaves)
-                            {
                                 leafCount++;
-                            }
                         }
                     }
                 }
@@ -139,6 +137,7 @@ public class BlockCassiaCinnamonLog extends Block
         boolean shouldDestroy = true;
         if (downState.getBlock() instanceof BlockCassiaCinnamonLog || BlocksTFC.isGrowableSoil(downState) || BlocksTFCF.isGrowableSoil(downState))
             shouldDestroy = false;
+        
         if (shouldDestroy)
         {
             worldIn.destroyBlock(pos, true);
@@ -221,13 +220,11 @@ public class BlockCassiaCinnamonLog extends Block
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
         if (state.getValue(CONNECTED))
-        {
             return FULL_BLOCK_AABB;
-        }
+        
         if (!state.getValue(GROWN))
-        {
             return SMALLER_LOG;
-        }
+        
         return SMALL_LOG;
     }
 
@@ -236,13 +233,11 @@ public class BlockCassiaCinnamonLog extends Block
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess worldIn, BlockPos pos)
     {
         if (state.getValue(CONNECTED))
-        {
             return FULL_BLOCK_AABB;
-        }
+        
         if (!state.getValue(GROWN))
-        {
             return SMALLER_LOG;
-        }
+        
         return SMALL_LOG;
     }
 

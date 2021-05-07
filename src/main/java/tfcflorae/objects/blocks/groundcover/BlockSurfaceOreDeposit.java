@@ -95,26 +95,22 @@ public class BlockSurfaceOreDeposit extends Block
         OreDictionaryHelper.register(this, "rock", rock.getRockCategory());
 
         if (rock.isFluxStone())
-        {
             OreDictionaryHelper.register(this, "rock", "flux");
-        }
 
-        {
             //noinspection ConstantConditions
-            String oreName = ore.getRegistryName().getPath();
-            switch (oreName)
-            {
-                case "bituminous_coal":
-                    OreDictionaryHelper.register(this, "gem", "bituminous_coal");
-                    break;
-                case "lignite":
-                    OreDictionaryHelper.register(this, "gem", "coal");
-                    break;
-                case "anthracite":
-                    OreDictionaryHelper.register(this, "gem", "coal");
-                    OreDictionaryHelper.register(this, "gem", "anthracite");
-                    break;
-            }
+        String oreName = ore.getRegistryName().getPath();
+        switch (oreName)
+        {
+            case "bituminous_coal":
+                OreDictionaryHelper.register(this, "gem", "bituminous_coal");
+                break;
+            case "lignite":
+                OreDictionaryHelper.register(this, "gem", "coal");
+                break;
+            case "anthracite":
+                OreDictionaryHelper.register(this, "gem", "coal");
+                OreDictionaryHelper.register(this, "gem", "anthracite");
+                break;
         }
     }
 
@@ -280,9 +276,7 @@ public class BlockSurfaceOreDeposit extends Block
     {
         super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         if (!worldIn.isSideSolid(pos.down(), EnumFacing.UP) && !(worldIn.getBlockState(pos.down()).getBlock() instanceof BlockFarmlandTFC))
-        {
             worldIn.setBlockToAir(pos);
-        }
     }
 
     @Override

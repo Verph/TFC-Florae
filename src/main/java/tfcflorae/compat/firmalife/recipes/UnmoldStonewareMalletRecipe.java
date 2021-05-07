@@ -59,28 +59,20 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
             if (!stack.isEmpty())
             {
                 if (!(stack.getItem() instanceof ItemStonewareMalletMoldFL))
-                {
                     return false;
-                }
 
                 ItemStonewareMalletMoldFL moldItemStoneware = (ItemStonewareMalletMoldFL) stack.getItem();
                 IFluidHandler cap = stack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
                 if (!(cap instanceof IMoldHandler))
-                {
                     return false;
-                }
 
                 IMoldHandler moldHandler = (IMoldHandler) cap;
                 if (moldHandler.isMolten())
-                {
                     return false;
-                }
 
                 Metal metal = moldHandler.getMetal();
                 if (metal == null || !moldItemStoneware.getToolName().equals(this.type) || foundMold)
-                {
                     return false;
-                }
 
                 foundMold = true;
             }
@@ -100,15 +92,11 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
             if (!stack.isEmpty())
             {
                 if (!(stack.getItem() instanceof ItemStonewareMalletMoldFL))
-                {
                     return ItemStack.EMPTY;
-                }
 
                 ItemStonewareMalletMoldFL tmp = (ItemStonewareMalletMoldFL) stack.getItem();
                 if (!tmp.getToolName().equals(this.type) || moldStack != null)
-                {
                     return ItemStack.EMPTY;
-                }
 
                 moldStack = stack;
             }
@@ -121,9 +109,7 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
             {
                 IMoldHandler moldHandler = (IMoldHandler) moldCap;
                 if (!moldHandler.isMolten() && moldHandler.getAmount() == 100)
-                {
                     return this.getOutputItem(moldHandler);
-                }
             }
         }
 
@@ -208,9 +194,7 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
             ItemStack output = new ItemStack(ItemsFL.getMetalMalletHead(m));
             IItemHeat heat = output.getCapability(CapabilityItemHeat.ITEM_HEAT_CAPABILITY, null);
             if (heat != null)
-            {
                 heat.setTemperature(moldHandler.getTemperature());
-            }
 
             return output;
         }
@@ -222,9 +206,7 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
 
     public static class Factory implements IRecipeFactory
     {
-        public Factory()
-        {
-        }
+        public Factory(){}
 
         public IRecipe parse(JsonContext context, JsonObject json)
         {
@@ -234,9 +216,8 @@ public class UnmoldStonewareMalletRecipe extends IForgeRegistryEntry.Impl<IRecip
             String group = JsonUtils.getString(json, "group", "");
             float chance = 0.0F;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
+            
             return new UnmoldStonewareMalletRecipe(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }
     }

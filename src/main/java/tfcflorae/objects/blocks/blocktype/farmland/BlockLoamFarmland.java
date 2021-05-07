@@ -197,9 +197,7 @@ public class BlockLoamFarmland extends FarmlandTFCF
     {
         super.neighborChanged(state, world, pos, block, fromPos);
         if (fromPos.getY() == pos.getY() + 1 && world.getBlockState(fromPos).isSideSolid(world, fromPos, EnumFacing.DOWN))
-        {
             turnToDirt(world, pos);
-        }
     }
 
     @Override
@@ -207,9 +205,7 @@ public class BlockLoamFarmland extends FarmlandTFCF
     {
         super.onBlockAdded(worldIn, pos, state);
         if (worldIn.getBlockState(pos.up()).isSideSolid(worldIn, pos.up(), EnumFacing.DOWN))
-        {
             turnToDirt(worldIn, pos);
-        }
     }
 
     @Override

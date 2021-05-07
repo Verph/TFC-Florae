@@ -121,30 +121,22 @@ public class BlockLeavesTFCF extends BlockLeaves
             else if (fruitTree.isFlowerMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
-                {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
-                }
             }
             else if (fruitTree.isAutumnMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN)
-                {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
-                }
             }
             else if (fruitTree.isWinterMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
-                {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
-                }
             }
             else
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
-                {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
             }
             doLeafDecay(world, pos, state);
         }
@@ -163,9 +155,7 @@ public class BlockLeavesTFCF extends BlockLeaves
     {
         TETickCounter tile = Helpers.getTE(worldIn, pos, TETickCounter.class);
         if (tile != null)
-        {
             tile.resetCounter();
-        }
     }
 
     @Override
@@ -179,9 +169,7 @@ public class BlockLeavesTFCF extends BlockLeaves
                 worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 TETickCounter te = Helpers.getTE(worldIn, pos, TETickCounter.class);
                 if (te != null)
-                {
                     te.resetCounter();
-                }
             }
             return true;
         }
@@ -199,9 +187,8 @@ public class BlockLeavesTFCF extends BlockLeaves
             // Entity motion is reduced by leaves.
             entityIn.motionX *= ConfigTFC.General.MISC.leafMovementModifier;
             if (entityIn.motionY < 0)
-            {
                 entityIn.motionY *= ConfigTFC.General.MISC.leafMovementModifier;
-            }
+            
             entityIn.motionZ *= ConfigTFC.General.MISC.leafMovementModifier;
         }
     }
@@ -236,9 +223,8 @@ public class BlockLeavesTFCF extends BlockLeaves
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
         if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && fruitTree.hasDeadLeaves == false)
-        {
             return ConfigTFC.General.TREE.enableSaplings ? Item.getItemFromBlock(BlockSaplingTFC.get(wood)) : Items.AIR;
-        }
+        
         return null;
     }
 
@@ -381,13 +367,13 @@ public class BlockLeavesTFCF extends BlockLeaves
             {
                 case 1:
                     TFCParticles.LEAF1.sendToAllNear(world, x + RNG.nextFloat() / particleScale, y - RNG.nextFloat() / particleScale, z + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, -0.15D + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, 90);
-                    break;
+                break;
                 case 2:
                     TFCParticles.LEAF2.sendToAllNear(world, x + RNG.nextFloat() / particleScale, y - RNG.nextFloat() / particleScale, z + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, -0.15D + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, 70);
-                    break;
+                break;
                 case 3:
                     TFCParticles.LEAF3.sendToAllNear(world, x + RNG.nextFloat() / particleScale, y - RNG.nextFloat() / particleScale, z + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, -0.15D + RNG.nextFloat() / particleScale, (RNG.nextFloat() - 0.5) / particleScale, 80);
-                    break;
+                break;
             }
         }
     }

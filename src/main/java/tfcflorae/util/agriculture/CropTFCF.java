@@ -73,9 +73,7 @@ public enum CropTFCF implements ICrop
     static
     {
         for (ICrop crop : values())
-        {
             WorldGenWildCrops.register(crop);
-        }
     }
 
     /**

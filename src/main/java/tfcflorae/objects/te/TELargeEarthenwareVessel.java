@@ -66,9 +66,7 @@ public class TELargeEarthenwareVessel extends TEInventory implements IItemHandle
     public void onLoad()
     {
         if (!world.isRemote)
-        {
             sealed = world.getBlockState(pos).getValue(SEALED);
-        }
     }
 
     @Nonnull
@@ -107,9 +105,7 @@ public class TELargeEarthenwareVessel extends TEInventory implements IItemHandle
     {
         // Update preservation trait on contents
         for (int i = 0; i < inventory.getSlots(); i++)
-        {
             CapabilityFood.removeTrait(inventory.getStackInSlot(i), FoodTrait.PRESERVED);
-        }
 
         // Update sealed tick info and sync to client
         sealedTick = sealedCalendarTick = 0;
@@ -151,9 +147,8 @@ public class TELargeEarthenwareVessel extends TEInventory implements IItemHandle
     public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
     {
         if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
-        {
             return (T) new ItemHandlerSidedWrapper(this, inventory, facing);
-        }
+        
         return super.getCapability(capability, facing);
     }
 
@@ -179,9 +174,8 @@ public class TELargeEarthenwareVessel extends TEInventory implements IItemHandle
     {
         IItemSize sizeCap = CapabilityItemSize.getIItemSize(stack);
         if (sizeCap != null)
-        {
             return sizeCap.getSize(stack).isSmallerThan(Size.LARGE);
-        }
+        
         return true;
     }
 

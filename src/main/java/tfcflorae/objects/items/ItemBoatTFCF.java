@@ -169,14 +169,10 @@ public class ItemBoatTFCF extends ItemTFCF
                 else
                 {
                     if (!worldIn.isRemote)
-                    {
                         worldIn.spawnEntity(entityboat);
-                    }
 
                     if (!playerIn.capabilities.isCreativeMode)
-                    {
                         itemstack.shrink(1);
-                    }
 
                     playerIn.addStat(Objects.requireNonNull(StatList.getObjectUseStats(this)));
                     return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);

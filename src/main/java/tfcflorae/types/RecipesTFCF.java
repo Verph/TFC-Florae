@@ -704,23 +704,17 @@ public final class RecipesTFCF
             ItemUnfiredEarthenwareMold unfiredMoldEarthenware = ItemUnfiredEarthenwareMold.get(type);
             ItemEarthenwareMold firedMoldEarthenware = ItemEarthenwareMold.get(type);
             if (unfiredMoldEarthenware != null && firedMoldEarthenware != null)
-            {
                 r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldEarthenware), new ItemStack(firedMoldEarthenware), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_earthenware_mold_" + type.name().toLowerCase()));
-            }
 
             ItemUnfiredKaoliniteMold unfiredMoldKaolinite = ItemUnfiredKaoliniteMold.get(type);
             ItemKaoliniteMold firedMoldKaolinite = ItemKaoliniteMold.get(type);
             if (unfiredMoldKaolinite != null && firedMoldKaolinite != null)
-            {
                 r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldKaolinite), new ItemStack(firedMoldKaolinite), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_kaolinite_mold_" + type.name().toLowerCase()));
-            }
 
             ItemUnfiredStonewareMold unfiredMoldStoneware = ItemUnfiredStonewareMold.get(type);
             ItemStonewareMold firedMoldStoneware = ItemStonewareMold.get(type);
             if (unfiredMoldStoneware != null && firedMoldStoneware != null)
-            {
                 r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldStoneware), new ItemStack(firedMoldStoneware), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_stoneware_mold_" + type.name().toLowerCase()));
-            }
         }
 
         // Bread
@@ -1481,25 +1475,19 @@ public final class RecipesTFCF
                 ItemUnfiredEarthenwareMoldTFCE unfiredMoldEarthenware = ItemUnfiredEarthenwareMoldTFCE.get(type);
                 ItemEarthenwareMoldTFCE firedMoldEarthenware = ItemEarthenwareMoldTFCE.get(type);
                 if (unfiredMoldEarthenware != null && firedMoldEarthenware != null)
-                {
                     r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldEarthenware), new ItemStack(firedMoldEarthenware), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_earthenware_mold_" + type.name().toLowerCase()));
-                }
 
                 if (!type.isTypeActive()) continue;
                 ItemUnfiredKaoliniteMoldTFCE unfiredMoldKaolinite = ItemUnfiredKaoliniteMoldTFCE.get(type);
                 ItemKaoliniteMoldTFCE firedMoldKaolinite = ItemKaoliniteMoldTFCE.get(type);
                 if (unfiredMoldKaolinite != null && firedMoldKaolinite != null)
-                {
                     r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldKaolinite), new ItemStack(firedMoldKaolinite), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_kaolinite_mold_" + type.name().toLowerCase()));
-                }
 
                 if (!type.isTypeActive()) continue;
                 ItemUnfiredStonewareMoldTFCE unfiredMoldStoneware = ItemUnfiredStonewareMoldTFCE.get(type);
                 ItemStonewareMoldTFCE firedMoldStoneware = ItemStonewareMoldTFCE.get(type);
                 if (unfiredMoldStoneware != null && firedMoldStoneware != null)
-                {
                     r.register(new HeatRecipeSimple(IIngredient.of(unfiredMoldStoneware), new ItemStack(firedMoldStoneware), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_stoneware_mold_" + type.name().toLowerCase()));
-                }
             }
         }
     }

@@ -141,9 +141,7 @@ public class UnmoldRecipeKaolinite extends IForgeRegistryEntry.Impl<IRecipe> imp
             {
                 IMoldHandler moldHandler = (IMoldHandler) moldCap;
                 if (!moldHandler.isMolten() && moldHandler.getAmount() == ((ItemKaoliniteMoldTFCE) moldStack.getItem()).getFluidCapacity())
-                {
                     return getOutputItem(moldHandler);
-                }
             }
         }
         return ItemStack.EMPTY;
@@ -274,9 +272,7 @@ public class UnmoldRecipeKaolinite extends IForgeRegistryEntry.Impl<IRecipe> imp
             //Chance of getting the mold back
             float chance = 0;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
 
             return new UnmoldRecipeKaolinite(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }

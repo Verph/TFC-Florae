@@ -72,9 +72,7 @@ public class BlockFruitSupport extends Block
             if (st.getBlock() instanceof BlockFruitSupport)
             {
                 if (((BlockFruitSupport) st.getBlock()).canSupportBlocks(worldIn, searchSupport))
-                {
                     return true; // Found support block that can support this position
-                }
             }
         }
         return false;
@@ -105,9 +103,8 @@ public class BlockFruitSupport extends Block
             maxPoint.add(sRangeHor, sRangeVert, sRangeHor)))
         {
             if (!listSupported.contains(searchingPoint))
-            {
                 listUnsupported.add(searchingPoint.toImmutable()); //Adding blocks that wasn't found supported
-            }
+
             IBlockState st = worldIn.getBlockState(searchingPoint);
             if (st.getBlock() instanceof BlockFruitSupport)
             {
@@ -177,21 +174,13 @@ public class BlockFruitSupport extends Block
     {
         AxisAlignedBB value = state.getValue(AXIS) == EnumFacing.Axis.Y ? VERTICAL_SUPPORT_AABB : HORIZONTAL_SUPPORT_AABB;
         if (isConnectable(source, pos, EnumFacing.NORTH))
-        {
             value = value.union(CONNECTION_N_AABB);
-        }
         if (isConnectable(source, pos, EnumFacing.SOUTH))
-        {
             value = value.union(CONNECTION_S_AABB);
-        }
         if (isConnectable(source, pos, EnumFacing.EAST))
-        {
             value = value.union(CONNECTION_E_AABB);
-        }
         if (isConnectable(source, pos, EnumFacing.WEST))
-        {
             value = value.union(CONNECTION_W_AABB);
-        }
         return value;
     }
 
@@ -209,29 +198,16 @@ public class BlockFruitSupport extends Block
     {
         EnumFacing.Axis axis = state.getValue(AXIS);
         if (axis == EnumFacing.Axis.Y)
-        {
-            addCollisionBoxToList(pos, entityBox, collidingBoxes, VERTICAL_SUPPORT_AABB);
-        }
-        else
-        {
-            addCollisionBoxToList(pos, entityBox, collidingBoxes, HORIZONTAL_SUPPORT_AABB);
-        }
+            addCollisionBoxToList(pos, entityBox, collidingBoxes, axis == EnumFacing.Axis.Y ? VERTICAL_SUPPORT_AABB : HORIZONTAL_SUPPORT_AABB);
+
         if (isConnectable(worldIn, pos, EnumFacing.NORTH))
-        {
             addCollisionBoxToList(pos, entityBox, collidingBoxes, CONNECTION_N_AABB);
-        }
         if (isConnectable(worldIn, pos, EnumFacing.SOUTH))
-        {
             addCollisionBoxToList(pos, entityBox, collidingBoxes, CONNECTION_S_AABB);
-        }
         if (isConnectable(worldIn, pos, EnumFacing.EAST))
-        {
             addCollisionBoxToList(pos, entityBox, collidingBoxes, CONNECTION_E_AABB);
-        }
         if (isConnectable(worldIn, pos, EnumFacing.WEST))
-        {
             addCollisionBoxToList(pos, entityBox, collidingBoxes, CONNECTION_W_AABB);
-        }
     }
 
     @Override
@@ -247,9 +223,7 @@ public class BlockFruitSupport extends Block
     {
         super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         if (!this.canBlockStay(worldIn, pos))
-        {
             worldIn.destroyBlock(pos, true);
-        }
     }
 
     @Override
@@ -281,13 +255,10 @@ public class BlockFruitSupport extends Block
                     if (world.getBlockState(mutablePos).getMaterial().isReplaceable())
                     {
                         if (!world.isRemote)
-                        {
                             world.setBlockState(mutablePos, itemBlock.getDefaultState().withProperty(AXIS, EnumFacing.Axis.Y), 2);
-                        }
                         if (!player.isCreative())
-                        {
                             heldStack.shrink(1);
-                        }
+                        
                         return true;
                     }
                 }

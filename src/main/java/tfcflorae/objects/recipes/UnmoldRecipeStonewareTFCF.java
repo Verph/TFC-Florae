@@ -245,9 +245,8 @@ public class UnmoldRecipeStonewareTFCF extends IForgeRegistryEntry.Impl<IRecipe>
             ItemStack output = new ItemStack(ItemMetal.get(m, type));
             IItemHeat heat = output.getCapability(ITEM_HEAT_CAPABILITY, null);
             if (heat != null)
-            {
                 heat.setTemperature(moldHandler.getTemperature());
-            }
+            
             return output;
         }
         return ItemStack.EMPTY;
@@ -267,9 +266,7 @@ public class UnmoldRecipeStonewareTFCF extends IForgeRegistryEntry.Impl<IRecipe>
             //Chance of getting the mold back
             float chance = 0;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
 
             return new UnmoldRecipeStonewareTFCF(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }

@@ -57,9 +57,7 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
         {
             Block blockAtPos = world.getBlockState(pos).getBlock();
             if (world != null && blockAtPos instanceof BlockFruitChestTFCF)
-            {
                 cachedWood = ((BlockFruitChestTFCF) blockAtPos).wood;;
-            }
         }
         return cachedWood;
     }
@@ -71,9 +69,7 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
         {
             Block blockAtPos = world.getBlockState(pos).getBlock();
             if (world != null && blockAtPos instanceof BlockFruitChestTFCF)
-            {
                 cachedTree = ((BlockFruitChestTFCF) blockAtPos).tree;;
-            }
         }
         return cachedTree;
     }
@@ -109,9 +105,7 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
                 {
                     IInventory iinventory = ((ContainerChestTFC) player.openContainer).getLowerChestInventory();
                     if (iinventory == this || iinventory instanceof InventoryLargeChest && ((InventoryLargeChest) iinventory).isPartOfLargeChest(this))
-                    {
                         ++numPlayersUsing;
-                    }
                 }
             }
         }
@@ -124,14 +118,10 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
             double centerZ = pos.getZ() + 0.5D;
 
             if (adjacentChestZPos != null)
-            {
                 centerZ += 0.5D;
-            }
 
             if (adjacentChestXPos != null)
-            {
                 centerX += 0.5D;
-            }
 
             world.playSound(null, centerX, pos.getY() + 0.5D, centerZ, SoundEvents.BLOCK_CHEST_OPEN, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
         }
@@ -149,9 +139,7 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
             }
 
             if (lidAngle > 1.0F)
-            {
                 lidAngle = 1.0F;
-            }
 
             if (lidAngle < 0.5F && initialAngle >= 0.5F && adjacentChestZNeg == null && adjacentChestXNeg == null)
             {
@@ -159,22 +147,16 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
                 double centerZ = pos.getZ() + 0.5D;
 
                 if (adjacentChestZPos != null)
-                {
                     centerZ += 0.5D;
-                }
 
                 if (adjacentChestXPos != null)
-                {
                     centerX += 0.5D;
-                }
 
                 world.playSound(null, centerX, pos.getY() + 0.5D, centerZ, SoundEvents.BLOCK_CHEST_CLOSE, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
             }
 
             if (lidAngle < 0.0F)
-            {
                 lidAngle = 0.0F;
-            }
         }
     }
 
@@ -186,13 +168,9 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
         if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
         {
             if (doubleChestHandler == null || doubleChestHandler.needsRefresh())
-            {
                 doubleChestHandler = TFCDoubleChestItemHandler.get(this);
-            }
             if (doubleChestHandler != null && doubleChestHandler != TFCDoubleChestItemHandler.NO_ADJACENT_CHESTS_INSTANCE)
-            {
                 return (T) doubleChestHandler;
-            }
         }
         return super.getCapability(capability, facing);
     }
@@ -217,9 +195,8 @@ public class TEFruitChest extends TileEntityChest implements ISlotCallback
         // Blocks input from hopper
         IItemSize cap = CapabilityItemSize.getIItemSize(stack);
         if (cap != null)
-        {
             return cap.getSize(stack).isSmallerThan(Size.VERY_LARGE);
-        }
+        
         return true;
     }
 

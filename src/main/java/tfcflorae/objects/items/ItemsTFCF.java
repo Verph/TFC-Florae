@@ -2163,7 +2163,7 @@ public final class ItemsTFCF
             simpleItems.add(register(r, slab.getRegistryName().getPath(), new ItemSlabTFCF(slab, slab, slab.doubleSlab), CT_DECORATIONS));
 
         for (BlockSlabTFC.Half slab : BlocksTFCF.getAllSlabBlocksTFC())
-                simpleItems.add(register(r, slab.getRegistryName().getPath(), new ItemSlabTFC(slab, slab, slab.doubleSlab), CT_DECORATIONS));
+            simpleItems.add(register(r, slab.getRegistryName().getPath(), new ItemSlabTFC(slab, slab, slab.doubleSlab), CT_DECORATIONS));
 
         for (BlockSlabTFCF.Half slab : BlocksTFCF.getAllSlabBlocks())
             simpleItems.add(register(r, slab.getRegistryName().getPath(), new ItemSlabTFCF(slab, slab, slab.doubleSlab), CT_DECORATIONS));
@@ -2199,9 +2199,7 @@ public final class ItemsTFCF
         allItemBows = itemBows.build();
 
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay || ConfigTFCF.General.WORLD.enableAllKaoliniteClay || ConfigTFCF.General.WORLD.enableAllStonewareClay)
-        {
             allCeramicMoldItems = ceramicItems.build();
-        }
 
         OreDictionaryHelper.init();
     }
@@ -2229,9 +2227,7 @@ public final class ItemsTFCF
         register(r, nameUnfired, unfiredItem, CT_POTTERY);
 
         if (items != null)
-        {
             items.add(firedItem, unfiredItem);
-        }
     }
 
     private static <T extends Item> T register(IForgeRegistry<Item> r, String name, T item, CreativeTabs ct)

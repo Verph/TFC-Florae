@@ -92,9 +92,7 @@ public class TECrate extends TEInventory implements IItemHandlerSidedCallback
     public void onSealed()
     {
         for (int i = 0; i < inventory.getSlots(); i++)
-        {
             CapabilityFood.applyTrait(inventory.getStackInSlot(i), FoodTrait.PRESERVED);
-        }
 
         // Update sealed tick info and sync to client
         sealedTick = CalendarTFC.PLAYER_TIME.getTicks();
@@ -107,9 +105,7 @@ public class TECrate extends TEInventory implements IItemHandlerSidedCallback
     {
         // Update preservation trait on contents
         for (int i = 0; i < inventory.getSlots(); i++)
-        {
             CapabilityFood.removeTrait(inventory.getStackInSlot(i), FoodTrait.PRESERVED);
-        }
 
         // Update sealed tick info and sync to client
         sealedTick = sealedCalendarTick = 0;
@@ -151,9 +147,8 @@ public class TECrate extends TEInventory implements IItemHandlerSidedCallback
     public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
     {
         if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
-        {
             return (T) new ItemHandlerSidedWrapper(this, inventory, facing);
-        }
+        
         return super.getCapability(capability, facing);
     }
 
@@ -179,9 +174,8 @@ public class TECrate extends TEInventory implements IItemHandlerSidedCallback
     {
         IItemSize sizeCap = CapabilityItemSize.getIItemSize(stack);
         if (sizeCap != null)
-        {
             return sizeCap.getSize(stack).isSmallerThan(Size.LARGE);
-        }
+        
         return true;
     }
 

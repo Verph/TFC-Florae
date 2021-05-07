@@ -274,9 +274,7 @@ public class UnmoldRecipeEarthenware extends IForgeRegistryEntry.Impl<IRecipe> i
             //Chance of getting the mold back
             float chance = 0;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
 
             return new UnmoldRecipeEarthenware(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }

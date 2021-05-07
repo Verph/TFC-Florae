@@ -23,9 +23,7 @@ public enum BerryBushTFCF implements IBerryBush
     static
     {
         for (IBerryBush bush : values())
-        {
             WorldGenBerryBushes.register(bush);
-        }
     }
 
     private final ItemFoodTFCF fruit;

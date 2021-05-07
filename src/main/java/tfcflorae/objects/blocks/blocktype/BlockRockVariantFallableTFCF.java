@@ -217,14 +217,10 @@ public class BlockRockVariantFallableTFCF extends BlockRockVariantTFCF
         if (rockTFCF == RockTFCF.MUD)
         {
             if (fortune > 3)
-            {
                 fortune = 3;
-            }
 
             if (rand.nextInt(10 - fortune * 3) == 0)
-            {
                 return ItemMud.get(rock);
-            }
         }
         return super.getItemDropped(state, rand, fortune);
     }

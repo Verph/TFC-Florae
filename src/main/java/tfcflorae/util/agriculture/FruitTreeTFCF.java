@@ -222,9 +222,7 @@ public enum FruitTreeTFCF implements IFruitTree
     static
     {
         for (FruitTreeTFCF tree : values())
-        {
             WorldGenFruitTrees.register(tree);
-        }
     }
 
     private final Supplier<Item> fruit;

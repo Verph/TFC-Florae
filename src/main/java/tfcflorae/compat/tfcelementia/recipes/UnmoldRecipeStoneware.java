@@ -141,9 +141,7 @@ public class UnmoldRecipeStoneware extends IForgeRegistryEntry.Impl<IRecipe> imp
             {
                 IMoldHandler moldHandler = (IMoldHandler) moldCap;
                 if (!moldHandler.isMolten() && moldHandler.getAmount() == ((ItemStonewareMoldTFCE) moldStack.getItem()).getFluidCapacity())
-                {
                     return getOutputItem(moldHandler);
-                }
             }
         }
         return ItemStack.EMPTY;
@@ -252,9 +250,8 @@ public class UnmoldRecipeStoneware extends IForgeRegistryEntry.Impl<IRecipe> imp
             ItemStack output = new ItemStack(ItemMetalTFCE.get(m, type));
             IItemHeat heat = output.getCapability(ITEM_HEAT_CAPABILITY, null);
             if (heat != null)
-            {
                 heat.setTemperature(moldHandler.getTemperature());
-            }
+            
             return output;
         }
         return ItemStack.EMPTY;
@@ -274,9 +271,7 @@ public class UnmoldRecipeStoneware extends IForgeRegistryEntry.Impl<IRecipe> imp
             //Chance of getting the mold back
             float chance = 0;
             if (JsonUtils.hasField(json, "chance"))
-            {
                 chance = JsonUtils.getFloat(json, "chance");
-            }
 
             return new UnmoldRecipeStoneware(group.isEmpty() ? new ResourceLocation(result) : new ResourceLocation(group), ingredients, type, chance);
         }

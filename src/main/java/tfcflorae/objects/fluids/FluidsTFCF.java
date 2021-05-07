@@ -208,9 +208,7 @@ public final class FluidsTFCF
         
         DISTILLED_WATER = registerFluid(new Fluid("distilled_water", STILL, FLOW, 0xFF1F32DA)).with(DrinkableProperty.DRINKABLE, player -> {
             if (player.getFoodStats() instanceof FoodStatsTFC)
-            {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
-            }
         });
 
         DrinkableProperty teaProperty = player -> {
@@ -218,9 +216,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 1200, 1));
-                }
             }
         };
         allTeaFluids = ImmutableSet.<FluidWrapper>builder()
@@ -239,9 +235,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1));
-                }
             }
         };
 
@@ -283,9 +277,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(10);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 1));
-                }
             }
         };
         allFermentedAlcoholsFluids = ImmutableSet.<FluidWrapper>builder()
@@ -314,9 +306,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(10);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 1200, 2));
-                }
             }
         };
         allAlcoholsFluids = ImmutableSet.<FluidWrapper>builder()
@@ -345,9 +335,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(10);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 200, 1));
-                }
             }
         };
         allBeerFluids = ImmutableSet.<FluidWrapper>builder()
@@ -370,9 +358,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(15);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300, 1));
-                }
             }
         };
         allJuiceBerryFluids = ImmutableSet.<FluidWrapper>builder()
@@ -396,9 +382,7 @@ public final class FluidsTFCF
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(15);
                 if (Constants.RNG.nextFloat() < 0.25f)
-                {
                     player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300, 1));
-                }
             }
         };
         allJuiceFruitFluids = ImmutableSet.<FluidWrapper>builder()

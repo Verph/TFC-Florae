@@ -60,9 +60,8 @@ public class ItemRockTFCF extends ItemBlockTFC
     {
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
-        {
             TFCGuiHandler.openGui(world, player.getPosition(), player, TFCGuiHandler.Type.KNAPPING_STONE);
-        }
+        
         return new ActionResult<>(EnumActionResult.SUCCESS, stack);
     }
 }

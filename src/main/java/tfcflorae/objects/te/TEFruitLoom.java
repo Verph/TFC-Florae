@@ -45,9 +45,7 @@ public class TEFruitLoom extends TEInventory implements ITickable
         if (cachedWood == null)
         {
             if (world != null)
-            {
                 cachedWood = ((BlockFruitLoom) world.getBlockState(pos).getBlock()).wood;
-            }
         }
         return cachedWood;
     }
@@ -58,9 +56,7 @@ public class TEFruitLoom extends TEInventory implements ITickable
         if (cachedTree == null)
         {
             if (world != null)
-            {
                 cachedTree = ((BlockFruitLoom) world.getBlockState(pos).getBlock()).tree;
-            }
         }
         return cachedTree;
     }
@@ -81,11 +77,10 @@ public class TEFruitLoom extends TEInventory implements ITickable
         super.writeToNBT(nbt);
         nbt.setInteger("progress", progress);
         nbt.setLong("lastPushed", lastPushed);
+        //noinspection ConstantConditions
         if (recipe != null)
-        {
-            //noinspection ConstantConditions
             nbt.setString("recipe", recipe.getRegistryName().toString());
-        }
+        
         return nbt;
     }
 
@@ -126,9 +121,8 @@ public class TEFruitLoom extends TEInventory implements ITickable
                     inventory.getStackInSlot(0).shrink(1);
 
                     if (inventory.getStackInSlot(0).isEmpty())
-                    {
                         recipe = null;
-                    }
+                    
                     markForBlockUpdate();
                     return true;
                 }
@@ -168,9 +162,8 @@ public class TEFruitLoom extends TEInventory implements ITickable
                     {
                         long time = world.getTotalWorldTime() - lastPushed;
                         if (time < 20)
-                        {
                             return true;
-                        }
+                        
                         lastPushed = world.getTotalWorldTime();
                         needsUpdate = true;
                         markForSync();

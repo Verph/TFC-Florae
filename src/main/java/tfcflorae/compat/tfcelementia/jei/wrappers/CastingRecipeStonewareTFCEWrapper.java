@@ -28,9 +28,7 @@ public class CastingRecipeStonewareTFCEWrapper extends net.dries007.tfc.compat.j
         mold = new ItemStack(ItemStonewareMoldTFCE.get(type));
         IFluidHandler cap = mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(input, true);
-        }
     }
 
     @Override

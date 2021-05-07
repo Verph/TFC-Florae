@@ -80,25 +80,24 @@ public class BlockFruitChestTFCF extends BlockChest implements IItemSize
         this.tree = null;
         setHardness(2.5F);
         setSoundType(SoundType.WOOD);
-        if (type == TFCBASIC)
-        {
-            if (MAP_BASIC.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
-            OreDictionaryHelper.register(this, "chest");
-            OreDictionaryHelper.register(this, "chest", "wood");
-            //noinspection ConstantConditions
-            OreDictionaryHelper.register(this, "chest", tree);
-        }
-        else if (type == TFCTRAP)
-        {
-            if (MAP_TRAP.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
-            OreDictionaryHelper.register(this, "chest", "trapped");
-            OreDictionaryHelper.register(this, "chest", "wood");
-            //noinspection ConstantConditions
-            OreDictionaryHelper.register(this, "chest", "trapped", tree);
-        }
-        else
-        {
-            throw new IllegalStateException("TFCF Chest must use TFCF chest type");
+        switch(type) {
+            case TFCBASIC:
+                if (MAP_BASIC.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
+                OreDictionaryHelper.register(this, "chest");
+                OreDictionaryHelper.register(this, "chest", "wood");
+                //noinspection ConstantConditions
+                OreDictionaryHelper.register(this, "chest", tree);
+            break;
+            case TFCTRAP:
+                if (MAP_TRAP.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
+                OreDictionaryHelper.register(this, "chest", "trapped");
+                OreDictionaryHelper.register(this, "chest", "wood");
+                //noinspection ConstantConditions
+                OreDictionaryHelper.register(this, "chest", "trapped", tree);
+            break;
+            default:
+                throw new IllegalStateException("TFCF Chest must use TFCF chest type");
+            break;
         }
         Blocks.FIRE.setFireInfo(this, 5, 20);
     }
@@ -137,9 +136,8 @@ public class BlockFruitChestTFCF extends BlockChest implements IItemSize
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         if (!worldIn.isRemote)
-        {
             GuiHandler.openGui(worldIn, pos, playerIn, GuiHandler.Type.CHEST);
-        }
+
         return true;
     }
 
@@ -236,9 +234,7 @@ public class BlockFruitChestTFCF extends BlockChest implements IItemSize
             EntityOcelot entityocelot = (EntityOcelot) entity;
 
             if (entityocelot.isSitting())
-            {
                 return true;
-            }
         }
 
         return false;

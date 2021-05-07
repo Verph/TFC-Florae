@@ -166,9 +166,8 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     {
         TEFruitLoom te = Helpers.getTE(worldIn, pos, TEFruitLoom.class);
         if (te != null)
-        {
             return te.onRightClick(playerIn);
-        }
+        
         return true;
     }
 
@@ -178,9 +177,8 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         if (facing.getAxis() == EnumFacing.Axis.Y)
-        {
             facing = placer.getHorizontalFacing().getOpposite();
-        }
+        
         return getDefaultState().withProperty(FACING, facing);
     }
 
@@ -204,9 +202,8 @@ public class BlockFruitLoom extends BlockContainer implements IItemSize
     {
         TEFruitLoom te = Helpers.getTE(worldIn, pos, TEFruitLoom.class);
         if (te != null)
-        {
             te.onBreakBlock(worldIn, pos, state);
-        }
+        
         super.breakBlock(worldIn, pos, state);
     }
 }

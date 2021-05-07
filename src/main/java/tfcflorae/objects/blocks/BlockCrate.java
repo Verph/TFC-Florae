@@ -173,9 +173,7 @@ public class BlockCrate extends Block implements IItemSize
     public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
         if (!canStay(world, pos))
-        {
             world.destroyBlock(pos, true);
-        }
     }
 
     @Override
@@ -183,9 +181,8 @@ public class BlockCrate extends Block implements IItemSize
     {
         TECrate tile = Helpers.getTE(worldIn, pos, TECrate.class);
         if (tile != null)
-        {
             tile.onBreakBlock(worldIn, pos, state);
-        }
+
         super.breakBlock(worldIn, pos, state);
     }
 
@@ -283,9 +280,7 @@ public class BlockCrate extends Block implements IItemSize
     {
         // Only drop the barrel if it's not sealed, since the barrel with contents will be already dropped by the TE
         if (!state.getValue(SEALED))
-        {
             super.getDrops(drops, world, pos, state, fortune);
-        }
     }
 
     @Override

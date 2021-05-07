@@ -68,9 +68,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
                 ItemStack arrowStack = player.inventory.getStackInSlot(i);
 
                 if (this.isArrow(arrowStack))
-                {
                     return arrowStack;
-                }
             }
 
             return ItemStack.EMPTY;
@@ -99,9 +97,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
             if (itemstack != ItemStack.EMPTY || flag)
             {
                 if (itemstack == ItemStack.EMPTY)
-                {
                     itemstack = new ItemStack(Items.ARROW);
-                }
 
                 float f = getArrowVelocity(i);
                 if ((double)f >= 0.1D)
@@ -158,9 +154,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
                     	itemstack.shrink(1);
 
                         if (itemstack.getCount() == 0)
-                        {
                             entityplayer.inventory.deleteStack(itemstack);
-                        }
                     }
 
                     entityplayer.addStat(StatList.getObjectUseStats(this));
@@ -180,9 +174,7 @@ public class ItemBowTFCF extends ItemBow implements IItemSize
         f = (f * f + f * 2.0F) / 3.0F;
 
         if (f > 1.0F)
-        {
             f = 1.0F;
-        }
 
         return f;
     }

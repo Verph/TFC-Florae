@@ -61,9 +61,7 @@ public class ItemStonewareMold extends ItemPottery
     {
         this.type = type;
         if (MAP.put(type, this) != null)
-        {
             throw new IllegalStateException("There can only be one.");
-        }
     }
 
     @Override
@@ -75,9 +73,7 @@ public class ItemStonewareMold extends ItemPottery
         {
             IItemHeat cap = stack.getCapability(CapabilityItemHeat.ITEM_HEAT_CAPABILITY, null);
             if (!player.isSneaking() && cap != null && cap.isMolten())
-            {
                 TFCGuiHandler.openGui(world, player, TFCGuiHandler.Type.MOLD);
-            }
 
             if (player.isSneaking())
             {
@@ -118,11 +114,9 @@ public class ItemStonewareMold extends ItemPottery
         if (capFluidHandler instanceof IMoldHandler)
         {
             Metal metal = ((IMoldHandler) capFluidHandler).getMetal();
+            //noinspection ConstantConditions
             if (metal != null)
-            {
-                //noinspection ConstantConditions
                 return super.getTranslationKey(stack) + "." + metal.getRegistryName().getPath();
-            }
         }
         return super.getTranslationKey(stack);
     }
@@ -170,9 +164,7 @@ public class ItemStonewareMold extends ItemPottery
             tank = new FluidTank(100);
 
             if (nbt != null)
-            {
                 deserializeNBT(nbt);
-            }
         }
 
         @Nullable
@@ -192,9 +184,8 @@ public class ItemStonewareMold extends ItemPottery
         public IFluidTankProperties[] getTankProperties()
         {
             if (fluidTankProperties == null)
-            {
                 fluidTankProperties = new IFluidTankProperties[] {new FluidTankPropertiesWrapper(tank)};
-            }
+            
             return fluidTankProperties;
         }
 
@@ -209,9 +200,8 @@ public class ItemStonewareMold extends ItemPottery
                 {
                     int fillAmount = tank.fill(resource, doFill);
                     if (fillAmount == tank.getFluidAmount())
-                    {
                         updateFluidData();
-                    }
+                    
                     return fillAmount;
                 }
             }
@@ -233,9 +223,8 @@ public class ItemStonewareMold extends ItemPottery
             {
                 FluidStack stack = tank.drain(maxDrain, doDrain);
                 if (tank.getFluidAmount() == 0)
-                {
                     updateFluidData();
-                }
+                
                 return stack;
             }
             return null;

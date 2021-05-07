@@ -107,22 +107,20 @@ public class EntityBoatTFCF extends EntityBoat
     public void setWood(@Nullable IFruitTree wood)
     {
         String woodName = "";
+        //noinspection ConstantConditions
         if (wood != null)
-        {
-            //noinspection ConstantConditions
             woodName = wood.getName().toLowerCase();
-        }
+
         this.dataManager.set(WOOD_NAME, woodName);
     }
 
     public void setTree(@Nullable Tree tree)
     {
         String woodName = "";
+        //noinspection ConstantConditions
         if (tree != null)
-        {
-            //noinspection ConstantConditions
             woodName = tree.getRegistryName().getPath().toLowerCase();
-        }
+        
         this.dataManager.set(WOOD_NAME, woodName);
     }
 
@@ -138,14 +136,12 @@ public class EntityBoatTFCF extends EntityBoat
     {
         IFruitTree wood = getWood();
         if (wood != null)
-        {
             return ItemBoatTFCF.get(wood);
-        }
+
         Tree tree = getTree();
         if (tree != null)
-        {
             return ItemBoatTFCF.get(tree);
-        }
+        
         return super.getItemBoat();
     }
 
@@ -165,27 +161,19 @@ public class EntityBoatTFCF extends EntityBoat
         }
 
         if (!this.world.isRemote && this.outOfControlTicks >= 60.0F)
-        {
             this.removePassengers();
-        }
 
         if (this.getTimeSinceHit() > 0)
-        {
             this.setTimeSinceHit(this.getTimeSinceHit() - 1);
-        }
 
         if (this.getDamageTaken() > 0.0F)
-        {
             this.setDamageTaken(this.getDamageTaken() - 1.0F);
-        }
 
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
         if (!this.world.isRemote)
-        {
             this.setFlag(6, this.isGlowing());
-        }
 
         this.onEntityUpdate();
         this.tickLerp();
@@ -193,9 +181,7 @@ public class EntityBoatTFCF extends EntityBoat
         if (this.canPassengerSteer())
         {
             if (this.getPassengers().isEmpty() || !(this.getPassengers().get(0) instanceof EntityPlayer))
-            {
                 this.setPaddleState(false, false);
-            }
 
             this.updateMotion();
 

@@ -91,9 +91,7 @@ public abstract class BlockFruitSlab extends BlockSlab
         IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, Variant.DEFAULT);
 
         if (!this.isDouble())
-        {
             iblockstate = iblockstate.withProperty(HALF, (meta & 8) == 0 ? BlockSlab.EnumBlockHalf.BOTTOM : BlockSlab.EnumBlockHalf.TOP);
-        }
 
         return iblockstate;
     }
@@ -104,9 +102,7 @@ public abstract class BlockFruitSlab extends BlockSlab
         int i = 0;
 
         if (!this.isDouble() && state.getValue(HALF) == BlockSlab.EnumBlockHalf.TOP)
-        {
             i |= 8;
-        }
 
         return i;
     }

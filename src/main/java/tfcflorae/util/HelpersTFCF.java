@@ -122,16 +122,14 @@ public class HelpersTFCF
         };
         Set<String> woodenBucketSet = new HashSet<>(Arrays.asList(ConfigTFC.General.MISC.woodenBucketWhitelist));
         for (String a : fluidAdditions)
-        {
             woodenBucketSet.add(a);
-        }
+        
         ConfigTFC.General.MISC.woodenBucketWhitelist = woodenBucketSet.toArray(new String[] {});
 
         Set<String> barrelSet = new HashSet<>(Arrays.asList(ConfigTFC.Devices.BARREL.fluidWhitelist));
         for (String a : fluidAdditions)
-        {
             barrelSet.add(a);
-        }
+        
         ConfigTFC.Devices.BARREL.fluidWhitelist = barrelSet.toArray(new String[] {});
 
         // Oil Fuels
@@ -144,9 +142,8 @@ public class HelpersTFCF
         
         Set<String> fuelSet = new HashSet<>(Arrays.asList(ConfigTFC.Devices.LAMP.fuels));
         for (String a : oilAdditions)
-        {
             fuelSet.add(a);
-        }
+        
         ConfigTFC.Devices.LAMP.fuels = fuelSet.toArray(new String[] {});
     }
 }

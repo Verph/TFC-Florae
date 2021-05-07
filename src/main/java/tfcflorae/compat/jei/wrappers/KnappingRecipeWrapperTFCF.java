@@ -33,37 +33,34 @@ public class KnappingRecipeWrapperTFCF extends KnappingRecipeWrapper
 
     private static ResourceLocation getHighTexture(KnappingType type)
     {
-        if(type == KnappingTypes.EARTHENWARE_CLAY)
-        {
-            return EARTHENWARE_CLAY_TEXTURE;
-        }
-        if(type == KnappingTypes.KAOLINITE_CLAY)
-        {
-            return KAOLINITE_CLAY_TEXTURE;
-        }
-        if(type == KnappingTypes.STONEWARE_CLAY)
-        {
-            return STONEWARE_CLAY_TEXTURE;
-        }
-        if(type == KnappingTypes.FLINT)
-        {
-            return FLINT_TEXTURE;
+        switch(type) {
+            case KnappingTypes.EARTHENWARE_CLAY:
+                return EARTHENWARE_CLAY_TEXTURE;
+            break;
+            case KnappingTypes.KAOLINITE_CLAY:
+                return KAOLINITE_CLAY_TEXTURE;
+            break;
+            case KnappingTypes.STONEWARE_CLAY:
+                return STONEWARE_CLAY_TEXTURE;
+            break;
+            case KnappingTypes.FLINT:
+                return FLINT_TEXTURE;
+            break;
         }
         return null;
     }
     private static ResourceLocation getLowTexture(KnappingType type)
     {
-        if(type == KnappingTypes.EARTHENWARE_CLAY)
-        {
-            return EARTHENWARE_CLAY_DISABLED_TEXTURE;
-        }
-        if(type == KnappingTypes.KAOLINITE_CLAY)
-        {
-            return KAOLINITE_CLAY_DISABLED_TEXTURE;
-        }
-        if(type == KnappingTypes.STONEWARE_CLAY)
-        {
-            return STONEWARE_CLAY_DISABLED_TEXTURE;
+        switch(type) {
+            case KnappingTypes.EARTHENWARE_CLAY:
+                return EARTHENWARE_CLAY_DISABLED_TEXTURE;
+            break;
+            case KnappingTypes.KAOLINITE_CLAY:
+                return KAOLINITE_CLAY_DISABLED_TEXTURE;
+            break;
+            case KnappingTypes.STONEWARE_CLAY:
+                return STONEWARE_CLAY_DISABLED_TEXTURE;
+            break;
         }
         return null;
     }

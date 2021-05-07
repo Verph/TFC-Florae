@@ -27,9 +27,8 @@ public class UnmoldRecipeStonewareTFCEWrapper implements IRecipeWrapper
         mold = new ItemStack(ItemStonewareMoldTFCE.get(type));
         IFluidHandler cap = mold.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
         if (cap instanceof IMoldHandler)
-        {
             cap.fill(new FluidStack(FluidsTFC.getFluidFromMetal(metal), type.getSmeltAmount()), true);
-        }
+        
         output = new ItemStack(ItemMetalTFCE.get(metal, type));
     }
 

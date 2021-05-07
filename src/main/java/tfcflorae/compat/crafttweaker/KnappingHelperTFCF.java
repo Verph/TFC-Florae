@@ -50,9 +50,9 @@ public class KnappingHelperTFCF
         ItemStack item = (ItemStack) output.getInternal();
         List<KnappingRecipe> removeList = new ArrayList<>();
         TFCRegistries.KNAPPING.getValuesCollection()
-                .stream()
-                .filter(x -> x.getType() == type && x.getOutput(ItemStack.EMPTY).isItemEqual(item))
-                .forEach(removeList::add);
+            .stream()
+            .filter(x -> x.getType() == type && x.getOutput(ItemStack.EMPTY).isItemEqual(item))
+            .forEach(removeList::add);
         for (KnappingRecipe rem : removeList)
         {
             CraftTweakerAPI.apply(new IAction()
