@@ -1,0 +1,171 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"texture": "tfcflorae:items/tools/walking_stick"
+	},
+	"elements": [
+		{
+			"from": [7.75, 17.42081, 8.87643],
+			"to": [8.2, 17.89581, 9.92643],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [12, 11, 14, 15], "texture": "#texture"},
+				"east": {"uv": [10, 6, 15, 9], "texture": "#texture"},
+				"south": {"uv": [7.5, 1, 8, 15], "texture": "#texture"},
+				"west": {"uv": [11, 0, 16, 3], "texture": "#texture"},
+				"up": {"uv": [11, 3, 16, 6], "rotation": 90, "texture": "#texture"},
+				"down": {"uv": [11, 4, 16, 7], "rotation": 90, "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.675, 13, 7.775],
+			"to": [8.275, 18.3, 8.35],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 14], "texture": "#texture"},
+				"east": {"uv": [6, 0, 7, 14], "texture": "#texture"},
+				"south": {"uv": [6, 0, 7, 14], "texture": "#texture"},
+				"west": {"uv": [6, 0, 7, 14], "texture": "#texture"},
+				"up": {"uv": [6, 0, 7, 14], "texture": "#texture"},
+				"down": {"uv": [6, 0, 7, 14], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.65, 14.175, 7.75],
+			"to": [8.3, 16.5, 8.375],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.9375, 15.30857, 8.02598]},
+			"faces": {
+				"north": {"uv": [5, 0, 6, 14], "texture": "#texture"},
+				"east": {"uv": [5, 0, 6, 14], "texture": "#texture"},
+				"south": {"uv": [5, 0, 6, 14], "texture": "#texture"},
+				"west": {"uv": [5, 0, 6, 14], "texture": "#texture"},
+				"up": {"uv": [5, 0, 6, 14], "texture": "#texture"},
+				"down": {"uv": [5, 0, 6, 14], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.7, 9, 7.9],
+			"to": [8.25, 13, 8.35],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [8, 9, 9, 16], "texture": "#texture"},
+				"east": {"uv": [8, 9, 9, 16], "texture": "#texture"},
+				"south": {"uv": [8, 9, 9, 16], "texture": "#texture"},
+				"west": {"uv": [8, 9, 9, 16], "texture": "#texture"},
+				"up": {"uv": [8, 9, 9, 16], "texture": "#texture"},
+				"down": {"uv": [8, 9, 9, 16], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.75, 1.4, 8.05],
+			"to": [8.2, 8.925, 8.4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [4, 1, 5, 15], "texture": "#texture"},
+				"east": {"uv": [4, 1, 5, 15], "texture": "#texture"},
+				"south": {"uv": [4, 1, 5, 15], "texture": "#texture"},
+				"west": {"uv": [4, 1, 5, 15], "texture": "#texture"},
+				"up": {"uv": [4, 1, 5, 15], "texture": "#texture"},
+				"down": {"uv": [12, 11, 14, 15], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.675, 12.86599, 7.59589],
+			"to": [8.275, 13.16599, 8.15089],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"east": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"south": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"west": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"up": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"down": {"uv": [10, 8, 12, 9], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.7, 9.10118, 6.18145],
+			"to": [8.25, 9.40118, 6.63645],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"east": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"south": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"west": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"up": {"uv": [10, 8, 12, 9], "texture": "#texture"},
+				"down": {"uv": [10, 8, 12, 9], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.625, 17.74658, 5.7745],
+			"to": [8.325, 18.24658, 6.7045],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [10, 6, 15, 9], "texture": "#texture"},
+				"east": {"uv": [10, 2, 15, 5], "texture": "#texture"},
+				"south": {"uv": [10, 4, 15, 7], "texture": "#texture"},
+				"west": {"uv": [11, 5, 16, 8], "texture": "#texture"},
+				"up": {"uv": [12, 11, 14, 15], "texture": "#texture"},
+				"down": {"uv": [12, 5, 14, 9], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [7.7, 16.31131, 4.45188],
+			"to": [8.25, 16.74131, 4.77688],
+			"rotation": {"angle": 45, "axis": "x", "origin": [7.9375, 13.50857, 8.02598]},
+			"faces": {
+				"north": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"},
+				"east": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"},
+				"south": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"},
+				"west": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"},
+				"up": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"},
+				"down": {"uv": [13, 1, 15, 3], "rotation": 270, "texture": "#texture"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [62, -180, 0],
+			"translation": [-0.5, -3.75, -5.25],
+			"scale": [1.5, 1.2, 1.24]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [62, -180, 0],
+			"translation": [-0.5, -3.75, -5.25],
+			"scale": [1.5, 1.2, 1.24]
+		},
+		"firstperson_righthand": {
+			"rotation": [16, -13.75, 7],
+			"translation": [3, -3, -1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [16, -13.75, 7],
+			"translation": [3, -3, -1]
+		},
+		"ground": {
+			"rotation": [48, 67, 17],
+			"translation": [0, 1.25, 0],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"gui": {
+			"rotation": [-52, -34.5, -52],
+			"translation": [-1.5, -1.5, 0],
+			"scale": [1.2, 1.2, 1.2]
+		},
+		"head": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 6.25, -4.5],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"translation": [0, -2.75, -1.5],
+			"scale": [1.25, 1.25, 1.25]
+		}
+	},
+	"groups": [
+		{
+			"name": "walking stick",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+		}
+	]
+}

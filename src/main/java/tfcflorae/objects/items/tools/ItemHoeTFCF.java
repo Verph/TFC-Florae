@@ -40,7 +40,7 @@ public class ItemHoeTFCF extends ItemHoe implements IItemSize
     {
 	    super(material);
 	    this.material = material;
-	    this.attackDamage = AttackDamage * 0.875f;
+	    this.attackDamage = AttackDamage;
 	    this.attackSpeed =AttackSpeed;
         this.setMaxDamage(Durability);
         this.setHarvestLevel("hoe", material.getHarvestLevel());

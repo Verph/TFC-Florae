@@ -69,7 +69,6 @@ public class RenderBoatTFCF extends Render<EntityBoatTFCF>
         final IFruitTree wood = entity.getWood();
         if (wood != null)
         {
-            TFCFlorae.getLog().info("TFCFlorae: Boat texture 1: " + wood.getName().toLowerCase());
             //noinspection ConstantConditions
             return new ResourceLocation(MODID, "textures/entity/boat/" + wood.getName().toLowerCase() + ".png");
         }
@@ -77,7 +76,6 @@ public class RenderBoatTFCF extends Render<EntityBoatTFCF>
         final Tree tree = entity.getTree();
         if (tree != null)
         {
-            TFCFlorae.getLog().info("TFCFlorae: Boat texture 2: " + tree.getRegistryName().getPath().toLowerCase());
             //noinspection ConstantConditions
             return new ResourceLocation(MODID, "textures/entity/boat/" + tree.getRegistryName().getPath().toLowerCase() + ".png");
         }

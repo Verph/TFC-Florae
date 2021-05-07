@@ -18874,6 +18874,7 @@ tile.tfc.plants.cave_vines.name=Cave vines
 tile.tfc.plants.glow_vines.name=Glow vines
 tile.tfc.plants.roots.name=Roots
 tile.tfc.plants.icicle.name=Icicle
+tile.tfc.plants.resin.name=Resin
 
 tile.tfc.plants.rattan.name=Rattan
 tile.tfc.plants.hanging_vines.name=Hanging Vines
@@ -26286,6 +26287,7 @@ item.tfcflorae.powder.slaked_lime.name=Slaked Lime Powder
 item.tfcflorae.powder.pearl.name=Pearl Powder
 item.tfcflorae.powder.black_pearl.name=Black Pearl Powder
 
+item.tfcflorae.tools.walking_stick.name=Walking Stick
 item.tfcflorae.tools.flint.axe.flint.name=Flint Axe
 item.tfcflorae.tools.flint.axe_head.flint.name=Flint Axe Head
 item.tfcflorae.tools.flint.hammer.flint.name=Flint Hammer
@@ -31689,6 +31691,8 @@ item.tfcflorae.food.wild_rice_bread.name=Wild Rice Bread
 item.tfcflorae.food.wild_rice_flatbread.name=Wild Rice Flatbread
 item.tfcflorae.food.wild_rice_flatbread_dough.name=Wild Rice Flatbread Dough
 item.tfcflorae.food.wild_rice_slice.name=Wild Rice Slice
+item.tfcflorae.food.wild_barley.name=Wild Barley
+item.tfcflorae.food.wild_wheat.name=Wild Wheat
 item.tfcflorae.food.linseed.name=Linseed
 item.tfcflorae.food.rape_seed.name=Rape Seed
 item.tfcflorae.food.sunflower_seed.name=Sunflower Seed
@@ -31714,7 +31718,7 @@ item.tfcflorae.food.rape_seed_paste.name=Rape Seed Paste
 item.tfcflorae.food.sunflower_seed_paste.name=Sunflower Seed Paste
 item.tfcflorae.food.opium_poppy_seed_paste.name=Opium Poppy Seed Paste
 item.tfcflorae.food.mashed_sugar_beet.name=Mashed Sugar Beet
-item.tfcflorae.food.mashed_sugar_cane.name=Mashed Suagr Cane
+item.tfcflorae.food.mashed_sugar_cane.name=Mashed Sugar Cane
 item.tfcflorae.food.soybean_paste.name=Soybean Paste
 item.tfcflorae.food.cow_cheese.name=Cow Cheese
 item.tfcflorae.food.goat_cheese.name=Goat Cheese
@@ -32055,6 +32059,12 @@ config.tfcflorae.general.world.bambooRarity.tooltip=The rarity for bamboo trees 
 config.tfcflorae.general.world.cinnamonRarity=Bamboo Tree Rarity
 config.tfcflorae.general.world.cinnamonRarity.tooltip=The rarity for cinnamon trees to generate. On average 1 / N chunks will have a cinnamon tree, if the chunk in question is valid for cinnamon to generate.
 
+config.tfcflorae.general.world.enableGourdWorldGen=Gourd Generation
+config.tfcflorae.general.world.enableGourdWorldGen.tooltip=Enable gourd generation?
+
+config.tfcflorae.general.world.enableAllVines=Vine Generation
+config.tfcflorae.general.world.enableAllVines.tooltip=Enable vine generation?
+
 config.tfcflorae.general.world.enableGroundcoverBones=Bone Groundcover
 config.tfcflorae.general.world.enableGroundcoverBones.tooltip=Enable bone groundcover?
 
@@ -32093,6 +32103,33 @@ config.tfcflorae.general.world.enableAllBlockRockTypes.tooltip=Enable rock types
 
 config.tfcflorae.general.world.enableAllWorldGen=All World Generation
 config.tfcflorae.general.world.enableAllWorldGen.tooltip=Enable all world generation?
+
+config.tfcflorae.general.world.enableAllBogIron=All Bog Iron
+config.tfcflorae.general.world.enableAllBogIron.tooltip=Enable bog iron blocks?
+
+config.tfcflorae.general.world.enableAllCoarse=All Coarse Soil
+config.tfcflorae.general.world.enableAllCoarse.tooltip=Enable coarse soil blocks?
+
+config.tfcflorae.general.world.enableAllPodzol=All Podzol
+config.tfcflorae.general.world.enableAllPodzol.tooltip=Enable podzol blocks?
+
+config.tfcflorae.general.world.enableAllSparseGrass=All Sparse Grass
+config.tfcflorae.general.world.enableAllSparseGrass.tooltip=Enable sparse grass blocks?
+
+config.tfcflorae.general.world.enableAllSpecialSoil=All Special Soils
+config.tfcflorae.general.world.enableAllSpecialSoil.tooltip=Enable special soil blocks?
+
+config.tfcflorae.general.world.enableAllEarthenwareClay=All Earthenware Clay
+config.tfcflorae.general.world.enableAllEarthenwareClay.tooltip=Enable earthenware clay blocks?
+
+config.tfcflorae.general.world.enableAllKaoliniteClay=All Kaolinite Clay
+config.tfcflorae.general.world.enableAllKaoliniteClay.tooltip=Enable kaolinite clay blocks?
+
+config.tfcflorae.general.world.enableAllStonewareClay=All Stoneware Clay
+config.tfcflorae.general.world.enableAllStonewareClay.tooltip=Enable stoneware clay blocks?
+
+config.tfcflorae.general.world.enableAllFarmland=All Special Soil Farmland
+config.tfcflorae.general.world.enableAllFarmland.tooltip=Enable special soil farmland blocks?
 
 config.tfcflorae.general.structures.activateStructureGeneration=All Structure Generation
 config.tfcflorae.general.structures.activateStructureGeneration.tooltip=Activate structure generation?

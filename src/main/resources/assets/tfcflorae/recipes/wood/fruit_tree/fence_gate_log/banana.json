@@ -10,8 +10,7 @@
       "ore" : "lumberBanana"
     },
     "B": {
-      "type": "forge:ore_dict",
-      "ore" : "poleBanana"
+      "item": "firmalife:banana_pole"
     }
   },
   "result": {

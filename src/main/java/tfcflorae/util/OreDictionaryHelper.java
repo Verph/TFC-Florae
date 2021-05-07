@@ -16,10 +16,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import net.dries007.tfc.api.capability.damage.DamageType;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Rock;
-
+import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
 import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.types.PlantsTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 
 public class OreDictionaryHelper 
@@ -91,6 +93,8 @@ public class OreDictionaryHelper
         OreDictionary.registerOre("balePapyrusFiber", new ItemStack(BlocksTFCF.PAPYRUS_FIBER_BALE));
         OreDictionary.registerOre("baleSilkString", new ItemStack(BlocksTFCF.SILK_STRING_BALE));
         OreDictionary.registerOre("baleSisalFiber", new ItemStack(BlocksTFCF.SISAL_FIBER_BALE));
+        OreDictionary.registerOre("glue", new ItemStack(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.RESIN))));
+        OreDictionary.registerOre("slimeball", new ItemStack(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.RESIN))));
 
         // Flint
         OreDictionary.registerOre("flint", new ItemStack(Items.FLINT));

@@ -6,8 +6,7 @@
   ],
   "key": {
     "X": {
-      "type": "forge:ore_dict",
-      "ore" : "poleRed_apple"
+      "item": "firmalife:red_apple_pole"
     },
     "B": {
       "type": "forge:ore_dict",

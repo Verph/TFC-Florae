@@ -45,7 +45,7 @@ public class ItemJavelinTFCF extends ItemTool implements IItemSize
 
     public ItemJavelinTFCF(ToolMaterial material, float AttackDamage, float AttackSpeed, int Durability, Object... oreNameParts)
     {
-	    super(-0.3f * material.getAttackDamage(), -1.8f, material, ImmutableSet.of());
+	    super(material.getAttackDamage(), AttackSpeed, material, ImmutableSet.of());
 	    this.material = material;
 	    this.attackDamage = AttackDamage;
 	    this.attackSpeed = AttackSpeed;

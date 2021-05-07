@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/kaolinite/unfired/spindle"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/kaolinite/kaolinite_clay",
+    "count": 1
+  }
+}

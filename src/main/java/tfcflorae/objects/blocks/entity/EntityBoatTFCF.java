@@ -71,7 +71,7 @@ public class EntityBoatTFCF extends EntityBoat
             for (FruitTreeFL fruitTree : FruitTreeFL.values())
             {
                 String name = fruitTree.getName().toLowerCase();
-    
+
                 if (this.dataManager.get(WOOD_NAME) == name)
                     return fruitTree;
             }

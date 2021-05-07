@@ -1,9 +1,7 @@
 package tfcflorae.proxy;
 
 import net.minecraft.item.Item;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.gen.IChunkGenerator;
+
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -13,6 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import tfcflorae.ConfigTFCF;
+import tfcflorae.TFCFlorae;
 import tfcflorae.world.worldgen.*;
 import tfcflorae.world.worldgen.structures.WorldGenStructures;
 
@@ -67,6 +66,10 @@ public class CommonProxy
             if (ConfigTFCF.General.WORLD.enableGroundcoverTwig)
             {
                 GameRegistry.registerWorldGenerator(new WorldGenSurfaceTwig(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableGourdWorldGen && TFCFlorae.FirmaLifeAdded)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenGourds(), 0);
             }
         }
     }

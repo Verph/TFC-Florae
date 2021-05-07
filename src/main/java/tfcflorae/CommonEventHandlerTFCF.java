@@ -1,5 +1,7 @@
 package tfcflorae;
 
+import com.eerussianguy.firmalife.init.FoodFL;
+import com.eerussianguy.firmalife.registry.BlocksFL;
 import com.eerussianguy.firmalife.registry.ItemsFL;
 
 import net.minecraft.block.Block;
@@ -132,6 +134,11 @@ public final class CommonEventHandlerTFCF
 
         if (TFCFlorae.FirmaLifeAdded)
         {
+            /*if (block == BlocksFL.MELON_FRUIT)
+            {
+                event.getDrops().clear();
+                event.getDrops().add(new ItemStack(ItemsFL.getFood(FoodFL.MELON), 2 + Constants.RNG.nextInt(5)));
+            }*/
             if (block instanceof BlockCassiaCinnamonLeaves || block instanceof BlockCeylonCinnamonLeaves || block instanceof BlockBambooLeaves)
             {
                 event.getDrops().add(new ItemStack(ItemsFL.FRUIT_LEAF, 2 + Constants.RNG.nextInt(4)));
@@ -207,14 +214,14 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.LOAMY_SAND || 
                             blockRock.getType() == RockTFCF.LOAMY_SAND_GRASS || 
                             blockRock.getType() == RockTFCF.LOAMY_SAND_PODZOL || 
                             blockRock.getType() == RockTFCF.DRY_LOAMY_SAND_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_LOAMY_SAND_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -223,14 +230,14 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.SANDY_LOAM || 
                             blockRock.getType() == RockTFCF.SANDY_LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.SANDY_LOAM_PODZOL || 
                             blockRock.getType() == RockTFCF.DRY_SANDY_LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_SANDY_LOAM_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -239,14 +246,14 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.LOAM || 
                             blockRock.getType() == RockTFCF.LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.LOAM_PODZOL || 
                             blockRock.getType() == RockTFCF.DRY_LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_LOAM_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -255,14 +262,14 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.SILT_LOAM || 
                             blockRock.getType() == RockTFCF.SILT_LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.SILT_LOAM_PODZOL || 
                             blockRock.getType() == RockTFCF.DRY_SILT_LOAM_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_SILT_LOAM_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -271,14 +278,14 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.SILT || 
                             blockRock.getType() == RockTFCF.SILT_GRASS || 
                             blockRock.getType() == RockTFCF.SILT_PODZOL || 
                             blockRock.getType() == RockTFCF.DRY_SILT_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_SILT_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -287,13 +294,13 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllFarmland && ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.HUMUS || 
                             blockRock.getType() == RockTFCF.HUMUS_GRASS || 
                             blockRock.getType() == RockTFCF.DRY_HUMUS_GRASS || 
                             blockRock.getType() == RockTFCF.SPARSE_HUMUS_GRASS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -302,10 +309,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_LOAMY_SAND
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -314,10 +321,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_SANDY_LOAM
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -326,10 +333,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_LOAM
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -338,10 +345,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_SILT_LOAM
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -350,10 +357,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_SILT
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {
@@ -362,10 +369,10 @@ public final class CommonEventHandlerTFCF
                         }
                         event.setResult(Event.Result.ALLOW);
                     }
-                    else if 
+                    else if (ConfigTFCF.General.WORLD.enableAllSpecialSoil &&
                         (
                             blockRock.getType() == RockTFCF.COARSE_HUMUS
-                        )
+                        ))
                     {
                         if (!world.isRemote)
                         {

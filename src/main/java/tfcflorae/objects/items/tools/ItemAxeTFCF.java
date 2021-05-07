@@ -32,7 +32,7 @@ public class ItemAxeTFCF extends ItemAxe implements IItemSize
 
     public ItemAxeTFCF(ToolMaterial material, float AttackDamage, float AttackSpeed, int Durability, Object... oreNameParts)
     {
-	    super(material, material.getAttackDamage(), -3);
+	    super(material, material.getAttackDamage(), AttackSpeed);
 	    this.material = material;
 	    this.attackDamage = (AttackDamage);
 	    this.attackSpeed = (AttackSpeed);

@@ -44,13 +44,13 @@ public class BlockEarthenwareClay extends Block implements IItemSize
     @Override
     public Size getSize(ItemStack stack)
     {
-        return Size.VERY_SMALL;
+        return Size.SMALL;
     }
 
     @Nonnull
     @Override
     public Weight getWeight(ItemStack stack)
     {
-        return Weight.HEAVY;
+        return Weight.LIGHT;
     }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "dyeWhite"
+    },
+    {
+      "item": "tfcflorae:ceramics/kaolinite/unfired/vessel"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/kaolinite/unfired/vessel_glazed",
+    "data": 15
+  }
+}

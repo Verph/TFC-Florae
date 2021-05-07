@@ -10,8 +10,7 @@
       "ore" : "lumberRed_apple"
     },
     "B": {
-      "type": "forge:ore_dict",
-      "ore" : "poleRed_apple"
+      "item": "firmalife:red_apple_pole"
     }
   },
   "result": {

@@ -37,6 +37,7 @@ import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.items.metal.ItemSmallOre;
 import net.dries007.tfc.objects.items.rock.ItemRock;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.blocktype.farmland.BlockHumusFarmland;
 import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamFarmland;
 import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamySandFarmland;
@@ -54,7 +55,7 @@ import static net.dries007.tfc.objects.blocks.agriculture.BlockCropTFC.WILD;
 @ParametersAreNonnullByDefault
 public class BlockRockVariantTFCF extends Block implements IItemSize
 {
-    private static final Map<RockTFCF, BlockRockVariantTFCF> TABLETFCF = new HashMap();
+    private static final Map<RockTFCF, BlockRockVariantTFCF> TABLETFCF = new HashMap<>();
     private static final Map<Rock, EnumMap<RockTFCF, BlockRockVariantTFCF>> TABLE = new HashMap<>();
 
     public static BlockRockVariantTFCF get(Rock rock, RockTFCF rockTFCF)
@@ -73,8 +74,9 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
         {
             case MOSSY_RAW:
                 return new BlockRockRawTFCF(rockTFCF, rock);
-            case COARSE_DIRT:
             case MUD:
+                return new BlockRockMud(rockTFCF, rock);
+            case COARSE_DIRT:
             case BOG_IRON:
             case BOG_IRON_GRASS:
             case DRY_BOG_IRON_GRASS:
@@ -546,14 +548,12 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SPARSE_SILTY_EARTHENWARE_CLAY_GRASS:
             case SPARSE_SILTY_EARTHENWARE_CLAY_LOAM_GRASS:
             case SPARSE_EARTHENWARE_CLAY_HUMUS_GRASS:
-            
             case SPARSE_SANDY_KAOLINITE_CLAY_LOAM_GRASS:
             case SPARSE_SANDY_KAOLINITE_CLAY_GRASS:
             case SPARSE_KAOLINITE_CLAY_LOAM_GRASS:
             case SPARSE_SILTY_KAOLINITE_CLAY_GRASS:
             case SPARSE_SILTY_KAOLINITE_CLAY_LOAM_GRASS:
             case SPARSE_KAOLINITE_CLAY_HUMUS_GRASS:
-            
             case SPARSE_SANDY_STONEWARE_CLAY_LOAM_GRASS:
             case SPARSE_SANDY_STONEWARE_CLAY_GRASS:
             case SPARSE_STONEWARE_CLAY_LOAM_GRASS:

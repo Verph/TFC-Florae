@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/kaolinite/unfired/vessel_glazed",
+      "data": 4
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/kaolinite/kaolinite_clay",
+    "count": 3
+  }
+}

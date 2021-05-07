@@ -10,8 +10,7 @@
       "ore" : "lumberCocoa"
     },
     "B": {
-      "type": "forge:ore_dict",
-      "ore" : "poleCocoa"
+      "item": "firmalife:cocoa_pole"
     }
   },
   "result": {

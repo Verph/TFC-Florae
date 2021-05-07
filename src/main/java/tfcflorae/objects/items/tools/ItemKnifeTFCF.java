@@ -36,7 +36,7 @@ public class ItemKnifeTFCF extends ItemTool implements IItemSize
 
     public ItemKnifeTFCF(ToolMaterial material, float AttackDamage, float AttackSpeed, int Durability, Object... oreNameParts)
     {
-        super(-0.46f * material.getAttackDamage(), -1.5f, material, ImmutableSet.of());
+        super(material.getAttackDamage(), AttackSpeed, material, ImmutableSet.of());
 	    this.material = material;
 	    this.attackDamage = AttackDamage;
 	    this.attackSpeed = AttackSpeed;

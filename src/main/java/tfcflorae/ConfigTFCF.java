@@ -307,6 +307,14 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.cinnamonRarity")
             public int cinnamonRarity = 100;
 
+            @Config.Comment("Enable gourd generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableGourdWorldGen")
+            public boolean enableGourdWorldGen = true;
+
+            @Config.Comment("Enable vines?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllVines")
+            public boolean enableAllVines = true;
+
             @Config.Comment("Enable bone groundcover?")
             @Config.LangKey("config." + MODID + ".general.world.enableGroundcoverBones")
             public boolean enableGroundcoverBones = true;
@@ -358,6 +366,42 @@ public class ConfigTFCF
             @Config.Comment("Enable all world generation?")
             @Config.LangKey("config." + MODID + ".general.world.enableAllWorldGen")
             public boolean enableAllWorldGen = true;
+
+            @Config.Comment("Enable bog iron blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllBogIron")
+            public boolean enableAllBogIron = true;
+
+            @Config.Comment("Enable coarse soil blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllCoarse")
+            public boolean enableAllCoarse = true;
+
+            @Config.Comment("Enable podzol blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllPodzol")
+            public boolean enableAllPodzol = true;
+
+            @Config.Comment("Enable sparse grass blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllSparseGrass")
+            public boolean enableAllSparseGrass = true;
+
+            @Config.Comment("Enable special soil blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllSpecialSoil")
+            public boolean enableAllSpecialSoil = true;
+
+            @Config.Comment("Enable earthenware clay blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllEarthenwareClay")
+            public boolean enableAllEarthenwareClay = true;
+
+            @Config.Comment("Enable kaolinite clay blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllKaoliniteClay")
+            public boolean enableAllKaoliniteClay = true;
+
+            @Config.Comment("Enable stoneware clay blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllStonewareClay")
+            public boolean enableAllStonewareClay = true;
+
+            @Config.Comment("Enable special soil farmland blocks?")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllFarmland")
+            public boolean enableAllFarmland = true;
         }
 
         public static final class StructuresCFG

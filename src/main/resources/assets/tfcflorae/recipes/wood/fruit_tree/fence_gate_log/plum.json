@@ -10,8 +10,7 @@
       "ore" : "lumberPlum"
     },
     "B": {
-      "type": "forge:ore_dict",
-      "ore" : "polePlum"
+      "item": "firmalife:plum_pole"
     }
   },
   "result": {

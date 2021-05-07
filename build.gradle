@@ -79,7 +79,7 @@ dependencies {
 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.615"
     deobfProvided "mezz.jei:jei_1.12.2:4.16.1.302"
 	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.17.175-deobf.jar")
-    provided files("./libs/firmalife-0.3.7.jar")
+    provided files("./libs/firmalife-0.3.8.jar")
     provided files("./libs/TFC-Elementia-MC1.12.2-1.0.jar")
     provided files("./libs/TFC_PH_Compat-1.12.2-1.1.1.jar")
     compile fileTree(include: ["*.jar"], dir: "libs")

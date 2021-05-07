@@ -142,7 +142,6 @@ public class BlockSurfaceOreDeposit extends Block
     @Override
     public int damageDropped(IBlockState state)
     {
-        TFCFlorae.getLog().info("TFCFlorae: damaged val should be 1: " + getMetaFromState(state));
         return getMetaFromState(state);
     }
 

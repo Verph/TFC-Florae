@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/earthenware/unfired/mold/mallet_head"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/earthenware/earthenware_clay",
+    "count": 3
+  }
+}

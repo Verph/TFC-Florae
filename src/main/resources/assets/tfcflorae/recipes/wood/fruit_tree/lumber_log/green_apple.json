@@ -2,8 +2,7 @@
   "type": "tfc:damage_item_shapeless",
   "ingredients": [
     {
-      "type": "forge:ore_dict",
-      "ore" : "poleGreen_apple"
+      "item": "firmalife:green_apple_pole"
     },
     {
       "type": "forge:ore_dict",

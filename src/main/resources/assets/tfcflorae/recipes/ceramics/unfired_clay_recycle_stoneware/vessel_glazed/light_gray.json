@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:ceramics/stoneware/unfired/vessel_glazed",
+      "data": 7
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramics/stoneware/stoneware_clay",
+    "count": 3
+  }
+}

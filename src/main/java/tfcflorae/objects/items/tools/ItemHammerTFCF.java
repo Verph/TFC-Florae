@@ -33,7 +33,7 @@ public class ItemHammerTFCF extends ItemTool implements IItemSize
 
     public ItemHammerTFCF(ToolMaterial material, float AttackDamage, float AttackSpeed, int Durability, Object... oreNameParts)
     {
-	    super(0f, -3f, material, ImmutableSet.of());
+	    super(AttackDamage, AttackSpeed, material, ImmutableSet.of());
 	    this.material = material;
 	    this.attackDamage = (AttackDamage);
 	    this.attackSpeed = (AttackSpeed);

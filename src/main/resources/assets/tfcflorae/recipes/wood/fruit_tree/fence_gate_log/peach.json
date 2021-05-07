@@ -10,8 +10,7 @@
       "ore" : "lumberPeach"
     },
     "B": {
-      "type": "forge:ore_dict",
-      "ore" : "polePeach"
+      "item": "firmalife:peach_pole"
     }
   },
   "result": {

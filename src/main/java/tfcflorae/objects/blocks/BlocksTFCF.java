@@ -96,11 +96,11 @@ import static tfcflorae.TFCFlorae.MODID;
 @GameRegistry.ObjectHolder(MODID)
 public final class BlocksTFCF
 {
-    @GameRegistry.ObjectHolder("ceramics/earthenware_fired/large_vessel")
+    @GameRegistry.ObjectHolder("ceramics/earthenware/fired/large_vessel")
     public static final BlockLargeVessel FIRED_EARTHENWARE_LARGE_VESSEL = getNull();
-    @GameRegistry.ObjectHolder("ceramics/kaolinite_fired/large_vessel")
+    @GameRegistry.ObjectHolder("ceramics/kaolinite/fired/large_vessel")
     public static final BlockLargeVessel FIRED_KAOLINITE_LARGE_VESSEL = getNull();
-    @GameRegistry.ObjectHolder("ceramics/stoneware_fired/large_vessel")
+    @GameRegistry.ObjectHolder("ceramics/stoneware/fired/large_vessel")
     public static final BlockLargeVessel FIRED_STONEWARE_LARGE_VESSEL = getNull();
 
     @GameRegistry.ObjectHolder("storage/urn")
@@ -576,17 +576,26 @@ public final class BlocksTFCF
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/silk/silk_string_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/sisal/sisal_fiber_bale", new BlockBale(), CT_DECORATIONS)));
 
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_clay_block", new BlockEarthenwareClay(), CT_ROCK_BLOCKS)));
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
-        normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/earthenware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_clay_block", new BlockEarthenwareClay(), CT_ROCK_BLOCKS)));
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/earthenware/earthenware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
+            normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/earthenware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        }
 
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_clay_block", new BlockKaoliniteClay(), CT_ROCK_BLOCKS)));
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
-        normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/kaolinite/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_clay_block", new BlockKaoliniteClay(), CT_ROCK_BLOCKS)));
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/kaolinite/kaolinite_bricks", new BlockFireBrick(), CT_DECORATIONS)));
+            normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/kaolinite/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        }
 
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_clay_block", new BlockStonewareClay(), CT_ROCK_BLOCKS)));
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
-        normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/stoneware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_clay_block", new BlockStonewareClay(), CT_ROCK_BLOCKS)));
+            normalItemBlocks.add(new ItemBlockTFC(register(r, "ceramics/stoneware/stoneware_bricks", new BlockFireBrick(), CT_DECORATIONS)));
+            normalItemBlocks.add(new ItemBlockLargeVessel(register(r, "ceramics/stoneware/fired/large_vessel", new BlockLargeVessel(), CT_POTTERY)));
+        }
 
         normalItemBlocks.add(new ItemBlockUrn(register(r, "storage/urn", new BlockUrn(), CT_POTTERY)));
         normalItemBlocks.add(new ItemBlockUrnLoot(register(r, "storage/urn_loot", new BlockUrnLoot(), CT_POTTERY)));
@@ -658,7 +667,7 @@ public final class BlocksTFCF
         {
             for (Ore ore : TFCRegistries.ORES.getValuesCollection())
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    surfaceOreBlocks.add(register(r, ("groundcover/ore/" + ore.getRegistryName().getPath() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
+                    surfaceOreBlocks.add(register(r, ("groundcover/ore/" + ore.getRegistryName().getPath().toLowerCase() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSurfaceOreDeposit(ore, rock), CT_ROCK_BLOCKS));
 
             allSurfaceOreBlocks = surfaceOreBlocks.build();
             allSurfaceOreBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
@@ -720,22 +729,22 @@ public final class BlocksTFCF
             // Walls
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    blockWallTFCF.add(register(r, "wall/" + rockTFCF.name() + "/" + rock.getRegistryName().getPath().toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
+                    blockWallTFCF.add(register(r, "wall/" + rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath().toLowerCase(), new BlockWallTFCF(BlockRockVariantTFCF.get(rock, rockTFCF)), CT_DECORATIONS));
 
             // Stairs
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    blockStairsTFC.add(register(r, "stairs/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockStairsTFCF(rock, rockTFCF), CT_DECORATIONS));
+                    blockStairsTFC.add(register(r, "stairs/" + (rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockStairsTFCF(rock, rockTFCF), CT_DECORATIONS));
 
             // Full slabs are the same as full blocks, they are not saved to a list, they are kept track of by the halfslab version.
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    register(r, "double_slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Double(rock, rockTFCF));
+                    register(r, "double_slab/" + (rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Double(rock, rockTFCF));
 
             // Slabs
             for (RockTFCF rockTFCF : new RockTFCF[] {RockTFCF.MUD_BRICKS})
                 for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
-                    blockSlabTFCF.add(register(r, "slab/" + (rockTFCF.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Half(rock, rockTFCF), CT_DECORATIONS));
+                    blockSlabTFCF.add(register(r, "slab/" + (rockTFCF.name().toLowerCase() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFCF.Half(rock, rockTFCF), CT_DECORATIONS));
 
             allWallBlocks = blockWallTFCF.build();
             allStairBlocks = blockStairsTFC.build();
@@ -1121,11 +1130,18 @@ public final class BlocksTFCF
 
         allNormalItemBlocks = normalItemBlocks.build();
 
-        FluidsTFC.getWrapper(FluidsTFCF.COCONUT_MILK.get());
-        
-        register(TELargeEarthenwareVessel.class, "large_earthenware_vessel");
-        register(TELargeKaoliniteVessel.class, "large_kaolinite_vessel");
-        register(TELargeStonewareVessel.class, "large_stoneware_vessel");
+        if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
+        {
+            register(TELargeEarthenwareVessel.class, "large_earthenware_vessel");
+        }
+        if (ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
+        {
+            register(TELargeKaoliniteVessel.class, "large_kaolinite_vessel");
+        }
+        if (ConfigTFCF.General.WORLD.enableAllStonewareClay)
+        {
+            register(TELargeStonewareVessel.class, "large_stoneware_vessel");
+        }
         register(TEFruitChest.class, "fruit_chest");
         register(TEFruitLoom.class, "fruit_loom");
         register(TEUrn.class, "urn");

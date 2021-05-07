@@ -10,7 +10,9 @@ import net.dries007.tfc.api.registries.TFCRegistryEvent;
 import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.api.types.RockCategory;
 import net.dries007.tfc.objects.ToolMaterialsTFC;
+
 import tfcflorae.TFCFlorae;
+import tfcflorae.objects.ToolMaterialsTFCF;
 
 import static net.dries007.tfc.types.DefaultRocks.*;
 

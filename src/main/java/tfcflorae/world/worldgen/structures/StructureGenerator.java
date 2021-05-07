@@ -83,11 +83,11 @@ public class StructureGenerator extends WorldGenerator
 			variation = 3;
 		}
 
-		TFCFlorae.getLog().info("TFCFlorae: Structure '" + structureName + "' Is trying to spawn at location: " + position);
-		
+		//TFCFlorae.getLog().info("TFCFlorae: Structure '" + structureName + "' Is trying to spawn at location: " + position);
+
 		if (canSpawnHere(template, worldServer, position, variation) && checkBiome(template, world, position))
         {
-			TFCFlorae.getLog().info("TFCFlorae: Structure '" + structureName + "' can spawn here");
+			//TFCFlorae.getLog().info("TFCFlorae: Structure '" + structureName + "' can spawn here");
 			// The structure can spawn here
 			Rotation rotation = Rotation.values()[rand.nextInt(3)];
 			PlacementSettings settings = new PlacementSettings().setMirror(Mirror.NONE).setRotation(getRotation()).setIgnoreStructureBlock(false);
