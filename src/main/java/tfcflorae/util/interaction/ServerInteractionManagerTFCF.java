@@ -43,11 +43,10 @@ final class ServerInteractionManagerTFCF
         BlockPos pos = event.getPos();
         EntityPlayerMP player = (EntityPlayerMP) event.getEntityPlayer();
         EnumFacing facing = event.getFace();
+        // Should never happen
         if (facing == null)
-        {
-            // Should never happen
             facing = EnumFacing.UP;
-        }
+        
         EnumHand hand = event.getHand();
         ItemStack stack = event.getItemStack();
 
@@ -74,9 +73,7 @@ final class ServerInteractionManagerTFCF
             IBlockState iblockstate = worldIn.getBlockState(pos);
             if (event.getUseBlock() != Event.Result.DENY)
                 if (iblockstate.getBlock().onBlockActivated(worldIn, pos, iblockstate, player, hand, facing, hitX, hitY, hitZ))
-                {
                     result = EnumActionResult.SUCCESS;
-                }
         }
 
         if (stack.isEmpty())
@@ -94,9 +91,7 @@ final class ServerInteractionManagerTFCF
                 Block block = ((ItemBlock) stack.getItem()).getBlock();
 
                 if (block instanceof BlockCommandBlock || block instanceof BlockStructure)
-                {
                     return EnumActionResult.FAIL;
-                }
             }
 
             if (player.interactionManager.isCreative())
