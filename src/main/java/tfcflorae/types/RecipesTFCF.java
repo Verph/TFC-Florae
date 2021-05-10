@@ -795,6 +795,7 @@ public final class RecipesTFCF
             new HeatRecipeSimple(IIngredient.of(BlocksTFCF.FIRED_URN), new ItemStack(BlocksTFCF.FIRED_URN), 1599f, Metal.Tier.TIER_I).setRegistryName("fired_urn"),
 
             // Bread
+            HeatRecipe.destroy(IIngredient.of(ItemsTFCF.HASH_MUFFIN), 480).setRegistryName("burned_hash_muffin"),
             HeatRecipe.destroy(IIngredient.of(ItemsTFCF.AMARANTH_BREAD), 480).setRegistryName("burned_barley_bread"),
             HeatRecipe.destroy(IIngredient.of(ItemsTFCF.BUCKWHEAT_BREAD), 480).setRegistryName("burned_cornbread"),
             HeatRecipe.destroy(IIngredient.of(ItemsTFCF.FONIO_BREAD), 480).setRegistryName("burned_oat_bread"),
@@ -1319,6 +1320,7 @@ public final class RecipesTFCF
             }
 
             r.registerAll(
+                new OvenRecipe(IIngredient.of(ItemsTFCF.HASH_MUFFIN_DOUGH), new ItemStack(ItemsTFCF.HASH_MUFFIN), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "hash_muffin_dough_oven"),
                 new OvenRecipe(IIngredient.of(ItemsTFCF.AMARANTH_DOUGH), new ItemStack(ItemsTFCF.AMARANTH_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "amaranth_dough_oven"),
                 new OvenRecipe(IIngredient.of(ItemsTFCF.BUCKWHEAT_DOUGH), new ItemStack(ItemsTFCF.BUCKWHEAT_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "buckwheat_dough_oven"),
                 new OvenRecipe(IIngredient.of(ItemsTFCF.FONIO_DOUGH), new ItemStack(ItemsTFCF.FONIO_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "fonio_dough_oven"),

@@ -251,11 +251,12 @@ public class FoodDataTFCF
     public static final FoodData FLATBREAD = new FoodData(4, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0F);
     public static final FoodData SLICE = new FoodData(4, 0.0f, 0.5f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.5F);
     public static final FoodData SANDWICH = new FoodData(4, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 5f);
+    public static final FoodData HASH_MUFFIN_DOUGH = new FoodData(4, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0F);
+    public static final FoodData HASH_MUFFIN = new FoodData(4, 1f, 0f, 1f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData LINSEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData RAPE_SEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData SUNFLOWER_SEED = new FoodData(4, 0.6f, 0f, 0.2f, 0.1f, 0.1f, 0f, 0f, 0.8f);
     public static final FoodData OPIUM_POPPY_SEED = new FoodData(4, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0.8f);
-    public static final FoodData HASH_MUFFIN = new FoodData(4, 1f, 0f, 1f, 0f, 0f, 0f, 0f, 0.8f);
     public static final FoodData RUTABAGA = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData TURNIP = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData BLACK_EYED_PEAS = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 3.5f);

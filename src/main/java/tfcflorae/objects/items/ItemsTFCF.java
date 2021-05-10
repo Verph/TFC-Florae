@@ -687,6 +687,8 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF SUNFLOWER_SEED = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/opium_poppy_seed")
     public static final ItemFoodTFCF OPIUM_POPPY_SEED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/hash_muffin_dough")
+    public static final ItemFoodTFCF HASH_MUFFIN_DOUGH = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/hash_muffin")
     public static final ItemFoodTFCF HASH_MUFFIN = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/rutabaga")
@@ -1589,7 +1591,8 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/rape_seed", new ItemFoodTFCF(FoodDataTFCF.RAPE_SEED, "rape_seed", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/sunflower_seed", new ItemFoodTFCF(FoodDataTFCF.SUNFLOWER_SEED, "sunflower_seed", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/opium_poppy_seed", new ItemFoodTFCF(FoodDataTFCF.OPIUM_POPPY_SEED, "opium_poppy_seed", "category_vegetable"), CT_FOOD));
-        simpleItems.add(register(r, "food/hash_muffin", new ItemFoodTFCF(FoodDataTFCF.HASH_MUFFIN, new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 2), "hash_muffin", "category_meal"), CT_FOOD));
+        simpleItems.add(register(r, "food/hash_muffin_dough", new ItemFoodTFCF(FoodDataTFCF.HASH_MUFFIN_DOUGH, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dough_hash_muffin", "dough", "category_grain"), CT_FOOD));
+        simpleItems.add(register(r, "food/hash_muffin", new ItemFoodTFCF(FoodDataTFCF.HASH_MUFFIN, new PotionEffectToHave(MobEffects.NAUSEA, 610, 3, 2), "hash_muffin", "bread", "category_meal"), CT_FOOD));
         simpleItems.add(register(r, "food/rutabaga", new ItemFoodTFCF(FoodDataTFCF.RUTABAGA, "rutabaga", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/turnip", new ItemFoodTFCF(FoodDataTFCF.TURNIP, "turnip", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/black_eyed_peas", new ItemFoodTFCF(FoodDataTFCF.BLACK_EYED_PEAS, "black_eyed_peas", "category_vegetable"), CT_FOOD));
@@ -1947,18 +1950,18 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "pearl", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "pearl"), CT_MISC));
         simpleItems.add(register(r, "black_pearl", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "pearl_black"), CT_MISC));
 
-        simpleItems.add(register(r, "food/cannabis_bud", new ItemFoodTFCF(FoodDataTFCF.CANNABIS_BUD, "cannabis_bud"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/cannabis_bud", new ItemFoodTFCF(FoodDataTFCF.DRIED_CANNABIS_BUD, "dried_cannabis_bud"), CT_FOOD));
-        simpleItems.add(register(r, "food/cannabis_leaf", new ItemFoodTFCF(FoodDataTFCF.CANNABIS_LEAF, "cannabis_leaf"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/cannabis_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_CANNABIS_LEAF, "dried_cannabis_leaf"), CT_FOOD));
-        simpleItems.add(register(r, "food/coca_leaf", new ItemFoodTFCF(FoodDataTFCF.COCA_LEAF, "coca_leaf"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/coca_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_COCA_LEAF, "dried_coca_leaf"), CT_FOOD));
-        simpleItems.add(register(r, "food/opium_poppy_bulb", new ItemFoodTFCF(FoodDataTFCF.OPIUM_POPPY_BULB, "opium_poppy_bulb"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/opium_poppy_bulb", new ItemFoodTFCF(FoodDataTFCF.DRIED_OPIUM_POPPY_BULB, "dried_opium_poppy_bulb"), CT_FOOD));
-        simpleItems.add(register(r, "food/peyote", new ItemFoodTFCF(FoodDataTFCF.PEYOTE, "peyote", "category_fruit"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/peyote", new ItemFoodTFCF(FoodDataTFCF.DRIED_PEYOTE, "dried_peyote"), CT_FOOD));
-        simpleItems.add(register(r, "food/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.TOBACCO_LEAF, "tobacco_leaf"), CT_FOOD));
-        simpleItems.add(register(r, "food/dried/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_TOBACCO_LEAF, "dried_tobacco_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/cannabis_bud", new ItemFoodTFCF(FoodDataTFCF.CANNABIS_BUD, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "cannabis_bud"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/cannabis_bud", new ItemFoodTFCF(FoodDataTFCF.DRIED_CANNABIS_BUD, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_cannabis_bud"), CT_FOOD));
+        simpleItems.add(register(r, "food/cannabis_leaf", new ItemFoodTFCF(FoodDataTFCF.CANNABIS_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "cannabis_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/cannabis_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_CANNABIS_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_cannabis_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/coca_leaf", new ItemFoodTFCF(FoodDataTFCF.COCA_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "coca_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/coca_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_COCA_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_coca_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/opium_poppy_bulb", new ItemFoodTFCF(FoodDataTFCF.OPIUM_POPPY_BULB, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "opium_poppy_bulb"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/opium_poppy_bulb", new ItemFoodTFCF(FoodDataTFCF.DRIED_OPIUM_POPPY_BULB, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_opium_poppy_bulb"), CT_FOOD));
+        simpleItems.add(register(r, "food/peyote", new ItemFoodTFCF(FoodDataTFCF.PEYOTE, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "peyote", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/peyote", new ItemFoodTFCF(FoodDataTFCF.DRIED_PEYOTE, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_peyote"), CT_FOOD));
+        simpleItems.add(register(r, "food/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.TOBACCO_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "tobacco_leaf"), CT_FOOD));
+        simpleItems.add(register(r, "food/dried/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_TOBACCO_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_tobacco_leaf"), CT_FOOD));
 
         simpleItems.add(register(r, "crop/product/papyrus_pulp", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "pulp", "pulp_papyrus"), CT_MISC));
         simpleItems.add(register(r, "crop/product/papyrus_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_papyrus"), CT_MISC));

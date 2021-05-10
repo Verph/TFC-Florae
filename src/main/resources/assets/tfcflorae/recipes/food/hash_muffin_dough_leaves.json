@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "doughYeast"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "driedCannabisLeaf"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:food/hash_muffin_dough",
+    "count": 1
+  }
+}
