@@ -31697,6 +31697,7 @@ item.tfcflorae.food.linseed.name=Linseed
 item.tfcflorae.food.rape_seed.name=Rape Seed
 item.tfcflorae.food.sunflower_seed.name=Sunflower Seed
 item.tfcflorae.food.opium_poppy_seed.name=Opium Poppy Seed
+item.tfcflorae.food.hash_muffin_dough.name=Hash Muffin Dough
 item.tfcflorae.food.hash_muffin.name=Hash Muffin
 item.tfcflorae.food.rutabaga.name=Rutabaga
 item.tfcflorae.food.turnip.name=Turnip
@@ -32152,6 +32153,9 @@ jei.category.tfcflorae.knap.kaolinite_clay=Kaolinite Clay knapping
 jei.category.tfcflorae.knap.stoneware_clay=Stoneware Clay knapping
 jei.category.tfcflorae.knap.flint=Flint knapping
 jei.category.tfcflorae.casting=Casting recipes
+jei.category.tfcflorae.casting_earthenware_firmalife=Casting recipes
+jei.category.tfcflorae.casting_kaolinite_firmalife=Casting recipes
+jei.category.tfcflorae.casting_stoneware_firmalife=Casting recipes
 
 
 
