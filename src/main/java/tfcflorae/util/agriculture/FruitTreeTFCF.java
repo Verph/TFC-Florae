@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.IFruitTree;
 import net.dries007.tfc.api.types.Tree;
@@ -21,6 +22,7 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.world.classic.worldgen.WorldGenFruitTrees;
+
 import tfcflorae.objects.blocks.wood.BlockLeavesTFCF.EnumLeafState;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.types.TreesTFCF;
@@ -219,13 +221,13 @@ public enum FruitTreeTFCF implements IFruitTree
     WALNUT(() -> ItemsTFCF.WALNUT, Month.APRIL, 1, Month.JUNE, 4, 5f, 21f, 100f, 350f, 0.33f);
     */
 
-    static
+    /*static
     {
         for (FruitTreeTFCF tree : values())
         {
             WorldGenFruitTrees.register(tree);
         }
-    }
+    }*/
 
     private final Supplier<Item> fruit;
     private final Month flowerMonthStart;

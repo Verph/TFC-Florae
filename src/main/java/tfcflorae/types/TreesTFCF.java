@@ -153,6 +153,7 @@ public final class TreesTFCF
     public static final ITreeGenerator GEN_YEW = new TreeGenVariants(true, 19);
     public static final ITreeGenerator GEN_ZEBRAWOOD = new TreeGenVariants(true, 34);
 
+    public static final ITreeGenerator GEN_TALL_TFC = new TreeGenNormal(3, 3);
     public static final ITreeGenerator GEN_NORMAL = new TreeGenRandom(1, 3, 3);
     public static final ITreeGenerator GEN_MEDIUM = new TreeGenRandom(2, 2, 3);
     public static final ITreeGenerator GEN_TALL = new TreeGenRandom(3, 3, 3);
@@ -208,7 +209,7 @@ public final class TreesTFCF
     	// Other Trees
     	event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "african_padauk"), 275f, 500f, 22f, 50f, GEN_AFRICAN_PADAUK).setRadius(1).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.5f, 2f).setBurnInfo(745f, 1500).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "angelim"), 320f, 500f, 22f, 50f, GEN_ANGELIM).setRadius(1).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.5f, 2f).setBurnInfo(773f, 1200).build());
-        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "box"), 180f, 400f, -8f, 15f, GEN_TALL).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build());
+        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "box"), 180f, 400f, -8f, 15f, GEN_TALL_TFC).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "brazilwood"), 290f, 550f, 14f, 37f, GEN_BRAZILWOOD).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cocobolo"), 255f, 500f, 20f, 50f, GEN_COCOBOLO).setRadius(1).setGrowthTime(8).setBushes().setDensity(0.5f, 2f).setBurnInfo(773f, 1000).build());
 	    event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ebony"), 180f, 320f, 19f, 38f, GEN_EBONY).setGrowthTime(8).setBushes().setBurnInfo(795f, 1000).build());
