@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/novaculite",
-      "particle": "tfc:blocks/stonetypes/dirt/novaculite",
-      "clay": "tfc:blocks/stonetypes/clay_overlay"
+      "all": "tfc:blocks/stonetypes/clay/novaculite"
     }
   },
   "variants": {

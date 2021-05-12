@@ -4,9 +4,8 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/catlinite",
-      "particle": "tfc:blocks/stonetypes/dirt/catlinite",
-      "clay": "tfc:blocks/stonetypes/clay_overlay",
+      "all": "tfc:blocks/stonetypes/clay/catlinite",
+      "particle": "tfc:blocks/stonetypes/clay/catlinite",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",
       "south": "tfc:blocks/grass_side",

@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/siltstone",
-      "particle": "tfc:blocks/stonetypes/dirt/siltstone",
-      "clay": "tfc:blocks/stonetypes/clay_overlay"
+      "all": "tfc:blocks/stonetypes/clay/siltstone"
     }
   },
   "variants": {

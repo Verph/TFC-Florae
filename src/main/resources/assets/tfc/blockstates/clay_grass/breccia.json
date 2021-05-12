@@ -4,9 +4,8 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/breccia",
-      "particle": "tfc:blocks/stonetypes/dirt/breccia",
-      "clay": "tfc:blocks/stonetypes/clay_overlay",
+      "all": "tfc:blocks/stonetypes/clay/breccia",
+      "particle": "tfc:blocks/stonetypes/clay/breccia",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",
       "south": "tfc:blocks/grass_side",

@@ -4,9 +4,7 @@
   "defaults": {
     "model": "cube_all",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/porphyry",
-      "particle": "tfc:blocks/stonetypes/dirt/porphyry",
-      "clay": "tfc:blocks/stonetypes/clay_overlay"
+      "all": "tfc:blocks/stonetypes/clay/porphyry"
     }
   },
   "variants": {

@@ -4,9 +4,8 @@
   "defaults": {
     "model": "tfc:grass",
     "textures": {
-      "all": "tfc:blocks/stonetypes/dirt/novaculite",
-      "particle": "tfc:blocks/stonetypes/dirt/novaculite",
-      "clay": "tfc:blocks/stonetypes/clay_overlay",
+      "all": "tfc:blocks/stonetypes/clay/novaculite",
+      "particle": "tfc:blocks/stonetypes/clay/novaculite",
       "top": "tfc:blocks/grass_top",
       "north": "tfc:blocks/grass_side",
       "south": "tfc:blocks/grass_side",
