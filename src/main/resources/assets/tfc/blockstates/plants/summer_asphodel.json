@@ -2,11 +2,23 @@
   "multipart": [
     {
       "when": {
-        "part": "single"
+        "part": "single",
+        "stage": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/summer_asphodel_single"
+          "model": "tfc:plants/summer_asphodel_single_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "single",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/summer_asphodel_single_1"
         }
       ]
     },

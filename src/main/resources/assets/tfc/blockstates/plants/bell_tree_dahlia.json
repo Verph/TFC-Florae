@@ -2,11 +2,23 @@
   "multipart": [
     {
       "when": {
-        "part": "single"
+        "part": "single",
+        "stage": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/bell_tree_dahlia_single"
+          "model": "tfc:plants/bell_tree_dahlia_single_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "single",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/bell_tree_dahlia_single_1"
         }
       ]
     },

@@ -23,34 +23,12 @@
     },
     {
       "when": {
-        "part": "lower",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_cane_lower_1"
-        }
-      ]
-    },
-    {
-      "when": {
         "part": "upper",
         "stage": "0"
       },
       "apply": [
         {
           "model": "tfc:plants/giant_cane_upper_0"
-        }
-      ]
-    },
-    {
-      "when": {
-        "part": "upper",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_cane_upper_1"
         }
       ]
     }

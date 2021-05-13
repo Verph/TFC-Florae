@@ -23,34 +23,12 @@
     },
     {
       "when": {
-        "part": "lower",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/big_leaf_palm_lower_1"
-        }
-      ]
-    },
-    {
-      "when": {
         "part": "upper",
         "stage": "0"
       },
       "apply": [
         {
           "model": "tfc:plants/big_leaf_palm_upper_0"
-        }
-      ]
-    },
-    {
-      "when": {
-        "part": "upper",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/big_leaf_palm_upper_1"
         }
       ]
     }

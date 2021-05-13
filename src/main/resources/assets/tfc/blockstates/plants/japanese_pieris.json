@@ -6,11 +6,49 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/japanese_pieris_single",
+          "model": "tfc:plants/japanese_pieris_single_0",
           "weight": 3
         },
         {
           "model": "tfc:plants/japanese_pieris_0",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/japanese_pieris_single_0",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/japanese_pieris_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/japanese_pieris_single_1",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/japanese_pieris_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/japanese_pieris_single_1",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/japanese_pieris_1",
           "weight": 1
         }
       ]

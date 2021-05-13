@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"leaves": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_0",
-		"particle": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_0"
+		"leaves": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_1",
+		"particle": "tfc:blocks/plants/giant_feather_grass/giant_feather_grass_lower_1"
 	},
 	"elements": [
 		{

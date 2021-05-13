@@ -23,34 +23,12 @@
     },
     {
       "when": {
-        "part": "lower",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_elephant_ear_lower_1"
-        }
-      ]
-    },
-    {
-      "when": {
         "part": "upper",
         "stage": "0"
       },
       "apply": [
         {
           "model": "tfc:plants/giant_elephant_ear_upper_0"
-        }
-      ]
-    },
-    {
-      "when": {
-        "part": "upper",
-        "stage": "1"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_elephant_ear_upper_1"
         }
       ]
     }

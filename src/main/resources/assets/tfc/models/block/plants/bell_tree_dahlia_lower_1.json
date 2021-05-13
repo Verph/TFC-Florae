@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"stem": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_0b",
-		"leaves": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_0",
-		"particle": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_0"
+		"stem": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_1b",
+		"leaves": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_1",
+		"particle": "tfc:blocks/plants/bell_tree_dahlia/bell_tree_dahlia_lower_1"
 	},
 	"elements": [
 		{
