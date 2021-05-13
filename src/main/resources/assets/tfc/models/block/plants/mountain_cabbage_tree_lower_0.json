@@ -3,7 +3,7 @@
 	"ambientocclusion": false,
 	"textures": {
 		"stem": "tfc:blocks/plants/mountain_cabbage_tree/mountain_cabbage_tree_lower_0b",
-		"particle": "tfc:blocks/plants/mountain_cabbage_tree/mountain_cabbage_tree_lower_0"
+		"particle": "tfc:blocks/plants/mountain_cabbage_tree/mountain_cabbage_tree_lower_0b"
 	},
 	"elements": [
 		{

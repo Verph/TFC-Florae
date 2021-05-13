@@ -3,7 +3,7 @@
   "textures": {
     "tintedcross": "tfc:blocks/plants/wild_rice/wild_rice_4",
     "cross": "tfc:blocks/plants/wild_rice/wild_rice_4b",
-    "particle": "tfc:blocks/plants/wild_rice/wild_rice_4"
+    "particle": "tfc:blocks/plants/wild_rice/item"
   },
   "elements": [
     {

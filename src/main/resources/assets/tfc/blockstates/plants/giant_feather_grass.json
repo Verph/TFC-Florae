@@ -7,7 +7,12 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/giant_feather_grass_single_0"
+          "model": "tfc:plants/giant_feather_grass_single_0",
+          "weight": 3
+        },
+        {
+          "model": "tfc:plants/giant_feather_grass_lower_0",
+          "weight": 1
         }
       ]
     },
@@ -25,18 +30,7 @@
     {
       "when": {
         "part": "lower",
-        "stage": "0"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_feather_grass_lower_0"
-        }
-      ]
-    },
-    {
-      "when": {
-        "part": "lower",
-        "stage": "1"
+        "stage": "0|1"
       },
       "apply": [
         {
@@ -47,18 +41,7 @@
     {
       "when": {
         "part": "upper",
-        "stage": "0"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/giant_feather_grass_upper_0"
-        }
-      ]
-    },
-    {
-      "when": {
-        "part": "upper",
-        "stage": "1"
+        "stage": "0|1"
       },
       "apply": [
         {

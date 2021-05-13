@@ -1721,7 +1721,7 @@ public final class ItemsTFCF
                     malletMoldEarthenware = register(r, "ceramics/earthenware/fired/mold/mallet_head", new ItemEarthenwareMalletMoldFL("mallet"), CT_POTTERY);
                 }
 
-                simpleItems.add(register(r, "ceramics/earthenware/earthenware_clay", new ItemClayEarthenware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_earthenware"), CT_MISC));
+                simpleItems.add(register(r, "ceramics/earthenware/earthenware_clay", new ItemClayEarthenware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay_earthenware", "clay"), CT_MISC));
                 registerPottery(simpleItems, r, "ceramics/earthenware/unfired/earthenware_brick", "ceramics/earthenware/fired/earthenware_brick");
 
                 simpleItems.add(register(r, "ceramics/earthenware/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));
@@ -1789,7 +1789,7 @@ public final class ItemsTFCF
                     malletMoldKaolinite = register(r, "ceramics/kaolinite/fired/mold/mallet_head", new ItemKaoliniteMalletMoldFL("mallet"), CT_POTTERY);
                 }
 
-                simpleItems.add(register(r, "ceramics/kaolinite/kaolinite_clay", new ItemClayKaolinite(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_kaolinite"), CT_MISC));
+                simpleItems.add(register(r, "ceramics/kaolinite/kaolinite_clay", new ItemClayKaolinite(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay_kaolinite", "clay"), CT_MISC));
                 registerPottery(simpleItems, r, "ceramics/kaolinite/unfired/kaolinite_brick", "ceramics/kaolinite/fired/kaolinite_brick");
 
                 simpleItems.add(register(r, "ceramics/kaolinite/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));
@@ -1857,7 +1857,7 @@ public final class ItemsTFCF
                     malletMoldStoneware = register(r, "ceramics/stoneware/fired/mold/mallet_head", new ItemStonewareMalletMoldFL("mallet"), CT_POTTERY);
                 }
 
-                simpleItems.add(register(r, "ceramics/stoneware/stoneware_clay", new ItemClayStoneware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay", "clay_stoneware"), CT_MISC));
+                simpleItems.add(register(r, "ceramics/stoneware/stoneware_clay", new ItemClayStoneware(Size.VERY_SMALL, Weight.VERY_LIGHT, "clay_stoneware", "clay"), CT_MISC));
                 registerPottery(simpleItems, r, "ceramics/stoneware/unfired/stoneware_brick", "ceramics/stoneware/fired/stoneware_brick");
 
                 simpleItems.add(register(r, "ceramics/stoneware/unfired/large_vessel", new ItemUnfiredLargeVessel(), CT_POTTERY));

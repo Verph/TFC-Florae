@@ -16,6 +16,7 @@ import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 
 @ParametersAreNonnullByDefault
 public class BlockStonewareClay extends Block implements IItemSize
@@ -25,6 +26,7 @@ public class BlockStonewareClay extends Block implements IItemSize
         super(Material.CLAY);
         setSoundType(SoundType.GROUND);
         setHardness(1.0F);
+        OreDictionaryHelper.register(this, "block", "Clay");
     }
 
     @Override
