@@ -1,11 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "Y  ",
     "XXX"
   ],
   "key": {
     "X": {
-      "item": "tfcflorae:crop/product/papyrus_fiber"
+      "type": "forge:ore_dict",
+      "ore": "fiberPapyrus"
+    },
+    "Y": {
+      "type": "forge:ore_dict",
+      "ore": "glue"
     }
   },
   "result": {

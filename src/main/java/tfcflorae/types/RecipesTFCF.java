@@ -376,6 +376,18 @@ public final class RecipesTFCF
             // Sugar
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 600), IIngredient.of("sugarcane", 5), null, new ItemStack(Items.SUGAR), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("sugar_from_sugar_cane"),
 
+            // Base Potash Liquor
+            new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 500), IIngredient.of("dustPotash"), new FluidStack(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 500), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("base_potash_liquor_from_potash"),
+            new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 500), IIngredient.of("dustAsh"), new FluidStack(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 500), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("base_potash_liquor_from_ash"),
+            new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 500), IIngredient.of("dustWood"), new FluidStack(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 500), ItemStack.EMPTY, 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("base_potash_liquor_from_wood_dust"),
+
+            // Cellulose Fibers
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 150), IIngredient.of("sugarcane"), new FluidStack(FluidsTFCF.WASTE.get(), 150), new ItemStack(ItemsTFCF.CELLULOSE_FIBERS), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("cellulose_fibers_from_sugarcane"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 150), IIngredient.of("pulp"), new FluidStack(FluidsTFCF.WASTE.get(), 150), new ItemStack(ItemsTFCF.CELLULOSE_FIBERS), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("cellulose_fibers_from_pulp"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 150), IIngredient.of("cropAgave"), new FluidStack(FluidsTFCF.WASTE.get(), 150), new ItemStack(ItemsTFCF.CELLULOSE_FIBERS), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("cellulose_fibers_from_agave_crop"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 150), IIngredient.of("cropFlax"), new FluidStack(FluidsTFCF.WASTE.get(), 150), new ItemStack(ItemsTFCF.CELLULOSE_FIBERS), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("cellulose_fibers_from_flax_crop"),
+            new BarrelRecipe(IIngredient.of(FluidsTFCF.BASE_POTASH_LIQUOR.get(), 150), IIngredient.of("cropHemp"), new FluidStack(FluidsTFCF.WASTE.get(), 150), new ItemStack(ItemsTFCF.CELLULOSE_FIBERS), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("cellulose_fibers_from_hemp_crop"),
+
             // Papyrus Fibers
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 600), IIngredient.of("pulpPapyrus", 3), null, new ItemStack(ItemsTFCF.PAPYRUS_FIBER), 8 * ICalendar.TICKS_IN_HOUR).setRegistryName("papyrus_fiber_from_papyrus"),
 
@@ -1320,20 +1332,20 @@ public final class RecipesTFCF
             }
 
             r.registerAll(
-                new OvenRecipe(IIngredient.of(ItemsTFCF.HASH_MUFFIN_DOUGH), new ItemStack(ItemsTFCF.HASH_MUFFIN), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "hash_muffin_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.AMARANTH_DOUGH), new ItemStack(ItemsTFCF.AMARANTH_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "amaranth_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.BUCKWHEAT_DOUGH), new ItemStack(ItemsTFCF.BUCKWHEAT_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "buckwheat_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.FONIO_DOUGH), new ItemStack(ItemsTFCF.FONIO_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "fonio_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.MILLET_DOUGH), new ItemStack(ItemsTFCF.MILLET_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "millet_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.QUINOA_DOUGH), new ItemStack(ItemsTFCF.QUINOA_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "quinoa_dough_oven"),
-                new OvenRecipe(IIngredient.of(ItemsTFCF.SPELT_DOUGH), new ItemStack(ItemsTFCF.SPELT_BREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "spelt_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.HASH_MUFFIN_DOUGH), new ItemStack(ItemsTFCF.HASH_MUFFIN), 4 * hour).setRegistryName(TFCFlorae.MODID, "hash_muffin_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.AMARANTH_DOUGH), new ItemStack(ItemsTFCF.AMARANTH_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "amaranth_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.BUCKWHEAT_DOUGH), new ItemStack(ItemsTFCF.BUCKWHEAT_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "buckwheat_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.FONIO_DOUGH), new ItemStack(ItemsTFCF.FONIO_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "fonio_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.MILLET_DOUGH), new ItemStack(ItemsTFCF.MILLET_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "millet_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.QUINOA_DOUGH), new ItemStack(ItemsTFCF.QUINOA_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "quinoa_dough_oven"),
+                new OvenRecipe(IIngredient.of(ItemsTFCF.SPELT_DOUGH), new ItemStack(ItemsTFCF.SPELT_BREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "spelt_dough_oven"),
 
-                new OvenRecipe(IIngredient.of("amaranthFlatbreadDough"), new ItemStack(ItemsTFCF.AMARANTH_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "amaranth_flatbread_dough_oven"),
-                new OvenRecipe(IIngredient.of("buckwheatFlatbreadDough"), new ItemStack(ItemsTFCF.BUCKWHEAT_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "buckwheat_flatbread_dough_oven"),
-                new OvenRecipe(IIngredient.of("fonioFlatbreadDough"), new ItemStack(ItemsTFCF.FONIO_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "fonio_flatbread_dough_oven"),
-                new OvenRecipe(IIngredient.of("milletFlatbreadDough"), new ItemStack(ItemsTFCF.MILLET_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "millet_flatbread_dough_oven"),
-                new OvenRecipe(IIngredient.of("quinoaFlatbreadDough"), new ItemStack(ItemsTFCF.QUINOA_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "quinoa_flatbread_dough_oven"),
-                new OvenRecipe(IIngredient.of("speltFlatbreadDough"), new ItemStack(ItemsTFCF.SPELT_FLATBREAD), 4 * hour).setRegistryName(FirmaLife.MOD_ID, "spelt_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("amaranthFlatbreadDough"), new ItemStack(ItemsTFCF.AMARANTH_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "amaranth_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("buckwheatFlatbreadDough"), new ItemStack(ItemsTFCF.BUCKWHEAT_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "buckwheat_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("fonioFlatbreadDough"), new ItemStack(ItemsTFCF.FONIO_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "fonio_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("milletFlatbreadDough"), new ItemStack(ItemsTFCF.MILLET_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "millet_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("quinoaFlatbreadDough"), new ItemStack(ItemsTFCF.QUINOA_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "quinoa_flatbread_dough_oven"),
+                new OvenRecipe(IIngredient.of("speltFlatbreadDough"), new ItemStack(ItemsTFCF.SPELT_FLATBREAD), 4 * hour).setRegistryName(TFCFlorae.MODID, "spelt_flatbread_dough_oven"),
 
                 //new OvenRecipe(IIngredient.of(new ItemStack(ItemsTFCF.ACORN_NUT)), new ItemStack(ItemsTFCF.ROASTED_ACORN_NUT), 2 * hour).setRegistryName("acorn_roasted_oven"),
                 new OvenRecipe(IIngredient.of(new ItemStack(ItemsTFCF.BEECHNUT_NUT)), new ItemStack(ItemsTFCF.ROASTED_BEECHNUT_NUT), 2 * hour).setRegistryName("beechnut_roasted_oven"),
@@ -1390,20 +1402,21 @@ public final class RecipesTFCF
         {
             IForgeRegistry<DryingRecipe> r = event.getRegistry();
             r.registerAll(
-                new DryingRecipe(IIngredient.of(ItemsTFCF.BLACK_TEA), new ItemStack(ItemsTFCF.DRIED_BLACK_TEA), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_black_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.GREEN_TEA), new ItemStack(ItemsTFCF.DRIED_GREEN_TEA), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_green_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.WHITE_TEA), new ItemStack(ItemsTFCF.DRIED_WHITE_TEA), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_white_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_BUD), new ItemStack(ItemsTFCF.DRIED_CANNABIS_BUD), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_cannabis_bud"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_LEAF), new ItemStack(ItemsTFCF.DRIED_CANNABIS_LEAF), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_cannabis_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.COCA_LEAF), new ItemStack(ItemsTFCF.DRIED_COCA_LEAF), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_coca_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.OPIUM_POPPY_BULB), new ItemStack(ItemsTFCF.DRIED_OPIUM_POPPY_BULB), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_opium_poppy_bulb"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.PEYOTE), new ItemStack(ItemsTFCF.DRIED_PEYOTE), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_peyote"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.TOBACCO_LEAF), new ItemStack(ItemsTFCF.DRIED_TOBACCO_LEAF), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_tobacco_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.COFFEA_CHERRIES), new ItemStack(ItemsTFCF.DRIED_COFFEA_CHERRIES), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_coffea_cherries"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CHAMOMILE_HEAD), new ItemStack(ItemsTFCF.DRIED_CHAMOMILE_HEAD), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_chamomile_head"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.DANDELION_HEAD), new ItemStack(ItemsTFCF.DRIED_DANDELION_HEAD), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_dandelion_head"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CELLULOSE_FIBERS), new ItemStack(Items.PAPER), 24000).setRegistryName(TFCFlorae.MODID, "paper_from_cellulose_fibers"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.BLACK_TEA), new ItemStack(ItemsTFCF.DRIED_BLACK_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_black_tea"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.GREEN_TEA), new ItemStack(ItemsTFCF.DRIED_GREEN_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_green_tea"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.WHITE_TEA), new ItemStack(ItemsTFCF.DRIED_WHITE_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_white_tea"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_BUD), new ItemStack(ItemsTFCF.DRIED_CANNABIS_BUD), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_bud"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_LEAF), new ItemStack(ItemsTFCF.DRIED_CANNABIS_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_leaf"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.COCA_LEAF), new ItemStack(ItemsTFCF.DRIED_COCA_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_coca_leaf"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.OPIUM_POPPY_BULB), new ItemStack(ItemsTFCF.DRIED_OPIUM_POPPY_BULB), 24000).setRegistryName(TFCFlorae.MODID, "dried_opium_poppy_bulb"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.PEYOTE), new ItemStack(ItemsTFCF.DRIED_PEYOTE), 24000).setRegistryName(TFCFlorae.MODID, "dried_peyote"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.TOBACCO_LEAF), new ItemStack(ItemsTFCF.DRIED_TOBACCO_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_tobacco_leaf"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.COFFEA_CHERRIES), new ItemStack(ItemsTFCF.DRIED_COFFEA_CHERRIES), 24000).setRegistryName(TFCFlorae.MODID, "dried_coffea_cherries"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CHAMOMILE_HEAD), new ItemStack(ItemsTFCF.DRIED_CHAMOMILE_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_chamomile_head"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.DANDELION_HEAD), new ItemStack(ItemsTFCF.DRIED_DANDELION_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_dandelion_head"),
                 new DryingRecipe(IIngredient.of(ItemsTFCF.LABRADOR_TEA_HEAD), new ItemStack(ItemsTFCF.DRIED_LABRADOR_TEA_HEAD), 24000).setRegistryName("dried_labrador_tea_head"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.SUNFLOWER_HEAD), new ItemStack(ItemsTFCF.DRIED_SUNFLOWER_HEAD), 24000).setRegistryName(FirmaLife.MOD_ID, "dried_sunflower_head")
+                new DryingRecipe(IIngredient.of(ItemsTFCF.SUNFLOWER_HEAD), new ItemStack(ItemsTFCF.DRIED_SUNFLOWER_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_sunflower_head")
             );
 
             // Mud Pottery

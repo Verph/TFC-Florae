@@ -1056,6 +1056,9 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("crop/product/rape")
     public static final ItemMiscTFCF RAPE = Helpers.getNull();
 
+    @GameRegistry.ObjectHolder("cellulose_fibers")
+    public static final ItemMiscTFCF CELLULOSE_FIBERS = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("wood/fruit_tree/pole/cassia_cinnamon")
     public static final ItemMisc CASSIA_CINNAMON_POLE = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/fruit_tree/lumber/cassia_cinnamon")
@@ -1962,6 +1965,8 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/dried/peyote", new ItemFoodTFCF(FoodDataTFCF.DRIED_PEYOTE, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_peyote"), CT_FOOD));
         simpleItems.add(register(r, "food/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.TOBACCO_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "tobacco_leaf"), CT_FOOD));
         simpleItems.add(register(r, "food/dried/tobacco_leaf", new ItemFoodTFCF(FoodDataTFCF.DRIED_TOBACCO_LEAF, new PotionEffectToHave(MobEffects.NAUSEA, 300, 2, 3), "dried_tobacco_leaf"), CT_FOOD));
+
+        simpleItems.add(register(r, "cellulose_fibers", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "fiber", "fiber_cellulose"), CT_MISC));
 
         simpleItems.add(register(r, "crop/product/papyrus_pulp", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "pulp", "pulp_papyrus"), CT_MISC));
         simpleItems.add(register(r, "crop/product/papyrus_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_papyrus"), CT_MISC));

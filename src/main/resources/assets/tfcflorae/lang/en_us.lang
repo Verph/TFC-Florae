@@ -16,6 +16,8 @@ tfcflorae.tooltip.crate_unseal=Unseal Crate
 
 ## Fluids
 fluid.distilled_water=Distilled Water
+fluid.waste=Waste
+fluid.base_potash_liquor=Base Potash Liquor
 fluid.white_tea=White Tea
 fluid.green_tea=Green Tea
 fluid.black_tea=Black Tea
@@ -31228,6 +31230,7 @@ item.tfcflorae.cracked_coconut.name=Empty Coconut
 item.tfcflorae.cracked_coconut.filled.name=Filled Coconut (%s)
 item.tfcflorae.coconut.name=Coconut
 
+item.tfcflorae.cellulose_fibers.name=Cellulose Fibers
 item.tfcflorae.crop.product.papyrus_pulp.name=Papyrus Pulp
 item.tfcflorae.crop.product.papyrus_fiber.name=Papyrus Fiber
 item.tfcflorae.crop.product.papyrus_paper.name=Papyrus Paper

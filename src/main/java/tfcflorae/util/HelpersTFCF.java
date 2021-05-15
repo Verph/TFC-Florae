@@ -29,6 +29,8 @@ public class HelpersTFCF
         // Fluids
         String[] fluidAdditions = {
             "distilled_water",
+            "waste",
+            "base_potash_liquor",
             "white_tea",
             "green_tea",
             "black_tea",
@@ -93,7 +95,6 @@ public class HelpersTFCF
             "sunflower_seed_oil",
             "opium_poppy_seed_oil",
             "wort",
-            "coconut_milk",
             "firma_cola",
             "juice_blackberry",
             "juice_blueberry",

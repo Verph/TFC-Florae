@@ -27,8 +27,10 @@ public final class FluidsTFCF
 
     private static final HashBiMap<Fluid, FluidWrapper> WRAPPERS = HashBiMap.create();
 
-    // Water variants
+    // Other
     public static FluidWrapper DISTILLED_WATER;
+    public static FluidWrapper WASTE;
+    public static FluidWrapper BASE_POTASH_LIQUOR;
 
     // Tea
     public static FluidWrapper WHITE_TEA;
@@ -106,7 +108,6 @@ public final class FluidsTFCF
     public static FluidWrapper SUNFLOWER_SEED_OIL;
     public static FluidWrapper OPIUM_POPPY_SEED_OIL;
     public static FluidWrapper WORT;
-    public static FluidWrapper COCONUT_MILK;
 
     // Juice - Berries
     public static FluidWrapper JUICE_BLACKBERRY;
@@ -202,14 +203,32 @@ public final class FluidsTFCF
             }
         };
 
-        allFiniteFluids = ImmutableSet.<FluidWrapper>builder().add(
-            COCONUT_MILK = registerFluid(new Fluid("coconut_milk", STILL, FLOW, 0xFFFCFAE2)).with(DrinkableProperty.DRINKABLE, milkProperty)
-        ).build();
-        
         DISTILLED_WATER = registerFluid(new Fluid("distilled_water", STILL, FLOW, 0xFF1F32DA)).with(DrinkableProperty.DRINKABLE, player -> {
             if (player.getFoodStats() instanceof FoodStatsTFC)
             {
                 ((FoodStatsTFC) player.getFoodStats()).addThirst(20);
+            }
+        });
+        WASTE = registerFluid(new Fluid("waste", STILL, FLOW, 0xFF858678)).with(DrinkableProperty.DRINKABLE, player -> {
+            if (player.getFoodStats() instanceof FoodStatsTFC)
+            {
+                ((FoodStatsTFC) player.getFoodStats()).addThirst(-20);
+                if (Constants.RNG.nextFloat() < 0.25f)
+                {
+                    player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 1));
+                    player.addPotionEffect(new PotionEffect(MobEffects.POISON, 400, 1));
+                }
+            }
+        });
+        BASE_POTASH_LIQUOR = registerFluid(new Fluid("base_potash_liquor", STILL, FLOW, 0xFF86888B)).with(DrinkableProperty.DRINKABLE, player -> {
+            if (player.getFoodStats() instanceof FoodStatsTFC)
+            {
+                ((FoodStatsTFC) player.getFoodStats()).addThirst(-20);
+                if (Constants.RNG.nextFloat() < 0.25f)
+                {
+                    player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 1));
+                    player.addPotionEffect(new PotionEffect(MobEffects.POISON, 400, 1));
+                }
             }
         });
 
