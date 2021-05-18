@@ -345,6 +345,8 @@ public enum FruitTreeTFCF implements IFruitTree
     @Override
     public boolean isHarvestMonth(Month month)
     {
+        if (fruit == null)
+            return false;
         Month testing = this.harvestMonthStart;
         for (int i = 0; i < this.harvestingMonths; i++)
         {
@@ -392,6 +394,11 @@ public enum FruitTreeTFCF implements IFruitTree
     public ItemStack getFoodDrop()
     {
         return new ItemStack(this.fruit.get());
+    }
+
+    public Supplier<Item> getDrop()
+    {
+        return fruit;
     }
 
     @Override

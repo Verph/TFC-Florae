@@ -44,7 +44,8 @@ import net.dries007.tfc.objects.te.TETickCounter;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
-
+import net.dries007.tfc.util.calendar.Month;
+import tfcflorae.TFCFlorae;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.agriculture.FruitTreeTFCF;
 
@@ -105,7 +106,8 @@ public class BlockLeavesTFCF extends BlockLeaves
     {
         if (!world.isRemote)
         {
-            if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
+            Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+            if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(currentMonth))
             {
                 TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
                 if (te != null)
@@ -118,21 +120,21 @@ public class BlockLeavesTFCF extends BlockLeaves
                     }
                 }
             }
-            else if (fruitTree.isFlowerMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
+            else if (fruitTree.isFlowerMonth(currentMonth))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
                 {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
                 }
             }
-            else if (fruitTree.isAutumnMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
+            else if (fruitTree.isAutumnMonth(currentMonth))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN)
                 {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
                 }
             }
-            else if (fruitTree.isWinterMonth(CalendarTFC.CALENDAR_TIME.getMonthOfYear()))
+            else if (fruitTree.isWinterMonth(currentMonth))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
                 {
@@ -171,7 +173,7 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        if (worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT)
+        if (worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT && fruitTree.getDrop() != null)
         {
             if (!worldIn.isRemote)
             {
