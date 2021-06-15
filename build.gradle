@@ -6,11 +6,23 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 buildscript {
     repositories {
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        maven {
+            name = "curseforge"
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
 		classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.4'
+        classpath "com.wynprice.cursemaven:CurseMaven:2.1.0"
     }
 }
 
@@ -71,14 +83,19 @@ repositories {
         url = "https://maven.covers1624.net/"
     }
     maven {
-		url "https://minecraft.curseforge.com/api/maven"
-	}
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+    removeIf { it instanceof MavenArtifactRepository && it.url.host == 'files.minecraftforge.net' }
+    maven {
+        url "https://maven.minecraftforge.net/"
+    }
 }
 
 dependencies {
 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.615"
     deobfProvided "mezz.jei:jei_1.12.2:4.16.1.302"
-	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.17.175-deobf.jar")
+	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.19.177-deobf.jar")
     provided files("./libs/firmalife-0.3.8.jar")
     provided files("./libs/TFC-Elementia-MC1.12.2-1.0.jar")
     provided files("./libs/TFC_PH_Compat-1.12.2-1.1.1.jar")

@@ -61,7 +61,7 @@ public class ItemFlint extends ItemTFCF implements IItemSize
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
     {
         ItemStack stack = player.getHeldItem(hand);
-        if (!world.isRemote && !player.isSneaking() && stack.getCount() > 0)
+        if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
         {
             GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
         }
@@ -76,7 +76,8 @@ public class ItemFlint extends ItemTFCF implements IItemSize
         {
             EntityPlayer player = event.getEntityPlayer();
             World world = event.getWorld();
-            if (!world.isRemote && !player.isSneaking())
+            ItemStack stack = player.getHeldItem(hand);
+            if (!world.isRemote && !player.isSneaking() && stack.getCount() > 1)
             {
                 GuiHandler.openGui(world, player.getPosition(), player, GuiHandler.Type.FLINT);
             }

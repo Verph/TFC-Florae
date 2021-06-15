@@ -160,15 +160,15 @@ public final class TreesTFCF
     public static final ITreeGenerator GEN_TALL_SINGLE = new TreeGenRandom(3, 3, 1);
 
     // Seasonal & Fruit-bearing Trees
-    public static final Tree ASH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ash"), 60f, 140f, -6f, 12f, GEN_NORMAL).setBurnInfo(696f, 1250).build();
+    public static final Tree ASH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ash"), 60f, 140f, -6f, 12f, GEN_NORMAL).setBushes().setBurnInfo(696f, 1250).build();
     public static final Tree ASPEN_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "aspen"), 10f, 80f, -10f, 16f, GEN_ASPEN).setGrowthTime(8).setBurnInfo(611f, 1000).build();
     public static final Tree BIRCH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "birch"), 20f, 180f, -15f, 7f, GEN_TALL).setRadius(1).setTannin().setBurnInfo(652f, 1750).build();
-    public static final Tree CHESTNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "chestnut"), 160f, 320f, 11f, 35f, GEN_NORMAL).setTannin().setBurnInfo(651f, 1500).build();
-    public static final Tree HICKORY_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hickory"), 80f, 250f, 7f, 29f, GEN_TALL).setGrowthTime(10).setTannin().setBurnInfo(762f, 2000).build();
+    public static final Tree CHESTNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "chestnut"), 160f, 320f, 11f, 35f, GEN_NORMAL).setTannin().setBushes().setBurnInfo(651f, 1500).build();
+    public static final Tree HICKORY_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hickory"), 80f, 250f, 7f, 29f, GEN_TALL).setGrowthTime(10).setBushes().setTannin().setBurnInfo(762f, 2000).build();
     public static final Tree MAPLE_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "maple"), 140f, 360f, 3f, 20f, GEN_MEDIUM).setDominance(6.3f).setRadius(1).setTannin().setBurnInfo(745f, 2000).build();
-    public static final Tree OAK_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "oak"), 180f, 430f, -8f, 12f, GEN_TALL).setHeight(16).setGrowthTime(10).setTannin().setBurnInfo(728f, 2250).build();
+    public static final Tree OAK_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "oak"), 180f, 430f, -8f, 12f, GEN_TALL).setHeight(16).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 2250).build();
     public static final Tree SYCAMORE_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "sycamore"), 120f, 290f, 17f, 33f, GEN_MEDIUM).setGrowthTime(8).setBushes().setDensity(0.25f, 2f).setBurnInfo(653f, 1750).build();
-    public static final Tree WHITE_CEDAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_cedar"), 10f, 240f, -8f, 17f, GEN_TALL_SINGLE).setHeight(16).setBurnInfo(625f, 1500).build();
+    public static final Tree WHITE_CEDAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_cedar"), 10f, 240f, -8f, 17f, GEN_TALL_SINGLE).setHeight(16).setBushes().setBurnInfo(625f, 1500).build();
 
     public static final Tree BAOBAB_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "baobab"), 10f, 150f, 21f, 40f, GEN_BAOBAB).setDecayDist(6).setGrowthTime(20).setDensity(0.1f, 0.3f).setBurnInfo(478f, 1000).build();
     public static final Tree EUCALYPTUS_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "eucalyptus"), 120f, 300f, 18f, 39f, GEN_EUCALYPTUS).setGrowthTime(8).setBushes().setDensity(0.35f, 2f).setBurnInfo(705f, 1000).build();
@@ -176,7 +176,7 @@ public final class TreesTFCF
     public static final Tree MACLURA_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "maclura"), 140f, 400f, -1f, 17f, GEN_MACLURA).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(773f, 1000).build();
     public static final Tree MAHOGANY_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "mahogany"), 270f, 500f, 23f, 42f, GEN_MAHOGANY).setRadius(1).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.5f, 2f).setBurnInfo(773f, 1000).build();
     public static final Tree PINK_IVORY_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "pink_ivory"), 210f, 500f, 18f, 31f, GEN_PINK_IVORY).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.2f, 2f).setBurnInfo(773f, 1000).build();
-    public static final Tree RED_CEDAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "red_cedar"), 10f, 240f, -8f, 17f, GEN_RED_CEDAR).setDecayDist(6).setGrowthTime(18).setConifer().setBushes().setTannin().setDensity(0.4f, 2f).setBurnInfo(618f, 1750).build();
+    public static final Tree RED_CEDAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "red_cedar"), 10f, 240f, -8f, 17f, GEN_RED_CEDAR).setDecayDist(6).setGrowthTime(18).setBushes().setConifer().setBushes().setTannin().setDensity(0.4f, 2f).setBurnInfo(618f, 1750).build();
     public static final Tree ROWAN_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "rowan"), 180f, 400f, -15f, 8f, GEN_ROWAN).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(645f, 2000).build();
     public static final Tree SYZYGIUM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "syzygium"), 140f, 360f, 13f, 35f, GEN_SYZYGIUM).setDecayDist(6).setGrowthTime(16).setBushes().setTannin().setDensity(0.2f, 1f).setBurnInfo(745f, 2000).build();
     public static final Tree YEW_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "yew"), 180f, 350f, -15f, 11f, GEN_YEW).setGrowthTime(10).setBushes().setBurnInfo(813f, 2150).build();
@@ -189,19 +189,19 @@ public final class TreesTFCF
     public static final Tree LARCH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "larch"), 60f, 400f, -12f, 15f, GEN_LARCH).setGrowthTime(8).setConifer().setDensity(0.5f, 1f).setBurnInfo(632f, 1250).build();
     public static final Tree ALDER_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "alder"), 60f, 400f, -4f, 13f, GEN_ALDER).setGrowthTime(8).setBushes().setDensity(0.25f, 2f).setBurnInfo(601f, 1000).build();
     public static final Tree BEECH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "beech"), 220f, 300f, -15f, 9f, GEN_BEECH).setGrowthTime(8).setBushes().setTannin().setDensity(0.25f, 1f).setBurnInfo(703f, 1750).build();
-    public static final Tree BLACK_WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "black_walnut"), 180f, 300f, -10f, 16f, GEN_BLACK_WALNUT).setGrowthTime(9).setBurnInfo(758f, 1800).build();
-    public static final Tree BUTTERNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "butternut"), 180f, 320f, -8f, 17f, GEN_BUTTERNUT).setGrowthTime(9).setBurnInfo(758f, 1800).build();
+    public static final Tree BLACK_WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "black_walnut"), 180f, 300f, -10f, 16f, GEN_BLACK_WALNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
+    public static final Tree BUTTERNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "butternut"), 180f, 320f, -8f, 17f, GEN_BUTTERNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
     public static final Tree CYPRESS_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cypress"), 140f, 350f, 4f, 33f, GEN_CYPRESS).setGrowthTime(8).setBushes().setConifer().setBurnInfo(783f, 1100).build();
-    public static final Tree EUROPEAN_OAK_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "european_oak"), 140f, 430f, -8f, 15f, GEN_EUROPEAN_OAK).setGrowthTime(10).setTannin().setBurnInfo(728f, 2250).build();
+    public static final Tree EUROPEAN_OAK_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "european_oak"), 140f, 430f, -8f, 15f, GEN_EUROPEAN_OAK).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 2250).build();
     public static final Tree GINKGO_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ginkgo"), 240f, 550f, 6f, 20f, GEN_GINKGO).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build();
-    public static final Tree HAZEL_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hazel"), 60f, 400f, -10f, 14f, GEN_HAZEL).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build();
-    public static final Tree HORNBEAM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hornbeam"), 140f, 430f, -10f, 12f, GEN_HORNBEAM).setGrowthTime(10).setTannin().setBurnInfo(728f, 2250).build();
-    public static final Tree LOCUST_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "locust"), 120f, 290f, -6f, 15f, GEN_LOCUST).setGrowthTime(8).setBurnInfo(653f, 1750).build();
+    public static final Tree HAZEL_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hazel"), 60f, 400f, -10f, 14f, GEN_HAZEL).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build();
+    public static final Tree HORNBEAM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hornbeam"), 140f, 430f, -10f, 12f, GEN_HORNBEAM).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 2250).build();
+    public static final Tree LOCUST_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "locust"), 120f, 290f, -6f, 15f, GEN_LOCUST).setGrowthTime(8).setBushes().setBurnInfo(653f, 1750).build();
     public static final Tree POPLAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "poplar"), 140f, 400f, -7f, 14f, GEN_POPLAR).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(609f, 1000).build();
     public static final Tree RED_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "red_elm"), 60f, 290f, 2f, 20f, GEN_RED_ELM).setDecayDist(6).setGrowthTime(18).setBushes().setTannin().setDensity(0.4f, 2f).setBurnInfo(618f, 1750).build();
-    public static final Tree WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "walnut"), 180f, 300f, -10f, 16f, GEN_WALNUT).setGrowthTime(9).setBurnInfo(758f, 1800).build();
-    public static final Tree WHITE_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_elm"), 60f, 290f, 2f, 20f, GEN_WHITE_ELM).setGrowthTime(8).setBurnInfo(653f, 1750).build();
-    public static final Tree WHITEBEAM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "whitebeam"), 140f, 430f, -10f, 12f, GEN_WHITEBEAM).setGrowthTime(10).setTannin().setBurnInfo(728f, 1750).build();
+    public static final Tree WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "walnut"), 180f, 300f, -10f, 16f, GEN_WALNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
+    public static final Tree WHITE_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_elm"), 60f, 290f, 2f, 20f, GEN_WHITE_ELM).setGrowthTime(8).setBushes().setBurnInfo(653f, 1750).build();
+    public static final Tree WHITEBEAM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "whitebeam"), 140f, 430f, -10f, 12f, GEN_WHITEBEAM).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 1750).build();
 
     @SubscribeEvent
     public static void onPreRegisterTrees(TFCRegistryEvent.RegisterPreBlock<Tree> event)
