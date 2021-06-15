@@ -69,7 +69,7 @@ public class WorldGenStructures implements IWorldGenerator
 						else if (chance == 5)
 							generateStructure(StructureList.MOAI_2B, world, random, pos);
 					}
-					if (data.isInitialized() && data.getRainfall() >= 320f && data.getFloraDensity() >= 0.2f && data.getAverageTemp() >= 18f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceMaya) == 0)
+					if (data.isInitialized() && data.getRainfall() >= 320f && data.getFloraDensity() >= 0.2f && data.getAverageTemp() >= 13f && random.nextInt(ConfigTFCF.General.STRUCTURES.spawnChanceMaya) == 0)
 					{
 						generateStructure(StructureList.MAYAN_TEMPLE_1A, world, random, pos);
 					}
