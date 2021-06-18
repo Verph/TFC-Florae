@@ -69,10 +69,16 @@ public class WorldGeneratorTrees implements IWorldGenerator
             genBush(random, chunkX, chunkZ, world, chunkData, 0.3f, 1f, 150f + gauss, 500f - gauss, 1 + random.nextInt(5), trees);
         }
 
+        // Jungle Foliage
+        if (!(b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN) && (temperature >= 10 + gauss))
+        {
+            genBush(random, chunkX, chunkZ, world, chunkData, 0.3f, 1f, 150f + gauss, 500f - gauss, 5 + random.nextInt(10), trees);
+        }
+
         // Sparse foliage were it's otherwise just completely barren and boring...
         if (!(b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN))
         {
-            genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.2f, 70f + gauss, 500f - gauss, 0 + random.nextInt(5), trees);
+            genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.2f, 260f + gauss, 500f - gauss, 0 + random.nextInt(5), trees);
         }
     }
 

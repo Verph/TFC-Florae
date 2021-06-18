@@ -119,7 +119,8 @@ public class HelpersTFCF
             "juice_plum",
             "juice_juniper",
             "juice_green_grape",
-            "juice_purple_grape"
+            "juice_purple_grape",
+            "juice_barrel_cactus"
         };
         Set<String> woodenBucketSet = new HashSet<>(Arrays.asList(ConfigTFC.General.MISC.woodenBucketWhitelist));
         for (String a : fluidAdditions)

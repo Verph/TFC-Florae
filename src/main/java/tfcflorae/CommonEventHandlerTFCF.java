@@ -35,6 +35,7 @@ import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.container.CapabilityContainerListener;
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
+import net.dries007.tfc.types.DefaultPlants;
 import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.Month;
@@ -74,6 +75,15 @@ public final class CommonEventHandlerTFCF
         final Block block = state.getBlock();
         final Month month = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
 
+        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(DefaultPlants.BARREL_CACTUS)) && (month == Month.SEPTEMBER || month == Month.OCTOBER || month == Month.NOVEMBER))
+        {
+            int chance = Constants.RNG.nextInt(2);
+            if (chance == 0)
+            {
+                event.getDrops().clear();
+                event.getDrops().add(new ItemStack(ItemsTFCF.BARREL_CACTUS_FRUIT, 1 + Constants.RNG.nextInt(3)));
+            }
+        }
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
         {
             event.getDrops().clear();
@@ -131,7 +141,6 @@ public final class CommonEventHandlerTFCF
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
             }
         }
-
         if (TFCFlorae.FirmaLifeAdded)
         {
             /*if (block == BlocksFL.MELON_FRUIT)

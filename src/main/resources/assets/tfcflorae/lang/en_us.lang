@@ -109,6 +109,7 @@ fluid.juice_plum=Plum Juice
 fluid.juice_juniper=Juniper Juice
 fluid.juice_green_grape=Green Juice
 fluid.juice_purple_grape=Purple Juice
+fluid.juice_barrel_cactus=Barrel Cactus Juice
 
 ## Stone types & variaties, Wood, Stairs, Slabs, ....
 
@@ -31307,6 +31308,7 @@ item.tfcflorae.food.apricot.name=Apricot
 item.tfcflorae.food.avocado.name=Avocado
 item.tfcflorae.food.bael.name=Bael
 item.tfcflorae.food.baobab_fruit.name=Baobab Fruit
+item.tfcflorae.food.barrel_cactus_fruit.name=Barrel Cactus Fruit
 item.tfcflorae.food.bay_laurel.name=Bay Laurel
 item.tfcflorae.food.ber.name=Ber
 item.tfcflorae.food.bergamot.name=Bergamot
@@ -31383,6 +31385,7 @@ item.tfcflorae.food.dried.apricot.name=Dried Apricot
 item.tfcflorae.food.dried.avocado.name=Dried Avocado
 item.tfcflorae.food.dried.bael.name=Dried Bael
 item.tfcflorae.food.dried.baobab_fruit.name=Dried Baobab Fruit
+item.tfcflorae.food.dried.barrel_cactus_fruit.name=Dried Barrel Cactus Fruit
 item.tfcflorae.food.dried.bay_laurel.name=Dried Bay Laurel
 item.tfcflorae.food.dried.ber.name=Dried Ber
 item.tfcflorae.food.dried.bergamot.name=Dried Bergamot

@@ -90,6 +90,7 @@ public class FoodDataTFCF
 
     // Normal Trees Fruits
     public static final FoodData BAOBAB_FRUIT = new FoodData(2, 0.2f, 5f, 0.1f, 1f, 0.75f, 0.1f, 0.0f, 1.5f);
+    public static final FoodData BARREL_CACTUS_FRUIT = new FoodData(2, 1.5f, 5f, 0f, 2f, 0f, 0.1f, 0.0f, 0.9f);
     public static final FoodData HAWTHORN = new FoodData(2, 0.5f, 5f, 0f, 1f, 0f, 0f, 0f, 1.8f);
     public static final FoodData JUNIPER = new FoodData(2, 0.5f, 5f, 0f, 1f, 0f, 0f, 0f, 1.8f);
     public static final FoodData OSAGE_ORANGE = new FoodData(2, 0.5f, 0f, 0f, 1f, 0f, 0f, 0f, 1.6f);

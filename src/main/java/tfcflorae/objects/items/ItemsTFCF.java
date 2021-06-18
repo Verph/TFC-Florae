@@ -314,6 +314,8 @@ public final class ItemsTFCF
     // Normal Trees Fruits
     @GameRegistry.ObjectHolder("food/baobab_fruit")
     public static final ItemFoodTFCF BAOBAB_FRUIT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/barrel_cactus_fruit")
+    public static final ItemFoodTFCF BARREL_CACTUS_FRUIT = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/hawthorn")
     public static final ItemFoodTFCF HAWTHORN = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/juniper")
@@ -1323,6 +1325,7 @@ public final class ItemsTFCF
 
         // Normal Tree Fruits
         simpleItems.add(register(r, "food/baobab_fruit", new ItemFoodTFCF(FoodDataTFCF.BAOBAB_FRUIT, "baobab_fruit", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/barrel_cactus_fruit", new ItemFoodTFCF(FoodDataTFCF.BARREL_CACTUS_FRUIT, "barrel_cactus_fruit", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/hawthorn", new ItemFoodTFCF(FoodDataTFCF.HAWTHORN, "hawthorn", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/juniper", new ItemFoodTFCF(FoodDataTFCF.JUNIPER, "juniper", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/osage_orange", new ItemFoodTFCF(FoodDataTFCF.OSAGE_ORANGE, "osage_orange", "citrus", "category_fruit"), CT_FOOD));

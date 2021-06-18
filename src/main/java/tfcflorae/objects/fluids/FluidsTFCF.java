@@ -136,6 +136,7 @@ public final class FluidsTFCF
     public static FluidWrapper JUICE_PEAR;
     public static FluidWrapper JUICE_PLUM;
     public static FluidWrapper JUICE_PURPLE_GRAPE;
+    public static FluidWrapper JUICE_BARREL_CACTUS;
 
     private static ImmutableSet<FluidWrapper> allFiniteFluids;
     private static ImmutableSet<FluidWrapper> allFermentedAlcoholsFluids;
@@ -434,7 +435,8 @@ public final class FluidsTFCF
                 JUICE_PEACH = registerFluid(new Fluid("juice_peach", STILL, FLOW, 0xFFF7C0A2).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty),
                	JUICE_PEAR = registerFluid(new Fluid("juice_pear", STILL, FLOW, 0xFFE9DF96).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty),
                 JUICE_PLUM = registerFluid(new Fluid("juice_plum", STILL, FLOW, 0xFF885375).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty),
-            	JUICE_PURPLE_GRAPE = registerFluid(new Fluid("juice_purple_grape", STILL, FLOW, 0xFF63344B).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty)
+            	JUICE_PURPLE_GRAPE = registerFluid(new Fluid("juice_purple_grape", STILL, FLOW, 0xFF63344B).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty),
+                JUICE_BARREL_CACTUS = registerFluid(new Fluid("juice_barrel_cactus", STILL, FLOW, 0xFFBBE16A).setRarity(EnumRarity.UNCOMMON)).with(DrinkableProperty.DRINKABLE, juiceFruitProperty)
             )
             .build();
     }

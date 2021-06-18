@@ -108,6 +108,7 @@ public enum FruitsTFCF
 
     // Normal Tree Fruits
     BAOBAB_FRUIT(ItemFoodTFCF.get(ItemsTFCF.BAOBAB_FRUIT), true, DRIED_FRUIT_DECAY, false),
+    BARREL_CACTUS_FRUIT(ItemFoodTFCF.get(ItemsTFCF.BARREL_CACTUS_FRUIT), true, DRIED_FRUIT_DECAY, false),
     HAWTHORN(ItemFoodTFCF.get(ItemsTFCF.HAWTHORN), true, DRIED_FRUIT_DECAY, false),
     OSAGE_ORANGE(ItemFoodTFCF.get(ItemsTFCF.OSAGE_ORANGE), true, DRIED_FRUIT_DECAY, false),
     PINK_IVORY_DRUPE(ItemFoodTFCF.get(ItemsTFCF.PINK_IVORY_DRUPE), true, DRIED_FRUIT_DECAY, false),
