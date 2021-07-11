@@ -230,7 +230,7 @@ public final class BlocksTFCF
     private static ImmutableList<BlockFenceGateLog> allFenceGateLogBlocks = Helpers.getNull();
     private static ImmutableList<BlockFruitTreeLeaves> allFruitLeaves = Helpers.getNull();
     private static ImmutableList<BlockFruitTreeSapling> allFruitSapling = Helpers.getNull();
-    private static ImmutableList<BlockFruitBarrel> allFruitBarrel = Helpers.getNull();
+    //private static ImmutableList<BlockFruitBarrelTest> allFruitBarrel = Helpers.getNull();
     private static ImmutableList<BlockFruitBookshelves> allFruitBookshelves = Helpers.getNull();
     private static ImmutableList<BlockFruitButton> allFruitButton = Helpers.getNull();
     private static ImmutableList<BlockFruitDoor> allFruitDoors = Helpers.getNull();
@@ -307,10 +307,10 @@ public final class BlocksTFCF
         return allFruitSapling;
     }
 
-    public static ImmutableList<BlockFruitBarrel> getAllFruitBarrel()
+    /*public static ImmutableList<BlockFruitBarrelTest> getAllFruitBarrel()
     {
         return allFruitBarrel;
-    }
+    }*/
 
     public static ImmutableList<BlockFruitBookshelves> getAllFruitBookshelves()
     {
@@ -542,7 +542,7 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockFenceGateLog> fenceGatesLog = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTreeLeaves> fruitLeaves = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitTreeSapling> fruitSapling = ImmutableList.builder();
-        ImmutableList.Builder<BlockFruitBarrel> fruitBarrel = ImmutableList.builder();
+        //ImmutableList.Builder<BlockFruitBarrelTest> fruitBarrel = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitBookshelves> fruitBookshelves = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitButton> fruitButton = ImmutableList.builder();
         ImmutableList.Builder<BlockFruitDoor> fruitDoors = ImmutableList.builder();
@@ -806,7 +806,7 @@ public final class BlocksTFCF
                 fruitLeaves.add(register(r, "wood/fruit_tree/leaves/" + name, new BlockFruitTreeLeaves(fruitTree), CT_WOOD));
                 fruitSapling.add(register(r, "wood/fruit_tree/sapling/" + name, new BlockFruitTreeSapling(fruitTree), CT_WOOD));
                 register(r, "wood/fruit_tree/trunk/" + name, new BlockFruitTreeTrunk(fruitTree));
-                fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
+                //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrelTest(), CT_DECORATIONS));
                 fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
                 fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
                 fruitDoors.add(register(r, "wood/fruit_tree/door/" + name, new BlockFruitDoor(name), CT_DECORATIONS));
@@ -832,7 +832,7 @@ public final class BlocksTFCF
         for (IFruitTree fruitTree : FruitTree.values())
         {
             String name = fruitTree.getName().toLowerCase();
-            fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
+            //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrelTest(), CT_DECORATIONS));
             fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
             if (!TFCFlorae.FirmaLifeAdded)
             {
@@ -864,7 +864,7 @@ public final class BlocksTFCF
         }
 
         // Cassia Cinnamon
-        fruitBarrel.add(register(r, "wood/fruit_tree/barrel/cassia_cinnamon", new BlockFruitBarrel(), CT_DECORATIONS));
+        //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/cassia_cinnamon", new BlockFruitBarrelTest(), CT_DECORATIONS));
         fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/cassia_cinnamon", new BlockFruitBookshelves(), CT_DECORATIONS));
         fruitDoors.add(register(r, "wood/fruit_tree/door/cassia_cinnamon", new BlockFruitDoor("cassia_cinnamon"), CT_DECORATIONS));
         fruitButton.add(register(r, "wood/fruit_tree/button/cassia_cinnamon", new BlockFruitButton(), CT_DECORATIONS));
@@ -886,7 +886,7 @@ public final class BlocksTFCF
         fruitLoom.add(register(r, "wood/fruit_tree/loom/cassia_cinnamon", new BlockFruitLoom(TreesTFCF.CASSIA_CINNAMON_TREE), CT_WOOD));
 
         // Ceylon Cinnamon
-        fruitBarrel.add(register(r, "wood/fruit_tree/barrel/ceylon_cinnamon", new BlockFruitBarrel(), CT_DECORATIONS));
+        //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/ceylon_cinnamon", new BlockFruitBarrelTest(), CT_DECORATIONS));
         fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/ceylon_cinnamon", new BlockFruitBookshelves(), CT_DECORATIONS));
         fruitButton.add(register(r, "wood/fruit_tree/button/ceylon_cinnamon", new BlockFruitButton(), CT_DECORATIONS));
         fruitDoors.add(register(r, "wood/fruit_tree/door/ceylon_cinnamon", new BlockFruitDoor("ceylon_cinnamon"), CT_DECORATIONS));
@@ -918,7 +918,7 @@ public final class BlocksTFCF
         // Bamboo
         for (int i = 0; i < bamboo.length; i++)
         {
-            fruitBarrel.add(register(r, "wood/barrel/" + bamboo[i], new BlockFruitBarrel(), CT_DECORATIONS));
+            //fruitBarrel.add(register(r, "wood/barrel/" + bamboo[i], new BlockFruitBarrelTest(), CT_DECORATIONS));
             fruitBookshelves.add(register(r, "wood/bookshelf/" + bamboo[i], new BlockFruitBookshelves(), CT_DECORATIONS));
             fruitButton.add(register(r, "wood/button/" + bamboo[i], new BlockFruitButton(), CT_DECORATIONS));
             fruitDoors.add(register(r, "wood/door/" + bamboo[i], new BlockFruitDoor(bamboo[i]), CT_DECORATIONS));
@@ -959,7 +959,7 @@ public final class BlocksTFCF
             for (FruitTreeFL fruitTree : FruitTreeFL.values())
             {
                 String name = fruitTree.getName().toLowerCase();
-                fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrel(), CT_DECORATIONS));
+                //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/" + name, new BlockFruitBarrelTest(), CT_DECORATIONS));
                 fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/" + name, new BlockFruitBookshelves(), CT_DECORATIONS));
                 fruitButton.add(register(r, "wood/fruit_tree/button/" + name, new BlockFruitButton(), CT_DECORATIONS));
                 fruitPlanks.add(register(r, "wood/fruit_tree/planks/" + name, new BlockFruitPlanks(fruitTree), CT_WOOD));
@@ -978,7 +978,7 @@ public final class BlocksTFCF
             }
 
             // Cinnamon
-            fruitBarrel.add(register(r, "wood/fruit_tree/barrel/cinnamon", new BlockFruitBarrel(), CT_DECORATIONS));
+            //fruitBarrel.add(register(r, "wood/fruit_tree/barrel/cinnamon", new BlockFruitBarrelTest(), CT_DECORATIONS));
             fruitBookshelves.add(register(r, "wood/fruit_tree/bookshelf/cinnamon", new BlockFruitBookshelves(), CT_DECORATIONS));
             fruitButton.add(register(r, "wood/fruit_tree/button/cinnamon", new BlockFruitButton(), CT_DECORATIONS));
             planksTFC.add(register(r, "wood/fruit_tree/planks/cinnamon", new BlockPlanksTFC(PlantsFL.CINNAMON_TREE), CT_WOOD));
@@ -1092,10 +1092,10 @@ public final class BlocksTFCF
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
 
-        allFruitBarrel = fruitBarrel.build();
+        /*allFruitBarrel = fruitBarrel.build();
         allFruitBarrel.forEach((x) -> {
             normalItemBlocks.add(new ItemBlockTFC(x));
-        });
+        });*/
 
         allFruitBookshelves = fruitBookshelves.build();
         allFruitBookshelves.forEach((x) -> {

@@ -26610,6 +26610,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.ingot.tantalum_hafnium.name=Unsha
 item.tfcflorae.ceramics.earthenware.fired.mold.ingot.hepatizon.name=Unshaped Hepatizon
 item.tfcflorae.ceramics.earthenware.fired.mold.ingot.silver_solder.name=Unshaped Silver Solder
 
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.extreme.name=Unshaped Extreme
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.hard_carbon.name=Unshaped Hard Carbon
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.refined_glowstone.name=Unshaped Refined Glowstone
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.refined_iron.name=Unshaped Refined Iron
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.refined_obsidian.name=Unshaped Refined Obsidian
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.silicon_carbide.name=Unshaped Silicon Carbide
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.soulforged_steel.name=Unshaped Soulforged Steel
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.thermoconducting.name=Unshaped Thermoconducting
+item.tfcflorae.ceramics.earthenware.fired.mold.ingot.void_metal.name=Unshaped Void Metal
+
 item.tfcflorae.ceramics.earthenware.unfired.mold.nail.name=Unfired Nail Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nail.name=Nail Mold
 item.tfcflorae.ceramics.earthenware.unfired.mold.ring.name=Unfired Ring Mold
@@ -26637,6 +26647,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.adamantium.name=Adamant
 item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.palladium.name=Palladium Pick Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.iridium.name=Iridium Pick Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.extreme.name=Extreme Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.hard_carbon.name=Hard Carbon Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.refined_glowstone.name=Refined Glowstone Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.refined_iron.name=Refined Iron Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.refined_obsidian.name=Refined Obsidian Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.silicon_carbide.name=Silicon Carbide Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.soulforged_steel.name=Soulforged Steel Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.thermoconducting.name=Thermoconducting Pick Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.pick_head.void_metal.name=Void Metal Pick Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.tin.name=Tin Shovel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.zinc.name=Zinc Shovel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.bismuth.name=Bismuth Shovel Head Mold
@@ -26656,6 +26676,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.titanium_gold.name=Ti
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.adamantium.name=Adamantium Shovel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.palladium.name=Palladium Shovel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.iridium.name=Iridium Shovel Head Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.extreme.name=Extreme Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.hard_carbon.name=Hard Carbon Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.refined_glowstone.name=Refined Glowstone Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.refined_iron.name=Refined Iron Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.refined_obsidian.name=Refined Obsidian Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.silicon_carbide.name=Silicon Carbide Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.soulforged_steel.name=Soulforged Steel Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.thermoconducting.name=Thermoconducting Shovel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.shovel_head.void_metal.name=Void Metal Shovel Head Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.tin.name=Tin Axe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.zinc.name=Zinc Axe Head Mold
@@ -26677,6 +26707,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.adamantium.name=Adamanti
 item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.palladium.name=Palladium Axe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.iridium.name=Iridium Axe Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.extreme.name=Extreme Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.hard_carbon.name=Hard Carbon Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.refined_glowstone.name=Refined Glowstone Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.refined_iron.name=Refined Iron Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.refined_obsidian.name=Refined Obsidian Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.silicon_carbide.name=Silicon Carbide Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.soulforged_steel.name=Soulforged Steel Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.thermoconducting.name=Thermoconducting Axe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.axe_head.void_metal.name=Void Metal Axe Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.tin.name=Tin Hoe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.zinc.name=Zinc Hoe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.bismuth.name=Bismuth Hoe Head Mold
@@ -26696,6 +26736,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.titanium_gold.name=Titan
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.adamantium.name=Adamantium Hoe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.palladium.name=Palladium Hoe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.iridium.name=Iridium Hoe Head Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.extreme.name=Extreme Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.hard_carbon.name=Hard Carbon Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.refined_glowstone.name=Refined Glowstone Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.refined_iron.name=Refined Iron Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.refined_obsidian.name=Refined Obsidian Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.silicon_carbide.name=Silicon Carbide Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.soulforged_steel.name=Soulforged Steel Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.thermoconducting.name=Thermoconducting Hoe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hoe_head.void_metal.name=Void Metal Hoe Head Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.tin.name=Tin Chisel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.zinc.name=Zinc Chisel Head Mold
@@ -26717,6 +26767,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.adamantium.name=Adama
 item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.palladium.name=Palladium Chisel Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.iridium.name=Iridium Chisel Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.extreme.name=Extreme Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.hard_carbon.name=Hard Carbon Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.refined_glowstone.name=Refined Glowstone Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.refined_iron.name=Refined Iron Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.refined_obsidian.name=Refined Obsidian Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.silicon_carbide.name=Silicon Carbide Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.soulforged_steel.name=Soulforged Steel Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.thermoconducting.name=Thermoconducting Chisel Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.chisel_head.void_metal.name=Void Metal Chisel Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.tin.name=Tin Sword Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.zinc.name=Zinc Sword Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.bismuth.name=Bismuth Sword Blade Mold
@@ -26736,6 +26796,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.titanium_gold.name=Ti
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.adamantium.name=Adamantium Sword Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.palladium.name=Palladium Sword Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.iridium.name=Iridium Sword Blade Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.extreme.name=Extreme Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.hard_carbon.name=Hard Carbon Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.refined_glowstone.name=Refined Glowstone Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.refined_iron.name=Refined Iron Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.refined_obsidian.name=Refined Obsidian Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.silicon_carbide.name=Silicon Carbide Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.soulforged_steel.name=Soulforged Steel Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.thermoconducting.name=Thermoconducting Sword Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sword_blade.void_metal.name=Void Metal Sword Blade Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.tin.name=Tin Mace Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.zinc.name=Zinc Mace Head Mold
@@ -26757,6 +26827,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.adamantium.name=Adamant
 item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.palladium.name=Palladium Mace Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.iridium.name=Iridium Mace Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.extreme.name=Extreme Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.hard_carbon.name=Hard Carbon Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.refined_glowstone.name=Refined Glowstone Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.refined_iron.name=Refined Iron Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.refined_obsidian.name=Refined Obsidian Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.silicon_carbide.name=Silicon Carbide Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.soulforged_steel.name=Soulforged Steel Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.thermoconducting.name=Thermoconducting Mace Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mace_head.void_metal.name=Void Metal Mace Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.tin.name=Tin Saw Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.zinc.name=Zinc Saw Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.bismuth.name=Bismuth Saw Blade Mold
@@ -26776,6 +26856,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.titanium_gold.name=Tita
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.adamantium.name=Adamantium Saw Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.palladium.name=Palladium Saw Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.iridium.name=Iridium Saw Blade Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.extreme.name=Extreme Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.hard_carbon.name=Hard Carbon Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.refined_glowstone.name=Refined Glowstone Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.refined_iron.name=Refined Iron Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.refined_obsidian.name=Refined Obsidian Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.silicon_carbide.name=Silicon Carbide Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.soulforged_steel.name=Soulforged Steel Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.thermoconducting.name=Thermoconducting Saw Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.saw_blade.void_metal.name=Void Metal Saw Blade Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.tin.name=Tin Javelin Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.zinc.name=Zinc Javelin Head Mold
@@ -26797,6 +26887,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.adamantium.name=Adam
 item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.palladium.name=Palladium Javelin Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.iridium.name=Iridium Javelin Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.extreme.name=Extreme Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.hard_carbon.name=Hard Carbon Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.refined_glowstone.name=Refined Glowstone Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.refined_iron.name=Refined Iron Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.refined_obsidian.name=Refined Obsidian Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.silicon_carbide.name=Silicon Carbide Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.soulforged_steel.name=Soulforged Steel Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.thermoconducting.name=Thermoconducting Javelin Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.javelin_head.void_metal.name=Void Metal Javelin Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.tin.name=Tin Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.zinc.name=Zinc Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.bismuth.name=Bismuth Hammer Head Mold
@@ -26816,6 +26916,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.titanium_gold.name=Ti
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.adamantium.name=Adamantium Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.palladium.name=Palladium Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.iridium.name=Iridium Hammer Head Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.extreme.name=Extreme Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.hard_carbon.name=Hard Carbon Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.refined_glowstone.name=Refined Glowstone Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.refined_iron.name=Refined Iron Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.refined_obsidian.name=Refined Obsidian Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.silicon_carbide.name=Silicon Carbide Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.soulforged_steel.name=Soulforged Steel Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.thermoconducting.name=Thermoconducting Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.hammer_head.void_metal.name=Void Metal Hammer Head Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.tin.name=Tin Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.zinc.name=Zinc Prospectors Pickaxe Head Mold
@@ -26837,6 +26947,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.adamantium.name=Adam
 item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.palladium.name=Palladium Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.iridium.name=Iridium Prospectors Pickaxe Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.extreme.name=Extreme Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.hard_carbon.name=Hard Carbon Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.refined_glowstone.name=Refined Glowstone Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.refined_iron.name=Refined Iron Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.refined_obsidian.name=Refined Obsidian Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.silicon_carbide.name=Silicon Carbide Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.soulforged_steel.name=Soulforged Steel Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.thermoconducting.name=Thermoconducting Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.propick_head.void_metal.name=Void Metal Prospectors Pickaxe Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.tin.name=Tin Knife Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.zinc.name=Zinc Knife Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.bismuth.name=Bismuth Knife Blade Mold
@@ -26857,6 +26977,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.adamantium.name=Adama
 item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.palladium.name=Palladium Knife Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.iridium.name=Iridium Knife Blade Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.extreme.name=Extreme Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.hard_carbon.name=Hard Carbon Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.refined_glowstone.name=Refined Glowstone Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.refined_iron.name=Refined Iron Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.refined_obsidian.name=Refined Obsidian Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.silicon_carbide.name=Silicon Carbide Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.soulforged_steel.name=Soulforged Steel Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.thermoconducting.name=Thermoconducting Knife Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.knife_blade.void_metal.name=Void Metal Knife Blade Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.tin.name=Tin Scythe Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.zinc.name=Zinc Scythe Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.bismuth.name=Bismuth Scythe Blade Mold
@@ -26876,6 +27006,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.titanium_gold.name=T
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.adamantium.name=Adamantium Scythe Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.palladium.name=Palladium Scythe Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.iridium.name=Iridium Scythe Blade Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.extreme.name=Extreme Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.hard_carbon.name=Hard Carbon Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.refined_glowstone.name=Refined Glowstone Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.refined_iron.name=Refined Iron Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.refined_obsidian.name=Refined Obsidian Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.silicon_carbide.name=Silicon Carbide Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.soulforged_steel.name=Soulforged Steel Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.thermoconducting.name=Thermoconducting Scythe Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.scythe_blade.void_metal.name=Void Metal Scythe Blade Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.bismuth_bronze.name=Bismuth Bronze Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.black_bronze.name=Black Bronze Prospectors Hammer Head Mold
@@ -26907,6 +27047,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.adamantiu
 item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.palladium.name=Palladium Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.iridium.name=Iridium Prospectors Hammer Head Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.extreme.name=Extreme Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.hard_carbon.name=Hard Carbon Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.refined_glowstone.name=Refined Glowstone Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.refined_iron.name=Refined Iron Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.refined_obsidian.name=Refined Obsidian Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.silicon_carbide.name=Silicon Carbide Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.soulforged_steel.name=Soulforged Steel Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.thermoconducting.name=Thermoconducting Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.prospectors_hammer_head.void_metal.name=Void Metal Prospectors Hammer Head Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.bismuth_bronze.name=Bismuth Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.black_bronze.name=Black Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.bronze.name=Bronze Halberd Blade Mold
@@ -26936,6 +27086,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.titanium_gold.name=
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.adamantium.name=Adamantium Halberd Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.palladium.name=Palladium Halberd Blade Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.iridium.name=Iridium Halberd Blade Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.extreme.name=Extreme Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.hard_carbon.name=Hard Carbon Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.refined_glowstone.name=Refined Glowstone Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.refined_iron.name=Refined Iron Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.refined_obsidian.name=Refined Obsidian Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.silicon_carbide.name=Silicon Carbide Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.soulforged_steel.name=Soulforged Steel Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.thermoconducting.name=Thermoconducting Halberd Blade Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.halberd_blade.void_metal.name=Void Metal Halberd Blade Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.ring.bismuth.name=Bismuth Ring Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.ring.bismuth_bronze.name=Bismuth Bronze Ring Mold
@@ -27078,6 +27238,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.ring.tantalum_hafnium.name=Tantal
 item.tfcflorae.ceramics.earthenware.fired.mold.ring.hepatizon.name=Hepatizon Ring Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.ring.silver_solder.name=Silver Solder Ring Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.extreme.name=Extreme Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.hard_carbon.name=Hard Carbon Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.refined_glowstone.name=Refined Glowstone Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.refined_iron.name=Refined Iron Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.refined_obsidian.name=Refined Obsidian Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.silicon_carbide.name=Silicon Carbide Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.soulforged_steel.name=Soulforged Steel Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.thermoconducting.name=Thermoconducting Ring Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.ring.void_metal.name=Void Metal Ring Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.bismuth.name=Bismuth Nugget Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.bismuth_bronze.name=Bismuth Bronze Nugget Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.black_bronze.name=Black Bronze Nugget Mold
@@ -27218,6 +27388,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.nugget.selenium.name=Selenium Nug
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.tantalum_hafnium.name=Tantalum Hafnium Nugget Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.hepatizon.name=Hepatizon Nugget Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nugget.silver_solder.name=Silver Solder Nugget Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.extreme.name=Extreme Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.hard_carbon.name=Hard Carbon Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.refined_glowstone.name=Refined Glowstone Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.refined_iron.name=Refined Iron Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.refined_obsidian.name=Refined Obsidian Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.silicon_carbide.name=Silicon Carbide Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.soulforged_steel.name=Soulforged Steel Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.thermoconducting.name=Thermoconducting Nugget Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nugget.void_metal.name=Void Metal Nugget Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.nail.bismuth.name=Bismuth Nail Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nail.bismuth_bronze.name=Bismuth Bronze Nail Mold
@@ -27360,6 +27540,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.nail.tantalum_hafnium.name=Tantal
 item.tfcflorae.ceramics.earthenware.fired.mold.nail.hepatizon.name=Hepatizon Nail Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.nail.silver_solder.name=Silver Solder Nail Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.extreme.name=Extreme Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.hard_carbon.name=Hard Carbon Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.refined_glowstone.name=Refined Glowstone Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.refined_iron.name=Refined Iron Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.refined_obsidian.name=Refined Obsidian Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.silicon_carbide.name=Silicon Carbide Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.soulforged_steel.name=Soulforged Steel Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.thermoconducting.name=Thermoconducting Nail Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.nail.void_metal.name=Void Metal Nail Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.bismuth.name=Bismuth Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.bismuth_bronze.name=Bismuth Bronze Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.black_bronze.name=Black Bronze Metal Block Mold
@@ -27500,6 +27690,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.selenium.name=Seleniu
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.tantalum_hafnium.name=Tantalum Hafnium Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.hepatizon.name=Hepatizon Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.silver_solder.name=Silver Solder Metal Block Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.extreme.name=Extreme Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.hard_carbon.name=Hard Carbon Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.refined_glowstone.name=Refined Glowstone Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.refined_iron.name=Refined Iron Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.refined_obsidian.name=Refined Obsidian Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.silicon_carbide.name=Silicon Carbide Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.soulforged_steel.name=Soulforged Steel Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.thermoconducting.name=Thermoconducting Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.metal_block.void_metal.name=Void Metal Metal Block Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.bismuth.name=Bismuth Sheet Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.bismuth_bronze.name=Bismuth Bronze Sheet Metal Block Mold
@@ -27642,6 +27842,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.tantalum_hafniu
 item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.hepatizon.name=Hepatizon Sheet Metal Block Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.silver_solder.name=Silver Solder Sheet Metal Block Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.extreme.name=Extreme Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.hard_carbon.name=Hard Carbon Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.refined_glowstone.name=Refined Glowstone Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.refined_iron.name=Refined Iron Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.refined_obsidian.name=Refined Obsidian Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.silicon_carbide.name=Silicon Carbide Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.soulforged_steel.name=Soulforged Steel Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.thermoconducting.name=Thermoconducting Sheet Metal Block Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sheet_metal_block.void_metal.name=Void Metal Sheet Metal Block Mold
+
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.bismuth.name=Bismuth Rackwheel Piece Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.bismuth_bronze.name=Bismuth Bronze Rackwheel Piece Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.black_bronze.name=Black Bronze Rackwheel Piece Mold
@@ -27782,6 +27992,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.selenium.name=Sel
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.tantalum_hafnium.name=Tantalum Hafnium Rackwheel Piece Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.hepatizon.name=Hepatizon Rackwheel Piece Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.silver_solder.name=Silver Solder Rackwheel Piece Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.extreme.name=Extreme Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.hard_carbon.name=Hard Carbon Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.refined_glowstone.name=Refined Glowstone Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.refined_iron.name=Refined Iron Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.refined_obsidian.name=Refined Obsidian Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.silicon_carbide.name=Silicon Carbide Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.soulforged_steel.name=Soulforged Steel Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.thermoconducting.name=Thermoconducting Rackwheel Piece Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.rackwheel_piece.void_metal.name=Void Metal Rackwheel Piece Mold
 
 item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.bismuth.name=Bismuth Sleeve Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.bismuth_bronze.name=Bismuth Bronze Sleeve Mold
@@ -27924,6 +28144,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.tantalum_hafnium.name=Tant
 item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.hepatizon.name=Hepatizon Sleeve Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.silver_solder.name=Silver Solder Sleeve Mold
 
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.extreme.name=Extreme Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.hard_carbon.name=Hard Carbon Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.refined_glowstone.name=Refined Glowstone Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.refined_iron.name=Refined Iron Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.refined_obsidian.name=Refined Obsidian Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.silicon_carbide.name=Silicon Carbide Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.soulforged_steel.name=Soulforged Steel Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.thermoconducting.name=Thermoconducting Sleeve Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.sleeve.void_metal.name=Void Metal Sleeve Mold
+
 item.tfcflorae.ceramics.earthenware.unfired.mold.mallet_head.name=Unfired Mallet Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.name=Mallet Head Mold
 
@@ -27955,6 +28185,16 @@ item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.titanium_gold.name=Ti
 item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.adamantium.name=Adamantium Mallet Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.palladium.name=Palladium Mallet Head Mold
 item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.iridium.name=Iridium Mallet Head Mold
+
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.extreme.name=Extreme Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.hard_carbon.name=Hard Carbon Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.refined_glowstone.name=Refined Glowstone Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.refined_iron.name=Refined Iron Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.refined_obsidian.name=Refined Obsidian Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.silicon_carbide.name=Silicon Carbide Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.soulforged_steel.name=Soulforged Steel Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.thermoconducting.name=Thermoconducting Mallet Head Mold
+item.tfcflorae.ceramics.earthenware.fired.mold.mallet_head.void_metal.name=Void Metal Mallet Head Mold
 
 
 item.tfcflorae.ceramics.kaolinite.fired.jug.name=Jug
@@ -28245,6 +28485,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.tantalum_hafnium.name=Unshape
 item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.hepatizon.name=Unshaped Hepatizon
 item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.silver_solder.name=Unshaped Silver Solder
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.extreme.name=Unshaped Extreme
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.hard_carbon.name=Unshaped Hard Carbon
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.refined_glowstone.name=Unshaped Refined Glowstone
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.refined_iron.name=Unshaped Refined Iron
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.refined_obsidian.name=Unshaped Refined Obsidian
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.silicon_carbide.name=Unshaped Silicon Carbide
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.soulforged_steel.name=Unshaped Soulforged Steel
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.thermoconducting.name=Unshaped Thermoconducting
+item.tfcflorae.ceramics.kaolinite.fired.mold.ingot.void_metal.name=Unshaped Void Metal
+
 item.tfcflorae.ceramics.kaolinite.unfired.mold.nail.name=Unfired Nail Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nail.name=Nail Mold
 item.tfcflorae.ceramics.kaolinite.unfired.mold.ring.name=Unfired Ring Mold
@@ -28272,6 +28522,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.adamantium.name=Adamantiu
 item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.palladium.name=Palladium Pick Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.iridium.name=Iridium Pick Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.extreme.name=Extreme Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.hard_carbon.name=Hard Carbon Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.refined_glowstone.name=Refined Glowstone Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.refined_iron.name=Refined Iron Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.refined_obsidian.name=Refined Obsidian Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.silicon_carbide.name=Silicon Carbide Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.soulforged_steel.name=Soulforged Steel Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.thermoconducting.name=Thermoconducting Pick Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.pick_head.void_metal.name=Void Metal Pick Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.tin.name=Tin Shovel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.zinc.name=Zinc Shovel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.bismuth.name=Bismuth Shovel Head Mold
@@ -28291,6 +28551,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.adamantium.name=Adamantium Shovel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.palladium.name=Palladium Shovel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.iridium.name=Iridium Shovel Head Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.extreme.name=Extreme Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.hard_carbon.name=Hard Carbon Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.refined_glowstone.name=Refined Glowstone Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.refined_iron.name=Refined Iron Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.refined_obsidian.name=Refined Obsidian Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.silicon_carbide.name=Silicon Carbide Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.soulforged_steel.name=Soulforged Steel Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.thermoconducting.name=Thermoconducting Shovel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.shovel_head.void_metal.name=Void Metal Shovel Head Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.tin.name=Tin Axe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.zinc.name=Zinc Axe Head Mold
@@ -28312,6 +28582,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.adamantium.name=Adamantium
 item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.palladium.name=Palladium Axe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.iridium.name=Iridium Axe Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.extreme.name=Extreme Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.hard_carbon.name=Hard Carbon Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.refined_glowstone.name=Refined Glowstone Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.refined_iron.name=Refined Iron Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.refined_obsidian.name=Refined Obsidian Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.silicon_carbide.name=Silicon Carbide Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.soulforged_steel.name=Soulforged Steel Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.thermoconducting.name=Thermoconducting Axe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.axe_head.void_metal.name=Void Metal Axe Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.tin.name=Tin Hoe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.zinc.name=Zinc Hoe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.bismuth.name=Bismuth Hoe Head Mold
@@ -28331,6 +28611,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.titanium_gold.name=Titaniu
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.adamantium.name=Adamantium Hoe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.palladium.name=Palladium Hoe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.iridium.name=Iridium Hoe Head Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.extreme.name=Extreme Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.hard_carbon.name=Hard Carbon Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.refined_glowstone.name=Refined Glowstone Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.refined_iron.name=Refined Iron Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.refined_obsidian.name=Refined Obsidian Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.silicon_carbide.name=Silicon Carbide Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.soulforged_steel.name=Soulforged Steel Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.thermoconducting.name=Thermoconducting Hoe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hoe_head.void_metal.name=Void Metal Hoe Head Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.tin.name=Tin Chisel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.zinc.name=Zinc Chisel Head Mold
@@ -28352,6 +28642,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.adamantium.name=Adamant
 item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.palladium.name=Palladium Chisel Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.iridium.name=Iridium Chisel Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.extreme.name=Extreme Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.hard_carbon.name=Hard Carbon Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.refined_glowstone.name=Refined Glowstone Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.refined_iron.name=Refined Iron Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.refined_obsidian.name=Refined Obsidian Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.silicon_carbide.name=Silicon Carbide Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.soulforged_steel.name=Soulforged Steel Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.thermoconducting.name=Thermoconducting Chisel Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.chisel_head.void_metal.name=Void Metal Chisel Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.tin.name=Tin Sword Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.zinc.name=Zinc Sword Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.bismuth.name=Bismuth Sword Blade Mold
@@ -28371,6 +28671,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.titanium_gold.name=Tita
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.adamantium.name=Adamantium Sword Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.palladium.name=Palladium Sword Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.iridium.name=Iridium Sword Blade Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.extreme.name=Extreme Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.hard_carbon.name=Hard Carbon Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.refined_glowstone.name=Refined Glowstone Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.refined_iron.name=Refined Iron Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.refined_obsidian.name=Refined Obsidian Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.silicon_carbide.name=Silicon Carbide Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.soulforged_steel.name=Soulforged Steel Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.thermoconducting.name=Thermoconducting Sword Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sword_blade.void_metal.name=Void Metal Sword Blade Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.tin.name=Tin Mace Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.zinc.name=Zinc Mace Head Mold
@@ -28392,6 +28702,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.adamantium.name=Adamantiu
 item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.palladium.name=Palladium Mace Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.iridium.name=Iridium Mace Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.extreme.name=Extreme Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.hard_carbon.name=Hard Carbon Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.refined_glowstone.name=Refined Glowstone Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.refined_iron.name=Refined Iron Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.refined_obsidian.name=Refined Obsidian Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.silicon_carbide.name=Silicon Carbide Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.soulforged_steel.name=Soulforged Steel Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.thermoconducting.name=Thermoconducting Mace Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mace_head.void_metal.name=Void Metal Mace Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.tin.name=Tin Saw Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.zinc.name=Zinc Saw Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.bismuth.name=Bismuth Saw Blade Mold
@@ -28411,6 +28731,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.titanium_gold.name=Titani
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.adamantium.name=Adamantium Saw Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.palladium.name=Palladium Saw Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.iridium.name=Iridium Saw Blade Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.extreme.name=Extreme Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.hard_carbon.name=Hard Carbon Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.refined_glowstone.name=Refined Glowstone Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.refined_iron.name=Refined Iron Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.refined_obsidian.name=Refined Obsidian Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.silicon_carbide.name=Silicon Carbide Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.soulforged_steel.name=Soulforged Steel Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.thermoconducting.name=Thermoconducting Saw Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.saw_blade.void_metal.name=Void Metal Saw Blade Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.tin.name=Tin Javelin Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.zinc.name=Zinc Javelin Head Mold
@@ -28432,6 +28762,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.adamantium.name=Adaman
 item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.palladium.name=Palladium Javelin Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.iridium.name=Iridium Javelin Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.extreme.name=Extreme Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.hard_carbon.name=Hard Carbon Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.refined_glowstone.name=Refined Glowstone Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.refined_iron.name=Refined Iron Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.refined_obsidian.name=Refined Obsidian Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.silicon_carbide.name=Silicon Carbide Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.soulforged_steel.name=Soulforged Steel Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.thermoconducting.name=Thermoconducting Javelin Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.javelin_head.void_metal.name=Void Metal Javelin Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.tin.name=Tin Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.zinc.name=Zinc Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.bismuth.name=Bismuth Hammer Head Mold
@@ -28451,6 +28791,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.adamantium.name=Adamantium Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.palladium.name=Palladium Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.iridium.name=Iridium Hammer Head Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.extreme.name=Extreme Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.hard_carbon.name=Hard Carbon Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.refined_glowstone.name=Refined Glowstone Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.refined_iron.name=Refined Iron Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.refined_obsidian.name=Refined Obsidian Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.silicon_carbide.name=Silicon Carbide Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.soulforged_steel.name=Soulforged Steel Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.thermoconducting.name=Thermoconducting Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.hammer_head.void_metal.name=Void Metal Hammer Head Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.tin.name=Tin Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.zinc.name=Zinc Prospectors Pickaxe Head Mold
@@ -28472,6 +28822,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.adamantium.name=Adaman
 item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.palladium.name=Palladium Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.iridium.name=Iridium Prospectors Pickaxe Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.extreme.name=Extreme Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.hard_carbon.name=Hard Carbon Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.refined_glowstone.name=Refined Glowstone Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.refined_iron.name=Refined Iron Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.refined_obsidian.name=Refined Obsidian Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.silicon_carbide.name=Silicon Carbide Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.soulforged_steel.name=Soulforged Steel Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.thermoconducting.name=Thermoconducting Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.propick_head.void_metal.name=Void Metal Prospectors Pickaxe Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.tin.name=Tin Knife Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.zinc.name=Zinc Knife Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.bismuth.name=Bismuth Knife Blade Mold
@@ -28492,6 +28852,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.adamantium.name=Adamant
 item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.palladium.name=Palladium Knife Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.iridium.name=Iridium Knife Blade Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.extreme.name=Extreme Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.hard_carbon.name=Hard Carbon Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.refined_glowstone.name=Refined Glowstone Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.refined_iron.name=Refined Iron Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.refined_obsidian.name=Refined Obsidian Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.silicon_carbide.name=Silicon Carbide Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.soulforged_steel.name=Soulforged Steel Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.thermoconducting.name=Thermoconducting Knife Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.knife_blade.void_metal.name=Void Metal Knife Blade Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.tin.name=Tin Scythe Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.zinc.name=Zinc Scythe Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.bismuth.name=Bismuth Scythe Blade Mold
@@ -28511,6 +28881,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.titanium_gold.name=Tit
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.adamantium.name=Adamantium Scythe Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.palladium.name=Palladium Scythe Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.iridium.name=Iridium Scythe Blade Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.extreme.name=Extreme Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.hard_carbon.name=Hard Carbon Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.refined_glowstone.name=Refined Glowstone Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.refined_iron.name=Refined Iron Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.refined_obsidian.name=Refined Obsidian Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.silicon_carbide.name=Silicon Carbide Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.soulforged_steel.name=Soulforged Steel Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.thermoconducting.name=Thermoconducting Scythe Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.scythe_blade.void_metal.name=Void Metal Scythe Blade Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.bismuth_bronze.name=Bismuth Bronze Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.black_bronze.name=Black Bronze Prospectors Hammer Head Mold
@@ -28542,6 +28922,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.adamantium.
 item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.palladium.name=Palladium Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.iridium.name=Iridium Prospectors Hammer Head Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.extreme.name=Extreme Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.hard_carbon.name=Hard Carbon Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.refined_glowstone.name=Refined Glowstone Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.refined_iron.name=Refined Iron Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.refined_obsidian.name=Refined Obsidian Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.silicon_carbide.name=Silicon Carbide Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.soulforged_steel.name=Soulforged Steel Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.thermoconducting.name=Thermoconducting Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.prospectors_hammer_head.void_metal.name=Void Metal Prospectors Hammer Head Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.bismuth_bronze.name=Bismuth Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.black_bronze.name=Black Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.bronze.name=Bronze Halberd Blade Mold
@@ -28571,6 +28961,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.titanium_gold.name=Ti
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.adamantium.name=Adamantium Halberd Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.palladium.name=Palladium Halberd Blade Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.iridium.name=Iridium Halberd Blade Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.extreme.name=Extreme Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.hard_carbon.name=Hard Carbon Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.refined_glowstone.name=Refined Glowstone Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.refined_iron.name=Refined Iron Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.refined_obsidian.name=Refined Obsidian Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.silicon_carbide.name=Silicon Carbide Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.soulforged_steel.name=Soulforged Steel Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.thermoconducting.name=Thermoconducting Halberd Blade Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.halberd_blade.void_metal.name=Void Metal Halberd Blade Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.ring.bismuth.name=Bismuth Ring Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.ring.bismuth_bronze.name=Bismuth Bronze Ring Mold
@@ -28713,6 +29113,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.ring.tantalum_hafnium.name=Tantalum
 item.tfcflorae.ceramics.kaolinite.fired.mold.ring.hepatizon.name=Hepatizon Ring Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.ring.silver_solder.name=Silver Solder Ring Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.extreme.name=Extreme Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.hard_carbon.name=Hard Carbon Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.refined_glowstone.name=Refined Glowstone Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.refined_iron.name=Refined Iron Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.refined_obsidian.name=Refined Obsidian Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.silicon_carbide.name=Silicon Carbide Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.soulforged_steel.name=Soulforged Steel Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.thermoconducting.name=Thermoconducting Ring Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.ring.void_metal.name=Void Metal Ring Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.bismuth.name=Bismuth Nugget Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.bismuth_bronze.name=Bismuth Bronze Nugget Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.black_bronze.name=Black Bronze Nugget Mold
@@ -28853,6 +29263,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.selenium.name=Selenium Nugge
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.tantalum_hafnium.name=Tantalum Hafnium Nugget Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.hepatizon.name=Hepatizon Nugget Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.silver_solder.name=Silver Solder Nugget Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.extreme.name=Extreme Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.hard_carbon.name=Hard Carbon Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.refined_glowstone.name=Refined Glowstone Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.refined_iron.name=Refined Iron Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.refined_obsidian.name=Refined Obsidian Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.silicon_carbide.name=Silicon Carbide Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.soulforged_steel.name=Soulforged Steel Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.thermoconducting.name=Thermoconducting Nugget Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nugget.void_metal.name=Void Metal Nugget Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.nail.bismuth.name=Bismuth Nail Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nail.bismuth_bronze.name=Bismuth Bronze Nail Mold
@@ -28995,6 +29415,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.nail.tantalum_hafnium.name=Tantalum
 item.tfcflorae.ceramics.kaolinite.fired.mold.nail.hepatizon.name=Hepatizon Nail Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.nail.silver_solder.name=Silver Solder Nail Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.extreme.name=Extreme Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.hard_carbon.name=Hard Carbon Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.refined_glowstone.name=Refined Glowstone Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.refined_iron.name=Refined Iron Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.refined_obsidian.name=Refined Obsidian Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.silicon_carbide.name=Silicon Carbide Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.soulforged_steel.name=Soulforged Steel Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.thermoconducting.name=Thermoconducting Nail Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.nail.void_metal.name=Void Metal Nail Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.bismuth.name=Bismuth Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.bismuth_bronze.name=Bismuth Bronze Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.black_bronze.name=Black Bronze Metal Block Mold
@@ -29135,6 +29565,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.selenium.name=Selenium 
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.tantalum_hafnium.name=Tantalum Hafnium Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.hepatizon.name=Hepatizon Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.silver_solder.name=Silver Solder Metal Block Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.extreme.name=Extreme Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.hard_carbon.name=Hard Carbon Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.refined_glowstone.name=Refined Glowstone Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.refined_iron.name=Refined Iron Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.refined_obsidian.name=Refined Obsidian Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.silicon_carbide.name=Silicon Carbide Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.soulforged_steel.name=Soulforged Steel Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.thermoconducting.name=Thermoconducting Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.metal_block.void_metal.name=Void Metal Metal Block Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.bismuth.name=Bismuth Sheet Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.bismuth_bronze.name=Bismuth Bronze Sheet Metal Block Mold
@@ -29277,6 +29717,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.tantalum_hafnium.
 item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.hepatizon.name=Hepatizon Sheet Metal Block Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.silver_solder.name=Silver Solder Sheet Metal Block Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.extreme.name=Extreme Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.hard_carbon.name=Hard Carbon Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.refined_glowstone.name=Refined Glowstone Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.refined_iron.name=Refined Iron Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.refined_obsidian.name=Refined Obsidian Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.silicon_carbide.name=Silicon Carbide Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.soulforged_steel.name=Soulforged Steel Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.thermoconducting.name=Thermoconducting Sheet Metal Block Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sheet_metal_block.void_metal.name=Void Metal Sheet Metal Block Mold
+
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.bismuth.name=Bismuth Rackwheel Piece Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.bismuth_bronze.name=Bismuth Bronze Rackwheel Piece Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.black_bronze.name=Black Bronze Rackwheel Piece Mold
@@ -29417,6 +29867,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.selenium.name=Selen
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.tantalum_hafnium.name=Tantalum Hafnium Rackwheel Piece Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.hepatizon.name=Hepatizon Rackwheel Piece Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.silver_solder.name=Silver Solder Rackwheel Piece Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.extreme.name=Extreme Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.hard_carbon.name=Hard Carbon Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.refined_glowstone.name=Refined Glowstone Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.refined_iron.name=Refined Iron Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.refined_obsidian.name=Refined Obsidian Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.silicon_carbide.name=Silicon Carbide Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.soulforged_steel.name=Soulforged Steel Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.thermoconducting.name=Thermoconducting Rackwheel Piece Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.rackwheel_piece.void_metal.name=Void Metal Rackwheel Piece Mold
 
 item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.bismuth.name=Bismuth Sleeve Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.bismuth_bronze.name=Bismuth Bronze Sleeve Mold
@@ -29559,6 +30019,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.tantalum_hafnium.name=Tantal
 item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.hepatizon.name=Hepatizon Sleeve Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.silver_solder.name=Silver Solder Sleeve Mold
 
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.extreme.name=Extreme Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.hard_carbon.name=Hard Carbon Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.refined_glowstone.name=Refined Glowstone Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.refined_iron.name=Refined Iron Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.refined_obsidian.name=Refined Obsidian Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.silicon_carbide.name=Silicon Carbide Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.soulforged_steel.name=Soulforged Steel Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.thermoconducting.name=Thermoconducting Sleeve Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.sleeve.void_metal.name=Void Metal Sleeve Mold
+
 item.tfcflorae.ceramics.kaolinite.unfired.mold.mallet_head.name=Unfired Mallet Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.name=Mallet Head Mold
 
@@ -29590,6 +30060,16 @@ item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.adamantium.name=Adamantium Mallet Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.palladium.name=Palladium Mallet Head Mold
 item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.iridium.name=Iridium Mallet Head Mold
+
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.extreme.name=Extreme Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.hard_carbon.name=Hard Carbon Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.refined_glowstone.name=Refined Glowstone Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.refined_iron.name=Refined Iron Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.refined_obsidian.name=Refined Obsidian Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.silicon_carbide.name=Silicon Carbide Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.soulforged_steel.name=Soulforged Steel Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.thermoconducting.name=Thermoconducting Mallet Head Mold
+item.tfcflorae.ceramics.kaolinite.fired.mold.mallet_head.void_metal.name=Void Metal Mallet Head Mold
 
 
 item.tfcflorae.ceramics.stoneware.fired.jug.name=Jug
@@ -29880,6 +30360,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.ingot.tantalum_hafnium.name=Unshape
 item.tfcflorae.ceramics.stoneware.fired.mold.ingot.hepatizon.name=Unshaped Hepatizon
 item.tfcflorae.ceramics.stoneware.fired.mold.ingot.silver_solder.name=Unshaped Silver Solder
 
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.extreme.name=Unshaped Extreme
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.hard_carbon.name=Unshaped Hard Carbon
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.refined_glowstone.name=Unshaped Refined Glowstone
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.refined_iron.name=Unshaped Refined Iron
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.refined_obsidian.name=Unshaped Refined Obsidian
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.silicon_carbide.name=Unshaped Silicon Carbide
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.soulforged_steel.name=Unshaped Soulforged Steel
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.thermoconducting.name=Unshaped Thermoconducting
+item.tfcflorae.ceramics.stoneware.fired.mold.ingot.void_metal.name=Unshaped Void Metal
+
 item.tfcflorae.ceramics.stoneware.unfired.mold.nail.name=Unfired Nail Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nail.name=Nail Mold
 item.tfcflorae.ceramics.stoneware.unfired.mold.ring.name=Unfired Ring Mold
@@ -29907,6 +30397,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.adamantium.name=Adamantiu
 item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.palladium.name=Palladium Pick Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.iridium.name=Iridium Pick Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.extreme.name=Extreme Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.hard_carbon.name=Hard Carbon Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.refined_glowstone.name=Refined Glowstone Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.refined_iron.name=Refined Iron Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.refined_obsidian.name=Refined Obsidian Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.silicon_carbide.name=Silicon Carbide Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.soulforged_steel.name=Soulforged Steel Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.thermoconducting.name=Thermoconducting Pick Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.pick_head.void_metal.name=Void Metal Pick Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.tin.name=Tin Shovel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.zinc.name=Zinc Shovel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.bismuth.name=Bismuth Shovel Head Mold
@@ -29926,6 +30426,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.adamantium.name=Adamantium Shovel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.palladium.name=Palladium Shovel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.iridium.name=Iridium Shovel Head Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.extreme.name=Extreme Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.hard_carbon.name=Hard Carbon Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.refined_glowstone.name=Refined Glowstone Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.refined_iron.name=Refined Iron Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.refined_obsidian.name=Refined Obsidian Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.silicon_carbide.name=Silicon Carbide Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.soulforged_steel.name=Soulforged Steel Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.thermoconducting.name=Thermoconducting Shovel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.shovel_head.void_metal.name=Void Metal Shovel Head Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.tin.name=Tin Axe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.zinc.name=Zinc Axe Head Mold
@@ -29947,6 +30457,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.adamantium.name=Adamantium
 item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.palladium.name=Palladium Axe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.iridium.name=Iridium Axe Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.extreme.name=Extreme Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.hard_carbon.name=Hard Carbon Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.refined_glowstone.name=Refined Glowstone Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.refined_iron.name=Refined Iron Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.refined_obsidian.name=Refined Obsidian Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.silicon_carbide.name=Silicon Carbide Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.soulforged_steel.name=Soulforged Steel Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.thermoconducting.name=Thermoconducting Axe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.axe_head.void_metal.name=Void Metal Axe Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.tin.name=Tin Hoe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.zinc.name=Zinc Hoe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.bismuth.name=Bismuth Hoe Head Mold
@@ -29966,6 +30486,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.titanium_gold.name=Titaniu
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.adamantium.name=Adamantium Hoe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.palladium.name=Palladium Hoe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.iridium.name=Iridium Hoe Head Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.extreme.name=Extreme Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.hard_carbon.name=Hard Carbon Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.refined_glowstone.name=Refined Glowstone Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.refined_iron.name=Refined Iron Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.refined_obsidian.name=Refined Obsidian Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.silicon_carbide.name=Silicon Carbide Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.soulforged_steel.name=Soulforged Steel Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.thermoconducting.name=Thermoconducting Hoe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hoe_head.void_metal.name=Void Metal Hoe Head Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.tin.name=Tin Chisel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.zinc.name=Zinc Chisel Head Mold
@@ -29987,6 +30517,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.adamantium.name=Adamant
 item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.palladium.name=Palladium Chisel Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.iridium.name=Iridium Chisel Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.extreme.name=Extreme Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.hard_carbon.name=Hard Carbon Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.refined_glowstone.name=Refined Glowstone Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.refined_iron.name=Refined Iron Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.refined_obsidian.name=Refined Obsidian Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.silicon_carbide.name=Silicon Carbide Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.soulforged_steel.name=Soulforged Steel Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.thermoconducting.name=Thermoconducting Chisel Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.chisel_head.void_metal.name=Void Metal Chisel Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.tin.name=Tin Sword Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.zinc.name=Zinc Sword Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.bismuth.name=Bismuth Sword Blade Mold
@@ -30006,6 +30546,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.titanium_gold.name=Tita
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.adamantium.name=Adamantium Sword Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.palladium.name=Palladium Sword Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.iridium.name=Iridium Sword Blade Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.extreme.name=Extreme Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.hard_carbon.name=Hard Carbon Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.refined_glowstone.name=Refined Glowstone Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.refined_iron.name=Refined Iron Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.refined_obsidian.name=Refined Obsidian Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.silicon_carbide.name=Silicon Carbide Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.soulforged_steel.name=Soulforged Steel Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.thermoconducting.name=Thermoconducting Sword Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sword_blade.void_metal.name=Void Metal Sword Blade Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.tin.name=Tin Mace Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.zinc.name=Zinc Mace Head Mold
@@ -30027,6 +30577,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.adamantium.name=Adamantiu
 item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.palladium.name=Palladium Mace Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.iridium.name=Iridium Mace Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.extreme.name=Extreme Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.hard_carbon.name=Hard Carbon Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.refined_glowstone.name=Refined Glowstone Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.refined_iron.name=Refined Iron Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.refined_obsidian.name=Refined Obsidian Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.silicon_carbide.name=Silicon Carbide Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.soulforged_steel.name=Soulforged Steel Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.thermoconducting.name=Thermoconducting Mace Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mace_head.void_metal.name=Void Metal Mace Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.tin.name=Tin Saw Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.zinc.name=Zinc Saw Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.bismuth.name=Bismuth Saw Blade Mold
@@ -30046,6 +30606,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.titanium_gold.name=Titani
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.adamantium.name=Adamantium Saw Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.palladium.name=Palladium Saw Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.iridium.name=Iridium Saw Blade Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.extreme.name=Extreme Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.hard_carbon.name=Hard Carbon Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.refined_glowstone.name=Refined Glowstone Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.refined_iron.name=Refined Iron Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.refined_obsidian.name=Refined Obsidian Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.silicon_carbide.name=Silicon Carbide Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.soulforged_steel.name=Soulforged Steel Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.thermoconducting.name=Thermoconducting Saw Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.saw_blade.void_metal.name=Void Metal Saw Blade Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.tin.name=Tin Javelin Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.zinc.name=Zinc Javelin Head Mold
@@ -30067,6 +30637,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.adamantium.name=Adaman
 item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.palladium.name=Palladium Javelin Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.iridium.name=Iridium Javelin Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.extreme.name=Extreme Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.hard_carbon.name=Hard Carbon Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.refined_glowstone.name=Refined Glowstone Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.refined_iron.name=Refined Iron Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.refined_obsidian.name=Refined Obsidian Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.silicon_carbide.name=Silicon Carbide Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.soulforged_steel.name=Soulforged Steel Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.thermoconducting.name=Thermoconducting Javelin Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.javelin_head.void_metal.name=Void Metal Javelin Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.tin.name=Tin Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.zinc.name=Zinc Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.bismuth.name=Bismuth Hammer Head Mold
@@ -30086,6 +30666,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.adamantium.name=Adamantium Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.palladium.name=Palladium Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.iridium.name=Iridium Hammer Head Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.extreme.name=Extreme Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.hard_carbon.name=Hard Carbon Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.refined_glowstone.name=Refined Glowstone Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.refined_iron.name=Refined Iron Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.refined_obsidian.name=Refined Obsidian Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.silicon_carbide.name=Silicon Carbide Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.soulforged_steel.name=Soulforged Steel Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.thermoconducting.name=Thermoconducting Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.hammer_head.void_metal.name=Void Metal Hammer Head Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.tin.name=Tin Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.zinc.name=Zinc Prospectors Pickaxe Head Mold
@@ -30107,6 +30697,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.adamantium.name=Adaman
 item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.palladium.name=Palladium Prospectors Pickaxe Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.iridium.name=Iridium Prospectors Pickaxe Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.extreme.name=Extreme Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.hard_carbon.name=Hard Carbon Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.refined_glowstone.name=Refined Glowstone Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.refined_iron.name=Refined Iron Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.refined_obsidian.name=Refined Obsidian Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.silicon_carbide.name=Silicon Carbide Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.soulforged_steel.name=Soulforged Steel Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.thermoconducting.name=Thermoconducting Prospectors Pickaxe Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.propick_head.void_metal.name=Void Metal Prospectors Pickaxe Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.tin.name=Tin Knife Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.zinc.name=Zinc Knife Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.bismuth.name=Bismuth Knife Blade Mold
@@ -30127,6 +30727,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.adamantium.name=Adamant
 item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.palladium.name=Palladium Knife Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.iridium.name=Iridium Knife Blade Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.extreme.name=Extreme Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.hard_carbon.name=Hard Carbon Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.refined_glowstone.name=Refined Glowstone Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.refined_iron.name=Refined Iron Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.refined_obsidian.name=Refined Obsidian Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.silicon_carbide.name=Silicon Carbide Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.soulforged_steel.name=Soulforged Steel Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.thermoconducting.name=Thermoconducting Knife Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.knife_blade.void_metal.name=Void Metal Knife Blade Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.tin.name=Tin Scythe Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.zinc.name=Zinc Scythe Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.bismuth.name=Bismuth Scythe Blade Mold
@@ -30146,6 +30756,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.titanium_gold.name=Tit
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.adamantium.name=Adamantium Scythe Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.palladium.name=Palladium Scythe Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.iridium.name=Iridium Scythe Blade Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.extreme.name=Extreme Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.hard_carbon.name=Hard Carbon Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.refined_glowstone.name=Refined Glowstone Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.refined_iron.name=Refined Iron Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.refined_obsidian.name=Refined Obsidian Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.silicon_carbide.name=Silicon Carbide Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.soulforged_steel.name=Soulforged Steel Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.thermoconducting.name=Thermoconducting Scythe Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.scythe_blade.void_metal.name=Void Metal Scythe Blade Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.bismuth_bronze.name=Bismuth Bronze Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.black_bronze.name=Black Bronze Prospectors Hammer Head Mold
@@ -30177,6 +30797,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.adamantium.
 item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.palladium.name=Palladium Prospectors Hammer Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.iridium.name=Iridium Prospectors Hammer Head Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.extreme.name=Extreme Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.hard_carbon.name=Hard Carbon Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.refined_glowstone.name=Refined Glowstone Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.refined_iron.name=Refined Iron Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.refined_obsidian.name=Refined Obsidian Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.silicon_carbide.name=Silicon Carbide Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.soulforged_steel.name=Soulforged Steel Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.thermoconducting.name=Thermoconducting Prospectors Hammer Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.prospectors_hammer_head.void_metal.name=Void Metal Prospectors Hammer Head Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.bismuth_bronze.name=Bismuth Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.black_bronze.name=Black Bronze Halberd Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.bronze.name=Bronze Halberd Blade Mold
@@ -30206,6 +30836,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.titanium_gold.name=Ti
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.adamantium.name=Adamantium Halberd Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.palladium.name=Palladium Halberd Blade Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.iridium.name=Iridium Halberd Blade Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.extreme.name=Extreme Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.hard_carbon.name=Hard Carbon Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.refined_glowstone.name=Refined Glowstone Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.refined_iron.name=Refined Iron Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.refined_obsidian.name=Refined Obsidian Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.silicon_carbide.name=Silicon Carbide Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.soulforged_steel.name=Soulforged Steel Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.thermoconducting.name=Thermoconducting Halberd Blade Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.halberd_blade.void_metal.name=Void Metal Halberd Blade Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.ring.bismuth.name=Bismuth Ring Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.ring.bismuth_bronze.name=Bismuth Bronze Ring Mold
@@ -30348,6 +30988,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.ring.tantalum_hafnium.name=Tantalum
 item.tfcflorae.ceramics.stoneware.fired.mold.ring.hepatizon.name=Hepatizon Ring Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.ring.silver_solder.name=Silver Solder Ring Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.extreme.name=Extreme Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.hard_carbon.name=Hard Carbon Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.refined_glowstone.name=Refined Glowstone Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.refined_iron.name=Refined Iron Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.refined_obsidian.name=Refined Obsidian Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.silicon_carbide.name=Silicon Carbide Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.soulforged_steel.name=Soulforged Steel Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.thermoconducting.name=Thermoconducting Ring Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.ring.void_metal.name=Void Metal Ring Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.bismuth.name=Bismuth Nugget Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.bismuth_bronze.name=Bismuth Bronze Nugget Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.black_bronze.name=Black Bronze Nugget Mold
@@ -30488,6 +31138,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.nugget.selenium.name=Selenium Nugge
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.tantalum_hafnium.name=Tantalum Hafnium Nugget Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.hepatizon.name=Hepatizon Nugget Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nugget.silver_solder.name=Silver Solder Nugget Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.extreme.name=Extreme Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.hard_carbon.name=Hard Carbon Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.refined_glowstone.name=Refined Glowstone Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.refined_iron.name=Refined Iron Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.refined_obsidian.name=Refined Obsidian Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.silicon_carbide.name=Silicon Carbide Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.soulforged_steel.name=Soulforged Steel Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.thermoconducting.name=Thermoconducting Nugget Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nugget.void_metal.name=Void Metal Nugget Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.nail.bismuth.name=Bismuth Nail Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nail.bismuth_bronze.name=Bismuth Bronze Nail Mold
@@ -30630,6 +31290,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.nail.tantalum_hafnium.name=Tantalum
 item.tfcflorae.ceramics.stoneware.fired.mold.nail.hepatizon.name=Hepatizon Nail Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.nail.silver_solder.name=Silver Solder Nail Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.extreme.name=Extreme Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.hard_carbon.name=Hard Carbon Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.refined_glowstone.name=Refined Glowstone Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.refined_iron.name=Refined Iron Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.refined_obsidian.name=Refined Obsidian Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.silicon_carbide.name=Silicon Carbide Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.soulforged_steel.name=Soulforged Steel Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.thermoconducting.name=Thermoconducting Nail Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.nail.void_metal.name=Void Metal Nail Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.bismuth.name=Bismuth Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.bismuth_bronze.name=Bismuth Bronze Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.black_bronze.name=Black Bronze Metal Block Mold
@@ -30770,6 +31440,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.selenium.name=Selenium 
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.tantalum_hafnium.name=Tantalum Hafnium Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.hepatizon.name=Hepatizon Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.silver_solder.name=Silver Solder Metal Block Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.extreme.name=Extreme Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.hard_carbon.name=Hard Carbon Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.refined_glowstone.name=Refined Glowstone Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.refined_iron.name=Refined Iron Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.refined_obsidian.name=Refined Obsidian Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.silicon_carbide.name=Silicon Carbide Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.soulforged_steel.name=Soulforged Steel Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.thermoconducting.name=Thermoconducting Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.metal_block.void_metal.name=Void Metal Metal Block Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.bismuth.name=Bismuth Sheet Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.bismuth_bronze.name=Bismuth Bronze Sheet Metal Block Mold
@@ -30912,6 +31592,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.tantalum_hafnium.
 item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.hepatizon.name=Hepatizon Sheet Metal Block Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.silver_solder.name=Silver Solder Sheet Metal Block Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.extreme.name=Extreme Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.hard_carbon.name=Hard Carbon Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.refined_glowstone.name=Refined Glowstone Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.refined_iron.name=Refined Iron Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.refined_obsidian.name=Refined Obsidian Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.silicon_carbide.name=Silicon Carbide Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.soulforged_steel.name=Soulforged Steel Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.thermoconducting.name=Thermoconducting Sheet Metal Block Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sheet_metal_block.void_metal.name=Void Metal Sheet Metal Block Mold
+
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.bismuth.name=Bismuth Rackwheel Piece Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.bismuth_bronze.name=Bismuth Bronze Rackwheel Piece Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.black_bronze.name=Black Bronze Rackwheel Piece Mold
@@ -31052,6 +31742,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.selenium.name=Selen
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.tantalum_hafnium.name=Tantalum Hafnium Rackwheel Piece Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.hepatizon.name=Hepatizon Rackwheel Piece Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.silver_solder.name=Silver Solder Rackwheel Piece Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.extreme.name=Extreme Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.hard_carbon.name=Hard Carbon Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.refined_glowstone.name=Refined Glowstone Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.refined_iron.name=Refined Iron Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.refined_obsidian.name=Refined Obsidian Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.silicon_carbide.name=Silicon Carbide Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.soulforged_steel.name=Soulforged Steel Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.thermoconducting.name=Thermoconducting Rackwheel Piece Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.rackwheel_piece.void_metal.name=Void Metal Rackwheel Piece Mold
 
 item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.bismuth.name=Bismuth Sleeve Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.bismuth_bronze.name=Bismuth Bronze Sleeve Mold
@@ -31194,6 +31894,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.tantalum_hafnium.name=Tantal
 item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.hepatizon.name=Hepatizon Sleeve Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.silver_solder.name=Silver Solder Sleeve Mold
 
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.extreme.name=Extreme Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.hard_carbon.name=Hard Carbon Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.refined_glowstone.name=Refined Glowstone Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.refined_iron.name=Refined Iron Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.refined_obsidian.name=Refined Obsidian Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.silicon_carbide.name=Silicon Carbide Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.soulforged_steel.name=Soulforged Steel Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.thermoconducting.name=Thermoconducting Sleeve Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.sleeve.void_metal.name=Void Metal Sleeve Mold
+
 item.tfcflorae.ceramics.stoneware.unfired.mold.mallet_head.name=Unfired Mallet Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.name=Mallet Head Mold
 
@@ -31225,6 +31935,16 @@ item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.titanium_gold.name=Tita
 item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.adamantium.name=Adamantium Mallet Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.palladium.name=Palladium Mallet Head Mold
 item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.iridium.name=Iridium Mallet Head Mold
+
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.extreme.name=Extreme Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.hard_carbon.name=Hard Carbon Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.refined_glowstone.name=Refined Glowstone Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.refined_iron.name=Refined Iron Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.refined_obsidian.name=Refined Obsidian Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.silicon_carbide.name=Silicon Carbide Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.soulforged_steel.name=Soulforged Steel Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.thermoconducting.name=Thermoconducting Mallet Head Mold
+item.tfcflorae.ceramics.stoneware.fired.mold.mallet_head.void_metal.name=Void Metal Mallet Head Mold
 
 
 item.tfcflorae.cracked_coconut.name=Empty Coconut

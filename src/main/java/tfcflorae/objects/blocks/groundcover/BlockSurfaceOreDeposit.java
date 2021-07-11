@@ -86,8 +86,16 @@ public class BlockSurfaceOreDeposit extends Block
 
         this.ore = ore;
         this.rock = rock;
-        grade = Ore.Grade.POOR;
-        setDefaultState(blockState.getBaseState().withProperty(GRADE, Ore.Grade.POOR));
+        if (!ore.isGraded())
+        {
+            grade = Ore.Grade.NORMAL;
+            setDefaultState(blockState.getBaseState().withProperty(GRADE, Ore.Grade.NORMAL));
+        }
+        else
+        {
+            grade = Ore.Grade.POOR;
+            setDefaultState(blockState.getBaseState().withProperty(GRADE, Ore.Grade.POOR));
+        }
         setSoundType(SoundType.STONE);
         setHardness(0.5f).setResistance(5.0F);
         OreDictionaryHelper.register(this, "rock");

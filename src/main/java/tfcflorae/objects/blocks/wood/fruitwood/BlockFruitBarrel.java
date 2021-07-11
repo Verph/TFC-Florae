@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRedstoneComparator;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -182,6 +183,8 @@ public class BlockFruitBarrel extends Block implements IItemSize
     {
         if (!world.isRemote)
         {
+            if (world.getBlockState(fromPos).getBlock() instanceof BlockRedstoneComparator)
+                return;
             boolean powered = world.isBlockPowered(pos);
             if (powered || block.getDefaultState().canProvidePower())
             {
@@ -201,6 +204,7 @@ public class BlockFruitBarrel extends Block implements IItemSize
         {
             tile.onBreakBlock(worldIn, pos, state);
         }
+        worldIn.updateComparatorOutputLevel(pos, this);
         super.breakBlock(worldIn, pos, state);
     }
 
@@ -297,13 +301,13 @@ public class BlockFruitBarrel extends Block implements IItemSize
         return new TEBarrel();
     }
 
+    /**
+        Handle drops via {@link this#breakBlock(World, BlockPos, IBlockState)}
+     */
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
-        if (!state.getValue(SEALED))
-        {
-            super.getDrops(drops, world, pos, state, fortune);
-        }
+        // NO-OP
     }
 
     @Override
@@ -316,8 +320,7 @@ public class BlockFruitBarrel extends Block implements IItemSize
 
     @Override
     @Nonnull
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world,
-                                  BlockPos pos, EntityPlayer player)
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
     {
         ItemStack stack = new ItemStack(state.getBlock());
         TEBarrel tile = Helpers.getTE(world, pos, TEBarrel.class);
@@ -326,5 +329,19 @@ public class BlockFruitBarrel extends Block implements IItemSize
             tile.saveToItemStack(stack);
         }
         return stack;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public boolean hasComparatorInputOverride(IBlockState state)
+    {
+        return true;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public int getComparatorInputOverride(IBlockState state, World world, BlockPos pos)
+    {
+        return state.getValue(SEALED) ? 15 : 0;
     }
 }

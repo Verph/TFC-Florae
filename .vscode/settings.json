@@ -25,6 +25,6 @@
         "mongongo",
         "tfcflorae"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "java.home": "C:\\Program Files\\Java\\jdk-16.0.1"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.home": "C:\\Program Files\\Java\\jdk-11.0.11"
 }
