@@ -1,20 +1,36 @@
 package tfcflorae.util.fuel;
 
-import tfcflorae.objects.blocks.wood.BlockLogTFCF;
-import tfcflorae.types.TreesTFCF;
+import net.minecraft.item.ItemStack;
+
 import net.dries007.tfc.api.registries.TFCRegistries;
+import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.objects.inventory.ingredient.IIngredient;
 import net.dries007.tfc.util.fuel.Fuel;
 import net.dries007.tfc.util.fuel.FuelManager;
-import net.minecraft.item.ItemStack;
+
+import tfcflorae.objects.blocks.wood.BlockLogTFCF;
+import tfcflorae.types.TreesTFCF;
+import tfcflorae.util.agriculture.FruitTreeTFCF;
 
 public class FuelsTFCF
 {
     public static void postInit()
     {
+        for (Tree wood : TFCRegistries.TREES.getValuesCollection())
+        {
+            BlockLogTFCF log = BlockLogTFCF.get(wood);
+            FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(log)), wood.getBurnTicks(), wood.getBurnTemp()));
+        }
+
+        for (FruitTreeTFCF tree : FruitTreeTFCF.values())
+        {
+            BlockLogTFCF log = BlockLogTFCF.get(tree);
+            FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(log)), tree.normalTree.getBurnTicks(), tree.normalTree.getBurnTemp()));
+        }
+
         // Eucalyptus
-        FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(BlockLogTFCF.get(TFCRegistries.TREES.getValue(TreesTFCF.EUCALYPTUS)))), 1000, 705, false, false));
-        FuelManager.addFuel(new Fuel(IIngredient.of("logWoodEucalyptus"), 1000, 705, false, false));
+        // FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(BlockLogTFCF.get(TFCRegistries.TREES.getValue(TreesTFCF.EUCALYPTUS)))), 1000, 705, false, false));
+        // FuelManager.addFuel(new Fuel(IIngredient.of("logWoodEucalyptus"), 1000, 705, false, false));
 
         // Wood
         FuelManager.addFuel(new Fuel(IIngredient.of("poleWooden"), 900, 700));
