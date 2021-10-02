@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XB"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "paper"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "leatherPineapple"
+    }
+  },
+  "result": {
+    "item": "minecraft:book",
+    "count": 1
+  }
+}

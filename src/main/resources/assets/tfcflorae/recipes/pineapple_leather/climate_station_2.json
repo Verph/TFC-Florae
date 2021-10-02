@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BFB",
+    "FCF",
+    "BFB"
+  ],
+  "key": {
+    "F": {
+      "item": "tfc:fire_clay_block"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "leatherPineapple"
+    },
+    "C": {
+      "item": "firmalife:climeate_station_1"
+    }
+  },
+  "result": {
+    "item": "firmalife:climeate_station_2",
+    "count": 1
+  }
+}

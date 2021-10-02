@@ -39,7 +39,7 @@ public class KnappingHelperTFCF
             public String describe()
             {
                 //noinspection ConstantConditions
-                return "Adding Tanned Leather knapping recipe " + recipe.getRegistryName().toString();
+                return "Adding knapping recipe " + recipe.getRegistryName().toString();
             }
         });
     }
@@ -68,7 +68,7 @@ public class KnappingHelperTFCF
                 public String describe()
                 {
                     //noinspection ConstantConditions
-                    return "Removing Knapping recipe " + rem.getRegistryName().toString();
+                    return "Removing knapping recipe " + rem.getRegistryName().toString();
                 }
             });
         }
@@ -92,7 +92,7 @@ public class KnappingHelperTFCF
                 public String describe()
                 {
                     //noinspection ConstantConditions
-                    return "Removing Knapping recipe " + recipe.getRegistryName().toString();
+                    return "Removing knapping recipe " + recipe.getRegistryName().toString();
                 }
             });
         }
@@ -100,6 +100,24 @@ public class KnappingHelperTFCF
 
     public static KnappingType getType(String type) {
         switch (type) {
+            case "pineapple_leather":
+                return KnappingTypes.PINEAPPLE_LEATHER;
+            case "burlap_cloth":
+                return KnappingTypes.BURLAP_CLOTH;
+            case "wool_cloth":
+                return KnappingTypes.WOOL_CLOTH;
+            case "silk_cloth":
+                return KnappingTypes.SILK_CLOTH;
+            case "sisal_cloth":
+                return KnappingTypes.SISAL_CLOTH;
+            case "cotton_cloth":
+                return KnappingTypes.COTTON_CLOTH;
+            case "linen_cloth":
+                return KnappingTypes.LINEN_CLOTH;
+            case "hemp_cloth":
+                return KnappingTypes.HEMP_CLOTH;
+            case "yucca_canvas":
+                return KnappingTypes.YUCCA_CANVAS;
             case "mud":
                 return KnappingTypes.MUD;
             case "earthenware_clay":

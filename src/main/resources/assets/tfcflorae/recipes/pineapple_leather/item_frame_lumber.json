@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XBX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "lumber"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "leatherPineapple"
+    }
+  },
+  "result": {
+    "item": "minecraft:item_frame",
+    "count": 4
+  }
+}

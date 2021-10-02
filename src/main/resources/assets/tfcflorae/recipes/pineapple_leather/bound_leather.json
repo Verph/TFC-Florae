@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XBX"
+  ],
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "string"
+    },
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "leatherPineapple"
+    }
+  },
+  "result": {
+    "item": "improvedbackpacks:bound_leather",
+    "count": 1
+  }
+}

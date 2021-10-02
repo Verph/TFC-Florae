@@ -1,0 +1,13 @@
+{
+  "type": "tfc:damage_item_shapeless",
+  "ingredients": [
+	{
+      "type": "forge:ore_dict",
+      "ore": "baleYuccaFiber"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:crop/product/yucca_fiber",
+    "count": 9
+  }
+}

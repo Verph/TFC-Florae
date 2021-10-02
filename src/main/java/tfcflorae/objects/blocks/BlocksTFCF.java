@@ -66,9 +66,9 @@ import tfcflorae.TFCFlorae;
 import tfcflorae.api.registries.TFCFRegistries;
 import tfcflorae.objects.blocks.*;
 import tfcflorae.objects.blocks.groundcover.*;
-import tfcflorae.objects.blocks.multiblock.BlockCampfire;
+/*import tfcflorae.objects.blocks.multiblock.BlockCampfire;
 import tfcflorae.objects.blocks.multiblock.BlockDummyHalf;
-import tfcflorae.objects.blocks.multiblock.MultiBlockBase;
+import tfcflorae.objects.blocks.multiblock.MultiBlockBase;*/
 import tfcflorae.objects.blocks.wood.*;
 import tfcflorae.objects.blocks.wood.bamboo.*;
 import tfcflorae.objects.blocks.wood.cinnamon.*;
@@ -141,6 +141,10 @@ public final class BlocksTFCF
     public static final BlockCeylonCinnamonSapling CEYLON_CINNAMON_SAPLING = Helpers.getNull();
 
     // Bales
+    @GameRegistry.ObjectHolder("crop/bales/yucca/yucca_bale")
+    public static final BlockBale YUCCA_BALE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/bales/yucca/yucca_fiber_bale")
+    public static final BlockBale YUCCA_FIBER_BALE = Helpers.getNull();
     @GameRegistry.ObjectHolder("crop/bales/cotton/cotton_bale")
     public static final BlockBale COTTON_BALE = Helpers.getNull();
     @GameRegistry.ObjectHolder("crop/bales/cotton/cotton_yarn_bale")
@@ -219,10 +223,10 @@ public final class BlocksTFCF
     public static final BlockBambooLeaves WEAVERS_BAMBOO_LEAVES = Helpers.getNull();
 
     //MultiBlocks
-    @GameRegistry.ObjectHolder("multiblock/campfire")
+    /*@GameRegistry.ObjectHolder("multiblock/campfire")
     public static final BlockCampfire Campfire = Helpers.getNull();
     @GameRegistry.ObjectHolder("multiblock/dummyHalf")
-    public static final BlockCampfire DummyHalf = Helpers.getNull();
+    public static final BlockCampfire DummyHalf = Helpers.getNull();*/
 
     private static ImmutableList<ItemBlock> allNormalItemBlocks;
     private static ImmutableList<Block> allInventoryItemBlocks = Helpers.getNull();
@@ -272,7 +276,7 @@ public final class BlocksTFCF
     private static ImmutableList<BlockLeavesTFCF> allNormalTreeLeaves = Helpers.getNull();
     private static ImmutableList<BlockLogTFCF> allNormalTreeLog = Helpers.getNull();
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
-    private static ImmutableList<MultiBlockBase> allMultiBlocks = Helpers.getNull();
+    //private static ImmutableList<MultiBlockBase> allMultiBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
     public static Tree[] bambooTrees = {TreesTFCF.ARROW_BAMBOO, TreesTFCF.BLACK_BAMBOO, TreesTFCF.BLUE_BAMBOO, TreesTFCF.DRAGON_BAMBOO, TreesTFCF.GOLDEN_BAMBOO, TreesTFCF.NARROW_LEAF_BAMBOO, TreesTFCF.RED_BAMBOO, TreesTFCF.TEMPLE_BAMBOO, TreesTFCF.THORNY_BAMBOO, TreesTFCF.TIMBER_BAMBOO, TreesTFCF.TINWA_BAMBOO, TreesTFCF.WEAVERS_BAMBOO};
@@ -517,10 +521,10 @@ public final class BlocksTFCF
         return allSurfaceOreBlocks;
     }
 
-    public static ImmutableList<MultiBlockBase> getAllMultiBlocks()
+    /*public static ImmutableList<MultiBlockBase> getAllMultiBlocks()
     {
         return allMultiBlocks;
-    }
+    }*/
 
     @SubscribeEvent
     @SuppressWarnings("ConstantConditions")
@@ -578,8 +582,10 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
-        ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
+        //ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
 
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_bale", new BlockBale(), CT_DECORATIONS)));
+        normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_fiber_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/cotton/cotton_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/cotton/cotton_yarn_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/flax/flax_bale", new BlockBale(), CT_DECORATIONS)));
@@ -996,8 +1002,8 @@ public final class BlocksTFCF
             fruitLoom.add(register(r, "wood/fruit_tree/loom/cinnamon", new BlockFruitLoom(PlantsFL.CINNAMON_TREE), CT_WOOD));
         }
 
-        multiBlock.add(register(r, "multiblock/campfire", new BlockCampfire(Material.ROCK), CT_MISC));
-        multiBlock.add(register(r, "multiblock/dummyHalf", new BlockDummyHalf(), CT_MISC));
+        //multiBlock.add(register(r, "multiblock/campfire", new BlockCampfire(Material.ROCK), CT_MISC));
+        //multiBlock.add(register(r, "multiblock/dummyHalf", new BlockDummyHalf(), CT_MISC));
 
         for(Tree wood : TFCRegistries.TREES.getValuesCollection())
         {
@@ -1182,10 +1188,10 @@ public final class BlocksTFCF
             normalItemBlocks.add(new ItemBlockTFC(x));
         });
 
-        allMultiBlocks = multiBlock.build();
+        /*allMultiBlocks = multiBlock.build();
         allMultiBlocks.forEach((x) -> {
             normalItemBlocks.add(new ItemBlockTFC(x));
-        });
+        });*/
 
         allNormalItemBlocks = normalItemBlocks.build();
 

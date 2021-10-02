@@ -8,6 +8,7 @@ import javax.annotation.Nonnull;
 import com.eerussianguy.firmalife.init.FruitTreeFL;
 import com.eerussianguy.firmalife.init.PlantsFL;
 import com.eerussianguy.firmalife.items.ItemMetalMalletMold;
+import com.eerussianguy.firmalife.registry.ItemsFL;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
 
@@ -803,6 +804,47 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("tools/bows/sabrewing/sabrewing")
     public static final ItemBowTFCF SABREWING = Helpers.getNull();
 
+    @GameRegistry.ObjectHolder("container/leather_bag_piece")
+    public static final ItemMiscTFCF LEATHER_BAG_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/leather_bag")
+    public static final ItemBag LEATHER_BAG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/pineapple_leather_bag_piece")
+    public static final ItemMiscTFCF PINEAPPLE_LEATHER_BAG_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/pineapple_leather_bag")
+    public static final ItemBag PINEAPPLE_LEATHER_BAG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/burlap_sack_piece")
+    public static final ItemMiscTFCF BURLAP_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/burlap_sack")
+    public static final ItemSack BURLAP_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/wool_sack_piece")
+    public static final ItemMiscTFCF WOOL_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/wool_sack")
+    public static final ItemSack WOOL_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/silk_sack_piece")
+    public static final ItemMiscTFCF SILK_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/silk_sack")
+    public static final ItemSack SILK_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/cotton_sack_piece")
+    public static final ItemMiscTFCF COTTON_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/cotton_sack")
+    public static final ItemSack COTTON_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/hemp_sack_piece")
+    public static final ItemMiscTFCF HEMP_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/hemp_sack")
+    public static final ItemSack HEMP_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/linen_sack_piece")
+    public static final ItemMiscTFCF LINEN_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/linen_sack")
+    public static final ItemSack LINEN_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/sisal_sack_piece")
+    public static final ItemMiscTFCF SISAL_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/sisal_sack")
+    public static final ItemSack SISAL_SACK = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/yucca_sack_piece")
+    public static final ItemMiscTFCF YUCCA_SACK_PIECE = Helpers.getNull();
+    @GameRegistry.ObjectHolder("container/yucca_sack")
+    public static final ItemSack YUCCA_SACK = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("logwood_chips")
     public static final ItemMiscTFCF LOGWOOD_CHIPS = Helpers.getNull();
     //@GameRegistry.ObjectHolder("resin")
@@ -1060,6 +1102,12 @@ public final class ItemsTFCF
 
     @GameRegistry.ObjectHolder("cellulose_fibers")
     public static final ItemMiscTFCF CELLULOSE_FIBERS = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/product/yucca_fiber")
+    public static final ItemMiscTFCF YUCCA_FIBER = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/product/yucca_string")
+    public static final ItemMiscTFCF YUCCA_STRING = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/product/yucca_canvas")
+    public static final ItemMiscTFCF YUCCA_CANVAS = Helpers.getNull();
 
     @GameRegistry.ObjectHolder("wood/fruit_tree/pole/cassia_cinnamon")
     public static final ItemMisc CASSIA_CINNAMON_POLE = Helpers.getNull();
@@ -1943,6 +1991,28 @@ public final class ItemsTFCF
         itemBows.add(register(r, "tools/bows/rosebow/rosebow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_rosebow"), CT_MISC));
         itemBows.add(register(r, "tools/bows/sabrewing/sabrewing", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_sabrewing"), CT_MISC));
 
+        // Containers
+        simpleItems.add(register(r, "container/leather_bag_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "bag_piece", "bag_piece_leather"), CT_MISC));
+        simpleItems.add(register(r, "container/leather_bag", new ItemBag("bag", "bag_leather"), CT_MISC));
+        simpleItems.add(register(r, "container/pineapple_leather_bag_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "bag_piece", "bag_piece_pineapple_leather"), CT_MISC));
+        simpleItems.add(register(r, "container/pineapple_leather_bag", new ItemBag("bag", "bag_pineapple_leather"), CT_MISC));
+        simpleItems.add(register(r, "container/burlap_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_burlap"), CT_MISC));
+        simpleItems.add(register(r, "container/burlap_sack", new ItemSack("sack", "sack_burlap"), CT_MISC));
+        simpleItems.add(register(r, "container/wool_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_wool"), CT_MISC));
+        simpleItems.add(register(r, "container/wool_sack", new ItemSack("sack", "sack_wool"), CT_MISC));
+        simpleItems.add(register(r, "container/silk_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_silk"), CT_MISC));
+        simpleItems.add(register(r, "container/silk_sack", new ItemSack("sack", "sack_silk"), CT_MISC));
+        simpleItems.add(register(r, "container/cotton_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_cotton"), CT_MISC));
+        simpleItems.add(register(r, "container/cotton_sack", new ItemSack("sack", "sack_cotton"), CT_MISC));
+        simpleItems.add(register(r, "container/hemp_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_hemp"), CT_MISC));
+        simpleItems.add(register(r, "container/hemp_sack", new ItemSack("sack", "sack_hemp"), CT_MISC));
+        simpleItems.add(register(r, "container/linen_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_linen"), CT_MISC));
+        simpleItems.add(register(r, "container/linen_sack", new ItemSack("sack", "sack_linen"), CT_MISC));
+        simpleItems.add(register(r, "container/sisal_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_sisal"), CT_MISC));
+        simpleItems.add(register(r, "container/sisal_sack", new ItemSack("sack", "sack_sisal"), CT_MISC));
+        simpleItems.add(register(r, "container/yucca_sack_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "sack_piece", "sack_piece_yucca"), CT_MISC));
+        simpleItems.add(register(r, "container/yucca_sack", new ItemSack("sack", "sack_yucca"), CT_MISC));
+
         // Items
         simpleItems.add(register(r, "logwood_chips", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "chips_logwood", "dust_logwood", "powder_logwood"), CT_MISC));
         //simpleItems.add(register(r, "resin", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "resin", "glue"), CT_MISC));
@@ -1971,6 +2041,10 @@ public final class ItemsTFCF
 
         simpleItems.add(register(r, "cellulose_fibers", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "fiber", "fiber_cellulose"), CT_MISC));
 
+        simpleItems.add(register(r, "crop/product/yucca_fiber", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "fiber", "fiber_yucca"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/yucca_string", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "string", "string_yucca"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/yucca_canvas", new ItemMiscTFCF(Size.VERY_SMALL,Weight.LIGHT, "cloth", "cloth_yucca", "fabric", "fabric_yucca", "canvas", "canvas_yucca"), CT_MISC));
+
         simpleItems.add(register(r, "crop/product/papyrus_pulp", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "pulp", "pulp_papyrus"), CT_MISC));
         simpleItems.add(register(r, "crop/product/papyrus_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_papyrus"), CT_MISC));
         simpleItems.add(register(r, "crop/product/papyrus_paper", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "paper", "paper_papyrus"), CT_MISC));
@@ -1978,7 +2052,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/agave", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "crop_agave", "agave"), CT_MISC));
         simpleItems.add(register(r, "crop/product/sisal_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_sisal"), CT_MISC));
         simpleItems.add(register(r, "crop/product/sisal_string", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "string", "string_sisal"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/sisal_cloth", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "cloth", "cloth_sisal", "fabric", "fabric_sisal", "fabric_hemp"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/sisal_cloth", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "cloth", "cloth_sisal", "fabric", "fabric_sisal"), CT_MISC));
         
         simpleItems.add(register(r, "crop/product/cotton_boll", new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "crop_cotton", "cotton"), CT_MISC));
         simpleItems.add(register(r, "crop/product/cotton_yarn", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "string", "string_cotton", "yarn", "yarn_cotton"), CT_MISC));
@@ -1987,7 +2061,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/flax", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "crop_flax", "flax"), CT_MISC));
         simpleItems.add(register(r, "crop/product/flax_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_flax"), CT_MISC));
         simpleItems.add(register(r, "crop/product/linen_string", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "string", "string_linen"), CT_MISC));
-        simpleItems.add(register(r, "crop/product/linen_cloth", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "cloth", "cloth_linen", "fabric", "fabric_linen", "fabric_hemp"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/linen_cloth", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "cloth", "cloth_linen", "fabric", "fabric_linen"), CT_MISC));
         
         simpleItems.add(register(r, "crop/product/hemp", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "crop_hemp", "hemp"), CT_MISC));
         simpleItems.add(register(r, "crop/product/hemp_fiber", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "fiber", "fiber_hemp"), CT_MISC));
@@ -2227,6 +2301,14 @@ public final class ItemsTFCF
             new ItemFlint(Size.VERY_SMALL, Weight.VERY_LIGHT).setRegistryName(Items.FLINT.getRegistryName()).setTranslationKey("flint")
             //new ItemFoodTFCF(FoodDataTFCF.ROASTED_PORCINI).setRegistryName(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(DefaultPlants.BARREL_CACTUS)).getRegistryName()).setTranslationKey("barrel_cactus")
         );
+
+        // Why is this necessary?? #FirmaLife
+        /*if (TFCFlorae.FirmaLifeAdded)
+        {
+            event.getRegistry().registerAll(
+                new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "leather", "leather_pineapple").setRegistryName(ItemsFL.PINEAPPLE_LEATHER.getRegistryName()).setTranslationKey("pineapple_leather")
+            );
+        }*/
     }
 
     private static void registerPottery(Builder<Item> items, IForgeRegistry<Item> r, String nameUnfired, String nameFired)

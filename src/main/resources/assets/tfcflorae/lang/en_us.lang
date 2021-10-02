@@ -25368,6 +25368,8 @@ tile.tfcflorae.crop.bales.linen.linen_string_bale.name=Linen String Bale
 tile.tfcflorae.crop.bales.papyrus.papyrus_fiber_bale.name=Papyrus Fiber Bale
 tile.tfcflorae.crop.bales.silk.silk_string_bale.name=Silk String Bale
 tile.tfcflorae.crop.bales.sisal.sisal_fiber_bale.name=Sisal Fiber Bale
+tile.tfcflorae.crop.bales.yucca.yucca_bale.name=Yucca Bale
+tile.tfcflorae.crop.bales.yucca.yucca_fiber_bale.name=Yucca Fiber Bale
 
 tile.tfcflorae.ceramics.earthenware.earthenware_clay_block.name=Earthenware Clay
 tile.tfcflorae.ceramics.earthenware.earthenware_bricks.name=Earthenware Bricks
@@ -26359,11 +26361,31 @@ item.tfcflorae.tools.bows.red_snake.red_snake.name=Red Snake
 item.tfcflorae.tools.bows.rosebow.rosebow.name=Rosebow
 item.tfcflorae.tools.bows.sabrewing.sabrewing.name=Sabrewing
 
+item.tfcflorae.container.leather_bag_piece.name=Leather Bag Piece
+item.tfcflorae.container.leather_bag.name=Leather Bag
+item.tfcflorae.container.pineapple_leather_bag_piece.name=Pineapple Leather Bag Piece
+item.tfcflorae.container.pineapple_leather_bag.name=Pineapple Leather Bag
+item.tfcflorae.container.burlap_sack_piece.name=Burlap Sack Piece
+item.tfcflorae.container.burlap_sack.name=Burlap Sack
+item.tfcflorae.container.wool_sack_piece.name=Wool Sack Piece
+item.tfcflorae.container.wool_sack.name=Wool Sack
+item.tfcflorae.container.silk_sack_piece.name=Silk Sack Piece
+item.tfcflorae.container.silk_sack.name=Silk Sack
+item.tfcflorae.container.cotton_sack_piece.name=Cotton Sack Piece
+item.tfcflorae.container.cotton_sack.name=Cotton Sack
+item.tfcflorae.container.hemp_sack_piece.name=Hemp Sack Piece
+item.tfcflorae.container.hemp_sack.name=Hemp Sack
+item.tfcflorae.container.linen_sack_piece.name=Linen Sack Piece
+item.tfcflorae.container.linen_sack.name=Linen Sack
+item.tfcflorae.container.sisal_sack_piece.name=Sisal Sack Piece
+item.tfcflorae.container.sisal_sack.name=Sisal Sack
+item.tfcflorae.container.yucca_sack_piece.name=Yucca Sack Piece
+item.tfcflorae.container.yucca_sack.name=Yucca Sack
+
 item.tfcflorae.storage.unfired.urn.name=Unfired Urn
 tile.tfcflorae.storage.urn.name=Urn
 tile.tfcflorae.storage.urn_loot.name=Treasure Urn
 tile.tfcflorae.storage.crate.name=Crate
-
 
 item.tfcflorae.ceramics.earthenware.fired.jug.name=Jug
 item.tfcflorae.ceramics.earthenware.fired.jug.filled=%s Jug
@@ -31995,6 +32017,9 @@ item.tfcflorae.cracked_coconut.filled.name=Filled Coconut (%s)
 item.tfcflorae.coconut.name=Coconut
 
 item.tfcflorae.cellulose_fibers.name=Cellulose Fibers
+item.tfcflorae.crop.product.yucca_fiber.name=Yucca Fiber
+item.tfcflorae.crop.product.yucca_string.name=Yucca String
+item.tfcflorae.crop.product.yucca_canvas.name=Yucca Canvas
 item.tfcflorae.crop.product.papyrus_pulp.name=Papyrus Pulp
 item.tfcflorae.crop.product.papyrus_fiber.name=Papyrus Fiber
 item.tfcflorae.crop.product.papyrus_paper.name=Papyrus Paper
@@ -32919,6 +32944,15 @@ config.tfcflorae.general.structures.spawnChanceMoai.tooltip=Generation chance fo
 config.tfcflorae.general.structures.spawnChanceMoai=Mayan Temple Generation
 config.tfcflorae.general.structures.spawnChanceMoai.tooltip=Generation chance for mayan temples. On average 1 / N chunks will have mayan temples.
 
+jei.category.tfcflorae.knap.pineapple_leather=Pineapple Leather knapping
+jei.category.tfcflorae.knap.burlap_cloth=Burlap Cloth knapping
+jei.category.tfcflorae.knap.wool_cloth=Wool Cloth knapping
+jei.category.tfcflorae.knap.silk_cloth=Silk Cloth knapping
+jei.category.tfcflorae.knap.sisal_cloth=Sisal Cloth knapping
+jei.category.tfcflorae.knap.cotton_cloth=Cotton Cloth knapping
+jei.category.tfcflorae.knap.linen_cloth=Linen Cloth knapping
+jei.category.tfcflorae.knap.hemp_cloth=Hemp Cloth knapping
+jei.category.tfcflorae.knap.yucca_canvas=Yucca Canvas knapping
 jei.category.tfcflorae.knap.mud=Mud knapping
 jei.category.tfcflorae.knap.earthenware_clay=Earthenware Clay knapping
 jei.category.tfcflorae.knap.kaolinite_clay=Kaolinite Clay knapping

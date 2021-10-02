@@ -36,6 +36,7 @@ import net.dries007.tfc.objects.container.CapabilityContainerListener;
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.types.DefaultPlants;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.Month;
@@ -43,12 +44,14 @@ import net.dries007.tfc.util.skills.SmithingSkill;
 
 import tfcflorae.objects.items.ItemMiscTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.client.GuiHandler;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.objects.blocks.wood.bamboo.BlockBambooLeaves;
 import tfcflorae.objects.blocks.wood.cinnamon.BlockCassiaCinnamonLeaves;
 import tfcflorae.objects.blocks.wood.cinnamon.BlockCeylonCinnamonLeaves;
 import tfcflorae.types.PlantsTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
 
