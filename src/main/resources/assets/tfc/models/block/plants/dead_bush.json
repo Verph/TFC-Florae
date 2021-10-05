@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "minecraft:blocks/deadbush",
+    "particle": "minecraft:blocks/deadbush"
+  }
+}

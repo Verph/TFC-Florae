@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/desert_flame/desert_flame_0",
+    "particle": "tfc:blocks/plants/desert_flame/desert_flame_0"
+  }
+}

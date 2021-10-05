@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/hornwort/hornwort",
+    "particle": "tfc:blocks/plants/hornwort/hornwort"
+  }
+}

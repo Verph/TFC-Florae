@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/hibiscus/hibiscus_single_1",
+    "particle": "tfc:blocks/plants/hibiscus/hibiscus_single_1"
+  }
+}

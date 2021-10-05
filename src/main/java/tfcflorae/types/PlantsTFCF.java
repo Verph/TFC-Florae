@@ -15,11 +15,9 @@ import static tfcflorae.TFCFlorae.MODID;
 @Mod.EventBusSubscriber(modid = TFCFlorae.MODID)
 public final class PlantsTFCF
 {
-    public static final ResourceLocation BADDERLOCKS = new ResourceLocation(MODID, "badderlocks");
     public static final ResourceLocation CATTAIL = new ResourceLocation(MODID, "cattail");
     public static final ResourceLocation CHAMOMILE = new ResourceLocation(MODID, "chamomile");
     public static final ResourceLocation DEVILS_TONGUE = new ResourceLocation(MODID, "devils_tongue");
-    public static final ResourceLocation GUTWEED = new ResourceLocation(MODID, "gutweed");
     public static final ResourceLocation HYDRANGEA = new ResourceLocation(MODID, "hydrangea");
     public static final ResourceLocation LAVANDULA = new ResourceLocation(MODID, "lavandula");
     public static final ResourceLocation LEAF_LITTER = new ResourceLocation(MODID, "leaf_litter");
@@ -149,15 +147,55 @@ public final class PlantsTFCF
     public static final ResourceLocation TINWA_BAMBOO = new ResourceLocation(MODID, "tinwa_bamboo");
     public static final ResourceLocation WEAVERS_BAMBOO = new ResourceLocation(MODID, "weavers_bamboo");
 
+    // Plants courtesy of Therighton
+    public static final ResourceLocation ANTHURIUM = new ResourceLocation(MODID, "anthurium");
+    public static final ResourceLocation ARROWHEAD = new ResourceLocation(MODID, "arrowhead");
+    public static final ResourceLocation ARUNDO = new ResourceLocation(MODID, "arundo");
+    public static final ResourceLocation AZURE_BLUET = new ResourceLocation(MODID, "azure_bluet");
+    public static final ResourceLocation BADDERLOCKS = new ResourceLocation(MODID, "badderlocks");
+    public static final ResourceLocation BLUEGRASS = new ResourceLocation(MODID, "bluegrass");
+    public static final ResourceLocation BLUE_GINGER = new ResourceLocation(MODID, "blue_ginger");
+    public static final ResourceLocation BROMEGRASS = new ResourceLocation(MODID, "bromegrass");
+    public static final ResourceLocation BROWN_ALGAE = new ResourceLocation(MODID, "brown_algae");
+    public static final ResourceLocation BUR_MARIGOLD = new ResourceLocation(MODID, "bur_marigold");
+    public static final ResourceLocation BUR_REED = new ResourceLocation(MODID, "bur_reed");
+    public static final ResourceLocation CANNA_LILY = new ResourceLocation(MODID, "canna_lily");
+    public static final ResourceLocation COCKLESHELL_ORCHID = new ResourceLocation(MODID, "cockleshell_orchid");
+    public static final ResourceLocation COONTAIL = new ResourceLocation(MODID, "coontail");
+    public static final ResourceLocation DEAD_BUSH = new ResourceLocation(MODID, "dead_bush");
+    public static final ResourceLocation DESERT_FLAME = new ResourceLocation(MODID, "desert_flame");
+    public static final ResourceLocation EEL_GRASS = new ResourceLocation(MODID, "eel_grass");
+    public static final ResourceLocation GUTWEED = new ResourceLocation(MODID, "gutweed");
+    public static final ResourceLocation HELICONIA = new ResourceLocation(MODID, "heliconia");
+    public static final ResourceLocation HIBISCUS = new ResourceLocation(MODID, "hibiscus");
+    public static final ResourceLocation HORNWORT = new ResourceLocation(MODID, "hornwort");
+    public static final ResourceLocation HUNGARIAN_LILAC = new ResourceLocation(MODID, "hungarian_lilac"); // Lilac
+    public static final ResourceLocation KANGAROO_PAW = new ResourceLocation(MODID, "kangaroo_paw");
+    public static final ResourceLocation KING_FERN = new ResourceLocation(MODID, "king_fern");
+    public static final ResourceLocation LAMINARIA = new ResourceLocation(MODID, "laminaria");
+    public static final ResourceLocation LIPSTICK_PALM = new ResourceLocation(MODID, "lipstick_palm"); // Red Sealing Wax Palm
+    public static final ResourceLocation MANATEE_GRASS = new ResourceLocation(MODID, "manatee_grass");
+    public static final ResourceLocation MARIGOLD = new ResourceLocation(MODID, "marigold");
+    public static final ResourceLocation MILFOIL = new ResourceLocation(MODID, "milfoil");
+    public static final ResourceLocation MONSTERA_EPIPHYTE = new ResourceLocation(MODID, "monstera_epiphyte");
+    public static final ResourceLocation MONSTERA_GROUND = new ResourceLocation(MODID, "monstera_ground");
+    public static final ResourceLocation PHRAGMITE = new ResourceLocation(MODID, "phragmite");
+    public static final ResourceLocation PICKERELWEED = new ResourceLocation(MODID, "pickerelweed");
+    public static final ResourceLocation PONDWEED = new ResourceLocation(MODID, "pondweed");
+    public static final ResourceLocation RADDIA_GRASS = new ResourceLocation(MODID, "raddia_grass");
+    public static final ResourceLocation SCARLET_STAR_BROMELIAD = new ResourceLocation(MODID, "scarlet_star_bromeliad");
+    public static final ResourceLocation SILVER_SPURFLOWER = new ResourceLocation(MODID, "silver_spurflower");
+    public static final ResourceLocation STAR_GRASS = new ResourceLocation(MODID, "star_grass");
+    public static final ResourceLocation TURTLE_GRASS = new ResourceLocation(MODID, "turtle_grass");
+    public static final ResourceLocation WATER_TARO = new ResourceLocation(MODID, "water_taro");
+
     @SubscribeEvent
     public static void onPreRegisterPlant(TFCRegistryEvent.RegisterPreBlock<Plant> event)
     {
         event.getRegistry().registerAll(
-            //new Plant(BADDERLOCKS, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 0f, 12f, -20f, 16f, 0f, 500f, 0, 15, 2, 3, 14, 1.0D, "seaweed"),
-            new Plant(CATTAIL, Plant.PlantType.FLOATING, new int[] {4, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4}, false, false, -5f, 40f, -15f, 50f, 100f, 500f, 0, 15, 1, 1, 1, 0.5D, "cattail"),
+            new Plant(CATTAIL, Plant.PlantType.FLOATING, new int[] {4, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4}, false, false, -16f, 28f, -21f, 35f, 150f, 500f, 0, 15, 1, 0, 2, 0.5D, "cattail"),
             new Plant(CHAMOMILE, Plant.PlantType.STANDARD, new int[] {0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 0, 0}, false, false, 5f, 25f, -40f, 40f, 75f, 400f, 9, 15, 1, 0.9D, "chamomile"),
             new Plant(DEVILS_TONGUE, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 16f, 45f, 10f, 50f, 270f, 500f, 0, 15, 2, 0.9D, "devils_tongue"),
-            //new Plant(GUTWEED, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 17f, 30f, -21f, 40f, 0f, 500f, 0, 15, 1, 1, 7, 1.0D, "seaweed"),
             new Plant(HYDRANGEA, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 11f, 31f, -29f, 34f, 125f, 300f, 9, 15, 2, 0.9D, "hydrangea"),
             new Plant(LAVANDULA, Plant.PlantType.STANDARD, new int[] {5, 0, 0, 1, 2, 2, 3, 3, 3, 3, 4, 5}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 8, 15, 1, 0.8D, "lavender"),
             new Plant(LILAC, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 11f, 31f, -29f, 34f, 125f, 300f, 9, 15, 2, 0.9D, "lilac"),
@@ -262,7 +300,50 @@ public final class PlantsTFCF
             new Plant(ZIMBABWE_ALOE, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 30f, -34f, 36f, 0f, 75f, 0, 15, 2, 0.2D, null),
 
             // "Small" Bamboo
-            new Plant(BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 12, 0D, "bamboo")
+            new Plant(BAMBOO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 40f, 10f, 50f, 270f, 500f, 9, 15, 12, 0D, "bamboo"),
+
+            // Plants courtesy of Therighton
+            new Plant(ANTHURIUM, Plant.PlantType.STANDARD, new int[] {0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1}, false, false, 12f, 40f, -3f, 50f, 290f, 500f, 0, 15, 1, 0.8D, "anthurium"),
+            //new Plant(ARROWHEAD, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -10f, 22f, -25f, 37f, 180f, 500f, 0, 15, 1, 1, 64, 0.6D, "arrowhead"),
+            new Plant(ARUNDO, Plant.PlantType.TALL_REED, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 30f, 0f, 45f, 120f, 500f, 0, 15, 2, 0.5D, "arundo"),
+            //new Plant(AZURE_BLUET, Plant.PlantType.STANDARD, new int[] {2, 2, 2, 0, 1, 1, 1, 2, 2, 2, 2, 2}, false, false, -12f, 10f, -27f, 25f, 150f, 500f, 0, 15, 1, 0.9D, "azure_bluet"),
+            //new Plant(BADDERLOCKS, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -18f, 2f, -33f, 17f, 150f, 500f, 0, 15, 5, 1, 64, 0.8D, "badderlocks"),
+            new Plant(BLUEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0}, false, false, -4f, 12f, -19f, 27f, 110f, 280f, 0, 15, 1, 0.8D, "bluegrass"),
+            new Plant(BLUE_GINGER, Plant.PlantType.STANDARD, new int[] {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1}, false, false, 16f, 26f, 1f, 41f, 300f, 450f, 0, 15, 1, 0.8D, "ginger"),
+            //new Plant(BROADLEAF_CATTAIL, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -16f, 22f, -31f, 37f, 150f, 500f, 0, 15, 1, 1, 64, 0.6D, "broadleaf_cattail"),
+            new Plant(BROMEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 4f, 20f, -11f, 35f, 140f, 360f, 0, 15, 1, 0.8D, "bromegrass"),
+            //new Plant(BROWN_ALGAE, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -24f, -2f, -39f, 13f, 100f, 500f, 0, 15, 1, 1, 64, 0.6D, "brown_algae"),
+            //new Plant(BUR_MARIGOLD, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -8f, 18f, -23f, 33f, 50f, 390f, 0, 15, 1, 1, 64, 0.4D, "bur_marigold"),
+            //new Plant(BUR_REED, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}, false, false, -16f, 4f, -31f, 19f, 250f, 400f, 0, 15, 1, 1, 64, 0.6D, "bur_reed"),
+            //new Plant(CANNA_LILY, Plant.PlantType.STANDARD, new int[] {0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 0}, true, false, 10f, 40f, -5f, 50f, 270f, 500f, 0, 15, 1, 0.8D, "canna_lily"),
+            //new Plant(COCKLESHELL_ORCHID, Plant.PlantType.STANDARD, new int[] {2, 2, 2, 0, 1, 1, 1, 2, 2, 2, 2, 2}, false, false, 14f, 40f, -1f, 50f, 290f, 410f, 0, 15, 1, 0.8D, "cockleshell_orchid"),
+            //new Plant(COONTAIL, Plant.PlantType.WATER, new int[] {3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2}, false, false, 2f, 18f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 64, 0.7D, "coontail"),
+            new Plant(DEAD_BUSH, Plant.PlantType.DRY_TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -12f, 40f, -27f, 50f, 70f, 120f, 0, 15, 1, 0.9D, "dead_bush"),
+            new Plant(DESERT_FLAME, Plant.PlantType.STANDARD, new int[] {1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1}, false, false, 0f, 20f, -15f, 35f, 40f, 170f, 0, 15, 1, 0.8D, "desert_flame"),
+            //new Plant(EEL_GRASS, Plant.PlantType.WATER, new int[] {3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2}, false, false, 6f, 40f, -9f, 50f, 200f, 500f, 0, 15, 1, 1, 64, 0.9D, "eel_grass"),
+            //new Plant(GUTWEED, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -6f, 18f, -21f, 33f, 100f, 500f, 0, 15, 1, 1, 64, 0.9D, "gutweed"),
+            new Plant(HELICONIA, Plant.PlantType.STANDARD, new int[] {0, 0, 1, 2, 0, 0, 0, 0, 1, 2, 0, 0}, false, false, 14f, 40f, -1f, 50f, 320f, 500f, 0, 15, 1, 0.8D, "heliconia"),
+            new Plant(HIBISCUS, Plant.PlantType.TALL_PLANT, new int[] {2, 2, 2, 0, 0, 0, 0, 0, 0, 1, 2, 2}, false, false, 10f, 24f, -10f, 39f, 260f, 450f, 0, 15, 2, 0.9D, "hibiscus"),
+            //new Plant(HORNWORT, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 2f, 18f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 64, 0.7D, "hornwort"),
+            new Plant(HUNGARIAN_LILAC, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0}, false, false, -10f, 6f, -25f, 21f, 150f, 300f, 0, 15, 2, 0.7D, "hungarian_lilac"),
+            new Plant(KANGAROO_PAW, Plant.PlantType.STANDARD, new int[] {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1}, false, false, 14f, 40f, -1f, 50f, 100f, 300f, 0, 15, 1, 0.8D, "kangaroo_paw"),
+            new Plant(KING_FERN, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, -7f, 50f, 350f, 500f, 0, 15, 2, 0.4D, "king_fern"),
+            //new Plant(LAMINARIA, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -16f, 4f, -31f, 19f, 250f, 400f, 0, 15, 1, 1, 64, 0.6D, "laminaria"),
+            new Plant(LIPSTICK_PALM, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, 3f, 50f, 280f, 500f, 0, 15, 2, 0.4D, "lipstick_palm"),
+            //new Plant(MANATEE_GRASS, Plant.PlantType.WATER, new int[] {3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2}, false, false, 12f, 40f, -3f, 50f, 250f, 500f, 0, 15, 1, 1, 64, 0.9D, "manatee_grass"),
+            new Plant(MARIGOLD, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 0}, false, false, 4f, 22f, -11f, 37f, 130f, 300f, 0, 15, 2, 0.8D, "marigold"),
+            //new Plant(MILFOIL, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -14f, 22f, -29f, 37f, 250f, 500f, 0, 15, 1, 1, 64, 0.7D, "milfoil"),
+            new Plant(MONSTERA_EPIPHYTE, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 200f, 500f, 0, 15, 1, 0.9D, "monstera"),
+            new Plant(MONSTERA_GROUND, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 200f, 500f, 0, 15, 2, 0.9D, "monstera"),
+            //new Plant(PHRAGMITE, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 1, 1, 1, 2, 2, 3, 1, 1, 0}, false, false, -6f, 18f, -21f, 33f, 50f, 250f, 0, 15, 1, 1, 64, 0.6D, "phragmite"),
+            //new Plant(PICKERELWEED, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 0, 0}, false, false, -14f, 16f, -29f, 31f, 200f, 500f, 0, 15, 1, 1, 64, 0.6D, "pickerelweed"),
+            //new Plant(PONDWEED, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -18f, 18f, -33f, 33f, 200f, 500f, 0, 15, 6, 1, 64, 0.7D, "pondweed"),
+            new Plant(RADDIA_GRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 0}, false, false, 18f, 31f, 3f, 48f, 75f, 295f, 0, 15, 1, 0.8D, "raddia_grass"),
+            //new Plant(SCARLET_STAR_BROMELIAD, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 5f, 50f, 290f, 480f, 0, 15, 6, 0.9D, "scarlet_star_bromeliad"),
+            new Plant(SILVER_SPURFLOWER, Plant.PlantType.STANDARD, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0}, false, false, 14f, 24f, -1f, 39f, 230f, 400f, 0, 15, 1, 0.8D, "silver_spurflower")
+            //new Plant(STAR_GRASS, Plant.PlantType.WATER, new int[] {3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2}, false, false, 2f, 40f, -13f, 50f, 50f, 260f, 0, 15, 1, 1, 64, 0.9D, "star_grass"),
+            //new Plant(TURTLE_GRASS, Plant.PlantType.WATER, new int[] {3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2}, false, false, 14f, 40f, -1f, 50f, 240f, 500f, 0, 15, 1, 1, 64, 0.9D, "turtle_grass"),
+            //new Plant(WATER_TARO, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 12f, 40f, -3f, 50f, 260f, 500f, 0, 15, 1, 1, 64, 0.6D, "water_taro")
         );
 
         // Vine/Ivy

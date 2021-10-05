@@ -191,7 +191,6 @@ public final class TreesTFCF
     public static final Tree BEECH_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "beech"), 220f, 300f, -15f, 9f, GEN_BEECH).setGrowthTime(8).setBushes().setTannin().setDensity(0.25f, 1f).setBurnInfo(703f, 1750).build();
     public static final Tree BLACK_WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "black_walnut"), 180f, 300f, -10f, 16f, GEN_BLACK_WALNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
     public static final Tree BUTTERNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "butternut"), 180f, 320f, -8f, 17f, GEN_BUTTERNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
-    public static final Tree CYPRESS_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cypress"), 140f, 350f, 4f, 33f, GEN_CYPRESS).setGrowthTime(8).setBushes().setConifer().setBurnInfo(783f, 1100).build();
     public static final Tree EUROPEAN_OAK_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "european_oak"), 140f, 430f, -8f, 15f, GEN_EUROPEAN_OAK).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 2250).build();
     public static final Tree GINKGO_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "ginkgo"), 240f, 550f, 6f, 20f, GEN_GINKGO).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(710f, 1000).build();
     public static final Tree HAZEL_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hazel"), 60f, 400f, -10f, 14f, GEN_HAZEL).setGrowthTime(8).setBushes().setDensity(0.25f, 1f).setBurnInfo(683f, 1500).build();
@@ -234,6 +233,7 @@ public final class TreesTFCF
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "zebrawood"), 280f, 500f, 23f, 50f, GEN_ZEBRAWOOD).setRadius(1).setDecayDist(6).setGrowthTime(18).setBushes().setDensity(0.5f, 2f).setBurnInfo(822f, 1570).build());
 
         // Coniferous Trees
+        event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "cypress"), 140f, 350f, 4f, 33f, GEN_CYPRESS).setGrowthTime(8).setBushes().setConifer().setBurnInfo(783f, 1100).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "hemlock"), 140f, 400f, -9f, 10f, GEN_HEMLOCK).setGrowthTime(8).setConifer().setDensity(0.25f, 1f).setBurnInfo(609f, 1000).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "nordmann_fir"), 100f, 380f, -16f, 7f, GEN_NORDMANN_FIR).setGrowthTime(8).setConifer().setDensity(0.1f, 0.9f).setBurnInfo(628f, 1500).build());
         event.getRegistry().registerAll(new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "norway_spruce"), 100f, 380f, -20f, 5f, GEN_NORWAY_SPRUCE).setGrowthTime(8).setConifer().setDensity(0.1f, 0.9f).setBurnInfo(628f, 1500).build());
@@ -271,7 +271,7 @@ public final class TreesTFCF
         event.getRegistry().registerAll(BEECH_TREE);
         event.getRegistry().registerAll(BLACK_WALNUT_TREE);
         event.getRegistry().registerAll(BUTTERNUT_TREE);
-        event.getRegistry().registerAll(CYPRESS_TREE);
+        //event.getRegistry().registerAll(CYPRESS_TREE); // Whoops, it's a conifer, not deciduous!
         event.getRegistry().registerAll(EUROPEAN_OAK_TREE);
         event.getRegistry().registerAll(GINKGO_TREE);
         event.getRegistry().registerAll(HAZEL_TREE);

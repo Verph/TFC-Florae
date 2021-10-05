@@ -1,0 +1,51 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/marigold/marigold_3",
+		"marigold": "tfc:blocks/plants/marigold/marigold_3",
+		"bloom": "tfc:blocks/plants/marigold/marigold_3b"
+	},
+	"elements": [
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#marigold", "tintindex": 0},
+				"south": {"uv": [16, 8, 0, 16], "texture": "#marigold", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, -8],
+			"to": [8, 16, 24],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 8, 0, 16], "texture": "#marigold", "tintindex": 0},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#marigold", "tintindex": 0}
+			}
+		},
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#bloom"},
+				"south": {"uv": [16, 8, 0, 16], "texture": "#bloom"}
+			}
+		},
+		{
+			"from": [8, 0, -8],
+			"to": [8, 16, 24],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 8, 0, 16], "texture": "#bloom"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#bloom"}
+			}
+		}
+	]
+}

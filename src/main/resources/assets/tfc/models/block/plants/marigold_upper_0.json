@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "tfc:blocks/plants/marigold/marigold_0",
+		"marigold": "tfc:blocks/plants/marigold/marigold_0"
+	},
+	"elements": [
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#marigold", "tintindex": 0},
+				"south": {"uv": [16, 0, 0, 8], "texture": "#marigold", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, -8],
+			"to": [8, 16, 24],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 8], "texture": "#marigold", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#marigold", "tintindex": 0}
+			}
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/canna_lily/canna_lily_3",
+    "particle": "tfc:blocks/plants/canna_lily/canna_lily_3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/anthurium/anthurium_0",
+    "particle": "tfc:blocks/plants/anthurium/anthurium_0"
+  }
+}

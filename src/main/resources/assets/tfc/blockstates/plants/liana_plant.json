@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tfc:plants/liana_plant"
+    }
+  }
+}

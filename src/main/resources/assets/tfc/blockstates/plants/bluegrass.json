@@ -1,0 +1,76 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_shortest"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_shorter"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_short"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_shortest_tuft"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_shorter_tuft"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_short_tuft"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfc:plants/bluegrass_tuft"
+      }
+    }
+  ]
+}

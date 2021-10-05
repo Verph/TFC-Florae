@@ -1,0 +1,185 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1,
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1,
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1,
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1,
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/monstera_epiphyte_0",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_1",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_2",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_3",
+		  "weight": 1
+        },
+        {
+          "model": "tfc:plants/monstera_epiphyte_4",
+		  "weight": 1
+        }
+      ]
+    }
+  ]
+}

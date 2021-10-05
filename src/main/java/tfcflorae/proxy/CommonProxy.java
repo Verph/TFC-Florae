@@ -26,6 +26,7 @@ public class CommonProxy
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {
+            GameRegistry.registerWorldGenerator(new WorldGenFoliage(), 0);
             if (ConfigTFCF.General.WORLD.enableTrees)
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);

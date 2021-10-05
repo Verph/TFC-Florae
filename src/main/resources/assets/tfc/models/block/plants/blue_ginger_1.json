@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/tinted_cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/blue_ginger/blue_ginger_1"
+  }
+}
