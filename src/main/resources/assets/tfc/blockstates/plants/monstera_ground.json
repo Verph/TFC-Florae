@@ -7,6 +7,25 @@
       },
       "apply":[
         {
+          "model":"tfc:plants/monstera_lower_0",
+          "weight":3
+        },
+        {
+          "model":"tfc:plants/monstera_lower_0",
+          "y":90,
+          "weight":3
+        },
+        {
+          "model":"tfc:plants/monstera_lower_0",
+          "y":180,
+          "weight":3
+        },
+        {
+          "model":"tfc:plants/monstera_lower_0",
+          "y":270,
+          "weight":3
+        },
+        {
           "model":"tfc:plants/monstera_upper_0a",
           "weight":16
         },

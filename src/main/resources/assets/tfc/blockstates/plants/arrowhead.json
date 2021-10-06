@@ -1,8 +1,8 @@
 {
   "multipart":[
     {
-      "when":{
-        "part":"upper"
+      "when": {
+        "stage": "0"
       },
       "apply":[
         {
