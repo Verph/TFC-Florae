@@ -107,6 +107,13 @@ public class BlockLeavesTFCF extends BlockLeaves
         if (!world.isRemote)
         {
             Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+            if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
+            {
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
+                {
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                }
+            }
             if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(currentMonth))
             {
                 TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
@@ -120,7 +127,7 @@ public class BlockLeavesTFCF extends BlockLeaves
                     }
                 }
             }
-            else if (fruitTree.isFlowerMonth(currentMonth))
+            else if (fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
                 {

@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfc:plants/seaweed"
+        },
+        {
+          "model": "tfc:plants/seaweed",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/seaweed",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/seaweed",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

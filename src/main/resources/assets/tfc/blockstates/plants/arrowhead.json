@@ -4,11 +4,9 @@
       "when": {
         "stage": "0"
       },
-      "apply":[
-        {
-          "model":"tfc:plants/arrowhead_0"
-        }
-      ]
+      "apply": {
+        "model":"tfc:plants/arrowhead_0"
+	  }
     }
   ]
 }

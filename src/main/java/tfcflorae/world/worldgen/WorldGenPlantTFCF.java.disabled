@@ -1,0 +1,141 @@
+package tfcflorae.world.worldgen;
+
+import java.util.Random;
+
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.EnumSkyBlock;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.fml.common.IWorldGenerator;
+import net.minecraftforge.registries.ForgeRegistry;
+
+import net.dries007.tfc.ConfigTFC;
+import net.dries007.tfc.api.registries.TFCRegistries;
+import net.dries007.tfc.api.types.Rock;
+import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
+import net.dries007.tfc.util.climate.ClimateTFC;
+import net.dries007.tfc.world.classic.ChunkGenTFC;
+import net.dries007.tfc.world.classic.WorldTypeTFC;
+import net.dries007.tfc.world.classic.biomes.BiomesTFC;
+import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
+
+import tfcflorae.api.types.PlantTFCF;
+import tfcflorae.ConfigTFCF;
+import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
+import tfcflorae.objects.blocks.plants.*;
+import tfcflorae.types.DefaultPlantsTFCF;
+import tfcflorae.types.BlockTypesTFCF.RockTFCF;
+
+public class WorldGenPlantTFCF extends WorldGenerator
+{
+    private PlantTFCF plant;
+
+    public void setGeneratedPlant(PlantTFCF plantIn)
+    {
+        this.plant = plantIn;
+    }
+
+    public boolean generate(World worldIn, Random rand, BlockPos position)
+    {
+        if (plant.getIsClayMarking()) return false;
+        if (plant.getIsSwampPlant() && (/*!ClimateTFC.isSwamp(worldIn, position) ||*/ !BiomeDictionary.hasType(worldIn.getBiome(position), BiomeDictionary.Type.SWAMP)))
+            return false;
+
+        switch (plant.getPlantType())
+        {
+            case WATER:
+            case WATER_SEA:
+            {
+                BlockWaterPlantTFCF plantBlock = BlockWaterPlantTFCF.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+                IBlockState water = plant.getWaterType();
+
+                int depth = plant.getValidWaterDepth(worldIn, position, water);
+                if (depth == -1) return false;
+
+                BlockPos blockpos = position.add(0, -depth + 1, 0);
+
+                if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                    plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                    plantBlock.canPlaceBlockAt(worldIn, blockpos))
+                {
+                    int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                    setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockWaterPlantTFCF.AGE, plantAge));
+                }
+                break;
+            }
+            case EMERGENT_TALL_WATER:
+            case EMERGENT_TALL_WATER_SEA:
+            {
+                BlockEmergentTallWaterPlantTFCF plantBlock = BlockEmergentTallWaterPlantTFCF.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+                IBlockState water = plant.getWaterType();
+
+                int depth = plant.getValidWaterDepth(worldIn, position, water);
+                if (depth == -1) return false;
+                BlockPos blockpos = position.add(0, -depth + 1, 0);
+
+                if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                    plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                    plantBlock.canPlaceBlockAt(worldIn, blockpos))
+                {
+                    int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                    setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockEmergentTallWaterPlantTFCF.AGE, plantAge));
+                    if (rand.nextInt(3) < plantAge && plantBlock.canGrow(worldIn, blockpos, state, worldIn.isRemote))
+                        setBlockAndNotifyAdequately(worldIn, blockpos.up(), state);
+                }
+                break;
+            }
+            case TALL_WATER:
+            case TALL_WATER_SEA:
+            {
+                BlockTallWaterPlantTFCF plantBlock = BlockTallWaterPlantTFCF.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+                IBlockState water = plant.getWaterType();
+
+                int depth = plant.getValidWaterDepth(worldIn, position, water);
+                if (depth == -1) return false;
+                BlockPos blockpos = position.add(0, -depth + 1, 0);
+
+                if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                    plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                    plantBlock.canPlaceBlockAt(worldIn, blockpos))
+                {
+                    int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                    setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockTallPlantTFCF.AGE, plantAge));
+                    if (rand.nextInt(4) < plantAge && plantBlock.canGrow(worldIn, blockpos, state, worldIn.isRemote))
+                        setBlockAndNotifyAdequately(worldIn, blockpos.up(), state);
+                }
+                break;
+            }
+            default:
+            {
+                BlockPlantTFCF plantBlock = BlockPlantTFCF.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 16; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(7) - rand.nextInt(7));
+
+                    if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                        plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                        worldIn.isAirBlock(blockpos) &&
+                        plantBlock.canBlockStay(worldIn, blockpos, state))
+                    {
+                        int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                        setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockPlantTFCF.AGE, plantAge));
+                    }
+                }
+            }
+        }
+        return true;
+    }
+}

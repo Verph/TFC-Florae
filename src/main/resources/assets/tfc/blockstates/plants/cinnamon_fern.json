@@ -4,55 +4,17 @@
       "when": {
         "age": "0"
       },
-      "apply": [
-        {
-          "model": "tfc:plants/cinnamon_fern_big",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern",
-          "weight": 3
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_short",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shorter",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shortest",
-          "weight": 1
-        }
-      ]
+      "apply": {
+        "model": "tfc:plants/cinnamon_fern_shortest"
+      }
     },
     {
       "when": {
         "age": "1"
       },
-      "apply": [
-        {
-          "model": "tfc:plants/cinnamon_fern_big",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern",
-          "weight": 3
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_short",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shorter",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shortest",
-          "weight": 1
-        }
-      ]
+      "apply": {
+        "model": "tfc:plants/cinnamon_fern_shorter"
+      }
     },
     {
       "when": {
@@ -60,26 +22,14 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/cinnamon_fern_big",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern",
-          "weight": 3
-        },
-        {
           "model": "tfc:plants/cinnamon_fern_short",
           "weight": 1
         },
         {
-          "model": "tfc:plants/cinnamon_fern_shorter",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shortest",
-          "weight": 1
+          "model": "tfc:plants/cinnamon_fern_big_short",
+          "weight": 2
         }
-      ]
+	  ]
     },
     {
       "when": {
@@ -87,26 +37,14 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/cinnamon_fern_big",
-          "weight": 1
-        },
-        {
           "model": "tfc:plants/cinnamon_fern",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/cinnamon_fern_big",
           "weight": 3
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_short",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shorter",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/cinnamon_fern_shortest",
-          "weight": 1
         }
-      ]
+	  ]
     }
   ]
 }

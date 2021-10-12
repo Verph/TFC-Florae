@@ -2,149 +2,47 @@
   "multipart": [
     {
       "when": {
-        "stage": "0"
+        "age": "0"
+      },
+      "apply": {
+		"model": "tfc:plants/halfa_grass_shortest_1"
+      }
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": {
+		"model": "tfc:plants/halfa_grass_shorter_1"
+	  }
+    },
+    {
+      "when": {
+        "age": "2"
       },
       "apply": [
 		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 0
+		  "model": "tfc:plants/halfa_grass_short_0",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 270
+		  "model": "tfc:plants/halfa_grass_short_1",
+		  "weight": 3
 		}
       ]
     },
     {
       "when": {
-        "stage": "1"
+        "age": "3"
       },
       "apply": [
 		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 5,
-		  "y": 0
+		  "model": "tfc:plants/halfa_grass_0",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 5,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 5,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 5,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 270
-		}
-      ]
-    },
-    {
-      "when": {
-        "stage": "2"
-      },
-      "apply": [
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_0",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 5,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 5,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 5,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 5,
-		  "y": 270
-		}
-      ]
-    },
-    {
-      "when": {
-        "stage": "3"
-      },
-      "apply": [
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/halfa_grass_1",
-		  "weight": 1,
-		  "y": 270
+		  "model": "tfc:plants/halfa_grass_1",
+		  "weight": 3
 		}
       ]
     }

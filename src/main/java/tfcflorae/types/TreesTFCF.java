@@ -100,7 +100,7 @@ public final class TreesTFCF
     public static final ITreeGenerator GEN_BRAZILWOOD = new TreeGenVariants(true, 14);
     public static final ITreeGenerator GEN_BUTTERNUT = new TreeGenVariants(true, 45);
     public static final ITreeGenerator GEN_COCOBOLO = new TreeGenVariants(true, 34);
-    public static final ITreeGenerator GEN_CYPRESS = new TreeGenVariants(true, 15);
+    public static final ITreeGenerator GEN_CYPRESS = new TreeGenVariants(true, 5);
     public static final ITreeGenerator GEN_EBONY = new TreeGenVariants(true, 20);
     public static final ITreeGenerator GEN_EUCALYPTUS = new TreeGenVariants(true, 48);
     public static final ITreeGenerator GEN_EUROPEAN_OAK = new TreeGenVariants(true, 45);

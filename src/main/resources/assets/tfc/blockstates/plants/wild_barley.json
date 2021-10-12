@@ -2,247 +2,137 @@
   "multipart": [
     {
       "when": {
-        "part": "single",
+        "age": "0",
         "stage": "0"
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 0
+          "model": "tfc:plants/wild_barley_0",
+		  "weight": 4
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 90
+          "model": "tfc:plants/wild_barley_1",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 270
+          "model": "tfc:plants/wild_barley_2",
+		  "weight": 1
 		}
       ]
     },
     {
       "when": {
-        "part": "single",
+        "age": "1",
+        "stage": "0"
+      },
+      "apply": [
+		{
+          "model": "tfc:plants/wild_barley_1",
+		  "weight": 4
+		},
+		{
+          "model": "tfc:plants/wild_barley_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "stage": "0"
+      },
+      "apply": [
+		{
+          "model": "tfc:plants/wild_barley_2",
+		  "weight": 4
+		},
+		{
+          "model": "tfc:plants/wild_barley_3",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "stage": "0"
+      },
+      "apply": [
+		{
+          "model": "tfc:plants/wild_barley_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfc:plants/wild_barley_double",
+		  "weight": 3
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "0",
         "stage": "1"
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 0
+          "model": "tfc:plants/wild_barley_0_tuft",
+		  "weight": 3
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 90
+          "model": "tfc:plants/wild_barley_1_tuft",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_0",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 3,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 3,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 3,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 3,
-		  "y": 270
+          "model": "tfc:plants/wild_barley_2_tuft",
+		  "weight": 1
 		}
       ]
     },
     {
       "when": {
-        "part": "single",
-        "stage": "2"
+        "age": "1",
+        "stage": "1"
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 0
+          "model": "tfc:plants/wild_barley_1_tuft",
+		  "weight": 3
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 3,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 3,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 3,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 3,
-		  "y": 270
+          "model": "tfc:plants/wild_barley_2_tuft",
+		  "weight": 1
 		}
       ]
     },
     {
       "when": {
-        "part": "single",
-        "stage": "3"
+        "age": "2",
+        "stage": "1"
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 0
+          "model": "tfc:plants/wild_barley_2_tuft",
+		  "weight": 3
 		},
 		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_1",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_2",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_3",
-		  "weight": 5,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_3",
-		  "weight": 5,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_3",
-		  "weight": 5,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_single_3",
-		  "weight": 5,
-		  "y": 270
+          "model": "tfc:plants/wild_barley_3_tuft",
+		  "weight": 1
 		}
       ]
     },
     {
       "when": {
-        "part": "lower"
+        "age": "3",
+        "stage": "1"
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_lower_3",
-		  "weight": 1,
-		  "y": 0
+          "model": "tfc:plants/wild_barley_3_tuft",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/wild_barley_lower_3",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_lower_3",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_lower_3",
-		  "weight": 1,
-		  "y": 270
-		}
-      ]
-    },
-    {
-      "when": {
-        "part": "upper"
-      },
-      "apply": [
-		{
-          "model": "tfc:plants/wild_barley_upper_3",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/wild_barley_upper_3",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/wild_barley_upper_3",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/wild_barley_upper_3",
-		  "weight": 1,
-		  "y": 270
+          "model": "tfc:plants/wild_barley_double_tuft",
+		  "weight": 3
 		}
       ]
     }

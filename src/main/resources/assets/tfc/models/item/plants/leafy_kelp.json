@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/kelp"
+    "layer0": "tfc:blocks/plants/leafy_kelp/leafy_kelp_item"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/tinted_cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/goosegrass/goosegrass_3",
+    "particle": "tfc:blocks/plants/goosegrass/goosegrass_3"
+  }
+}

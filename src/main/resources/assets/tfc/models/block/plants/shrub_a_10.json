@@ -1,0 +1,57 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"leaves": "tfc:blocks/plants/shrub/shrub_leaves_0",
+		"particle": "tfc:blocks/plants/shrub/shrub_stem",
+		"cross": "tfc:blocks/plants/shrub/shrub_stem"
+	},
+	"elements": [
+		{
+			"from": [2.8, 0, 8],
+			"to": [13.2, 18, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#cross"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [8, 0, 2.8],
+			"to": [8, 18, 13.2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-0.53492, 4, -1.06075],
+			"to": [9.46508, 14, 8.93925],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [12, 3, 7]},
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"up": {"uv": [2, 2, 14, 14], "rotation": 90, "texture": "#leaves", "tintindex": 0},
+				"down": {"uv": [2, 2, 14, 14], "rotation": 270, "texture": "#leaves", "tintindex": 0}
+			}
+		},
+		{
+			"from": [4.79884, 3.6, 3.01546],
+			"to": [17.79884, 16.6, 16.01546],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 0, 6]},
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#leaves", "tintindex": 0},
+				"up": {"uv": [2, 2, 14, 14], "rotation": 270, "texture": "#leaves", "tintindex": 0},
+				"down": {"uv": [2, 2, 14, 14], "rotation": 90, "texture": "#leaves", "tintindex": 0}
+			}
+		}
+	]
+}

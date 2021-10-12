@@ -18,7 +18,18 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/arundo"
+          "model": "tfc:plants/arundo_plant"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "middle",
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/arundo_plant"
         }
       ]
     },
@@ -29,7 +40,7 @@
       },
       "apply": [
         {
-          "model": "tfc:plants/arundo_plant"
+          "model": "tfc:plants/arundo"
         }
       ]
     }

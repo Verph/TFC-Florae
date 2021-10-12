@@ -1,7 +1,29 @@
 {
-  "parent": "tfc:block/tinted_cross",
+  "ambientocclusion": false,
   "textures": {
     "cross": "tfc:blocks/plants/sago/sago",
     "particle": "tfc:blocks/plants/sago/sago"
-  }
+  },
+	"elements": [
+		{
+			"from": [8, 0, 0.2],
+			"to": [8, 16, 15.8],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [8, 0, 0.2],
+			"to": [8, 16, 15.8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross"}
+			}
+		}
+	]
 }

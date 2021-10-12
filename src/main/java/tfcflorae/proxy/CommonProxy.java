@@ -3,6 +3,7 @@ package tfcflorae.proxy;
 import net.minecraft.item.Item;
 
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -26,7 +27,7 @@ public class CommonProxy
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {
-            GameRegistry.registerWorldGenerator(new WorldGenFoliage(), 0);
+            //GameRegistry.registerWorldGenerator(new WorldGenFoliage(), 0);
             if (ConfigTFCF.General.WORLD.enableTrees)
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);

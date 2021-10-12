@@ -37,7 +37,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 if (System.getenv('VERSION') != null) {
     version = System.getenv('VERSION')
 } else {
-    version = "1.2"
+    version = "1.2.1"
 }
 
 shadowJar {

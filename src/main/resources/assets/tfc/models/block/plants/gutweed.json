@@ -1,9 +1,9 @@
 {
-  "ambientocclusion": false,
-  "textures": {
-    "cross": "tfc:blocks/plants/gutweed/gutweed",
-    "particle": "tfc:blocks/plants/gutweed/gutweed"
-  },
+    "ambientocclusion": false,
+    "textures": {
+      "cross": "tfc:blocks/plants/gutweed/gutweed",
+      "particle": "tfc:blocks/plants/gutweed/gutweed"
+    },
   "elements": [
     {
       "from": [

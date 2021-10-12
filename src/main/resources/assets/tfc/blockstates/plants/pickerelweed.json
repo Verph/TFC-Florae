@@ -2,8 +2,7 @@
   "multipart":[
     {
       "when":{
-        "stage":"0",
-        "part":"upper"
+        "stage":"0"
       },
       "apply":[
         {
@@ -25,8 +24,7 @@
     },
     {
       "when":{
-        "stage":"1",
-        "part":"upper"
+        "stage":"1"
       },
       "apply":[
         {
@@ -48,8 +46,7 @@
     },
     {
       "when":{
-        "stage":"2",
-        "part":"upper"
+        "stage":"2"
       },
       "apply":[
         {

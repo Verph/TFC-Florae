@@ -263,6 +263,7 @@ public class FoodDataTFCF
     public static final FoodData BLACK_EYED_PEAS = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 3.5f);
     public static final FoodData GREEN_CAYENNE_PEPPER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData RED_CAYENNE_PEPPER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
+    public static final FoodData GINGER = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData GINSENG = new FoodData(4, 0.4f, 3f, 0f, 0f, 0f, 1f, 0f, 2.5f);
     public static final FoodData SUGAR_BEET = new FoodData(4, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 2.5f);
     public static final FoodData PURPLE_GRAPE = new FoodData(4, 0.5f, 5f, 0f, 0f, 0.75f, 0f, 0f, 2.8f);

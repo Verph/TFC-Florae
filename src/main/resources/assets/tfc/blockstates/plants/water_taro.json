@@ -1,12 +1,21 @@
 {
-  "multipart":[
+  "multipart": [
     {
-      "when":{
-        "part":"upper"
-      },
-      "apply":[
+      "apply": [
         {
-          "model":"tfc:plants/water_taro_0"
+          "model": "tfc:plants/water_taro_0"
+        },
+        {
+          "model": "tfc:plants/water_taro_0",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/water_taro_0",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/water_taro_0",
+          "y": 270
         }
       ]
     }

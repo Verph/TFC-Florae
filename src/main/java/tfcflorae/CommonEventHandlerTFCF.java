@@ -28,9 +28,11 @@ import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.food.*;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.*;
+import net.dries007.tfc.api.types.IAnimalTFC.Age;
 import net.dries007.tfc.objects.blocks.agriculture.BlockFruitTreeLeaves;
 import net.dries007.tfc.objects.blocks.agriculture.BlockFruitTreeTrunk;
 import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
+import net.dries007.tfc.objects.blocks.plants.BlockShortGrassTFC;
 import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.container.CapabilityContainerListener;
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
@@ -90,18 +92,20 @@ public final class CommonEventHandlerTFCF
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
         {
             event.getDrops().clear();
-            int chance = Constants.RNG.nextInt(3);
-
-            if (chance == 0)
+            if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
             {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
+                int chance = Constants.RNG.nextInt(2);
+                if (chance == 0)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
+                }
+                else if (chance == 1)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
+                }
             }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
+            else
             {
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
             }
@@ -109,37 +113,41 @@ public final class CommonEventHandlerTFCF
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
         {
             event.getDrops().clear();
-            int chance = Constants.RNG.nextInt(3);
-
-            if (chance == 0)
+            if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
             {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
+                int chance = Constants.RNG.nextInt(2);
+                if (chance == 0)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
+                }
+                else if (chance == 1)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
+                }
             }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
+            else
             {
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1 + Constants.RNG.nextInt(2)));
             }
         }
-        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
+        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)) && state.getValue(((BlockPlantTFC) block).AGE) == 3 && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
         {
             event.getDrops().clear();
-            int chance = Constants.RNG.nextInt(3);
-
-            if (chance == 0)
+            if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
             {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
-                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
+                int chance = Constants.RNG.nextInt(2);
+                if (chance == 0)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
+                }
+                else if (chance == 1)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
+                }
             }
-            else if (chance == 1)
-            {
-                event.getDrops().add(new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
-            }
-            else if (chance == 2)
+            else
             {
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1 + Constants.RNG.nextInt(2)));
             }

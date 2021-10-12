@@ -2,66 +2,95 @@
   "multipart": [
     {
       "when": {
-        "stage": "0"
+        "age": "0"
       },
       "apply": [
-        {
-          "model": "tfc:plants/goosegrass_0"
-        },
-        {
-          "model": "tfc:plants/goosegrass_0b",
-          "weight": 1
-        }
-      ]
+		{
+		  "model": "tfc:plants/goosegrass_shortest_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shortest_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shortest_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shortest_3",
+		  "weight": 2
+		}
+	  ]
     },
     {
       "when": {
-        "stage": "1"
+        "age": "1"
       },
       "apply": [
-        {
-          "model": "tfc:plants/goosegrass_0",
-          "weight": 2
-        },
-        {
-          "model": "tfc:plants/goosegrass_0b",
-          "weight": 2
-        },
-        {
-          "model": "tfc:plants/goosegrass_1",
-          "weight": 1
-        }
-      ]
+		{
+		  "model": "tfc:plants/goosegrass_shorter_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shorter_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shorter_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_shorter_3",
+		  "weight": 2
+		}
+	  ]
     },
     {
       "when": {
-        "stage": "2"
+        "age": "2"
       },
       "apply": [
-        {
-          "model": "tfc:plants/goosegrass_1",
-          "weight": 5
-        },
-        {
-          "model": "tfc:plants/goosegrass_2",
-          "weight": 1
-        }
-      ]
+		{
+		  "model": "tfc:plants/goosegrass_short_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_short_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_short_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_short_3",
+		  "weight": 2
+		}
+	  ]
     },
     {
       "when": {
-        "stage": "3"
+        "age": "3"
       },
       "apply": [
-        {
-          "model": "tfc:plants/goosegrass_2",
-          "weight": 5
-        },
-        {
-          "model": "tfc:plants/goosegrass_1",
-          "weight": 1
-        }
-      ]
+		{
+		  "model": "tfc:plants/goosegrass_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfc:plants/goosegrass_3",
+		  "weight": 2
+		}
+	  ]
     }
   ]
 }

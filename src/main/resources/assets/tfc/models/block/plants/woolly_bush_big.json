@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "tfc:blocks/plants/woolly_bush/woolly_bush_1",
-		"cross": "tfc:blocks/plants/woolly_bush/woolly_bush_1"
+		"particle": "tfc:blocks/plants/woolly_bush/woolly_bush_big",
+		"cross": "tfc:blocks/plants/woolly_bush/woolly_bush_big"
 	},
 	"elements": [
 		{

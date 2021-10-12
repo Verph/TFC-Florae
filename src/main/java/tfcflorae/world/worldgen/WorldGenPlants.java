@@ -115,7 +115,7 @@ public class WorldGenPlants extends WorldGenerator
                 BlockEpiphyteTFC plantBlock = BlockEpiphyteTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE));
 
                 ChunkDataTFC data = ChunkDataTFC.get(worldIn, position);
-                if (data.isInitialized())
+                if (data.isInitialized() && data.getRainfall() >= 200f && data.getAverageTemp() >= 17)
                 {
                     for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position); ++i)
                     {
@@ -133,6 +133,8 @@ public class WorldGenPlants extends WorldGenerator
                     break;
                 }
             }
+            default:
+                break;
         }
         return true;
     }

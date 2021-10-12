@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfc:blocks/plants/turtle_grass/1"
+    "layer0": "tfc:blocks/plants/turtle_grass/3"
   }
 }

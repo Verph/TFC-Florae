@@ -2,216 +2,85 @@
   "multipart": [
     {
       "when": {
-        "stage": "0"
+        "age": "0"
       },
       "apply": [
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 0
+		  "model": "tfc:plants/crowngrass_shortest_2",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 90
+		  "model": "tfc:plants/crowngrass_shortest_3",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 270
+		  "model": "tfc:plants/crowngrass_shortest_4",
+		  "weight": 3
 		}
       ]
     },
     {
       "when": {
-        "stage": "1"
+        "age": "1"
       },
       "apply": [
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 0
+		  "model": "tfc:plants/crowngrass_shorter_2",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 90
+		  "model": "tfc:plants/crowngrass_shorter_3",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_0",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 3,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 3,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 3,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 3,
-		  "y": 270
+		  "model": "tfc:plants/crowngrass_shorter_4",
+		  "weight": 4
 		}
       ]
     },
     {
       "when": {
-        "stage": "2"
+        "age": "2"
       },
       "apply": [
 		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 1,
-		  "y": 0
+		  "model": "tfc:plants/crowngrass_short_2",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 1,
-		  "y": 90
+		  "model": "tfc:plants/crowngrass_short_3",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_1",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 3,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 3,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 3,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 3,
-		  "y": 270
+		  "model": "tfc:plants/crowngrass_short_4",
+		  "weight": 4
 		}
       ]
     },
     {
       "when": {
-        "stage": "3"
+        "age": "3"
       },
       "apply": [
 		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 1,
-		  "y": 0
+		  "model": "tfc:plants/crowngrass_0",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 1,
-		  "y": 90
+		  "model": "tfc:plants/crowngrass_1",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 1,
-		  "y": 180
+		  "model": "tfc:plants/crowngrass_2",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_2",
-		  "weight": 1,
-		  "y": 270
+		  "model": "tfc:plants/crowngrass_3",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 5,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 5,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 5,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 5,
-		  "y": 270
-		}
-      ]
-    },
-    {
-      "when": {
-        "stage": "3"
-      },
-      "apply": [
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_3",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/crowngrass_4",
-		  "weight": 5,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/crowngrass_4",
-		  "weight": 5,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/crowngrass_4",
-		  "weight": 5,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/crowngrass_4",
-		  "weight": 5,
-		  "y": 270
+		  "model": "tfc:plants/crowngrass_4",
+		  "weight": 5
 		}
       ]
     }

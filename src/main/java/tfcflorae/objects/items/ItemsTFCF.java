@@ -704,6 +704,8 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF GREEN_CAYENNE_PEPPER = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/red_cayenne_pepper")
     public static final ItemFoodTFCF RED_CAYENNE_PEPPER = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/ginger")
+    public static final ItemFoodTFCF GINGER = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/ginseng")
     public static final ItemFoodTFCF GINSENG = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/sugar_beet")
@@ -1652,6 +1654,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/black_eyed_peas", new ItemFoodTFCF(FoodDataTFCF.BLACK_EYED_PEAS, "black_eyed_peas", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/green_cayenne_pepper", new ItemFoodTFCF(FoodDataTFCF.GREEN_CAYENNE_PEPPER, "green_cayenne_pepper", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/red_cayenne_pepper", new ItemFoodTFCF(FoodDataTFCF.RED_CAYENNE_PEPPER, "red_cayenne_pepper", "category_vegetable"), CT_FOOD));
+        simpleItems.add(register(r, "food/ginger", new ItemFoodTFCF(FoodDataTFCF.GINGER, "ginger", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/ginseng", new ItemFoodTFCF(FoodDataTFCF.GINSENG, "ginseng", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/sugar_beet", new ItemFoodTFCF(FoodDataTFCF.SUGAR_BEET, "sugar_beet", "crop_sugar_beet", "category_vegetable"), CT_FOOD));
         simpleItems.add(register(r, "food/purple_grape", new ItemFoodTFCF(FoodDataTFCF.PURPLE_GRAPE, "purple_grape", "crop_purple_grape", "category_fruit"), CT_FOOD));

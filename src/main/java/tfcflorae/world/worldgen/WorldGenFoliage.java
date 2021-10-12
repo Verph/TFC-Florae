@@ -28,7 +28,8 @@ public class WorldGenFoliage implements IWorldGenerator
 
         if (CalendarTFC.CALENDAR_TIME.getMonthOfYear().isWithin(Month.APRIL, Month.JULY) && !chunkDataTFC.isSpawnProtected() && CalendarTFC.CALENDAR_TIME.getTotalYears() > chunkDataTFC.getLastUpdateYear())
         {
-            PLANTS.generate(world, random, center);
+            for (int i = 0; i < 10; i++)
+                PLANTS.generate(world, random, center);
         }
         chunkDataTFC.resetLastUpdateYear();
     }

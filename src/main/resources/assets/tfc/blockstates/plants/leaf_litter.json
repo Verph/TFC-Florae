@@ -2,128 +2,69 @@
   "multipart": [
     {
       "when": {
-        "stage": "0"
+        "age": "0"
       },
       "apply": [
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_0",
-		  "weight": 2,
-		  "y": 0
+		  "model": "tfc:plants/deciduous_leaf_litter_0",
+		  "weight": 3
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_0",
-		  "weight": 2,
-		  "y": 90
+		  "model": "tfc:plants/deciduous_leaf_litter_1",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfc:plants/deciduous_leaf_litter_1",
+		  "weight": 3
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_0",
-		  "weight": 2,
-		  "y": 180
+		  "model": "tfc:plants/deciduous_leaf_litter_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfc:plants/deciduous_leaf_litter_2",
+		  "weight": 2
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_0",
-		  "weight": 2,
-		  "y": 270
+		  "model": "tfc:plants/deciduous_leaf_litter_3",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_1",
-		  "weight": 2,
-		  "y": 0
+		  "model": "tfc:plants/deciduous_leaf_litter_4",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfc:plants/deciduous_leaf_litter_5",
+		  "weight": 5
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_1",
-		  "weight": 2,
-		  "y": 90
+		  "model": "tfc:plants/deciduous_leaf_litter_4",
+		  "weight": 1
 		},
 		{
-          "model": "tfc:plants/deciduous_leaf_litter_1",
-		  "weight": 2,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_1",
-		  "weight": 2,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_2",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_2",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_2",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_2",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_3",
-		  "weight": 1,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_3",
-		  "weight": 1,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_3",
-		  "weight": 1,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/deciduous_leaf_litter_3",
-		  "weight": 1,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_0",
-		  "weight": 2,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_0",
-		  "weight": 2,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_0",
-		  "weight": 2,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_0",
-		  "weight": 2,
-		  "y": 270
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_1",
-		  "weight": 2,
-		  "y": 0
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_1",
-		  "weight": 2,
-		  "y": 90
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_1",
-		  "weight": 2,
-		  "y": 180
-		},
-		{
-          "model": "tfc:plants/deciduous_leafpile_1",
-		  "weight": 2,
-		  "y": 270
+		  "model": "tfc:plants/deciduous_leaf_litter_3",
+		  "weight": 1
 		}
       ]
     }

@@ -2,64 +2,131 @@
   "multipart": [
     {
       "when": {
-        "stage": "0"
+        "stage": "0",
+        "age": "0"
       },
       "apply": [
         {
-          "model": "tfc:plants/prairie_junegrass_0"
+          "model": "tfc:plants/prairie_junegrass_shortest_1",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_shortest_2",
+          "weight": 2
         }
       ]
     },
     {
       "when": {
-        "stage": "1"
+        "stage": "0",
+        "age": "1"
       },
       "apply": [
         {
-          "model": "tfc:plants/prairie_junegrass_1",
-          "weight": 5
+          "model": "tfc:plants/prairie_junegrass_shorter_1",
+          "weight": 1
         },
+        {
+          "model": "tfc:plants/prairie_junegrass_shorter_2",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/prairie_junegrass_short_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_short_1",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_short_2",
+          "weight": 2
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_big_short",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": [
         {
           "model": "tfc:plants/prairie_junegrass_0",
           "weight": 1
-        }
-      ]
-    },
-    {
-      "when": {
-        "stage": "2"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/prairie_junegrass_3",
-          "weight": 1
-        },
-        {
-          "model": "tfc:plants/prairie_junegrass_2",
-          "weight": 5
         },
         {
           "model": "tfc:plants/prairie_junegrass_1",
           "weight": 1
-        }
-      ]
-    },
-    {
-      "when": {
-        "stage": "3"
-      },
-      "apply": [
-        {
-          "model": "tfc:plants/prairie_junegrass_4",
-          "weight": 1
         },
         {
           "model": "tfc:plants/prairie_junegrass_2",
           "weight": 1
         },
         {
-          "model": "tfc:plants/prairie_junegrass_3",
+          "model": "tfc:plants/prairie_junegrass_big",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfc:plants/prairie_junegrass_flowering_shortest"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfc:plants/prairie_junegrass_flowering_shorter"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/prairie_junegrass_flowering_short",
           "weight": 1
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_big_flowering_short",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/prairie_junegrass_flowering",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/prairie_junegrass_big_flowering",
+          "weight": 5
         }
       ]
     }

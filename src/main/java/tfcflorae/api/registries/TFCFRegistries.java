@@ -3,16 +3,20 @@ package tfcflorae.api.registries;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import net.dries007.tfc.TerraFirmaCraft;
-import net.dries007.tfc.api.types.Rock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
+
+import net.dries007.tfc.TerraFirmaCraft;
+
+import tfcflorae.api.types.PlantTFCF;
 
 /**
  * This is where we initialize our registry instances!
  */
 public class TFCFRegistries
 {
+    public static final IForgeRegistry<PlantTFCF> PLANTS = GameRegistry.findRegistry(PlantTFCF.class);
+
     /*This is kindly hijacked from TerraFirmCraft TFCRegistries.java*/
     static
     {
