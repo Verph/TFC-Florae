@@ -114,7 +114,7 @@ public class BlockLeavesTFCF extends BlockLeaves
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 }
             }
-            if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(currentMonth))
+            else if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(currentMonth))
             {
                 TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
                 if (te != null)

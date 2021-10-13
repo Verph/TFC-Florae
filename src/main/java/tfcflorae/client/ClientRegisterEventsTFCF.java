@@ -52,7 +52,6 @@ import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE.ItemType;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.groundcover.*;
-import tfcflorae.objects.blocks.plants.*;
 import tfcflorae.objects.blocks.blocktype.BlockRockRawTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
@@ -79,6 +78,7 @@ import tfcflorae.compat.tfcelementia.ceramics.*;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
+import tfcflorae.api.registries.TFCFRegistries;
 import tfcflorae.api.stateproperty.StatePropertiesTFCF;
 import tfcflorae.objects.GemTFCF;
 import tfcflorae.objects.items.ItemGemTFCF;
@@ -149,9 +149,6 @@ public class ClientRegisterEventsTFCF
 
         for (ItemBlock itemBlock : BlocksTFCF.getAllNormalItemBlocks())
             ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName().toString()));
-
-        /*for (BlockPlantTFCF plants : BlocksTFCF.getAllPlantBlocks())
-            ModelLoader.setCustomStateMapper(plants, new StateMap.Builder().ignore(BlockLiquid.LEVEL).build());*/
 
         /*
         for (Block block : BlocksTFCF.getAllSurfaceOreBlocks())
@@ -786,10 +783,6 @@ public class ClientRegisterEventsTFCF
                 event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
             BlocksTFCF.CEYLON_CINNAMON_LEAVES);
 
-        itemColors.registerItemColorHandler((stack, tintIndex) ->
-                event.getBlockColors().colorMultiplier(((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata()), null, null, tintIndex),
-            BlocksTFC.getAllGrassBlocks().toArray(new BlockPlantTFCF[0]));
-
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay || ConfigTFCF.General.WORLD.enableAllKaoliniteClay || ConfigTFCF.General.WORLD.enableAllStonewareClay)
         {
             for (Item item : ItemsTFCF.getAllCeramicMoldItems())
@@ -924,7 +917,6 @@ public class ClientRegisterEventsTFCF
 
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CASSIA_CINNAMON_LEAVES);
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CEYLON_CINNAMON_LEAVES);
-        blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.getAllPlantBlocks().toArray(new BlockPlantTFCF[0]));
 
         if (ConfigTFCF.General.WORLD.enableAllBlockTypes && ConfigTFCF.General.WORLD.enableAllFarmland)
         {

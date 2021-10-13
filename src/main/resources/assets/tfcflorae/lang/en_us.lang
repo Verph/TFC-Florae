@@ -32908,6 +32908,9 @@ config.tfcflorae.general.world.enableGourdWorldGen.tooltip=Enable gourd generati
 config.tfcflorae.general.world.enableAllVines=Vine Generation
 config.tfcflorae.general.world.enableAllVines.tooltip=Enable vine generation?
 
+config.tfcflorae.general.world.enableAllWaterPlants=Water Plant Generation
+config.tfcflorae.general.world.enableAllWaterPlants.tooltip=Enable water plant generation?
+
 config.tfcflorae.general.world.enableGroundcoverBones=Bone Groundcover
 config.tfcflorae.general.world.enableGroundcoverBones.tooltip=Enable bone groundcover?
 

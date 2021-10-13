@@ -61,13 +61,11 @@ import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.FruitTree;
 import net.dries007.tfc.util.Helpers;
 
-import tfcflorae.api.types.*;
 import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.registries.TFCFRegistries;
 import tfcflorae.objects.blocks.*;
 import tfcflorae.objects.blocks.groundcover.*;
-import tfcflorae.objects.blocks.plants.*;
 /*import tfcflorae.objects.blocks.multiblock.BlockCampfire;
 import tfcflorae.objects.blocks.multiblock.BlockDummyHalf;
 import tfcflorae.objects.blocks.multiblock.MultiBlockBase;*/
@@ -81,7 +79,6 @@ import tfcflorae.objects.fluids.FluidsTFCF;
 import tfcflorae.objects.items.food.*;
 import tfcflorae.objects.items.groundcover.*;
 import tfcflorae.objects.items.itemblock.ItemBlockCrate;
-import tfcflorae.objects.items.itemblock.ItemBlockPlantTFCF;
 import tfcflorae.objects.items.itemblock.ItemBlockUrn;
 import tfcflorae.objects.items.itemblock.ItemBlockUrnLoot;
 import tfcflorae.objects.te.*;
@@ -279,7 +276,6 @@ public final class BlocksTFCF
     private static ImmutableList<BlockLeavesTFCF> allNormalTreeLeaves = Helpers.getNull();
     private static ImmutableList<BlockLogTFCF> allNormalTreeLog = Helpers.getNull();
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
-    private static ImmutableList<BlockPlantTFCF> allPlantBlocks = Helpers.getNull();
     //private static ImmutableList<MultiBlockBase> allMultiBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
@@ -525,11 +521,6 @@ public final class BlocksTFCF
         return allSurfaceOreBlocks;
     }
 
-    public static ImmutableList<BlockPlantTFCF> getAllPlantBlocks()
-    {
-        return allPlantBlocks;
-    }
-
     /*public static ImmutableList<MultiBlockBase> getAllMultiBlocks()
     {
         return allMultiBlocks;
@@ -591,7 +582,6 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
-        ImmutableList.Builder<BlockPlantTFCF> plantBlocks = ImmutableList.builder();
         //ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_bale", new BlockBale(), CT_DECORATIONS)));
@@ -1018,26 +1008,6 @@ public final class BlocksTFCF
         for(Tree wood : TFCRegistries.TREES.getValuesCollection())
         {
             fenceGatesLog.add(register(r, "wood/fence_gate_log/" + wood.getRegistryName().getPath(), new BlockFenceGateLog(wood), CT_DECORATIONS));
-        }
-
-        {
-            for (PlantTFCF plant : TFCFRegistries.PLANTS.getValuesCollection())
-            {
-                plantBlocks.add(register(r, "plants/" + plant.getRegistryName().getPath(), plant.getPlantType().create(plant), CT_FLORA));
-            }
-            allPlantBlocks = plantBlocks.build();
-
-            /*for (BlockPlantTFCF blockPlant : allPlantBlocks)
-            {
-                if (blockPlant.getPlant().canBePotted())
-                {
-                    normalItemBlocks.add(new ItemBlockPlantTFCF(blockPlant, blockPlant.getPlant()));
-                }
-                else
-                {
-                    normalItemBlocks.add(new ItemBlockTFC(blockPlant));
-                }
-            }*/
         }
 
         {

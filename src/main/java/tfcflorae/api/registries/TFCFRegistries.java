@@ -6,17 +6,13 @@ import java.lang.reflect.Modifier;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import net.dries007.tfc.TerraFirmaCraft;
-
-import tfcflorae.api.types.PlantTFCF;
+import tfcflorae.TFCFlorae;
 
 /**
  * This is where we initialize our registry instances!
  */
 public class TFCFRegistries
 {
-    public static final IForgeRegistry<PlantTFCF> PLANTS = GameRegistry.findRegistry(PlantTFCF.class);
-
     /*This is kindly hijacked from TerraFirmCraft TFCRegistries.java*/
     static
     {
@@ -29,12 +25,12 @@ public class TFCFRegistries
             {
                 if (!field.getType().isAssignableFrom(IForgeRegistry.class))
                 {
-                    TerraFirmaCraft.getLog().warn("[Please inform TFCF Team] Something missing? (Not a registry) {}", field);
+                    TFCFlorae.getLog().warn("[Please inform TFCF Team] Something missing? (Not a registry) {}", field);
                     continue;
                 }
                 if ((field.getModifiers() & publicStaticFinal) != publicStaticFinal)
                 {
-                    TerraFirmaCraft.getLog().warn("[Please inform TFCF Team] Something missing? (not Public Static Final) {}", field);
+                    TFCFlorae.getLog().warn("[Please inform TFCF Team] Something missing? (not Public Static Final) {}", field);
                     continue;
                 }
                 if (field.get(null) == null)
@@ -45,7 +41,7 @@ public class TFCFRegistries
         }
         catch (Exception e)
         {
-            TerraFirmaCraft.getLog().fatal("Fatal error! This is likely a programming mistake.", e);
+            TFCFlorae.getLog().fatal("Fatal error! This is likely a programming mistake.", e);
             throw new RuntimeException(e);
         }
     }

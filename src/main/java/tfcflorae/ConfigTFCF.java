@@ -402,6 +402,10 @@ public class ConfigTFCF
             @Config.Comment("Enable special soil farmland blocks?")
             @Config.LangKey("config." + MODID + ".general.world.enableAllFarmland")
             public boolean enableAllFarmland = true;
+
+            @Config.Comment("Enable water plants? You'll need to manually overwrite TFC BlockPlant classes in order for these to work properly!")
+            @Config.LangKey("config." + MODID + ".general.world.enableAllWaterPlants")
+            public boolean enableAllWaterPlants = false;
         }
 
         public static final class StructuresCFG
