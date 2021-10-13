@@ -3,8 +3,7 @@
     {
       "when": {
         "part": "single",
-        "stage": "0",
-        "age": "0"
+        "stage": "0"
       },
       "apply": [
 		{
@@ -15,8 +14,7 @@
     {
       "when": {
         "part": "single",
-        "stage": "1",
-        "age": "0"
+        "stage": "1"
       },
       "apply": [
 		{
@@ -27,8 +25,7 @@
     {
       "when": {
         "part": "single",
-        "stage": "2",
-        "age": "0"
+        "stage": "2"
       },
       "apply": [
 		{
@@ -39,8 +36,7 @@
     {
       "when": {
         "part": "lower",
-        "stage": "0",
-        "age": "0"
+        "stage": "0"
       },
       "apply": [
         {
@@ -51,8 +47,7 @@
     {
       "when": {
         "part": "lower",
-        "stage": "1",
-        "age": "0"
+        "stage": "1"
       },
       "apply": [
         {
@@ -63,8 +58,7 @@
 	    {
       "when": {
         "part": "lower",
-        "stage": "2",
-        "age": "0"
+        "stage": "2"
       },
       "apply": [
         {
@@ -75,8 +69,7 @@
     {
       "when": {
         "part": "upper",
-        "stage": "0",
-        "age": "0"
+        "stage": "0"
       },
       "apply": [
         {
@@ -87,8 +80,7 @@
     {
       "when": {
         "part": "upper",
-        "stage": "1",
-        "age": "0"
+        "stage": "1"
       },
       "apply": [
         {
@@ -99,8 +91,7 @@
 	    {
       "when": {
         "part": "upper",
-        "stage": "2",
-        "age": "0"
+        "stage": "2"
       },
       "apply": [
         {

@@ -104,7 +104,7 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
     {
-        if (!world.isRemote)
+        //if (!world.isRemote)
         {
             Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
             if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
@@ -127,6 +127,34 @@ public class BlockLeavesTFCF extends BlockLeaves
                     }
                 }
             }
+            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
+            {
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
+                {
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                }
+            }
+            else if (fruitTree.isAutumnMonth(currentMonth))
+            {
+                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
+                {
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
+                }
+            }
+            else if (fruitTree.isWinterMonth(currentMonth))
+            {
+                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
+                {
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
+                }
+            }
+            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
+            {
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
+                {
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                }
+            }
             else if (fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth))
             {
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
@@ -134,23 +162,16 @@ public class BlockLeavesTFCF extends BlockLeaves
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
                 }
             }
-            else if (fruitTree.isAutumnMonth(currentMonth))
+            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
             {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN)
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
                 {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
-                }
-            }
-            else if (fruitTree.isWinterMonth(currentMonth))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 }
             }
             else
             {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
                 {
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 }

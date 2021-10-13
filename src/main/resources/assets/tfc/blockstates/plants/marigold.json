@@ -3,7 +3,6 @@
     {
       "when": {
         "part": "single",
-        "age": "0",
         "stage": "0"
       },
       "apply": {
@@ -13,7 +12,6 @@
     {
       "when": {
         "part": "single",
-        "age": "0",
         "stage": "1"
       },
       "apply": {
@@ -23,7 +21,6 @@
     {
       "when": {
         "part": "single",
-        "age": "0",
         "stage": "2"
       },
       "apply": {
@@ -33,7 +30,6 @@
     {
       "when": {
         "part": "single",
-        "age": "0",
         "stage": "3"
       },
       "apply": {
@@ -43,7 +39,6 @@
     {
       "when": {
         "part": "lower",
-        "age": "0",
         "stage": "0"
       },
       "apply": {
@@ -53,7 +48,6 @@
     {
       "when": {
         "part": "upper",
-        "age": "0",
         "stage": "0"
       },
       "apply": {
@@ -63,7 +57,6 @@
     {
       "when": {
         "part": "lower",
-        "age": "0",
         "stage": "1"
       },
       "apply": {
@@ -73,7 +66,6 @@
     {
       "when": {
         "part": "upper",
-        "age": "0",
         "stage": "1"
       },
       "apply": {
@@ -83,7 +75,6 @@
     {
       "when": {
         "part": "lower",
-        "age": "0",
         "stage": "2"
       },
       "apply": {
@@ -93,7 +84,6 @@
     {
       "when": {
         "part": "upper",
-        "age": "0",
         "stage": "2"
       },
       "apply": {
@@ -103,7 +93,6 @@
     {
       "when": {
         "part": "lower",
-        "age": "0",
         "stage": "3"
       },
       "apply": {
@@ -113,7 +102,6 @@
     {
       "when": {
         "part": "upper",
-        "age": "0",
         "stage": "3"
       },
       "apply": {
