@@ -38,7 +38,7 @@ public class WorldGeneratorTrees implements IWorldGenerator
         BlockPos center = new BlockPos(chunkX * 16 + 8, world.getHeight(chunkX * 16 + 8, chunkZ * 16 + 8), chunkZ * 16 + 8);
 
         cinnamon_trees.generate(world, random, center);
-        //bamboo_trees.generate(world, random, center);
+        bamboo_trees.generate(world, random, center);
 
         trees.removeIf(t -> !t.hasBushes());
 

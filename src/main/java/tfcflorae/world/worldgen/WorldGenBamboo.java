@@ -65,10 +65,10 @@ public class WorldGenBamboo extends WorldGenerator
         {
             generateNarrowLeafBamboo(world, rand, genPos);
         }
-        else if (gen == 6)
+        /*else if (gen == 6)
         {
             generateRedBamboo(world, rand, genPos);
-        }
+        }*/
         else if (gen == 7)
         {
             generateTempleBamboo(world, rand, genPos);
@@ -185,7 +185,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -233,7 +233,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -267,7 +267,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -302,7 +302,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -336,7 +336,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -370,7 +370,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -404,7 +404,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -438,7 +438,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -472,7 +472,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -506,7 +506,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -540,7 +540,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
@@ -574,7 +574,7 @@ public class WorldGenBamboo extends WorldGenerator
 
         if (rand.nextInt(ConfigTFCF.General.WORLD.bambooRarity) == 0 || pos.getY() > WorldTypeTFC.SEALEVEL && world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isGround(world.getBlockState(pos.down()))))
         {
-            if (rain > 240f && temp > 20f && density > 0.2f)
+            if (rain > 290f && temp > 20f && density > 0.2f)
             {
                 IBlockState state = world.getBlockState(pos.down());
                 if (world.isAirBlock(pos) && state.isSideSolid(world, pos.down(), EnumFacing.UP) && BlocksTFC.isGrowableSoil(state))
