@@ -37,7 +37,7 @@ import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -48,10 +48,10 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
     public static final AxisAlignedBB SMALL_AABB_Y = new AxisAlignedBB(0.25, 0, 0.25, 0.75, 1, 0.75);
     public static final AxisAlignedBB SMALL_AABB_X = new AxisAlignedBB(0, 0.25, 0.25, 1, 0.75, 0.75);
     public static final AxisAlignedBB SMALL_AABB_Z = new AxisAlignedBB(0.25, 0.25, 0, 0.75, 0.75, 1);
-    private static final Map<FruitTreeTFCF, BlockLogTFCF> MAP = new HashMap<>();
+    private static final Map<SeasonalTrees, BlockLogTFCF> MAP = new HashMap<>();
     private static final Map<Tree, BlockLogTFCF> MAP_TREE = new HashMap<>();
 
-    public static BlockLogTFCF get(FruitTreeTFCF tree)
+    public static BlockLogTFCF get(SeasonalTrees tree)
     {
         return MAP.get(tree);
     }
@@ -62,9 +62,9 @@ public class BlockLogTFCF extends BlockLog implements IItemSize
     }
 
     public final Tree wood;
-    public final FruitTreeTFCF fruitTree;
+    public final SeasonalTrees fruitTree;
 
-    public BlockLogTFCF(Tree wood, FruitTreeTFCF tree)
+    public BlockLogTFCF(Tree wood, SeasonalTrees tree)
     {
         this.wood = wood;
         this.fruitTree = tree;

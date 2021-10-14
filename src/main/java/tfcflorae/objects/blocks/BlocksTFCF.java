@@ -793,7 +793,7 @@ public final class BlocksTFCF
             for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
                 blockSlabTFC.add(register(r, "slab/" + (type.name() + "/" + rock.getRegistryName().getPath()).toLowerCase(), new BlockSlabTFC.Half(rock, type), CT_DECORATIONS));
 
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
+        for (SeasonalTrees fruitTree : SeasonalTrees.values())
         {
             if (fruitTree.isNormalTree)
             {
@@ -805,7 +805,7 @@ public final class BlocksTFCF
                     normalTreeLog.add(register(r, "wood/log/" + name, new BlockLogTFCF(fruitTree.normalTree, fruitTree), CT_WOOD));
                 }
             }
-            else
+            /*else
             {
                 String name = fruitTree.getName().toLowerCase();
                 register(r, "wood/fruit_tree/branch/" + name, new BlockFruitTreeBranch(fruitTree));
@@ -832,7 +832,7 @@ public final class BlocksTFCF
                 fruitChests.add(register(r, "wood/fruit_tree/chest/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCBASIC, fruitTree), CT_DECORATIONS));
                 fruitChests.add(register(r, "wood/fruit_tree/chest_trap/" + name, new BlockFruitChestTFCF(BlockFruitChestTFCF.TFCTRAP, fruitTree), CT_DECORATIONS));
                 fruitLoom.add(register(r, "wood/fruit_tree/loom/" + name, new BlockFruitLoom(fruitTree), CT_WOOD));
-            }
+            }*/
         }
 
         for (IFruitTree fruitTree : FruitTree.values())

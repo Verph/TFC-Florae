@@ -22,7 +22,7 @@ import net.dries007.tfc.util.agriculture.FruitTree;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.te.TEFruitLoom;
 import tfcflorae.types.TreesTFCF;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static tfcflorae.TFCFlorae.MODID;
@@ -35,13 +35,13 @@ public class TESRFruitLoomTFCF extends TESRBase<TEFruitLoom>
 
     static
     {
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
+        /*for (SeasonalTrees fruitTree : SeasonalTrees.values())
         {
             String name = fruitTree.getName().toLowerCase();
             
             //noinspection ConstantConditions
             PLANKS_TEXTURES.put(fruitTree, new ResourceLocation(MODID, "textures/blocks/wood/planks/" + name + ".png"));
-        }
+        }*/
 
         for (IFruitTree fruitTree : FruitTree.values())
         {

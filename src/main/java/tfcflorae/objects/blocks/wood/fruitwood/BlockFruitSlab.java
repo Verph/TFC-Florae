@@ -24,7 +24,7 @@ import mcp.MethodsReturnNonnullByDefault;
 import net.dries007.tfc.api.types.IFruitTree;
 
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -34,7 +34,7 @@ public abstract class BlockFruitSlab extends BlockSlab
     public final Block modelBlock;
     protected Half halfSlab;
 
-    private BlockFruitSlab(FruitTreeTFCF tree)
+    private BlockFruitSlab(SeasonalTrees tree)
     {
         this(BlockFruitPlanks.getTFCF(tree));
         Block c = BlockFruitPlanks.getTFCF(tree);
@@ -164,10 +164,10 @@ public abstract class BlockFruitSlab extends BlockSlab
 
     public static class Double extends BlockFruitSlab
     {
-        private static final Map<FruitTreeTFCF, Double> TREE_MAP_TFCF = new HashMap<>();
+        private static final Map<SeasonalTrees, Double> TREE_MAP_TFCF = new HashMap<>();
         private static final Map<IFruitTree, Double> TREE_MAP_TFC = new HashMap<>();
 
-        public static Double getTFCF(FruitTreeTFCF tree)
+        public static Double getTFCF(SeasonalTrees tree)
         {
             return TREE_MAP_TFCF.get(tree);
         }
@@ -177,7 +177,7 @@ public abstract class BlockFruitSlab extends BlockSlab
             return TREE_MAP_TFC.get(tree);
         }
 
-        public Double(FruitTreeTFCF tree)
+        public Double(SeasonalTrees tree)
         {
             super(tree);
             if (TREE_MAP_TFCF.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
@@ -200,10 +200,10 @@ public abstract class BlockFruitSlab extends BlockSlab
 
     public static class Half extends BlockFruitSlab
     {
-        private static final Map<FruitTreeTFCF, Half> TREE_MAP_TFCF = new HashMap<>();
+        private static final Map<SeasonalTrees, Half> TREE_MAP_TFCF = new HashMap<>();
         private static final Map<IFruitTree, Half> TREE_MAP_TFC = new HashMap<>();
 
-        public static Half getTFCF(FruitTreeTFCF tree)
+        public static Half getTFCF(SeasonalTrees tree)
         {
             return TREE_MAP_TFCF.get(tree);
         }
@@ -215,7 +215,7 @@ public abstract class BlockFruitSlab extends BlockSlab
 
         public final Double doubleSlab;
 
-        public Half(FruitTreeTFCF tree)
+        public Half(SeasonalTrees tree)
         {
             super(tree);
             if (TREE_MAP_TFCF.put(tree, this) != null) throw new IllegalStateException("There can only be one.");

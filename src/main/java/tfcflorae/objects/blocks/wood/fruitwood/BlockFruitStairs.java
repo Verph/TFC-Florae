@@ -16,15 +16,15 @@ import net.minecraft.world.World;
 import net.dries007.tfc.api.types.IFruitTree;
 
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 @ParametersAreNonnullByDefault
 public class BlockFruitStairs extends BlockStairs
 {
-    private static final Map<FruitTreeTFCF, BlockFruitStairs> TREE_MAP_TFCF = new HashMap<>();
+    private static final Map<SeasonalTrees, BlockFruitStairs> TREE_MAP_TFCF = new HashMap<>();
     private static final Map<IFruitTree, BlockFruitStairs> TREE_MAP_TFC = new HashMap<>();
 
-    public static BlockFruitStairs get(FruitTreeTFCF tree)
+    public static BlockFruitStairs get(SeasonalTrees tree)
     {
         return TREE_MAP_TFCF.get(tree);
     }
@@ -34,7 +34,7 @@ public class BlockFruitStairs extends BlockStairs
         return TREE_MAP_TFC.get(tree);
     }
 
-    public BlockFruitStairs(FruitTreeTFCF tree)
+    public BlockFruitStairs(SeasonalTrees tree)
     {
         super(BlockFruitPlanks.getTFCF(tree).getDefaultState());
         if (TREE_MAP_TFCF.put(tree, this) != null) throw new IllegalStateException("There can only be one.");

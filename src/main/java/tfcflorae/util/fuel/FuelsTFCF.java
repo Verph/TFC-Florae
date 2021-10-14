@@ -10,7 +10,7 @@ import net.dries007.tfc.util.fuel.FuelManager;
 
 import tfcflorae.objects.blocks.wood.BlockLogTFCF;
 import tfcflorae.types.TreesTFCF;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 public class FuelsTFCF
 {
@@ -22,7 +22,7 @@ public class FuelsTFCF
             FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(log)), wood.getBurnTicks(), wood.getBurnTemp()));
         }
 
-        for (FruitTreeTFCF tree : FruitTreeTFCF.values())
+        for (SeasonalTrees tree : SeasonalTrees.values())
         {
             BlockLogTFCF log = BlockLogTFCF.get(tree);
             FuelManager.addFuel(new Fuel(IIngredient.of(new ItemStack(log)), tree.normalTree.getBurnTicks(), tree.normalTree.getBurnTemp()));

@@ -2200,7 +2200,7 @@ public final class ItemsTFCF
             simpleItems.add(register(r, "wood/boat/" + BlocksTFCF.bamboo[i], new ItemBoatTFCF(BlocksTFCF.bambooTrees[i]), CT_WOOD));
         }
 
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
+        /*for (SeasonalTrees fruitTree : SeasonalTrees.values())
         {
             if (!fruitTree.isNormalTree)
             {
@@ -2217,7 +2217,7 @@ public final class ItemsTFCF
 
                 simpleItems.add(register(r, "wood/fruit_tree/boat/" + name, new ItemBoatTFCF(fruitTree), CT_WOOD));
             }
-        }
+        }*/
 
         for (IFruitTree fruitTree : FruitTree.values())
         {

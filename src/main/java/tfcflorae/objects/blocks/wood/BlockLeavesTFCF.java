@@ -12,6 +12,7 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -45,32 +46,35 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
+
 import tfcflorae.TFCFlorae;
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 import static net.dries007.tfc.Constants.RNG;
 
 @ParametersAreNonnullByDefault
-
 public class BlockLeavesTFCF extends BlockLeaves
 {
     public static final PropertyEnum<EnumLeafState> LEAF_STATE = PropertyEnum.create("state", BlockLeavesTFCF.EnumLeafState.class);
     public static final PropertyBool HARVESTABLE = PropertyBool.create("harvestable");
-    private static final Map<FruitTreeTFCF, BlockLeavesTFCF> MAP = new HashMap<>();
+    private static final Map<SeasonalTrees, BlockLeavesTFCF> MAP = new HashMap<>();
 
-    public static BlockLeavesTFCF get(FruitTreeTFCF wood)
+    public static BlockLeavesTFCF get(SeasonalTrees wood)
     {
         return MAP.get(wood);
     }
 
     public final Tree wood;
-    public final FruitTreeTFCF fruitTree;
+    public final SeasonalTrees fruitTree;
+    //public final PropertyInteger growthStageProperty;
 
-    public BlockLeavesTFCF(Tree wood, FruitTreeTFCF tree)
+    public BlockLeavesTFCF(Tree wood, SeasonalTrees tree)
     {
         this.wood = wood;
         this.fruitTree = tree;
+        //this.growthStageProperty = PropertyInteger.create("stage", 0, fruitTree.getNumStages());
+        this.setTickRandomly(true);
         if (MAP.put(tree, this) != null) throw new IllegalStateException("There can only be one.");
         setDefaultState(blockState.getBaseState().withProperty(DECAYABLE, false).withProperty(LEAF_STATE, EnumLeafState.NORMAL).withProperty(HARVESTABLE, false)); // TFC leaves don't use CHECK_DECAY, so just don't use it
         leavesFancy = true; // Fast / Fancy graphics works correctly
@@ -79,6 +83,14 @@ public class BlockLeavesTFCF extends BlockLeaves
         Blocks.FIRE.setFireInfo(this, 30, 60);
         setTickRandomly(true);
     }
+
+    /*@SuppressWarnings("deprecation")
+    @Override
+    @Nonnull
+    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
+    {
+        return state.withProperty(growthStageProperty, fruitTree.getStageForMonth());
+    }*/
 
     @SuppressWarnings("deprecation")
     @Override
@@ -104,80 +116,55 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
     {
-        //if (!world.isRemote)
+        if (!world.isAreaLoaded(pos, 1)) return;
+        Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+        //int currentStage = state.getValue(growthStageProperty);
+        int expectedStage = fruitTree.getStageForMonth(currentMonth);
+
+        /*if (currentStage != expectedStage && random.nextDouble() < 0.5)
         {
-            Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
-            if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
+            world.setBlockState(pos, state.withProperty(growthStageProperty, expectedStage));
+        }*/
+        this.updateTick(world, pos, state, random);
+
+        switch (expectedStage)
+        {
+            case 0:
+                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
+                break;
+            case 1:
+                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
-            }
-            else if (state.getValue(HARVESTABLE) && fruitTree.isHarvestMonth(currentMonth))
-            {
-                TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
-                if (te != null)
+                break;
+            case 2:
+                if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
+                break;
+            case 3:
+                if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
                 {
-                    long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
-                    if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                    TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
+                    if (te != null)
                     {
-                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT));
-                        te.resetCounter();
+                        long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
+                        if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                        {
+                            world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT));
+                            te.resetCounter();
+                        }
                     }
                 }
-            }
-            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
-            }
-            else if (fruitTree.isAutumnMonth(currentMonth))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
-                {
+                break;
+            case 4:
+                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN)
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
-                }
-            }
-            else if (fruitTree.isWinterMonth(currentMonth))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
-                }
-            }
-            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
-            }
-            else if (fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
-                }
-            }
-            else if (!fruitTree.isHarvestMonth(currentMonth) && !fruitTree.isFlowerMonth(currentMonth) && !fruitTree.isAutumnMonth(currentMonth) && !fruitTree.isWinterMonth(currentMonth) && (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER))
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL && state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
-            }
-            else
-            {
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL || state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
-                {
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                }
-            }
-            doLeafDecay(world, pos, state);
+                break;
+            default:
+                world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                break;
         }
+        doLeafDecay(world, pos, state);
     }
 
     @Override
@@ -191,6 +178,7 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
+        //worldIn.setBlockState(pos, state.withProperty(growthStageProperty, fruitTree.getStageForMonth()));
         TETickCounter tile = Helpers.getTE(worldIn, pos, TETickCounter.class);
         if (tile != null)
         {
@@ -275,7 +263,7 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     protected int getSaplingDropChance(IBlockState state)
     {
-        return wood == Tree.SEQUOIA ? 0 : 25;
+        return 25;
     }
 
     @SuppressWarnings("deprecation")

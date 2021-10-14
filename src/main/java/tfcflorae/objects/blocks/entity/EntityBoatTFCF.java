@@ -29,7 +29,7 @@ import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemBoatTFCF;
 import tfcflorae.types.TreesTFCF;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -50,13 +50,13 @@ public class EntityBoatTFCF extends EntityBoat
     @Nullable
     public IFruitTree getWood()
     {
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
+        /*for (SeasonalTrees fruitTree : SeasonalTrees.values())
         {
             String name = fruitTree.getName().toLowerCase();
 
             if (this.dataManager.get(WOOD_NAME) == name)
                 return fruitTree;
-        }
+        }*/
 
         for (IFruitTree fruitTree : FruitTree.values())
         {

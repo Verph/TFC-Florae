@@ -11,14 +11,14 @@ import net.minecraft.init.Blocks;
 import net.dries007.tfc.api.types.IFruitTree;
 
 import tfcflorae.util.OreDictionaryHelper;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 public class BlockFruitPlanks extends Block
 {
-    private static final Map<FruitTreeTFCF, BlockFruitPlanks> MAP_TFCF = new HashMap<>();
+    private static final Map<SeasonalTrees, BlockFruitPlanks> MAP_TFCF = new HashMap<>();
     private static final Map<IFruitTree, BlockFruitPlanks> MAP_TFC = new HashMap<>();
 
-    public static BlockFruitPlanks getTFCF(FruitTreeTFCF tree)
+    public static BlockFruitPlanks getTFCF(SeasonalTrees tree)
     {
         return MAP_TFCF.get(tree);
     }
@@ -28,10 +28,10 @@ public class BlockFruitPlanks extends Block
         return MAP_TFC.get(tree);
     }
 
-    public final FruitTreeTFCF fruitTFCF;
+    public final SeasonalTrees fruitTFCF;
     public final IFruitTree fruitTFC;
 
-    public BlockFruitPlanks(FruitTreeTFCF tree)
+    public BlockFruitPlanks(SeasonalTrees tree)
     {
         super(Material.WOOD, Material.WOOD.getMaterialMapColor());
         if (MAP_TFCF.put(tree, this) != null) throw new IllegalStateException("There can only be one.");

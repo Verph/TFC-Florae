@@ -25,7 +25,7 @@ import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.wood.fruitwood.BlockFruitChestTFCF;
 import tfcflorae.objects.te.TEFruitChest;
 import tfcflorae.types.TreesTFCF;
-import tfcflorae.util.agriculture.FruitTreeTFCF;
+import tfcflorae.util.agriculture.SeasonalTrees;
 
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -44,7 +44,7 @@ public class TESRFruitChestTFCF extends TileEntitySpecialRenderer<TEFruitChest>
 
     static
     {
-        for (FruitTreeTFCF fruitTree : FruitTreeTFCF.values())
+        /*for (SeasonalTrees fruitTree : SeasonalTrees.values())
         {
             String name = fruitTree.getName().toLowerCase();
 
@@ -53,7 +53,7 @@ public class TESRFruitChestTFCF extends TileEntitySpecialRenderer<TEFruitChest>
             DOUBLE_TEXTURES.put(fruitTree, new ResourceLocation(MODID, "textures/entity/wood/fruit_tree/chests/chest_double/" + name + ".png"));
             TRAP_SINGLE_TEXTURES.put(fruitTree, new ResourceLocation(MODID, "textures/entity/wood/fruit_tree/chests/chest_trap/" + name + ".png"));
             TRAP_DOUBLE_TEXTURES.put(fruitTree, new ResourceLocation(MODID, "textures/entity/wood/fruit_tree/chests/chest_trap_double/" + name + ".png"));
-        }
+        }*/
 
         for (IFruitTree fruitTree : FruitTree.values())
         {
