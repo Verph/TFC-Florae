@@ -1,0 +1,56 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/pink"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/side/pink",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/side/pink",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/side/pink"
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/pink",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/brain/side/pink",
+        "y": 90
+      }
+    }
+  ]
+}

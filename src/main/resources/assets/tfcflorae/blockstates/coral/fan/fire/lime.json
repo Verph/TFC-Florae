@@ -1,0 +1,56 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/lime"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/side/lime",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/side/lime",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/side/lime"
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/lime",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/fire/side/lime",
+        "y": 90
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
 import tfcflorae.world.worldgen.*;
 import tfcflorae.world.worldgen.structures.WorldGenStructures;
+import tfcflorae.world.worldgen.structures.WorldGenStructuresCorals;
 
 @Mod.EventBusSubscriber
 public class CommonProxy 
@@ -24,9 +25,17 @@ public class CommonProxy
         if (ConfigTFCF.General.STRUCTURES.activateStructureGeneration)
         {
     	    GameRegistry.registerWorldGenerator(new WorldGenStructures(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {
+            GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);
+            GameRegistry.registerWorldGenerator(new WorldGeneratorPlants(), 0);
             if (ConfigTFCF.General.WORLD.enableTrees)
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);

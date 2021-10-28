@@ -29,6 +29,7 @@ import net.dries007.tfc.api.capability.food.*;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.*;
 import net.dries007.tfc.api.types.IAnimalTFC.Age;
+import net.dries007.tfc.api.types.Plant.PlantType;
 import net.dries007.tfc.objects.blocks.agriculture.BlockFruitTreeLeaves;
 import net.dries007.tfc.objects.blocks.agriculture.BlockFruitTreeTrunk;
 import net.dries007.tfc.objects.blocks.plants.BlockPlantTFC;
@@ -37,9 +38,11 @@ import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.container.CapabilityContainerListener;
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
+import net.dries007.tfc.objects.items.food.ItemFoodTFC;
 import net.dries007.tfc.types.DefaultPlants;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.agriculture.Crop;
+import net.dries007.tfc.util.agriculture.Food;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.skills.SmithingSkill;
@@ -57,6 +60,8 @@ import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
 
+import java.util.List;
+
 @SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = MODID)
 public final class CommonEventHandlerTFCF
@@ -70,12 +75,14 @@ public final class CommonEventHandlerTFCF
         Item item = stack.getItem();
         if (!stack.isEmpty());
     }
-    
+
     @SubscribeEvent
-    public static void onBlockHarvestDrops(BlockEvent.HarvestDropsEvent event)
+    public void onBlockHarvestDrops(BlockEvent.HarvestDropsEvent event)
     {
-        final EntityPlayer player = event.getHarvester();
-        final ItemStack held = player == null ? ItemStack.EMPTY : player.getHeldItemMainhand();
+        final World world = event.getWorld();
+        final BlockPos pos = event.getPos();
+        final EntityPlayer playerHarvest = event.getHarvester();
+        final ItemStack held = playerHarvest == null ? ItemStack.EMPTY : playerHarvest.getHeldItemMainhand();
         final IBlockState state = event.getState();
         final Block block = state.getBlock();
         final Month month = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
@@ -154,23 +161,15 @@ public final class CommonEventHandlerTFCF
         }
         if (TFCFlorae.FirmaLifeAdded)
         {
-            /*if (block == BlocksFL.MELON_FRUIT)
-            {
-                event.getDrops().clear();
-                event.getDrops().add(new ItemStack(ItemsFL.getFood(FoodFL.MELON), 2 + Constants.RNG.nextInt(5)));
-            }*/
             if (block instanceof BlockCassiaCinnamonLeaves || block instanceof BlockCeylonCinnamonLeaves || block instanceof BlockBambooLeaves)
             {
                 event.getDrops().add(new ItemStack(ItemsFL.FRUIT_LEAF, 2 + Constants.RNG.nextInt(4)));
             }
-            /*else if (block instanceof BlockFruitTreeTrunk)
+            if (block == BlocksFL.MELON_FRUIT && (held.getItem().getHarvestLevel(held, "knife", playerHarvest, state) != -1))
             {
-                IFruitTree tree = ((BlockFruitTreeTrunk) block).getTree();
-                String poleName = MODID + "wood/fruit_tree/pole" + tree.getName().toLowerCase();
-                Item pole = ItemMiscTFCF.getByNameOrId(poleName);
-                if (pole != null)
-                    event.getDrops().add(new ItemStack(pole));
-            }*/
+                event.getDrops().clear();
+                event.getDrops().add(new ItemStack(ItemsFL.getFood(FoodFL.MELON), 2 + Constants.RNG.nextInt(4)));
+            }
         }
     }
 

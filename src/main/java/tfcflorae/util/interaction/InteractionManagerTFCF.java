@@ -34,7 +34,7 @@ public final class InteractionManagerTFCF
     {
         // Pineapple Leather knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "leatherPineapple"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -47,7 +47,7 @@ public final class InteractionManagerTFCF
 
         // Burlap Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothBurlap"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -60,7 +60,7 @@ public final class InteractionManagerTFCF
 
         // Wool Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothWool"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -73,7 +73,7 @@ public final class InteractionManagerTFCF
 
         // Silk Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothSilk"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -86,7 +86,7 @@ public final class InteractionManagerTFCF
 
         // Sisal Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothSisal"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -99,7 +99,7 @@ public final class InteractionManagerTFCF
 
         // Cotton Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothCotton"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -112,7 +112,7 @@ public final class InteractionManagerTFCF
 
         // Linen Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothLinen"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -125,7 +125,7 @@ public final class InteractionManagerTFCF
 
         // Hemp Cloth knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "clothHemp"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -138,7 +138,7 @@ public final class InteractionManagerTFCF
 
         // Yucca Canvas knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "canvasYucca"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
             {
                 if (!worldIn.isRemote)
                 {

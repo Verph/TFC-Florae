@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
@@ -31,14 +32,15 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.blocks.stone.BlockFarmlandTFC;
 
 import tfcflorae.client.GuiHandler;
+import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @ParametersAreNonnullByDefault
-public class BlockSurfaceFlint extends Block
+public class BlockSurfaceFlint extends BlockBush
 {
     private static final AxisAlignedBB AABB = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.9, 0.4, 0.9);
 
@@ -193,6 +195,18 @@ public class BlockSurfaceFlint extends Block
     public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager)
     {
         return true;
+    }
+
+    @Override
+    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
+    {
+        IBlockState soil = worldIn.getBlockState(pos.down());
+
+        if (state.getBlock() == this)
+        {
+            return (BlocksTFC.isGround(soil) || BlocksTFCF.isGround(soil)) && !(BlocksTFC.isSaltWater(soil) || BlocksTFC.isFreshWater(soil));
+        }
+        return this.canSustainBush(soil);
     }
 
     @Nonnull

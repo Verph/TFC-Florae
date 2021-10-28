@@ -223,11 +223,11 @@ public final class PlantsTFCF
             new Plant(JAPANESE_PIERIS, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 1, 1, 2, 2, 2, 1, 1, 1, 0, 0}, false, false, 15f, 25f, -29f, 30f, 220f, 500f, 6, 15, 1, 0.5D, null),
             new Plant(KAIETEUR_FALLS, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 16f, 40f, 10f, 50f, 250f, 500f, 0, 15, 2, 0.8D, null),
             new Plant(LAVANDULA, Plant.PlantType.STANDARD, new int[] {5, 0, 0, 1, 2, 2, 3, 3, 3, 3, 4, 5}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 8, 15, 1, 0.8D, "lavender"),
-            new Plant(LEAF_LITTER, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -20f, 50f, -30f, 50f, 70f, 500f, 0, 14, 1, 0.9D, "leaves"),
+            new Plant(LEAF_LITTER, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -20f, 50f, -30f, 50f, 70f, 500f, 0, 14, 1, 0.9D, null),
             new Plant(LEYMUS, Plant.PlantType.DRY_TALL_PLANT, new int[] {0, 1, 1, 2, 2, 3, 3, 2, 2, 1, 1, 0}, false, false, 15f, 35f, -12f, 40f, 80f, 180f, 0, 15, 1, 0.7D, null),
             new Plant(LILAC, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 11f, 31f, -29f, 34f, 125f, 300f, 9, 15, 2, 0.9D, "lilac"),
             new Plant(LILY_OF_THE_VALLEY, Plant.PlantType.STANDARD, new int[] {5, 0, 0, 1, 2, 2, 3, 3, 3, 3, 4, 5}, false, false, 5f, 35f, -29f, 40f, 0f, 300f, 9, 15, 1, 0.8D, "lily_of_the_valley"),
-            new Plant(LOW_UNDERGROWTH, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, -1f, 50f, 250f, 500f, 0, 14, 1, 0.9D, "undergrowth_low"),
+            new Plant(LOW_UNDERGROWTH, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, -1f, 50f, 250f, 500f, 0, 14, 1, 0.9D, null),
             new Plant(MARRAM_GRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 50f, -10f, 50f, 70f, 120f, 0, 15, 1, 0.7D, null),
             new Plant(MATTEUCCIA, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 210f, 500f, 0, 15, 2, 0.5D, null),
             new Plant(OCOTILLO, Plant.PlantType.DRY_TALL_PLANT, new int[] {0, 0, 1, 1, 2, 2, 2, 1, 1, 0, 0, 0}, false, false, 15f, 50f, -10f, 50f, 70f, 90f, 9, 15, 2, 0.9D, "ocotillo"),
@@ -238,7 +238,7 @@ public final class PlantsTFCF
             new Plant(RESIN, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 10f, 45f, 5f, 50f, 50f, 500f, 0, 14, 1, 0.0D, "resin"),
             //new Plant(ROOTS, Plant.PlantType.HANGING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -50f, 50f, -50f, 50f, 0f, 500f, 0, 5, 2, 0.9D, null),
             new Plant(SEA_OATS, Plant.PlantType.DESERT_TALL_PLANT, new int[] {0, 1, 1, 2, 2, 3, 3, 2, 2, 1, 1, 0}, false, false, 3f, 25f, -15f, 32f, 100f, 300f, 0, 15, 2, 0.7D, null),
-            new Plant(SHRUB, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 0, 15, 1, 0.1D, "shrub"),
+            new Plant(SHRUB, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 0, 15, 1, 0.1D, null),
             new Plant(SUGAR_CANE, Plant.PlantType.TALL_REED, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, 10f, 40f, 300f, 500f, 0, 15, 3, 0.5D, "sugarcane"),
             new Plant(SUNFLOWER, Plant.PlantType.TALL_PLANT, new int[] {9, 0, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9}, false, false, 8f, 31f, -29f, 34f, 100f, 300f, 6, 15, 2, 0.9D, "sunflower"),
             new Plant(TACKWEED, Plant.PlantType.CREEPING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -2f, 25f, -10f, 40f, 250f, 500f, 0, 14, 1, 0.7D, "moss"),
@@ -306,10 +306,10 @@ public final class PlantsTFCF
             new Plant(ARROWHEAD, Plant.PlantType.FLOATING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -10f, 22f, -25f, 37f, 180f, 500f, 0, 15, 1, 1, 1, 0.6D, "arrowhead"),
             new Plant(ARUNDO, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 15f, 30f, 0f, 45f, 120f, 500f, 0, 15, 8, 0.5D, "arundo"),
             //new Plant(AZURE_BLUET, Plant.PlantType.STANDARD, new int[] {2, 2, 2, 0, 1, 1, 1, 2, 2, 2, 2, 2}, false, false, -12f, 10f, -27f, 25f, 150f, 500f, 0, 15, 1, 0.9D, "azure_bluet"),
-            new Plant(BLUEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0}, false, false, -4f, 12f, -19f, 27f, 110f, 280f, 0, 15, 1, 0.8D, "bluegrass"),
+            new Plant(BLUEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0}, false, false, -4f, 12f, -19f, 27f, 110f, 280f, 0, 15, 1, 0.8D, null),
             new Plant(BLUE_GINGER, Plant.PlantType.STANDARD, new int[] {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1}, false, false, 16f, 26f, 1f, 41f, 300f, 450f, 0, 15, 1, 0.8D, "ginger"),
             //new Plant(BROADLEAF_CATTAIL, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -16f, 22f, -31f, 37f, 150f, 500f, 0, 15, 1, 1, 64, 0.6D, "broadleaf_cattail"),
-            new Plant(BROMEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 4f, 20f, -11f, 35f, 140f, 360f, 0, 15, 1, 0.8D, "bromegrass"),
+            new Plant(BROMEGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, false, false, 4f, 20f, -11f, 35f, 140f, 360f, 0, 15, 1, 0.8D, null),
             //new Plant(BUR_MARIGOLD, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -8f, 18f, -23f, 33f, 50f, 390f, 0, 15, 1, 1, 64, 0.4D, "bur_marigold"),
             new Plant(BUR_REED, Plant.PlantType.FLOATING, new int[] {0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}, false, false, -16f, 4f, -31f, 19f, 250f, 400f, 0, 15, 1, 1, 1, 0.6D, "bur_reed"),
             //new Plant(CANNA_LILY, Plant.PlantType.STANDARD, new int[] {0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 0}, true, false, 10f, 40f, -5f, 50f, 270f, 500f, 0, 15, 1, 0.8D, "canna_lily"),
@@ -320,14 +320,14 @@ public final class PlantsTFCF
             new Plant(HIBISCUS, Plant.PlantType.TALL_PLANT, new int[] {2, 2, 2, 0, 0, 0, 0, 0, 0, 1, 2, 2}, false, false, 10f, 24f, -10f, 39f, 260f, 450f, 0, 15, 2, 0.9D, "hibiscus"),
             //new Plant(HUNGARIAN_LILAC, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0}, false, false, -10f, 6f, -25f, 21f, 150f, 300f, 0, 15, 2, 0.7D, "hungarian_lilac"),
             new Plant(KANGAROO_PAW, Plant.PlantType.STANDARD, new int[] {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1}, false, false, 14f, 40f, -1f, 50f, 100f, 300f, 0, 15, 1, 0.8D, "kangaroo_paw"),
-            new Plant(KING_FERN, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, -7f, 50f, 350f, 500f, 0, 15, 2, 0.4D, "king_fern"),
+            new Plant(KING_FERN, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, -7f, 50f, 350f, 500f, 0, 15, 2, 0.4D, null),
             new Plant(LIPSTICK_PALM, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 40f, 3f, 50f, 280f, 500f, 0, 15, 2, 0.4D, "lipstick_palm"),
             new Plant(MARIGOLD, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 0}, false, false, 4f, 22f, -11f, 37f, 130f, 300f, 0, 15, 2, 0.8D, "marigold"),
             new Plant(MONSTERA_EPIPHYTE, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 200f, 500f, 0, 15, 1, 0.9D, "monstera"),
-            new Plant(MONSTERA_GROUND, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 200f, 500f, 0, 15, 2, 0.9D, "monstera"),
+            new Plant(MONSTERA_GROUND, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 0f, 50f, 200f, 500f, 0, 15, 2, 0.9D, null),
             new Plant(PHRAGMITE, Plant.PlantType.FLOATING, new int[] {0, 0, 0, 1, 1, 1, 2, 2, 3, 1, 1, 0}, false, false, -6f, 18f, -21f, 33f, 50f, 250f, 0, 15, 1, 1, 1, 0.6D, "phragmite"),
             new Plant(PICKERELWEED, Plant.PlantType.FLOATING, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 0, 0}, false, false, -14f, 16f, -29f, 31f, 200f, 500f, 0, 15, 1, 1, 1, 0.6D, "pickerelweed"),
-            new Plant(RADDIA_GRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 31f, 3f, 48f, 75f, 295f, 0, 15, 1, 0.8D, "raddia_grass"),
+            new Plant(RADDIA_GRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 18f, 31f, 3f, 48f, 75f, 295f, 0, 15, 1, 0.8D, null),
             //new Plant(SCARLET_STAR_BROMELIAD, Plant.PlantType.EPIPHYTE, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 40f, 5f, 50f, 290f, 480f, 0, 15, 6, 0.9D, "scarlet_star_bromeliad"),
             new Plant(SILVER_SPURFLOWER, Plant.PlantType.STANDARD, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0}, false, false, 14f, 24f, -1f, 39f, 230f, 400f, 0, 15, 1, 0.8D, "silver_spurflower"),
             new Plant(WATER_TARO, Plant.PlantType.FLOATING, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 12f, 40f, -3f, 50f, 260f, 500f, 0, 15, 1, 1, 1, 0.6D, "water_taro")
@@ -351,23 +351,23 @@ public final class PlantsTFCF
         // Water Plants
         if (ConfigTFCF.General.WORLD.enableAllWaterPlants)
         {
-            event.getRegistry().register(new Plant(BADDERLOCKS, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -18f, 2f, -33f, 17f, 150f, 500f, 0, 15, 6, 1, 256, 0.8D, "seaweed"));
-            //event.getRegistry().register(new Plant(BROWN_ALGAE, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -24f, -2f, -39f, 13f, 100f, 500f, 0, 15, 1, 1, 256, 0.6D, "seaweed"));
-            event.getRegistry().register(new Plant(COONTAIL, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 2f, 18f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
-            event.getRegistry().register(new Plant(EEL_GRASS, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 6f, 40f, -9f, 50f, 200f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
-            event.getRegistry().register(new Plant(GIANT_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -18f, 18f, -33f, 33f, 0f, 500f, 0, 15, 26, 1, 256, 0.9D, "seaweed"));
-            event.getRegistry().register(new Plant(GUTWEED, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -6f, 18f, -21f, 33f, 100f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
-            event.getRegistry().register(new Plant(HORNWORT, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 2f, 18f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed"));
-            event.getRegistry().register(new Plant(LAMINARIA, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -16f, 4f, -31f, 19f, 250f, 400f, 0, 15, 1, 1, 256, 0.6D, "seaweed"));
-            event.getRegistry().register(new Plant(LEAFY_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -20f, 20f, -35f, 35f, 0f, 500f, 0, 15, 21, 1, 256, 0.9D, "seaweed"));
-            event.getRegistry().register(new Plant(MANATEE_GRASS, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 12f, 40f, -3f, 50f, 250f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
-            event.getRegistry().register(new Plant(MILFOIL, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -14f, 22f, -29f, 37f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed"));
-            event.getRegistry().register(new Plant(PONDWEED, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -18f, 18f, -33f, 33f, 200f, 500f, 0, 15, 5, 1, 256, 0.7D, "seaweed"));
-            event.getRegistry().register(new Plant(SAGO, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 11f, 20f, -34f, 38f, 0f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
-            event.getRegistry().register(new Plant(SEAWEED, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 17f, 30f, -21f, 40f, 0f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
-            event.getRegistry().register(new Plant(STAR_GRASS, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 2f, 40f, -13f, 50f, 50f, 260f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
-            event.getRegistry().register(new Plant(TURTLE_GRASS, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 14f, 40f, -1f, 50f, 240f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
-            event.getRegistry().register(new Plant(WINGED_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -15f, 15f, -30f, 30f, 0f, 450f, 0, 15, 21, 1, 256, 0.8D, "seaweed"));
+            event.getRegistry().register(new Plant(BADDERLOCKS, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -31f, 15f, -33f, 17f, 150f, 500f, 0, 15, 6, 1, 256, 0.8D, "seaweed"));
+            //event.getRegistry().register(new Plant(BROWN_ALGAE, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -37f, 11f, -39f, 13f, 100f, 500f, 0, 15, 1, 1, 256, 0.6D, "seaweed"));
+            event.getRegistry().register(new Plant(COONTAIL, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -11f, 31f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
+            event.getRegistry().register(new Plant(EEL_GRASS, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -7f, 48f, -9f, 50f, 200f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
+            event.getRegistry().register(new Plant(GIANT_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -31f, 31f, -33f, 33f, 0f, 500f, 0, 15, 26, 1, 256, 0.9D, "seaweed"));
+            event.getRegistry().register(new Plant(GUTWEED, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -19f, 31f, -21f, 33f, 100f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
+            event.getRegistry().register(new Plant(HORNWORT, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -11f, 31f, -13f, 33f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed"));
+            event.getRegistry().register(new Plant(LAMINARIA, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -29f, 17f, -31f, 19f, 250f, 400f, 0, 15, 1, 1, 256, 0.6D, "seaweed"));
+            event.getRegistry().register(new Plant(LEAFY_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -33f, 33f, -35f, 35f, 0f, 500f, 0, 15, 21, 1, 256, 0.9D, "seaweed"));
+            event.getRegistry().register(new Plant(MANATEE_GRASS, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -1f, 48f, -3f, 50f, 250f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
+            event.getRegistry().register(new Plant(MILFOIL, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -27f, 35f, -29f, 37f, 250f, 500f, 0, 15, 1, 1, 256, 0.7D, "seaweed"));
+            event.getRegistry().register(new Plant(PONDWEED, Plant.PlantType.TALL_WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -31f, 31f, -33f, 33f, 200f, 500f, 0, 15, 5, 1, 256, 0.7D, "seaweed"));
+            event.getRegistry().register(new Plant(SAGO, Plant.PlantType.WATER, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -32f, 36f, -34f, 38f, 0f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
+            event.getRegistry().register(new Plant(SEAWEED, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -19f, 38f, -21f, 40f, 0f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed"));
+            event.getRegistry().register(new Plant(STAR_GRASS, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -11f, 48f, -13f, 50f, 50f, 260f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
+            event.getRegistry().register(new Plant(TURTLE_GRASS, Plant.PlantType.WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 1f, 48f, -1f, 50f, 240f, 500f, 0, 15, 1, 1, 256, 0.9D, "seaweed")); //3, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2
+            event.getRegistry().register(new Plant(WINGED_KELP, Plant.PlantType.TALL_WATER_SEA, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -28f, 28f, -30f, 30f, 0f, 450f, 0, 15, 21, 1, 256, 0.8D, "seaweed"));
         }
     }
 }

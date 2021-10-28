@@ -1,0 +1,64 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/pondweed_upper_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/pondweed_upper_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/pondweed_lower_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/pondweed_lower_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/pondweed_lower_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/pondweed_lower_1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/pondweed_upper_0",
+          "weight": 1
+        },
+        {
+          "model": "tfc:plants/pondweed_upper_1",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

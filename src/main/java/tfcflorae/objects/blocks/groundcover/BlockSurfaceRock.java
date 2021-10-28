@@ -10,6 +10,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
@@ -39,15 +40,17 @@ import net.dries007.tfc.api.types.Rock;
 import net.dries007.tfc.api.types.RockCategory;
 import net.dries007.tfc.api.util.IRockObject;
 import net.dries007.tfc.client.TFCGuiHandler;
+import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.blocks.stone.BlockFarmlandTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.objects.items.rock.ItemRock;
+import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class BlockSurfaceRock extends Block implements IRockObject
+public class BlockSurfaceRock extends BlockBush implements IRockObject
 {
     private static final AxisAlignedBB AABB = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.9, 0.6, 0.9);
     private static final Map<Rock, BlockSurfaceRock> MAP = new HashMap<>();
@@ -252,6 +255,18 @@ public class BlockSurfaceRock extends Block implements IRockObject
     public RockCategory getRockCategory(ItemStack stack)
     {
         return rock.getRockCategory();
+    }
+
+    @Override
+    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
+    {
+        IBlockState soil = worldIn.getBlockState(pos.down());
+
+        if (state.getBlock() == this)
+        {
+            return (BlocksTFC.isGround(soil) || BlocksTFCF.isGround(soil)) && !(BlocksTFC.isSaltWater(soil) || BlocksTFC.isFreshWater(soil));
+        }
+        return this.canSustainBush(soil);
     }
 
     @Nonnull

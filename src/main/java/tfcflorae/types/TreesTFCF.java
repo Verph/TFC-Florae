@@ -199,7 +199,7 @@ public final class TreesTFCF
     public static final Tree POPLAR_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "poplar"), 140f, 400f, -7f, 14f, GEN_POPLAR).setGrowthTime(8).setDensity(0.25f, 1f).setBurnInfo(609f, 1000).build();
     public static final Tree RED_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "red_elm"), 60f, 290f, 2f, 20f, GEN_RED_ELM).setDecayDist(6).setGrowthTime(18).setBushes().setTannin().setDensity(0.4f, 2f).setBurnInfo(618f, 1750).build();
     public static final Tree WALNUT_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "walnut"), 180f, 300f, -10f, 16f, GEN_WALNUT).setGrowthTime(9).setBushes().setBurnInfo(758f, 1800).build();
-    public static final Tree WHITE_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_elm"), 60f, 290f, 2f, 20f, GEN_WHITE_ELM).setGrowthTime(8).setBushes().setBurnInfo(653f, 1750).build();
+    public static final Tree WHITE_ELM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "white_elm"), 60f, 290f, 2f, 20f, GEN_WHITE_ELM).setGrowthTime(8).setBushes().setTannin().setBurnInfo(653f, 1750).build();
     public static final Tree WHITEBEAM_TREE = new Tree.Builder(new ResourceLocation(TerraFirmaCraft.MOD_ID, "whitebeam"), 140f, 430f, -10f, 12f, GEN_WHITEBEAM).setGrowthTime(10).setBushes().setTannin().setBurnInfo(728f, 1750).build();
 
     @SubscribeEvent

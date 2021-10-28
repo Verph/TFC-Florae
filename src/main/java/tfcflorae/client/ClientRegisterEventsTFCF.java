@@ -12,12 +12,14 @@ import net.minecraft.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockLeaves;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
@@ -52,6 +54,7 @@ import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE.ItemType;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.groundcover.*;
+import tfcflorae.objects.blocks.plants.BlockWaterPlantTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockRawTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
 import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
@@ -65,6 +68,7 @@ import tfcflorae.objects.blocks.wood.fruitwood.*;
 import tfcflorae.objects.blocks.wood.BlockFenceGateLog;
 import tfcflorae.objects.blocks.wood.BlockLeavesTFCF;
 import tfcflorae.objects.blocks.wood.BlockLogTFCF;
+import tfcflorae.objects.items.ItemArmorTFCF;
 import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.ceramics.*;
@@ -92,6 +96,8 @@ import static tfcflorae.TFCFlorae.MODID;
 @Mod.EventBusSubscriber(value = {Side.CLIENT}, modid = TFCFlorae.MODID)
 public class ClientRegisterEventsTFCF 
 {
+    private final java.util.Map<net.minecraftforge.registries.IRegistryDelegate<Item>, IItemColor> itemColorMap = com.google.common.collect.Maps.newHashMap();
+
     public ClientRegisterEventsTFCF() {}
 
 	@SubscribeEvent
@@ -145,15 +151,13 @@ public class ClientRegisterEventsTFCF
             }
         }
 
+        for (ItemArmorTFCF item : ItemsTFCF.getAllArmorItems())
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
+
         // BLOCKS
 
         for (ItemBlock itemBlock : BlocksTFCF.getAllNormalItemBlocks())
             ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName().toString()));
-
-        /*
-        for (Block block : BlocksTFCF.getAllSurfaceOreBlocks())
-            ModelLoader.setCustomStateMapper(block, new StateMap.Builder().build());
-        */
 
         if (ConfigTFCF.General.WORLD.enableGroundcoverBones)
         {
@@ -742,6 +746,18 @@ public class ClientRegisterEventsTFCF
     {
         ItemColors itemColors = event.getItemColors();
 
+        /*itemColors.registerItemColorHandler(new IItemColor()
+        {
+            public int colorMultiplier(ItemStack stack, int tintIndex)
+            {
+                return tintIndex > 0 ? -1 : ((ItemArmorTFCF)stack.getItem()).getColor(stack);
+            }
+        }, ItemsTFCF.getAllArmorItems().toArray(new ItemArmorTFCF[0]));*/
+
+        itemColors.registerItemColorHandler((stack, tintIndex) ->
+            tintIndex > 0 ? -1 : ((ItemArmorTFCF)stack.getItem()).getColor(stack),
+            ItemsTFCF.getAllArmorItems().toArray(new ItemArmorTFCF[0]));
+
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
         {
             itemColors.registerItemColorHandler((stack, tintIndex) -> tintIndex == 1 ? EnumDyeColor.byDyeDamage(stack.getItemDamage()).getColorValue() : 0xFFFFFF,
@@ -917,6 +933,7 @@ public class ClientRegisterEventsTFCF
 
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CASSIA_CINNAMON_LEAVES);
         blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.CEYLON_CINNAMON_LEAVES);
+        blockColors.registerBlockColorHandler(foliageColor, BlocksTFCF.getAllWaterPlantBlocks().toArray(new BlockWaterPlantTFCF[0]));
 
         if (ConfigTFCF.General.WORLD.enableAllBlockTypes && ConfigTFCF.General.WORLD.enableAllFarmland)
         {

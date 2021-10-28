@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfcflorae:blocks/coral/bubble/silver"
+  }
+}

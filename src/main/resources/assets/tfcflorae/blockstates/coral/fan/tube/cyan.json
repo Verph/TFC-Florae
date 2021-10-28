@@ -1,0 +1,56 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/cyan"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/side/cyan",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/side/cyan",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/side/cyan"
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/cyan",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:coral/fan/tube/side/cyan",
+        "y": 90
+      }
+    }
+  ]
+}
