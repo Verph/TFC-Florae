@@ -26,11 +26,6 @@ public class CommonProxy
         {
     	    GameRegistry.registerWorldGenerator(new WorldGenStructures(), 0);
     	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {

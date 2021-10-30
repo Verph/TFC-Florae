@@ -100,7 +100,7 @@ public class BlockCoral extends BlockFluidTFC implements IItemSize, IPlantable
         this.setSoundType(SoundType.PLANT);
         this.setHardness(0.0F);
         this.setLightOpacity(0);
-        this.setLightLevel(1F);
+        //this.setLightLevel(1F);
         Blocks.FIRE.setFireInfo(this, 5, 20);
         this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, 0));
         this.canCreateSources = false;

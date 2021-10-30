@@ -26,7 +26,7 @@ public class WorldGenStructuresCorals implements IWorldGenerator
     {
         if (chunkGenerator instanceof ChunkGenTFC && world.provider.getDimension() == 0)
         {
-			int coralsInChunk = 3 + random.nextInt(8);
+			int coralsInChunk = 3 + random.nextInt(15);
 			for (int i = 0; i < coralsInChunk; i++)
 			{
 				final int x = (chunkX << 4) + random.nextInt(16) + 8;
@@ -41,7 +41,7 @@ public class WorldGenStructuresCorals implements IWorldGenerator
 				{
 					if (data.isInitialized() && (b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH))
 					{
-						if ((up.getBlock() instanceof BlockCoral || world.getBlockState(pos).getBlock() instanceof BlockCoral || BlocksTFC.isGround(down) || world.getBlockState(pos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock()) && (pos.getY() < WorldTypeTFC.SEALEVEL - 7 && pos.getY() > 120 && data.getFloraDiversity() >= 0.3f  && data.getFloraDensity() >= 0.4f && data.getAverageTemp() >= 10f && data.getRainfall() >= 100f && world.provider.getDimension() == 0))
+						if ((up.getBlock() instanceof BlockCoral || world.getBlockState(pos).getBlock() instanceof BlockCoral || BlocksTFC.isGround(down) || world.getBlockState(pos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock()) && (pos.getY() < WorldTypeTFC.SEALEVEL - 7 && pos.getY() > 119 && data.getFloraDiversity() >= 0.3f  && data.getFloraDensity() >= 0.4f && data.getAverageTemp() >= 10f && data.getRainfall() >= 100f))
 						{
 							int chance = random.nextInt(5);
 
