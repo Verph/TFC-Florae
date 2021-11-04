@@ -228,7 +228,7 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case EPIPHYTE:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f)
+                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE))
                         {
                             for (float i = rng.nextInt(Math.round(epiphyteCount / floraDiversity)); i < (5 + floraDensity + floraDiversity) * 3; i++)
                             {
