@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/magma_shroom/magma_shroom_0"
+  }
+}

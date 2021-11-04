@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "tfc:blocks/plants/red_sea_whip/red_sea_whip"
+    }
+}

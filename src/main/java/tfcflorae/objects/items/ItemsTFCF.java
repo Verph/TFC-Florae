@@ -2245,7 +2245,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "crop/product/dirty_hemp_net", new ItemMiscTFCF(Size.VERY_SMALL,Weight.VERY_LIGHT, "net", "net_hemp_dirty"), CT_MISC));
 
         // Armors
-        armorItems.add(register(r, "armor/helmet/pineapple_leather", new ItemArmorTFCF(ArmorMaterialsTFCF.PINEAPPLE_LEATHER, 0, EntityEquipmentSlot.HEAD), CT_MISC));
+        /*armorItems.add(register(r, "armor/helmet/pineapple_leather", new ItemArmorTFCF(ArmorMaterialsTFCF.PINEAPPLE_LEATHER, 0, EntityEquipmentSlot.HEAD), CT_MISC));
         armorItems.add(register(r, "armor/chestplate/pineapple_leather", new ItemArmorTFCF(ArmorMaterialsTFCF.PINEAPPLE_LEATHER, 1, EntityEquipmentSlot.CHEST), CT_MISC));
         armorItems.add(register(r, "armor/leggings/pineapple_leather", new ItemArmorTFCF(ArmorMaterialsTFCF.PINEAPPLE_LEATHER, 2, EntityEquipmentSlot.LEGS), CT_MISC));
         armorItems.add(register(r, "armor/boots/pineapple_leather", new ItemArmorTFCF(ArmorMaterialsTFCF.PINEAPPLE_LEATHER, 3, EntityEquipmentSlot.FEET), CT_MISC));
@@ -2288,7 +2288,7 @@ public final class ItemsTFCF
         armorItems.add(register(r, "armor/helmet/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 0, EntityEquipmentSlot.HEAD), CT_MISC));
         armorItems.add(register(r, "armor/chestplate/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 1, EntityEquipmentSlot.CHEST), CT_MISC));
         armorItems.add(register(r, "armor/leggings/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 2, EntityEquipmentSlot.LEGS), CT_MISC));
-        armorItems.add(register(r, "armor/boots/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 3, EntityEquipmentSlot.FEET), CT_MISC));
+        armorItems.add(register(r, "armor/boots/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 3, EntityEquipmentSlot.FEET), CT_MISC));*/
 
         // Cassia cinnamon
         ItemMisc cassiaPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);

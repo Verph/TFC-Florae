@@ -63,7 +63,7 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
     {
         return new ItemStack(MAP.get(food), amount);
     }
-    
+
 	@Override
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {

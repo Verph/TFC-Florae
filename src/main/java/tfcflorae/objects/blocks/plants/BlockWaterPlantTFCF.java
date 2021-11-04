@@ -81,7 +81,7 @@ public class BlockWaterPlantTFCF extends BlockFluidTFC implements IItemSize, IPl
      * 2 = noon-dusk
      * 3 = dusk-midnight
      */
-    public final static PropertyInteger DAYPERIOD = PropertyInteger.create("dayperiod", 0, 3);
+    public static final PropertyInteger DAYPERIOD = PropertyInteger.create("dayperiod", 0, 3);
     private static final AxisAlignedBB PLANT_AABB = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.875D, 1.0D, 0.875D);
     private static final Map<Plant, BlockWaterPlantTFCF> MAP = new HashMap<>();
 
@@ -349,7 +349,7 @@ public class BlockWaterPlantTFCF extends BlockFluidTFC implements IItemSize, IPl
     @Nonnull
     public Block.EnumOffsetType getOffsetType()
     {
-        return Block.EnumOffsetType.XYZ;
+        return Block.EnumOffsetType.XZ;
     }
 
     public Plant getPlant()
@@ -468,20 +468,27 @@ public class BlockWaterPlantTFCF extends BlockFluidTFC implements IItemSize, IPl
         return CalendarTFC.CALENDAR_TIME.getHourOfDay() / (ICalendar.HOURS_IN_DAY / 4);
     }
 
-    @SuppressWarnings("deprecation")
-    @Nonnull
-    @Override
-    @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos)
-    {
-        return state.getBoundingBox(worldIn, pos).offset(pos);
-    }
-
     @Nonnull
 	@Override
 	@SideOnly(Side.CLIENT)
 	public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer)
     {
 		return layer == BlockRenderLayer.TRANSLUCENT || layer == BlockRenderLayer.CUTOUT;
+	}
+
+    @SuppressWarnings("deprecation")
+    @Override
+    @SideOnly(Side.CLIENT)
+	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos)
+    {
+		if (state.getBlock() instanceof BlockWaterPlantTFCF)
+			return state.getBoundingBox(worldIn, pos).offset(pos);
+		return null;
+	}
+
+	@Override
+	public boolean canCollideCheck(IBlockState state, boolean fullHit)
+    {
+		return state.getBlock() instanceof BlockWaterPlantTFCF && super.canCollideCheck(state, fullHit);
 	}
 }

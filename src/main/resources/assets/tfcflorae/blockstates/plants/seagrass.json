@@ -1,0 +1,56 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/seagrass_single"
+        },
+        {
+          "model": "tfc:plants/seagrass_single",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/seagrass_single",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/seagrass_single",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/seagrass_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/seagrass_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/seagrass_upper"
+        }
+      ]
+    }
+  ]
+}

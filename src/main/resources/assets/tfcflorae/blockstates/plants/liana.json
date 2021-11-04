@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/liana_cross_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/liana_cross_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/liana_cross_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/liana_cross_1"
+        }
+      ]
+    }
+  ]
+}

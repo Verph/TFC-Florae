@@ -1,0 +1,60 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glowshroom_0"
+        },
+        {
+          "model": "tfc:plants/glowshroom_1"
+        },
+        {
+          "model": "tfc:plants/glowshroom_2"
+        },
+        {
+          "model": "tfc:plants/glowshroom_3"
+        },
+        {
+          "model": "tfc:plants/glowshroom_4"
+        },
+        {
+          "model": "tfc:plants/glowshroom_5"
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glowshroom_0",
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/glowshroom_1",
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/glowshroom_2",
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/glowshroom_3",
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/glowshroom_4",
+          "x": 180
+        },
+        {
+          "model": "tfc:plants/glowshroom_5",
+          "x": 180
+        }
+      ]
+    }
+  ]
+}

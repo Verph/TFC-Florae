@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "tfc:blocks/plants/sea_anemone/sea_anemone"
+    }
+}

@@ -12,10 +12,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Plant;
+import net.dries007.tfc.objects.blocks.plants.*;
 import net.dries007.tfc.util.climate.ClimateTFC;
+import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.blocks.plants.*;
+import tfcflorae.types.PlantsTFCF;
 
 @ParametersAreNonnullByDefault
 public class WorldGenPlants extends WorldGenerator
@@ -31,6 +35,38 @@ public class WorldGenPlants extends WorldGenerator
     {
         switch (plant.getPlantType())
         {
+            case HANGING:
+            {
+                if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOW_VINE) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.HANGING_VINE) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA))
+                {
+                    BlockHangingPlantTFCF plantBlock = BlockHangingPlantTFCF.get(plant);
+                    IBlockState state = plantBlock.getDefaultState();
+
+                    for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 4; ++i)
+                    {
+                        BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(16), rand.nextInt(7) - rand.nextInt(7));
+
+                        int j = 1 + rand.nextInt(plant.getMaxHeight());
+
+                        for (int k = 0; k < j; ++k)
+                        {
+                            if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                                plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos.down(k))) &&
+                                worldIn.isAirBlock(blockpos.down(k)) &&
+                                plantBlock.canBlockStay(worldIn, blockpos.down(k), state))
+                            {
+                                int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                                setBlockAndNotifyAdequately(worldIn, blockpos.down(k), state.withProperty(BlockHangingPlantTFCF.AGE, plantAge));
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
             case WATER:
             case WATER_SEA:
             {
@@ -79,8 +115,114 @@ public class WorldGenPlants extends WorldGenerator
                 }
                 break;
             }
+            case SHORT_GRASS:
+            {
+                BlockShortGrassTFC plantBlock = BlockShortGrassTFC.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 4; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(7) - rand.nextInt(7));
+
+                    if (plant.isValidGrowthTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                        plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                        worldIn.isAirBlock(blockpos) &&
+                        plantBlock.canBlockStay(worldIn, blockpos, state))
+                    {
+                        int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                        setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockShortGrassTFC.AGE, plantAge));
+                    }
+                }
+                break;
+            }
+            case TALL_GRASS:
+            {
+                BlockTallGrassTFC plantBlock = BlockTallGrassTFC.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 16; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(7) - rand.nextInt(7));
+
+                    int j = 1 + rand.nextInt(plant.getMaxHeight());
+
+                    for (int k = 0; k < j; ++k)
+                    {
+                        if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                            plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos.up(k))) &&
+                            worldIn.isAirBlock(blockpos.up(k)) &&
+                            plantBlock.canBlockStay(worldIn, blockpos.up(k), state))
+                        {
+                            int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                            setBlockAndNotifyAdequately(worldIn, blockpos.up(k), state.withProperty(BlockShortGrassTFC.AGE, plantAge));
+                        }
+                    }
+                }
+                break;
+            }
+            case TALL_PLANT:
+            {
+                BlockTallPlantTFC plantBlock = BlockTallPlantTFC.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 16; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(7) - rand.nextInt(7));
+
+                    int j = 1 + rand.nextInt(plant.getMaxHeight());
+
+                    for (int k = 0; k < j; ++k)
+                    {
+                        if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                            plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos.up(k))) &&
+                            worldIn.isAirBlock(blockpos.up(k)) &&
+                            plantBlock.canBlockStay(worldIn, blockpos.up(k), state))
+                        {
+                            int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                            setBlockAndNotifyAdequately(worldIn, blockpos.up(k), state.withProperty(BlockTallPlantTFC.AGE, plantAge));
+                        }
+                    }
+                }
+                break;
+            }
+            case EPIPHYTE:
+            {
+                BlockEpiphyteTFC plantBlock = BlockEpiphyteTFC.get(plant);
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 4; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(16), rand.nextInt(7) - rand.nextInt(7));
+
+                    if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                        plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                        worldIn.getBlockState(blockpos).getBlock().isReplaceable(worldIn, blockpos) &&
+                        plantBlock.canPlaceBlockAt(worldIn, blockpos))
+                    {
+                        int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                        setBlockAndNotifyAdequately(worldIn, blockpos, plantBlock.getStateForWorldGen(worldIn, blockpos).withProperty(BlockEpiphyteTFC.AGE, plantAge));
+                    }
+                }
+                break;
+            }
             default:
-                return false;
+            {
+                BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);
+                IBlockState state = plantBlock.getDefaultState();
+
+                for (int i = 0; i < ChunkDataTFC.getRainfall(worldIn, position) / 16; ++i)
+                {
+                    BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(7) - rand.nextInt(7));
+
+                    if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
+                        plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
+                        worldIn.isAirBlock(blockpos) &&
+                        plantBlock.canBlockStay(worldIn, blockpos, state))
+                    {
+                        int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
+                        setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockPlantTFC.AGE, plantAge));
+                    }
+                }
+            }
         }
         return true;
     }

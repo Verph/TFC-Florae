@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfc:plants/sea_anemone"
+        },
+        {
+          "model": "tfc:plants/sea_anemone",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/sea_anemone",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/sea_anemone",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tfc:blocks/plants/sulphur_shroom/sulphur_shroom_0"
+  }
+}

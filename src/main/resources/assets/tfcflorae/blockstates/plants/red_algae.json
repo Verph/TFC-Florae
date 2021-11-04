@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfc:plants/red_algae"
+        },
+        {
+          "model": "tfc:plants/red_algae",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/red_algae",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/red_algae",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

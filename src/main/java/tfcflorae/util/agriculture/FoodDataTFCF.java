@@ -142,6 +142,11 @@ public class FoodDataTFCF
     public static final FoodData RAW_WEEPING_MILK_CAP = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
     public static final FoodData RAW_WOOD_BLEWIT = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
     public static final FoodData RAW_WOOLLY_GOMPHUS = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_BLUESHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_GLOWSHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_MAGMA_SHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_POISON_SHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
+    public static final FoodData RAW_SULPHUR_SHROOM = new FoodData(2, 0.0f, 0.3f, 0.2f, 0.0f, 0.0f, 0.5F, 0.0f, 2.2F);
 
     // Roasted Epiphytes
     public static final FoodData ROASTED_ARTISTS_CONK = new FoodData(4, 0.0f, 0.5f, 0.3f, 0.0f, 0.5f, 1f, 0.0f, 1.1F);

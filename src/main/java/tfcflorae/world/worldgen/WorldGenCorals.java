@@ -66,7 +66,7 @@ public class WorldGenCorals implements IWorldGenerator
 
             if ((b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH) && world.provider.getDimension() == 0)
             {
-                if (isValidPosition(world, pos) && pos.getY() < WorldTypeTFC.SEALEVEL - 1 && pos.getY() > 119 && floraDensity >= 0.4f && floraDiversity >= 0.3f && avgTemperature >= 10f && rainfall >= 100f)
+                if (isValidPosition(world, pos) && pos.getY() < WorldTypeTFC.SEALEVEL - 1 && pos.getY() > 119 && floraDensity >= 0.4f && floraDiversity >= 0.3f && floraDensity <= 0.6f && floraDiversity <= 0.5f && avgTemperature >= 10f && avgTemperature <= 28f && rainfall >= 150f)
                 {
                     int dyeColorRandom = random.nextInt(16);
                     if (dyeColorRandom == 0)
@@ -784,7 +784,7 @@ public class WorldGenCorals implements IWorldGenerator
 
             if ((b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH) && world.provider.getDimension() == 0)
             {
-                if (isValidPosition2(world, pos) && pos.getY() < WorldTypeTFC.SEALEVEL - 1 && pos.getY() > 119 && floraDensity >= 0.4f && floraDiversity >= 0.3f && avgTemperature >= 10f && rainfall >= 100f)
+                if (isValidPosition2(world, pos) && pos.getY() < WorldTypeTFC.SEALEVEL - 1 && pos.getY() > 119 && floraDensity >= 0.4f && floraDiversity >= 0.3f && avgTemperature >= 10f && rainfall >= 150f)
                 {
                     int dyeColorRandom = random.nextInt(16);
                     if (dyeColorRandom == 0)

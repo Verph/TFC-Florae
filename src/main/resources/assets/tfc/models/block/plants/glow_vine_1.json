@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/plants/glow_vine_0",
+  "textures": {
+    "particle": "tfc:blocks/plants/glow_vine/glow_vine_1",
+    "layer0": "tfc:blocks/plants/glow_vine/glow_vine_1",
+	"overlay": "tfc:blocks/plants/glow_vine/glow_vine_1b"
+  }
+}

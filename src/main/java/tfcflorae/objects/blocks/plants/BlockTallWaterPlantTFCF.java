@@ -114,7 +114,7 @@ public class BlockTallWaterPlantTFCF extends BlockWaterPlantTFCF implements IGro
     @Nonnull
     public Block.EnumOffsetType getOffsetType()
     {
-        return EnumOffsetType.XYZ;
+        return EnumOffsetType.XZ;
     }
 
     @Override
