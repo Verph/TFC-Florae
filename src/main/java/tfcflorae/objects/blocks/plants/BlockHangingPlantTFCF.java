@@ -52,6 +52,7 @@ import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
+
 import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantDummy1;
 import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantTFCF;
 import tfcflorae.util.OreDictionaryHelper;
@@ -74,6 +75,8 @@ public class BlockHangingPlantTFCF extends BlockPlantDummy1 implements IGrowable
     {
         super(plant);
         if (MAP.put(plant, this) != null) throw new IllegalStateException("There can only be one.");
+
+        plant.getOreDictName().ifPresent(name -> OreDictionaryHelper.register(this, name));
     }
 
     @Override
@@ -223,7 +226,7 @@ public class BlockHangingPlantTFCF extends BlockPlantDummy1 implements IGrowable
                 float u = Math.max(Math.abs(px), Math.abs(pz));
                 px = px / u * dripRange + 0.5F;
                 pz = pz / u * dripRange + 0.5F;
-                worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, pos.getX() + px, pos.getY() + py, pos.getZ() + pz, 0, -1, 0);
+                worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, pos.getX() + px - 0.5, pos.getY() + py, pos.getZ() + pz - 0.5, 0, -1, 0);
             }
         }
 	}

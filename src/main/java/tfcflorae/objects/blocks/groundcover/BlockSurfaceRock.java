@@ -73,7 +73,7 @@ public class BlockSurfaceRock extends BlockBush implements IRockObject
         this.rock = rock;
         if (MAP.put(rock, this) != null) throw new IllegalStateException("There can only be one.");
         setSoundType(SoundType.STONE);
-        setHardness(0.5f).setResistance(5.0F);;
+        setHardness(0.5f).setResistance(5.0F);
         OreDictionaryHelper.register(this, "rock");
         OreDictionaryHelper.register(this, "rock", rock);
         OreDictionaryHelper.register(this, "rock", rock.getRockCategory());
@@ -264,7 +264,7 @@ public class BlockSurfaceRock extends BlockBush implements IRockObject
 
         if (state.getBlock() == this)
         {
-            return (BlocksTFC.isGround(soil) || BlocksTFCF.isGround(soil)) && !(BlocksTFC.isSaltWater(soil) || BlocksTFC.isFreshWater(soil));
+            return (BlocksTFC.isGround(soil) || BlocksTFCF.isGround(soil) || worldIn.getBlockState(pos.down()).isFullBlock()) && !(BlocksTFC.isSaltWater(soil) || BlocksTFC.isFreshWater(soil));
         }
         return this.canSustainBush(soil);
     }

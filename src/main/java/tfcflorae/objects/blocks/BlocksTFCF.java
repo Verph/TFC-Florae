@@ -272,6 +272,9 @@ public final class BlocksTFCF
     @GameRegistry.ObjectHolder("plants/sulphur_shroom")
     public static final BlockCaveMushroom SULPHUR_SHROOM = getNull();
 
+    @GameRegistry.ObjectHolder("groundcover/lightstone")
+    public static final BlockLightstone LIGHTSTONE = getNull();
+
     //MultiBlocks
     /*@GameRegistry.ObjectHolder("multiblock/campfire")
     public static final BlockCampfire Campfire = Helpers.getNull();
@@ -331,6 +334,8 @@ public final class BlocksTFCF
     private static ImmutableList<BlockHangingCreepingPlantTFCF> allHangingCreepingPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockCreepingPlantTFCF> allCreepingPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockCaveMushroom> allMushroomPlantBlocks = Helpers.getNull();
+    private static ImmutableList<BlockPebbleWater> allPebbleWater = Helpers.getNull();
+    private static ImmutableList<BlockLightstone> allLightstoneBlock = Helpers.getNull();
     //private static ImmutableList<MultiBlockBase> allMultiBlocks = Helpers.getNull();
 
     public static String[] bamboo = {"arrow_bamboo", "black_bamboo", "blue_bamboo", "dragon_bamboo", "golden_bamboo", "narrow_leaf_bamboo", "red_bamboo", "temple_bamboo", "thorny_bamboo", "timber_bamboo", "tinwa_bamboo", "weavers_bamboo"};
@@ -601,6 +606,16 @@ public final class BlocksTFCF
         return allMushroomPlantBlocks;
     }
 
+    public static ImmutableList<BlockPebbleWater> getAllPebbleWater()
+    {
+        return allPebbleWater;
+    }
+
+    public static ImmutableList<BlockLightstone> getAllLightstoneBlock()
+    {
+        return allLightstoneBlock;
+    }
+
     /*public static ImmutableList<MultiBlockBase> getAllMultiBlocks()
     {
         return allMultiBlocks;
@@ -662,6 +677,8 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockStairsTFC> blockStairTFC = new Builder<>();
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
+        ImmutableList.Builder<BlockPebbleWater> pebbleWater = ImmutableList.builder();
+        ImmutableList.Builder<BlockLightstone> blockLightstone = ImmutableList.builder();
         //ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_bale", new BlockBale(), CT_DECORATIONS)));
@@ -900,6 +917,24 @@ public final class BlocksTFCF
         allBerryBushBlocks.forEach(x -> normalItemBlocks.add(new ItemBlockTFC(x)));
         allCropBlocks = cropBlocks.build();
         allDeadCrops = deadCrops.build();
+
+        /*for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+        {
+            pebbleWater.add(register(r, "pebble/" + rock.getRegistryName().getPath().toLowerCase(), new BlockPebbleWater(FluidsTFC.SALT_WATER.get(), rock), CT_DECORATIONS));
+        }
+        allPebbleWater = pebbleWater.build();
+        allPebbleWater.forEach((x) -> {
+            normalItemBlocks.add(new ItemBlockTFC(x));
+        });*/
+
+        {
+            blockLightstone.add(register(r, "groundcover/lightstone", new BlockLightstone(0.8f), CT_DECORATIONS));
+        }
+        allLightstoneBlock = blockLightstone.build();
+        for (BlockLightstone lightstone : allLightstoneBlock)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(lightstone));
+        }
 
         for (RockTFCF rockTFCF : RockTFCF.values())
         {

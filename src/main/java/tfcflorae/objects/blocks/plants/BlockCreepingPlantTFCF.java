@@ -34,6 +34,7 @@ import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantDummy2;
 import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 
 @ParametersAreNonnullByDefault
 public class BlockCreepingPlantTFCF extends BlockPlantDummy2
@@ -64,6 +65,8 @@ public class BlockCreepingPlantTFCF extends BlockPlantDummy2
     {
         super(plant);
         if (MAP.put(plant, this) != null) throw new IllegalStateException("There can only be one.");
+
+        plant.getOreDictName().ifPresent(name -> OreDictionaryHelper.register(this, name));
     }
 
     @Override

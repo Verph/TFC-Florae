@@ -192,9 +192,10 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case SHORT_GRASS:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f)
+                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && 
+                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE))
                         {
-                            for (int i = rng.nextInt(Math.round(grassCount / floraDiversity)); i < (5 + floraDensity) * 15; i++)
+                            for (int i = rng.nextInt(Math.round(grassCount / floraDiversity)); i < (5 + floraDensity) * 10; i++)
                             {
                                 BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
                                 plantGen.generate(world, rng, blockPos);
@@ -204,9 +205,11 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case TALL_GRASS:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f)
+                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && (
+                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY) || 
+                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)))
                         {
-                            for (int i = rng.nextInt(Math.round((tallGrassCount + 8) / floraDiversity)); i < (1 + floraDensity) * 8; i++)
+                            for (int i = rng.nextInt(Math.round((tallGrassCount + 8) / floraDiversity)); i < (3 + floraDensity) * 10; i++)
                             {
                                 BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
                                 plantGen.generate(world, rng, blockPos);
@@ -228,7 +231,8 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case EPIPHYTE:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE))
+                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && 
+                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE))
                         {
                             for (float i = rng.nextInt(Math.round(epiphyteCount / floraDiversity)); i < (5 + floraDensity + floraDiversity) * 3; i++)
                             {

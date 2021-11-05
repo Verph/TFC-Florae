@@ -161,6 +161,9 @@ public class ClientRegisterEventsTFCF
         for (ItemBlock itemBlock : BlocksTFCF.getAllNormalItemBlocks())
             ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName().toString()));
 
+        /*for (Block block : BlocksTFCF.getAllPebbleWater())
+            ModelLoader.setCustomStateMapper(block, new StateMap.Builder().ignore(BlockPebbleWater.LEVEL).build());*/
+
         if (ConfigTFCF.General.WORLD.enableGroundcoverBones)
         {
             for (Block block : BlocksTFCF.getAllSurfaceBones())

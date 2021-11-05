@@ -44,6 +44,7 @@ public class WorldGenCaveMoss extends WorldGenerator
                 plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
                 worldIn.isAirBlock(blockpos) &&
                 pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
                 plantBlock.canBlockStay(worldIn, blockpos, state))
             {
                 int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(worldIn, blockpos));

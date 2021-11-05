@@ -63,6 +63,8 @@ public class BlockHangingCreepingPlantTFCF extends BlockCreepingPlantTFCF implem
     {
         super(plant);
         if (MAP.put(plant, this) != null) throw new IllegalStateException("There can only be one.");
+
+        plant.getOreDictName().ifPresent(name -> OreDictionaryHelper.register(this, name));
     }
 
     @Override

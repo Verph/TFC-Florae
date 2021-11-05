@@ -48,6 +48,7 @@ import net.minecraftforge.common.property.IUnlistedProperty;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.size.IItemSize;
@@ -66,6 +67,7 @@ import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.blocks.groundcover.*;
+import tfcflorae.util.OreDictionaryHelper;
 
 import static net.dries007.tfc.world.classic.ChunkGenTFC.SALT_WATER;
 import static net.dries007.tfc.world.classic.ChunkGenTFC.FRESH_WATER;
@@ -116,6 +118,8 @@ public class BlockWaterPlantTFCF extends BlockFluidTFC implements IItemSize, IPl
         this.canCreateSources = false;
         this.setLightOpacity(3);
         this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, 0));
+
+        plant.getOreDictName().ifPresent(name -> OreDictionaryHelper.register(this, name));
     }
 
     @SuppressWarnings("deprecation")

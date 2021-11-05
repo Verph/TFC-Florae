@@ -6,6 +6,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -33,6 +34,8 @@ public class WorldGenCaveMushrooms extends WorldGenerator
 
                 if (worldIn.isAirBlock(blockpos) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                    worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
+                    !worldIn.canSeeSky(blockpos) &&
                     mushroomBlock.canBlockStay(worldIn, blockpos, state))
                 {
                     setBlockAndNotifyAdequately(worldIn, blockpos, state);
@@ -50,6 +53,8 @@ public class WorldGenCaveMushrooms extends WorldGenerator
 
                 if (worldIn.isAirBlock(blockpos) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                    worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
+                    !worldIn.canSeeSky(blockpos) &&
                     mushroomBlock.canBlockStay(worldIn, blockpos, state))
                 {
                     setBlockAndNotifyAdequately(worldIn, blockpos, state);
@@ -67,6 +72,8 @@ public class WorldGenCaveMushrooms extends WorldGenerator
 
                 if (worldIn.isAirBlock(blockpos) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                    worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
+                    !worldIn.canSeeSky(blockpos) &&
                     mushroomBlock.canBlockStay(worldIn, blockpos, state))
                 {
                     setBlockAndNotifyAdequately(worldIn, blockpos, state);
@@ -84,6 +91,8 @@ public class WorldGenCaveMushrooms extends WorldGenerator
 
                 if (worldIn.isAirBlock(blockpos) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                    worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
+                    !worldIn.canSeeSky(blockpos) &&
                     mushroomBlock.canBlockStay(worldIn, blockpos, state))
                 {
                     setBlockAndNotifyAdequately(worldIn, blockpos, state);
@@ -101,6 +110,8 @@ public class WorldGenCaveMushrooms extends WorldGenerator
 
                 if (worldIn.isAirBlock(blockpos) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
+                    worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
+                    !worldIn.canSeeSky(blockpos) &&
                     mushroomBlock.canBlockStay(worldIn, blockpos, state))
                 {
                     setBlockAndNotifyAdequately(worldIn, blockpos, state);

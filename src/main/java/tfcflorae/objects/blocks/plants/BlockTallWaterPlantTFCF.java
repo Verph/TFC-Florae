@@ -23,12 +23,15 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.property.IUnlistedProperty;
 import net.minecraftforge.fluids.Fluid;
+
 import net.dries007.tfc.api.types.Plant;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.blocks.plants.BlockWaterPlantTFC;
 import net.dries007.tfc.objects.blocks.property.ITallPlant;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
+
+import tfcflorae.util.OreDictionaryHelper;
 
 import static net.minecraft.block.BlockLiquid.LEVEL;
 import static net.dries007.tfc.world.classic.ChunkGenTFC.SALT_WATER;
@@ -49,6 +52,8 @@ public class BlockTallWaterPlantTFCF extends BlockWaterPlantTFCF implements IGro
         super(fluid, plant);
         this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, 0));
         if (MAP.put(plant, this) != null) throw new IllegalStateException("There can only be one.");
+
+        plant.getOreDictName().ifPresent(name -> OreDictionaryHelper.register(this, name));
     }
 
     @Override

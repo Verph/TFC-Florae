@@ -52,6 +52,7 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
+
 import tfcflorae.objects.items.ItemTFCF;
 import tfcflorae.objects.items.food.ItemFoodTFCF;
 import tfcflorae.objects.items.food.PotionEffectToHave;
@@ -82,12 +83,12 @@ public class BlockCaveMushroom extends BlockBush implements IGrowable, IItemSize
 
     private static final PropertyBool[] ALL_FACES = new PropertyBool[] {DOWN, UP, NORTH, SOUTH, WEST, EAST};
 
-    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.0D, 0.25D, 0.0D, 1.0D, 0.75D, 1.0D);
-    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.0D, 0.75D, 0.0D, 1.0D, 0.25D, 1.0D);
-    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.75D);
-    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.25D, 1.0D, 1.0D, 1.0D);
-    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.75D, 1.0D, 1.0D);
-    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
+    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 0.8D, 0.8D);
+    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 1.0D, 0.8D);
+    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 0.8D, 1.0D);
+    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.0D, 0.8D, 0.8D, 0.8D);
+    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 1.0D, 0.8D, 0.8D);
+    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.0D, 0.2D, 0.2D, 0.8D, 0.8D, 0.8D);
 
     protected final BlockStateContainer blockState;
 

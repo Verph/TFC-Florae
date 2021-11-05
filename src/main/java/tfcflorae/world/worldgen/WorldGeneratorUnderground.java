@@ -69,7 +69,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                             {
                                 BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
                                 //TFCFlorae.getLog().warn("TFCFlorae: Mushroom " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > 20)
+                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 15 && blockPos.getY() > 20)
                                 {
                                     undergroundMushrooms.generate(world, rng, blockPos);
                                 }
@@ -94,7 +94,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                                     {
                                         BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
                                         //TFCFlorae.getLog().warn("TFCFlorae: Vines " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3)
+                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
                                         {
                                             undergroundVines.generate(world, rng, blockPos);
                                         }
@@ -114,7 +114,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                                     {
                                         BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
                                         //TFCFlorae.getLog().warn("TFCFlorae: CreepingVines " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3)
+                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
                                         {
                                             undergroundCreepingVines.generate(world, rng, blockPos);
                                         }
@@ -140,7 +140,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                             {
                                 BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
                                 //TFCFlorae.getLog().warn("TFCFlorae: Moss " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3)
+                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
                                 {
                                     undergroundMoss.generate(world, rng, blockPos);
                                 }

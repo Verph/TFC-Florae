@@ -33,6 +33,7 @@ public class CommonProxy
             GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);
             GameRegistry.registerWorldGenerator(new WorldGeneratorPlants(), 0);
             GameRegistry.registerWorldGenerator(new WorldGeneratorUnderground(), 0);
+            GameRegistry.registerWorldGenerator(new WorldGenLightstones(), 0);
             if (ConfigTFCF.General.WORLD.enableTrees)
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);

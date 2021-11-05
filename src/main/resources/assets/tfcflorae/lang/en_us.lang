@@ -19076,6 +19076,8 @@ tile.tfcflorae.plants.magma_shroom.name=Magma Shroom
 tile.tfcflorae.plants.poison_shroom.name=Poison Shroom
 tile.tfcflorae.plants.sulphur_shroom.name=Sulphur Shroom
 
+tile.tfcflorae.groundcover.lightstone.name=Yooperite Crystal
+
 tile.tfcflorae.groundcover.seashell.name=Seashells
 tile.tfcflorae.groundcover.flint.name=Flint
 tile.tfcflorae.groundcover.bone.name=Bones
