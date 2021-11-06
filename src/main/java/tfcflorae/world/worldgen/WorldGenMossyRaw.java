@@ -56,7 +56,6 @@ public class WorldGenMossyRaw implements IWorldGenerator
                 for (int i = random.nextInt(Math.round(1 + floraDiversity)); i < (mossyCount + floraDensity) * 10; i++)
                 {
                     BlockPos blockPos = chunkBlockPos.add(random.nextInt(16) + 8, random.nextInt(16), random.nextInt(16) + 8);
-                    TFCFlorae.getLog().warn("TFCFlorae: Mossy raw stone attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
                     if (BlocksTFC.isRawStone(world.getBlockState(blockPos)) && (world.isAirBlock(blockPos.up()) || world.isAirBlock(blockPos.down()) || world.isAirBlock(blockPos.north()) || world.isAirBlock(blockPos.south()) || world.isAirBlock(blockPos.east()) || world.isAirBlock(blockPos.west())) && 
                         world.getLightFor(EnumSkyBlock.SKY, blockPos) < 14 && !world.canSeeSky(blockPos))
                     {

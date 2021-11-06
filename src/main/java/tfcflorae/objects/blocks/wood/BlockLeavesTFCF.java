@@ -46,7 +46,8 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
-
+import net.dries007.tfc.util.climate.ClimateTFC;
+import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 import tfcflorae.TFCFlorae;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.agriculture.SeasonalTrees;
@@ -116,10 +117,15 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
     {
-        if (!world.isAreaLoaded(pos, 1)) return;
+        //if (!world.isAreaLoaded(pos, 1)) return;
+
+        ChunkDataTFC data = ChunkDataTFC.get(world, pos);
+        if (!data.isInitialized()) return;
         Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
         //int currentStage = state.getValue(growthStageProperty);
         int expectedStage = fruitTree.getStageForMonth(currentMonth);
+
+        float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
 
         /*if (currentStage != expectedStage && random.nextDouble() < 0.5)
         {
@@ -130,8 +136,10 @@ public class BlockLeavesTFCF extends BlockLeaves
         switch (expectedStage)
         {
             case 0:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
+                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature < 12)
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
+                else if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature >= 12)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
             case 1:
                 if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
@@ -157,13 +165,16 @@ public class BlockLeavesTFCF extends BlockLeaves
                 }
                 break;
             case 4:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN)
+                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature < 12)
                     world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
+                else if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature >= 12)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
             default:
                 world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
         }
+        this.updateTick(world, pos, state, random);
         doLeafDecay(world, pos, state);
     }
 
