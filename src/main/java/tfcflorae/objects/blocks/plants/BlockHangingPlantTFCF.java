@@ -219,14 +219,14 @@ public class BlockHangingPlantTFCF extends BlockPlantDummy1 implements IGrowable
         {
             if (rand.nextInt(40) == 0)
             {
-                float dripRange = 0.5F;
+                float dripRange = 0.4F;
                 float px = rand.nextFloat() - 0.5F;
                 float py = rand.nextFloat();
                 float pz = rand.nextFloat() - 0.5F;
                 float u = Math.max(Math.abs(px), Math.abs(pz));
                 px = px / u * dripRange + 0.5F;
                 pz = pz / u * dripRange + 0.5F;
-                worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, pos.getX() + px - 0.5, pos.getY() + py, pos.getZ() + pz - 0.5, 0, -1, 0);
+                worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, pos.getX() + px, pos.getY() + py, pos.getZ() + pz, 0, -1, 0);
             }
         }
 	}

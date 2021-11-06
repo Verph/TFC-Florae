@@ -30,7 +30,7 @@ public class WorldGenLightstones implements IWorldGenerator
     {
         if (!(chunkGenerator instanceof ChunkGenTFC)) return;
 
-        int y = rng.nextInt(WorldTypeTFC.SEALEVEL);
+        int y = rng.nextInt(70) + 1;
         BlockPos chunkPos = new BlockPos(chunkX << 4, y, chunkZ << 4);
 
         ChunkDataTFC data = ChunkDataTFC.get(world, chunkPos);
@@ -38,9 +38,9 @@ public class WorldGenLightstones implements IWorldGenerator
         final float floraDiversity = data.getFloraDiversity();
 
         int lightstoneCount = (Constants.RNG.nextInt(8) + 1);
-        for (int i = rng.nextInt(Math.round(lightstoneCount / floraDiversity)); i < (lightstoneCount + floraDensity + floraDiversity) * lightstoneCount; i++)
+        for (int i = rng.nextInt(Math.round(1 / floraDiversity)); i < (4 + floraDensity + floraDiversity) * lightstoneCount; i++)
         {
-            BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
+            BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16), rng.nextInt(16) + 8);
             if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 30 && blockPos.getY() > 10)
             {
                 BlockLightstone lightstoneBlock = BlocksTFCF.LIGHTSTONE;

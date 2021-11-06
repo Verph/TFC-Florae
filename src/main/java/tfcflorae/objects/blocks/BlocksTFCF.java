@@ -329,6 +329,8 @@ public final class BlocksTFCF
     private static ImmutableList<BlockLeavesTFCF> allNormalTreeLeaves = Helpers.getNull();
     private static ImmutableList<BlockLogTFCF> allNormalTreeLog = Helpers.getNull();
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks = Helpers.getNull();
+    private static ImmutableList<BlockCoral> allCoralPlants = Helpers.getNull();
+    private static ImmutableList<BlockWaterGlowPlant> allGlowWaterPlants = Helpers.getNull();
     private static ImmutableList<BlockWaterPlantTFCF> allWaterPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockHangingPlantTFCF> allHangingPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockHangingCreepingPlantTFCF> allHangingCreepingPlantBlocks = Helpers.getNull();
@@ -581,6 +583,16 @@ public final class BlocksTFCF
         return allSurfaceOreBlocks;
     }
 
+    public static ImmutableList<BlockCoral> getAllCoralPlants()
+    {
+        return allCoralPlants;
+    }
+
+    public static ImmutableList<BlockWaterGlowPlant> getAllGlowWaterPlants()
+    {
+        return allGlowWaterPlants;
+    }
+
     public static ImmutableList<BlockWaterPlantTFCF> getAllWaterPlantBlocks()
     {
         return allWaterPlantBlocks;
@@ -678,6 +690,8 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockPlanksTFC> planksTFC = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = ImmutableList.builder();
         ImmutableList.Builder<BlockPebbleWater> pebbleWater = ImmutableList.builder();
+        ImmutableList.Builder<BlockCoral> plantCoral = ImmutableList.builder();
+        ImmutableList.Builder<BlockWaterGlowPlant> plantGlowWater = ImmutableList.builder();
         ImmutableList.Builder<BlockLightstone> blockLightstone = ImmutableList.builder();
         //ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
 
@@ -722,7 +736,7 @@ public final class BlocksTFCF
         normalItemBlocks.add(new ItemBlockUrnLoot(register(r, "storage/urn_loot", new BlockUrnLoot(), CT_POTTERY)));
         normalItemBlocks.add(new ItemBlockCrate(register(r, "storage/crate", new BlockCrate(), CT_DECORATIONS)));
 
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/tube/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA)));
+        /*normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/tube/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/brain/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/bubble/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/fire/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA)));
@@ -774,6 +788,68 @@ public final class BlocksTFCF
             BlockCoral.FIRE_CORAL_FAN.put(dyeColor, fire);
             BlockCoral.HORN_CORAL_FAN.put(dyeColor, horn);
             BlockCoral.TUBE_CORAL_FAN.put(dyeColor, tube);
+        }*/
+
+        // Normal Corals
+        plantCoral.add(register(r, "coral/tube/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/brain/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/bubble/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/fire/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/horn/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+
+        for (EnumDyeColor dyeColor : EnumDyeColor.values())
+        {
+            
+            BlockCoral brainNormal = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral bubbleNormal = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral fireNormal = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral hornNormal = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral tubeNormal = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+
+            plantCoral.add(register(r, "coral/brain/" + dyeColor.getName(), brainNormal, CT_FLORA));
+            plantCoral.add(register(r, "coral/bubble/" + dyeColor.getName(), bubbleNormal, CT_FLORA));
+            plantCoral.add(register(r, "coral/fire/" + dyeColor.getName(), fireNormal, CT_FLORA));
+            plantCoral.add(register(r, "coral/horn/" + dyeColor.getName(), hornNormal, CT_FLORA));
+            plantCoral.add(register(r, "coral/tube/" + dyeColor.getName(), tubeNormal, CT_FLORA));
+
+            BlockCoral.BRAIN_CORAL.put(dyeColor, brainNormal);
+            BlockCoral.BUBBLE_CORAL.put(dyeColor, bubbleNormal);
+            BlockCoral.FIRE_CORAL.put(dyeColor, fireNormal);
+            BlockCoral.HORN_CORAL.put(dyeColor, hornNormal);
+            BlockCoral.TUBE_CORAL.put(dyeColor, tubeNormal);
+        }
+
+        // Fan Corals
+        plantCoral.add(register(r, "coral/fan/tube/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/fan/brain/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/fan/bubble/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/fan/fire/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+        plantCoral.add(register(r, "coral/fan/horn/dead", new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.SNOW), CT_FLORA));
+
+        for (EnumDyeColor dyeColor : EnumDyeColor.values())
+        {
+            BlockCoral brainFan = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral bubbleFan = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral fireFan = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral hornFan = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+            BlockCoral tubeFan = new BlockCoral(FluidsTFC.SALT_WATER.get(), MapColor.getBlockColor(dyeColor));
+
+            plantCoral.add(register(r, "coral/fan/brain/" + dyeColor.getName(), brainFan, CT_FLORA));
+            plantCoral.add(register(r, "coral/fan/bubble/" + dyeColor.getName(), bubbleFan, CT_FLORA));
+            plantCoral.add(register(r, "coral/fan/fire/" + dyeColor.getName(), fireFan, CT_FLORA));
+            plantCoral.add(register(r, "coral/fan/horn/" + dyeColor.getName(), hornFan, CT_FLORA));
+            plantCoral.add(register(r, "coral/fan/tube/" + dyeColor.getName(), tubeFan, CT_FLORA));
+
+            BlockCoral.BRAIN_CORAL_FAN.put(dyeColor, brainFan);
+            BlockCoral.BUBBLE_CORAL_FAN.put(dyeColor, bubbleFan);
+            BlockCoral.FIRE_CORAL_FAN.put(dyeColor, fireFan);
+            BlockCoral.HORN_CORAL_FAN.put(dyeColor, hornFan);
+            BlockCoral.TUBE_CORAL_FAN.put(dyeColor, tubeFan);
+        }
+        allCoralPlants = plantCoral.build();
+        for (BlockCoral plantCoralBlock : allCoralPlants)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(plantCoralBlock));
         }
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "coral/block/brain/dead", new BlockCoralBlock(MapColor.SNOW), CT_FLORA)));
@@ -803,7 +879,16 @@ public final class BlocksTFCF
             BlockCoralBlock.TUBE_CORAL_BLOCK.put(dyeColor, tube);
         }
 
-        normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/glowing_sea_banana", new BlockWaterGlowPlant(FluidsTFC.SALT_WATER.get()), CT_FLORA)));
+        {
+            //normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/glowing_sea_banana", new BlockWaterGlowPlant(FluidsTFC.SALT_WATER.get()), CT_FLORA)));
+            plantGlowWater.add(register(r, "plants/glowing_sea_banana", new BlockWaterGlowPlant(FluidsTFC.SALT_WATER.get()), CT_FLORA));
+        }
+        allGlowWaterPlants = plantGlowWater.build();
+        for (BlockWaterGlowPlant plantGlowWaterBlock : allGlowWaterPlants)
+        {
+            normalItemBlocks.add(new ItemBlockTFC(plantGlowWaterBlock));
+        }
+
         normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/blueshroom", new BlockCaveMushroom(0.3F, FoodDataTFCF.RAW_BLUESHROOM, new PotionEffectToHave(MobEffects.HUNGER, 610, 1, 4), new PotionEffectToHave(MobEffects.HASTE, 610, 1, 4), "blueshroom", "mushroom", "category_vegetable"), CT_FLORA)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/glowshroom", new BlockCaveMushroom(0.5F, FoodDataTFCF.RAW_GLOWSHROOM, new PotionEffectToHave(MobEffects.HUNGER, 610, 1, 4), new PotionEffectToHave(MobEffects.GLOWING, 610, 1, 4), "glowshroom", "mushroom", "category_vegetable"), CT_FLORA)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/magma_shroom", new BlockCaveMushroom(0.2F, FoodDataTFCF.RAW_MAGMA_SHROOM, new PotionEffectToHave(MobEffects.HUNGER, 610, 1, 4), new PotionEffectToHave(MobEffects.FIRE_RESISTANCE, 610, 1, 4), "magma_shroom", "mushroom", "category_vegetable"), CT_FLORA)));

@@ -41,7 +41,6 @@ public class WorldGenCaveMoss extends WorldGenerator
             BlockPos blockpos = pos.add(rng.nextInt(4) - rng.nextInt(4), rng.nextInt(4) - rng.nextInt(4), rng.nextInt(4) - rng.nextInt(4));
 
             if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
-                plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
                 worldIn.isAirBlock(blockpos) &&
                 pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
                 worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 

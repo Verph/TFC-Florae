@@ -89,12 +89,15 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA))
                                 {
+                                    int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER2) + WorldTypeTFC.ROCKLAYER2;
+                                    BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
+
                                     int plantCount = (Constants.RNG.nextInt(3) + 1);
-                                    for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (3 + floraDensity + floraDiversity) * plantCount; i++)
+                                    for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (1 + floraDensity + floraDiversity) * plantCount; i++)
                                     {
-                                        BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
+                                        BlockPos blockPos = chunkBlockPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8);
                                         //TFCFlorae.getLog().warn("TFCFlorae: Vines " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
+                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER2)
                                         {
                                             undergroundVines.generate(world, rng, blockPos);
                                         }
@@ -109,12 +112,15 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.HANGING_VINE) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE))
                                 {
+                                    int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER2) + WorldTypeTFC.ROCKLAYER2;
+                                    BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
+
                                     int plantCount = (Constants.RNG.nextInt(3) + 1);
-                                    for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (3 + floraDensity + floraDiversity) * plantCount; i++)
+                                    for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (1 + floraDensity + floraDiversity) * plantCount; i++)
                                     {
-                                        BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
+                                        BlockPos blockPos = chunkBlockPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8);
                                         //TFCFlorae.getLog().warn("TFCFlorae: CreepingVines " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
+                                        if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER2)
                                         {
                                             undergroundCreepingVines.generate(world, rng, blockPos);
                                         }
@@ -135,12 +141,15 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                             plant == TFCRegistries.PLANTS.getValue(DefaultPlants.MOSS) || 
                             plant == TFCRegistries.PLANTS.getValue(DefaultPlants.REINDEER_LICHEN))
                         {
+                            int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER3) + WorldTypeTFC.ROCKLAYER3;
+                            BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
+
                             int plantCount = (Constants.RNG.nextInt(8) + 1);
-                            for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (plantCount + floraDensity + floraDiversity) * plantCount; i++)
+                            for (int i = rng.nextInt(Math.round(plantCount / floraDiversity)); i < (6 + floraDensity + floraDiversity) * plantCount; i++)
                             {
-                                BlockPos blockPos = chunkPos.add(rng.nextInt(16) + 8, rng.nextInt(16) + 8, rng.nextInt(16) + 8);
+                                BlockPos blockPos = chunkBlockPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8);
                                 //TFCFlorae.getLog().warn("TFCFlorae: Moss " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
-                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER3 + 10)
+                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER2)
                                 {
                                     undergroundMoss.generate(world, rng, blockPos);
                                 }
