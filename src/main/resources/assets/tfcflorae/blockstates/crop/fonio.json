@@ -41,16 +41,6 @@
         "textures": {
           "crop": "tfcflorae:blocks/crop/fonio_5"
         }
-      },
-      "6": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/fonio_6"
-        }
-      },
-      "7": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/fonio_7"
-        }
       }
     }
   }

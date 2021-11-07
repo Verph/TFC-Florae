@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:large_cross",
     "textures": {
-      "crop": "tfcflorae:blocks/crop/hops_dead"
+      "cross": "tfcflorae:blocks/crop/hop_dead"
     }
   },
   "variants": {
@@ -14,7 +14,7 @@
     "mature": {
       "false": {
         "textures": {
-          "crop": "tfcflorae:blocks/crop/hops_dead_young"
+          "cross": "tfcflorae:blocks/crop/hop_dead_young"
         }
       },
       "true": {}

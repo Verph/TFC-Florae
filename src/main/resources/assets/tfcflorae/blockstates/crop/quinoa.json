@@ -41,16 +41,6 @@
         "textures": {
           "crop": "tfcflorae:blocks/crop/quinoa_5"
         }
-      },
-      "6": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/quinoa_6"
-        }
-      },
-      "7": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/quinoa_7"
-        }
       }
     }
   }

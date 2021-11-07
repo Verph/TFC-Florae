@@ -4,7 +4,7 @@
   "defaults": {
     "model": "tfc:flowerpot/flower_pot_cross",
     "textures": {
-      "plant": "tfc:blocks/plants/kangaroo_paw/kangaroo_paw_item"
+      "plant": "tfc:blocks/plants/shrub/dry_shrub"
     }
   },
   "variants": {

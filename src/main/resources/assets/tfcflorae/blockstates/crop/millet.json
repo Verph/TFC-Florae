@@ -41,16 +41,6 @@
         "textures": {
           "cross": "tfcflorae:blocks/crop/millet_5"
         }
-      },
-      "6": {
-        "textures": {
-          "cross": "tfcflorae:blocks/crop/millet_6"
-        }
-      },
-      "7": {
-        "textures": {
-          "cross": "tfcflorae:blocks/crop/millet_7"
-        }
       }
     }
   }

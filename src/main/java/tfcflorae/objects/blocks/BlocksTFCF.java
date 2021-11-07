@@ -1013,7 +1013,7 @@ public final class BlocksTFCF
         });*/
 
         {
-            blockLightstone.add(register(r, "groundcover/lightstone", new BlockLightstone(0.8f), CT_DECORATIONS));
+            blockLightstone.add(register(r, "groundcover/lightstone", new BlockLightstone(0.8f), CT_GEMS));
         }
         allLightstoneBlock = blockLightstone.build();
         for (BlockLightstone lightstone : allLightstoneBlock)

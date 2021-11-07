@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfc:plants/red_sea_whip"
+        },
+        {
+          "model": "tfc:plants/red_sea_whip",
+          "y": 90
+        },
+        {
+          "model": "tfc:plants/red_sea_whip",
+          "y": 180
+        },
+        {
+          "model": "tfc:plants/red_sea_whip",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

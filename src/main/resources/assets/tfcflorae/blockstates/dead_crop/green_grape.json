@@ -4,7 +4,7 @@
   "defaults": {
     "model": "crop",
     "textures": {
-      "crop": "tfcflorae:blocks/crop/green_grape_dead"
+      "crop": "tfcflorae:blocks/crop/millet_dead"
     }
   },
   "variants": {
@@ -14,7 +14,7 @@
     "mature": {
       "false": {
         "textures": {
-          "crop": "tfcflorae:blocks/crop/green_grape_dead_young"
+          "crop": "tfcflorae:blocks/crop/millet_dead_young"
         }
       },
       "true": {}

@@ -33,12 +33,12 @@ import static tfcflorae.util.agriculture.CropTFCF.CropType.*;
 
 public enum CropTFCF implements ICrop
 {
-    AMARANTH(ItemsTFCF.AMARANTH, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    BUCKWHEAT(ItemsTFCF.BUCKWHEAT, -5f, 0f, 30f, 35f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    FONIO(ItemsTFCF.MILLET, 7f, 15f, 40f, 50f, 50f, 70f, 200f, 250f, 8, 0.5f, SIMPLE),
-    MILLET(ItemsTFCF.MILLET, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 8, 0.5f, SIMPLE),
-    QUINOA(ItemsTFCF.QUINOA, -10f, -5f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
-    SPELT(ItemsTFCF.SPELT, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 8, 0.5f, SIMPLE),
+    AMARANTH(ItemsTFCF.AMARANTH, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    BUCKWHEAT(ItemsTFCF.BUCKWHEAT, -5f, 0f, 30f, 35f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    FONIO(ItemsTFCF.MILLET, 7f, 15f, 40f, 50f, 50f, 70f, 200f, 250f, 6, 0.5f, SIMPLE),
+    MILLET(ItemsTFCF.MILLET, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 6, 0.5f, SIMPLE),
+    QUINOA(ItemsTFCF.QUINOA, -10f, -5f, 35f, 40f, 50f, 100f, 400f, 450f, 6, 0.5f, SIMPLE),
+    SPELT(ItemsTFCF.SPELT, 0f, 4f, 35f, 40f, 70f, 90f, 400f, 450f, 6, 0.5f, SIMPLE),
     //WILD_RICE(ItemsTFCF.WILD_RICE, 0f, 4f, 35f, 40f, 50f, 100f, 400f, 450f, 8, 0.5f, SIMPLE),
 	BLACK_EYED_PEAS(ItemsTFCF.BLACK_EYED_PEAS, 0f, 8f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),
     CAYENNE_PEPPER(() -> new ItemStack(ItemFoodTFCF.get(ItemsTFCF.RED_CAYENNE_PEPPER)), () -> new ItemStack(ItemFoodTFCF.get(ItemsTFCF.GREEN_CAYENNE_PEPPER)), 4f, 12f, 35f, 40f, 50f, 100f, 400f, 450f, 7, 0.5f, PICKABLE),

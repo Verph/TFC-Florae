@@ -41,16 +41,6 @@
         "textures": {
           "crop": "tfcflorae:blocks/crop/spelt_5"
         }
-      },
-      "6": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/spelt_6"
-        }
-      },
-      "7": {
-        "textures": {
-          "crop": "tfcflorae:blocks/crop/spelt_7"
-        }
       }
     }
   }

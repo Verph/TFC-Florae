@@ -15,6 +15,7 @@ import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.food.FoodData;
 import net.dries007.tfc.api.capability.food.FoodStatsTFC;
 import net.dries007.tfc.api.capability.food.IFoodStatsTFC;
+import net.dries007.tfc.objects.fluids.FluidsTFC;
 import net.dries007.tfc.objects.fluids.properties.DrinkableProperty;
 import net.dries007.tfc.objects.fluids.properties.FluidWrapper;
 
@@ -443,7 +444,7 @@ public final class FluidsTFCF
 
     private static FluidWrapper registerFluid(@Nonnull Fluid newFluid)
     {
-        boolean isDefault = !FluidRegistry.isFluidRegistered(newFluid.getName());
+        /*boolean isDefault = !FluidRegistry.isFluidRegistered(newFluid.getName());
 
         if (!isDefault)
         {
@@ -457,6 +458,21 @@ public final class FluidsTFCF
         }
         FluidRegistry.addBucketForFluid(newFluid);
         FluidWrapper properties = new FluidWrapper(newFluid, isDefault);
+        WRAPPERS.put(newFluid, properties);
+        return properties;*/
+
+    	boolean isDefault = FluidRegistry.registerFluid(newFluid);
+        if (!isDefault)
+        {
+            newFluid = FluidRegistry.getFluid(newFluid.getName());
+        }
+        else
+        {
+            // No fluid found, we are safe to register our default
+            FluidRegistry.registerFluid(newFluid);
+        }
+        FluidRegistry.addBucketForFluid(newFluid);
+        FluidWrapper properties = FluidsTFC.getWrapper(newFluid);
         WRAPPERS.put(newFluid, properties);
         return properties;
     }
