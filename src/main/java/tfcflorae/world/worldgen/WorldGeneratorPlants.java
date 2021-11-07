@@ -84,7 +84,7 @@ public class WorldGeneratorPlants implements IWorldGenerator
     @Override
     public void generate(Random rng, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        final BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
+        BlockPos chunkPos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
         ChunkPos forgeChunkPos = new ChunkPos(chunkPos); // actual ChunkPos instead of BlockPos, used for events
         MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(world, rng, forgeChunkPos));
 
@@ -168,16 +168,18 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case HANGING:
                     {
-                        if (floraDensity >= 0.1f && rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && (
-                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOW_VINE) || 
+                        if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOW_VINE) || 
                             plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.HANGING_VINE) || 
                             plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE) || 
-                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA)))
+                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA))
                         {
                             for (float i = rng.nextInt(Math.round(hangingCount / floraDiversity)); i < (5 + floraDensity + floraDiversity) * 2; i++)
                             {
-                                BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
-                                plantGen.generate(world, rng, blockPos);
+                                if (floraDensity >= 0.1f && rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()))
+                                {
+                                    BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
+                                    plantGen.generate(world, rng, blockPos);
+                                }
                             }
                         }
                         else if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) && (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.LAKE))
@@ -192,24 +194,26 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case SHORT_GRASS:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && 
-                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE))
+                        if (plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE))
                         {
                             for (int i = rng.nextInt(Math.round(grassCount / floraDiversity)); i < (5 + floraDensity) * 10; i++)
                             {
-                                BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
-                                plantGen.generate(world, rng, blockPos);
+                                if (rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()))
+                                {
+                                    BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
+                                    plantGen.generate(world, rng, blockPos);
+                                }
                             }
                         }
                         break;
                     }
                     case TALL_GRASS:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && (
-                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY) || 
-                            plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)))
+                        for (int i = rng.nextInt(Math.round((tallGrassCount + 8) / floraDiversity)); i < (3 + floraDensity) * 10; i++)
                         {
-                            for (int i = rng.nextInt(Math.round((tallGrassCount + 8) / floraDiversity)); i < (3 + floraDensity) * 10; i++)
+                            if (rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()) && (
+                                plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY) || 
+                                plant != TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)))
                             {
                                 BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
                                 plantGen.generate(world, rng, blockPos);
@@ -219,9 +223,9 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case TALL_PLANT:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f)
+                        for (float i = rng.nextInt(Math.round((tallCount + 8) / floraDiversity)); i < (1 + floraDensity) * 3; i++)
                         {
-                            for (float i = rng.nextInt(Math.round((tallCount + 8) / floraDiversity)); i < (1 + floraDensity) * 3; i++)
+                            if (rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()))
                             {
                                 BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
                                 plantGen.generate(world, rng, blockPos);
@@ -231,22 +235,24 @@ public class WorldGeneratorPlants implements IWorldGenerator
                     }
                     case EPIPHYTE:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f && 
-                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE))
+                        if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_EPIPHYTE))
                         {
                             for (float i = rng.nextInt(Math.round(epiphyteCount / floraDiversity)); i < (5 + floraDensity + floraDiversity) * 3; i++)
                             {
-                                BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
-                                plantGen.generate(world, rng, blockPos);
+                                if (rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()))
+                                {
+                                    BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
+                                    plantGen.generate(world, rng, blockPos);
+                                }
                             }
                         }
                         break;
                     }
                     case STANDARD:
                     {
-                        if (rainfall >= 255f && ClimateTFC.getActualTemp(world, chunkPos) >= 20f)
+                        for (float i = rng.nextInt(Math.round((standardCount + 8) / floraDiversity)); i < (1 + floraDensity) * 3; i++)
                         {
-                            for (float i = rng.nextInt(Math.round((standardCount + 8) / floraDiversity)); i < (1 + floraDensity) * 3; i++)
+                            if (rainfall >= (255f + 4f * rng.nextGaussian()) && ClimateTFC.getAvgTemp(world, chunkPos) >= (20f + 4f * rng.nextGaussian()))
                             {
                                 BlockPos blockPos = world.getHeight(chunkPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8));
                                 plantGen.generate(world, rng, blockPos);

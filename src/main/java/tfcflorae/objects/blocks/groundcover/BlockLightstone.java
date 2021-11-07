@@ -157,7 +157,7 @@ public class BlockLightstone extends BlockBush implements IItemSize
         {
             if (this.canPlaceAt(worldIn, pos, enumfacing))
             {
-                return worldIn.getBlockState(pos).getBlock() != this;
+                return true;
             }
         }
 
@@ -170,7 +170,7 @@ public class BlockLightstone extends BlockBush implements IItemSize
         IBlockState iblockstate = worldIn.getBlockState(blockpos);
         BlockFaceShape blockfaceshape = iblockstate.getBlockFaceShape(worldIn, blockpos, facing);
 
-        return blockfaceshape == BlockFaceShape.SOLID && worldIn.getBlockState(pos).getBlock() != this;
+        return blockfaceshape == BlockFaceShape.SOLID || BlocksTFC.isGround(iblockstate) || BlocksTFCF.isGround(iblockstate) || worldIn.getBlockState(blockpos).isFullBlock();
     }
 
     @Override

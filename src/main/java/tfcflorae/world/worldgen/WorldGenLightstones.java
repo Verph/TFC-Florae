@@ -47,7 +47,8 @@ public class WorldGenLightstones implements IWorldGenerator
                 IBlockState state = lightstoneBlock.getDefaultState();
                 if (world.isAirBlock(blockPos) &&
                     world.getLightFor(EnumSkyBlock.SKY, blockPos) < 14 && !world.canSeeSky(blockPos) &&
-                    lightstoneBlock.canBlockStay(world, blockPos, state))
+                    lightstoneBlock.canBlockStay(world, blockPos, state) &&
+                    lightstoneBlock.canPlaceBlockAt(world, blockPos))
                 {
                     //TFCFlorae.getLog().warn("TFCFlorae: Lightstones attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
                     world.setBlockState(blockPos, BlocksTFCF.LIGHTSTONE.getDefaultState());
