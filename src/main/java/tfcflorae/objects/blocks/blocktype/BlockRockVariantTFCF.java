@@ -303,6 +303,11 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
     protected final RockTFCF rockTFCF;
     protected final Rock rock;
 
+    public RockTFCF getRockType()
+    {
+        return rockTFCF;
+    }
+
     public BlockRockVariantTFCF(RockTFCF rockTFCF, Rock rock)
     {
         super(rockTFCF.material);
