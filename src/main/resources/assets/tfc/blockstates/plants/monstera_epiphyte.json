@@ -7,23 +7,28 @@
       "apply": [
         {
           "model": "tfc:plants/monstera_epiphyte_0",
-		  "weight": 1
+		  "weight": 1,
+          "x": 270
         },
         {
           "model": "tfc:plants/monstera_epiphyte_1",
-		  "weight": 1
+		  "weight": 1,
+          "x": 270
         },
         {
           "model": "tfc:plants/monstera_epiphyte_2",
-		  "weight": 1
+		  "weight": 1,
+          "x": 270
         },
         {
           "model": "tfc:plants/monstera_epiphyte_3",
-		  "weight": 1
+		  "weight": 1,
+          "x": 270
         },
         {
           "model": "tfc:plants/monstera_epiphyte_4",
-		  "weight": 1
+		  "weight": 1,
+          "x": 270
         }
       ]
     },
@@ -35,26 +40,27 @@
         {
           "model": "tfc:plants/monstera_epiphyte_0",
 		  "weight": 1,
-          "x": 180
+          "x": 90
         },
         {
           "model": "tfc:plants/monstera_epiphyte_1",
 		  "weight": 1,
-          "x": 180
+          "x": 90
         },
         {
           "model": "tfc:plants/monstera_epiphyte_2",
 		  "weight": 1,
-          "x": 180
+          "x": 90
         },
         {
           "model": "tfc:plants/monstera_epiphyte_3",
 		  "weight": 1,
-          "x": 180
+          "x": 90
         },
         {
           "model": "tfc:plants/monstera_epiphyte_4",
-		  "weight": 1
+		  "weight": 1,
+          "x": 90
         }
       ]
     },

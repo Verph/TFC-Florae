@@ -48,6 +48,8 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
+import tfcflorae.objects.blocks.BlocksTFCF;
+
 @ParametersAreNonnullByDefault
 public class BlockPlantTFCF extends BlockBush implements IItemSize
 {
@@ -392,25 +394,25 @@ public class BlockPlantTFCF extends BlockBush implements IItemSize
                 return BlocksTFC.isSand(state);
             case DRY:
             case DRY_TALL_PLANT:
-                return BlocksTFC.isSand(state) || BlocksTFC.isDryGrass(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isDryGrass(state) || BlocksTFCF.isDryGrass(state);
             case REED:
             case REED_SEA:
             case TALL_REED:
             case TALL_REED_SEA:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoil(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state);
             case WATER:
             case TALL_WATER:
             case EMERGENT_TALL_WATER:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
             case WATER_SEA:
             case TALL_WATER_SEA:
             case EMERGENT_TALL_WATER_SEA:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
             case CREEPING:
             case HANGING:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
             default:
-                return BlocksTFC.isSoil(state);
+                return BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state);
         }
     }
 }

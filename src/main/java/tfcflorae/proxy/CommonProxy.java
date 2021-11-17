@@ -14,6 +14,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import tfcflorae.ConfigTFCF;
 import tfcflorae.TFCFlorae;
 import tfcflorae.world.worldgen.*;
+import tfcflorae.world.worldgen.cave.WorldGenLightstones;
+import tfcflorae.world.worldgen.cave.WorldGeneratorUnderground;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceBones;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceDriftwood;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceFlint;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceOreDeposits;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfacePinecone;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceRocks;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceSeashells;
+import tfcflorae.world.worldgen.groundcover.WorldGenSurfaceTwig;
+import tfcflorae.world.worldgen.soil.*;
 import tfcflorae.world.worldgen.structures.WorldGenStructures;
 import tfcflorae.world.worldgen.structures.WorldGenStructuresCorals;
 
@@ -25,24 +36,47 @@ public class CommonProxy
         if (ConfigTFCF.General.STRUCTURES.activateStructureGeneration)
         {
     	    GameRegistry.registerWorldGenerator(new WorldGenStructures(), 0);
-    	    GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+            if (ConfigTFCF.General.WORLD.enableCoralWorldGen)
+            {
+    	        GameRegistry.registerWorldGenerator(new WorldGenStructuresCorals(), 0);
+            }
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {
-            GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);
-            GameRegistry.registerWorldGenerator(new WorldGenMossyRaw(), 0);
-            GameRegistry.registerWorldGenerator(new WorldGeneratorPlants(), 0);
-            GameRegistry.registerWorldGenerator(new WorldGeneratorUnderground(), 0);
-            GameRegistry.registerWorldGenerator(new WorldGenLightstones(), 0);
-            GameRegistry.registerWorldGenerator(new WorldGenGlowPlant(), 0);
+            if (ConfigTFCF.General.WORLD.enableCoralWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableMossyRawWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenMossyRaw(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enablePlantWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGeneratorPlants(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableUndergroundPlantWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGeneratorUnderground(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableLightstoneWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenLightstones(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableOceanGlowPlantWorldGen)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenGlowPlant(), 0);
+            }
             if (ConfigTFCF.General.WORLD.enableTrees)
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);
             }
             if (ConfigTFCF.General.WORLD.enableSoilPits)
             {
-                GameRegistry.registerWorldGenerator(new WorldGenSoilSurface(), 0);
-                GameRegistry.registerWorldGenerator(new WorldGenSoilPitsTFCF(), 0);
+                //GameRegistry.registerWorldGenerator(new WorldGenSoil(), 0);
+                GameRegistry.registerWorldGenerator(new WorldGenSoilTypes(), 0);
+                GameRegistry.registerWorldGenerator(new WorldGenSoilDecorative(), 0);
+                GameRegistry.registerWorldGenerator(new WorldGenClays(), 0);
             }
             if (ConfigTFCF.General.WORLD.enableGroundcoverRock)
             {

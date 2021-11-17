@@ -2,6 +2,8 @@ package tfcflorae;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import net.minecraft.launchwrapper.Launch;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.DedicatedServer;
 import net.minecraft.server.dedicated.PropertyManager;
@@ -56,6 +58,7 @@ import tfcflorae.objects.blocks.entity.EntitiesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
 import tfcflorae.util.CapabilityHeatHandler;
+import tfcflorae.util.ClassAdder;
 import tfcflorae.util.HelpersTFCF;
 import tfcflorae.util.fuel.FuelsTFCF;
 import tfcflorae.proxy.ClientProxy;
@@ -73,7 +76,8 @@ public class TFCFlorae
     public static final String DEPENDENCIES = "required-after:tfc@[1.7,);"
             + "after:firmalife;"
             + "after:tfcelementia;"
-            + "after:tfc_ph_compat;";
+            + "after:tfc_ph_compat;"
+            + "required-after:loliasm;";
 
     @Mod.Instance
     public static TFCFlorae instance;
@@ -109,6 +113,7 @@ public class TFCFlorae
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        ClassAdder.addClasses(event.getModConfigurationDirectory());
         logger = event.getModLog();
         if (!signedBuild)
         {

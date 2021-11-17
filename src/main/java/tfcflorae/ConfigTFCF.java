@@ -45,12 +45,17 @@ public class ConfigTFCF
             @Config.Comment("The rarity for podzol pits to occur. On average 1 / N chunks will have a podzol deposit, if the chunk in question is valid for podzol to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.podzolRarity")
-            public int podzolRarity = 1;
+            public int podzolRarity = 2;
 
             @Config.Comment("The rarity for mud pits to occur. On average 1 / N chunks will have a mud deposit, if the chunk in question is valid for mud to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.mudRarity")
-            public int mudRarity = 5;
+            public int mudRarity = 1;
+
+            @Config.Comment("The rarity for sand to occur on the sea bed. On average 1 / N chunks will be populated with sand, if the chunk in question is valid for sand to generate.")
+            @Config.RangeInt(min = 1)
+            @Config.LangKey("config." + MODID + ".general.world.sandRarity")
+            public int sandRarity = 4;
 
             @Config.Comment("The rarity for bog iron pits to occur. On average 1 / N chunks will have a bog iron deposit, if the chunk in question is valid for bog iron to spawn.")
             @Config.RangeInt(min = 1)
@@ -297,6 +302,86 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.groundcoverTwigFrequency")
             public int groundcoverTwigFrequency = 11;
 
+            @Config.Comment("The fresh water plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.waterCount")
+            public float waterCount = 10f;
+
+            @Config.Comment("The tall fresh water plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.waterTallCount")
+            public float waterTallCount = 5f;
+
+            @Config.Comment("The ocean water plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.waterSeaCount")
+            public float waterSeaCount = 10f;
+
+            @Config.Comment("The tall ocean water plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.waterTallSeaCount")
+            public float waterTallSeaCount = 5f;
+
+            @Config.Comment("The ocean water algae frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.waterSeaAlgaeCount")
+            public float waterSeaAlgaeCount = 0.2f;
+
+            @Config.Comment("The hanging plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.hangingCount")
+            public float hangingCount = 2f;
+
+            @Config.Comment("The bearded moss plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.beardedMossCount")
+            public float beardedMossCount = 1f;
+
+            @Config.Comment("The grass plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.grassCount")
+            public float grassCount = 12f;
+
+            @Config.Comment("The tall grass plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.tallGrassCount")
+            public float tallGrassCount = 8f;
+
+            @Config.Comment("The tall plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.tallPlantCount")
+            public float tallPlantCount = 3f;
+
+            @Config.Comment("The epiphyte plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.epiphyteCount")
+            public float epiphyteCount = 3f;
+
+            @Config.Comment("The standard plant frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.standardCount")
+            public float standardCount = 3f;
+
+            @Config.Comment("The underground fungi generation frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.fungiUndergroundCount")
+            public float fungiUndergroundCount = 0.5f;
+
+            @Config.Comment("The underground hanging vines generation frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.hangingVinesUndergroundCount")
+            public float hangingVinesUndergroundCount = 1.5f;
+
+            @Config.Comment("The underground creeping vines generation frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.creepingVinesUndergroundCount")
+            public float creepingVinesUndergroundCount = 0.7f;
+
+            @Config.Comment("The underground creeping plant generation frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.creepingUndergroundCount")
+            public float creepingUndergroundCount = 5f;
+
             @Config.Comment("The rarity for bamboo trees to generate. On average 1 / N chunks will have a bamboo tree, if the chunk in question is valid for bamboo to generate.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.bambooRarity")
@@ -306,6 +391,42 @@ public class ConfigTFCF
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.cinnamonRarity")
             public int cinnamonRarity = 100;
+
+            /*@Config.Comment("Enable podzol generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enablePodzolGen")
+            public boolean enablePodzolGen = true;*/
+
+            @Config.Comment("Enable mud generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableMudGen")
+            public boolean enableMudGen = true;
+
+            @Config.Comment("Enable sand generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableSandGen")
+            public boolean enableSandGen = true;
+
+            @Config.Comment("Enable plant generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enablePlantWorldGen")
+            public boolean enablePlantWorldGen = true;
+
+            @Config.Comment("Enable underground plant generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableUndergroundPlantWorldGen")
+            public boolean enableUndergroundPlantWorldGen = true;
+
+            @Config.Comment("Enable underground lightstone generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableLightstoneWorldGen")
+            public boolean enableLightstoneWorldGen = true;
+
+            @Config.Comment("Enable ocean glow plant generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableOceanGlowPlantWorldGen")
+            public boolean enableOceanGlowPlantWorldGen = true;
+
+            @Config.Comment("Enable mossy raw stone generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableMossyRawWorldGen")
+            public boolean enableMossyRawWorldGen = true;
+
+            @Config.Comment("Enable coral generation?")
+            @Config.LangKey("config." + MODID + ".general.world.enableCoralWorldGen")
+            public boolean enableCoralWorldGen = true;
 
             @Config.Comment("Enable gourd generation?")
             @Config.LangKey("config." + MODID + ".general.world.enableGourdWorldGen")
