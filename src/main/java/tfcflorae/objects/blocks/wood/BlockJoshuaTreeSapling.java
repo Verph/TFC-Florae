@@ -222,10 +222,7 @@ public class BlockJoshuaTreeSapling extends BlockBush implements IGrowable
                 int k1 = j1 - 1;
                 if (world.isAirBlock(pos.add(l, k1 + 1, i1)) && (BlocksTFC.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFC.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1)))))
                 {
-                    if (15f <= avgTemperature && 40f >= avgTemperature && 20f <= rainfall && 150f >= rainfall)
-                    {
-                        BlockJoshuaTreeFlower.get(TFCRegistries.TREES.getValue(TreesTFCF.JOSHUA_TREE)).generatePlant(world, pos.add(l, k1 + 1, i1), rand, 8);
-                    }
+                    BlockJoshuaTreeFlower.get(wood).generatePlant(world, pos.add(l, k1 + 1, i1), rand, 8);
                 }
             }
         }

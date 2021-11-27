@@ -1443,7 +1443,7 @@ public final class BlocksTFCF
                 allJoshuaTreeSaplingBlocks = saplingJoshuaTree.build();
                 for (BlockJoshuaTreeSapling blockJoshuaTreeSapling : allJoshuaTreeSaplingBlocks)
                 {
-                    normalItemBlocks.add(new ItemBlockJoshuaTreeSapling(blockJoshuaTreeSapling));
+                    normalItemBlocks.add(new ItemBlockTFC(blockJoshuaTreeSapling));
                 }
             }
         }

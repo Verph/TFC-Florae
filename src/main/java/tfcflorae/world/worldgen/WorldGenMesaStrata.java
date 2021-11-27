@@ -61,7 +61,7 @@ public class WorldGenMesaStrata implements IWorldGenerator
             for (int z = 0; z < 16; ++z)
             {
                 BlockPos strataLayer = chunkBlockPos.add(x, WorldTypeTFC.SEALEVEL, z);
-                TFCFlorae.getLog().warn("TFCFlorae: Current 'strataLayer' is " + "X: " + strataLayer.getX() + ", Y: " + strataLayer.getY() + ", Z: " + strataLayer.getZ());
+                //TFCFlorae.getLog().warn("TFCFlorae: Current 'strataLayer' is " + "X: " + strataLayer.getX() + ", Y: " + strataLayer.getY() + ", Z: " + strataLayer.getZ());
                 Biome b = world.getBiome(strataLayer);
 
                 final float avgTemperature = ClimateTFC.getAvgTemp(world, strataLayer);
@@ -76,7 +76,7 @@ public class WorldGenMesaStrata implements IWorldGenerator
                             BlockPos currentBlock = chunkBlockPos.add(x, y, z);
                             IBlockState currentBlockState = world.getBlockState(currentBlock);
                             IBlockState currentBlockStateTop = world.getBlockState(currentBlock.up());
-                            TFCFlorae.getLog().warn("TFCFlorae: Current 'currentBlock' is " + "X: " + currentBlock.getX() + ", Y: " + currentBlock.getY() + ", Z: " + currentBlock.getZ());
+                            //TFCFlorae.getLog().warn("TFCFlorae: Current 'currentBlock' is " + "X: " + currentBlock.getX() + ", Y: " + currentBlock.getY() + ", Z: " + currentBlock.getZ());
                             //if (currentBlockState instanceof BlockRockVariant && ((BlockRockVariant)(currentBlockState.getBlock())).getRock().getRockCategory() == TFCRegistries.ROCK_CATEGORIES.getValue(DefaultRocks.SEDIMENTARY))
                             if ((y <= WorldTypeTFC.SEALEVEL + 5 && (BlocksTFC.isRawStone(currentBlockState) || BlocksTFC.isGround(currentBlockState) || BlocksTFCF.isGround(currentBlockState) || BlocksTFC.isSoil(currentBlockState) || BlocksTFCF.isSoil(currentBlockState)) && !(BlocksTFC.isGrass(currentBlockState) || BlocksTFC.isSand(currentBlockState) || BlocksTFC.isClay(currentBlockState) || BlocksTFCF.isGrass(currentBlockState) || BlocksTFCF.isSand(currentBlockState) || BlocksTFCF.isClay(currentBlockState))) || 
                                 (y > WorldTypeTFC.SEALEVEL + 5 && (BlocksTFC.isRawStone(currentBlockState) || BlocksTFC.isGround(currentBlockState) || BlocksTFCF.isGround(currentBlockState) || BlocksTFC.isSoil(currentBlockState) || BlocksTFCF.isSoil(currentBlockState))))
