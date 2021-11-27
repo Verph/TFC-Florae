@@ -93,7 +93,7 @@ def tree(origin, wood, nameout):
             })
             
         if block['Name'] == 'byg:baobabfruitblock':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'decayable': String('true'),
@@ -110,7 +110,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -118,7 +118,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:leaves2':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -126,7 +126,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:oak_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -134,7 +134,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:spruce_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -142,7 +142,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:birch_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -150,7 +150,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:jungle_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -158,7 +158,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:acacia_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -166,7 +166,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'minecraft:dark_oak_leaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -174,7 +174,7 @@ def tree(origin, wood, nameout):
             })
 
         if block['Name'] == 'byg:baobableaves':
-            block['Name'] = String('tfcflorae:wood/leaves/' + wood)
+            block['Name'] = String('tfc:wood/leaves/' + wood)
             block['Properties'] = Compound({
                 'decayable': String('true'),
                 'harvestable': String('true'),
@@ -1159,6 +1159,7 @@ WOOD_TYPES = {
     'african_padauk': 'african_padauk',
     'alder': 'alder',
     'angelim': 'angelim',
+    'bald_cypress': 'bald_cypress',
     'baobab': 'baobab',
     'beech': 'beech',
     'black_walnut': 'black_walnut',
@@ -1199,6 +1200,7 @@ WOOD_TYPES = {
     'maclura': 'maclura',
     'mahoe': 'mahoe',
     'mahogany': 'mahogany',
+    'mangrove': 'mangrove',
     'marblewood': 'marblewood',
     'messmate': 'messmate',
     'mountain_ash': 'mountain_ash',
@@ -1273,6 +1275,11 @@ for wood, key in WOOD_TYPES.items():
     if key == 'angelim':
         for s in ['1', '2', '3', '4', '5', '6']:
             tree('structure_templates/angelim/angelim_' + s, wood, s)
+
+    # bald_cypress
+    if key == 'bald_cypress':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/bald_cypress/bald_cypress_' + s, wood, s)
 
     # baobab
     if key == 'baobab':
@@ -1453,6 +1460,11 @@ for wood, key in WOOD_TYPES.items():
     if key == 'mahogany':
         for s in ['1', '2', '3', '4', '5', '6']:
             tree('structure_templates/mahogany/mahogany_' + s, wood, s)
+
+    # mangrove
+    if key == 'mangrove':
+        for s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']:
+            tree('structure_templates/mangrove/mangrove_' + s, wood, s)
 
     # marblewood
     if key == 'marblewood':

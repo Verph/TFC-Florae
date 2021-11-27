@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/wild_rice_flatbread"
+    "item": "tfcflorae:food/wild_rice_slice",
+    "count": 3
   }
 }

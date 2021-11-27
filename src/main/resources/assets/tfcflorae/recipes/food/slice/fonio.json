@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/fonio_flatbread"
+    "item": "tfcflorae:food/fonio_slice",
+    "count": 3
   }
 }

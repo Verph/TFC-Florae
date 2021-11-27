@@ -59,7 +59,7 @@ public class WorldGenSurfaceRocks implements IWorldGenerator
             }
         }
     }
-    
+
     private void generateRock(World world, BlockPos pos, @Nullable Vein vein, Rock rock)
     {
         if (world.isAirBlock(pos) && world.getBlockState(pos.down()).isSideSolid(world, pos.down(), EnumFacing.UP) && (BlocksTFC.isSoil(world.getBlockState(pos.down())) || BlocksTFCF.isSoil(world.getBlockState(pos.down())) || BlocksTFC.isRawStone(world.getBlockState(pos.down()))))

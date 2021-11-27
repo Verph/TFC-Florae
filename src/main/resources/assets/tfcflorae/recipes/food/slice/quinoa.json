@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/quinoa_flatbread"
+    "item": "tfcflorae:food/quinoa_slice",
+    "count": 3
   }
 }

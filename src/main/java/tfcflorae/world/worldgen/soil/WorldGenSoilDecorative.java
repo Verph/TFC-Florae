@@ -76,6 +76,9 @@ public class WorldGenSoilDecorative implements IWorldGenerator
                 BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
                 generateBogIron(world, random, pos);
             }
+
+            BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
+            generatePeat(world, random, pos);
         }
     }
 
@@ -203,7 +206,7 @@ public class WorldGenSoilDecorative implements IWorldGenerator
         if (rng.nextInt(ConfigTFCF.General.WORLD.mudRarity) == 0 && start.getY() >= WorldTypeTFC.SEALEVEL && start.getY() <= 150 && ChunkDataTFC.getDrainage(world, start) <= 2)
         {
             final Biome b = world.getBiome(start);
-            if (b == BiomesTFC.SWAMPLAND)
+            if (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH)
             {
                 ChunkDataTFC data = ChunkDataTFC.get(world, start);
                 if (data.isInitialized() && data.getRainfall() >= RAINFALL_SAND_SANDY_MIX)
@@ -270,7 +273,7 @@ public class WorldGenSoilDecorative implements IWorldGenerator
             if (rng.nextInt(ConfigTFCF.General.WORLD.bogIronRarity) == 0 && start.getY() <= 150 && data.getAverageTemp() >= 0f && ChunkDataTFC.getDrainage(world, start) <= 2)
             {
                 final Biome b = world.getBiome(start);
-                if (b == BiomesTFC.SWAMPLAND)
+                if (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH)
                 {
                     int radius = rng.nextInt(5) + 2;
                     int depth = rng.nextInt(3) + 1;
@@ -341,5 +344,46 @@ public class WorldGenSoilDecorative implements IWorldGenerator
                 }
             }
         }
+    }
+
+    private boolean generatePeat(World world, Random rng, BlockPos start)
+    {
+        // If this has to have a radius that is >= 8, then it needs to be moved to a cascading-lag safe model
+        // Otherwise, do not change this unless you are prepared to do some fairly large re-writes, similar to how ore gen is handled
+        int radius = rng.nextInt(4) + 4;
+        byte depth = 2;
+
+        if (rng.nextInt(30) != 0 || start.getY() > WorldTypeTFC.SEALEVEL) return false;
+        ChunkDataTFC data = ChunkDataTFC.get(world, start);
+        final Biome b = world.getBiome(start);
+        if (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH)
+        {
+            if (data.isInitialized() && data.getRainfall() >= 375f && data.getFloraDiversity() >= 0.5f && data.getFloraDensity() >= 0.5f && world.getBiome(start).getHeightVariation() < 0.15)
+                return false;
+
+            for (int x = -radius; x <= radius; ++x)
+            {
+                for (int z = -radius; z <= radius; ++z)
+                {
+                    if (x * x + z * z > radius * radius) continue;
+
+                    for (int y = -depth; y <= depth; ++y)
+                    {
+                        final BlockPos pos = start.add(x, y, z);
+                        final IBlockState current = world.getBlockState(pos);
+
+                        if (BlocksTFC.isGrass(current))
+                        {
+                            world.setBlockState(pos, BlocksTFC.PEAT_GRASS.getDefaultState(), 2);
+                        }
+                        else if (BlocksTFC.isDirt(current) || BlocksTFC.isClay(current))
+                        {
+                            world.setBlockState(pos, BlocksTFC.PEAT.getDefaultState(), 2);
+                        }
+                    }
+                }
+            }
+        }
+        return true;
     }
 }

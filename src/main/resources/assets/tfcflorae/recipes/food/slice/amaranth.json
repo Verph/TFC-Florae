@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/amaranth_flatbread"
+    "item": "tfcflorae:food/amaranth_slice",
+    "count": 3
   }
 }

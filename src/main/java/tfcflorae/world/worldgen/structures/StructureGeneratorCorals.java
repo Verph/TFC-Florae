@@ -138,7 +138,7 @@ public class StructureGeneratorCorals extends WorldGenerator
 			}
 
 			// Places foundations under flying structures
-			if ((!structureName.startsWith("underground_") || world.provider.getDimension() != DimensionType.NETHER.getId()) || !(b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH))
+			if ((!structureName.startsWith("underground_") || world.provider.getDimension() != DimensionType.NETHER.getId()) || !(b == BiomesTFC.OCEAN || b == BiomesTFC.DEEP_OCEAN || b == BiomesTFC.BEACH || b == BiomesTFC.GRAVEL_BEACH || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH))
             {
 				final int searchRange = 10;
 				int posX = position.getX();

@@ -43,6 +43,14 @@ public class CommonProxy
         }
         if (ConfigTFCF.General.WORLD.enableAllWorldGen)
         {
+            if (ConfigTFCF.General.WORLD.enableMesaStrata)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGenMesaStrata(), 0);
+            }
+            if (ConfigTFCF.General.WORLD.enableTrees)
+            {
+                GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);
+            }
             if (ConfigTFCF.General.WORLD.enableCoralWorldGen)
             {
                 GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);
@@ -66,10 +74,6 @@ public class CommonProxy
             if (ConfigTFCF.General.WORLD.enableOceanGlowPlantWorldGen)
             {
                 GameRegistry.registerWorldGenerator(new WorldGenGlowPlant(), 0);
-            }
-            if (ConfigTFCF.General.WORLD.enableTrees)
-            {
-                GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);
             }
             if (ConfigTFCF.General.WORLD.enableSoilPits)
             {

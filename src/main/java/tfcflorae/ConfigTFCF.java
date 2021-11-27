@@ -472,6 +472,10 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.enableSoilPits")
             public boolean enableSoilPits = true;
 
+            @Config.Comment("Enable mesa clay strata world generation within mesa biomes?")
+            @Config.LangKey("config." + MODID + ".general.world.enableMesaStrata")
+            public boolean enableMesaStrata = true;
+
             @Config.Comment("Enable bamboo and cinnamon tree world generation?")
             @Config.LangKey("config." + MODID + ".general.world.enableTrees")
             public boolean enableTrees = true;

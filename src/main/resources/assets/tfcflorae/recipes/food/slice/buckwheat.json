@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/buckwheat_flatbread"
+    "item": "tfcflorae:food/buckwheat_slice",
+    "count": 3
   }
 }

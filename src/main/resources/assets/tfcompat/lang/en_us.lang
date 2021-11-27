@@ -82,6 +82,10 @@ tile.rustic.chair_whitebeam.name=Whitebeam Chair
 tile.rustic.chair_yellow_meranti.name=Yellow Meranti Chair
 tile.rustic.chair_yew.name=Yew Chair
 tile.rustic.chair_zebrawood.name=Zebrawood Chair
+tile.rustic.chair_mangrove.name=Mangrove Chair
+tile.rustic.chair_bald_cypress.name=Bald Cypress Chair
+tile.rustic.chair_joshua_tree.name=Joshua Tree Chair
+
 tile.rustic.table_african_padauk.name=African Padauk Table
 tile.rustic.table_alder.name=Alder Table
 tile.rustic.table_angelim.name=Angelim Table
@@ -164,3 +168,6 @@ tile.rustic.table_whitebeam.name=Whitebeam Table
 tile.rustic.table_yellow_meranti.name=Yellow Meranti Table
 tile.rustic.table_yew.name=Yew Table
 tile.rustic.table_zebrawood.name=Zebrawood Table
+tile.rustic.table_mangrove.name=Mangrove Table
+tile.rustic.table_bald_cypress.name=Bald Cypress Table
+tile.rustic.table_joshua_tree.name=Joshua Tree Table

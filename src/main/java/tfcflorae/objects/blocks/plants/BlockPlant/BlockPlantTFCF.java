@@ -14,6 +14,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockHardenedClay;
+import net.minecraft.block.BlockStainedHardenedClay;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
@@ -391,28 +393,28 @@ public class BlockPlantTFCF extends BlockBush implements IItemSize
             case CACTUS:
             case DESERT:
             case DESERT_TALL_PLANT:
-                return BlocksTFC.isSand(state);
+                return BlocksTFC.isSand(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             case DRY:
             case DRY_TALL_PLANT:
-                return BlocksTFC.isSand(state) || BlocksTFC.isDryGrass(state) || BlocksTFCF.isDryGrass(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isDryGrass(state) || BlocksTFCF.isDryGrass(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             case REED:
             case REED_SEA:
             case TALL_REED:
             case TALL_REED_SEA:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             case WATER:
             case TALL_WATER:
             case EMERGENT_TALL_WATER:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             case WATER_SEA:
             case TALL_WATER_SEA:
             case EMERGENT_TALL_WATER_SEA:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             case CREEPING:
             case HANGING:
-                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state);
+                return BlocksTFC.isSand(state) || BlocksTFC.isSoilOrGravel(state) || BlocksTFC.isSoil(state) || BlocksTFC.isGround(state) || BlocksTFCF.isSoilOrGravel(state) || BlocksTFCF.isSoil(state) || BlocksTFCF.isGround(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
             default:
-                return BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state);
+                return BlocksTFC.isSoil(state) || BlocksTFCF.isSoil(state) || state instanceof BlockHardenedClay || state instanceof BlockStainedHardenedClay;
         }
     }
 }

@@ -80,6 +80,9 @@ tile.tfcstorage.wood.food_shelf.whitebeam.name=whitebeam Food Shelf
 tile.tfcstorage.wood.food_shelf.yellow_meranti.name=Yellow Meranti Food Shelf
 tile.tfcstorage.wood.food_shelf.yew.name=Yew Food Shelf
 tile.tfcstorage.wood.food_shelf.zebrawood.name=Zebrawood Food Shelf
+tile.tfcstorage.wood.food_shelf.mangrove.name=Mangrove Food Shelf
+tile.tfcstorage.wood.food_shelf.bald_cypress.name=Bald Cypress Food Shelf
+tile.tfcstorage.wood.food_shelf.joshua_tree.name=Joshua Tree Food Shelf
 
 
 # Hangers
@@ -164,3 +167,6 @@ tile.tfcstorage.wood.hanger.whitebeam.name=whitebeam Hanger
 tile.tfcstorage.wood.hanger.yellow_meranti.name=Yellow Meranti Hanger
 tile.tfcstorage.wood.hanger.yew.name=Yew Hanger
 tile.tfcstorage.wood.hanger.zebrawood.name=Zebrawood Hanger
+tile.tfcstorage.wood.hanger.mangrove.name=Mangrove Hanger
+tile.tfcstorage.wood.hanger.bald_cypress.name=Bald Cypress Hanger
+tile.tfcstorage.wood.hanger.joshua_tree.name=Joshua Tree Hanger

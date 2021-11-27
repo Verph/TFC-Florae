@@ -4,6 +4,7 @@ import java.util.*;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -18,6 +19,7 @@ import net.dries007.tfc.types.DefaultPlants;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.ChunkGenTFC;
 import net.dries007.tfc.world.classic.WorldTypeTFC;
+import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 public class WorldGeneratorUnderground implements IWorldGenerator
@@ -51,6 +53,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
         BlockPos chunkPos = new BlockPos(chunkX << 4, y, chunkZ << 4);
 
         ChunkDataTFC data = ChunkDataTFC.get(world, chunkPos);
+        Biome b = world.getBiome(chunkPos);
         final float avgTemperature = ClimateTFC.getAvgTemp(world, chunkPos);
         final float rainfall = ChunkDataTFC.getRainfall(world, chunkPos);
         final float floraDensity = data.getFloraDensity();
@@ -89,11 +92,12 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                         {
                             case 0:
                             {
-                                if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) || 
+                                if ((b != BiomesTFC.OCEAN || b != BiomesTFC.OCEAN) && (
+                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOW_VINE) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.HANGING_VINE) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE) || 
-                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA))
+                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.LIANA)))
                                 {
                                     int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER2) + WorldTypeTFC.ROCKLAYER2;
                                     BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
@@ -113,10 +117,11 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                             }
                             case 1:
                             {
-                                if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) || 
+                                if ((b != BiomesTFC.OCEAN || b != BiomesTFC.OCEAN) && (
+                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BEARDED_MOSS) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOW_VINE) || 
                                     plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.HANGING_VINE) || 
-                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE))
+                                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.JUNGLE_VINE)))
                                 {
                                     int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER2) + WorldTypeTFC.ROCKLAYER2;
                                     BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
@@ -140,12 +145,13 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                     }
                     case CREEPING:
                     {
-                        if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.TACKWEED) || 
+                        if ((b != BiomesTFC.OCEAN || b != BiomesTFC.OCEAN) && (
+                            plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.TACKWEED) || 
                             plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.TAKAKIA) || 
                             plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.IVY) || 
                             plant == TFCRegistries.PLANTS.getValue(DefaultPlants.MORNING_GLORY) || 
                             plant == TFCRegistries.PLANTS.getValue(DefaultPlants.MOSS) || 
-                            plant == TFCRegistries.PLANTS.getValue(DefaultPlants.REINDEER_LICHEN))
+                            plant == TFCRegistries.PLANTS.getValue(DefaultPlants.REINDEER_LICHEN)))
                         {
                             int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER3) + WorldTypeTFC.ROCKLAYER3;
                             BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);

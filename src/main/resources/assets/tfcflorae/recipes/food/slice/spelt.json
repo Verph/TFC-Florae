@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "tfcflorae:food/spelt_flatbread"
+    "item": "tfcflorae:food/spelt_slice",
+    "count": 3
   }
 }

@@ -305,8 +305,10 @@ public class BlockWaterPlantTFCF extends BlockFluidTFC implements IItemSize, IPl
     public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
     {
         IBlockState soil = worldIn.getBlockState(pos.down());
+        IBlockState up = worldIn.getBlockState(pos.up());
 
         if (worldIn.isAirBlock(pos.up())) return false;
+        if (up.getBlock() instanceof BlockTallGrassWater) return false;
         if (state.getBlock() == this)
         {
             return (soil.getBlock().canSustainPlant(soil, worldIn, pos.down(), net.minecraft.util.EnumFacing.UP, this) || BlocksTFC.isGround(soil)) && plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, pos)) && plant.isValidRain(ChunkDataTFC.getRainfall(worldIn, pos));
