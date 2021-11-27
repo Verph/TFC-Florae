@@ -43,7 +43,7 @@ public enum SeasonalTrees
     PINK_IVORY(() -> ItemsTFCF.PINK_IVORY_DRUPE, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 18f, 31f, 210f, 500f, 0.33f, false, false, false, TreesTFCF.PINK_IVORY_TREE),
     SYZYGIUM(() -> ItemsTFCF.RIBERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 13f, 35f, 140f, 360f, 0.33f, false, false, false, TreesTFCF.SYZYGIUM_TREE),
     YEW(() -> ItemsTFCF.YEW_BERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -15f, 11f, 180f, 350f, 0.33f, true, false, false, TreesTFCF.YEW_TREE),
-    JOSHUA_TREE(() -> ItemsTFCF.SKY_FRUIT, new int[] {1, 2, 2, 2, 3, 3, 3, 1, 1, 1, 1, 1}, 13f, 35f, 140f, 360f, 0.33f, false, false, true, TreesTFCF.JOSHUA_TREE_TREE),
+    JOSHUA_TREE(() -> ItemsTFCF.BARREL_CACTUS_FRUIT, new int[] {1, 2, 2, 2, 3, 3, 3, 1, 1, 1, 1, 1}, 13f, 35f, 140f, 360f, 0.33f, false, false, true, TreesTFCF.JOSHUA_TREE_TREE),
     PURPLE_JACARANDA(null, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
     YELLOW_JACARANDA(null, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
     JUNIPER(() -> ItemsTFCF.JUNIPER, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -8f, 20f, 80f, 350f, 0.33f, false, false, false, TreesTFCF.JUNIPER_TREE),

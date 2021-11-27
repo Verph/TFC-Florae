@@ -49,7 +49,7 @@ public class ItemFoodTFCF extends ItemFood implements IItemFoodTFC
     @Override
     public ICapabilityProvider getCustomFoodHandler()
     {
-        return new FoodHeatHandler(null, data, 1.0F, 480.0F);
+        return new FoodHeatHandler(null, data, 1.0F, 200.0F);
     }
 
     private static final Map<ItemTFCF, ItemFoodTFCF> MAP = new HashMap<>();
