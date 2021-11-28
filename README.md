@@ -1,3 +1,4 @@
+[![Foo](https://media.forgecdn.net/avatars/thumbnails/396/923/64/64/637597280762832131.png)](https://discord.gg/knYTg5HAKb)
 # ![](https://media.forgecdn.net/avatars/thumbnails/396/923/64/64/637597280762832131.png) TFC Florae - an expansive world exploration addon to TerraFirmaCraft
 Welcome to TFC Florae, an addon for TerraFirmaCraft which adds a plethora of new blocks, items and much more to the world and thereby spices it up a prodigious amount! This mod is especially something for you, if you find the base TerraFirmaCraft world to be bland and boring. Want examples of what this mod adds to the table, then check out [the image page](https://www.curseforge.com/minecraft/mc-mods/tfc-florae/screenshots)!
 ## Discord
