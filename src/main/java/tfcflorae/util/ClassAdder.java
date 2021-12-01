@@ -25,7 +25,7 @@ public class ClassAdder
     private static final String CHUNKDATATFC_STORAGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC$ChunkDataStorage.class";
     private static final String GENLAYERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/GenLayerTFC.class";
     private static final String GENLAYERBIOMEEDGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/biome/GenLayerBiomeEdge.class";
-    private static final String GENLAYERBIOMETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/biome/GenLayerBiomeTFC.class";
+    private static final String GENLAYERSHORETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/biome/GenLayerShoreTFC.class";
     private static final String GENLAYERTREEINIT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenLayerTreeInit.class";
     private static final String GENRIVERLAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenRiverLayer.class";
     private static final String GENLAYERRIVERINITTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverInitTFC.class";
@@ -41,6 +41,7 @@ public class ClassAdder
     private static final String SUBDIR_WORLD_GENLAYERS = DIR + "/world/classic/genlayers";
     private static final String SUBDIR_WORLD_GENLAYERS_BIOME = DIR + "/world/classic/genlayers/biome";
     private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS = DIR + "/world/classic/genlayers/datalayers";
+    private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS_TREE = DIR + "/world/classic/genlayers/datalayers/tree";
     private static final String SUBDIR_WORLD_GENLAYERS_RIVER = DIR + "/world/classic/genlayers/river";
     //private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes";
 
@@ -87,6 +88,11 @@ public class ClassAdder
         {
             subDirWorldGenLayersDataLayers.mkdirs();
         }
+        File subDirWorldGenLayersDataLayersTree = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS_DATALAYERS_TREE);
+        if (!subDirWorldGenLayersDataLayersTree.exists())
+        {
+            subDirWorldGenLayersDataLayersTree.mkdirs();
+        }
         File subDirWorldGenLayersRiver = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS_RIVER);
         if (!subDirWorldGenLayersRiver.exists())
         {
@@ -107,7 +113,7 @@ public class ClassAdder
         File chunkDataTFCStorage = new File(bansoukouFolder + "/world/classic/chunkdata", "ChunkDataTFC$ChunkDataStorage.class");
         File genLayerTFC = new File(bansoukouFolder + "/world/classic/genlayers", "GenLayerTFC.class");
         File genLayerBiomeEdge = new File(bansoukouFolder + "/world/classic/genlayers/biome", "GenLayerBiomeEdge.class");
-        //File genLayerBiomeTFC = new File(bansoukouFolder + "/world/classic/genlayers/biome", "GenLayerBiomeTFC.class");
+        File genLayerShoreTFC = new File(bansoukouFolder + "/world/classic/genlayers/biome", "GenLayerShoreTFC.class");
         File genLayerTreeInit = new File(bansoukouFolder + "/world/classic/genlayers/datalayers/tree", "GenLayerTreeInit.class");
         File genRiverLayer = new File(bansoukouFolder + "/world/classic/genlayers/datalayers/tree", "GenRiverLayer.class");
         /*File genLayerRiverInitTFC = new File(bansoukouFolder + "/world/classic/genlayers/river", "GenLayerRiverInitTFC.class");
@@ -167,10 +173,10 @@ public class ClassAdder
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(GENLAYERBIOMEEDGE_FROM)), genLayerBiomeEdge);
             }
-            /*if (genLayerBiomeTFC.createNewFile())
+            if (genLayerShoreTFC.createNewFile())
             {
-                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(GENLAYERBIOMETFC_FROM)), genLayerBiomeTFC);
-            }*/
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(GENLAYERSHORETFC_FROM)), genLayerShoreTFC);
+            }
             if (genLayerTreeInit.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(GENLAYERTREEINIT_FROM)), genLayerTreeInit);
