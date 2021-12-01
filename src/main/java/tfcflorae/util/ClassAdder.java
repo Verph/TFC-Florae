@@ -11,6 +11,7 @@ import tfcflorae.TFCFlorae;
 
 public class ClassAdder
 {
+    // Files
     private static final String BLOCKPLANTTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC.class";
     private static final String BLOCKPLANTTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC$1.class";
     private static final String CHUNKGENTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/ChunkGenTFC.class";
@@ -30,16 +31,69 @@ public class ClassAdder
     private static final String GENLAYERRIVERINITTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverInitTFC.class";
     private static final String GENLAYERRIVERMIXTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverMixTFC.class";
     private static final String GENLAYERRIVERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverTFC.class";
+
+    // Directories
     private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc";
+    private static final String SUBDIR_BLOCKPLANT = DIR + "/objects/blocks/plants";
+    private static final String SUBDIR_WORLD = DIR + "/world/classic";
+    private static final String SUBDIR_WORLD_BIOMES = DIR + "/world/classic/biomes";
+    private static final String SUBDIR_WORLD_CHUNKDATA = DIR + "/world/classic/chunkdata";
+    private static final String SUBDIR_WORLD_GENLAYERS = DIR + "/world/classic/genlayers";
+    private static final String SUBDIR_WORLD_GENLAYERS_BIOME = DIR + "/world/classic/genlayers/biome";
+    private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS = DIR + "/world/classic/genlayers/datalayers";
+    private static final String SUBDIR_WORLD_GENLAYERS_RIVER = DIR + "/world/classic/genlayers/river";
     //private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes";
 
     public static void addClasses(File dir)
     {
-        File bansoukouFolder = new File(Launch.minecraftHome, DIR); // Creates a /bansoukou/.../ directory in the %HOME% directory, if it doesn't yet exist.
+        // Make directories if they are missing.
+        File bansoukouFolder = new File(Launch.minecraftHome, DIR);
         if (!bansoukouFolder.exists())
         {
             bansoukouFolder.mkdirs();
         }
+        File subDirBlockPlant = new File(Launch.minecraftHome, SUBDIR_BLOCKPLANT);
+        if (!subDirBlockPlant.exists())
+        {
+            subDirBlockPlant.mkdirs();
+        }
+        File subDirWorld = new File(Launch.minecraftHome, SUBDIR_WORLD);
+        if (!subDirWorld.exists())
+        {
+            subDirWorld.mkdirs();
+        }
+        File subDirWorldBiomes = new File(Launch.minecraftHome, SUBDIR_WORLD_BIOMES);
+        if (!subDirWorldBiomes.exists())
+        {
+            subDirWorldBiomes.mkdirs();
+        }
+        File subDirWorldChunkData = new File(Launch.minecraftHome, SUBDIR_WORLD_CHUNKDATA);
+        if (!subDirWorldChunkData.exists())
+        {
+            subDirWorldChunkData.mkdirs();
+        }
+        File subDirWorldGenLayers = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS);
+        if (!subDirWorldGenLayers.exists())
+        {
+            subDirWorldGenLayers.mkdirs();
+        }
+        File subDirWorldGenLayersBiome = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS_BIOME);
+        if (!subDirWorldGenLayersBiome.exists())
+        {
+            subDirWorldGenLayersBiome.mkdirs();
+        }
+        File subDirWorldGenLayersDataLayers = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS_DATALAYERS);
+        if (!subDirWorldGenLayersDataLayers.exists())
+        {
+            subDirWorldGenLayersDataLayers.mkdirs();
+        }
+        File subDirWorldGenLayersRiver = new File(Launch.minecraftHome, SUBDIR_WORLD_GENLAYERS_RIVER);
+        if (!subDirWorldGenLayersRiver.exists())
+        {
+            subDirWorldGenLayersRiver.mkdirs();
+        }
+
+        // Define file locations
         File blockPlantTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC.class");
         File blockPlantTFC1 = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC$1.class");
         File chunkGenTFC = new File(bansoukouFolder + "/world/classic", "ChunkGenTFC.class");

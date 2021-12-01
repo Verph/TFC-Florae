@@ -348,6 +348,261 @@ public final class RecipesTFCF
                 }
             }
         }
+        if (!ConfigTFCF.General.WORLD.enableAllEarthenwareClay)
+        {
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/earthenware/" + type,
+                        "ceramics/unfired_clay_recycle_earthenware/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/earthenware/" + type,
+                        "ceramics/unfired_clay_recycle_earthenware/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (EnumDyeColor dyeColor : EnumDyeColor.values())
+            {
+                IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                String[] regNames = {
+                    "ceramics/glazed_vessel_earthenware/" + dyeColor,
+                    "ceramics/unfired_clay_recycle_earthenware/vessel_glazed/" + dyeColor
+                };
+                for (String name : regNames)
+                {
+                    IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                    if (recipe != null)
+                    {
+                        registry.remove(recipe.getRegistryName());
+                        TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                    }
+                }
+            }
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/earthenware/mallet_head",
+                "ceramics/unfired_clay_recycle_earthenware/mallet",
+                "ceramics/unfired_clay_recycle_earthenware/bowl",
+                "ceramics/unfired_clay_recycle_earthenware/flowerpot",
+                "ceramics/unfired_clay_recycle_earthenware/jug",
+                "ceramics/unfired_clay_recycle_earthenware/large_vessel",
+                "ceramics/unfired_clay_recycle_earthenware/pot",
+                "ceramics/unfired_clay_recycle_earthenware/spindle",
+                "ceramics/unfired_clay_recycle_earthenware/vessel",
+                "earthenware_block",
+                "earthenware_bricks",
+                "earthenware_clay",
+                "unfired_spindle_head_earthenware"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
+        {
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/kaolinite/" + type,
+                        "ceramics/unfired_clay_recycle_kaolinite/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/kaolinite/" + type,
+                        "ceramics/unfired_clay_recycle_kaolinite/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (EnumDyeColor dyeColor : EnumDyeColor.values())
+            {
+                IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                String[] regNames = {
+                    "ceramics/glazed_vessel_kaolinite/" + dyeColor,
+                    "ceramics/unfired_clay_recycle_kaolinite/vessel_glazed/" + dyeColor
+                };
+                for (String name : regNames)
+                {
+                    IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                    if (recipe != null)
+                    {
+                        registry.remove(recipe.getRegistryName());
+                        TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                    }
+                }
+            }
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/kaolinite/mallet_head",
+                "ceramics/unfired_clay_recycle_kaolinite/mallet",
+                "ceramics/unfired_clay_recycle_kaolinite/bowl",
+                "ceramics/unfired_clay_recycle_kaolinite/flowerpot",
+                "ceramics/unfired_clay_recycle_kaolinite/jug",
+                "ceramics/unfired_clay_recycle_kaolinite/large_vessel",
+                "ceramics/unfired_clay_recycle_kaolinite/pot",
+                "ceramics/unfired_clay_recycle_kaolinite/spindle",
+                "ceramics/unfired_clay_recycle_kaolinite/vessel",
+                "kaolinite_block",
+                "kaolinite_bricks",
+                "kaolinite_clay",
+                "unfired_spindle_head_kaolinite"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllStonewareClay)
+        {
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/stoneware/" + type,
+                        "ceramics/unfired_clay_recycle_stoneware/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
+            {
+                if (type.hasMold(null))
+                {
+                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                    String[] regNames = {
+                        "metal/unmold/stoneware/" + type,
+                        "ceramics/unfired_clay_recycle_stoneware/" + type
+                    };
+                    for (String name : regNames)
+                    {
+                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                        if (recipe != null)
+                        {
+                            registry.remove(recipe.getRegistryName());
+                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                        }
+                    }
+                }
+            }
+            for (EnumDyeColor dyeColor : EnumDyeColor.values())
+            {
+                IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+                String[] regNames = {
+                    "ceramics/glazed_vessel_stoneware/" + dyeColor,
+                    "ceramics/unfired_clay_recycle_stoneware/vessel_glazed/" + dyeColor
+                };
+                for (String name : regNames)
+                {
+                    IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                    if (recipe != null)
+                    {
+                        registry.remove(recipe.getRegistryName());
+                        TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                    }
+                }
+            }
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/stoneware/mallet_head",
+                "ceramics/unfired_clay_recycle_stoneware/mallet",
+                "ceramics/unfired_clay_recycle_stoneware/bowl",
+                "ceramics/unfired_clay_recycle_stoneware/flowerpot",
+                "ceramics/unfired_clay_recycle_stoneware/jug",
+                "ceramics/unfired_clay_recycle_stoneware/large_vessel",
+                "ceramics/unfired_clay_recycle_stoneware/pot",
+                "ceramics/unfired_clay_recycle_stoneware/spindle",
+                "ceramics/unfired_clay_recycle_stoneware/vessel",
+                "stoneware_block",
+                "stoneware_bricks",
+                "stoneware_clay",
+                "unfired_spindle_head_stoneware"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
     }
 
     @SuppressWarnings("rawtypes")
@@ -1088,7 +1343,7 @@ public final class RecipesTFCF
             new QuernRecipe(IIngredient.of("cropIndigo"), new ItemStack(ItemsTFC.DYE_BLUE, 2)).setRegistryName("crushed_indigo"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.SUNFLOWER))), new ItemStack(Items.DYE, 2, EnumDyeColor.YELLOW.getDyeDamage())).setRegistryName("crushed_sunflower"),
             new QuernRecipe(IIngredient.of("cropWeld"), new ItemStack(Items.DYE, 2, EnumDyeColor.YELLOW.getDyeDamage())).setRegistryName("crushed_weld"),
-            new QuernRecipe(IIngredient.of("cropRape"), new ItemStack(Items.DYE, 2, EnumDyeColor.BLUE.getDyeDamage())).setRegistryName("crushed_rape"),
+            new QuernRecipe(IIngredient.of("cropRape"), new ItemStack(ItemsTFC.DYE_BLUE, 2)).setRegistryName("crushed_rape"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LILAC))), new ItemStack(Items.DYE, 2, EnumDyeColor.PINK.getDyeDamage())).setRegistryName("crushed_lilac"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.PEONY))), new ItemStack(Items.DYE, 2, EnumDyeColor.PINK.getDyeDamage())).setRegistryName("crushed_peony"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LAVANDULA))), new ItemStack(Items.DYE, 2, EnumDyeColor.PURPLE.getDyeDamage())).setRegistryName("crushed_lavandula"),
@@ -1150,10 +1405,10 @@ public final class RecipesTFCF
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.FISH_BONE_CACTUS))), new ItemStack(Items.DYE, 2, EnumDyeColor.MAGENTA.getDyeDamage())).setRegistryName("magenta_dye_fish_bone_cactus"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.FRAGRANT_FERN))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_fragrant_fern"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.HARLEQUIN_MISTLETOE))), new ItemStack(Items.DYE, 2, EnumDyeColor.ORANGE.getDyeDamage())).setRegistryName("orange_dye_harlequin_mistletoe"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.KING_ORCHID))), new ItemStack(Items.DYE, 2, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("white_dye_king_orchid"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.KING_ORCHID))), new ItemStack(ItemsTFC.DYE_WHITE, 2)).setRegistryName("white_dye_king_orchid"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LANTERN_OF_THE_FOREST))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_lantern_of_the_forest"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LARGE_FOOT_DENDROBIUM))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_large_foot_dendrobium"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.COMMON_MISTLETOE))), new ItemStack(Items.DYE, 2, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("white_dye_common_mistletoe"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.COMMON_MISTLETOE))), new ItemStack(ItemsTFC.DYE_WHITE, 2)).setRegistryName("white_dye_common_mistletoe"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.SKY_PLANT))), new ItemStack(Items.DYE, 2, EnumDyeColor.PINK.getDyeDamage())).setRegistryName("pink_dye_sky_plant"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.SULPHUR_SHELF))), new ItemStack(Items.DYE, 2, EnumDyeColor.ORANGE.getDyeDamage())).setRegistryName("orange_dye_sulphur_shelf"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.TAMPA_BUTTERFLY_ORCHID))), new ItemStack(Items.DYE, 2, EnumDyeColor.YELLOW.getDyeDamage())).setRegistryName("yellow_dye_tampa_butterfly_orchid"),
@@ -1178,12 +1433,12 @@ public final class RecipesTFCF
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.ARROWHEAD))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_arrowhead"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.ARUNDO))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_arundo"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUEGRASS))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_bluegrass"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUE_GINGER))), new ItemStack(Items.DYE, 2, EnumDyeColor.BLUE.getDyeDamage())).setRegistryName("blue_dye_blue_ginger"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUE_GINGER))), new ItemStack(ItemsTFC.DYE_BLUE, 2)).setRegistryName("blue_dye_blue_ginger"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BROMEGRASS))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_bromegrass"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BUR_REED))), new ItemStack(Items.DYE, 2, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("white_dye_bur_reed"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BUR_REED))), new ItemStack(ItemsTFC.DYE_WHITE, 2)).setRegistryName("white_dye_bur_reed"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.DESERT_FLAME))), new ItemStack(Items.DYE, 2, EnumDyeColor.YELLOW.getDyeDamage())).setRegistryName("yellow_dye_desert_flame"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.HELICONIA))), new ItemStack(Items.DYE, 2, EnumDyeColor.RED.getDyeDamage())).setRegistryName("red_dye_heliconia"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.HIBISCUS))), new ItemStack(Items.DYE, 2, EnumDyeColor.WHITE.getDyeDamage())).setRegistryName("white_dye_hibiscus"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.HIBISCUS))), new ItemStack(ItemsTFC.DYE_WHITE, 2)).setRegistryName("white_dye_hibiscus"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.KANGAROO_PAW))), new ItemStack(Items.DYE, 2, EnumDyeColor.RED.getDyeDamage())).setRegistryName("red_dye_kangaroo_paw"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.KING_FERN))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_king_fern"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LIPSTICK_PALM))), new ItemStack(Items.DYE, 2, EnumDyeColor.MAGENTA.getDyeDamage())).setRegistryName("magenta_dye_lipstick_palm"),
@@ -1192,13 +1447,13 @@ public final class RecipesTFCF
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.MONSTERA_GROUND))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_monstera_ground"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.PHRAGMITE))), new ItemStack(Items.DYE, 2, EnumDyeColor.PINK.getDyeDamage())).setRegistryName("pink_dye_phragmite"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.PICKERELWEED))), new ItemStack(Items.DYE, 2, EnumDyeColor.PURPLE.getDyeDamage())).setRegistryName("purple_dye_pickerelweed"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BADDERLOCKS))), new ItemStack(Items.DYE, 2, EnumDyeColor.BROWN.getDyeDamage())).setRegistryName("brown_dye_badderlocks"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BADDERLOCKS))), new ItemStack(ItemsTFC.DYE_BROWN, 2)).setRegistryName("brown_dye_badderlocks"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.COONTAIL))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_coontail"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.EEL_GRASS))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_eel_grass"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.GIANT_KELP))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_giant_kelp"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.GUTWEED))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_gutweed"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.HORNWORT))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_hornwort"),
-            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LAMINARIA))), new ItemStack(Items.DYE, 2, EnumDyeColor.BROWN.getDyeDamage())).setRegistryName("brown_dye_laminaria"),
+            new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LAMINARIA))), new ItemStack(ItemsTFC.DYE_BROWN, 2)).setRegistryName("brown_dye_laminaria"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.LEAFY_KELP))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_leafy_kelp"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.MANATEE_GRASS))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_manatee_grass"),
             new QuernRecipe(IIngredient.of(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.MILFOIL))), new ItemStack(Items.DYE, 2, EnumDyeColor.GREEN.getDyeDamage())).setRegistryName("green_dye_milfoil"),

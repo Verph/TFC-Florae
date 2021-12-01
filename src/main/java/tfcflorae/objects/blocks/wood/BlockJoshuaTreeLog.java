@@ -31,11 +31,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.capability.player.CapabilityPlayerData;
 import net.dries007.tfc.api.capability.player.IPlayerData;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.blocks.wood.BlockLogTFC;
 import net.dries007.tfc.util.Helpers;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.types.TreesTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 
 @MethodsReturnNonnullByDefault
@@ -98,7 +101,7 @@ public class BlockJoshuaTreeLog extends Block
         Block block3 = worldIn.getBlockState(pos.east()).getBlock();
         Block block4 = worldIn.getBlockState(pos.south()).getBlock();
         Block block5 = worldIn.getBlockState(pos.west()).getBlock();
-        return state.withProperty(DOWN, Boolean.valueOf(block == this || block == BlockJoshuaTreeFlower.get(wood) || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())))).withProperty(UP, Boolean.valueOf(block1 == this || block1 == BlockJoshuaTreeFlower.get(wood))).withProperty(NORTH, Boolean.valueOf(block2 == this || block2 == BlockJoshuaTreeFlower.get(wood))).withProperty(EAST, Boolean.valueOf(block3 == this || block3 == BlockJoshuaTreeFlower.get(wood))).withProperty(SOUTH, Boolean.valueOf(block4 == this || block4 == BlockJoshuaTreeFlower.get(wood))).withProperty(WEST, Boolean.valueOf(block5 == this || block5 == BlockJoshuaTreeFlower.get(wood)));
+        return state.withProperty(DOWN, Boolean.valueOf(block == this || block == BlockJoshuaTreeFlower.get(wood) || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY)).withProperty(UP, Boolean.valueOf(block1 == this || block1 == BlockJoshuaTreeFlower.get(wood))).withProperty(NORTH, Boolean.valueOf(block2 == this || block2 == BlockJoshuaTreeFlower.get(wood))).withProperty(EAST, Boolean.valueOf(block3 == this || block3 == BlockJoshuaTreeFlower.get(wood))).withProperty(SOUTH, Boolean.valueOf(block4 == this || block4 == BlockJoshuaTreeFlower.get(wood))).withProperty(WEST, Boolean.valueOf(block5 == this || block5 == BlockJoshuaTreeFlower.get(wood)));
     }
 
     @Override
@@ -180,11 +183,16 @@ public class BlockJoshuaTreeLog extends Block
     /**
      * Get the Item that this Block should drop when harvested.
      */
-    /*@Override
+    @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Items.CHORUS_FRUIT;
-    }*/
+        /*TFCFlorae.getLog().warn("This wood is " + wood);
+        TFCFlorae.getLog().warn("Wood drop is " + BlockLogTFC.get(wood));*/
+        if (BlockLogTFC.get(wood) != null)
+            return BlockLogTFC.get(wood).getItemDropped(state, rand, fortune);
+        else
+            return BlockLogTFC.get(TFCRegistries.TREES.getValue(TreesTFCF.JOSHUA_TREE)).getItemDropped(state, rand, fortune);
+    }
 
     /**
      * Returns the quantity of items to drop on block destruction.
@@ -249,7 +257,7 @@ public class BlockJoshuaTreeLog extends Block
 
                 Block block1 = worldIn.getBlockState(blockpos.down()).getBlock();
 
-                if (block1 == this || BlocksTFC.isSand(worldIn.getBlockState(blockpos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(blockpos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(blockpos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(blockpos.down())))
+                if (block1 == this || BlocksTFC.isSand(worldIn.getBlockState(blockpos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(blockpos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(blockpos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(blockpos.down())) || block1 == Blocks.HARDENED_CLAY || block1 == Blocks.STAINED_HARDENED_CLAY)
                 {
                     return true;
                 }
@@ -257,7 +265,7 @@ public class BlockJoshuaTreeLog extends Block
         }
 
         Block block2 = worldIn.getBlockState(pos.down()).getBlock();
-        return block2 == this || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down()));
+        return block2 == this || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())) || block2 == Blocks.HARDENED_CLAY || block2 == Blocks.STAINED_HARDENED_CLAY;
     }
 
     @Override
@@ -284,7 +292,7 @@ public class BlockJoshuaTreeLog extends Block
     public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
     {
         Block block = blockAccess.getBlockState(pos.offset(side)).getBlock();
-        return block != this && block != BlockJoshuaTreeFlower.get(wood) && (side != EnumFacing.DOWN || !BlocksTFC.isSand(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFC.isSoilOrGravel(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFCF.isSand(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFCF.isSoilOrGravel(blockAccess.getBlockState(pos.offset(side))));
+        return block != this && block != BlockJoshuaTreeFlower.get(wood) && (side != EnumFacing.DOWN || !BlocksTFC.isSand(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFC.isSoilOrGravel(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFCF.isSand(blockAccess.getBlockState(pos.offset(side))) || !BlocksTFCF.isSoilOrGravel(blockAccess.getBlockState(pos.offset(side))) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY);
     }
 
     @Override

@@ -149,7 +149,7 @@ public class StructureGeneratorCorals extends WorldGenerator
                 {
 					for (int z = 0; z < template.getSize().getZ(); z++)
                     {
-						for (int y = 0; y < searchRange; y++)
+						/*for (int y = 0; y < searchRange; y++)
                         {
                             for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
                             {
@@ -184,7 +184,7 @@ public class StructureGeneratorCorals extends WorldGenerator
                                     posY = posY - 1;
                                 }
                             }
-						}
+						}*/
 						posY = position.getY() - 1;
 						if(settings.getRotation() == Rotation.NONE)
                         {

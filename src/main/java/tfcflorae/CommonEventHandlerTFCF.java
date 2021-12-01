@@ -57,6 +57,7 @@ import tfcflorae.objects.blocks.wood.cinnamon.BlockCeylonCinnamonLeaves;
 import tfcflorae.types.PlantsTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
 import tfcflorae.util.OreDictionaryHelper;
+import tfcflorae.util.agriculture.CropTFCF;
 
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -94,6 +95,27 @@ public final class CommonEventHandlerTFCF
             {
                 event.getDrops().clear();
                 event.getDrops().add(new ItemStack(ItemsTFCF.BARREL_CACTUS_FRUIT, 1 + Constants.RNG.nextInt(3)));
+            }
+        }
+        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUE_GINGER)) && (month == Month.AUGUST || month == Month.SEPTEMBER || month == Month.OCTOBER || month == Month.NOVEMBER))
+        {
+            event.getDrops().clear();
+            if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
+            {
+                int chance = Constants.RNG.nextInt(2);
+                if (chance == 0)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
+                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(CropTFCF.GINGER), 1 + Constants.RNG.nextInt(2)));
+                }
+                else if (chance == 1)
+                {
+                    event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
+                }
+            }
+            else
+            {
+                event.getDrops().add(new ItemStack(ItemSeedsTFC.get(CropTFCF.GINGER), 1 + Constants.RNG.nextInt(2)));
             }
         }
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))

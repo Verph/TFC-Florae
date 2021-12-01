@@ -45,7 +45,7 @@ public class ConfigTFCF
             @Config.Comment("The rarity for podzol pits to occur. On average 1 / N chunks will have a podzol deposit, if the chunk in question is valid for podzol to spawn.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.podzolRarity")
-            public int podzolRarity = 2;
+            public int podzolRarity = 1;
 
             @Config.Comment("The rarity for mud pits to occur. On average 1 / N chunks will have a mud deposit, if the chunk in question is valid for mud to spawn.")
             @Config.RangeInt(min = 1)
@@ -305,32 +305,32 @@ public class ConfigTFCF
             @Config.Comment("The fresh water plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.waterCount")
-            public float waterCount = 10f;
+            public float waterCount = 12f;
 
             @Config.Comment("The tall fresh water plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.waterTallCount")
-            public float waterTallCount = 5f;
+            public float waterTallCount = 8f;
 
             @Config.Comment("The ocean water plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.waterSeaCount")
-            public float waterSeaCount = 10f;
+            public float waterSeaCount = 12f;
 
             @Config.Comment("The tall ocean water plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.waterTallSeaCount")
-            public float waterTallSeaCount = 5f;
+            public float waterTallSeaCount = 7f;
 
             @Config.Comment("The ocean water algae frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.waterSeaAlgaeCount")
-            public float waterSeaAlgaeCount = 0.2f;
+            public float waterSeaAlgaeCount = 0.3f;
 
             @Config.Comment("The hanging plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.hangingCount")
-            public float hangingCount = 2f;
+            public float hangingCount = 1f;
 
             @Config.Comment("The bearded moss plant frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
@@ -370,12 +370,12 @@ public class ConfigTFCF
             @Config.Comment("The underground hanging vines generation frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.hangingVinesUndergroundCount")
-            public float hangingVinesUndergroundCount = 1.5f;
+            public float hangingVinesUndergroundCount = 1f;
 
             @Config.Comment("The underground creeping vines generation frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
             @Config.LangKey("config." + MODID + ".general.world.creepingVinesUndergroundCount")
-            public float creepingVinesUndergroundCount = 0.7f;
+            public float creepingVinesUndergroundCount = 0.5f;
 
             @Config.Comment("The underground creeping plant generation frequency. Higher value equals higher frequency.")
             @Config.RangeDouble(min = 0)
@@ -528,9 +528,9 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.enableAllFarmland")
             public boolean enableAllFarmland = true;
 
-            @Config.Comment("Enable water plants? You'll need to manually overwrite TFC BlockPlant classes in order for these to work properly!")
+            @Config.Comment("Enable water plants?")
             @Config.LangKey("config." + MODID + ".general.world.enableAllWaterPlants")
-            public boolean enableAllWaterPlants = false;
+            public boolean enableAllWaterPlants = true;
         }
 
         public static final class StructuresCFG

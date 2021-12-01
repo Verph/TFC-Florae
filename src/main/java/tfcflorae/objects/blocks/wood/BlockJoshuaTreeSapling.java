@@ -86,7 +86,8 @@ public class BlockJoshuaTreeSapling extends BlockBush implements IGrowable
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return (super.canPlaceBlockAt(worldIn, pos) || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())));
+        Block block = worldIn.getBlockState(pos.down()).getBlock();
+        return (super.canPlaceBlockAt(worldIn, pos) || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY);
     }
 
     @Override
@@ -220,7 +221,8 @@ public class BlockJoshuaTreeSapling extends BlockBush implements IGrowable
             if (j1 > 0)
             {
                 int k1 = j1 - 1;
-                if (world.isAirBlock(pos.add(l, k1 + 1, i1)) && (BlocksTFC.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFC.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1)))))
+                Block block = world.getBlockState(pos.down()).getBlock();
+                if (world.isAirBlock(pos.add(l, k1 + 1, i1)) && (BlocksTFC.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFC.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSand(world.getBlockState(pos.add(l, k1, i1))) || BlocksTFCF.isSoilOrGravel(world.getBlockState(pos.add(l, k1, i1))) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY))
                 {
                     BlockJoshuaTreeFlower.get(wood).generatePlant(world, pos.add(l, k1 + 1, i1), rand, 8);
                 }

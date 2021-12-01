@@ -62,14 +62,15 @@ public class WorldGenMesaStrata implements IWorldGenerator
             {
                 BlockPos strataLayer = chunkBlockPos.add(x, WorldTypeTFC.SEALEVEL, z);
                 //TFCFlorae.getLog().warn("TFCFlorae: Current 'strataLayer' is " + "X: " + strataLayer.getX() + ", Y: " + strataLayer.getY() + ", Z: " + strataLayer.getZ());
-                Biome b = world.getBiome(strataLayer);
-
+                final Biome b = world.getBiome(strataLayer);
                 final float avgTemperature = ClimateTFC.getAvgTemp(world, strataLayer);
                 final float rainfall = ChunkDataTFC.getRainfall(world, strataLayer);
 
                 if (rainfall < +1.3 * random.nextGaussian() + RAINFALL_DRY_GRASS && avgTemperature >= 15f)
                 {
-                    if (b == BiomesTFC.MESA || b == BiomesTFC.MESA_PLATEAU || b == BiomesTFC.MESA_BRYCE || b == BiomesTFC.MESA_PLATEAU_M)
+                    //TFCFlorae.getLog().warn("Biome at X: " + strataLayer.getX() + " Z: " + strataLayer.getZ() + " is " + b);
+                    //if (b == BiomesTFC.MESA || b == BiomesTFC.MESA_PLATEAU || b == BiomesTFC.MESA_BRYCE || b == BiomesTFC.MESA_PLATEAU_M || BiomesTFC.isMesaBiome(b))
+                    if (BiomesTFC.isMesaBiome(b))
                     {
                         for (int y = WorldTypeTFC.SEALEVEL; y < world.getTopSolidOrLiquidBlock(strataLayer).getY(); ++y)
                         {

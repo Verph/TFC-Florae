@@ -33,6 +33,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -117,7 +118,7 @@ public class BlockJoshuaTreeFlower extends Block
                     IBlockState iblockstate = worldIn.getBlockState(pos.down());
                     Block block = iblockstate.getBlock();
 
-                    if (BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate))
+                    if (BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate) || iblockstate == Blocks.HARDENED_CLAY || iblockstate == Blocks.STAINED_HARDENED_CLAY)
                     {
                         flag = true;
                     }
@@ -131,7 +132,7 @@ public class BlockJoshuaTreeFlower extends Block
 
                             if (block1 != BlockJoshuaTreeLog.get(wood))
                             {
-                                if (BlocksTFC.isSand(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down(j + 1))))
+                                if (BlocksTFC.isSand(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down(j + 1))) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down(j + 1))) || block1 == Blocks.HARDENED_CLAY || block1 == Blocks.STAINED_HARDENED_CLAY)
                                 {
                                     flag1 = true;
                                 }
@@ -142,12 +143,12 @@ public class BlockJoshuaTreeFlower extends Block
                             ++j;
                         }
 
-                        int growMultiplier = rand.nextInt(2);
+                        int growthMultiplier = rand.nextInt(2);
                         int i1 = 2;
 
                         if (flag1)
                         {
-                            if (j < 2 || rand.nextInt(i1 + growMultiplier) >= j)
+                            if (j < 2 || rand.nextInt(i1 + growthMultiplier) >= j)
                             {
                                 flag = true;
                             }
@@ -285,7 +286,7 @@ public class BlockJoshuaTreeFlower extends Block
                 IBlockState iblockstate = worldIn.getBlockState(currentBlock.down());
                 Block block = iblockstate.getBlock();
 
-                if (BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate))
+                if (BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY)
                 {
                     flag = true;
                 }
@@ -299,7 +300,7 @@ public class BlockJoshuaTreeFlower extends Block
 
                         if (block1 != BlockJoshuaTreeLog.get(wood))
                         {
-                            if (BlocksTFC.isSand(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFCF.isSand(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(currentBlock.down(j + 1))))
+                            if (BlocksTFC.isSand(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFCF.isSand(worldIn.getBlockState(currentBlock.down(j + 1))) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(currentBlock.down(j + 1))) || block1 == Blocks.HARDENED_CLAY || block1 == Blocks.STAINED_HARDENED_CLAY)
                             {
                                 flag1 = true;
                             }
@@ -310,12 +311,12 @@ public class BlockJoshuaTreeFlower extends Block
                         ++j;
                     }
 
-                    int growMultiplier = rand.nextInt(2);
+                    int growthMultiplier = rand.nextInt(2);
                     int i1 = 2;
 
                     if (flag1)
                     {
-                        if (j < 2 || rand.nextInt(i1 + growMultiplier) >= j)
+                        if (j < 2 || rand.nextInt(i1 + growthMultiplier) >= j)
                         {
                             flag = true;
                         }
@@ -369,7 +370,7 @@ public class BlockJoshuaTreeFlower extends Block
                             worldIn.setBlockState(blockpos1, BlockJoshuaTreeLog.get(wood).getDefaultState(), 2);
                             worldIn.setBlockState(blockpos1.up(), BlockJoshuaTreeFlower.get(wood).getDefaultState().withProperty(AGE, Integer.valueOf(5)), 2);
                             //this.placeGrownFlower(worldIn, blockpos1.up(), age + 1);
-                            growTreeRecursive(worldIn, blockpos1.up(), rand, age + 1);
+                            growTreeRecursive(worldIn, blockpos1.up(), rand, MathHelper.clamp(age + rand.nextInt(5 - age) + 1, 0, 4));
                             flag2 = true;
                         }
                     }
@@ -583,7 +584,8 @@ public class BlockJoshuaTreeFlower extends Block
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return (super.canPlaceBlockAt(worldIn, pos) && this.canSurvive(worldIn, pos)) || BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down()));
+        Block block = worldIn.getBlockState(pos.down()).getBlock();
+        return ((super.canPlaceBlockAt(worldIn, pos) && this.canSurvive(worldIn, pos)) || (BlocksTFC.isSand(worldIn.getBlockState(pos.down())) || BlocksTFC.isSoilOrGravel(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSand(worldIn.getBlockState(pos.down())) || BlocksTFCF.isSoilOrGravel(worldIn.getBlockState(pos.down())) || block == Blocks.HARDENED_CLAY || block == Blocks.STAINED_HARDENED_CLAY));
     }
 
     /**
@@ -605,7 +607,7 @@ public class BlockJoshuaTreeFlower extends Block
         IBlockState iblockstate = worldIn.getBlockState(pos.down());
         Block block = iblockstate.getBlock();
 
-        if (block != BlockJoshuaTreeLog.get(wood) && !(BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate)))
+        if (block != BlockJoshuaTreeLog.get(wood) && !(BlocksTFC.isSand(iblockstate) || BlocksTFC.isSoilOrGravel(iblockstate) || BlocksTFCF.isSand(iblockstate) || BlocksTFCF.isSoilOrGravel(iblockstate) || iblockstate == Blocks.HARDENED_CLAY || iblockstate == Blocks.STAINED_HARDENED_CLAY))
         {
             if (iblockstate.getMaterial() == Material.AIR)
             {
