@@ -370,26 +370,6 @@ public final class RecipesTFCF
                     }
                 }
             }
-            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
-            {
-                if (type.hasMold(null))
-                {
-                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
-                    String[] regNames = {
-                        "metal/unmold/earthenware/" + type,
-                        "ceramics/unfired_clay_recycle_earthenware/" + type
-                    };
-                    for (String name : regNames)
-                    {
-                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
-                        if (recipe != null)
-                        {
-                            registry.remove(recipe.getRegistryName());
-                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
-                        }
-                    }
-                }
-            }
             for (EnumDyeColor dyeColor : EnumDyeColor.values())
             {
                 IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
@@ -409,8 +389,6 @@ public final class RecipesTFCF
             }
             IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
             String[] regNames = {
-                "metal/unmold/earthenware/mallet_head",
-                "ceramics/unfired_clay_recycle_earthenware/mallet",
                 "ceramics/unfired_clay_recycle_earthenware/bowl",
                 "ceramics/unfired_clay_recycle_earthenware/flowerpot",
                 "ceramics/unfired_clay_recycle_earthenware/jug",
@@ -433,29 +411,49 @@ public final class RecipesTFCF
                 }
             }
         }
+        if (!ConfigTFCF.General.WORLD.enableAllEarthenwareClay || !TFCFlorae.FirmaLifeAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/earthenware/mallet_head",
+                "ceramics/unfired_clay_recycle_earthenware/mallet",
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllEarthenwareClay || !TFCFlorae.TFCElementiaAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/earthenware/nail",
+                "metal/unmold/earthenware/ring",
+                "metal/unmold/earthenware/halberd_blade",
+                "metal/unmold/earthenware/metal_block",
+                "ceramics/unfired_clay_recycle_earthenware/nail",
+                "ceramics/unfired_clay_recycle_earthenware/ring",
+                "ceramics/unfired_clay_recycle_earthenware/halberd_blade",
+                "ceramics/unfired_clay_recycle_earthenware/metal_block"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
         if (!ConfigTFCF.General.WORLD.enableAllKaoliniteClay)
         {
             for (Metal.ItemType type : Metal.ItemType.values())
-            {
-                if (type.hasMold(null))
-                {
-                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
-                    String[] regNames = {
-                        "metal/unmold/kaolinite/" + type,
-                        "ceramics/unfired_clay_recycle_kaolinite/" + type
-                    };
-                    for (String name : regNames)
-                    {
-                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
-                        if (recipe != null)
-                        {
-                            registry.remove(recipe.getRegistryName());
-                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
-                        }
-                    }
-                }
-            }
-            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
             {
                 if (type.hasMold(null))
                 {
@@ -494,8 +492,6 @@ public final class RecipesTFCF
             }
             IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
             String[] regNames = {
-                "metal/unmold/kaolinite/mallet_head",
-                "ceramics/unfired_clay_recycle_kaolinite/mallet",
                 "ceramics/unfired_clay_recycle_kaolinite/bowl",
                 "ceramics/unfired_clay_recycle_kaolinite/flowerpot",
                 "ceramics/unfired_clay_recycle_kaolinite/jug",
@@ -518,29 +514,49 @@ public final class RecipesTFCF
                 }
             }
         }
+        if (!ConfigTFCF.General.WORLD.enableAllKaoliniteClay || !TFCFlorae.FirmaLifeAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/kaolinite/mallet_head",
+                "ceramics/unfired_clay_recycle_kaolinite/mallet",
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllKaoliniteClay || !TFCFlorae.TFCElementiaAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/kaolinite/nail",
+                "metal/unmold/kaolinite/ring",
+                "metal/unmold/kaolinite/halberd_blade",
+                "metal/unmold/kaolinite/metal_block",
+                "ceramics/unfired_clay_recycle_kaolinite/nail",
+                "ceramics/unfired_clay_recycle_kaolinite/ring",
+                "ceramics/unfired_clay_recycle_kaolinite/halberd_blade",
+                "ceramics/unfired_clay_recycle_kaolinite/metal_block"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
         if (!ConfigTFCF.General.WORLD.enableAllStonewareClay)
         {
             for (Metal.ItemType type : Metal.ItemType.values())
-            {
-                if (type.hasMold(null))
-                {
-                    IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
-                    String[] regNames = {
-                        "metal/unmold/stoneware/" + type,
-                        "ceramics/unfired_clay_recycle_stoneware/" + type
-                    };
-                    for (String name : regNames)
-                    {
-                        IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
-                        if (recipe != null)
-                        {
-                            registry.remove(recipe.getRegistryName());
-                            TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
-                        }
-                    }
-                }
-            }
-            for (ItemMetalTFCE.ItemType type : ItemMetalTFCE.ItemType.values())
             {
                 if (type.hasMold(null))
                 {
@@ -579,8 +595,6 @@ public final class RecipesTFCF
             }
             IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
             String[] regNames = {
-                "metal/unmold/stoneware/mallet_head",
-                "ceramics/unfired_clay_recycle_stoneware/mallet",
                 "ceramics/unfired_clay_recycle_stoneware/bowl",
                 "ceramics/unfired_clay_recycle_stoneware/flowerpot",
                 "ceramics/unfired_clay_recycle_stoneware/jug",
@@ -592,6 +606,46 @@ public final class RecipesTFCF
                 "stoneware_bricks",
                 "stoneware_clay",
                 "unfired_spindle_head_stoneware"
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllStonewareClay || !TFCFlorae.FirmaLifeAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/stoneware/mallet_head",
+                "ceramics/unfired_clay_recycle_stoneware/mallet",
+            };
+            for (String name : regNames)
+            {
+                IRecipe recipe = registry.getValue(new ResourceLocation("tfcflorae", name));
+                if (recipe != null)
+                {
+                    registry.remove(recipe.getRegistryName());
+                    TFCFlorae.logger.info("Removed crafting recipe tfcflorae:{}", name);
+                }
+            }
+        }
+        if (!ConfigTFCF.General.WORLD.enableAllStonewareClay || !TFCFlorae.TFCElementiaAdded)
+        {
+            IForgeRegistryModifiable<IRecipe> registry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+            String[] regNames = {
+                "metal/unmold/stoneware/nail",
+                "metal/unmold/stoneware/ring",
+                "metal/unmold/stoneware/halberd_blade",
+                "metal/unmold/stoneware/metal_block",
+                "ceramics/unfired_clay_recycle_stoneware/nail",
+                "ceramics/unfired_clay_recycle_stoneware/ring",
+                "ceramics/unfired_clay_recycle_stoneware/halberd_blade",
+                "ceramics/unfired_clay_recycle_stoneware/metal_block"
             };
             for (String name : regNames)
             {
