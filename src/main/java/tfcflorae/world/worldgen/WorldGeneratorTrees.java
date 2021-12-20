@@ -112,7 +112,7 @@ public class WorldGeneratorTrees implements IWorldGenerator
                 if ((BlocksTFC.isGround(down) || BlocksTFCF.isGround(down) || world.getBlockState(blockPos).getBlock() == ChunkGenTFC.FRESH_WATER.getBlock()) && b1 == BiomesTFC.BAYOU)
                 {
                     //if (TFCRegistries.TREES.getValue(TreesTFCF.BALD_CYPRESS).isValidLocation(avgTemperature, rainfall, density))
-                    if (10f <= avgTemperature && 38f >= avgTemperature && 180f <= rainfall && 500f >= rainfall && blockPos.getY() >= WorldTypeTFC.SEALEVEL - 6)
+                    if (10f <= avgTemperature && 38f >= avgTemperature && 180f <= rainfall && 500f >= rainfall && blockPos.getY() >= WorldTypeTFC.SEALEVEL - 8)
                     {
                         int randomTree = random.nextInt(13) + 1;
                         StructureGeneratorCorals gen = new StructureGeneratorCorals("bald_cypress/" + randomTree);
@@ -138,7 +138,7 @@ public class WorldGeneratorTrees implements IWorldGenerator
                 if ((BlocksTFC.isGround(down) || BlocksTFCF.isGround(down) || world.getBlockState(blockPos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock()) && b1 == BiomesTFC.MANGROVE)
                 {
                     //if (TFCRegistries.TREES.getValue(TreesTFCF.MANGROVE).isValidLocation(avgTemperature, rainfall, density))
-                    if (15f <= avgTemperature && 40f >= avgTemperature && 200f <= rainfall && 500f >= rainfall && blockPos.getY() >= WorldTypeTFC.SEALEVEL - 6)
+                    if (15f <= avgTemperature && 40f >= avgTemperature && 200f <= rainfall && 500f >= rainfall && blockPos.getY() >= WorldTypeTFC.SEALEVEL - 8)
                     {
                         int randomTree = random.nextInt(13) + 1;
                         StructureGeneratorCorals gen = new StructureGeneratorCorals("mangrove/" + randomTree);

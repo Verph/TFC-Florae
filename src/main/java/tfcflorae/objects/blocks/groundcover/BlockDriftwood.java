@@ -43,7 +43,7 @@ public class BlockDriftwood extends BlockBush
         setSoundType(SoundType.WOOD);
         setHardness(0.1f);
         OreDictionaryHelper.register(this, "wood");
-        OreDictionaryHelper.register(this, "wood_driftwood");
+        OreDictionaryHelper.register(this, "wood", "driftwood");
         OreDictionaryHelper.register(this, "driftwood");
     }
 

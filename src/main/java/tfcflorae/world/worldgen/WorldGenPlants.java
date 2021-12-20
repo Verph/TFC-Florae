@@ -57,7 +57,8 @@ public class WorldGenPlants extends WorldGenerator
                             if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
                                 plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos.down(k))) &&
                                 worldIn.isAirBlock(blockpos.down(k)) &&
-                                plantBlock.canBlockStay(worldIn, blockpos.down(k), state))
+                                plantBlock.canBlockStay(worldIn, blockpos.down(k), state) &&
+                                plantBlock.canPlaceBlockAt(worldIn, blockpos.down(k)))
                             {
                                 int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
                                 setBlockAndNotifyAdequately(worldIn, blockpos.down(k), state.withProperty(BlockHangingPlantTFCF.AGE, plantAge));

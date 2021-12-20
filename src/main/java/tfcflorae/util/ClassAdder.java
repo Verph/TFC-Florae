@@ -12,6 +12,11 @@ import tfcflorae.TFCFlorae;
 public class ClassAdder
 {
     // Files
+    private static final String ITEMFIRESTARTER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/ItemFireStarter.class";
+    private static final String ITEMPROSPECTORSPICKRESULTTYPE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult$Type.class";
+    private static final String ITEMPROSPECTORSPICKRESULT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult.class";
+    private static final String ITEMPROSPECTORSPICK_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick.class";
+    private static final String ITEMPROSPECTORSPICK1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$1.class";
     private static final String BLOCKPLANTTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC.class";
     private static final String BLOCKPLANTTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC$1.class";
     private static final String CHUNKGENTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/ChunkGenTFC.class";
@@ -34,6 +39,11 @@ public class ClassAdder
 
     // Directories
     private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc";
+    private static final String SUBDIR_ITEMFIRESTARTER = DIR + "/objects/items";
+    private static final String SUBDIR_ITEMPROSPECTORSPICKRESULTTYPE = DIR + "/objects/items/metal";
+    private static final String SUBDIR_ITEMPROSPECTORSPICKRESULT = DIR + "/objects/items/metal";
+    private static final String SUBDIR_ITEMPROSPECTORSPICK = DIR + "/objects/items/metal";
+    private static final String SUBDIR_ITEMPROSPECTORSPICK1 = DIR + "/objects/items/metal";
     private static final String SUBDIR_BLOCKPLANT = DIR + "/objects/blocks/plants";
     private static final String SUBDIR_WORLD = DIR + "/world/classic";
     private static final String SUBDIR_WORLD_BIOMES = DIR + "/world/classic/biomes";
@@ -52,6 +62,31 @@ public class ClassAdder
         if (!bansoukouFolder.exists())
         {
             bansoukouFolder.mkdirs();
+        }
+        File subDirItemFireStarter = new File(Launch.minecraftHome, SUBDIR_ITEMFIRESTARTER);
+        if (!subDirItemFireStarter.exists())
+        {
+            subDirItemFireStarter.mkdirs();
+        }
+        File subDirItemProspectorPickResultType = new File(Launch.minecraftHome, SUBDIR_ITEMPROSPECTORSPICKRESULTTYPE);
+        if (!subDirItemProspectorPickResultType.exists())
+        {
+            subDirItemProspectorPickResultType.mkdirs();
+        }
+        File subDirItemProspectorPickResult = new File(Launch.minecraftHome, SUBDIR_ITEMPROSPECTORSPICKRESULT);
+        if (!subDirItemProspectorPickResult.exists())
+        {
+            subDirItemProspectorPickResult.mkdirs();
+        }
+        File subDirItemProspectorPick = new File(Launch.minecraftHome, SUBDIR_ITEMPROSPECTORSPICK);
+        if (!subDirItemProspectorPick.exists())
+        {
+            subDirItemProspectorPick.mkdirs();
+        }
+        File subDirItemProspectorPick1 = new File(Launch.minecraftHome, SUBDIR_ITEMPROSPECTORSPICK1);
+        if (!subDirItemProspectorPick1.exists())
+        {
+            subDirItemProspectorPick1.mkdirs();
         }
         File subDirBlockPlant = new File(Launch.minecraftHome, SUBDIR_BLOCKPLANT);
         if (!subDirBlockPlant.exists())
@@ -100,6 +135,11 @@ public class ClassAdder
         }
 
         // Define file locations
+        File itemFireStarter = new File(bansoukouFolder + "/objects/items", "ItemFireStarter.class");
+        File itemProspectorPickResultType = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$ProspectResult$Type.class");
+        File itemProspectorPickResult = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$ProspectResult.class");
+        File itemProspectorPick = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick.class");
+        File itemProspectorPick1 = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$1.class");
         File blockPlantTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC.class");
         File blockPlantTFC1 = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC$1.class");
         File chunkGenTFC = new File(bansoukouFolder + "/world/classic", "ChunkGenTFC.class");
@@ -121,6 +161,26 @@ public class ClassAdder
         File genLayerRiverTFC = new File(bansoukouFolder + "/world/classic/genlayers/river", "GenLayerRiverTFC.class");*/
         try
         {
+            if (itemFireStarter.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMFIRESTARTER_FROM)), itemFireStarter);
+            }
+            /*if (itemProspectorPickResultType.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMPROSPECTORSPICKRESULTTYPE_FROM)), itemProspectorPickResultType);
+            }
+            if (itemProspectorPickResult.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMPROSPECTORSPICKRESULT_FROM)), itemProspectorPickResult);
+            }
+            if (itemProspectorPick.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMPROSPECTORSPICK_FROM)), itemProspectorPick);
+            }
+            if (itemProspectorPick1.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMPROSPECTORSPICK1_FROM)), itemProspectorPick1);
+            }*/
             if (blockPlantTFC.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKPLANTTFC_FROM)), blockPlantTFC);

@@ -1722,7 +1722,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/spelt_flour", new ItemFoodTFCF(FoodDataTFCF.SPELT_FLOUR, "flour_spelt", "flour", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/spelt_dough", new ItemFoodTFCF(FoodDataTFCF.SPELT_DOUGH, "dough_spelt", "dough", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/spelt_bread", new ItemFoodTFCF(FoodDataTFCF.SPELT_BREAD, "bread_spelt", "bread", "category_grain"), CT_FOOD));
-        simpleItems.add(register(r, "food/wild_barley", new ItemFoodTFCF(FoodDataTFCF.WILD_BARLEY, "wild_barley", "barley", "category_grain"), CT_FOOD));
+        simpleItems.add(register(r, "food/wild_barley", new ItemFoodTFCF(FoodDataTFCF.WILD_BARLEY, "wild_barley", "barley", "crop_barley", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/wild_rice", new ItemFoodTFCF(FoodDataTFCF.WILD_RICE, "wild_rice", "rice", "crop_wild_rice", "crop_rice", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/wild_wheat", new ItemFoodTFCF(FoodDataTFCF.WILD_WHEAT, "wild_wheat", "wheat", "crop_wild_wheat", "crop_wheat", "category_grain"), CT_FOOD));
         simpleItems.add(register(r, "food/linseed", new ItemFoodTFCF(FoodDataTFCF.LINSEED, "linseed", "crop_linseed", "category_vegetable"), CT_FOOD));

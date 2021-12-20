@@ -48,7 +48,8 @@ public class WorldGenCaveCreepingVines extends WorldGenerator
                     worldIn.isAirBlock(blockpos.down(k)) &&
                     pos.getY() < WorldTypeTFC.SEALEVEL - 3 &&
                     worldIn.getLightFor(EnumSkyBlock.SKY, blockpos) < 14 && 
-                    plantBlock.canBlockStay(worldIn, blockpos.down(k), state))
+                    plantBlock.canBlockStay(worldIn, blockpos.down(k), state) &&
+                    plantBlock.canPlaceBlockAt(worldIn, blockpos.down(k)))
                 {
                     int plantAge = plant.getAgeForWorldgen(rng, ClimateTFC.getActualTemp(worldIn, blockpos));
                     setBlockAndNotifyAdequately(worldIn, blockpos.down(k), state.withProperty(BlockHangingCreepingPlantTFCF.AGE, plantAge));

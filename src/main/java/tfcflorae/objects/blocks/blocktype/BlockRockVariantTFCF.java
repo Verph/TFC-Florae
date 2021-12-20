@@ -329,6 +329,7 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
         switch (rockTFCF)
         {
             case MOSSY_RAW:
+            case MUD_BRICKS:
                 setSoundType(SoundType.STONE);
                 setHardness(rock.getRockCategory().getHardness()).setResistance(rock.getRockCategory().getResistance());
                 setHarvestLevel("pickaxe", 0);

@@ -69,12 +69,12 @@ import tfcflorae.util.OreDictionaryHelper;
 public class BlockLightstone extends BlockBush implements IItemSize
 {
     private static final PropertyDirection FACING = PropertyDirection.create("facing");
-    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 1.0D, 0.8D);
-    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 0.8D, 1.0D);
-    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.0D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.2D, 0.2D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 1.0D, 0.8D, 0.8D);
+    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.1D, 0.0D, 0.1D, 0.9D, 0.8D, 0.9D);
+    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.1D, 0.2D, 0.1D, 0.9D, 1.0D, 0.9D);
+    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.1D, 0.1D, 0.2D, 0.9D, 0.9D, 1.0D);
+    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.1D, 0.1D, 0.0D, 0.9D, 0.9D, 0.8D);
+    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.1D, 0.1D, 0.8D, 0.9D, 0.9D);
+    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.2D, 0.1D, 0.1D, 1.0D, 0.9D, 0.9D);
 
     protected final BlockStateContainer blockState;
 
@@ -87,6 +87,7 @@ public class BlockLightstone extends BlockBush implements IItemSize
         blockState = this.createPlantBlockState();
         this.setDefaultState(this.blockState.getBaseState());
         OreDictionaryHelper.register(this, "ore", "yooperlite");
+        OreDictionaryHelper.register(this, "gem", "yooperlite");
     }
 
     @Nonnull

@@ -83,12 +83,12 @@ public class BlockCaveMushroom extends BlockBush implements IGrowable, IItemSize
 
     private static final PropertyBool[] ALL_FACES = new PropertyBool[] {DOWN, UP, NORTH, SOUTH, WEST, EAST};
 
-    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 1.0D, 0.8D);
-    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 0.8D, 0.8D, 1.0D);
-    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.0D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.2D, 0.2D, 0.8D, 0.8D, 0.8D);
-    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.2D, 0.2D, 0.2D, 1.0D, 0.8D, 0.8D);
+    private static final AxisAlignedBB UP_AABB = new AxisAlignedBB(0.1D, 0.2D, 0.1D, 0.9D, 1.0D, 0.9D);
+    private static final AxisAlignedBB DOWN_AABB = new AxisAlignedBB(0.1D, 0.0D, 0.1D, 0.9D, 0.8D, 0.9D);
+    private static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.1D, 0.1D, 0.0D, 0.9D, 0.9D, 0.8D);
+    private static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.1D, 0.1D, 0.2D, 0.9D, 0.9D, 1.0D);
+    private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.2D, 0.1D, 0.1D, 1.0D, 0.9D, 0.9D);
+    private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.0D, 0.1D, 0.1D, 0.8D, 0.9D, 0.9D);
 
     protected final BlockStateContainer blockState;
 

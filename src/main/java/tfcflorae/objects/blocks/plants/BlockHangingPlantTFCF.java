@@ -153,7 +153,10 @@ public class BlockHangingPlantTFCF extends BlockPlantDummy1 implements IGrowable
 	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return true;
+        IBlockState up = worldIn.getBlockState(pos.up());
+        return (up.getBlock().canSustainPlant(up, worldIn, pos.up(), net.minecraft.util.EnumFacing.DOWN, this) || isValidBlock(worldIn, pos.up(), worldIn.getBlockState(pos.up())) || worldIn.getBlockState(pos.up()).getBlock() == this) && plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, pos)) && plant.isValidRain(ChunkDataTFC.getRainfall(worldIn, pos));
+        //return this.canBlockStay(worldIn, pos, worldIn.getBlockState(pos));
+        //return true;
 	}
 
     @Override

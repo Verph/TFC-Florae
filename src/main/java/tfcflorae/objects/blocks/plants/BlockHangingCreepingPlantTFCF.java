@@ -126,7 +126,8 @@ public class BlockHangingCreepingPlantTFCF extends BlockCreepingPlantTFCF implem
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, pos)) && plant.isValidRain(ChunkDataTFC.getRainfall(worldIn, pos));
+        return super.canPlaceBlockAt(worldIn, pos) && this.canBlockStay(worldIn, pos, worldIn.getBlockState(pos));
+        //return plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, pos)) && plant.isValidRain(ChunkDataTFC.getRainfall(worldIn, pos));
     }
 
     @Override

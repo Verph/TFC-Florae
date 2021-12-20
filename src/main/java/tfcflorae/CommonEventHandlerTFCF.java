@@ -100,22 +100,15 @@ public final class CommonEventHandlerTFCF
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUE_GINGER)) && (month == Month.AUGUST || month == Month.SEPTEMBER || month == Month.OCTOBER || month == Month.NOVEMBER))
         {
             event.getDrops().clear();
-            if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
+            int chance = Constants.RNG.nextInt(2);
+            if (chance == 0)
             {
-                int chance = Constants.RNG.nextInt(2);
-                if (chance == 0)
-                {
-                    event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
-                    event.getDrops().add(new ItemStack(ItemSeedsTFC.get(CropTFCF.GINGER), 1 + Constants.RNG.nextInt(2)));
-                }
-                else if (chance == 1)
-                {
-                    event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
-                }
-            }
-            else
-            {
+                event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(CropTFCF.GINGER), 1 + Constants.RNG.nextInt(2)));
+            }
+            else if (chance == 1)
+            {
+                event.getDrops().add(new ItemStack(ItemsTFCF.GINGER, 1 + Constants.RNG.nextInt(2)));
             }
         }
         if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
@@ -139,7 +132,7 @@ public final class CommonEventHandlerTFCF
                 event.getDrops().add(new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1 + Constants.RNG.nextInt(2)));
             }
         }
-        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE)) && (month == Month.JUNE || month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER))
+        if (block == BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE)) && (month == Month.JULY || month == Month.AUGUST || month == Month.SEPTEMBER || month == Month.OCTOBER))
         {
             event.getDrops().clear();
             if (state.getValue(((BlockPlantTFC) block).AGE) == 3)
