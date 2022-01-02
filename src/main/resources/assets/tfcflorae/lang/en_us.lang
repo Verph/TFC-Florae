@@ -12634,6 +12634,7 @@ tile.tfc.ore.bismuthinite.slate.name=Slate Bismuthinite
 tile.tfc.ore.bismuthinite.soapstone.name=Soapstone Bismuthinite
 tile.tfc.ore.bismuthinite.travertine.name=Travertine Bismuthinite
 tile.tfc.ore.bismuthinite.wackestone.name=Wackestone Bismuthinite
+tile.tfc.ore.bismuthinite.catlinite.name=Catlinite Bismuthinite
 
 tile.tfc.ore.bituminous_coal.andesite.name=Andesite Bituminous Coal
 tile.tfc.ore.bituminous_coal.arkose.name=Arkose Bituminous Coal
@@ -12677,6 +12678,7 @@ tile.tfc.ore.bituminous_coal.slate.name=Slate Bituminous Coal
 tile.tfc.ore.bituminous_coal.soapstone.name=Soapstone Bituminous Coal
 tile.tfc.ore.bituminous_coal.travertine.name=Travertine Bituminous Coal
 tile.tfc.ore.bituminous_coal.wackestone.name=Wackestone Bituminous Coal
+tile.tfc.ore.bituminous_coal.catlinite.name=Catlinite Bituminous Coal
 
 tile.tfc.ore.borax.andesite.name=Andesite Borax
 tile.tfc.ore.borax.arkose.name=Arkose Borax
@@ -12720,6 +12722,7 @@ tile.tfc.ore.borax.slate.name=Slate Borax
 tile.tfc.ore.borax.soapstone.name=Soapstone Borax
 tile.tfc.ore.borax.travertine.name=Travertine Borax
 tile.tfc.ore.borax.wackestone.name=Wackestone Borax
+tile.tfc.ore.borax.catlinite.name=Catlinite Borax
 
 tile.tfc.ore.cassiterite.andesite.name=Andesite Cassiterite
 tile.tfc.ore.cassiterite.arkose.name=Arkose Cassiterite
@@ -12763,6 +12766,7 @@ tile.tfc.ore.cassiterite.slate.name=Slate Cassiterite
 tile.tfc.ore.cassiterite.soapstone.name=Soapstone Cassiterite
 tile.tfc.ore.cassiterite.travertine.name=Travertine Cassiterite
 tile.tfc.ore.cassiterite.wackestone.name=Wackestone Cassiterite
+tile.tfc.ore.cassiterite.catlinite.name=Catlinite Cassiterite
 
 tile.tfc.ore.cinnabar.andesite.name=Andesite Cinnabar
 tile.tfc.ore.cinnabar.arkose.name=Arkose Cinnabar
@@ -12806,6 +12810,7 @@ tile.tfc.ore.cinnabar.slate.name=Slate Cinnabar
 tile.tfc.ore.cinnabar.soapstone.name=Soapstone Cinnabar
 tile.tfc.ore.cinnabar.travertine.name=Travertine Cinnabar
 tile.tfc.ore.cinnabar.wackestone.name=Wackestone Cinnabar
+tile.tfc.ore.cinnabar.catlinite.name=Catlinite Cinnabar
 
 tile.tfc.ore.cryolite.andesite.name=Andesite Cryolite
 tile.tfc.ore.cryolite.arkose.name=Arkose Cryolite
@@ -12849,6 +12854,7 @@ tile.tfc.ore.cryolite.slate.name=Slate Cryolite
 tile.tfc.ore.cryolite.soapstone.name=Soapstone Cryolite
 tile.tfc.ore.cryolite.travertine.name=Travertine Cryolite
 tile.tfc.ore.cryolite.wackestone.name=Wackestone Cryolite
+tile.tfc.ore.cryolite.catlinite.name=Catlinite Cryolite
 
 tile.tfc.ore.galena.andesite.name=Andesite Galena
 tile.tfc.ore.galena.arkose.name=Arkose Galena
@@ -12892,6 +12898,7 @@ tile.tfc.ore.galena.slate.name=Slate Galena
 tile.tfc.ore.galena.soapstone.name=Soapstone Galena
 tile.tfc.ore.galena.travertine.name=Travertine Galena
 tile.tfc.ore.galena.wackestone.name=Wackestone Galena
+tile.tfc.ore.galena.catlinite.name=Catlinite Galena
 
 tile.tfc.ore.garnierite.andesite.name=Andesite Garnierite
 tile.tfc.ore.garnierite.arkose.name=Arkose Garnierite
@@ -12935,6 +12942,7 @@ tile.tfc.ore.garnierite.slate.name=Slate Garnierite
 tile.tfc.ore.garnierite.soapstone.name=Soapstone Garnierite
 tile.tfc.ore.garnierite.travertine.name=Travertine Garnierite
 tile.tfc.ore.garnierite.wackestone.name=Wackestone Garnierite
+tile.tfc.ore.garnierite.catlinite.name=Catlinite Garnierite
 
 tile.tfc.ore.graphite.andesite.name=Andesite Graphite
 tile.tfc.ore.graphite.arkose.name=Arkose Graphite
@@ -12978,6 +12986,7 @@ tile.tfc.ore.graphite.slate.name=Slate Graphite
 tile.tfc.ore.graphite.soapstone.name=Soapstone Graphite
 tile.tfc.ore.graphite.travertine.name=Travertine Graphite
 tile.tfc.ore.graphite.wackestone.name=Wackestone Graphite
+tile.tfc.ore.graphite.catlinite.name=Catlinite Graphite
 
 tile.tfc.ore.gypsum.andesite.name=Andesite Gypsum
 tile.tfc.ore.gypsum.arkose.name=Arkose Gypsum
@@ -13021,6 +13030,7 @@ tile.tfc.ore.gypsum.slate.name=Slate Gypsum
 tile.tfc.ore.gypsum.soapstone.name=Soapstone Gypsum
 tile.tfc.ore.gypsum.travertine.name=Travertine Gypsum
 tile.tfc.ore.gypsum.wackestone.name=Wackestone Gypsum
+tile.tfc.ore.gypsum.catlinite.name=Catlinite Gypsum
 
 tile.tfc.ore.hematite.andesite.name=Andesite Hematite
 tile.tfc.ore.hematite.arkose.name=Arkose Hematite
@@ -13064,6 +13074,7 @@ tile.tfc.ore.hematite.slate.name=Slate Hematite
 tile.tfc.ore.hematite.soapstone.name=Soapstone Hematite
 tile.tfc.ore.hematite.travertine.name=Travertine Hematite
 tile.tfc.ore.hematite.wackestone.name=Wackestone Hematite
+tile.tfc.ore.hematite.catlinite.name=Catlinite Hematite
 
 tile.tfc.ore.jet.andesite.name=Andesite Jet
 tile.tfc.ore.jet.arkose.name=Arkose Jet
@@ -13107,6 +13118,7 @@ tile.tfc.ore.jet.slate.name=Slate Jet
 tile.tfc.ore.jet.soapstone.name=Soapstone Jet
 tile.tfc.ore.jet.travertine.name=Travertine Jet
 tile.tfc.ore.jet.wackestone.name=Wackestone Jet
+tile.tfc.ore.jet.catlinite.name=Catlinite Jet
 
 tile.tfc.ore.kaolinite.andesite.name=Andesite Kaolinite
 tile.tfc.ore.kaolinite.arkose.name=Arkose Kaolinite
@@ -13150,6 +13162,7 @@ tile.tfc.ore.kaolinite.slate.name=Slate Kaolinite
 tile.tfc.ore.kaolinite.soapstone.name=Soapstone Kaolinite
 tile.tfc.ore.kaolinite.travertine.name=Travertine Kaolinite
 tile.tfc.ore.kaolinite.wackestone.name=Wackestone Kaolinite
+tile.tfc.ore.kaolinite.catlinite.name=Catlinite Kaolinite
 
 tile.tfc.ore.kimberlite.andesite.name=Andesite Kimberlite
 tile.tfc.ore.kimberlite.arkose.name=Arkose Kimberlite
@@ -13193,6 +13206,7 @@ tile.tfc.ore.kimberlite.slate.name=Slate Kimberlite
 tile.tfc.ore.kimberlite.soapstone.name=Soapstone Kimberlite
 tile.tfc.ore.kimberlite.travertine.name=Travertine Kimberlite
 tile.tfc.ore.kimberlite.wackestone.name=Wackestone Kimberlite
+tile.tfc.ore.kimberlite.catlinite.name=Catlinite Kimberlite
 
 tile.tfc.ore.lapis_lazuli.andesite.name=Andesite Lapis Lazuli
 tile.tfc.ore.lapis_lazuli.arkose.name=Arkose Lapis Lazuli
@@ -13236,6 +13250,7 @@ tile.tfc.ore.lapis_lazuli.slate.name=Slate Lapis Lazuli
 tile.tfc.ore.lapis_lazuli.soapstone.name=Soapstone Lapis Lazuli
 tile.tfc.ore.lapis_lazuli.travertine.name=Travertine Lapis Lazuli
 tile.tfc.ore.lapis_lazuli.wackestone.name=Wackestone Lapis Lazuli
+tile.tfc.ore.lapis_lazuli.catlinite.name=Catlinite Lapis Lazuli
 
 tile.tfc.ore.lignite.andesite.name=Andesite Lignite
 tile.tfc.ore.lignite.arkose.name=Arkose Lignite
@@ -13279,6 +13294,7 @@ tile.tfc.ore.lignite.slate.name=Slate Lignite
 tile.tfc.ore.lignite.soapstone.name=Soapstone Lignite
 tile.tfc.ore.lignite.travertine.name=Travertine Lignite
 tile.tfc.ore.lignite.wackestone.name=Wackestone Lignite
+tile.tfc.ore.lignite.catlinite.name=Catlinite Lignite
 
 tile.tfc.ore.limonite.andesite.name=Andesite Limonite
 tile.tfc.ore.limonite.arkose.name=Arkose Limonite
@@ -13322,6 +13338,7 @@ tile.tfc.ore.limonite.slate.name=Slate Limonite
 tile.tfc.ore.limonite.soapstone.name=Soapstone Limonite
 tile.tfc.ore.limonite.travertine.name=Travertine Limonite
 tile.tfc.ore.limonite.wackestone.name=Wackestone Limonite
+tile.tfc.ore.limonite.catlinite.name=Catlinite Limonite
 
 tile.tfc.ore.magnetite.andesite.name=Andesite Magnetite
 tile.tfc.ore.magnetite.arkose.name=Arkose Magnetite
@@ -13365,6 +13382,7 @@ tile.tfc.ore.magnetite.slate.name=Slate Magnetite
 tile.tfc.ore.magnetite.soapstone.name=Soapstone Magnetite
 tile.tfc.ore.magnetite.travertine.name=Travertine Magnetite
 tile.tfc.ore.magnetite.wackestone.name=Wackestone Magnetite
+tile.tfc.ore.magnetite.catlinite.name=Catlinite Magnetite
 
 tile.tfc.ore.malachite.andesite.name=Andesite Malachite
 tile.tfc.ore.malachite.arkose.name=Arkose Malachite
@@ -13408,6 +13426,7 @@ tile.tfc.ore.malachite.slate.name=Slate Malachite
 tile.tfc.ore.malachite.soapstone.name=Soapstone Malachite
 tile.tfc.ore.malachite.travertine.name=Travertine Malachite
 tile.tfc.ore.malachite.wackestone.name=Wackestone Malachite
+tile.tfc.ore.malachite.catlinite.name=Catlinite Malachite
 
 tile.tfc.ore.microcline.andesite.name=Andesite Microcline
 tile.tfc.ore.microcline.arkose.name=Arkose Microcline
@@ -13451,6 +13470,7 @@ tile.tfc.ore.microcline.slate.name=Slate Microcline
 tile.tfc.ore.microcline.soapstone.name=Soapstone Microcline
 tile.tfc.ore.microcline.travertine.name=Travertine Microcline
 tile.tfc.ore.microcline.wackestone.name=Wackestone Microcline
+tile.tfc.ore.microcline.catlinite.name=Catlinite Microcline
 
 tile.tfc.ore.native_copper.andesite.name=Andesite Native Copper
 tile.tfc.ore.native_copper.arkose.name=Arkose Native Copper
@@ -13494,6 +13514,7 @@ tile.tfc.ore.native_copper.slate.name=Slate Native Copper
 tile.tfc.ore.native_copper.soapstone.name=Soapstone Native Copper
 tile.tfc.ore.native_copper.travertine.name=Travertine Native Copper
 tile.tfc.ore.native_copper.wackestone.name=Wackestone Native Copper
+tile.tfc.ore.native_copper.catlinite.name=Catlinite Native Copper
 
 tile.tfc.ore.native_gold.andesite.name=Andesite Native Gold
 tile.tfc.ore.native_gold.arkose.name=Arkose Native Gold
@@ -13537,6 +13558,7 @@ tile.tfc.ore.native_gold.slate.name=Slate Native Gold
 tile.tfc.ore.native_gold.soapstone.name=Soapstone Native Gold
 tile.tfc.ore.native_gold.travertine.name=Travertine Native Gold
 tile.tfc.ore.native_gold.wackestone.name=Wackestone Native Gold
+tile.tfc.ore.native_gold.catlinite.name=Catlinite Native Gold
 
 tile.tfc.ore.native_platinum.andesite.name=Andesite Native Platinum
 tile.tfc.ore.native_platinum.arkose.name=Arkose Native Platinum
@@ -13580,6 +13602,7 @@ tile.tfc.ore.native_platinum.slate.name=Slate Native Platinum
 tile.tfc.ore.native_platinum.soapstone.name=Soapstone Native Platinum
 tile.tfc.ore.native_platinum.travertine.name=Travertine Native Platinum
 tile.tfc.ore.native_platinum.wackestone.name=Wackestone Native Platinum
+tile.tfc.ore.native_platinum.catlinite.name=Catlinite Native Platinum
 
 tile.tfc.ore.native_silver.andesite.name=Andesite Native Silver
 tile.tfc.ore.native_silver.arkose.name=Arkose Native Silver
@@ -13623,6 +13646,7 @@ tile.tfc.ore.native_silver.slate.name=Slate Native Silver
 tile.tfc.ore.native_silver.soapstone.name=Soapstone Native Silver
 tile.tfc.ore.native_silver.travertine.name=Travertine Native Silver
 tile.tfc.ore.native_silver.wackestone.name=Wackestone Native Silver
+tile.tfc.ore.native_silver.catlinite.name=Catlinite Native Silver
 
 tile.tfc.ore.olivine.andesite.name=Andesite Olivine
 tile.tfc.ore.olivine.arkose.name=Arkose Olivine
@@ -13666,6 +13690,7 @@ tile.tfc.ore.olivine.slate.name=Slate Olivine
 tile.tfc.ore.olivine.soapstone.name=Soapstone Olivine
 tile.tfc.ore.olivine.travertine.name=Travertine Olivine
 tile.tfc.ore.olivine.wackestone.name=Wackestone Olivine
+tile.tfc.ore.olivine.catlinite.name=Catlinite Olivine
 
 tile.tfc.ore.petrified_wood.andesite.name=Andesite Petrified Wood
 tile.tfc.ore.petrified_wood.arkose.name=Arkose Petrified Wood
@@ -13709,6 +13734,7 @@ tile.tfc.ore.petrified_wood.slate.name=Slate Petrified Wood
 tile.tfc.ore.petrified_wood.soapstone.name=Soapstone Petrified Wood
 tile.tfc.ore.petrified_wood.travertine.name=Travertine Petrified Wood
 tile.tfc.ore.petrified_wood.wackestone.name=Wackestone Petrified Wood
+tile.tfc.ore.petrified_wood.catlinite.name=Catlinite Petrified Wood
 
 tile.tfc.ore.pitchblende.andesite.name=Andesite Pitchblende
 tile.tfc.ore.pitchblende.arkose.name=Arkose Pitchblende
@@ -13752,6 +13778,7 @@ tile.tfc.ore.pitchblende.slate.name=Slate Pitchblende
 tile.tfc.ore.pitchblende.soapstone.name=Soapstone Pitchblende
 tile.tfc.ore.pitchblende.travertine.name=Travertine Pitchblende
 tile.tfc.ore.pitchblende.wackestone.name=Wackestone Pitchblende
+tile.tfc.ore.pitchblende.catlinite.name=Catlinite Pitchblende
 
 tile.tfc.ore.saltpeter.andesite.name=Andesite Saltpeter
 tile.tfc.ore.saltpeter.arkose.name=Arkose Saltpeter
@@ -13795,6 +13822,7 @@ tile.tfc.ore.saltpeter.slate.name=Slate Saltpeter
 tile.tfc.ore.saltpeter.soapstone.name=Soapstone Saltpeter
 tile.tfc.ore.saltpeter.travertine.name=Travertine Saltpeter
 tile.tfc.ore.saltpeter.wackestone.name=Wackestone Saltpeter
+tile.tfc.ore.saltpeter.catlinite.name=Catlinite Saltpeter
 
 tile.tfc.ore.satinspar.andesite.name=Andesite Satinspar
 tile.tfc.ore.satinspar.arkose.name=Arkose Satinspar
@@ -13838,6 +13866,7 @@ tile.tfc.ore.satinspar.slate.name=Slate Satinspar
 tile.tfc.ore.satinspar.soapstone.name=Soapstone Satinspar
 tile.tfc.ore.satinspar.travertine.name=Travertine Satinspar
 tile.tfc.ore.satinspar.wackestone.name=Wackestone Satinspar
+tile.tfc.ore.satinspar.catlinite.name=Catlinite Satinspar
 
 tile.tfc.ore.selenite.andesite.name=Andesite Selenite
 tile.tfc.ore.selenite.arkose.name=Arkose Selenite
@@ -13881,6 +13910,7 @@ tile.tfc.ore.selenite.slate.name=Slate Selenite
 tile.tfc.ore.selenite.soapstone.name=Soapstone Selenite
 tile.tfc.ore.selenite.travertine.name=Travertine Selenite
 tile.tfc.ore.selenite.wackestone.name=Wackestone Selenite
+tile.tfc.ore.selenite.catlinite.name=Catlinite Selenite
 
 tile.tfc.ore.serpentine.andesite.name=Andesite Serpentine
 tile.tfc.ore.serpentine.arkose.name=Arkose Serpentine
@@ -13924,6 +13954,7 @@ tile.tfc.ore.serpentine.slate.name=Slate Serpentine
 tile.tfc.ore.serpentine.soapstone.name=Soapstone Serpentine
 tile.tfc.ore.serpentine.travertine.name=Travertine Serpentine
 tile.tfc.ore.serpentine.wackestone.name=Wackestone Serpentine
+tile.tfc.ore.serpentine.catlinite.name=Catlinite Serpentine
 
 tile.tfc.ore.sphalerite.andesite.name=Andesite Sphalerite
 tile.tfc.ore.sphalerite.arkose.name=Arkose Sphalerite
@@ -13967,6 +13998,7 @@ tile.tfc.ore.sphalerite.slate.name=Slate Sphalerite
 tile.tfc.ore.sphalerite.soapstone.name=Soapstone Sphalerite
 tile.tfc.ore.sphalerite.travertine.name=Travertine Sphalerite
 tile.tfc.ore.sphalerite.wackestone.name=Wackestone Sphalerite
+tile.tfc.ore.sphalerite.catlinite.name=Catlinite Sphalerite
 
 tile.tfc.ore.sulfur.andesite.name=Andesite Sulfur
 tile.tfc.ore.sulfur.arkose.name=Arkose Sulfur
@@ -14010,6 +14042,7 @@ tile.tfc.ore.sulfur.slate.name=Slate Sulfur
 tile.tfc.ore.sulfur.soapstone.name=Soapstone Sulfur
 tile.tfc.ore.sulfur.travertine.name=Travertine Sulfur
 tile.tfc.ore.sulfur.wackestone.name=Wackestone Sulfur
+tile.tfc.ore.sulfur.catlinite.name=Catlinite Sulfur
 
 tile.tfc.ore.sylvite.andesite.name=Andesite Sylvite
 tile.tfc.ore.sylvite.arkose.name=Arkose Sylvite
@@ -14053,6 +14086,7 @@ tile.tfc.ore.sylvite.slate.name=Slate Sylvite
 tile.tfc.ore.sylvite.soapstone.name=Soapstone Sylvite
 tile.tfc.ore.sylvite.travertine.name=Travertine Sylvite
 tile.tfc.ore.sylvite.wackestone.name=Wackestone Sylvite
+tile.tfc.ore.sylvite.catlinite.name=Catlinite Sylvite
 
 tile.tfc.ore.tetrahedrite.andesite.name=Andesite Tetrahedrite
 tile.tfc.ore.tetrahedrite.arkose.name=Arkose Tetrahedrite
@@ -14096,6 +14130,7 @@ tile.tfc.ore.tetrahedrite.slate.name=Slate Tetrahedrite
 tile.tfc.ore.tetrahedrite.soapstone.name=Soapstone Tetrahedrite
 tile.tfc.ore.tetrahedrite.travertine.name=Travertine Tetrahedrite
 tile.tfc.ore.tetrahedrite.wackestone.name=Wackestone Tetrahedrite
+tile.tfc.ore.tetrahedrite.catlinite.name=Catlinite Tetrahedrite
 
 tile.tfc.wall.cobble.breccia.name=Breccia Cobble Wall
 tile.tfc.wall.cobble.foidolite.name=Foidolite Cobble Wall
@@ -19111,6 +19146,10 @@ tile.tfc.plants.red_algae.name=Red Algae
 tile.tfc.plants.red_sea_whip.name=Red Sea Whip
 tile.tfc.plants.sea_anemone.name=Sea Anemone
 
+tile.tfcflorae.plants.wild_barley.name=Wild Barley
+tile.tfcflorae.plants.wild_rice.name=Wild Rice
+tile.tfcflorae.plants.wild_wheat.name=Wild Wheat
+tile.tfcflorae.plants.blue_ginger.name=Blue Ginger
 tile.tfcflorae.plants.badderlocks.name=Badderlocks
 tile.tfcflorae.plants.brown_algae.name=Brown Algae
 tile.tfcflorae.plants.coontail.name=Coontail

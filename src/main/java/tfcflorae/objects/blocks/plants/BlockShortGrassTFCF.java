@@ -24,11 +24,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
 
 import net.dries007.tfc.Constants;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Plant;
+import net.dries007.tfc.objects.items.ItemSeedsTFC;
 import net.dries007.tfc.objects.items.ItemsTFC;
+import net.dries007.tfc.util.agriculture.Crop;
+import net.dries007.tfc.util.calendar.CalendarTFC;
+import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantTFCF;
+import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.types.PlantsTFCF;
 
 @ParametersAreNonnullByDefault
 public class BlockShortGrassTFCF extends BlockPlantTFCF implements IShearable
@@ -53,18 +60,89 @@ public class BlockShortGrassTFCF extends BlockPlantTFCF implements IShearable
     @Override
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack)
     {
-        if (!worldIn.isRemote && stack.getItem() == Items.SHEARS)
+        Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+        int currentStage = state.getValue(growthStageProperty);
+        int expectedStage = plant.getStageForMonth(currentMonth);
+        int age = state.getValue(AGE);
+
+        if (!worldIn.isRemote)
         {
-            spawnAsEntity(worldIn, pos, new ItemStack(this, 1));
-        }
-        else if (!worldIn.isRemote && stack.getItem().getHarvestLevel(stack, "knife", player, state) != -1 || stack.getItem().getHarvestLevel(stack, "scythe", player, state) != -1)
-        {
-            if (Constants.RNG.nextDouble() <= (state.getValue(AGE) + 1) / 4.0D) //+25% change for each age
+            if (stack.getItem().getHarvestLevel(stack, "knife", player, state) != -1 || stack.getItem().getHarvestLevel(stack, "scythe", player, state) != -1)
             {
-                spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFC.STRAW, 1));
+                /*if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY))
+                {
+                    if (age == 3 && (currentStage == 1 || expectedStage == 1))
+                    {
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFCF.WILD_BARLEY, 1 + Constants.RNG.nextInt(2)));
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), Constants.RNG.nextInt(2)));
+                    }
+                    else
+                    {
+                        if (Constants.RNG.nextDouble() <= (age + 1) / 4.0D) //+25% change for each age
+                        {
+                            spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFC.STRAW, 1));
+                            int chance = Constants.RNG.nextInt(2);
+                            if (chance == 0)
+                            {
+                                spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.BARLEY), 1));
+                            }
+                        }
+                    }
+                }
+                else if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT))
+                {
+                    if (age == 3 && (currentStage == 1 || expectedStage == 1))
+                    {
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFCF.WILD_WHEAT, 1 + Constants.RNG.nextInt(2)));
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), Constants.RNG.nextInt(2)));
+                    }
+                    else
+                    {
+                        if (Constants.RNG.nextDouble() <= (age + 1) / 4.0D) //+25% change for each age
+                        {
+                            spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFC.STRAW, 1));
+                            int chance = Constants.RNG.nextInt(2);
+                            if (chance == 0)
+                            {
+                                spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.WHEAT), 1));
+                            }
+                        }
+                    }
+                }
+                else if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE))
+                {
+                    if (age == 3 && (currentStage == 1 || expectedStage == 1))
+                    {
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFCF.WILD_RICE, 1 + Constants.RNG.nextInt(2)));
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.RICE), Constants.RNG.nextInt(2)));
+                    }
+                    else
+                    {
+                        if (Constants.RNG.nextDouble() <= (age + 1) / 4.0D) //+25% change for each age
+                        {
+                            spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFC.STRAW, 1));
+                            int chance = Constants.RNG.nextInt(2);
+                            if (chance == 0)
+                            {
+                                spawnAsEntity(worldIn, pos, new ItemStack(ItemSeedsTFC.get(Crop.RICE), 1));
+                            }
+                        }
+                    }
+                }
+                else*/
+                {
+                    if (Constants.RNG.nextDouble() <= (age + 1) / 4.0D) //+25% change for each age
+                    {
+                        spawnAsEntity(worldIn, pos, new ItemStack(ItemsTFC.STRAW, 1));
+                    }
+                }
+            }
+            else if (stack.getItem() == Items.SHEARS)
+            {
+                spawnAsEntity(worldIn, pos, new ItemStack(this, 1));
             }
         }
-        super.harvestBlock(worldIn, player, pos, state, te, stack);
+        //super.harvestBlock(worldIn, player, pos, state, te, stack);
     }
 
     @Override

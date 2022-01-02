@@ -7,16 +7,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_0",
-		  "weight": 4
-		},
-		{
-          "model": "tfc:plants/wild_barley_1",
-		  "weight": 1
-		},
-		{
-          "model": "tfc:plants/wild_barley_2",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_0"
 		}
       ]
     },
@@ -27,12 +18,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_1",
-		  "weight": 4
-		},
-		{
-          "model": "tfc:plants/wild_barley_2",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_1"
 		}
       ]
     },
@@ -43,12 +29,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_2",
-		  "weight": 4
-		},
-		{
-          "model": "tfc:plants/wild_barley_3",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_2"
 		}
       ]
     },
@@ -59,12 +40,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_3",
-		  "weight": 1
-		},
-		{
-          "model": "tfc:plants/wild_barley_double",
-		  "weight": 3
+          "model": "tfc:plants/wild_barley_3"
 		}
       ]
     },
@@ -75,16 +51,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_0_tuft",
-		  "weight": 3
-		},
-		{
-          "model": "tfc:plants/wild_barley_1_tuft",
-		  "weight": 1
-		},
-		{
-          "model": "tfc:plants/wild_barley_2_tuft",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_0_tuft"
 		}
       ]
     },
@@ -95,12 +62,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_1_tuft",
-		  "weight": 3
-		},
-		{
-          "model": "tfc:plants/wild_barley_2_tuft",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_1_tuft"
 		}
       ]
     },
@@ -111,12 +73,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_2_tuft",
-		  "weight": 3
-		},
-		{
-          "model": "tfc:plants/wild_barley_3_tuft",
-		  "weight": 1
+          "model": "tfc:plants/wild_barley_2_tuft"
 		}
       ]
     },
@@ -127,12 +84,7 @@
       },
       "apply": [
 		{
-          "model": "tfc:plants/wild_barley_3_tuft",
-		  "weight": 1
-		},
-		{
-          "model": "tfc:plants/wild_barley_double_tuft",
-		  "weight": 3
+          "model": "tfc:plants/wild_barley_3_tuft"
 		}
       ]
     }

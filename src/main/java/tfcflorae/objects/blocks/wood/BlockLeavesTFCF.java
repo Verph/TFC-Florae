@@ -118,24 +118,25 @@ public class BlockLeavesTFCF extends BlockLeaves
         Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
         int expectedStage = fruitTree.getStageForMonth(currentMonth);
         float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
+        float tempGauss = (int)(12f + (random.nextGaussian() / 4));
 
         switch (expectedStage)
         {
             case 0:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature < 12f)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.WINTER));
-                else if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature >= 12f)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature < tempGauss)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
+                else if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature >= tempGauss)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
             case 1:
                 if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 else if (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
             case 2:
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
                 break;
             case 3:
                 if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
@@ -146,21 +147,20 @@ public class BlockLeavesTFCF extends BlockLeaves
                         long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
                         if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
                         {
-                            world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.FRUIT));
+                            world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT));
                             te.resetCounter();
                         }
                     }
                 }
                 break;
             case 4:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature < 12)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
-                else if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature >= 12)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature < tempGauss)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
+                else if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature >= tempGauss)
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
                 break;
             default:
-                world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
+                world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
         }
         doLeafDecay(world, pos, state);
     }

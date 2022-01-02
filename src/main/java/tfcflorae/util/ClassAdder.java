@@ -13,19 +13,35 @@ public class ClassAdder
 {
     // Files
     private static final String ITEMFIRESTARTER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/ItemFireStarter.class";
+    private static final String ITEM_SEEDS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/ItemSeedsTFC.class";
+    private static final String ITEMBLOCKBLOCKCROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/itemblock/ItemBlockCropDeadWaterTFC.class";
+    private static final String ITEMBLOCKBLOCKCROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/itemblock/ItemBlockCropWaterTFC.class";
     private static final String ITEMPROSPECTORSPICKRESULTTYPE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult$Type.class";
     private static final String ITEMPROSPECTORSPICKRESULT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult.class";
     private static final String ITEMPROSPECTORSPICK_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick.class";
     private static final String ITEMPROSPECTORSPICK1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/items/metal/ItemProspectorPick$1.class";
+
+    private static final String BLOCKSTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/BlocksTFC$1.class";
+    private static final String BLOCKSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/BlocksTFC.class";
+    private static final String BLOCK_CROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/agriculture/BlockCropDead.class";
+    private static final String BLOCK_CROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/agriculture/BlockCropTFC.class";
     private static final String BLOCKPLANTTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC.class";
     private static final String BLOCKPLANTTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC$1.class";
+    private static final String BLOCKSHORTGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockShortGrassTFC.class";
+    private static final String BLOCKTALLGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockTallGrassTFC.class";
+    private static final String BLOCKHANGINGTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/objects/blocks/plants/BlockHangingPlantTFC.class";
+
+    private static final String WORLDREGEN_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/util/WorldRegenHandler.class";
+
     private static final String CHUNKGENTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/ChunkGenTFC.class";
     private static final String DATALAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/DataLayer.class";
+
     private static final String BIOMEDECORATOR_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC.class";
     private static final String BIOMEDECORATOR1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC$1.class";
     private static final String BIOMEMESATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes/BiomeMesaTFC.class";
     private static final String BIOMESTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes/BiomesTFC.class";
     private static final String BIOMETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes/BiomeTFC.class";
+
     private static final String CHUNKDATATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC.class";
     private static final String CHUNKDATATFC_STORAGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC$ChunkDataStorage.class";
     private static final String GENLAYERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/GenLayerTFC.class";
@@ -37,14 +53,20 @@ public class ClassAdder
     private static final String GENLAYERRIVERMIXTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverMixTFC.class";
     private static final String GENLAYERRIVERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverTFC.class";
 
+    private static final String WORLDGENWILDCROPS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/worldgen/WorldGenWildCrops.class";
+
     // Directories
     private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc";
-    private static final String SUBDIR_ITEMFIRESTARTER = DIR + "/objects/items";
+    private static final String SUBDIR_ITEM = DIR + "/objects/items";
+    private static final String SUBDIR_ITEM_ITEMBLOCK = DIR + "/objects/items/itemblock";
     private static final String SUBDIR_ITEMPROSPECTORSPICKRESULTTYPE = DIR + "/objects/items/metal";
     private static final String SUBDIR_ITEMPROSPECTORSPICKRESULT = DIR + "/objects/items/metal";
     private static final String SUBDIR_ITEMPROSPECTORSPICK = DIR + "/objects/items/metal";
     private static final String SUBDIR_ITEMPROSPECTORSPICK1 = DIR + "/objects/items/metal";
+    private static final String SUBDIR_BLOCK = DIR + "/objects/blocks";
+    private static final String SUBDIR_BLOCK_AGRICULTURE = DIR + "/objects/blocks/agriculture";
     private static final String SUBDIR_BLOCKPLANT = DIR + "/objects/blocks/plants";
+    private static final String SUBDIR_UTIL = DIR + "/util";
     private static final String SUBDIR_WORLD = DIR + "/world/classic";
     private static final String SUBDIR_WORLD_BIOMES = DIR + "/world/classic/biomes";
     private static final String SUBDIR_WORLD_CHUNKDATA = DIR + "/world/classic/chunkdata";
@@ -53,6 +75,7 @@ public class ClassAdder
     private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS = DIR + "/world/classic/genlayers/datalayers";
     private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS_TREE = DIR + "/world/classic/genlayers/datalayers/tree";
     private static final String SUBDIR_WORLD_GENLAYERS_RIVER = DIR + "/world/classic/genlayers/river";
+    private static final String SUBDIR_WORLD_WORLDGEN = DIR + "/world/classic/worldgen";
     //private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.21.179/net/dries007/tfc/world/classic/biomes";
 
     public static void addClasses(File dir)
@@ -63,10 +86,15 @@ public class ClassAdder
         {
             bansoukouFolder.mkdirs();
         }
-        File subDirItemFireStarter = new File(Launch.minecraftHome, SUBDIR_ITEMFIRESTARTER);
-        if (!subDirItemFireStarter.exists())
+        File subDirItem = new File(Launch.minecraftHome, SUBDIR_ITEM);
+        if (!subDirItem.exists())
         {
-            subDirItemFireStarter.mkdirs();
+            subDirItem.mkdirs();
+        }
+        File subDirItemItemBlock = new File(Launch.minecraftHome, SUBDIR_ITEM_ITEMBLOCK);
+        if (!subDirItemItemBlock.exists())
+        {
+            subDirItemItemBlock.mkdirs();
         }
         File subDirItemProspectorPickResultType = new File(Launch.minecraftHome, SUBDIR_ITEMPROSPECTORSPICKRESULTTYPE);
         if (!subDirItemProspectorPickResultType.exists())
@@ -88,10 +116,25 @@ public class ClassAdder
         {
             subDirItemProspectorPick1.mkdirs();
         }
+        File subDirBlock = new File(Launch.minecraftHome, SUBDIR_BLOCK);
+        if (!subDirBlock.exists())
+        {
+            subDirBlock.mkdirs();
+        }
+        File subDirBlockAgriculture = new File(Launch.minecraftHome, SUBDIR_BLOCK_AGRICULTURE);
+        if (!subDirBlockAgriculture.exists())
+        {
+            subDirBlockAgriculture.mkdirs();
+        }
         File subDirBlockPlant = new File(Launch.minecraftHome, SUBDIR_BLOCKPLANT);
         if (!subDirBlockPlant.exists())
         {
             subDirBlockPlant.mkdirs();
+        }
+        File subDirUtil = new File(Launch.minecraftHome, SUBDIR_UTIL);
+        if (!subDirUtil.exists())
+        {
+            subDirUtil.mkdirs();
         }
         File subDirWorld = new File(Launch.minecraftHome, SUBDIR_WORLD);
         if (!subDirWorld.exists())
@@ -133,15 +176,31 @@ public class ClassAdder
         {
             subDirWorldGenLayersRiver.mkdirs();
         }
+        File subDirWorldGen = new File(Launch.minecraftHome, SUBDIR_WORLD_WORLDGEN);
+        if (!subDirWorldGen.exists())
+        {
+            subDirWorldGen.mkdirs();
+        }
 
         // Define file locations
         File itemFireStarter = new File(bansoukouFolder + "/objects/items", "ItemFireStarter.class");
+        File itemSeeds = new File(bansoukouFolder + "/objects/items", "ItemSeedsTFC.class");
+        File itemBlockCropWaterDead = new File(bansoukouFolder + "/objects/items/itemblock", "ItemBlockCropDeadWaterTFC.class");
+        File itemBlockCropWater = new File(bansoukouFolder + "/objects/items/itemblock", "ItemBlockCropWaterTFC.class");
         File itemProspectorPickResultType = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$ProspectResult$Type.class");
         File itemProspectorPickResult = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$ProspectResult.class");
         File itemProspectorPick = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick.class");
         File itemProspectorPick1 = new File(bansoukouFolder + "/objects/items/metal", "ItemProspectorPick$1.class");
+        File blockBlocksTFC1 = new File(bansoukouFolder + "/objects/blocks", "BlocksTFC$1.class");
+        File blockBlocksTFC = new File(bansoukouFolder + "/objects/blocks", "BlocksTFC.class");
+        File blockCropDead = new File(bansoukouFolder + "/objects/blocks/agriculture", "BlockCropDead.class");
+        File blockCrop = new File(bansoukouFolder + "/objects/blocks/agriculture", "BlockCropTFC.class");
         File blockPlantTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC.class");
         File blockPlantTFC1 = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC$1.class");
+        File blockShortGrassTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockShortGrassTFC.class");
+        File blockTallGrassTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockTallGrassTFC.class");
+        File blockHangingTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockHangingPlantTFC.class");
+        File worldRegenHandler = new File(bansoukouFolder + "/util", "WorldRegenHandler.class");
         File chunkGenTFC = new File(bansoukouFolder + "/world/classic", "ChunkGenTFC.class");
         File dataLayer = new File(bansoukouFolder + "/world/classic", "DataLayer.class");
         File biomeDecoratorTFC = new File(bansoukouFolder + "/world/classic/biomes", "BiomeDecoratorTFC.class");
@@ -159,11 +218,24 @@ public class ClassAdder
         /*File genLayerRiverInitTFC = new File(bansoukouFolder + "/world/classic/genlayers/river", "GenLayerRiverInitTFC.class");
         File genLayerRiverMixTFC = new File(bansoukouFolder + "/world/classic/genlayers/river", "GenLayerRiverMixTFC.class");
         File genLayerRiverTFC = new File(bansoukouFolder + "/world/classic/genlayers/river", "GenLayerRiverTFC.class");*/
+        File genWildCrops = new File(bansoukouFolder + "/world/classic/worldgen", "WorldGenWildCrops.class");
         try
         {
             if (itemFireStarter.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMFIRESTARTER_FROM)), itemFireStarter);
+            }
+            if (itemSeeds.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEM_SEEDS_FROM)), itemSeeds);
+            }
+            if (itemBlockCropWaterDead.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMBLOCKBLOCKCROPDEAD_FROM)), itemBlockCropWaterDead);
+            }
+            if (itemBlockCropWater.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMBLOCKBLOCKCROP_FROM)), itemBlockCropWater);
             }
             /*if (itemProspectorPickResultType.createNewFile())
             {
@@ -181,6 +253,22 @@ public class ClassAdder
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(ITEMPROSPECTORSPICK1_FROM)), itemProspectorPick1);
             }*/
+            if (blockBlocksTFC1.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKSTFC1_FROM)), blockBlocksTFC1);
+            }
+            if (blockBlocksTFC.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKSTFC_FROM)), blockBlocksTFC);
+            }
+            if (blockCropDead.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCK_CROPDEAD_FROM)), blockCropDead);
+            }
+            if (blockCrop.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCK_CROP_FROM)), blockCrop);
+            }
             if (blockPlantTFC.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKPLANTTFC_FROM)), blockPlantTFC);
@@ -188,6 +276,22 @@ public class ClassAdder
             if (blockPlantTFC1.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKPLANTTFC1_FROM)), blockPlantTFC1);
+            }
+            if (blockShortGrassTFC.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKSHORTGRASSTFC_FROM)), blockShortGrassTFC);
+            }
+            if (blockTallGrassTFC.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKTALLGRASSTFC_FROM)), blockTallGrassTFC);
+            }
+            if (blockHangingTFC.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKHANGINGTFC_FROM)), blockHangingTFC);
+            }
+            if (worldRegenHandler.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(WORLDREGEN_FROM)), worldRegenHandler);
             }
             if (chunkGenTFC.createNewFile())
             {
@@ -257,6 +361,10 @@ public class ClassAdder
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(GENLAYERRIVERTFC_FROM)), genLayerRiverTFC);
             }*/
+            if (genWildCrops.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(WORLDGENWILDCROPS_FROM)), genWildCrops);
+            }
         }
         catch (IOException e)
         {

@@ -69,6 +69,7 @@ import tfcflorae.api.registries.TFCFRegistries;
 import tfcflorae.objects.blocks.*;
 import tfcflorae.objects.blocks.groundcover.*;
 import tfcflorae.objects.blocks.plants.*;
+import tfcflorae.objects.blocks.plants.BlockPlant.*;
 /*import tfcflorae.objects.blocks.multiblock.BlockCampfire;
 import tfcflorae.objects.blocks.multiblock.BlockDummyHalf;
 import tfcflorae.objects.blocks.multiblock.MultiBlockBase;*/
@@ -338,6 +339,9 @@ public final class BlocksTFCF
     private static ImmutableList<BlockHangingCreepingPlantTFCF> allHangingCreepingPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockCreepingPlantTFCF> allCreepingPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockTallGrassWater> allTallGrassWaterBlocks = Helpers.getNull();
+    private static ImmutableList<BlockShortGrassTFCF> allShortGrassBlocks = Helpers.getNull();
+    private static ImmutableList<BlockTallGrassTFCF> allTallGrassBlocks = Helpers.getNull();
+    private static ImmutableList<BlockPlantDummy1> allStandardBlocks = Helpers.getNull();
     private static ImmutableList<BlockCaveMushroom> allMushroomPlantBlocks = Helpers.getNull();
     private static ImmutableList<BlockPebbleWater> allPebbleWater = Helpers.getNull();
     private static ImmutableList<BlockLightstone> allLightstoneBlocks = Helpers.getNull();
@@ -624,6 +628,21 @@ public final class BlocksTFCF
         return allTallGrassWaterBlocks;
     }
 
+    public static ImmutableList<BlockShortGrassTFCF> getAllShortGrassBlocks()
+    {
+        return allShortGrassBlocks;
+    }
+
+    public static ImmutableList<BlockTallGrassTFCF> getAllTallGrassBlocks()
+    {
+        return allTallGrassBlocks;
+    }
+
+    public static ImmutableList<BlockPlantDummy1> getAllStandardBlocks()
+    {
+        return allStandardBlocks;
+    }
+
     public static ImmutableList<BlockCaveMushroom> getAllMushroomPlantBlocks()
     {
         return allMushroomPlantBlocks;
@@ -906,7 +925,6 @@ public final class BlocksTFCF
         }
 
         {
-            //normalItemBlocks.add(new ItemBlockTFC(register(r, "plants/glowing_sea_banana", new BlockWaterGlowPlant(FluidsTFC.SALT_WATER.get()), CT_FLORA)));
             plantGlowWater.add(register(r, "plants/glowing_sea_banana", new BlockWaterGlowPlant(FluidsTFC.SALT_WATER.get()), CT_FLORA));
         }
         allGlowWaterPlants = plantGlowWater.build();
@@ -927,7 +945,9 @@ public final class BlocksTFCF
             Builder<BlockHangingCreepingPlantTFCF> plantHangingCreepingBlock = ImmutableList.builder();
             Builder<BlockCreepingPlantTFCF> plantCreepingBlock = ImmutableList.builder();
             Builder<BlockTallGrassWater> plantTallGrassWaterBlock = ImmutableList.builder();
-            // Builder<BlockCaveMushroom> plantMushroomBlock = ImmutableList.builder();
+            Builder<BlockShortGrassTFCF> plantShortGrassBlock = ImmutableList.builder();
+            Builder<BlockTallGrassTFCF> plantTallGrassBlock = ImmutableList.builder();
+            Builder<BlockPlantDummy1> plantStandardBlock = ImmutableList.builder();
 
             for (Plant plant : TFCRegistries.PLANTS.getValuesCollection())
             {
@@ -972,10 +992,23 @@ public final class BlocksTFCF
                 {
                     plantTallGrassWaterBlock.add(register(r, "plants/" + plant.getRegistryName().getPath(), new BlockTallGrassWater(plant), CT_FLORA));
                 }
-                /*else if (plant.getPlantType() == Plant.PlantType.MUSHROOM && (
-                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.GLOWSHROOM)))
+                /*else if (plant.getPlantType() == Plant.PlantType.SHORT_GRASS && (
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_RICE) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)))
                 {
-                    plantMushroomBlock.add(register(r, "plants/" + plant.getRegistryName().getPath(), new BlockCaveMushroom(plant), CT_FLORA));
+                    plantShortGrassBlock.add(register(r, "plants/" + plant.getRegistryName().getPath(), new BlockShortGrassTFCF(plant), CT_FLORA));
+                }
+                else if (plant.getPlantType() == Plant.PlantType.TALL_GRASS && (
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_BARLEY) || 
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.WILD_WHEAT)))
+                {
+                    plantTallGrassBlock.add(register(r, "plants/" + plant.getRegistryName().getPath(), new BlockTallGrassTFCF(plant), CT_FLORA));
+                }
+                else if (plant.getPlantType() == Plant.PlantType.STANDARD && (
+                    plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.BLUE_GINGER)))
+                {
+                    plantStandardBlock.add(register(r, "plants/" + plant.getRegistryName().getPath(), new BlockPlantDummy1(plant), CT_FLORA));
                 }*/
             }
             allWaterPlantBlocks = plantWaterBlock.build();
@@ -1003,11 +1036,21 @@ public final class BlocksTFCF
             {
                 normalItemBlocks.add(new ItemBlockTallGrassWater((BlockTallGrassWater) blockTallGrassWaterPlant));
             }
-            /*allMushroomPlantBlocks = plantMushroomBlock.build();
-            for (BlockCaveMushroom blockMushroomPlant : allMushroomPlantBlocks)
+            allShortGrassBlocks = plantShortGrassBlock.build();
+            for (BlockShortGrassTFCF blockShortGrassPlant : allShortGrassBlocks)
             {
-                normalItemBlocks.add(new ItemBlockTFC(blockMushroomPlant));
-            }*/
+                normalItemBlocks.add(new ItemBlockTFC(blockShortGrassPlant));
+            }
+            allTallGrassBlocks = plantTallGrassBlock.build();
+            for (BlockTallGrassTFCF blockTallGrassPlant : allTallGrassBlocks)
+            {
+                normalItemBlocks.add(new ItemBlockTFC(blockTallGrassPlant));
+            }
+            allStandardBlocks = plantStandardBlock.build();
+            for (BlockPlantDummy1 blockStandardPlant : allStandardBlocks)
+            {
+                normalItemBlocks.add(new ItemBlockTFC(blockStandardPlant));
+            }
         }
 
         {

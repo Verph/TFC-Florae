@@ -19,6 +19,8 @@ import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.blocks.plants.*;
+import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantDummy1;
+import tfcflorae.objects.blocks.plants.BlockPlant.BlockPlantTFCF;
 import tfcflorae.types.PlantsTFCF;
 
 @ParametersAreNonnullByDefault
@@ -162,7 +164,7 @@ public class WorldGenPlants extends WorldGenerator
                         }
                     }
                 }
-                else if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.SAWGRASS))
+                if (plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.SAWGRASS))
                 {
                     BlockTallGrassWater plantBlock = BlockTallGrassWater.get(plant);
                     IBlockState state = plantBlock.getDefaultState();
@@ -235,28 +237,6 @@ public class WorldGenPlants extends WorldGenerator
                 }
                 break;
             }
-            /*case FLOATING:
-            {
-                BlockFloatingWaterTFC plantBlock = BlockFloatingWaterTFC.get(plant);
-                IBlockState state = plantBlock.getDefaultState();
-                IBlockState water = plant.getWaterType();
-
-                for (int i = 0; i < 8; ++i)
-                {
-                    final BlockPos blockpos = position.add(rand.nextInt(7) - rand.nextInt(7), 0, rand.nextInt(7) - rand.nextInt(7));
-
-                    if (plant.isValidTemp(ClimateTFC.getActualTemp(worldIn, blockpos)) &&
-                        plant.isValidSunlight(worldIn.getLightFor(EnumSkyBlock.SKY, blockpos)) &&
-                        worldIn.isAirBlock(blockpos) &&
-                        plantBlock.canPlaceBlockAt(worldIn, blockpos) &&
-                        plant.isValidFloatingWaterDepth(worldIn, blockpos, water))
-                    {
-                        int plantAge = plant.getAgeForWorldgen(rand, ClimateTFC.getActualTemp(worldIn, blockpos));
-                        setBlockAndNotifyAdequately(worldIn, blockpos, state.withProperty(BlockFloatingWaterTFC.AGE, plantAge));
-                    }
-                }
-                break;
-            }*/
             default:
             {
                 BlockPlantTFC plantBlock = BlockPlantTFC.get(plant);

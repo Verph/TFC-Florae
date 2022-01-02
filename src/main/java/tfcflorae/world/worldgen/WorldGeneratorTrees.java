@@ -70,14 +70,14 @@ public class WorldGeneratorTrees implements IWorldGenerator
         // Similarly to South African areas
         if ((b == BiomesTFC.ROLLING_HILLS || b == BiomesTFC.HIGH_PLAINS) && (avgTemperature >= 1 + gauss))
         {
-            genBush(random, chunkX, chunkZ, world, chunkData, 0.1f, 0.3f, 70f + gauss, 230f + gauss, 3 + random.nextInt(7), trees);
+            genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.3f, 70f + gauss, 230f + gauss, 4 + random.nextInt(9), trees);
         }
 
         // Mid-dense foliage chaparral/shrubland forests in temperate regions
         // Similarly to steppes across Eurasian regions
-        if ((b == BiomesTFC.ROLLING_HILLS || b == BiomesTFC.PLAINS || b == BiomesTFC.HIGH_PLAINS) && (avgTemperature <= 10 + gauss))
+        if ((b == BiomesTFC.ROLLING_HILLS || b == BiomesTFC.FIELDS || b == BiomesTFC.FLATLANDS || b == BiomesTFC.PLAINS || b == BiomesTFC.HIGH_PLAINS) && (avgTemperature <= 10 + gauss))
         {
-            genBush(random, chunkX, chunkZ, world, chunkData, 0.1f, 0.3f, 150f + gauss, 380f + gauss, 1 + random.nextInt(7), trees);
+            genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.3f, 150f + gauss, 380f + gauss, 1 + random.nextInt(7), trees);
         }
 
         // More foliage bushes to woodlands

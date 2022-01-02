@@ -51,6 +51,7 @@ public class CommonProxy
             {
                 GameRegistry.registerWorldGenerator(new WorldGeneratorTrees(), 0);
             }
+            //GameRegistry.registerWorldGenerator(new WorldGenWildCropsTFCF(), 0);
             if (ConfigTFCF.General.WORLD.enableCoralWorldGen)
             {
                 GameRegistry.registerWorldGenerator(new WorldGenCorals(), 0);

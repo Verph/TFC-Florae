@@ -28,6 +28,7 @@ import net.dries007.tfc.world.classic.worldgen.WorldGenWildCrops;
 
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.food.*;
+import tfcflorae.world.worldgen.WorldGenWildCropsTFCF;
 
 import static tfcflorae.util.agriculture.CropTFCF.CropType.*;
 
@@ -75,6 +76,7 @@ public enum CropTFCF implements ICrop
         for (ICrop crop : values())
         {
             WorldGenWildCrops.register(crop);
+            WorldGenWildCropsTFCF.register(crop);
         }
     }
 

@@ -38,12 +38,16 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeHooks;
 
 import net.dries007.tfc.ConfigTFC;
+import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Plant;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.items.ItemSeedsTFC;
 import net.dries007.tfc.util.OreDictionaryHelper;
+import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
@@ -51,6 +55,9 @@ import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
 import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.types.PlantsTFCF;
+import tfcflorae.util.agriculture.CropTFCF;
 
 @ParametersAreNonnullByDefault
 public class BlockPlantTFCF extends BlockBush implements IItemSize
@@ -232,8 +239,8 @@ public class BlockPlantTFCF extends BlockBush implements IItemSize
             case REED_SEA:
             case TALL_REED:
             case TALL_REED_SEA:
-            case SHORT_GRASS:
-            case TALL_GRASS:
+            /*case SHORT_GRASS:
+            case TALL_GRASS:*/
                 return (stack.getItem().getHarvestLevel(stack, "knife", player, state) != -1 || stack.getItem().getHarvestLevel(stack, "scythe", player, state) != -1);
             default:
                 return true;

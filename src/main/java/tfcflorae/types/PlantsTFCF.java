@@ -61,9 +61,9 @@ public final class PlantsTFCF
     public static final ResourceLocation HALFA_GRASS = new ResourceLocation(MODID, "halfa_grass");
     public static final ResourceLocation LEYMUS = new ResourceLocation(MODID, "leymus");
     public static final ResourceLocation MARRAM_GRASS = new ResourceLocation(MODID, "marram_grass");
-    public static final ResourceLocation WILD_BARLEY = new ResourceLocation(MODID, "wild_barley");
-    public static final ResourceLocation WILD_RICE = new ResourceLocation(MODID, "wild_rice");
-    public static final ResourceLocation WILD_WHEAT = new ResourceLocation(MODID, "wild_wheat");
+    //public static final ResourceLocation WILD_BARLEY = new ResourceLocation(MODID, "wild_barley");
+    //public static final ResourceLocation WILD_RICE = new ResourceLocation(MODID, "wild_rice");
+    //public static final ResourceLocation WILD_WHEAT = new ResourceLocation(MODID, "wild_wheat");
     public static final ResourceLocation SAWGRASS = new ResourceLocation(MODID, "sawgrass");
 
     public static final ResourceLocation CAVE_VINES = new ResourceLocation(MODID, "cave_vines");
@@ -261,9 +261,9 @@ public final class PlantsTFCF
             new Plant(UNDERGROWTH_SHRUB_SMALL, Plant.PlantType.TALL_PLANT, new int[] {4, 4, 0, 1, 1, 1, 2, 2, 2, 3, 3, 4}, false, false, -10f, 40f, 0f, 50f, 70f, 500f, 0, 15, 2, 0.3D, null),
             new Plant(VOODOO_LILY, Plant.PlantType.TALL_PLANT, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 16f, 45f, 10f, 50f, 270f, 500f, 0, 15, 2, 0.9D, "voodoo_lily"),
             new Plant(WHEATGRASS, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 3f, 25f, -15f, 32f, 100f, 300f, 0, 15, 1, 0.7D, null),
-            new Plant(WILD_BARLEY, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0}, false, false, 1f, 26f, -2f, 33f, 70f, 310f, 0, 15, 1, 0.7D, null),
-            new Plant(WILD_RICE, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0}, false, true, 22f, 40f, 20f, 45f, 300f, 450f, 0, 15, 1, 0.7D, null),
-            new Plant(WILD_WHEAT, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0}, false, false, 0f, 30f, -2f, 34f, 100f, 350f, 0, 15, 1, 0.7D, null),
+            //new Plant(WILD_BARLEY, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0}, false, false, 1f, 26f, -2f, 33f, 70f, 310f, 0, 15, 1, 0.7D, null),
+            //new Plant(WILD_RICE, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0}, false, true, 22f, 40f, 20f, 45f, 300f, 450f, 0, 15, 1, 0.7D, null),
+            //new Plant(WILD_WHEAT, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0}, false, false, 0f, 30f, -2f, 34f, 100f, 350f, 0, 15, 1, 0.7D, null),
             new Plant(WOOLLY_BUSH, Plant.PlantType.SHORT_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, 20f, 30f, 5f, 33f, 85f, 190f, 0, 15, 1, 0.7D, null),
             new Plant(SAWGRASS, Plant.PlantType.TALL_GRASS, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, false, false, -16f, 32f, -36f, 50f, 100f, 500f, 0, 15, 2, 1, 1, 0.7D, null),
 
