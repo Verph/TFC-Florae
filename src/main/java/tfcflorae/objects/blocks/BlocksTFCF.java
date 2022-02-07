@@ -79,11 +79,14 @@ import tfcflorae.objects.blocks.wood.cinnamon.*;
 import tfcflorae.objects.blocks.wood.fruitwood.*;
 import tfcflorae.objects.blocks.blocktype.*;
 import tfcflorae.objects.blocks.blocktype.BlockRockVariantTFCF;
+import tfcflorae.objects.blocks.devices.*;
 import tfcflorae.objects.fluids.FluidsTFCF;
 import tfcflorae.objects.items.food.*;
 import tfcflorae.objects.items.groundcover.*;
 import tfcflorae.objects.items.itemblock.ItemBlockCrate;
+import tfcflorae.objects.items.itemblock.ItemBlockDryer;
 import tfcflorae.objects.items.itemblock.ItemBlockJoshuaTreeSapling;
+import tfcflorae.objects.items.itemblock.ItemBlockStickBundle;
 import tfcflorae.objects.items.itemblock.ItemBlockTallGrassWater;
 import tfcflorae.objects.items.itemblock.ItemBlockUrn;
 import tfcflorae.objects.items.itemblock.ItemBlockUrnLoot;
@@ -107,6 +110,9 @@ import static tfcflorae.TFCFlorae.MODID;
 @GameRegistry.ObjectHolder(MODID)
 public final class BlocksTFCF
 {
+    public static final BlockDryer DRYER = Helpers.getNull();
+    public static final BlockStickBundle STICK_BUNDLE = Helpers.getNull();
+
     @GameRegistry.ObjectHolder("ceramics/earthenware/fired/large_vessel")
     public static final BlockLargeVessel FIRED_EARTHENWARE_LARGE_VESSEL = getNull();
     @GameRegistry.ObjectHolder("ceramics/kaolinite/fired/large_vessel")
@@ -206,7 +212,7 @@ public final class BlocksTFCF
     public static final BlockBambooLeaves NARROW_LEAF_BAMBOO_LEAVES = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/log/red_bamboo")
     public static final BlockBambooLog RED_BAMBOO_LOG = Helpers.getNull();
-    @GameRegistry.ObjectHolder("wood/leaves/rbricked_bamboo")
+    @GameRegistry.ObjectHolder("wood/leaves/red_bamboo")
     public static final BlockBambooLeaves RED_BAMBOO_LEAVES = Helpers.getNull();
     @GameRegistry.ObjectHolder("wood/log/temple_bamboo")
     public static final BlockBambooLog TEMPLE_BAMBOO_LOG = Helpers.getNull();
@@ -739,6 +745,9 @@ public final class BlocksTFCF
         ImmutableList.Builder<BlockWaterGlowPlant> plantGlowWater = ImmutableList.builder();
         ImmutableList.Builder<BlockLightstone> blockLightstone = ImmutableList.builder();
         //ImmutableList.Builder<MultiBlockBase> multiBlock = ImmutableList.builder();
+
+        normalItemBlocks.add(new ItemBlockDryer(register(r, "dryer", new BlockDryer(), CT_MISC)));
+        normalItemBlocks.add(new ItemBlockStickBundle(register(r, "stick_bundle", new BlockStickBundle(), CT_MISC)));
 
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_bale", new BlockBale(), CT_DECORATIONS)));
         normalItemBlocks.add(new ItemBlockTFC(register(r, "crop/bales/yucca/yucca_fiber_bale", new BlockBale(), CT_DECORATIONS)));

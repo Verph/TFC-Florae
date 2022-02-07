@@ -22,7 +22,9 @@ import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
+import tfcflorae.client.gui.GuiBag;
 import tfcflorae.client.gui.GuiCrate;
+import tfcflorae.client.gui.GuiSack;
 import tfcflorae.client.gui.GuiUrn;
 import tfcflorae.objects.blocks.wood.fruitwood.BlockFruitChestTFCF;
 import tfcflorae.objects.container.ContainerBag;
@@ -141,9 +143,9 @@ public class GuiHandler implements IGuiHandler
         switch (type)
         {
             case SACK:
-                return new GuiContainerTFC(container, player.inventory, SACK_INVENTORY_BACKGROUND);
+                return new GuiSack(container, player.inventory, SACK_INVENTORY_BACKGROUND);
             case BAG:
-                return new GuiContainerTFC(container, player.inventory, BAG_INVENTORY_BACKGROUND);
+                return new GuiBag(container, player.inventory, BAG_INVENTORY_BACKGROUND);
             case PINEAPPLE_LEATHER:
                 return new GuiKnappingTFCF(container, player, KnappingTypes.PINEAPPLE_LEATHER, PINEAPPLE_LEATHER_TEXTURE);
             case BURLAP_CLOTH:

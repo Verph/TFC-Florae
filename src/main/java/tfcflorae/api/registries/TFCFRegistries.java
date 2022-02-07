@@ -7,12 +7,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import tfcflorae.TFCFlorae;
+import tfcflorae.objects.recipes.*;
 
 /**
  * This is where we initialize our registry instances!
  */
 public class TFCFRegistries
 {
+    public static final IForgeRegistry<DryingRecipe> DRYING = GameRegistry.findRegistry(DryingRecipe.class);
+    public static final IForgeRegistry<StickBundleRecipe> STICK_BUNDLE = GameRegistry.findRegistry(StickBundleRecipe.class);
+
     /*This is kindly hijacked from TerraFirmCraft TFCRegistries.java*/
     static
     {

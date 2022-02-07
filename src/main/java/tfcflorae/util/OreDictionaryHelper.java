@@ -81,6 +81,15 @@ public class OreDictionaryHelper
         MAP.forEach((t, s) -> OreDictionary.registerOre(s, t.toItemStack()));
         MAP.clear(); // No need to keep this stuff around
 
+        OreDictionary.registerOre("cloth", new ItemStack(ItemsTFC.BURLAP_CLOTH));
+        OreDictionary.registerOre("cloth", new ItemStack(ItemsTFC.WOOL_CLOTH));
+        OreDictionary.registerOre("cloth", new ItemStack(ItemsTFC.SILK_CLOTH));
+        OreDictionary.registerOre("fabric", new ItemStack(ItemsTFC.BURLAP_CLOTH));
+        OreDictionary.registerOre("fabric", new ItemStack(ItemsTFC.WOOL_CLOTH));
+        OreDictionary.registerOre("fabric", new ItemStack(ItemsTFC.SILK_CLOTH));
+
+        OreDictionary.registerOre("stickBunch", new ItemStack(ItemsTFC.STICK_BUNCH));
+        OreDictionary.registerOre("stickBundle", new ItemStack(ItemsTFC.STICK_BUNCH));
         OreDictionary.registerOre("thatch", new ItemStack(Blocks.HAY_BLOCK));
         OreDictionary.registerOre("bale", new ItemStack(Blocks.HAY_BLOCK));
         OreDictionary.registerOre("baleHay", new ItemStack(Blocks.HAY_BLOCK));

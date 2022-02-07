@@ -22,14 +22,13 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import tfcflorae.objects.entity.EntityBoatTFCF;
 import mcp.MethodsReturnNonnullByDefault;
 
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.api.types.IFruitTree;
 import net.dries007.tfc.api.types.Tree;
-
-import tfcflorae.objects.blocks.entity.EntityBoatTFCF;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

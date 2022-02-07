@@ -8,15 +8,15 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import net.dries007.tfc.api.util.IGrowingPlant;
 import net.dries007.tfc.objects.blocks.wood.BlockSaplingTFC;
 
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.TreesTFCF;
 import tfcflorae.world.worldgen.WorldGenCinnamon;
 
-public class BlockCassiaCinnamonSapling extends BlockSaplingTFC
+public class BlockCassiaCinnamonSapling extends BlockSaplingTFC implements IGrowingPlant
 {
-
     public BlockCassiaCinnamonSapling()
     {
         super(TreesTFCF.CASSIA_CINNAMON_TREE);
@@ -52,5 +52,11 @@ public class BlockCassiaCinnamonSapling extends BlockSaplingTFC
             }
         }
         world.setBlockState(pos.offset(EnumFacing.UP, height), leaves);
+    }
+
+    @Override
+    public GrowthStatus getGrowingStatus(IBlockState state, World world, BlockPos pos)
+    {
+        return GrowthStatus.GROWING;
     }
 }

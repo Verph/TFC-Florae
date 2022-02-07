@@ -65,10 +65,10 @@ public class WorldGenBamboo extends WorldGenerator
         {
             generateNarrowLeafBamboo(world, rand, genPos);
         }
-        /*else if (gen == 6)
+        else if (gen == 6)
         {
             generateRedBamboo(world, rand, genPos);
-        }*/
+        }
         else if (gen == 7)
         {
             generateTempleBamboo(world, rand, genPos);

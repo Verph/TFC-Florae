@@ -44,6 +44,7 @@ import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.capability.player.CapabilityPlayerData;
 import net.dries007.tfc.api.capability.player.IPlayerData;
 import net.dries007.tfc.api.types.Tree;
+import net.dries007.tfc.api.util.IGrowingPlant;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
 import net.dries007.tfc.objects.te.TETickCounter;
 import net.dries007.tfc.util.Helpers;
@@ -58,7 +59,7 @@ import tfcflorae.util.agriculture.SeasonalTrees;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class BlockJoshuaTreeFlower extends Block
+public class BlockJoshuaTreeFlower extends Block implements IGrowingPlant
 {
     public static final PropertyEnum<EnumLeafState> LEAF_STATE = PropertyEnum.create("state", BlockJoshuaTreeFlower.EnumLeafState.class);
     public static final PropertyBool HARVESTABLE = PropertyBool.create("harvestable");
@@ -759,42 +760,45 @@ public class BlockJoshuaTreeFlower extends Block
     {
         if (!world.isAreaLoaded(pos, 1)) return;
 
-        Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
-        int expectedStage = fruitTree.getStageForMonth(currentMonth);
-        float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
-
-        switch (expectedStage)
+        if (!world.isRemote)
         {
-            case 1:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                else if (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
-            case 2:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
-                    world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
-                break;
-            case 3:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
-                    TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
-                    if (te != null)
+            Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+            int expectedStage = fruitTree.getStageForMonth(currentMonth);
+            float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
+
+            switch (expectedStage)
+            {
+                case 1:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    else if (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    break;
+                case 2:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING), 2);
+                    break;
+                case 3:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
                     {
-                        long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
-                        if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                        TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
+                        if (te != null)
                         {
-                            world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.FRUIT));
-                            te.resetCounter();
+                            long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
+                            if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                            {
+                                world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT), 2);
+                                te.resetCounter();
+                            }
                         }
                     }
-                }
-                break;
-            default:
-                world.setBlockState(pos, world.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
+                    break;
+                default:
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    break;
+            }
+            world.scheduleUpdate(pos, this, 1);
         }
-        world.scheduleUpdate(pos, this, 1);
     }
 
     /**
@@ -857,5 +861,11 @@ public class BlockJoshuaTreeFlower extends Block
         {
             return this.name().toLowerCase();
         }
+    }
+
+    @Override
+    public GrowthStatus getGrowingStatus(IBlockState state, World world, BlockPos pos)
+    {
+        return GrowthStatus.GROWING;
     }
 }

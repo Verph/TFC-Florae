@@ -109,6 +109,10 @@ public final class FluidsTFCF
     public static FluidWrapper SUNFLOWER_SEED_OIL;
     public static FluidWrapper OPIUM_POPPY_SEED_OIL;
     public static FluidWrapper WORT;
+    public static FluidWrapper SWEET_SAP;
+    public static FluidWrapper SWEET_SYRUP;
+    public static FluidWrapper RESIN;
+    public static FluidWrapper KINO;
 
     // Juice - Berries
     public static FluidWrapper JUICE_BLACKBERRY;
@@ -233,6 +237,21 @@ public final class FluidsTFCF
                 }
             }
         });
+        SWEET_SAP = registerFluid(new Fluid("sweet_sap", STILL, FLOW, 0xFFFBC754)).with(DrinkableProperty.DRINKABLE, player -> {
+            if (player.getFoodStats() instanceof FoodStatsTFC)
+            {
+                ((FoodStatsTFC) player.getFoodStats()).addThirst(10);
+                player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300, 1));
+            }
+        });
+        SWEET_SYRUP = registerFluid(new Fluid("sweet_syrup", STILL, FLOW, 0xFFE84E00)).with(DrinkableProperty.DRINKABLE, player -> {
+            if (player.getFoodStats() instanceof FoodStatsTFC)
+            {
+                player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 800, 2));
+            }
+        });
+        RESIN = registerFluid(new Fluid("resin", STILL, FLOW, 0xFFFABF0B));
+        KINO = registerFluid(new Fluid("kino", STILL, FLOW, 0xFFA00814));
 
         DrinkableProperty teaProperty = player -> {
             if (player.getFoodStats() instanceof FoodStatsTFC)

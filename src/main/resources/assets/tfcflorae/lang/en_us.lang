@@ -7,12 +7,12 @@ tfcflorae.tooltip.large_kaolinite_vessel_seal=Seal Large Vessel
 tfcflorae.tooltip.large_kaolinite_vessel_unseal=Unseal Large Vessel
 tfcflorae.tooltip.large_stoneware_vessel_seal=Seal Large Vessel
 tfcflorae.tooltip.large_stoneware_vessel_unseal=Unseal Large Vessel
-
 tfcflorae.tooltip.urn_seal=Seal Urn
 tfcflorae.tooltip.urn_unseal=Unseal Urn
-
 tfcflorae.tooltip.crate_seal=Seal Crate
 tfcflorae.tooltip.crate_unseal=Unseal Crate
+tfcflorae.tooltip.hours=Hours
+tfcflorae.tooltip.days=Days
 
 ## Fluids
 fluid.distilled_water=Distilled Water
@@ -82,6 +82,10 @@ fluid.rape_seed_oil=Rape Seed Oil
 fluid.sunflower_seed_oil=Sunflower Seed Oil
 fluid.opium_poppy_seed_oil=Opium Poppy Seed Oil
 fluid.wort=Wort
+fluid.sweet_sap=Sweet Sap
+fluid.sweet_syrup=Sweet Syrup
+fluid.resin=Resin
+fluid.kino=Kino
 fluid.coconut_milk=Coconut Milk
 fluid.firma_cola=Firma Cola
 fluid.juice_blackberry=Blackberry Juice
@@ -110,6 +114,11 @@ fluid.juice_juniper=Juniper Juice
 fluid.juice_green_grape=Green Juice
 fluid.juice_purple_grape=Purple Juice
 fluid.juice_barrel_cactus=Barrel Cactus Juice
+
+## Devices
+
+tile.tfcflorae.dryer.name=Drying Rack
+tile.tfcflorae.stick_bundle.name=Stick Bundle
 
 ## Stone types & variaties, Wood, Stairs, Slabs, ....
 
@@ -15429,6 +15438,26 @@ tile.tfcflorae.wood.fruit_tree.fence_gate.orange.name=Orange Fence Gate
 tile.tfcflorae.wood.fruit_tree.fence_gate.peach.name=Peach Fence Gate
 tile.tfcflorae.wood.fruit_tree.fence_gate.plum.name=Plum Fence Gate
 tile.tfcflorae.wood.fruit_tree.fence_gate.red_apple.name=Red Apple Fence Gate
+
+tile.tfcflorae.wood.fence_gate_log.ash.name=Ash Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.aspen.name=Aspen Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.birch.name=Birch Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.chestnut.name=Chestnut Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.douglas_fir.name=Douglas Fir Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.hickory.name=Hickory Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.maple.name=Maple Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.oak.name=Oak Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.pine.name=Pine Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.sequoia.name=Sequoia Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.spruce.name=Spruce Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.sycamore.name=Sycamore Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.white_cedar.name=White Cedar Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.willow.name=Willow Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.kapok.name=Kapok Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.acacia.name=Acacia Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.rosewood.name=Rosewood Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.blackwood.name=Blackwood Log Fence Gate
+tile.tfcflorae.wood.fence_gate_log.palm.name=Palm Log Fence Gate
 
 tile.tfcflorae.wood.fence_gate_log.african_padauk.name=African Padauk Log Fence Gate
 tile.tfcflorae.wood.fence_gate_log.alder.name=Alder Log Fence Gate
@@ -33038,7 +33067,17 @@ item.tfcflorae.live_scallop.name=Live Scallop
 item.tfcflorae.pearl.name=Pearl
 item.tfcflorae.black_pearl.name=Black Pearl
 item.tfcflorae.live_starfish.name=Live Starfish
+
+item.tfcflorae.animal.product.silk_moth_egg.name=Silk Worm Eggs
+item.tfcflorae.animal.product.silk_worm_hatchery.name=Silk Worm Hatchery
+item.tfcflorae.animal.product.silk_worm_cocoon.name=Silk Worm Cocoon
+item.tfcflorae.animal.product.silk_worm_cocoon_boiled.name=Boiled Silk Worm Cocoon
+item.tfcflorae.animal.product.silk_worm.name=Silk Worms
+item.tfcflorae.crop.product.mulberry_leaf.name=Mulberry Leaf
     
+item.tfcflorae.wooden_bucket_salt.name=Wooden Bucket with Salt
+item.tfcflorae.wooden_bucket_sugar.name=Wooden Bucket with Sugar
+
 item.tfcflorae.crop.product.papyrus_pulp.name=Papyrus Pulp
 item.tfcflorae.crop.product.papyrus_fiber.name=Papyrus Fiber
 item.tfcflorae.crop.product.papyrus_paper.name=Papyrus Paper
@@ -33218,6 +33257,8 @@ item.tfcflorae.armor.helmet.yucca_canvas.name=Yucca Canvas Cap
 item.tfcflorae.armor.chestplate.yucca_canvas.name=Yucca Canvas Tunic
 item.tfcflorae.armor.leggings.yucca_canvas.name=Yucca Canvas Pants
 item.tfcflorae.armor.boots.yucca_canvas.name=Yucca Canvas Boots
+
+item.tfcflorae.firma_cola_blend.name=Firma Cola Blend
 
 config.tfcflorae.general=General Settings
 config.tfcflorae.general.tooltip=General settings for TFC Florae
@@ -33481,6 +33522,8 @@ config.tfcflorae.general.structures.spawnChanceMoai.tooltip=Generation chance fo
 config.tfcflorae.general.structures.spawnChanceMoai=Mayan Temple Generation
 config.tfcflorae.general.structures.spawnChanceMoai.tooltip=Generation chance for mayan temples. On average 1 / N chunks will have mayan temples.
 
+jei.category.tfcflorae.drying=Drying
+jei.category.tfcflorae.stick_bundle=Stick Bundle
 jei.category.tfcflorae.knap.pineapple_leather=Pineapple Leather knapping
 jei.category.tfcflorae.knap.burlap_cloth=Burlap Cloth knapping
 jei.category.tfcflorae.knap.wool_cloth=Wool Cloth knapping

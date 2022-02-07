@@ -13,7 +13,7 @@ import net.dries007.tfc.api.recipes.knapping.KnappingType;
 import tfcflorae.TFCFlorae;
 
 @ZenRegister
-@ZenClass("mods.tfcflorae.knapping")
+@ZenClass("mods.tfcflorae.Knapping")
 public class KnappingTFCF
 {
     @ZenMethod

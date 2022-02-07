@@ -7,8 +7,12 @@ import javax.annotation.Nullable;
 
 import com.eerussianguy.firmalife.registry.ItemsFL;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -16,9 +20,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
+import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.interaction.*;
 import tfcflorae.client.GuiHandler;
+import tfcflorae.objects.blocks.BlocksTFCF;
+import tfcflorae.objects.blocks.devices.BlockStickBundle;
 import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
@@ -34,7 +41,7 @@ public final class InteractionManagerTFCF
     {
         // Pineapple Leather knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "leatherPineapple"), ((worldIn, playerIn, handIn) -> {
-            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "shears"))
+            if (Helpers.playerHasItemMatchingOre(playerIn.inventory, "knife"))
             {
                 if (!worldIn.isRemote)
                 {
@@ -148,6 +155,40 @@ public final class InteractionManagerTFCF
             }
             return EnumActionResult.FAIL;
         }));
+
+        // Stick Bunch -> Stick Bundle Block (placement)
+        USE_ACTIONS.put(stack -> (OreDictionaryHelper.doesStackMatchOre(stack, "stickBunch") || OreDictionaryHelper.doesStackMatchOre(stack, "stickBundle") || stack.getItem() == ItemsTFC.STICK_BUNCH), (stack, player, worldIn, pos, hand, direction, hitX, hitY, hitZ) -> {
+            if (direction != null)
+            {
+                IBlockState stateAt = worldIn.getBlockState(pos);
+                // Try and place a stick bundle - if you were sneaking
+                if (player.isSneaking())
+                {
+                    BlockPos posAt = pos;
+                    if (!stateAt.getBlock().isReplaceable(worldIn, pos))
+                    {
+                        posAt = posAt.offset(direction);
+                    }
+                    if (worldIn.getBlockState(posAt.down()).isNormalCube() && worldIn.mayPlace(BlocksTFCF.STICK_BUNDLE, posAt, false, direction, null))
+                    {
+                        // Place stick bundle
+                        if (!worldIn.isRemote)
+                        {
+                            worldIn.setBlockState(posAt, BlocksTFCF.STICK_BUNDLE.getDefaultState().withProperty(BlockStickBundle.PART, BlockStickBundle.EnumBlockPart.UPPER), 10);
+
+                            SoundType soundtype = BlocksTFCF.STICK_BUNDLE.getSoundType(stateAt, worldIn, pos, player);
+                            worldIn.playSound(null, posAt, soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+                            stack.shrink(1);
+                            player.setHeldItem(hand, stack);
+                        }
+                        return EnumActionResult.SUCCESS;
+                    }
+                }
+            }
+            // Pass to allow the normal `onItemUse` to get called, which handles item block placement
+            return EnumActionResult.PASS;
+        });
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)

@@ -53,6 +53,7 @@ import net.dries007.tfc.objects.blocks.wood.BlockSaplingTFC;
 
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE.ItemType;
+
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.groundcover.*;
 import tfcflorae.objects.blocks.plants.*;
@@ -76,10 +77,8 @@ import tfcflorae.objects.items.ItemFruitDoor;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.ceramics.*;
 import tfcflorae.objects.items.groundcover.*;
-import tfcflorae.objects.te.TEFruitChest;
-import tfcflorae.objects.te.TEFruitLoom;
-import tfcflorae.client.render.TESRFruitChestTFCF;
-import tfcflorae.client.render.TESRFruitLoomTFCF;
+import tfcflorae.objects.te.*;
+import tfcflorae.client.render.*;
 import tfcflorae.compat.firmalife.ceramics.*;
 import tfcflorae.compat.tfcelementia.ceramics.*;
 import tfcflorae.types.PlantsTFCF;
@@ -750,6 +749,7 @@ public class ClientRegisterEventsTFCF
         //TESRs
         ClientRegistry.bindTileEntitySpecialRenderer(TEFruitChest.class, new TESRFruitChestTFCF());
         ClientRegistry.bindTileEntitySpecialRenderer(TEFruitLoom.class, new TESRFruitLoomTFCF());
+        ClientRegistry.bindTileEntitySpecialRenderer(TEDryer.class, new TESRDryer());
     }
 
     @SuppressWarnings("deprecation")

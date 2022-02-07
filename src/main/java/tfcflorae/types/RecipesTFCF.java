@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import com.eerussianguy.firmalife.ConfigFL;
 import com.eerussianguy.firmalife.FirmaLife;
 import com.eerussianguy.firmalife.init.FoodFL;
+import com.eerussianguy.firmalife.init.Fruit;
 import com.eerussianguy.firmalife.init.KnappingFL;
 import com.eerussianguy.firmalife.recipe.CrackingRecipe;
 import com.eerussianguy.firmalife.recipe.DryingRecipe;
@@ -29,7 +30,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler;
@@ -101,6 +104,7 @@ import net.dries007.tfc.objects.items.metal.ItemOreTFC;
 import net.dries007.tfc.objects.items.metal.ItemSmallOre;
 import net.dries007.tfc.objects.items.rock.ItemRock;
 import net.dries007.tfc.objects.items.rock.ItemRockToolHead;
+import net.dries007.tfc.objects.items.wood.ItemWoodenBucket;
 import net.dries007.tfc.objects.recipes.ShapelessDamageRecipe;
 import net.dries007.tfc.types.DefaultPlants;
 import net.dries007.tfc.types.DefaultTrees;
@@ -130,6 +134,7 @@ import tfcflorae.objects.items.food.ItemFoodTFCF;
 import tfcflorae.objects.items.rock.ItemFiredMudBrick;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.objects.items.rock.ItemUnfiredMudBrick;
+import tfcflorae.objects.recipes.StickBundleRecipe;
 import tfcflorae.types.PlantsTFCF;
 import tfcflorae.types.BlockTypesTFCF;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
@@ -909,10 +914,13 @@ public final class RecipesTFCF
             // Kaolinite Clay
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 100), IIngredient.of("dustKaolinite"), null, new ItemStack(ItemsTFCF.KAOLINITE_CLAY), 0).setRegistryName("kaolinite_clay"),
 
-            //Special Clay Washing
+            // Special Clay Washing
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 100), IIngredient.of("clayEarthenware"), null, new ItemStack(Items.CLAY_BALL), 0).setRegistryName("earthenware_clay_wash"),
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 100), IIngredient.of("clayKaolinite"), null, new ItemStack(Items.CLAY_BALL), 0).setRegistryName("kaolinite_clay_wash"),
             new BarrelRecipe(IIngredient.of(FluidsTFC.FRESH_WATER.get(), 100), IIngredient.of("clayStoneware"), null, new ItemStack(Items.CLAY_BALL), 0).setRegistryName("stoneware_clay_wash"),
+
+            // Silk Worm Stuff
+            new BarrelRecipe(IIngredient.of(FluidsTFC.HOT_WATER.get(), 100), IIngredient.of("cocoonSilkWorm"), null, new ItemStack(ItemsTFCF.SILK_WORM_COCOON_BOILED), 1 * ICalendar.TICKS_IN_HOUR).setRegistryName("boiled_cocoon"),
 
             // Cooling
             new BarrelRecipeTemperature(IIngredient.of(FluidsTFCF.DISTILLED_WATER.get(), 1), 50).setRegistryName("distilled_water_cooling")
@@ -1142,6 +1150,22 @@ public final class RecipesTFCF
             new HeatRecipeSimple(IIngredient.of(ItemsTFCF.SPELT_DOUGH), new ItemStack(ItemsTFCF.SPELT_BREAD), 200, 480).setRegistryName("spelt_bread")
             );
         }
+
+        // Bucket Stuff
+        /*ItemStack woodenBucket = new ItemStack(ItemsTFC.WOODEN_BUCKET);
+        IFluidHandler woodenBucketSaltWater = woodenBucket.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null);
+        woodenBucketSaltWater.fill(new FluidStack(FluidsTFC.SALT_WATER.get(), Fluid.BUCKET_VOLUME), true);
+        IFluidHandler woodenBucketSweetSap = woodenBucket.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null);
+        woodenBucketSweetSap.fill(new FluidStack(FluidsTFCF.SWEET_SAP.get(), Fluid.BUCKET_VOLUME), true);
+        IFluidHandler woodenBucketSweetSyrup = woodenBucket.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null);
+        woodenBucketSweetSyrup.fill(new FluidStack(FluidsTFCF.SWEET_SYRUP.get(), Fluid.BUCKET_VOLUME), true);
+
+        r.registerAll(
+
+            new HeatRecipeSimple(IIngredient.of((Item) woodenBucketSaltWater), new ItemStack(ItemsTFCF.WOODEN_BUCKET_SALT, 1), 480, 500).setRegistryName("bucket_salt"),
+            new HeatRecipeSimple(IIngredient.of((Item) woodenBucketSweetSap), new ItemStack((Item) woodenBucketSweetSyrup, 1), 480, 500).setRegistryName("bucket_syrup"),
+            new HeatRecipeSimple(IIngredient.of((Item) woodenBucketSweetSyrup), new ItemStack(ItemsTFCF.WOODEN_BUCKET_SUGAR, 1), 480, 500).setRegistryName("bucket_sugar")
+        );*/
 
         // Standard / Simple recipes
         r.registerAll(
@@ -1843,27 +1867,90 @@ public final class RecipesTFCF
     }
 
     @SubscribeEvent
+    public static void onRegisterStickBundleRecipeEvent(RegistryEvent.Register<StickBundleRecipe> event)
+    {
+        IForgeRegistry<StickBundleRecipe> r = event.getRegistry();
+        int day = ICalendar.TICKS_IN_DAY;
+
+        r.registerAll(
+            new StickBundleRecipe(IIngredient.of(ItemsTFCF.SILK_WORM), new ItemStack(ItemsTFCF.SILK_WORM_COCOON), 3 * day).setRegistryName("silk_worm_cocoon")
+        );
+    }
+
+    @SubscribeEvent
+    public static void onRegisterDryingRecipeEvent(RegistryEvent.Register<tfcflorae.objects.recipes.DryingRecipe> event)
+    {
+        IForgeRegistry<tfcflorae.objects.recipes.DryingRecipe> r = event.getRegistry();
+        int day = ICalendar.TICKS_IN_DAY;
+
+        r.registerAll(
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.SILK_WORM_HATCHERY), new ItemStack(ItemsTFCF.SILK_WORM), 1 * day).setRegistryName("silk_worm_hatchery"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.CELLULOSE_FIBERS), new ItemStack(Items.PAPER), 24000).setRegistryName(TFCFlorae.MODID, "paper_from_cellulose_fibers"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.BLACK_TEA), new ItemStack(ItemsTFCF.DRIED_BLACK_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_black_tea"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.GREEN_TEA), new ItemStack(ItemsTFCF.DRIED_GREEN_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_green_tea"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.WHITE_TEA), new ItemStack(ItemsTFCF.DRIED_WHITE_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_white_tea"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_BUD), new ItemStack(ItemsTFCF.DRIED_CANNABIS_BUD), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_bud"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_LEAF), new ItemStack(ItemsTFCF.DRIED_CANNABIS_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_leaf"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.COCA_LEAF), new ItemStack(ItemsTFCF.DRIED_COCA_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_coca_leaf"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.OPIUM_POPPY_BULB), new ItemStack(ItemsTFCF.DRIED_OPIUM_POPPY_BULB), 24000).setRegistryName(TFCFlorae.MODID, "dried_opium_poppy_bulb"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.PEYOTE), new ItemStack(ItemsTFCF.DRIED_PEYOTE), 24000).setRegistryName(TFCFlorae.MODID, "dried_peyote"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.TOBACCO_LEAF), new ItemStack(ItemsTFCF.DRIED_TOBACCO_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_tobacco_leaf"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.COFFEA_CHERRIES), new ItemStack(ItemsTFCF.DRIED_COFFEA_CHERRIES), 24000).setRegistryName(TFCFlorae.MODID, "dried_coffea_cherries"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.CHAMOMILE_HEAD), new ItemStack(ItemsTFCF.DRIED_CHAMOMILE_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_chamomile_head"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.DANDELION_HEAD), new ItemStack(ItemsTFCF.DRIED_DANDELION_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_dandelion_head"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.LABRADOR_TEA_HEAD), new ItemStack(ItemsTFCF.DRIED_LABRADOR_TEA_HEAD), 24000).setRegistryName("dried_labrador_tea_head"),
+            new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemsTFCF.SUNFLOWER_HEAD), new ItemStack(ItemsTFCF.DRIED_SUNFLOWER_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_sunflower_head")
+        );
+
+        // Mud Pottery
+        for (Rock rock : TFCRegistries.ROCKS.getValuesCollection())
+        {
+            ItemFiredMudBrick firedMudBrick = ItemFiredMudBrick.get(ItemUnfiredMudBrick.get(rock));
+
+            tfcflorae.objects.recipes.DryingRecipe mud = new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(ItemUnfiredMudBrick.get(rock)), new ItemStack(firedMudBrick), 6000);
+            event.getRegistry().register(mud.setRegistryName(TFCFlorae.MODID, rock.getRegistryName().getPath().toLowerCase() + "_wet_mud_brick"));
+        }
+
+        if (TFCFlorae.FirmaLifeAdded)
+        {
+            for (Fruit fruit : Fruit.values())
+            {
+                r.register(new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(fruit.getFruit()), new ItemStack(ItemsFL.getDriedFruit(fruit)), day / 2).setRegistryName(TFCFlorae.MODID, fruit.name().toLowerCase()));
+            }
+
+            r.registerAll(
+                new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(new ItemStack(ItemsFL.CINNAMON_BARK)), new ItemStack(ItemsFL.CINNAMON), day).setRegistryName(TFCFlorae.MODID, "cinnamon_bark"),
+                new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(new ItemStack(ItemsFL.getFood(FoodFL.COCOA_BEANS))), new ItemStack(ItemsFL.getFood(FoodFL.DRIED_COCOA_BEANS)), day / 2).setRegistryName(TFCFlorae.MODID, "cocoa_beans"),
+                new tfcflorae.objects.recipes.DryingRecipe(IIngredient.of(new ItemStack(ItemsFL.getFood(FoodFL.PINEAPPLE))), new ItemStack(ItemsFL.DRIED_PINEAPPLE), day / 2).setRegistryName(TFCFlorae.MODID, "pineapple")
+            );
+        }
+    }
+
+    @SubscribeEvent
     public static void onRegisterDryingRecipeEventFL(RegistryEvent.Register<DryingRecipe> event)
     {
+        int day = ICalendar.TICKS_IN_DAY;
+
         if (TFCFlorae.FirmaLifeAdded)
         {
             IForgeRegistry<DryingRecipe> r = event.getRegistry();
             r.registerAll(
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CELLULOSE_FIBERS), new ItemStack(Items.PAPER), 24000).setRegistryName(TFCFlorae.MODID, "paper_from_cellulose_fibers"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.BLACK_TEA), new ItemStack(ItemsTFCF.DRIED_BLACK_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_black_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.GREEN_TEA), new ItemStack(ItemsTFCF.DRIED_GREEN_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_green_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.WHITE_TEA), new ItemStack(ItemsTFCF.DRIED_WHITE_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_white_tea"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_BUD), new ItemStack(ItemsTFCF.DRIED_CANNABIS_BUD), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_bud"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_LEAF), new ItemStack(ItemsTFCF.DRIED_CANNABIS_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.COCA_LEAF), new ItemStack(ItemsTFCF.DRIED_COCA_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_coca_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.OPIUM_POPPY_BULB), new ItemStack(ItemsTFCF.DRIED_OPIUM_POPPY_BULB), 24000).setRegistryName(TFCFlorae.MODID, "dried_opium_poppy_bulb"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.PEYOTE), new ItemStack(ItemsTFCF.DRIED_PEYOTE), 24000).setRegistryName(TFCFlorae.MODID, "dried_peyote"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.TOBACCO_LEAF), new ItemStack(ItemsTFCF.DRIED_TOBACCO_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_tobacco_leaf"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.COFFEA_CHERRIES), new ItemStack(ItemsTFCF.DRIED_COFFEA_CHERRIES), 24000).setRegistryName(TFCFlorae.MODID, "dried_coffea_cherries"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.CHAMOMILE_HEAD), new ItemStack(ItemsTFCF.DRIED_CHAMOMILE_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_chamomile_head"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.DANDELION_HEAD), new ItemStack(ItemsTFCF.DRIED_DANDELION_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_dandelion_head"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.LABRADOR_TEA_HEAD), new ItemStack(ItemsTFCF.DRIED_LABRADOR_TEA_HEAD), 24000).setRegistryName("dried_labrador_tea_head"),
-                new DryingRecipe(IIngredient.of(ItemsTFCF.SUNFLOWER_HEAD), new ItemStack(ItemsTFCF.DRIED_SUNFLOWER_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_sunflower_head")
+                new DryingRecipe(IIngredient.of(ItemsTFCF.SILK_WORM_HATCHERY), new ItemStack(ItemsTFCF.SILK_WORM), 1 * day).setRegistryName(TFCFlorae.MODID, "silk_worm_hatchery_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CELLULOSE_FIBERS), new ItemStack(Items.PAPER), 24000).setRegistryName(TFCFlorae.MODID, "paper_from_cellulose_fibers_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.BLACK_TEA), new ItemStack(ItemsTFCF.DRIED_BLACK_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_black_tea_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.GREEN_TEA), new ItemStack(ItemsTFCF.DRIED_GREEN_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_green_tea_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.WHITE_TEA), new ItemStack(ItemsTFCF.DRIED_WHITE_TEA), 24000).setRegistryName(TFCFlorae.MODID, "dried_white_tea_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_BUD), new ItemStack(ItemsTFCF.DRIED_CANNABIS_BUD), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_bud_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CANNABIS_LEAF), new ItemStack(ItemsTFCF.DRIED_CANNABIS_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_cannabis_leaf_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.COCA_LEAF), new ItemStack(ItemsTFCF.DRIED_COCA_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_coca_leaf_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.OPIUM_POPPY_BULB), new ItemStack(ItemsTFCF.DRIED_OPIUM_POPPY_BULB), 24000).setRegistryName(TFCFlorae.MODID, "dried_opium_poppy_bulb_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.PEYOTE), new ItemStack(ItemsTFCF.DRIED_PEYOTE), 24000).setRegistryName(TFCFlorae.MODID, "dried_peyote_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.TOBACCO_LEAF), new ItemStack(ItemsTFCF.DRIED_TOBACCO_LEAF), 24000).setRegistryName(TFCFlorae.MODID, "dried_tobacco_leaf_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.COFFEA_CHERRIES), new ItemStack(ItemsTFCF.DRIED_COFFEA_CHERRIES), 24000).setRegistryName(TFCFlorae.MODID, "dried_coffea_cherries_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.CHAMOMILE_HEAD), new ItemStack(ItemsTFCF.DRIED_CHAMOMILE_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_chamomile_head_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.DANDELION_HEAD), new ItemStack(ItemsTFCF.DRIED_DANDELION_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_dandelion_head_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.LABRADOR_TEA_HEAD), new ItemStack(ItemsTFCF.DRIED_LABRADOR_TEA_HEAD), 24000).setRegistryName("dried_labrador_tea_head_firmalife"),
+                new DryingRecipe(IIngredient.of(ItemsTFCF.SUNFLOWER_HEAD), new ItemStack(ItemsTFCF.DRIED_SUNFLOWER_HEAD), 24000).setRegistryName(TFCFlorae.MODID, "dried_sunflower_head_firmalife")
             );
 
             // Mud Pottery
@@ -1872,7 +1959,7 @@ public final class RecipesTFCF
                 ItemFiredMudBrick firedMudBrick = ItemFiredMudBrick.get(ItemUnfiredMudBrick.get(rock));
 
                 DryingRecipe mud = new DryingRecipe(IIngredient.of(ItemUnfiredMudBrick.get(rock)), new ItemStack(firedMudBrick), 6000);
-                event.getRegistry().register(mud.setRegistryName(rock.getRegistryName().getPath().toLowerCase() + "_wet_mud_brick"));
+                event.getRegistry().register(mud.setRegistryName(TFCFlorae.MODID, rock.getRegistryName().getPath().toLowerCase() + "_wet_mud_brick_firmalife"));
             }
         }
     }

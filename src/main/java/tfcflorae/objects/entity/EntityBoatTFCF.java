@@ -1,4 +1,4 @@
-package tfcflorae.objects.blocks.entity;
+package tfcflorae.objects.entity;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;

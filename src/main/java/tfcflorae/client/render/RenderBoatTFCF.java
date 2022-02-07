@@ -18,7 +18,7 @@ import net.dries007.tfc.api.types.IFruitTree;
 import net.dries007.tfc.api.types.Tree;
 
 import tfcflorae.TFCFlorae;
-import tfcflorae.objects.blocks.entity.EntityBoatTFCF;
+import tfcflorae.objects.entity.EntityBoatTFCF;
 
 import static tfcflorae.TFCFlorae.MODID;
 

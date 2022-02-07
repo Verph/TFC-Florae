@@ -92,6 +92,7 @@ import tfcflorae.objects.items.*;
 import tfcflorae.objects.items.ceramics.*;
 import tfcflorae.objects.items.ceramics.ItemUnfiredUrn;
 import tfcflorae.objects.items.food.*;
+import tfcflorae.objects.items.itemblock.ItemBlockStickBundle;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.objects.items.rock.ItemFiredMudBrick;
 import tfcflorae.objects.items.rock.ItemUnfiredMudBrick;
@@ -871,6 +872,18 @@ public final class ItemsTFCF
     public static final ItemMiscTFCF BLACK_PEARL = Helpers.getNull();
     @GameRegistry.ObjectHolder("live_starfish")
     public static final ItemMiscTFCF LIVE_STARFISH = Helpers.getNull();
+    @GameRegistry.ObjectHolder("animal/product/silk_moth_egg")
+    public static final ItemMiscTFCF SILK_MOTH_EGG = Helpers.getNull();
+    @GameRegistry.ObjectHolder("animal/product/silk_worm_hatchery")
+    public static final ItemMiscTFCF SILK_WORM_HATCHERY = Helpers.getNull();
+    @GameRegistry.ObjectHolder("animal/product/silk_worm")
+    public static final ItemMiscTFCF SILK_WORM = Helpers.getNull();
+    @GameRegistry.ObjectHolder("animal/product/silk_worm_cocoon")
+    public static final ItemMiscTFCF SILK_WORM_COCOON = Helpers.getNull();
+    @GameRegistry.ObjectHolder("animal/product/silk_worm_cocoon_boiled")
+    public static final ItemMiscTFCF SILK_WORM_COCOON_BOILED = Helpers.getNull();
+    @GameRegistry.ObjectHolder("crop/product/mulberry_leaf")
+    public static final ItemMiscTFCF MULBERRY_LEAF = Helpers.getNull();
 
     @GameRegistry.ObjectHolder("food/cannabis_bud")
     public static final ItemFoodTFCF CANNABIS_BUD = Helpers.getNull();
@@ -1241,6 +1254,10 @@ public final class ItemsTFCF
 
     @GameRegistry.ObjectHolder("storage/unfired/urn")
     public static final ItemPottery UNFIRED_URN = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wooden_bucket_salt")
+    public static final ItemMiscTFCF WOODEN_BUCKET_SALT = Helpers.getNull();
+    @GameRegistry.ObjectHolder("wooden_bucket_sugar")
+    public static final ItemMiscTFCF WOODEN_BUCKET_SUGAR = Helpers.getNull();
 
     @GameRegistry.ObjectHolder("armor/helmet/pineapple_leather")
     public static final ItemArmorTFCF PINEAPPLE_LEATHER_HELMET = Helpers.getNull();
@@ -2099,6 +2116,14 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "container/yucca_sack", new ItemSack("sack", "sack_yucca"), CT_MISC));
 
         // Items
+        simpleItems.add(register(r, "wooden_bucket_salt", new ItemMiscTFCF(Size.LARGE, Weight.MEDIUM, "bucket_salt", "bucket_wooden_salt"), CT_MISC));
+        simpleItems.add(register(r, "wooden_bucket_sugar", new ItemMiscTFCF(Size.LARGE, Weight.MEDIUM, "bucket_sugar", "bucket_wooden_sugar"), CT_MISC));
+        simpleItems.add(register(r, "animal/product/silk_moth_egg", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "egg_silk_moth", "egg"), CT_MISC));
+        simpleItems.add(register(r, "animal/product/silk_worm_hatchery", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "hatchery", "hatchery_silk_worm"), CT_MISC));
+        simpleItems.add(register(r, "animal/product/silk_worm", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "silk_worm"), CT_MISC));
+        simpleItems.add(register(r, "animal/product/silk_worm_cocoon", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "cocoon", "cocoon_silk_worm"), CT_MISC));
+        simpleItems.add(register(r, "animal/product/silk_worm_cocoon_boiled", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "cocoon_boiled", "cocoon_silk_worm_boiled"), CT_MISC));
+        simpleItems.add(register(r, "crop/product/mulberry_leaf", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "leaf", "leaf_mulberry", "leaves", "leaves_mulberry"), CT_MISC));
         simpleItems.add(register(r, "logwood_chips", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "chips_logwood", "dust_logwood", "powder_logwood"), CT_MISC));
         //simpleItems.add(register(r, "resin", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "resin", "glue"), CT_MISC));
         simpleItems.add(register(r, "charred_bones", new ItemMiscTFCF(Size.SMALL, Weight.VERY_LIGHT, "bone_charred"), CT_MISC));

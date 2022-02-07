@@ -30,14 +30,20 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.ConfigTFC;
 import net.dries007.tfc.api.types.Tree;
+import net.dries007.tfc.api.util.IGrowingPlant;
 import net.dries007.tfc.client.particle.TFCParticles;
 import net.dries007.tfc.objects.blocks.wood.BlockLogTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockSaplingTFC;
@@ -49,13 +55,15 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 import tfcflorae.TFCFlorae;
+import tfcflorae.objects.entity.animal.EntitySilkMoth;
+import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.agriculture.SeasonalTrees;
 
 import static net.dries007.tfc.Constants.RNG;
 
 @ParametersAreNonnullByDefault
-public class BlockLeavesTFCF extends BlockLeaves
+public class BlockLeavesTFCF extends BlockLeaves implements IGrowingPlant
 {
     public static final PropertyEnum<EnumLeafState> LEAF_STATE = PropertyEnum.create("state", BlockLeavesTFCF.EnumLeafState.class);
     public static final PropertyBool HARVESTABLE = PropertyBool.create("harvestable");
@@ -110,59 +118,68 @@ public class BlockLeavesTFCF extends BlockLeaves
         else return ConfigTFC.General.MISC.plantGrowthRate;
     }
 
+    @SubscribeEvent(priority=EventPriority.HIGH)
     @Override
     public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
     {
+        ChunkPos forgeChunkPos = new ChunkPos(pos); // actual ChunkPos instead of BlockPos, used for events
+        MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(world, random, forgeChunkPos));
+
         if (!world.isAreaLoaded(pos, 1)) return;
 
-        Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
-        int expectedStage = fruitTree.getStageForMonth(currentMonth);
-        float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
-        float tempGauss = (int)(12f + (random.nextGaussian() / 4));
-
-        switch (expectedStage)
+        if (!world.isRemote)
         {
-            case 0:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature < tempGauss)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER));
-                else if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature >= tempGauss)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
-            case 1:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                else if (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
-            case 2:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING));
-                break;
-            case 3:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
-                {
-                    TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
-                    if (te != null)
+            Month currentMonth = CalendarTFC.CALENDAR_TIME.getMonthOfYear();
+            int expectedStage = fruitTree.getStageForMonth(currentMonth);
+            float avgTemperature = ClimateTFC.getAvgTemp(world, pos);
+            float tempGauss = (int)(12f + (random.nextGaussian() / 4));
+
+            switch (expectedStage)
+            {
+                case 0:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature < tempGauss)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.WINTER), 2);
+                    else if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && avgTemperature >= tempGauss)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    break;
+                case 1:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.NORMAL)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    else if (state.getValue(LEAF_STATE) == EnumLeafState.FLOWERING || state.getValue(LEAF_STATE) == EnumLeafState.AUTUMN || state.getValue(LEAF_STATE) == EnumLeafState.WINTER)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    break;
+                case 2:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.FLOWERING)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FLOWERING), 2);
+                    break;
+                case 3:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.FRUIT)
                     {
-                        long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
-                        if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                        TETickCounter te = Helpers.getTE(world, pos, TETickCounter.class);
+                        if (te != null)
                         {
-                            world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT));
-                            te.resetCounter();
+                            long hours = te.getTicksSinceUpdate() / ICalendar.TICKS_IN_HOUR;
+                            if (hours > (fruitTree.getGrowthTime() * ConfigTFC.General.FOOD.fruitTreeGrowthTimeModifier))
+                            {
+                                world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.FRUIT), 2);
+                                te.resetCounter();
+                            }
                         }
                     }
-                }
-                break;
-            case 4:
-                if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature < tempGauss)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN));
-                else if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature >= tempGauss)
-                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                break;
-            default:
-                world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                    break;
+                case 4:
+                    if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature < tempGauss)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.AUTUMN), 2);
+                    else if (state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN && avgTemperature >= tempGauss)
+                        world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+                    break;
+                default:
+                    world.setBlockState(pos, state.withProperty(LEAF_STATE, EnumLeafState.NORMAL), 2);
+            }
+            doLeafDecay(world, pos, state);
         }
-        doLeafDecay(world, pos, state);
+
+        MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(world, random, forgeChunkPos));
     }
 
     @Override
@@ -250,6 +267,30 @@ public class BlockLeavesTFCF extends BlockLeaves
     @Override
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
+		if(!worldIn.isRemote)
+        {
+            if ((fruitTree == SeasonalTrees.YELLOW_PINK_CHERRY || fruitTree == SeasonalTrees.ORANGE_PINK_CHERRY || fruitTree == SeasonalTrees.RED_PINK_CHERRY) && 
+                (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN))
+            {
+                int dayTime = (int) CalendarTFC.CALENDAR_TIME.getTicks();
+                int bound = 900;
+                if(dayTime >= 12000){
+                    if(dayTime <= 20000) bound /= 6;
+                    if(dayTime <= 16000) bound /= 2;
+                    if(dayTime <= 13800) bound /= 5;
+                }
+                if(rand.nextInt(bound) == 0)
+                {
+                    BlockPos spawnPos = new BlockPos(pos.getX() - 3 + rand.nextInt(7), pos.getY() - 1 + rand.nextInt(3), pos.getZ() - 3 + rand.nextInt(7));
+                    if(worldIn.getBlockState(spawnPos).getCollisionBoundingBox(worldIn, spawnPos) == NULL_AABB)
+                    {
+                        EntitySilkMoth entity = new EntitySilkMoth(worldIn);
+                        entity.setPosition(spawnPos.getX() + 0.5D, spawnPos.getY() + 0.5D, spawnPos.getZ() + 0.5D);
+                        worldIn.spawnEntity(entity);
+                    }
+                }
+            }
+		}
         doLeafDecay(worldIn, pos, state);
     }
 
@@ -327,6 +368,14 @@ public class BlockLeavesTFCF extends BlockLeaves
                         drops.add(drop);
                     }
                 }
+            }
+        }
+        if ((fruitTree == SeasonalTrees.YELLOW_PINK_CHERRY || fruitTree == SeasonalTrees.ORANGE_PINK_CHERRY || fruitTree == SeasonalTrees.RED_PINK_CHERRY) && (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN))
+        {
+            ItemStack drop = new ItemStack(ItemsTFCF.MULBERRY_LEAF, 1 + RANDOM.nextInt(2), damageDropped(state));
+            if (!drop.isEmpty())
+            {
+                drops.add(drop);
             }
         }
     }
@@ -430,5 +479,11 @@ public class BlockLeavesTFCF extends BlockLeaves
         {
             return this.name().toLowerCase();
         }
+    }
+
+    @Override
+    public GrowthStatus getGrowingStatus(IBlockState state, World world, BlockPos pos)
+    {
+        return GrowthStatus.GROWING;
     }
 }

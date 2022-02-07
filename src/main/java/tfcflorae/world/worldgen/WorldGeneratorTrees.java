@@ -132,7 +132,7 @@ public class WorldGeneratorTrees implements IWorldGenerator
 				final int z = (chunkZ << 4) + random.nextInt(16) + 8;
 				BlockPos blockPos = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z));
 				IBlockState down = world.getBlockState(blockPos.down());
-                final Biome b1 = world.getBiome(blockPos);
+                Biome b1 = world.getBiome(blockPos);
                 //BlockPos blockPos = world.getHeight(chunkPos.add(random.nextInt(16) + 8, (random.nextInt(7) - random.nextInt(7)) * -1, random.nextInt(16) + 8));
 
                 if ((BlocksTFC.isGround(down) || BlocksTFCF.isGround(down) || world.getBlockState(blockPos).getBlock() == ChunkGenTFC.SALT_WATER.getBlock()) && b1 == BiomesTFC.MANGROVE)

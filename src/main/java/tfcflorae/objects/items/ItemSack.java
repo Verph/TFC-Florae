@@ -52,7 +52,6 @@ import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.api.types.Metal;
-import net.dries007.tfc.client.TFCGuiHandler;
 import net.dries007.tfc.network.PacketSimpleMessage;
 import net.dries007.tfc.network.PacketSimpleMessage.MessageCategory;
 import net.dries007.tfc.objects.container.CapabilityContainerListener;
@@ -63,6 +62,7 @@ import net.dries007.tfc.objects.items.ItemTFC;
 import net.dries007.tfc.util.Alloy;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.CalendarTFC;
+
 import tfcflorae.client.GuiHandler;
 import tfcflorae.util.OreDictionaryHelper;
 
@@ -133,7 +133,7 @@ public class ItemSack extends ItemTFCF
     @Override
     public Size getSize(ItemStack stack)
     {
-        return Size.NORMAL; // Can't be stored in itself
+        return Size.HUGE; // Can't be stored in itself
     }
 
     @Nonnull
@@ -222,7 +222,7 @@ public class ItemSack extends ItemTFCF
             IItemSize size = CapabilityItemSize.getIItemSize(stack);
             if (size != null)
             {
-                return size.getSize(stack).isSmallerThan(Size.NORMAL);
+                return size.getSize(stack).isSmallerThan(Size.HUGE);
             }
             return false;
         }
@@ -231,10 +231,9 @@ public class ItemSack extends ItemTFCF
         public NBTTagCompound serializeNBT()
         {
             NBTTagCompound nbt = new NBTTagCompound();
-            {
-                // Save item data
-                nbt.setTag("items", super.serializeNBT());
-            }
+
+            // Save item data
+            nbt.setTag("items", super.serializeNBT());
             return nbt;
         }
 

@@ -42,7 +42,6 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.chunkdata.CapabilityChunkData;
 import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
-import net.dries007.tfc.util.OreDictionaryHelper;
 
 import tfcflorae.client.ClientEvents;
 import tfcflorae.client.GuiHandler;
@@ -54,12 +53,14 @@ import tfcflorae.compat.tfcelementia.ceramics.*;
 import tfcflorae.compat.tfcelementia.jei.JEIPluginTFCECompat;
 import tfcflorae.compat.tfcelementia.jei.wrappers.*;
 import tfcflorae.compat.tfcelementia.recipes.*;
-import tfcflorae.objects.blocks.entity.EntitiesTFCF;
+import tfcflorae.objects.LootTablesTFCF;
+import tfcflorae.objects.entity.EntitiesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.proxy.CommonProxy;
 import tfcflorae.util.CapabilityHeatHandler;
 import tfcflorae.util.ClassAdder;
 import tfcflorae.util.HelpersTFCF;
+import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.fuel.FuelsTFCF;
 import tfcflorae.proxy.ClientProxy;
 
@@ -101,6 +102,13 @@ public class TFCFlorae
         return instance;
     }
 
+    public static SimpleNetworkWrapper getNetwork()
+    {
+        return instance.network;
+    }
+
+    private SimpleNetworkWrapper network;
+
     @EventHandler
     public void onFingerprintViolation(FMLFingerprintViolationEvent event)
     {
@@ -115,6 +123,11 @@ public class TFCFlorae
     {
         ClassAdder.addClasses(event.getModConfigurationDirectory());
         logger = event.getModLog();
+
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+        network = NetworkRegistry.INSTANCE.newSimpleChannel(MODID);
+        int id = 0;
+
         if (!signedBuild)
         {
             logger.error("INVALID FINGERPRINT DETECTED!");
@@ -149,8 +162,8 @@ public class TFCFlorae
         }
         */
 
-        proxy.preInit(event);
         EntitiesTFCF.preInit();
+        proxy.preInit(event);
 
         if (event.getSide().isClient())
         {
@@ -164,6 +177,8 @@ public class TFCFlorae
     public void init(FMLInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+        OreDictionaryHelper.init();
+        LootTablesTFCF.init();
         CapabilityHeatHandler.init();
 		proxy.init(event);
     }

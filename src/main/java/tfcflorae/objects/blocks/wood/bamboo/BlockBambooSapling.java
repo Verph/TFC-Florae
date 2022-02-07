@@ -12,13 +12,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import net.dries007.tfc.api.types.Tree;
+import net.dries007.tfc.api.util.IGrowingPlant;
 import net.dries007.tfc.objects.blocks.wood.BlockSaplingTFC;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.types.TreesTFCF;
 
-public class BlockBambooSapling extends BlockSaplingTFC
+public class BlockBambooSapling extends BlockSaplingTFC implements IGrowingPlant
 {
     Block leaves;
     Block log;
@@ -60,5 +61,11 @@ public class BlockBambooSapling extends BlockSaplingTFC
             }
         }
         world.setBlockState(pos.offset(EnumFacing.UP, height), leaves);
+    }
+
+    @Override
+    public GrowthStatus getGrowingStatus(IBlockState state, World world, BlockPos pos)
+    {
+        return GrowthStatus.GROWING;
     }
 }

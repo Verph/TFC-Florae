@@ -59,14 +59,14 @@ public class ItemWalkingStick extends ItemHoe implements IItemSize
             else
                 OreDictionaryHelper.register(this, obj);
         }
-        OreDictionaryHelper.registerDamageType(this, DamageType.CRUSHING);
+        OreDictionaryHelper.registerDamageType(this, DamageType.PIERCING);
     }
 
     @Override
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack)
     {
         Multimap<String, AttributeModifier> multimap = HashMultimap.create();
-        if (slot == EntityEquipmentSlot.MAINHAND)
+        if (slot == EntityEquipmentSlot.MAINHAND || slot == EntityEquipmentSlot.OFFHAND)
         {
             multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", attackDamage, 0));
             multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, 0));

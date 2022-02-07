@@ -49,15 +49,18 @@ import net.dries007.tfc.world.classic.worldgen.vein.VeinRegistry;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
+import tfcflorae.api.registries.TFCFRegistries;
 import tfcflorae.client.GuiKnappingTFCF;
+import tfcflorae.compat.jei.category.*;
 import tfcflorae.compat.jei.wrappers.*;
+import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 
 import static tfcflorae.TFCFlorae.MODID;
 
 @JEIPlugin
-public class TFCFJEIPlugin implements IModPlugin
+public final class TFCFJEIPlugin implements IModPlugin
 {
     private static IModRegistry REGISTRY;
     public static final String KNAP_PINEAPPLE_LEATHER_UID = TFCFlorae.MODID + ".knap.pineapple_leather";
@@ -75,6 +78,8 @@ public class TFCFJEIPlugin implements IModPlugin
     public static final String KNAP_STONEWARE_CLAY_UID = TFCFlorae.MODID + ".knap.stoneware_clay";
     public static final String KNAP_FLINT_UID = TFCFlorae.MODID + ".knap.flint";
     public static final String CASTING_UID = TFCFlorae.MODID + ".casting";
+    public static final String DRY_UID = TFCFlorae.MODID + ".drying";
+    public static final String STICK_BUNDLE_UID = TFCFlorae.MODID + ".stick_bundle";
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registry)
@@ -94,6 +99,8 @@ public class TFCFJEIPlugin implements IModPlugin
         registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_STONEWARE_CLAY_UID));
         registry.addRecipeCategories(new KnappingCategory(registry.getJeiHelpers().getGuiHelper(), KNAP_FLINT_UID));
         registry.addRecipeCategories(new CastingCategory(registry.getJeiHelpers().getGuiHelper(), CASTING_UID));
+        registry.addRecipeCategories(new DryingRecipeCategory(registry.getJeiHelpers().getGuiHelper(), DRY_UID));
+        registry.addRecipeCategories(new StickBundleRecipeCategory(registry.getJeiHelpers().getGuiHelper(), STICK_BUNDLE_UID));
     }
 
     /**
@@ -110,6 +117,14 @@ public class TFCFJEIPlugin implements IModPlugin
     public void register(IModRegistry registry)
     {
         REGISTRY = registry;
+
+        List<SimpleRecipeWrapper> dryList = TFCFRegistries.DRYING.getValuesCollection().stream().map(DryingRecipeWrapper::new).collect(Collectors.toList());
+        registry.addRecipes(dryList, DRY_UID);
+        registry.addRecipeCatalyst(new ItemStack(BlocksTFCF.DRYER), DRY_UID);
+
+        List<SimpleRecipeWrapper> stickbundleList = TFCFRegistries.STICK_BUNDLE.getValuesCollection().stream().map(StickBundleRecipeWrapper::new).collect(Collectors.toList());
+        registry.addRecipes(stickbundleList, STICK_BUNDLE_UID);
+        registry.addRecipeCatalyst(new ItemStack(BlocksTFCF.STICK_BUNDLE), STICK_BUNDLE_UID);
 
         // Knapping Pineapple Leather
         List<KnappingRecipeWrapperTFCF> leatherPineappleRecipes = TFCRegistries.KNAPPING.getValuesCollection().stream()
