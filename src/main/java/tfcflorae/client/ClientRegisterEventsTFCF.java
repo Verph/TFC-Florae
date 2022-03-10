@@ -129,8 +129,8 @@ public class ClientRegisterEventsTFCF
             for (GemTFCF.Grade grade : GemTFCF.Grade.values())
                 registerEnumBasedMetaItems("gem", grade, item);
 
-        for (Item item : ItemsTFCF.getAllItemBows())
-            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
+        /*for (Item item : ItemsTFCF.getAllItemBows())
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));*/
 
         for (ItemFruitDoor item : ItemsTFCF.getAllFruitDoors())
             ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
@@ -158,6 +158,9 @@ public class ClientRegisterEventsTFCF
             ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString()));
 
         // BLOCKS
+
+        for (ItemBlock itemBlock : BlocksTFCF.getAllItemBlockCondenser())
+            ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName().toString()));
 
         for (ItemBlock itemBlock : BlocksTFCF.getAllNormalItemBlocks())
             ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName().toString()));

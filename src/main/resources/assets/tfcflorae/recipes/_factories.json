@@ -1,4 +1,7 @@
 {
+  "ingredients": {
+    "fluid": "net.dries007.tfc.objects.recipes.ingredients.FluidIngredient$Factory"
+  },
   "recipes": {
     "unmold_recipe_earthenware_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeEarthenwareTFCF$Factory",
     "unmold_recipe_kaolinite_tfcf": "tfcflorae.objects.recipes.UnmoldRecipeKaoliniteTFCF$Factory",
@@ -8,6 +11,7 @@
     "unmold_recipe_stoneware_tfce": "tfcflorae.compat.tfcelementia.recipes.UnmoldRecipeStoneware$Factory",
     "unmold_recipe_earthenware_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldEarthenwareMalletRecipe$Factory",
     "unmold_recipe_kaolinite_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldKaoliniteMalletRecipe$Factory",
-    "unmold_recipe_stoneware_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldStonewareMalletRecipe$Factory"
+    "unmold_recipe_stoneware_firmalife": "tfcflorae.compat.firmalife.recipes.UnmoldStonewareMalletRecipe$Factory",
+    "fluid_food_recipe": "net.dries007.tfc.objects.recipes.ShapelessFluidFoodRecipe$Factory"
   }
 }

@@ -12,56 +12,57 @@ import tfcflorae.TFCFlorae;
 public class ClassAdder
 {
     // Files
-    private static final String CEH_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/CommonEventHandler.class";
+    private static final String CEH_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/CommonEventHandler.class";
 
-    private static final String ITEMFIRESTARTER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/ItemFireStarter.class";
-    private static final String ITEM_SEEDS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/ItemSeedsTFC.class";
-    private static final String ITEMBLOCKBLOCKCROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/itemblock/ItemBlockCropDeadWaterTFC.class";
-    private static final String ITEMBLOCKBLOCKCROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/itemblock/ItemBlockCropWaterTFC.class";
-    private static final String ITEMPROSPECTORSPICKRESULTTYPE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult$Type.class";
-    private static final String ITEMPROSPECTORSPICKRESULT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult.class";
-    private static final String ITEMPROSPECTORSPICK_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemProspectorPick.class";
-    private static final String ITEMPROSPECTORSPICK1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemProspectorPick$1.class";
-    private static final String ITEMMETALTOOL1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemMetalTool$1.class";
-    private static final String ITEMMETALTOOL_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/metal/ItemMetalTool.class";
-    private static final String ITEMROCKSHOVEL_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/items/rock/ItemRockShovel.class";
+    private static final String ITEMFIRESTARTER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/ItemFireStarter.class";
+    private static final String ITEM_SEEDS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/ItemSeedsTFC.class";
+    private static final String ITEMBLOCKBLOCKCROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/itemblock/ItemBlockCropDeadWaterTFC.class";
+    private static final String ITEMBLOCKBLOCKCROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/itemblock/ItemBlockCropWaterTFC.class";
+    private static final String ITEMPROSPECTORSPICKRESULTTYPE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult$Type.class";
+    private static final String ITEMPROSPECTORSPICKRESULT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemProspectorPick$ProspectResult.class";
+    private static final String ITEMPROSPECTORSPICK_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemProspectorPick.class";
+    private static final String ITEMPROSPECTORSPICK1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemProspectorPick$1.class";
+    private static final String ITEMMETALTOOL1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemMetalTool$1.class";
+    private static final String ITEMMETALTOOL_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/metal/ItemMetalTool.class";
+    private static final String ITEMROCKSHOVEL_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/items/rock/ItemRockShovel.class";
 
-    private static final String BLOCKSTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/BlocksTFC$1.class";
-    private static final String BLOCKSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/BlocksTFC.class";
-    private static final String BLOCK_CROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/agriculture/BlockCropDead.class";
-    private static final String BLOCK_CROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/agriculture/BlockCropTFC.class";
-    private static final String BLOCKPLANTTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC.class";
-    private static final String BLOCKPLANTTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC$1.class";
-    private static final String BLOCKSHORTGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/plants/BlockShortGrassTFC.class";
-    private static final String BLOCKTALLGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/plants/BlockTallGrassTFC.class";
-    private static final String BLOCKHANGINGTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/objects/blocks/plants/BlockHangingPlantTFC.class";
+    private static final String BLOCKSTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/BlocksTFC$1.class";
+    private static final String BLOCKSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/BlocksTFC.class";
+    private static final String BLOCKFLUIDHOTWATER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/BlockFluidHotWater.class";
+    private static final String BLOCK_CROPDEAD_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/agriculture/BlockCropDead.class";
+    private static final String BLOCK_CROP_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/agriculture/BlockCropTFC.class";
+    private static final String BLOCKPLANTTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC.class";
+    private static final String BLOCKPLANTTFC1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/plants/BlockPlantTFC$1.class";
+    private static final String BLOCKSHORTGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/plants/BlockShortGrassTFC.class";
+    private static final String BLOCKTALLGRASSTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/plants/BlockTallGrassTFC.class";
+    private static final String BLOCKHANGINGTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/objects/blocks/plants/BlockHangingPlantTFC.class";
 
-    private static final String WORLDREGEN_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/util/WorldRegenHandler.class";
+    private static final String WORLDREGEN_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/util/WorldRegenHandler.class";
 
-    private static final String CHUNKGENTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/ChunkGenTFC.class";
-    private static final String DATALAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/DataLayer.class";
+    private static final String CHUNKGENTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/ChunkGenTFC.class";
+    private static final String DATALAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/DataLayer.class";
 
-    private static final String BIOMEDECORATOR_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC.class";
-    private static final String BIOMEDECORATOR1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC$1.class";
-    private static final String BIOMEMESATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes/BiomeMesaTFC.class";
-    private static final String BIOMESTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes/BiomesTFC.class";
-    private static final String BIOMETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes/BiomeTFC.class";
+    private static final String BIOMEDECORATOR_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC.class";
+    private static final String BIOMEDECORATOR1_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes/BiomeDecoratorTFC$1.class";
+    private static final String BIOMEMESATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes/BiomeMesaTFC.class";
+    private static final String BIOMESTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes/BiomesTFC.class";
+    private static final String BIOMETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes/BiomeTFC.class";
 
-    private static final String CHUNKDATATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC.class";
-    private static final String CHUNKDATATFC_STORAGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC$ChunkDataStorage.class";
-    private static final String GENLAYERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/GenLayerTFC.class";
-    private static final String GENLAYERBIOMEEDGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/biome/GenLayerBiomeEdge.class";
-    private static final String GENLAYERSHORETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/biome/GenLayerShoreTFC.class";
-    private static final String GENLAYERTREEINIT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenLayerTreeInit.class";
-    private static final String GENRIVERLAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenRiverLayer.class";
-    private static final String GENLAYERRIVERINITTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverInitTFC.class";
-    private static final String GENLAYERRIVERMIXTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverMixTFC.class";
-    private static final String GENLAYERRIVERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverTFC.class";
+    private static final String CHUNKDATATFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC.class";
+    private static final String CHUNKDATATFC_STORAGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/chunkdata/ChunkDataTFC$ChunkDataStorage.class";
+    private static final String GENLAYERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/GenLayerTFC.class";
+    private static final String GENLAYERBIOMEEDGE_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/biome/GenLayerBiomeEdge.class";
+    private static final String GENLAYERSHORETFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/biome/GenLayerShoreTFC.class";
+    private static final String GENLAYERTREEINIT_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenLayerTreeInit.class";
+    private static final String GENRIVERLAYER_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/datalayers/tree/GenRiverLayer.class";
+    private static final String GENLAYERRIVERINITTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverInitTFC.class";
+    private static final String GENLAYERRIVERMIXTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverMixTFC.class";
+    private static final String GENLAYERRIVERTFC_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/genlayers/river/GenLayerRiverTFC.class";
 
-    private static final String WORLDGENWILDCROPS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/worldgen/WorldGenWildCrops.class";
+    private static final String WORLDGENWILDCROPS_FROM = "assets/tfcflorae/bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/worldgen/WorldGenWildCrops.class";
 
     // Directories
-    private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc";
+    private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc";
     private static final String SUBDIR_ITEM = DIR + "/objects/items";
     private static final String SUBDIR_ITEM_ITEMBLOCK = DIR + "/objects/items/itemblock";
     private static final String SUBDIR_ITEMMETALTOOL = DIR + "/objects/items/metal";
@@ -79,7 +80,7 @@ public class ClassAdder
     private static final String SUBDIR_WORLD_GENLAYERS_DATALAYERS_TREE = DIR + "/world/classic/genlayers/datalayers/tree";
     private static final String SUBDIR_WORLD_GENLAYERS_RIVER = DIR + "/world/classic/genlayers/river";
     private static final String SUBDIR_WORLD_WORLDGEN = DIR + "/world/classic/worldgen";
-    //private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.22.180/net/dries007/tfc/world/classic/biomes";
+    //private static final String DIR = "bansoukou/TerraFirmaCraft-MC1.12.2-1.7.23.181/net/dries007/tfc/world/classic/biomes";
 
     public static void addClasses(File dir)
     {
@@ -190,6 +191,7 @@ public class ClassAdder
         File itemRockShovel = new File(bansoukouFolder + "/objects/items/rock", "ItemRockShovel.class");
         File blockBlocksTFC1 = new File(bansoukouFolder + "/objects/blocks", "BlocksTFC$1.class");
         File blockBlocksTFC = new File(bansoukouFolder + "/objects/blocks", "BlocksTFC.class");
+        File blockBlockFluidHotWater = new File(bansoukouFolder + "/objects/blocks", "BlockFluidHotWater.class");
         File blockCropDead = new File(bansoukouFolder + "/objects/blocks/agriculture", "BlockCropDead.class");
         File blockCrop = new File(bansoukouFolder + "/objects/blocks/agriculture", "BlockCropTFC.class");
         File blockPlantTFC = new File(bansoukouFolder + "/objects/blocks/plants", "BlockPlantTFC.class");
@@ -273,6 +275,10 @@ public class ClassAdder
             if (blockBlocksTFC.createNewFile())
             {
                 FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKSTFC_FROM)), blockBlocksTFC);
+            }
+            if (blockBlockFluidHotWater.createNewFile())
+            {
+                FileUtils.copyInputStreamToFile(Objects.requireNonNull(ClassAdder.class.getClassLoader().getResourceAsStream(BLOCKFLUIDHOTWATER_FROM)), blockBlockFluidHotWater);
             }
             if (blockCropDead.createNewFile())
             {

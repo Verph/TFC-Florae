@@ -12,7 +12,6 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -42,9 +41,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.ConfigTFC;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.api.util.IGrowingPlant;
 import net.dries007.tfc.client.particle.TFCParticles;
+import net.dries007.tfc.objects.blocks.wood.BlockLeavesTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockLogTFC;
 import net.dries007.tfc.objects.blocks.wood.BlockSaplingTFC;
 import net.dries007.tfc.objects.te.TETickCounter;
@@ -53,10 +54,10 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
-import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
-import tfcflorae.TFCFlorae;
+
 import tfcflorae.objects.entity.animal.EntitySilkMoth;
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.types.TreesTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.agriculture.SeasonalTrees;
 
@@ -265,23 +266,23 @@ public class BlockLeavesTFCF extends BlockLeaves implements IGrowingPlant
     }
 
     @Override
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random random)
     {
 		if(!worldIn.isRemote)
         {
-            if ((fruitTree == SeasonalTrees.YELLOW_PINK_CHERRY || fruitTree == SeasonalTrees.ORANGE_PINK_CHERRY || fruitTree == SeasonalTrees.RED_PINK_CHERRY) && 
-                (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN))
+            int dayTime = (int) CalendarTFC.CALENDAR_TIME.getTicks();
+            if (dayTime >= 12000 && dayTime <= 23000 && (fruitTree == SeasonalTrees.YELLOW_MULBERRY || fruitTree == SeasonalTrees.ORANGE_MULBERRY || fruitTree == SeasonalTrees.RED_MULBERRY || state == BlockLeavesTFC.get(TFCRegistries.TREES.getValue(TreesTFCF.MULBERRY))) && 
+                (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN) && state.getValue(DECAYABLE) == true)
             {
-                int dayTime = (int) CalendarTFC.CALENDAR_TIME.getTicks();
                 int bound = 900;
                 if(dayTime >= 12000){
                     if(dayTime <= 20000) bound /= 6;
                     if(dayTime <= 16000) bound /= 2;
                     if(dayTime <= 13800) bound /= 5;
                 }
-                if(rand.nextInt(bound) == 0)
+                if(random.nextInt(bound) == 0)
                 {
-                    BlockPos spawnPos = new BlockPos(pos.getX() - 3 + rand.nextInt(7), pos.getY() - 1 + rand.nextInt(3), pos.getZ() - 3 + rand.nextInt(7));
+                    BlockPos spawnPos = new BlockPos(pos.getX() - 3 + random.nextInt(7), pos.getY() - 1 + random.nextInt(3), pos.getZ() - 3 + random.nextInt(7));
                     if(worldIn.getBlockState(spawnPos).getCollisionBoundingBox(worldIn, spawnPos) == NULL_AABB)
                     {
                         EntitySilkMoth entity = new EntitySilkMoth(worldIn);
@@ -370,7 +371,7 @@ public class BlockLeavesTFCF extends BlockLeaves implements IGrowingPlant
                 }
             }
         }
-        if ((fruitTree == SeasonalTrees.YELLOW_PINK_CHERRY || fruitTree == SeasonalTrees.ORANGE_PINK_CHERRY || fruitTree == SeasonalTrees.RED_PINK_CHERRY) && (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || state.getValue(LEAF_STATE) != EnumLeafState.AUTUMN))
+        if ((fruitTree == SeasonalTrees.YELLOW_MULBERRY || fruitTree == SeasonalTrees.ORANGE_MULBERRY || fruitTree == SeasonalTrees.RED_MULBERRY) && state.getValue(LEAF_STATE) != EnumLeafState.WINTER)
         {
             ItemStack drop = new ItemStack(ItemsTFCF.MULBERRY_LEAF, 1 + RANDOM.nextInt(2), damageDropped(state));
             if (!drop.isEmpty())

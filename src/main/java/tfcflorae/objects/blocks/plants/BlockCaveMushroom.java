@@ -16,12 +16,10 @@ import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -46,14 +44,13 @@ import net.dries007.tfc.api.capability.food.IItemFoodTFC;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
-import net.dries007.tfc.api.types.Plant;
 import net.dries007.tfc.objects.blocks.wood.BlockLeavesTFC;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.ClimateTFC;
 import net.dries007.tfc.world.classic.chunkdata.ChunkDataTFC;
 
-import tfcflorae.objects.items.ItemTFCF;
+import tfcflorae.objects.blocks.plants.BlockCaveMushroom;
 import tfcflorae.objects.items.food.ItemFoodTFCF;
 import tfcflorae.objects.items.food.PotionEffectToHave;
 import tfcflorae.util.OreDictionaryHelper;
@@ -63,6 +60,8 @@ public class BlockCaveMushroom extends BlockBush implements IGrowable, IItemSize
 {
     ArrayList<PotionEffectToHave> PotionEffects = new ArrayList<PotionEffectToHave>();
     public FoodData data;
+
+    private static final Map<BlockCaveMushroom, ItemFoodTFCF> MAP = new HashMap<>();
 
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 3);
     /*
@@ -124,8 +123,6 @@ public class BlockCaveMushroom extends BlockBush implements IGrowable, IItemSize
     {
         return new FoodHeatHandler(null, data, 1.0F, 200.0F);
     }
-
-    private static final Map<BlockCaveMushroom, ItemFoodTFCF> MAP = new HashMap<>();
 
     public static ItemFoodTFCF get(ItemFoodTFCF food)
     {

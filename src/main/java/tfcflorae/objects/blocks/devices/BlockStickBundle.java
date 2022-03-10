@@ -7,6 +7,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -30,12 +31,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.dries007.tfc.Constants;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
 import net.dries007.tfc.objects.blocks.property.ITallPlant;
 import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.util.Helpers;
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.itemblock.ItemBlockStickBundle;
 import tfcflorae.objects.recipes.StickBundleRecipe;
@@ -53,6 +56,7 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
     {
         super(Material.WOOD);
         this.setDefaultState(this.blockState.getBaseState().withProperty(GROWTH, 0).withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER));
+        setSoundType(SoundType.WOOD);
         setHardness(1.0F);
         setResistance(2.0F);
         setHarvestLevel("axe", 0);
@@ -80,7 +84,9 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
         return true;
     }
 
-	public TileEntity createNewTileEntity(World world, int meta)
+    @Nullable
+    @Override
+	public TileEntity createTileEntity(World world, IBlockState state)
     {
 		return new TEStickBundle();
 	}
@@ -107,7 +113,7 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
 	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
     {
     	if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER) drops.add(new ItemStack(ItemsTFC.STICK_BUNCH, 1));
-    	switch(state.getValue(GROWTH))
+    	/*switch(state.getValue(GROWTH))
         {
 			case 4:
 				drops.add(new ItemStack(ItemsTFCF.SILK_WORM_COCOON, 1));
@@ -118,7 +124,7 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
 				drops.add(new ItemStack(ItemsTFCF.SILK_WORM, 1));
 				break;
 			default:
-		}
+		}*/
 	}
 
 	/**
@@ -130,15 +136,18 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
         if (!worldIn.isRemote)
         {
             ItemStack held = playerIn.getHeldItem(hand);
+            ItemStack heldOffHand = playerIn.getHeldItemOffhand();
             if (held.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)) return false;
             TEStickBundle te = Helpers.getTE(worldIn, pos, TEStickBundle.class);
             if (te != null)
             {
+                TEStickBundle teOther = otherTE(worldIn, pos, state);
                 IItemHandler inventory = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
                 if (inventory != null)
                 {
+                    IBlockState otherBundleState = otherPart(worldIn, pos, state);
                     ItemStack tryStack = new ItemStack(held.getItem(), 1);
-                    if (StickBundleRecipe.get(tryStack) != null && inventory.getStackInSlot(0).isEmpty())
+                    if (StickBundleRecipe.get(tryStack) != null && inventory.getStackInSlot(0).isEmpty() && state.getValue(GROWTH) == 0)
                     {
                         ItemStack leftover = inventory.insertItem(0, held.splitStack(1), false);
                         ItemHandlerHelper.giveItemToPlayer(playerIn, leftover);
@@ -156,24 +165,95 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
                         }
                         return true;
                     }
-                    if (playerIn.isSneaking())
+                    if ((state.getValue(GROWTH) == 1 || state.getValue(GROWTH) == 2) && te.getTicksRemaining() > 0 && (held.isEmpty() || heldOffHand.isEmpty()) && playerIn.isSneaking())
                     {
                         ItemStack takeStack = inventory.extractItem(0, 1, false);
-                        Helpers.spawnItemStack(worldIn, pos, takeStack);
-                        te.deleteSlot();
-                        te.clear();
-                        te.markForSync();
+                        if (takeStack != ItemStack.EMPTY)
+                        {
+                            ItemHandlerHelper.giveItemToPlayer(playerIn, takeStack);
+                            te.deleteSlot();
+                            te.clear();
+                            te.markForSync();
 
-                        worldIn.setBlockState(pos, state.withProperty(GROWTH, 0));
-                        if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
-                        {
-                            worldIn.setBlockState(pos.down(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER).withProperty(GROWTH, 0));
+                            worldIn.setBlockState(pos, state.withProperty(GROWTH, 0));
+                            if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                            {
+                                worldIn.setBlockState(pos.down(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER).withProperty(GROWTH, 0));
+                            }
+                            else
+                            {
+                                worldIn.setBlockState(pos.up(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.UPPER).withProperty(GROWTH, 0));
+                            }
+                            return true;
                         }
-                        else
+                    }
+                    if ((otherBundleState.getValue(GROWTH) == 1 || otherBundleState.getValue(GROWTH) == 2) && teOther.getTicksRemaining() > 0 && (held.isEmpty() || heldOffHand.isEmpty()) && playerIn.isSneaking())
+                    {
+                        ItemStack takeStack = teOther.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).extractItem(0, 1, false);
+                        //ItemStack takeStack = inventory.extractItem(0, 1, false);
+                        if (takeStack != ItemStack.EMPTY)
                         {
-                            worldIn.setBlockState(pos.up(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.UPPER).withProperty(GROWTH, 0));
+                            ItemHandlerHelper.giveItemToPlayer(playerIn, takeStack);
+                            teOther.deleteSlot();
+                            teOther.clear();
+                            teOther.markForSync();
+
+                            worldIn.setBlockState(pos, state.withProperty(GROWTH, 0));
+                            if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                            {
+                                worldIn.setBlockState(pos.down(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER).withProperty(GROWTH, 0));
+                            }
+                            else
+                            {
+                                worldIn.setBlockState(pos.up(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.UPPER).withProperty(GROWTH, 0));
+                            }
+                            return true;
                         }
-                        return true;
+                    }
+                    if (state.getValue(GROWTH) == 3 && te.getTicksRemaining() <= 0)
+                    {
+                        ItemStack takeStack = inventory.extractItem(0, 1 + Constants.RNG.nextInt(3), false);
+                        if (takeStack != ItemStack.EMPTY)
+                        {
+                            ItemHandlerHelper.giveItemToPlayer(playerIn, takeStack);
+                            te.deleteSlot();
+                            te.clear();
+                            te.markForSync();
+
+                            worldIn.setBlockState(pos, state.withProperty(GROWTH, 0));
+                            if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                            {
+                                worldIn.setBlockState(pos.down(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER).withProperty(GROWTH, 0));
+                            }
+                            else
+                            {
+                                worldIn.setBlockState(pos.up(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.UPPER).withProperty(GROWTH, 0));
+                            }
+                            return true;
+                        }
+                    }
+                    if (otherBundleState.getValue(GROWTH) == 3 && teOther.getTicksRemaining() <= 0)
+                    {
+                        ItemStack takeStack = teOther.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).extractItem(0, 1, false);
+                        //ItemStack takeStack = inventory.extractItem(0, 1 + Constants.RNG.nextInt(3), false);
+                        if (takeStack != ItemStack.EMPTY)
+                        {
+                            ItemHandlerHelper.giveItemToPlayer(playerIn, takeStack);
+                            teOther.deleteSlot();
+                            teOther.clear();
+                            teOther.markForSync();
+
+                            worldIn.setBlockState(pos, state.withProperty(GROWTH, 0));
+                            if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                            {
+                                worldIn.setBlockState(pos.down(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.LOWER).withProperty(GROWTH, 0));
+                            }
+                            else
+                            {
+                                worldIn.setBlockState(pos.up(), this.getDefaultState().withProperty(PART, BlockStickBundle.EnumBlockPart.UPPER).withProperty(GROWTH, 0));
+                            }
+                            return true;
+                        }
                     }
                 }
             }
@@ -181,22 +261,110 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
         return true;
 	}
 
+    private IBlockState otherPart(World worldIn, BlockPos pos, IBlockState state)
+    {
+        if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+            return worldIn.getBlockState(pos.down());
+        else
+            return worldIn.getBlockState(pos.up());
+    }
+
+    private TEStickBundle otherTE(World worldIn, BlockPos pos, IBlockState state)
+    {
+        if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+        {
+            return Helpers.getTE(worldIn, pos.down(), TEStickBundle.class);
+        }
+        else
+        {
+            return Helpers.getTE(worldIn, pos.up(), TEStickBundle.class);
+        }
+    }
+
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-		if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+        TEStickBundle te = Helpers.getTE(worldIn, pos, TEStickBundle.class);
+        if (te != null)
         {
-			int growth = state.getValue(GROWTH);
-			if (growth > 0 && growth < 3)
+            TEStickBundle other = otherTE(worldIn, pos, state);
+            IItemHandler inventory = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+            if (inventory != null)
             {
-				if (rand.nextInt(5) == 0)
+                //double percentage = te.calculatePercentage();
+                double percentage = calcPercentage(te.getCurrentTicks(), te.getGoalTick());
+                
+                TFCFlorae.getLog().warn("TFCFlorae: BlockStickBundle error, percentage stuff: " + percentage + ", " + te.getTicksRemaining());
+                if (!(inventory.getStackInSlot(0).isEmpty()))
                 {
-					worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH,growth + 1));
-					worldIn.setBlockState(pos.down(), worldIn.getBlockState(pos.down()).withProperty(GROWTH,growth + 1));
-				}
-			}
-		}
+                    // Note to self, need to move it back to only check for current block and not both, so remove half
+                    if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                    {
+                        if (percentage >= 1 && state.getValue(GROWTH) <= 2)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 3));
+                                worldIn.setBlockState(pos.down(), worldIn.getBlockState(pos.down()).withProperty(GROWTH, 3));
+                        }
+                        if (percentage >= 0.5 && percentage < 1 && state.getValue(GROWTH) <= 1)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 2));
+                                worldIn.setBlockState(pos.down(), worldIn.getBlockState(pos.down()).withProperty(GROWTH, 2));
+                        }
+                        if (percentage < 0.5 && state.getValue(GROWTH) == 0)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 1));
+                                worldIn.setBlockState(pos.down(), worldIn.getBlockState(pos.down()).withProperty(GROWTH, 1));
+                        }
+                    }
+                    else
+                    {
+                        if (percentage >= 1 && state.getValue(GROWTH) <= 2)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 3));
+                                worldIn.setBlockState(pos.up(), worldIn.getBlockState(pos.up()).withProperty(GROWTH, 3));
+                        }
+                        if (percentage >= 0.5 && percentage < 1 && state.getValue(GROWTH) <= 1)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 2));
+                                worldIn.setBlockState(pos.up(), worldIn.getBlockState(pos.up()).withProperty(GROWTH, 2));
+                        }
+                        if (percentage < 0.5 && state.getValue(GROWTH) == 0)
+                        {
+                                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 1));
+                                worldIn.setBlockState(pos.up(), worldIn.getBlockState(pos.up()).withProperty(GROWTH, 1));
+                        }
+                    }
+                }
+                else
+                {
+                    
+                    if (state.getValue(PART) == BlockStickBundle.EnumBlockPart.UPPER)
+                    {
+                        if (percentage <= 0)
+                        {
+                            worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 0));
+                            worldIn.setBlockState(pos.down(), worldIn.getBlockState(pos.down()).withProperty(GROWTH, 0));
+                        }
+                    }
+                    else
+                    {
+                        if (percentage <= 0)
+                        {
+                            worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(GROWTH, 0));
+                            worldIn.setBlockState(pos.up(), worldIn.getBlockState(pos.up()).withProperty(GROWTH, 0));
+                        }
+                    }
+                }
+            }
+        }
 	}
+
+    public double calcPercentage(double currentTick, double targetTick)
+    {
+        if (targetTick <= currentTick) return 1;
+
+        return currentTick / targetTick;
+    }
 
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
@@ -310,5 +478,11 @@ public class BlockStickBundle extends Block implements IItemSize, ITallPlant
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
     {
         return NULL_AABB;
+    }
+
+    @Override
+    public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos)
+    {
+        return false;
     }
 }

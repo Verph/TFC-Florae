@@ -23,7 +23,7 @@ public class TESRDryer extends TileEntitySpecialRenderer<TEDryer>
             {
                 double magic = 0.003125D;
                 GlStateManager.pushMatrix();
-                GlStateManager.translate(x + 0.5, y + 0.125 + magic, z + 0.5);
+                GlStateManager.translate(x + 0.5, y + 0.075, z + 0.5);
                 GlStateManager.scale(0.5f, 0.5f, 0.5f);
                 GlStateManager.rotate(90f, 1f, 0f, 0f);
 
@@ -31,6 +31,12 @@ public class TESRDryer extends TileEntitySpecialRenderer<TEDryer>
                 if (!item.isEmpty())
                 {
                     Minecraft.getMinecraft().getRenderItem().renderItem(item, ItemCameraTransforms.TransformType.FIXED);
+                }
+                ItemStack item2 = cap.getStackInSlot(1);
+                if (!item2.isEmpty())
+                {
+                    GlStateManager.translate(0, 0, -1);
+                    Minecraft.getMinecraft().getRenderItem().renderItem(item2, ItemCameraTransforms.TransformType.FIXED);
                 }
                 GlStateManager.popMatrix();
             }

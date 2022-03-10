@@ -5,27 +5,32 @@ import java.util.Map;
 import java.util.function.Predicate;
 import javax.annotation.Nullable;
 
-import com.eerussianguy.firmalife.registry.ItemsFL;
-
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
-
+import net.dries007.tfc.objects.Powder;
 import net.dries007.tfc.objects.items.ItemSeedsTFC;
-import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.interaction.*;
+
 import tfcflorae.client.GuiHandler;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.devices.BlockStickBundle;
+import tfcflorae.objects.blocks.groundcover.BlockPowder;
+import tfcflorae.objects.items.ItemPowderTFC;
+import tfcflorae.objects.te.TEPowder;
 import tfcflorae.util.OreDictionaryHelper;
 
 import static tfcflorae.TFCFlorae.MODID;
@@ -37,7 +42,7 @@ public final class InteractionManagerTFCF
     private static final Map<Predicate<ItemStack>, IRightClickItemAction> RIGHT_CLICK_ACTIONS = new HashMap<>();
     private static final ThreadLocal<Boolean> PROCESSING_INTERACTION = ThreadLocal.withInitial(() -> false); // avoids stack overflows where some mods post interaction events during onBlockActivated (see #1321)
 
-    static
+    //static
     {
         // Pineapple Leather knapping
         putBoth(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "leatherPineapple"), ((worldIn, playerIn, handIn) -> {
@@ -156,29 +161,29 @@ public final class InteractionManagerTFCF
             return EnumActionResult.FAIL;
         }));
 
-        // Stick Bunch -> Stick Bundle Block (placement)
-        USE_ACTIONS.put(stack -> (OreDictionaryHelper.doesStackMatchOre(stack, "stickBunch") || OreDictionaryHelper.doesStackMatchOre(stack, "stickBundle") || stack.getItem() == ItemsTFC.STICK_BUNCH), (stack, player, worldIn, pos, hand, direction, hitX, hitY, hitZ) -> {
-            if (direction != null)
+        USE_ACTIONS.put(stack -> OreDictionaryHelper.doesStackMatchOre(stack, "stickBundle"), (stack, player, worldIn, pos, hand, direction, hitX, hitY, hitZ) -> {
+            if (direction == EnumFacing.DOWN)
             {
-                IBlockState stateAt = worldIn.getBlockState(pos);
-                // Try and place a stick bundle - if you were sneaking
-                if (player.isSneaking())
+                IBlockState state = worldIn.getBlockState(pos);
+                Block block = state.getBlock();
+                if (!block.isReplaceable(worldIn, pos)) pos = pos.down();
+                BlockPos posDown = pos.down();
+                //ItemStack itemStack = player.getHeldItem(hand);
+
+                if (player.canPlayerEdit(pos, direction, stack) && player.canPlayerEdit(posDown, direction, stack))
                 {
-                    BlockPos posAt = pos;
-                    if (!stateAt.getBlock().isReplaceable(worldIn, pos))
+                    IBlockState stateDown = worldIn.getBlockState(posDown);
+                    boolean canPutBlock = block.isReplaceable(worldIn, pos) || worldIn.isAirBlock(pos);
+                    boolean canPutBlockDown = stateDown.getBlock().isReplaceable(worldIn, posDown) || worldIn.isAirBlock(posDown);
+                    if (canPutBlock && canPutBlockDown)
                     {
-                        posAt = posAt.offset(direction);
-                    }
-                    if (worldIn.getBlockState(posAt.down()).isNormalCube() && worldIn.mayPlace(BlocksTFCF.STICK_BUNDLE, posAt, false, direction, null))
-                    {
-                        // Place stick bundle
                         if (!worldIn.isRemote)
                         {
-                            worldIn.setBlockState(posAt, BlocksTFCF.STICK_BUNDLE.getDefaultState().withProperty(BlockStickBundle.PART, BlockStickBundle.EnumBlockPart.UPPER), 10);
-
-                            SoundType soundtype = BlocksTFCF.STICK_BUNDLE.getSoundType(stateAt, worldIn, pos, player);
-                            worldIn.playSound(null, posAt, soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
-
+                            worldIn.setBlockState(pos, BlocksTFCF.STICK_BUNDLE.getDefaultState().withProperty(BlockStickBundle.PART, BlockStickBundle.EnumBlockPart.UPPER), 10);
+                            worldIn.setBlockState(posDown, BlocksTFCF.STICK_BUNDLE.getDefaultState(), 10);
+                            SoundType soundtype = BlocksTFCF.STICK_BUNDLE.getSoundType(stateDown, worldIn, pos, player);
+                            worldIn.playSound(null, pos, soundtype.getPlaceSound(), SoundCategory.BLOCKS, (soundtype.getVolume() + 1.0F) / 2.0F, soundtype.getPitch() * 0.8F);
+                            //itemStack.shrink(1);
                             stack.shrink(1);
                             player.setHeldItem(hand, stack);
                         }
@@ -186,8 +191,46 @@ public final class InteractionManagerTFCF
                     }
                 }
             }
-            // Pass to allow the normal `onItemUse` to get called, which handles item block placement
-            return EnumActionResult.PASS;
+            return EnumActionResult.FAIL;
+        });
+
+        USE_ACTIONS.put(stack -> stack.getItem() instanceof ItemPowderTFC, (stack, player, worldIn, pos, hand, direction, hitX, hitY, hitZ) -> {
+            ItemStack stackHand = player.getHeldItem(hand);
+            if (worldIn.getBlockState(pos).isNormalCube() && stackHand.getItem() instanceof ItemPowderTFC)
+            {
+                if (!ItemStack.areItemStacksEqual(new ItemStack(stackHand.getItem(), stackHand.getCount()), stackHand))
+                {
+                    return EnumActionResult.FAIL;
+                }
+                ItemPowderTFC block = (ItemPowderTFC) stackHand.getItem();
+                BlockPos posAt = pos.offset(direction);
+                IBlockState stateAt = worldIn.getBlockState(posAt);
+    
+                if (stateAt.getBlock() instanceof BlockPowder)
+                {
+                    // Existing sheet block
+                    Powder powderItem = ((BlockPowder) stateAt.getBlock()).getPowder();
+                    if (powderItem == block.powder)
+                    {
+                        stackHand.shrink(1);
+                        player.setHeldItem(hand, stackHand);
+                        return placeBlock(worldIn, posAt, direction);
+                    }
+                }
+                else if (stateAt.getBlock().isReplaceable(worldIn, posAt))
+                {
+                    // Place a new block
+                    if (!worldIn.isRemote)
+                    {
+                        worldIn.setBlockState(posAt, BlockPowder.get(block.powder).getDefaultState());
+                        stackHand.shrink(1);
+                        player.setHeldItem(hand, stackHand);
+                        placeBlock(worldIn, posAt, direction);
+                    }
+                    return EnumActionResult.SUCCESS;
+                }
+            }
+            return EnumActionResult.FAIL;
         });
     }
 
@@ -254,5 +297,20 @@ public final class InteractionManagerTFCF
     {
         USE_ACTIONS.put(predicate, minorAction);
         RIGHT_CLICK_ACTIONS.put(predicate, minorAction);
+    }
+
+    private EnumActionResult placeBlock(World world, BlockPos pos, EnumFacing facing)
+    {
+        TEPowder tile = Helpers.getTE(world, pos, TEPowder.class);
+        if (tile != null && !tile.getFace(facing))
+        {
+            if (!world.isRemote)
+            {
+                tile.setFace(facing, true);
+                world.playSound(null, pos.offset(facing), SoundEvents.BLOCK_GRAVEL_PLACE, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            }
+            return EnumActionResult.SUCCESS;
+        }
+        return EnumActionResult.FAIL;
     }
 }

@@ -9,6 +9,7 @@ import java.util.function.BiConsumer;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,36 +38,41 @@ import net.dries007.tfc.api.capability.egg.CapabilityEgg;
 import net.dries007.tfc.api.capability.egg.IEgg;
 import net.dries007.tfc.api.capability.food.CapabilityFood;
 import net.dries007.tfc.api.capability.food.IFood;
+import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.IAnimalTFC;
 import net.dries007.tfc.api.types.ILivestock;
 import net.dries007.tfc.objects.LootTablesTFC;
 import net.dries007.tfc.objects.advancements.TFCTriggers;
 import net.dries007.tfc.objects.blocks.BlocksTFC;
+import net.dries007.tfc.objects.blocks.wood.BlockLeavesTFC;
 import net.dries007.tfc.objects.entity.animal.AnimalGroupingRules;
 import net.dries007.tfc.objects.entity.animal.EntityAnimalTFC;
 import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.climate.BiomeHelper;
+import net.dries007.tfc.world.classic.WorldTypeTFC;
 import net.dries007.tfc.world.classic.biomes.BiomesTFC;
 
 import tfcflorae.objects.LootTablesTFCF;
 import tfcflorae.objects.entity.EntitiesTFCF;
 import tfcflorae.objects.blocks.wood.BlockLeavesTFCF;
 import tfcflorae.objects.items.ItemsTFCF;
+import tfcflorae.types.TreesTFCF;
 import tfcflorae.util.agriculture.SeasonalTrees;
 
 import static tfcflorae.TFCFlorae.MODID;
 
 public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
 {
-    private static final int DAYS_TO_ADULTHOOD = 12;
-    private static final int DAYS_TO_ELDER = 32;
-    private static final int DAYS_TO_DEATH = 40;
+    private static final int DAYS_TO_ADULTHOOD = 6;
+    private static final int DAYS_TO_ELDER = 12;
+    private static final int DAYS_TO_DEATH = 20;
     private static final double DEATH_CHANCE = 5;
-    private static final int DAYS_TO_HATCH = 2;
+    private static final int DAYS_TO_HATCH = 1;
     private static final int TICKS_TO_LAY_EGG = 2500;
     private static final DataParameter<Long> LAID = EntityDataManager.createKey(EntitySilkMoth.class, EntitiesTFCF.getLongDataSerializer());
 
 	private BlockPos rotationPos = new BlockPos(0,0,0);
+    private BlockPos spawnPosition;
 	private boolean clockwise;
 	private float distance;
 
@@ -88,6 +94,11 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
     @Override
     public int getSpawnWeight(Biome biome, float temperature, float rainfall, float floraDensity, float floraDiversity)
     {
+        BlockPos blockpos = new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ);
+        if (!BiomesTFC.isOceanicBiome(biome) && !BiomesTFC.isBeachBiome(biome) && blockpos.getY() >= WorldTypeTFC.SEALEVEL)
+        {
+            return (int)(ConfigTFC.Animals.HARE.rarity / 1.4D);
+        }
         return 0;
     }
 
@@ -239,6 +250,22 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
 	}
 
     @Override
+    public boolean canBePushed()
+    {
+        return false;
+    }
+
+    @Override
+    protected void collideWithEntity(Entity entityIn)
+    {
+    }
+
+    @Override
+    protected void collideWithNearbyEntities()
+    {
+    }
+
+    @Override
     protected void initEntityAI()
     {
         EntityAnimalTFC.addCommonLivestockAI(this, 1.3D);
@@ -342,6 +369,33 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
 		}
 	}
 
+    @Override
+    protected void updateAITasks()
+    {
+        super.updateAITasks();
+
+        if (this.spawnPosition != null && (!this.world.isAirBlock(this.spawnPosition) || this.spawnPosition.getY() < 1))
+        {
+            this.spawnPosition = null;
+        }
+
+        if (this.spawnPosition == null || this.rand.nextInt(30) == 0 || this.spawnPosition.distanceSq((double)((int)this.posX), (double)((int)this.posY), (double)((int)this.posZ)) < 4.0D)
+        {
+            this.spawnPosition = new BlockPos((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
+        }
+
+        double d0 = (double)this.spawnPosition.getX() + 0.5D - this.posX;
+        double d1 = (double)this.spawnPosition.getY() + 0.1D - this.posY;
+        double d2 = (double)this.spawnPosition.getZ() + 0.5D - this.posZ;
+        this.motionX += (Math.signum(d0) * 0.5D - this.motionX) * 0.10000000149011612D;
+        this.motionY += (Math.signum(d1) * 0.699999988079071D - this.motionY) * 0.10000000149011612D;
+        this.motionZ += (Math.signum(d2) * 0.5D - this.motionZ) * 0.10000000149011612D;
+        float f = (float)(MathHelper.atan2(this.motionZ, this.motionX) * (180D / Math.PI)) - 90.0F;
+        float f1 = MathHelper.wrapDegrees(f - this.rotationYaw);
+        this.moveForward = 0.5F;
+        this.rotationYaw += f1;
+    }
+
 	private void changeRotationPos()
     {
         int dayTicks = (int) CalendarTFC.CALENDAR_TIME.getTicks();
@@ -364,7 +418,7 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
 					BlockPos pos = new BlockPos(x + i, y + k, z + j);
 					state = this.world.getBlockState(pos);
                     Block stateBlock = state.getBlock();
-					if(stateBlock == BlockLeavesTFCF.get(SeasonalTrees.YELLOW_PINK_CHERRY) || stateBlock == BlockLeavesTFCF.get(SeasonalTrees.ORANGE_PINK_CHERRY) || stateBlock == BlockLeavesTFCF.get(SeasonalTrees.RED_PINK_CHERRY))
+					if(stateBlock == BlockLeavesTFCF.get(SeasonalTrees.YELLOW_MULBERRY) || stateBlock == BlockLeavesTFCF.get(SeasonalTrees.ORANGE_MULBERRY) || stateBlock == BlockLeavesTFCF.get(SeasonalTrees.RED_MULBERRY) || stateBlock == BlockLeavesTFC.get(TFCRegistries.TREES.getValue(TreesTFCF.MULBERRY)))
                     {
 						listMulberry.add(pos);
 					}
@@ -388,6 +442,19 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
 
 		this.distance = 0.5F + 2 * this.rand.nextFloat();
 	}
+
+	@Override
+    public boolean attackEntityFrom(DamageSource source, float amount)
+    {
+        if (this.isEntityInvulnerable(source))
+        {
+            return false;
+        }
+        else
+        {
+            return super.attackEntityFrom(source, amount);
+        }
+    }
 
 	@Override
 	protected boolean canTriggerWalking()

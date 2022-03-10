@@ -76,7 +76,8 @@ import net.dries007.tfc.util.agriculture.Crop;
 import net.dries007.tfc.util.agriculture.Food;
 import net.dries007.tfc.util.agriculture.FruitTree;
 import net.dries007.tfc.util.Helpers;
-
+import tfcelementia.TFCElementia;
+import tfcelementia.objects.PowderTFCE;
 import tfcelementia.objects.items.metal.ItemMetalTFCE;
 
 import tfcflorae.objects.*;
@@ -113,6 +114,7 @@ import tfcflorae.TFCFlorae;
 import tfcflorae.compat.firmalife.ceramics.*;
 import tfcflorae.compat.tfcelementia.ceramics.*;
 
+import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.objects.CreativeTabsTFC.*;
 import static tfcflorae.TFCFlorae.MODID;
 
@@ -338,6 +340,8 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF YEW_BERRY = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/roasted/yew_berry")
     public static final ItemFoodTFCF ROASTED_YEW_BERRY = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/mulberry")
+    public static final ItemFoodTFCF MULBERRY = Helpers.getNull();
 
     // Normal Trees Nuts
     @GameRegistry.ObjectHolder("food/acorn")
@@ -786,7 +790,7 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("tools/flint/shovel_head/flint")
     public static final ItemMiscTFCF FLINT_SHOVEL_HEAD = Helpers.getNull();
 
-    @GameRegistry.ObjectHolder("tools/bows/shortbow/shortbow")
+    /*@GameRegistry.ObjectHolder("tools/bows/shortbow/shortbow")
     public static final ItemBowTFCF SHORTBOW = Helpers.getNull();
     @GameRegistry.ObjectHolder("tools/bows/longbow/longbow")
     public static final ItemBowTFCF LONGBOW = Helpers.getNull();
@@ -807,7 +811,7 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("tools/bows/rosebow/rosebow")
     public static final ItemBowTFCF ROSEBOW = Helpers.getNull();
     @GameRegistry.ObjectHolder("tools/bows/sabrewing/sabrewing")
-    public static final ItemBowTFCF SABREWING = Helpers.getNull();
+    public static final ItemBowTFCF SABREWING = Helpers.getNull();*/
 
     @GameRegistry.ObjectHolder("container/leather_bag_piece")
     public static final ItemMiscTFCF LEATHER_BAG_PIECE = Helpers.getNull();
@@ -1333,7 +1337,7 @@ public final class ItemsTFCF
     public static final ItemArmorTFCF YUCCA_CANVAS_BOOTS = Helpers.getNull();
 
     private static ImmutableList<Item> allSimpleItems;
-    private static ImmutableList<ItemBowTFCF> allItemBows;
+    //private static ImmutableList<ItemBowTFCF> allItemBows;
     private static ImmutableList<Item> allFoodItems;
     private static ImmutableList<ItemGemTFCF> allGemTFCFItems;
     private static ImmutableList<BlockSurfaceOreDeposit> allSurfaceOreBlocks;
@@ -1346,10 +1350,10 @@ public final class ItemsTFCF
         return allSimpleItems;
     }
 
-    public static ImmutableList<ItemBowTFCF> getAllItemBows()
+    /*public static ImmutableList<ItemBowTFCF> getAllItemBows()
     {
         return allItemBows;
-    }
+    }*/
 
     public static ImmutableList<Item> getAllFoodItems()
     {
@@ -1399,7 +1403,7 @@ public final class ItemsTFCF
         IForgeRegistry<Item> r = event.getRegistry();
 
         ImmutableList.Builder<Item> simpleItems = ImmutableList.builder();
-        ImmutableList.Builder<ItemBowTFCF> itemBows = ImmutableList.builder();
+        //ImmutableList.Builder<ItemBowTFCF> itemBows = ImmutableList.builder();
         ImmutableList.Builder<BlockSurfaceOreDeposit> surfaceOreBlocks = new Builder<>();
         ImmutableList.Builder<ItemFruitDoor> fruitDoors = ImmutableList.builder();
         ImmutableList.Builder<Item> ceramicItems = ImmutableList.builder();
@@ -1484,6 +1488,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/sky_fruit", new ItemFoodTFCF(FoodDataTFCF.SKY_FRUIT, "sky_fruit", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/yew_berry", new ItemFoodTFCF(FoodDataTFCF.YEW_BERRY, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 1, 1), "yew_berry", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/yew_berry", new ItemFoodTFCF(FoodDataTFCF.ROASTED_YEW_BERRY, "roasted_yew_berry", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/mulberry", new ItemFoodTFCF(FoodDataTFCF.MULBERRY, "mulberry", "category_fruit"), CT_FOOD));
 
         // Dried Berries & Fruits
         for (FruitsTFCF fruit : FruitsTFCF.values())
@@ -2058,7 +2063,7 @@ public final class ItemsTFCF
                 b.add(register(r, "gem/" + gem.name().toLowerCase(), new ItemGemTFCF(gem), CT_GEMS));
             allGemTFCFItems = b.build();
         }
-        
+
         for (PowderTFCF powder : PowderTFCF.values())
             simpleItems.add(register(r, "powder/" + powder.name().toLowerCase(), new ItemPowderTFCF(powder), CT_MISC));
 
@@ -2081,7 +2086,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "tools/flint/shovel_head/flint", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "flint_head", "flint_head_shovel"), CT_ROCK_ITEMS));
 
         // Bows
-        itemBows.add(register(r, "tools/bows/shortbow/shortbow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 250, 0, "bow", "bow_shortbow", "bow_wooden_shortbow"), CT_MISC));
+        /*itemBows.add(register(r, "tools/bows/shortbow/shortbow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 250, 0, "bow", "bow_shortbow", "bow_wooden_shortbow"), CT_MISC));
         itemBows.add(register(r, "tools/bows/longbow/longbow", new ItemBowTFCF(Size.SMALL, Weight.MEDIUM, 450, 3, "bow", "bow_longbow", "bow_wooden_longbow"), CT_MISC));
         itemBows.add(register(r, "tools/bows/bonebow/bonebow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 320, 2, "bow", "bow_bonebow"), CT_MISC));
         itemBows.add(register(r, "tools/bows/bow_of_lost_souls/bow_of_lost_souls", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 320, 2, "bow", "bow_bow_of_lost_souls"), CT_MISC));
@@ -2091,7 +2096,7 @@ public final class ItemsTFCF
         itemBows.add(register(r, "tools/bows/nocturnal_bow/nocturnal_bow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_nocturnal_bow"), CT_MISC));
         itemBows.add(register(r, "tools/bows/red_snake/red_snake", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_red_snake"), CT_MISC));
         itemBows.add(register(r, "tools/bows/rosebow/rosebow", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_rosebow"), CT_MISC));
-        itemBows.add(register(r, "tools/bows/sabrewing/sabrewing", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_sabrewing"), CT_MISC));
+        itemBows.add(register(r, "tools/bows/sabrewing/sabrewing", new ItemBowTFCF(Size.VERY_SMALL, Weight.LIGHT, 384, 1, "bow", "bow_sabrewing"), CT_MISC));*/
 
         // Containers
         simpleItems.add(register(r, "container/leather_bag_piece", new ItemMiscTFCF(Size.SMALL, Weight.LIGHT, "bag_piece", "bag_piece_leather"), CT_MISC));
@@ -2435,9 +2440,10 @@ public final class ItemsTFCF
         BlocksTFCF.getAllNormalItemBlocks().forEach((x) -> {
             registerItemBlock(r, x);
         });
+        BlocksTFCF.getAllItemBlockCondenser().forEach(x -> registerItemBlock(r, x));
 
         allSimpleItems = simpleItems.build();
-        allItemBows = itemBows.build();
+        //allItemBows = itemBows.build();
         allArmorItems = armorItems.build();
 
         if (ConfigTFCF.General.WORLD.enableAllEarthenwareClay || ConfigTFCF.General.WORLD.enableAllKaoliniteClay || ConfigTFCF.General.WORLD.enableAllStonewareClay)
@@ -2453,19 +2459,25 @@ public final class ItemsTFCF
     public static void registerVanillaOverrides(RegistryEvent.Register<Item> event)
     {
         // Vanilla Overrides. Used for small tweaks on vanilla items, rather than replacing them outright
-        TFCFlorae.getLog().info("The below warnings about unintended overrides are normal. The override is intended - deal with it. ;)");
+        TFCFlorae.getLog().info("The below warnings about unintended overrides are normal. The overrides are intended - deal with it. ;)");
         event.getRegistry().registerAll(
-            new ItemFlint(Size.VERY_SMALL, Weight.VERY_LIGHT).setRegistryName(Items.FLINT.getRegistryName()).setTranslationKey("flint")
-            //new ItemFoodTFCF(FoodDataTFCF.ROASTED_PORCINI).setRegistryName(BlockPlantTFC.get(TFCRegistries.PLANTS.getValue(DefaultPlants.BARREL_CACTUS)).getRegistryName()).setTranslationKey("barrel_cactus")
+            new ItemFlint(Size.VERY_SMALL, Weight.VERY_LIGHT).setRegistryName(Items.FLINT.getRegistryName()).setTranslationKey("flint"),
+            new ItemBlockStickBundle(BlocksTFCF.STICK_BUNDLE).setRegistryName(MOD_ID, "stick_bundle")
         );
 
-        // Why is this necessary?? #FirmaLife
-        /*if (TFCFlorae.FirmaLifeAdded)
+        for (Powder powder : Powder.values())
         {
             event.getRegistry().registerAll(
-                new ItemMiscTFCF(Size.VERY_SMALL, Weight.VERY_LIGHT, "leather", "leather_pineapple").setRegistryName(ItemsFL.PINEAPPLE_LEATHER.getRegistryName()).setTranslationKey("pineapple_leather")
+                new ItemPowderTFC(powder).setRegistryName(MOD_ID, "powder/" + powder.name().toLowerCase()).setTranslationKey("powder." + powder.name().toLowerCase())
             );
-        }*/
+        }
+
+        for (PowderTFCE powder : PowderTFCE.values())
+        {
+            event.getRegistry().registerAll(
+                new ItemPowderTFCE(powder).setRegistryName(TFCElementia.MODID, "powder/" + powder.name().toLowerCase()).setTranslationKey("powder." + powder.name().toLowerCase())
+            );
+        }
     }
 
     private static void registerPottery(Builder<Item> items, IForgeRegistry<Item> r, String nameUnfired, String nameFired)

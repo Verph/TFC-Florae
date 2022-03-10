@@ -23,11 +23,13 @@ import net.dries007.tfc.util.Helpers;
 import tfcflorae.TFCFlorae;
 import tfcflorae.api.knapping.KnappingTypes;
 import tfcflorae.client.gui.GuiBag;
+import tfcflorae.client.gui.GuiCondenser;
 import tfcflorae.client.gui.GuiCrate;
 import tfcflorae.client.gui.GuiSack;
 import tfcflorae.client.gui.GuiUrn;
 import tfcflorae.objects.blocks.wood.fruitwood.BlockFruitChestTFCF;
 import tfcflorae.objects.container.ContainerBag;
+import tfcflorae.objects.container.ContainerCondenser;
 import tfcflorae.objects.container.ContainerCrate;
 import tfcflorae.objects.container.ContainerSack;
 import tfcflorae.objects.container.ContainerUrn;
@@ -36,6 +38,7 @@ import tfcflorae.objects.items.ItemSack;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.ceramics.ItemClayKaolinite;
 import tfcflorae.objects.items.rock.ItemMud;
+import tfcflorae.objects.te.TECondenser;
 import tfcflorae.objects.te.TECrate;
 import tfcflorae.objects.te.TEUrn;
 import tfcflorae.util.OreDictionaryHelper;
@@ -128,6 +131,8 @@ public class GuiHandler implements IGuiHandler
                     return new ContainerChestTFC(player.inventory, chestContainer, player);
                 }
                 return null;
+            case CONDENSER:
+                return new ContainerCondenser(player.inventory, Helpers.getTE(world, pos, TECondenser.class));
             default:
                 return null;
         }
@@ -187,7 +192,9 @@ public class GuiHandler implements IGuiHandler
                     return new GuiChestTFC((ContainerChestTFC) container, player.inventory);
                 }
                 return null;
-            default :
+            case CONDENSER:
+                return new GuiCondenser(container, player.inventory, Helpers.getTE(world, pos, TECondenser.class), world.getBlockState(new BlockPos(x, y, z)).getBlock().getTranslationKey());
+            default:
                 return null;
         }
     }
@@ -213,6 +220,7 @@ public class GuiHandler implements IGuiHandler
         CHEST,
         URN,
         CRATE,
+        CONDENSER,
         NULL;
 
         private static final Type[] values = values();

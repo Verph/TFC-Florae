@@ -2,7 +2,10 @@ package tfcflorae.objects.blocks.devices;
 
 import java.util.Random;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -33,12 +36,15 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.dries007.tfc.api.capability.size.IItemSize;
 import net.dries007.tfc.api.capability.size.Size;
 import net.dries007.tfc.api.capability.size.Weight;
+import net.dries007.tfc.objects.items.ItemsTFC;
 import net.dries007.tfc.util.Helpers;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.items.itemblock.ItemBlockDryer;
 import tfcflorae.objects.recipes.DryingRecipe;
 import tfcflorae.objects.te.TEDryer;
 
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
 public class BlockDryer extends Block implements IItemSize
 {
 	public static final PropertyBool SIMPLE = PropertyBool.create("simple");
@@ -79,7 +85,9 @@ public class BlockDryer extends Block implements IItemSize
         return true;
     }
 
-	public TileEntity createNewTileEntity(World world, int meta)
+    @Nullable
+    @Override
+	public TileEntity createTileEntity(World world, IBlockState state)
     {
 		return new TEDryer();
 	}
@@ -190,32 +198,44 @@ public class BlockDryer extends Block implements IItemSize
             ItemStack held = player.getHeldItem(hand);
             if (held.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)) return false;
             TEDryer te = Helpers.getTE(worldIn, pos, TEDryer.class);
-            if (te != null)
-            {
+			if(te != null)
+			{
                 IItemHandler inventory = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
                 if (inventory != null)
                 {
-                    ItemStack tryStack = new ItemStack(held.getItem(), 1);
-                    if (DryingRecipe.get(tryStack) != null && inventory.getStackInSlot(0).isEmpty())
-                    {
-                        ItemStack leftover = inventory.insertItem(0, held.splitStack(1), false);
-                        ItemHandlerHelper.giveItemToPlayer(player, leftover);
-                        te.start();
-                        te.markForSync();
-                        return true;
-                    }
-                    if (player.isSneaking())
-                    {
-                        ItemStack takeStack = inventory.extractItem(0, 1, false);
-                        Helpers.spawnItemStack(worldIn, pos, takeStack);
-                        te.deleteSlot();
-                        te.clear();
-                        te.markForSync();
-                    }
-                }
-            }
-        }
-        return true;
+					if(player.isSneaking())
+					{
+						ItemStack takeStack = te.removeItem();
+						//Helpers.spawnItemStack(worldIn, pos, takeStack);
+						ItemHandlerHelper.giveItemToPlayer(player, takeStack);
+						te.markForSync();
+						return true;
+					}
+					else
+					{
+						ItemStack output = te.removeIfDone();
+						if (output != ItemStack.EMPTY)
+						{
+							ItemHandlerHelper.giveItemToPlayer(player, output);
+							te.markForSync();
+							return true;
+						}
+
+						ItemStack itemstack = player.getHeldItem(hand);
+						ItemStack tryStack = new ItemStack(held.getItem(), 1);
+						if (DryingRecipe.get(itemstack) != null || DryingRecipe.get(tryStack) != null)
+						{
+							//ItemStack leftover = inventory.insertItem(0, held.splitStack(1), false);
+							ItemStack leftover = te.addItem(held, state.getValue(SIMPLE));
+							ItemHandlerHelper.giveItemToPlayer(player, leftover);
+							te.markForSync();
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return true;
     }
 
     @Override
@@ -276,4 +296,10 @@ public class BlockDryer extends Block implements IItemSize
 			.setTranslationKey(this.getTranslationKey())
 			.setRegistryName(this.getRegistryName());
 	}
+
+    @Override
+    public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos)
+    {
+        return false;
+    }
 }

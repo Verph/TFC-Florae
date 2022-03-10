@@ -26,6 +26,7 @@ public final class RegistriesTFCF
     @SubscribeEvent
     public static void onNewRegistryEvent(RegistryEvent.NewRegistry event)
     {
+        newRegistry(ALEMBIC_RECIPE, AlembicRecipe.class, false);
         newRegistry(DRYING_RECIPE, DryingRecipe.class, false);
         newRegistry(STICK_BUNDLE_RECIPE, StickBundleRecipe.class, false);
     }

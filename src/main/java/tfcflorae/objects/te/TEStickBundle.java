@@ -1,35 +1,25 @@
 package tfcflorae.objects.te;
 
-import java.util.Objects;
-import java.util.Random;
-
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.play.server.SPacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-import net.dries007.tfc.api.capability.food.CapabilityFood;
-import net.dries007.tfc.api.capability.food.IFood;
 import net.dries007.tfc.objects.te.TEInventory;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.CalendarTFC;
-import net.dries007.tfc.util.calendar.ICalendar;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.recipes.StickBundleRecipe;
-import tfcflorae.objects.recipes.StickBundleRecipe;
+import tfcflorae.util.HelpersTFCF;
 
-import static net.minecraft.block.Block.spawnAsEntity;
-
+@ParametersAreNonnullByDefault
 public class TEStickBundle extends TEInventory implements ITickable
 {
     private long startTick;
@@ -45,7 +35,10 @@ public class TEStickBundle extends TEInventory implements ITickable
     @Override
     public boolean isItemValid(int slot, ItemStack stack)
     {
-        return true;
+        if (slot == 0)
+            return StickBundleRecipe.get(stack) != null;
+        else
+            return false;
     }
 
     @Override
@@ -80,7 +73,6 @@ public class TEStickBundle extends TEInventory implements ITickable
         return super.writeToNBT(nbt);
     }
 
-    @Override
     public void onBreakBlock(World world, BlockPos pos, IBlockState state)
     {
         Helpers.spawnItemStack(world, pos, inventory.getStackInSlot(0));
@@ -152,7 +144,7 @@ public class TEStickBundle extends TEInventory implements ITickable
             StickBundleRecipe recipe = StickBundleRecipe.get(input);
             if (recipe != null && !world.isRemote)
             {
-                inventory.setStackInSlot(0, CapabilityFood.mergeItemStacksIgnoreCreationDate(inventory.getStackInSlot(0), input));
+                inventory.setStackInSlot(0, HelpersTFCF.updateFoodFuzzed(input, recipe.getOutputItem(input)));
                 setAndUpdateSlots(0);
                 markForSync();
             }
@@ -162,6 +154,25 @@ public class TEStickBundle extends TEInventory implements ITickable
 
     public long getTicksRemaining()
 	{
-        return tickGoal - (CalendarTFC.PLAYER_TIME.getTicks() - startTick);
+        long ticks = CalendarTFC.PLAYER_TIME.getTicks() - startTick;
+        if (ticks > tickGoal) return 0;
+
+        return tickGoal - ticks;
+    }
+
+    public double getCurrentTicks()
+    {
+        return CalendarTFC.PLAYER_TIME.getTicks() - startTick;
+    }
+
+    public double getGoalTick()
+    {
+        return tickGoal;
+    }
+
+    public double calculatePercentage()
+    {
+        if(getTicksRemaining() == 0 || tickGoal == 0) return 0;
+        return ((double)getTicksRemaining()) / tickGoal;
     }
 }

@@ -14,6 +14,7 @@ import tfcflorae.objects.recipes.*;
  */
 public class TFCFRegistries
 {
+    public static final IForgeRegistry<AlembicRecipe> ALEMBIC = GameRegistry.findRegistry(AlembicRecipe.class);
     public static final IForgeRegistry<DryingRecipe> DRYING = GameRegistry.findRegistry(DryingRecipe.class);
     public static final IForgeRegistry<StickBundleRecipe> STICK_BUNDLE = GameRegistry.findRegistry(StickBundleRecipe.class);
 

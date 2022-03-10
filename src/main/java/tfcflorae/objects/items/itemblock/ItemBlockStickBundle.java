@@ -17,14 +17,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import net.dries007.tfc.objects.items.itemblock.ItemBlockTFC;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.objects.blocks.devices.BlockStickBundle;
 
 @ParametersAreNonnullByDefault
 public class ItemBlockStickBundle extends ItemBlockTFC
 {
-    protected final BlockStickBundle block;
+    public final BlockStickBundle block;
 
 	public ItemBlockStickBundle(BlockStickBundle block)
     {
