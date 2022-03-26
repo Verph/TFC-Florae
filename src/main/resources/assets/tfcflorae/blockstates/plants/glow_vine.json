@@ -39,6 +39,50 @@
           "model": "tfc:plants/glow_vine_cross_1"
         }
       ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "part": "single"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vine_cross_fruiting_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vine_cross_fruiting_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "part": "middle"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vine_cross_fruiting_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfc:plants/glow_vine_cross_fruiting_1"
+        }
+      ]
     }
   ]
 }

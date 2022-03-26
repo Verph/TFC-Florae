@@ -96,6 +96,20 @@ public class BlockSaguaroCactus extends BlockPlantTFCF implements IGrowable, ITa
                                                             .withProperty(WEST, Boolean.valueOf(false)));
     }
 
+    @Nonnull
+    @Override
+    public Size getSize(ItemStack stack)
+    {
+        return Size.SMALL; // Can store everywhere
+    }
+
+    @Nonnull
+    @Override
+    public Weight getWeight(ItemStack stack)
+    {
+        return Weight.MEDIUM; // stacksize = 16
+    }
+
     @Override
     public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
     {

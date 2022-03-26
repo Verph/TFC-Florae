@@ -97,6 +97,11 @@ public class TFCFlorae
         return logger;
     }
 
+    public static CommonProxy getProxy()
+    {
+        return proxy;
+    }
+
     public static TFCFlorae getInstance()
     {
         return instance;

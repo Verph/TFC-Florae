@@ -147,7 +147,7 @@ public class WorldGenSoilDecorative implements IWorldGenerator
             if (rng.nextInt(ConfigTFCF.General.WORLD.podzolRarity) == 0 && start.getY() >= 146 && start.getY() <= 175)
             {
                 ChunkDataTFC data = ChunkDataTFC.get(world, start);
-                if (data.isInitialized() && data.getRainfall() >= 90f && data.getFloraDensity() >= 0.5f && ChunkDataTFC.getDrainage(world, start) >= 2)
+                if (data.isInitialized() && data.getRainfall() >= 90f && data.getFloraDensity() >= 0.35f + 0.05f * rng.nextGaussian() && ChunkDataTFC.getDrainage(world, start) >= 2 * rng.nextGaussian())
                 {
                     int length = rng.nextInt(4) + 3;
                     int depth = rng.nextInt(3) + 1;
@@ -185,13 +185,44 @@ public class WorldGenSoilDecorative implements IWorldGenerator
                             {
                                 final BlockPos pos = posHorizontal.add(0, y, 0);
                                 final IBlockState current = world.getBlockState(pos);
-                                if (BlocksTFC.isGrass(current))
+
+                                if (current.getBlock() instanceof BlockRockVariant)
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                    BlockRockVariant blockRock = (BlockRockVariant) current.getBlock();
+
+                                    if (blockRock.getType() == Rock.Type.GRASS || blockRock.getType() == Rock.Type.DRY_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                    }
                                 }
-                                else if (BlocksTFC.isDryGrass(current))
+                                else if (current.getBlock() instanceof BlockRockVariantTFCF)
                                 {
-                                    world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.PODZOL).getDefaultState(), 2);
+                                    BlockRockVariantTFCF blockRockTFCF = (BlockRockVariantTFCF) current.getBlock();
+
+                                    if (blockRockTFCF.getType() == RockTFCF.LOAMY_SAND_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_LOAMY_SAND_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND_PODZOL).getDefaultState(), 2);
+                                    }
+                                    else if (blockRockTFCF.getType() == RockTFCF.SANDY_LOAM_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_SANDY_LOAM_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM_PODZOL).getDefaultState(), 2);
+                                    }
+                                    else if (blockRockTFCF.getType() == RockTFCF.LOAM_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_LOAM_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM_PODZOL).getDefaultState(), 2);
+                                    }
+                                    else if (blockRockTFCF.getType() == RockTFCF.SILT_LOAM_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_SILT_LOAM_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM_PODZOL).getDefaultState(), 2);
+                                    }
+                                    else if (blockRockTFCF.getType() == RockTFCF.SILT_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_SILT_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_PODZOL).getDefaultState(), 2);
+                                    }
+                                    else if (blockRockTFCF.getType() == RockTFCF.HUMUS_GRASS || blockRockTFCF.getType() == RockTFCF.DRY_HUMUS_GRASS)
+                                    {
+                                        world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SPARSE_HUMUS_GRASS).getDefaultState(), 2);
+                                    }
                                 }
                             }
                         }
@@ -203,7 +234,7 @@ public class WorldGenSoilDecorative implements IWorldGenerator
 
     private void generateMud(World world, Random rng, BlockPos start)
     {
-        if (rng.nextInt(ConfigTFCF.General.WORLD.mudRarity) == 0 && start.getY() >= WorldTypeTFC.SEALEVEL && start.getY() <= 150 && ChunkDataTFC.getDrainage(world, start) <= 2)
+        if (rng.nextInt(ConfigTFCF.General.WORLD.mudRarity) == 0 && start.getY() >= WorldTypeTFC.SEALEVEL && start.getY() <= 150 && ChunkDataTFC.getDrainage(world, start) <= 2 * rng.nextGaussian())
         {
             final Biome b = world.getBiome(start);
             if (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH)
@@ -270,7 +301,7 @@ public class WorldGenSoilDecorative implements IWorldGenerator
         if (ConfigTFCF.General.WORLD.enableAllBogIron)
         {
             ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (rng.nextInt(ConfigTFCF.General.WORLD.bogIronRarity) == 0 && start.getY() <= 150 && data.getAverageTemp() >= 0f && ChunkDataTFC.getDrainage(world, start) <= 2)
+            if (rng.nextInt(ConfigTFCF.General.WORLD.bogIronRarity) == 0 && start.getY() <= 150 && data.getAverageTemp() >= 0f && ChunkDataTFC.getDrainage(world, start) <= 2 * rng.nextGaussian())
             {
                 final Biome b = world.getBiome(start);
                 if (b == BiomesTFC.SWAMPLAND || b == BiomesTFC.BAYOU || b == BiomesTFC.MANGROVE || b == BiomesTFC.MARSH)

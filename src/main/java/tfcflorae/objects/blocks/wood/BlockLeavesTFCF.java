@@ -41,6 +41,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.ConfigTFC;
+import net.dries007.tfc.api.capability.player.CapabilityPlayerData;
 import net.dries007.tfc.api.registries.TFCRegistries;
 import net.dries007.tfc.api.types.Tree;
 import net.dries007.tfc.api.util.IGrowingPlant;
@@ -54,7 +55,9 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
-
+import net.dries007.tfc.util.skills.SimpleSkill;
+import net.dries007.tfc.util.skills.Skill;
+import net.dries007.tfc.util.skills.SkillType;
 import tfcflorae.objects.entity.animal.EntitySilkMoth;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.types.TreesTFCF;
@@ -207,22 +210,32 @@ public class BlockLeavesTFCF extends BlockLeaves implements IGrowingPlant
         }
     }
 
+    public static int getSkillFoodBonus(Skill skill, Random random)
+    {
+        return random.nextInt(2 + (int) (6 * skill.getTotalLevel()));
+    }
+
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        if (worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT && fruitTree.getDrop() != null)
+        if (playerIn != null)
         {
-            if (!worldIn.isRemote)
+            SimpleSkill skill = CapabilityPlayerData.getSkill(playerIn, SkillType.AGRICULTURE);
+
+            if (skill != null && worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT && fruitTree.getDrop() != null)
             {
-                ItemHandlerHelper.giveItemToPlayer(playerIn, fruitTree.getFoodDrop());
-                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                TETickCounter te = Helpers.getTE(worldIn, pos, TETickCounter.class);
-                if (te != null)
+                if (!worldIn.isRemote)
                 {
-                    te.resetCounter();
+                    ItemHandlerHelper.giveItemToPlayer(playerIn, new ItemStack(fruitTree.getFoodDrop(), 1 + BlockLeavesTFCF.getSkillFoodBonus(skill, RANDOM)));
+                    worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                    TETickCounter te = Helpers.getTE(worldIn, pos, TETickCounter.class);
+                    if (te != null)
+                    {
+                        te.resetCounter();
+                    }
                 }
+                return true;
             }
-            return true;
         }
         return false;
     }
@@ -298,7 +311,7 @@ public class BlockLeavesTFCF extends BlockLeaves implements IGrowingPlant
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER && fruitTree.hasDeadLeaves == false)
+        if (state.getValue(LEAF_STATE) != EnumLeafState.WINTER || fruitTree.hasDeadLeaves == false)
         {
             return ConfigTFC.General.TREE.enableSaplings ? Item.getItemFromBlock(BlockSaplingTFC.get(wood)) : Items.AIR;
         }

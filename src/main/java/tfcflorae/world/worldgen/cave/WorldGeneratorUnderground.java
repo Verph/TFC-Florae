@@ -28,12 +28,14 @@ public class WorldGeneratorUnderground implements IWorldGenerator
     private final WorldGenCaveMoss undergroundMoss;
     private final WorldGenCaveVines undergroundVines;
     private final WorldGenCaveCreepingVines undergroundCreepingVines;
+    private final WorldGenCaveSporeBlossom undergroundEpiphyte;
     //private final WorldGenUnderground undergroundPlant = new WorldGenUnderground();
 
     private float fungiUndergroundCount = ConfigTFCF.General.WORLD.fungiUndergroundCount;
     private float hangingVinesUndergroundCount = ConfigTFCF.General.WORLD.hangingVinesUndergroundCount;
     private float creepingVinesUndergroundCount = ConfigTFCF.General.WORLD.creepingVinesUndergroundCount;
     private float creepingUndergroundCount = ConfigTFCF.General.WORLD.creepingUndergroundCount;
+    private float sporeBlossomUndergroundCount = ConfigTFCF.General.WORLD.sporeBlossomUndergroundCount;
 
     public WorldGeneratorUnderground()
     {
@@ -41,6 +43,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
         undergroundCreepingVines = new WorldGenCaveCreepingVines();
         undergroundVines = new WorldGenCaveVines();
         undergroundMoss = new WorldGenCaveMoss();
+        undergroundEpiphyte = new WorldGenCaveSporeBlossom();
     }
 
     // Somewhat works
@@ -66,6 +69,7 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                 undergroundVines.setGeneratedPlant(plant);
                 undergroundCreepingVines.setGeneratedPlant(plant);
                 undergroundMoss.setGeneratedPlant(plant);
+                undergroundEpiphyte.setGeneratedPlant(plant);
 
                 switch (plant.getPlantType())
                 {
@@ -164,6 +168,26 @@ public class WorldGeneratorUnderground implements IWorldGenerator
                                 if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER2)
                                 {
                                     undergroundMoss.generate(world, rng, blockPos);
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    case EPIPHYTE:
+                    {
+                        if ((b != BiomesTFC.OCEAN || b != BiomesTFC.OCEAN) && plant == TFCRegistries.PLANTS.getValue(PlantsTFCF.SPORE_BLOSSOM) && floraDensity >= 0.2f)
+                        {
+                            int y1 = rng.nextInt((WorldTypeTFC.SEALEVEL - 5) - WorldTypeTFC.ROCKLAYER2) + WorldTypeTFC.ROCKLAYER2;
+                            BlockPos chunkBlockPos = new BlockPos(chunkX << 4, y1, chunkZ << 4);
+
+                            int plantCount = (Constants.RNG.nextInt(3) + 1);
+                            for (int i = rng.nextInt(Math.round((plantCount + 32) / floraDiversity)); i < (1 + floraDensity) * sporeBlossomUndergroundCount; i++)
+                            {
+                                BlockPos blockPos = chunkBlockPos.add(rng.nextInt(16) + 8, 0, rng.nextInt(16) + 8);
+                                //TFCFlorae.getLog().warn("TFCFlorae: Moss " + plant + " attempted to generate at " + "X: " + blockPos.getX() + ", Y: " + blockPos.getY() + ", Z: " + blockPos.getZ());
+                                if (blockPos.getY() < WorldTypeTFC.SEALEVEL - 5 && blockPos.getY() > WorldTypeTFC.ROCKLAYER2)
+                                {
+                                    undergroundEpiphyte.generate(world, rng, blockPos);
                                 }
                             }
                             break;

@@ -52,7 +52,8 @@ import net.dries007.tfc.util.calendar.CalendarTFC;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.ClimateTFC;
-
+import net.dries007.tfc.util.skills.SimpleSkill;
+import net.dries007.tfc.util.skills.SkillType;
 import tfcflorae.objects.blocks.BlocksTFCF;
 import tfcflorae.util.OreDictionaryHelper;
 import tfcflorae.util.agriculture.SeasonalTrees;
@@ -525,19 +526,24 @@ public class BlockJoshuaTreeFlower extends Block implements IGrowingPlant
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        if (worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT && fruitTree.getDrop() != null)
+        if (playerIn != null)
         {
-            if (!worldIn.isRemote)
+            SimpleSkill skill = CapabilityPlayerData.getSkill(playerIn, SkillType.AGRICULTURE);
+
+            if (skill != null && worldIn.getBlockState(pos).getValue(LEAF_STATE) == EnumLeafState.FRUIT && fruitTree.getDrop() != null)
             {
-                ItemHandlerHelper.giveItemToPlayer(playerIn, fruitTree.getFoodDrop());
-                worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
-                TETickCounter te = Helpers.getTE(worldIn, pos, TETickCounter.class);
-                if (te != null)
+                if (!worldIn.isRemote)
                 {
-                    te.resetCounter();
+                    ItemHandlerHelper.giveItemToPlayer(playerIn, new ItemStack(fruitTree.getFoodDrop(), 1 + BlockLeavesTFCF.getSkillFoodBonus(skill, RANDOM)));
+                    worldIn.setBlockState(pos, worldIn.getBlockState(pos).withProperty(LEAF_STATE, EnumLeafState.NORMAL));
+                    TETickCounter te = Helpers.getTE(worldIn, pos, TETickCounter.class);
+                    if (te != null)
+                    {
+                        te.resetCounter();
+                    }
                 }
+                return true;
             }
-            return true;
         }
         return false;
     }

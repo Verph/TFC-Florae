@@ -102,6 +102,7 @@ public class FoodDataTFCF
     public static final FoodData YEW_BERRY = new FoodData(4, 5f, 0.5f, 0f, 0.75f, 0f, 0f, 0f, 4.9f);
     public static final FoodData ROASTED_YEW_BERRY = new FoodData(4, 0f, 2f, 0f, 1.1f, 0f, 0f, 0f, 2.6f);
     public static final FoodData MULBERRY = new FoodData(4, 4.5f, 0.5f, 0f, 0.75f, 0f, 0f, 0f, 4.9f);
+    public static final FoodData GLOWBERRY = new FoodData(2, 7.5f, 0.25f, 0f, 1f, 0f, 0f, 0f, 4.9f);
 
     // Normal Trees Nuts
     public static final FoodData ACORN = new FoodData(4, 0f, 0.5f, 0f, 0.75f, 0f, 0f, 0f, 0.25f);

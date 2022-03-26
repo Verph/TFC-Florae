@@ -95,8 +95,6 @@ repositories {
 dependencies {
 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.615"
     deobfProvided "mezz.jei:jei_1.12.2:4.16.1.302"
-	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.21.179-deobf.jar")
-	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.22.180-deobf.jar")
 	compile files("./libs/TerraFirmaCraft-MC1.12.2-1.7.23.181-deobf.jar")
     provided files("./libs/firmalife-0.5.0.jar")
     provided files("./libs/TFC-Elementia-MC1.12.2-1.7.jar")

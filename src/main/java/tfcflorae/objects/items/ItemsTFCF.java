@@ -92,6 +92,7 @@ import tfcflorae.objects.blocks.blocktype.BlockSlabTFCF;
 import tfcflorae.objects.items.*;
 import tfcflorae.objects.items.ceramics.*;
 import tfcflorae.objects.items.ceramics.ItemUnfiredUrn;
+import tfcflorae.objects.items.devices.*;
 import tfcflorae.objects.items.food.*;
 import tfcflorae.objects.items.itemblock.ItemBlockStickBundle;
 import tfcflorae.objects.items.rock.ItemMud;
@@ -342,6 +343,8 @@ public final class ItemsTFCF
     public static final ItemFoodTFCF ROASTED_YEW_BERRY = Helpers.getNull();
     @GameRegistry.ObjectHolder("food/mulberry")
     public static final ItemFoodTFCF MULBERRY = Helpers.getNull();
+    @GameRegistry.ObjectHolder("food/glowberry")
+    public static final ItemFoodTFCF GLOWBERRY = Helpers.getNull();
 
     // Normal Trees Nuts
     @GameRegistry.ObjectHolder("food/acorn")
@@ -1336,6 +1339,11 @@ public final class ItemsTFCF
     @GameRegistry.ObjectHolder("armor/boots/yucca_canvas")
     public static final ItemArmorTFCF YUCCA_CANVAS_BOOTS = Helpers.getNull();
 
+    @GameRegistry.ObjectHolder("devices/flora_density_meter")
+    public static final ItemFloraDensity FLORA_DENSITY_METER = Helpers.getNull();
+    @GameRegistry.ObjectHolder("devices/season_clock")
+    public static final ItemCalendarClock CALENDAR_CLOCK = Helpers.getNull();
+
     private static ImmutableList<Item> allSimpleItems;
     //private static ImmutableList<ItemBowTFCF> allItemBows;
     private static ImmutableList<Item> allFoodItems;
@@ -1489,6 +1497,7 @@ public final class ItemsTFCF
         simpleItems.add(register(r, "food/yew_berry", new ItemFoodTFCF(FoodDataTFCF.YEW_BERRY, new PotionEffectToHave(MobEffects.POISON, 610, 1, 3), new PotionEffectToHave(MobEffects.NAUSEA, 610, 1, 1), "yew_berry", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/roasted/yew_berry", new ItemFoodTFCF(FoodDataTFCF.ROASTED_YEW_BERRY, "roasted_yew_berry", "category_fruit"), CT_FOOD));
         simpleItems.add(register(r, "food/mulberry", new ItemFoodTFCF(FoodDataTFCF.MULBERRY, "mulberry", "category_fruit"), CT_FOOD));
+        simpleItems.add(register(r, "food/glowberry", new ItemFoodTFCF(FoodDataTFCF.GLOWBERRY, new PotionEffectToHave(MobEffects.GLOWING, 300, 1, 3), new PotionEffectToHave(MobEffects.LUCK, 150, 2, 6), "glowberry", "category_fruit"), CT_FOOD));
 
         // Dried Berries & Fruits
         for (FruitsTFCF fruit : FruitsTFCF.values())
@@ -2319,6 +2328,9 @@ public final class ItemsTFCF
         armorItems.add(register(r, "armor/chestplate/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 1, EntityEquipmentSlot.CHEST), CT_MISC));
         armorItems.add(register(r, "armor/leggings/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 2, EntityEquipmentSlot.LEGS), CT_MISC));
         armorItems.add(register(r, "armor/boots/yucca_canvas", new ItemArmorTFCF(ArmorMaterialsTFCF.YUCCA_CANVAS, 3, EntityEquipmentSlot.FEET), CT_MISC));*/
+
+        simpleItems.add(register(r, "devices/flora_density_meter", new ItemFloraDensity(Size.VERY_SMALL, Weight.VERY_LIGHT), CT_MISC));
+        simpleItems.add(register(r, "devices/season_clock", new ItemCalendarClock(Size.VERY_SMALL, Weight.VERY_LIGHT), CT_MISC));
 
         // Cassia cinnamon
         ItemMisc cassiaPole = new ItemMisc(Size.SMALL, Weight.MEDIUM);

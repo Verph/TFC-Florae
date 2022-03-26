@@ -44,14 +44,14 @@ public enum SeasonalTrees
     SYZYGIUM(() -> ItemsTFCF.RIBERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 13f, 35f, 140f, 360f, 0.33f, false, false, false, TreesTFCF.SYZYGIUM_TREE),
     YEW(() -> ItemsTFCF.YEW_BERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -15f, 11f, 180f, 350f, 0.33f, true, false, false, TreesTFCF.YEW_TREE),
     JOSHUA_TREE(() -> ItemsTFCF.BARREL_CACTUS_FRUIT, new int[] {1, 2, 2, 2, 3, 3, 3, 1, 1, 1, 1, 1}, 13f, 35f, 140f, 360f, 0.33f, false, false, true, TreesTFCF.JOSHUA_TREE_TREE),
-    PURPLE_JACARANDA(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
-    YELLOW_JACARANDA(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
+    PURPLE_JACARANDA(null, new int[] {0, 0, 1, 1, 2, 1, 1, 1, 2, 4, 4, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
+    YELLOW_JACARANDA(null, new int[] {0, 0, 1, 1, 2, 1, 1, 1, 2, 4, 4, 0}, 10f, 34f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.JACARANDA_TREE),
     JUNIPER(() -> ItemsTFCF.JUNIPER, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -8f, 20f, 80f, 350f, 0.33f, false, false, false, TreesTFCF.JUNIPER_TREE),
     RED_CEDAR(() -> ItemsTFCF.JUNIPER, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -8f, 17f, 10f, 240f, 0.33f, false, false, false, TreesTFCF.RED_CEDAR_TREE),
     WHITE_CEDAR(() -> ItemsTFCF.JUNIPER, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -8f, 17f, 10f, 240f, 0.33f, false, false, false, TreesTFCF.WHITE_CEDAR_TREE),
-    PINK_IPE(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
-    WHITE_IPE(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
-    YELLOW_IPE(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
+    PINK_IPE(null, new int[] {0, 0, 0, 1, 1, 2, 2, 2, 1, 1, 4, 4}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
+    WHITE_IPE(null, new int[] {0, 0, 0, 1, 1, 2, 2, 2, 1, 1, 4, 4}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
+    YELLOW_IPE(null, new int[] {0, 0, 0, 1, 1, 2, 2, 2, 1, 1, 4, 4}, 15f, 32f, 150f, 350f, 0.33f, true, false, false, TreesTFCF.IPE_TREE),
     ARGYLE_EUCALYPTUS(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 18f, 39f, 120f, 300f, 0.33f, true, true, false, TreesTFCF.EUCALYPTUS_TREE, true),
     RAINBOW_EUCALYPTUS(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 18f, 39f, 120f, 300f, 0.33f, true, true, false, TreesTFCF.EUCALYPTUS_TREE, true),
     SNOW_GUM_EUCALYPTUS(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, 18f, 39f, 120f, 300f, 0.33f, true, true, false, TreesTFCF.EUCALYPTUS_TREE, true),
@@ -69,12 +69,12 @@ public enum SeasonalTrees
     YELLOW_ROWAN(() -> ItemsTFCF.ROWAN_BERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -15f, 8f, 180f, 400f, 0.33f, true, false, false, TreesTFCF.ROWAN_TREE),
     ORANGE_ROWAN(() -> ItemsTFCF.ROWAN_BERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -15f, 8f, 180f, 400f, 0.33f, true, false, false, TreesTFCF.ROWAN_TREE),
     RED_ROWAN(() -> ItemsTFCF.ROWAN_BERRY, new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, -15f, 8f, 180f, 400f, 0.33f, true, false, false, TreesTFCF.ROWAN_TREE),
-    YELLOW_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
-    ORANGE_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
-    RED_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
-    YELLOW_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
-    ORANGE_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
-    RED_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 1, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
+    YELLOW_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
+    ORANGE_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
+    RED_PINK_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 0, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.PINK_CHERRY_TREE),
+    YELLOW_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
+    ORANGE_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 2, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
+    RED_WHITE_CHERRY(() -> ItemFoodTFC.get(Food.CHERRY), new int[] {0, 0, 0, 0, 2, 1, 1, 3, 4, 4, 0, 0}, 0f, 20f, 180f, 300f, 0.33f, true, false, false, TreesTFCF.WHITE_CHERRY_TREE),
     YELLOW_SWEETGUM(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, -2f, 18f, 140f, 360f, 0.33f, true, false, false, TreesTFCF.SWEETGUM_TREE),
     ORANGE_SWEETGUM(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, -2f, 18f, 140f, 360f, 0.33f, true, false, false, TreesTFCF.SWEETGUM_TREE),
     RED_SWEETGUM(null, new int[] {0, 0, 1, 2, 2, 1, 1, 1, 4, 4, 0, 0}, -2f, 18f, 140f, 360f, 0.33f, true, false, false, TreesTFCF.SWEETGUM_TREE),
@@ -276,9 +276,9 @@ public enum SeasonalTrees
         return minTemp < temperature && temperature < maxTemp && minRain < rainfall && rainfall < maxRain;
     }
 
-    public ItemStack getFoodDrop()
+    public Item getFoodDrop()
     {
-        return new ItemStack(this.fruit.get());
+        return this.fruit.get();
     }
 
     public Supplier<Item> getDrop()

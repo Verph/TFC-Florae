@@ -94,10 +94,17 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
     @Override
     public int getSpawnWeight(Biome biome, float temperature, float rainfall, float floraDensity, float floraDiversity)
     {
-        BlockPos blockpos = new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ);
+        /*BlockPos blockpos = new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ);
         if (!BiomesTFC.isOceanicBiome(biome) && !BiomesTFC.isBeachBiome(biome) && blockpos.getY() >= WorldTypeTFC.SEALEVEL)
         {
             return (int)(ConfigTFC.Animals.HARE.rarity / 1.4D);
+        }
+        return 0;*/
+        BiomeHelper.BiomeType biomeType = BiomeHelper.getBiomeType(temperature, rainfall, floraDensity);
+        if (!BiomesTFC.isOceanicBiome(biome) && !BiomesTFC.isBeachBiome(biome) &&
+            (biomeType == BiomeHelper.BiomeType.TEMPERATE_FOREST || biomeType == BiomeHelper.BiomeType.TROPICAL_FOREST))
+        {
+            return ConfigTFC.Animals.HARE.rarity;
         }
         return 0;
     }
@@ -289,6 +296,18 @@ public class EntitySilkMoth extends EntityAnimalTFC implements ILivestock
     protected boolean hasEggs()
     {
         return this.getGender() == Gender.FEMALE && this.getAge() == Age.ADULT && (getLaidTicks() <= 0 || getProductsCooldown() <= 0);
+    }
+
+    @Override
+    public boolean getCanSpawnHere()
+    {
+        return this.world.checkNoEntityCollision(getEntityBoundingBox())
+            && this.world.getCollisionBoxes(this, getEntityBoundingBox()).isEmpty()
+            && !this.world.containsAnyLiquid(getEntityBoundingBox())
+            && (this.world.getBlockState(this.getPosition().down()) == BlockLeavesTFCF.get(SeasonalTrees.YELLOW_MULBERRY) || 
+                this.world.getBlockState(this.getPosition().down()) == BlockLeavesTFCF.get(SeasonalTrees.ORANGE_MULBERRY) || 
+                this.world.getBlockState(this.getPosition().down()) == BlockLeavesTFCF.get(SeasonalTrees.RED_MULBERRY) || 
+                this.world.getBlockState(this.getPosition().down()) == BlockLeavesTFC.get(TFCRegistries.TREES.getValue(TreesTFCF.MULBERRY)));
     }
 
     @Override

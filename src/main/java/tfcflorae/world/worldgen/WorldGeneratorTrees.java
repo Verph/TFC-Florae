@@ -60,8 +60,14 @@ public class WorldGeneratorTrees implements IWorldGenerator
         trees.removeIf(t -> !t.hasBushes());
 
         // Dense foliage chaparral/shrubland forests in dry & sparsely populated mountain regions
+        if ((b == BiomesTFC.CRAG || b == BiomesTFC.MOUNTAINS || b == BiomesTFC.MOUNTAINS_EDGE || b == BiomesTFC.FOOTHILLS))
+        {
+            genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.3f, 60f + gauss, 200f + gauss, 8 + random.nextInt(20), trees);
+        }
+
+        // Dense foliage chaparral/shrubland forests in dry & sparsely populated mountain regions
         // Similarly to Mediterranean and Californian areas 
-        if ((b == BiomesTFC.MOUNTAINS || b == BiomesTFC.MOUNTAINS_EDGE || b == BiomesTFC.HIGH_HILLS || b == BiomesTFC.HIGH_HILLS_EDGE) && (avgTemperature >= 4 + gauss))
+        if ((b == BiomesTFC.MOUNTAINS || b == BiomesTFC.MOUNTAINS_EDGE || b == BiomesTFC.HIGH_HILLS || b == BiomesTFC.HIGH_HILLS_EDGE || b == BiomesTFC.MOUNTAIN_RANGE || b == BiomesTFC.MOUNTAIN_RANGE_EDGE || b == BiomesTFC.FOOTHILLS) && (avgTemperature >= 4 + gauss))
         {
             genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.3f, 60f + gauss, 200f + gauss, 4 + random.nextInt(10), trees);
         }
@@ -75,7 +81,7 @@ public class WorldGeneratorTrees implements IWorldGenerator
 
         // Mid-dense foliage chaparral/shrubland forests in temperate regions
         // Similarly to steppes across Eurasian regions
-        if ((b == BiomesTFC.ROLLING_HILLS || b == BiomesTFC.FIELDS || b == BiomesTFC.FLATLANDS || b == BiomesTFC.PLAINS || b == BiomesTFC.HIGH_PLAINS) && (avgTemperature <= 10 + gauss))
+        if ((b == BiomesTFC.ROLLING_HILLS || b == BiomesTFC.FIELDS || b == BiomesTFC.FLATLANDS || b == BiomesTFC.PLAINS || b == BiomesTFC.HIGH_PLAINS) || b == BiomesTFC.FOOTHILLS && (avgTemperature <= 10 + gauss))
         {
             genBush(random, chunkX, chunkZ, world, chunkData, 0.0f, 0.3f, 150f + gauss, 380f + gauss, 1 + random.nextInt(7), trees);
         }

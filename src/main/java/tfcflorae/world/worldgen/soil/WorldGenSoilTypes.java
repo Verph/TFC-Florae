@@ -31,6 +31,13 @@ public class WorldGenSoilTypes implements IWorldGenerator
     public static final float RAINFALL_SILT_SILTY_MIX = 350;
     public static final float RAINFALL_SILT = 400;
 
+    public static final float FLORA_DIVERSITY_SAND = 0.15f;
+    public static final float FLORA_DIVERSITY_SAND_SANDY_MIX = 0.25f;
+    public static final float FLORA_DIVERSITY_SANDY = 0.4f; // Upper thresholds
+    public static final float FLORA_DIVERSITY_SILTY = 0.55f; // Lower thresholds
+    public static final float FLORA_DIVERSITY_SILT_SILTY_MIX = 0.7f;
+    public static final float FLORA_DIVERSITY_SILT = 0.8f;
+
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
@@ -54,17 +61,17 @@ public class WorldGenSoilTypes implements IWorldGenerator
                 generateSparseGrassSurface(world, random, pos1);
             }
 
-            if (ConfigTFCF.General.WORLD.enableAllSpecialSoil)
+            /*if (ConfigTFCF.General.WORLD.enableAllSpecialSoil)
             {
                 BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
                 generateSoilSurface(world, random, pos);
                 BlockPos pos1 = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
                 generateSoilSurface(world, random, pos1);
-            }
+            }*/
 
             if (ConfigTFCF.General.WORLD.enableAllCoarse)
             {
-                if (avgTemperature >= (20f + 2f * random.nextGaussian()) && floraDensity >= 0.3f && drainage <= 3)
+                if (floraDensity >= 0.3f + 0.05f * random.nextGaussian() && drainage >= 2 * random.nextGaussian())
                 {
                     BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
                     generateCoarseSoilSurface(world, random, pos);
@@ -90,7 +97,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                 }
             }
 
-            if (ConfigTFCF.General.WORLD.enableAllRooted && floraDensity >= 0.3f)
+            if (ConfigTFCF.General.WORLD.enableAllRooted && floraDensity >= 0.35f)
             {
                 BlockPos pos = world.getTopSolidOrLiquidBlock(chunkBlockPos.add(8 + random.nextInt(16), 0, 8 + random.nextInt(16)));
                 generateRootedSoilSurface(world, random, pos);
@@ -105,7 +112,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
         if (ConfigTFCF.General.WORLD.enableAllSparseGrass)
         {
             ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && rng.nextInt(ConfigTFCF.General.WORLD.sparseGrassRarity) == 0 && data.getFloraDensity() >= 0.4f)
+            if (data.isInitialized() && rng.nextInt(ConfigTFCF.General.WORLD.sparseGrassRarity) == 0 && data.getFloraDensity() >= 0.35f && ChunkDataTFC.getDrainage(world, start) >= 2 * rng.nextGaussian())
             {
                 int normalRarity = rng.nextInt(1);
                 int sandyLoamRarity = rng.nextInt(ConfigTFCF.General.WORLD.sandyLoamRarity / 5);
@@ -159,17 +166,13 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SPARSE_GRASS).getDefaultState(), 2);
                                 }
                             }
-                            if (data.getRainfall() < RAINFALL_SANDY)
+                            if (data.getFloraDiversity() < FLORA_DIVERSITY_SANDY)
                             {
-                                if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX && ChunkDataTFC.getDrainage(world, start) >= 3)
+                                if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND_SANDY_MIX)
                                 {
                                     if (sandyLoamRarity == 0)
                                     {
-                                        if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
-                                        {
-                                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM).getDefaultState(), 2);
-                                        }
-                                        else if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
+                                        if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
                                         {
                                             world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SANDY_LOAM_PODZOL).getDefaultState(), 2);
                                         }
@@ -183,15 +186,11 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() > RAINFALL_SAND && ChunkDataTFC.getDrainage(world, start) >= 4)
+                                else if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND)
                                 {
                                     if (loamySandRarity== 0)
                                     {
-                                        if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
-                                        {
-                                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND).getDefaultState(), 2);
-                                        }
-                                        else if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
+                                        if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
                                         {
                                             world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAMY_SAND_PODZOL).getDefaultState(), 2);
                                         }
@@ -206,17 +205,13 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }
-                            else if (data.getRainfall() > RAINFALL_SANDY)
+                            else if (data.getFloraDiversity() > FLORA_DIVERSITY_SANDY)
                             {
-                                if (data.getRainfall() < RAINFALL_SILTY && ChunkDataTFC.getDrainage(world, start) >= 2)
+                                if (data.getFloraDiversity() < FLORA_DIVERSITY_SILTY)
                                 {
                                     if (loamRarity == 0)
                                     {
-                                        if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
-                                        {
-                                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM).getDefaultState(), 2);
-                                        }
-                                        else if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
+                                        if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
                                         {
                                             world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.LOAM_PODZOL).getDefaultState(), 2);
                                         }
@@ -231,17 +226,13 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }
-                            else if (data.getRainfall() > RAINFALL_SILTY)
+                            else if (data.getFloraDiversity() > FLORA_DIVERSITY_SILTY)
                             {
-                                if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX && ChunkDataTFC.getDrainage(world, start) <= 2)
+                                if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT_SILTY_MIX)
                                 {
                                     if (siltLoamRarity == 0)
                                     {
-                                        if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
-                                        {
-                                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM).getDefaultState(), 2);
-                                        }
-                                        else if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
+                                        if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
                                         {
                                             world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_LOAM_PODZOL).getDefaultState(), 2);
                                         }
@@ -255,7 +246,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() < RAINFALL_SILT && ChunkDataTFC.getDrainage(world, start) >= 2 && ChunkDataTFC.getDrainage(world, start) <= 3)
+                                else if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT)
                                 {
                                     if (humusRarity == 0)
                                     {
@@ -273,15 +264,11 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (ChunkDataTFC.getDrainage(world, start) <= 1)
+                                else
                                 {
                                     if (siltRarity == 0)
                                     {
-                                        if (BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
-                                        {
-                                            world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT).getDefaultState(), 2);
-                                        }
-                                        else if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
+                                        if (BlocksTFCF.isPodzol(current) && ConfigTFCF.General.WORLD.enableAllPodzol)
                                         {
                                             world.setBlockState(pos, BlockRockVariantTFCF.get(ChunkDataTFC.getRockHeight(world, pos), RockTFCF.SILT_PODZOL).getDefaultState(), 2);
                                         }
@@ -348,7 +335,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
         }
     }*/
 
-    private void generateSoilSurface(World world, Random rng, BlockPos start)
+    /*private void generateSoilSurface(World world, Random rng, BlockPos start)
     {
         if (ConfigTFCF.General.WORLD.enableAllSpecialSoil)
         {
@@ -516,14 +503,14 @@ public class WorldGenSoilTypes implements IWorldGenerator
                 }
             }
         }
-    }
+    }*/
 
     private void generateCoarseSoilSurface(World world, Random rng, BlockPos start)
     {
         if (ConfigTFCF.General.WORLD.enableAllCoarse)
         {
             ChunkDataTFC data = ChunkDataTFC.get(world, start);
-            if (data.isInitialized() && data.getFloraDensity() >= 0.3f && (data.getAverageTemp() >= 15f || data.getAverageTemp() <= 5) && ChunkDataTFC.getDrainage(world, start) >= 3)
+            if (data.isInitialized() && data.getFloraDensity() >= 0.3f + 0.05f * rng.nextGaussian() && ChunkDataTFC.getDrainage(world, start) >= 2 * rng.nextGaussian())
             {
                 int length = rng.nextInt(4) + 3;
                 int depth = rng.nextInt(3) + 1;
@@ -570,9 +557,9 @@ public class WorldGenSoilTypes implements IWorldGenerator
                             final BlockPos pos = posHorizontal.add(0, y, 0);
                             final IBlockState current = world.getBlockState(pos);
 
-                            if (data.getRainfall() < RAINFALL_SANDY)
+                            if (data.getFloraDiversity() < FLORA_DIVERSITY_SANDY)
                             {       
-                                if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX) {
+                                if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND_SANDY_MIX) {
                                     if (coarseSandyLoamRarity == 0)
                                     {
                                         if (BlocksTFC.isGrass(current) || BlocksTFCF.isGrass(current) || BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
@@ -597,7 +584,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() > RAINFALL_SAND)
+                                else if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND)
                                 {
                                     if (coarseLoamySandRarity == 0)
                                     {
@@ -624,7 +611,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }       
-                            if (data.getRainfall() > RAINFALL_SANDY)
+                            if (data.getFloraDiversity() > FLORA_DIVERSITY_SANDY)
                             {       
                                 if (coarseDirtRarity == 0)
                                 {
@@ -634,7 +621,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }
-                            if (data.getRainfall() < RAINFALL_SILTY)
+                            if (data.getFloraDiversity() < FLORA_DIVERSITY_SILTY)
                             {
                                 if (coarseLoamRarity == 0)
                                 {
@@ -660,9 +647,9 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }       
-                            if (data.getRainfall() > RAINFALL_SILTY)
+                            if (data.getFloraDiversity() > FLORA_DIVERSITY_SILTY)
                             {       
-                                if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
+                                if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT_SILTY_MIX)
                                 {
                                     if (coarseSiltLoamRarity == 0)
                                     {
@@ -688,7 +675,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() < RAINFALL_SILT)
+                                else if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT)
                                 {
                                     if (coarseHumusRarity == 0)
                                     {
@@ -800,9 +787,9 @@ public class WorldGenSoilTypes implements IWorldGenerator
                             final BlockPos pos = posHorizontal.add(0, y, 0);
                             final IBlockState current = world.getBlockState(pos);
 
-                            if (data.getRainfall() < RAINFALL_SANDY)
+                            if (data.getFloraDiversity() < FLORA_DIVERSITY_SANDY)
                             {       
-                                if (data.getRainfall() > RAINFALL_SAND_SANDY_MIX) {
+                                if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND_SANDY_MIX) {
                                     if (rootedSandyLoamRarity == 0)
                                     {
                                         if (BlocksTFC.isGrass(current) || BlocksTFCF.isGrass(current) || BlocksTFC.isDirt(current) || BlocksTFCF.isDirt(current))
@@ -811,7 +798,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() > RAINFALL_SAND)
+                                else if (data.getFloraDiversity() > FLORA_DIVERSITY_SAND)
                                 {
                                     if (rootedLoamySandRarity == 0)
                                     {
@@ -822,7 +809,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }       
-                            if (data.getRainfall() > RAINFALL_SANDY)
+                            if (data.getFloraDiversity() > FLORA_DIVERSITY_SANDY)
                             {       
                                 if (rootedDirtRarity == 0)
                                 {
@@ -832,7 +819,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }
-                            if (data.getRainfall() < RAINFALL_SILTY)
+                            if (data.getFloraDiversity() < FLORA_DIVERSITY_SILTY)
                             {
                                 if (rootedLoamRarity == 0)
                                 {
@@ -842,9 +829,9 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                     }
                                 }
                             }       
-                            if (data.getRainfall() > RAINFALL_SILTY)
+                            if (data.getFloraDiversity() > FLORA_DIVERSITY_SILTY)
                             {       
-                                if (data.getRainfall() < RAINFALL_SILT_SILTY_MIX)
+                                if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT_SILTY_MIX)
                                 {
                                     if (rootedSiltLoamRarity == 0)
                                     {
@@ -854,7 +841,7 @@ public class WorldGenSoilTypes implements IWorldGenerator
                                         }
                                     }
                                 }
-                                else if (data.getRainfall() < RAINFALL_SILT)
+                                else if (data.getFloraDiversity() < FLORA_DIVERSITY_SILT)
                                 {
                                     if (rootedHumusRarity == 0)
                                     {

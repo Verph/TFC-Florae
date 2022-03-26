@@ -37,13 +37,8 @@ import net.dries007.tfc.objects.blocks.stone.BlockRockVariant;
 import net.dries007.tfc.objects.items.metal.ItemSmallOre;
 import net.dries007.tfc.objects.items.rock.ItemRock;
 
-import tfcflorae.TFCFlorae;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockHumusFarmland;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamFarmland;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockLoamySandFarmland;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockSandyLoamFarmland;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltFarmland;
-import tfcflorae.objects.blocks.blocktype.farmland.BlockSiltLoamFarmland;
+import tfcflorae.objects.blocks.blocktype.farmland.*;
+import tfcflorae.objects.blocks.blocktype.path.*;
 import tfcflorae.objects.items.ItemsTFCF;
 import tfcflorae.objects.items.rock.ItemMud;
 import tfcflorae.types.BlockTypesTFCF.RockTFCF;
@@ -76,6 +71,18 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                 return new BlockRockRawTFCF(rockTFCF, rock);
             case MUD:
                 return new BlockRockMud(rockTFCF, rock);
+            case LOAMY_SAND_PATH:
+                return new BlockLoamySandPath(rockTFCF, rock);
+            case SANDY_LOAM_PATH:
+                return new BlockSandyLoamPath(rockTFCF, rock);
+            case LOAM_PATH:
+                return new BlockLoamPath(rockTFCF, rock);
+            case SILT_LOAM_PATH:
+                return new BlockSiltLoamPath(rockTFCF, rock);
+            case SILT_PATH:
+                return new BlockSiltPath(rockTFCF, rock);
+            case HUMUS_PATH:
+                return new BlockHumusPath(rockTFCF, rock);
             case ROOTED_DIRT:
             case ROOTED_LOAMY_SAND:
             case ROOTED_SANDY_LOAM:
@@ -358,6 +365,12 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case SILT_LOAM_FARMLAND:
             case SILT_FARMLAND:
             case HUMUS_FARMLAND:
+            case LOAMY_SAND_PATH:
+            case SANDY_LOAM_PATH:
+            case LOAM_PATH:
+            case SILT_LOAM_PATH:
+            case SILT_PATH:
+            case HUMUS_PATH:
                 setSoundType(SoundType.GROUND);
                 setHardness(1.5F * 0.15F);
                 setHarvestLevel("shovel", 0);
@@ -608,6 +621,12 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
     {
         switch (this.rockTFCF)
         {
+            case LOAMY_SAND_PATH:
+            case SANDY_LOAM_PATH:
+            case LOAM_PATH:
+            case SILT_LOAM_PATH:
+            case SILT_PATH:
+            case HUMUS_PATH:
             case LOAMY_SAND_FARMLAND:
             case SANDY_LOAM_FARMLAND:
             case LOAM_FARMLAND:
@@ -625,11 +644,29 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
                         IBlockState state = world.getBlockState(pos.offset(side));
                         Block block = state.getBlock();
                         if (state.isOpaqueCube()) return false;
-                        if (block instanceof BlockLoamySandFarmland || block instanceof BlockSandyLoamFarmland || block instanceof BlockLoamFarmland || block instanceof BlockSiltLoamFarmland || block instanceof BlockSiltFarmland || block instanceof BlockHumusFarmland) return false;
+                        if (block instanceof BlockLoamySandFarmland || 
+                            block instanceof BlockSandyLoamFarmland || 
+                            block instanceof BlockLoamFarmland || 
+                            block instanceof BlockSiltLoamFarmland || 
+                            block instanceof BlockSiltFarmland || 
+                            block instanceof BlockHumusFarmland /*|| 
+                            block instanceof BlockLoamySandPath || 
+                            block instanceof BlockSandyLoamPath || 
+                            block instanceof BlockLoamPath || 
+                            block instanceof BlockSiltLoamPath || 
+                            block instanceof BlockSiltPath || 
+                            block instanceof BlockHumusPath*/) 
+                            return false;
                         if (block instanceof BlockRockVariantTFCF)
                         {
                             switch (((BlockRockVariantTFCF) block).rockTFCF)
                             {
+                                case LOAMY_SAND_PATH:
+                                case SANDY_LOAM_PATH:
+                                case LOAM_PATH:
+                                case SILT_LOAM_PATH:
+                                case SILT_PATH:
+                                case HUMUS_PATH:
                                 case LOAMY_SAND_FARMLAND:
                                 case SANDY_LOAM_FARMLAND:
                                 case LOAM_FARMLAND:
@@ -677,31 +714,37 @@ public class BlockRockVariantTFCF extends Block implements IItemSize
             case DRY_LOAMY_SAND_GRASS:
             case LOAMY_SAND_GRASS:
             case LOAMY_SAND_PODZOL:
+            case LOAMY_SAND_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.LOAMY_SAND));
             case SPARSE_SANDY_LOAM_GRASS:
             case DRY_SANDY_LOAM_GRASS:
             case SANDY_LOAM_GRASS:
             case SANDY_LOAM_PODZOL:
+            case SANDY_LOAM_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.SANDY_LOAM));
             case SPARSE_LOAM_GRASS:
             case DRY_LOAM_GRASS:
             case LOAM_GRASS:
             case LOAM_PODZOL:
+            case LOAM_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.LOAM));
             case SPARSE_SILT_LOAM_GRASS:
             case DRY_SILT_LOAM_GRASS:
             case SILT_LOAM_GRASS:
             case SILT_LOAM_PODZOL:
+            case SILT_LOAM_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.SILT_LOAM));
             case SPARSE_SILT_GRASS:
             case DRY_SILT_GRASS:
             case SILT_GRASS:
             case SILT_PODZOL:
+            case SILT_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.SILT));
             case SPARSE_HUMUS_GRASS:
             case HUMUS:
             case HUMUS_GRASS:
             case DRY_HUMUS_GRASS:
+            case HUMUS_PATH:
                 return Item.getItemFromBlock(get(null, RockTFCF.HUMUS));
             case SANDY_CLAY_LOAM:
             case SANDY_CLAY:

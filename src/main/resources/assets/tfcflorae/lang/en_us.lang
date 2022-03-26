@@ -12265,6 +12265,12 @@ tile.tfcflorae.sandy_stoneware_clay_path.catlinite.name=Sandy Catlinite Stonewar
 tile.tfcflorae.single.bog_iron.name=Bog Iron
 tile.tfcflorae.single.bog_iron_grass.name=Bog Iron Grass
 tile.tfcflorae.single.bog_iron_podzol.name=Bog Iron Podzol
+tile.tfcflorae.single.loamy_sand_path.name=Loamy Sand Path
+tile.tfcflorae.single.sandy_loam_path.name=Sandy Loam Path
+tile.tfcflorae.single.loam_path.name=Loam Path
+tile.tfcflorae.single.silt_loam_path.name=Silt Loam Path
+tile.tfcflorae.single.silt_path.name=Silt Path
+tile.tfcflorae.single.humus_path.name=Humus Path
 tile.tfcflorae.single.rooted_loamy_sand.name=Rooted Loamy Sand
 tile.tfcflorae.single.rooted_sandy_loam.name=Rooted Sandy Loam
 tile.tfcflorae.single.rooted_loam.name=Rooted Loam
@@ -19543,6 +19549,8 @@ tile.tfc.plants.sulphur_shelf.name=Sulphur Shelf
 tile.tfc.plants.tampa_butterfly_orchid.name=Tampa Butterfly Orchid
 tile.tfc.plants.turkey_tail.name=Turkey Tail
 tile.tfc.plants.wildfire.name=Wildfire
+tile.tfc.plants.spore_blossom.name=Spore Blossom
+tile.tfcflorae.plants.spore_blossom.name=Spore Blossom
 
 tile.tfc.plants.amanita.name=Amanita
 tile.tfc.plants.black_powderpuff.name=Black Powderpuff
@@ -19693,17 +19701,17 @@ tile.tfcflorae.plants.glow_vine.name=Glow Vine
 tile.tfcflorae.plants.hanging_vine.name=Hanging Vine
 tile.tfcflorae.plants.jungle_vine.name=Jungle Vine
 tile.tfcflorae.plants.liana.name=Liana
-tile.tfcflorae.plants.bearded_moss_creeping.name=Bearded Moss
-tile.tfcflorae.plants.glow_vine_creeping.name=Glow Vine
-tile.tfcflorae.plants.hanging_vine_creeping.name=Hanging Vine
-tile.tfcflorae.plants.jungle_vine_creeping.name=Jungle Vine
-tile.tfcflorae.plants.liana_creeping.name=Liana
-tile.tfcflorae.plants.ivy.name=Ivy
-tile.tfcflorae.plants.tackweed.name=Tackweed
-tile.tfcflorae.plants.takakia.name=Takakia Moss
-tile.tfcflorae.plants.morning_glory.name=Morning Glory
-tile.tfcflorae.plants.moss.name=Moss
-tile.tfcflorae.plants.reindeer_lichen.name=Reindeer Lichen
+tile.tfcflorae.plants.bearded_moss_creeping.name=Creeping Bearded Moss
+tile.tfcflorae.plants.glow_vine_creeping.name=Creeping Glow Vine
+tile.tfcflorae.plants.hanging_vine_creeping.name=Creeping Hanging Vine
+tile.tfcflorae.plants.jungle_vine_creeping.name=Creeping Jungle Vine
+tile.tfcflorae.plants.liana_creeping.name=Creeping Liana
+tile.tfcflorae.plants.ivy.name=Creeping Ivy
+tile.tfcflorae.plants.tackweed.name=Creeping Tackweed
+tile.tfcflorae.plants.takakia.name=Creeping Takakia Moss
+tile.tfcflorae.plants.morning_glory.name=Creeping Morning Glory
+tile.tfcflorae.plants.moss.name=Creeping Moss
+tile.tfcflorae.plants.reindeer_lichen.name=Creeping Reindeer Lichen
 tile.tfcflorae.plants.blueshroom.name=Blueshroom
 tile.tfcflorae.plants.glowshroom.name=Glowshroom
 tile.tfcflorae.plants.magma_shroom.name=Magma Shroom
@@ -33132,6 +33140,7 @@ item.tfcflorae.food.date.name=Date
 item.tfcflorae.food.elder.name=Elderberry
 item.tfcflorae.food.fig.name=Fig
 item.tfcflorae.food.finger_lime.name=Finger Lime
+item.tfcflorae.food.glowberry.name=Glowberry
 item.tfcflorae.food.grapefruit.name=Grapefruit
 item.tfcflorae.food.guava.name=Guava
 item.tfcflorae.food.hawthorn.name=Hawthorn
@@ -33751,6 +33760,9 @@ item.tfcflorae.armor.boots.yucca_canvas.name=Yucca Canvas Boots
 
 item.tfcflorae.firma_cola_blend.name=Firma Cola Blend
 
+item.tfcflorae.devices.flora_density_meter.name=Flora Density Meter
+item.tfcflorae.devices.season_clock.name=Season Clock
+
 ## Entities
 
 # Animals
@@ -33857,7 +33869,6 @@ config.tfcflorae.general.world.siltyKaoliniteClayRarity.tooltip=The rarity for s
 
 config.tfcflorae.general.world.kaoliniteClayHumusRarity=Kaolinite Clay Humus Depository Rarity
 config.tfcflorae.general.world.kaoliniteClayHumusRarity.tooltip=The rarity for kaolinite clay humus pits to occur. On average 1 / N chunks will have a kaolinite clay humus deposit, if the chunk in question is valid for kaolinite clay humus to spawn.
-
 
 config.tfcflorae.general.world.stonewareClayRarity=Stoneware Clay Depository Rarity
 config.tfcflorae.general.world.stonewareClayRarity.tooltip=The rarity for stoneware clay pits to occur. On average 1 / N chunks will have a stoneware clay deposit, if the chunk in question is valid for stoneware clay to spawn.

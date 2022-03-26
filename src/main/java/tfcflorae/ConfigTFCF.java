@@ -417,6 +417,11 @@ public class ConfigTFCF
             @Config.LangKey("config." + MODID + ".general.world.creepingUndergroundCount")
             public float creepingUndergroundCount = 5f;
 
+            @Config.Comment("The underground spore blossom plant generation frequency. Higher value equals higher frequency.")
+            @Config.RangeDouble(min = 0)
+            @Config.LangKey("config." + MODID + ".general.world.sporeBlossomUndergroundCount")
+            public float sporeBlossomUndergroundCount = 2f;
+
             @Config.Comment("The rarity for bamboo trees to generate. On average 1 / N chunks will have a bamboo tree, if the chunk in question is valid for bamboo to generate.")
             @Config.RangeInt(min = 1)
             @Config.LangKey("config." + MODID + ".general.world.bambooRarity")
