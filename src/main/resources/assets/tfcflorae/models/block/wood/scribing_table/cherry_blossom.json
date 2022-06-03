@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/cherry_blossom",
+    "leg": "tfcflorae:block/wood/log/cherry_blossom",
+    "side": "tfcflorae:block/wood/planks/cherry_blossom",
+    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/cherry_blossom"
+  }
+}

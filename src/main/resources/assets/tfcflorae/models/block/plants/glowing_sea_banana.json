@@ -1,6 +1,0 @@
-{
-    "parent": "block/cross",
-    "textures": {
-        "cross": "tfcflorae:blocks/plants/glowing_sea_banana/glowing_sea_banana"
-    }
-}

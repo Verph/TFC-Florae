@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/mangrove",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/mangrove"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/mangrove",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/mangrove",
+        "y": 270
+      }
+    ]
+  }
+}

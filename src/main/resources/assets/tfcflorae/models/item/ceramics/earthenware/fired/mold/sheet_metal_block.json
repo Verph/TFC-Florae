@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfcflorae:items/ceramics/earthenware/fired/mold/sheet_metal_block",
-    "layer1": "tfcflorae:items/ceramics/earthenware/fired/mold/sheet_metal_block_metal"
-  }
-}

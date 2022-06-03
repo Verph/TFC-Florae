@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/sequoia",
+    "tfcflorae:wood/stripped_log/sequoia",
+    "tfcflorae:wood/wood/sequoia",
+    "tfcflorae:wood/stripped_wood/sequoia"
+  ]
+}

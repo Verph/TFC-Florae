@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfc:blocks/plants/red_sealing_wax_palm/red_sealing_wax_palm_item"
-  }
-}

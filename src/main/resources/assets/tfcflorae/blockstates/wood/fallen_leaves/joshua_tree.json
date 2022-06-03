@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua_tree",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua_tree"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua_tree",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua_tree",
+        "y": 270
+      }
+    ]
+  }
+}

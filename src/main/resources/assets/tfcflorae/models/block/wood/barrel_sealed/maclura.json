@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/maclura",
+    "planks": "tfcflorae:block/wood/planks/maclura",
+    "sheet": "tfcflorae:block/wood/sheet/maclura",
+    "hoop": "tfcflorae:block/barrel_hoop"
+  }
+}

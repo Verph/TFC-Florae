@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "tfc:blocks/plants/poison_shroom/poison_shroom_0"
-  }
-}

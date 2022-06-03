@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/mahogany",
+    "base": "tfcflorae:block/wood/lectern/mahogany/base",
+    "front": "tfcflorae:block/wood/lectern/mahogany/front",
+    "sides": "tfcflorae:block/wood/lectern/mahogany/sides",
+    "top": "tfcflorae:block/wood/lectern/mahogany/top",
+    "particle": "tfcflorae:block/wood/lectern/mahogany/sides"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "tfcflorae:wood/log/norway_spruce"
+      },
+      {
+        "item": "tfcflorae:wood/log/norway_spruce"
+      },
+      {
+        "tag": "tfcflorae:saws"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:wood/support/norway_spruce",
+      "count": 8
+    }
+  }
+}

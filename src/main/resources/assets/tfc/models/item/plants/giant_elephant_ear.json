@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfc:blocks/plants/giant_elephant_ear/giant_elephant_ear_item"
-  }
-}

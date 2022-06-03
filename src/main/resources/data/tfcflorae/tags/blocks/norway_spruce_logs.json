@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/norway_spruce",
+    "tfcflorae:wood/stripped_log/norway_spruce",
+    "tfcflorae:wood/wood/norway_spruce",
+    "tfcflorae:wood/stripped_wood/norway_spruce"
+  ]
+}

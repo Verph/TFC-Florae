@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/iroko",
+  "result": "tfcflorae:wood/planks/iroko_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/planks/iroko_slab"
+  }
+}

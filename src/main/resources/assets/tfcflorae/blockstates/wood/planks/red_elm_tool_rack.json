@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/planks/red_elm_tool_rack",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/planks/red_elm_tool_rack",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/planks/red_elm_tool_rack"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/planks/red_elm_tool_rack",
+      "y": 90
+    }
+  }
+}

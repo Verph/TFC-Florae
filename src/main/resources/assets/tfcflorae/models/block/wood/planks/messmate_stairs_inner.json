@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/messmate",
+    "top": "tfcflorae:block/wood/planks/messmate",
+    "side": "tfcflorae:block/wood/planks/messmate"
+  }
+}

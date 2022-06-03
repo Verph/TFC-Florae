@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/juniper",
+    "base": "tfcflorae:block/wood/lectern/juniper/base",
+    "front": "tfcflorae:block/wood/lectern/juniper/front",
+    "sides": "tfcflorae:block/wood/lectern/juniper/sides",
+    "top": "tfcflorae:block/wood/lectern/juniper/top",
+    "particle": "tfcflorae:block/wood/lectern/juniper/sides"
+  }
+}

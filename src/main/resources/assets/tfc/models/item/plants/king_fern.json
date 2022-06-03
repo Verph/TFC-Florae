@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfc:blocks/plants/king_fern/small_frond_0a"
-  }
-}

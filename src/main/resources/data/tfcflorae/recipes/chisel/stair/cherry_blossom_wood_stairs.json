@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/cherry_blossom",
+  "result": "tfcflorae:wood/planks/cherry_blossom_stairs",
+  "mode": "stair"
+}

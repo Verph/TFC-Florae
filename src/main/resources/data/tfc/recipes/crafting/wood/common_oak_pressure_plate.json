@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/common_oak"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/common_oak_pressure_plate"
+  }
+}

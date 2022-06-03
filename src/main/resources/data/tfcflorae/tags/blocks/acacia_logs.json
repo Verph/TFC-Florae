@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/acacia",
+    "tfcflorae:wood/stripped_log/acacia",
+    "tfcflorae:wood/wood/acacia",
+    "tfcflorae:wood/stripped_wood/acacia"
+  ]
+}

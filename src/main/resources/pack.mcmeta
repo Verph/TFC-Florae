@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "description": "TFC Florae Resources",
-        "pack_format": 3
-    }
+  "pack": {
+    "description": "TFCFlorae",
+    "pack_format": 8
+  }
 }

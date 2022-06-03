@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/plants/jungle_vine_cross_0",
-  "textures": {
-    "particle": "tfc:blocks/plants/jungle_vine/tip",
-	"overlay": "tfc:blocks/plants/jungle_vine/tip"
-  }
-}

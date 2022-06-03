@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/red_elm",
+    "base": "tfcflorae:block/wood/lectern/red_elm/base",
+    "front": "tfcflorae:block/wood/lectern/red_elm/front",
+    "sides": "tfcflorae:block/wood/lectern/red_elm/sides",
+    "top": "tfcflorae:block/wood/lectern/red_elm/top",
+    "particle": "tfcflorae:block/wood/lectern/red_elm/sides"
+  }
+}

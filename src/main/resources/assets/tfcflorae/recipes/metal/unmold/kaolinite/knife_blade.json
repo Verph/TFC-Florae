@@ -1,9 +1,0 @@
-{
-  "type": "tfcflorae:unmold_recipe_kaolinite_tfcf",
-  "ingredients": [
-    {
-      "item": "tfcflorae:ceramics/kaolinite/fired/mold/knife_blade"
-    }
-  ],
-  "result": "knife_blade"
-}

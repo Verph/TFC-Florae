@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "tfcflorae:items/crop/product/sunflower_seed_cotton_disc"
-  }
-}

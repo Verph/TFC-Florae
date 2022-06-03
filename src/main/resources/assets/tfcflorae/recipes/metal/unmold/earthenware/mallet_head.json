@@ -1,9 +1,0 @@
-{
-  "type": "tfcflorae:unmold_recipe_earthenware_firmalife",
-  "ingredients": [
-    {
-      "item": "tfcflorae:ceramics/earthenware/fired/mold/mallet_head"
-    }
-  ],
-  "result": "mallet_head"
-}

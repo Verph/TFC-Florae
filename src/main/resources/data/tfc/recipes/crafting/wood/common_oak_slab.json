@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/common_oak_slab",
+    "count": 6
+  }
+}

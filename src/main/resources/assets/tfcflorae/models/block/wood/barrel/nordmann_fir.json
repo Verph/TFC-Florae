@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/nordmann_fir",
+    "planks": "tfcflorae:block/wood/planks/nordmann_fir",
+    "sheet": "tfcflorae:block/wood/sheet/nordmann_fir",
+    "hoop": "tfcflorae:block/barrel_hoop"
+  }
+}

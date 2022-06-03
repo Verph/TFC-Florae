@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/cherry_blossom",
+    "tfcflorae:wood/stripped_log/cherry_blossom",
+    "tfcflorae:wood/wood/cherry_blossom",
+    "tfcflorae:wood/stripped_wood/cherry_blossom"
+  ]
+}

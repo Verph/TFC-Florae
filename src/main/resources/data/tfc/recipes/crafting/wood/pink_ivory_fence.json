@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/pink_ivory"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/pink_ivory_fence",
+    "count": 8
+  }
+}

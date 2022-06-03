@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/baobab",
+    "tfcflorae:wood/stripped_log/baobab",
+    "tfcflorae:wood/wood/baobab",
+    "tfcflorae:wood/stripped_wood/baobab"
+  ]
+}

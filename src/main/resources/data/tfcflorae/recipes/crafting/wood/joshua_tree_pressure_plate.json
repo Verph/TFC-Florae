@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/joshua_tree"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/joshua_tree_pressure_plate"
+  }
+}

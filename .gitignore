@@ -1,17 +1,17 @@
 # eclipse
 bin
 *.launch
-*.settings
-*.metadata
-*.classpath
-*.project
+.settings
+.metadata
+.classpath
+.project
 
 # idea
 out
 *.ipr
 *.iws
 *.iml
-*.idea
+.idea
 
 # gradle
 build
@@ -20,6 +20,8 @@ build
 # other
 eclipse
 run
-*.vscode
-unused_java
-Resources
+libs
+resources/__pycache__
+
+# Files from Forge MDK
+forge*changelog.txt

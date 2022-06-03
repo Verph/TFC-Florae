@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/beech",
+  "result": "tfcflorae:wood/planks/beech_stairs",
+  "mode": "stair"
+}

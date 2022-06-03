@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/jacaranda",
+  "result": "tfcflorae:wood/planks/jacaranda_stairs",
+  "mode": "stair"
+}

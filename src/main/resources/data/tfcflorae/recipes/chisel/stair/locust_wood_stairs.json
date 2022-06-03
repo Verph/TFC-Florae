@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/locust",
+  "result": "tfcflorae:wood/planks/locust_stairs",
+  "mode": "stair"
+}

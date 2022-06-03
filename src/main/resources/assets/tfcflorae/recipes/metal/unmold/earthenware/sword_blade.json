@@ -1,9 +1,0 @@
-{
-  "type": "tfcflorae:unmold_recipe_earthenware_tfcf",
-  "ingredients": [
-    {
-      "item": "tfcflorae:ceramics/earthenware/fired/mold/sword_blade"
-    }
-  ],
-  "result": "sword_blade"
-}

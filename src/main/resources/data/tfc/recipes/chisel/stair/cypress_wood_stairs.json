@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/cypress",
+  "result": "tfcflorae:wood/planks/cypress_stairs",
+  "mode": "stair"
+}

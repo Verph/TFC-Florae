@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/common_oak",
+    "planks": "tfcflorae:block/wood/planks/common_oak",
+    "sheet": "tfcflorae:block/wood/sheet/common_oak",
+    "hoop": "tfcflorae:block/barrel_hoop"
+  }
+}

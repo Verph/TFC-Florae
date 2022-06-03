@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/tinted_cross",
-  "textures": {
-    "cross": "tfc:blocks/plants/prairie_junegrass/prairie_junegrass_0",
-    "particle": "tfc:blocks/plants/prairie_junegrass/prairie_junegrass_0"
-  }
-}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/brazilwood",
+    "base": "tfcflorae:block/wood/lectern/brazilwood/base",
+    "front": "tfcflorae:block/wood/lectern/brazilwood/front",
+    "sides": "tfcflorae:block/wood/lectern/brazilwood/sides",
+    "top": "tfcflorae:block/wood/lectern/brazilwood/top",
+    "particle": "tfcflorae:block/wood/lectern/brazilwood/sides"
+  }
+}

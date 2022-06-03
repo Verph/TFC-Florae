@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/mangrove",
+  "result": "tfcflorae:wood/planks/mangrove_stairs",
+  "mode": "stair"
+}

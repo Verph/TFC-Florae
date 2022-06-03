@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:chisel",
+  "ingredient": "tfcflorae:wood/planks/bald_cypress",
+  "result": "tfcflorae:wood/planks/bald_cypress_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/planks/bald_cypress_slab"
+  }
+}

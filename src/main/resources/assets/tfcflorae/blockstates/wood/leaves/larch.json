@@ -1,50 +1,8 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "leaves",
-    "textures": {
-      "all": "tfcflorae:blocks/wood/leaves/larch"
-    }
-  },
+  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "normal": [
-      {}
-    ],
-    "inventory": {
-      "model": "leaves",
-      "transform": "forge:default-block"
-    },
-    "state": {
-      "normal": {
-        "model": "leaves"
-      },
-      "flowering": {
-        "model": "leaves",
-        "textures": {
-          "all": "tfcflorae:blocks/wood/leaves/larch"
-        },
-        "submodel": "leaves"
-      },
-      "fruit": {
-        "model": "leaves",
-        "textures": {
-          "all": "tfcflorae:blocks/wood/leaves/larch"
-        },
-        "submodel": "leaves"
-      },
-      "autumn": {
-        "model": "leaves",
-        "textures": {
-          "all": "tfcflorae:blocks/wood/leaves/yellow_larch"
-        },
-        "submodel": "leaves"
-      },
-      "winter": {
-        "model": "tfcflorae:wood/branch/branch",
-        "textures": {
-          "all": "tfcflorae:blocks/wood/branch/branch"
-        }
-      }
+    "": {
+      "model": "tfcflorae:block/wood/leaves/larch"
     }
   }
 }

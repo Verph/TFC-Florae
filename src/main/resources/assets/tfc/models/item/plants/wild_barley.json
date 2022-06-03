@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfc:blocks/plants/wild_barley/wild_barley_3_tuft"
-  }
-}

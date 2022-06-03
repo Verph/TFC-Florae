@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/eucalyptus",
+    "tfcflorae:wood/stripped_log/eucalyptus",
+    "tfcflorae:wood/wood/eucalyptus",
+    "tfcflorae:wood/stripped_wood/eucalyptus"
+  ]
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfc:blocks/plants/jade_vine/jade_vine_item"
-  }
-}

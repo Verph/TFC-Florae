@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/door_bottom",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/african_padauk_door_top",
+    "bottom": "tfcflorae:block/wood/planks/african_padauk_door_bottom"
+  }
+}

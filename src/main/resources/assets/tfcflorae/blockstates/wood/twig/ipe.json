@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/ipe",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/ipe"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/ipe",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/ipe",
+        "y": 270
+      }
+    ]
+  }
+}

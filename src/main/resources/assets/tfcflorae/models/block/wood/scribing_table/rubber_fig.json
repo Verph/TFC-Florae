@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/rubber_fig",
+    "leg": "tfcflorae:block/wood/log/rubber_fig",
+    "side": "tfcflorae:block/wood/planks/rubber_fig",
+    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/rubber_fig"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/rosewood",
+    "tfcflorae:wood/stripped_log/rosewood",
+    "tfcflorae:wood/wood/rosewood",
+    "tfcflorae:wood/stripped_wood/rosewood"
+  ]
+}

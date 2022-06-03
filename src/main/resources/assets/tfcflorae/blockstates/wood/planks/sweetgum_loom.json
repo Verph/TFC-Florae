@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/planks/sweetgum_loom",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/planks/sweetgum_loom",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/planks/sweetgum_loom"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/planks/sweetgum_loom",
+      "y": 90
+    }
+  }
+}

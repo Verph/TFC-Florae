@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/syzygium",
+    "tfcflorae:wood/stripped_log/syzygium",
+    "tfcflorae:wood/wood/syzygium",
+    "tfcflorae:wood/stripped_wood/syzygium"
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "type": "tfcflorae:unmold_recipe_kaolinite_firmalife",
-  "ingredients": [
-    {
-      "item": "tfcflorae:ceramics/kaolinite/fired/mold/mallet_head"
-    }
-  ],
-  "result": "mallet_head"
-}
