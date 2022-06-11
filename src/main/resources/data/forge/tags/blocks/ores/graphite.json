@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/graphite/granite",
+    "tfcflorae:ore/graphite/diorite",
+    "tfcflorae:ore/graphite/gabbro",
+    "tfcflorae:ore/graphite/shale",
+    "tfcflorae:ore/graphite/claystone",
+    "tfcflorae:ore/graphite/limestone",
+    "tfcflorae:ore/graphite/conglomerate",
+    "tfcflorae:ore/graphite/dolomite",
+    "tfcflorae:ore/graphite/chert",
+    "tfcflorae:ore/graphite/chalk",
+    "tfcflorae:ore/graphite/rhyolite",
+    "tfcflorae:ore/graphite/basalt",
+    "tfcflorae:ore/graphite/andesite",
+    "tfcflorae:ore/graphite/dacite",
+    "tfcflorae:ore/graphite/quartzite",
+    "tfcflorae:ore/graphite/slate",
+    "tfcflorae:ore/graphite/phyllite",
+    "tfcflorae:ore/graphite/schist",
+    "tfcflorae:ore/graphite/gneiss",
+    "tfcflorae:ore/graphite/marble"
+  ]
+}

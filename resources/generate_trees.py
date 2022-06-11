@@ -1,4 +1,4 @@
-import os
+import os, csv
 from typing import Set, Any, Tuple, NamedTuple, Literal, Union
 
 from nbtlib import nbt
@@ -108,8 +108,7 @@ def main():
     print('Verifying tree structures')
 
     print('Tree sapling drop chances:')
-    for tree in NORMAL_TREES:
-        analyze_tree_leaves(tree)
+    analyze_tree_leaves(NORMAL_TREES)
 
     print('Making tree structures')
     for tree in NORMAL_TREES:
@@ -119,6 +118,10 @@ def main():
         make_tree_structures(tree, True)
 
     print('New = %d, Modified = %d, Unchanged = %d, Errors = %d' % (Count.NEW, Count.MODIFIED, Count.SKIPPED, Count.ERRORS))
+
+
+def gen_drop_rate():
+    analyze_tree_leaves(NORMAL_TREES)
 
 
 def make_tree_structures(tree: Tree, large: bool):
@@ -566,16 +569,22 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
         Count.ERRORS += 1
 
 
-def analyze_tree_leaves(tree: Tree):
-    if tree.feature == 'random':
-        leaves = count_leaves_in_random_tree(tree.variant, tree.count)
-    elif tree.feature == 'overlay':
-        leaves = count_leaves_in_overlay_tree(tree.variant)
-    else:
-        raise NotImplementedError
+def analyze_tree_leaves(treeList):
+    with open("Tree-sapling-drop.csv", "w", newline='') as file:
+        csvFile = csv.writer(file)
+        csvFile.writerow(["Tree_Name", "Sappling_Drop_Rate"])
 
-    # Every tree results in 2.5 saplings, on average, if every leaf was broken
-    print('%s: %.4f,' % (repr(tree.name), 2.5 / 0.1 + leaves))
+        for tree in treeList:
+            if tree.feature == 'random':
+                leaves = count_leaves_in_random_tree(tree.variant, tree.count)
+            elif tree.feature == 'overlay':
+                leaves = count_leaves_in_overlay_tree(tree.variant)
+            else:
+                raise NotImplementedError
+            
+            csvFile.writerow([repr(tree.name), 2.5 / 0.1 + leaves])
+            # Every tree results in 2.5 saplings, on average, if every leaf was broken
+            print('%s: %.4f,' % (repr(tree.name), 2.5 / 0.1 + leaves))
 
 
 def count_leaves_in_random_tree(base_name: str, count: int) -> float:

@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/halite/granite",
+    "tfcflorae:ore/halite/diorite",
+    "tfcflorae:ore/halite/gabbro",
+    "tfcflorae:ore/halite/shale",
+    "tfcflorae:ore/halite/claystone",
+    "tfcflorae:ore/halite/limestone",
+    "tfcflorae:ore/halite/conglomerate",
+    "tfcflorae:ore/halite/dolomite",
+    "tfcflorae:ore/halite/chert",
+    "tfcflorae:ore/halite/chalk",
+    "tfcflorae:ore/halite/rhyolite",
+    "tfcflorae:ore/halite/basalt",
+    "tfcflorae:ore/halite/andesite",
+    "tfcflorae:ore/halite/dacite",
+    "tfcflorae:ore/halite/quartzite",
+    "tfcflorae:ore/halite/slate",
+    "tfcflorae:ore/halite/phyllite",
+    "tfcflorae:ore/halite/schist",
+    "tfcflorae:ore/halite/gneiss",
+    "tfcflorae:ore/halite/marble"
+  ]
+}

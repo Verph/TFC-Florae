@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/borax/granite",
+    "tfcflorae:ore/borax/diorite",
+    "tfcflorae:ore/borax/gabbro",
+    "tfcflorae:ore/borax/shale",
+    "tfcflorae:ore/borax/claystone",
+    "tfcflorae:ore/borax/limestone",
+    "tfcflorae:ore/borax/conglomerate",
+    "tfcflorae:ore/borax/dolomite",
+    "tfcflorae:ore/borax/chert",
+    "tfcflorae:ore/borax/chalk",
+    "tfcflorae:ore/borax/rhyolite",
+    "tfcflorae:ore/borax/basalt",
+    "tfcflorae:ore/borax/andesite",
+    "tfcflorae:ore/borax/dacite",
+    "tfcflorae:ore/borax/quartzite",
+    "tfcflorae:ore/borax/slate",
+    "tfcflorae:ore/borax/phyllite",
+    "tfcflorae:ore/borax/schist",
+    "tfcflorae:ore/borax/gneiss",
+    "tfcflorae:ore/borax/marble"
+  ]
+}

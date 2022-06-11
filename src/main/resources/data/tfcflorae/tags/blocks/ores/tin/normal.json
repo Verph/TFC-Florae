@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/normal_cassiterite/granite",
+    "tfcflorae:ore/normal_cassiterite/diorite",
+    "tfcflorae:ore/normal_cassiterite/gabbro",
+    "tfcflorae:ore/normal_cassiterite/shale",
+    "tfcflorae:ore/normal_cassiterite/claystone",
+    "tfcflorae:ore/normal_cassiterite/limestone",
+    "tfcflorae:ore/normal_cassiterite/conglomerate",
+    "tfcflorae:ore/normal_cassiterite/dolomite",
+    "tfcflorae:ore/normal_cassiterite/chert",
+    "tfcflorae:ore/normal_cassiterite/chalk",
+    "tfcflorae:ore/normal_cassiterite/rhyolite",
+    "tfcflorae:ore/normal_cassiterite/basalt",
+    "tfcflorae:ore/normal_cassiterite/andesite",
+    "tfcflorae:ore/normal_cassiterite/dacite",
+    "tfcflorae:ore/normal_cassiterite/quartzite",
+    "tfcflorae:ore/normal_cassiterite/slate",
+    "tfcflorae:ore/normal_cassiterite/phyllite",
+    "tfcflorae:ore/normal_cassiterite/schist",
+    "tfcflorae:ore/normal_cassiterite/gneiss",
+    "tfcflorae:ore/normal_cassiterite/marble"
+  ]
+}

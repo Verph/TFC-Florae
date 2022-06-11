@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/wood/mahoe"
+    }
+  ],
+  "duration": 1100,
+  "temperature": 783
+}

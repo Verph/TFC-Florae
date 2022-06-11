@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfcflorae:chisel",
-  "ingredient": "tfcflorae:wood/planks/baobab",
-  "result": "tfcflorae:wood/planks/baobab_stairs",
-  "mode": "stair"
-}

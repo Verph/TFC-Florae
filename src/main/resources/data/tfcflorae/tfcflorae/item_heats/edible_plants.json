@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:plant/sago"
+    },
+    {
+      "item": "tfcflorae:plant/gutweed"
+    },
+    {
+      "item": "tfcflorae:plant/laminaria"
+    },
+    {
+      "item": "tfcflorae:plant/milfoil"
+    },
+    {
+      "item": "tfcflorae:plant/giant_kelp_flower"
+    },
+    {
+      "item": "tfcflorae:groundcover/seaweed"
+    }
+  ],
+  "heat_capacity": 1
+}

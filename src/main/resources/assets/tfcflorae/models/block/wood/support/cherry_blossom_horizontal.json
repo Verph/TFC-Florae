@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/wood/support/horizontal",
+  "parent": "tfcflorae:block/wood/support/horizontal",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/cherry_blossom",
     "particle": "tfcflorae:block/wood/sheet/cherry_blossom"

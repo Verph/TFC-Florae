@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:stone/hammer/sedimentary",
+    "tfcflorae:stone/hammer/metamorphic",
+    "tfcflorae:stone/hammer/igneous_extrusive",
+    "tfcflorae:stone/hammer/igneous_intrusive",
+    "tfcflorae:metal/hammer/bismuth_bronze",
+    "tfcflorae:metal/hammer/black_bronze",
+    "tfcflorae:metal/hammer/bronze",
+    "tfcflorae:metal/hammer/copper",
+    "tfcflorae:metal/hammer/wrought_iron",
+    "tfcflorae:metal/hammer/steel",
+    "tfcflorae:metal/hammer/black_steel",
+    "tfcflorae:metal/hammer/blue_steel",
+    "tfcflorae:metal/hammer/red_steel"
+  ]
+}

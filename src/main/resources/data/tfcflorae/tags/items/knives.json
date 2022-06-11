@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:stone/knife/sedimentary",
+    "tfcflorae:stone/knife/metamorphic",
+    "tfcflorae:stone/knife/igneous_extrusive",
+    "tfcflorae:stone/knife/igneous_intrusive",
+    "tfcflorae:metal/knife/bismuth_bronze",
+    "tfcflorae:metal/knife/black_bronze",
+    "tfcflorae:metal/knife/bronze",
+    "tfcflorae:metal/knife/copper",
+    "tfcflorae:metal/knife/wrought_iron",
+    "tfcflorae:metal/knife/steel",
+    "tfcflorae:metal/knife/black_steel",
+    "tfcflorae:metal/knife/blue_steel",
+    "tfcflorae:metal/knife/red_steel"
+  ]
+}

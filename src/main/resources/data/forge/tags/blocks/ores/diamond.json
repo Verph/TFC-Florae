@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/diamond/granite",
+    "tfcflorae:ore/diamond/diorite",
+    "tfcflorae:ore/diamond/gabbro",
+    "tfcflorae:ore/diamond/shale",
+    "tfcflorae:ore/diamond/claystone",
+    "tfcflorae:ore/diamond/limestone",
+    "tfcflorae:ore/diamond/conglomerate",
+    "tfcflorae:ore/diamond/dolomite",
+    "tfcflorae:ore/diamond/chert",
+    "tfcflorae:ore/diamond/chalk",
+    "tfcflorae:ore/diamond/rhyolite",
+    "tfcflorae:ore/diamond/basalt",
+    "tfcflorae:ore/diamond/andesite",
+    "tfcflorae:ore/diamond/dacite",
+    "tfcflorae:ore/diamond/quartzite",
+    "tfcflorae:ore/diamond/slate",
+    "tfcflorae:ore/diamond/phyllite",
+    "tfcflorae:ore/diamond/schist",
+    "tfcflorae:ore/diamond/gneiss",
+    "tfcflorae:ore/diamond/marble"
+  ]
+}

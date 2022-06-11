@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/zebrawood"
+    }
+  ],
+  "duration": 1570,
+  "temperature": 822
+}

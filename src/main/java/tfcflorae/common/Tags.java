@@ -11,10 +11,10 @@ public class Tags
 {
     public static class Blocks
     {
-        public static final TagKey<Block> OVEN_BLOCKS = create("oven_blocks");
+        /*public static final TagKey<Block> OVEN_BLOCKS = create("oven_blocks");
         public static final TagKey<Block> OVEN_INSULATION = create("oven_insulation");
         public static final TagKey<Block> CHIMNEYS = create("chimneys");
-        public static final TagKey<Block> GREENHOUSE = create("greenhouse");
+        public static final TagKey<Block> GREENHOUSE = create("greenhouse");*/
 
         private static TagKey<Block> create(String id)
         {

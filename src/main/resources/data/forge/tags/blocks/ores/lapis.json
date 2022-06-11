@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/lapis_lazuli/granite",
+    "tfcflorae:ore/lapis_lazuli/diorite",
+    "tfcflorae:ore/lapis_lazuli/gabbro",
+    "tfcflorae:ore/lapis_lazuli/shale",
+    "tfcflorae:ore/lapis_lazuli/claystone",
+    "tfcflorae:ore/lapis_lazuli/limestone",
+    "tfcflorae:ore/lapis_lazuli/conglomerate",
+    "tfcflorae:ore/lapis_lazuli/dolomite",
+    "tfcflorae:ore/lapis_lazuli/chert",
+    "tfcflorae:ore/lapis_lazuli/chalk",
+    "tfcflorae:ore/lapis_lazuli/rhyolite",
+    "tfcflorae:ore/lapis_lazuli/basalt",
+    "tfcflorae:ore/lapis_lazuli/andesite",
+    "tfcflorae:ore/lapis_lazuli/dacite",
+    "tfcflorae:ore/lapis_lazuli/quartzite",
+    "tfcflorae:ore/lapis_lazuli/slate",
+    "tfcflorae:ore/lapis_lazuli/phyllite",
+    "tfcflorae:ore/lapis_lazuli/schist",
+    "tfcflorae:ore/lapis_lazuli/gneiss",
+    "tfcflorae:ore/lapis_lazuli/marble"
+  ]
+}

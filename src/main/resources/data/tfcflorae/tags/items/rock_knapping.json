@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/granite",
+    "tfcflorae:rock/loose/diorite",
+    "tfcflorae:rock/loose/gabbro",
+    "tfcflorae:rock/loose/shale",
+    "tfcflorae:rock/loose/claystone",
+    "tfcflorae:rock/loose/limestone",
+    "tfcflorae:rock/loose/conglomerate",
+    "tfcflorae:rock/loose/dolomite",
+    "tfcflorae:rock/loose/chert",
+    "tfcflorae:rock/loose/chalk",
+    "tfcflorae:rock/loose/rhyolite",
+    "tfcflorae:rock/loose/basalt",
+    "tfcflorae:rock/loose/andesite",
+    "tfcflorae:rock/loose/dacite",
+    "tfcflorae:rock/loose/quartzite",
+    "tfcflorae:rock/loose/slate",
+    "tfcflorae:rock/loose/phyllite",
+    "tfcflorae:rock/loose/schist",
+    "tfcflorae:rock/loose/gneiss",
+    "tfcflorae:rock/loose/marble"
+  ]
+}

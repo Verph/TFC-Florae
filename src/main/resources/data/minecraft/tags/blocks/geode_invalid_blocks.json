@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:sea_ice",
+    "tfcflorae:fluid/salt_water",
+    "tfcflorae:fluid/river_water",
+    "tfcflorae:fluid/spring_water"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/saltpeter/granite",
+    "tfcflorae:ore/saltpeter/diorite",
+    "tfcflorae:ore/saltpeter/gabbro",
+    "tfcflorae:ore/saltpeter/shale",
+    "tfcflorae:ore/saltpeter/claystone",
+    "tfcflorae:ore/saltpeter/limestone",
+    "tfcflorae:ore/saltpeter/conglomerate",
+    "tfcflorae:ore/saltpeter/dolomite",
+    "tfcflorae:ore/saltpeter/chert",
+    "tfcflorae:ore/saltpeter/chalk",
+    "tfcflorae:ore/saltpeter/rhyolite",
+    "tfcflorae:ore/saltpeter/basalt",
+    "tfcflorae:ore/saltpeter/andesite",
+    "tfcflorae:ore/saltpeter/dacite",
+    "tfcflorae:ore/saltpeter/quartzite",
+    "tfcflorae:ore/saltpeter/slate",
+    "tfcflorae:ore/saltpeter/phyllite",
+    "tfcflorae:ore/saltpeter/schist",
+    "tfcflorae:ore/saltpeter/gneiss",
+    "tfcflorae:ore/saltpeter/marble"
+  ]
+}

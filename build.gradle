@@ -30,7 +30,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 version = '1.0'
 group = 'tfcflorae'
-archivesBaseName = 'tfcflorae'
+archivesBaseName = "TFCFlorae-${minecraft_version}"
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -38,7 +38,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 minecraft {
     mappings channel: 'parchment', version: '2022.03.13-1.18.2'
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
     runs {
         client {
@@ -49,6 +49,7 @@ minecraft {
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            jvmArgs '-ea', '-Xmx8G', '-Xms8G'
 
             mods {
                 tfcflorae {

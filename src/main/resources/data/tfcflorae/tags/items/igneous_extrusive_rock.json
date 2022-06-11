@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/rhyolite",
+    "tfcflorae:rock/loose/basalt",
+    "tfcflorae:rock/loose/andesite",
+    "tfcflorae:rock/loose/dacite"
+  ]
+}

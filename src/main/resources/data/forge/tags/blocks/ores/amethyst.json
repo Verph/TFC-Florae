@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/amethyst/granite",
+    "tfcflorae:ore/amethyst/diorite",
+    "tfcflorae:ore/amethyst/gabbro",
+    "tfcflorae:ore/amethyst/shale",
+    "tfcflorae:ore/amethyst/claystone",
+    "tfcflorae:ore/amethyst/limestone",
+    "tfcflorae:ore/amethyst/conglomerate",
+    "tfcflorae:ore/amethyst/dolomite",
+    "tfcflorae:ore/amethyst/chert",
+    "tfcflorae:ore/amethyst/chalk",
+    "tfcflorae:ore/amethyst/rhyolite",
+    "tfcflorae:ore/amethyst/basalt",
+    "tfcflorae:ore/amethyst/andesite",
+    "tfcflorae:ore/amethyst/dacite",
+    "tfcflorae:ore/amethyst/quartzite",
+    "tfcflorae:ore/amethyst/slate",
+    "tfcflorae:ore/amethyst/phyllite",
+    "tfcflorae:ore/amethyst/schist",
+    "tfcflorae:ore/amethyst/gneiss",
+    "tfcflorae:ore/amethyst/marble"
+  ]
+}

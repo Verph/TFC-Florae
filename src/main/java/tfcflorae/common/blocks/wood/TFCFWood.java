@@ -31,7 +31,7 @@ import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 import org.jetbrains.annotations.Nullable;
 
-import tfcflorae.common.blocks.Blocks;
+import tfcflorae.common.blocks.TFCFBlocks;
 
 /**
  * Default wood types used for block registration calls.
@@ -170,105 +170,6 @@ public enum TFCFWood implements RegistryWood
 
     public Supplier<Block> getBlock(BlockType type)
     {
-        return Blocks.WOODS.get(this).get(type);
+        return TFCFBlocks.WOODS.get(this).get(type);
     }
-
-    /*public enum BlockType
-    {
-        LOG((self, wood) -> new LogBlock(fire(Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(2.0F).sound(SoundType.WOOD).requiresCorrectToolForDrops()), wood.getBlock(self.stripped())), false),
-        STRIPPED_LOG(wood -> new LogBlock(fire(Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(2.0F).sound(SoundType.WOOD).requiresCorrectToolForDrops()), null), false),
-        WOOD((self, wood) -> new LogBlock(fire(properties(wood).strength(2.0F).requiresCorrectToolForDrops()), wood.getBlock(self.stripped())), false),
-        STRIPPED_WOOD(wood -> new LogBlock(fire(properties(wood).strength(2.0F).requiresCorrectToolForDrops()), null), false),
-        LEAVES(wood -> TFCLeavesBlock.create(fire(Properties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(Blocks::never)), wood.maxDecayDistance()), false),
-        PLANKS(wood -> new ExtendedBlock(fire(properties(wood).strength(2.0F, 3.0F))), false),
-        SAPLING(wood -> new TFCSaplingBlock(wood.tree(), fire(Properties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS)).blockEntity(TFCBlockEntities.TICK_COUNTER), wood.daysToGrow()), false),
-        BOOKSHELF(wood -> new ExtendedBlock(fire(properties(wood).strength(2.0F, 3.0F))), true),
-        DOOR(wood -> new TFCDoorBlock(fire(properties(wood).strength(3.0F).noOcclusion())), true),
-        TRAPDOOR(wood -> new TFCTrapDoorBlock(fire(properties(wood).strength(3.0F).noOcclusion())), true),
-        FENCE(wood -> new TFCFenceBlock(fire(properties(wood).strength(2.0F, 3.0F))), true),
-        LOG_FENCE(wood -> new TFCFenceBlock(fire(properties(wood).strength(2.0F, 3.0F))), true),
-        FENCE_GATE(wood -> new TFCFenceGateBlock(fire(properties(wood).strength(2.0F, 3.0F))), true),
-        BUTTON(wood -> new TFCWoodButtonBlock(fire(Properties.of(Material.DECORATION).noCollission().strength(0.5F).sound(SoundType.WOOD))), true),
-        PRESSURE_PLATE(wood -> new TFCPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, fire(properties(wood).noCollission().strength(0.5F).sound(SoundType.WOOD))), true),
-        SLAB(wood -> new TFCSlabBlock(fire(properties(wood).strength(2.0F, 3.0F))), true),
-        STAIRS(wood -> new TFCStairBlock(() -> wood.getBlock(PLANKS).get().defaultBlockState(), fire(properties(wood).strength(2.0F, 3.0F).sound(SoundType.WOOD))), true),
-        TOOL_RACK(wood -> new ToolRackBlock(fire(properties(wood).strength(2.0F).noOcclusion()).blockEntity(TFCBlockEntities.TOOL_RACK)), true),
-        TWIG(wood -> GroundcoverBlock.twig(fire(Properties.of(Material.GRASS).strength(0.05F, 0.0F).sound(SoundType.WOOD).noCollission())), false),
-        FALLEN_LEAVES(wood -> new FallenLeavesBlock(fire(Properties.of(Material.GRASS).strength(0.05F, 0.0F).noOcclusion().sound(SoundType.CROP))), false),
-        VERTICAL_SUPPORT(wood -> new VerticalSupportBlock(fire(properties(wood).strength(1.0F).noOcclusion()).flammable(60, 60)), false),
-        HORIZONTAL_SUPPORT(wood -> new HorizontalSupportBlock(fire(properties(wood).strength(1.0F).noOcclusion()).flammable(60, 60)), false),
-        WORKBENCH(wood -> new TFCCraftingTableBlock(fire(properties(wood).strength(2.5F)).flammable(60, 30)), true),
-        TRAPPED_CHEST((self, wood) -> new TFCTrappedChestBlock(fire(properties(wood).strength(2.5F)).flammable(60, 30).blockEntity(TFCBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), false, ChestBlockItem::new),
-        CHEST((self, wood) -> new TFCChestBlock(fire(properties(wood).strength(2.5F)).flammable(60, 30).blockEntity(TFCBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), false, ChestBlockItem::new),
-        LOOM(wood -> new TFCLoomBlock(fire(properties(wood).strength(2.5F).noOcclusion()).flammable(60, 30).blockEntity(TFCBlockEntities.LOOM).ticks(LoomBlockEntity::tick), Helpers.identifier("block/wood/planks/" + wood.getSerializedName())), true),
-        SLUICE(wood -> new SluiceBlock(fire(properties(wood).strength(3F).noOcclusion()).flammable(30, 30).blockEntity(TFCBlockEntities.SLUICE).serverTicks(SluiceBlockEntity::serverTick)), false),
-        SIGN(wood -> new TFCStandingSignBlock(fire(properties(wood).noCollission().strength(1F)).flammable(60, 30).blockEntity(TFCBlockEntities.SIGN)), true),
-        WALL_SIGN(wood -> new TFCWallSignBlock(fire(properties(wood).noCollission().strength(1F).lootFrom(wood.getBlock(SIGN))).flammable(60, 30).blockEntity(TFCBlockEntities.SIGN)), true),
-        BARREL((self, wood) -> new BarrelBlock(fire(properties(wood).strength(2.5f)).flammable(60, 30).blockEntity(TFCBlockEntities.BARREL).serverTicks(BarrelBlockEntity::serverTick)), false),
-        LECTERN(wood -> new TFCLecternBlock(ExtendedProperties.of(properties(wood).noCollission().strength(2.5F)).flammable(60, 30).blockEntity(TFCBlockEntities.LECTERN)), false),
-        SCRIBING_TABLE(wood -> new ScribingTableBlock(ExtendedProperties.of(properties(wood).noOcclusion().strength(2.5F)).flammable(60, 30)), false);
-
-        private static Properties properties(RegistryWood wood)
-        {
-            return Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD);
-        }
-
-        private final BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory;
-        private final boolean isPlanksVariant;
-        private final BiFunction<BlockType, RegistryWood, Block> blockFactory;
-
-        BlockType(Function<RegistryWood, Block> blockFactory, boolean isPlanksVariant)
-        {
-            this((self, wood) -> blockFactory.apply(wood), isPlanksVariant);
-        }
-
-        BlockType(BiFunction<BlockType, RegistryWood, Block> blockFactory, boolean isPlanksVariant)
-        {
-            this(blockFactory, isPlanksVariant, BlockItem::new);
-        }
-
-        BlockType(BiFunction<BlockType, RegistryWood, Block> blockFactory, boolean isPlanksVariant, BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory)
-        {
-            this.blockFactory = blockFactory;
-            this.isPlanksVariant = isPlanksVariant;
-            this.blockItemFactory = blockItemFactory;
-        }
-
-        @Nullable
-        public Function<Block, BlockItem> createBlockItem(Item.Properties properties)
-        {
-            return needsItem() ? block -> blockItemFactory.apply(block, properties) : null;
-        }
-
-        public String nameFor(Wood wood)
-        {
-            return (isPlanksVariant ? "wood/planks/" + wood.name() + "_" + name() : "wood/" + name() + "/" + wood.name()).toLowerCase(Locale.ROOT);
-        }
-
-        public boolean needsItem()
-        {
-            return this != VERTICAL_SUPPORT && this != HORIZONTAL_SUPPORT && this != SIGN && this != WALL_SIGN;
-        }
-
-        private BlockType stripped()
-        {
-            return switch (this)
-                {
-                    case LOG -> STRIPPED_LOG;
-                    case WOOD -> STRIPPED_WOOD;
-                    default ->
-                        throw new IllegalStateException("Block type " + name() + " does not have a stripped variant");
-                };
-        }
-
-        public Supplier<Block> create(RegistryWood wood)
-        {
-            return () -> blockFactory.apply(this, wood);
-        }
-
-        private static ExtendedProperties fire(Properties properties)
-        {
-            return ExtendedProperties.of(properties).flammable(60, 30);
-        }
-    }*/
 }

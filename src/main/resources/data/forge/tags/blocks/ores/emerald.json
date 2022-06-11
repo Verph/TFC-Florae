@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/emerald/granite",
+    "tfcflorae:ore/emerald/diorite",
+    "tfcflorae:ore/emerald/gabbro",
+    "tfcflorae:ore/emerald/shale",
+    "tfcflorae:ore/emerald/claystone",
+    "tfcflorae:ore/emerald/limestone",
+    "tfcflorae:ore/emerald/conglomerate",
+    "tfcflorae:ore/emerald/dolomite",
+    "tfcflorae:ore/emerald/chert",
+    "tfcflorae:ore/emerald/chalk",
+    "tfcflorae:ore/emerald/rhyolite",
+    "tfcflorae:ore/emerald/basalt",
+    "tfcflorae:ore/emerald/andesite",
+    "tfcflorae:ore/emerald/dacite",
+    "tfcflorae:ore/emerald/quartzite",
+    "tfcflorae:ore/emerald/slate",
+    "tfcflorae:ore/emerald/phyllite",
+    "tfcflorae:ore/emerald/schist",
+    "tfcflorae:ore/emerald/gneiss",
+    "tfcflorae:ore/emerald/marble"
+  ]
+}

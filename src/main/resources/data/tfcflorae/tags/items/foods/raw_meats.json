@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/beef",
+    "tfcflorae:food/pork",
+    "tfcflorae:food/chicken",
+    "tfcflorae:food/mutton",
+    "tfcflorae:food/bluegill",
+    "tfcflorae:food/shellfish",
+    "tfcflorae:food/cod",
+    "tfcflorae:food/salmon",
+    "tfcflorae:food/tropical_fish",
+    "tfcflorae:food/bear",
+    "tfcflorae:food/calamari",
+    "tfcflorae:food/horse_meat",
+    "tfcflorae:food/turtle",
+    "tfcflorae:food/pheasant",
+    "tfcflorae:food/venison",
+    "tfcflorae:food/wolf",
+    "tfcflorae:food/rabbit",
+    "tfcflorae:food/hyena",
+    "tfcflorae:food/duck",
+    "tfcflorae:food/chevon",
+    "tfcflorae:food/gran_feline",
+    "tfcflorae:food/camelidae",
+    "tfcflorae:food/cooked_turtle"
+  ]
+}

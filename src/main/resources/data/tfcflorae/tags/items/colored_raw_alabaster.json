@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:alabaster/stained/orange_raw_alabaster",
+    "tfcflorae:alabaster/stained/magenta_raw_alabaster",
+    "tfcflorae:alabaster/stained/light_blue_raw_alabaster",
+    "tfcflorae:alabaster/stained/yellow_raw_alabaster",
+    "tfcflorae:alabaster/stained/lime_raw_alabaster",
+    "tfcflorae:alabaster/stained/pink_raw_alabaster",
+    "tfcflorae:alabaster/stained/gray_raw_alabaster",
+    "tfcflorae:alabaster/stained/light_gray_raw_alabaster",
+    "tfcflorae:alabaster/stained/cyan_raw_alabaster",
+    "tfcflorae:alabaster/stained/purple_raw_alabaster",
+    "tfcflorae:alabaster/stained/blue_raw_alabaster",
+    "tfcflorae:alabaster/stained/brown_raw_alabaster",
+    "tfcflorae:alabaster/stained/green_raw_alabaster",
+    "tfcflorae:alabaster/stained/red_raw_alabaster",
+    "tfcflorae:alabaster/stained/black_raw_alabaster"
+  ]
+}

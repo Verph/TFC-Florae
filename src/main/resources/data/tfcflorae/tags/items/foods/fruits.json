@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/banana",
+    "tfcflorae:food/blackberry",
+    "tfcflorae:food/blueberry",
+    "tfcflorae:food/bunchberry",
+    "tfcflorae:food/cherry",
+    "tfcflorae:food/cloudberry",
+    "tfcflorae:food/cranberry",
+    "tfcflorae:food/elderberry",
+    "tfcflorae:food/gooseberry",
+    "tfcflorae:food/green_apple",
+    "tfcflorae:food/lemon",
+    "tfcflorae:food/olive",
+    "tfcflorae:food/orange",
+    "tfcflorae:food/peach",
+    "tfcflorae:food/plum",
+    "tfcflorae:food/raspberry",
+    "tfcflorae:food/red_apple",
+    "tfcflorae:food/snowberry",
+    "tfcflorae:food/strawberry",
+    "tfcflorae:food/wintergreen_berry"
+  ]
+}

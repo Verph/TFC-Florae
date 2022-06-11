@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/gypsum/granite",
+    "tfcflorae:ore/gypsum/diorite",
+    "tfcflorae:ore/gypsum/gabbro",
+    "tfcflorae:ore/gypsum/shale",
+    "tfcflorae:ore/gypsum/claystone",
+    "tfcflorae:ore/gypsum/limestone",
+    "tfcflorae:ore/gypsum/conglomerate",
+    "tfcflorae:ore/gypsum/dolomite",
+    "tfcflorae:ore/gypsum/chert",
+    "tfcflorae:ore/gypsum/chalk",
+    "tfcflorae:ore/gypsum/rhyolite",
+    "tfcflorae:ore/gypsum/basalt",
+    "tfcflorae:ore/gypsum/andesite",
+    "tfcflorae:ore/gypsum/dacite",
+    "tfcflorae:ore/gypsum/quartzite",
+    "tfcflorae:ore/gypsum/slate",
+    "tfcflorae:ore/gypsum/phyllite",
+    "tfcflorae:ore/gypsum/schist",
+    "tfcflorae:ore/gypsum/gneiss",
+    "tfcflorae:ore/gypsum/marble"
+  ]
+}

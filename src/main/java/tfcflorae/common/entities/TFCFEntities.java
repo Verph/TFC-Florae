@@ -31,7 +31,7 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.blocks.wood.TFCFWood;
-import tfcflorae.common.items.Items;
+import tfcflorae.common.items.TFCFItems;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
@@ -56,7 +56,7 @@ public class TFCFEntities
 
     // Misc
     public static final Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> BOATS = Helpers.mapOfKeys(TFCFWood.class, wood ->
-        register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, Items.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10))
+        register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10))
     );
 
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder)

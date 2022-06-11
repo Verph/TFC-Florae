@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/normal_garnierite/granite",
+    "tfcflorae:ore/normal_garnierite/diorite",
+    "tfcflorae:ore/normal_garnierite/gabbro",
+    "tfcflorae:ore/normal_garnierite/shale",
+    "tfcflorae:ore/normal_garnierite/claystone",
+    "tfcflorae:ore/normal_garnierite/limestone",
+    "tfcflorae:ore/normal_garnierite/conglomerate",
+    "tfcflorae:ore/normal_garnierite/dolomite",
+    "tfcflorae:ore/normal_garnierite/chert",
+    "tfcflorae:ore/normal_garnierite/chalk",
+    "tfcflorae:ore/normal_garnierite/rhyolite",
+    "tfcflorae:ore/normal_garnierite/basalt",
+    "tfcflorae:ore/normal_garnierite/andesite",
+    "tfcflorae:ore/normal_garnierite/dacite",
+    "tfcflorae:ore/normal_garnierite/quartzite",
+    "tfcflorae:ore/normal_garnierite/slate",
+    "tfcflorae:ore/normal_garnierite/phyllite",
+    "tfcflorae:ore/normal_garnierite/schist",
+    "tfcflorae:ore/normal_garnierite/gneiss",
+    "tfcflorae:ore/normal_garnierite/marble"
+  ]
+}

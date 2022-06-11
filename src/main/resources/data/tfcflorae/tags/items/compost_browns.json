@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:groundcover/humus",
+    "tfcflorae:groundcover/dead_grass",
+    "tfcflorae:groundcover/driftwood",
+    "tfcflorae:groundcover/pinecone",
+    "minecraft:paper"
+  ]
+}

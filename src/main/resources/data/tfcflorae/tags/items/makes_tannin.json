@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/beech",
+    "tfcflorae:wood/wood/beech",
+    "tfcflorae:wood/log/common_oak",
+    "tfcflorae:wood/wood/common_oak",
+    "tfcflorae:wood/log/hornbeam",
+    "tfcflorae:wood/wood/hornbeam",
+    "tfcflorae:wood/log/juniper",
+    "tfcflorae:wood/wood/juniper",
+    "tfcflorae:wood/log/red_cedar",
+    "tfcflorae:wood/wood/red_cedar",
+    "tfcflorae:wood/log/red_elm",
+    "tfcflorae:wood/wood/red_elm",
+    "tfcflorae:wood/log/redwood",
+    "tfcflorae:wood/wood/redwood",
+    "tfcflorae:wood/log/sweetgum",
+    "tfcflorae:wood/wood/sweetgum",
+    "tfcflorae:wood/log/syzygium",
+    "tfcflorae:wood/wood/syzygium",
+    "tfcflorae:wood/log/white_elm",
+    "tfcflorae:wood/wood/white_elm",
+    "tfcflorae:wood/log/whitebeam",
+    "tfcflorae:wood/wood/whitebeam"
+  ]
+}

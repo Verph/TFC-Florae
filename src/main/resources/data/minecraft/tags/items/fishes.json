@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/cod",
+    "tfcflorae:food/cooked_cod",
+    "tfcflorae:food/salmon",
+    "tfcflorae:food/cooked_salmon",
+    "tfcflorae:food/tropical_fish",
+    "tfcflorae:food/cooked_tropical_fish",
+    "tfcflorae:food/bluegill",
+    "tfcflorae:food/cooked_bluegill",
+    "tfcflorae:food/shellfish",
+    "tfcflorae:food/cooked_shellfish"
+  ]
+}

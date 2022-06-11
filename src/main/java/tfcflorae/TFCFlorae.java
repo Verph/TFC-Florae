@@ -10,13 +10,11 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 
-import tfcflorae.client.ClientEventHandler;
-import tfcflorae.client.ClientEvents;
-import tfcflorae.client.ClientForgeEvents;
+import tfcflorae.client.*;
 import tfcflorae.common.ForgeEvents;
-import tfcflorae.common.blocks.Blocks;
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.entities.TFCFEntities;
-import tfcflorae.common.items.Items;
+import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.network.Packets;
 import tfcflorae.common.recipes.RecipeSerializers;
 import tfcflorae.common.recipes.RecipeTypes;
@@ -35,8 +33,8 @@ public class TFCFlorae
         bus.addListener(this::setup);
         bus.addListener(TFCFEntities::onEntityAttributeCreation);
 
-        Items.ITEMS.register(bus);
-        Blocks.BLOCKS.register(bus);
+        TFCFItems.ITEMS.register(bus);
+        TFCFBlocks.BLOCKS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
         RecipeTypes.RECIPE_TYPES.register(bus);
         RecipeSerializers.RECIPE_SERIALIZERS.register(bus);
@@ -48,7 +46,6 @@ public class TFCFlorae
         ForgeEvents.init();
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
-            ClientEvents.init();
             ClientEventHandler.init();
             ClientForgeEvents.init();
         }

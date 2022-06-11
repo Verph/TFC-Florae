@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/magma/granite",
+    "tfcflorae:rock/magma/diorite",
+    "tfcflorae:rock/magma/gabbro",
+    "tfcflorae:rock/magma/rhyolite",
+    "tfcflorae:rock/magma/basalt",
+    "tfcflorae:rock/magma/andesite",
+    "tfcflorae:rock/magma/dacite"
+  ]
+}

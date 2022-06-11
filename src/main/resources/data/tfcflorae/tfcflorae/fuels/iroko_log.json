@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/wood/iroko"
+    }
+  ],
+  "duration": 1200,
+  "temperature": 785
+}

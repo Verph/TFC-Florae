@@ -9,6 +9,60 @@ from mcresources.type_definitions import ResourceIdentifier, JsonObject, Json, V
 
 from constants import *
 
+def spawner(entity: str, weight: int = 1, min_count: int = 1, max_count: int = 4) -> Dict[str, Any]:
+    return {
+        'type': entity,
+        'weight': weight,
+        'minCount': min_count,
+        'maxCount': max_count
+    }
+
+OCEAN_AMBIENT: Dict[str, Dict[str, Any]] = {
+    'isopod': spawner('tfc:isopod'),
+    'lobster': spawner('tfc:lobster'),
+    'horseshoe_crab': spawner('tfc:horseshoe_crab'),
+    'cod': spawner('tfc:cod', weight=10),
+    'pufferfish': spawner('tfc:pufferfish', max_count=2),
+    'tropical_fish': spawner('tfc:tropical_fish', weight=10, max_count=6),
+    'jellyfish': spawner('tfc:jellyfish', min_count=2, max_count=6)
+}
+
+OCEAN_CREATURES: Dict[str, Dict[str, Any]] = {
+    'orca': spawner('tfc:orca', min_count=1, max_count=3),
+    'dolphin': spawner('tfc:dolphin', min_count=1, max_count=3),
+    'squid': spawner('tfc:squid', min_count=1, max_count=3)
+}
+
+UNDERGROUND_WATER_CREATURES: Dict[str, Dict[str, Any]] = {
+    'octopoteuthis': spawner('tfc:octopoteuthis', min_count=1, max_count=2)
+}
+
+LAKE_AMBIENT: Dict[str, Dict[str, Any]] = {
+    'salmon': spawner('tfc:salmon', min_count=2, max_count=6, weight=10),
+    'bluegill': spawner('tfc:bluegill', min_count=2, max_count=4, weight=10),
+    'crayfish': spawner('tfc:crayfish', min_count=1, max_count=4, weight=3)
+}
+
+LAKE_CREATURES: Dict[str, Dict[str, Any]] = {
+    'manatee': spawner('tfc:manatee', min_count=1, max_count=2)
+}
+
+SHORE_CREATURES: Dict[str, Dict[str, Any]] = {
+    'penguin': spawner('tfc:penguin', min_count=2, max_count=5),
+    'turtle': spawner('tfc:turtle', min_count=2, max_count=5)
+}
+
+LAND_CREATURES: Dict[str, Dict[str, Any]] = {
+    'pig': spawner('tfc:pig', min_count=1, max_count=4),
+    'cow': spawner('tfc:cow', min_count=1, max_count=4),
+    'alpaca': spawner('tfc:alpaca', min_count=1, max_count=4),
+    'chicken': spawner('tfc:chicken', min_count=2, max_count=6),
+    'polar_bear': spawner('tfc:polar_bear', min_count=1, max_count=1),
+    'grizzly_bear': spawner('tfc:grizzly_bear', min_count=1, max_count=1),
+    'black_bear': spawner('tfc:black_bear', min_count=1, max_count=1),
+    'lion': spawner('tfc:lion', min_count=1, max_count=3),
+    'sabertooth': spawner('tfc:sabertooth', min_count=1, max_count=1),
+}
 
 class BiomeTemperature(NamedTuple):
     id: str
@@ -358,6 +412,8 @@ def generate(rm: ResourceManager):
     forest_config(rm, 10, 220, -13, 9, 'white_cedar', True)
     forest_config(rm, 330, 500, 11, 35, 'willow', True)
     # flat: acacia, ash, chestnut, maple, sequoia, spruce, willow
+    
+    forest_config_florae(rm, 60, 240, 1, 15, 'african_padauk', True)
 
     configured_placed_feature(rm, 'forest', 'tfc:forest', {
         'entries': '#tfc:forest_trees',
@@ -388,7 +444,38 @@ def generate(rm: ResourceManager):
             }
         }
     })
-    rm.tag('forest_trees', 'worldgen/configured_feature', *['tfc:tree/%s_entry' % tree for tree in WOODS.keys()])
+    
+    configured_placed_feature_florae(rm, 'forest', 'tfcflorae:forest', {
+        'entries': '#tfcflorae:forest_trees',
+        'types': {
+            'none': {
+                'per_chunk_chance': 0
+            },
+            'sparse': {
+                'tree_count': uniform_int(1, 3),
+                'groundcover_count': 10,
+                'per_chunk_chance': 0.08,
+                'bush_count': 0,
+                'has_spoiler_old_growth': True
+            },
+            'edge': {
+                'tree_count': 2,
+                'groundcover_count': 15
+            },
+            'normal': {
+                'tree_count': 5,
+                'groundcover_count': 30,
+                'has_spoiler_old_growth': True
+            },
+            'old_growth': {
+                'tree_count': 7,
+                'groundcover_count': 40,
+                'allows_old_growth': True
+            }
+        }
+    })
+    rm.tag('forest_trees', 'worldgen/configured_feature', *['tfc:tree/%s_entry' % tree for tree in TFCWOODS.keys()])
+    rm.tag('forest_trees', 'worldgen/configured_feature', *['tfcflorae:tree/%s_entry' % tree for tree in WOODS.keys()])
 
     configured_placed_feature(rm, ('tree', 'acacia'), 'tfc:random_tree', random_config('acacia', 35, place=tree_placement_config(1, 3)))
     configured_placed_feature(rm, ('tree', 'acacia_large'), 'tfc:random_tree', random_config('acacia', 6, 2, '_large', place=tree_placement_config(2, 5)))
@@ -440,6 +527,8 @@ def generate(rm: ResourceManager):
     configured_placed_feature(rm, ('tree', 'willow'), 'tfc:random_tree', random_config('willow', 7, place=tree_placement_config(1, 3, True)))
     configured_placed_feature(rm, ('tree', 'willow_large'), 'tfc:random_tree', random_config('willow', 14, 1, '_large', place=tree_placement_config(2, 3, True)))
     configured_placed_feature(rm, ('tree', 'willow_dead'), 'tfc:random_tree', random_config('willow', 3, 1, '_dead', place=tree_placement_config(2, 3, True)))
+    
+    configured_placed_feature_florae(rm, ('tree', 'african_padauk'), 'tfcflorae:random_tree', random_config('african_padauk', 7, place=tree_placement_config(1, 3, True)))
 
     # Ore Veins
     for vein_name, vein in ORE_VEINS.items():
@@ -1042,6 +1131,31 @@ def forest_config(rm: ResourceManager, min_rain: float, max_rain: float, min_tem
     if old_growth:
         cfg['old_growth_tree'] = 'tfc:tree/%s_large' % tree
     rm.configured_feature('tree/%s_entry' % tree, 'tfc:forest_entry', cfg)
+
+def forest_config_florae(rm: ResourceManager, min_rain: float, max_rain: float, min_temp: float, max_temp: float, tree: str, old_growth: bool, old_growth_chance: int = None, spoiler_chance: int = None):
+    cfg = {
+        'min_rain': min_rain,
+        'max_rain': max_rain,
+        'min_temp': min_temp,
+        'max_temp': max_temp,
+        'groundcover': [{'block': 'tfcflorae:wood/twig/%s' % tree}],
+        'normal_tree': 'tfcflorae:tree/%s' % tree,
+        'dead_tree': 'tfcflorae:tree/%s_dead' % tree,
+        'old_growth_chance': old_growth_chance,
+        'spoiler_old_growth_chance': spoiler_chance,
+    }
+    if tree != 'palm':
+        cfg['groundcover'] += [{'block': 'tfcflorae:wood/fallen_leaves/%s' % tree}]
+    if tree not in ('acacia', 'willow'):
+        cfg['fallen_log'] = 'tfcflorae:wood/log/%s' % tree
+    else:
+        cfg['fallen_tree_chance'] = 0
+    if tree not in ('palm', 'rosewood', 'sycamore'):
+        cfg['bush_log'] = utils.block_state('tfcflorae:wood/wood/%s[natural=true,axis=y]' % tree)
+        cfg['bush_leaves'] = 'tfcflorae:wood/leaves/%s' % tree
+    if old_growth:
+        cfg['old_growth_tree'] = 'tfcflorae:tree/%s_large' % tree
+    rm.configured_feature('tree/%s_entry' % tree, 'tfcflorae:forest_entry', cfg)
 
 
 def overlay_config(tree: str, min_height: int, max_height: int, width: int = 1, radius: int = 1, suffix: str = '', place = None):

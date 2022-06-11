@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "tier": 1,
+  "fluid": "tfcflorae:metal/tin",
+  "melt_temperature": 230,
+  "heat_capacity": 0.14,
+  "ingots": {
+    "tag": "forge:ingots/tin"
+  },
+  "sheets": {
+    "tag": "forge:sheets/tin"
+  }
+}

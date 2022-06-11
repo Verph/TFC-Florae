@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/wood/support/vertical",
+  "parent": "tfcflorae:block/wood/support/vertical",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/yellow_meranti",
     "particle": "tfcflorae:block/wood/sheet/yellow_meranti"

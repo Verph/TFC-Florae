@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/cod",
+    "tfcflorae:food/salmon",
+    "tfcflorae:food/tropical_fish",
+    "tfcflorae:food/bluegill"
+  ]
+}

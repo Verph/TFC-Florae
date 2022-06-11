@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/rich_sphalerite/granite",
+    "tfcflorae:ore/rich_sphalerite/diorite",
+    "tfcflorae:ore/rich_sphalerite/gabbro",
+    "tfcflorae:ore/rich_sphalerite/shale",
+    "tfcflorae:ore/rich_sphalerite/claystone",
+    "tfcflorae:ore/rich_sphalerite/limestone",
+    "tfcflorae:ore/rich_sphalerite/conglomerate",
+    "tfcflorae:ore/rich_sphalerite/dolomite",
+    "tfcflorae:ore/rich_sphalerite/chert",
+    "tfcflorae:ore/rich_sphalerite/chalk",
+    "tfcflorae:ore/rich_sphalerite/rhyolite",
+    "tfcflorae:ore/rich_sphalerite/basalt",
+    "tfcflorae:ore/rich_sphalerite/andesite",
+    "tfcflorae:ore/rich_sphalerite/dacite",
+    "tfcflorae:ore/rich_sphalerite/quartzite",
+    "tfcflorae:ore/rich_sphalerite/slate",
+    "tfcflorae:ore/rich_sphalerite/phyllite",
+    "tfcflorae:ore/rich_sphalerite/schist",
+    "tfcflorae:ore/rich_sphalerite/gneiss",
+    "tfcflorae:ore/rich_sphalerite/marble"
+  ]
+}

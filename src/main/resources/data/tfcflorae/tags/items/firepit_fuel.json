@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#minecraft:logs",
+    "tfcflorae:peat",
+    "tfcflorae:peat_grass",
+    "tfcflorae:stick_bundle"
+  ]
+}

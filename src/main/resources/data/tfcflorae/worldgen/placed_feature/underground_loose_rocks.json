@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfcflorae:underground_loose_rocks",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 20
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": -59
+        },
+        "max_inclusive": {
+          "absolute": 63
+        }
+      }
+    }
+  ]
+}

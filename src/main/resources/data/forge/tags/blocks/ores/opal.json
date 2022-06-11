@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/opal/granite",
+    "tfcflorae:ore/opal/diorite",
+    "tfcflorae:ore/opal/gabbro",
+    "tfcflorae:ore/opal/shale",
+    "tfcflorae:ore/opal/claystone",
+    "tfcflorae:ore/opal/limestone",
+    "tfcflorae:ore/opal/conglomerate",
+    "tfcflorae:ore/opal/dolomite",
+    "tfcflorae:ore/opal/chert",
+    "tfcflorae:ore/opal/chalk",
+    "tfcflorae:ore/opal/rhyolite",
+    "tfcflorae:ore/opal/basalt",
+    "tfcflorae:ore/opal/andesite",
+    "tfcflorae:ore/opal/dacite",
+    "tfcflorae:ore/opal/quartzite",
+    "tfcflorae:ore/opal/slate",
+    "tfcflorae:ore/opal/phyllite",
+    "tfcflorae:ore/opal/schist",
+    "tfcflorae:ore/opal/gneiss",
+    "tfcflorae:ore/opal/marble"
+  ]
+}

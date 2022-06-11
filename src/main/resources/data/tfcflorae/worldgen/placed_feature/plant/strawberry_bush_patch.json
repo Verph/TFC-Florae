@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfcflorae:plant/strawberry_bush_patch",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 5,
+      "max_temperature": 28,
+      "min_rainfall": 100,
+      "max_rainfall": 500,
+      "min_forest": "none",
+      "max_forest": "sparse"
+    }
+  ]
+}

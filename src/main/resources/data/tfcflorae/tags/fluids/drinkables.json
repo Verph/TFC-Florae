@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "minecraft:water",
+    "tfcflorae:salt_water",
+    "tfcflorae:river_water",
+    "#tfcflorae:alcohols",
+    "#tfcflorae:milks"
+  ]
+}

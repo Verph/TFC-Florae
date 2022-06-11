@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/topaz/granite",
+    "tfcflorae:ore/topaz/diorite",
+    "tfcflorae:ore/topaz/gabbro",
+    "tfcflorae:ore/topaz/shale",
+    "tfcflorae:ore/topaz/claystone",
+    "tfcflorae:ore/topaz/limestone",
+    "tfcflorae:ore/topaz/conglomerate",
+    "tfcflorae:ore/topaz/dolomite",
+    "tfcflorae:ore/topaz/chert",
+    "tfcflorae:ore/topaz/chalk",
+    "tfcflorae:ore/topaz/rhyolite",
+    "tfcflorae:ore/topaz/basalt",
+    "tfcflorae:ore/topaz/andesite",
+    "tfcflorae:ore/topaz/dacite",
+    "tfcflorae:ore/topaz/quartzite",
+    "tfcflorae:ore/topaz/slate",
+    "tfcflorae:ore/topaz/phyllite",
+    "tfcflorae:ore/topaz/schist",
+    "tfcflorae:ore/topaz/gneiss",
+    "tfcflorae:ore/topaz/marble"
+  ]
+}

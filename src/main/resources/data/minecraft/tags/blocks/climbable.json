@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/hanging_vines",
+    "tfcflorae:plant/hanging_vines_plant",
+    "tfcflorae:plant/liana",
+    "tfcflorae:plant/liana_plant"
+  ]
+}

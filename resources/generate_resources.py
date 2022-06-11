@@ -11,9 +11,10 @@ from mcresources import ResourceManager, utils
 from mcresources.type_definitions import Json
 
 import assets
-#import data
+import data
 import recipes
-#import world_gen
+import world_gen
+import generate_trees
 
 from constants import *
 
@@ -29,9 +30,10 @@ class ModificationLoggingResourceManager(ResourceManager):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate resources for TFC')
+    parser = argparse.ArgumentParser(description='Generate resources for TFCFlorae')
     parser.add_argument('--clean', action='store_true', dest='clean', help='Clean all auto generated resources')
     parser.add_argument('--hotswap', type=str, default=None, help='A secondary target directory to write resources to, creates a resource hotswap.')
+    parser.add_argument('--genTree', type=bool, default=False, help='Generate tree resources, and saplings drop rate for normal trees', action=argparse.BooleanOptionalAction)
     args = parser.parse_args()
 
     rm = ResourceManager('tfcflorae', resource_dir='../src/main/resources')
@@ -48,7 +50,7 @@ def main():
         print('Clean Aborted')
         return
 
-    generate_all(rm)
+    generate_all(rm, args)
     print('New = %d, Modified = %d, Unchanged = %d, Errors = %d' % (rm.new_files, rm.modified_files, rm.unchanged_files, rm.error_files))
 
     if args.hotswap is not None:
@@ -58,13 +60,17 @@ def main():
         print('Hotswap Finished')
 
 
-def generate_all(rm: ResourceManager):
+def generate_all(rm: ResourceManager, args):
     # do simple lang keys first, because it's ordered intentionally
     rm.lang(DEFAULT_LANG)
 
+    #generate structures
+    if args.genTree:
+        generate_trees.main()
+
     # generic assets / data
     assets.generate(rm)
-    #data.generate(rm)
+    data.generate(rm)
     #world_gen.generate(rm)
     recipes.generate(rm)
 

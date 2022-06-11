@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/wood/support/connection",
+  "parent": "tfcflorae:block/wood/support/connection",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/logwood",
     "particle": "tfcflorae:block/wood/sheet/logwood"

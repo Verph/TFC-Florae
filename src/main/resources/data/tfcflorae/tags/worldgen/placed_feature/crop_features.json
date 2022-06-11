@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/wild_crop/barley_patch",
+    "tfcflorae:plant/wild_crop/oat_patch",
+    "tfcflorae:plant/wild_crop/rye_patch",
+    "tfcflorae:plant/wild_crop/maize_patch",
+    "tfcflorae:plant/wild_crop/wheat_patch",
+    "tfcflorae:plant/wild_crop/rice_patch",
+    "tfcflorae:plant/wild_crop/beet_patch",
+    "tfcflorae:plant/wild_crop/cabbage_patch",
+    "tfcflorae:plant/wild_crop/carrot_patch",
+    "tfcflorae:plant/wild_crop/garlic_patch",
+    "tfcflorae:plant/wild_crop/green_bean_patch",
+    "tfcflorae:plant/wild_crop/potato_patch",
+    "tfcflorae:plant/wild_crop/onion_patch",
+    "tfcflorae:plant/wild_crop/soybean_patch",
+    "tfcflorae:plant/wild_crop/squash_patch",
+    "tfcflorae:plant/wild_crop/sugarcane_patch",
+    "tfcflorae:plant/wild_crop/tomato_patch",
+    "tfcflorae:plant/wild_crop/jute_patch"
+  ]
+}

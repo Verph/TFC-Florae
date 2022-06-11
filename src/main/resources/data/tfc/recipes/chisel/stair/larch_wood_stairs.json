@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfcflorae:chisel",
-  "ingredient": "tfcflorae:wood/planks/larch",
-  "result": "tfcflorae:wood/planks/larch_stairs",
-  "mode": "stair"
-}

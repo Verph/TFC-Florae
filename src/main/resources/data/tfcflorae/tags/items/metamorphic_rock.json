@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/quartzite",
+    "tfcflorae:rock/loose/slate",
+    "tfcflorae:rock/loose/phyllite",
+    "tfcflorae:rock/loose/schist",
+    "tfcflorae:rock/loose/gneiss",
+    "tfcflorae:rock/loose/marble"
+  ]
+}

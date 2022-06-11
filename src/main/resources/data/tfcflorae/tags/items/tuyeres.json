@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:metal/tuyere/bismuth_bronze",
+    "tfcflorae:metal/tuyere/black_bronze",
+    "tfcflorae:metal/tuyere/bronze",
+    "tfcflorae:metal/tuyere/copper",
+    "tfcflorae:metal/tuyere/wrought_iron",
+    "tfcflorae:metal/tuyere/steel",
+    "tfcflorae:metal/tuyere/black_steel",
+    "tfcflorae:metal/tuyere/blue_steel",
+    "tfcflorae:metal/tuyere/red_steel"
+  ]
+}

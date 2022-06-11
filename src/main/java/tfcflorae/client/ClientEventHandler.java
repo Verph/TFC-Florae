@@ -26,10 +26,7 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import net.dries007.tfc.client.IngameOverlays;
-import net.dries007.tfc.client.RenderHelpers;
-import net.dries007.tfc.client.TFCColors;
-import net.dries007.tfc.client.TFCKeyBindings;
+import net.dries007.tfc.client.*;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.config.TFCConfig;
@@ -37,7 +34,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
-import tfcflorae.common.blocks.Blocks;
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
 
@@ -66,7 +63,7 @@ public class ClientEventHandler
         // Screens
         event.enqueueWork(() -> {
 
-            Blocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
+            TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
         });
 
         // Keybindings
@@ -81,7 +78,7 @@ public class ClientEventHandler
         final RenderType translucent = RenderType.translucent();
 
         // TFCFWood blocks
-        Blocks.WOODS.values().forEach(map -> {
+        TFCFBlocks.WOODS.values().forEach(map -> {
             Stream.of(SAPLING, DOOR, TRAPDOOR, FENCE, FENCE_GATE, BUTTON, PRESSURE_PLATE, SLAB, STAIRS, TWIG, BARREL, SCRIBING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
             Stream.of(LEAVES, FALLEN_LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
         });
@@ -125,7 +122,7 @@ public class ClientEventHandler
         final BlockColor foliageColor = (state, worldIn, pos, tintIndex) -> TFCColors.getFoliageColor(pos, tintIndex);
         final BlockColor seasonalFoliageColor = (state, worldIn, pos, tintIndex) -> TFCColors.getSeasonalFoliageColor(pos, tintIndex);
 
-        Blocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(LEAVES).get(), reg.get(FALLEN_LEAVES).get()));
+        TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(LEAVES).get(), reg.get(FALLEN_LEAVES).get()));
     }
 
     public static void registerColorHandlerItems(ColorHandlerEvent.Item event)
@@ -134,7 +131,7 @@ public class ClientEventHandler
         final ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
         final ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
 
-        Blocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
+        TFCFBlocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
     }
 
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event)

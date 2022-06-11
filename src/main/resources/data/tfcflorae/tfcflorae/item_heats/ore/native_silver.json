@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:ore/small_native_silver"
+    },
+    {
+      "item": "tfcflorae:ore/normal_native_silver"
+    },
+    {
+      "item": "tfcflorae:ore/poor_native_silver"
+    },
+    {
+      "item": "tfcflorae:ore/rich_native_silver"
+    }
+  ],
+  "heat_capacity": 0.48,
+  "forging_temperature": 576.6,
+  "welding_temperature": 768.8000000000001
+}

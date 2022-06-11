@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/pyrite/granite",
+    "tfcflorae:ore/pyrite/diorite",
+    "tfcflorae:ore/pyrite/gabbro",
+    "tfcflorae:ore/pyrite/shale",
+    "tfcflorae:ore/pyrite/claystone",
+    "tfcflorae:ore/pyrite/limestone",
+    "tfcflorae:ore/pyrite/conglomerate",
+    "tfcflorae:ore/pyrite/dolomite",
+    "tfcflorae:ore/pyrite/chert",
+    "tfcflorae:ore/pyrite/chalk",
+    "tfcflorae:ore/pyrite/rhyolite",
+    "tfcflorae:ore/pyrite/basalt",
+    "tfcflorae:ore/pyrite/andesite",
+    "tfcflorae:ore/pyrite/dacite",
+    "tfcflorae:ore/pyrite/quartzite",
+    "tfcflorae:ore/pyrite/slate",
+    "tfcflorae:ore/pyrite/phyllite",
+    "tfcflorae:ore/pyrite/schist",
+    "tfcflorae:ore/pyrite/gneiss",
+    "tfcflorae:ore/pyrite/marble"
+  ]
+}

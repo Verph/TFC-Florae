@@ -13,15 +13,4 @@ import static tfcflorae.TFCFlorae.MOD_ID;
 public class RecipeTypes
 {
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, MOD_ID);
-
-    /*private static <R extends Recipe<?>> RegistryObject<RecipeType<R>> register(String name)
-    {
-        return RECIPE_TYPES.register(name, () -> new RecipeType<>() {
-            @Override
-            public String toString()
-            {
-                return TFCFHelpers.identifier(name).toString();
-            }
-        });
-    }*/
 }

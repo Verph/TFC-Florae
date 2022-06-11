@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:metal/pickaxe/bismuth_bronze",
+    "tfcflorae:metal/pickaxe/black_bronze",
+    "tfcflorae:metal/pickaxe/bronze",
+    "tfcflorae:metal/pickaxe/copper",
+    "tfcflorae:metal/pickaxe/wrought_iron",
+    "tfcflorae:metal/pickaxe/steel",
+    "tfcflorae:metal/pickaxe/black_steel",
+    "tfcflorae:metal/pickaxe/blue_steel",
+    "tfcflorae:metal/pickaxe/red_steel"
+  ]
+}

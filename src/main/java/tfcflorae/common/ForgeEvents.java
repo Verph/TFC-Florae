@@ -12,7 +12,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.network.PacketDistributor;
 
-import tfcflorae.common.blocks.Blocks;
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.network.Packets;
 import net.dries007.tfc.util.events.StartFireEvent;
 

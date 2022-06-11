@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/pink_ivory"
+    },
+    {
+      "item": "tfcflorae:wood/wood/pink_ivory"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 773
+}

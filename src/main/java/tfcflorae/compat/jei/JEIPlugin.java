@@ -16,7 +16,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.TFCFHelpers;
-import tfcflorae.common.blocks.Blocks;
+
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;

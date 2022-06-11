@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "tier": 5,
+  "fluid": "tfcflorae:metal/weak_blue_steel",
+  "melt_temperature": 1540,
+  "heat_capacity": 0.35,
+  "ingots": {
+    "tag": "forge:ingots/weak_blue_steel"
+  },
+  "sheets": {
+    "tag": "forge:sheets/weak_blue_steel"
+  }
+}

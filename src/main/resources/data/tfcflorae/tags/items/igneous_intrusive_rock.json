@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/granite",
+    "tfcflorae:rock/loose/diorite",
+    "tfcflorae:rock/loose/gabbro"
+  ]
+}

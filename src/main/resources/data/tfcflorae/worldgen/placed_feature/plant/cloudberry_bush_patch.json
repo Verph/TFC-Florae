@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfcflorae:plant/cloudberry_bush_patch",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 3,
+      "max_temperature": 17,
+      "min_rainfall": 80,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "max_forest": "old_growth"
+    }
+  ]
+}

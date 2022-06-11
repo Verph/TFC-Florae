@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/sulfur/granite",
+    "tfcflorae:ore/sulfur/diorite",
+    "tfcflorae:ore/sulfur/gabbro",
+    "tfcflorae:ore/sulfur/shale",
+    "tfcflorae:ore/sulfur/claystone",
+    "tfcflorae:ore/sulfur/limestone",
+    "tfcflorae:ore/sulfur/conglomerate",
+    "tfcflorae:ore/sulfur/dolomite",
+    "tfcflorae:ore/sulfur/chert",
+    "tfcflorae:ore/sulfur/chalk",
+    "tfcflorae:ore/sulfur/rhyolite",
+    "tfcflorae:ore/sulfur/basalt",
+    "tfcflorae:ore/sulfur/andesite",
+    "tfcflorae:ore/sulfur/dacite",
+    "tfcflorae:ore/sulfur/quartzite",
+    "tfcflorae:ore/sulfur/slate",
+    "tfcflorae:ore/sulfur/phyllite",
+    "tfcflorae:ore/sulfur/schist",
+    "tfcflorae:ore/sulfur/gneiss",
+    "tfcflorae:ore/sulfur/marble"
+  ]
+}

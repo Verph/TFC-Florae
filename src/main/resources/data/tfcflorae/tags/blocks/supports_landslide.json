@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "minecraft:dirt_path",
+    "tfcflorae:grass_path/silt",
+    "tfcflorae:grass_path/loam",
+    "tfcflorae:grass_path/sandy_loam",
+    "tfcflorae:grass_path/silty_loam",
+    "tfcflorae:farmland/silt",
+    "tfcflorae:farmland/loam",
+    "tfcflorae:farmland/sandy_loam",
+    "tfcflorae:farmland/silty_loam"
+  ]
+}

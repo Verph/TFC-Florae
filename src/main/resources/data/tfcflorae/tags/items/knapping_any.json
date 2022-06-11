@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfcflorae:clay_knapping",
+    "#tfcflorae:fire_clay_knapping",
+    "#tfcflorae:leather_knapping",
+    "#tfcflorae:rock_knapping"
+  ]
+}

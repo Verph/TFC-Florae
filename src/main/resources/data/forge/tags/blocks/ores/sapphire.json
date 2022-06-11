@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/sapphire/granite",
+    "tfcflorae:ore/sapphire/diorite",
+    "tfcflorae:ore/sapphire/gabbro",
+    "tfcflorae:ore/sapphire/shale",
+    "tfcflorae:ore/sapphire/claystone",
+    "tfcflorae:ore/sapphire/limestone",
+    "tfcflorae:ore/sapphire/conglomerate",
+    "tfcflorae:ore/sapphire/dolomite",
+    "tfcflorae:ore/sapphire/chert",
+    "tfcflorae:ore/sapphire/chalk",
+    "tfcflorae:ore/sapphire/rhyolite",
+    "tfcflorae:ore/sapphire/basalt",
+    "tfcflorae:ore/sapphire/andesite",
+    "tfcflorae:ore/sapphire/dacite",
+    "tfcflorae:ore/sapphire/quartzite",
+    "tfcflorae:ore/sapphire/slate",
+    "tfcflorae:ore/sapphire/phyllite",
+    "tfcflorae:ore/sapphire/schist",
+    "tfcflorae:ore/sapphire/gneiss",
+    "tfcflorae:ore/sapphire/marble"
+  ]
+}

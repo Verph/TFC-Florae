@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:metal/scythe/bismuth_bronze",
+    "tfcflorae:metal/scythe/black_bronze",
+    "tfcflorae:metal/scythe/bronze",
+    "tfcflorae:metal/scythe/copper",
+    "tfcflorae:metal/scythe/wrought_iron",
+    "tfcflorae:metal/scythe/steel",
+    "tfcflorae:metal/scythe/black_steel",
+    "tfcflorae:metal/scythe/blue_steel",
+    "tfcflorae:metal/scythe/red_steel"
+  ]
+}

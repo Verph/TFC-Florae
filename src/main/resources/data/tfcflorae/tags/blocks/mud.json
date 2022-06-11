@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:mud/silt",
+    "tfcflorae:mud/loam",
+    "tfcflorae:mud/sandy_loam",
+    "tfcflorae:mud/silty_loam"
+  ]
+}

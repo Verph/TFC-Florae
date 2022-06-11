@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:metal/sword/bismuth_bronze",
+    "tfcflorae:metal/sword/black_bronze",
+    "tfcflorae:metal/sword/bronze",
+    "tfcflorae:metal/sword/copper",
+    "tfcflorae:metal/sword/wrought_iron",
+    "tfcflorae:metal/sword/steel",
+    "tfcflorae:metal/sword/black_steel",
+    "tfcflorae:metal/sword/blue_steel",
+    "tfcflorae:metal/sword/red_steel"
+  ]
+}

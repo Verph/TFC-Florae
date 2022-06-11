@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:reset_decay",
+  "conditions": [
+    {
+      "condition": "tfcflorae:always_true"
+    }
+  ]
+}

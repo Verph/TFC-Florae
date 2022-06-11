@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/shellfish",
+    "tfcflorae:groundcover/mollusk",
+    "tfcflorae:groundcover/clam",
+    "minecraft:scute",
+    "tfcflorae:rock/loose/limestone",
+    "tfcflorae:rock/loose/dolomite",
+    "tfcflorae:rock/loose/chalk",
+    "tfcflorae:rock/loose/marble"
+  ]
+}

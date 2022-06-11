@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/sylvite/granite",
+    "tfcflorae:ore/sylvite/diorite",
+    "tfcflorae:ore/sylvite/gabbro",
+    "tfcflorae:ore/sylvite/shale",
+    "tfcflorae:ore/sylvite/claystone",
+    "tfcflorae:ore/sylvite/limestone",
+    "tfcflorae:ore/sylvite/conglomerate",
+    "tfcflorae:ore/sylvite/dolomite",
+    "tfcflorae:ore/sylvite/chert",
+    "tfcflorae:ore/sylvite/chalk",
+    "tfcflorae:ore/sylvite/rhyolite",
+    "tfcflorae:ore/sylvite/basalt",
+    "tfcflorae:ore/sylvite/andesite",
+    "tfcflorae:ore/sylvite/dacite",
+    "tfcflorae:ore/sylvite/quartzite",
+    "tfcflorae:ore/sylvite/slate",
+    "tfcflorae:ore/sylvite/phyllite",
+    "tfcflorae:ore/sylvite/schist",
+    "tfcflorae:ore/sylvite/gneiss",
+    "tfcflorae:ore/sylvite/marble"
+  ]
+}

@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfcflorae:chisel",
-  "ingredient": "tfcflorae:wood/planks/angelim",
-  "result": "tfcflorae:wood/planks/angelim_stairs",
-  "mode": "stair"
-}

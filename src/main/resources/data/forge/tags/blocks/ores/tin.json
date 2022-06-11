@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfcflorae:ores/tin/poor",
+    "#tfcflorae:ores/tin/normal",
+    "#tfcflorae:ores/tin/rich"
+  ]
+}

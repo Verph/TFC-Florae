@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:stone/axe/sedimentary",
+    "tfcflorae:stone/axe/metamorphic",
+    "tfcflorae:stone/axe/igneous_extrusive",
+    "tfcflorae:stone/axe/igneous_intrusive",
+    "tfcflorae:metal/axe/bismuth_bronze",
+    "tfcflorae:metal/axe/black_bronze",
+    "tfcflorae:metal/axe/bronze",
+    "tfcflorae:metal/axe/copper",
+    "tfcflorae:metal/axe/wrought_iron",
+    "tfcflorae:metal/axe/steel",
+    "tfcflorae:metal/axe/black_steel",
+    "tfcflorae:metal/axe/blue_steel",
+    "tfcflorae:metal/axe/red_steel"
+  ]
+}

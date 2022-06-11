@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/barrel_sealed",
+  "parent": "tfcflorae:block/barrel_sealed",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/iroko",
     "planks": "tfcflorae:block/wood/planks/iroko",

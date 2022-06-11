@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/shale",
+    "tfcflorae:rock/loose/claystone",
+    "tfcflorae:rock/loose/limestone",
+    "tfcflorae:rock/loose/conglomerate",
+    "tfcflorae:rock/loose/dolomite",
+    "tfcflorae:rock/loose/chert",
+    "tfcflorae:rock/loose/chalk"
+  ]
+}

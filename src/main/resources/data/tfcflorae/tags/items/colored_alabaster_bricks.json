@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:alabaster/stained/orange_alabaster_bricks",
+    "tfcflorae:alabaster/stained/magenta_alabaster_bricks",
+    "tfcflorae:alabaster/stained/light_blue_alabaster_bricks",
+    "tfcflorae:alabaster/stained/yellow_alabaster_bricks",
+    "tfcflorae:alabaster/stained/lime_alabaster_bricks",
+    "tfcflorae:alabaster/stained/pink_alabaster_bricks",
+    "tfcflorae:alabaster/stained/gray_alabaster_bricks",
+    "tfcflorae:alabaster/stained/light_gray_alabaster_bricks",
+    "tfcflorae:alabaster/stained/cyan_alabaster_bricks",
+    "tfcflorae:alabaster/stained/purple_alabaster_bricks",
+    "tfcflorae:alabaster/stained/blue_alabaster_bricks",
+    "tfcflorae:alabaster/stained/brown_alabaster_bricks",
+    "tfcflorae:alabaster/stained/green_alabaster_bricks",
+    "tfcflorae:alabaster/stained/red_alabaster_bricks",
+    "tfcflorae:alabaster/stained/black_alabaster_bricks"
+  ]
+}

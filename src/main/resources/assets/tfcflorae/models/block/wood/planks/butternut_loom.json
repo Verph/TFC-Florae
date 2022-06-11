@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/loom",
+  "parent": "tfcflorae:block/loom",
   "textures": {
     "texture": "tfcflorae:block/wood/planks/butternut",
     "particle": "tfcflorae:block/wood/planks/butternut"

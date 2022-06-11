@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/smooth/granite_slab",
+    "tfcflorae:rock/smooth/diorite_slab",
+    "tfcflorae:rock/smooth/gabbro_slab",
+    "tfcflorae:rock/smooth/shale_slab",
+    "tfcflorae:rock/smooth/claystone_slab",
+    "tfcflorae:rock/smooth/limestone_slab",
+    "tfcflorae:rock/smooth/conglomerate_slab",
+    "tfcflorae:rock/smooth/dolomite_slab",
+    "tfcflorae:rock/smooth/chert_slab",
+    "tfcflorae:rock/smooth/chalk_slab",
+    "tfcflorae:rock/smooth/rhyolite_slab",
+    "tfcflorae:rock/smooth/basalt_slab",
+    "tfcflorae:rock/smooth/andesite_slab",
+    "tfcflorae:rock/smooth/dacite_slab",
+    "tfcflorae:rock/smooth/quartzite_slab",
+    "tfcflorae:rock/smooth/slate_slab",
+    "tfcflorae:rock/smooth/phyllite_slab",
+    "tfcflorae:rock/smooth/schist_slab",
+    "tfcflorae:rock/smooth/gneiss_slab",
+    "tfcflorae:rock/smooth/marble_slab"
+  ]
+}

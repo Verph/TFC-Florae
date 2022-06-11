@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:sand/brown",
+    "tfcflorae:sand/white",
+    "tfcflorae:sand/black",
+    "tfcflorae:sand/red",
+    "tfcflorae:sand/yellow",
+    "tfcflorae:sand/green",
+    "tfcflorae:sand/pink"
+  ]
+}

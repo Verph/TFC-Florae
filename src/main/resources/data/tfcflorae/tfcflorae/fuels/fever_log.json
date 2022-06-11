@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/fever"
+    },
+    {
+      "item": "tfcflorae:wood/wood/fever"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 590
+}

@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/log_fence_inventory",
+  "parent": "tfcflorae:block/log_fence_inventory",
   "textures": {
     "log": "tfcflorae:block/wood/log/jacaranda",
     "planks": "tfcflorae:block/wood/planks/jacaranda"

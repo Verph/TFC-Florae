@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/scribing_table",
+  "parent": "tfcflorae:block/scribing_table",
   "textures": {
     "top": "tfcflorae:block/wood/scribing_table/buxus",
     "leg": "tfcflorae:block/wood/log/buxus",

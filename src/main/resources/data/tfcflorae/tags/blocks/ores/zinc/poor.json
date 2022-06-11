@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/poor_sphalerite/granite",
+    "tfcflorae:ore/poor_sphalerite/diorite",
+    "tfcflorae:ore/poor_sphalerite/gabbro",
+    "tfcflorae:ore/poor_sphalerite/shale",
+    "tfcflorae:ore/poor_sphalerite/claystone",
+    "tfcflorae:ore/poor_sphalerite/limestone",
+    "tfcflorae:ore/poor_sphalerite/conglomerate",
+    "tfcflorae:ore/poor_sphalerite/dolomite",
+    "tfcflorae:ore/poor_sphalerite/chert",
+    "tfcflorae:ore/poor_sphalerite/chalk",
+    "tfcflorae:ore/poor_sphalerite/rhyolite",
+    "tfcflorae:ore/poor_sphalerite/basalt",
+    "tfcflorae:ore/poor_sphalerite/andesite",
+    "tfcflorae:ore/poor_sphalerite/dacite",
+    "tfcflorae:ore/poor_sphalerite/quartzite",
+    "tfcflorae:ore/poor_sphalerite/slate",
+    "tfcflorae:ore/poor_sphalerite/phyllite",
+    "tfcflorae:ore/poor_sphalerite/schist",
+    "tfcflorae:ore/poor_sphalerite/gneiss",
+    "tfcflorae:ore/poor_sphalerite/marble"
+  ]
+}

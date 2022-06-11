@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/poor_native_gold/granite",
+    "tfcflorae:ore/poor_native_gold/diorite",
+    "tfcflorae:ore/poor_native_gold/gabbro",
+    "tfcflorae:ore/poor_native_gold/shale",
+    "tfcflorae:ore/poor_native_gold/claystone",
+    "tfcflorae:ore/poor_native_gold/limestone",
+    "tfcflorae:ore/poor_native_gold/conglomerate",
+    "tfcflorae:ore/poor_native_gold/dolomite",
+    "tfcflorae:ore/poor_native_gold/chert",
+    "tfcflorae:ore/poor_native_gold/chalk",
+    "tfcflorae:ore/poor_native_gold/rhyolite",
+    "tfcflorae:ore/poor_native_gold/basalt",
+    "tfcflorae:ore/poor_native_gold/andesite",
+    "tfcflorae:ore/poor_native_gold/dacite",
+    "tfcflorae:ore/poor_native_gold/quartzite",
+    "tfcflorae:ore/poor_native_gold/slate",
+    "tfcflorae:ore/poor_native_gold/phyllite",
+    "tfcflorae:ore/poor_native_gold/schist",
+    "tfcflorae:ore/poor_native_gold/gneiss",
+    "tfcflorae:ore/poor_native_gold/marble"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/rich_native_silver/granite",
+    "tfcflorae:ore/rich_native_silver/diorite",
+    "tfcflorae:ore/rich_native_silver/gabbro",
+    "tfcflorae:ore/rich_native_silver/shale",
+    "tfcflorae:ore/rich_native_silver/claystone",
+    "tfcflorae:ore/rich_native_silver/limestone",
+    "tfcflorae:ore/rich_native_silver/conglomerate",
+    "tfcflorae:ore/rich_native_silver/dolomite",
+    "tfcflorae:ore/rich_native_silver/chert",
+    "tfcflorae:ore/rich_native_silver/chalk",
+    "tfcflorae:ore/rich_native_silver/rhyolite",
+    "tfcflorae:ore/rich_native_silver/basalt",
+    "tfcflorae:ore/rich_native_silver/andesite",
+    "tfcflorae:ore/rich_native_silver/dacite",
+    "tfcflorae:ore/rich_native_silver/quartzite",
+    "tfcflorae:ore/rich_native_silver/slate",
+    "tfcflorae:ore/rich_native_silver/phyllite",
+    "tfcflorae:ore/rich_native_silver/schist",
+    "tfcflorae:ore/rich_native_silver/gneiss",
+    "tfcflorae:ore/rich_native_silver/marble"
+  ]
+}

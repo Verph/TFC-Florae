@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/poor_bismuthinite/granite",
+    "tfcflorae:ore/poor_bismuthinite/diorite",
+    "tfcflorae:ore/poor_bismuthinite/gabbro",
+    "tfcflorae:ore/poor_bismuthinite/shale",
+    "tfcflorae:ore/poor_bismuthinite/claystone",
+    "tfcflorae:ore/poor_bismuthinite/limestone",
+    "tfcflorae:ore/poor_bismuthinite/conglomerate",
+    "tfcflorae:ore/poor_bismuthinite/dolomite",
+    "tfcflorae:ore/poor_bismuthinite/chert",
+    "tfcflorae:ore/poor_bismuthinite/chalk",
+    "tfcflorae:ore/poor_bismuthinite/rhyolite",
+    "tfcflorae:ore/poor_bismuthinite/basalt",
+    "tfcflorae:ore/poor_bismuthinite/andesite",
+    "tfcflorae:ore/poor_bismuthinite/dacite",
+    "tfcflorae:ore/poor_bismuthinite/quartzite",
+    "tfcflorae:ore/poor_bismuthinite/slate",
+    "tfcflorae:ore/poor_bismuthinite/phyllite",
+    "tfcflorae:ore/poor_bismuthinite/schist",
+    "tfcflorae:ore/poor_bismuthinite/gneiss",
+    "tfcflorae:ore/poor_bismuthinite/marble"
+  ]
+}

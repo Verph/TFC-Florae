@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:food/barley_dough"
+    },
+    {
+      "item": "tfcflorae:food/maize_dough"
+    },
+    {
+      "item": "tfcflorae:food/oat_dough"
+    },
+    {
+      "item": "tfcflorae:food/rice_dough"
+    },
+    {
+      "item": "tfcflorae:food/rye_dough"
+    },
+    {
+      "item": "tfcflorae:food/wheat_dough"
+    }
+  ],
+  "heat_capacity": 1
+}

@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/tool_rack",
+  "parent": "tfcflorae:block/tool_rack",
   "textures": {
     "texture": "tfcflorae:block/wood/planks/purpleheart",
     "particle": "tfcflorae:block/wood/planks/purpleheart"

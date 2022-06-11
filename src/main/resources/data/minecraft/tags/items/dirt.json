@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:dirt/silt",
+    "tfcflorae:dirt/loam",
+    "tfcflorae:dirt/sandy_loam",
+    "tfcflorae:dirt/silty_loam",
+    "tfcflorae:rooted_dirt/silt",
+    "tfcflorae:rooted_dirt/loam",
+    "tfcflorae:rooted_dirt/sandy_loam",
+    "tfcflorae:rooted_dirt/silty_loam"
+  ]
+}
