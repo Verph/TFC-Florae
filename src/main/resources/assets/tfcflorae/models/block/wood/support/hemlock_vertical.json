@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/wood/support/vertical",
+  "parent": "tfc:block/wood/support/vertical",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/hemlock",
-    "particle": "tfcflorae:block/wood/sheet/hemlock"
+    "texture": "tfc:block/wood/sheet/hemlock",
+    "particle": "tfc:block/wood/sheet/hemlock"
   }
 }

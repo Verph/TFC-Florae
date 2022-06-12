@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/cocobolo",
-    "base": "tfcflorae:block/wood/lectern/cocobolo/base",
-    "front": "tfcflorae:block/wood/lectern/cocobolo/front",
-    "sides": "tfcflorae:block/wood/lectern/cocobolo/sides",
-    "top": "tfcflorae:block/wood/lectern/cocobolo/top",
-    "particle": "tfcflorae:block/wood/lectern/cocobolo/sides"
+    "bottom": "tfc:block/wood/planks/cocobolo",
+    "base": "tfc:block/wood/lectern/cocobolo/base",
+    "front": "tfc:block/wood/lectern/cocobolo/front",
+    "sides": "tfc:block/wood/lectern/cocobolo/sides",
+    "top": "tfc:block/wood/lectern/cocobolo/top",
+    "particle": "tfc:block/wood/lectern/cocobolo/sides"
   }
 }

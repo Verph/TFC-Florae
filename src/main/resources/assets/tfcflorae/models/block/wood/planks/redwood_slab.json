@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/redwood",
-    "top": "tfcflorae:block/wood/planks/redwood",
-    "side": "tfcflorae:block/wood/planks/redwood"
+    "bottom": "tfc:block/wood/planks/redwood",
+    "top": "tfc:block/wood/planks/redwood",
+    "side": "tfc:block/wood/planks/redwood"
   }
 }

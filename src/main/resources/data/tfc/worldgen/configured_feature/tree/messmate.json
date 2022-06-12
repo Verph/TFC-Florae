@@ -1,0 +1,32 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:messmate/1",
+      "tfcflorae:messmate/2",
+      "tfcflorae:messmate/3",
+      "tfcflorae:messmate/4",
+      "tfcflorae:messmate/5",
+      "tfcflorae:messmate/6",
+      "tfcflorae:messmate/7",
+      "tfcflorae:messmate/8",
+      "tfcflorae:messmate/9",
+      "tfcflorae:messmate/10",
+      "tfcflorae:messmate/11",
+      "tfcflorae:messmate/12",
+      "tfcflorae:messmate/13",
+      "tfcflorae:messmate/14",
+      "tfcflorae:messmate/15",
+      "tfcflorae:messmate/16",
+      "tfcflorae:messmate/17",
+      "tfcflorae:messmate/18"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

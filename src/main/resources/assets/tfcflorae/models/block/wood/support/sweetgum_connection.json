@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/wood/support/connection",
+  "parent": "tfc:block/wood/support/connection",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/sweetgum",
-    "particle": "tfcflorae:block/wood/sheet/sweetgum"
+    "texture": "tfc:block/wood/sheet/sweetgum",
+    "particle": "tfc:block/wood/sheet/sweetgum"
   }
 }

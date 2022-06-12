@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/mud_bricks/humus_slab"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/mud_bricks/humus_slab_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/mud_bricks/humus"
+    }
+  }
+}

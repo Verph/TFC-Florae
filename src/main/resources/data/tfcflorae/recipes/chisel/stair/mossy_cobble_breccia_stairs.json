@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobble/breccia",
+  "result": "tfcflorae:rock/mossy_cobble/breccia_stairs",
+  "mode": "stair"
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "part=base": {
+      "model": "tfcflorae:block/rock/spike/travertine_base"
+    },
+    "part=middle": {
+      "model": "tfcflorae:block/rock/spike/travertine_middle"
+    },
+    "part=tip": {
+      "model": "tfcflorae:block/rock/spike/travertine_tip"
+    }
+  }
+}

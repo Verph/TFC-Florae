@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/wood/support/vertical",
+  "parent": "tfc:block/wood/support/vertical",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/fever",
-    "particle": "tfcflorae:block/wood/sheet/fever"
+    "texture": "tfc:block/wood/sheet/fever",
+    "particle": "tfc:block/wood/sheet/fever"
   }
 }

@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/norway_spruce",
-    "planks": "tfcflorae:block/wood/planks/norway_spruce"
+    "log": "tfc:block/wood/log/norway_spruce",
+    "planks": "tfc:block/wood/planks/norway_spruce"
   }
 }

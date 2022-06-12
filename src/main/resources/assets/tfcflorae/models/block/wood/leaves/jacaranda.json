@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/leaves",
   "textures": {
-    "all": "tfcflorae:block/wood/leaves/jacaranda"
+    "all": "tfc:block/wood/leaves/jacaranda"
   }
 }

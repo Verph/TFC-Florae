@@ -1,0 +1,34 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:red_elm/1",
+      "tfcflorae:red_elm/2",
+      "tfcflorae:red_elm/3",
+      "tfcflorae:red_elm/4",
+      "tfcflorae:red_elm/5",
+      "tfcflorae:red_elm/6",
+      "tfcflorae:red_elm/7",
+      "tfcflorae:red_elm/8",
+      "tfcflorae:red_elm/9",
+      "tfcflorae:red_elm/10",
+      "tfcflorae:red_elm/11",
+      "tfcflorae:red_elm/12",
+      "tfcflorae:red_elm/13",
+      "tfcflorae:red_elm/14",
+      "tfcflorae:red_elm/15",
+      "tfcflorae:red_elm/16",
+      "tfcflorae:red_elm/17",
+      "tfcflorae:red_elm/18",
+      "tfcflorae:red_elm/19",
+      "tfcflorae:red_elm/20"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

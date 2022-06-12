@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/bricks/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/bricks/limestone_wall",
+    "count": 6
+  }
+}

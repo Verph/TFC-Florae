@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/rowan",
-    "leg": "tfcflorae:block/wood/log/rowan",
-    "side": "tfcflorae:block/wood/planks/rowan",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/rowan"
+    "top": "tfc:block/wood/scribing_table/rowan",
+    "leg": "tfc:block/wood/log/rowan",
+    "side": "tfc:block/wood/planks/rowan",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/rowan"
   }
 }

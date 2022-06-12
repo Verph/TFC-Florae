@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/ginkgo",
-    "base": "tfcflorae:block/wood/lectern/ginkgo/base",
-    "front": "tfcflorae:block/wood/lectern/ginkgo/front",
-    "sides": "tfcflorae:block/wood/lectern/ginkgo/sides",
-    "top": "tfcflorae:block/wood/lectern/ginkgo/top",
-    "particle": "tfcflorae:block/wood/lectern/ginkgo/sides"
+    "bottom": "tfc:block/wood/planks/ginkgo",
+    "base": "tfc:block/wood/lectern/ginkgo/base",
+    "front": "tfc:block/wood/lectern/ginkgo/front",
+    "sides": "tfc:block/wood/lectern/ginkgo/sides",
+    "top": "tfc:block/wood/lectern/ginkgo/top",
+    "particle": "tfc:block/wood/lectern/ginkgo/sides"
   }
 }

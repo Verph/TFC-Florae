@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "fluid": "tfcflorae:olive_oil",
-  "burn_rate": 8000,
-  "valid_lamps": {
-    "type": "tfcflorae:tag",
-    "tag": "tfcflorae:lamps"
-  }
-}

@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XSX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/joshua_tree"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/joshua_tree_loom"
+  }
+}

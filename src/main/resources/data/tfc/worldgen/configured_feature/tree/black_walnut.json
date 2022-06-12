@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:black_walnut/1",
+      "tfcflorae:black_walnut/2",
+      "tfcflorae:black_walnut/3",
+      "tfcflorae:black_walnut/4",
+      "tfcflorae:black_walnut/5",
+      "tfcflorae:black_walnut/6",
+      "tfcflorae:black_walnut/7",
+      "tfcflorae:black_walnut/8",
+      "tfcflorae:black_walnut/9",
+      "tfcflorae:black_walnut/10",
+      "tfcflorae:black_walnut/11",
+      "tfcflorae:black_walnut/12",
+      "tfcflorae:black_walnut/13",
+      "tfcflorae:black_walnut/14",
+      "tfcflorae:black_walnut/15"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

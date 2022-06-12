@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/aspen",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/aspen"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/aspen",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/aspen",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/gabbro",
+  "result": "tfcflorae:rock/bricks/gabbro_stairs",
+  "mode": "stair"
+}

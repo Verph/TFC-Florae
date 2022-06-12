@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log/kauri",
-    "side": "tfcflorae:block/wood/stripped_log/kauri"
+    "end": "tfc:block/wood/stripped_log/kauri",
+    "side": "tfc:block/wood/stripped_log/kauri"
   }
 }

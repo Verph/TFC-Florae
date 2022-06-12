@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/arkose",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/arkose"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/arkose",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/arkose",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/arkose",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/arkose"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/arkose",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/arkose",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/arkose",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/arkose"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/arkose",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/arkose",
+        "y": 270
+      }
+    ]
+  }
+}

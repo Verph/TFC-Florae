@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/joshua_tree",
+    "tfcflorae:wood/stripped_log/joshua_tree",
+    "tfcflorae:wood/wood/joshua_tree",
+    "tfcflorae:wood/stripped_wood/joshua_tree"
+  ]
+}

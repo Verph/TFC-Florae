@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:mulberry_dead/1",
+      "tfcflorae:mulberry_dead/2",
+      "tfcflorae:mulberry_dead/3",
+      "tfcflorae:mulberry_dead/4",
+      "tfcflorae:mulberry_dead/5",
+      "tfcflorae:mulberry_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 6,
+      "allow_submerged": true
+    }
+  }
+}

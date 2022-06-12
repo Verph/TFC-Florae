@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/tool_rack",
+  "parent": "tfc:block/tool_rack",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/fever",
-    "particle": "tfcflorae:block/wood/planks/fever"
+    "texture": "tfc:block/wood/planks/fever",
+    "particle": "tfc:block/wood/planks/fever"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:cocobolo_large/1",
+      "tfcflorae:cocobolo_large/2",
+      "tfcflorae:cocobolo_large/3",
+      "tfcflorae:cocobolo_large/4",
+      "tfcflorae:cocobolo_large/5",
+      "tfcflorae:cocobolo_large/6",
+      "tfcflorae:cocobolo_large/7",
+      "tfcflorae:cocobolo_large/8",
+      "tfcflorae:cocobolo_large/9",
+      "tfcflorae:cocobolo_large/10",
+      "tfcflorae:cocobolo_large/11",
+      "tfcflorae:cocobolo_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

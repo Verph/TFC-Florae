@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/ironwood",
-    "base": "tfcflorae:block/wood/lectern/ironwood/base",
-    "front": "tfcflorae:block/wood/lectern/ironwood/front",
-    "sides": "tfcflorae:block/wood/lectern/ironwood/sides",
-    "top": "tfcflorae:block/wood/lectern/ironwood/top",
-    "particle": "tfcflorae:block/wood/lectern/ironwood/sides"
+    "bottom": "tfc:block/wood/planks/ironwood",
+    "base": "tfc:block/wood/lectern/ironwood/base",
+    "front": "tfc:block/wood/lectern/ironwood/front",
+    "sides": "tfc:block/wood/lectern/ironwood/sides",
+    "top": "tfc:block/wood/lectern/ironwood/top",
+    "particle": "tfc:block/wood/lectern/ironwood/sides"
   }
 }

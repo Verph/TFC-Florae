@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/whitebeam"
+    },
+    {
+      "item": "tfcflorae:wood/wood/whitebeam"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 728
+}

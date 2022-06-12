@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/wood/support/horizontal",
+  "parent": "tfc:block/wood/support/horizontal",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/mulberry",
-    "particle": "tfcflorae:block/wood/sheet/mulberry"
+    "texture": "tfc:block/wood/sheet/mulberry",
+    "particle": "tfc:block/wood/sheet/mulberry"
   }
 }

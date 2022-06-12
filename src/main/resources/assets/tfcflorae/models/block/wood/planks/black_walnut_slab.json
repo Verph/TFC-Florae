@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/black_walnut",
-    "top": "tfcflorae:block/wood/planks/black_walnut",
-    "side": "tfcflorae:block/wood/planks/black_walnut"
+    "bottom": "tfc:block/wood/planks/black_walnut",
+    "top": "tfc:block/wood/planks/black_walnut",
+    "side": "tfc:block/wood/planks/black_walnut"
   }
 }

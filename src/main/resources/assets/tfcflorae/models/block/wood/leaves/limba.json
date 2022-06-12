@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/leaves",
   "textures": {
-    "all": "tfcflorae:block/wood/leaves/limba"
+    "all": "tfc:block/wood/leaves/limba"
   }
 }

@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/yellow_meranti",
-    "base": "tfcflorae:block/wood/lectern/yellow_meranti/base",
-    "front": "tfcflorae:block/wood/lectern/yellow_meranti/front",
-    "sides": "tfcflorae:block/wood/lectern/yellow_meranti/sides",
-    "top": "tfcflorae:block/wood/lectern/yellow_meranti/top",
-    "particle": "tfcflorae:block/wood/lectern/yellow_meranti/sides"
+    "bottom": "tfc:block/wood/planks/yellow_meranti",
+    "base": "tfc:block/wood/lectern/yellow_meranti/base",
+    "front": "tfc:block/wood/lectern/yellow_meranti/front",
+    "sides": "tfc:block/wood/lectern/yellow_meranti/sides",
+    "top": "tfc:block/wood/lectern/yellow_meranti/top",
+    "particle": "tfc:block/wood/lectern/yellow_meranti/sides"
   }
 }

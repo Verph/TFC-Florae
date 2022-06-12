@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/mahoe",
+    "tfcflorae:wood/stripped_log/mahoe",
+    "tfcflorae:wood/wood/mahoe",
+    "tfcflorae:wood/stripped_wood/mahoe"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:whitebeam_dead/1",
+      "tfcflorae:whitebeam_dead/2",
+      "tfcflorae:whitebeam_dead/3",
+      "tfcflorae:whitebeam_dead/4",
+      "tfcflorae:whitebeam_dead/5",
+      "tfcflorae:whitebeam_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

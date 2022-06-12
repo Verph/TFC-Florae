@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/poplar",
-    "leg": "tfcflorae:block/wood/log/poplar",
-    "side": "tfcflorae:block/wood/planks/poplar",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/poplar"
+    "top": "tfc:block/wood/scribing_table/poplar",
+    "leg": "tfc:block/wood/log/poplar",
+    "side": "tfc:block/wood/planks/poplar",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/poplar"
   }
 }

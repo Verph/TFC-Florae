@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/bookshelf",
   "textures": {
-    "end": "tfcflorae:block/wood/planks/redwood",
-    "side": "tfcflorae:block/wood/planks/redwood_bookshelf"
+    "end": "tfc:block/wood/planks/redwood",
+    "side": "tfc:block/wood/planks/redwood_bookshelf"
   }
 }

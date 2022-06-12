@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:red_cedar_large/1",
+      "tfcflorae:red_cedar_large/2",
+      "tfcflorae:red_cedar_large/3",
+      "tfcflorae:red_cedar_large/4",
+      "tfcflorae:red_cedar_large/5",
+      "tfcflorae:red_cedar_large/6",
+      "tfcflorae:red_cedar_large/7",
+      "tfcflorae:red_cedar_large/8",
+      "tfcflorae:red_cedar_large/9",
+      "tfcflorae:red_cedar_large/10",
+      "tfcflorae:red_cedar_large/11",
+      "tfcflorae:red_cedar_large/12",
+      "tfcflorae:red_cedar_large/13",
+      "tfcflorae:red_cedar_large/14",
+      "tfcflorae:red_cedar_large/15",
+      "tfcflorae:red_cedar_large/16",
+      "tfcflorae:red_cedar_large/17"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

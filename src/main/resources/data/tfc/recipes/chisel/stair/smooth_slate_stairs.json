@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/slate",
+  "result": "tfcflorae:rock/smooth/slate_stairs",
+  "mode": "stair"
+}

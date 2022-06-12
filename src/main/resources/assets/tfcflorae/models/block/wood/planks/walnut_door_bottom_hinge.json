@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/door_bottom_rh",
   "textures": {
-    "top": "tfcflorae:block/wood/planks/walnut_door_top",
-    "bottom": "tfcflorae:block/wood/planks/walnut_door_bottom"
+    "top": "tfc:block/wood/planks/walnut_door_top",
+    "bottom": "tfc:block/wood/planks/walnut_door_bottom"
   }
 }

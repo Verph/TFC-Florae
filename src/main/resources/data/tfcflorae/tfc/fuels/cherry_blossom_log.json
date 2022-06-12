@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/wood/cherry_blossom"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 795
+}

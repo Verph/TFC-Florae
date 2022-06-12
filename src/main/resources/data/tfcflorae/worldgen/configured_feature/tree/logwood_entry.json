@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 430,
+    "min_temp": 12,
+    "max_temp": 35,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/logwood"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/logwood"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/logwood",
+    "dead_tree": "tfcflorae:tree/logwood_dead",
+    "fallen_log": "tfcflorae:wood/log/logwood",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/logwood",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/logwood",
+    "old_growth_tree": "tfcflorae:tree/logwood_large"
+  }
+}

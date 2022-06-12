@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 60,
+    "max_rain": 400,
+    "min_temp": -4,
+    "max_temp": 13,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/alder"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/alder"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/alder",
+    "dead_tree": "tfcflorae:tree/alder_dead",
+    "fallen_log": "tfcflorae:wood/log/alder",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/alder",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/alder",
+    "old_growth_tree": "tfcflorae:tree/alder_large"
+  }
+}

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/pressure_plate_up",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/marblewood"
+    "texture": "tfc:block/wood/planks/marblewood"
   }
 }

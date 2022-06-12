@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/eucalyptus",
-    "top": "tfcflorae:block/wood/planks/eucalyptus",
-    "side": "tfcflorae:block/wood/planks/eucalyptus"
+    "bottom": "tfc:block/wood/planks/eucalyptus",
+    "top": "tfc:block/wood/planks/eucalyptus",
+    "side": "tfc:block/wood/planks/eucalyptus"
   }
 }

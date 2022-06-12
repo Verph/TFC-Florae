@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/raw/soapstone",
+  "result": "tfc:rock/raw/soapstone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfc:rock/raw/soapstone_slab"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:fever/1",
+      "tfcflorae:fever/2",
+      "tfcflorae:fever/3",
+      "tfcflorae:fever/4",
+      "tfcflorae:fever/5",
+      "tfcflorae:fever/6",
+      "tfcflorae:fever/7",
+      "tfcflorae:fever/8",
+      "tfcflorae:fever/9",
+      "tfcflorae:fever/10",
+      "tfcflorae:fever/11",
+      "tfcflorae:fever/12",
+      "tfcflorae:fever/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

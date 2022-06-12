@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/bricks/mylonite"
+  },
+  "result": "tfcflorae:rock/bricks/mylonite_stairs",
+  "count": 1
+}

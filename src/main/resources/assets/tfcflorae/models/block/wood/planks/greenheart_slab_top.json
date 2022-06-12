@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/greenheart",
-    "top": "tfcflorae:block/wood/planks/greenheart",
-    "side": "tfcflorae:block/wood/planks/greenheart"
+    "bottom": "tfc:block/wood/planks/greenheart",
+    "top": "tfc:block/wood/planks/greenheart",
+    "side": "tfc:block/wood/planks/greenheart"
   }
 }

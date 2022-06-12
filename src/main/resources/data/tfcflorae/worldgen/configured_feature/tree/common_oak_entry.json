@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 430,
+    "min_temp": -8,
+    "max_temp": 15,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/common_oak"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/common_oak"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/common_oak",
+    "dead_tree": "tfcflorae:tree/common_oak_dead",
+    "fallen_log": "tfcflorae:wood/log/common_oak",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/common_oak",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/common_oak",
+    "old_growth_tree": "tfcflorae:tree/common_oak_large"
+  }
+}

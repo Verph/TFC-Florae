@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/bald_cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/bald_cypress_pressure_plate"
+  }
+}

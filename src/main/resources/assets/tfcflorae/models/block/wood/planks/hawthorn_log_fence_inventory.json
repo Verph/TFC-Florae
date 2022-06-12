@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/hawthorn",
-    "planks": "tfcflorae:block/wood/planks/hawthorn"
+    "log": "tfc:block/wood/log/hawthorn",
+    "planks": "tfc:block/wood/planks/hawthorn"
   }
 }

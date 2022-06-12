@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/sluice_upper",
+  "parent": "tfc:block/sluice_upper",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/wenge"
+    "texture": "tfc:block/wood/sheet/wenge"
   }
 }

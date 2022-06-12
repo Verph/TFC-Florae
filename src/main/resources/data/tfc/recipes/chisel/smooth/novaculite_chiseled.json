@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/novaculite",
+  "result": "tfcflorae:rock/chiseled/novaculite",
+  "mode": "smooth"
+}

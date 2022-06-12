@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/yew",
-    "leg": "tfcflorae:block/wood/log/yew",
-    "side": "tfcflorae:block/wood/planks/yew",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/yew"
+    "top": "tfc:block/wood/scribing_table/yew",
+    "leg": "tfc:block/wood/log/yew",
+    "side": "tfc:block/wood/planks/yew",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/yew"
   }
 }

@@ -47,6 +47,11 @@ public enum TFCFSoil
     SPARSE_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant)),
                  (self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant), TFCFBlocks.TFCSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant))),
 
+    DRY_CLAY_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(DRY_GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
+                   (self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCSOIL.get(DRY_GRASS_PATH).get(variant), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant))),
+    SPARSE_CLAY_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
+                      (self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant))),
+                
     EARTHENWARE_CLAY((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
                      (self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant), TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH).get(variant), TFCBlocks.SOIL.get(SoilBlockType.FARMLAND).get(variant))),
     EARTHENWARE_CLAY_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
@@ -140,6 +145,8 @@ public enum TFCFSoil
             case CLAY:
                 return CLAY_GRASS;
             case CLAY_GRASS:
+            case DRY_CLAY_GRASS:
+            case SPARSE_CLAY_GRASS:
                 return CLAY;
             case EARTHENWARE_CLAY:
                 return EARTHENWARE_CLAY_GRASS;

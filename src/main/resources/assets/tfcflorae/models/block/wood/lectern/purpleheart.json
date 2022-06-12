@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/purpleheart",
-    "base": "tfcflorae:block/wood/lectern/purpleheart/base",
-    "front": "tfcflorae:block/wood/lectern/purpleheart/front",
-    "sides": "tfcflorae:block/wood/lectern/purpleheart/sides",
-    "top": "tfcflorae:block/wood/lectern/purpleheart/top",
-    "particle": "tfcflorae:block/wood/lectern/purpleheart/sides"
+    "bottom": "tfc:block/wood/planks/purpleheart",
+    "base": "tfc:block/wood/lectern/purpleheart/base",
+    "front": "tfc:block/wood/lectern/purpleheart/front",
+    "sides": "tfc:block/wood/lectern/purpleheart/sides",
+    "top": "tfc:block/wood/lectern/purpleheart/top",
+    "particle": "tfc:block/wood/lectern/purpleheart/sides"
   }
 }

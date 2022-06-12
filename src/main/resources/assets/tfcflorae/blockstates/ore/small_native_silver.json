@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/groundcover/native_silver",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/groundcover/native_silver"
+      },
+      {
+        "model": "tfcflorae:block/groundcover/native_silver",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/groundcover/native_silver",
+        "y": 270
+      }
+    ]
+  }
+}

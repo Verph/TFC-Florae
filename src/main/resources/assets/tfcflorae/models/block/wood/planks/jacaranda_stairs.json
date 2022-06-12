@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/jacaranda",
-    "top": "tfcflorae:block/wood/planks/jacaranda",
-    "side": "tfcflorae:block/wood/planks/jacaranda"
+    "bottom": "tfc:block/wood/planks/jacaranda",
+    "top": "tfc:block/wood/planks/jacaranda",
+    "side": "tfc:block/wood/planks/jacaranda"
   }
 }

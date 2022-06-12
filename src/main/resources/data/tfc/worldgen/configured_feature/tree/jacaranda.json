@@ -1,0 +1,44 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:jacaranda/1",
+      "tfcflorae:jacaranda/2",
+      "tfcflorae:jacaranda/3",
+      "tfcflorae:jacaranda/4",
+      "tfcflorae:jacaranda/5",
+      "tfcflorae:jacaranda/6",
+      "tfcflorae:jacaranda/7",
+      "tfcflorae:jacaranda/8",
+      "tfcflorae:jacaranda/9",
+      "tfcflorae:jacaranda/10",
+      "tfcflorae:jacaranda/11",
+      "tfcflorae:jacaranda/12",
+      "tfcflorae:jacaranda/13",
+      "tfcflorae:jacaranda/14",
+      "tfcflorae:jacaranda/15",
+      "tfcflorae:jacaranda/16",
+      "tfcflorae:jacaranda/17",
+      "tfcflorae:jacaranda/18",
+      "tfcflorae:jacaranda/19",
+      "tfcflorae:jacaranda/20",
+      "tfcflorae:jacaranda/21",
+      "tfcflorae:jacaranda/22",
+      "tfcflorae:jacaranda/23",
+      "tfcflorae:jacaranda/24",
+      "tfcflorae:jacaranda/25",
+      "tfcflorae:jacaranda/26",
+      "tfcflorae:jacaranda/27",
+      "tfcflorae:jacaranda/28",
+      "tfcflorae:jacaranda/29",
+      "tfcflorae:jacaranda/30"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cracked_bricks/slate"
+  },
+  "result": "tfcflorae:rock/cracked_bricks/slate_stairs",
+  "count": 1
+}

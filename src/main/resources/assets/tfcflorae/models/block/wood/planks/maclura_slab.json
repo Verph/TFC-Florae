@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/maclura",
-    "top": "tfcflorae:block/wood/planks/maclura",
-    "side": "tfcflorae:block/wood/planks/maclura"
+    "bottom": "tfc:block/wood/planks/maclura",
+    "top": "tfc:block/wood/planks/maclura",
+    "side": "tfc:block/wood/planks/maclura"
   }
 }

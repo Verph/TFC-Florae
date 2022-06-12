@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 100,
+    "max_rain": 380,
+    "min_temp": -20,
+    "max_temp": 5,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/norway_spruce"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/norway_spruce"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/norway_spruce",
+    "dead_tree": "tfcflorae:tree/norway_spruce_dead",
+    "fallen_log": "tfcflorae:wood/log/norway_spruce",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/norway_spruce",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/norway_spruce",
+    "old_growth_tree": "tfcflorae:tree/norway_spruce_large"
+  }
+}

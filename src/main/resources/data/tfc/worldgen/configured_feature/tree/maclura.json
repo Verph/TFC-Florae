@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:maclura/1",
+      "tfcflorae:maclura/2",
+      "tfcflorae:maclura/3",
+      "tfcflorae:maclura/4",
+      "tfcflorae:maclura/5"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

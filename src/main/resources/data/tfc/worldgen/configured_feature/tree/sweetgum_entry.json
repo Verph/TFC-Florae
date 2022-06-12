@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 360,
+    "min_temp": -2,
+    "max_temp": 18,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/sweetgum"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/sweetgum"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/sweetgum",
+    "dead_tree": "tfcflorae:tree/sweetgum_dead",
+    "fallen_log": "tfcflorae:wood/log/sweetgum",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/sweetgum",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/sweetgum",
+    "old_growth_tree": "tfcflorae:tree/sweetgum_large"
+  }
+}

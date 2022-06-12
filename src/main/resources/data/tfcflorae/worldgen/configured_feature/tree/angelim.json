@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:angelim/1",
+      "tfcflorae:angelim/2",
+      "tfcflorae:angelim/3",
+      "tfcflorae:angelim/4",
+      "tfcflorae:angelim/5",
+      "tfcflorae:angelim/6",
+      "tfcflorae:angelim/7",
+      "tfcflorae:angelim/8",
+      "tfcflorae:angelim/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

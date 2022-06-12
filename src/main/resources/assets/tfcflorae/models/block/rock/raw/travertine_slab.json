@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfc:block/rock/raw/travertine",
+    "top": "tfc:block/rock/raw/travertine",
+    "side": "tfc:block/rock/raw/travertine"
+  }
+}

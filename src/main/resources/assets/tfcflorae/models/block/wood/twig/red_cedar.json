@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/red_cedar",
-    "top": "tfcflorae:block/wood/log_top/red_cedar"
+    "side": "tfc:block/wood/log/red_cedar",
+    "top": "tfc:block/wood/log_top/red_cedar"
   }
 }

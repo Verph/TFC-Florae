@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/travertine",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/travertine"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/travertine",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/travertine",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/travertine",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/travertine"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/travertine",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/travertine",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/travertine",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/travertine"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/travertine",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/travertine",
+        "y": 270
+      }
+    ]
+  }
+}

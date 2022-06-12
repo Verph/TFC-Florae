@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/walnut",
-    "planks": "tfcflorae:block/wood/planks/walnut"
+    "log": "tfc:block/wood/log/walnut",
+    "planks": "tfc:block/wood/planks/walnut"
   }
 }

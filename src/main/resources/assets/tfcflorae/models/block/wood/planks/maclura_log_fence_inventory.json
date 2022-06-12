@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/maclura",
-    "planks": "tfcflorae:block/wood/planks/maclura"
+    "log": "tfc:block/wood/log/maclura",
+    "planks": "tfc:block/wood/planks/maclura"
   }
 }

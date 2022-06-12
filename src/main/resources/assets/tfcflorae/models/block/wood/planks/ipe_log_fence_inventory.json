@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/ipe",
-    "planks": "tfcflorae:block/wood/planks/ipe"
+    "log": "tfc:block/wood/log/ipe",
+    "planks": "tfc:block/wood/planks/ipe"
   }
 }

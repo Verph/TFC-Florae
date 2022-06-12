@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/greenheart",
+    "tfcflorae:wood/stripped_log/greenheart",
+    "tfcflorae:wood/wood/greenheart",
+    "tfcflorae:wood/stripped_wood/greenheart"
+  ]
+}

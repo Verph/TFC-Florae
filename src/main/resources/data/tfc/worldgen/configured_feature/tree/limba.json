@@ -1,0 +1,27 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:limba/1",
+      "tfcflorae:limba/2",
+      "tfcflorae:limba/3",
+      "tfcflorae:limba/4",
+      "tfcflorae:limba/5",
+      "tfcflorae:limba/6",
+      "tfcflorae:limba/7",
+      "tfcflorae:limba/8",
+      "tfcflorae:limba/9",
+      "tfcflorae:limba/10",
+      "tfcflorae:limba/11",
+      "tfcflorae:limba/12",
+      "tfcflorae:limba/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

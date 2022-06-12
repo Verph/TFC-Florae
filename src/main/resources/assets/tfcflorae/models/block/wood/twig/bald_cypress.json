@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/bald_cypress",
-    "top": "tfcflorae:block/wood/log_top/bald_cypress"
+    "side": "tfc:block/wood/log/bald_cypress",
+    "top": "tfc:block/wood/log_top/bald_cypress"
   }
 }

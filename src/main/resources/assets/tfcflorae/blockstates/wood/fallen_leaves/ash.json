@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ash",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ash"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ash",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ash",
+        "y": 270
+      }
+    ]
+  }
+}

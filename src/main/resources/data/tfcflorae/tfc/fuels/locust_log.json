@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/locust"
+    },
+    {
+      "item": "tfcflorae:wood/wood/locust"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 653
+}

@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/tool_rack",
+  "parent": "tfc:block/tool_rack",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/butternut",
-    "particle": "tfcflorae:block/wood/planks/butternut"
+    "texture": "tfc:block/wood/planks/butternut",
+    "particle": "tfc:block/wood/planks/butternut"
   }
 }

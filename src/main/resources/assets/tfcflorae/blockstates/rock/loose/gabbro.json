@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/gabbro",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/gabbro"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/gabbro",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/gabbro",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/gabbro",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/gabbro"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/gabbro",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/gabbro",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/gabbro",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/gabbro"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/gabbro",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/gabbro",
+        "y": 270
+      }
+    ]
+  }
+}

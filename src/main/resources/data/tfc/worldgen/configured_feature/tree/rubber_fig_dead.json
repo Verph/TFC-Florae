@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:rubber_fig_dead/1",
+      "tfcflorae:rubber_fig_dead/2",
+      "tfcflorae:rubber_fig_dead/3",
+      "tfcflorae:rubber_fig_dead/4",
+      "tfcflorae:rubber_fig_dead/5",
+      "tfcflorae:rubber_fig_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/smooth/soapstone"
+  },
+  "result": "tfcflorae:rock/smooth/soapstone_slab",
+  "count": 2
+}

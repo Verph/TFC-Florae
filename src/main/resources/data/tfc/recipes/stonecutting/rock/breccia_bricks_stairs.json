@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/bricks/breccia"
+  },
+  "result": "tfcflorae:rock/bricks/breccia_stairs",
+  "count": 1
+}

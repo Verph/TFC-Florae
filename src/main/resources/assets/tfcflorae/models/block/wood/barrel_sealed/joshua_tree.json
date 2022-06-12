@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
-    "particle": "tfcflorae:block/wood/planks/joshua_tree",
-    "planks": "tfcflorae:block/wood/planks/joshua_tree",
-    "sheet": "tfcflorae:block/wood/sheet/joshua_tree",
-    "hoop": "tfcflorae:block/barrel_hoop"
+    "particle": "tfc:block/wood/planks/joshua_tree",
+    "planks": "tfc:block/wood/planks/joshua_tree",
+    "sheet": "tfc:block/wood/sheet/joshua_tree",
+    "hoop": "tfc:block/barrel_hoop"
   }
 }

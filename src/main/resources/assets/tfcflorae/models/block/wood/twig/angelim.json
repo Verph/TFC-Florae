@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/angelim",
-    "top": "tfcflorae:block/wood/log_top/angelim"
+    "side": "tfc:block/wood/log/angelim",
+    "top": "tfc:block/wood/log_top/angelim"
   }
 }

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "fluid": "tfcflorae:tallow",
-  "burn_rate": 1800,
-  "valid_lamps": {
-    "type": "tfcflorae:tag",
-    "tag": "tfcflorae:lamps"
-  }
-}

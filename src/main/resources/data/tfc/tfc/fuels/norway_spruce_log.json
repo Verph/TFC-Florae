@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/norway_spruce"
+    },
+    {
+      "item": "tfcflorae:wood/wood/norway_spruce"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 628
+}

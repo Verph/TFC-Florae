@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log/locust",
-    "side": "tfcflorae:block/wood/log/locust"
+    "end": "tfc:block/wood/log/locust",
+    "side": "tfc:block/wood/log/locust"
   }
 }

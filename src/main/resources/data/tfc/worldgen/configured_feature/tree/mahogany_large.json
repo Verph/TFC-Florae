@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:mahogany_large/1",
+      "tfcflorae:mahogany_large/2",
+      "tfcflorae:mahogany_large/3",
+      "tfcflorae:mahogany_large/4",
+      "tfcflorae:mahogany_large/5",
+      "tfcflorae:mahogany_large/6",
+      "tfcflorae:mahogany_large/7",
+      "tfcflorae:mahogany_large/8",
+      "tfcflorae:mahogany_large/9",
+      "tfcflorae:mahogany_large/10",
+      "tfcflorae:mahogany_large/11",
+      "tfcflorae:mahogany_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

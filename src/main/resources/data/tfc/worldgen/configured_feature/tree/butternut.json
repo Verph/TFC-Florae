@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:butternut/1",
+      "tfcflorae:butternut/2",
+      "tfcflorae:butternut/3",
+      "tfcflorae:butternut/4",
+      "tfcflorae:butternut/5",
+      "tfcflorae:butternut/6",
+      "tfcflorae:butternut/7",
+      "tfcflorae:butternut/8",
+      "tfcflorae:butternut/9",
+      "tfcflorae:butternut/10",
+      "tfcflorae:butternut/11",
+      "tfcflorae:butternut/12",
+      "tfcflorae:butternut/13",
+      "tfcflorae:butternut/14",
+      "tfcflorae:butternut/15"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

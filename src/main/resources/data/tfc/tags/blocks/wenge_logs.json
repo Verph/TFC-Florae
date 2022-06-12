@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/wenge",
+    "tfcflorae:wood/stripped_log/wenge",
+    "tfcflorae:wood/wood/wenge",
+    "tfcflorae:wood/stripped_wood/wenge"
+  ]
+}

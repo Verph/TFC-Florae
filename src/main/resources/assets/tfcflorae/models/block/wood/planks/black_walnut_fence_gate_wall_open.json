@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_fence_gate_wall_open",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/black_walnut"
+    "texture": "tfc:block/wood/planks/black_walnut"
   }
 }

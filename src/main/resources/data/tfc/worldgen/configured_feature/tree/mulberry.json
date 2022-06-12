@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:mulberry/1",
+      "tfcflorae:mulberry/2",
+      "tfcflorae:mulberry/3",
+      "tfcflorae:mulberry/4",
+      "tfcflorae:mulberry/5"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

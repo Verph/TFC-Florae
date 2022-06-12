@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 300,
+    "min_temp": -10,
+    "max_temp": 16,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/black_walnut"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/black_walnut"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/black_walnut",
+    "dead_tree": "tfcflorae:tree/black_walnut_dead",
+    "fallen_log": "tfcflorae:wood/log/black_walnut",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/black_walnut",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/black_walnut",
+    "old_growth_tree": "tfcflorae:tree/black_walnut_large"
+  }
+}

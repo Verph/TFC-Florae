@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_all",
   "textures": {
-    "all": "tfcflorae:block/wood/planks/pink_ivory"
+    "all": "tfc:block/wood/planks/pink_ivory"
   }
 }

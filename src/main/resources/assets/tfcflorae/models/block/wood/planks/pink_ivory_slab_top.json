@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/pink_ivory",
-    "top": "tfcflorae:block/wood/planks/pink_ivory",
-    "side": "tfcflorae:block/wood/planks/pink_ivory"
+    "bottom": "tfc:block/wood/planks/pink_ivory",
+    "top": "tfc:block/wood/planks/pink_ivory",
+    "side": "tfc:block/wood/planks/pink_ivory"
   }
 }

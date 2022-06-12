@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:syzygium/1",
+      "tfcflorae:syzygium/2",
+      "tfcflorae:syzygium/3",
+      "tfcflorae:syzygium/4",
+      "tfcflorae:syzygium/5",
+      "tfcflorae:syzygium/6",
+      "tfcflorae:syzygium/7",
+      "tfcflorae:syzygium/8",
+      "tfcflorae:syzygium/9",
+      "tfcflorae:syzygium/10",
+      "tfcflorae:syzygium/11",
+      "tfcflorae:syzygium/12",
+      "tfcflorae:syzygium/13",
+      "tfcflorae:syzygium/14"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

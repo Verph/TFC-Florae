@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/african_padauk",
-    "leg": "tfcflorae:block/wood/log/african_padauk",
-    "side": "tfcflorae:block/wood/planks/african_padauk",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/african_padauk"
+    "top": "tfc:block/wood/scribing_table/african_padauk",
+    "leg": "tfc:block/wood/log/african_padauk",
+    "side": "tfc:block/wood/planks/african_padauk",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/african_padauk"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cobble/boninite"
+  },
+  "result": "tfcflorae:rock/cobble/boninite_wall",
+  "count": 1
+}

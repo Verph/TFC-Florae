@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 350,
+    "min_temp": 4,
+    "max_temp": 33,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/cypress"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/cypress"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/cypress",
+    "dead_tree": "tfcflorae:tree/cypress_dead",
+    "fallen_log": "tfcflorae:wood/log/cypress",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/cypress",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/cypress",
+    "old_growth_tree": "tfcflorae:tree/cypress_large"
+  }
+}

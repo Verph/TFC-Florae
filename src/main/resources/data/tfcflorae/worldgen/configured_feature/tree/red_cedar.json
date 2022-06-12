@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:red_cedar/1",
+      "tfcflorae:red_cedar/2",
+      "tfcflorae:red_cedar/3",
+      "tfcflorae:red_cedar/4",
+      "tfcflorae:red_cedar/5",
+      "tfcflorae:red_cedar/6",
+      "tfcflorae:red_cedar/7",
+      "tfcflorae:red_cedar/8"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

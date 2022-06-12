@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:zebrawood/1",
+      "tfcflorae:zebrawood/2",
+      "tfcflorae:zebrawood/3",
+      "tfcflorae:zebrawood/4",
+      "tfcflorae:zebrawood/5",
+      "tfcflorae:zebrawood/6",
+      "tfcflorae:zebrawood/7",
+      "tfcflorae:zebrawood/8",
+      "tfcflorae:zebrawood/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

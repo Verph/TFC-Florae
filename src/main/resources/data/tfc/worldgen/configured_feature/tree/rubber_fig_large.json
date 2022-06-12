@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:rubber_fig_large/1",
+      "tfcflorae:rubber_fig_large/2",
+      "tfcflorae:rubber_fig_large/3",
+      "tfcflorae:rubber_fig_large/4",
+      "tfcflorae:rubber_fig_large/5",
+      "tfcflorae:rubber_fig_large/6",
+      "tfcflorae:rubber_fig_large/7",
+      "tfcflorae:rubber_fig_large/8",
+      "tfcflorae:rubber_fig_large/9",
+      "tfcflorae:rubber_fig_large/10",
+      "tfcflorae:rubber_fig_large/11",
+      "tfcflorae:rubber_fig_large/12",
+      "tfcflorae:rubber_fig_large/13",
+      "tfcflorae:rubber_fig_large/14"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 2,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/ebony",
-    "leg": "tfcflorae:block/wood/log/ebony",
-    "side": "tfcflorae:block/wood/planks/ebony",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/ebony"
+    "top": "tfc:block/wood/scribing_table/ebony",
+    "leg": "tfc:block/wood/log/ebony",
+    "side": "tfc:block/wood/planks/ebony",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/ebony"
   }
 }

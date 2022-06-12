@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 220,
+    "max_rain": 300,
+    "min_temp": -15,
+    "max_temp": 9,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/beech"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/beech"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/beech",
+    "dead_tree": "tfcflorae:tree/beech_dead",
+    "fallen_log": "tfcflorae:wood/log/beech",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/beech",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/beech",
+    "old_growth_tree": "tfcflorae:tree/beech_large"
+  }
+}

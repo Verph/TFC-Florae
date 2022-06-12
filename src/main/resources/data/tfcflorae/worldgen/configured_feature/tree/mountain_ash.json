@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:mountain_ash/1",
+      "tfcflorae:mountain_ash/2",
+      "tfcflorae:mountain_ash/3",
+      "tfcflorae:mountain_ash/4",
+      "tfcflorae:mountain_ash/5",
+      "tfcflorae:mountain_ash/6",
+      "tfcflorae:mountain_ash/7",
+      "tfcflorae:mountain_ash/8",
+      "tfcflorae:mountain_ash/9",
+      "tfcflorae:mountain_ash/10"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

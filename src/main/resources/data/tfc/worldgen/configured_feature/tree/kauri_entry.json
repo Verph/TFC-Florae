@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 330,
+    "max_rain": 500,
+    "min_temp": 23,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/kauri"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/kauri"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/kauri",
+    "dead_tree": "tfcflorae:tree/kauri_dead",
+    "fallen_log": "tfcflorae:wood/log/kauri",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/kauri",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/kauri",
+    "old_growth_tree": "tfcflorae:tree/kauri_large"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:mahogany/1",
+      "tfcflorae:mahogany/2",
+      "tfcflorae:mahogany/3",
+      "tfcflorae:mahogany/4",
+      "tfcflorae:mahogany/5",
+      "tfcflorae:mahogany/6",
+      "tfcflorae:mahogany/7",
+      "tfcflorae:mahogany/8",
+      "tfcflorae:mahogany/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

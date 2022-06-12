@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/willow",
+  "result": "tfcflorae:wood/planks/willow_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/planks/willow_slab"
+  }
+}

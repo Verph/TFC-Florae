@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:wenge_dead/1",
+      "tfcflorae:wenge_dead/2",
+      "tfcflorae:wenge_dead/3",
+      "tfcflorae:wenge_dead/4"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

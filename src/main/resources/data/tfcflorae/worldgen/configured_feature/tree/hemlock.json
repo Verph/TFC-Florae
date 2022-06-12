@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:hemlock/1",
+      "tfcflorae:hemlock/2",
+      "tfcflorae:hemlock/3",
+      "tfcflorae:hemlock/4",
+      "tfcflorae:hemlock/5",
+      "tfcflorae:hemlock/6",
+      "tfcflorae:hemlock/7",
+      "tfcflorae:hemlock/8",
+      "tfcflorae:hemlock/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

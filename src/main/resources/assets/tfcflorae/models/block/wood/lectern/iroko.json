@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/iroko",
-    "base": "tfcflorae:block/wood/lectern/iroko/base",
-    "front": "tfcflorae:block/wood/lectern/iroko/front",
-    "sides": "tfcflorae:block/wood/lectern/iroko/sides",
-    "top": "tfcflorae:block/wood/lectern/iroko/top",
-    "particle": "tfcflorae:block/wood/lectern/iroko/sides"
+    "bottom": "tfc:block/wood/planks/iroko",
+    "base": "tfc:block/wood/lectern/iroko/base",
+    "front": "tfc:block/wood/lectern/iroko/front",
+    "sides": "tfc:block/wood/lectern/iroko/sides",
+    "top": "tfc:block/wood/lectern/iroko/top",
+    "particle": "tfc:block/wood/lectern/iroko/sides"
   }
 }

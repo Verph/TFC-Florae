@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 100,
+    "max_rain": 380,
+    "min_temp": -16,
+    "max_temp": 7,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/nordmann_fir"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/nordmann_fir"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/nordmann_fir",
+    "dead_tree": "tfcflorae:tree/nordmann_fir_dead",
+    "fallen_log": "tfcflorae:wood/log/nordmann_fir",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/nordmann_fir",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/nordmann_fir",
+    "old_growth_tree": "tfcflorae:tree/nordmann_fir_large"
+  }
+}

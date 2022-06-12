@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/birch"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/birch"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/birch_fence_gate",
+    "count": 2
+  }
+}

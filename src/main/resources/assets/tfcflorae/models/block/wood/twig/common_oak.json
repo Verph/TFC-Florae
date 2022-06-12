@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/common_oak",
-    "top": "tfcflorae:block/wood/log_top/common_oak"
+    "side": "tfc:block/wood/log/common_oak",
+    "top": "tfc:block/wood/log_top/common_oak"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/chert",
+  "result": "tfcflorae:rock/raw/chert_stairs",
+  "mode": "stair"
+}

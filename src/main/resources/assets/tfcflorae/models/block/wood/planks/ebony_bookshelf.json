@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/bookshelf",
   "textures": {
-    "end": "tfcflorae:block/wood/planks/ebony",
-    "side": "tfcflorae:block/wood/planks/ebony_bookshelf"
+    "end": "tfc:block/wood/planks/ebony",
+    "side": "tfc:block/wood/planks/ebony_bookshelf"
   }
 }

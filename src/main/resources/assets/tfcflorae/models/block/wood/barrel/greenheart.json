@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/barrel",
+  "parent": "tfc:block/barrel",
   "textures": {
-    "particle": "tfcflorae:block/wood/planks/greenheart",
-    "planks": "tfcflorae:block/wood/planks/greenheart",
-    "sheet": "tfcflorae:block/wood/sheet/greenheart",
-    "hoop": "tfcflorae:block/barrel_hoop"
+    "particle": "tfc:block/wood/planks/greenheart",
+    "planks": "tfc:block/wood/planks/greenheart",
+    "sheet": "tfc:block/wood/sheet/greenheart",
+    "hoop": "tfc:block/barrel_hoop"
   }
 }

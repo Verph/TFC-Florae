@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/carbonatite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/carbonatite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/carbonatite",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/carbonatite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/carbonatite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/carbonatite",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/carbonatite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/carbonatite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/carbonatite",
+        "y": 270
+      }
+    ]
+  }
+}

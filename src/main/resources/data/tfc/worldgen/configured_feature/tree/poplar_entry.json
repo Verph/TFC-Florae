@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 400,
+    "min_temp": -7,
+    "max_temp": 14,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/poplar"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/poplar"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/poplar",
+    "dead_tree": "tfcflorae:tree/poplar_dead",
+    "fallen_log": "tfcflorae:wood/log/poplar",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/poplar",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/poplar",
+    "old_growth_tree": "tfcflorae:tree/poplar_large"
+  }
+}

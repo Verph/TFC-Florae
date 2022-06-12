@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:african_padauk_large/1",
+      "tfcflorae:african_padauk_large/2",
+      "tfcflorae:african_padauk_large/3",
+      "tfcflorae:african_padauk_large/4",
+      "tfcflorae:african_padauk_large/5",
+      "tfcflorae:african_padauk_large/6",
+      "tfcflorae:african_padauk_large/7",
+      "tfcflorae:african_padauk_large/8",
+      "tfcflorae:african_padauk_large/9",
+      "tfcflorae:african_padauk_large/10",
+      "tfcflorae:african_padauk_large/11",
+      "tfcflorae:african_padauk_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

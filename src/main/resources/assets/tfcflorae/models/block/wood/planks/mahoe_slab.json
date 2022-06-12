@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/mahoe",
-    "top": "tfcflorae:block/wood/planks/mahoe",
-    "side": "tfcflorae:block/wood/planks/mahoe"
+    "bottom": "tfc:block/wood/planks/mahoe",
+    "top": "tfc:block/wood/planks/mahoe",
+    "side": "tfc:block/wood/planks/mahoe"
   }
 }

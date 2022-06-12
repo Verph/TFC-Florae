@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:zebrawood_large/1",
+      "tfcflorae:zebrawood_large/2",
+      "tfcflorae:zebrawood_large/3",
+      "tfcflorae:zebrawood_large/4",
+      "tfcflorae:zebrawood_large/5",
+      "tfcflorae:zebrawood_large/6",
+      "tfcflorae:zebrawood_large/7",
+      "tfcflorae:zebrawood_large/8",
+      "tfcflorae:zebrawood_large/9",
+      "tfcflorae:zebrawood_large/10",
+      "tfcflorae:zebrawood_large/11",
+      "tfcflorae:zebrawood_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/fence_inventory",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/cherry_blossom"
+    "texture": "tfc:block/wood/planks/cherry_blossom"
   }
 }

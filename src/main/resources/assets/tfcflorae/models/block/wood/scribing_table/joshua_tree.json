@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/joshua_tree",
-    "leg": "tfcflorae:block/wood/log/joshua_tree",
-    "side": "tfcflorae:block/wood/planks/joshua_tree",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/joshua_tree"
+    "top": "tfc:block/wood/scribing_table/joshua_tree",
+    "leg": "tfc:block/wood/log/joshua_tree",
+    "side": "tfc:block/wood/planks/joshua_tree",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/joshua_tree"
   }
 }

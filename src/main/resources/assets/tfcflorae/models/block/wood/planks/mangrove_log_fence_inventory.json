@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/log_fence_inventory",
+  "parent": "tfc:block/log_fence_inventory",
   "textures": {
-    "log": "tfcflorae:block/wood/log/mangrove",
-    "planks": "tfcflorae:block/wood/planks/mangrove"
+    "log": "tfc:block/wood/log/mangrove",
+    "planks": "tfc:block/wood/planks/mangrove"
   }
 }

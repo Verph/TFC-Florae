@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/blaimorite",
+  "result": "tfcflorae:rock/raw/blaimorite_stairs",
+  "mode": "stair"
+}

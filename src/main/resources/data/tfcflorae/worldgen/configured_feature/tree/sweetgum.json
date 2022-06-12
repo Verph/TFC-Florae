@@ -1,0 +1,34 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:sweetgum/1",
+      "tfcflorae:sweetgum/2",
+      "tfcflorae:sweetgum/3",
+      "tfcflorae:sweetgum/4",
+      "tfcflorae:sweetgum/5",
+      "tfcflorae:sweetgum/6",
+      "tfcflorae:sweetgum/7",
+      "tfcflorae:sweetgum/8",
+      "tfcflorae:sweetgum/9",
+      "tfcflorae:sweetgum/10",
+      "tfcflorae:sweetgum/11",
+      "tfcflorae:sweetgum/12",
+      "tfcflorae:sweetgum/13",
+      "tfcflorae:sweetgum/14",
+      "tfcflorae:sweetgum/15",
+      "tfcflorae:sweetgum/16",
+      "tfcflorae:sweetgum/17",
+      "tfcflorae:sweetgum/18",
+      "tfcflorae:sweetgum/19",
+      "tfcflorae:sweetgum/20"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

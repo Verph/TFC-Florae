@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:hazel/1",
+      "tfcflorae:hazel/2",
+      "tfcflorae:hazel/3",
+      "tfcflorae:hazel/4",
+      "tfcflorae:hazel/5",
+      "tfcflorae:hazel/6",
+      "tfcflorae:hazel/7",
+      "tfcflorae:hazel/8",
+      "tfcflorae:hazel/9",
+      "tfcflorae:hazel/10",
+      "tfcflorae:hazel/11",
+      "tfcflorae:hazel/12",
+      "tfcflorae:hazel/13",
+      "tfcflorae:hazel/14",
+      "tfcflorae:hazel/15"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

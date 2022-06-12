@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cobble/shale"
+  },
+  "result": "tfcflorae:rock/cobble/shale_stairs",
+  "count": 1
+}

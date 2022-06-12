@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/bald_cypress",
-    "top": "tfcflorae:block/wood/planks/bald_cypress",
-    "side": "tfcflorae:block/wood/planks/bald_cypress"
+    "bottom": "tfc:block/wood/planks/bald_cypress",
+    "top": "tfc:block/wood/planks/bald_cypress",
+    "side": "tfc:block/wood/planks/bald_cypress"
   }
 }

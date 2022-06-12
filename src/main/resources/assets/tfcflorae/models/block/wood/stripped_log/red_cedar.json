@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log_top/red_cedar",
-    "side": "tfcflorae:block/wood/stripped_log/red_cedar"
+    "end": "tfc:block/wood/stripped_log_top/red_cedar",
+    "side": "tfc:block/wood/stripped_log/red_cedar"
   }
 }

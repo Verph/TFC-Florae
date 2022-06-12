@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 420,
+    "min_temp": -30,
+    "max_temp": 28,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/mulberry"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/mulberry"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/mulberry",
+    "dead_tree": "tfcflorae:tree/mulberry_dead",
+    "fallen_log": "tfcflorae:wood/log/mulberry",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/mulberry",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/mulberry",
+    "old_growth_tree": "tfcflorae:tree/mulberry_large"
+  }
+}

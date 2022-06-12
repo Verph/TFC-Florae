@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/ebony",
-    "base": "tfcflorae:block/wood/lectern/ebony/base",
-    "front": "tfcflorae:block/wood/lectern/ebony/front",
-    "sides": "tfcflorae:block/wood/lectern/ebony/sides",
-    "top": "tfcflorae:block/wood/lectern/ebony/top",
-    "particle": "tfcflorae:block/wood/lectern/ebony/sides"
+    "bottom": "tfc:block/wood/planks/ebony",
+    "base": "tfc:block/wood/lectern/ebony/base",
+    "front": "tfc:block/wood/lectern/ebony/front",
+    "sides": "tfc:block/wood/lectern/ebony/sides",
+    "top": "tfc:block/wood/lectern/ebony/top",
+    "particle": "tfc:block/wood/lectern/ebony/sides"
   }
 }

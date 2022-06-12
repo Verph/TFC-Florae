@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/ipe",
-    "top": "tfcflorae:block/wood/log_top/ipe"
+    "side": "tfc:block/wood/log/ipe",
+    "top": "tfc:block/wood/log_top/ipe"
   }
 }

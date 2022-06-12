@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:common_oak/1",
+      "tfcflorae:common_oak/2",
+      "tfcflorae:common_oak/3",
+      "tfcflorae:common_oak/4",
+      "tfcflorae:common_oak/5",
+      "tfcflorae:common_oak/6",
+      "tfcflorae:common_oak/7",
+      "tfcflorae:common_oak/8",
+      "tfcflorae:common_oak/9",
+      "tfcflorae:common_oak/10",
+      "tfcflorae:common_oak/11",
+      "tfcflorae:common_oak/12",
+      "tfcflorae:common_oak/13",
+      "tfcflorae:common_oak/14",
+      "tfcflorae:common_oak/15"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

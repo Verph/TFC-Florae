@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "replace": false,
-  "values": [
-    "#tfcflorae:ores/nickel/poor",
-    "#tfcflorae:ores/nickel/normal",
-    "#tfcflorae:ores/nickel/rich"
-  ]
-}

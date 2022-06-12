@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/pink_ivory",
-    "leg": "tfcflorae:block/wood/log/pink_ivory",
-    "side": "tfcflorae:block/wood/planks/pink_ivory",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/pink_ivory"
+    "top": "tfc:block/wood/scribing_table/pink_ivory",
+    "leg": "tfc:block/wood/log/pink_ivory",
+    "side": "tfc:block/wood/planks/pink_ivory",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/pink_ivory"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/diorite",
+  "result": "tfcflorae:rock/bricks/diorite_stairs",
+  "mode": "stair"
+}

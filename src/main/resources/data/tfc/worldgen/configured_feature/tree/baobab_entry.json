@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 10,
+    "max_rain": 150,
+    "min_temp": 21,
+    "max_temp": 40,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/baobab"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/baobab"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/baobab",
+    "dead_tree": "tfcflorae:tree/baobab_dead",
+    "fallen_log": "tfcflorae:wood/log/baobab",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/baobab",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/baobab",
+    "old_growth_tree": "tfcflorae:tree/baobab_large"
+  }
+}

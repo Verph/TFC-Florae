@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/log/hickory"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/log/hickory",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/log/hickory",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

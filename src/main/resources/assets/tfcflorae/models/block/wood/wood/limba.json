@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log/limba",
-    "side": "tfcflorae:block/wood/log/limba"
+    "end": "tfc:block/wood/log/limba",
+    "side": "tfc:block/wood/log/limba"
   }
 }

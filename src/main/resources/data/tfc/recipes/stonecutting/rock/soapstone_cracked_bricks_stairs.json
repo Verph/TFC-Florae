@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cracked_bricks/soapstone"
+  },
+  "result": "tfcflorae:rock/cracked_bricks/soapstone_stairs",
+  "count": 1
+}

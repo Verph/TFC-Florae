@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/syzygium",
-    "leg": "tfcflorae:block/wood/log/syzygium",
-    "side": "tfcflorae:block/wood/planks/syzygium",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/syzygium"
+    "top": "tfc:block/wood/scribing_table/syzygium",
+    "leg": "tfc:block/wood/log/syzygium",
+    "side": "tfc:block/wood/planks/syzygium",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/syzygium"
   }
 }

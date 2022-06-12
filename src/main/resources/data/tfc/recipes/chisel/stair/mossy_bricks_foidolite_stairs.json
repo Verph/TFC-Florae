@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_bricks/foidolite",
+  "result": "tfcflorae:rock/mossy_bricks/foidolite_stairs",
+  "mode": "stair"
+}

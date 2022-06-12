@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/wood/support/connection",
+  "parent": "tfc:block/wood/support/connection",
   "textures": {
-    "texture": "tfcflorae:block/wood/sheet/whitebeam",
-    "particle": "tfcflorae:block/wood/sheet/whitebeam"
+    "texture": "tfc:block/wood/sheet/whitebeam",
+    "particle": "tfc:block/wood/sheet/whitebeam"
   }
 }

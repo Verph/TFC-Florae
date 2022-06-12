@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cracked_bricks/boninite"
+  },
+  "result": "tfcflorae:rock/cracked_bricks/boninite_stairs",
+  "count": 1
+}

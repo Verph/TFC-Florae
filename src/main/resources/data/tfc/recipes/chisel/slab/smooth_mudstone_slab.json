@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/mudstone",
+  "result": "tfc:rock/smooth/mudstone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfc:rock/smooth/mudstone_slab"
+  }
+}

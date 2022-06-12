@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/hardened/rhyolite",
+  "result": "tfcflorae:rock/smooth/rhyolite",
+  "mode": "smooth"
+}

@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/willow",
+  "result": "tfcflorae:wood/planks/willow_stairs",
+  "mode": "stair"
+}

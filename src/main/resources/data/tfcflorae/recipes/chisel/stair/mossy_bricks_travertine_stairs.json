@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_bricks/travertine",
+  "result": "tfcflorae:rock/mossy_bricks/travertine_stairs",
+  "mode": "stair"
+}

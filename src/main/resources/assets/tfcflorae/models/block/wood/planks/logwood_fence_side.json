@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/fence_side",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/logwood"
+    "texture": "tfc:block/wood/planks/logwood"
   }
 }

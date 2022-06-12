@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log/eucalyptus",
-    "side": "tfcflorae:block/wood/stripped_log/eucalyptus"
+    "end": "tfc:block/wood/stripped_log/eucalyptus",
+    "side": "tfc:block/wood/stripped_log/eucalyptus"
   }
 }

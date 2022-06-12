@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/jaspillite",
+  "result": "tfc:rock/cobble/jaspillite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfc:rock/cobble/jaspillite_slab"
+  }
+}

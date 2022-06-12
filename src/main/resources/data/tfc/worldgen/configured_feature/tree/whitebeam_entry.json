@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 430,
+    "min_temp": -10,
+    "max_temp": 12,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/whitebeam"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/whitebeam"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/whitebeam",
+    "dead_tree": "tfcflorae:tree/whitebeam_dead",
+    "fallen_log": "tfcflorae:wood/log/whitebeam",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/whitebeam",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/whitebeam",
+    "old_growth_tree": "tfcflorae:tree/whitebeam_large"
+  }
+}

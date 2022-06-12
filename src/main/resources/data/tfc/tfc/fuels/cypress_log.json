@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/cypress"
+    },
+    {
+      "item": "tfcflorae:wood/wood/cypress"
+    }
+  ],
+  "duration": 1100,
+  "temperature": 783
+}

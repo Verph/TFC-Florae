@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/dacite",
+  "result": "tfcflorae:rock/smooth/dacite_stairs",
+  "mode": "stair"
+}

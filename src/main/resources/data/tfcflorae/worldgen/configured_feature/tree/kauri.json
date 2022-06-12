@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:kauri/1",
+      "tfcflorae:kauri/2",
+      "tfcflorae:kauri/3",
+      "tfcflorae:kauri/4",
+      "tfcflorae:kauri/5",
+      "tfcflorae:kauri/6",
+      "tfcflorae:kauri/7",
+      "tfcflorae:kauri/8",
+      "tfcflorae:kauri/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

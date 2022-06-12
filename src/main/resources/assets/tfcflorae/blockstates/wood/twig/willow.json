@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/willow",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/willow"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/willow",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/willow",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/bookshelf",
   "textures": {
-    "end": "tfcflorae:block/wood/planks/buxus",
-    "side": "tfcflorae:block/wood/planks/buxus_bookshelf"
+    "end": "tfc:block/wood/planks/buxus",
+    "side": "tfc:block/wood/planks/buxus_bookshelf"
   }
 }

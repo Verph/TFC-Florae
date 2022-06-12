@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/loom",
+  "parent": "tfc:block/loom",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/mahogany",
-    "particle": "tfcflorae:block/wood/planks/mahogany"
+    "texture": "tfc:block/wood/planks/mahogany",
+    "particle": "tfc:block/wood/planks/mahogany"
   }
 }

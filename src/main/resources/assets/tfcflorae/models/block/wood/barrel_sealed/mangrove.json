@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
-    "particle": "tfcflorae:block/wood/planks/mangrove",
-    "planks": "tfcflorae:block/wood/planks/mangrove",
-    "sheet": "tfcflorae:block/wood/sheet/mangrove",
-    "hoop": "tfcflorae:block/barrel_hoop"
+    "particle": "tfc:block/wood/planks/mangrove",
+    "planks": "tfc:block/wood/planks/mangrove",
+    "sheet": "tfc:block/wood/sheet/mangrove",
+    "hoop": "tfc:block/barrel_hoop"
   }
 }

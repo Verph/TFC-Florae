@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/hazel"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/hazel"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/hazel_fence_gate",
+    "count": 2
+  }
+}

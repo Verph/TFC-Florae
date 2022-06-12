@@ -20,6 +20,7 @@ import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.util.registry.RegistryRock;
 
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.soil.TFCFSand;
 
 /**
  * Default wood types used for block registration calls.
@@ -32,33 +33,58 @@ public enum TFCFRock implements RegistryRock
     FOIDOLITE(RockCategory.IGNEOUS_INTRUSIVE, SandBlockType.BLACK),
     PORPHYRY(RockCategory.IGNEOUS_INTRUSIVE, SandBlockType.RED),
     PERIDOTITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.GREEN),
+    BLAIMORITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.GREEN),
+    BONINITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.BLACK),
+    CARBONATITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.BROWN),
     MUDSTONE(RockCategory.SEDIMENTARY, SandBlockType.WHITE),
     SANDSTONE(RockCategory.SEDIMENTARY, SandBlockType.YELLOW),
     SILTSTONE(RockCategory.SEDIMENTARY, SandBlockType.PINK),
-    BLUESCHIST(RockCategory.METAMORPHIC, SandBlockType.WHITE),
+    ARKOSE(RockCategory.SEDIMENTARY, SandBlockType.BROWN),
+    JASPILLITE(RockCategory.SEDIMENTARY, SandBlockType.PINK),
+    TRAVERTINE(RockCategory.SEDIMENTARY, SandBlockType.WHITE),
+    WACKESTONE(RockCategory.SEDIMENTARY, SandBlockType.BLACK),
+    BLACKBAND_IRONSTONE(RockCategory.SEDIMENTARY, SandBlockType.BLACK),
+    BLUESCHIST(RockCategory.METAMORPHIC, SandBlockType.BROWN/*, TFCFSand.BLUE*/),
     CATLINITE(RockCategory.METAMORPHIC, SandBlockType.RED),
     GREENSCHIST(RockCategory.METAMORPHIC, SandBlockType.GREEN),
     NOVACULITE(RockCategory.METAMORPHIC, SandBlockType.WHITE),
     SOAPSTONE(RockCategory.METAMORPHIC, SandBlockType.WHITE),
-    KOMATIITE(RockCategory.METAMORPHIC, SandBlockType.GREEN);
+    KOMATIITE(RockCategory.METAMORPHIC, SandBlockType.GREEN),
+    CATACLASITE(RockCategory.METAMORPHIC, SandBlockType.RED),
+    MYLONITE(RockCategory.METAMORPHIC, SandBlockType.YELLOW);
 
     public static final TFCFRock[] VALUES = values();
 
     private final String serializedName;
     private final RockCategory category;
     private final SandBlockType sandType;
+    //private final TFCFSand sandTypeTFCF;
 
     TFCFRock(RockCategory category, SandBlockType sandType)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.category = category;
         this.sandType = sandType;
+        //this.sandTypeTFCF = null;
     }
+
+    /*TFCFRock(RockCategory category, TFCFSand sandTypeTFCF)
+    {
+        this.serializedName = name().toLowerCase(Locale.ROOT);
+        this.category = category;
+        this.sandTypeTFCF = sandTypeTFCF;
+        this.sandType = null;
+    }*/
 
     public SandBlockType getSandType()
     {
         return sandType;
     }
+
+    /*public TFCFSand getSandTypeTFCF()
+    {
+        return sandTypeTFCF;
+    }*/
 
     @Override
     public RockCategory category()

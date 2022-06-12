@@ -14,7 +14,6 @@ import assets
 import data
 import recipes
 import world_gen
-import generate_trees
 
 from constants import *
 
@@ -30,13 +29,12 @@ class ModificationLoggingResourceManager(ResourceManager):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate resources for TFCFlorae')
+    parser = argparse.ArgumentParser(description='Generate resources for TFC')
     parser.add_argument('--clean', action='store_true', dest='clean', help='Clean all auto generated resources')
     parser.add_argument('--hotswap', type=str, default=None, help='A secondary target directory to write resources to, creates a resource hotswap.')
-    parser.add_argument('--genTree', type=bool, default=False, help='Generate tree resources, and saplings drop rate for normal trees', action=argparse.BooleanOptionalAction)
     args = parser.parse_args()
 
-    rm = ResourceManager('tfcflorae', resource_dir='../src/main/resources')
+    rm = ResourceManager('tfc', resource_dir='../src/main/resources')
 
     if args.clean:
         # Stupid windows file locking errors.
@@ -50,28 +48,24 @@ def main():
         print('Clean Aborted')
         return
 
-    generate_all(rm, args)
+    generate_all(rm)
     print('New = %d, Modified = %d, Unchanged = %d, Errors = %d' % (rm.new_files, rm.modified_files, rm.unchanged_files, rm.error_files))
 
     if args.hotswap is not None:
         # Optionally generate all resources into a second directory (the build dir, either gradle or IDEA's, for resource hot swapping
-        rm = ResourceManager('tfcflorae', resource_dir=args.hotswap)
+        rm = ResourceManager('tfc', resource_dir=args.hotswap)
         generate_all(rm)
         print('Hotswap Finished')
 
 
-def generate_all(rm: ResourceManager, args):
+def generate_all(rm: ResourceManager):
     # do simple lang keys first, because it's ordered intentionally
     rm.lang(DEFAULT_LANG)
-
-    #generate structures
-    if args.genTree:
-        generate_trees.main()
 
     # generic assets / data
     assets.generate(rm)
     data.generate(rm)
-    #world_gen.generate(rm)
+    world_gen.generate(rm)
     recipes.generate(rm)
 
     rm.flush()

@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:cypress/1",
+      "tfcflorae:cypress/2",
+      "tfcflorae:cypress/3",
+      "tfcflorae:cypress/4",
+      "tfcflorae:cypress/5",
+      "tfcflorae:cypress/6",
+      "tfcflorae:cypress/7",
+      "tfcflorae:cypress/8",
+      "tfcflorae:cypress/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

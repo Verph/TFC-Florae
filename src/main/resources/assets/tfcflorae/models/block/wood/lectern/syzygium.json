@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/syzygium",
-    "base": "tfcflorae:block/wood/lectern/syzygium/base",
-    "front": "tfcflorae:block/wood/lectern/syzygium/front",
-    "sides": "tfcflorae:block/wood/lectern/syzygium/sides",
-    "top": "tfcflorae:block/wood/lectern/syzygium/top",
-    "particle": "tfcflorae:block/wood/lectern/syzygium/sides"
+    "bottom": "tfc:block/wood/planks/syzygium",
+    "base": "tfc:block/wood/lectern/syzygium/base",
+    "front": "tfc:block/wood/lectern/syzygium/front",
+    "sides": "tfc:block/wood/lectern/syzygium/sides",
+    "top": "tfc:block/wood/lectern/syzygium/top",
+    "particle": "tfc:block/wood/lectern/syzygium/sides"
   }
 }

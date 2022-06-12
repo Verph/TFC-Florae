@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/locust",
-    "top": "tfcflorae:block/wood/planks/locust",
-    "side": "tfcflorae:block/wood/planks/locust"
+    "bottom": "tfc:block/wood/planks/locust",
+    "top": "tfc:block/wood/planks/locust",
+    "side": "tfc:block/wood/planks/locust"
   }
 }

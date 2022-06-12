@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/tool_rack",
+  "parent": "tfc:block/tool_rack",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/cypress",
-    "particle": "tfcflorae:block/wood/planks/cypress"
+    "texture": "tfc:block/wood/planks/cypress",
+    "particle": "tfc:block/wood/planks/cypress"
   }
 }

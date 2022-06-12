@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:buxus_dead/1",
+      "tfcflorae:buxus_dead/2",
+      "tfcflorae:buxus_dead/3",
+      "tfcflorae:buxus_dead/4",
+      "tfcflorae:buxus_dead/5",
+      "tfcflorae:buxus_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 6,
+      "allow_submerged": true
+    }
+  }
+}

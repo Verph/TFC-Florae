@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log/maclura",
-    "side": "tfcflorae:block/wood/log/maclura"
+    "end": "tfc:block/wood/log/maclura",
+    "side": "tfc:block/wood/log/maclura"
   }
 }

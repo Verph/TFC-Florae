@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:angelim_large/1",
+      "tfcflorae:angelim_large/2",
+      "tfcflorae:angelim_large/3",
+      "tfcflorae:angelim_large/4",
+      "tfcflorae:angelim_large/5",
+      "tfcflorae:angelim_large/6",
+      "tfcflorae:angelim_large/7",
+      "tfcflorae:angelim_large/8",
+      "tfcflorae:angelim_large/9",
+      "tfcflorae:angelim_large/10",
+      "tfcflorae:angelim_large/11",
+      "tfcflorae:angelim_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

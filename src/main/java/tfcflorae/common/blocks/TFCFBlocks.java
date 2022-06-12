@@ -28,6 +28,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import net.dries007.tfc.common.TFCItemGroup;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.*;
@@ -37,7 +38,7 @@ import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.blocks.rock.*;
-import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.common.blocks.soil.*;
 import tfcflorae.common.blocks.wood.*;
 import tfcflorae.common.items.TFCFItems;
 
@@ -57,12 +58,6 @@ public class TFCFBlocks
         )
     );
 
-    /*public static final Map<TFCFSoil, Map<SoilBlockType.Variant, RegistryObject<Block>>> TFCSOIL = Helpers.mapOfKeys(TFCFSoil.class, type -> 
-        Helpers.mapOfKeys(SoilBlockType.Variant.class, variant ->
-            register((type.name() + "/" + variant.name()), () -> type.TFCCreate(variant), EARTH)
-        )
-    );*/
-
     public static final Map<TFCFSoil, Map<SoilBlockType.Variant, RegistryObject<Block>>> TFCSOIL = TFCSoilMap(TFCFSoil.class);
 
     public static final Map<TFCFSoil.TFCFVariant, DecorationBlockRegistryObject> MUD_BRICK_DECORATIONS = Helpers.mapOfKeys(TFCFSoil.TFCFVariant.class, variant -> new DecorationBlockRegistryObject(
@@ -70,6 +65,29 @@ public class TFCFBlocks
         register(("mud_bricks/" + variant.name() + "_stairs"), () -> new StairBlock(() -> TFCFSOIL.get(TFCFSoil.MUD_BRICKS).get(variant).get().defaultBlockState(), SoilBlockType.mudProperties()), DECORATIONS),
         register(("mud_bricks/" + variant.name() + "_wall"), () -> new WallBlock(SoilBlockType.mudProperties()), DECORATIONS)
     ));
+
+    // Ores
+
+    public static final Map<TFCFRock, Map<Ore, RegistryObject<Block>>> ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, ore -> !ore.isGraded(), ore ->
+            register(("ore/" + ore.name() + "/" + rock.name()), ore::create, TFCItemGroup.ORES)
+        )
+    );
+
+    public static final Map<TFCFRock, Map<Ore, Map<Ore.Grade, RegistryObject<Block>>>> GRADED_ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, Ore::isGraded, ore ->
+            Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), ore::create, TFCItemGroup.ORES)
+            )
+        )
+    );
+
+    // Gotta fix OreDepositBlock
+    /*public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(OreDeposit.class, ore ->
+            register("deposit/" + ore.name() + "/" + rock.name(), () -> new OreDepositBlock(Block.Properties.of(Material.SAND, MaterialColor.STONE).sound(SoundType.GRAVEL).strength(0.8f), rock, ore), ORES)
+        )
+    );*/
 
     // Rock Stuff #less wow :(
 

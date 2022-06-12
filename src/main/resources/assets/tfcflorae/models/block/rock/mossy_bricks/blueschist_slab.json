@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfc:block/rock/mossy_bricks/blueschist",
+    "top": "tfc:block/rock/mossy_bricks/blueschist",
+    "side": "tfc:block/rock/mossy_bricks/blueschist"
+  }
+}

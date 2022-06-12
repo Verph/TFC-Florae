@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/buxus",
-    "base": "tfcflorae:block/wood/lectern/buxus/base",
-    "front": "tfcflorae:block/wood/lectern/buxus/front",
-    "sides": "tfcflorae:block/wood/lectern/buxus/sides",
-    "top": "tfcflorae:block/wood/lectern/buxus/top",
-    "particle": "tfcflorae:block/wood/lectern/buxus/sides"
+    "bottom": "tfc:block/wood/planks/buxus",
+    "base": "tfc:block/wood/lectern/buxus/base",
+    "front": "tfc:block/wood/lectern/buxus/front",
+    "sides": "tfc:block/wood/lectern/buxus/sides",
+    "top": "tfc:block/wood/lectern/buxus/top",
+    "particle": "tfc:block/wood/lectern/buxus/sides"
   }
 }

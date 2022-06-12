@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/kapok",
+  "result": "tfcflorae:wood/planks/kapok_stairs",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/smooth/breccia",
+  "result": "tfc:rock/smooth/breccia_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfc:rock/smooth/breccia_slab"
+  }
+}

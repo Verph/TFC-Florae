@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/black_walnut",
-    "leg": "tfcflorae:block/wood/log/black_walnut",
-    "side": "tfcflorae:block/wood/planks/black_walnut",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/black_walnut"
+    "top": "tfc:block/wood/scribing_table/black_walnut",
+    "leg": "tfc:block/wood/log/black_walnut",
+    "side": "tfc:block/wood/planks/black_walnut",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/black_walnut"
   }
 }

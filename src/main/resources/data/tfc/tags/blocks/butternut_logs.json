@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/butternut",
+    "tfcflorae:wood/stripped_log/butternut",
+    "tfcflorae:wood/wood/butternut",
+    "tfcflorae:wood/stripped_wood/butternut"
+  ]
+}

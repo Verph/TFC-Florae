@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:yew/1",
+      "tfcflorae:yew/2",
+      "tfcflorae:yew/3",
+      "tfcflorae:yew/4",
+      "tfcflorae:yew/5",
+      "tfcflorae:yew/6",
+      "tfcflorae:yew/7",
+      "tfcflorae:yew/8",
+      "tfcflorae:yew/9",
+      "tfcflorae:yew/10",
+      "tfcflorae:yew/11",
+      "tfcflorae:yew/12",
+      "tfcflorae:yew/13",
+      "tfcflorae:yew/14",
+      "tfcflorae:yew/15",
+      "tfcflorae:yew/16",
+      "tfcflorae:yew/17",
+      "tfcflorae:yew/18",
+      "tfcflorae:yew/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

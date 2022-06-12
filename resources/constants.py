@@ -1,6 +1,6 @@
 #  Work under Copyright. Licensed under the EUPL.
 #  See the project README.md and LICENSE.txt for more information.
-import csv
+
 from typing import Dict, List, NamedTuple, Sequence, Optional, Literal, Tuple, Any
 
 Tier = Literal['stone', 'copper', 'bronze', 'wrought_iron', 'steel', 'black_steel', 'colored_steel']
@@ -69,7 +69,30 @@ ROCKS: Dict[str, Rock] = {
     'phyllite': Rock('metamorphic', 'brown'),
     'schist': Rock('metamorphic', 'green'),
     'gneiss': Rock('metamorphic', 'green'),
-    'marble': Rock('metamorphic', 'yellow')
+    'marble': Rock('metamorphic', 'yellow'),
+    'breccia': Rock('igneous_intrusive', 'white'),
+    'foidolite': Rock('igneous_intrusive', 'black'),
+    'porphyry': Rock('igneous_intrusive', 'red'),
+    'peridotite': Rock('igneous_extrusive', 'green'),
+    'blaimorite': Rock('igneous_extrusive', 'green'),
+    'boninite': Rock('igneous_extrusive', 'black'),
+    'carbonatite': Rock('igneous_extrusive', 'brown'),
+    'mudstone': Rock('sedimentary', 'white'),
+    'sandstone': Rock('sedimentary', 'yellow'),
+    'siltstone': Rock('sedimentary', 'pink'),
+    'arkose': Rock('sedimentary', 'brown'),
+    'jaspillite': Rock('sedimentary', 'pink'),
+    'travertine': Rock('sedimentary', 'white'),
+    'wackestone': Rock('sedimentary', 'black'),
+    'blackband_ironstone': Rock('sedimentary', 'black'),
+    'blueschist': Rock('metamorphic', 'brown'),
+    'catlinite': Rock('metamorphic', 'red'),
+    'greenschist': Rock('metamorphic', 'green'),
+    'novaculite': Rock('metamorphic', 'white'),
+    'soapstone': Rock('metamorphic', 'white'),
+    'komatiite': Rock('metamorphic', 'green'),
+    'cataclasite': Rock('metamorphic', 'red'),
+    'mylonite': Rock('metamorphic', 'yellow')
 }
 METALS: Dict[str, Metal] = {
     'bismuth': Metal(1, {'part'}, 0.14, 270, None),
@@ -102,10 +125,10 @@ METALS: Dict[str, Metal] = {
     'unknown': Metal(0, set(), 0.5, 400, None)
 }
 METAL_BLOCKS: Dict[str, MetalItem] = {
-    'anvil': MetalItem('utility', 1400, 'tfcflorae:block/anvil', None, False),
-    'chain': MetalItem('utility', 100, 'tfcflorae:block/chain', None, False),
-    'lamp': MetalItem('utility', 100, 'tfcflorae:block/lamp', None, False),
-    'trapdoor': MetalItem('utility', 200, 'tfcflorae:block/trapdoor', None, False)
+    'anvil': MetalItem('utility', 1400, 'tfc:block/anvil', None, False),
+    'chain': MetalItem('utility', 100, 'tfc:block/chain', None, False),
+    'lamp': MetalItem('utility', 100, 'tfc:block/lamp', None, False),
+    'trapdoor': MetalItem('utility', 200, 'tfc:block/trapdoor', None, False)
 }
 METAL_ITEMS: Dict[str, MetalItem] = {
     'ingot': MetalItem('all', 100, 'item/generated', 'forge:ingots', True),
@@ -139,7 +162,7 @@ METAL_ITEMS: Dict[str, MetalItem] = {
     'hammer_head': MetalItem('tool', 100, 'item/generated', None, True),
     'propick': MetalItem('tool', 100, 'item/handheld', None, False),
     'propick_head': MetalItem('tool', 100, 'item/generated', None, True),
-    'knife': MetalItem('tool', 100, 'tfcflorae:item/handheld_flipped', None, False),
+    'knife': MetalItem('tool', 100, 'tfc:item/handheld_flipped', None, False),
     'knife_blade': MetalItem('tool', 100, 'item/generated', None, True),
     'scythe': MetalItem('tool', 100, 'item/handheld', None, False),
     'scythe_blade': MetalItem('tool', 100, 'item/generated', None, True),
@@ -232,8 +255,8 @@ ORE_VEINS: Dict[str, Vein] = {
     'deep_native_gold': preset_vein('native_gold', 'cluster', ['igneous_extrusive', 'igneous_intrusive'], 'pyrite', 10, ['igneous_extrusive', 'igneous_intrusive'], preset=DEEP_S_METAL_ORE),
     'normal_native_silver': preset_vein('native_silver', 'cluster', ['granite', 'gneiss'], preset=NORMAL_METAL_ORE),
     'poor_native_silver': preset_vein('native_silver', 'cluster', ['granite', 'metamorphic'], preset=POOR_METAL_ORE),
-    'normal_hematite': preset_vein('hematite', 'cluster', ['igneous_extrusive'], preset=NORMAL_METAL_ORE),
-    'deep_hematite': preset_vein('hematite', 'cluster', ['igneous_extrusive'], preset=DEEP_METAL_ORE),
+    'normal_hematite': preset_vein('hematite', 'cluster', ['jaspillite', 'blackband_ironstone', 'igneous_extrusive'], preset=NORMAL_METAL_ORE),
+    'deep_hematite': preset_vein('hematite', 'cluster', ['jaspillite', 'blackband_ironstone', 'igneous_extrusive'], preset=DEEP_METAL_ORE),
     'normal_cassiterite': preset_vein('cassiterite', 'cluster', ['igneous_intrusive'], 'topaz', 10, ['granite'], preset=NORMAL_METAL_ORE),
     'surface_cassiterite': preset_vein('cassiterite', 'cluster', ['igneous_intrusive'], 'topaz', 20, ['granite'], preset=SURFACE_METAL_ORE, deposits=True),
     'normal_bismuthinite': preset_vein('bismuthinite', 'cluster', ['igneous_intrusive', 'sedimentary'], preset=NORMAL_METAL_ORE),
@@ -266,9 +289,9 @@ ORE_VEINS: Dict[str, Vein] = {
     'halite': vein('halite', 'disc', 120, 30, 30, 90, 80, 0, 0, 0, ['sedimentary']),
     'diamond': vein('diamond', 'pipe', 60, 60, -64, 100, 40, 0, 0, 0, ['gabbro']),
     'emerald': vein('emerald', 'pipe', 80, 60, -64, 100, 40, 0, 0, 0, ['igneous_intrusive']),
-    'volcanic_sulfur': vein('sulfur', 'disc', 25, 14, 80, 180, 40, 0, 0, 0, ['igneous_extrusive', 'igneous_intrusive'], biomes='#tfcflorae:is_volcanic', height=6),
-    'amethyst': vein('amethyst', 'disc', 14, 8, 40, 60, 20, 0, 0, 0, ['sedimentary', 'metamorphic'], biomes='#tfcflorae:is_river', height=4),
-    'opal': vein('opal', 'disc', 14, 8, 40, 60, 20, 0, 0, 0, ['sedimentary', 'igneous_extrusive'], biomes='#tfcflorae:is_river', height=4)
+    'volcanic_sulfur': vein('sulfur', 'disc', 25, 14, 80, 180, 40, 0, 0, 0, ['igneous_extrusive', 'igneous_intrusive'], biomes='#tfc:is_volcanic', height=6),
+    'amethyst': vein('amethyst', 'disc', 14, 8, 40, 60, 20, 0, 0, 0, ['sedimentary', 'metamorphic'], biomes='#tfc:is_river', height=4),
+    'opal': vein('opal', 'disc', 14, 8, 40, 60, 20, 0, 0, 0, ['sedimentary', 'igneous_extrusive'], biomes='#tfc:is_river', height=4)
 }
 
 DEPOSIT_RARES: Dict[str, str] = {
@@ -291,7 +314,30 @@ DEPOSIT_RARES: Dict[str, str] = {
     'phyllite': 'pyrite',
     'schist': 'pyrite',
     'gneiss': 'gypsum',
-    'marble': 'lapis_lazuli'
+    'marble': 'lapis_lazuli',
+    'breccia': 'ruby',
+    'foidolite': 'emerald',
+    'porphyry': 'pyrite',
+    'peridotite': 'emerald',
+    'blaimorite': 'pyrite',
+    'boninite': 'pyrite',
+    'carbonatite': 'diamond',
+    'mudstone': 'amethyst',
+    'sandstone': 'amethyst',
+    'siltstone': 'amethyst',
+    'arkose': 'pyrite',
+    'jaspillite': 'opal',
+    'travertine': 'topaz',
+    'wackestone': 'pyrite',
+    'blackband_ironstone': 'opal',
+    'blueschist': 'ruby',
+    'catlinite': 'pyrite',
+    'greenschist': 'pyrite',
+    'novaculite': 'ruby',
+    'soapstone': 'halite',
+    'komatiite': 'sapphire',
+    'cataclasite': 'topaz',
+    'mylonite': 'pyrite'
 }
 
 ROCK_BLOCK_TYPES = ('raw', 'hardened', 'bricks', 'cobble', 'gravel', 'smooth', 'mossy_cobble', 'mossy_bricks', 'cracked_bricks', 'chiseled', 'spike', 'loose', 'pressure_plate', 'button')
@@ -300,8 +346,8 @@ CUTTABLE_ROCKS = ('raw', 'bricks', 'cobble', 'smooth', 'mossy_cobble', 'mossy_br
 ROCK_SPIKE_PARTS = ('base', 'middle', 'tip')
 SAND_BLOCK_TYPES = ('brown', 'white', 'black', 'red', 'yellow', 'green', 'pink')
 SANDSTONE_BLOCK_TYPES = ('raw', 'smooth', 'cut')
-SOIL_BLOCK_TYPES = ('dirt', 'grass', 'grass_path', 'clay', 'clay_grass', 'farmland', 'rooted_dirt', 'mud', 'mud_bricks', 'drying_bricks')
-SOIL_BLOCK_VARIANTS = ('silt', 'loam', 'sandy_loam', 'silty_loam')
+SOIL_BLOCK_TYPES = ('dirt', 'grass', 'grass_path', 'clay', 'clay_grass', 'farmland', 'rooted_dirt', 'mud', 'mud_bricks', 'drying_bricks', 'coarse_dirt', 'podzol', 'dry_grass_path', 'dry_grass', 'sparse_grass_path', 'sparse_grass', 'dry_clay_grass', 'sparse_clay_grass', 'earthenware_clay', 'earthenware_clay_grass', 'dry_earthenware_clay_grass', 'sparse_earthenware_clay_grass', 'kaolinite_clay', 'kaolinite_clay_grass', 'dry_kaolinite_clay_grass', 'sparse_kaolinite_clay_grass', 'stoneware_clay', 'stoneware_clay_grass', 'dry_stoneware_clay_grass', 'sparse_stoneware_clay_grass')
+SOIL_BLOCK_VARIANTS = ('silt', 'loam', 'sandy_loam', 'silty_loam', 'humus')
 ORE_DEPOSITS = ('native_copper', 'cassiterite', 'native_silver', 'native_gold')
 
 GEMS = ('amethyst', 'diamond', 'emerald', 'lapis_lazuli', 'opal', 'pyrite', 'ruby', 'sapphire', 'topaz')
@@ -314,10 +360,29 @@ SIMPLE_FLUIDS = ('brine', 'curdled_milk', 'limewater', 'lye', 'milk_vinegar', 'o
 ALCOHOLS = ('beer', 'cider', 'rum', 'sake', 'vodka', 'whiskey', 'corn_whiskey', 'rye_whiskey')
 
 WOODS: Dict[str, Wood] = {
+    'acacia': Wood(650, 1000),
+    'ash': Wood(696, 1250),
+    'aspen': Wood(611, 1000),
+    'birch': Wood(652, 1750),
+    'blackwood': Wood(720, 1750),
+    'chestnut': Wood(651, 1500),
+    'douglas_fir': Wood(707, 1500),
+    'hickory': Wood(762, 2000),
+    'kapok': Wood(645, 1000),
+    'maple': Wood(745, 2000),
+    'oak': Wood(728, 2250),
+    'palm': Wood(730, 1250),
+    'pine': Wood(627, 1250),
+    'rosewood': Wood(640, 1500),
+    'sequoia': Wood(612, 1750),
+    'spruce': Wood(608, 1500),
+    'sycamore': Wood(653, 1750),
+    'white_cedar': Wood(625, 1500),
+    'willow': Wood(603, 1000),
     'african_padauk': Wood(745, 1500),
     'alder': Wood(601, 1000),
     'angelim': Wood(773, 1200),
-    #'bald_cypress': Wood(770, 1300),
+    'bald_cypress': Wood(770, 1300),
     'baobab': Wood(478, 1000),
     'beech': Wood(703, 1750),
     'black_walnut': Wood(758, 1800),
@@ -326,7 +391,7 @@ WOODS: Dict[str, Wood] = {
     'butternut': Wood(758, 1800),
     'cherry_blossom': Wood(795, 1250),
     'cocobolo': Wood(773, 1000),
-    #'cypress': Wood(783, 1100),
+    'cypress': Wood(783, 1100),
     'ebony': Wood(795, 1000),
     'eucalyptus': Wood(705, 1000),
     'common_oak': Wood(728, 2250),
@@ -342,7 +407,7 @@ WOODS: Dict[str, Wood] = {
     'iroko': Wood(785, 1200),
     'ironwood': Wood(694, 1970),
     'jacaranda': Wood(795, 1250),
-    #'joshua_tree': Wood(696, 1250),
+    'joshua_tree': Wood(696, 1250),
     'juniper': Wood(632, 1750),
     'kauri': Wood(730, 1250),
     'larch': Wood(632, 1250),
@@ -352,13 +417,13 @@ WOODS: Dict[str, Wood] = {
     'maclura': Wood(773, 1930),
     'mahoe': Wood(783, 1100),
     'mahogany': Wood(773, 1000),
-    #'mangrove': Wood(783, 1100),
+    'mangrove': Wood(783, 1100),
     'marblewood': Wood(837, 1200),
     'messmate': Wood(696, 1250),
     'mountain_ash': Wood(696, 1250),
     'mulberry': Wood(705, 1860),
-    #'nordmann_fir': Wood(628, 1500),
-    #'norway_spruce': Wood(628, 1500),
+    'nordmann_fir': Wood(628, 1500),
+    'norway_spruce': Wood(628, 1500),
     'pink_ivory': Wood(773, 1000),
     'poplar': Wood(609, 1000),
     'purpleheart': Wood(793, 1700),
@@ -579,15 +644,15 @@ NORMAL_FRUIT_TREES: List[str] = [k for k in FRUITS.keys() if k != 'banana']
 
 GRAINS = ('barley', 'maize', 'oat', 'rice', 'rye', 'wheat')
 GRAIN_SUFFIXES = ('', '_grain', '_flour', '_dough', '_bread')
-VEGETABLES = ('beet', 'cabbage', 'carrot', 'garlic', 'green_bean', 'green_bell_pepper', 'onion', 'potato', 'red_bell_pepper', 'soybean', 'squash', 'tomato', 'yellow_bell_pepper', 'cheese', 'cooked_egg', 'dried_seaweed', 'dried_kelp', 'cattail_root', 'taro_root', 'sugarcane')
+VEGETABLES = ('beet', 'cabbage', 'carrot', 'garlic', 'green_bean', 'green_bell_pepper', 'onion', 'potato', 'red_bell_pepper', 'soybean', 'squash', 'tomato', 'yellow_bell_pepper', 'cheese', 'cooked_egg', 'boiled_egg', 'dried_seaweed', 'dried_kelp', 'cattail_root', 'taro_root', 'sugarcane', 'cooked_rice')
 MEATS = ('beef', 'pork', 'chicken', 'mutton', 'bear', 'horse_meat', 'pheasant', 'venison', 'wolf', 'rabbit', 'hyena', 'duck', 'chevon', 'gran_feline', 'camelidae', 'cod', 'bluegill', 'salmon', 'tropical_fish', 'turtle', 'calamari', 'shellfish')
 NUTRIENTS = ('grain', 'fruit', 'vegetables', 'protein', 'dairy')
 
 SPAWN_EGG_ENTITIES = ('isopod', 'lobster', 'crayfish', 'cod', 'pufferfish', 'tropical_fish', 'jellyfish', 'orca', 'dolphin', 'salmon', 'bluegill', 'manatee', 'penguin', 'turtle', 'vulture', 'horseshoe_crab', 'polar_bear', 'grizzly_bear', 'black_bear', 'cougar', 'panther', 'lion', 'sabertooth', 'squid', 'octopoteuthis', 'pig', 'cow', 'alpaca', 'chicken')
 BUCKETABLE_FISH = ('cod', 'pufferfish', 'tropical_fish', 'jellyfish', 'salmon', 'bluegill')
 
-BLOCK_ENTITIES = ('log_pile', 'burning_log_pile', 'placed_item', 'pit_kiln', 'charcoal_forge', 'quern', 'scraping', 'crucible', 'bellows', 'composter', 'chest', 'trapped_chest', 'barrel', 'loom', 'sluice', 'tool_rack', 'sign', 'lamp', 'berry_bush', 'crop', 'firepit', 'pot', 'grill', 'pile', 'farmland', 'tick_counter', 'nest_box', 'bloomery', 'bloom', 'anvil', 'ingot_pile', 'sheet_pile', 'blast_furnace', 'large_vessel')
-TANNIN_WOOD_TYPES = ('red_cedar', 'syzygium', 'juniper', 'sweetgum', 'beech', 'common_oak', 'hornbeam', 'red_elm', 'white_elm', 'whitebeam', 'redwood')
+BLOCK_ENTITIES = ('log_pile', 'burning_log_pile', 'placed_item', 'pit_kiln', 'charcoal_forge', 'quern', 'scraping', 'crucible', 'bellows', 'composter', 'chest', 'trapped_chest', 'barrel', 'loom', 'sluice', 'tool_rack', 'sign', 'lamp', 'berry_bush', 'crop', 'firepit', 'pot', 'grill', 'pile', 'farmland', 'tick_counter', 'nest_box', 'bloomery', 'bloom', 'anvil', 'ingot_pile', 'sheet_pile', 'blast_furnace', 'large_vessel', 'powderkeg')
+TANNIN_WOOD_TYPES = ('oak', 'birch', 'chestnut', 'douglas_fir', 'hickory', 'maple', 'sequoia', 'red_cedar', 'syzygium', 'juniper', 'sweetgum', 'beech', 'common_oak', 'hornbeam', 'red_elm', 'white_elm', 'whitebeam', 'redwood')
 
 def spawner(entity: str, weight: int = 1, min_count: int = 1, max_count: int = 4) -> Dict[str, Any]:
     return {
@@ -596,6 +661,54 @@ def spawner(entity: str, weight: int = 1, min_count: int = 1, max_count: int = 4
         'minCount': min_count,
         'maxCount': max_count
     }
+
+
+OCEAN_AMBIENT: Dict[str, Dict[str, Any]] = {
+    'isopod': spawner('tfc:isopod'),
+    'lobster': spawner('tfc:lobster'),
+    'horseshoe_crab': spawner('tfc:horseshoe_crab'),
+    'cod': spawner('tfc:cod', weight=10),
+    'pufferfish': spawner('tfc:pufferfish', max_count=2),
+    'tropical_fish': spawner('tfc:tropical_fish', weight=10, max_count=6),
+    'jellyfish': spawner('tfc:jellyfish', min_count=2, max_count=6)
+}
+
+OCEAN_CREATURES: Dict[str, Dict[str, Any]] = {
+    'orca': spawner('tfc:orca', min_count=1, max_count=3),
+    'dolphin': spawner('tfc:dolphin', min_count=1, max_count=3),
+    'squid': spawner('tfc:squid', min_count=1, max_count=3)
+}
+
+UNDERGROUND_WATER_CREATURES: Dict[str, Dict[str, Any]] = {
+    'octopoteuthis': spawner('tfc:octopoteuthis', min_count=1, max_count=2)
+}
+
+LAKE_AMBIENT: Dict[str, Dict[str, Any]] = {
+    'salmon': spawner('tfc:salmon', min_count=2, max_count=6, weight=10),
+    'bluegill': spawner('tfc:bluegill', min_count=2, max_count=4, weight=10),
+    'crayfish': spawner('tfc:crayfish', min_count=1, max_count=4, weight=3)
+}
+
+LAKE_CREATURES: Dict[str, Dict[str, Any]] = {
+    'manatee': spawner('tfc:manatee', min_count=1, max_count=2)
+}
+
+SHORE_CREATURES: Dict[str, Dict[str, Any]] = {
+    'penguin': spawner('tfc:penguin', min_count=2, max_count=5),
+    'turtle': spawner('tfc:turtle', min_count=2, max_count=5)
+}
+
+LAND_CREATURES: Dict[str, Dict[str, Any]] = {
+    'pig': spawner('tfc:pig', min_count=1, max_count=4),
+    'cow': spawner('tfc:cow', min_count=1, max_count=4),
+    'alpaca': spawner('tfc:alpaca', min_count=1, max_count=4),
+    'chicken': spawner('tfc:chicken', min_count=2, max_count=6),
+    'polar_bear': spawner('tfc:polar_bear', min_count=1, max_count=1),
+    'grizzly_bear': spawner('tfc:grizzly_bear', min_count=1, max_count=1),
+    'black_bear': spawner('tfc:black_bear', min_count=1, max_count=1),
+    'lion': spawner('tfc:lion', min_count=1, max_count=3),
+    'sabertooth': spawner('tfc:sabertooth', min_count=1, max_count=1),
+}
 
 DISABLED_VANILLA_RECIPES = ('flint_and_steel', 'turtle_helmet', 'campfire', 'bucket', 'composter', 'tinted_glass', 'enchanting_table', 'bowl', 'blaze_rod', 'bone_meal', 'flower_pot', 'painting', 'torch', 'soul_torch', 'sticky_piston', 'clock', 'compass', 'wool', 'hay_block', 'anvil', 'wheat', 'lapis_lazuli')
 ARMOR_SECTIONS = ('chestplate', 'leggings', 'boots', 'helmet')
@@ -608,87 +721,434 @@ def lang(key: str, *args) -> str:
 
 
 def lang_enum(name: str, values: Sequence[str]) -> Dict[str, str]:
-    return dict(('tfcflorae.enum.%s.%s' % (name, value), lang(value)) for value in values)
+    return dict(('tfc.enum.%s.%s' % (name, value), lang(value)) for value in values)
 
 
 # This is here as it's used only once in a generic lang call by generate_resources.py
 DEFAULT_LANG = {
+    # Misc
+    'generator.tfc.tng': 'TerraFirmaCraft',
+    'death.attack.tfc.grill': '%1$s grilled themself to death',
+    'death.attack.tfc.grill.player': '%1$s grilled themselves while trying to escape %2$s',
+    'death.attack.tfc.pot': '%1$s boiled themselves into soup',
+    'death.attack.tfc.pot.player': '%1$s boiled themself while trying to escape %2$s',
+    'death.attack.tfc.dehydration': '%1$s dehydrated to death',
+    'death.attack.tfc.dehydration.player': '%1$s dehydrated to death while trying to escape %2$s',
+    'effect.tfc.pinned': 'Pinned',
+    'effect.tfc.ink': 'Ink',
+    'effect.tfc.glow_ink': 'Glowing Ink',
+    'item.minecraft.glow_ink_sac': 'Glowing Ink Sac',
+    'subtitles.block.tfc.tool_rack.place_item': 'Item placed on Tool Rack',
+    'subtitles.block.tfc.wattle.dyed': 'Wattle stained',
+    'subtitles.block.tfc.wattle.daubed': 'Wattle daubed',
+    'subtitles.block.tfc.wattle.woven': 'Wattle woven',
+    'subtitles.item.tfc.pan.use': 'Pan sifting',
+    'subtitles.block.tfc.scribing_table.rename_item': 'Player scribbling',
+    'subtitles.block.tfc.vessel.opened': 'Vessel opened',
+    'subtitles.block.tfc.vessel.closed': 'Vessel closed',
+    'tfc.key.place_block': 'Place Block',
+    'tfc.key.cycle_chisel_mode': 'Cycle Chisel Mode',
+    'tfc.key.stack_food': 'Stack Food',
+    # Sounds todo: subtitles for everything and standardize the format
+    'tfc.animal.alpaca.ambient': 'Alpaca Bleats',
+    'tfc.animal.alpaca.hurt': 'Alpaca Yelps',
+    'tfc.animal.alpaca.death': 'Alpaca Dies',
+    'tfc.animal.alpaca.step': 'Alpaca Steps',
+    # Item groups
+    'itemGroup.tfc.earth': 'TFC Earth',
+    'itemGroup.tfc.ores': 'TFC Ores',
+    'itemGroup.tfc.rock': 'TFC Rock Stuffs',
+    'itemGroup.tfc.metals': 'TFC Metal Stuffs',
+    'itemGroup.tfc.wood': 'TFC Wooden Stuffs',
+    'itemGroup.tfc.flora': 'TFC Flora',
+    'itemGroup.tfc.devices': 'TFC Devices',
+    'itemGroup.tfc.food': 'TFC Food',
+    'itemGroup.tfc.misc': 'TFC Misc',
+    'itemGroup.tfc.decorations': 'TFC Decorations',
+    # Containers
+    'tfc.screen.calendar': 'Calendar',
+    'tfc.screen.nutrition': 'Nutrition',
+    'tfc.screen.climate': 'Climate',
+    'tfc.screen.rock_knapping': 'Rock Knapping',
+    'tfc.screen.clay_knapping': 'Clay Knapping',
+    'tfc.screen.fire_clay_knapping': 'Fire Clay Knapping',
+    'tfc.screen.leather_knapping': 'Leather Knapping',
+    'tfc.screen.scribing_table': 'Rename Items',
+    # Tooltips
+    'tfc.tooltip.forging': '§f - Can Work',
+    'tfc.tooltip.welding': '§f - Can Weld',
+    'tfc.tooltip.danger': '§f - Danger!!',
+    'tfc.tooltip.anvil_plan': 'Plans',
+    'tfc.tooltip.calendar_days_years': '%d, %04d',
+    'tfc.tooltip.calendar_season': 'Season : ',
+    'tfc.tooltip.calendar_day': 'Day : ',
+    'tfc.tooltip.calendar_birthday': '%s\'s Birthday!',
+    'tfc.tooltip.calendar_date': 'Date : ',
+    'tfc.tooltip.climate_plate_tectonics_classification': 'Region: ',
+    'tfc.tooltip.climate_koppen_climate_classification': 'Climate: ',
+    'tfc.tooltip.climate_average_temperature': 'Avg. Temp: %s\u00b0C',
+    'tfc.tooltip.climate_annual_rainfall': 'Annual Rainfall: %smm',
+    'tfc.tooltip.climate_current_temp': 'Current Temp: %s\u00b0C',
+    'tfc.tooltip.f3_rainfall': 'Rainfall: %s',
+    'tfc.tooltip.f3_average_temperature': 'Avg. Temp: %s\u00b0C',
+    'tfc.tooltip.f3_temperature': 'Actual. Temp: %s\u00b0C',
+    'tfc.tooltip.f3_forest_type': 'Forest Type: ',
+    'tfc.tooltip.f3_forest_properties': 'Forest Density = %s, Weirdness = %s',
+    'tfc.tooltip.f3_invalid_chunk_data': 'Invalid Chunk Data',
+    'tfc.tooltip.food_expiry_date': 'Expires on: ',
+    'tfc.tooltip.food_expiry_left': 'Expires in: ',
+    'tfc.tooltip.food_expiry_and_days_left': ' (in ',
+    'tfc.tooltip.food_expiry_and_days_left_close': ')',
+    'tfc.tooltip.food_infinite_expiry': 'Never expires',
+    'tfc.tooltip.food_rotten': 'Rotten!',
+    'tfc.tooltip.food_rotten_special': 'Ewwww, are you really thinking of eating that? It looks disgusting',
+    'tfc.tooltip.nutrition': 'Nutrition:',
+    'tfc.tooltip.nutrition_saturation': ' - Saturation: %s%%',
+    'tfc.tooltip.nutrition_water': ' - Water: %s%%',
+    'tfc.tooltip.nutrition_none': '- None!',
+    'tfc.tooltip.hold_shift_for_nutrition_info': 'Hold (Shift) for Nutrition Info',
+    'tfc.tooltip.salad': 'Salad',
+    'tfc.tooltip.contents': 'Contents:',
+    'tfc.tooltip.propick.found_very_large': 'Found a very large sample of',
+    'tfc.tooltip.propick.found_large': 'Found a large sample of',
+    'tfc.tooltip.propick.found_medium': 'Found a medium sample of',
+    'tfc.tooltip.propick.found_small': 'Found a small sample of',
+    'tfc.tooltip.propick.found_traces': 'Found traces of',
+    'tfc.tooltip.propick.found': 'Found',
+    'tfc.tooltip.propick.nothing': 'Found nothing.',
+    'tfc.tooltip.propick.accuracy': 'Accuracy: %s%%',
+    'tfc.tooltip.pan.contents': '§7Contains ',
+    'tfc.tooltip.pan.water': 'You need to stand in water to be able to pan.',
+    'tfc.tooltip.small_vessel.inventory_too_hot': 'Too hot to open!',
+    'tfc.tooltip.small_vessel.alloy_solid': 'Contents have solidified!',
+    'tfc.tooltip.small_vessel.alloy_molten': 'Contents are still liquid!',
+    'tfc.tooltip.small_vessel.contents': 'Contents:',
+    'tfc.tooltip.small_vessel.solid': '- Solid.',
+    'tfc.tooltip.small_vessel.molten': '- Molten!',
+    'tfc.tooltip.small_vessel.still_has_unmelted_items': 'Contains un-melted items!',
+    'tfc.tooltip.food_trait.salted': 'Salted',
+    'tfc.tooltip.food_trait.brined': 'Brined',
+    'tfc.tooltip.food_trait.pickled': 'Pickled',
+    'tfc.tooltip.food_trait.preserved': 'Preserved',
+    'tfc.tooltip.food_trait.vinegar': 'Preserved in Vinegar',
+    'tfc.tooltip.food_trait.charcoal_grilled': 'Charcoal Grilled',
+    'tfc.tooltip.food_trait.wood_grilled': 'Wood Grilled',
+    'tfc.tooltip.food_trait.burnt_to_a_crisp': 'Burnt to a crisp!',
+    'tfc.tooltip.item_melts_into': '§7Melts into %s mB of §f',
+    'tfc.tooltip.item_melts_into_open': '§7 (at ',
+    'tfc.tooltip.item_melts_into_close': '§7)',
+    'tfc.tooltip.fuel_burns_at': '§7Burns at §f',
+    'tfc.tooltip.fuel_burns_at_duration': '§7 for §f',
+    'tfc.tooltip.time_delta_hours_minutes': '%s:%s',
+    'tfc.tooltip.time_delta_days': '%s day(s)',
+    'tfc.tooltip.time_delta_months_days': '%s month(s) and %s day(s)',
+    'tfc.tooltip.time_delta_years_months_days': '%s year(s), %s month(s) and %s day(s)',
+    'tfc.tooltip.temperature_celsius': '%s\u00b0C',
+    'tfc.tooltip.temperature_fahrenheit': '%s\u00b0F',
+    'tfc.tooltip.fluid_units': '%s mB',
+    'tfc.tooltip.fluid_units_of': '%s mB of ',
+    'tfc.tooltip.less_than_one_fluid_units': '< 1 mB',
+    'tfc.tooltip.farmland.mature': '§aMature',
+    'tfc.tooltip.farmland.hydration': '§1Hydration: §r%s%%',
+    'tfc.tooltip.farmland.hydration_too_low': ' - §4Too low! §r(>%s%%)',
+    'tfc.tooltip.farmland.hydration_too_high': ' - §4Too high! §r(<%s%%)',
+    'tfc.tooltip.farmland.temperature': '§4Temperature: §r%s\u00b0C',
+    'tfc.tooltip.farmland.temperature_too_low': ' - §4Too low! §r(>%s\u00b0C)',
+    'tfc.tooltip.farmland.temperature_too_high': ' - §4Too high! §r(<%s\u00b0C)',
+    'tfc.tooltip.farmland.just_right': ' - §2Good§r',
+    'tfc.tooltip.farmland.nutrients': '§b(N) Nitrogen: §r%s%%, §6(P) Phosphorus: §r%s%%, §d(K) Potassium: §r%s%%',
+    'tfc.tooltip.fertilizer.nitrogen': '§b(N) Nitrogen: §r%s%%',
+    'tfc.tooltip.fertilizer.phosphorus': '§6(P) Phosphorus: §r%s%%',
+    'tfc.tooltip.fertilizer.potassium': '§d(K) Potassium: §r%s%%',
+    'tfc.tooltip.seal_barrel': 'Seal',
+    'tfc.tooltip.unseal_barrel': 'Unseal',
+    'tfc.tooltip.while_sealed': 'While sealed',
+    'tfc.tooltip.while_sealed_description': 'While the barrel is sealed and the required fluid is present',
+    'tfc.tooltip.anvil_is_too_low_tier_to_weld': 'The Anvil is not a high enough tier to weld that!',
+    'tfc.tooltip.anvil_is_too_low_tier_to_work': 'The Anvil is not a high enough tier to work that!',
+    'tfc.tooltip.not_hot_enough_to_weld': 'Not hot enough to weld!',
+    'tfc.tooltip.not_hot_enough_to_work': 'Not hot enough to work!',
+    'tfc.tooltip.no_flux_to_weld': 'There is no flux in the anvil!',
+    'tfc.tooltip.hammer_required_to_work': 'A hammer is required to work in the anvil!',
+    'tfc.tooltip.anvil_has_been_worked': 'Worked',
+    'tfc.tooltip.blast_furnace_ore': 'Input: %d / %d',
+    'tfc.tooltip.blast_furnace_fuel': 'Fuel: %d / %d',
+    'tfc.tooltip.fertilized': '§6Fertilized',
+    'tfc.tooltip.egg_hatch': 'Will hatch in %s days',
+    'tfc.tooltip.egg_hatch_today': 'Will hatch today!',
+    'tfc.tooltip.fishing.bait': '§6Bait: ',
+    'tfc.tooltip.animal.pregnant': 'This %s is pregnant!',
+    'tfc.tooltip.animal.male_milk': 'This %s is a male.',
+    'tfc.tooltip.animal.old': 'This %s is too old to produce.',
+    'tfc.tooltip.animal.young': 'This %s is too young to produce.',
+    'tfc.tooltip.animal.low_familiarity': 'This %s is not familiar enough to produce.',
+    'tfc.tooltip.animal.no_milk': 'This %s has no milk.',
+    'tfc.tooltip.animal.no_wool': 'This %s has no wool.',
+    'tfc.tooltip.scribing_table.missingink': 'Ink is missing!',
+    'tfc.tooltip.scribing_table.invalidink': 'Item isn\'t ink!',
+
+    # Commands
+
+    'tfc.commands.time.query.daytime': 'The day time is %s',
+    'tfc.commands.time.query.game_time': 'The game time is %s',
+    'tfc.commands.time.query.day': 'The day is %s',
+    'tfc.commands.time.query.player_ticks': 'The player ticks is %s',
+    'tfc.commands.time.query.calendar_ticks': 'The calendar ticks is %s',
+    'tfc.commands.heat.set_heat': 'Held item heat set to %s',
+    'tfc.commands.clear_world.starting': 'Clearing world. Prepare for lag...',
+    'tfc.commands.clear_world.done': 'Cleared %d Block(s).',
+    'tfc.commands.countblock.done': 'Found %d %s',
+    'tfc.commands.player.query_hunger': 'Hunger is %s / 20',
+    'tfc.commands.player.query_saturation': 'Saturation is %s / 20',
+    'tfc.commands.player.query_water': 'Water is %s / 100',
+    'tfc.commands.player.query_nutrition': 'Player nutrition:',
+    'tfc.commands.player.fail_invalid_food_stats': 'Player does not have any TFC nutrition or hydration data',
+    'tfc.commands.locatevein.unknown_vein': 'Unknown vein: %s',
+    'tfc.commands.locatevein.vein_not_found': 'Unable to find vein %s within reasonable distance (16 chunks radius)',
+    'tfc.commands.locate.invalid_biome': 'Invalid biome: \"%s\"',
+    'tfc.commands.locate.invalid_biome_source': 'This world does not have a compatible biome source',
+    'tfc.commands.locate.not_found': 'Could not find a biome of type \"%s\" within reasonable distance',
+    'tfc.commands.locate.volcano_not_found': 'Could not find a volcano within reasonable distance',
+
     # Entities
-    # 'entity.tfcflorae.cod': 'Cod', # Placeholder for silkmoth
-    **{'entity.tfcflorae.boat.%s' % wood : lang('%s boat', wood) for wood in WOODS.keys()}
+    'entity.tfc.cod': 'Cod',
+    'entity.tfc.pufferfish': 'Pufferfish',
+    'entity.tfc.tropical_fish': 'Tropical Fish',
+    'entity.tfc.salmon': 'Salmon',
+    'entity.tfc.bluegill': 'Bluegill',
+    'entity.tfc.jellyfish': 'Jellyfish',
+    'entity.tfc.manatee': 'Manatee',
+    'entity.tfc.orca': 'Orca',
+    'entity.tfc.dolphin': 'Dolphin',
+    'entity.tfc.isopod': 'Isopod',
+    'entity.tfc.lobster': 'Lobster',
+    'entity.tfc.crayfish': 'Crayfish',
+    'entity.tfc.horseshoe_crab': 'Horseshoe Crab',
+    'entity.tfc.penguin': 'Penguin',
+    'entity.tfc.turtle': 'Turtle',
+    'entity.tfc.pig': 'Pig',
+    'entity.tfc.pig.male': 'Pig',
+    'entity.tfc.pig.female': 'Sow',
+    'entity.tfc.cow': 'Cow',
+    'entity.tfc.cow.female': 'Cow',
+    'entity.tfc.cow.male': 'Bull',
+    'entity.tfc.alpaca': 'Alpaca',
+    'entity.tfc.alpaca.female': 'Female Alpaca',
+    'entity.tfc.alpaca.male': 'Male Alpaca',
+    'entity.tfc.polar_bear': 'Polar Bear',
+    'entity.tfc.grizzly_bear': 'Grizzly Bear',
+    'entity.tfc.black_bear': 'Black Bear',
+    'entity.tfc.cougar': 'Cougar',
+    'entity.tfc.panther': 'Panther',
+    'entity.tfc.lion': 'Lion',
+    'entity.tfc.sabertooth': 'Sabertooth',
+    'entity.tfc.falling_block': 'Falling Block',
+    'entity.tfc.fishing_bobber': 'Fishing Bobber',
+    'entity.tfc.squid': 'Squid',
+    'entity.tfc.octopoteuthis': 'Octopoteuthis',
+    'entity.tfc.glow_arrow': 'Glowing Arrow',
+    'entity.tfc.thrown_javelin': 'Javelin',
+    'entity.tfc.seat': 'Seat',
+    'entity.tfc.chicken': 'Chicken',
+    'entity.tfc.chicken.male': 'Rooster',
+    'entity.tfc.chicken.female': 'Chicken',
+    **{'entity.tfc.boat.%s' % wood : lang('%s boat', wood) for wood in WOODS.keys()},
+
+    # Enums
+
+    **dict(('tfc.enum.tier.tier_%s' % tier, 'Tier %s' % lang(tier)) for tier in ('0', 'i', 'ii', 'iii', 'iv', 'v', 'vi')),
+    **lang_enum('heat', ('warming', 'hot', 'very_hot', 'faint_red', 'dark_red', 'bright_red', 'orange', 'yellow', 'yellow_white', 'white', 'brilliant_white')),
+    **lang_enum('month', ('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december')),
+    **lang_enum('day', ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')),
+    **lang_enum('foresttype', ('sparse', 'old_growth', 'normal', 'edge', 'none')),
+    **lang_enum('koppenclimateclassification', ('arctic', 'tundra', 'subarctic', 'cold_desert', 'hot_desert', 'temperate', 'subtropical', 'humid_subtropical', 'humid_oceanic', 'humid_subtropical', 'tropical_savanna', 'tropical_rainforest')),
+    **dict(('tfc.enum.platetectonicsclassification.%s' % k, v) for k, v in {
+        'oceanic': 'Oceanic',
+        'continental_low': 'Low Altitude Continental',
+        'continental_mid': 'Mid Altitude Continental',
+        'continental_high': 'High Altitude Continental',
+        'ocean_ocean_diverging': 'Mid-Ocean Ridge',
+        'ocean_ocean_converging_lower': 'Oceanic Subduction',
+        'ocean_ocean_converging_upper': 'Oceanic Subduction',
+        'ocean_continent_converging_lower': 'Continental Subduction',
+        'ocean_continent_converging_upper': 'Continental Subduction',
+        'continent_continent_diverging': 'Continental Rift',
+        'continent_continent_converging': 'Orogenic Belt',
+        'continental_shelf': 'Continental Shelf'
+    }.items()),
+    'tfc.enum.season.january': 'Winter',
+    'tfc.enum.season.february': 'Late Winter',
+    'tfc.enum.season.march': 'Early Spring',
+    'tfc.enum.season.april': 'Spring',
+    'tfc.enum.season.may': 'Late Spring',
+    'tfc.enum.season.june': 'Early Summer',
+    'tfc.enum.season.july': 'Summer',
+    'tfc.enum.season.august': 'Late Summer',
+    'tfc.enum.season.september': 'Early Autumn',
+    'tfc.enum.season.october': 'Autumn',
+    'tfc.enum.season.november': 'Late Autumn',
+    'tfc.enum.season.december': 'Early Winter',
+    'tfc.enum.size.tiny': 'Tiny',
+    'tfc.enum.size.very_small': 'Very Small',
+    'tfc.enum.size.small': 'Small',
+    'tfc.enum.size.normal': 'Normal',
+    'tfc.enum.size.large': 'Large',
+    'tfc.enum.size.very_large': 'Very Large',
+    'tfc.enum.size.huge': 'Huge',
+    'tfc.enum.weight.very_light': 'Very Light',
+    'tfc.enum.weight.light': 'Light',
+    'tfc.enum.weight.medium': 'Medium',
+    'tfc.enum.weight.heavy': 'Heavy',
+    'tfc.enum.weight.very_heavy': 'Very Heavy',
+    'tfc.enum.nutrient.grain': 'Grain',
+    'tfc.enum.nutrient.fruit': 'Fruit',
+    'tfc.enum.nutrient.vegetables': 'Vegetables',
+    'tfc.enum.nutrient.protein': 'Protein',
+    'tfc.enum.nutrient.dairy': 'Dairy',
+    'tfc.enum.forgingbonus.none': 'No Forging Bonus',
+    'tfc.enum.forgingbonus.poorly_forged': 'Poorly Forged',
+    'tfc.enum.forgingbonus.well_forged': 'Well Forged',
+    'tfc.enum.forgingbonus.expertly_forged': 'Expertly Forged',
+    'tfc.enum.forgingbonus.perfectly_forged': 'Perfectly Forged!',
+    'tfc.enum.forgestep.hit': 'Hit',
+    'tfc.enum.forgestep.hit_light': 'Light Hit',
+    'tfc.enum.forgestep.hit_medium': 'Medium Hit',
+    'tfc.enum.forgestep.hit_hard': 'Hard Hit',
+    'tfc.enum.forgestep.draw': 'Draw',
+    'tfc.enum.forgestep.punch': 'Punch',
+    'tfc.enum.forgestep.bend': 'Bend',
+    'tfc.enum.forgestep.upset': 'Upset',
+    'tfc.enum.forgestep.shrink': 'Shrink',
+    'tfc.enum.order.any': 'Any',
+    'tfc.enum.order.last': 'Last',
+    'tfc.enum.order.not_last': 'Not Last',
+    'tfc.enum.order.second_last': 'Second Last',
+    'tfc.enum.order.third_last': 'Third Last',
+
+    'tfc.thatch_bed.use': 'This bed is too uncomfortable to sleep in.',
+    'tfc.thatch_bed.thundering': 'You are too scared to sleep.',
+    'tfc.composter.rotten': 'This composter is smelly and might attract animals. You should empty it.',
+    'tfc.composter.too_many_greens': 'This composter has enough green items',
+    'tfc.composter.too_many_browns': 'This composter has enough brown items',
+    'tfc.chisel.cannot_place': 'The chiseled version of this block cannot exist here',
+    'tfc.chisel.no_recipe': 'This block cannot be chiseled',
+    'tfc.chisel.bad_fluid': 'The chiseled version of this block cannot contain the fluid here',
+    'tfc.fishing.no_bait': 'This fishing rod needs bait!',
+    'tfc.fishing.pulled_too_hard': 'You pulled too hard, and the fish got away with the bait.',
+
+    **dict(('metal.tfc.%s' % metal, lang(metal)) for metal in METALS.keys()),
+
+    'tfc.jei.heating': 'Heating Recipe',
+    'tfc.jei.quern': 'Quern Recipe',
+    'tfc.jei.scraping': 'Scraping Recipe',
+    'tfc.jei.clay_knapping': 'Clay Knapping Recipe',
+    'tfc.jei.fire_clay_knapping': 'Fire Clay Knapping Recipe',
+    'tfc.jei.leather_knapping': 'Leather Knapping Recipe',
+    'tfc.jei.rock_knapping': 'Rock Knapping Recipe',
+    'tfc.jei.soup_pot': 'Soup Pot',
+    'tfc.jei.simple_pot': 'Pot',
+    'tfc.jei.casting': 'Casting',
+    'tfc.jei.alloying': 'Alloying',
+    'tfc.jei.loom': 'Loom',
+    'tfc.jei.instant_barrel': 'Instant Barrel Recipe',
+    'tfc.jei.sealed_barrel': 'Sealed Barrel Recipe',
+    'tfc.jei.bloomery': 'Bloomery',
+    'tfc.jei.welding': 'Welding',
+    'tfc.jei.anvil': 'Anvil',
+    'tfc.jei.chisel': 'Chisel',
+
+    # jei tooltips
+    'tfc.jei.compost_greens': 'This item can be added to the Composter as a green item. Composters need four green and four brown items to work.',
+    'tfc.jei.compost_browns': 'This item can be added to the Composter as a brown item. Composters need four green and four brown items to work.',
+    'tfc.jei.compost_poisons': 'This item poisons compost in the Composter. This causes it to produce rotten compost.',
+    'tfc.jei.compost': 'This fertilizer is made by adding four green items and four brown items to the Composter, and waiting for a while.',
+    'tfc.jei.rotten_compost': 'This kills plants. It is made by adding compost poisons to the Composter.',
+
+
 }
 
-
 # Automatically Generated by generate_trees.py
-def Read_CSV(filename: str) -> Dict[str, float]:
-    with open(filename, 'r') as f:
-        reader = csv.reader(f)
-        next(reader, None)
-        return {row[0].strip("'"): float(row[1]) for row in reader}
-    
-TREE_SAPLING_DROP_CHANCES = Read_CSV("Tree-sapling-drop.csv")
-#TREE_SAPLING_DROP_CHANCES = {
-#    'african_padauk': 0.0067,
-#    'alder': 0.0153,
-#    'angelim': 0.0067,
-#    'bald_cypress': 0.0388,
-#    'baobab': 0.0067,
-#    'beech': 0.0153,
-#    'black_walnut': 0.0557,
-#    'buxus': 0.0388,
-#    'brazilwood': 0.0067,
-#    'butternut': 0.0557,
-#    'cherry_blossom': 0.0153,
-#    'cocobolo': 0.0067,
-#    'cypress': 0.0170,
-#    'ebony': 0.0557,
-#    'eucalyptus': 0.0388,
-#    'common_oak': 0.0057,
-#    'fever': 0.0210,
-#    'ginkgo': 0.0067,
-#    'greenheart': 0.0067,
-#    'hawthorn': 0.0388,
-#    'hazel': 0.0388,
-#    'hemlock': 0.0651,
-#    'holly': 0.0651,
-#    'hornbeam': 0.0057,
-#    'ipe': 0.0306,
-#    'iroko': 0.0306,
-#    'ironwood': 0.0153,
-#    'jacaranda': 0.0153,
-#    'joshua_tree': 0.0651,
-#    'juniper': 0.0170,
-#    'kauri': 0.0067,
-#    'larch': 0.0153,
-#    'limba': 0.0067,
-#    'locust': 0.0153,
-#    'logwood': 0.0057,
-#    'maclura': 0.0092,
-#    'mahoe': 0.0170,
-#    'mahogany': 0.0067,
-#    'mangrove': 0.0170,
-#    'marblewood': 0.0057,
-#    'messmate': 0.0651,
-#    'mountain_ash': 0.0651,
-#    'mulberry': 0.0306,
-#    'nordmann_fir': 0.0388,
-#    'norway_spruce': 0.0388,
-#    'pink_ivory': 0.0067,
-#    'poplar': 0.0651,
-#    'purpleheart': 0.0067,
-#    'red_cedar': 0.0170,
-#    'red_elm': 0.0170,
-#    'redwood': 0.0170,
-#    'rowan': 0.0057,
-#    'rubber_fig': 0.0067,
-#    'sweetgum': 0.0067,
-#    'syzygium': 0.0067,
-#    'teak': 0.0057,
-#    'walnut': 0.0557,
-#    'wenge': 0.0057,
-#    'white_elm': 0.0153,
-#    'whitebeam': 0.0153,
-#    'yellow_meranti': 0.0057,
-#    'yew': 0.0092,
-#    'zebrawood': 0.0153
-#}
+TREE_SAPLING_DROP_CHANCES = {
+    'acacia': 0.0210,
+    'ash': 0.0153,
+    'aspen': 0.0306,
+    'birch': 0.0306,
+    'blackwood': 0.0557,
+    'chestnut': 0.0153,
+    'douglas_fir': 0.0388,
+    'hickory': 0.0388,
+    'kapok': 0.0067,
+    'maple': 0.0153,
+    'oak': 0.0057,
+    'palm': 0.0651,
+    'pine': 0.0388,
+    'rosewood': 0.0057,
+    'sequoia': 0.0170,
+    'spruce': 0.0170,
+    'sycamore': 0.0153,
+    'white_cedar': 0.0204,
+    'willow': 0.0092,
+    'african_padauk': 0.0067,
+    'alder': 0.0153,
+    'angelim': 0.0067,
+    'bald_cypress': 0.0388,
+    'baobab': 0.0067,
+    'beech': 0.0153,
+    'black_walnut': 0.0557,
+    'buxus': 0.0388,
+    'brazilwood': 0.0067,
+    'butternut': 0.0557,
+    'cherry_blossom': 0.0153,
+    'cocobolo': 0.0067,
+    'cypress': 0.0170,
+    'ebony': 0.0557,
+    'eucalyptus': 0.0388,
+    'common_oak': 0.0057,
+    'fever': 0.0210,
+    'ginkgo': 0.0067,
+    'greenheart': 0.0067,
+    'hawthorn': 0.0388,
+    'hazel': 0.0388,
+    'hemlock': 0.0651,
+    'holly': 0.0651,
+    'hornbeam': 0.0057,
+    'ipe': 0.0306,
+    'iroko': 0.0306,
+    'ironwood': 0.0153,
+    'jacaranda': 0.0153,
+    'joshua_tree': 0.0651,
+    'juniper': 0.0170,
+    'kauri': 0.0067,
+    'larch': 0.0153,
+    'limba': 0.0067,
+    'locust': 0.0153,
+    'logwood': 0.0057,
+    'maclura': 0.0092,
+    'mahoe': 0.0170,
+    'mahogany': 0.0067,
+    'mangrove': 0.0170,
+    'marblewood': 0.0057,
+    'messmate': 0.0651,
+    'mountain_ash': 0.0651,
+    'mulberry': 0.0306,
+    'nordmann_fir': 0.0388,
+    'norway_spruce': 0.0388,
+    'pink_ivory': 0.0067,
+    'poplar': 0.0651,
+    'purpleheart': 0.0067,
+    'red_cedar': 0.0170,
+    'red_elm': 0.0170,
+    'redwood': 0.0170,
+    'rowan': 0.0057,
+    'rubber_fig': 0.0067,
+    'sweetgum': 0.0067,
+    'syzygium': 0.0067,
+    'teak': 0.0057,
+    'walnut': 0.0557,
+    'wenge': 0.0057,
+    'white_elm': 0.0153,
+    'whitebeam': 0.0153,
+    'yellow_meranti': 0.0057,
+    'yew': 0.0092,
+    'zebrawood': 0.0153
+}

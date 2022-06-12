@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
-    "particle": "tfcflorae:block/wood/planks/syzygium",
-    "planks": "tfcflorae:block/wood/planks/syzygium",
-    "sheet": "tfcflorae:block/wood/sheet/syzygium",
-    "hoop": "tfcflorae:block/barrel_hoop"
+    "particle": "tfc:block/wood/planks/syzygium",
+    "planks": "tfc:block/wood/planks/syzygium",
+    "sheet": "tfc:block/wood/sheet/syzygium",
+    "hoop": "tfc:block/barrel_hoop"
   }
 }

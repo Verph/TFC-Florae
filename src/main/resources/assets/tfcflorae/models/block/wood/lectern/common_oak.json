@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/common_oak",
-    "base": "tfcflorae:block/wood/lectern/common_oak/base",
-    "front": "tfcflorae:block/wood/lectern/common_oak/front",
-    "sides": "tfcflorae:block/wood/lectern/common_oak/sides",
-    "top": "tfcflorae:block/wood/lectern/common_oak/top",
-    "particle": "tfcflorae:block/wood/lectern/common_oak/sides"
+    "bottom": "tfc:block/wood/planks/common_oak",
+    "base": "tfc:block/wood/lectern/common_oak/base",
+    "front": "tfc:block/wood/lectern/common_oak/front",
+    "sides": "tfc:block/wood/lectern/common_oak/sides",
+    "top": "tfc:block/wood/lectern/common_oak/top",
+    "particle": "tfc:block/wood/lectern/common_oak/sides"
   }
 }

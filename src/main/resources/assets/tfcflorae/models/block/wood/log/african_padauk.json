@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log_top/african_padauk",
-    "side": "tfcflorae:block/wood/log/african_padauk"
+    "end": "tfc:block/wood/log_top/african_padauk",
+    "side": "tfc:block/wood/log/african_padauk"
   }
 }

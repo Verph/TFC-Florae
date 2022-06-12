@@ -1,0 +1,44 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:cherry_blossom/1",
+      "tfcflorae:cherry_blossom/2",
+      "tfcflorae:cherry_blossom/3",
+      "tfcflorae:cherry_blossom/4",
+      "tfcflorae:cherry_blossom/5",
+      "tfcflorae:cherry_blossom/6",
+      "tfcflorae:cherry_blossom/7",
+      "tfcflorae:cherry_blossom/8",
+      "tfcflorae:cherry_blossom/9",
+      "tfcflorae:cherry_blossom/10",
+      "tfcflorae:cherry_blossom/11",
+      "tfcflorae:cherry_blossom/12",
+      "tfcflorae:cherry_blossom/13",
+      "tfcflorae:cherry_blossom/14",
+      "tfcflorae:cherry_blossom/15",
+      "tfcflorae:cherry_blossom/16",
+      "tfcflorae:cherry_blossom/17",
+      "tfcflorae:cherry_blossom/18",
+      "tfcflorae:cherry_blossom/19",
+      "tfcflorae:cherry_blossom/20",
+      "tfcflorae:cherry_blossom/21",
+      "tfcflorae:cherry_blossom/22",
+      "tfcflorae:cherry_blossom/23",
+      "tfcflorae:cherry_blossom/24",
+      "tfcflorae:cherry_blossom/25",
+      "tfcflorae:cherry_blossom/26",
+      "tfcflorae:cherry_blossom/27",
+      "tfcflorae:cherry_blossom/28",
+      "tfcflorae:cherry_blossom/29",
+      "tfcflorae:cherry_blossom/30"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": "tfc:deposit/native_copper/boninite",
+  "result": "tfc:deposit/native_copper/boninite"
+}

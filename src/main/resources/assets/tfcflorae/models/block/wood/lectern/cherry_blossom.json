@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/cherry_blossom",
-    "base": "tfcflorae:block/wood/lectern/cherry_blossom/base",
-    "front": "tfcflorae:block/wood/lectern/cherry_blossom/front",
-    "sides": "tfcflorae:block/wood/lectern/cherry_blossom/sides",
-    "top": "tfcflorae:block/wood/lectern/cherry_blossom/top",
-    "particle": "tfcflorae:block/wood/lectern/cherry_blossom/sides"
+    "bottom": "tfc:block/wood/planks/cherry_blossom",
+    "base": "tfc:block/wood/lectern/cherry_blossom/base",
+    "front": "tfc:block/wood/lectern/cherry_blossom/front",
+    "sides": "tfc:block/wood/lectern/cherry_blossom/sides",
+    "top": "tfc:block/wood/lectern/cherry_blossom/top",
+    "particle": "tfc:block/wood/lectern/cherry_blossom/sides"
   }
 }

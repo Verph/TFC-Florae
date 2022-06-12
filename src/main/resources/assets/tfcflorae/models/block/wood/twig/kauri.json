@@ -1,8 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/twig",
+  "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfcflorae:block/wood/log/kauri",
-    "top": "tfcflorae:block/wood/log_top/kauri"
+    "side": "tfc:block/wood/log/kauri",
+    "top": "tfc:block/wood/log_top/kauri"
   }
 }

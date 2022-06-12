@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "replace": false,
-  "values": [
-    "#tfcflorae:ores/bismuth/poor",
-    "#tfcflorae:ores/bismuth/normal",
-    "#tfcflorae:ores/bismuth/rich"
-  ]
-}

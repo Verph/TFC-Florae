@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mossy_bricks/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mossy_bricks/blackband_ironstone_wall",
+    "count": 6
+  }
+}

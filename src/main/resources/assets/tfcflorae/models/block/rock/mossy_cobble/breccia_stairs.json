@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfc:block/rock/mossy_cobble/breccia",
+    "top": "tfc:block/rock/mossy_cobble/breccia",
+    "side": "tfc:block/rock/mossy_cobble/breccia"
+  }
+}

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_fence_gate",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/kauri"
+    "texture": "tfc:block/wood/planks/kauri"
   }
 }

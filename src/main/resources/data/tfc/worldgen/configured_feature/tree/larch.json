@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:larch/1",
+      "tfcflorae:larch/2",
+      "tfcflorae:larch/3",
+      "tfcflorae:larch/4",
+      "tfcflorae:larch/5",
+      "tfcflorae:larch/6",
+      "tfcflorae:larch/7",
+      "tfcflorae:larch/8",
+      "tfcflorae:larch/9",
+      "tfcflorae:larch/10"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

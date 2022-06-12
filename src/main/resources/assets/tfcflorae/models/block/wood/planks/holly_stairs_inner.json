@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/holly",
-    "top": "tfcflorae:block/wood/planks/holly",
-    "side": "tfcflorae:block/wood/planks/holly"
+    "bottom": "tfc:block/wood/planks/holly",
+    "top": "tfc:block/wood/planks/holly",
+    "side": "tfc:block/wood/planks/holly"
   }
 }

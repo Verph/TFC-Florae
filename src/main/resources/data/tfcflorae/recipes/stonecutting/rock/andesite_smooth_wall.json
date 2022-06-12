@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/smooth/andesite"
+  },
+  "result": "tfcflorae:rock/smooth/andesite_wall",
+  "count": 1
+}

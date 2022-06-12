@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:iroko/1",
+      "tfcflorae:iroko/2",
+      "tfcflorae:iroko/3",
+      "tfcflorae:iroko/4",
+      "tfcflorae:iroko/5",
+      "tfcflorae:iroko/6",
+      "tfcflorae:iroko/7",
+      "tfcflorae:iroko/8",
+      "tfcflorae:iroko/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

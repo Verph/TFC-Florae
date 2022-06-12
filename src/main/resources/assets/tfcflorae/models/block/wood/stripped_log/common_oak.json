@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log_top/common_oak",
-    "side": "tfcflorae:block/wood/stripped_log/common_oak"
+    "end": "tfc:block/wood/stripped_log_top/common_oak",
+    "side": "tfc:block/wood/stripped_log/common_oak"
   }
 }

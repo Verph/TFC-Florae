@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 320,
+    "min_temp": 19,
+    "max_temp": 38,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/ebony"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/ebony"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/ebony",
+    "dead_tree": "tfcflorae:tree/ebony_dead",
+    "fallen_log": "tfcflorae:wood/log/ebony",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/ebony",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/ebony",
+    "old_growth_tree": "tfcflorae:tree/ebony_large"
+  }
+}

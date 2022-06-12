@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 400,
+    "min_temp": -4,
+    "max_temp": 16,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/holly"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/holly"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/holly",
+    "dead_tree": "tfcflorae:tree/holly_dead",
+    "fallen_log": "tfcflorae:wood/log/holly",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/holly",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/holly",
+    "old_growth_tree": "tfcflorae:tree/holly_large"
+  }
+}

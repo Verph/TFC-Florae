@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/mahogany",
-    "leg": "tfcflorae:block/wood/log/mahogany",
-    "side": "tfcflorae:block/wood/planks/mahogany",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/mahogany"
+    "top": "tfc:block/wood/scribing_table/mahogany",
+    "leg": "tfc:block/wood/log/mahogany",
+    "side": "tfc:block/wood/planks/mahogany",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/mahogany"
   }
 }

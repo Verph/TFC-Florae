@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
-    "particle": "tfcflorae:block/wood/planks/hazel",
-    "planks": "tfcflorae:block/wood/planks/hazel",
-    "sheet": "tfcflorae:block/wood/sheet/hazel",
-    "hoop": "tfcflorae:block/barrel_hoop"
+    "particle": "tfc:block/wood/planks/hazel",
+    "planks": "tfc:block/wood/planks/hazel",
+    "sheet": "tfc:block/wood/sheet/hazel",
+    "hoop": "tfc:block/barrel_hoop"
   }
 }

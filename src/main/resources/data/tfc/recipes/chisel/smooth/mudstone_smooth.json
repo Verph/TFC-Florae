@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/mudstone",
+  "result": "tfcflorae:rock/smooth/mudstone",
+  "mode": "smooth"
+}

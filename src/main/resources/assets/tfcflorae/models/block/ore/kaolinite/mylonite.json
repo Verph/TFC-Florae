@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfc:block/rock/raw/mylonite",
+    "particle": "tfc:block/rock/raw/mylonite",
+    "overlay": "tfc:block/ore/kaolinite"
+  }
+}

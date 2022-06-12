@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log/buxus",
-    "side": "tfcflorae:block/wood/log/buxus"
+    "end": "tfc:block/wood/log/buxus",
+    "side": "tfc:block/wood/log/buxus"
   }
 }

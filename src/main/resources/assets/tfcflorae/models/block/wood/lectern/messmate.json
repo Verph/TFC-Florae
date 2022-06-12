@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/messmate",
-    "base": "tfcflorae:block/wood/lectern/messmate/base",
-    "front": "tfcflorae:block/wood/lectern/messmate/front",
-    "sides": "tfcflorae:block/wood/lectern/messmate/sides",
-    "top": "tfcflorae:block/wood/lectern/messmate/top",
-    "particle": "tfcflorae:block/wood/lectern/messmate/sides"
+    "bottom": "tfc:block/wood/planks/messmate",
+    "base": "tfc:block/wood/lectern/messmate/base",
+    "front": "tfc:block/wood/lectern/messmate/front",
+    "sides": "tfc:block/wood/lectern/messmate/sides",
+    "top": "tfc:block/wood/lectern/messmate/top",
+    "particle": "tfc:block/wood/lectern/messmate/sides"
   }
 }

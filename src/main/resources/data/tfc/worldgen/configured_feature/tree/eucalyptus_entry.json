@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 120,
+    "max_rain": 300,
+    "min_temp": 18,
+    "max_temp": 39,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/eucalyptus"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/eucalyptus"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/eucalyptus",
+    "dead_tree": "tfcflorae:tree/eucalyptus_dead",
+    "fallen_log": "tfcflorae:wood/log/eucalyptus",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/eucalyptus",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/eucalyptus",
+    "old_growth_tree": "tfcflorae:tree/eucalyptus_large"
+  }
+}

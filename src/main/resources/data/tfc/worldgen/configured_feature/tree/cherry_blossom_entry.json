@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 300,
+    "min_temp": 0,
+    "max_temp": 20,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/cherry_blossom"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/cherry_blossom"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/cherry_blossom",
+    "dead_tree": "tfcflorae:tree/cherry_blossom_dead",
+    "fallen_log": "tfcflorae:wood/log/cherry_blossom",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/cherry_blossom",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/cherry_blossom",
+    "old_growth_tree": "tfcflorae:tree/cherry_blossom_large"
+  }
+}

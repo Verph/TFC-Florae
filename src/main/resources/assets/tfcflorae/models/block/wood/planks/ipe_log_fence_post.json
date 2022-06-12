@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/fence_post",
   "textures": {
-    "texture": "tfcflorae:block/wood/log/ipe"
+    "texture": "tfc:block/wood/log/ipe"
   }
 }

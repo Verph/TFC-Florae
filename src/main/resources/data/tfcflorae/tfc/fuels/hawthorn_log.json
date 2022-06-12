@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/hawthorn"
+    },
+    {
+      "item": "tfcflorae:wood/wood/hawthorn"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 683
+}

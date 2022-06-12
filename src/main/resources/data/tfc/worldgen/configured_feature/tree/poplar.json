@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:poplar/1",
+      "tfcflorae:poplar/2",
+      "tfcflorae:poplar/3",
+      "tfcflorae:poplar/4",
+      "tfcflorae:poplar/5",
+      "tfcflorae:poplar/6",
+      "tfcflorae:poplar/7",
+      "tfcflorae:poplar/8",
+      "tfcflorae:poplar/9",
+      "tfcflorae:poplar/10",
+      "tfcflorae:poplar/11",
+      "tfcflorae:poplar/12",
+      "tfcflorae:poplar/13",
+      "tfcflorae:poplar/14",
+      "tfcflorae:poplar/15",
+      "tfcflorae:poplar/16",
+      "tfcflorae:poplar/17"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": true
+    }
+  }
+}

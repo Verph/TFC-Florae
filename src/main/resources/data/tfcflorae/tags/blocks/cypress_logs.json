@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/cypress",
+    "tfcflorae:wood/stripped_log/cypress",
+    "tfcflorae:wood/wood/cypress",
+    "tfcflorae:wood/stripped_wood/cypress"
+  ]
+}

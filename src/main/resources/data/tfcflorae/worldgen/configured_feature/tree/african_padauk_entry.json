@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 275,
+    "max_rain": 500,
+    "min_temp": 22,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/african_padauk"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/african_padauk"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/african_padauk",
+    "dead_tree": "tfcflorae:tree/african_padauk_dead",
+    "fallen_log": "tfcflorae:wood/log/african_padauk",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/african_padauk",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/african_padauk",
+    "old_growth_tree": "tfcflorae:tree/african_padauk_large"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/diorite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/diorite"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/diorite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/diorite",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/diorite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/diorite"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/diorite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/diorite",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/diorite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/diorite"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/diorite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/diorite",
+        "y": 270
+      }
+    ]
+  }
+}

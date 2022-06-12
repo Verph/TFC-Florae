@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/red_cedar",
-    "top": "tfcflorae:block/wood/planks/red_cedar",
-    "side": "tfcflorae:block/wood/planks/red_cedar"
+    "bottom": "tfc:block/wood/planks/red_cedar",
+    "top": "tfc:block/wood/planks/red_cedar",
+    "side": "tfc:block/wood/planks/red_cedar"
   }
 }

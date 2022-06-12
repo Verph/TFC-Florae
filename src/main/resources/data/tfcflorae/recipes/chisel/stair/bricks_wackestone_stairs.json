@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/wackestone",
+  "result": "tfcflorae:rock/bricks/wackestone_stairs",
+  "mode": "stair"
+}

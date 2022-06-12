@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log_top/syzygium",
-    "side": "tfcflorae:block/wood/stripped_log/syzygium"
+    "end": "tfc:block/wood/stripped_log_top/syzygium",
+    "side": "tfc:block/wood/stripped_log/syzygium"
   }
 }

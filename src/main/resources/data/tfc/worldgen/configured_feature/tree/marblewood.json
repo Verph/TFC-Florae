@@ -1,0 +1,38 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:marblewood/1",
+      "tfcflorae:marblewood/2",
+      "tfcflorae:marblewood/3",
+      "tfcflorae:marblewood/4",
+      "tfcflorae:marblewood/5",
+      "tfcflorae:marblewood/6",
+      "tfcflorae:marblewood/7",
+      "tfcflorae:marblewood/8",
+      "tfcflorae:marblewood/9",
+      "tfcflorae:marblewood/10",
+      "tfcflorae:marblewood/11",
+      "tfcflorae:marblewood/12",
+      "tfcflorae:marblewood/13",
+      "tfcflorae:marblewood/14",
+      "tfcflorae:marblewood/15",
+      "tfcflorae:marblewood/16",
+      "tfcflorae:marblewood/17",
+      "tfcflorae:marblewood/18",
+      "tfcflorae:marblewood/19",
+      "tfcflorae:marblewood/20",
+      "tfcflorae:marblewood/21",
+      "tfcflorae:marblewood/22",
+      "tfcflorae:marblewood/23",
+      "tfcflorae:marblewood/24"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

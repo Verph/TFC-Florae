@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "replace": false,
-  "values": [
-    "#tfcflorae:foods/vegetables",
-    "#tfcflorae:foods/cooked_meats",
-    "#tfcflorae:foods/dairy"
-  ]
-}

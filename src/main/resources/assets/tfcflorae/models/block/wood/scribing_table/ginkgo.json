@@ -1,11 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/scribing_table",
+  "parent": "tfc:block/scribing_table",
   "textures": {
-    "top": "tfcflorae:block/wood/scribing_table/ginkgo",
-    "leg": "tfcflorae:block/wood/log/ginkgo",
-    "side": "tfcflorae:block/wood/planks/ginkgo",
-    "misc": "tfcflorae:block/wood/scribing_table/scribing_paraphernalia",
-    "particle": "tfcflorae:block/wood/planks/ginkgo"
+    "top": "tfc:block/wood/scribing_table/ginkgo",
+    "leg": "tfc:block/wood/log/ginkgo",
+    "side": "tfc:block/wood/planks/ginkgo",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfc:block/wood/planks/ginkgo"
   }
 }

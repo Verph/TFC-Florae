@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/teak",
-    "top": "tfcflorae:block/wood/planks/teak",
-    "side": "tfcflorae:block/wood/planks/teak"
+    "bottom": "tfc:block/wood/planks/teak",
+    "top": "tfc:block/wood/planks/teak",
+    "side": "tfc:block/wood/planks/teak"
   }
 }

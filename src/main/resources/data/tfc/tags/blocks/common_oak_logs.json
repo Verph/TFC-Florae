@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/common_oak",
+    "tfcflorae:wood/stripped_log/common_oak",
+    "tfcflorae:wood/wood/common_oak",
+    "tfcflorae:wood/stripped_wood/common_oak"
+  ]
+}

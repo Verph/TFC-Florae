@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:locust/1",
+      "tfcflorae:locust/2",
+      "tfcflorae:locust/3",
+      "tfcflorae:locust/4",
+      "tfcflorae:locust/5",
+      "tfcflorae:locust/6",
+      "tfcflorae:locust/7",
+      "tfcflorae:locust/8",
+      "tfcflorae:locust/9",
+      "tfcflorae:locust/10",
+      "tfcflorae:locust/11",
+      "tfcflorae:locust/12",
+      "tfcflorae:locust/13",
+      "tfcflorae:locust/14",
+      "tfcflorae:locust/15"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

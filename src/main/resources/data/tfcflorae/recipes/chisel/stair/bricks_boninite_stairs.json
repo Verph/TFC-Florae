@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/boninite",
+  "result": "tfcflorae:rock/bricks/boninite_stairs",
+  "mode": "stair"
+}

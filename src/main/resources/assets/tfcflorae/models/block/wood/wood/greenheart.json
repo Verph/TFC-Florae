@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log/greenheart",
-    "side": "tfcflorae:block/wood/log/greenheart"
+    "end": "tfc:block/wood/log/greenheart",
+    "side": "tfc:block/wood/log/greenheart"
   }
 }

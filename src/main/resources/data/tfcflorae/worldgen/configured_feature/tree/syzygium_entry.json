@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 140,
+    "max_rain": 360,
+    "min_temp": 13,
+    "max_temp": 35,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/syzygium"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/syzygium"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/syzygium",
+    "dead_tree": "tfcflorae:tree/syzygium_dead",
+    "fallen_log": "tfcflorae:wood/log/syzygium",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/syzygium",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/syzygium",
+    "old_growth_tree": "tfcflorae:tree/syzygium_large"
+  }
+}

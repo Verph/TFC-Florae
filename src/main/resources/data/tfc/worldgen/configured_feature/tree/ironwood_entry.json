@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 30,
+    "max_rain": 210,
+    "min_temp": 11,
+    "max_temp": 36,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/ironwood"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/ironwood"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/ironwood",
+    "dead_tree": "tfcflorae:tree/ironwood_dead",
+    "fallen_log": "tfcflorae:wood/log/ironwood",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/ironwood",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/ironwood",
+    "old_growth_tree": "tfcflorae:tree/ironwood_large"
+  }
+}

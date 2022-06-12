@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:rowan/1",
+      "tfcflorae:rowan/2",
+      "tfcflorae:rowan/3",
+      "tfcflorae:rowan/4",
+      "tfcflorae:rowan/5",
+      "tfcflorae:rowan/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "allow_submerged": false
+    }
+  }
+}

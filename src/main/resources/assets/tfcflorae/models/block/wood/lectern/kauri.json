@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/kauri",
-    "base": "tfcflorae:block/wood/lectern/kauri/base",
-    "front": "tfcflorae:block/wood/lectern/kauri/front",
-    "sides": "tfcflorae:block/wood/lectern/kauri/sides",
-    "top": "tfcflorae:block/wood/lectern/kauri/top",
-    "particle": "tfcflorae:block/wood/lectern/kauri/sides"
+    "bottom": "tfc:block/wood/planks/kauri",
+    "base": "tfc:block/wood/lectern/kauri/base",
+    "front": "tfc:block/wood/lectern/kauri/front",
+    "sides": "tfc:block/wood/lectern/kauri/sides",
+    "top": "tfc:block/wood/lectern/kauri/top",
+    "particle": "tfc:block/wood/lectern/kauri/sides"
   }
 }

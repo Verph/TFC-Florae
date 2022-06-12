@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:purpleheart_large/1",
+      "tfcflorae:purpleheart_large/2",
+      "tfcflorae:purpleheart_large/3",
+      "tfcflorae:purpleheart_large/4",
+      "tfcflorae:purpleheart_large/5",
+      "tfcflorae:purpleheart_large/6",
+      "tfcflorae:purpleheart_large/7",
+      "tfcflorae:purpleheart_large/8",
+      "tfcflorae:purpleheart_large/9",
+      "tfcflorae:purpleheart_large/10",
+      "tfcflorae:purpleheart_large/11",
+      "tfcflorae:purpleheart_large/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

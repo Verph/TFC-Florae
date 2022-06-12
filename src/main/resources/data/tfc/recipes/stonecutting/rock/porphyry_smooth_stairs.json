@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/smooth/porphyry"
+  },
+  "result": "tfcflorae:rock/smooth/porphyry_stairs",
+  "count": 1
+}

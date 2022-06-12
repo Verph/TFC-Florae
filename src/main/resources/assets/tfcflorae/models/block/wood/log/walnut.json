@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/log_top/walnut",
-    "side": "tfcflorae:block/wood/log/walnut"
+    "end": "tfc:block/wood/log_top/walnut",
+    "side": "tfc:block/wood/log/walnut"
   }
 }

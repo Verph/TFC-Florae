@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "tfcflorae:block/wood/planks/bald_cypress_trapdoor"
+    "texture": "tfc:block/wood/planks/bald_cypress_trapdoor"
   }
 }

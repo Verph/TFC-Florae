@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/smooth/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/smooth/gneiss_stairs",
+    "count": 8
+  }
+}

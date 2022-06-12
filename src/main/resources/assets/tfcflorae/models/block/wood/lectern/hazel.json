@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/hazel",
-    "base": "tfcflorae:block/wood/lectern/hazel/base",
-    "front": "tfcflorae:block/wood/lectern/hazel/front",
-    "sides": "tfcflorae:block/wood/lectern/hazel/sides",
-    "top": "tfcflorae:block/wood/lectern/hazel/top",
-    "particle": "tfcflorae:block/wood/lectern/hazel/sides"
+    "bottom": "tfc:block/wood/planks/hazel",
+    "base": "tfc:block/wood/lectern/hazel/base",
+    "front": "tfc:block/wood/lectern/hazel/front",
+    "sides": "tfc:block/wood/lectern/hazel/sides",
+    "top": "tfc:block/wood/lectern/hazel/top",
+    "particle": "tfc:block/wood/lectern/hazel/sides"
   }
 }

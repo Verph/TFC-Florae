@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
-    "end": "tfcflorae:block/wood/stripped_log/teak",
-    "side": "tfcflorae:block/wood/stripped_log/teak"
+    "end": "tfc:block/wood/stripped_log/teak",
+    "side": "tfc:block/wood/stripped_log/teak"
   }
 }

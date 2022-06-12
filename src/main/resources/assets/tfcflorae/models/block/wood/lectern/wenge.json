@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
-    "bottom": "tfcflorae:block/wood/planks/wenge",
-    "base": "tfcflorae:block/wood/lectern/wenge/base",
-    "front": "tfcflorae:block/wood/lectern/wenge/front",
-    "sides": "tfcflorae:block/wood/lectern/wenge/sides",
-    "top": "tfcflorae:block/wood/lectern/wenge/top",
-    "particle": "tfcflorae:block/wood/lectern/wenge/sides"
+    "bottom": "tfc:block/wood/planks/wenge",
+    "base": "tfc:block/wood/lectern/wenge/base",
+    "front": "tfc:block/wood/lectern/wenge/front",
+    "sides": "tfc:block/wood/lectern/wenge/sides",
+    "top": "tfc:block/wood/lectern/wenge/top",
+    "particle": "tfc:block/wood/lectern/wenge/sides"
   }
 }
