@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/yew",
-    "old_growth_tree": "tfcflorae:tree/yew_large"
+    "bush_leaves": "tfcflorae:wood/leaves/yew"
   }
 }

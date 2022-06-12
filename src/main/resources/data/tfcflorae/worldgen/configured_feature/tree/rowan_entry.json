@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/rowan",
-    "old_growth_tree": "tfcflorae:tree/rowan_large"
+    "bush_leaves": "tfcflorae:wood/leaves/rowan"
   }
 }

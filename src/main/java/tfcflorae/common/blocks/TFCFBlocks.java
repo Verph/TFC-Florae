@@ -37,6 +37,8 @@ import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.util.Helpers;
 
+import tfcflorae.common.blockentities.TFCFBlockEntities;
+import tfcflorae.common.blocks.ceramics.*;
 import tfcflorae.common.blocks.rock.*;
 import tfcflorae.common.blocks.soil.*;
 import tfcflorae.common.blocks.wood.*;
@@ -82,12 +84,11 @@ public class TFCFBlocks
         )
     );
 
-    // Gotta fix OreDepositBlock
-    /*public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(TFCFRock.class, rock ->
+    public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(TFCFRock.class, rock ->
         Helpers.mapOfKeys(OreDeposit.class, ore ->
-            register("deposit/" + ore.name() + "/" + rock.name(), () -> new OreDepositBlock(Block.Properties.of(Material.SAND, MaterialColor.STONE).sound(SoundType.GRAVEL).strength(0.8f), rock, ore), ORES)
+            register("deposit/" + ore.name() + "/" + rock.name(), () -> new TFCFOreDepositBlock(Block.Properties.of(Material.SAND, MaterialColor.STONE).sound(SoundType.GRAVEL).strength(0.8f), rock, ore), TFCItemGroup.ORES)
         )
-    );*/
+    );
 
     // Rock Stuff #less wow :(
 
@@ -119,6 +120,23 @@ public class TFCFBlocks
         Helpers.mapOfKeys(Wood.BlockType.class, type ->
             register(type.nameFor(wood), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD)))
         )
+    );
+
+    // Misc
+
+    public static final RegistryObject<Block> LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/large_vessel", () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC);
+    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/earthenware/large_vessel/" + color.getName(), () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC)
+    );
+
+    public static final RegistryObject<Block> LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/large_vessel", () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC);
+    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/kaolinite/large_vessel/" + color.getName(), () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC)
+    );
+
+    public static final RegistryObject<Block> LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/large_vessel", () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC);
+    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/stoneware/large_vessel/" + color.getName(), () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC)
     );
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)

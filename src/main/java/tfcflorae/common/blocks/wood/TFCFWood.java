@@ -40,10 +40,12 @@ import tfcflorae.common.blocks.TFCFBlocks;
  */
 public enum TFCFWood implements RegistryWood
 {
+    // Add variants and fruit-bearing trees
+
     AFRICAN_PADAUK(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 26),
     ALDER(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
     ANGELIM(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 26),
-    //BALD_CYPRESS(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),
+    BALD_CYPRESS(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),
     BAOBAB(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 32),
     BEECH(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
     BLACK_WALNUT(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
@@ -78,7 +80,7 @@ public enum TFCFWood implements RegistryWood
     MACLURA(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
     MAHOE(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
     MAHOGANY(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 26),
-    //MANGROVE(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),
+    MANGROVE(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),
     MARBLEWOOD(true, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 26),
     MESSMATE(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 11),
     MOUNTAIN_ASH(false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),

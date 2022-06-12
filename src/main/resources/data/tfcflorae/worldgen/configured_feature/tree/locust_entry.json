@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/locust",
-    "old_growth_tree": "tfcflorae:tree/locust_large"
+    "bush_leaves": "tfcflorae:wood/leaves/locust"
   }
 }

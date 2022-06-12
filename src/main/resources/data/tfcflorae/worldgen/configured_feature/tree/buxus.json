@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "type": "tfcflorae:overlay_tree",
+  "type": "tfc:overlay_tree",
   "config": {
     "base": "tfcflorae:buxus/base",
     "overlay": "tfcflorae:buxus/overlay",

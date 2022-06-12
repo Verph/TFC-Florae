@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/pink_ivory",
-    "old_growth_tree": "tfcflorae:tree/pink_ivory_large"
+    "bush_leaves": "tfcflorae:wood/leaves/pink_ivory"
   }
 }

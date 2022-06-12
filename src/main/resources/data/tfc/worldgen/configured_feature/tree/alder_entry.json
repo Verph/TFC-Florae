@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/alder",
-    "old_growth_tree": "tfcflorae:tree/alder_large"
+    "bush_leaves": "tfcflorae:wood/leaves/alder"
   }
 }

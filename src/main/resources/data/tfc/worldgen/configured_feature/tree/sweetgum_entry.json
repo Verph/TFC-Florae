@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/sweetgum",
-    "old_growth_tree": "tfcflorae:tree/sweetgum_large"
+    "bush_leaves": "tfcflorae:wood/leaves/sweetgum"
   }
 }

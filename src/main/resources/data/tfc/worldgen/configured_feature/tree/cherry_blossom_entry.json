@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/cherry_blossom",
-    "old_growth_tree": "tfcflorae:tree/cherry_blossom_large"
+    "bush_leaves": "tfcflorae:wood/leaves/cherry_blossom"
   }
 }

@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/ginkgo",
-    "old_growth_tree": "tfcflorae:tree/ginkgo_large"
+    "bush_leaves": "tfcflorae:wood/leaves/ginkgo"
   }
 }

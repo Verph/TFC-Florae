@@ -11,13 +11,16 @@ import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 
 import tfcflorae.client.*;
-import tfcflorae.common.ForgeEvents;
+import tfcflorae.common.ForgeEventHandler;
+import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.network.Packets;
-import tfcflorae.common.recipes.RecipeSerializers;
-import tfcflorae.common.recipes.RecipeTypes;
+import tfcflorae.common.recipes.TFCFRecipeSerializers;
+import tfcflorae.common.recipes.TFCFRecipeTypes;
+import tfcflorae.util.TFCFInteractionManager;
 
 @Mod(TFCFlorae.MOD_ID)
 public class TFCFlorae
@@ -35,15 +38,18 @@ public class TFCFlorae
 
         TFCFItems.ITEMS.register(bus);
         TFCFBlocks.BLOCKS.register(bus);
+        TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
-        RecipeTypes.RECIPE_TYPES.register(bus);
-        RecipeSerializers.RECIPE_SERIALIZERS.register(bus);
+        TFCFRecipeTypes.RECIPE_TYPES.register(bus);
+        TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
+        TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
 
         Packets.init();
 
         bus.addListener(this::setup);
 
-        ForgeEvents.init();
+        ForgeEventHandler.init();
+
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
             ClientEventHandler.init();
@@ -53,5 +59,8 @@ public class TFCFlorae
 
     public void setup(FMLCommonSetupEvent event)
     {
+        LOGGER.info("TFCFlorae Common Setup");
+
+        TFCFInteractionManager.registerDefaultInteractions();
     }
 }

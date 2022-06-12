@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/ironwood",
-    "old_growth_tree": "tfcflorae:tree/ironwood_large"
+    "bush_leaves": "tfcflorae:wood/leaves/ironwood"
   }
 }

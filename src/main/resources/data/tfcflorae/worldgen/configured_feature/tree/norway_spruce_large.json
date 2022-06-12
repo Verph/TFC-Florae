@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "type": "tfcflorae:stacked_tree",
+  "type": "tfc:stacked_tree",
   "config": {
     "trunk": {
       "state": {

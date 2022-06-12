@@ -24,7 +24,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/logwood",
-    "old_growth_tree": "tfcflorae:tree/logwood_large"
+    "bush_leaves": "tfcflorae:wood/leaves/logwood"
   }
 }
