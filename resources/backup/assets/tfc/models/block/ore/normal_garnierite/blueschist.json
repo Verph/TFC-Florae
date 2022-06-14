@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/blueschist",
+    "particle": "tfcflorae:block/rock/raw/blueschist",
+    "overlay": "tfcflorae:block/ore/normal_garnierite"
+  }
+}

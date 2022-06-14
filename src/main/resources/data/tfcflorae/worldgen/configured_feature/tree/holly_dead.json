@@ -8,12 +8,23 @@
       "tfcflorae:holly_dead/3",
       "tfcflorae:holly_dead/4",
       "tfcflorae:holly_dead/5",
-      "tfcflorae:holly_dead/6"
+      "tfcflorae:holly_dead/6",
+      "tfcflorae:holly_dead/7",
+      "tfcflorae:holly_dead/8",
+      "tfcflorae:holly_dead/9",
+      "tfcflorae:holly_dead/10",
+      "tfcflorae:holly_dead/11",
+      "tfcflorae:holly_dead/12",
+      "tfcflorae:holly_dead/13",
+      "tfcflorae:holly_dead/14",
+      "tfcflorae:holly_dead/15",
+      "tfcflorae:holly_dead/16",
+      "tfcflorae:holly_dead/17"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 6,
+      "height": 5,
       "allow_submerged": true
     }
   }

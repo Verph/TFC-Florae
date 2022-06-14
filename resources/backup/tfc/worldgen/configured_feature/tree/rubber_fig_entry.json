@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 210,
+    "max_rain": 550,
+    "min_temp": 16,
+    "max_temp": 35,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/rubber_fig"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/rubber_fig"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/rubber_fig",
+    "dead_tree": "tfcflorae:tree/rubber_fig_dead",
+    "fallen_log": "tfcflorae:wood/log/rubber_fig",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/rubber_fig",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/rubber_fig",
+    "old_growth_tree": "tfcflorae:tree/rubber_fig_large"
+  }
+}

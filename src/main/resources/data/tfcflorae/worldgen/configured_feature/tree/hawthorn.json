@@ -7,13 +7,27 @@
       "tfcflorae:hawthorn/2",
       "tfcflorae:hawthorn/3",
       "tfcflorae:hawthorn/4",
-      "tfcflorae:hawthorn/5"
+      "tfcflorae:hawthorn/5",
+      "tfcflorae:hawthorn/6",
+      "tfcflorae:hawthorn/7",
+      "tfcflorae:hawthorn/8",
+      "tfcflorae:hawthorn/9",
+      "tfcflorae:hawthorn/10",
+      "tfcflorae:hawthorn/11",
+      "tfcflorae:hawthorn/12",
+      "tfcflorae:hawthorn/13",
+      "tfcflorae:hawthorn/14",
+      "tfcflorae:hawthorn/15",
+      "tfcflorae:hawthorn/16",
+      "tfcflorae:hawthorn/17",
+      "tfcflorae:hawthorn/18",
+      "tfcflorae:hawthorn/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

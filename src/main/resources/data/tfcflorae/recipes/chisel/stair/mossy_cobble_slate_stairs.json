@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/mossy_cobble/slate",
-  "result": "tfcflorae:rock/mossy_cobble/slate_stairs",
-  "mode": "stair"
-}

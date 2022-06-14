@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/whitebeam"
+    "bush_leaves": "tfcflorae:wood/leaves/whitebeam",
+    "old_growth_tree": "tfcflorae:tree/whitebeam_large"
   }
 }

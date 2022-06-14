@@ -11,12 +11,14 @@
       "tfcflorae:zebrawood/6",
       "tfcflorae:zebrawood/7",
       "tfcflorae:zebrawood/8",
-      "tfcflorae:zebrawood/9"
+      "tfcflorae:zebrawood/9",
+      "tfcflorae:zebrawood/10",
+      "tfcflorae:zebrawood/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

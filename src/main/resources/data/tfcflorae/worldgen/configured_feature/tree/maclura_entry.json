@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/maclura"
+    "bush_leaves": "tfcflorae:wood/leaves/maclura",
+    "old_growth_tree": "tfcflorae:tree/maclura_large"
   }
 }

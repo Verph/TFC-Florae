@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/bricks/dacite"
-  },
-  "result": "tfcflorae:rock/bricks/dacite_stairs",
-  "count": 1
-}

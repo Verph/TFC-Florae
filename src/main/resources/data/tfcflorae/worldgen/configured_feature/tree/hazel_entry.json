@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/hazel"
+    "bush_leaves": "tfcflorae:wood/leaves/hazel",
+    "old_growth_tree": "tfcflorae:tree/hazel_large"
   }
 }

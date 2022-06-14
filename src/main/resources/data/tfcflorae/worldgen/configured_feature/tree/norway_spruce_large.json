@@ -1,53 +1,18 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:stacked_tree",
+  "type": "tfc:random_tree",
   "config": {
-    "trunk": {
-      "state": {
-        "Name": "tfcflorae:wood/log/norway_spruce",
-        "Properties": {
-          "axis": "y",
-          "natural": "true"
-        }
-      },
-      "min_height": 5,
-      "max_height": 9,
-      "width": 2
-    },
-    "layers": [
-      {
-        "templates": [
-          "tfcflorae:norway_spruce_large/layer1_1",
-          "tfcflorae:norway_spruce_large/layer1_2",
-          "tfcflorae:norway_spruce_large/layer1_3"
-        ],
-        "min_count": 2,
-        "max_count": 3
-      },
-      {
-        "templates": [
-          "tfcflorae:norway_spruce_large/layer2_1",
-          "tfcflorae:norway_spruce_large/layer2_2",
-          "tfcflorae:norway_spruce_large/layer2_3"
-        ],
-        "min_count": 1,
-        "max_count": 2
-      },
-      {
-        "templates": [
-          "tfcflorae:norway_spruce_large/layer3_1",
-          "tfcflorae:norway_spruce_large/layer3_2",
-          "tfcflorae:norway_spruce_large/layer3_3"
-        ],
-        "min_count": 1,
-        "max_count": 1
-      }
+    "structures": [
+      "tfcflorae:norway_spruce_large/1",
+      "tfcflorae:norway_spruce_large/2",
+      "tfcflorae:norway_spruce_large/3",
+      "tfcflorae:norway_spruce_large/4"
     ],
     "radius": 2,
     "placement": {
       "width": 2,
-      "height": 7,
-      "allow_submerged": false
+      "height": 9,
+      "allow_submerged": true
     }
   }
 }

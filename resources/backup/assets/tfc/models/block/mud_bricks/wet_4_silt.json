@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/mud_bricks/4",
+  "textures": {
+    "mud": "tfcflorae:block/mud/silt"
+  }
+}

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/boninite",
-    "top": "tfc:block/rock/cracked_bricks/boninite",
-    "side": "tfc:block/rock/cracked_bricks/boninite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/boninite",
+    "top": "tfcflorae:block/rock/cracked_bricks/boninite",
+    "side": "tfcflorae:block/rock/cracked_bricks/boninite"
   }
 }

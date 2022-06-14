@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/mahoe"
+    "bush_leaves": "tfcflorae:wood/leaves/mahoe",
+    "old_growth_tree": "tfcflorae:tree/mahoe_large"
   }
 }

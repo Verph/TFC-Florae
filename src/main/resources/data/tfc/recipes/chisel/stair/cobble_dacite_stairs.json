@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobble/dacite",
-  "result": "tfcflorae:rock/cobble/dacite_stairs",
-  "mode": "stair"
-}

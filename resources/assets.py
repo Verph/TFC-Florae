@@ -15,65 +15,65 @@ def generate(rm: ResourceManager):
         for block_type in ROCK_BLOCK_TYPES:
             if block_type == 'spike':
                 # Spikes have special block states
-                block = rm.blockstate(('rock', block_type, rock), variants=dict(('part=%s' % part, {'model': 'tfc:block/rock/%s/%s_%s' % (block_type, rock, part)}) for part in ROCK_SPIKE_PARTS))
+                block = rm.blockstate(('rock', block_type, rock), variants=dict(('part=%s' % part, {'model': 'tfcflorae:block/rock/%s/%s_%s' % (block_type, rock, part)}) for part in ROCK_SPIKE_PARTS))
                 block.with_lang(lang('%s spike', rock))
-                block.with_block_loot('1-2 tfc:rock/loose/%s' % rock)
+                block.with_block_loot('1-2 tfcflorae:rock/loose/%s' % rock)
                 # Individual models
-                rm.item_model(('rock', block_type, rock), 'tfc:block/rock/raw/%s' % rock, parent='tfc:block/rock/spike/%s_base' % rock)
+                rm.item_model(('rock', block_type, rock), 'tfcflorae:block/rock/raw/%s' % rock, parent='tfcflorae:block/rock/spike/%s_base' % rock)
                 for part in ROCK_SPIKE_PARTS:
                     rm.block_model(('rock', block_type, '%s_%s' % (rock, part)), {
-                        'texture': 'tfc:block/rock/raw/%s' % rock,
-                        'particle': 'tfc:block/rock/raw/%s' % rock
-                    }, parent='tfc:block/rock/spike_%s' % part)
+                        'texture': 'tfcflorae:block/rock/raw/%s' % rock,
+                        'particle': 'tfcflorae:block/rock/raw/%s' % rock
+                    }, parent='tfcflorae:block/rock/spike_%s' % part)
 
             elif block_type == 'loose':
                 # One block state and multiple models for the block
                 block = rm.blockstate('rock/loose/%s' % rock, variants={
-                    'count=1': four_ways('tfc:block/rock/pebble/%s' % rock),
-                    'count=2': four_ways('tfc:block/rock/rubble/%s' % rock),
-                    'count=3': four_ways('tfc:block/rock/boulder/%s' % rock),
+                    'count=1': four_ways('tfcflorae:block/rock/pebble/%s' % rock),
+                    'count=2': four_ways('tfcflorae:block/rock/rubble/%s' % rock),
+                    'count=3': four_ways('tfcflorae:block/rock/boulder/%s' % rock),
                 }, use_default_model=False)
                 for loose_type in ('pebble', 'rubble', 'boulder'):
-                    rm.block_model('tfc:rock/%s/%s' % (loose_type, rock), 'tfc:item/loose_rock/%s' % rock, parent='tfc:block/groundcover/%s' % loose_type)
+                    rm.block_model('tfcflorae:rock/%s/%s' % (loose_type, rock), 'tfcflorae:item/loose_rock/%s' % rock, parent='tfcflorae:block/groundcover/%s' % loose_type)
 
                 block.with_lang(lang('loose %s', rock)).with_tag('can_be_snow_piled').with_block_loot({
-                    'name': 'tfc:rock/loose/%s' % rock,
+                    'name': 'tfcflorae:rock/loose/%s' % rock,
                     'functions': [
-                        {**loot_tables.set_count(2), 'conditions': [loot_tables.block_state_property('tfc:rock/loose/%s[count=2]' % rock)]},
-                        {**loot_tables.set_count(3), 'conditions': [loot_tables.block_state_property('tfc:rock/loose/%s[count=3]' % rock)]},
+                        {**loot_tables.set_count(2), 'conditions': [loot_tables.block_state_property('tfcflorae:rock/loose/%s[count=2]' % rock)]},
+                        {**loot_tables.set_count(3), 'conditions': [loot_tables.block_state_property('tfcflorae:rock/loose/%s[count=3]' % rock)]},
                         loot_tables.explosion_decay()
                     ]
                 })
 
                 # Model for the item
-                rm.item_model(('rock', 'loose', rock), 'tfc:item/loose_rock/%s' % rock)
+                rm.item_model(('rock', 'loose', rock), 'tfcflorae:item/loose_rock/%s' % rock)
 
             elif block_type == 'pressure_plate':
                 block = rm.block(('rock', 'pressure_plate', rock))
-                block.make_pressure_plate(pressure_plate_suffix='', texture='tfc:block/rock/raw/%s' % rock)
+                block.make_pressure_plate(pressure_plate_suffix='', texture='tfcflorae:block/rock/raw/%s' % rock)
                 block.with_lang(lang('%s pressure plate', rock))
-                block.with_block_loot('tfc:rock/pressure_plate/%s' % rock)
+                block.with_block_loot('tfcflorae:rock/pressure_plate/%s' % rock)
             elif block_type == 'button':
                 block = rm.block(('rock', 'button', rock))
-                block.make_button(button_suffix='', texture='tfc:block/rock/raw/%s' % rock)
+                block.make_button(button_suffix='', texture='tfcflorae:block/rock/raw/%s' % rock)
                 block.with_lang(lang('%s button', rock))
-                block.with_block_loot('tfc:rock/button/%s' % rock)
+                block.with_block_loot('tfcflorae:rock/button/%s' % rock)
             else:
                 block = rm.blockstate(('rock', block_type, rock))
                 if block_type == 'hardened':
-                    block.with_block_model('tfc:block/rock/raw/%s' % rock)  # Hardened uses the raw model
+                    block.with_block_model('tfcflorae:block/rock/raw/%s' % rock)  # Hardened uses the raw model
                 else:
-                    block.with_block_model('tfc:block/rock/%s/%s' % (block_type, rock))
+                    block.with_block_model('tfcflorae:block/rock/%s/%s' % (block_type, rock))
                 block.with_item_model()
 
                 if block_type in CUTTABLE_ROCKS:
                     # Stairs
-                    rm.block('tfc:rock/' + block_type + '/' + rock).make_stairs()
-                    rm.block_loot('tfc:rock/' + block_type + '/' + rock + '_stairs', 'tfc:rock/' + block_type + '/' + rock + '_stairs')
-                    rm.lang('block.tfc.rock.' + block_type + '.' + rock + '_stairs', lang('%s %s Stairs', rock, block_type))
+                    rm.block('tfcflorae:rock/' + block_type + '/' + rock).make_stairs()
+                    rm.block_loot('tfcflorae:rock/' + block_type + '/' + rock + '_stairs', 'tfcflorae:rock/' + block_type + '/' + rock + '_stairs')
+                    rm.lang('block.tfcflorae.rock.' + block_type + '.' + rock + '_stairs', lang('%s %s Stairs', rock, block_type))
                     # Slabs
-                    rm.block('tfc:rock/' + block_type + '/' + rock).make_slab()
-                    slab_namespace = 'tfc:rock/' + block_type + '/' + rock + '_slab'
+                    rm.block('tfcflorae:rock/' + block_type + '/' + rock).make_slab()
+                    slab_namespace = 'tfcflorae:rock/' + block_type + '/' + rock + '_slab'
                     rm.block_loot(slab_namespace, {
                         'functions': [
                             {**loot_tables.set_count(2), 'conditions': [loot_tables.block_state_property(slab_namespace + '[type=double]')]},
@@ -81,25 +81,25 @@ def generate(rm: ResourceManager):
                         ],
                         'name': slab_namespace
                     })
-                    rm.lang('block.tfc.rock.' + block_type + '.' + rock + '_slab', lang('%s %s Slab', rock, block_type))
+                    rm.lang('block.tfcflorae.rock.' + block_type + '.' + rock + '_slab', lang('%s %s Slab', rock, block_type))
                     # Walls
-                    rm.block('tfc:rock/' + block_type + '/' + rock).make_wall()
-                    rm.block_loot('tfc:rock/' + block_type + '/' + rock + '_wall', 'tfc:rock/' + block_type + '/' + rock + '_wall')
-                    rm.lang('block.tfc.rock.' + block_type + '.' + rock + '_wall', lang('%s %s Wall', rock, block_type))
-                    rm.block_tag('minecraft:walls', 'tfc:rock/' + block_type + '/' + rock + '_wall')
+                    rm.block('tfcflorae:rock/' + block_type + '/' + rock).make_wall()
+                    rm.block_loot('tfcflorae:rock/' + block_type + '/' + rock + '_wall', 'tfcflorae:rock/' + block_type + '/' + rock + '_wall')
+                    rm.lang('block.tfcflorae.rock.' + block_type + '.' + rock + '_wall', lang('%s %s Wall', rock, block_type))
+                    rm.block_tag('minecraft:walls', 'tfcflorae:rock/' + block_type + '/' + rock + '_wall')
                 # Loot
                 if block_type == 'raw' or block_type == 'hardened':
                     block.with_block_loot(({
-                        'name': 'tfc:rock/raw/%s' % rock,
+                        'name': 'tfcflorae:rock/raw/%s' % rock,
                         'conditions': ['tfc:is_isolated'],
                     }, {
-                        'name': 'tfc:rock/loose/%s' % rock,
+                        'name': 'tfcflorae:rock/loose/%s' % rock,
                         'functions': [loot_tables.set_count(1, 4)]
                     }))
                 elif block_type == 'gravel':
                     block.with_block_loot(({
                         'conditions': [loot_tables.silk_touch()],
-                        'name': 'tfc:rock/gravel/%s' % rock
+                        'name': 'tfcflorae:rock/gravel/%s' % rock
                     }, {
                         'type': 'minecraft:alternatives',
                         'conditions': 'minecraft:survives_explosion',
@@ -109,11 +109,11 @@ def generate(rm: ResourceManager):
                             'name': 'minecraft:flint'
                         }, {
                             'type': 'minecraft:item',
-                            'name': 'tfc:rock/gravel/%s' % rock
+                            'name': 'tfcflorae:rock/gravel/%s' % rock
                         }]
                     }))
                 else:
-                    block.with_block_loot('tfc:rock/%s/%s' % (block_type, rock))
+                    block.with_block_loot('tfcflorae:rock/%s/%s' % (block_type, rock))
                 # Lang
                 if block_type in {'smooth', 'raw', 'chiseled', 'hardened'}:
                     block.with_lang(lang('%s %s', block_type, rock))
@@ -121,48 +121,48 @@ def generate(rm: ResourceManager):
                     block.with_lang(lang('%s %s', rock, block_type))
 
         if rock_data.category == 'igneous_extrusive' or rock_data.category == 'igneous_intrusive':
-            rm.blockstate('tfc:rock/anvil/%s' % rock, model='tfc:block/rock/anvil/%s' % rock).with_lang(lang('%s Anvil', rock)).with_block_loot('1-4 tfc:rock/loose/%s' % rock).with_item_model()
-            rm.block_model('tfc:rock/anvil/%s' % rock, parent='tfc:block/rock/anvil', textures={'texture': 'tfc:block/rock/raw/%s' % rock})
-            rm.blockstate('tfc:rock/magma/%s' % rock, model='tfc:block/rock/magma/%s' % rock).with_block_model(parent='minecraft:block/cube_all', textures={'all': 'tfc:block/rock/magma/%s' % rock}).with_lang(lang('%s magma block', rock)).with_item_model().with_block_loot('tfc:rock/magma/%s' % rock)
+            rm.blockstate('tfcflorae:rock/anvil/%s' % rock, model='tfcflorae:block/rock/anvil/%s' % rock).with_lang(lang('%s Anvil', rock)).with_block_loot('1-4 tfcflorae:rock/loose/%s' % rock).with_item_model()
+            rm.block_model('tfcflorae:rock/anvil/%s' % rock, parent='tfcflorae:block/rock/anvil', textures={'texture': 'tfcflorae:block/rock/raw/%s' % rock})
+            rm.blockstate('tfcflorae:rock/magma/%s' % rock, model='tfcflorae:block/rock/magma/%s' % rock).with_block_model(parent='minecraft:block/cube_all', textures={'all': 'tfcflorae:block/rock/magma/%s' % rock}).with_lang(lang('%s magma block', rock)).with_item_model().with_block_loot('tfcflorae:rock/magma/%s' % rock)
 
         # Ores
         for ore, ore_data in ORES.items():
             if ore_data.graded:
                 # Small Ores / Groundcover Blocks
-                block = rm.blockstate('tfc:ore/small_%s' % ore, variants={"": four_ways('tfc:block/groundcover/%s' % ore)}, use_default_model=False)
-                block.with_lang(lang('small %s', ore)).with_block_loot('tfc:ore/small_%s' % ore).with_tag('can_be_snow_piled')
+                block = rm.blockstate('tfcflorae:ore/small_%s' % ore, variants={"": four_ways('tfcflorae:block/groundcover/%s' % ore)}, use_default_model=False)
+                block.with_lang(lang('small %s', ore)).with_block_loot('tfcflorae:ore/small_%s' % ore).with_tag('can_be_snow_piled')
 
-                rm.item_model('tfc:ore/small_%s' % ore).with_lang(lang('small %s', ore))
+                rm.item_model('tfcflorae:ore/small_%s' % ore).with_lang(lang('small %s', ore))
 
                 for grade in ORE_GRADES.keys():
-                    block = rm.blockstate(('ore', grade + '_' + ore, rock), 'tfc:block/ore/%s_%s/%s' % (grade, ore, rock))
+                    block = rm.blockstate(('ore', grade + '_' + ore, rock), 'tfcflorae:block/ore/%s_%s/%s' % (grade, ore, rock))
                     block.with_block_model({
-                        'all': 'tfc:block/rock/raw/%s' % rock,
-                        'particle': 'tfc:block/rock/raw/%s' % rock,
-                        'overlay': 'tfc:block/ore/%s_%s' % (grade, ore)
+                        'all': 'tfcflorae:block/rock/raw/%s' % rock,
+                        'particle': 'tfcflorae:block/rock/raw/%s' % rock,
+                        'overlay': 'tfcflorae:block/ore/%s_%s' % (grade, ore)
                     }, parent='tfc:block/ore')
                     block.with_item_model()
                     block.with_lang(lang('%s %s %s', grade, rock, ore))
-                    block.with_block_loot('tfc:ore/%s_%s' % (grade, ore))
+                    block.with_block_loot('tfcflorae:ore/%s_%s' % (grade, ore))
             else:
-                block = rm.blockstate(('ore', ore, rock), 'tfc:block/ore/%s/%s' % (ore, rock))
+                block = rm.blockstate(('ore', ore, rock), 'tfcflorae:block/ore/%s/%s' % (ore, rock))
                 block.with_block_model({
-                    'all': 'tfc:block/rock/raw/%s' % rock,
-                    'particle': 'tfc:block/rock/raw/%s' % rock,
-                    'overlay': 'tfc:block/ore/%s' % ore
-                }, parent='tfc:block/ore')
+                    'all': 'tfcflorae:block/rock/raw/%s' % rock,
+                    'particle': 'tfcflorae:block/rock/raw/%s' % rock,
+                    'overlay': 'tfcflorae:block/ore/%s' % ore
+                }, parent='tfcflorae:block/ore')
                 block.with_item_model()
                 block.with_lang(lang('%s %s', rock, ore))
-                rm.block_loot('tfc:ore/%s/%s' % (ore, rock), 'tfc:ore/%s' % ore)
+                rm.block_loot('tfcflorae:ore/%s/%s' % (ore, rock), 'tfcflorae:ore/%s' % ore)
 
     # Loose Ore Items
     for ore, ore_data in ORES.items():
         if ore_data.graded:
             for grade in ORE_GRADES.keys():
-                rm.item_model('tfc:ore/%s_%s' % (grade, ore)).with_lang(lang('%s %s', grade, ore))
-            rm.item_model('tfc:ore/small_%s' % ore).with_lang(lang('small %s', ore))
+                rm.item_model('tfcflorae:ore/%s_%s' % (grade, ore)).with_lang(lang('%s %s', grade, ore))
+            rm.item_model('tfcflorae:ore/small_%s' % ore).with_lang(lang('small %s', ore))
         else:
-            rm.item_model('tfc:ore/%s' % ore).with_lang(lang('%s', ore))
+            rm.item_model('tfcflorae:ore/%s' % ore).with_lang(lang('%s', ore))
 
     # Sand
     for sand in SAND_BLOCK_TYPES:
@@ -451,10 +451,10 @@ def generate(rm: ResourceManager):
     # Dirt
     for soil in SOIL_BLOCK_VARIANTS:
         # Regular Dirt
-        block = rm.blockstate(('dirt', soil), variants={'': [{'model': 'tfc:block/dirt/%s' % soil, 'y': i} for i in range(0, 360, 90)]}, use_default_model=False)
-        block.with_block_model().with_item_model().with_block_loot('tfc:dirt/%s' % soil).with_lang(lang('%s Dirt', soil))
+        block = rm.blockstate(('dirt', soil), variants={'': [{'model': 'tfcflorae:block/dirt/%s' % soil, 'y': i} for i in range(0, 360, 90)]}, use_default_model=False)
+        block.with_block_model().with_item_model().with_block_loot('tfcflorae:dirt/%s' % soil).with_lang(lang('%s Dirt', soil))
         for variant in ('mud', 'rooted_dirt', 'mud_bricks'):
-            rm.blockstate((variant, soil)).with_block_model().with_item_model().with_block_loot('tfc:%s/%s' % (variant, soil)).with_lang(lang('%s %s', soil, variant))
+            rm.blockstate((variant, soil)).with_block_model().with_item_model().with_block_loot('tfcflorae:%s/%s' % (variant, soil)).with_lang(lang('%s %s', soil, variant))
 
         rm.item_model('mud_brick/%s' % soil).with_lang(lang('%s mud brick', soil))
         mud_bricks = rm.block(('mud_bricks', soil))
@@ -462,22 +462,22 @@ def generate(rm: ResourceManager):
         mud_bricks.make_stairs()
         mud_bricks.make_wall().with_tag('minecraft:walls')
         for variant in ('_stairs', '_slab', '_wall'):
-            rm.block_loot('mud_bricks/%s%s' % (soil, variant), 'tfc:mud_bricks/%s%s' % (soil, variant)).with_lang(lang('%s mud bricks%s', soil, variant)).with_tag('minecraft:mineable/shovel')
+            rm.block_loot('mud_bricks/%s%s' % (soil, variant), 'tfcflorae:mud_bricks/%s%s' % (soil, variant)).with_lang(lang('%s mud bricks%s', soil, variant)).with_tag('minecraft:mineable/shovel')
 
         for variant in ('dry', 'wet'):
-            texture = {'mud': 'tfc:block/mud_bricks/%s' % soil if variant == 'dry' else 'tfc:block/mud/%s' % soil}
+            texture = {'mud': 'tfcflorae:block/mud_bricks/%s' % soil if variant == 'dry' else 'tfcflorae:block/mud/%s' % soil}
             for i in range(1, 5):
-                rm.block_model('mud_bricks/%s_%s_%s' % (variant, i, soil), textures=texture, parent='tfc:block/mud_bricks/%s' % i)
+                rm.block_model('mud_bricks/%s_%s_%s' % (variant, i, soil), textures=texture, parent='tfcflorae:block/mud_bricks/%s' % i)
         block = rm.blockstate(('drying_bricks', soil), variants=dict(
-            ('count=%s,dried=%s' % (c, d), {'model': 'tfc:block/mud_bricks/%s_%s_%s' % (e, c, soil)})
+            ('count=%s,dried=%s' % (c, d), {'model': 'tfcflorae:block/mud_bricks/%s_%s_%s' % (e, c, soil)})
             for c in range(1, 5) for d, e in (('true', 'dry'), ('false', 'wet'))
         )).with_lang(lang('wet %s mud bricks', soil))
         loot_pools = []
         for i in range(1, 5):
-            for m, d in (('tfc:drying_bricks/%s' % soil, 'false'), ('tfc:mud_brick/%s' % soil, 'true')):
-                loot_pools += [{'name': m, 'conditions': [loot_tables.block_state_property('tfc:drying_bricks/%s[count=%s,dried=%s]' % (soil, i, d))], 'functions': [loot_tables.set_count(i)]}]
+            for m, d in (('tfcflorae:drying_bricks/%s' % soil, 'false'), ('tfcflorae:mud_brick/%s' % soil, 'true')):
+                loot_pools += [{'name': m, 'conditions': [loot_tables.block_state_property('tfcflorae:drying_bricks/%s[count=%s,dried=%s]' % (soil, i, d))], 'functions': [loot_tables.set_count(i)]}]
         block.with_block_loot(*loot_pools)
-        rm.item_model('tfc:drying_bricks/%s' % soil, 'tfc:item/mud_brick/%s_wet' % soil)
+        rm.item_model('tfcflorae:drying_bricks/%s' % soil, 'tfcflorae:item/mud_brick/%s_wet' % soil)
 
         # Clay Dirt
         block = rm.blockstate(('clay', soil), use_default_model=False)
@@ -491,17 +491,17 @@ def generate(rm: ResourceManager):
 
         block = rm.block(('grass_path', soil))
         block.with_lang(lang('%s path', soil))
-        block.with_block_loot('tfc:dirt/%s' % soil)
+        block.with_block_loot('tfcflorae:dirt/%s' % soil)
 
     # Grass
     north_face = {'from': [0, 0, 0], 'to': [16, 16, 0], 'faces': {'north': {'texture': '#texture', 'cullface': 'north'}}}
     north_face_overlay = {'from': [0, 0, 0], 'to': [16, 16, 0], 'faces': {'north': {'texture': '#overlay', 'cullface': 'north'}}}
     north_face_overlay_tint0 = {'from': [0, 0, 0], 'to': [16, 16, 0], 'faces': {'north': {'texture': '#overlay', 'cullface': 'north', 'tintindex': 0}}}
 
-    rm.block_model('grass_top', textures={'overlay': 'tfc:block/grass_top', 'particle': '#texture'}, parent='block/block', elements=[north_face_overlay_tint0])
+    rm.block_model('grass_top', textures={'overlay': 'tfcflorae:block/grass_top', 'particle': '#texture'}, parent='block/block', elements=[north_face_overlay_tint0])
     rm.block_model('grass_snowy_top', textures={'overlay': 'minecraft:block/snow', 'particle': '#texture'}, parent='block/block', elements=[north_face_overlay])
-    rm.block_model('grass_side', textures={'overlay': 'tfc:block/grass_side', 'particle': '#texture'}, parent='block/block', elements=[north_face, north_face_overlay_tint0])
-    rm.block_model('grass_snowy_side', textures={'overlay': 'tfc:block/grass_snowy_side', 'particle': '#texture'}, parent='block/block', elements=[north_face, north_face_overlay])
+    rm.block_model('grass_side', textures={'overlay': 'tfcflorae:block/grass_side', 'particle': '#texture'}, parent='block/block', elements=[north_face, north_face_overlay_tint0])
+    rm.block_model('grass_snowy_side', textures={'overlay': 'tfcflorae:block/grass_snowy_side', 'particle': '#texture'}, parent='block/block', elements=[north_face, north_face_overlay])
     rm.block_model('grass_bottom', textures={'texture': '#texture', 'particle': '#texture'}, parent='block/block', elements=[north_face])
 
     # Grass (Peat, Normal + Clay) - Helper Functions
@@ -530,7 +530,7 @@ def generate(rm: ResourceManager):
 
     def grass_models(name: utils.ResourceIdentifier, texture: str):
         for variant in ('top', 'snowy_top', 'side', 'snowy_side', 'bottom'):
-            rm.block_model((name, variant), {'texture': texture}, parent='tfc:block/grass_%s' % variant)
+            rm.block_model((name, variant), {'texture': texture}, parent='tfcflorae:block/grass_%s' % variant)
 
     # Peat Grass
     rm.blockstate_multipart('peat_grass', *grass_multipart('tfc:block/peat_grass')).with_block_loot('tfc:peat').with_tag('grass').with_lang(lang('Peat Grass'))
@@ -538,10 +538,10 @@ def generate(rm: ResourceManager):
 
     # Grass Blocks
     for soil in SOIL_BLOCK_VARIANTS:
-        for grass_var, dirt in (('grass', 'tfc:block/dirt/%s' % soil), ('clay_grass', 'tfc:block/clay/%s' % soil)):
-            block = rm.blockstate_multipart((grass_var, soil), *grass_multipart('tfc:block/%s/%s' % (grass_var, soil)))
+        for grass_var, dirt in (('grass', 'tfcflorae:block/dirt/%s' % soil), ('clay_grass', 'tfcflorae:block/clay/%s' % soil)):
+            block = rm.blockstate_multipart((grass_var, soil), *grass_multipart('tfcflorae:block/%s/%s' % (grass_var, soil)))
             if grass_var == 'grass':
-                block.with_block_loot('tfc:dirt/%s' % soil)
+                block.with_block_loot('tfcflorae:dirt/%s' % soil)
             else:
                 block.with_block_loot({
                     'name': 'minecraft:clay_ball',
@@ -554,11 +554,11 @@ def generate(rm: ResourceManager):
         # Farmland
         block = rm.blockstate(('farmland', soil))
         block.with_block_model({
-            'dirt': 'tfc:block/dirt/%s' % soil,
-            'top': 'tfc:block/farmland/%s' % soil
+            'dirt': 'tfcflorae:block/dirt/%s' % soil,
+            'top': 'tfcflorae:block/farmland/%s' % soil
         }, parent='block/template_farmland')
         block.with_item_model()
-        block.with_block_loot('tfc:dirt/%s' % soil)
+        block.with_block_loot('tfcflorae:dirt/%s' % soil)
         block.with_tag('farmland')
         block.with_lang(lang('%s farmland', soil))
 
@@ -720,28 +720,28 @@ def generate(rm: ResourceManager):
         ore = 'native_' + metal if metal != 'tin' else 'cassiterite'
         rm.item_model(('pan', ore, 'result'), {'material': 'tfc:block/metal/full/' + metal}, parent='tfc:item/pan/result')
         for rock_id, rock in enumerate(ROCKS.keys()):
-            rm.item_model(('pan', ore, rock + '_full'), {'material': 'tfc:block/rock/gravel/%s' % rock}, parent='tfc:item/pan/full')
-            rm.item_model(('pan', ore, rock + '_half'), {'material': 'tfc:block/rock/gravel/%s' % rock}, parent='tfc:item/pan/half')
+            rm.item_model(('pan', ore, rock + '_full'), {'material': 'tfcflorae:block/rock/gravel/%s' % rock}, parent='tfc:item/pan/full')
+            rm.item_model(('pan', ore, rock + '_half'), {'material': 'tfcflorae:block/rock/gravel/%s' % rock}, parent='tfc:item/pan/half')
             stages.append({'predicate': {'tfc:rock': rock_id, 'tfc:stage': 0.4, 'tfc:ore': metal_id}, 'model': 'tfc:item/pan/%s/%s_half' % (ore, rock)})
             stages.append({'predicate': {'tfc:rock': rock_id, 'tfc:stage': 0.7, 'tfc:ore': metal_id}, 'model': 'tfc:item/pan/%s/%s_full' % (ore, rock)})
             block = rm.blockstate(('deposit', ore, rock)).with_lang(lang('%s %s Deposit', rock, ore)).with_item_model()
             block.with_block_model({
-                'all': 'tfc:block/rock/gravel/%s' % rock,
-                'particle': 'tfc:block/rock/gravel/%s' % rock,
-                'overlay': 'tfc:block/deposit/%s' % ore
+                'all': 'tfcflorae:block/rock/gravel/%s' % rock,
+                'particle': 'tfcflorae:block/rock/gravel/%s' % rock,
+                'overlay': 'tfcflorae:block/deposit/%s' % ore
             }, parent='tfc:block/ore')
             rare = DEPOSIT_RARES[rock]
             block.with_block_loot(({
                'name': 'tfc:ore/small_%s' % ore,
                'conditions': ['tfc:is_panned', condition_chance(0.5)],  # 50% chance
             }, {
-               'name': 'tfc:rock/loose/%s' % rock,
+               'name': 'tfcflorae:rock/loose/%s' % rock,
                'conditions': ['tfc:is_panned', condition_chance(0.5)],  # 25% chance
             }, {
                'name': 'tfc:gem/%s' % rare if rare in GEMS else 'tfc:ore/%s' % rare,
                'conditions': ['tfc:is_panned', condition_chance(0.04)],  # 1% chance
             }, {
-               'name': 'tfc:deposit/%s/%s' % (ore, rock),
+               'name': 'tfcflorae:deposit/%s/%s' % (ore, rock),
                'conditions': [{'condition': 'minecraft:inverted', 'term': {'condition': 'tfc:is_panned'}}]
             }))
     item_model_property(rm, ('pan', 'filled'), stages, {'parent': 'tfc:item/pan/empty'}).with_lang(lang('Filled Pan'))
@@ -1161,9 +1161,9 @@ def generate(rm: ResourceManager):
         # Logs
         for variant in ('log', 'stripped_log', 'wood', 'stripped_wood'):
             block = rm.blockstate(('wood', variant, wood), variants={
-                'axis=y': {'model': 'tfc:block/wood/%s/%s' % (variant, wood)},
-                'axis=z': {'model': 'tfc:block/wood/%s/%s' % (variant, wood), 'x': 90},
-                'axis=x': {'model': 'tfc:block/wood/%s/%s' % (variant, wood), 'x': 90, 'y': 90}
+                'axis=y': {'model': 'tfcflorae:block/wood/%s/%s' % (variant, wood)},
+                'axis=z': {'model': 'tfcflorae:block/wood/%s/%s' % (variant, wood), 'x': 90},
+                'axis=x': {'model': 'tfcflorae:block/wood/%s/%s' % (variant, wood), 'x': 90, 'y': 90}
             }, use_default_model=False)
 
             stick_with_hammer = {
@@ -1175,23 +1175,23 @@ def generate(rm: ResourceManager):
                 block.with_block_loot((
                     stick_with_hammer,
                     {  # wood blocks will only drop themselves if non-natural
-                        'name': 'tfc:wood/%s/%s' % (variant, wood),
-                        'conditions': loot_tables.block_state_property('tfc:wood/%s/%s[natural=false]' % (variant, wood))
+                        'name': 'tfcflorae:wood/%s/%s' % (variant, wood),
+                        'conditions': loot_tables.block_state_property('tfcflorae:wood/%s/%s[natural=false]' % (variant, wood))
                     },
-                    'tfc:wood/%s/%s' % (variant.replace('wood', 'log'), wood)
+                    'tfcflorae:wood/%s/%s' % (variant.replace('wood', 'log'), wood)
                 ))
             else:
                 block.with_block_loot((
                     stick_with_hammer,
-                    'tfc:wood/%s/%s' % (variant, wood)  # logs drop themselves always
+                    'tfcflorae:wood/%s/%s' % (variant, wood)  # logs drop themselves always
                 ))
 
             if variant != 'log':
                 block.with_item_model()
             else:
-                rm.item_model(('wood', variant, wood), 'tfc:item/wood/log/' + wood)
-            end = 'tfc:block/wood/%s/%s' % (variant.replace('log', 'log_top').replace('wood', 'log'), wood)
-            side = 'tfc:block/wood/%s/%s' % (variant.replace('wood', 'log'), wood)
+                rm.item_model(('wood', variant, wood), 'tfcflorae:item/wood/log/' + wood)
+            end = 'tfcflorae:block/wood/%s/%s' % (variant.replace('log', 'log_top').replace('wood', 'log'), wood)
+            side = 'tfcflorae:block/wood/%s/%s' % (variant.replace('wood', 'log'), wood)
             block.with_block_model({'end': end, 'side': side}, parent='block/cube_column')
             if 'stripped' in variant:
                 block.with_lang(lang(variant.replace('_', ' ' + wood + ' ')))
@@ -1205,32 +1205,32 @@ def generate(rm: ResourceManager):
 
         # Groundcover
         for variant in ('twig', 'fallen_leaves'):
-            block = rm.blockstate('wood/%s/%s' % (variant, wood), variants={"": four_ways('tfc:block/wood/%s/%s' % (variant, wood))}, use_default_model=False)
+            block = rm.blockstate('wood/%s/%s' % (variant, wood), variants={"": four_ways('tfcflorae:block/wood/%s/%s' % (variant, wood))}, use_default_model=False)
             block.with_lang(lang('%s %s', wood, variant))
 
             if variant == 'twig':
-                block.with_block_model({'side': 'tfc:block/wood/log/%s' % wood, 'top': 'tfc:block/wood/log_top/%s' % wood}, parent='tfc:block/groundcover/%s' % variant)
-                rm.item_model('wood/%s/%s' % (variant, wood), 'tfc:item/wood/twig/%s' % wood)
-                block.with_block_loot('tfc:wood/twig/%s' % wood)
+                block.with_block_model({'side': 'tfcflorae:block/wood/log/%s' % wood, 'top': 'tfcflorae:block/wood/log_top/%s' % wood}, parent='tfcflorae:block/groundcover/%s' % variant)
+                rm.item_model('wood/%s/%s' % (variant, wood), 'tfcflorae:item/wood/twig/%s' % wood)
+                block.with_block_loot('tfcflorae:wood/twig/%s' % wood)
             elif variant == 'fallen_leaves':
-                block.with_block_model('tfc:block/wood/leaves/%s' % wood, parent='tfc:block/groundcover/%s' % variant)
-                rm.item_model('wood/%s/%s' % (variant, wood), 'tfc:item/groundcover/fallen_leaves')
-                block.with_block_loot('tfc:wood/%s/%s' % (variant, wood))
+                block.with_block_model('tfcflorae:block/wood/leaves/%s' % wood, parent='tfcflorae:block/groundcover/%s' % variant)
+                rm.item_model('wood/%s/%s' % (variant, wood), 'tfcflorae:item/groundcover/fallen_leaves')
+                block.with_block_loot('tfcflorae:wood/%s/%s' % (variant, wood))
             else:
                 block.with_item_model()
 
             block.with_tag('can_be_snow_piled')
 
         # Leaves
-        block = rm.blockstate(('wood', 'leaves', wood), model='tfc:block/wood/leaves/%s' % wood)
-        block.with_block_model('tfc:block/wood/leaves/%s' % wood, parent='block/leaves')
+        block = rm.blockstate(('wood', 'leaves', wood), model='tfcflorae:block/wood/leaves/%s' % wood)
+        block.with_block_model('tfcflorae:block/wood/leaves/%s' % wood, parent='block/leaves')
         block.with_item_model()
         block.with_tag('minecraft:leaves')
         block.with_block_loot(({
-            'name': 'tfc:wood/leaves/%s' % wood,
+            'name': 'tfcflorae:wood/leaves/%s' % wood,
             'conditions': [loot_tables.or_condition(match_tag('forge:shears'), loot_tables.silk_touch())]
         }, {
-            'name': 'tfc:wood/sapling/%s' % wood,
+            'name': 'tfcflorae:wood/sapling/%s' % wood,
             'conditions': ['minecraft:survives_explosion', condition_chance(TREE_SAPLING_DROP_CHANCES[wood])]
         }), ({
             'name': 'minecraft:stick',
@@ -1243,17 +1243,17 @@ def generate(rm: ResourceManager):
         }))
 
         # Sapling
-        block = rm.blockstate(('wood', 'sapling', wood), 'tfc:block/wood/sapling/%s' % wood)
-        block.with_block_model({'cross': 'tfc:block/wood/sapling/%s' % wood}, 'block/cross')
-        block.with_block_loot('tfc:wood/sapling/%s' % wood)
-        rm.item_model(('wood', 'sapling', wood), 'tfc:block/wood/sapling/%s' % wood)
+        block = rm.blockstate(('wood', 'sapling', wood), 'tfcflorae:block/wood/sapling/%s' % wood)
+        block.with_block_model({'cross': 'tfcflorae:block/wood/sapling/%s' % wood}, 'block/cross')
+        block.with_block_loot('tfcflorae:wood/sapling/%s' % wood)
+        rm.item_model(('wood', 'sapling', wood), 'tfcflorae:block/wood/sapling/%s' % wood)
 
         # Planks and variant blocks
         block = rm.block(('wood', 'planks', wood))
         block.with_blockstate()
         block.with_block_model()
         block.with_item_model()
-        block.with_block_loot('tfc:wood/planks/%s' % wood)
+        block.with_block_loot('tfcflorae:wood/planks/%s' % wood)
         block.with_lang(lang('%s planks', wood))
         block.make_slab()
         block.make_stairs()
@@ -1265,117 +1265,117 @@ def generate(rm: ResourceManager):
         block.make_fence_gate()
 
         for block_type in ('bookshelf', 'button', 'fence', 'fence_gate', 'pressure_plate', 'slab', 'stairs', 'trapdoor'):
-            rm.block_loot('wood/planks/%s_%s' % (wood, block_type), 'tfc:wood/planks/%s_%s' % (wood, block_type))
+            rm.block_loot('wood/planks/%s_%s' % (wood, block_type), 'tfcflorae:wood/planks/%s_%s' % (wood, block_type))
 
         # Tool Rack
-        rack_namespace = 'tfc:wood/planks/%s_tool_rack' % wood
-        block = rm.blockstate(rack_namespace, model='tfc:block/wood/planks/%s_tool_rack' % wood, variants=four_rotations('tfc:block/wood/planks/%s_tool_rack' % wood, (270, 180, None, 90)))
-        block.with_block_model(textures={'texture': 'tfc:block/wood/planks/%s' % wood, 'particle': 'tfc:block/wood/planks/%s' % wood}, parent='tfc:block/tool_rack')
+        rack_namespace = 'tfcflorae:wood/planks/%s_tool_rack' % wood
+        block = rm.blockstate(rack_namespace, model='tfcflorae:block/wood/planks/%s_tool_rack' % wood, variants=four_rotations('tfcflorae:block/wood/planks/%s_tool_rack' % wood, (270, 180, None, 90)))
+        block.with_block_model(textures={'texture': 'tfcflorae:block/wood/planks/%s' % wood, 'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent='tfc:block/tool_rack')
         block.with_lang(lang('%s Tool Rack', wood)).with_block_loot(rack_namespace).with_item_model()
 
         # Loom
-        block = rm.blockstate('tfc:wood/planks/%s_loom' % wood, model='tfc:block/wood/planks/%s_loom' % wood, variants=four_rotations('tfc:block/wood/planks/%s_loom' % wood, (270, 180, None, 90)))
-        block.with_block_model(textures={'texture': 'tfc:block/wood/planks/%s' % wood, 'particle': 'tfc:block/wood/planks/%s' % wood}, parent='tfc:block/loom')
-        block.with_item_model().with_lang(lang('%s loom', wood)).with_block_loot('tfc:wood/planks/%s_loom' % wood).with_tag('minecraft:mineable/axe')
+        block = rm.blockstate('tfcflorae:wood/planks/%s_loom' % wood, model='tfcflorae:block/wood/planks/%s_loom' % wood, variants=four_rotations('tfcflorae:block/wood/planks/%s_loom' % wood, (270, 180, None, 90)))
+        block.with_block_model(textures={'texture': 'tfcflorae:block/wood/planks/%s' % wood, 'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent='tfc:block/loom')
+        block.with_item_model().with_lang(lang('%s loom', wood)).with_block_loot('tfcflorae:wood/planks/%s_loom' % wood).with_tag('minecraft:mineable/axe')
 
         # Bookshelf
-        block = rm.blockstate('tfc:wood/planks/%s_bookshelf' % wood).with_item_model().with_lang(lang('%s bookshelf', wood))
-        block.with_block_model({'end': 'tfc:block/wood/planks/%s' % wood, 'side': 'tfc:block/wood/planks/%s_bookshelf' % wood}, parent='minecraft:block/bookshelf')
+        block = rm.blockstate('tfcflorae:wood/planks/%s_bookshelf' % wood).with_item_model().with_lang(lang('%s bookshelf', wood))
+        block.with_block_model({'end': 'tfcflorae:block/wood/planks/%s' % wood, 'side': 'tfcflorae:block/wood/planks/%s_bookshelf' % wood}, parent='minecraft:block/bookshelf')
 
         # Workbench
         rm.blockstate(('wood', 'planks', '%s_workbench' % wood)).with_block_model(parent='minecraft:block/cube', textures={
-            'particle': 'tfc:block/wood/planks/%s_workbench_front' % wood,
-            'north': 'tfc:block/wood/planks/%s_workbench_front' % wood,
-            'south': 'tfc:block/wood/planks/%s_workbench_side' % wood,
-            'east': 'tfc:block/wood/planks/%s_workbench_side' % wood,
-            'west': 'tfc:block/wood/planks/%s_workbench_front' % wood,
-            'up': 'tfc:block/wood/planks/%s_workbench_top' % wood,
-            'down': 'tfc:block/wood/planks/%s' % wood
-        }).with_item_model().with_lang(lang('%s Workbench', wood)).with_tag('tfc:workbench').with_block_loot('tfc:wood/planks/%s_workbench' % wood)
+            'particle': 'tfcflorae:block/wood/planks/%s_workbench_front' % wood,
+            'north': 'tfcflorae:block/wood/planks/%s_workbench_front' % wood,
+            'south': 'tfcflorae:block/wood/planks/%s_workbench_side' % wood,
+            'east': 'tfcflorae:block/wood/planks/%s_workbench_side' % wood,
+            'west': 'tfcflorae:block/wood/planks/%s_workbench_front' % wood,
+            'up': 'tfcflorae:block/wood/planks/%s_workbench_top' % wood,
+            'down': 'tfcflorae:block/wood/planks/%s' % wood
+        }).with_item_model().with_lang(lang('%s Workbench', wood)).with_tag('tfc:workbench').with_block_loot('tfcflorae:wood/planks/%s_workbench' % wood)
 
         # Doors
-        rm.item_model('tfc:wood/planks/%s_door' % wood, 'tfc:item/wood/planks/%s_door' % wood)
-        rm.block_loot('wood/planks/%s_door' % wood, {'name': 'tfc:wood/planks/%s_door' % wood, 'conditions': [loot_tables.block_state_property('tfc:wood/planks/%s_door[half=lower]' % wood)]})
+        rm.item_model('tfcflorae:wood/planks/%s_door' % wood, 'tfcflorae:item/wood/planks/%s_door' % wood)
+        rm.block_loot('wood/planks/%s_door' % wood, {'name': 'tfcflorae:wood/planks/%s_door' % wood, 'conditions': [loot_tables.block_state_property('tfcflorae:wood/planks/%s_door[half=lower]' % wood)]})
 
         # Log Fences
-        log_fence_namespace = 'tfc:wood/planks/' + wood + '_log_fence'
-        rm.blockstate_multipart(log_fence_namespace, *block_states.fence_multipart('tfc:block/wood/planks/' + wood + '_log_fence_post', 'tfc:block/wood/planks/' + wood + '_log_fence_side'))
-        rm.block_model(log_fence_namespace + '_post', textures={'texture': 'tfc:block/wood/log/' + wood}, parent='block/fence_post')
-        rm.block_model(log_fence_namespace + '_side', textures={'texture': 'tfc:block/wood/planks/' + wood}, parent='block/fence_side')
-        rm.block_model(log_fence_namespace + '_inventory', textures={'log': 'tfc:block/wood/log/' + wood, 'planks': 'tfc:block/wood/planks/' + wood}, parent='tfc:block/log_fence_inventory')
-        rm.item_model('tfc:wood/planks/' + wood + '_log_fence', parent='tfc:block/wood/planks/' + wood + '_log_fence_inventory', no_textures=True)
+        log_fence_namespace = 'tfcflorae:wood/planks/' + wood + '_log_fence'
+        rm.blockstate_multipart(log_fence_namespace, *block_states.fence_multipart('tfcflorae:block/wood/planks/' + wood + '_log_fence_post', 'tfcflorae:block/wood/planks/' + wood + '_log_fence_side'))
+        rm.block_model(log_fence_namespace + '_post', textures={'texture': 'tfcflorae:block/wood/log/' + wood}, parent='block/fence_post')
+        rm.block_model(log_fence_namespace + '_side', textures={'texture': 'tfcflorae:block/wood/planks/' + wood}, parent='block/fence_side')
+        rm.block_model(log_fence_namespace + '_inventory', textures={'log': 'tfcflorae:block/wood/log/' + wood, 'planks': 'tfcflorae:block/wood/planks/' + wood}, parent='tfc:block/log_fence_inventory')
+        rm.item_model('tfcflorae:wood/planks/' + wood + '_log_fence', parent='tfcflorae:block/wood/planks/' + wood + '_log_fence_inventory', no_textures=True)
         rm.block_loot(log_fence_namespace, log_fence_namespace)
 
-        texture = 'tfc:block/wood/sheet/%s' % wood
-        connection = 'tfc:block/wood/support/%s_connection' % wood
+        texture = 'tfcflorae:block/wood/sheet/%s' % wood
+        connection = 'tfcflorae:block/wood/support/%s_connection' % wood
         rm.blockstate_multipart(('wood', 'vertical_support', wood),
-            {'model': 'tfc:block/wood/support/%s_vertical' % wood},
+            {'model': 'tfcflorae:block/wood/support/%s_vertical' % wood},
             ({'north': True}, {'model': connection, 'y': 270}),
             ({'east': True}, {'model': connection}),
             ({'south': True}, {'model': connection, 'y': 90}),
             ({'west': True}, {'model': connection, 'y': 180}),
-        ).with_tag('tfc:support_beam').with_lang(lang('%s Support', wood)).with_block_loot('tfc:wood/support/' + wood)
+        ).with_tag('tfc:support_beam').with_lang(lang('%s Support', wood)).with_block_loot('tfcflorae:wood/support/' + wood)
         rm.blockstate_multipart(('wood', 'horizontal_support', wood),
-            {'model': 'tfc:block/wood/support/%s_horizontal' % wood},
+            {'model': 'tfcflorae:block/wood/support/%s_horizontal' % wood},
             ({'north': True}, {'model': connection, 'y': 270}),
             ({'east': True}, {'model': connection}),
             ({'south': True}, {'model': connection, 'y': 90}),
             ({'west': True}, {'model': connection, 'y': 180}),
-        ).with_tag('tfc:support_beam').with_lang(lang('%s Support', wood)).with_block_loot('tfc:wood/support/' + wood)
+        ).with_tag('tfc:support_beam').with_lang(lang('%s Support', wood)).with_block_loot('tfcflorae:wood/support/' + wood)
 
-        rm.block_model('tfc:wood/support/%s_inventory' % wood, textures={'texture': texture}, parent='tfc:block/wood/support/inventory')
-        rm.block_model('tfc:wood/support/%s_vertical' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/vertical')
-        rm.block_model('tfc:wood/support/%s_connection' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/connection')
-        rm.block_model('tfc:wood/support/%s_horizontal' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/horizontal')
-        rm.item_model(('wood', 'support', wood), no_textures=True, parent='tfc:block/wood/support/%s_inventory' % wood).with_lang(lang('%s Support', wood))
+        rm.block_model('tfcflorae:wood/support/%s_inventory' % wood, textures={'texture': texture}, parent='tfc:block/wood/support/inventory')
+        rm.block_model('tfcflorae:wood/support/%s_vertical' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/vertical')
+        rm.block_model('tfcflorae:wood/support/%s_connection' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/connection')
+        rm.block_model('tfcflorae:wood/support/%s_horizontal' % wood, textures={'texture': texture, 'particle': texture}, parent='tfc:block/wood/support/horizontal')
+        rm.item_model(('wood', 'support', wood), no_textures=True, parent='tfcflorae:block/wood/support/%s_inventory' % wood).with_lang(lang('%s Support', wood))
 
         for chest in ('chest', 'trapped_chest'):
-            rm.blockstate(('wood', chest, wood), model='tfc:block/wood/%s/%s' % (chest, wood)).with_lang(lang('%s %s', wood, chest)).with_tag('minecraft:features_cannot_replace').with_tag('forge:chests/wooden').with_tag('minecraft:lava_pool_stone_cannot_replace')
-            rm.block_model(('wood', chest, wood), textures={'particle': 'tfc:block/wood/planks/%s' % wood}, parent=None)
-            rm.item_model(('wood', chest, wood), {'particle': 'tfc:block/wood/planks/%s' % wood}, parent='minecraft:item/chest')
-            rm.block_loot(('wood', chest, wood), {'name': 'tfc:wood/%s/%s'%(chest,wood)})
+            rm.blockstate(('wood', chest, wood), model='tfcflorae:block/wood/%s/%s' % (chest, wood)).with_lang(lang('%s %s', wood, chest)).with_tag('minecraft:features_cannot_replace').with_tag('forge:chests/wooden').with_tag('minecraft:lava_pool_stone_cannot_replace')
+            rm.block_model(('wood', chest, wood), textures={'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent=None)
+            rm.item_model(('wood', chest, wood), {'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent='minecraft:item/chest')
+            rm.block_loot(('wood', chest, wood), {'name': 'tfcflorae:wood/%s/%s'%(chest,wood)})
 
-        rm.block_model('wood/sluice/%s_upper' % wood, textures={'texture': 'tfc:block/wood/sheet/%s' % wood}, parent='tfc:block/sluice_upper')
-        rm.block_model('wood/sluice/%s_lower' % wood, textures={'texture': 'tfc:block/wood/sheet/%s' % wood}, parent='tfc:block/sluice_lower')
-        block = rm.blockstate(('wood', 'sluice', wood), variants={**four_rotations('tfc:block/wood/sluice/%s_upper' % wood, (90, 0, 180, 270), suffix=',upper=true'), **four_rotations('tfc:block/wood/sluice/%s_lower' % wood, (90, 0, 180, 270), suffix=',upper=false')}).with_lang(lang('%s sluice', wood))
-        block.with_block_loot({'name': 'tfc:wood/sluice/%s' % wood, 'conditions': [loot_tables.block_state_property('tfc:wood/sluice/%s[upper=true]' % wood)]})
-        rm.item_model(('wood', 'sluice', wood), parent='tfc:block/wood/sluice/%s_lower' % wood, no_textures=True)
+        rm.block_model('wood/sluice/%s_upper' % wood, textures={'texture': 'tfcflorae:block/wood/sheet/%s' % wood}, parent='tfcflorae:block/sluice_upper')
+        rm.block_model('wood/sluice/%s_lower' % wood, textures={'texture': 'tfcflorae:block/wood/sheet/%s' % wood}, parent='tfcflorae:block/sluice_lower')
+        block = rm.blockstate(('wood', 'sluice', wood), variants={**four_rotations('tfcflorae:block/wood/sluice/%s_upper' % wood, (90, 0, 180, 270), suffix=',upper=true'), **four_rotations('tfcflorae:block/wood/sluice/%s_lower' % wood, (90, 0, 180, 270), suffix=',upper=false')}).with_lang(lang('%s sluice', wood))
+        block.with_block_loot({'name': 'tfcflorae:wood/sluice/%s' % wood, 'conditions': [loot_tables.block_state_property('tfcflorae:wood/sluice/%s[upper=true]' % wood)]})
+        rm.item_model(('wood', 'sluice', wood), parent='tfcflorae:block/wood/sluice/%s_lower' % wood, no_textures=True)
 
-        rm.blockstate(('wood', 'planks', '%s_sign' % wood), model='tfc:block/wood/planks/%s_sign' % wood).with_lang(lang('%s Sign', wood)).with_block_model({'particle': 'tfc:block/wood/planks/%s' % wood}, parent=None).with_block_loot('tfc:wood/sign/%s' % wood).with_tag('minecraft:standing_sings')
-        rm.blockstate(('wood', 'planks', '%s_wall_sign' % wood), model='tfc:block/wood/planks/%s_sign' % wood).with_lang(lang('%s Sign', wood)).with_lang(lang('%s Sign', wood)).with_tag('minecraft:wall_signs')
+        rm.blockstate(('wood', 'planks', '%s_sign' % wood), model='tfcflorae:block/wood/planks/%s_sign' % wood).with_lang(lang('%s Sign', wood)).with_block_model({'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent=None).with_block_loot('tfcflorae:wood/sign/%s' % wood).with_tag('minecraft:standing_sings')
+        rm.blockstate(('wood', 'planks', '%s_wall_sign' % wood), model='tfcflorae:block/wood/planks/%s_sign' % wood).with_lang(lang('%s Sign', wood)).with_lang(lang('%s Sign', wood)).with_tag('minecraft:wall_signs')
 
         # Barrels
-        texture = 'tfc:block/wood/planks/%s' % wood
-        textures = {'particle': texture, 'planks': texture, 'sheet': 'tfc:block/wood/sheet/%s' % wood, 'hoop': 'tfc:block/barrel_hoop'}
+        texture = 'tfcflorae:block/wood/planks/%s' % wood
+        textures = {'particle': texture, 'planks': texture, 'sheet': 'tfcflorae:block/wood/sheet/%s' % wood, 'hoop': 'tfc:block/barrel_hoop'}
         block = rm.blockstate(('wood', 'barrel', wood), variants={
-            'sealed=true': {'model': 'tfc:block/wood/barrel_sealed/%s' % wood},
-            'sealed=false': {'model': 'tfc:block/wood/barrel/%s' % wood}
+            'sealed=true': {'model': 'tfcflorae:block/wood/barrel_sealed/%s' % wood},
+            'sealed=false': {'model': 'tfcflorae:block/wood/barrel/%s' % wood}
         })
-        item_model_property(rm, ('wood', 'barrel', wood), [{'predicate': {'tfc:sealed': 1.0}, 'model': 'tfc:block/wood/barrel_sealed/%s' % wood}], {'parent': 'tfc:block/wood/barrel/%s' % wood})
+        item_model_property(rm, ('wood', 'barrel', wood), [{'predicate': {'tfc:sealed': 1.0}, 'model': 'tfcflorae:block/wood/barrel_sealed/%s' % wood}], {'parent': 'tfcflorae:block/wood/barrel/%s' % wood})
         block.with_block_model(textures, 'tfc:block/barrel')
         rm.block_model(('wood', 'barrel_sealed', wood), textures, 'tfc:block/barrel_sealed')
         block.with_lang(lang('%s barrel', wood))
         block.with_tag('tfc:barrels').with_tag('minecraft:mineable/axe')
         block.with_block_loot(({
-            'name': 'tfc:wood/barrel/%s' % wood,
+            'name': 'tfcflorae:wood/barrel/%s' % wood,
             'functions': [loot_tables.copy_block_entity_name(), loot_tables.copy_block_entity_nbt()],
-            'conditions': [loot_tables.block_state_property('tfc:wood/barrel/%s[sealed=true]' % wood)]
-        }, 'tfc:wood/barrel/%s' % wood))
+            'conditions': [loot_tables.block_state_property('tfcflorae:wood/barrel/%s[sealed=true]' % wood)]
+        }, 'tfcflorae:wood/barrel/%s' % wood))
 
         # Lecterns
-        block = rm.blockstate('tfc:wood/lectern/%s' % wood, variants=four_rotations('tfc:block/wood/lectern/%s' % wood, (90, None, 180, 270)))
-        block.with_block_model(textures={'bottom': 'tfc:block/wood/planks/%s' % wood, 'base': 'tfc:block/wood/lectern/%s/base' % wood, 'front': 'tfc:block/wood/lectern/%s/front' % wood, 'sides': 'tfc:block/wood/lectern/%s/sides' % wood, 'top': 'tfc:block/wood/lectern/%s/top' % wood, 'particle': 'tfc:block/wood/lectern/%s/sides' % wood}, parent='minecraft:block/lectern')
+        block = rm.blockstate('tfcflorae:wood/lectern/%s' % wood, variants=four_rotations('tfcflorae:block/wood/lectern/%s' % wood, (90, None, 180, 270)))
+        block.with_block_model(textures={'bottom': 'tfcflorae:block/wood/planks/%s' % wood, 'base': 'tfcflorae:block/wood/lectern/%s/base' % wood, 'front': 'tfcflorae:block/wood/lectern/%s/front' % wood, 'sides': 'tfcflorae:block/wood/lectern/%s/sides' % wood, 'top': 'tfcflorae:block/wood/lectern/%s/top' % wood, 'particle': 'tfcflorae:block/wood/lectern/%s/sides' % wood}, parent='minecraft:block/lectern')
         block.with_item_model()
         block.with_lang(lang("%s lectern" % wood))
-        block.with_block_loot('tfc:wood/lectern/%s' % wood)
+        block.with_block_loot('tfcflorae:wood/lectern/%s' % wood)
         block.with_tag('minecraft:mineable/axe')
 
         # Scribing Table
-        block = rm.blockstate('tfc:wood/scribing_table/%s' % wood, variants=four_rotations('tfc:block/wood/scribing_table/%s' % wood, (90, None, 180, 270)))
-        block.with_block_model(textures={'top': 'tfc:block/wood/scribing_table/%s' % wood, 'leg' : 'tfc:block/wood/log/%s' % wood, 'side' : 'tfc:block/wood/planks/%s' % wood, 'misc': 'tfc:block/wood/scribing_table/scribing_paraphernalia', 'particle': 'tfc:block/wood/planks/%s' % wood}, parent='tfc:block/scribing_table')
+        block = rm.blockstate('tfcflorae:wood/scribing_table/%s' % wood, variants=four_rotations('tfcflorae:block/wood/scribing_table/%s' % wood, (90, None, 180, 270)))
+        block.with_block_model(textures={'top': 'tfcflorae:block/wood/scribing_table/%s' % wood, 'leg' : 'tfcflorae:block/wood/log/%s' % wood, 'side' : 'tfcflorae:block/wood/planks/%s' % wood, 'misc': 'tfc:block/wood/scribing_table/scribing_paraphernalia', 'particle': 'tfcflorae:block/wood/planks/%s' % wood}, parent='tfc:block/scribing_table')
         block.with_item_model()
         block.with_lang(lang("%s scribing table" % wood))
-        block.with_block_loot('tfc:wood/lectern/%s' % wood)
+        block.with_block_loot('tfcflorae:wood/lectern/%s' % wood)
         block.with_tag('minecraft:mineable/axe')
 
         # Candles
@@ -1398,33 +1398,33 @@ def generate(rm: ResourceManager):
             if color: rm.item_tag('tfc:colored_candles', namespace)
 
         # Tags
-        for fence_namespace in ('tfc:wood/planks/' + wood + '_fence', log_fence_namespace):
+        for fence_namespace in ('tfcflorae:wood/planks/' + wood + '_fence', log_fence_namespace):
             rm.block_tag('minecraft:wooden_fences', fence_namespace)
             rm.block_tag('minecraft:fences', fence_namespace)
             rm.block_tag('forge:fences', fence_namespace)
             rm.block_tag('forge:fences/wooden', fence_namespace)
 
-        fence_gate_namespace = 'tfc:wood/planks/' + wood + '_fence_gate'
+        fence_gate_namespace = 'tfcflorae:wood/planks/' + wood + '_fence_gate'
         rm.block_tag('forge:fence_gates/wooden', fence_gate_namespace)
         rm.block_tag('forge:fence_gates', fence_gate_namespace)
-        rm.block_tag('minecraft:doors', 'tfc:wood/planks/' + wood + '_door')
-        rm.block_tag('minecraft:buttons', 'tfc:wood/planks/' + wood + '_button')
-        rm.block_tag('minecraft:wooden_buttons', 'tfc:wood/planks/' + wood + '_button')
-        rm.block_tag('minecraft:wooden_pressure_plates', 'tfc:wood/planks/' + wood + '_pressure_plate')
-        rm.block_tag('minecraft:wooden_slabs', 'tfc:wood/planks/' + wood + '_slab')
-        rm.block_tag('minecraft:wooden_stairs', 'tfc:wood/planks/' + wood + '_stairs')
+        rm.block_tag('minecraft:doors', 'tfcflorae:wood/planks/' + wood + '_door')
+        rm.block_tag('minecraft:buttons', 'tfcflorae:wood/planks/' + wood + '_button')
+        rm.block_tag('minecraft:wooden_buttons', 'tfcflorae:wood/planks/' + wood + '_button')
+        rm.block_tag('minecraft:wooden_pressure_plates', 'tfcflorae:wood/planks/' + wood + '_pressure_plate')
+        rm.block_tag('minecraft:wooden_slabs', 'tfcflorae:wood/planks/' + wood + '_slab')
+        rm.block_tag('minecraft:wooden_stairs', 'tfcflorae:wood/planks/' + wood + '_stairs')
 
         for variant in ('log', 'stripped_log', 'wood', 'stripped_wood'):
             if variant != 'log':
-                rm.block_tag('minecraft:logs', 'tfc:wood/' + variant + '/' + wood)
-            rm.block_tag('tfc:' + wood + '_logs', 'tfc:wood/' + variant + '/' + wood)
-            rm.block_tag('tfc:creeping_plantable_on', 'tfc:wood/' + variant + '/' + wood)
+                rm.block_tag('minecraft:logs', 'tfcflorae:wood/' + variant + '/' + wood)
+            rm.block_tag('tfc:' + wood + '_logs', 'tfcflorae:wood/' + variant + '/' + wood)
+            rm.block_tag('tfc:creeping_plantable_on', 'tfcflorae:wood/' + variant + '/' + wood)
 
         # Lang
         for variant in ('door', 'trapdoor', 'fence', 'log_fence', 'fence_gate', 'button', 'pressure_plate', 'slab', 'stairs'):
-            rm.lang('block.tfc.wood.planks.' + wood + '_' + variant, lang('%s %s', wood, variant))
+            rm.lang('block.tfcflorae.wood.planks.' + wood + '_' + variant, lang('%s %s', wood, variant))
         for variant in ('sapling', 'leaves'):
-            rm.lang('block.tfc.wood.' + variant + '.' + wood, lang('%s %s', wood, variant))
+            rm.lang('block.tfcflorae.wood.' + variant + '.' + wood, lang('%s %s', wood, variant))
 
     rm.blockstate('light', variants={'level=%s' % i: {'model': 'minecraft:block/light_%s' % i if i >= 10 else 'minecraft:block/light_0%s' % i} for i in range(0, 15 + 1)}).with_lang(lang('Light'))
     rm.item_model('light', no_textures=True, parent='minecraft:item/light')
@@ -1469,8 +1469,8 @@ def generate(rm: ResourceManager):
     # Thin Spikes: Calcite + Icicles
     for variant, texture in (('calcite', 'tfc:block/calcite'), ('icicle', 'minecraft:block/ice')):
         block = rm.blockstate(variant, variants={
-            'tip=true': {'model': 'tfc:block/%s_tip' % variant},
-            'tip=false': {'model': 'tfc:block/%s' % variant}
+            'tip=true': {'model': 'tfcflorae:block/%s_tip' % variant},
+            'tip=false': {'model': 'tfcflorae:block/%s' % variant}
         })
         rm.item_model(variant)
         block.with_lang(lang(variant))
@@ -1488,7 +1488,7 @@ def generate(rm: ResourceManager):
     rm.blockstate('sheet_pile', 'tfc:block/empty').with_lang(lang('sheet pile'))
 
     for be in BLOCK_ENTITIES:
-        rm.lang('tfc.block_entity.%s' % be, lang(be))
+        rm.lang('tfcflorae.block_entity.%s' % be, lang(be))
 
 
 def item_model_property(rm: ResourceManager, name_parts: utils.ResourceIdentifier, overrides: utils.Json, data: Dict[str, Any]) -> ItemContext:

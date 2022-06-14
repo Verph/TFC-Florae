@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/conglomerate",
-    "top": "tfc:block/rock/bricks/conglomerate",
-    "side": "tfc:block/rock/bricks/conglomerate"
+    "bottom": "tfcflorae:block/rock/bricks/conglomerate",
+    "top": "tfcflorae:block/rock/bricks/conglomerate",
+    "side": "tfcflorae:block/rock/bricks/conglomerate"
   }
 }

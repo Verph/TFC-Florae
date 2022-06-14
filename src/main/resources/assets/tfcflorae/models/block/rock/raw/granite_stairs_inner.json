@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/raw/granite",
-    "top": "tfc:block/rock/raw/granite",
-    "side": "tfc:block/rock/raw/granite"
+    "bottom": "tfcflorae:block/rock/raw/granite",
+    "top": "tfcflorae:block/rock/raw/granite",
+    "side": "tfcflorae:block/rock/raw/granite"
   }
 }

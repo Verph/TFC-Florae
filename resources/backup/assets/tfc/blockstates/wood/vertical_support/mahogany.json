@@ -1,0 +1,45 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/wood/support/mahogany_vertical"
+      }
+    },
+    {
+      "when": {
+        "north": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/support/mahogany_connection",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "east": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/support/mahogany_connection"
+      }
+    },
+    {
+      "when": {
+        "south": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/support/mahogany_connection",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "west": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/support/mahogany_connection",
+        "y": 180
+      }
+    }
+  ]
+}

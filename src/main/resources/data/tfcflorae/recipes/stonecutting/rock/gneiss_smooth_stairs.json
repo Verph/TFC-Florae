@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/gneiss"
-  },
-  "result": "tfcflorae:rock/smooth/gneiss_stairs",
-  "count": 1
-}

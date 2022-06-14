@@ -11,12 +11,14 @@
       "tfcflorae:greenheart/6",
       "tfcflorae:greenheart/7",
       "tfcflorae:greenheart/8",
-      "tfcflorae:greenheart/9"
+      "tfcflorae:greenheart/9",
+      "tfcflorae:greenheart/10",
+      "tfcflorae:greenheart/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

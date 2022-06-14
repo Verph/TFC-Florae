@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/sandstone",
-    "top": "tfc:block/rock/bricks/sandstone",
-    "side": "tfc:block/rock/bricks/sandstone"
+    "bottom": "tfcflorae:block/rock/bricks/sandstone",
+    "top": "tfcflorae:block/rock/bricks/sandstone",
+    "side": "tfcflorae:block/rock/bricks/sandstone"
   }
 }

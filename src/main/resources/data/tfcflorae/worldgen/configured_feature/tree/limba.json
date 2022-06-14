@@ -11,17 +11,13 @@
       "tfcflorae:limba/6",
       "tfcflorae:limba/7",
       "tfcflorae:limba/8",
-      "tfcflorae:limba/9",
-      "tfcflorae:limba/10",
-      "tfcflorae:limba/11",
-      "tfcflorae:limba/12",
-      "tfcflorae:limba/13"
+      "tfcflorae:limba/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

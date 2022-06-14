@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/marble",
-    "top": "tfc:block/rock/mossy_cobble/marble",
-    "side": "tfc:block/rock/mossy_cobble/marble"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/marble",
+    "top": "tfcflorae:block/rock/mossy_cobble/marble",
+    "side": "tfcflorae:block/rock/mossy_cobble/marble"
   }
 }

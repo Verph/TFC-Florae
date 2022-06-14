@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/foidolite",
+    "particle": "tfcflorae:block/rock/raw/foidolite",
+    "overlay": "tfcflorae:block/ore/normal_bismuthinite"
+  }
+}

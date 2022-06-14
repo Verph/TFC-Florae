@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/mulberry"
+    "bush_leaves": "tfcflorae:wood/leaves/mulberry",
+    "old_growth_tree": "tfcflorae:tree/mulberry_large"
   }
 }

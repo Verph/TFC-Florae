@@ -16,13 +16,30 @@
       "tfcflorae:syzygium/11",
       "tfcflorae:syzygium/12",
       "tfcflorae:syzygium/13",
-      "tfcflorae:syzygium/14"
+      "tfcflorae:syzygium/14",
+      "tfcflorae:syzygium/15",
+      "tfcflorae:syzygium/16",
+      "tfcflorae:syzygium/17",
+      "tfcflorae:syzygium/18",
+      "tfcflorae:syzygium/19",
+      "tfcflorae:syzygium/20",
+      "tfcflorae:syzygium/21",
+      "tfcflorae:syzygium/22",
+      "tfcflorae:syzygium/23",
+      "tfcflorae:syzygium/24",
+      "tfcflorae:syzygium/25",
+      "tfcflorae:syzygium/26",
+      "tfcflorae:syzygium/27",
+      "tfcflorae:syzygium/28",
+      "tfcflorae:syzygium/29",
+      "tfcflorae:syzygium/30",
+      "tfcflorae:syzygium/31"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

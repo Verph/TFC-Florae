@@ -6,12 +6,19 @@
       "tfcflorae:zebrawood_dead/1",
       "tfcflorae:zebrawood_dead/2",
       "tfcflorae:zebrawood_dead/3",
-      "tfcflorae:zebrawood_dead/4"
+      "tfcflorae:zebrawood_dead/4",
+      "tfcflorae:zebrawood_dead/5",
+      "tfcflorae:zebrawood_dead/6",
+      "tfcflorae:zebrawood_dead/7",
+      "tfcflorae:zebrawood_dead/8",
+      "tfcflorae:zebrawood_dead/9",
+      "tfcflorae:zebrawood_dead/10",
+      "tfcflorae:zebrawood_dead/11"
     ],
     "radius": 1,
     "placement": {
-      "width": 2,
-      "height": 9,
+      "width": 1,
+      "height": 5,
       "allow_submerged": true
     }
   }

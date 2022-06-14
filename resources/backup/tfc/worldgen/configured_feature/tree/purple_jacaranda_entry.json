@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 300,
+    "min_temp": 10,
+    "max_temp": 34,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/purple_jacaranda"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/purple_jacaranda"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/purple_jacaranda",
+    "dead_tree": "tfcflorae:tree/purple_jacaranda_dead",
+    "fallen_log": "tfcflorae:wood/log/purple_jacaranda",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/purple_jacaranda",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/purple_jacaranda",
+    "old_growth_tree": "tfcflorae:tree/purple_jacaranda_large"
+  }
+}

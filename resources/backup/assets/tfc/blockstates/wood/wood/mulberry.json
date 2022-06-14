@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/wood/mulberry"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/wood/mulberry",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/wood/mulberry",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

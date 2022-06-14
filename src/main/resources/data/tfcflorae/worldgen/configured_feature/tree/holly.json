@@ -18,13 +18,14 @@
       "tfcflorae:holly/13",
       "tfcflorae:holly/14",
       "tfcflorae:holly/15",
-      "tfcflorae:holly/16"
+      "tfcflorae:holly/16",
+      "tfcflorae:holly/17"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

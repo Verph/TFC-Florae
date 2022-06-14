@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:logwood_large/1",
+      "tfcflorae:logwood_large/2",
+      "tfcflorae:logwood_large/3",
+      "tfcflorae:logwood_large/4",
+      "tfcflorae:logwood_large/5",
+      "tfcflorae:logwood_large/6",
+      "tfcflorae:logwood_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

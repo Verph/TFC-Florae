@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:white_jacaranda/1",
+      "tfcflorae:white_jacaranda/2",
+      "tfcflorae:white_jacaranda/3",
+      "tfcflorae:white_jacaranda/4",
+      "tfcflorae:white_jacaranda/5",
+      "tfcflorae:white_jacaranda/6",
+      "tfcflorae:white_jacaranda/7",
+      "tfcflorae:white_jacaranda/8",
+      "tfcflorae:white_jacaranda/9",
+      "tfcflorae:white_jacaranda/10",
+      "tfcflorae:white_jacaranda/11",
+      "tfcflorae:white_jacaranda/12",
+      "tfcflorae:white_jacaranda/13",
+      "tfcflorae:white_jacaranda/14"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

@@ -20,13 +20,26 @@
       "tfcflorae:messmate/15",
       "tfcflorae:messmate/16",
       "tfcflorae:messmate/17",
-      "tfcflorae:messmate/18"
+      "tfcflorae:messmate/18",
+      "tfcflorae:messmate/19",
+      "tfcflorae:messmate/20",
+      "tfcflorae:messmate/21",
+      "tfcflorae:messmate/22",
+      "tfcflorae:messmate/23",
+      "tfcflorae:messmate/24",
+      "tfcflorae:messmate/25",
+      "tfcflorae:messmate/26",
+      "tfcflorae:messmate/27",
+      "tfcflorae:messmate/28",
+      "tfcflorae:messmate/29",
+      "tfcflorae:messmate/30",
+      "tfcflorae:messmate/31"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

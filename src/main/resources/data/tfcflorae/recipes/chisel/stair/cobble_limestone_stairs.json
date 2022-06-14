@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobble/limestone",
-  "result": "tfcflorae:rock/cobble/limestone_stairs",
-  "mode": "stair"
-}

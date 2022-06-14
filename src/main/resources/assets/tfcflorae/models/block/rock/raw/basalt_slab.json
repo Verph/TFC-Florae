@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/raw/basalt",
-    "top": "tfc:block/rock/raw/basalt",
-    "side": "tfc:block/rock/raw/basalt"
+    "bottom": "tfcflorae:block/rock/raw/basalt",
+    "top": "tfcflorae:block/rock/raw/basalt",
+    "side": "tfcflorae:block/rock/raw/basalt"
   }
 }

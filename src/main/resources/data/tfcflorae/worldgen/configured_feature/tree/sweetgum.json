@@ -21,14 +21,13 @@
       "tfcflorae:sweetgum/16",
       "tfcflorae:sweetgum/17",
       "tfcflorae:sweetgum/18",
-      "tfcflorae:sweetgum/19",
-      "tfcflorae:sweetgum/20"
+      "tfcflorae:sweetgum/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

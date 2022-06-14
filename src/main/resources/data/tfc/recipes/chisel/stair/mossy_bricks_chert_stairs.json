@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/mossy_bricks/chert",
-  "result": "tfcflorae:rock/mossy_bricks/chert_stairs",
-  "mode": "stair"
-}

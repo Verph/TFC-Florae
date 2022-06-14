@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/schist",
-    "top": "tfc:block/rock/mossy_bricks/schist",
-    "side": "tfc:block/rock/mossy_bricks/schist"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/schist",
+    "top": "tfcflorae:block/rock/mossy_bricks/schist",
+    "side": "tfcflorae:block/rock/mossy_bricks/schist"
   }
 }

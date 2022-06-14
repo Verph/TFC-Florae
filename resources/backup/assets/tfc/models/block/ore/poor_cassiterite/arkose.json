@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/arkose",
+    "particle": "tfcflorae:block/rock/raw/arkose",
+    "overlay": "tfcflorae:block/ore/poor_cassiterite"
+  }
+}

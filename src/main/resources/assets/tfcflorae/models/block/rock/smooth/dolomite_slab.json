@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/dolomite",
-    "top": "tfc:block/rock/smooth/dolomite",
-    "side": "tfc:block/rock/smooth/dolomite"
+    "bottom": "tfcflorae:block/rock/smooth/dolomite",
+    "top": "tfcflorae:block/rock/smooth/dolomite",
+    "side": "tfcflorae:block/rock/smooth/dolomite"
   }
 }

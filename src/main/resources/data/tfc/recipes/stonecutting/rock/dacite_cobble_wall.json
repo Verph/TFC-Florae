@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/dacite"
-  },
-  "result": "tfcflorae:rock/cobble/dacite_wall",
-  "count": 1
-}

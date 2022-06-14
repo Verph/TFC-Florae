@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/walnut",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/walnut"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/walnut",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/walnut",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/gabbro",
-    "top": "tfc:block/rock/mossy_bricks/gabbro",
-    "side": "tfc:block/rock/mossy_bricks/gabbro"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/gabbro",
+    "top": "tfcflorae:block/rock/mossy_bricks/gabbro",
+    "side": "tfcflorae:block/rock/mossy_bricks/gabbro"
   }
 }

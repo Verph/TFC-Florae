@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/komatiite",
-    "top": "tfc:block/rock/mossy_cobble/komatiite",
-    "side": "tfc:block/rock/mossy_cobble/komatiite"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/komatiite",
+    "top": "tfcflorae:block/rock/mossy_cobble/komatiite",
+    "side": "tfcflorae:block/rock/mossy_cobble/komatiite"
   }
 }

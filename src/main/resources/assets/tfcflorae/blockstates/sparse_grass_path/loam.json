@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "tfcflorae:block/sparse_grass_path/loam"},
+      {"model": "tfcflorae:block/sparse_grass_path/loam", "y": 90},
+      {"model": "tfcflorae:block/sparse_grass_path/loam", "y": 180},
+      {"model": "tfcflorae:block/sparse_grass_path/loam", "y": 270}
+    ]
+  }
+}

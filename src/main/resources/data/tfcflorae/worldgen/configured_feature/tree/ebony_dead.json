@@ -8,12 +8,26 @@
       "tfcflorae:ebony_dead/3",
       "tfcflorae:ebony_dead/4",
       "tfcflorae:ebony_dead/5",
-      "tfcflorae:ebony_dead/6"
+      "tfcflorae:ebony_dead/6",
+      "tfcflorae:ebony_dead/7",
+      "tfcflorae:ebony_dead/8",
+      "tfcflorae:ebony_dead/9",
+      "tfcflorae:ebony_dead/10",
+      "tfcflorae:ebony_dead/11",
+      "tfcflorae:ebony_dead/12",
+      "tfcflorae:ebony_dead/13",
+      "tfcflorae:ebony_dead/14",
+      "tfcflorae:ebony_dead/15",
+      "tfcflorae:ebony_dead/16",
+      "tfcflorae:ebony_dead/17",
+      "tfcflorae:ebony_dead/18",
+      "tfcflorae:ebony_dead/19",
+      "tfcflorae:ebony_dead/20"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

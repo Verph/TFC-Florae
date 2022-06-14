@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfc:block/wood/log/beech",
-    "top": "tfc:block/wood/log_top/beech"
+    "side": "tfcflorae:block/wood/log/beech",
+    "top": "tfcflorae:block/wood/log_top/beech"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/blaimorite",
+    "particle": "tfcflorae:block/rock/raw/blaimorite",
+    "overlay": "tfcflorae:block/ore/rich_cassiterite"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/groundcover/pebble",
+  "parent": "tfcflorae:block/groundcover/pebble",
   "textures": {
-    "all": "tfc:item/loose_rock/basalt"
+    "all": "tfcflorae:item/loose_rock/basalt"
   }
 }

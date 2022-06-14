@@ -6,14 +6,13 @@
       "tfcflorae:nordmann_fir_large/1",
       "tfcflorae:nordmann_fir_large/2",
       "tfcflorae:nordmann_fir_large/3",
-      "tfcflorae:nordmann_fir_large/4",
-      "tfcflorae:nordmann_fir_large/5"
+      "tfcflorae:nordmann_fir_large/4"
     ],
     "radius": 2,
     "placement": {
-      "width": 1,
+      "width": 2,
       "height": 9,
-      "allow_submerged": false
+      "allow_submerged": true
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/baobab"
+    },
+    {
+      "item": "tfcflorae:wood/wood/baobab"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 478
+}

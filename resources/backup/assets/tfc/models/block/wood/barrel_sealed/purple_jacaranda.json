@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/purple_jacaranda",
+    "planks": "tfcflorae:block/wood/planks/purple_jacaranda",
+    "sheet": "tfcflorae:block/wood/sheet/purple_jacaranda",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

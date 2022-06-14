@@ -12,13 +12,16 @@
       "tfcflorae:alder/7",
       "tfcflorae:alder/8",
       "tfcflorae:alder/9",
-      "tfcflorae:alder/10"
+      "tfcflorae:alder/10",
+      "tfcflorae:alder/11",
+      "tfcflorae:alder/12",
+      "tfcflorae:alder/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

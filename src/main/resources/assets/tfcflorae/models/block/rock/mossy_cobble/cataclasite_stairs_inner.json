@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/cataclasite",
-    "top": "tfc:block/rock/mossy_cobble/cataclasite",
-    "side": "tfc:block/rock/mossy_cobble/cataclasite"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/cataclasite",
+    "top": "tfcflorae:block/rock/mossy_cobble/cataclasite",
+    "side": "tfcflorae:block/rock/mossy_cobble/cataclasite"
   }
 }

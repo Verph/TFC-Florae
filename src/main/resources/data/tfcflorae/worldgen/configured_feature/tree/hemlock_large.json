@@ -6,16 +6,13 @@
       "tfcflorae:hemlock_large/1",
       "tfcflorae:hemlock_large/2",
       "tfcflorae:hemlock_large/3",
-      "tfcflorae:hemlock_large/4",
-      "tfcflorae:hemlock_large/5",
-      "tfcflorae:hemlock_large/6",
-      "tfcflorae:hemlock_large/7"
+      "tfcflorae:hemlock_large/4"
     ],
     "radius": 2,
     "placement": {
-      "width": 1,
+      "width": 2,
       "height": 9,
-      "allow_submerged": false
+      "allow_submerged": true
     }
   }
 }

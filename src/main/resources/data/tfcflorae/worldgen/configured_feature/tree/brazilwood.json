@@ -11,18 +11,13 @@
       "tfcflorae:brazilwood/6",
       "tfcflorae:brazilwood/7",
       "tfcflorae:brazilwood/8",
-      "tfcflorae:brazilwood/9",
-      "tfcflorae:brazilwood/10",
-      "tfcflorae:brazilwood/11",
-      "tfcflorae:brazilwood/12",
-      "tfcflorae:brazilwood/13",
-      "tfcflorae:brazilwood/14"
+      "tfcflorae:brazilwood/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

@@ -24,13 +24,15 @@
       "tfcflorae:redwood/19",
       "tfcflorae:redwood/20",
       "tfcflorae:redwood/21",
-      "tfcflorae:redwood/22"
+      "tfcflorae:redwood/22",
+      "tfcflorae:redwood/23",
+      "tfcflorae:redwood/24"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
       "height": 5,
-      "allow_submerged": false
+      "allow_submerged": true
     }
   }
 }

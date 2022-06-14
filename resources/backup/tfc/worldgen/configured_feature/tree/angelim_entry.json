@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 320,
+    "max_rain": 500,
+    "min_temp": 22,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/angelim"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/angelim"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/angelim",
+    "dead_tree": "tfcflorae:tree/angelim_dead",
+    "fallen_log": "tfcflorae:wood/log/angelim",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/angelim",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/angelim",
+    "old_growth_tree": "tfcflorae:tree/angelim_large"
+  }
+}

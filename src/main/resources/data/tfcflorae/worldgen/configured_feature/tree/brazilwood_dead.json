@@ -8,12 +8,15 @@
       "tfcflorae:brazilwood_dead/3",
       "tfcflorae:brazilwood_dead/4",
       "tfcflorae:brazilwood_dead/5",
-      "tfcflorae:brazilwood_dead/6"
+      "tfcflorae:brazilwood_dead/6",
+      "tfcflorae:brazilwood_dead/7",
+      "tfcflorae:brazilwood_dead/8",
+      "tfcflorae:brazilwood_dead/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

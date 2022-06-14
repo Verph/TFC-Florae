@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/larch"
+    "bush_leaves": "tfcflorae:wood/leaves/larch",
+    "old_growth_tree": "tfcflorae:tree/larch_large"
   }
 }

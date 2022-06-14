@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:purple_ipe/1",
+      "tfcflorae:purple_ipe/2",
+      "tfcflorae:purple_ipe/3",
+      "tfcflorae:purple_ipe/4",
+      "tfcflorae:purple_ipe/5",
+      "tfcflorae:purple_ipe/6",
+      "tfcflorae:purple_ipe/7",
+      "tfcflorae:purple_ipe/8",
+      "tfcflorae:purple_ipe/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

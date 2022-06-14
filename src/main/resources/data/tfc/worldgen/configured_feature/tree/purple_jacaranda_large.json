@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:purple_jacaranda_large/1",
+      "tfcflorae:purple_jacaranda_large/2",
+      "tfcflorae:purple_jacaranda_large/3"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

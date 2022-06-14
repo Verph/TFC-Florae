@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_wall_side_tall",
   "textures": {
-    "wall": "tfc:block/rock/bricks/chert"
+    "wall": "tfcflorae:block/rock/bricks/chert"
   }
 }

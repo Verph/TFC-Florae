@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/dacite",
+    "particle": "tfcflorae:block/rock/raw/dacite",
+    "overlay": "tfcflorae:block/ore/poor_native_gold"
+  }
+}

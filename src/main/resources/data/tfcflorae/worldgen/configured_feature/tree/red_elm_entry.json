@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/red_elm"
+    "bush_leaves": "tfcflorae:wood/leaves/red_elm",
+    "old_growth_tree": "tfcflorae:tree/red_elm_large"
   }
 }

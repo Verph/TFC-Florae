@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/rainbow_eucalyptus",
+    "planks": "tfcflorae:block/wood/planks/rainbow_eucalyptus",
+    "sheet": "tfcflorae:block/wood/sheet/rainbow_eucalyptus",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

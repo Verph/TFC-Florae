@@ -8,12 +8,19 @@
       "tfcflorae:beech_dead/3",
       "tfcflorae:beech_dead/4",
       "tfcflorae:beech_dead/5",
-      "tfcflorae:beech_dead/6"
+      "tfcflorae:beech_dead/6",
+      "tfcflorae:beech_dead/7",
+      "tfcflorae:beech_dead/8",
+      "tfcflorae:beech_dead/9",
+      "tfcflorae:beech_dead/10",
+      "tfcflorae:beech_dead/11",
+      "tfcflorae:beech_dead/12",
+      "tfcflorae:beech_dead/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/chert",
-    "top": "tfc:block/rock/bricks/chert",
-    "side": "tfc:block/rock/bricks/chert"
+    "bottom": "tfcflorae:block/rock/bricks/chert",
+    "top": "tfcflorae:block/rock/bricks/chert",
+    "side": "tfcflorae:block/rock/bricks/chert"
   }
 }

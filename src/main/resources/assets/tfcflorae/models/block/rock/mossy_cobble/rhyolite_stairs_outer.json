@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/rhyolite",
-    "top": "tfc:block/rock/mossy_cobble/rhyolite",
-    "side": "tfc:block/rock/mossy_cobble/rhyolite"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/rhyolite",
+    "top": "tfcflorae:block/rock/mossy_cobble/rhyolite",
+    "side": "tfcflorae:block/rock/mossy_cobble/rhyolite"
   }
 }

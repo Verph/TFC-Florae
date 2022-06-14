@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/basalt"
-  },
-  "result": "tfcflorae:rock/smooth/basalt_slab",
-  "count": 2
-}

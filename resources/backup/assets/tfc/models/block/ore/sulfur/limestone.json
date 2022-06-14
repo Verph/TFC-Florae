@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/limestone",
+    "particle": "tfcflorae:block/rock/raw/limestone",
+    "overlay": "tfcflorae:block/ore/sulfur"
+  }
+}

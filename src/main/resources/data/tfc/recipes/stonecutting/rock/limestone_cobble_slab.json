@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/limestone"
-  },
-  "result": "tfcflorae:rock/cobble/limestone_slab",
-  "count": 2
-}

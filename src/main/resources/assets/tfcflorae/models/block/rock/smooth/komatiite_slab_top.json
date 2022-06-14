@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/komatiite",
-    "top": "tfc:block/rock/smooth/komatiite",
-    "side": "tfc:block/rock/smooth/komatiite"
+    "bottom": "tfcflorae:block/rock/smooth/komatiite",
+    "top": "tfcflorae:block/rock/smooth/komatiite",
+    "side": "tfcflorae:block/rock/smooth/komatiite"
   }
 }

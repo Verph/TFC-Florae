@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfc:block/wood/planks/yellow_ipe",
+    "top": "tfc:block/wood/planks/yellow_ipe",
+    "side": "tfc:block/wood/planks/yellow_ipe"
+  }
+}

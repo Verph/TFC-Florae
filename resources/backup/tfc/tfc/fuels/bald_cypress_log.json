@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/bald_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/wood/bald_cypress"
+    }
+  ],
+  "duration": 1300,
+  "temperature": 770
+}

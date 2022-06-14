@@ -8,12 +8,21 @@
       "tfcflorae:walnut_dead/3",
       "tfcflorae:walnut_dead/4",
       "tfcflorae:walnut_dead/5",
-      "tfcflorae:walnut_dead/6"
+      "tfcflorae:walnut_dead/6",
+      "tfcflorae:walnut_dead/7",
+      "tfcflorae:walnut_dead/8",
+      "tfcflorae:walnut_dead/9",
+      "tfcflorae:walnut_dead/10",
+      "tfcflorae:walnut_dead/11",
+      "tfcflorae:walnut_dead/12",
+      "tfcflorae:walnut_dead/13",
+      "tfcflorae:walnut_dead/14",
+      "tfcflorae:walnut_dead/15"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

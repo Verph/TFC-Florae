@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/diorite",
-    "top": "tfc:block/rock/mossy_cobble/diorite",
-    "side": "tfc:block/rock/mossy_cobble/diorite"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/diorite",
+    "top": "tfcflorae:block/rock/mossy_cobble/diorite",
+    "side": "tfcflorae:block/rock/mossy_cobble/diorite"
   }
 }

@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/sycamore",
-  "result": "tfcflorae:wood/planks/sycamore_stairs",
-  "mode": "stair"
-}

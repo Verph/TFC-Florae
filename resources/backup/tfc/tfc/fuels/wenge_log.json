@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/wenge"
+    },
+    {
+      "item": "tfcflorae:wood/wood/wenge"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 773
+}

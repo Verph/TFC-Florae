@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/marble",
-    "top": "tfc:block/rock/cracked_bricks/marble",
-    "side": "tfc:block/rock/cracked_bricks/marble"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/marble",
+    "top": "tfcflorae:block/rock/cracked_bricks/marble",
+    "side": "tfcflorae:block/rock/cracked_bricks/marble"
   }
 }

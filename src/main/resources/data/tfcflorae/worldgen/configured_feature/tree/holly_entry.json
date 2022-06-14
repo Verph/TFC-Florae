@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/holly"
+    "bush_leaves": "tfcflorae:wood/leaves/holly",
+    "old_growth_tree": "tfcflorae:tree/holly_large"
   }
 }

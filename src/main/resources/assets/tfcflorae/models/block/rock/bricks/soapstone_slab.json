@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/soapstone",
-    "top": "tfc:block/rock/bricks/soapstone",
-    "side": "tfc:block/rock/bricks/soapstone"
+    "bottom": "tfcflorae:block/rock/bricks/soapstone",
+    "top": "tfcflorae:block/rock/bricks/soapstone",
+    "side": "tfcflorae:block/rock/bricks/soapstone"
   }
 }

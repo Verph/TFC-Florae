@@ -11,12 +11,14 @@
       "tfcflorae:iroko/6",
       "tfcflorae:iroko/7",
       "tfcflorae:iroko/8",
-      "tfcflorae:iroko/9"
+      "tfcflorae:iroko/9",
+      "tfcflorae:iroko/10",
+      "tfcflorae:iroko/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

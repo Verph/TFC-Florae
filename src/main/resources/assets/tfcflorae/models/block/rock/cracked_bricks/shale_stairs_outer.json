@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/shale",
-    "top": "tfc:block/rock/cracked_bricks/shale",
-    "side": "tfc:block/rock/cracked_bricks/shale"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/shale",
+    "top": "tfcflorae:block/rock/cracked_bricks/shale",
+    "side": "tfcflorae:block/rock/cracked_bricks/shale"
   }
 }

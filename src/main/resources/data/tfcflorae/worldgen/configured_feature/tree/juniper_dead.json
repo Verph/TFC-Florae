@@ -8,12 +8,27 @@
       "tfcflorae:juniper_dead/3",
       "tfcflorae:juniper_dead/4",
       "tfcflorae:juniper_dead/5",
-      "tfcflorae:juniper_dead/6"
+      "tfcflorae:juniper_dead/6",
+      "tfcflorae:juniper_dead/7",
+      "tfcflorae:juniper_dead/8",
+      "tfcflorae:juniper_dead/9",
+      "tfcflorae:juniper_dead/10",
+      "tfcflorae:juniper_dead/11",
+      "tfcflorae:juniper_dead/12",
+      "tfcflorae:juniper_dead/13",
+      "tfcflorae:juniper_dead/14",
+      "tfcflorae:juniper_dead/15",
+      "tfcflorae:juniper_dead/16",
+      "tfcflorae:juniper_dead/17",
+      "tfcflorae:juniper_dead/18",
+      "tfcflorae:juniper_dead/19",
+      "tfcflorae:juniper_dead/20",
+      "tfcflorae:juniper_dead/21"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

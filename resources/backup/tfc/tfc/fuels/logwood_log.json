@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/logwood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/logwood"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 695
+}

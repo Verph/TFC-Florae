@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/andesite",
-    "top": "tfc:block/rock/bricks/andesite",
-    "side": "tfc:block/rock/bricks/andesite"
+    "bottom": "tfcflorae:block/rock/bricks/andesite",
+    "top": "tfcflorae:block/rock/bricks/andesite",
+    "side": "tfcflorae:block/rock/bricks/andesite"
   }
 }

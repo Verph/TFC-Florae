@@ -6,12 +6,19 @@
       "tfcflorae:angelim_dead/1",
       "tfcflorae:angelim_dead/2",
       "tfcflorae:angelim_dead/3",
-      "tfcflorae:angelim_dead/4"
+      "tfcflorae:angelim_dead/4",
+      "tfcflorae:angelim_dead/5",
+      "tfcflorae:angelim_dead/6",
+      "tfcflorae:angelim_dead/7",
+      "tfcflorae:angelim_dead/8",
+      "tfcflorae:angelim_dead/9",
+      "tfcflorae:angelim_dead/10",
+      "tfcflorae:angelim_dead/11"
     ],
     "radius": 1,
     "placement": {
-      "width": 2,
-      "height": 9,
+      "width": 1,
+      "height": 5,
       "allow_submerged": true
     }
   }

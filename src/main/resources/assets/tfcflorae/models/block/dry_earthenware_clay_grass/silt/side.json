@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/dry_grass_side",
+  "textures": {
+    "texture": "tfcflorae:block/earthenware_clay/silt"
+  }
+}

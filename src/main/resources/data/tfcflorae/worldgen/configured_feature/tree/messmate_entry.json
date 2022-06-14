@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/messmate"
+    "bush_leaves": "tfcflorae:wood/leaves/messmate",
+    "old_growth_tree": "tfcflorae:tree/messmate_large"
   }
 }

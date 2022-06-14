@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/maclura"
+    },
+    {
+      "item": "tfcflorae:wood/wood/maclura"
+    }
+  ],
+  "duration": 1930,
+  "temperature": 773
+}

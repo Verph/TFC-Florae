@@ -21,12 +21,28 @@
       "tfcflorae:yew/16",
       "tfcflorae:yew/17",
       "tfcflorae:yew/18",
-      "tfcflorae:yew/19"
+      "tfcflorae:yew/19",
+      "tfcflorae:yew/20",
+      "tfcflorae:yew/21",
+      "tfcflorae:yew/22",
+      "tfcflorae:yew/23",
+      "tfcflorae:yew/24",
+      "tfcflorae:yew/25",
+      "tfcflorae:yew/26",
+      "tfcflorae:yew/27",
+      "tfcflorae:yew/28",
+      "tfcflorae:yew/29",
+      "tfcflorae:yew/30",
+      "tfcflorae:yew/31",
+      "tfcflorae:yew/32",
+      "tfcflorae:yew/33",
+      "tfcflorae:yew/34",
+      "tfcflorae:yew/35"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

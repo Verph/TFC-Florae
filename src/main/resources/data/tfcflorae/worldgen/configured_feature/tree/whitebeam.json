@@ -13,15 +13,12 @@
       "tfcflorae:whitebeam/8",
       "tfcflorae:whitebeam/9",
       "tfcflorae:whitebeam/10",
-      "tfcflorae:whitebeam/11",
-      "tfcflorae:whitebeam/12",
-      "tfcflorae:whitebeam/13",
-      "tfcflorae:whitebeam/14"
+      "tfcflorae:whitebeam/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

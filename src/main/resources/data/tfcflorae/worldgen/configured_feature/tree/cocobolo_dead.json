@@ -6,12 +6,19 @@
       "tfcflorae:cocobolo_dead/1",
       "tfcflorae:cocobolo_dead/2",
       "tfcflorae:cocobolo_dead/3",
-      "tfcflorae:cocobolo_dead/4"
+      "tfcflorae:cocobolo_dead/4",
+      "tfcflorae:cocobolo_dead/5",
+      "tfcflorae:cocobolo_dead/6",
+      "tfcflorae:cocobolo_dead/7",
+      "tfcflorae:cocobolo_dead/8",
+      "tfcflorae:cocobolo_dead/9",
+      "tfcflorae:cocobolo_dead/10",
+      "tfcflorae:cocobolo_dead/11"
     ],
     "radius": 1,
     "placement": {
-      "width": 2,
-      "height": 9,
+      "width": 1,
+      "height": 5,
       "allow_submerged": true
     }
   }

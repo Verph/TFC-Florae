@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/diorite",
-    "top": "tfc:block/rock/cracked_bricks/diorite",
-    "side": "tfc:block/rock/cracked_bricks/diorite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/diorite",
+    "top": "tfcflorae:block/rock/cracked_bricks/diorite",
+    "side": "tfcflorae:block/rock/cracked_bricks/diorite"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:yellow_ipe/1",
+      "tfcflorae:yellow_ipe/2",
+      "tfcflorae:yellow_ipe/3",
+      "tfcflorae:yellow_ipe/4",
+      "tfcflorae:yellow_ipe/5",
+      "tfcflorae:yellow_ipe/6",
+      "tfcflorae:yellow_ipe/7",
+      "tfcflorae:yellow_ipe/8",
+      "tfcflorae:yellow_ipe/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

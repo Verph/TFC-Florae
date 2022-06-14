@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/phyllite"
-  },
-  "result": "tfcflorae:rock/smooth/phyllite_slab",
-  "count": 2
-}

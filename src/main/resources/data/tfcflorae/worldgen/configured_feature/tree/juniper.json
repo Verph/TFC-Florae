@@ -19,13 +19,17 @@
       "tfcflorae:juniper/14",
       "tfcflorae:juniper/15",
       "tfcflorae:juniper/16",
-      "tfcflorae:juniper/17"
+      "tfcflorae:juniper/17",
+      "tfcflorae:juniper/18",
+      "tfcflorae:juniper/19",
+      "tfcflorae:juniper/20",
+      "tfcflorae:juniper/21"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

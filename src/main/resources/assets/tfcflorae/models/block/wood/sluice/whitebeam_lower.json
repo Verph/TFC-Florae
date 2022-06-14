@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/sluice_lower",
   "textures": {
-    "texture": "tfc:block/wood/sheet/whitebeam"
+    "texture": "tfcflorae:block/wood/sheet/whitebeam"
   }
 }

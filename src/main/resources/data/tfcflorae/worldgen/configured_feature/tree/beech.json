@@ -13,12 +13,14 @@
       "tfcflorae:beech/8",
       "tfcflorae:beech/9",
       "tfcflorae:beech/10",
-      "tfcflorae:beech/11"
+      "tfcflorae:beech/11",
+      "tfcflorae:beech/12",
+      "tfcflorae:beech/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

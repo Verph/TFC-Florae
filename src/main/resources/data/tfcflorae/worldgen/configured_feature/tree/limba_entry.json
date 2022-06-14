@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/limba"
+    "bush_leaves": "tfcflorae:wood/leaves/limba",
+    "old_growth_tree": "tfcflorae:tree/limba_large"
   }
 }

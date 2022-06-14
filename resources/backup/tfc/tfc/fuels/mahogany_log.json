@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/mahogany"
+    },
+    {
+      "item": "tfcflorae:wood/wood/mahogany"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 773
+}

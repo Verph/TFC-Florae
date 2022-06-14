@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/chert",
-    "top": "tfc:block/rock/smooth/chert",
-    "side": "tfc:block/rock/smooth/chert"
+    "bottom": "tfcflorae:block/rock/smooth/chert",
+    "top": "tfcflorae:block/rock/smooth/chert",
+    "side": "tfcflorae:block/rock/smooth/chert"
   }
 }

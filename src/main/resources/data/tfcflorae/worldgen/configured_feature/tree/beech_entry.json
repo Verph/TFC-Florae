@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/beech"
+    "bush_leaves": "tfcflorae:wood/leaves/beech",
+    "old_growth_tree": "tfcflorae:tree/beech_large"
   }
 }

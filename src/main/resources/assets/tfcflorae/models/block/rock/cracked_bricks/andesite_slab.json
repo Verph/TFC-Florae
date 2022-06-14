@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/andesite",
-    "top": "tfc:block/rock/cracked_bricks/andesite",
-    "side": "tfc:block/rock/cracked_bricks/andesite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/andesite",
+    "top": "tfcflorae:block/rock/cracked_bricks/andesite",
+    "side": "tfcflorae:block/rock/cracked_bricks/andesite"
   }
 }

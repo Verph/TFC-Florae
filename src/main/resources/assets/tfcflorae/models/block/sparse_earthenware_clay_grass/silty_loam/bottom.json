@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/sparse_grass_bottom",
+  "textures": {
+    "texture": "tfcflorae:block/earthenware_clay/silty_loam"
+  }
+}

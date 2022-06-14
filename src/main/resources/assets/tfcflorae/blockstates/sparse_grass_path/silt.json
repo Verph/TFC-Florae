@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "tfcflorae:block/sparse_grass_path/silt"},
+      {"model": "tfcflorae:block/sparse_grass_path/silt", "y": 90},
+      {"model": "tfcflorae:block/sparse_grass_path/silt", "y": 180},
+      {"model": "tfcflorae:block/sparse_grass_path/silt", "y": 270}
+    ]
+  }
+}

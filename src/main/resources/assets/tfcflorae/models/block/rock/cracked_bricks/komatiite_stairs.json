@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/komatiite",
-    "top": "tfc:block/rock/cracked_bricks/komatiite",
-    "side": "tfc:block/rock/cracked_bricks/komatiite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/komatiite",
+    "top": "tfcflorae:block/rock/cracked_bricks/komatiite",
+    "side": "tfcflorae:block/rock/cracked_bricks/komatiite"
   }
 }

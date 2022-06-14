@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/raw/gneiss",
-    "top": "tfc:block/rock/raw/gneiss",
-    "side": "tfc:block/rock/raw/gneiss"
+    "bottom": "tfcflorae:block/rock/raw/gneiss",
+    "top": "tfcflorae:block/rock/raw/gneiss",
+    "side": "tfcflorae:block/rock/raw/gneiss"
   }
 }

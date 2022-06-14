@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfc:block/wood/log/buxus",
-    "top": "tfc:block/wood/log_top/buxus"
+    "side": "tfcflorae:block/wood/log/buxus",
+    "top": "tfcflorae:block/wood/log_top/buxus"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/snow_gum_eucalyptus",
+    "top": "tfcflorae:block/wood/log_top/snow_gum_eucalyptus"
+  }
+}

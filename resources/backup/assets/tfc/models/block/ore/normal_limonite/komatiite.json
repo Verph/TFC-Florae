@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/komatiite",
+    "particle": "tfcflorae:block/rock/raw/komatiite",
+    "overlay": "tfcflorae:block/ore/normal_limonite"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/gneiss"
-  },
-  "result": "tfcflorae:rock/cobble/gneiss_slab",
-  "count": 2
-}

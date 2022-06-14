@@ -6,12 +6,19 @@
       "tfcflorae:purpleheart_dead/1",
       "tfcflorae:purpleheart_dead/2",
       "tfcflorae:purpleheart_dead/3",
-      "tfcflorae:purpleheart_dead/4"
+      "tfcflorae:purpleheart_dead/4",
+      "tfcflorae:purpleheart_dead/5",
+      "tfcflorae:purpleheart_dead/6",
+      "tfcflorae:purpleheart_dead/7",
+      "tfcflorae:purpleheart_dead/8",
+      "tfcflorae:purpleheart_dead/9",
+      "tfcflorae:purpleheart_dead/10",
+      "tfcflorae:purpleheart_dead/11"
     ],
     "radius": 1,
     "placement": {
-      "width": 2,
-      "height": 9,
+      "width": 1,
+      "height": 5,
       "allow_submerged": true
     }
   }

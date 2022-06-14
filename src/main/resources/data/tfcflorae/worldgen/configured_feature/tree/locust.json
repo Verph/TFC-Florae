@@ -17,13 +17,17 @@
       "tfcflorae:locust/12",
       "tfcflorae:locust/13",
       "tfcflorae:locust/14",
-      "tfcflorae:locust/15"
+      "tfcflorae:locust/15",
+      "tfcflorae:locust/16",
+      "tfcflorae:locust/17",
+      "tfcflorae:locust/18",
+      "tfcflorae:locust/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

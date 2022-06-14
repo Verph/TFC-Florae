@@ -15,13 +15,20 @@
       "tfcflorae:teak/10",
       "tfcflorae:teak/11",
       "tfcflorae:teak/12",
-      "tfcflorae:teak/13"
+      "tfcflorae:teak/13",
+      "tfcflorae:teak/14",
+      "tfcflorae:teak/15",
+      "tfcflorae:teak/16",
+      "tfcflorae:teak/17",
+      "tfcflorae:teak/18",
+      "tfcflorae:teak/19",
+      "tfcflorae:teak/20"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/wackestone",
+    "particle": "tfcflorae:block/rock/raw/wackestone",
+    "overlay": "tfcflorae:block/ore/poor_native_silver"
+  }
+}

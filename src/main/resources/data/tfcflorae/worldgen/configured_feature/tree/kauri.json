@@ -11,12 +11,14 @@
       "tfcflorae:kauri/6",
       "tfcflorae:kauri/7",
       "tfcflorae:kauri/8",
-      "tfcflorae:kauri/9"
+      "tfcflorae:kauri/9",
+      "tfcflorae:kauri/10",
+      "tfcflorae:kauri/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

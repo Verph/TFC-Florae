@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/rock/spike_tip",
+  "textures": {
+    "texture": "tfcflorae:block/rock/raw/porphyry",
+    "particle": "tfcflorae:block/rock/raw/porphyry"
+  }
+}

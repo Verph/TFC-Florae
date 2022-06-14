@@ -8,12 +8,15 @@
       "tfcflorae:norway_spruce_dead/3",
       "tfcflorae:norway_spruce_dead/4",
       "tfcflorae:norway_spruce_dead/5",
-      "tfcflorae:norway_spruce_dead/6"
+      "tfcflorae:norway_spruce_dead/6",
+      "tfcflorae:norway_spruce_dead/7",
+      "tfcflorae:norway_spruce_dead/8",
+      "tfcflorae:norway_spruce_dead/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

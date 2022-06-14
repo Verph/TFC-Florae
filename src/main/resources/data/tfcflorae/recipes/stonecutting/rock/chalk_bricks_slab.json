@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/bricks/chalk"
-  },
-  "result": "tfcflorae:rock/bricks/chalk_slab",
-  "count": 2
-}

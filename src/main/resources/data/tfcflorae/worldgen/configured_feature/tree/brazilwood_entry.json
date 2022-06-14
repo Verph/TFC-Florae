@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/brazilwood"
+    "bush_leaves": "tfcflorae:wood/leaves/brazilwood",
+    "old_growth_tree": "tfcflorae:tree/brazilwood_large"
   }
 }

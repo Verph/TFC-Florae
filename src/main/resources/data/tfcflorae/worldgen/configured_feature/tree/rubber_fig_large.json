@@ -7,21 +7,12 @@
       "tfcflorae:rubber_fig_large/2",
       "tfcflorae:rubber_fig_large/3",
       "tfcflorae:rubber_fig_large/4",
-      "tfcflorae:rubber_fig_large/5",
-      "tfcflorae:rubber_fig_large/6",
-      "tfcflorae:rubber_fig_large/7",
-      "tfcflorae:rubber_fig_large/8",
-      "tfcflorae:rubber_fig_large/9",
-      "tfcflorae:rubber_fig_large/10",
-      "tfcflorae:rubber_fig_large/11",
-      "tfcflorae:rubber_fig_large/12",
-      "tfcflorae:rubber_fig_large/13",
-      "tfcflorae:rubber_fig_large/14"
+      "tfcflorae:rubber_fig_large/5"
     ],
-    "radius": 1,
+    "radius": 2,
     "placement": {
       "width": 2,
-      "height": 3,
+      "height": 9,
       "allow_submerged": true
     }
   }

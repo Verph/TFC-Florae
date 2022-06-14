@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfc:block/wood/planks/logwood",
+    "top": "tfc:block/wood/planks/logwood",
+    "side": "tfc:block/wood/planks/logwood"
+  }
+}

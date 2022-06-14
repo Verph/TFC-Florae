@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/rock/spike_base",
+  "textures": {
+    "texture": "tfcflorae:block/rock/raw/blackband_ironstone",
+    "particle": "tfcflorae:block/rock/raw/blackband_ironstone"
+  }
+}

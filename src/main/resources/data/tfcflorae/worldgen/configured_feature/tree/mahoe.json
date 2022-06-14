@@ -17,13 +17,29 @@
       "tfcflorae:mahoe/12",
       "tfcflorae:mahoe/13",
       "tfcflorae:mahoe/14",
-      "tfcflorae:mahoe/15"
+      "tfcflorae:mahoe/15",
+      "tfcflorae:mahoe/16",
+      "tfcflorae:mahoe/17",
+      "tfcflorae:mahoe/18",
+      "tfcflorae:mahoe/19",
+      "tfcflorae:mahoe/20",
+      "tfcflorae:mahoe/21",
+      "tfcflorae:mahoe/22",
+      "tfcflorae:mahoe/23",
+      "tfcflorae:mahoe/24",
+      "tfcflorae:mahoe/25",
+      "tfcflorae:mahoe/26",
+      "tfcflorae:mahoe/27",
+      "tfcflorae:mahoe/28",
+      "tfcflorae:mahoe/29",
+      "tfcflorae:mahoe/30",
+      "tfcflorae:mahoe/31"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

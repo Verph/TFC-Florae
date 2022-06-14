@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/butternut"
+    "bush_leaves": "tfcflorae:wood/leaves/butternut",
+    "old_growth_tree": "tfcflorae:tree/butternut_large"
   }
 }

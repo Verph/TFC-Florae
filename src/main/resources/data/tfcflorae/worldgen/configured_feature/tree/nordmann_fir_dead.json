@@ -8,12 +8,15 @@
       "tfcflorae:nordmann_fir_dead/3",
       "tfcflorae:nordmann_fir_dead/4",
       "tfcflorae:nordmann_fir_dead/5",
-      "tfcflorae:nordmann_fir_dead/6"
+      "tfcflorae:nordmann_fir_dead/6",
+      "tfcflorae:nordmann_fir_dead/7",
+      "tfcflorae:nordmann_fir_dead/8",
+      "tfcflorae:nordmann_fir_dead/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

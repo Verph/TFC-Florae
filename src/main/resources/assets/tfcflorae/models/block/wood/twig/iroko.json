@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfc:block/wood/log/iroko",
-    "top": "tfc:block/wood/log_top/iroko"
+    "side": "tfcflorae:block/wood/log/iroko",
+    "top": "tfcflorae:block/wood/log_top/iroko"
   }
 }

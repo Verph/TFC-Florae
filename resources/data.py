@@ -69,7 +69,7 @@ def generate(rm: ResourceManager):
     for ore, ore_data in ORES.items():
         if ore_data.metal and ore_data.graded:
             metal_data = METALS[ore_data.metal]
-            item_heat(rm, ('ore', ore), ['tfc:ore/small_%s' % ore, 'tfc:ore/normal_%s' % ore, 'tfc:ore/poor_%s' % ore, 'tfc:ore/rich_%s' % ore], metal_data.heat_capacity, int(metal_data.melt_temperature))
+            item_heat(rm, ('ore', ore), ['tfcflorae:ore/small_%s' % ore, 'tfcflorae:ore/normal_%s' % ore, 'tfcflorae:ore/poor_%s' % ore, 'tfcflorae:ore/rich_%s' % ore], metal_data.heat_capacity, int(metal_data.melt_temperature))
 
     rm.entity_tag('turtle_friends', 'minecraft:player', 'tfc:dolphin')
     rm.entity_tag('spawns_on_cold_blocks', 'tfc:penguin', 'tfc:polar_bear')
@@ -111,8 +111,8 @@ def generate(rm: ResourceManager):
     # Supports
 
     for wood in WOODS:
-        rm.data(('tfc', 'supports', wood), {
-            'ingredient': 'tfc:wood/horizontal_support/%s' % wood,
+        rm.data(('tfcflorae', 'supports', wood), {
+            'ingredient': 'tfcflorae:wood/horizontal_support/%s' % wood,
             'support_up': 1,
             'support_down': 1,
             'support_horizontal': 4
@@ -121,7 +121,7 @@ def generate(rm: ResourceManager):
     # Fuels
 
     for wood, wood_data in WOODS.items():
-        fuel_item(rm, wood + '_log', ['tfc:wood/log/' + wood, 'tfc:wood/wood/' + wood], wood_data.duration, wood_data.temp)
+        fuel_item(rm, wood + '_log', ['tfcflorae:wood/log/' + wood, 'tfcflorae:wood/wood/' + wood], wood_data.duration, wood_data.temp)
 
     fuel_item(rm, 'coal', ['minecraft:coal', 'tfc:ore/bituminous_coal'], 2200, 1415)
     fuel_item(rm, 'lignite', 'tfc:ore/lignite', 2200, 1350)
@@ -219,18 +219,18 @@ def generate(rm: ResourceManager):
         rm.item_tag('forge:gems', 'tfc:gem/' + gem)
 
     for wood in WOODS.keys():
-        rm.item_tag('minecraft:logs', 'tfc:wood/log/%s' % wood, 'tfc:wood/wood/%s' % wood, 'tfc:wood/stripped_log/%s' % wood, 'tfc:wood/stripped_wood/%s' % wood)
-        rm.item_tag('twigs', 'tfc:wood/twig/%s' % wood)
-        rm.item_tag('lumber', 'tfc:wood/lumber/%s' % wood)
-        rm.item_tag('sluices', 'tfc:wood/sluice/%s' % wood)
-        rm.item_tag('looms', 'tfc:wood/planks/%s_loom' % wood)
+        rm.item_tag('minecraft:logs', 'tfcflorae:wood/log/%s' % wood, 'tfcflorae:wood/wood/%s' % wood, 'tfcflorae:wood/stripped_log/%s' % wood, 'tfcflorae:wood/stripped_wood/%s' % wood)
+        rm.item_tag('twigs', 'tfcflorae:wood/twig/%s' % wood)
+        rm.item_tag('lumber', 'tfcflorae:wood/lumber/%s' % wood)
+        rm.item_tag('sluices', 'tfcflorae:wood/sluice/%s' % wood)
+        rm.item_tag('looms', 'tfcflorae:wood/planks/%s_loom' % wood)
         if wood in TANNIN_WOOD_TYPES:
-            rm.item_tag('makes_tannin', 'tfc:wood/log/%s' % wood, 'tfc:wood/wood/%s' % wood)
+            rm.item_tag('makes_tannin', 'tfcflorae:wood/log/%s' % wood, 'tfcflorae:wood/wood/%s' % wood)
 
     for category in ROCK_CATEGORIES:  # Rock (Category) Tools
         for tool in ROCK_CATEGORY_ITEMS:
-            rm.item_tag(TOOL_TAGS[tool], 'tfc:stone/%s/%s' % (tool, category))
-            rm.item_tag("usable_on_tool_rack", 'tfc:stone/%s/%s' % (tool, category))
+            rm.item_tag(TOOL_TAGS[tool], 'tfcflorae:stone/%s/%s' % (tool, category))
+            rm.item_tag("usable_on_tool_rack", 'tfcflorae:stone/%s/%s' % (tool, category))
 
     for metal, metal_data in METALS.items():  # Metal Tools
         if 'tool' in metal_data.types:
@@ -244,8 +244,8 @@ def generate(rm: ResourceManager):
     block_and_item_tag(rm, 'forge:sand', '#minecraft:sand')  # Forge doesn't reference the vanilla tag for some reason
 
     for wood in WOODS.keys():
-        block_and_item_tag(rm, 'tool_racks', 'tfc:wood/planks/%s_tool_rack' % wood)
-        rm.block_tag('single_block_replaceable', 'tfc:wood/twig/%s' % wood, 'tfc:wood/fallen_leaves/%s' % wood)
+        block_and_item_tag(rm, 'tool_racks', 'tfcflorae:wood/planks/%s_tool_rack' % wood)
+        rm.block_tag('single_block_replaceable', 'tfcflorae:wood/twig/%s' % wood, 'tfcflorae:wood/fallen_leaves/%s' % wood)
 
     for plant in PLANTS.keys():
         block_and_item_tag(rm, 'plants', 'tfc:plant/%s' % plant)
@@ -309,15 +309,15 @@ def generate(rm: ResourceManager):
         for rock in ROCKS.keys():
             if ore_data.graded:
                 for grade in ORE_GRADES.keys():
-                    rm.block_tag('prospectable', 'tfc:ore/%s_%s/%s' % (grade, ore, rock))
-                    rm.block('tfc:ore/%s_%s/%s/prospected' % (grade, ore, rock)).with_lang(lang(ore))
+                    rm.block_tag('prospectable', 'tfcflorae:ore/%s_%s/%s' % (grade, ore, rock))
+                    rm.block('tfcflorae:ore/%s_%s/%s/prospected' % (grade, ore, rock)).with_lang(lang(ore))
             else:
-                rm.block_tag('prospectable', 'tfc:ore/%s/%s' % (ore, rock))
-                rm.block('tfc:ore/%s/%s/prospected' % (ore, rock)).with_lang(lang(ore))
+                rm.block_tag('prospectable', 'tfcflorae:ore/%s/%s' % (ore, rock))
+                rm.block('tfcflorae:ore/%s/%s/prospected' % (ore, rock)).with_lang(lang(ore))
 
     for wood in WOODS.keys():
-        rm.block_tag('lit_by_dropped_torch', 'tfc:wood/fallen_leaves/' + wood)
-        rm.block_tag('converts_to_humus', 'tfc:wood/fallen_leaves/' + wood)
+        rm.block_tag('lit_by_dropped_torch', 'tfcflorae:wood/fallen_leaves/' + wood)
+        rm.block_tag('converts_to_humus', 'tfcflorae:wood/fallen_leaves/' + wood)
 
     for plant, data in PLANTS.items():  # Plants
         block_and_item_tag(rm, 'plants', 'tfc:plant/%s' % plant)
@@ -331,9 +331,9 @@ def generate(rm: ResourceManager):
     # Rocks
     for rock, rock_data in ROCKS.items():
         def block(block_type: str):
-            return 'tfc:rock/%s/%s' % (block_type, rock)
+            return 'tfcflorae:rock/%s/%s' % (block_type, rock)
 
-        block_and_item_tag(rm, 'forge:gravel', 'tfc:rock/gravel/%s' % rock)
+        block_and_item_tag(rm, 'forge:gravel', 'tfcflorae:rock/gravel/%s' % rock)
         block_and_item_tag(rm, 'forge:stone', block('raw'))
         rm.block_tag('forge:stone', block('hardened'))
         block_and_item_tag(rm, 'forge:cobblestone', block('cobble'), block('mossy_cobble'))
@@ -342,9 +342,9 @@ def generate(rm: ResourceManager):
         block_and_item_tag(rm, 'forge:smooth_stone', block('smooth'))
         rm.block_tag('tfc:breaks_when_isolated', block('raw'))
         block_and_item_tag(rm, 'minecraft:stone_pressure_plates', block('pressure_plate'))
-        block_and_item_tag(rm, 'forge:smooth_stone_slab', 'tfc:rock/smooth/%s_slab' % rock)
+        block_and_item_tag(rm, 'forge:smooth_stone_slab', 'tfcflorae:rock/smooth/%s_slab' % rock)
         rm.item_tag('tfc:rock_knapping', block('loose'))
-        rm.item_tag('tfc:%s_rock' % rock_data.category, block('loose'))
+        rm.item_tag('tfcflorae:%s_rock' % rock_data.category, block('loose'))
         if rock_data.category == 'igneous_extrusive' or rock_data.category == 'igneous_intrusive':
             rm.block_tag('creates_upward_bubbles', block('magma'))
 
@@ -352,37 +352,37 @@ def generate(rm: ResourceManager):
             rm.item_tag('tfc:fluxstone', block('loose'))
 
         for ore in ORE_DEPOSITS:
-            block_and_item_tag(rm, 'forge:gravel', 'tfc:deposit/%s/%s' % (ore, rock))
-            rm.block_tag('can_be_panned', 'tfc:deposit/%s/%s' % (ore, rock))
+            block_and_item_tag(rm, 'forge:gravel', 'tfcflorae:deposit/%s/%s' % (ore, rock))
+            rm.block_tag('can_be_panned', 'tfcflorae:deposit/%s/%s' % (ore, rock))
 
     # Ore tags
     for ore, data in ORES.items():
         if data.tag not in DEFAULT_FORGE_ORE_TAGS:
             rm.block_tag('forge:ores', '#forge:ores/%s' % data.tag)
         if data.graded:  # graded ores -> each grade is declared as a TFC tag, then added to the forge tag
-            rm.block_tag('forge:ores/%s' % data.tag, '#tfc:ores/%s/poor' % data.tag, '#tfc:ores/%s/normal' % data.tag, '#tfc:ores/%s/rich' % data.tag)
+            rm.block_tag('forge:ores/%s' % data.tag, '#tfcflorae:ores/%s/poor' % data.tag, '#tfcflorae:ores/%s/normal' % data.tag, '#tfcflorae:ores/%s/rich' % data.tag)
         for rock in ROCKS.keys():
             if data.graded:
-                rm.block_tag('ores/%s/poor' % data.tag, 'tfc:ore/poor_%s/%s' % (ore, rock))
-                rm.block_tag('ores/%s/normal' % data.tag, 'tfc:ore/normal_%s/%s' % (ore, rock))
-                rm.block_tag('ores/%s/rich' % data.tag, 'tfc:ore/rich_%s/%s' % (ore, rock))
+                rm.block_tag('ores/%s/poor' % data.tag, 'tfcflorae:ore/poor_%s/%s' % (ore, rock))
+                rm.block_tag('ores/%s/normal' % data.tag, 'tfcflorae:ore/normal_%s/%s' % (ore, rock))
+                rm.block_tag('ores/%s/rich' % data.tag, 'tfcflorae:ore/rich_%s/%s' % (ore, rock))
             else:
-                rm.block_tag('forge:ores/%s' % data.tag, 'tfc:ore/%s/%s' % (ore, rock))
+                rm.block_tag('forge:ores/%s' % data.tag, 'tfcflorae:ore/%s/%s' % (ore, rock))
 
     # can_carve Tag
     for rock in ROCKS.keys():
         for variant in ('raw', 'hardened', 'gravel', 'cobble'):
-            rm.block_tag('can_carve', 'tfc:rock/%s/%s' % (variant, rock))
+            rm.block_tag('can_carve', 'tfcflorae:rock/%s/%s' % (variant, rock))
     for sand in SAND_BLOCK_TYPES:
         rm.block_tag('can_carve', 'tfc:sand/%s' % sand, 'tfc:raw_sandstone/%s' % sand)
     for soil in SOIL_BLOCK_VARIANTS:
-        rm.block_tag('can_carve', 'tfc:dirt/%s' % soil, 'tfc:grass/%s' % soil, 'tfc:mud/%s' % soil, 'tfc:rooted_dirt/%s' % soil)
+        rm.block_tag('can_carve', 'tfcflorae:dirt/%s' % soil, 'tfcflorae:grass/%s' % soil, 'tfcflorae:mud/%s' % soil, 'tfcflorae:rooted_dirt/%s' % soil)
     rm.block_tag('can_carve', 'minecraft:powder_snow')
 
     # Soil / Standard blocks are toughness 0 - dirt destroys charcoal
     rm.block_tag('toughness_1', 'tfc:charcoal_pile', 'tfc:charcoal_forge')  # Charcoal is toughness 1 - resistant against destruction from soil
     rm.block_tag('toughness_2', *[
-        'tfc:rock/%s/%s' % (variant, rock) for variant in ('raw', 'cobble', 'mossy_cobble') for rock in ROCKS.keys()
+        'tfcflorae:rock/%s/%s' % (variant, rock) for variant in ('raw', 'cobble', 'mossy_cobble') for rock in ROCKS.keys()
     ])  # Stone type blocks are toughness 2
     rm.block_tag('toughness_3', 'minecraft:bedrock')  # Used as a top level 'everything goes'
 
@@ -419,18 +419,18 @@ def generate(rm: ResourceManager):
     for ore, data in ORES.items():
         for rock in ROCKS.keys():
             if data.graded:
-                rm.block_tag(needs_tool(data.required_tool), 'tfc:ore/poor_%s/%s' % (ore, rock), 'tfc:ore/normal_%s/%s' % (ore, rock), 'tfc:ore/rich_%s/%s' % (ore, rock))
+                rm.block_tag(needs_tool(data.required_tool), 'tfcflorae:ore/poor_%s/%s' % (ore, rock), 'tfcflorae:ore/normal_%s/%s' % (ore, rock), 'tfcflorae:ore/rich_%s/%s' % (ore, rock))
             else:
-                rm.block_tag(needs_tool(data.required_tool), 'tfc:ore/%s/%s' % (ore, rock))
+                rm.block_tag(needs_tool(data.required_tool), 'tfcflorae:ore/%s/%s' % (ore, rock))
 
     rm.block_tag('minecraft:mineable/shovel', *[
-        *['tfc:%s/%s' % (soil, variant) for soil in SOIL_BLOCK_TYPES for variant in SOIL_BLOCK_VARIANTS],
+        *['tfcflorae:%s/%s' % (soil, variant) for soil in SOIL_BLOCK_TYPES for variant in SOIL_BLOCK_VARIANTS],
         'tfc:peat',
         'tfc:peat_grass',
         *['tfc:sand/%s' % sand for sand in SAND_BLOCK_TYPES],
         'tfc:snow_pile',
-        *['tfc:rock/gravel/%s' % rock for rock in ROCKS.keys()],
-        *['tfc:deposit/%s/%s' % (ore, rock) for ore in ORE_DEPOSITS for rock in ROCKS.keys()],
+        *['tfcflorae:rock/gravel/%s' % rock for rock in ROCKS.keys()],
+        *['tfcflorae:deposit/%s/%s' % (ore, rock) for ore in ORE_DEPOSITS for rock in ROCKS.keys()],
         'tfc:aggregate',
         'tfc:fire_clay_block',
         'tfc:charcoal_pile',
@@ -443,13 +443,13 @@ def generate(rm: ResourceManager):
         'tfc:sea_ice',
         'tfc:ice_pile',
         'tfc:calcite',
-        *['tfc:ore/%s/%s' % (ore, rock) for ore, ore_data in ORES.items() for rock in ROCKS.keys() if not ore_data.graded],
-        *['tfc:ore/%s_%s/%s' % (grade, ore, rock) for ore, ore_data in ORES.items() for rock in ROCKS.keys() for grade in ORE_GRADES.keys() if ore_data.graded],
-        *['tfc:ore/small_%s' % ore for ore, ore_data in ORES.items() if ore_data.graded],
-        *['tfc:rock/%s/%s' % (variant, rock) for variant in ('raw', 'hardened', 'smooth', 'cobble', 'bricks', 'spike', 'cracked_bricks', 'mossy_bricks', 'mossy_cobble', 'chiseled', 'loose', 'pressure_plate', 'button') for rock in ROCKS.keys()],
-        *['tfc:rock/%s/%s_%s' % (variant, rock, suffix) for variant in ('raw', 'smooth', 'cobble', 'bricks', 'cracked_bricks', 'mossy_bricks', 'mossy_cobble') for rock in ROCKS.keys() for suffix in ('slab', 'stairs', 'wall')],
-        *['tfc:rock/anvil/%s' % rock for rock, rock_data in ROCKS.items() if rock_data.category == 'igneous_intrusive' or rock_data.category == 'igneous_extrusive'],
-        *['tfc:rock/magma/%s' % rock for rock, rock_data in ROCKS.items() if rock_data.category == 'igneous_intrusive' or rock_data.category == 'igneous_extrusive'],
+        *['tfcflorae:ore/%s/%s' % (ore, rock) for ore, ore_data in ORES.items() for rock in ROCKS.keys() if not ore_data.graded],
+        *['tfcflorae:ore/%s_%s/%s' % (grade, ore, rock) for ore, ore_data in ORES.items() for rock in ROCKS.keys() for grade in ORE_GRADES.keys() if ore_data.graded],
+        *['tfcflorae:ore/small_%s' % ore for ore, ore_data in ORES.items() if ore_data.graded],
+        *['tfcflorae:rock/%s/%s' % (variant, rock) for variant in ('raw', 'hardened', 'smooth', 'cobble', 'bricks', 'spike', 'cracked_bricks', 'mossy_bricks', 'mossy_cobble', 'chiseled', 'loose', 'pressure_plate', 'button') for rock in ROCKS.keys()],
+        *['tfcflorae:rock/%s/%s_%s' % (variant, rock, suffix) for variant in ('raw', 'smooth', 'cobble', 'bricks', 'cracked_bricks', 'mossy_bricks', 'mossy_cobble') for rock in ROCKS.keys() for suffix in ('slab', 'stairs', 'wall')],
+        *['tfcflorae:rock/anvil/%s' % rock for rock, rock_data in ROCKS.items() if rock_data.category == 'igneous_intrusive' or rock_data.category == 'igneous_extrusive'],
+        *['tfcflorae:rock/magma/%s' % rock for rock, rock_data in ROCKS.items() if rock_data.category == 'igneous_intrusive' or rock_data.category == 'igneous_extrusive'],
         *['tfc:metal/%s/%s' % (variant, metal) for variant, variant_data in METAL_BLOCKS.items() for metal, metal_data in METALS.items() if variant_data.type in metal_data.types],
         *['tfc:coral/%s_%s' % (color, variant) for color in CORALS for variant in CORAL_BLOCKS],
         'tfc:alabaster/raw/alabaster',
@@ -470,8 +470,8 @@ def generate(rm: ResourceManager):
         'tfc:blast_furnace'
     ])
     rm.block_tag('minecraft:mineable/axe', *[
-        *['tfc:wood/%s/%s' % (variant, wood) for variant in ('log', 'stripped_log', 'wood', 'stripped_wood', 'planks', 'twig', 'vertical_support', 'horizontal_support', 'sluice', 'chest', 'trapped_chest') for wood in WOODS.keys()],
-        *['tfc:wood/planks/%s_%s' % (wood, variant) for variant in ('bookshelf', 'door', 'trapdoor', 'fence', 'log_fence', 'fence_gate', 'button', 'pressure_plate', 'slab', 'stairs', 'tool_rack', 'workbench', 'sign') for wood in WOODS.keys()],
+        *['tfcflorae:wood/%s/%s' % (variant, wood) for variant in ('log', 'stripped_log', 'wood', 'stripped_wood', 'planks', 'twig', 'vertical_support', 'horizontal_support', 'sluice', 'chest', 'trapped_chest') for wood in WOODS.keys()],
+        *['tfcflorae:wood/planks/%s_%s' % (wood, variant) for variant in ('bookshelf', 'door', 'trapdoor', 'fence', 'log_fence', 'fence_gate', 'button', 'pressure_plate', 'slab', 'stairs', 'tool_rack', 'workbench', 'sign') for wood in WOODS.keys()],
         *['tfc:plant/%s_branch' % tree for tree in NORMAL_FRUIT_TREES],
         *['tfc:plant/%s_growing_branch' % tree for tree in NORMAL_FRUIT_TREES],
         *['tfc:wattle/%s' % color for color in COLORS],
@@ -486,7 +486,7 @@ def generate(rm: ResourceManager):
         'tfc:powderkeg'
     ])
     rm.block_tag('tfc:mineable_with_sharp_tool', *[
-        *['tfc:wood/%s/%s' % (variant, wood) for variant in ('leaves', 'sapling', 'fallen_leaves') for wood in WOODS.keys()],
+        *['tfcflorae:wood/%s/%s' % (variant, wood) for variant in ('leaves', 'sapling', 'fallen_leaves') for wood in WOODS.keys()],
         *['tfc:plant/%s' % plant for plant in PLANTS.keys()],
         *['tfc:plant/%s' % plant for plant in UNIQUE_PLANTS],
         *['tfc:wild_crop/%s' % plant for plant in CROPS.keys()],
@@ -505,7 +505,7 @@ def generate(rm: ResourceManager):
         'tfc:thatch_bed'
     ])
     rm.block_tag('tfc:mineable_with_blunt_tool',
-                 *['tfc:wood/%s/%s' % (variant, wood) for variant in ('log', 'stripped_log', 'wood', 'stripped_wood') for wood in WOODS.keys()]
+                 *['tfcflorae:wood/%s/%s' % (variant, wood) for variant in ('log', 'stripped_log', 'wood', 'stripped_wood') for wood in WOODS.keys()]
                  )
 
     # ==========

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/gabbro",
-    "top": "tfc:block/rock/smooth/gabbro",
-    "side": "tfc:block/rock/smooth/gabbro"
+    "bottom": "tfcflorae:block/rock/smooth/gabbro",
+    "top": "tfcflorae:block/rock/smooth/gabbro",
+    "side": "tfcflorae:block/rock/smooth/gabbro"
   }
 }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/arkose",
-    "top": "tfc:block/rock/smooth/arkose",
-    "side": "tfc:block/rock/smooth/arkose"
+    "bottom": "tfcflorae:block/rock/smooth/arkose",
+    "top": "tfcflorae:block/rock/smooth/arkose",
+    "side": "tfcflorae:block/rock/smooth/arkose"
   }
 }

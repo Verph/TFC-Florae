@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/raw/diorite"
-  },
-  "result": "tfcflorae:rock/raw/diorite_slab",
-  "count": 2
-}

@@ -64,9 +64,9 @@ def generate_all(rm: ResourceManager):
 
     # generic assets / data
     assets.generate(rm)
-    data.generate(rm)
+    #data.generate(rm)
     world_gen.generate(rm)
-    recipes.generate(rm)
+    #recipes.generate(rm)
 
     rm.flush()
 

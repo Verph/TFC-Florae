@@ -15,16 +15,13 @@
       "tfcflorae:ironwood/10",
       "tfcflorae:ironwood/11",
       "tfcflorae:ironwood/12",
-      "tfcflorae:ironwood/13",
-      "tfcflorae:ironwood/14",
-      "tfcflorae:ironwood/15",
-      "tfcflorae:ironwood/16"
+      "tfcflorae:ironwood/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

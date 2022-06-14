@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/bricks/gneiss",
-  "result": "tfcflorae:rock/bricks/gneiss_stairs",
-  "mode": "stair"
-}

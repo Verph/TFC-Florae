@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/eucalyptus"
+    },
+    {
+      "item": "tfcflorae:wood/wood/eucalyptus"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 705
+}

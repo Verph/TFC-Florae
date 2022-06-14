@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfc:block/wood/planks/red_elm",
+    "top": "tfc:block/wood/planks/red_elm",
+    "side": "tfc:block/wood/planks/red_elm"
+  }
+}

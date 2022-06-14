@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 180,
+    "max_rain": 400,
+    "min_temp": -8,
+    "max_temp": 15,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/buxus"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/buxus"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/buxus",
+    "dead_tree": "tfcflorae:tree/buxus_dead",
+    "fallen_log": "tfcflorae:wood/log/buxus",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/buxus",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/buxus"
+  }
+}

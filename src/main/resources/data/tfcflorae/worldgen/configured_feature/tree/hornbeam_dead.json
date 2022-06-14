@@ -8,12 +8,25 @@
       "tfcflorae:hornbeam_dead/3",
       "tfcflorae:hornbeam_dead/4",
       "tfcflorae:hornbeam_dead/5",
-      "tfcflorae:hornbeam_dead/6"
+      "tfcflorae:hornbeam_dead/6",
+      "tfcflorae:hornbeam_dead/7",
+      "tfcflorae:hornbeam_dead/8",
+      "tfcflorae:hornbeam_dead/9",
+      "tfcflorae:hornbeam_dead/10",
+      "tfcflorae:hornbeam_dead/11",
+      "tfcflorae:hornbeam_dead/12",
+      "tfcflorae:hornbeam_dead/13",
+      "tfcflorae:hornbeam_dead/14",
+      "tfcflorae:hornbeam_dead/15",
+      "tfcflorae:hornbeam_dead/16",
+      "tfcflorae:hornbeam_dead/17",
+      "tfcflorae:hornbeam_dead/18",
+      "tfcflorae:hornbeam_dead/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

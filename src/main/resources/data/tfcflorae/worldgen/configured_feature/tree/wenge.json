@@ -11,12 +11,14 @@
       "tfcflorae:wenge/6",
       "tfcflorae:wenge/7",
       "tfcflorae:wenge/8",
-      "tfcflorae:wenge/9"
+      "tfcflorae:wenge/9",
+      "tfcflorae:wenge/10",
+      "tfcflorae:wenge/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

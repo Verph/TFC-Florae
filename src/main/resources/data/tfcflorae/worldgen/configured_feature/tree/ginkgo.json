@@ -19,16 +19,13 @@
       "tfcflorae:ginkgo/14",
       "tfcflorae:ginkgo/15",
       "tfcflorae:ginkgo/16",
-      "tfcflorae:ginkgo/17",
-      "tfcflorae:ginkgo/18",
-      "tfcflorae:ginkgo/19",
-      "tfcflorae:ginkgo/20"
+      "tfcflorae:ginkgo/17"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/peridotite",
-    "top": "tfc:block/rock/cracked_bricks/peridotite",
-    "side": "tfc:block/rock/cracked_bricks/peridotite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/peridotite",
+    "top": "tfcflorae:block/rock/cracked_bricks/peridotite",
+    "side": "tfcflorae:block/rock/cracked_bricks/peridotite"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/dry_grass_path",
+  "textures": {
+    "dirt": "tfcflorae:block/dirt/humus",
+    "top": "tfcflorae:block/dry_grass_path/humus_top",
+    "side": "tfcflorae:block/dry_grass_path/humus_side"
+  }
+}

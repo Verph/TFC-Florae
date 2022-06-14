@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/redwood"
+    "bush_leaves": "tfcflorae:wood/leaves/redwood",
+    "old_growth_tree": "tfcflorae:tree/redwood_large"
   }
 }

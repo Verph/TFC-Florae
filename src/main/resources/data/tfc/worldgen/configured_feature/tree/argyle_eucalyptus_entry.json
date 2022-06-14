@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 120,
+    "max_rain": 300,
+    "min_temp": 18,
+    "max_temp": 39,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/argyle_eucalyptus"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/argyle_eucalyptus"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/argyle_eucalyptus",
+    "dead_tree": "tfcflorae:tree/argyle_eucalyptus_dead",
+    "fallen_log": "tfcflorae:wood/log/argyle_eucalyptus",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/argyle_eucalyptus",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/argyle_eucalyptus",
+    "old_growth_tree": "tfcflorae:tree/argyle_eucalyptus_large"
+  }
+}

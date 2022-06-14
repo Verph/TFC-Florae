@@ -8,12 +8,19 @@
       "tfcflorae:alder_dead/3",
       "tfcflorae:alder_dead/4",
       "tfcflorae:alder_dead/5",
-      "tfcflorae:alder_dead/6"
+      "tfcflorae:alder_dead/6",
+      "tfcflorae:alder_dead/7",
+      "tfcflorae:alder_dead/8",
+      "tfcflorae:alder_dead/9",
+      "tfcflorae:alder_dead/10",
+      "tfcflorae:alder_dead/11",
+      "tfcflorae:alder_dead/12",
+      "tfcflorae:alder_dead/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

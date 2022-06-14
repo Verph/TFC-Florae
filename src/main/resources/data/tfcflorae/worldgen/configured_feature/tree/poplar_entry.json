@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/poplar"
+    "bush_leaves": "tfcflorae:wood/leaves/poplar",
+    "old_growth_tree": "tfcflorae:tree/poplar_large"
   }
 }

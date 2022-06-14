@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cobble/basalt",
-    "top": "tfc:block/rock/cobble/basalt",
-    "side": "tfc:block/rock/cobble/basalt"
+    "bottom": "tfcflorae:block/rock/cobble/basalt",
+    "top": "tfcflorae:block/rock/cobble/basalt",
+    "side": "tfcflorae:block/rock/cobble/basalt"
   }
 }

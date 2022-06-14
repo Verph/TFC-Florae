@@ -8,12 +8,24 @@
       "tfcflorae:larch_dead/3",
       "tfcflorae:larch_dead/4",
       "tfcflorae:larch_dead/5",
-      "tfcflorae:larch_dead/6"
+      "tfcflorae:larch_dead/6",
+      "tfcflorae:larch_dead/7",
+      "tfcflorae:larch_dead/8",
+      "tfcflorae:larch_dead/9",
+      "tfcflorae:larch_dead/10",
+      "tfcflorae:larch_dead/11",
+      "tfcflorae:larch_dead/12",
+      "tfcflorae:larch_dead/13",
+      "tfcflorae:larch_dead/14",
+      "tfcflorae:larch_dead/15",
+      "tfcflorae:larch_dead/16",
+      "tfcflorae:larch_dead/17",
+      "tfcflorae:larch_dead/18"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

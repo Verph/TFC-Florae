@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/raw/dolomite",
-    "top": "tfc:block/rock/raw/dolomite",
-    "side": "tfc:block/rock/raw/dolomite"
+    "bottom": "tfcflorae:block/rock/raw/dolomite",
+    "top": "tfcflorae:block/rock/raw/dolomite",
+    "side": "tfcflorae:block/rock/raw/dolomite"
   }
 }

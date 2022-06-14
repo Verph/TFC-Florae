@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/granite",
-    "top": "tfc:block/rock/smooth/granite",
-    "side": "tfc:block/rock/smooth/granite"
+    "bottom": "tfcflorae:block/rock/smooth/granite",
+    "top": "tfcflorae:block/rock/smooth/granite",
+    "side": "tfcflorae:block/rock/smooth/granite"
   }
 }

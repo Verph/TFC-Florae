@@ -1,5 +1,6 @@
 package tfcflorae.common.items;
 
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -9,6 +10,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,18 +42,23 @@ public class TFCFItems
     public static final Map<TFCFRock, RegistryObject<Item>> BRICKS = Helpers.mapOfKeys(TFCFRock.class, type ->
         register("brick/" + type.name(), ROCK_STUFFS)
     );
+    
+    // Food
+
+    public static final Map<TFCFFood, RegistryObject<Item>> FOOD = Helpers.mapOfKeys(TFCFFood.class, food ->
+        register("food/" + food.name(), () -> new DecayingItem(food.createProperties()))
+    );
 
     // Wood
 
-    public static final Map<TFCFWood, RegistryObject<Item>> LUMBER = Helpers.mapOfKeys(TFCFWood.class, wood -> register("wood/lumber/" + wood.name(), WOOD));
+    public static final Map<TFCFWood, RegistryObject<Item>> LUMBER = lumberWoodMapper();
 
-    public static final Map<TFCFWood, RegistryObject<Item>> SUPPORTS = Helpers.mapOfKeys(TFCFWood.class, wood ->
-        register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties().tab(WOOD)))
-    );
+    public static final Map<TFCFWood, RegistryObject<Item>> SUPPORTS = supportWoodMapper();
 
-    public static final Map<TFCFWood, RegistryObject<Item>> BOATS = Helpers.mapOfKeys(TFCFWood.class, wood -> register("wood/boat/" + wood.name(), () -> new TFCFBoatItem(TFCFEntities.BOATS.get(wood), new Item.Properties().tab(WOOD))));
+    public static final Map<TFCFWood, RegistryObject<Item>> BOATS = boatsWoodMapper();
 
-    public static final Map<TFCFWood, RegistryObject<Item>> SIGNS = Helpers.mapOfKeys(TFCFWood.class, wood -> register("wood/sign/" + wood.name(), () -> new SignItem(new Item.Properties().tab(WOOD), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.SIGN).get(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WALL_SIGN).get())));
+    public static final Map<TFCFWood, RegistryObject<Item>> SIGNS = signWoodMapper();
+
 
     // Decorations
 
@@ -197,6 +204,58 @@ public class TFCFItems
     );
 
     // Fin
+
+    private static Map<TFCFWood, RegistryObject<Item>> lumberWoodMapper()
+    {
+        Map<TFCFWood,  RegistryObject<Item>> Map = new HashMap<>();
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (TFCFBlocks.WOODS.get(wood) == null)
+                continue;
+
+            Map.put(wood, register("wood/lumber/" + wood.name(), WOOD));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Item>> supportWoodMapper()
+    {
+        Map<TFCFWood,  RegistryObject<Item>> Map = new HashMap<>();
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (TFCFBlocks.WOODS.get(wood) == null)
+                continue;
+
+            Map.put(wood, register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties().tab(WOOD))));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Item>> boatsWoodMapper()
+    {
+        Map<TFCFWood,  RegistryObject<Item>> Map = new HashMap<>();
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (TFCFBlocks.WOODS.get(wood) == null)
+                continue;
+
+            Map.put(wood, register("wood/boat/" + wood.name(), () -> new TFCFBoatItem(TFCFEntities.BOATS.get(wood), new Item.Properties().tab(WOOD))));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Item>> signWoodMapper()
+    {
+        Map<TFCFWood,  RegistryObject<Item>> Map = new HashMap<>();
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (TFCFBlocks.WOODS.get(wood) == null)
+                continue;
+
+            Map.put(wood, register("wood/sign/" + wood.name(), () -> new SignItem(new Item.Properties().tab(WOOD), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.SIGN).get(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WALL_SIGN).get())));
+        }
+        return Map;
+    }
 
     private static Item.Properties prop()
     {

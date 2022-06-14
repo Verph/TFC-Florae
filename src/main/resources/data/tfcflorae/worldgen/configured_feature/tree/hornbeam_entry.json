@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/hornbeam"
+    "bush_leaves": "tfcflorae:wood/leaves/hornbeam",
+    "old_growth_tree": "tfcflorae:tree/hornbeam_large"
   }
 }

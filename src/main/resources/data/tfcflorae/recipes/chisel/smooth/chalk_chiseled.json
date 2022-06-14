@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/bricks/chalk",
-  "result": "tfcflorae:rock/chiseled/chalk",
-  "mode": "smooth"
-}

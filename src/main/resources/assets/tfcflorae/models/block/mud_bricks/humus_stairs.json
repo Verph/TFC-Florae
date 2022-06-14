@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/mud_bricks/humus",
-    "top": "tfc:block/mud_bricks/humus",
-    "side": "tfc:block/mud_bricks/humus"
+    "bottom": "tfcflorae:block/mud_bricks/humus",
+    "top": "tfcflorae:block/mud_bricks/humus",
+    "side": "tfcflorae:block/mud_bricks/humus"
   }
 }

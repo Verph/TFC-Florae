@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/hawthorn"
+    "bush_leaves": "tfcflorae:wood/leaves/hawthorn",
+    "old_growth_tree": "tfcflorae:tree/hawthorn_large"
   }
 }

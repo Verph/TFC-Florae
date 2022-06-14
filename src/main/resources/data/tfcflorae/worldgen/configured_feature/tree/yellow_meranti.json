@@ -11,12 +11,14 @@
       "tfcflorae:yellow_meranti/6",
       "tfcflorae:yellow_meranti/7",
       "tfcflorae:yellow_meranti/8",
-      "tfcflorae:yellow_meranti/9"
+      "tfcflorae:yellow_meranti/9",
+      "tfcflorae:yellow_meranti/10",
+      "tfcflorae:yellow_meranti/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

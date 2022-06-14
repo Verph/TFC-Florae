@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfc:block/wood/planks/pink_cherry_blossom",
+    "top": "tfc:block/wood/planks/pink_cherry_blossom",
+    "side": "tfc:block/wood/planks/pink_cherry_blossom"
+  }
+}

@@ -14,11 +14,12 @@
       "tfcflorae:purpleheart_large/9",
       "tfcflorae:purpleheart_large/10",
       "tfcflorae:purpleheart_large/11",
-      "tfcflorae:purpleheart_large/12"
+      "tfcflorae:purpleheart_large/12",
+      "tfcflorae:purpleheart_large/13"
     ],
-    "radius": 1,
+    "radius": 2,
     "placement": {
-      "width": 1,
+      "width": 2,
       "height": 9,
       "allow_submerged": true
     }

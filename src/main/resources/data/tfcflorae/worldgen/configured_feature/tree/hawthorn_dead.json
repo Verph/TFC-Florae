@@ -8,12 +8,25 @@
       "tfcflorae:hawthorn_dead/3",
       "tfcflorae:hawthorn_dead/4",
       "tfcflorae:hawthorn_dead/5",
-      "tfcflorae:hawthorn_dead/6"
+      "tfcflorae:hawthorn_dead/6",
+      "tfcflorae:hawthorn_dead/7",
+      "tfcflorae:hawthorn_dead/8",
+      "tfcflorae:hawthorn_dead/9",
+      "tfcflorae:hawthorn_dead/10",
+      "tfcflorae:hawthorn_dead/11",
+      "tfcflorae:hawthorn_dead/12",
+      "tfcflorae:hawthorn_dead/13",
+      "tfcflorae:hawthorn_dead/14",
+      "tfcflorae:hawthorn_dead/15",
+      "tfcflorae:hawthorn_dead/16",
+      "tfcflorae:hawthorn_dead/17",
+      "tfcflorae:hawthorn_dead/18",
+      "tfcflorae:hawthorn_dead/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 6,
+      "height": 5,
       "allow_submerged": true
     }
   }

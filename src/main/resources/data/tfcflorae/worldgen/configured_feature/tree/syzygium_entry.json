@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/syzygium"
+    "bush_leaves": "tfcflorae:wood/leaves/syzygium",
+    "old_growth_tree": "tfcflorae:tree/syzygium_large"
   }
 }

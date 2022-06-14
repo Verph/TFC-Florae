@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/juniper"
+    "bush_leaves": "tfcflorae:wood/leaves/juniper",
+    "old_growth_tree": "tfcflorae:tree/juniper_large"
   }
 }

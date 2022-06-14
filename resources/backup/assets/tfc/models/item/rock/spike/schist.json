@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/rock/spike/schist_base",
+  "textures": {
+    "layer0": "tfcflorae:block/rock/raw/schist"
+  }
+}

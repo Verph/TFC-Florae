@@ -8,12 +8,31 @@
       "tfcflorae:rubber_fig_dead/3",
       "tfcflorae:rubber_fig_dead/4",
       "tfcflorae:rubber_fig_dead/5",
-      "tfcflorae:rubber_fig_dead/6"
+      "tfcflorae:rubber_fig_dead/6",
+      "tfcflorae:rubber_fig_dead/7",
+      "tfcflorae:rubber_fig_dead/8",
+      "tfcflorae:rubber_fig_dead/9",
+      "tfcflorae:rubber_fig_dead/10",
+      "tfcflorae:rubber_fig_dead/11",
+      "tfcflorae:rubber_fig_dead/12",
+      "tfcflorae:rubber_fig_dead/13",
+      "tfcflorae:rubber_fig_dead/14",
+      "tfcflorae:rubber_fig_dead/15",
+      "tfcflorae:rubber_fig_dead/16",
+      "tfcflorae:rubber_fig_dead/17",
+      "tfcflorae:rubber_fig_dead/18",
+      "tfcflorae:rubber_fig_dead/19",
+      "tfcflorae:rubber_fig_dead/20",
+      "tfcflorae:rubber_fig_dead/21",
+      "tfcflorae:rubber_fig_dead/22",
+      "tfcflorae:rubber_fig_dead/23",
+      "tfcflorae:rubber_fig_dead/24",
+      "tfcflorae:rubber_fig_dead/25"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

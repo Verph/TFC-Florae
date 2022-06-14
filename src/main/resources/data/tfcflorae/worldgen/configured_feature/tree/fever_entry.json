@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/fever"
+    "bush_leaves": "tfcflorae:wood/leaves/fever",
+    "old_growth_tree": "tfcflorae:tree/fever_large"
   }
 }

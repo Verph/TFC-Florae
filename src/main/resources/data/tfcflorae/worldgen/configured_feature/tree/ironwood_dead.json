@@ -8,12 +8,19 @@
       "tfcflorae:ironwood_dead/3",
       "tfcflorae:ironwood_dead/4",
       "tfcflorae:ironwood_dead/5",
-      "tfcflorae:ironwood_dead/6"
+      "tfcflorae:ironwood_dead/6",
+      "tfcflorae:ironwood_dead/7",
+      "tfcflorae:ironwood_dead/8",
+      "tfcflorae:ironwood_dead/9",
+      "tfcflorae:ironwood_dead/10",
+      "tfcflorae:ironwood_dead/11",
+      "tfcflorae:ironwood_dead/12",
+      "tfcflorae:ironwood_dead/13"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

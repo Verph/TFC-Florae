@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:pink_ipe/1",
+      "tfcflorae:pink_ipe/2",
+      "tfcflorae:pink_ipe/3",
+      "tfcflorae:pink_ipe/4",
+      "tfcflorae:pink_ipe/5",
+      "tfcflorae:pink_ipe/6",
+      "tfcflorae:pink_ipe/7",
+      "tfcflorae:pink_ipe/8",
+      "tfcflorae:pink_ipe/9"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

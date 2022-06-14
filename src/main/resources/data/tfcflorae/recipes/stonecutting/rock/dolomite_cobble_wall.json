@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/dolomite"
-  },
-  "result": "tfcflorae:rock/cobble/dolomite_wall",
-  "count": 1
-}

@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/ash",
-  "result": "tfcflorae:wood/planks/ash_stairs",
-  "mode": "stair"
-}

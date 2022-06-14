@@ -21,13 +21,25 @@
       "tfcflorae:pink_ivory/16",
       "tfcflorae:pink_ivory/17",
       "tfcflorae:pink_ivory/18",
-      "tfcflorae:pink_ivory/19"
+      "tfcflorae:pink_ivory/19",
+      "tfcflorae:pink_ivory/20",
+      "tfcflorae:pink_ivory/21",
+      "tfcflorae:pink_ivory/22",
+      "tfcflorae:pink_ivory/23",
+      "tfcflorae:pink_ivory/24",
+      "tfcflorae:pink_ivory/25",
+      "tfcflorae:pink_ivory/26",
+      "tfcflorae:pink_ivory/27",
+      "tfcflorae:pink_ivory/28",
+      "tfcflorae:pink_ivory/29",
+      "tfcflorae:pink_ivory/30",
+      "tfcflorae:pink_ivory/31"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

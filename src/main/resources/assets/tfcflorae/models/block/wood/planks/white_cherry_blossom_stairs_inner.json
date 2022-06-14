@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfc:block/wood/planks/white_cherry_blossom",
+    "top": "tfc:block/wood/planks/white_cherry_blossom",
+    "side": "tfc:block/wood/planks/white_cherry_blossom"
+  }
+}

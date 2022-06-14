@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/schist",
-    "top": "tfc:block/rock/bricks/schist",
-    "side": "tfc:block/rock/bricks/schist"
+    "bottom": "tfcflorae:block/rock/bricks/schist",
+    "top": "tfcflorae:block/rock/bricks/schist",
+    "side": "tfcflorae:block/rock/bricks/schist"
   }
 }

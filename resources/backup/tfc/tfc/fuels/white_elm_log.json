@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/white_elm"
+    },
+    {
+      "item": "tfcflorae:wood/wood/white_elm"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 653
+}

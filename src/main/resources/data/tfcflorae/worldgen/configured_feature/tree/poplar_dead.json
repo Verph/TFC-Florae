@@ -8,12 +8,23 @@
       "tfcflorae:poplar_dead/3",
       "tfcflorae:poplar_dead/4",
       "tfcflorae:poplar_dead/5",
-      "tfcflorae:poplar_dead/6"
+      "tfcflorae:poplar_dead/6",
+      "tfcflorae:poplar_dead/7",
+      "tfcflorae:poplar_dead/8",
+      "tfcflorae:poplar_dead/9",
+      "tfcflorae:poplar_dead/10",
+      "tfcflorae:poplar_dead/11",
+      "tfcflorae:poplar_dead/12",
+      "tfcflorae:poplar_dead/13",
+      "tfcflorae:poplar_dead/14",
+      "tfcflorae:poplar_dead/15",
+      "tfcflorae:poplar_dead/16",
+      "tfcflorae:poplar_dead/17"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

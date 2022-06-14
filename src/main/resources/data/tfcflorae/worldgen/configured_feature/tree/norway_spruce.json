@@ -9,13 +9,15 @@
       "tfcflorae:norway_spruce/4",
       "tfcflorae:norway_spruce/5",
       "tfcflorae:norway_spruce/6",
-      "tfcflorae:norway_spruce/7"
+      "tfcflorae:norway_spruce/7",
+      "tfcflorae:norway_spruce/8",
+      "tfcflorae:norway_spruce/9"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
-      "allow_submerged": false
+      "height": 5,
+      "allow_submerged": true
     }
   }
 }

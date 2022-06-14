@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/chert",
-    "top": "tfc:block/rock/mossy_cobble/chert",
-    "side": "tfc:block/rock/mossy_cobble/chert"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/chert",
+    "top": "tfcflorae:block/rock/mossy_cobble/chert",
+    "side": "tfcflorae:block/rock/mossy_cobble/chert"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "tfcflorae:block/dry_grass_path/sandy_loam"},
+      {"model": "tfcflorae:block/dry_grass_path/sandy_loam", "y": 90},
+      {"model": "tfcflorae:block/dry_grass_path/sandy_loam", "y": 180},
+      {"model": "tfcflorae:block/dry_grass_path/sandy_loam", "y": 270}
+    ]
+  }
+}

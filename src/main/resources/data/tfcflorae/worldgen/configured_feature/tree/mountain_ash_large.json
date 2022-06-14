@@ -12,11 +12,15 @@
       "tfcflorae:mountain_ash_large/7",
       "tfcflorae:mountain_ash_large/8",
       "tfcflorae:mountain_ash_large/9",
-      "tfcflorae:mountain_ash_large/10"
+      "tfcflorae:mountain_ash_large/10",
+      "tfcflorae:mountain_ash_large/11",
+      "tfcflorae:mountain_ash_large/12",
+      "tfcflorae:mountain_ash_large/13",
+      "tfcflorae:mountain_ash_large/14"
     ],
-    "radius": 1,
+    "radius": 2,
     "placement": {
-      "width": 1,
+      "width": 2,
       "height": 9,
       "allow_submerged": true
     }

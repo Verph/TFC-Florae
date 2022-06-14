@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/template_farmland",
+  "textures": {
+    "dirt": "tfcflorae:block/dirt/sandy_loam",
+    "top": "tfcflorae:block/farmland/sandy_loam"
+  }
+}

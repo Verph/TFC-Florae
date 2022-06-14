@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "tfcflorae:block/grass_path/humus"},
+      {"model": "tfcflorae:block/grass_path/humus", "y": 90},
+      {"model": "tfcflorae:block/grass_path/humus", "y": 180},
+      {"model": "tfcflorae:block/grass_path/humus", "y": 270}
+    ]
+  }
+}

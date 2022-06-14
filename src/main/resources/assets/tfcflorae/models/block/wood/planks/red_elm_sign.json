@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "textures": {
-    "particle": "tfc:block/wood/planks/red_elm"
+    "particle": "tfcflorae:block/wood/planks/red_elm"
   }
 }

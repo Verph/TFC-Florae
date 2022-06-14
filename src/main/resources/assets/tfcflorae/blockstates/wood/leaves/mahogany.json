@@ -1,7 +1,16 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/leaves/mahogany_flowering"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/leaves/mahogany_fruiting"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/leaves/mahogany_dry"
+    },
+    "lifecycle=healthy": {
       "model": "tfcflorae:block/wood/leaves/mahogany"
     }
   }

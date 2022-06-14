@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/rainbow_eucalyptus",
+    "top": "tfcflorae:block/wood/log_top/rainbow_eucalyptus"
+  }
+}

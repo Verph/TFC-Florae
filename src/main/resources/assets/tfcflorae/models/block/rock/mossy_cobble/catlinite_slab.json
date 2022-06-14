@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/catlinite",
-    "top": "tfc:block/rock/mossy_cobble/catlinite",
-    "side": "tfc:block/rock/mossy_cobble/catlinite"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/catlinite",
+    "top": "tfcflorae:block/rock/mossy_cobble/catlinite",
+    "side": "tfcflorae:block/rock/mossy_cobble/catlinite"
   }
 }

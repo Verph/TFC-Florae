@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:locust_large/1",
+      "tfcflorae:locust_large/2",
+      "tfcflorae:locust_large/3",
+      "tfcflorae:locust_large/4",
+      "tfcflorae:locust_large/5",
+      "tfcflorae:locust_large/6",
+      "tfcflorae:locust_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 150,
+    "max_rain": 350,
+    "min_temp": 15,
+    "max_temp": 32,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/yellow_ipe"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/yellow_ipe"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/yellow_ipe",
+    "dead_tree": "tfcflorae:tree/yellow_ipe_dead",
+    "fallen_log": "tfcflorae:wood/log/yellow_ipe",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/yellow_ipe",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/yellow_ipe",
+    "old_growth_tree": "tfcflorae:tree/yellow_ipe_large"
+  }
+}

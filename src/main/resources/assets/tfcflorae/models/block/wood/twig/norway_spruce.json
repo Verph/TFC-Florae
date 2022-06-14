@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/groundcover/twig",
   "textures": {
-    "side": "tfc:block/wood/log/norway_spruce",
-    "top": "tfc:block/wood/log_top/norway_spruce"
+    "side": "tfcflorae:block/wood/log/norway_spruce",
+    "top": "tfcflorae:block/wood/log_top/norway_spruce"
   }
 }

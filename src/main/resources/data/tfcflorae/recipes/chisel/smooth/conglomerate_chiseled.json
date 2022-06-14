@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/bricks/conglomerate",
-  "result": "tfcflorae:rock/chiseled/conglomerate",
-  "mode": "smooth"
-}

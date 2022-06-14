@@ -11,12 +11,14 @@
       "tfcflorae:mahogany/6",
       "tfcflorae:mahogany/7",
       "tfcflorae:mahogany/8",
-      "tfcflorae:mahogany/9"
+      "tfcflorae:mahogany/9",
+      "tfcflorae:mahogany/10",
+      "tfcflorae:mahogany/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/messmate"
+    },
+    {
+      "item": "tfcflorae:wood/wood/messmate"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 696
+}

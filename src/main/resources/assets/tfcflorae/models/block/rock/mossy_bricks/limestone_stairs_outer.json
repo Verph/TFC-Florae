@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/limestone",
-    "top": "tfc:block/rock/mossy_bricks/limestone",
-    "side": "tfc:block/rock/mossy_bricks/limestone"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/limestone",
+    "top": "tfcflorae:block/rock/mossy_bricks/limestone",
+    "side": "tfcflorae:block/rock/mossy_bricks/limestone"
   }
 }

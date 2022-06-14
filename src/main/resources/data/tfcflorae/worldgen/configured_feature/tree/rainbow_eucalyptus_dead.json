@@ -1,0 +1,34 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:rainbow_eucalyptus_dead/1",
+      "tfcflorae:rainbow_eucalyptus_dead/2",
+      "tfcflorae:rainbow_eucalyptus_dead/3",
+      "tfcflorae:rainbow_eucalyptus_dead/4",
+      "tfcflorae:rainbow_eucalyptus_dead/5",
+      "tfcflorae:rainbow_eucalyptus_dead/6",
+      "tfcflorae:rainbow_eucalyptus_dead/7",
+      "tfcflorae:rainbow_eucalyptus_dead/8",
+      "tfcflorae:rainbow_eucalyptus_dead/9",
+      "tfcflorae:rainbow_eucalyptus_dead/10",
+      "tfcflorae:rainbow_eucalyptus_dead/11",
+      "tfcflorae:rainbow_eucalyptus_dead/12",
+      "tfcflorae:rainbow_eucalyptus_dead/13",
+      "tfcflorae:rainbow_eucalyptus_dead/14",
+      "tfcflorae:rainbow_eucalyptus_dead/15",
+      "tfcflorae:rainbow_eucalyptus_dead/16",
+      "tfcflorae:rainbow_eucalyptus_dead/17",
+      "tfcflorae:rainbow_eucalyptus_dead/18",
+      "tfcflorae:rainbow_eucalyptus_dead/19",
+      "tfcflorae:rainbow_eucalyptus_dead/20"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/rock/smooth/breccia",
-    "top": "tfc:block/rock/smooth/breccia",
-    "side": "tfc:block/rock/smooth/breccia"
+    "bottom": "tfcflorae:block/rock/smooth/breccia",
+    "top": "tfcflorae:block/rock/smooth/breccia",
+    "side": "tfcflorae:block/rock/smooth/breccia"
   }
 }

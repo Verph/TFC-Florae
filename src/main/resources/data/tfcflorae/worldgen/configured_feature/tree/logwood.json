@@ -12,12 +12,33 @@
       "tfcflorae:logwood/7",
       "tfcflorae:logwood/8",
       "tfcflorae:logwood/9",
-      "tfcflorae:logwood/10"
+      "tfcflorae:logwood/10",
+      "tfcflorae:logwood/11",
+      "tfcflorae:logwood/12",
+      "tfcflorae:logwood/13",
+      "tfcflorae:logwood/14",
+      "tfcflorae:logwood/15",
+      "tfcflorae:logwood/16",
+      "tfcflorae:logwood/17",
+      "tfcflorae:logwood/18",
+      "tfcflorae:logwood/19",
+      "tfcflorae:logwood/20",
+      "tfcflorae:logwood/21",
+      "tfcflorae:logwood/22",
+      "tfcflorae:logwood/23",
+      "tfcflorae:logwood/24",
+      "tfcflorae:logwood/25",
+      "tfcflorae:logwood/26",
+      "tfcflorae:logwood/27",
+      "tfcflorae:logwood/28",
+      "tfcflorae:logwood/29",
+      "tfcflorae:logwood/30",
+      "tfcflorae:logwood/31"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

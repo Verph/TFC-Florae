@@ -15,12 +15,18 @@
       "tfcflorae:hornbeam/10",
       "tfcflorae:hornbeam/11",
       "tfcflorae:hornbeam/12",
-      "tfcflorae:hornbeam/13"
+      "tfcflorae:hornbeam/13",
+      "tfcflorae:hornbeam/14",
+      "tfcflorae:hornbeam/15",
+      "tfcflorae:hornbeam/16",
+      "tfcflorae:hornbeam/17",
+      "tfcflorae:hornbeam/18",
+      "tfcflorae:hornbeam/19"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

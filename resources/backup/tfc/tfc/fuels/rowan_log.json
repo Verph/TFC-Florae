@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/wood/rowan"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 645
+}

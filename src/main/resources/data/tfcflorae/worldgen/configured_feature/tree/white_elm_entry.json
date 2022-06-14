@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/white_elm"
+    "bush_leaves": "tfcflorae:wood/leaves/white_elm",
+    "old_growth_tree": "tfcflorae:tree/white_elm_large"
   }
 }

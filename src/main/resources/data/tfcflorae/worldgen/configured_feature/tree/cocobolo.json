@@ -11,12 +11,14 @@
       "tfcflorae:cocobolo/6",
       "tfcflorae:cocobolo/7",
       "tfcflorae:cocobolo/8",
-      "tfcflorae:cocobolo/9"
+      "tfcflorae:cocobolo/9",
+      "tfcflorae:cocobolo/10",
+      "tfcflorae:cocobolo/11"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 3,
+      "height": 5,
       "allow_submerged": true
     }
   }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/raw/rhyolite",
-    "top": "tfc:block/rock/raw/rhyolite",
-    "side": "tfc:block/rock/raw/rhyolite"
+    "bottom": "tfcflorae:block/rock/raw/rhyolite",
+    "top": "tfcflorae:block/rock/raw/rhyolite",
+    "side": "tfcflorae:block/rock/raw/rhyolite"
   }
 }

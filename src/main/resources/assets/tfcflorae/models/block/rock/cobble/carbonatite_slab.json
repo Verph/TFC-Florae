@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/cobble/carbonatite",
-    "top": "tfc:block/rock/cobble/carbonatite",
-    "side": "tfc:block/rock/cobble/carbonatite"
+    "bottom": "tfcflorae:block/rock/cobble/carbonatite",
+    "top": "tfcflorae:block/rock/cobble/carbonatite",
+    "side": "tfcflorae:block/rock/cobble/carbonatite"
   }
 }

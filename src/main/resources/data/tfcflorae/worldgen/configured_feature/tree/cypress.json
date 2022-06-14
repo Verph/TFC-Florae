@@ -11,13 +11,21 @@
       "tfcflorae:cypress/6",
       "tfcflorae:cypress/7",
       "tfcflorae:cypress/8",
-      "tfcflorae:cypress/9"
+      "tfcflorae:cypress/9",
+      "tfcflorae:cypress/10",
+      "tfcflorae:cypress/11",
+      "tfcflorae:cypress/12",
+      "tfcflorae:cypress/13",
+      "tfcflorae:cypress/14",
+      "tfcflorae:cypress/15",
+      "tfcflorae:cypress/16",
+      "tfcflorae:cypress/17"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
       "height": 5,
-      "allow_submerged": false
+      "allow_submerged": true
     }
   }
 }

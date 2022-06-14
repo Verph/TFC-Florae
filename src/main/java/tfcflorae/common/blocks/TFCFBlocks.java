@@ -3,6 +3,7 @@ package tfcflorae.common.blocks;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -29,20 +31,24 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import net.dries007.tfc.common.TFCItemGroup;
+import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.*;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.common.blocks.wood.*;
+import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
-
+import net.dries007.tfc.util.registry.RegistrationHelpers;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.*;
 import tfcflorae.common.blocks.rock.*;
 import tfcflorae.common.blocks.soil.*;
 import tfcflorae.common.blocks.wood.*;
 import tfcflorae.common.items.TFCFItems;
+import tfcflorae.util.climate.TFCFClimateRanges;
 
 import static tfcflorae.common.blocks.soil.TFCFSoil.TFCFVariant.*;
 import static net.dries007.tfc.common.TFCItemGroup.*;
@@ -116,11 +122,8 @@ public class TFCFBlocks
 
     // Wood
 
-    public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = Helpers.mapOfKeys(TFCFWood.class, wood ->
-        Helpers.mapOfKeys(Wood.BlockType.class, type ->
-            register(type.nameFor(wood), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD)))
-        )
-    );
+    public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = WoodMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> LeavesOnly = LeavesOnlyMapper(TFCFWood.class);
 
     // Misc
 
@@ -165,7 +168,7 @@ public class TFCFBlocks
 
         for (TFCFSoil i : enumClass.getEnumConstants())
         {
-            if (i.TFCFactory == null)
+            if (i.getTFCFactory() == null)
                 continue;
             Map<SoilBlockType.Variant, RegistryObject<Block>> subMap = new HashMap<>();
 
@@ -173,10 +176,51 @@ public class TFCFBlocks
             {
                 subMap.put(j, register(i.name() + "/" + j.name(), () -> i.TFCCreate(j), EARTH));
             }
-
             Map.put(i, subMap);
         }
+        return Map;
+    }
 
+    private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WoodMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.hasLeavesOnly())
+                continue;
+
+            Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
+            for (Wood.BlockType type : Wood.BlockType.values())
+            {
+                if (type == BlockType.LEAVES && wood.isFruitTree())
+                {
+                    subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammable(90, 60), 
+                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else
+                    subMap.put(type, register(type.nameFor(wood), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
+            }
+            Map.put(wood, subMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> LeavesOnlyMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood,  RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (!wood.hasLeavesOnly())
+                continue;
+
+            BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+            Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammable(90, 60), 
+            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
+        }
         return Map;
     }
 

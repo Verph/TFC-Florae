@@ -8,12 +8,26 @@
       "tfcflorae:teak_dead/3",
       "tfcflorae:teak_dead/4",
       "tfcflorae:teak_dead/5",
-      "tfcflorae:teak_dead/6"
+      "tfcflorae:teak_dead/6",
+      "tfcflorae:teak_dead/7",
+      "tfcflorae:teak_dead/8",
+      "tfcflorae:teak_dead/9",
+      "tfcflorae:teak_dead/10",
+      "tfcflorae:teak_dead/11",
+      "tfcflorae:teak_dead/12",
+      "tfcflorae:teak_dead/13",
+      "tfcflorae:teak_dead/14",
+      "tfcflorae:teak_dead/15",
+      "tfcflorae:teak_dead/16",
+      "tfcflorae:teak_dead/17",
+      "tfcflorae:teak_dead/18",
+      "tfcflorae:teak_dead/19",
+      "tfcflorae:teak_dead/20"
     ],
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 9,
+      "height": 5,
       "allow_submerged": true
     }
   }

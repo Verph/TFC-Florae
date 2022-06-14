@@ -24,6 +24,7 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/black_walnut"
+    "bush_leaves": "tfcflorae:wood/leaves/black_walnut",
+    "old_growth_tree": "tfcflorae:tree/black_walnut_large"
   }
 }

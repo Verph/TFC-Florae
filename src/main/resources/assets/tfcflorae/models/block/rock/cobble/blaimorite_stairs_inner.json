@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cobble/blaimorite",
-    "top": "tfc:block/rock/cobble/blaimorite",
-    "side": "tfc:block/rock/cobble/blaimorite"
+    "bottom": "tfcflorae:block/rock/cobble/blaimorite",
+    "top": "tfcflorae:block/rock/cobble/blaimorite",
+    "side": "tfcflorae:block/rock/cobble/blaimorite"
   }
 }
