@@ -3,7 +3,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "tfc:block/wood/planks/mahoe_fence_post"
+        "model": "tfcflorae:block/wood/planks/mahoe_fence_post"
       }
     },
     {
@@ -11,7 +11,7 @@
         "north": "true"
       },
       "apply": {
-        "model": "tfc:block/wood/planks/mahoe_fence_side",
+        "model": "tfcflorae:block/wood/planks/mahoe_fence_side",
         "uvlock": true
       }
     },
@@ -20,7 +20,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "tfc:block/wood/planks/mahoe_fence_side",
+        "model": "tfcflorae:block/wood/planks/mahoe_fence_side",
         "y": 90,
         "uvlock": true
       }
@@ -30,7 +30,7 @@
         "south": "true"
       },
       "apply": {
-        "model": "tfc:block/wood/planks/mahoe_fence_side",
+        "model": "tfcflorae:block/wood/planks/mahoe_fence_side",
         "y": 180,
         "uvlock": true
       }
@@ -40,7 +40,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "tfc:block/wood/planks/mahoe_fence_side",
+        "model": "tfcflorae:block/wood/planks/mahoe_fence_side",
         "y": 270,
         "uvlock": true
       }

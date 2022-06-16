@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfc:block/wood/planks/yellow_ipe_pressure_plate"
+      "model": "tfcflorae:block/wood/planks/yellow_ipe_pressure_plate"
     },
     "powered=true": {
-      "model": "tfc:block/wood/planks/yellow_ipe_pressure_plate_down"
+      "model": "tfcflorae:block/wood/planks/yellow_ipe_pressure_plate_down"
     }
   }
 }

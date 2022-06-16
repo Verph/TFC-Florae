@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/wood/planks/zebrawood_workbench"
+      "model": "tfcflorae:block/wood/planks/zebrawood_workbench"
     }
   }
 }

@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfc:block/wood/planks/juniper_slab"
+      "model": "tfcflorae:block/wood/planks/juniper_slab"
     },
     "type=top": {
-      "model": "tfc:block/wood/planks/juniper_slab_top"
+      "model": "tfcflorae:block/wood/planks/juniper_slab_top"
     },
     "type=double": {
-      "model": "tfc:block/wood/planks/juniper"
+      "model": "tfcflorae:block/wood/planks/juniper"
     }
   }
 }

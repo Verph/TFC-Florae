@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfc:block/wood/planks/holly_slab"
+      "model": "tfcflorae:block/wood/planks/holly_slab"
     },
     "type=top": {
-      "model": "tfc:block/wood/planks/holly_slab_top"
+      "model": "tfcflorae:block/wood/planks/holly_slab_top"
     },
     "type=double": {
-      "model": "tfc:block/wood/planks/holly"
+      "model": "tfcflorae:block/wood/planks/holly"
     }
   }
 }
