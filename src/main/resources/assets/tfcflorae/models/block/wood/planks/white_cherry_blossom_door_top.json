@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/door_top",
   "textures": {
-    "top": "tfcflorae:block/wood/planks/white_cherry_blossom_door_top",
-    "bottom": "tfcflorae:block/wood/planks/white_cherry_blossom_door_bottom"
+    "top": "tfcflorae:block/wood/planks/white_cherry_blossom_top",
+    "bottom": "tfcflorae:block/wood/planks/white_cherry_blossom_bottom"
   }
 }

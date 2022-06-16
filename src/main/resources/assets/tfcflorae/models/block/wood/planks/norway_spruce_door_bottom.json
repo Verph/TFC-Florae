@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/door_bottom",
   "textures": {
-    "top": "tfcflorae:block/wood/planks/norway_spruce_door_top",
-    "bottom": "tfcflorae:block/wood/planks/norway_spruce_door_bottom"
+    "top": "tfcflorae:block/wood/planks/norway_spruce_top",
+    "bottom": "tfcflorae:block/wood/planks/norway_spruce_bottom"
   }
 }

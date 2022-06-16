@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:clay_knapping",
+    "#tfc:fire_clay_knapping",
+    "#tfc:leather_knapping",
+    "#tfc:rock_knapping",
+    "#tfcflorae:earthenware_clay_knapping",
+    "#tfcflorae:kaolinite_clay_knapping",
+    "#tfcflorae:earthenware_clay_knapping"
+  ]
+}

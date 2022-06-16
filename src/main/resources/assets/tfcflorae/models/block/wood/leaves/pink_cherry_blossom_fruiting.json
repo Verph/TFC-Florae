@@ -3,6 +3,6 @@
   "parent": "tfcflorae:block/leaves_overlay",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/pink_cherry_blossom",
-    "overlay": "tfcflorae:block/wood/fruits/pink_cherry_blossom"
+    "overlay": "tfcflorae:block/wood/fruits/cherry"
   }
 }
