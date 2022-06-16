@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "texture": "tfc:block/rock/raw/blaimorite",
-    "particle": "tfc:block/rock/raw/blaimorite"
+    "texture": "tfcflorae:block/rock/raw/blaimorite",
+    "particle": "tfcflorae:block/rock/raw/blaimorite"
   }
 }

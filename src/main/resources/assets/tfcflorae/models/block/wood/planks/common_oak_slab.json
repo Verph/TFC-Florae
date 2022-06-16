@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/wood/planks/common_oak",
-    "top": "tfc:block/wood/planks/common_oak",
-    "side": "tfc:block/wood/planks/common_oak"
+    "bottom": "tfcflorae:block/wood/planks/common_oak",
+    "top": "tfcflorae:block/wood/planks/common_oak",
+    "side": "tfcflorae:block/wood/planks/common_oak"
   }
 }

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/pressure_plate_down",
   "textures": {
-    "texture": "tfc:block/wood/planks/fever"
+    "texture": "tfcflorae:block/wood/planks/fever"
   }
 }

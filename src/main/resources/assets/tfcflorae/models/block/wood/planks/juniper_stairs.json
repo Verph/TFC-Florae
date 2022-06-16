@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/juniper",
-    "top": "tfc:block/wood/planks/juniper",
-    "side": "tfc:block/wood/planks/juniper"
+    "bottom": "tfcflorae:block/wood/planks/juniper",
+    "top": "tfcflorae:block/wood/planks/juniper",
+    "side": "tfcflorae:block/wood/planks/juniper"
   }
 }

@@ -1,0 +1,292 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 60,
+    "min_y": {
+      "absolute": -32
+    },
+    "max_y": {
+      "absolute": 75
+    },
+    "size": 20,
+    "density": 0.6,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/quartzite"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/quartzite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/slate"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/slate"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/phyllite"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/phyllite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/schist"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/schist"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/gneiss"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/gneiss"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_tetrahedrite/marble"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_tetrahedrite/marble"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_tetrahedrite/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/blueschist"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/blueschist"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/catlinite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/catlinite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/catlinite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/catlinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/greenschist"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/greenschist"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/greenschist"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/greenschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/novaculite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/novaculite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/novaculite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/novaculite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/soapstone"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/soapstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/komatiite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/komatiite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/komatiite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/cataclasite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/cataclasite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mylonite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_tetrahedrite/mylonite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_tetrahedrite/mylonite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_tetrahedrite/mylonite"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_tetrahedrite"
+        }
+      ]
+    },
+    "random_name": "normal_tetrahedrite"
+  }
+}

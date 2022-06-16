@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/cypress",
-    "top": "tfc:block/wood/planks/cypress",
-    "side": "tfc:block/wood/planks/cypress"
+    "bottom": "tfcflorae:block/wood/planks/cypress",
+    "top": "tfcflorae:block/wood/planks/cypress",
+    "side": "tfcflorae:block/wood/planks/cypress"
   }
 }

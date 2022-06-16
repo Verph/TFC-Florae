@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "texture": "tfc:block/rock/raw/wackestone",
-    "particle": "tfc:block/rock/raw/wackestone"
+    "texture": "tfcflorae:block/rock/raw/wackestone",
+    "particle": "tfcflorae:block/rock/raw/wackestone"
   }
 }

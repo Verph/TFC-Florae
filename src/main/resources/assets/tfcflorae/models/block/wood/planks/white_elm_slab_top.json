@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/wood/planks/white_elm",
-    "top": "tfc:block/wood/planks/white_elm",
-    "side": "tfc:block/wood/planks/white_elm"
+    "bottom": "tfcflorae:block/wood/planks/white_elm",
+    "top": "tfcflorae:block/wood/planks/white_elm",
+    "side": "tfcflorae:block/wood/planks/white_elm"
   }
 }

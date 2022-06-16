@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/button",
   "textures": {
-    "texture": "tfc:block/rock/raw/dacite"
+    "texture": "tfcflorae:block/rock/raw/dacite"
   }
 }

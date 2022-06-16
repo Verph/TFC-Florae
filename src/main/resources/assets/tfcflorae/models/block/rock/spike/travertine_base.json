@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_base",
   "textures": {
-    "texture": "tfc:block/rock/raw/travertine",
-    "particle": "tfc:block/rock/raw/travertine"
+    "texture": "tfcflorae:block/rock/raw/travertine",
+    "particle": "tfcflorae:block/rock/raw/travertine"
   }
 }

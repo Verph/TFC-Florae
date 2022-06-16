@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/wood/planks/nordmann_fir",
-    "top": "tfc:block/wood/planks/nordmann_fir",
-    "side": "tfc:block/wood/planks/nordmann_fir"
+    "bottom": "tfcflorae:block/wood/planks/nordmann_fir",
+    "top": "tfcflorae:block/wood/planks/nordmann_fir",
+    "side": "tfcflorae:block/wood/planks/nordmann_fir"
   }
 }

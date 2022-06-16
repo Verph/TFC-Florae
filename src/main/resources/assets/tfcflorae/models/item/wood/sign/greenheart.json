@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfc:item/wood/sign/greenheart"
+    "layer0": "tfcflorae:item/wood/sign/greenheart"
   }
 }

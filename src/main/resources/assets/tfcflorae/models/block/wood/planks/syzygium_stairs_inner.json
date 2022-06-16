@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/syzygium",
-    "top": "tfc:block/wood/planks/syzygium",
-    "side": "tfc:block/wood/planks/syzygium"
+    "bottom": "tfcflorae:block/wood/planks/syzygium",
+    "top": "tfcflorae:block/wood/planks/syzygium",
+    "side": "tfcflorae:block/wood/planks/syzygium"
   }
 }

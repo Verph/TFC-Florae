@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_all",
   "textures": {
-    "all": "tfc:block/rock/cracked_bricks/chert"
+    "all": "tfcflorae:block/rock/cracked_bricks/chert"
   }
 }

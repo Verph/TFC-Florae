@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/button",
   "textures": {
-    "texture": "tfc:block/wood/planks/mahoe"
+    "texture": "tfcflorae:block/wood/planks/mahoe"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/cut_sandstone/blue_slab"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/cut_sandstone/blue_slab_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/cut_sandstone/blue"
+    }
+  }
+}

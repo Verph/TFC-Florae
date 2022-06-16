@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/arkose",
-    "particle": "tfc:block/rock/raw/arkose",
+    "all": "tfcflorae:block/rock/raw/arkose",
+    "particle": "tfcflorae:block/rock/raw/arkose",
     "overlay": "tfc:block/ore/rich_sphalerite"
   }
 }

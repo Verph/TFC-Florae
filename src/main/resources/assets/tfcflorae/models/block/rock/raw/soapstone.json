@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_all",
   "textures": {
-    "all": "tfc:block/rock/raw/soapstone"
+    "all": "tfcflorae:block/rock/raw/soapstone"
   }
 }

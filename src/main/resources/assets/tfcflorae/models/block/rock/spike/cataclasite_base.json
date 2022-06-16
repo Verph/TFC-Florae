@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_base",
   "textures": {
-    "texture": "tfc:block/rock/raw/cataclasite",
-    "particle": "tfc:block/rock/raw/cataclasite"
+    "texture": "tfcflorae:block/rock/raw/cataclasite",
+    "particle": "tfcflorae:block/rock/raw/cataclasite"
   }
 }

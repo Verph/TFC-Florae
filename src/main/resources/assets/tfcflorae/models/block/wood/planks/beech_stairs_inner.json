@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/beech",
-    "top": "tfc:block/wood/planks/beech",
-    "side": "tfc:block/wood/planks/beech"
+    "bottom": "tfcflorae:block/wood/planks/beech",
+    "top": "tfcflorae:block/wood/planks/beech",
+    "side": "tfcflorae:block/wood/planks/beech"
   }
 }

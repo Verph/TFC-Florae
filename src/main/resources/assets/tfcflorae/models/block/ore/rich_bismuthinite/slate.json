@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/slate",
-    "particle": "tfc:block/rock/raw/slate",
+    "all": "tfcflorae:block/rock/raw/slate",
+    "particle": "tfcflorae:block/rock/raw/slate",
     "overlay": "tfc:block/ore/rich_bismuthinite"
   }
 }

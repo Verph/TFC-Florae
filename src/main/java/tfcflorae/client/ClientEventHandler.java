@@ -166,7 +166,8 @@ public class ClientEventHandler
         TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, reg.get()));
         TFCFBlocks.TFCFSOIL.get(TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, reg.get()));
 
-        TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(LEAVES).get(), reg.get(FALLEN_LEAVES).get()));
+        TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.LEAVES).get(), reg.get(Wood.BlockType.FALLEN_LEAVES).get()));
+        TFCFBlocks.LEAVES_ONLY.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
     }
 
     public static void registerColorHandlerItems(ColorHandlerEvent.Item event)
@@ -176,6 +177,7 @@ public class ClientEventHandler
         final ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
 
         TFCFBlocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
+        TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
     }
 
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event)

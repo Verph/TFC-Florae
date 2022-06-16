@@ -1,0 +1,158 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:disc_vein",
+  "config": {
+    "rarity": 120,
+    "min_y": {
+      "absolute": 30
+    },
+    "max_y": {
+      "absolute": 90
+    },
+    "size": 20,
+    "density": 0.6,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/gypsum/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/blueschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/catlinite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/catlinite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/greenschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/greenschist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/novaculite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/novaculite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/komatiite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/komatiite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mylonite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/gypsum/mylonite"
+          }
+        ]
+      }
+    ],
+    "random_name": "gypsum"
+  }
+}

@@ -13,7 +13,6 @@ import tfcflorae.common.blocks.wood.TFCFWood;
 
 public class TFCFClimateRanges
 {
-    //public static final Map<TFCFWood, Supplier<ClimateRange>> LARGE_FRUIT_TREES = Helpers.mapOfKeys(TFCFWood.class, wood -> register("tree/" + wood.name()));
     public static final Map<TFCFWood, Supplier<ClimateRange>> LARGE_FRUIT_TREES = WoodClimateMapper(TFCFWood.class);
 
     private static Map<TFCFWood, Supplier<ClimateRange>> WoodClimateMapper(Class<TFCFWood> enumClass)

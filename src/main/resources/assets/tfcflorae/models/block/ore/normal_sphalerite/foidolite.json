@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/foidolite",
-    "particle": "tfc:block/rock/raw/foidolite",
+    "all": "tfcflorae:block/rock/raw/foidolite",
+    "particle": "tfcflorae:block/rock/raw/foidolite",
     "overlay": "tfc:block/ore/normal_sphalerite"
   }
 }

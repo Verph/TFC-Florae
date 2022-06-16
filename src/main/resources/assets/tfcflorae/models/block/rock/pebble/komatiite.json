@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/groundcover/pebble",
+  "parent": "tfc:block/groundcover/pebble",
   "textures": {
     "all": "tfcflorae:item/loose_rock/komatiite"
   }

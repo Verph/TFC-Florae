@@ -6,9 +6,15 @@ import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -21,13 +27,14 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.client.particle.TFCParticles;
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -40,6 +47,8 @@ import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
+
+import tfcflorae.common.blockentities.TFCFBlockEntities;
 
 public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock
 {
@@ -99,12 +108,71 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     }
 
     @Override
+    @SuppressWarnings("deprecation")
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
+    {
+        if (!getTrimItemStack().isEmpty())
+        {
+            // Flowering bushes can be cut to create trimmings. This is how one moves or creates new bushes.
+            // The larger the bush is (higher stage), the better chance you have of
+            // 1. damaging it less (i.e. reducing the stage, or killing it), and
+            // 2. making a clipping.
+            if (state.getValue(LIFECYCLE) == Lifecycle.FLOWERING)
+            {
+                final ItemStack held = player.getItemInHand(hand);
+                if (Helpers.isItem(held.getItem(), TFCTags.Items.BUSH_CUTTING_TOOLS))
+                {
+                    level.playSound(null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.PLAYERS, 0.5f, 1.0f);
+                    if (!level.isClientSide())
+                    {
+                        level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(bush -> {
+                            final int finalStage = state.getValue(STAGE) - 1 - level.getRandom().nextInt(2);
+                            if (finalStage >= 0)
+                            {
+                                // We didn't kill the bush, but we have cut the flowers off
+                                level.setBlock(pos, state.setValue(STAGE, finalStage).setValue(LIFECYCLE, Lifecycle.HEALTHY), 3);
+                            }
+                            else
+                            {
+                                // Oops
+                                level.destroyBlock(pos, false, player);
+                            }
+
+                            held.hurtAndBreak(1, player, e -> e.broadcastBreakEvent(hand));
+
+                            // But, if we were successful, we have obtained a clipping (2 / 3 chance)
+                            if (level.getRandom().nextInt(3) != 0)
+                            {
+                                ItemHandlerHelper.giveItemToPlayer(player, getTrimItemStack());
+                            }
+                        });
+                    }
+                    return InteractionResult.SUCCESS;
+                }
+            }
+        }
+        if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING)
+        {
+            level.playSound(player, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
+            if (!level.isClientSide())
+            {
+                level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(bush -> {
+                    ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
+                    level.setBlockAndUpdate(pos, stateAfterPicking(state));
+                });
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
+    }
+
+    @Override
     public void onUpdate(Level level, BlockPos pos, BlockState state)
     {
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
-        level.getBlockEntity(pos, TFCBlockEntities.BERRY_BUSH.get()).ifPresent(leaves -> {
+        level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(leaves -> {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
             // if we are not working with a plant that is or should be dormant

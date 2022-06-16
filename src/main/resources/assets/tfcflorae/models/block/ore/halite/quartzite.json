@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/quartzite",
-    "particle": "tfc:block/rock/raw/quartzite",
+    "all": "tfcflorae:block/rock/raw/quartzite",
+    "particle": "tfcflorae:block/rock/raw/quartzite",
     "overlay": "tfc:block/ore/halite"
   }
 }

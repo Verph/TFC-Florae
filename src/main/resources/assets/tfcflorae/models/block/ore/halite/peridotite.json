@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/peridotite",
-    "particle": "tfc:block/rock/raw/peridotite",
+    "all": "tfcflorae:block/rock/raw/peridotite",
+    "particle": "tfcflorae:block/rock/raw/peridotite",
     "overlay": "tfc:block/ore/halite"
   }
 }

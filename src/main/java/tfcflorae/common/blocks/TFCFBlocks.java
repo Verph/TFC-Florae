@@ -42,6 +42,7 @@ import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
+import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.*;
 import tfcflorae.common.blocks.rock.*;
@@ -73,6 +74,24 @@ public class TFCFBlocks
         register(("mud_bricks/" + variant.name() + "_stairs"), () -> new StairBlock(() -> TFCFSOIL.get(TFCFSoil.MUD_BRICKS).get(variant).get().defaultBlockState(), SoilBlockType.mudProperties()), DECORATIONS),
         register(("mud_bricks/" + variant.name() + "_wall"), () -> new WallBlock(SoilBlockType.mudProperties()), DECORATIONS)
     ));
+
+    public static final Map<TFCFSand, RegistryObject<Block>> TFCF_SAND = Helpers.mapOfKeys(TFCFSand.class, type ->
+        register(("sand/" + type.name()), type::create, EARTH)
+    );
+
+    public static final Map<TFCFSand, Map<TFCFSandstoneBlockType, RegistryObject<Block>>> TFCF_SANDSTONE = Helpers.mapOfKeys(TFCFSand.class, color ->
+        Helpers.mapOfKeys(TFCFSandstoneBlockType.class, type ->
+            register((type.name() + "_sandstone/" + color.name()), () -> new Block(type.properties(color)), DECORATIONS)
+        )
+    );
+
+    public static final Map<TFCFSand, Map<TFCFSandstoneBlockType, DecorationBlockRegistryObject>> TFCF_SANDSTONE_DECORATIONS = Helpers.mapOfKeys(TFCFSand.class, color ->
+        Helpers.mapOfKeys(TFCFSandstoneBlockType.class, type -> new DecorationBlockRegistryObject(
+            register((type.name() + "_sandstone/" + color.name() + "_slab"), () -> new SlabBlock(type.properties(color)), DECORATIONS),
+            register((type.name() + "_sandstone/" + color.name() + "_stairs"), () -> new StairBlock(() -> TFCF_SANDSTONE.get(color).get(type).get().defaultBlockState(), type.properties(color)), DECORATIONS),
+            register((type.name() + "_sandstone/" + color.name() + "_wall"), () -> new WallBlock(type.properties(color)), DECORATIONS)
+        ))
+    );
 
     // Ores
 
@@ -123,7 +142,7 @@ public class TFCFBlocks
     // Wood
 
     public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = WoodMapper(TFCFWood.class);
-    public static final Map<TFCFWood, RegistryObject<Block>> LeavesOnly = LeavesOnlyMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = LeavesOnlyMapper(TFCFWood.class);
 
     // Misc
 
@@ -195,7 +214,7 @@ public class TFCFBlocks
                 if (type == BlockType.LEAVES && wood.isFruitTree())
                 {
                     subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammable(90, 60), 
+                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(90, 60), 
                         wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
                 }
                 else
@@ -218,7 +237,7 @@ public class TFCFBlocks
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
 
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammable(90, 60), 
+            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(90, 60), 
             wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
         }
         return Map;

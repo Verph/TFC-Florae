@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/soapstone",
-    "particle": "tfc:block/rock/raw/soapstone",
+    "all": "tfcflorae:block/rock/raw/soapstone",
+    "particle": "tfcflorae:block/rock/raw/soapstone",
     "overlay": "tfc:block/ore/normal_cassiterite"
   }
 }

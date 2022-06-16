@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/wood/planks/norway_spruce",
-    "top": "tfc:block/wood/planks/norway_spruce",
-    "side": "tfc:block/wood/planks/norway_spruce"
+    "bottom": "tfcflorae:block/wood/planks/norway_spruce",
+    "top": "tfcflorae:block/wood/planks/norway_spruce",
+    "side": "tfcflorae:block/wood/planks/norway_spruce"
   }
 }

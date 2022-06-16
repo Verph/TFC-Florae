@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "texture": "tfc:block/rock/raw/blackband_ironstone",
-    "particle": "tfc:block/rock/raw/blackband_ironstone"
+    "texture": "tfcflorae:block/rock/raw/blackband_ironstone",
+    "particle": "tfcflorae:block/rock/raw/blackband_ironstone"
   }
 }

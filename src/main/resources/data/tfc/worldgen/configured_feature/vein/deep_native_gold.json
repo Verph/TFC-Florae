@@ -1,0 +1,292 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 110,
+    "min_y": {
+      "absolute": -64
+    },
+    "max_y": {
+      "absolute": 30
+    },
+    "size": 25,
+    "density": 0.7,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/rhyolite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/rhyolite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/basalt"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/basalt"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/andesite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/andesite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/dacite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/dacite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/peridotite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/peridotite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blaimorite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/blaimorite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/blaimorite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/blaimorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/boninite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/boninite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/carbonatite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/carbonatite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/granite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/granite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/diorite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/diorite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_native_gold/gabbro"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_native_gold/gabbro"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_native_gold/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/breccia"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/breccia"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/breccia"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/foidolite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/foidolite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/foidolite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_native_gold/porphyry"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_native_gold/porphyry"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_native_gold/porphyry"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_native_gold"
+        }
+      ]
+    },
+    "random_name": "deep_native_gold"
+  }
+}

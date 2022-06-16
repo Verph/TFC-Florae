@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/wood/planks/butternut",
-    "top": "tfc:block/wood/planks/butternut",
-    "side": "tfc:block/wood/planks/butternut"
+    "bottom": "tfcflorae:block/wood/planks/butternut",
+    "top": "tfcflorae:block/wood/planks/butternut",
+    "side": "tfcflorae:block/wood/planks/butternut"
   }
 }

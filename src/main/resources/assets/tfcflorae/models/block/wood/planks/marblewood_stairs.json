@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/marblewood",
-    "top": "tfc:block/wood/planks/marblewood",
-    "side": "tfc:block/wood/planks/marblewood"
+    "bottom": "tfcflorae:block/wood/planks/marblewood",
+    "top": "tfcflorae:block/wood/planks/marblewood",
+    "side": "tfcflorae:block/wood/planks/marblewood"
   }
 }

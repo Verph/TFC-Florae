@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/wood/planks/iroko",
-    "top": "tfc:block/wood/planks/iroko",
-    "side": "tfc:block/wood/planks/iroko"
+    "bottom": "tfcflorae:block/wood/planks/iroko",
+    "top": "tfcflorae:block/wood/planks/iroko",
+    "side": "tfcflorae:block/wood/planks/iroko"
   }
 }

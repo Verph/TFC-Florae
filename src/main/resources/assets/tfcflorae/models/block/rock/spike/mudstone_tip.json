@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/rock/spike_tip",
   "textures": {
-    "texture": "tfc:block/rock/raw/mudstone",
-    "particle": "tfc:block/rock/raw/mudstone"
+    "texture": "tfcflorae:block/rock/raw/mudstone",
+    "particle": "tfcflorae:block/rock/raw/mudstone"
   }
 }

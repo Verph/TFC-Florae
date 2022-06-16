@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/sandstone/top/blue",
+    "side": "tfcflorae:block/sandstone/cut/blue"
+  }
+}

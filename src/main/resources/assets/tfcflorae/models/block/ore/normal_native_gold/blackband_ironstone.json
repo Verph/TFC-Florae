@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/blackband_ironstone",
-    "particle": "tfc:block/rock/raw/blackband_ironstone",
+    "all": "tfcflorae:block/rock/raw/blackband_ironstone",
+    "particle": "tfcflorae:block/rock/raw/blackband_ironstone",
     "overlay": "tfc:block/ore/normal_native_gold"
   }
 }

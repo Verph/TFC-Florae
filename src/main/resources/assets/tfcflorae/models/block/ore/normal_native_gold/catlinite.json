@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/catlinite",
-    "particle": "tfc:block/rock/raw/catlinite",
+    "all": "tfcflorae:block/rock/raw/catlinite",
+    "particle": "tfcflorae:block/rock/raw/catlinite",
     "overlay": "tfc:block/ore/normal_native_gold"
   }
 }

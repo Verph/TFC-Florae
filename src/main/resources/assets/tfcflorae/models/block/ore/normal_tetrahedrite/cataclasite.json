@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/cataclasite",
-    "particle": "tfc:block/rock/raw/cataclasite",
+    "all": "tfcflorae:block/rock/raw/cataclasite",
+    "particle": "tfcflorae:block/rock/raw/cataclasite",
     "overlay": "tfc:block/ore/normal_tetrahedrite"
   }
 }

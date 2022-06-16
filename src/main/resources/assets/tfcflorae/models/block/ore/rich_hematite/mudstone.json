@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/mudstone",
-    "particle": "tfc:block/rock/raw/mudstone",
+    "all": "tfcflorae:block/rock/raw/mudstone",
+    "particle": "tfcflorae:block/rock/raw/mudstone",
     "overlay": "tfc:block/ore/rich_hematite"
   }
 }

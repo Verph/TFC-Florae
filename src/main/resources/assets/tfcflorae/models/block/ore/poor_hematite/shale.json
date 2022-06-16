@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/shale",
-    "particle": "tfc:block/rock/raw/shale",
+    "all": "tfcflorae:block/rock/raw/shale",
+    "particle": "tfcflorae:block/rock/raw/shale",
     "overlay": "tfc:block/ore/poor_hematite"
   }
 }

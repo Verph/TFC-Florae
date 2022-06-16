@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/ore",
   "textures": {
-    "all": "tfc:block/rock/raw/travertine",
-    "particle": "tfc:block/rock/raw/travertine",
+    "all": "tfcflorae:block/rock/raw/travertine",
+    "particle": "tfcflorae:block/rock/raw/travertine",
     "overlay": "tfc:block/ore/normal_limonite"
   }
 }

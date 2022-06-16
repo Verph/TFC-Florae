@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/yellow_ipe",
-    "top": "tfc:block/wood/planks/yellow_ipe",
-    "side": "tfc:block/wood/planks/yellow_ipe"
+    "bottom": "tfcflorae:block/wood/planks/yellow_ipe",
+    "top": "tfcflorae:block/wood/planks/yellow_ipe",
+    "side": "tfcflorae:block/wood/planks/yellow_ipe"
   }
 }

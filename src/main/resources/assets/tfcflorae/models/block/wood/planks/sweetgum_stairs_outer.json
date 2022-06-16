@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/wood/planks/sweetgum",
-    "top": "tfc:block/wood/planks/sweetgum",
-    "side": "tfc:block/wood/planks/sweetgum"
+    "bottom": "tfcflorae:block/wood/planks/sweetgum",
+    "top": "tfcflorae:block/wood/planks/sweetgum",
+    "side": "tfcflorae:block/wood/planks/sweetgum"
   }
 }

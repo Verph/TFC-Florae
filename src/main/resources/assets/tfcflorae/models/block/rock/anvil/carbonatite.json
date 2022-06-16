@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/rock/anvil",
+  "parent": "tfc:block/rock/anvil",
   "textures": {
     "texture": "tfcflorae:block/rock/raw/carbonatite"
   }
