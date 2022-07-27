@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:kaolinite_clay_knapping",
+  "pattern": [
+    "X   X",
+    "X   X",
+    "X   X",
+    "XXXXX",
+    " XXX "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired_pot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/baobab_fruit"
+  },
+  "category": "fruit",
+  "hunger": 4,
+  "water": 1,
+  "saturation": 0.2,
+  "decay": 1.6,
+  "fruit": 1
+}

@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/earthenware/unfired_large_vessel/gray"
+  },
+  "result_item": {
+    "item": "tfcflorae:ceramic/earthenware/large_vessel/gray"
+  },
+  "temperature": 1199
+}

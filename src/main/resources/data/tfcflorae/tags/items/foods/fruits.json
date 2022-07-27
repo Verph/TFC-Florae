@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/baobab_fruit",
+    "tfcflorae:food/barrel_cactus_fruit",
+    "tfcflorae:food/hawthorn",
+    "tfcflorae:food/holly_berry",
+    "tfcflorae:food/juniper",
+    "tfcflorae:food/mulberry",
+    "tfcflorae:food/osage_orange",
+    "tfcflorae:food/pink_ivory_drupe",
+    "tfcflorae:food/riberry",
+    "tfcflorae:food/rowan_berry",
+    "tfcflorae:food/sky_fruit",
+    "tfcflorae:food/yew_berry"
+  ]
+}

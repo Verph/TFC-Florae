@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/stoneware/white_unfired_vessel"
+  },
+  "result_item": {
+    "item": "tfcflorae:ceramic/stoneware/white_glazed_vessel"
+  },
+  "temperature": 1199
+}

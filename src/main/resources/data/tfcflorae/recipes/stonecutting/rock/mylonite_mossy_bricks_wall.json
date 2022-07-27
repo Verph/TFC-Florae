@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/mossy_bricks/mylonite"
-  },
-  "result": "tfcflorae:rock/mossy_bricks/mylonite_wall",
-  "count": 1
-}

@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/podzol_bottom",
+  "textures": {
+    "texture": "tfcflorae:block/dirt/humus"
+  }
+}

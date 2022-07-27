@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/raw/komatiite",
-  "result": "tfcflorae:rock/raw/komatiite_stairs",
-  "mode": "stair"
-}

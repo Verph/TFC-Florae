@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:kaolinite_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XX XX",
+    "XX XX",
+    "XX XX",
+    "XX XX",
+    "XX XX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired_chisel_head_mold"
+  }
+}

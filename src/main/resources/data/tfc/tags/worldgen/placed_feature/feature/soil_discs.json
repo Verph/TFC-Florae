@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:clay_disc_with_indicator",
+    "tfc:water_clay_disc_with_indicator",
+    "tfc:peat_disc",
+    "tfcflorae:clay_disc_with_indicator",
+    "tfcflorae:earthenware_clay_disc_with_indicator",
+    "tfcflorae:kaolinite_clay_disc_with_indicator",
+    "tfcflorae:stoneware_clay_disc_with_indicator",
+    "tfcflorae:water_clay_disc_with_indicator",
+    "tfcflorae:water_earthenware_clay_disc_with_indicator",
+    "tfcflorae:water_kaolinite_clay_disc_with_indicator",
+    "tfcflorae:water_stoneware_clay_disc_with_indicator",
+    "tfcflorae:bog_iron_disc_with_indicator",
+    "tfcflorae:water_bog_iron_disc_with_indicator",
+    "tfcflorae:peat_disc"
+  ]
+}

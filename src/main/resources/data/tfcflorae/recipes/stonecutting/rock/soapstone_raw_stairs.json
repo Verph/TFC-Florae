@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/raw/soapstone"
-  },
-  "result": "tfcflorae:rock/raw/soapstone_stairs",
-  "count": 1
-}

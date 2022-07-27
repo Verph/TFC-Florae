@@ -14,14 +14,14 @@ import org.jetbrains.annotations.Nullable;
 
 public class TFCFConnectedGrassBlock extends ConnectedGrassBlock
 {
-    @Nullable private Supplier<? extends Block> spreadBlock;
+    //@Nullable private Supplier<? extends Block> spreadBlock;
 
     public TFCFConnectedGrassBlock(Properties properties, Supplier<? extends Block> dirt, @Nullable Supplier<? extends Block> path, @Nullable Supplier<? extends Block> farmland)
     {
         super(properties, dirt, path, farmland);
     }
 
-    public void setSpreadBlock(Supplier<? extends Block> spreadBlock)
+    /*public void setSpreadBlock(Supplier<? extends Block> spreadBlock)
     {
         if (this.spreadBlock != null)
             this.spreadBlock = spreadBlock;
@@ -62,5 +62,5 @@ public class TFCFConnectedGrassBlock extends ConnectedGrassBlock
                 }
             }
         }
-    }
+    }*/
 }

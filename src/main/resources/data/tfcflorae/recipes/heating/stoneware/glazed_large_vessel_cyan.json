@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/stoneware/unfired_large_vessel/cyan"
+  },
+  "result_item": {
+    "item": "tfcflorae:ceramic/stoneware/large_vessel/cyan"
+  },
+  "temperature": 1199
+}

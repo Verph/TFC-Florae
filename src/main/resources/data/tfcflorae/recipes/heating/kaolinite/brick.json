@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired_brick"
+  },
+  "result_item": {
+    "item": "tfcflorae:ceramic/kaolinite/fired_brick"
+  },
+  "temperature": 1199
+}

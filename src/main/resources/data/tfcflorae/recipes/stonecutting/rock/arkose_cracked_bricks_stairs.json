@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cracked_bricks/arkose"
-  },
-  "result": "tfcflorae:rock/cracked_bricks/arkose_stairs",
-  "count": 1
-}

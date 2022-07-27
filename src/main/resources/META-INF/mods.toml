@@ -17,17 +17,25 @@ description = '''
 An addon for TFC.
 ''' 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.tfcflorae]]
+modId = "tfc"
+mandatory = true
+versionRange = "[1.18.2-2.0.32,)"
+ordering = "BEFORE"
+side = "BOTH"
+
 [[dependencies.tfcflorae]] #optional
 mandatory = true #mandatory
 modId = "forge" #mandatory
 versionRange = "[40,)" #mandatory
 # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-ordering = "NONE"
+ordering = "AFTER"
 side = "BOTH"
+
 # Here's another dependency
 [[dependencies.tfcflorae]]
 mandatory = true
 modId = "minecraft"
-ordering = "NONE"
+ordering = "AFTER"
 side = "BOTH"
 versionRange = "[1.18.2,1.19)"

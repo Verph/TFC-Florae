@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/raw/arkose"
-  },
-  "result": "tfcflorae:rock/raw/arkose_slab",
-  "count": 2
-}

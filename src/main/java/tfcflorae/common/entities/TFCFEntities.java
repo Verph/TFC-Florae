@@ -21,12 +21,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.entities.land.DairyAnimal;
-import net.dries007.tfc.common.entities.land.Mammal;
-import net.dries007.tfc.common.entities.aquatic.*;
-import net.dries007.tfc.common.entities.land.OviparousAnimal;
-import net.dries007.tfc.common.entities.land.WoolyAnimal;
-import net.dries007.tfc.common.entities.predator.Predator;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 

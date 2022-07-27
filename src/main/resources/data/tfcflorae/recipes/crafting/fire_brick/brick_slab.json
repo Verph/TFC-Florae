@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:fire_bricks"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:ceramic/fire_bricks/brick_slab",
+    "count": 6
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/mudstone"
-  },
-  "result": "tfcflorae:rock/smooth/mudstone_stairs",
-  "count": 1
-}

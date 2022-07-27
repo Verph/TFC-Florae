@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired_pot"
+  },
+  "result_item": {
+    "item": "tfcflorae:ceramic/kaolinite/pot"
+  },
+  "temperature": 1199
+}

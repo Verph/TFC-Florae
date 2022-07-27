@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/bricks/catlinite"
-  },
-  "result": "tfcflorae:rock/bricks/catlinite_wall",
-  "count": 1
-}

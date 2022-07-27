@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:stoneware_clay_knapping",
+  "outside_slot_required": false,
+  "pattern": [
+    "X   X",
+    "XXXXX",
+    " XXX "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired_pan"
+  }
+}

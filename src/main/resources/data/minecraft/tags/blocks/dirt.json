@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:dirt/humus",
+    "tfcflorae:rooted_dirt/humus",
+    "tfcflorae:coarse_dirt/silt",
+    "tfcflorae:coarse_dirt/loam",
+    "tfcflorae:coarse_dirt/sandy_loam",
+    "tfcflorae:coarse_dirt/silty_loam",
+    "tfcflorae:coarse_dirt/humus",
+    "tfcflorae:dirt/bog_iron"
+  ]
+}

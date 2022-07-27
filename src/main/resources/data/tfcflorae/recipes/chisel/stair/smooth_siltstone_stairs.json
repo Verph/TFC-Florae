@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/smooth/siltstone",
-  "result": "tfcflorae:rock/smooth/siltstone_stairs",
-  "mode": "stair"
-}

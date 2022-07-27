@@ -4,9 +4,10 @@
 	"package": "tfcflorae.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"world.biome.TFCBiomesMixin"
 	],
 	"client": [
-		"client.MultiPlayerGameModeMixin",
+		"client.MultiPlayerGameModeMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ceramic/kaolinite/clay"
+  },
+  "result_item": {
+    "item": "tfc:powder/kaolinite"
+  },
+  "temperature": 200
+}

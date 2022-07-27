@@ -7,44 +7,112 @@
     "height": 7,
     "states": [
       {
-        "replace": "tfc:dirt/silt",
-        "with": "tfc:peat"
-      },
-      {
-        "replace": "tfc:dirt/loam",
-        "with": "tfc:peat"
-      },
-      {
-        "replace": "tfc:dirt/sandy_loam",
-        "with": "tfc:peat"
-      },
-      {
-        "replace": "tfc:dirt/silty_loam",
-        "with": "tfc:peat"
-      },
-      {
         "replace": "tfcflorae:dirt/humus",
         "with": "tfc:peat"
       },
       {
-        "replace": "tfc:grass/silt",
-        "with": "tfc:peat_grass"
-      },
-      {
-        "replace": "tfc:grass/loam",
-        "with": "tfc:peat_grass"
-      },
-      {
-        "replace": "tfc:grass/sandy_loam",
-        "with": "tfc:peat_grass"
-      },
-      {
-        "replace": "tfc:grass/silty_loam",
-        "with": "tfc:peat_grass"
-      },
-      {
         "replace": "tfcflorae:grass/humus",
         "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:coarse_dirt/silt",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:coarse_dirt/loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:coarse_dirt/sandy_loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:coarse_dirt/silty_loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:coarse_dirt/humus",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:dry_grass/silt",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dry_grass/loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dry_grass/sandy_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dry_grass/silty_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dry_grass/humus",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:sparse_grass/silt",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:sparse_grass/loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:sparse_grass/sandy_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:sparse_grass/silty_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:sparse_grass/humus",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dense_grass/silt",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dense_grass/loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dense_grass/sandy_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dense_grass/silty_loam",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfcflorae:dense_grass/humus",
+        "with": "tfc:peat_grass"
+      },
+      {
+        "replace": "tfc:mud/silt",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfc:mud/loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfc:mud/sandy_loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfc:mud/silty_loam",
+        "with": "tfc:peat"
+      },
+      {
+        "replace": "tfcflorae:mud/humus",
+        "with": "tfc:peat"
       }
     ]
   }

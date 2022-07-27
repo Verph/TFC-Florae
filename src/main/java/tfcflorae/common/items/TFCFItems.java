@@ -18,14 +18,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import net.dries007.tfc.common.*;
+import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
+
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
 
@@ -37,12 +38,10 @@ public class TFCFItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, tfcflorae.TFCFlorae.MOD_ID);
 
-    // Rock Stuff
+    // Ores
 
-    public static final Map<TFCFRock, RegistryObject<Item>> BRICKS = Helpers.mapOfKeys(TFCFRock.class, type ->
-        register("brick/" + type.name(), ROCK_STUFFS)
-    );
-    
+    public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCItemGroup.ORES);
+
     // Food
 
     public static final Map<TFCFFood, RegistryObject<Item>> FOOD = Helpers.mapOfKeys(TFCFFood.class, food ->
@@ -59,7 +58,6 @@ public class TFCFItems
 
     public static final Map<TFCFWood, RegistryObject<Item>> SIGNS = signWoodMapper();
 
-
     // Decorations
 
     public static final RegistryObject<Item> HUMUS_MUD_BRICK = register("mud_brick/humus", DECORATIONS);
@@ -75,6 +73,7 @@ public class TFCFItems
     public static final RegistryObject<Item> EARTHENWARE_CLAY_BALL = register("ceramic/earthenware/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/unfired_brick", MISC);
+    public static final RegistryObject<Item> FIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/fired_brick", MISC);
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_CRUCIBLE = register("ceramic/earthenware/unfired_crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_FLOWER_POT = register("ceramic/earthenware/unfired_flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_PAN = register("ceramic/earthenware/unfired_pan", MISC);
@@ -83,7 +82,7 @@ public class TFCFItems
     public static final RegistryObject<Item> EARTHENWARE_BOWL = register("ceramic/earthenware/bowl", MISC);
 
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_JUG = register("ceramic/earthenware/unfired_jug", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_JUG = register("ceramic/earthenware/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get));
+    public static final RegistryObject<Item> EARTHENWARE_JUG = register("ceramic/earthenware/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
 
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_POT = register("ceramic/earthenware/unfired_pot", MISC);
     public static final RegistryObject<Item> EARTHENWARE_POT = register("ceramic/earthenware/pot", MISC);
@@ -119,6 +118,7 @@ public class TFCFItems
     public static final RegistryObject<Item> KAOLINITE_CLAY_BALL = register("ceramic/kaolinite/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/unfired_brick", MISC);
+    public static final RegistryObject<Item> FIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/fired_brick", MISC);
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_CRUCIBLE = register("ceramic/kaolinite/unfired_crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_FLOWER_POT = register("ceramic/kaolinite/unfired_flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_PAN = register("ceramic/kaolinite/unfired_pan", MISC);
@@ -127,7 +127,7 @@ public class TFCFItems
     public static final RegistryObject<Item> KAOLINITE_BOWL = register("ceramic/kaolinite/bowl", MISC);
 
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_JUG = register("ceramic/kaolinite/unfired_jug", MISC);
-    public static final RegistryObject<Item> KAOLINITE_JUG = register("ceramic/kaolinite/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get));
+    public static final RegistryObject<Item> KAOLINITE_JUG = register("ceramic/kaolinite/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
 
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_POT = register("ceramic/kaolinite/unfired_pot", MISC);
     public static final RegistryObject<Item> KAOLINITE_POT = register("ceramic/kaolinite/pot", MISC);
@@ -163,6 +163,7 @@ public class TFCFItems
     public static final RegistryObject<Item> STONEWARE_CLAY_BALL = register("ceramic/stoneware/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_STONEWARE_BRICK = register("ceramic/stoneware/unfired_brick", MISC);
+    public static final RegistryObject<Item> FIRED_STONEWARE_BRICK = register("ceramic/stoneware/fired_brick", MISC);
     public static final RegistryObject<Item> UNFIRED_STONEWARE_CRUCIBLE = register("ceramic/stoneware/unfired_crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_STONEWARE_FLOWER_POT = register("ceramic/stoneware/unfired_flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_STONEWARE_PAN = register("ceramic/stoneware/unfired_pan", MISC);
@@ -171,7 +172,7 @@ public class TFCFItems
     public static final RegistryObject<Item> STONEWARE_BOWL = register("ceramic/stoneware/bowl", MISC);
 
     public static final RegistryObject<Item> UNFIRED_STONEWARE_JUG = register("ceramic/stoneware/unfired_jug", MISC);
-    public static final RegistryObject<Item> STONEWARE_JUG = register("ceramic/stoneware/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get));
+    public static final RegistryObject<Item> STONEWARE_JUG = register("ceramic/stoneware/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
 
     public static final RegistryObject<Item> UNFIRED_STONEWARE_POT = register("ceramic/stoneware/unfired_pot", MISC);
     public static final RegistryObject<Item> STONEWARE_POT = register("ceramic/stoneware/pot", MISC);

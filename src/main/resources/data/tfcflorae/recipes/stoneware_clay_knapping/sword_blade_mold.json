@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:stoneware_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "  XXX",
+    "   XX",
+    "X   X",
+    "XX  X",
+    "XXXX "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired_sword_blade_mold"
+  }
+}
