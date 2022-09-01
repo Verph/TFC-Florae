@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/dacite"
+  },
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/slab/dacite",
+  "count": 2
+}

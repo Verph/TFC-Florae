@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silty_loam/rhyolite",
+  "result": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/rhyolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/rhyolite"
+  }
+}

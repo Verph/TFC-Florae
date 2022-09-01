@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/slab/bottom/limestone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/slab/top/limestone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/limestone"
+    }
+  }
+}

@@ -46,6 +46,7 @@ import net.dries007.tfc.util.registry.RegistrationHelpers;
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.*;
+import tfcflorae.common.blocks.rock.*;
 import tfcflorae.common.blocks.soil.*;
 import tfcflorae.common.blocks.wood.*;
 import tfcflorae.common.items.TFCFItems;
@@ -81,6 +82,24 @@ public class TFCFBlocks
     public static final RegistryObject<Block> BOG_IRON_GRASS = register("grass/bog_iron", () -> new ConnectedGrassBlock(Properties.of(Material.GRASS).randomTicks().strength(3.0F).sound(TFCSounds.PEAT), DENSE_BOG_IRON_GRASS, null, null), EARTH);
     public static final RegistryObject<Block> ROOTED_BOG_IRON = register("rooted_dirt/bog_iron", () -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.TERRACOTTA_BROWN).strength(3.5F).sound(SoundType.ROOTED_DIRT), BOG_IRON), EARTH);
 
+    // Rocky Soils
+
+    public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, RegistryObject<Block>>>> TFCROCKSOIL = TFCRockSoilMapper(TFCFRockSoil.class);
+    public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>>> TFCFROCKSOIL = TFCFRockSoilMapper(TFCFRockSoil.class);
+
+    public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, DecorationBlockRegistryObject>>> TFCROCKSOILDECO = TFCRockSoilDecoMapper(TFCFRockSoil.class);
+    public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO = TFCFRockSoilDecoMapper(TFCFRockSoil.class);
+
+    // Rock Stuff
+
+    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> ROCK_BLOCKS = Helpers.mapOfKeys(Rock.class, rock ->
+        Helpers.mapOfKeys(TFCFRock.TFCFBlockType.class, type ->
+            register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), ROCK_STUFFS)
+        )
+    );
+
+    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> ROCK_DECORATIONS = RockDecoMapper(Rock.class);
+
     // Wood
 
     public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = WoodMapper(TFCFWood.class);
@@ -106,24 +125,24 @@ public class TFCFBlocks
 
     public static final RegistryObject<Block> STONEWARE_BRICKS_CLAY = register("ceramic/stoneware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_GRAY).strength(0.6F).sound(SoundType.GRAVEL)), DECORATIONS);
     public static final RegistryObject<Block> STONEWARE_BRICKS = register("ceramic/stoneware/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
-    public static final RegistryObject<SlabBlock> STONEWAR_BRICKS_SLAB = register(("ceramic/stoneware/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
-    public static final RegistryObject<StairBlock> STONEWAR_BRICKS_STAIRS = register(("ceramic/stoneware/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
-    public static final RegistryObject<WallBlock> STONEWAR_BRICKS_WALL = register(("ceramic/stoneware/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
+    public static final RegistryObject<SlabBlock> STONEWARE_BRICKS_SLAB = register(("ceramic/stoneware/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
+    public static final RegistryObject<StairBlock> STONEWARE_BRICKS_STAIRS = register(("ceramic/stoneware/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
+    public static final RegistryObject<WallBlock> STONEWARE_BRICKS_WALL = register(("ceramic/stoneware/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/large_vessel", () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC);
-    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/earthenware/large_vessel/" + color.getName(), () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC)
-    );
+    public static final RegistryObject<Block> LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/fired/large_vessel", () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC);
+    /*public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/earthenware/fired/large_vessel/" + color.getName(), () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC)
+    );*/
 
-    public static final RegistryObject<Block> LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/large_vessel", () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC);
-    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/kaolinite/large_vessel/" + color.getName(), () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC)
-    );
+    public static final RegistryObject<Block> LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/fired/large_vessel", () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC);
+    /*public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/kaolinite/fired/large_vessel/" + color.getName(), () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC)
+    );*/
 
-    public static final RegistryObject<Block> LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/large_vessel", () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC);
-    public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/stoneware/large_vessel/" + color.getName(), () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC)
-    );
+    public static final RegistryObject<Block> LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/fired/large_vessel", () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC);
+    /*public static final Map<DyeColor, RegistryObject<Block>> GLAZED_LARGE_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
+        register("ceramic/stoneware/fired/large_vessel/" + color.getName(), () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC)
+    );*/
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {
@@ -203,6 +222,116 @@ public class TFCFBlocks
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
             TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(90, 60), 
             wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, RegistryObject<Block>>>> TFCRockSoilMapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            Map<SoilBlockType.Variant, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
+            for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+            {
+                Map<Rock, RegistryObject<Block>> rockMap = new HashMap<>();
+                for (Rock rock : Rock.values())
+                {
+                    rockMap.put(rock, register((soilBlockType.name() + "/" + soilVariant.name() + "/" + rock.name()), () -> soilBlockType.TFCCreate(soilVariant, rock), EARTH));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>>> TFCFRockSoilMapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
+            for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+            {
+                Map<Rock, RegistryObject<Block>> rockMap = new HashMap<>();
+                for (Rock rock : Rock.values())
+                {
+                    rockMap.put(rock, register((soilBlockType.name() + "/" + soilVariant.name() + "/" + rock.name()), () -> soilBlockType.TFCFCreate(soilVariant, rock), EARTH));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, DecorationBlockRegistryObject>>> TFCRockSoilDecoMapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            Map<SoilBlockType.Variant, Map<Rock, DecorationBlockRegistryObject>> soilVariantMap = new HashMap<>();
+            for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+            {
+                Map<Rock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
+                for (Rock rock : Rock.values())
+                {
+                    rockMap.put(rock, new DecorationBlockRegistryObject(
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/slab/" + rock.name()), () -> new SlabBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/stairs/" + rock.name()), () -> new StairBlock(() -> TFCFBlocks.TFCROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get().defaultBlockState(), BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/wall/" + rock.name()), () -> new WallBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH)
+                    ));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> TFCFRockSoilDecoMapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>> soilVariantMap = new HashMap<>();
+            for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+            {
+                Map<Rock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
+                for (Rock rock : Rock.values())
+                {
+                    rockMap.put(rock, new DecorationBlockRegistryObject(
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/slab/" + rock.name()), () -> new SlabBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/stairs/" + rock.name()), () -> new StairBlock(() -> TFCFBlocks.TFCFROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get().defaultBlockState(), BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/wall/" + rock.name()), () -> new WallBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH)
+                    ));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoMapper(Class<Rock> enumClass)
+    {
+        Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
+        for (Rock rock : enumClass.getEnumConstants())
+        {
+            Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject> typeMap = new HashMap<>();
+            for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values())
+            {
+                if (type.hasVariants())
+                {
+                    typeMap.put(type, new DecorationBlockRegistryObject(
+                        register(("rock/" + type.name() + "/slab/" + rock.name()), () -> new SlabBlock(BlockBehaviour.Properties.copy(TFCFBlocks.ROCK_BLOCKS.get(rock).get(type).get())), ROCK_STUFFS),
+                        register(("rock/" + type.name() + "/stairs/" + rock.name()), () -> new StairBlock(() -> TFCFBlocks.ROCK_BLOCKS.get(rock).get(type).get().defaultBlockState(), BlockBehaviour.Properties.copy(TFCFBlocks.ROCK_BLOCKS.get(rock).get(type).get())), ROCK_STUFFS),
+                        register(("rock/" + type.name() + "/wall/" + rock.name()), () -> new WallBlock(BlockBehaviour.Properties.copy(TFCFBlocks.ROCK_BLOCKS.get(rock).get(type).get())), ROCK_STUFFS)
+                    ));
+                }
+            }
+            Map.put(rock, typeMap);
         }
         return Map;
     }

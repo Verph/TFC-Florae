@@ -2,9 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfc:clay_disc_with_indicator",
-    "tfc:water_clay_disc_with_indicator",
-    "tfc:peat_disc",
     "tfcflorae:clay_disc_with_indicator",
     "tfcflorae:earthenware_clay_disc_with_indicator",
     "tfcflorae:kaolinite_clay_disc_with_indicator",

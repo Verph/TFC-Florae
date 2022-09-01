@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/fever"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/fever"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/fever"
     }
   ],
   "duration": 1000,

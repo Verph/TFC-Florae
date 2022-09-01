@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silt/basalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/wall/basalt",
+    "count": 6
+  }
+}

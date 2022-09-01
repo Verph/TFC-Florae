@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/limestone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/outer/limestone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/stairs/inner/limestone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

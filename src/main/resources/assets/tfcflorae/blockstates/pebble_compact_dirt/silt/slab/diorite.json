@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/slab/bottom/diorite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/slab/top/diorite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/diorite"
+    }
+  }
+}

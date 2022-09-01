@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/nordmann_fir"
+          "name": "tfcflorae:wood/scribing_table/nordmann_fir"
         }
       ],
       "conditions": [

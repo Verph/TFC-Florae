@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:item/podzol_inv",
+  "textures": {
+    "block": "tfcflorae:block/dirt/loam"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:pear/1",
+      "tfcflorae:pear/2",
+      "tfcflorae:pear/3",
+      "tfcflorae:pear/4",
+      "tfcflorae:pear/5",
+      "tfcflorae:pear/6",
+      "tfcflorae:pear/7",
+      "tfcflorae:pear/8",
+      "tfcflorae:pear/9",
+      "tfcflorae:pear/10",
+      "tfcflorae:pear/11",
+      "tfcflorae:pear/12",
+      "tfcflorae:pear/13",
+      "tfcflorae:pear/14",
+      "tfcflorae:pear/15",
+      "tfcflorae:pear/16",
+      "tfcflorae:pear/17",
+      "tfcflorae:pear/18",
+      "tfcflorae:pear/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

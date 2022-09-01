@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/leaves",
+  "textures": {
+    "all": "tfcflorae:block/wood/leaves/rowan",
+    "overlay": "tfcflorae:block/wood/fruits/rowan"
+  }
+}

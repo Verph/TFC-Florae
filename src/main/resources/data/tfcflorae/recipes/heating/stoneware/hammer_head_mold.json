@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_hammer_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/hammer_head"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/stoneware/hammer_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/hammer_head"
   },
   "temperature": 1199
 }

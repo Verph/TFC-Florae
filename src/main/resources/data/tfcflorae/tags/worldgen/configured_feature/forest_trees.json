@@ -2,6 +2,12 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:tree/medlar_entry",
+    "tfcflorae:tree/persimmon_entry",
+    "tfcflorae:tree/quince_entry",
+    "tfcflorae:tree/sorb_entry",
+    "tfcflorae:tree/sloe_entry",
+    "tfcflorae:tree/pear_entry",
     "tfcflorae:tree/african_padauk_entry",
     "tfcflorae:tree/alder_entry",
     "tfcflorae:tree/angelim_entry",
@@ -36,6 +42,7 @@
     "tfcflorae:tree/purple_jacaranda_entry",
     "tfcflorae:tree/white_jacaranda_entry",
     "tfcflorae:tree/yellow_jacaranda_entry",
+    "tfcflorae:tree/joshua_entry",
     "tfcflorae:tree/juniper_entry",
     "tfcflorae:tree/kauri_entry",
     "tfcflorae:tree/larch_entry",
@@ -68,6 +75,12 @@
     "tfcflorae:tree/whitebeam_entry",
     "tfcflorae:tree/yellow_meranti_entry",
     "tfcflorae:tree/yew_entry",
-    "tfcflorae:tree/zebrawood_entry"
+    "tfcflorae:tree/zebrawood_entry",
+    "tfcflorae:tree/black_willow_entry",
+    "tfcflorae:tree/bald_cypress_entry",
+    "tfcflorae:tree/red_cypress_entry",
+    "tfcflorae:tree/red_mangrove_entry",
+    "tfcflorae:tree/white_mangrove_entry",
+    "tfcflorae:tree/baobab_entry"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/red_mangrove",
+  "result": "tfcflorae:wood/planks/red_mangrove_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/planks/red_mangrove_slab"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/humus/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/wall/quartzite",
+    "count": 6
+  }
+}

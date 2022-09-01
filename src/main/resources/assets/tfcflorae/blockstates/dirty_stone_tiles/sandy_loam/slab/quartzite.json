@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/slab/bottom/quartzite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/slab/top/quartzite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/quartzite"
+    }
+  }
+}

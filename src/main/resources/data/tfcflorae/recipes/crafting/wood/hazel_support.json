@@ -5,10 +5,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/hazel"
+        "tag": "tfc:hazel_logs"
       },
       {
-        "item": "tfcflorae:wood/log/hazel"
+        "tag": "tfc:hazel_logs"
       },
       {
         "tag": "tfc:saws"

@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/unfired_propick_head_mold"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/propick_head"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/kaolinite/propick_head_mold"
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/propick_head"
   },
   "temperature": 1199
 }

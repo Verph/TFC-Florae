@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/rainbow_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus_bookshelf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/rainbow_eucalyptus"
+  }
+}

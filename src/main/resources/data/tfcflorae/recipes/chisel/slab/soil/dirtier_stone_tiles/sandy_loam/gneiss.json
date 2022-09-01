@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/gneiss",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/gneiss",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/gneiss"
+  }
+}

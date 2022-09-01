@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/leaves/hawthorn_flowering"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/leaves/hawthorn_fruiting"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/leaves/hawthorn_dry"
+    },
+    "lifecycle=healthy": {
+      "model": "tfcflorae:block/wood/leaves/hawthorn"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/basalt"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/loam/basalt"
+  }
+}

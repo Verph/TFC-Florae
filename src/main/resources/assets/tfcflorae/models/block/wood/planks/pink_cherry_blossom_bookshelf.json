@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/pink_cherry_blossom",
+    "side": "tfcflorae:block/wood/planks/pink_cherry_blossom_bookshelf"
+  }
+}

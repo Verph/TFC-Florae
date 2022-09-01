@@ -3,6 +3,6 @@
   "parent": "tfcflorae:block/leaves_overlay",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/argyle_eucalyptus",
-    "overlay": "tfcflorae:block/wood/fruits/argyle_eucalyptus"
+    "overlay": "tfcflorae:block/wood/leaves/argyle_eucalyptus"
   }
 }

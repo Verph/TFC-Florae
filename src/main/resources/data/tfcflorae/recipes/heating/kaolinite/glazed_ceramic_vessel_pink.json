@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/pink_unfired_vessel"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/glazed_vessel/pink"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/kaolinite/pink_glazed_vessel"
+    "item": "tfcflorae:ceramic/kaolinite/fired/glazed_vessel/pink"
   },
   "temperature": 1199
 }

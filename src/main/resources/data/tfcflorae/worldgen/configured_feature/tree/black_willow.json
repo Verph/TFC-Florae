@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:black_willow_tree",
+  "config": {
+    "minHeight": 5,
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 20,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    },
+    "logState": "tfcflorae:wood/log/black_willow",
+    "woodState": "tfcflorae:wood/wood/black_willow",
+    "leavesState": "tfcflorae:wood/leaves/black_willow"
+  }
+}

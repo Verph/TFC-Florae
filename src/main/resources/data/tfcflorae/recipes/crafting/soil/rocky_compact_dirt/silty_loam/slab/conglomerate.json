@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silty_loam/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silty_loam/slab/conglomerate",
+    "count": 6
+  }
+}

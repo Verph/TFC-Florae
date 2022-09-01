@@ -1,9 +1,5 @@
 package tfcflorae.util;
 
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.Collectors;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -18,9 +14,6 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import tfcflorae.TFCFlorae;
-import tfcflorae.common.blocks.soil.TFCFSoil;
-
-import org.jetbrains.annotations.NotNull;
 
 public class TFCFHelpers
 {

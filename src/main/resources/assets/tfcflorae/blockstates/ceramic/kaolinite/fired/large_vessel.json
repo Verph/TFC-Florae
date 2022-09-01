@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "sealed=true": {
+      "model": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/large_vessel_sealed"
+    },
+    "sealed=false": {
+      "model": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/large_vessel_opened"
+    }
+  }
+}

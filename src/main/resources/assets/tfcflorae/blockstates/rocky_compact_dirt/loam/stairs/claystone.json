@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/claystone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/outer/claystone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/rocky_compact_dirt/loam/stairs/inner/claystone",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

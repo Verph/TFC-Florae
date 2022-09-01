@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/bald_cypress",
+    "planks": "tfcflorae:block/wood/planks/bald_cypress",
+    "sheet": "tfcflorae:block/wood/sheet/bald_cypress",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

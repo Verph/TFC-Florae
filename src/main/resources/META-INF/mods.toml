@@ -20,8 +20,8 @@ An addon for TFC.
 [[dependencies.tfcflorae]]
 modId = "tfc"
 mandatory = true
-versionRange = "[1.18.2-2.0.32,)"
-ordering = "BEFORE"
+versionRange = "[1.18.2-2.0.34,)"
+ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.tfcflorae]] #optional

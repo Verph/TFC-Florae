@@ -6,7 +6,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.dries007.tfc.common.blockentities.LargeVesselBlockEntity;
 import net.dries007.tfc.common.blocks.LargeVesselBlock;
 import net.dries007.tfc.common.container.*;
 
@@ -25,7 +24,7 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
 
     public LargeStonewareVesselContainer(LargeStonewareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
     {
-        super(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), windowId, vessel);
+        super(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), windowId, vessel);
     }
 
     @Override

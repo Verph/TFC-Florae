@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/nordmann_fir",
+    "leg": "tfcflorae:block/wood/log/nordmann_fir",
+    "side": "tfcflorae:block/wood/planks/nordmann_fir",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/nordmann_fir"
+  }
+}

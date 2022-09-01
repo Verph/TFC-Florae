@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:item/sparse_grass_inv",
+  "textures": {
+    "block": "tfcflorae:block/stoneware_clay/silty_loam"
+  }
+}

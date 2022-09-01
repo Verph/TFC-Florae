@@ -3,7 +3,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/bottom",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/bottom",
         "x": 90
       }
     },
@@ -12,7 +12,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/top",
         "x": 270
       }
     },
@@ -21,7 +21,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_top",
         "x": 270
       }
     },
@@ -31,7 +31,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/top"
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/top"
       }
     },
     {
@@ -40,7 +40,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/top",
         "y": 90
       }
     },
@@ -50,7 +50,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/top",
         "y": 180
       }
     },
@@ -60,7 +60,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/top",
         "y": 270
       }
     },
@@ -70,7 +70,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_top"
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_top"
       }
     },
     {
@@ -79,7 +79,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_top",
         "y": 90
       }
     },
@@ -89,7 +89,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_top",
         "y": 180
       }
     },
@@ -99,7 +99,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_top",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_top",
         "y": 270
       }
     },
@@ -109,7 +109,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/side"
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/side"
       }
     },
     {
@@ -118,7 +118,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/side",
         "y": 90
       }
     },
@@ -128,7 +128,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/side",
         "y": 180
       }
     },
@@ -138,7 +138,7 @@
         "snowy": false
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/side",
         "y": 270
       }
     },
@@ -148,7 +148,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_side"
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_side"
       }
     },
     {
@@ -157,7 +157,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_side",
         "y": 90
       }
     },
@@ -167,7 +167,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_side",
         "y": 180
       }
     },
@@ -177,7 +177,7 @@
         "snowy": true
       },
       "apply": {
-        "model": "tfcflorae:block/clay_grass/loam/snowy_side",
+        "model": "tfcflorae:block/stoneware_clay_grass/loam/snowy_side",
         "y": 270
       }
     }

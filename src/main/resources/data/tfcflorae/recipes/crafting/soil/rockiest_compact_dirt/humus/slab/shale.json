@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/humus/shale"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/shale",
+    "count": 6
+  }
+}

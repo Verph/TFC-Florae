@@ -1,0 +1,91 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/post/schist"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/schist",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/schist",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/schist",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/schist",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/tall/schist",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/tall/schist",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/tall/schist",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/wall/side/tall/schist",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

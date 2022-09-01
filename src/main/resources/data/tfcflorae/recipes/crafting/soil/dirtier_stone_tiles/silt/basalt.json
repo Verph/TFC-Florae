@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/basalt"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/basalt"
+  }
+}

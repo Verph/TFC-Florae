@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/black_walnut",
+    "base": "tfcflorae:block/wood/lectern/black_walnut/base",
+    "front": "tfcflorae:block/wood/lectern/black_walnut/front",
+    "sides": "tfcflorae:block/wood/lectern/black_walnut/sides",
+    "top": "tfcflorae:block/wood/lectern/black_walnut/top",
+    "particle": "tfcflorae:block/wood/lectern/black_walnut/sides"
+  }
+}

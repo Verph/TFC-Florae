@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/sloe",
+    "base": "tfcflorae:block/wood/lectern/sloe/base",
+    "front": "tfcflorae:block/wood/lectern/sloe/front",
+    "sides": "tfcflorae:block/wood/lectern/sloe/sides",
+    "top": "tfcflorae:block/wood/lectern/sloe/top",
+    "particle": "tfcflorae:block/wood/lectern/sloe/sides"
+  }
+}

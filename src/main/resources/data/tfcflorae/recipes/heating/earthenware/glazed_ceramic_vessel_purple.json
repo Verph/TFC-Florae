@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/earthenware/purple_unfired_vessel"
+    "item": "tfcflorae:ceramic/earthenware/unfired/glazed_vessel/purple"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/earthenware/purple_glazed_vessel"
+    "item": "tfcflorae:ceramic/earthenware/fired/glazed_vessel/purple"
   },
   "temperature": 1199
 }

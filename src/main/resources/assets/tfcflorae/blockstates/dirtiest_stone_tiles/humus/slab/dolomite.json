@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/slab/bottom/dolomite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/slab/top/dolomite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/dolomite"
+    }
+  }
+}

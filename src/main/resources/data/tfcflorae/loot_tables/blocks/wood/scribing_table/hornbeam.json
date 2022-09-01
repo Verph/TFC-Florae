@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/hornbeam"
+          "name": "tfcflorae:wood/scribing_table/hornbeam"
         }
       ],
       "conditions": [

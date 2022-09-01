@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:mangrove_tree",
+  "config": {
+    "minHeight": 5,
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 30,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    },
+    "logState": "tfcflorae:wood/log/red_mangrove",
+    "woodState": "tfcflorae:wood/wood/red_mangrove",
+    "leavesState": "tfcflorae:wood/leaves/red_mangrove"
+  }
+}

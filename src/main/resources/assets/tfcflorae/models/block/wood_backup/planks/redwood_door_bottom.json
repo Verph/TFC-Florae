@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/door_bottom",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/redwood_top",
+    "bottom": "tfcflorae:block/wood/planks/redwood_bottom"
+  }
+}

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/cocobolo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/cocobolo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/cocobolo"
     }
   ],
   "duration": 1000,

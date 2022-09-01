@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/yellow_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/yellow_jacaranda_pressure_plate"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/persimmon",
+    "planks": "tfcflorae:block/wood/planks/persimmon",
+    "sheet": "tfcflorae:block/wood/sheet/persimmon",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

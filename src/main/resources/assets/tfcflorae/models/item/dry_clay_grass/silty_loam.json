@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:item/dry_grass_inv",
+  "textures": {
+    "block": "tfc:block/clay/silty_loam"
+  }
+}

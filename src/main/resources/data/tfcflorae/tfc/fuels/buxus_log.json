@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/buxus"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/buxus"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/buxus"
     }
   ],
   "duration": 1500,

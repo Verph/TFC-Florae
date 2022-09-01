@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirtiest_stone_tiles/humus/diorite"
+  },
+  "result": "tfcflorae:dirtiest_stone_tiles/humus/stairs/diorite",
+  "count": 1
+}

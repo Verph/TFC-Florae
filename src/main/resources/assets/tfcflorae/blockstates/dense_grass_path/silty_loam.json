@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "tfcflorae:block/dense_grass_path/silty_loam"},
+      {"model": "tfcflorae:block/dense_grass_path/silty_loam", "y": 90},
+      {"model": "tfcflorae:block/dense_grass_path/silty_loam", "y": 180},
+      {"model": "tfcflorae:block/dense_grass_path/silty_loam", "y": 270}
+    ]
+  }
+}

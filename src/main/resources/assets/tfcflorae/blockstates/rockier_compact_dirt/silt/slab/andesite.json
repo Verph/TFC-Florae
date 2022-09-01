@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {	
+      "model": "tfcflorae:block/rockier_compact_dirt/silt/slab/bottom/andesite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rockier_compact_dirt/silt/slab/top/andesite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rockier_compact_dirt/silt/andesite"
+    }
+  }
+}

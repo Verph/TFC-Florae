@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/dolomite",
+  "result": "tfcflorae:rock/stone_tiles/slab/dolomite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/dolomite"
+  }
+}

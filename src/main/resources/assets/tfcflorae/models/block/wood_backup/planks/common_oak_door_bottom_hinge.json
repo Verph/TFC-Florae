@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/common_oak_top",
+    "bottom": "tfcflorae:block/wood/planks/common_oak_bottom"
+  }
+}

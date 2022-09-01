@@ -20,7 +20,9 @@ import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.network.Packets;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
+import tfcflorae.util.DispenserBehaviors;
 import tfcflorae.util.TFCFInteractionManager;
+import tfcflorae.world.feature.TFCFFeatures;
 
 @Mod(TFCFlorae.MOD_ID)
 public class TFCFlorae
@@ -40,6 +42,7 @@ public class TFCFlorae
         TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
+        TFCFFeatures.FEATURES.register(bus);
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
@@ -53,7 +56,6 @@ public class TFCFlorae
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
             ClientEventHandler.init();
-            ClientForgeEvents.init();
         }
     }
 
@@ -62,5 +64,9 @@ public class TFCFlorae
         LOGGER.info("TFCFlorae Common Setup");
 
         TFCFInteractionManager.registerDefaultInteractions();
+
+        event.enqueueWork(() -> {
+            DispenserBehaviors.registerDispenserBehaviors();
+        });
     }
 }

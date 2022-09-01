@@ -18,6 +18,12 @@
     "tfcflorae:sparse_grass_path/loam",
     "tfcflorae:sparse_grass_path/sandy_loam",
     "tfcflorae:sparse_grass_path/silty_loam",
-    "tfcflorae:sparse_grass_path/humus"
+    "tfcflorae:sparse_grass_path/humus",
+    "tfc:rooted_dirt/silt",
+    "tfc:rooted_dirt/loam",
+    "tfc:rooted_dirt/sandy_loam",
+    "tfc:rooted_dirt/silty_loam",
+    "tfcflorae:rooted_dirt/humus",
+    "tfcflorae:rooted_dirt/bog_iron"
   ]
 }

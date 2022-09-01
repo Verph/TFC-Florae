@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/humus/chert"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/stairs/chert",
+    "count": 8
+  }
+}

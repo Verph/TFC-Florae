@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/rowan"
     }
   ],
   "duration": 2000,

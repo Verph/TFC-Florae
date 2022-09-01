@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XY",
+    "YX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:dirt/loam"
+    },
+    "Y": {
+      "tag": "forge:gravel"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:coarse_dirt/loam",
+    "count": 4
+  }
+}

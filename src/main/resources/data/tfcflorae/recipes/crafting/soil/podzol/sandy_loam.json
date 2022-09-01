@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:groundcover/humus"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:podzol/sandy_loam",
+    "count": 1
+  }
+}

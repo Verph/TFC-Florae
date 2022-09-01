@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silty_loam"
+    },
+    {
+      "item": "tfc:dirt/silty_loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/conglomerate"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/conglomerate"
+  }
+}

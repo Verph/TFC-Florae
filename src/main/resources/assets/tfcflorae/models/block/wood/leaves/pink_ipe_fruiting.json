@@ -3,6 +3,6 @@
   "parent": "tfcflorae:block/leaves_overlay",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/pink_ipe",
-    "overlay": "tfcflorae:block/wood/fruits/pink_ipe"
+    "overlay": "tfcflorae:block/wood/leaves/pink_ipe"
   }
 }

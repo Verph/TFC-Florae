@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfc:rock/loose/andesite"
+    },
+    {
+      "item": "tfc:rock/loose/andesite"
+    },
+    {
+      "item": "tfc:rock/loose/andesite"
+    },
+    {
+      "item": "tfc:rock/loose/andesite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/andesite"
+  }
+}

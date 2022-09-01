@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/granite"
+  }
+}

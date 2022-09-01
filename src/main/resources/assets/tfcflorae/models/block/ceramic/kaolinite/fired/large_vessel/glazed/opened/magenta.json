@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/large_vessel_opened",
+  "textures": {
+    "side": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/glazed/magenta/side",
+    "bottom": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/glazed/magenta/bottom",
+    "particle": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/glazed/magenta/side"
+  }
+}

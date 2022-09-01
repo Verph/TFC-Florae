@@ -1,0 +1,91 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/post/quartzite"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/quartzite",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/quartzite",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/quartzite",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/quartzite",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/tall/quartzite",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/tall/quartzite",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/tall/quartzite",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/wall/side/tall/quartzite",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

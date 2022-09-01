@@ -11,17 +11,27 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 import net.dries007.tfc.client.screen.TFCContainerScreen;
 import net.dries007.tfc.client.screen.button.KnappingButton;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.KnappingPattern;
 import org.jetbrains.annotations.Nullable;
 
 import tfcflorae.common.container.TFCFKnappingContainer;
+import tfcflorae.util.TFCFHelpers;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
 public class TFCFKnappingScreen extends TFCContainerScreen<TFCFKnappingContainer>
 {
     private static final ResourceLocation KNAPPING_BACKGROUND = new ResourceLocation(MOD_ID, "textures/gui/knapping.png");
+
+    public static final ResourceLocation EARTHENWARE_CLAY = TFCFHelpers.identifier("textures/gui/knapping/earthenware_clay_ball.png");
+    public static final ResourceLocation EARTHENWARE_CLAY_DISABLED = TFCFHelpers.identifier("textures/gui/knapping/earthenware_clay_ball_disabled.png");
+
+    public static final ResourceLocation KAOLINITE_CLAY = TFCFHelpers.identifier("textures/gui/knapping/kaolinite_clay_ball.png");
+    public static final ResourceLocation KAOLINITE_CLAY_DISABLED = TFCFHelpers.identifier("textures/gui/knapping/kaolinite_clay_ball_disabled.png");
+
+    public static final ResourceLocation STONEWAREWARE_CLAY = TFCFHelpers.identifier("textures/gui/knapping/stoneware_clay_ball.png");
+    public static final ResourceLocation STONEWAREWARE_CLAY_DISABLED = TFCFHelpers.identifier("textures/gui/knapping/stoneware_clay_ball_disabled.png");
+
     private final ResourceLocation buttonLocation;
     @Nullable private final ResourceLocation buttonDisabledLocation;
 
@@ -29,7 +39,7 @@ public class TFCFKnappingScreen extends TFCContainerScreen<TFCFKnappingContainer
     {
         ResourceLocation buttonAssetPath = item.getRegistryName();
         assert buttonAssetPath != null;
-        return Helpers.identifier( "textures/gui/knapping/" + buttonAssetPath.getPath() + (disabled ? "_disabled" : "") + ".png");
+        return TFCFHelpers.identifier( "textures/gui/knapping/" + buttonAssetPath.getPath() + (disabled ? "_disabled" : "") + ".png");
     }
 
     public TFCFKnappingScreen(TFCFKnappingContainer container, Inventory inv, Component name)

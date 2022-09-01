@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/humus/diorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/stairs/diorite",
+    "count": 8
+  }
+}

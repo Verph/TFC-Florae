@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/shale",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/slab/shale"
+  }
+}

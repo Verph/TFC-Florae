@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rockiest_compact_dirt/humus/granite",
+    "top": "tfcflorae:block/rockiest_compact_dirt/humus/granite",
+    "side": "tfcflorae:block/rockiest_compact_dirt/humus/granite"
+  }
+}

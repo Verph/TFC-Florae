@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/unfired_spindle_head"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/spindle_head"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/kaolinite/spindle_head"
+    "item": "tfcflorae:ceramic/kaolinite/fired/spindle_head"
   },
   "temperature": 1199
 }

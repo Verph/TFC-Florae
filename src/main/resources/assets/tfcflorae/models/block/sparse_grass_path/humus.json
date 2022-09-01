@@ -2,7 +2,7 @@
   "parent": "tfcflorae:block/sparse_grass_path",
   "textures": {
     "dirt": "tfcflorae:block/dirt/humus",
-    "top": "tfcflorae:block/sparse_grass_path/humus_top",
+    "top": "tfcflorae:block/sparse_grass_path/top",
     "side": "tfcflorae:block/sparse_grass_path/humus_side"
   }
 }

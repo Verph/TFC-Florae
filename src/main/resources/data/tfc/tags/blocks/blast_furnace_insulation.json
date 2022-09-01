@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/bricks",
+    "tfcflorae:ceramic/kaolinite/bricks",
+    "tfcflorae:ceramic/stoneware/bricks",
+    "tfcflorae:ceramic/fire_bricks/brick_slab",
+    "tfcflorae:ceramic/earthenware/brick_slab",
+    "tfcflorae:ceramic/kaolinite/brick_slab",
+    "tfcflorae:ceramic/stoneware/brick_slab",
+    "tfcflorae:ceramic/fire_bricks/brick_stairs",
+    "tfcflorae:ceramic/earthenware/brick_stairs",
+    "tfcflorae:ceramic/kaolinite/brick_stairs",
+    "tfcflorae:ceramic/stoneware/brick_stairs"
+  ]
+}

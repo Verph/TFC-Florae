@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/shale",
+    "top": "tfcflorae:block/pebble_compact_dirt/loam/shale",
+    "side": "tfcflorae:block/pebble_compact_dirt/loam/shale"
+  }
+}

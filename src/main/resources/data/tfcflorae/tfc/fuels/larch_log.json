@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/larch"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/larch"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/larch"
     }
   ],
   "duration": 1250,

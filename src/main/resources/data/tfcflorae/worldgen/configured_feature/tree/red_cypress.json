@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:cypress_tree",
+  "config": {
+    "minHeight": 5,
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 30,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    },
+    "logState": "tfcflorae:wood/log/red_cypress",
+    "woodState": "tfcflorae:wood/wood/red_cypress",
+    "leavesState": "tfcflorae:wood/leaves/red_cypress"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rocky_compact_dirt/sandy_loam/slab/bottom/slate"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rocky_compact_dirt/sandy_loam/slab/top/slate"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rocky_compact_dirt/sandy_loam/slate"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_pan"
+    "item": "tfcflorae:ceramic/stoneware/unfired/pan"
   },
   "result_item": {
     "item": "tfc:pan/empty"

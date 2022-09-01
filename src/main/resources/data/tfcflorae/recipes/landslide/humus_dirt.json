@@ -2,11 +2,18 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:landslide",
   "ingredient": [
-    "tfc:dirt/humus",
-    "tfc:grass/humus",
-    "tfc:grass_path/humus",
-    "tfc:farmland/humus",
-    "tfc:rooted_dirt/humus"
+    "tfcflorae:dirt/humus",
+    "tfcflorae:grass/humus",
+    "tfcflorae:grass_path/humus",
+    "tfcflorae:farmland/humus",
+    "tfcflorae:rooted_dirt/humus",
+    "tfcflorae:dry_grass/humus",
+    "tfcflorae:sparse_grass/humus",
+    "tfcflorae:dense_grass/humus",
+    "tfcflorae:dry_grass_path/humus",
+    "tfcflorae:sparse_grass_path/humus",
+    "tfcflorae:dense_grass_path/humus",
+    "tfcflorae:podzol/humus"
   ],
-  "result": "tfc:dirt/humus"
+  "result": "tfcflorae:dirt/humus"
 }

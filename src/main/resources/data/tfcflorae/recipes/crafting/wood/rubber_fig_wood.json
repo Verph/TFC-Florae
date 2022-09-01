@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/rubber_fig"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood/rubber_fig",
+    "count": 3
+  }
+}

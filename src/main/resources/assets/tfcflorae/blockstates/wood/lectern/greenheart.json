@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/greenheart",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/greenheart"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/greenheart",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/greenheart",
+      "y": 270
+    }
+  }
+}

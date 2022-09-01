@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfc:rock/loose/dolomite"
+    },
+    {
+      "item": "tfc:rock/loose/dolomite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/dolomite"
+  }
+}

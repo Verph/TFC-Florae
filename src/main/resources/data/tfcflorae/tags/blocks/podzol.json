@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:groundcover/humus",
+    "tfcflorae:podzol/silt",
+    "tfcflorae:podzol/loam",
+    "tfcflorae:podzol/sandy_loam",
+    "tfcflorae:podzol/silty_loam",
+    "tfcflorae:podzol/humus"
+  ]
+}

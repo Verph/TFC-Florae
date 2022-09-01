@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/whitebeam"
+          "name": "tfcflorae:wood/scribing_table/whitebeam"
         }
       ],
       "conditions": [

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/silty_loam/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/stairs/gneiss",
+    "count": 8
+  }
+}

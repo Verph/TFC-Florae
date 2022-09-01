@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/large_vessel_opened",
+  "textures": {
+    "side": "tfcflorae:block/ceramic/stoneware/unfired/glazed/white/side",
+    "bottom": "tfcflorae:block/ceramic/stoneware/unfired/glazed/white/bottom",
+    "particle": "tfcflorae:block/ceramic/stoneware/unfired/glazed/white/side"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/gneiss",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/outer/gneiss",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/stairs/inner/gneiss",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

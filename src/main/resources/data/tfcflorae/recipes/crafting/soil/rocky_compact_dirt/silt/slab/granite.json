@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silt/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/slab/granite",
+    "count": 6
+  }
+}

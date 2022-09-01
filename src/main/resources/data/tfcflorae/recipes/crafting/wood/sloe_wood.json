@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/sloe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood/sloe",
+    "count": 3
+  }
+}

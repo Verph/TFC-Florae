@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/pear",
+    "base": "tfcflorae:block/wood/lectern/pear/base",
+    "front": "tfcflorae:block/wood/lectern/pear/front",
+    "sides": "tfcflorae:block/wood/lectern/pear/sides",
+    "top": "tfcflorae:block/wood/lectern/pear/top",
+    "particle": "tfcflorae:block/wood/lectern/pear/sides"
+  }
+}

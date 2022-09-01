@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/norway_spruce",
+    "planks": "tfcflorae:block/wood/planks/norway_spruce",
+    "sheet": "tfcflorae:block/wood/sheet/norway_spruce",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

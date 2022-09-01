@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/glazed/opened/orange",
+  "overrides": [
+    {
+      "predicate": {
+        "tfc:sealed": 1.0
+      },
+      "model": "tfcflorae:block/ceramic/kaolinite/fired/large_vessel/glazed/sealed/orange"
+    }
+  ]
+}

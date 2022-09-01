@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/silty_loam/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/conglomerate",
+    "count": 6
+  }
+}

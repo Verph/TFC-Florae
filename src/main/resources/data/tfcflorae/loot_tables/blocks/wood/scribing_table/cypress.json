@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/cypress"
+          "name": "tfcflorae:wood/scribing_table/cypress"
         }
       ],
       "conditions": [

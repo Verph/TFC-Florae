@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/wood/support/vertical",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/joshua",
+    "particle": "tfcflorae:block/wood/sheet/joshua"
+  }
+}

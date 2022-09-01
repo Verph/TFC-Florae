@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/diorite",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/slab/diorite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/diorite"
+  }
+}

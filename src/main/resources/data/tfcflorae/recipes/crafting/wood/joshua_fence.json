@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/joshua"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/joshua_fence",
+    "count": 8
+  }
+}

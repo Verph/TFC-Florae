@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/marblewood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/marblewood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/marblewood"
     }
   ],
   "duration": 1200,

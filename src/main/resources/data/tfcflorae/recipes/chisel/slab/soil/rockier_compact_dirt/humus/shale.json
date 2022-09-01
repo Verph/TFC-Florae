@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/shale",
+  "result": "tfcflorae:rockier_compact_dirt/humus/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/slab/shale"
+  }
+}

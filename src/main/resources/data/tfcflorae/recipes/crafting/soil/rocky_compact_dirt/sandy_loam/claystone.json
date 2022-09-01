@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/claystone"
+  }
+}

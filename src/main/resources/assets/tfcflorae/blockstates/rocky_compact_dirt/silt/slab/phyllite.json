@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/slab/bottom/phyllite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/slab/top/phyllite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/phyllite"
+    }
+  }
+}

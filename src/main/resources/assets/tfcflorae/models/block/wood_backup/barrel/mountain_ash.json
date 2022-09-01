@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/mountain_ash",
+    "planks": "tfcflorae:block/wood/planks/mountain_ash",
+    "sheet": "tfcflorae:block/wood/sheet/mountain_ash",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

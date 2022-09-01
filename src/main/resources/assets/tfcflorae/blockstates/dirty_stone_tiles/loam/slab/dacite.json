@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/slab/bottom/dacite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/slab/top/dacite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/dacite"
+    }
+  }
+}

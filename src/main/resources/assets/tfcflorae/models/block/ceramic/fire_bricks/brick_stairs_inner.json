@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfc:block/fire_bricks",
+    "top": "tfc:block/fire_bricks",
+    "side": "tfc:block/fire_bricks"
+  }
+}

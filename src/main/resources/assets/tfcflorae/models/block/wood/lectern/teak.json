@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/teak",
+    "base": "tfcflorae:block/wood/lectern/teak/base",
+    "front": "tfcflorae:block/wood/lectern/teak/front",
+    "sides": "tfcflorae:block/wood/lectern/teak/sides",
+    "top": "tfcflorae:block/wood/lectern/teak/top",
+    "particle": "tfcflorae:block/wood/lectern/teak/sides"
+  }
+}

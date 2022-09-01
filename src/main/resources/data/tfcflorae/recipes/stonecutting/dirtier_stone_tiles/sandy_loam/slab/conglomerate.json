@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/conglomerate"
+  },
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/conglomerate",
+  "count": 2
+}

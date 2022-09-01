@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/unfired_ingot_mold"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/ingot"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/kaolinite/ingot_mold"
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/ingot"
   },
   "temperature": 1199
 }

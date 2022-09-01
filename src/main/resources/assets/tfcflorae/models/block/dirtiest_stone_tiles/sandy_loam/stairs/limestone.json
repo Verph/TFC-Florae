@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/limestone",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/limestone",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/limestone"
+  }
+}

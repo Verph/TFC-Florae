@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/dirty_stone_tiles/silt/andesite",
+    "top": "tfcflorae:block/dirty_stone_tiles/silt/andesite",
+    "side": "tfcflorae:block/dirty_stone_tiles/silt/andesite"
+  }
+}

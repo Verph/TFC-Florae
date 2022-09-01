@@ -3,6 +3,6 @@
   "parent": "tfcflorae:block/leaves_overlay",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/white_jacaranda",
-    "overlay": "tfcflorae:block/wood/fruits/white_jacaranda"
+    "overlay": "tfcflorae:block/wood/leaves/white_jacaranda"
   }
 }

@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:persimmon/1",
+      "tfcflorae:persimmon/2",
+      "tfcflorae:persimmon/3",
+      "tfcflorae:persimmon/4",
+      "tfcflorae:persimmon/5",
+      "tfcflorae:persimmon/6",
+      "tfcflorae:persimmon/7",
+      "tfcflorae:persimmon/8",
+      "tfcflorae:persimmon/9",
+      "tfcflorae:persimmon/10",
+      "tfcflorae:persimmon/11",
+      "tfcflorae:persimmon/12",
+      "tfcflorae:persimmon/13",
+      "tfcflorae:persimmon/14",
+      "tfcflorae:persimmon/15",
+      "tfcflorae:persimmon/16",
+      "tfcflorae:persimmon/17",
+      "tfcflorae:persimmon/18",
+      "tfcflorae:persimmon/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

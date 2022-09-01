@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slate"
+  },
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/slate",
+  "count": 1
+}

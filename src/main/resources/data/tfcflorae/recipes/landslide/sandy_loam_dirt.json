@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:dry_grass/sandy_loam",
+    "tfcflorae:sparse_grass/sandy_loam",
+    "tfcflorae:dense_grass/sandy_loam",
+    "tfcflorae:dry_grass_path/sandy_loam",
+    "tfcflorae:sparse_grass_path/sandy_loam",
+    "tfcflorae:dense_grass_path/sandy_loam",
+    "tfcflorae:podzol/sandy_loam"
+  ],
+  "result": "tfc:dirt/sandy_loam"
+}

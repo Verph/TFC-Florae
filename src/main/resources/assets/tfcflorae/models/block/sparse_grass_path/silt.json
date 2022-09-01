@@ -2,7 +2,7 @@
   "parent": "tfcflorae:block/sparse_grass_path",
   "textures": {
     "dirt": "tfc:block/dirt/silt",
-    "top": "tfcflorae:block/sparse_grass_path/silt_top",
+    "top": "tfcflorae:block/sparse_grass_path/top",
     "side": "tfcflorae:block/sparse_grass_path/silt_side"
   }
 }

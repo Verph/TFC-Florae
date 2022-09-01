@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/white_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/barrel/white_cherry_blossom"
+  }
+}

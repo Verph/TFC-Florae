@@ -5,10 +5,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/black_walnut"
+        "tag": "tfc:black_walnut_logs"
       },
       {
-        "item": "tfcflorae:wood/log/black_walnut"
+        "tag": "tfc:black_walnut_logs"
       },
       {
         "tag": "tfc:saws"

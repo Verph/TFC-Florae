@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:medlar_large/1",
+      "tfcflorae:medlar_large/2",
+      "tfcflorae:medlar_large/3",
+      "tfcflorae:medlar_large/4",
+      "tfcflorae:medlar_large/5",
+      "tfcflorae:medlar_large/6",
+      "tfcflorae:medlar_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

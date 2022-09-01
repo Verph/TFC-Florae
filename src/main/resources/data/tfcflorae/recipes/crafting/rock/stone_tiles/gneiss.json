@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:rock/chiseled/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/gneiss",
+    "count": 4
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F B",
+    "XXX",
+    "Y Y"
+  ],
+  "key": {
+    "F": {
+      "tag": "forge:feathers"
+    },
+    "B": {
+      "item": "minecraft:glass_bottle"
+    },
+    "X": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus_slab"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/scribing_table/rainbow_eucalyptus"
+  }
+}

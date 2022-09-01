@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rockier_compact_dirt/silt/slate",
+    "top": "tfcflorae:block/rockier_compact_dirt/silt/slate",
+    "side": "tfcflorae:block/rockier_compact_dirt/silt/slate"
+  }
+}

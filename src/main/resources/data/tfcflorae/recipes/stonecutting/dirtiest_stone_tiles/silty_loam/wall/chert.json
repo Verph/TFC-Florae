@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/chert"
+  },
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/wall/chert",
+  "count": 1
+}

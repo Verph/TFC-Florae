@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:mud_bricks/humus_stairs",
+    "tfcflorae:ceramic/fire_bricks/brick_stairs",
+    "tfcflorae:ceramic/earthenware/brick_stairs",
+    "tfcflorae:ceramic/kaolinite/brick_stairs",
+    "tfcflorae:ceramic/stoneware/brick_stairs",
+    "#tfcflorae:dirty_stone_tile_stairs",
+    "#tfcflorae:rocky_compact_dirt_stairs"
+  ]
+}

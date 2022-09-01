@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:dry_grass/silt",
+    "tfcflorae:sparse_grass/silt",
+    "tfcflorae:dense_grass/silt",
+    "tfcflorae:dry_grass_path/silt",
+    "tfcflorae:sparse_grass_path/silt",
+    "tfcflorae:dense_grass_path/silt",
+    "tfcflorae:podzol/silt"
+  ],
+  "result": "tfc:dirt/silt"
+}

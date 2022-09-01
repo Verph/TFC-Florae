@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/pink_ivory"
+          "name": "tfcflorae:wood/scribing_table/pink_ivory"
         }
       ],
       "conditions": [

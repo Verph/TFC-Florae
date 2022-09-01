@@ -134,6 +134,7 @@
     "tfcflorae:dense_stoneware_clay_grass/loam",
     "tfcflorae:dense_stoneware_clay_grass/sandy_loam",
     "tfcflorae:dense_stoneware_clay_grass/silty_loam",
-    "tfcflorae:dense_stoneware_clay_grass/humus"
+    "tfcflorae:dense_stoneware_clay_grass/humus",
+    "#tfcflorae:rocky_compact_dirt"
   ]
 }

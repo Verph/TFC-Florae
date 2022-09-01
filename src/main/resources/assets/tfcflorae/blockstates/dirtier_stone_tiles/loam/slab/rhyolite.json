@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/loam/slab/bottom/rhyolite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/loam/slab/top/rhyolite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/loam/rhyolite"
+    }
+  }
+}

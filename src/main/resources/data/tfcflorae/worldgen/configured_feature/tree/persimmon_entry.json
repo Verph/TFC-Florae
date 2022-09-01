@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 120,
+    "max_rain": 500,
+    "min_temp": -9,
+    "max_temp": 32,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/persimmon"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/persimmon"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/persimmon",
+    "dead_tree": "tfcflorae:tree/persimmon_dead",
+    "fallen_log": "tfcflorae:wood/log/persimmon",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/persimmon",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/persimmon",
+    "old_growth_tree": "tfcflorae:tree/persimmon_large"
+  }
+}

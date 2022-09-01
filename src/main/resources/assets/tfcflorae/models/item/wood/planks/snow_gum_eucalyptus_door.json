@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfcflorae:item/wood/door/snow_gum_eucalyptus"
+    "layer0": "tfcflorae:item/wood/planks/snow_gum_eucalyptus_door"
   }
 }

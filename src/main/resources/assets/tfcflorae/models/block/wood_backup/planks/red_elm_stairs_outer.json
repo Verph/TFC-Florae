@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/red_elm",
+    "top": "tfcflorae:block/wood/planks/red_elm",
+    "side": "tfcflorae:block/wood/planks/red_elm"
+  }
+}

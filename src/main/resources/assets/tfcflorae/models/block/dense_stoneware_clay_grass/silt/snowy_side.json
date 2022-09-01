@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/dense_grass_snowy_side",
+  "textures": {
+    "texture": "tfcflorae:block/stoneware_clay/silt"
+  }
+}

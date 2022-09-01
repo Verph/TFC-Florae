@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:wood/chest/black_willow",
+    "tfcflorae:wood/trapped_chest/black_willow",
     "tfcflorae:wood/chest/african_padauk",
     "tfcflorae:wood/trapped_chest/african_padauk",
     "tfcflorae:wood/chest/alder",

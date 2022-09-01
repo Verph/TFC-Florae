@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/yellow_meranti"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/yellow_meranti"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/yellow_meranti"
     }
   ],
   "duration": 1200,

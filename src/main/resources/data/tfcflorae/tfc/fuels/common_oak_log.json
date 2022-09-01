@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/common_oak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/common_oak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/common_oak"
     }
   ],
   "duration": 2250,

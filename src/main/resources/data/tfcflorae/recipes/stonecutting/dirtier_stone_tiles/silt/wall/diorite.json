@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/diorite"
+  },
+  "result": "tfcflorae:dirtier_stone_tiles/silt/wall/diorite",
+  "count": 1
+}

@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/white_elm"
+          "name": "tfcflorae:wood/scribing_table/white_elm"
         }
       ],
       "conditions": [

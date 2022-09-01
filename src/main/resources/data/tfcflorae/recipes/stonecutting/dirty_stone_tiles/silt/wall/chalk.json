@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirty_stone_tiles/silt/chalk"
+  },
+  "result": "tfcflorae:dirty_stone_tiles/silt/wall/chalk",
+  "count": 1
+}

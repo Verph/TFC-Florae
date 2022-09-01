@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silt/slab/bottom/schist"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silt/slab/top/schist"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silt/schist"
+    }
+  }
+}

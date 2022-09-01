@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/chert"
+  },
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/chert",
+  "count": 2
+}

@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/cocobolo"
+          "name": "tfcflorae:wood/scribing_table/cocobolo"
         }
       ],
       "conditions": [

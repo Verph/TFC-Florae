@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/yellow_jacaranda",
+    "base": "tfcflorae:block/wood/lectern/yellow_jacaranda/base",
+    "front": "tfcflorae:block/wood/lectern/yellow_jacaranda/front",
+    "sides": "tfcflorae:block/wood/lectern/yellow_jacaranda/sides",
+    "top": "tfcflorae:block/wood/lectern/yellow_jacaranda/top",
+    "particle": "tfcflorae:block/wood/lectern/yellow_jacaranda/sides"
+  }
+}

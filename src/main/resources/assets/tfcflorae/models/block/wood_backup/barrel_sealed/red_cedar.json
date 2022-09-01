@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/red_cedar",
+    "planks": "tfcflorae:block/wood/planks/red_cedar",
+    "sheet": "tfcflorae:block/wood/sheet/red_cedar",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

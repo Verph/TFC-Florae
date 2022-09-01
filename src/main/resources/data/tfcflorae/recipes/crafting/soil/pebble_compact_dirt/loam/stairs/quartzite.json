@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/loam/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/stairs/quartzite",
+    "count": 8
+  }
+}

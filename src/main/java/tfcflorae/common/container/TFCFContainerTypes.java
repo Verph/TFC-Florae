@@ -17,6 +17,7 @@ import net.dries007.tfc.util.registry.RegistrationHelpers;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blockentities.ceramics.*;
 import tfcflorae.common.container.ceramics.*;
+//import tfcflorae.common.container.ceramics.LargeVesselContainer;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
@@ -28,6 +29,7 @@ public class TFCFContainerTypes
     public static final RegistryObject<MenuType<LargeEarthenwareVesselContainer>> LARGE_EARTHENWARE_VESSEL = TFCFContainerTypes.<LargeEarthenwareVesselBlockEntity, LargeEarthenwareVesselContainer>registerBlock("large_earthenware_vessel", TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL, LargeEarthenwareVesselContainer::create);
     public static final RegistryObject<MenuType<LargeKaoliniteVesselContainer>> LARGE_KAOLINITE_VESSEL = TFCFContainerTypes.<LargeKaoliniteVesselBlockEntity, LargeKaoliniteVesselContainer>registerBlock("large_kaolinite_vessel", TFCFBlockEntities.LARGE_KAOLINITE_VESSEL, LargeKaoliniteVesselContainer::create);
     public static final RegistryObject<MenuType<LargeStonewareVesselContainer>> LARGE_STONEWARE_VESSEL = TFCFContainerTypes.<LargeStonewareVesselBlockEntity, LargeStonewareVesselContainer>registerBlock("large_stoneware_vessel", TFCFBlockEntities.LARGE_STONEWARE_VESSEL, LargeStonewareVesselContainer::create);
+    //public static final RegistryObject<MenuType<LargeVesselContainer>> LARGE_STONEWARE_VESSEL = TFCFContainerTypes.<LargeKaoliniteVesselBlockEntity, LargeVesselContainer>registerBlock("large_stoneware_vessel", TFCFBlockEntities.LARGE_STONEWARE_VESSEL, LargeVesselContainer::create);
 
     public static final RegistryObject<MenuType<TFCFKnappingContainer>> EARTHENWARE_CLAY_KNAPPING = registerItem("earthenware_clay_knapping", TFCFKnappingContainer::createEarthenwareClay);
     public static final RegistryObject<MenuType<TFCFKnappingContainer>> KAOLINITE_CLAY_KNAPPING = registerItem("kaolinite_clay_knapping", TFCFKnappingContainer::createKaoliniteClay);

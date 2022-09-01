@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/basalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/basalt",
+    "count": 6
+  }
+}

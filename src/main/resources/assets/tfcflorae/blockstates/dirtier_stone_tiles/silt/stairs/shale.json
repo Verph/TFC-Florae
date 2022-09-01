@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/shale",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/outer/shale",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/stairs/inner/shale",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

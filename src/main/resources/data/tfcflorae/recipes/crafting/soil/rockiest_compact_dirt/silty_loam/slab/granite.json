@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silty_loam/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/slab/granite",
+    "count": 6
+  }
+}

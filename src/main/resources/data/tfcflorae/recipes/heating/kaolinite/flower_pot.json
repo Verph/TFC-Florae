@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/unfired_flower_pot"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/flower_pot"
   },
   "result_item": {
     "item": "minecraft:flower_pot"

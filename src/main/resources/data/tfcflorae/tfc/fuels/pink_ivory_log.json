@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/pink_ivory"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/pink_ivory"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/pink_ivory"
     }
   ],
   "duration": 1000,

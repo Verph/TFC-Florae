@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_mace_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/mace_head"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/stoneware/mace_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/mace_head"
   },
   "temperature": 1199
 }

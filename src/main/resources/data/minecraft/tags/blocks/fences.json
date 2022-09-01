@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:wood/planks/black_willow_fence",
+    "tfcflorae:wood/planks/black_willow_log_fence",
     "tfcflorae:wood/planks/african_padauk_fence",
     "tfcflorae:wood/planks/african_padauk_log_fence",
     "tfcflorae:wood/planks/alder_fence",

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/fired/bowl",
+    "tfcflorae:ceramic/kaolinite/fired/bowl",
+    "tfcflorae:ceramic/stoneware/fired/bowl"
+  ]
+}

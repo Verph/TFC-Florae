@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/sandy_loam",
+    "tfcflorae:stoneware_clay_grass/sandy_loam",
+    "tfcflorae:dry_stoneware_clay_grass/sandy_loam",
+    "tfcflorae:sparse_stoneware_clay_grass/sandy_loam",
+    "tfcflorae:dense_stoneware_clay_grass/sandy_loam"
+  ],
+  "result": "tfcflorae:stoneware_clay/sandy_loam"
+}

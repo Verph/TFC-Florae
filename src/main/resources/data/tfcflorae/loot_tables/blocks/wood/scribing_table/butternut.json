@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/butternut"
+          "name": "tfcflorae:wood/scribing_table/butternut"
         }
       ],
       "conditions": [

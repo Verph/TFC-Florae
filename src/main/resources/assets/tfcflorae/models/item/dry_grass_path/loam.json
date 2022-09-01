@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/dry_grass_path/loam",
+  "textures": {
+    "dirt": "tfc:block/dirt/loam",
+    "top": "tfcflorae:block/dry_grass_path/top",
+    "side": "tfcflorae:block/dry_grass_path/loam_side"
+  }
+}

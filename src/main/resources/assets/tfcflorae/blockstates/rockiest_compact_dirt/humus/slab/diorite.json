@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/humus/slab/bottom/diorite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/humus/slab/top/diorite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/humus/diorite"
+    }
+  }
+}

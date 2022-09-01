@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/rainbow_eucalyptus",
+  "result": "tfcflorae:wood/planks/rainbow_eucalyptus_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/planks/rainbow_eucalyptus_slab"
+  }
+}

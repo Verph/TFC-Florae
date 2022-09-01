@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/messmate"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/messmate"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/messmate"
     }
   ],
   "duration": 1250,

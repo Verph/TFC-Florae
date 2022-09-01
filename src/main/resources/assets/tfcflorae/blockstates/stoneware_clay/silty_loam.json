@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/clay/silty_loam"
+      "model": "tfcflorae:block/stoneware_clay/silty_loam"
     }
   }
 }

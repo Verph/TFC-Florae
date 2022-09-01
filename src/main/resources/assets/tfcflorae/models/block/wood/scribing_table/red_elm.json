@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/red_elm",
+    "leg": "tfcflorae:block/wood/log/red_elm",
+    "side": "tfcflorae:block/wood/planks/red_elm",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/red_elm"
+  }
+}

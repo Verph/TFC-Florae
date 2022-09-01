@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/humus",
+    "tfcflorae:earthenware_clay_grass/humus",
+    "tfcflorae:dry_earthenware_clay_grass/humus",
+    "tfcflorae:sparse_earthenware_clay_grass/humus",
+    "tfcflorae:dense_earthenware_clay_grass/humus"
+  ],
+  "result": "tfcflorae:earthenware_clay/humus"
+}

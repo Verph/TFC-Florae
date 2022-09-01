@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/silt/granite",
+    "top": "tfcflorae:block/pebble_compact_dirt/silt/granite",
+    "side": "tfcflorae:block/pebble_compact_dirt/silt/granite"
+  }
+}

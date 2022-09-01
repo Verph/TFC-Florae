@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/phyllite"
+  }
+}

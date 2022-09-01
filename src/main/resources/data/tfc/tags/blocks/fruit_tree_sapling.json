@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/sapling/baobab",
+    "tfcflorae:wood/sapling/hawthorn",
+    "tfcflorae:wood/sapling/holly",
+    "tfcflorae:wood/sapling/joshua",
+    "tfcflorae:wood/sapling/juniper",
+    "tfcflorae:wood/sapling/osage_orange",
+    "tfcflorae:wood/sapling/mahogany",
+    "tfcflorae:wood/sapling/medlar",
+    "tfcflorae:wood/sapling/mulberry",
+    "tfcflorae:wood/sapling/pear",
+    "tfcflorae:wood/sapling/persimmon",
+    "tfcflorae:wood/sapling/pink_cherry_blossom",
+    "tfcflorae:wood/sapling/pink_ivory",
+    "tfcflorae:wood/sapling/quince",
+    "tfcflorae:wood/sapling/red_cedar",
+    "tfcflorae:wood/sapling/rowan",
+    "tfcflorae:wood/sapling/sloe",
+    "tfcflorae:wood/sapling/sorb",
+    "tfcflorae:wood/sapling/syzygium",
+    "tfcflorae:wood/sapling/whitebeam",
+    "tfcflorae:wood/sapling/white_cherry_blossom",
+    "tfcflorae:wood/sapling/yew"
+  ]
+}

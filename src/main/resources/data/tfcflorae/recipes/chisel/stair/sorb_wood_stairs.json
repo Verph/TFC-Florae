@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/sorb",
+  "result": "tfcflorae:wood/planks/sorb_stairs",
+  "mode": "stair"
+}

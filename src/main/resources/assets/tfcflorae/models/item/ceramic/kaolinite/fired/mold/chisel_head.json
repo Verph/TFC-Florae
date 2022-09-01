@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "loader": "tfc:contained_fluid",
+  "parent": "forge:item/default",
+  "textures": {
+    "base": "tfcflorae:item/ceramic/kaolinite/fired/mold/chisel_head/empty",
+    "fluid": "tfcflorae:item/ceramic/kaolinite/fired/mold/chisel_head/metal"
+  }
+}

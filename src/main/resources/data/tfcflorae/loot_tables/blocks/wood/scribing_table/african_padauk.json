@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/african_padauk"
+          "name": "tfcflorae:wood/scribing_table/african_padauk"
         }
       ],
       "conditions": [

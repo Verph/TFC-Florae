@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/red_mangrove"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/red_mangrove_bookshelf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/red_mangrove"
+  }
+}

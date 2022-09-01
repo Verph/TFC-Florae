@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:baobab_tree",
+  "config": {
+    "minHeight": 2,
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 13,
+      "allow_submerged": false
+    },
+    "logState": "tfcflorae:wood/log/joshua",
+    "woodState": "tfcflorae:wood/wood/joshua",
+    "leavesState": "tfcflorae:wood/leaves/joshua"
+  }
+}

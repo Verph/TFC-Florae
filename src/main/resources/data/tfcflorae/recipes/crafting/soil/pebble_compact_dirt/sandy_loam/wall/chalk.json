@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/sandy_loam/chalk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/wall/chalk",
+    "count": 6
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/white_ipe",
+    "base": "tfcflorae:block/wood/lectern/white_ipe/base",
+    "front": "tfcflorae:block/wood/lectern/white_ipe/front",
+    "sides": "tfcflorae:block/wood/lectern/white_ipe/sides",
+    "top": "tfcflorae:block/wood/lectern/white_ipe/top",
+    "particle": "tfcflorae:block/wood/lectern/white_ipe/sides"
+  }
+}

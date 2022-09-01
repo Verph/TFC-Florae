@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/gneiss",
+    "count": 6
+  }
+}

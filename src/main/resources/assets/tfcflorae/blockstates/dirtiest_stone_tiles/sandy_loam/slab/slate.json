@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/slab/bottom/slate"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/slab/top/slate"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/slate"
+    }
+  }
+}

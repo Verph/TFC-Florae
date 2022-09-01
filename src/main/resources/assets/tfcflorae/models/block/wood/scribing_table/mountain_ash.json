@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/mountain_ash",
+    "leg": "tfcflorae:block/wood/log/mountain_ash",
+    "side": "tfcflorae:block/wood/planks/mountain_ash",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/mountain_ash"
+  }
+}

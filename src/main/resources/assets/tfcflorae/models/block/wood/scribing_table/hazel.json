@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/hazel",
+    "leg": "tfcflorae:block/wood/log/hazel",
+    "side": "tfcflorae:block/wood/planks/hazel",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/hazel"
+  }
+}

@@ -25,9 +25,6 @@ import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.network.Packets;
 import tfcflorae.util.TFCFInteractionManager;
 
-
-
-
 public class ForgeEventHandler
 {
     private static final Logger LOGGER = LogUtils.getLogger();

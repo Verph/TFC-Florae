@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/humus/dacite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/stairs/dacite",
+    "count": 8
+  }
+}

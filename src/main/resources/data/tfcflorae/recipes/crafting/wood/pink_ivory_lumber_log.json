@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/pink_ivory"
+        "tag": "tfc:pink_ivory_logs"
       },
       {
         "tag": "tfc:saws"

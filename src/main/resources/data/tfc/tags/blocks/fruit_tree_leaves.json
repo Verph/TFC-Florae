@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/leaves/baobab",
+    "tfcflorae:wood/leaves/hawthorn",
+    "tfcflorae:wood/leaves/holly",
+    "tfcflorae:wood/leaves/joshua",
+    "tfcflorae:wood/leaves/juniper",
+    "tfcflorae:wood/leaves/osage_orange",
+    "tfcflorae:wood/leaves/mahogany",
+    "tfcflorae:wood/leaves/medlar",
+    "tfcflorae:wood/leaves/mulberry",
+    "tfcflorae:wood/leaves/pear",
+    "tfcflorae:wood/leaves/persimmon",
+    "tfcflorae:wood/leaves/pink_cherry_blossom",
+    "tfcflorae:wood/leaves/pink_ivory",
+    "tfcflorae:wood/leaves/quince",
+    "tfcflorae:wood/leaves/red_cedar",
+    "tfcflorae:wood/leaves/rowan",
+    "tfcflorae:wood/leaves/sloe",
+    "tfcflorae:wood/leaves/sorb",
+    "tfcflorae:wood/leaves/syzygium",
+    "tfcflorae:wood/leaves/whitebeam",
+    "tfcflorae:wood/leaves/white_cherry_blossom",
+    "tfcflorae:wood/leaves/yew"
+  ]
+}

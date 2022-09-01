@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:dry_clay_grass/loam",
+    "tfcflorae:sparse_clay_grass/loam",
+    "tfcflorae:dense_clay_grass/loam"
+  ],
+  "result": "tfc:clay/loam"
+}

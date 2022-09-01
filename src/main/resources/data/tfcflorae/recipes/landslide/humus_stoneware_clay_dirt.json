@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/humus",
+    "tfcflorae:stoneware_clay_grass/humus",
+    "tfcflorae:dry_stoneware_clay_grass/humus",
+    "tfcflorae:sparse_stoneware_clay_grass/humus",
+    "tfcflorae:dense_stoneware_clay_grass/humus"
+  ],
+  "result": "tfcflorae:stoneware_clay/humus"
+}

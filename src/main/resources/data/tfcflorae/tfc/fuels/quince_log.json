@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/quince"
+    },
+    {
+      "item": "tfcflorae:wood/wood/quince"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/quince"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/quince"
+    }
+  ],
+  "duration": 2250,
+  "temperature": 745
+}

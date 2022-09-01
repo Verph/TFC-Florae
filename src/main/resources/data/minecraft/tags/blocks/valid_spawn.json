@@ -43,6 +43,8 @@
     "tfcflorae:earthenware_clay_grass/humus",
     "tfcflorae:dry_earthenware_clay_grass/humus",
     "tfcflorae:dense_earthenware_clay_grass/humus",
-    "tfcflorae:sparse_earthenware_clay_grass/humus"
+    "tfcflorae:sparse_earthenware_clay_grass/humus",
+	"#tfcflorae:dirty_stone_tiles",
+	"#tfcflorae:rocky_compact_dirt"
   ]
 }

@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/alder"
+          "name": "tfcflorae:wood/scribing_table/alder"
         }
       ],
       "conditions": [

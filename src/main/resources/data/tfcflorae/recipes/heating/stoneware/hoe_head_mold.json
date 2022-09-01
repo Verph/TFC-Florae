@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_hoe_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/hoe_head"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/stoneware/hoe_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/hoe_head"
   },
   "temperature": 1199
 }

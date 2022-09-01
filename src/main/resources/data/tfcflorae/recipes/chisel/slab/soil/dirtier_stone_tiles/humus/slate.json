@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/slate",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/slab/slate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/slate"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slate"
+  },
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/wall/slate",
+  "count": 1
+}

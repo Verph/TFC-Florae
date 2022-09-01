@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:food/baobab_fruit"
+    "item": "tfcflorae:food/osage_orange"
   },
   "category": "fruit",
   "hunger": 4,

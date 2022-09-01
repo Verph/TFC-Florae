@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtier_stone_tiles/sandy_loam/schist",
+    "top": "tfcflorae:block/dirtier_stone_tiles/sandy_loam/schist",
+    "side": "tfcflorae:block/dirtier_stone_tiles/sandy_loam/schist"
+  }
+}

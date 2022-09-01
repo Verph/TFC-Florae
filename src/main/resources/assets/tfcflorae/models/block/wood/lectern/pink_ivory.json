@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/pink_ivory",
+    "base": "tfcflorae:block/wood/lectern/pink_ivory/base",
+    "front": "tfcflorae:block/wood/lectern/pink_ivory/front",
+    "sides": "tfcflorae:block/wood/lectern/pink_ivory/sides",
+    "top": "tfcflorae:block/wood/lectern/pink_ivory/top",
+    "particle": "tfcflorae:block/wood/lectern/pink_ivory/sides"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/sandy_loam/chert",
+  "result": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/chert",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/chert"
+  }
+}

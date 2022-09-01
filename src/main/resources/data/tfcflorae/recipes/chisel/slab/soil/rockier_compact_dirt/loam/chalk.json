@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/loam/chalk",
+  "result": "tfcflorae:rockier_compact_dirt/loam/slab/chalk",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/slab/chalk"
+  }
+}

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/angelim"
+        "tag": "tfc:angelim_logs"
       },
       {
         "tag": "tfc:saws"

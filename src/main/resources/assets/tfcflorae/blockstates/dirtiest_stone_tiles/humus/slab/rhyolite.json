@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/slab/bottom/rhyolite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/slab/top/rhyolite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/humus/rhyolite"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/silt/slab/bottom/slate"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/silt/slab/top/slate"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rockiest_compact_dirt/silt/slate"
+    }
+  }
+}

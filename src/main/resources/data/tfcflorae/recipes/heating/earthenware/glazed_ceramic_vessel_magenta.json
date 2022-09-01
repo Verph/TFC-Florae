@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/earthenware/magenta_unfired_vessel"
+    "item": "tfcflorae:ceramic/earthenware/unfired/glazed_vessel/magenta"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/earthenware/magenta_glazed_vessel"
+    "item": "tfcflorae:ceramic/earthenware/fired/glazed_vessel/magenta"
   },
   "temperature": 1199
 }

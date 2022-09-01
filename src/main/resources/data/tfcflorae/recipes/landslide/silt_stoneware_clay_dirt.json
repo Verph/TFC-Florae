@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/silt",
+    "tfcflorae:stoneware_clay_grass/silt",
+    "tfcflorae:dry_stoneware_clay_grass/silt",
+    "tfcflorae:sparse_stoneware_clay_grass/silt",
+    "tfcflorae:dense_stoneware_clay_grass/silt"
+  ],
+  "result": "tfcflorae:stoneware_clay/silt"
+}

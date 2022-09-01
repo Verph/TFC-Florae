@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/loam/shale"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/wall/shale",
+    "count": 6
+  }
+}

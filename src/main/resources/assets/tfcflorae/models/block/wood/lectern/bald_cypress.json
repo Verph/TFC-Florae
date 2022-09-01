@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/bald_cypress",
+    "base": "tfcflorae:block/wood/lectern/bald_cypress/base",
+    "front": "tfcflorae:block/wood/lectern/bald_cypress/front",
+    "sides": "tfcflorae:block/wood/lectern/bald_cypress/sides",
+    "top": "tfcflorae:block/wood/lectern/bald_cypress/top",
+    "particle": "tfcflorae:block/wood/lectern/bald_cypress/sides"
+  }
+}

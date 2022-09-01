@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:dirty_stone_tiles/silt/phyllite"
+  },
+  "result": "tfcflorae:dirty_stone_tiles/silt/stairs/phyllite",
+  "count": 1
+}

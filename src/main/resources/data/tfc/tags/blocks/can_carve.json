@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "#minecraft:dirt",
+    "tfcflorae:dirt/humus",
     "tfcflorae:dirt/humus",
     "tfcflorae:grass/humus",
     "tfcflorae:mud/humus",
@@ -25,6 +27,8 @@
     "tfcflorae:sparse_grass/loam",
     "tfcflorae:sparse_grass/sandy_loam",
     "tfcflorae:sparse_grass/silty_loam",
-    "tfcflorae:sparse_grass/humus"
+    "tfcflorae:sparse_grass/humus",
+    "#tfcflorae:dirty_stone_tiles",
+    "#tfcflorae:rocky_compact_dirt"
   ]
 }

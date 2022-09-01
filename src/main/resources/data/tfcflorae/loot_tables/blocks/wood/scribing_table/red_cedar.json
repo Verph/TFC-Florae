@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/red_cedar"
+          "name": "tfcflorae:wood/scribing_table/red_cedar"
         }
       ],
       "conditions": [

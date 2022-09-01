@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:dry_grass/silty_loam",
+    "tfcflorae:sparse_grass/silty_loam",
+    "tfcflorae:dense_grass/silty_loam",
+    "tfcflorae:dry_grass_path/silty_loam",
+    "tfcflorae:sparse_grass_path/silty_loam",
+    "tfcflorae:dense_grass_path/silty_loam",
+    "tfcflorae:podzol/silty_loam"
+  ],
+  "result": "tfc:dirt/silty_loam"
+}

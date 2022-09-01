@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/granite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/granite"
+  }
+}

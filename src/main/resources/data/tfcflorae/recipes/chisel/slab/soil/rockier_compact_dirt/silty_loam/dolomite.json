@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silty_loam/dolomite",
+  "result": "tfcflorae:rockier_compact_dirt/silty_loam/slab/dolomite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/silty_loam/slab/dolomite"
+  }
+}

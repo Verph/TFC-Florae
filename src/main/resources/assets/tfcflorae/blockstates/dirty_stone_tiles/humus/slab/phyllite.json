@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/slab/bottom/phyllite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/slab/top/phyllite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/humus/phyllite"
+    }
+  }
+}

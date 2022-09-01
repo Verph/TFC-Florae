@@ -3,6 +3,6 @@
   "parent": "tfcflorae:block/leaves_overlay",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/mahoe",
-    "overlay": "tfcflorae:block/wood/fruits/mahoe"
+    "overlay": "tfcflorae:block/wood/leaves/mahoe"
   }
 }

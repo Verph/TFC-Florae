@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/rowan",
+    "base": "tfcflorae:block/wood/lectern/rowan/base",
+    "front": "tfcflorae:block/wood/lectern/rowan/front",
+    "sides": "tfcflorae:block/wood/lectern/rowan/sides",
+    "top": "tfcflorae:block/wood/lectern/rowan/top",
+    "particle": "tfcflorae:block/wood/lectern/rowan/sides"
+  }
+}

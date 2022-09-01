@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/syzygium"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/syzygium"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/syzygium"
     }
   ],
   "duration": 2000,

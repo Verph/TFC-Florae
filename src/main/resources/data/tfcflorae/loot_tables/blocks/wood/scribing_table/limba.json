@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/limba"
+          "name": "tfcflorae:wood/scribing_table/limba"
         }
       ],
       "conditions": [

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/wenge"
+        "tag": "tfc:wenge_logs"
       },
       {
         "tag": "tfc:saws"

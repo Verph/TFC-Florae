@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "#tfcflorae:grass",
-    "#tfcflorae:mud"
+	"#tfcflorae:dirty_stone_tiles",
+	"#tfcflorae:rocky_compact_dirt"
   ]
 }

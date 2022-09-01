@@ -16,23 +16,23 @@
       },
       {
         "replace": "tfcflorae:coarse_dirt/silt",
-        "with": "tfc:clay/silt"
+        "with": "tfcflorae:sparse_clay_grass/silt"
       },
       {
         "replace": "tfcflorae:coarse_dirt/loam",
-        "with": "tfc:clay/loam"
+        "with": "tfcflorae:sparse_clay_grass/loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/sandy_loam",
-        "with": "tfc:clay/sandy_loam"
+        "with": "tfcflorae:sparse_clay_grass/sandy_loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/silty_loam",
-        "with": "tfc:clay/silty_loam"
+        "with": "tfcflorae:sparse_clay_grass/silty_loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/humus",
-        "with": "tfcflorae:clay/humus"
+        "with": "tfcflorae:sparse_clay_grass/humus"
       },
       {
         "replace": "tfcflorae:dry_grass/silt",

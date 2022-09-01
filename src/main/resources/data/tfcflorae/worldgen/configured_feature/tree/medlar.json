@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:medlar/1",
+      "tfcflorae:medlar/2",
+      "tfcflorae:medlar/3",
+      "tfcflorae:medlar/4",
+      "tfcflorae:medlar/5",
+      "tfcflorae:medlar/6",
+      "tfcflorae:medlar/7",
+      "tfcflorae:medlar/8",
+      "tfcflorae:medlar/9",
+      "tfcflorae:medlar/10",
+      "tfcflorae:medlar/11",
+      "tfcflorae:medlar/12",
+      "tfcflorae:medlar/13",
+      "tfcflorae:medlar/14",
+      "tfcflorae:medlar/15",
+      "tfcflorae:medlar/16",
+      "tfcflorae:medlar/17",
+      "tfcflorae:medlar/18",
+      "tfcflorae:medlar/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

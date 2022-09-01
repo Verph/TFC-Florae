@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/white_mangrove",
+    "top": "tfcflorae:block/wood/log_top/white_mangrove"
+  }
+}

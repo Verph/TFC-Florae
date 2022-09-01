@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/phyllite",
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/slab/phyllite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slab/phyllite"
+  }
+}

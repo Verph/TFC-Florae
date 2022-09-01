@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/white_elm"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/white_elm"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/white_elm"
     }
   ],
   "duration": 1750,

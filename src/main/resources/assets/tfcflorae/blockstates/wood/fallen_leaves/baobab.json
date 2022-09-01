@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/baobab",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/baobab"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/baobab",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/baobab",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/earthenware/unfired_bowl"
+    "item": "tfcflorae:ceramic/earthenware/unfired/bowl"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/earthenware/bowl"
+    "item": "tfcflorae:ceramic/earthenware/fired/bowl"
   },
   "temperature": 1199
 }

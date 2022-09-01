@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/dense_grass_path",
+  "textures": {
+    "dirt": "tfc:block/dirt/sandy_loam",
+    "top": "tfcflorae:block/dense_grass_path/top",
+    "side": "tfcflorae:block/dense_grass_path/sandy_loam_side"
+  }
+}

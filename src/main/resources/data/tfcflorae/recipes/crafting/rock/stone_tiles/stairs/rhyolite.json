@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/stairs/rhyolite",
+    "count": 8
+  }
+}

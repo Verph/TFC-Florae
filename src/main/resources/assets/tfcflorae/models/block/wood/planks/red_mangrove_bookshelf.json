@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/red_mangrove",
+    "side": "tfcflorae:block/wood/planks/red_mangrove_bookshelf"
+  }
+}

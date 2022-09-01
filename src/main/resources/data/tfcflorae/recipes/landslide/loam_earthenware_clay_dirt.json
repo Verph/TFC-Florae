@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/loam",
+    "tfcflorae:earthenware_clay_grass/loam",
+    "tfcflorae:dry_earthenware_clay_grass/loam",
+    "tfcflorae:sparse_earthenware_clay_grass/loam",
+    "tfcflorae:dense_earthenware_clay_grass/loam"
+  ],
+  "result": "tfcflorae:earthenware_clay/loam"
+}

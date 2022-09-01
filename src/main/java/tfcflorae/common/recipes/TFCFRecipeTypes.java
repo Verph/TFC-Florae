@@ -25,5 +25,12 @@ public class TFCFRecipeTypes
                 return name;
             }
         });
+        /*return RECIPE_TYPES.register(name, () -> new RecipeType<R>() {
+            @Override
+            public String toString()
+            {
+                return name;
+            }
+        });*/
     }
 }

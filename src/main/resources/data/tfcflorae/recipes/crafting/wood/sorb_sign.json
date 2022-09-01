@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    " Y "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/sorb"
+    },
+    "Y": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/sign/sorb",
+    "count": 3
+  }
+}

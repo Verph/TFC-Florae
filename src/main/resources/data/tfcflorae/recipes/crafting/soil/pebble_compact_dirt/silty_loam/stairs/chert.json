@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silty_loam/chert"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/chert",
+    "count": 8
+  }
+}

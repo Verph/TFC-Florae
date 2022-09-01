@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/red_mangrove",
+    "base": "tfcflorae:block/wood/lectern/red_mangrove/base",
+    "front": "tfcflorae:block/wood/lectern/red_mangrove/front",
+    "sides": "tfcflorae:block/wood/lectern/red_mangrove/sides",
+    "top": "tfcflorae:block/wood/lectern/red_mangrove/top",
+    "particle": "tfcflorae:block/wood/lectern/red_mangrove/sides"
+  }
+}

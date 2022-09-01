@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:mud_bricks/humus_slab",
+    "tfcflorae:ceramic/fire_bricks/brick_slab",
+    "tfcflorae:ceramic/earthenware/brick_slab",
+    "tfcflorae:ceramic/kaolinite/brick_slab",
+    "tfcflorae:ceramic/stoneware/brick_slab",
+    "#tfcflorae:dirty_stone_tile_slabs",
+    "#tfcflorae:rocky_compact_dirt_slabs"
+  ]
+}

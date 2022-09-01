@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/gabbro"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/gabbro"
+  }
+}

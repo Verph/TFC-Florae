@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/zebrawood"
+          "name": "tfcflorae:wood/scribing_table/zebrawood"
         }
       ],
       "conditions": [

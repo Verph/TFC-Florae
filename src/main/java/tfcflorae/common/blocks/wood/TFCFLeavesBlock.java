@@ -3,6 +3,8 @@ package tfcflorae.common.blocks.wood;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import com.google.common.base.Preconditions;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -57,11 +59,18 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         level.sendParticles(TFCParticles.LEAF.get(), x, y, z, count, Helpers.triangle(level.random), Helpers.triangle(level.random), Helpers.triangle(level.random), 0.3f);
     }
 
+    /**
+     * Taking into account only environment rainfall, on a scale [0, 100]
+     */
+    public static int getHydration(Level level, BlockPos pos)
+    {
+        return (int) (Climate.getRainfall(level, pos) / 5);
+    }
+
     public static final BooleanProperty PERSISTENT = BlockStateProperties.PERSISTENT;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
 
-    private final int maxDecayDistance;
-    private final Supplier<ClimateRange> climateRange;
+    public final int maxDecayDistance;
 
     public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] stages, int maxDecayDistance, Supplier<ClimateRange> climateRange)
     {
@@ -76,7 +85,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         };
     }
 
-    private static IntegerProperty getDistanceProperty(int maxDecayDistance)
+    public static IntegerProperty getDistanceProperty(int maxDecayDistance)
     {
         if (maxDecayDistance >= 7 && maxDecayDistance < 7 + TFCBlockStateProperties.DISTANCES.length)
         {
@@ -87,10 +96,9 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
 
     public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] stages, int maxDecayDistance, Supplier<ClimateRange> climateRange)
     {
-        super(properties, productItem, stages);
+        super(properties, climateRange, productItem, stages);
 
         this.maxDecayDistance = maxDecayDistance;
-        this.climateRange = climateRange;
 
         registerDefaultState(getStateDefinition().any().setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
@@ -111,46 +119,6 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     @SuppressWarnings("deprecation")
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
-        if (!getTrimItemStack().isEmpty())
-        {
-            // Flowering bushes can be cut to create trimmings. This is how one moves or creates new bushes.
-            // The larger the bush is (higher stage), the better chance you have of
-            // 1. damaging it less (i.e. reducing the stage, or killing it), and
-            // 2. making a clipping.
-            if (state.getValue(LIFECYCLE) == Lifecycle.FLOWERING)
-            {
-                final ItemStack held = player.getItemInHand(hand);
-                if (Helpers.isItem(held.getItem(), TFCTags.Items.BUSH_CUTTING_TOOLS))
-                {
-                    level.playSound(null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.PLAYERS, 0.5f, 1.0f);
-                    if (!level.isClientSide())
-                    {
-                        level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(bush -> {
-                            final int finalStage = state.getValue(STAGE) - 1 - level.getRandom().nextInt(2);
-                            if (finalStage >= 0)
-                            {
-                                // We didn't kill the bush, but we have cut the flowers off
-                                level.setBlock(pos, state.setValue(STAGE, finalStage).setValue(LIFECYCLE, Lifecycle.HEALTHY), 3);
-                            }
-                            else
-                            {
-                                // Oops
-                                level.destroyBlock(pos, false, player);
-                            }
-
-                            held.hurtAndBreak(1, player, e -> e.broadcastBreakEvent(hand));
-
-                            // But, if we were successful, we have obtained a clipping (2 / 3 chance)
-                            if (level.getRandom().nextInt(3) != 0)
-                            {
-                                ItemHandlerHelper.giveItemToPlayer(player, getTrimItemStack());
-                            }
-                        });
-                    }
-                    return InteractionResult.SUCCESS;
-                }
-            }
-        }
         if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING)
         {
             level.playSound(player, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
@@ -185,8 +153,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                 long nextCalendarTick = currentCalendarTick - deltaTicks;
 
                 final ClimateRange range = climateRange.get();
-                // todo: include root water?
-                final int hydration = (int) Climate.getRainfall(level, pos) / 5;
+                final int hydration = getHydration(level, pos);
 
                 int monthsSpentDying = 0;
                 do
@@ -208,7 +175,6 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                     {
                         currentLifecycle = Lifecycle.DORMANT;
                     }
-                    currentLifecycle = currentLifecycle.advanceTowards(lifecycleAtNextTick);
 
                     if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                     {
@@ -223,9 +189,8 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
 
                 BlockState newState;
 
-                if (monthsSpentDying > 0 && level.getRandom().nextInt(16) < monthsSpentDying)
+                if (mayDie(level, pos, state, monthsSpentDying))
                 {
-                    // It may have died, as it spent too many consecutive months when it should've been healthy, in invalid conditions.
                     newState = Blocks.AIR.defaultBlockState();
                 }
                 else
@@ -239,12 +204,19 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                     level.setBlock(pos, newState, 3);
                 }
             }
-            leaves.afterUpdate();
         });
     }
 
+    /**
+     * Can this leaf block die, given that it spent {@code monthsSpentDying} consecutive months in a dormant state, when it should've been in a non-dormant state.
+     */
+    protected boolean mayDie(Level level, BlockPos pos, BlockState state, int monthsSpentDying)
+    {
+        return false;
+    }
+
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(LIFECYCLE, PERSISTENT, getDistanceProperty()); // avoid "STAGE" property
     }
@@ -311,7 +283,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         }
     }
 
-    private boolean isValid(LevelAccessor level, BlockPos pos, BlockState state)
+    public boolean isValid(LevelAccessor level, BlockPos pos, BlockState state)
     {
         if (state.getValue(PERSISTENT))
         {
@@ -355,7 +327,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
      */
     protected abstract IntegerProperty getDistanceProperty();
 
-    private int updateDistance(LevelAccessor level, BlockPos pos)
+    public int updateDistance(LevelAccessor level, BlockPos pos)
     {
         int distance = 1 + maxDecayDistance;
         BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
@@ -371,7 +343,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         return distance;
     }
 
-    private int getDistance(BlockState neighbor)
+    public int getDistance(BlockState neighbor)
     {
         if (Helpers.isBlock(neighbor.getBlock(), BlockTags.LOGS))
         {
@@ -385,7 +357,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
+    public boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;
     }

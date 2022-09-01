@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/large_vessel_sealed",
+  "textures": {
+    "top": "tfcflorae:block/ceramic/stoneware/unfired/glazed/yellow/top",
+    "side": "tfcflorae:block/ceramic/stoneware/unfired/glazed/yellow/side",
+    "bottom": "tfcflorae:block/ceramic/stoneware/unfired/glazed/yellow/bottom",
+    "particle": "tfcflorae:block/ceramic/stoneware/unfired/glazed/yellow/side"
+  }
+}

@@ -5,10 +5,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/rowan"
+        "tag": "tfc:rowan_logs"
       },
       {
-        "item": "tfcflorae:wood/log/rowan"
+        "tag": "tfc:rowan_logs"
       },
       {
         "tag": "tfc:saws"

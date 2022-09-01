@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/ceramic/earthenware/bricks",
+    "top": "tfcflorae:block/ceramic/earthenware/bricks",
+    "side": "tfcflorae:block/ceramic/earthenware/bricks"
+  }
+}

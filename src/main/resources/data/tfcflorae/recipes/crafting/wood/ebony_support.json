@@ -5,10 +5,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/ebony"
+        "tag": "tfc:ebony_logs"
       },
       {
-        "item": "tfcflorae:wood/log/ebony"
+        "tag": "tfc:ebony_logs"
       },
       {
         "tag": "tfc:saws"

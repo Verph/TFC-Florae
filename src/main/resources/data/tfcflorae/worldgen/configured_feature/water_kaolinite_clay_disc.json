@@ -68,23 +68,23 @@
       },
       {
         "replace": "tfcflorae:coarse_dirt/silt",
-        "with": "tfcflorae:kaolinite_clay/silt"
+        "with": "tfcflorae:sparse_kaolinite_clay_grass/silt"
       },
       {
         "replace": "tfcflorae:coarse_dirt/loam",
-        "with": "tfcflorae:kaolinite_clay/loam"
+        "with": "tfcflorae:sparse_kaolinite_clay_grass/loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/sandy_loam",
-        "with": "tfcflorae:kaolinite_clay/sandy_loam"
+        "with": "tfcflorae:sparse_kaolinite_clay_grass/sandy_loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/silty_loam",
-        "with": "tfcflorae:kaolinite_clay/silty_loam"
+        "with": "tfcflorae:sparse_kaolinite_clay_grass/silty_loam"
       },
       {
         "replace": "tfcflorae:coarse_dirt/humus",
-        "with": "tfcflorae:kaolinite_clay/humus"
+        "with": "tfcflorae:sparse_kaolinite_clay_grass/humus"
       },
       {
         "replace": "tfcflorae:dry_grass/silt",

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/medlar"
+    },
+    {
+      "item": "tfcflorae:wood/wood/medlar"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/medlar"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/medlar"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 728
+}

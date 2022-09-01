@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/ironwood_workbench_front",
+    "north": "tfcflorae:block/wood/planks/ironwood_workbench_front",
+    "south": "tfcflorae:block/wood/planks/ironwood_workbench_side",
+    "east": "tfcflorae:block/wood/planks/ironwood_workbench_side",
+    "west": "tfcflorae:block/wood/planks/ironwood_workbench_front",
+    "up": "tfcflorae:block/wood/planks/ironwood_workbench_top",
+    "down": "tfcflorae:block/wood/planks/ironwood"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/humus/slate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/humus/stairs/slate",
+    "count": 8
+  }
+}

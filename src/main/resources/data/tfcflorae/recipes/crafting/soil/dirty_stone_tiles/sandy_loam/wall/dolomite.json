@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/sandy_loam/dolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/wall/dolomite",
+    "count": 6
+  }
+}

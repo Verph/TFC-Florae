@@ -12,13 +12,21 @@ public enum TFCFFood
     BARREL_CACTUS_FRUIT,
     HAWTHORN,
     HOLLY_BERRY,
+    JOSHUA_FRUIT,
     JUNIPER,
+    MEDLAR,
     MULBERRY,
     OSAGE_ORANGE,
+    OTAHEITE_APPLE,
+    PEAR,
+    PERSIMMON,
     PINK_IVORY_DRUPE,
+    QUINCE,
     RIBERRY,
     ROWAN_BERRY,
     SKY_FRUIT,
+    SLOE,
+    SORB_APPLE,
     YEW_BERRY;
 
     private final boolean meat, fast;

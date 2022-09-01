@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:wood/lectern/brazilwood"
+          "name": "tfcflorae:wood/scribing_table/brazilwood"
         }
       ],
       "conditions": [

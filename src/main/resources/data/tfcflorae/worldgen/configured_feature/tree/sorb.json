@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:sorb/1",
+      "tfcflorae:sorb/2",
+      "tfcflorae:sorb/3",
+      "tfcflorae:sorb/4",
+      "tfcflorae:sorb/5",
+      "tfcflorae:sorb/6",
+      "tfcflorae:sorb/7",
+      "tfcflorae:sorb/8",
+      "tfcflorae:sorb/9",
+      "tfcflorae:sorb/10",
+      "tfcflorae:sorb/11",
+      "tfcflorae:sorb/12",
+      "tfcflorae:sorb/13",
+      "tfcflorae:sorb/14",
+      "tfcflorae:sorb/15",
+      "tfcflorae:sorb/16",
+      "tfcflorae:sorb/17",
+      "tfcflorae:sorb/18",
+      "tfcflorae:sorb/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

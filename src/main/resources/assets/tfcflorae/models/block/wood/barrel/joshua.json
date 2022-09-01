@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/joshua",
+    "planks": "tfcflorae:block/wood/planks/joshua",
+    "sheet": "tfcflorae:block/wood/sheet/joshua",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

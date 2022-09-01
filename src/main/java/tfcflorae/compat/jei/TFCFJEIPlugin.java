@@ -21,13 +21,16 @@ import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.IVanillaCategoryExtensionRegistration;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.TFCFlorae;
-import tfcflorae.common.TFCFHelpers;
+import tfcflorae.common.TFCFTags;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.TFCFKnappingRecipe;
+import tfcflorae.common.recipes.TFCFRecipeTypes;
 import tfcflorae.compat.jei.category.TFCFKnappingRecipeCategory;
+import tfcflorae.util.TFCFHelpers;
 
 @JeiPlugin
 public class TFCFJEIPlugin implements IModPlugin
@@ -47,6 +50,11 @@ public class TFCFJEIPlugin implements IModPlugin
     private static void addCatalystTag(IRecipeCatalystRegistration r, TagKey<Item> tag, RecipeType<?> recipeType)
     {
         Helpers.getAllTagValues(tag, ForgeRegistries.ITEMS).forEach(item -> r.addRecipeCatalyst(new ItemStack(item), recipeType));
+    }
+
+    private static List<ItemStack> tagToItemList(TagKey<Item> tag)
+    {
+        return Helpers.getAllTagValues(tag, ForgeRegistries.ITEMS).stream().map(Item::getDefaultInstance).collect(Collectors.toList());
     }
 
     private static <T> RecipeType<T> type(String name, Class<T> tClass)
@@ -83,10 +91,28 @@ public class TFCFJEIPlugin implements IModPlugin
     @Override
     public void registerRecipes(IRecipeRegistration r)
     {
+        r.addRecipes(EARTHENWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING.get()));
+        r.addRecipes(KAOLINITE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING.get()));
+        r.addRecipes(STONEWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING.get()));
+
+        addIngredientInfo(r);
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration r)
+    {
+        addCatalystTag(r, TFCFTags.Items.EARTHENWARE_CLAY_KNAPPING, EARTHENWARE_CLAY_KNAPPING);
+        addCatalystTag(r, TFCFTags.Items.KAOLINITE_CLAY_KNAPPING, KAOLINITE_CLAY_KNAPPING);
+        addCatalystTag(r, TFCFTags.Items.STONEWARE_CLAY_KNAPPING, STONEWARE_CLAY_KNAPPING);
+    }
+
+    @Override
+    public void registerVanillaCategoryExtensions(IVanillaCategoryExtensionRegistration r)
+    {
+        // todo: add bait, salting recipes
+    }
+
+    private void addIngredientInfo(IRecipeRegistration r)
     {
     }
 }

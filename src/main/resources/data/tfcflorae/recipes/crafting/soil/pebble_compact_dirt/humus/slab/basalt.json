@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/humus/basalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/slab/basalt",
+    "count": 6
+  }
+}

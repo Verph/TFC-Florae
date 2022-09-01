@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/black_willow",
+    "tfcflorae:wood/wood/black_willow",
+    "tfcflorae:wood/stripped_log/black_willow",
+    "tfcflorae:wood/stripped_wood/black_willow"
+  ]
+}

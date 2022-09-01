@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/sparse_grass_path",
+  "textures": {
+    "dirt": "tfc:block/peat",
+    "top": "tfcflorae:block/sparse_grass_path/top",
+    "side": "tfcflorae:block/sparse_grass_path/peat_side"
+  }
+}

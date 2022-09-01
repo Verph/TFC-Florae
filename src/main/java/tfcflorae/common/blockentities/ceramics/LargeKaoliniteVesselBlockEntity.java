@@ -30,7 +30,7 @@ import static tfcflorae.TFCFlorae.MOD_ID;
 public class LargeKaoliniteVesselBlockEntity extends InventoryBlockEntity<LargeKaoliniteVesselBlockEntity.VesselInventory>
 {
     public static final int SLOTS = 9;
-    private static final Component NAME = new TranslatableComponent(MOD_ID + ".block_entity.large_kaoliniteware_vessel");
+    private static final Component NAME = new TranslatableComponent(MOD_ID + ".block_entity.large_kaolinite_vessel");
 
     public LargeKaoliniteVesselBlockEntity(BlockPos pos, BlockState state)
     {

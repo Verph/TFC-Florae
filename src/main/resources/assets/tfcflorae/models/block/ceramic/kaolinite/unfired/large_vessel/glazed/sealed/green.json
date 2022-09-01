@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/large_vessel_sealed",
+  "textures": {
+    "top": "tfcflorae:block/ceramic/kaolinite/unfired/large_vessel/glazed/green/top",
+    "side": "tfcflorae:block/ceramic/kaolinite/unfired/large_vessel/glazed/green/side",
+    "bottom": "tfcflorae:block/ceramic/kaolinite/unfired/large_vessel/glazed/green/bottom",
+    "particle": "tfcflorae:block/ceramic/kaolinite/unfired/large_vessel/glazed/green/side"
+  }
+}

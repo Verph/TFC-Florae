@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:kaolinite_clay/humus",
+    "tfcflorae:kaolinite_clay_grass/humus",
+    "tfcflorae:dry_kaolinite_clay_grass/humus",
+    "tfcflorae:sparse_kaolinite_clay_grass/humus",
+    "tfcflorae:dense_kaolinite_clay_grass/humus"
+  ],
+  "result": "tfcflorae:kaolinite_clay/humus"
+}

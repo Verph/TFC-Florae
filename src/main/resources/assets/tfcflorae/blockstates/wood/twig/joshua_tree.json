@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfc:block/wood/twig/joshua_tree",
+        "y": 90
+      },
+      {
+        "model": "tfc:block/wood/twig/joshua_tree"
+      },
+      {
+        "model": "tfc:block/wood/twig/joshua_tree",
+        "y": 180
+      },
+      {
+        "model": "tfc:block/wood/twig/joshua_tree",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/wood/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/red_cypress"
+    }
+  ],
+  "duration": 1300,
+  "temperature": 770
+}

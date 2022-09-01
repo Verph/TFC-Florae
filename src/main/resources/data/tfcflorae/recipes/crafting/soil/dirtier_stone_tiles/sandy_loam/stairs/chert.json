@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/chert"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/chert",
+    "count": 8
+  }
+}

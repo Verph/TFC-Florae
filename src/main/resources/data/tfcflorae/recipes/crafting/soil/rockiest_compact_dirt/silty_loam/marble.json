@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silty_loam"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/marble"
+  }
+}

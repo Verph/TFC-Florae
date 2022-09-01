@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/argyle_eucalyptus",
+    "base": "tfcflorae:block/wood/lectern/argyle_eucalyptus/base",
+    "front": "tfcflorae:block/wood/lectern/argyle_eucalyptus/front",
+    "sides": "tfcflorae:block/wood/lectern/argyle_eucalyptus/sides",
+    "top": "tfcflorae:block/wood/lectern/argyle_eucalyptus/top",
+    "particle": "tfcflorae:block/wood/lectern/argyle_eucalyptus/sides"
+  }
+}

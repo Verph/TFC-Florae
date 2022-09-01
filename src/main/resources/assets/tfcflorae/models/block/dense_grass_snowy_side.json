@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/block",
   "textures": {
-    "overlay": "tfcflorae:block/dense_grass_snowy_side",
+    "overlay": "tfc:block/grass_snowy_side",
     "particle": "#texture"
   },
   "elements": [

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:wood/log/hawthorn"
+        "tag": "tfc:hawthorn_logs"
       },
       {
         "tag": "tfc:saws"

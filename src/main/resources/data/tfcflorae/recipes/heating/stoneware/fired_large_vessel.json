@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_large_vessel"
+    "item": "tfcflorae:ceramic/stoneware/unfired/large_vessel"
   },
   "result_item": {
-    "item": "tfcflorae:ceramic/stoneware/large_vessel"
+    "item": "tfcflorae:ceramic/stoneware/fired/large_vessel"
   },
   "temperature": 1199
 }

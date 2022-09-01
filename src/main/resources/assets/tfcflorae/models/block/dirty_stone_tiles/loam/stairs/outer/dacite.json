@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirty_stone_tiles/loam/dacite",
+    "top": "tfcflorae:block/dirty_stone_tiles/loam/dacite",
+    "side": "tfcflorae:block/dirty_stone_tiles/loam/dacite"
+  }
+}
