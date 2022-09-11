@@ -4,8 +4,6 @@
   "values": [
 	"#tfcflorae:dirty_stone_tiles",
 	"#tfcflorae:rocky_compact_dirt",
-	"#forge:gravel",
-	"#forge:sand",
-	"#minecraft:sand"
+	"#forge:gravel"
   ]
 }

@@ -19,7 +19,7 @@ import net.dries007.tfc.world.layer.framework.TypedAreaFactory;
 import net.dries007.tfc.world.noise.*;
 import net.dries007.tfc.world.river.*;
 
-import tfcflorae.mixin.world.biome.TFCBiomesMixin;
+import tfcflorae.mixin.world.biome.TFCBiomesMixinAccessor;
 
 @Mixin(TFCLayers.class)
 public class TFCLayersMixin
@@ -30,83 +30,83 @@ public class TFCLayersMixin
      *
      * @see PlateTectonicsClassification
      */
-    @Shadow @Mutable @Final public static final int OCEANIC = 0;
-    @Shadow @Mutable @Final public static final int CONTINENTAL_LOW = 1;
-    @Shadow @Mutable @Final public static final int CONTINENTAL_MID = 2;
-    @Shadow @Mutable @Final public static final int CONTINENTAL_HIGH = 3;
-    @Shadow @Mutable @Final public static final int OCEAN_OCEAN_DIVERGING = 4;
-    @Shadow @Mutable @Final public static final int OCEAN_OCEAN_CONVERGING_LOWER = 5;
-    @Shadow @Mutable @Final public static final int OCEAN_OCEAN_CONVERGING_UPPER = 6;
-    @Shadow @Mutable @Final public static final int OCEAN_CONTINENT_CONVERGING_LOWER = 7;
-    @Shadow @Mutable @Final public static final int OCEAN_CONTINENT_CONVERGING_UPPER = 8;
-    @Shadow @Mutable @Final public static final int OCEAN_CONTINENT_DIVERGING = 9;
-    @Shadow @Mutable @Final public static final int CONTINENT_CONTINENT_DIVERGING = 10;
-    @Shadow @Mutable @Final public static final int CONTINENT_CONTINENT_CONVERGING = 11;
-    @Shadow @Mutable @Final public static final int CONTINENTAL_SHELF = 12;
+    @Shadow public static final int OCEANIC = 0;
+    @Shadow public static final int CONTINENTAL_LOW = 1;
+    @Shadow public static final int CONTINENTAL_MID = 2;
+    @Shadow public static final int CONTINENTAL_HIGH = 3;
+    @Shadow public static final int OCEAN_OCEAN_DIVERGING = 4;
+    @Shadow public static final int OCEAN_OCEAN_CONVERGING_LOWER = 5;
+    @Shadow public static final int OCEAN_OCEAN_CONVERGING_UPPER = 6;
+    @Shadow public static final int OCEAN_CONTINENT_CONVERGING_LOWER = 7;
+    @Shadow public static final int OCEAN_CONTINENT_CONVERGING_UPPER = 8;
+    @Shadow public static final int OCEAN_CONTINENT_DIVERGING = 9;
+    @Shadow public static final int CONTINENT_CONTINENT_DIVERGING = 10;
+    @Shadow public static final int CONTINENT_CONTINENT_CONVERGING = 11;
+    @Shadow public static final int CONTINENTAL_SHELF = 12;
 
     /**
      * These are the int IDs that are used for forest layer generation
      */
-    @Shadow @Mutable @Final public static final int FOREST_NONE = ForestType.NONE.ordinal();
-    @Shadow @Mutable @Final public static final int FOREST_NORMAL = ForestType.NORMAL.ordinal();
-    @Shadow @Mutable @Final public static final int FOREST_SPARSE = ForestType.SPARSE.ordinal();
-    @Shadow @Mutable @Final public static final int FOREST_EDGE = ForestType.EDGE.ordinal();
-    @Shadow @Mutable @Final public static final int FOREST_OLD = ForestType.OLD_GROWTH.ordinal();
+    @Shadow public static final int FOREST_NONE = ForestType.NONE.ordinal();
+    @Shadow public static final int FOREST_NORMAL = ForestType.NORMAL.ordinal();
+    @Shadow public static final int FOREST_SPARSE = ForestType.SPARSE.ordinal();
+    @Shadow public static final int FOREST_EDGE = ForestType.EDGE.ordinal();
+    @Shadow public static final int FOREST_OLD = ForestType.OLD_GROWTH.ordinal();
 
     /**
      * These are the int IDs that are used for biome layer generation
      * They are mapped to {@link BiomeExtension} through the internal registry
      */
-    @Shadow @Mutable @Final public static final int OCEAN;
-    @Shadow @Mutable @Final public static final int OCEAN_REEF;
-    @Shadow @Mutable @Final public static final int DEEP_OCEAN;
-    @Shadow @Mutable @Final public static final int DEEP_OCEAN_TRENCH;
-    @Shadow @Mutable @Final public static final int PLAINS;
-    @Shadow @Mutable @Final public static final int HILLS;
-    @Shadow @Mutable @Final public static final int LOWLANDS;
-    @Shadow @Mutable @Final public static final int LOW_CANYONS;
-    @Shadow @Mutable @Final public static final int ROLLING_HILLS;
-    @Shadow @Mutable @Final public static final int BADLANDS;
-    @Shadow @Mutable @Final public static final int INVERTED_BADLANDS;
-    @Shadow @Mutable @Final public static final int PLATEAU;
-    @Shadow @Mutable @Final public static final int OLD_MOUNTAINS;
-    @Shadow @Mutable @Final public static final int MOUNTAINS;
-    @Shadow @Mutable @Final public static final int VOLCANIC_MOUNTAINS;
-    @Shadow @Mutable @Final public static final int OCEANIC_MOUNTAINS;
-    @Shadow @Mutable @Final public static final int VOLCANIC_OCEANIC_MOUNTAINS;
-    @Shadow @Mutable @Final public static final int CANYONS;
-    @Shadow @Mutable @Final public static final int SHORE;
-    @Shadow @Mutable @Final public static final int LAKE;
-    @Shadow @Mutable @Final public static final int RIVER;
-    @Shadow @Mutable @Final public static final int MOUNTAIN_RIVER;
-    @Shadow @Mutable @Final public static final int VOLCANIC_MOUNTAIN_RIVER;
-    @Shadow @Mutable @Final public static final int OLD_MOUNTAIN_RIVER;
-    @Shadow @Mutable @Final public static final int OCEANIC_MOUNTAIN_RIVER;
-    @Shadow @Mutable @Final public static final int VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
-    @Shadow @Mutable @Final public static final int MOUNTAIN_LAKE;
-    @Shadow @Mutable @Final public static final int VOLCANIC_MOUNTAIN_LAKE;
-    @Shadow @Mutable @Final public static final int OLD_MOUNTAIN_LAKE;
-    @Shadow @Mutable @Final public static final int OCEANIC_MOUNTAIN_LAKE;
-    @Shadow @Mutable @Final public static final int VOLCANIC_OCEANIC_MOUNTAIN_LAKE;
-    @Shadow @Mutable @Final public static final int PLATEAU_LAKE;
+    @Shadow public static final int OCEAN;
+    @Shadow public static final int OCEAN_REEF;
+    @Shadow public static final int DEEP_OCEAN;
+    @Shadow public static final int DEEP_OCEAN_TRENCH;
+    @Shadow public static final int PLAINS;
+    @Shadow public static final int HILLS;
+    @Shadow public static final int LOWLANDS;
+    @Shadow public static final int LOW_CANYONS;
+    @Shadow public static final int ROLLING_HILLS;
+    @Shadow public static final int BADLANDS;
+    @Shadow public static final int INVERTED_BADLANDS;
+    @Shadow public static final int PLATEAU;
+    @Shadow public static final int OLD_MOUNTAINS;
+    @Shadow public static final int MOUNTAINS;
+    @Shadow public static final int VOLCANIC_MOUNTAINS;
+    @Shadow public static final int OCEANIC_MOUNTAINS;
+    @Shadow public static final int VOLCANIC_OCEANIC_MOUNTAINS;
+    @Shadow public static final int CANYONS;
+    @Shadow public static final int SHORE;
+    @Shadow public static final int LAKE;
+    @Shadow public static final int RIVER;
+    @Shadow public static final int MOUNTAIN_RIVER;
+    @Shadow public static final int VOLCANIC_MOUNTAIN_RIVER;
+    @Shadow public static final int OLD_MOUNTAIN_RIVER;
+    @Shadow public static final int OCEANIC_MOUNTAIN_RIVER;
+    @Shadow public static final int VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+    @Shadow public static final int MOUNTAIN_LAKE;
+    @Shadow public static final int VOLCANIC_MOUNTAIN_LAKE;
+    @Shadow public static final int OLD_MOUNTAIN_LAKE;
+    @Shadow public static final int OCEANIC_MOUNTAIN_LAKE;
+    @Shadow public static final int VOLCANIC_OCEANIC_MOUNTAIN_LAKE;
+    @Shadow public static final int PLATEAU_LAKE;
 
-    @Shadow @Mutable @Final public static final int GRASSLANDS;
-    @Shadow @Mutable @Final public static final int WETLANDS;
-    @Shadow @Mutable @Final public static final int MARSHES;
-    @Shadow @Mutable @Final public static final int SWAMPS;
+    @Unique public static final int GRASSLANDS;
+    @Unique public static final int WETLANDS;
+    @Unique public static final int MARSHES;
+    @Unique public static final int SWAMPS;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
      */
-    @Shadow @Mutable @Final public static final int OCEAN_OCEAN_CONVERGING_MARKER;
-    @Shadow @Mutable @Final public static final int OCEAN_OCEAN_DIVERGING_MARKER;
-    @Shadow @Mutable @Final public static final int LAKE_MARKER;
-    @Shadow @Mutable @Final public static final int NULL_MARKER;
-    @Shadow @Mutable @Final public static final int INLAND_MARKER;
-    @Shadow @Mutable @Final public static final int OCEAN_REEF_MARKER;
+    @Shadow public static final int OCEAN_OCEAN_CONVERGING_MARKER;
+    @Shadow public static final int OCEAN_OCEAN_DIVERGING_MARKER;
+    @Shadow public static final int LAKE_MARKER;
+    @Shadow public static final int NULL_MARKER;
+    @Shadow public static final int INLAND_MARKER;
+    @Shadow public static final int OCEAN_REEF_MARKER;
 
-    @Shadow @Mutable @Final private static final BiomeExtension[] BIOME_LAYERS = new BiomeExtension[64];
-    @Shadow @Mutable @Final private static final MutableInt BIOME_LAYER_INDEX = new MutableInt(0);
+    @Shadow private static final BiomeExtension[] BIOME_LAYERS = new BiomeExtension[64];
+    @Shadow private static final MutableInt BIOME_LAYER_INDEX = new MutableInt(0);
 
     static
     {
@@ -143,10 +143,10 @@ public class TFCLayersMixin
         VOLCANIC_OCEANIC_MOUNTAIN_LAKE = register(() -> TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_LAKE);
         PLATEAU_LAKE = register(() -> TFCBiomes.PLATEAU_LAKE);
 
-        GRASSLANDS = register(TFCBiomesMixin::getGrasslands);
-        WETLANDS = register(TFCBiomesMixin::getWetlands);
-        MARSHES = register(TFCBiomesMixin::getMarshes);
-        SWAMPS = register(TFCBiomesMixin::getSwamps);
+        GRASSLANDS = register(TFCBiomesMixinAccessor::getGrasslands);
+        WETLANDS = register(TFCBiomesMixinAccessor::getWetlands);
+        MARSHES = register(TFCBiomesMixinAccessor::getMarshes);
+        SWAMPS = register(TFCBiomesMixinAccessor::getSwamps);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -156,7 +156,7 @@ public class TFCLayersMixin
         OCEAN_REEF_MARKER = register();
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static BiomeExtension getFromLayerId(int id)
     {
         final BiomeExtension v = BIOME_LAYERS[id];
@@ -167,7 +167,7 @@ public class TFCLayersMixin
         return v;
     }
 
-    @Shadow @Mutable
+    @Shadow @Mutable @Final
     public static AreaFactory createOverworldBiomeLayer(long seed, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
     {
         final Random random = new Random(seed);
@@ -241,13 +241,13 @@ public class TFCLayersMixin
         return mainLayer;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static AreaFactory createOverworldBiomeLayerWithRivers(long seed, Watershed.Context watersheds, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
     {
         return new MergeRiverLayer(watersheds).apply(seed, createOverworldBiomeLayer(seed, plateArtist, layerArtist));
     }
 
-    @Shadow @Mutable
+    @Shadow @Mutable @Final
     public static AreaFactory createOverworldForestLayer(long seed, IArtist<AreaFactory> artist)
     {
         final Random random = new Random(seed);
@@ -280,7 +280,7 @@ public class TFCLayersMixin
         return layer;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static TypedAreaFactory<Plate> createEarlyPlateLayers(long seed)
     {
         final Random random = new Random(seed);
@@ -295,7 +295,7 @@ public class TFCLayersMixin
         return plateLayer;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static AreaFactory createOverworldPlateTectonicInfoLayer(long seed)
     {
         final Random random = new Random(seed);
@@ -316,7 +316,7 @@ public class TFCLayersMixin
         return mainLayer;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static AreaFactory createOverworldRockLayer(long seed, int layerScale, int rockCount)
     {
         final Random random = new Random(seed);
@@ -349,19 +349,19 @@ public class TFCLayersMixin
         return layer;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isContinental(int value)
     {
         return value == CONTINENTAL_LOW || value == CONTINENTAL_MID || value == CONTINENTAL_HIGH;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean hasShore(int value)
     {
         return value != LOWLANDS && value != LOW_CANYONS && value != CANYONS && value != OCEANIC_MOUNTAINS && value != VOLCANIC_OCEANIC_MOUNTAINS;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static int shoreFor(int value)
     {
         if (value == MOUNTAINS)
@@ -375,13 +375,13 @@ public class TFCLayersMixin
         return SHORE;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean hasLake(int value)
     {
         return !isOcean(value) && value != BADLANDS;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static int lakeFor(int value)
     {
         if (value == MOUNTAINS)
@@ -411,13 +411,13 @@ public class TFCLayersMixin
         return LAKE;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean hasRiver(int value)
     {
         return !isOcean(value) && !isLake(value);
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static int riverFor(int value)
     {
         if (value == MOUNTAINS)
@@ -443,49 +443,49 @@ public class TFCLayersMixin
         return RIVER;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isOcean(int value)
     {
         return value == OCEAN || value == DEEP_OCEAN || value == DEEP_OCEAN_TRENCH || value == OCEAN_REEF;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isOceanOrMarker(int value)
     {
         return isOcean(value) || value == OCEAN_OCEAN_CONVERGING_MARKER || value == OCEAN_OCEAN_DIVERGING_MARKER || value == OCEAN_REEF_MARKER;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isLake(int value)
     {
         return value == LAKE || value == OCEANIC_MOUNTAIN_LAKE || value == OLD_MOUNTAIN_LAKE || value == MOUNTAIN_LAKE || value == VOLCANIC_OCEANIC_MOUNTAIN_LAKE || value == VOLCANIC_MOUNTAIN_LAKE || value == PLATEAU_LAKE;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isRiver(int value)
     {
         return value == RIVER || value == OCEANIC_MOUNTAIN_RIVER || value == OLD_MOUNTAIN_RIVER || value == MOUNTAIN_RIVER || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER || value == VOLCANIC_MOUNTAIN_RIVER;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static boolean isMountains(int value)
     {
         return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS;
     }
 
-    @Shadow @Mutable
+    @Shadow @Mutable @Final
     public static boolean isLow(int value)
     {
         return value == PLAINS || value == HILLS || value == LOW_CANYONS || value == LOWLANDS || value == GRASSLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS;
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static int register()
     {
         return register(() -> null);
     }
 
-    @Shadow @Mutable
+    @Shadow
     public static int register(Supplier<BiomeExtension> variants)
     {
         final int index = BIOME_LAYER_INDEX.getAndIncrement();

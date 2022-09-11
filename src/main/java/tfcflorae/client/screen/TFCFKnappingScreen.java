@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 import tfcflorae.common.container.TFCFKnappingContainer;
 import tfcflorae.util.TFCFHelpers;
 
-import static tfcflorae.TFCFlorae.MOD_ID;
+import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 
 public class TFCFKnappingScreen extends TFCContainerScreen<TFCFKnappingContainer>
 {

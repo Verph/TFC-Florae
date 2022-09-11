@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.gen.Accessor;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
@@ -66,14 +65,14 @@ public final class TFCBiomesMixin
     @Shadow @Mutable @Final
     public static final BiomeExtension LOW_CANYONS = register("low_canyons", builder().heightmap(seed -> BiomeNoise.canyons(seed, -8, 21)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).aquiferHeightOffset(-16).spawnable()); // Sharp, small hills, with lots of water / snaking winding rivers.
 
-    @Shadow @Mutable @Final
-    public static final BiomeExtension GRASSLANDS = register("grasslands", builder().heightmap(seed -> BiomeNoise.hills(seed, 0, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE)))).spawnable()); // Incredibly flat, slightly above sea level.
-    @Shadow @Mutable @Final
-    public static final BiomeExtension WETLANDS = register("wetlands", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
-    @Shadow @Mutable @Final
-    public static final BiomeExtension MARSHES = register("marshes", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, -2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
-    @Shadow @Mutable @Final
-    public static final BiomeExtension SWAMPS = register("swamps", builder().heightmap(seed -> BiomeNoise.hills(seed, -8, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
+    @Unique @Mutable @Final
+    private static final BiomeExtension GRASSLANDS = register("grasslands", builder().heightmap(seed -> BiomeNoise.hills(seed, 0, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE)))).spawnable()); // Incredibly flat, slightly above sea level.
+    @Unique @Mutable @Final
+    private static final BiomeExtension WETLANDS = register("wetlands", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
+    @Unique @Mutable @Final
+    private static final BiomeExtension MARSHES = register("marshes", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, -2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
+    @Unique @Mutable @Final
+    private static final BiomeExtension SWAMPS = register("swamps", builder().heightmap(seed -> BiomeNoise.hills(seed, -8, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
 
     // Mid biomes
     @Shadow @Mutable @Final
@@ -135,29 +134,29 @@ public final class TFCBiomesMixin
     @Shadow @Mutable @Final
     public static final BiomeExtension PLATEAU_LAKE = register("plateau_lake", builder().heightmap(seed -> BiomeNoise.hills(seed, 20, 30)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(BiomeNoise::undergroundLakes).group(BiomeExtension.Group.LAKE));
 
-    /*@Mutable @Final
-    public static final BiomeExtension getGrasslands()
+    @Unique @Mutable @Final
+    private static final BiomeExtension getGrasslands()
     {
         return GRASSLANDS;
     }
 
-    @Mutable @Final
-    public static final BiomeExtension getWetlands()
+    @Unique @Mutable @Final
+    private static final BiomeExtension getWetlands()
     {
         return WETLANDS;
     }
 
-    @Mutable @Final
-    public static final BiomeExtension getMarshes()
+    @Unique @Mutable @Final
+    private static final BiomeExtension getMarshes()
     {
         return MARSHES;
     }
 
-    @Mutable @Final
-    public static final BiomeExtension getSwamps()
+    @Unique @Mutable @Final
+    private static final BiomeExtension getSwamps()
     {
         return SWAMPS;
-    }*/
+    }
 
     @Shadow
     public static BiomeExtension getExtensionOrThrow(LevelAccessor level, Biome biome)

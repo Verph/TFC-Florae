@@ -41,11 +41,12 @@ import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
-
+import tfcflorae.TFCFlorae;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.world.feature.tree.TFCFMangroveTreeGrower;
@@ -56,6 +57,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_4;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
 
     public final TFCFWood wood;
     public final ExtendedProperties properties;
@@ -68,7 +70,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
         this.properties = properties;
         this.daysToGrow = days;
 
-        this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, 0).setValue(AGE, 0).setValue(WATERLOGGED, false).setValue(HANGING, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, 0).setValue(AGE, 0).setValue(WATERLOGGED, false).setValue(HANGING, false).setValue(FLUID, FLUID.keyFor(Fluids.EMPTY)));
     }
 
     public ExtendedProperties getExtendedProperties()
@@ -84,7 +86,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(STAGE, AGE, WATERLOGGED, HANGING);
+        builder.add(STAGE, AGE, WATERLOGGED, HANGING, FLUID);
     }
 
     @Override
@@ -97,7 +99,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
         FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-        return super.getStateForPlacement(context).setValue(TFCBlockStateProperties.SALT_WATER, TFCBlockStateProperties.SALT_WATER.keyFor(TFCFluids.SALT_WATER.getSource())).setValue(AGE, 4);
+        return this.defaultBlockState().setValue(FLUID, TFCBlockStateProperties.WATER.keyFor(fluidState.getType())).setValue(AGE, 4);
     }
 
     @Override
