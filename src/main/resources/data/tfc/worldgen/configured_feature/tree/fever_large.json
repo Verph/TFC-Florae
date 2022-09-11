@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:fever_large/1",
-      "tfcflorae:fever_large/2",
-      "tfcflorae:fever_large/3"
+      "tfc:fever_large/1",
+      "tfc:fever_large/2",
+      "tfc:fever_large/3"
     ],
     "radius": 2,
     "placement": {

@@ -46,6 +46,7 @@ public class TFCFlorae
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
+        TFCFSounds.SOUNDS.register(bus);
 
         Packets.init();
 

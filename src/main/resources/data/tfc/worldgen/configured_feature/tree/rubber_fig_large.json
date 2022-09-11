@@ -3,11 +3,11 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:rubber_fig_large/1",
-      "tfcflorae:rubber_fig_large/2",
-      "tfcflorae:rubber_fig_large/3",
-      "tfcflorae:rubber_fig_large/4",
-      "tfcflorae:rubber_fig_large/5"
+      "tfc:rubber_fig_large/1",
+      "tfc:rubber_fig_large/2",
+      "tfc:rubber_fig_large/3",
+      "tfc:rubber_fig_large/4",
+      "tfc:rubber_fig_large/5"
     ],
     "radius": 2,
     "placement": {

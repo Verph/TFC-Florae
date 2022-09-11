@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:holly_large/1",
-      "tfcflorae:holly_large/2",
-      "tfcflorae:holly_large/3"
+      "tfc:holly_large/1",
+      "tfc:holly_large/2",
+      "tfc:holly_large/3"
     ],
     "radius": 2,
     "placement": {

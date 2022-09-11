@@ -10,30 +10,21 @@ Tree = NamedTuple('Tree', name=str, feature=Literal['random', 'overlay', 'stacke
 DATA_VERSION = 2970
 
 NORMAL_TREES = [
-    Tree('medlar', 'random', 'medlar', 19),
-    Tree('persimmon', 'random', 'persimmon', 19),
-    Tree('pear', 'random', 'pear', 19),
-    Tree('sloe', 'random', 'sloe', 19),
-    Tree('sorb', 'random', 'sorb', 19),
-    Tree('quince', 'random', 'quince', 19)
+    Tree('bald_cypress', 'random', 'bald_cypress', 22),
+    Tree('red_cypress', 'random', 'red_cypress', 22),
+    Tree('black_willow', 'random', 'black_willow', 17)
 ]
 
 LARGE_TREES = [
-    Tree('medlar', 'random', 'medlar_large', 7),
-    Tree('persimmon', 'random', 'persimmon_large', 7),
-    Tree('pear', 'random', 'pear_large', 7),
-    Tree('sloe', 'random', 'sloe_large', 7),
-    Tree('sorb', 'random', 'sorb_large', 7),
-    Tree('quince', 'random', 'quince_large', 7)
+    Tree('bald_cypress', 'random', 'bald_cypress', 0),
+    Tree('red_cypress', 'random', 'red_cypress', 0),
+    Tree('black_willow', 'random', 'black_willow', 0)
 ]
 
 DEAD_TREES = [
-    Tree('medlar', 'random', 'medlar', 19),
-    Tree('persimmon', 'random', 'persimmon', 19),
-    Tree('pear', 'random', 'pear', 19),
-    Tree('sloe', 'random', 'sloe', 19),
-    Tree('sorb', 'random', 'sorb', 19),
-    Tree('quince', 'random', 'quince', 19)
+    Tree('bald_cypress', 'random', 'bald_cypress_dead', 13),
+    Tree('red_cypress', 'random', 'red_cypress_dead', 13),
+    Tree('black_willow', 'random', 'dead_stump', 3)
 ]
 
 
@@ -46,7 +37,12 @@ class Count:  # global mutable variables that doesn't require using the word "gl
 
 def main():
     print('Verifying tree structures')
-    verify_center_trunk('mulberry', 19)
+    verify_center_trunk('bald_cypress', 22)
+    verify_center_trunk('red_cypress', 22)
+    verify_center_trunk('black_willow', 17)
+    verify_center_trunk('bald_cypress_dead', 13)
+    verify_center_trunk('red_cypress_dead', 13)
+    verify_center_trunk('dead_stump', 3)
 
     print('Tree sapling drop chances:')
     for tree in NORMAL_TREES:
@@ -213,12 +209,50 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             block['Properties'] = Compound({
                 'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
+        elif block['Name'] == 'byg:willow_leaves':
+            block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'lifecycle': StringTag('healthy'),
+                'persistent': StringTag('false')})
+        elif block['Name'] == 'byg:cypress_leaves':
+            block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'lifecycle': StringTag('healthy'),
+                'persistent': StringTag('false')})
+        elif block['Name'] == 'byg:willow_log':
+            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'natural': StringTag('true'),
+                'axis': prop['axis']})
+        elif block['Name'] == 'byg:cypress_log':
+            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'natural': StringTag('true'),
+                'axis': prop['axis']})
         elif block['Name'] == 'minecraft:cocoa':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
+        elif block['Name'] == 'minecraft:fern':
+            block['Name'] = StringTag('tfc:plant/jungle_vines')
+        elif block['Name'] == 'minecraft:vine':
+            block['Name'] = StringTag('tfc:plant/jungle_vines')
+        elif block['Name'] == 'minecraft:grass':
+            block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+        elif block['Name'] == 'minecraft:tall_grass':
+            block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+        elif block['Name'] == 'minecraft:tallgrass':
+            block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+        elif block['Name'] == 'minecraft:double_plant':
+            block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+        elif block['Name'] == 'minecraft:air':
+            block['Name'] = StringTag('minecraft:structure_void')
         else:
             print('Structure: %s has an invalid block state \'%s\'' % (template, block['Name']))
 

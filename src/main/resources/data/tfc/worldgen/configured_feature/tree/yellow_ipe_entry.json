@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/yellow_ipe"
       }
     ],
-    "normal_tree": "tfcflorae:tree/yellow_ipe",
-    "dead_tree": "tfcflorae:tree/yellow_ipe_dead",
+    "normal_tree": "tfc:tree/yellow_ipe",
+    "dead_tree": "tfc:tree/yellow_ipe_dead",
     "fallen_log": "tfcflorae:wood/log/yellow_ipe",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/yellow_ipe",

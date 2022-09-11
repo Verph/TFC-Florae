@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:poplar_large/1",
-      "tfcflorae:poplar_large/2",
-      "tfcflorae:poplar_large/3",
-      "tfcflorae:poplar_large/4"
+      "tfc:poplar_large/1",
+      "tfc:poplar_large/2",
+      "tfc:poplar_large/3",
+      "tfc:poplar_large/4"
     ],
     "radius": 2,
     "placement": {

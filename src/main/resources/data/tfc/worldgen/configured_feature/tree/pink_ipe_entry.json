@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/pink_ipe"
       }
     ],
-    "normal_tree": "tfcflorae:tree/pink_ipe",
-    "dead_tree": "tfcflorae:tree/pink_ipe_dead",
+    "normal_tree": "tfc:tree/pink_ipe",
+    "dead_tree": "tfc:tree/pink_ipe_dead",
     "fallen_log": "tfcflorae:wood/log/pink_ipe",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/pink_ipe",

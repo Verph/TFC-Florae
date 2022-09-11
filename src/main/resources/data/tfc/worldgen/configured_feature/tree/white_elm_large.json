@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:white_elm_large/1",
-      "tfcflorae:white_elm_large/2",
-      "tfcflorae:white_elm_large/3",
-      "tfcflorae:white_elm_large/4",
-      "tfcflorae:white_elm_large/5",
-      "tfcflorae:white_elm_large/6",
-      "tfcflorae:white_elm_large/7"
+      "tfc:white_elm_large/1",
+      "tfc:white_elm_large/2",
+      "tfc:white_elm_large/3",
+      "tfc:white_elm_large/4",
+      "tfc:white_elm_large/5",
+      "tfc:white_elm_large/6",
+      "tfc:white_elm_large/7"
     ],
     "radius": 2,
     "placement": {

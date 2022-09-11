@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/norway_spruce"
       }
     ],
-    "normal_tree": "tfcflorae:tree/norway_spruce",
-    "dead_tree": "tfcflorae:tree/norway_spruce_dead",
+    "normal_tree": "tfc:tree/norway_spruce",
+    "dead_tree": "tfc:tree/norway_spruce_dead",
     "fallen_log": "tfcflorae:wood/log/norway_spruce",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/norway_spruce",

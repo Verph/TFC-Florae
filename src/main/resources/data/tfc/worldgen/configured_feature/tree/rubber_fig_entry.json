@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/rubber_fig"
       }
     ],
-    "normal_tree": "tfcflorae:tree/rubber_fig",
-    "dead_tree": "tfcflorae:tree/rubber_fig_dead",
+    "normal_tree": "tfc:tree/rubber_fig",
+    "dead_tree": "tfc:tree/rubber_fig_dead",
     "fallen_log": "tfcflorae:wood/log/rubber_fig",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/rubber_fig",

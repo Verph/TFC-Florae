@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:argyle_eucalyptus_large/1",
-      "tfcflorae:argyle_eucalyptus_large/2",
-      "tfcflorae:argyle_eucalyptus_large/3",
-      "tfcflorae:argyle_eucalyptus_large/4"
+      "tfc:argyle_eucalyptus_large/1",
+      "tfc:argyle_eucalyptus_large/2",
+      "tfc:argyle_eucalyptus_large/3",
+      "tfc:argyle_eucalyptus_large/4"
     ],
     "radius": 2,
     "placement": {

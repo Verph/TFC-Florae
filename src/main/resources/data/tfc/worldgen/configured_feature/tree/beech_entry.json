@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/beech"
       }
     ],
-    "normal_tree": "tfcflorae:tree/beech",
-    "dead_tree": "tfcflorae:tree/beech_dead",
+    "normal_tree": "tfc:tree/beech",
+    "dead_tree": "tfc:tree/beech_dead",
     "fallen_log": "tfcflorae:wood/log/beech",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/beech",

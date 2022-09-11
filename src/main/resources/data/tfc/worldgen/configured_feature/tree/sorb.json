@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:sorb/1",
+      "tfc:sorb/2",
+      "tfc:sorb/3",
+      "tfc:sorb/4",
+      "tfc:sorb/5",
+      "tfc:sorb/6",
+      "tfc:sorb/7",
+      "tfc:sorb/8",
+      "tfc:sorb/9",
+      "tfc:sorb/10",
+      "tfc:sorb/11",
+      "tfc:sorb/12",
+      "tfc:sorb/13",
+      "tfc:sorb/14",
+      "tfc:sorb/15",
+      "tfc:sorb/16",
+      "tfc:sorb/17",
+      "tfc:sorb/18",
+      "tfc:sorb/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

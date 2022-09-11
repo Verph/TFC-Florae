@@ -1,0 +1,29 @@
+{
+  "feature": "tfc:tree/bald_cypress",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 1
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "tfc:climate",
+		"min_rainfall": 350,
+		"max_rainfall": 500,
+		"min_temperature": -1,
+		"max_temperature": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

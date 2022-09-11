@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/purpleheart"
       }
     ],
-    "normal_tree": "tfcflorae:tree/purpleheart",
-    "dead_tree": "tfcflorae:tree/purpleheart_dead",
+    "normal_tree": "tfc:tree/purpleheart",
+    "dead_tree": "tfc:tree/purpleheart_dead",
     "fallen_log": "tfcflorae:wood/log/purpleheart",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/purpleheart",

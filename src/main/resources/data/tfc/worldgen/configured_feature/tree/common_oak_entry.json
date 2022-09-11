@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/common_oak"
       }
     ],
-    "normal_tree": "tfcflorae:tree/common_oak",
-    "dead_tree": "tfcflorae:tree/common_oak_dead",
+    "normal_tree": "tfc:tree/common_oak",
+    "dead_tree": "tfc:tree/common_oak_dead",
     "fallen_log": "tfcflorae:wood/log/common_oak",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/common_oak",

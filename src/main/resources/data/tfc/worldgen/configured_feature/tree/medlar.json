@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:medlar/1",
+      "tfc:medlar/2",
+      "tfc:medlar/3",
+      "tfc:medlar/4",
+      "tfc:medlar/5",
+      "tfc:medlar/6",
+      "tfc:medlar/7",
+      "tfc:medlar/8",
+      "tfc:medlar/9",
+      "tfc:medlar/10",
+      "tfc:medlar/11",
+      "tfc:medlar/12",
+      "tfc:medlar/13",
+      "tfc:medlar/14",
+      "tfc:medlar/15",
+      "tfc:medlar/16",
+      "tfc:medlar/17",
+      "tfc:medlar/18",
+      "tfc:medlar/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

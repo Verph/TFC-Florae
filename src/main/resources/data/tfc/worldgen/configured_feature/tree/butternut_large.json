@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:butternut_large/1",
-      "tfcflorae:butternut_large/2",
-      "tfcflorae:butternut_large/3",
-      "tfcflorae:butternut_large/4"
+      "tfc:butternut_large/1",
+      "tfc:butternut_large/2",
+      "tfc:butternut_large/3",
+      "tfc:butternut_large/4"
     ],
     "radius": 2,
     "placement": {

@@ -10,8 +10,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+
 import net.dries007.tfc.common.blocks.RiverWaterBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.TFCMaterials;
@@ -54,7 +56,7 @@ public class RoadNetworkBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        buildRoadSurface(context, startY, endY);
+        //buildRoadSurface(context, startY, endY);
     }
 
     private void buildRoadSurface(SurfaceBuilderContext context, int startY, int endY)
@@ -96,7 +98,8 @@ public class RoadNetworkBuilder implements SurfaceBuilder
         final BlockState STONE_TILES = TFCFBlocks.ROCK_BLOCKS.get(rock).get(TFCFRock.TFCFBlockType.STONE_TILES).get().defaultBlockState();
 
         final double randomGauss = Math.abs(context.random().nextGaussian()) * 0.1f;
-        if (pos.getY() >= context.getSeaLevel() && canPlaceHere(context.level(), pos))
+
+        if (pos.getY() > context.getSeaLevel() && canPlaceHere(context, topBlock) && canPlaceHere(context, startY))
         {
             if (noiseRoad == 0f || noiseRoad == 0f + randomGauss)
             {
@@ -138,21 +141,25 @@ public class RoadNetworkBuilder implements SurfaceBuilder
         }
     }
 
-    public boolean canPlaceHere(LevelAccessor level, BlockPos pos)
+    public boolean canPlaceHere(SurfaceBuilderContext context, int y)
     {
-        return level.getBlockState(pos) != SurfaceStates.SANDSTONE_OR_GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.SAND_OR_GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.DIRT || 
-            level.getBlockState(pos) != SurfaceStates.GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.COBBLE || 
-            !level.getBlockState(pos).isAir() || 
-            !Helpers.isFluid(level.getBlockState(pos).getFluidState(), FluidTags.WATER) || 
-            !level.getBlockState(pos).hasProperty(RiverWaterBlock.FLOW) ||
-            level.getBlockState(pos).getMaterial() != Material.WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SALT_WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SPRING_WATER || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SALT_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SPRING_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.RIVER_WATER.get();
+        BlockState state = context.getBlockState(y);
+        Material stateMat = state.getMaterial();
+        Block stateBlock = state.getBlock();
+
+        return (state != SurfaceStates.SANDSTONE_OR_GRAVEL || 
+            state != SurfaceStates.SAND_OR_GRAVEL || 
+            state != SurfaceStates.DIRT || 
+            state != SurfaceStates.GRAVEL || 
+            state != SurfaceStates.COBBLE || 
+            !state.isAir() || 
+            !Helpers.isFluid(state.getFluidState(), FluidTags.WATER) || 
+            !state.hasProperty(RiverWaterBlock.FLOW) ||
+            stateMat != Material.WATER || 
+            stateMat != TFCMaterials.SALT_WATER || 
+            stateMat != TFCMaterials.SPRING_WATER || 
+            stateBlock != TFCBlocks.SALT_WATER.get() || 
+            stateBlock != TFCBlocks.SPRING_WATER.get() || 
+            stateBlock != TFCBlocks.RIVER_WATER.get());
     }
 }

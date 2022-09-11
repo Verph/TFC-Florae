@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/rainbow_eucalyptus"
       }
     ],
-    "normal_tree": "tfcflorae:tree/rainbow_eucalyptus",
-    "dead_tree": "tfcflorae:tree/rainbow_eucalyptus_dead",
+    "normal_tree": "tfc:tree/rainbow_eucalyptus",
+    "dead_tree": "tfc:tree/rainbow_eucalyptus_dead",
     "fallen_log": "tfcflorae:wood/log/rainbow_eucalyptus",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/rainbow_eucalyptus",

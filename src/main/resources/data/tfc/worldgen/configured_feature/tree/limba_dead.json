@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:limba_dead/1",
-      "tfcflorae:limba_dead/2",
-      "tfcflorae:limba_dead/3",
-      "tfcflorae:limba_dead/4",
-      "tfcflorae:limba_dead/5",
-      "tfcflorae:limba_dead/6",
-      "tfcflorae:limba_dead/7",
-      "tfcflorae:limba_dead/8",
-      "tfcflorae:limba_dead/9"
+      "tfc:limba_dead/1",
+      "tfc:limba_dead/2",
+      "tfc:limba_dead/3",
+      "tfc:limba_dead/4",
+      "tfc:limba_dead/5",
+      "tfc:limba_dead/6",
+      "tfc:limba_dead/7",
+      "tfc:limba_dead/8",
+      "tfc:limba_dead/9"
     ],
     "radius": 1,
     "placement": {

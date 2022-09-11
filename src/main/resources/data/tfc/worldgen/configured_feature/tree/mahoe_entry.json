@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/mahoe"
       }
     ],
-    "normal_tree": "tfcflorae:tree/mahoe",
-    "dead_tree": "tfcflorae:tree/mahoe_dead",
+    "normal_tree": "tfc:tree/mahoe",
+    "dead_tree": "tfc:tree/mahoe_dead",
     "fallen_log": "tfcflorae:wood/log/mahoe",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/mahoe",

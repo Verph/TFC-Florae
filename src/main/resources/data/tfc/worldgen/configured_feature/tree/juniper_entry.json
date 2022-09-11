@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/juniper"
       }
     ],
-    "normal_tree": "tfcflorae:tree/juniper",
-    "dead_tree": "tfcflorae:tree/juniper_dead",
+    "normal_tree": "tfc:tree/juniper",
+    "dead_tree": "tfc:tree/juniper_dead",
     "fallen_log": "tfcflorae:wood/log/juniper",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/juniper",

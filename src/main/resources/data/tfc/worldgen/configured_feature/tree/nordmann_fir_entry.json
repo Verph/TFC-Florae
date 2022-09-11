@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/nordmann_fir"
       }
     ],
-    "normal_tree": "tfcflorae:tree/nordmann_fir",
-    "dead_tree": "tfcflorae:tree/nordmann_fir_dead",
+    "normal_tree": "tfc:tree/nordmann_fir",
+    "dead_tree": "tfc:tree/nordmann_fir_dead",
     "fallen_log": "tfcflorae:wood/log/nordmann_fir",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/nordmann_fir",

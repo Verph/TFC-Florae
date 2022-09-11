@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/logwood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/logwood",
-    "dead_tree": "tfcflorae:tree/logwood_dead",
+    "normal_tree": "tfc:tree/logwood",
+    "dead_tree": "tfc:tree/logwood_dead",
     "fallen_log": "tfcflorae:wood/log/logwood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/logwood",

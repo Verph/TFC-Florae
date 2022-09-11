@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:overlay_tree",
   "config": {
-    "base": "tfcflorae:buxus/base",
-    "overlay": "tfcflorae:buxus/overlay",
+    "base": "tfc:buxus/base",
+    "overlay": "tfc:buxus/overlay",
     "trunk": {
       "state": {
-        "Name": "tfcflorae:wood/log/buxus",
+        "Name": "tfc:wood/log/buxus",
         "Properties": {
           "axis": "y",
           "natural": "true"

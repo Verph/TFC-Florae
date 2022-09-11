@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/cocobolo"
       }
     ],
-    "normal_tree": "tfcflorae:tree/cocobolo",
-    "dead_tree": "tfcflorae:tree/cocobolo_dead",
+    "normal_tree": "tfc:tree/cocobolo",
+    "dead_tree": "tfc:tree/cocobolo_dead",
     "fallen_log": "tfcflorae:wood/log/cocobolo",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/cocobolo",

@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/mountain_ash"
       }
     ],
-    "normal_tree": "tfcflorae:tree/mountain_ash",
-    "dead_tree": "tfcflorae:tree/mountain_ash_dead",
+    "normal_tree": "tfc:tree/mountain_ash",
+    "dead_tree": "tfc:tree/mountain_ash_dead",
     "fallen_log": "tfcflorae:wood/log/mountain_ash",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/mountain_ash",

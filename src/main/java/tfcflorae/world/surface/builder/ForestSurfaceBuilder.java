@@ -10,8 +10,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+
 import net.dries007.tfc.common.blocks.RiverWaterBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.TFCMaterials;
@@ -52,23 +54,8 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
     @Override
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
-        /*BlockPos pos = new BlockPos(context.pos().getX(), startY, context.pos().getZ());
-        float adjustedForestDensity = context.getChunkData().getAdjustedForestDensity();
-        float rainfall = context.getChunkData().getRainfall(pos) * 0.0005f;*/
-
         parent.buildSurface(context, startY, endY);
         buildForestSurface(context, startY, endY);
-
-        /*if (rainfall > 150f + 1.3f * context.random().nextGaussian())
-        {
-            if (adjustedForestDensity >= 0.55f + 0.05f * context.random().nextGaussian())
-                buildForestSurface(context, startY, endY);
-        }
-        else
-        {
-            if (adjustedForestDensity >= 0.4f + 0.05f * context.random().nextGaussian())
-                buildForestSurface(context, startY, endY);
-        }*/
     }
 
     private void buildForestSurface(SurfaceBuilderContext context, int startY, int endY)
@@ -76,9 +63,8 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
         int topBlock = startY - 1;
         ChunkData data = context.getChunkData();
         BlockPos pos = new BlockPos(context.pos().getX(), topBlock, context.pos().getZ());
-        final float rainfall = data.getRainfall(pos);
+        final ForestType forestType = context.getChunkData().getForestType();
         final float forestDensity = data.getForestDensity();
-        final float adjustedForestDensity = data.getAdjustedForestDensity();
         RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
 
         Rock rock = Rock.GRANITE;
@@ -91,6 +77,7 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
             }
         }
 
+        final SurfaceState GRASS = SoilSurfaceState.buildType(SoilBlockType.GRASS);
         final SurfaceState PODZOL = TFCFSoilSurfaceState.buildType(TFCFSoil.PODZOL);
         final SurfaceState ROOTED_DIRT = SoilSurfaceState.buildType(SoilBlockType.ROOTED_DIRT);
         final SurfaceState SPARSE_GRASS = TFCFSoilSurfaceState.buildType(TFCFSoil.SPARSE_GRASS);
@@ -106,55 +93,54 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
         final float noise = surfaceMaterialNoise.noise(context.pos().getX(), context.pos().getZ()) * 0.9f + context.random().nextFloat() * 0.1f;
         //final float noiseForest = (surfaceMaterialNoise.noise(context.pos().getX(), context.pos().getZ()) + 0.1f * context.random().nextFloat() - 0.05f) + ((Mth.abs((float) context.random().nextGaussian()) / adjustedForestDensity) / 10);
 
-        if (pos.getY() >= context.getSeaLevel() && canPlaceHere(context.level(), pos))
+        if (pos.getY() > context.getSeaLevel() && canPlaceHere(context, topBlock) && canPlaceHere(context, startY))
         {
-            if (forestDensity >= 0.25f + (Math.abs(context.random().nextGaussian()) * 0.5f) && 
-                topBlock <= 110 + (Math.abs(context.random().nextGaussian()) * 4) && 
-                adjustedForestDensity > 0.5f - (Math.abs(context.random().nextGaussian()) - forestDensity))
+            if (forestDensity >= 0.3f && topBlock <= 110 && (forestType == ForestType.NORMAL || forestType == ForestType.OLD_GROWTH))
             {
                 final int random = context.random().nextInt(7);
-                if (noise >= -0.4f + randomGauss && noise < -0.22f + randomGauss)
+                /*if (noise >= -0.4f + randomGauss && noise < -0.22f + randomGauss)
+                {
+                    context.setBlockState(topBlock, GRASS);
+                }
+                else */
+                if (noise >= -0.22f + randomGauss && noise < -0.13f + randomGauss)
                 {
                     context.setBlockState(topBlock, DENSE_GRASS);
-                }
-                else if (noise >= -0.22f + randomGauss && noise < -0.13f + randomGauss)
-                {
-                    context.setBlockState(topBlock, SPARSE_GRASS);
                 }
                 else if (noise >= -0.13f + randomGauss && noise < 0f + randomGauss)
                 {
                     if (random > 3)
-                        context.setBlockState(topBlock, COARSE_DIRT);
+                        context.setBlockState(topBlock, SPARSE_GRASS);
                     else
                         context.setBlockState(topBlock, COMPACT_DIRT);
                 }
                 else if (noise >= 0f + randomGauss && noise < 0.1f + randomGauss)
                 {
                     if (random > 4)
-                        context.setBlockState(topBlock, SPARSE_GRASS);
+                        context.setBlockState(topBlock, DENSE_GRASS);
                     else
                         context.setBlockState(topBlock, PEBBLE_COMPACT_DIRT);
                 }
                 else if (noise >= 0.1f + randomGauss && noise < 0.2f + randomGauss)
                 {
                     if (random > 4)
-                        context.setBlockState(topBlock, SPARSE_GRASS);
+                        context.setBlockState(topBlock, DENSE_GRASS);
                     else
                         context.setBlockState(topBlock, ROCKY_COMPACT_DIRT);
                 }
                 else if (noise >= 0.2f + randomGauss && noise < 0.35f + randomGauss)
                 {
                     if (random > 4)
-                        context.setBlockState(topBlock, SPARSE_GRASS);
+                        context.setBlockState(topBlock, ROCKY_COMPACT_DIRT);
                     else
                         context.setBlockState(topBlock, ROCKIER_COMPACT_DIRT);
                 }
                 else if (noise >= 0.35f + randomGauss && noise < 0.55f + randomGauss)
                 {
                     if (random > 4)
-                        context.setBlockState(topBlock, COMPACT_DIRT);
+                        context.setBlockState(topBlock, DENSE_GRASS);
                     else
-                        context.setBlockState(topBlock, ROCKIEST_COMPACT_DIRT);
+                        context.setBlockState(topBlock, ROOTED_DIRT);
                 }
                 else if (noise >= 0.55f + randomGauss && noise < 0.75f + randomGauss)
                 {
@@ -171,21 +157,25 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
         }
     }
 
-    public boolean canPlaceHere(LevelAccessor level, BlockPos pos)
+    public boolean canPlaceHere(SurfaceBuilderContext context, int y)
     {
-        return level.getBlockState(pos) != SurfaceStates.SANDSTONE_OR_GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.SAND_OR_GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.DIRT || 
-            level.getBlockState(pos) != SurfaceStates.GRAVEL || 
-            level.getBlockState(pos) != SurfaceStates.COBBLE || 
-            !level.getBlockState(pos).isAir() || 
-            !Helpers.isFluid(level.getBlockState(pos).getFluidState(), FluidTags.WATER) || 
-            !level.getBlockState(pos).hasProperty(RiverWaterBlock.FLOW) ||
-            level.getBlockState(pos).getMaterial() != Material.WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SALT_WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SPRING_WATER || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SALT_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SPRING_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.RIVER_WATER.get();
+        BlockState state = context.getBlockState(y);
+        Material stateMat = state.getMaterial();
+        Block stateBlock = state.getBlock();
+
+        return (state != SurfaceStates.SANDSTONE_OR_GRAVEL || 
+            state != SurfaceStates.SAND_OR_GRAVEL || 
+            state != SurfaceStates.DIRT || 
+            state != SurfaceStates.GRAVEL || 
+            state != SurfaceStates.COBBLE || 
+            !state.isAir() || 
+            !Helpers.isFluid(state.getFluidState(), FluidTags.WATER) || 
+            !state.hasProperty(RiverWaterBlock.FLOW) ||
+            stateMat != Material.WATER || 
+            stateMat != TFCMaterials.SALT_WATER || 
+            stateMat != TFCMaterials.SPRING_WATER || 
+            stateBlock != TFCBlocks.SALT_WATER.get() || 
+            stateBlock != TFCBlocks.SPRING_WATER.get() || 
+            stateBlock != TFCBlocks.RIVER_WATER.get());
     }
 }

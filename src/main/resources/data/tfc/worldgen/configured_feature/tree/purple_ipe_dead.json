@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:purple_ipe_dead/1",
-      "tfcflorae:purple_ipe_dead/2",
-      "tfcflorae:purple_ipe_dead/3",
-      "tfcflorae:purple_ipe_dead/4",
-      "tfcflorae:purple_ipe_dead/5",
-      "tfcflorae:purple_ipe_dead/6",
-      "tfcflorae:purple_ipe_dead/7",
-      "tfcflorae:purple_ipe_dead/8",
-      "tfcflorae:purple_ipe_dead/9"
+      "tfc:purple_ipe_dead/1",
+      "tfc:purple_ipe_dead/2",
+      "tfc:purple_ipe_dead/3",
+      "tfc:purple_ipe_dead/4",
+      "tfc:purple_ipe_dead/5",
+      "tfc:purple_ipe_dead/6",
+      "tfc:purple_ipe_dead/7",
+      "tfc:purple_ipe_dead/8",
+      "tfc:purple_ipe_dead/9"
     ],
     "radius": 1,
     "placement": {

@@ -3,12 +3,12 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:juniper_large/1",
-      "tfcflorae:juniper_large/2",
-      "tfcflorae:juniper_large/3",
-      "tfcflorae:juniper_large/4",
-      "tfcflorae:juniper_large/5",
-      "tfcflorae:juniper_large/6"
+      "tfc:juniper_large/1",
+      "tfc:juniper_large/2",
+      "tfc:juniper_large/3",
+      "tfc:juniper_large/4",
+      "tfc:juniper_large/5",
+      "tfc:juniper_large/6"
     ],
     "radius": 2,
     "placement": {

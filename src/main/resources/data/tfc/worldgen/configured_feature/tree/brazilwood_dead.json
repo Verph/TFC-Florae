@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:brazilwood_dead/1",
-      "tfcflorae:brazilwood_dead/2",
-      "tfcflorae:brazilwood_dead/3",
-      "tfcflorae:brazilwood_dead/4",
-      "tfcflorae:brazilwood_dead/5",
-      "tfcflorae:brazilwood_dead/6",
-      "tfcflorae:brazilwood_dead/7",
-      "tfcflorae:brazilwood_dead/8",
-      "tfcflorae:brazilwood_dead/9"
+      "tfc:brazilwood_dead/1",
+      "tfc:brazilwood_dead/2",
+      "tfc:brazilwood_dead/3",
+      "tfc:brazilwood_dead/4",
+      "tfc:brazilwood_dead/5",
+      "tfc:brazilwood_dead/6",
+      "tfc:brazilwood_dead/7",
+      "tfc:brazilwood_dead/8",
+      "tfc:brazilwood_dead/9"
     ],
     "radius": 1,
     "placement": {

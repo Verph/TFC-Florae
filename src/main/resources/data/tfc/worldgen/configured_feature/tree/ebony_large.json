@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:ebony_large/1",
-      "tfcflorae:ebony_large/2",
-      "tfcflorae:ebony_large/3",
-      "tfcflorae:ebony_large/4"
+      "tfc:ebony_large/1",
+      "tfc:ebony_large/2",
+      "tfc:ebony_large/3",
+      "tfc:ebony_large/4"
     ],
     "radius": 2,
     "placement": {

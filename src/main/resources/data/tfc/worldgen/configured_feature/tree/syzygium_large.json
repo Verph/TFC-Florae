@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:syzygium_large/1",
-      "tfcflorae:syzygium_large/2",
-      "tfcflorae:syzygium_large/3",
-      "tfcflorae:syzygium_large/4",
-      "tfcflorae:syzygium_large/5",
-      "tfcflorae:syzygium_large/6",
-      "tfcflorae:syzygium_large/7"
+      "tfc:syzygium_large/1",
+      "tfc:syzygium_large/2",
+      "tfc:syzygium_large/3",
+      "tfc:syzygium_large/4",
+      "tfc:syzygium_large/5",
+      "tfc:syzygium_large/6",
+      "tfc:syzygium_large/7"
     ],
     "radius": 2,
     "placement": {

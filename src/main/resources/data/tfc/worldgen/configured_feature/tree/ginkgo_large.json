@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:ginkgo_large/1",
-      "tfcflorae:ginkgo_large/2",
-      "tfcflorae:ginkgo_large/3"
+      "tfc:ginkgo_large/1",
+      "tfc:ginkgo_large/2",
+      "tfc:ginkgo_large/3"
     ],
     "radius": 2,
     "placement": {

@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:maclura_large/1",
-      "tfcflorae:maclura_large/2",
-      "tfcflorae:maclura_large/3",
-      "tfcflorae:maclura_large/4",
-      "tfcflorae:maclura_large/5",
-      "tfcflorae:maclura_large/6",
-      "tfcflorae:maclura_large/7"
+      "tfc:maclura_large/1",
+      "tfc:maclura_large/2",
+      "tfc:maclura_large/3",
+      "tfc:maclura_large/4",
+      "tfc:maclura_large/5",
+      "tfc:maclura_large/6",
+      "tfc:maclura_large/7"
     ],
     "radius": 2,
     "placement": {

@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:messmate_large/1",
-      "tfcflorae:messmate_large/2",
-      "tfcflorae:messmate_large/3",
-      "tfcflorae:messmate_large/4"
+      "tfc:messmate_large/1",
+      "tfc:messmate_large/2",
+      "tfc:messmate_large/3",
+      "tfc:messmate_large/4"
     ],
     "radius": 2,
     "placement": {

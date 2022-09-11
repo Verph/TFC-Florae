@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/iroko"
       }
     ],
-    "normal_tree": "tfcflorae:tree/iroko",
-    "dead_tree": "tfcflorae:tree/iroko_dead",
+    "normal_tree": "tfc:tree/iroko",
+    "dead_tree": "tfc:tree/iroko_dead",
     "fallen_log": "tfcflorae:wood/log/iroko",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/iroko",

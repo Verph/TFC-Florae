@@ -3,14 +3,14 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:redwood_large/1",
-      "tfcflorae:redwood_large/2",
-      "tfcflorae:redwood_large/3",
-      "tfcflorae:redwood_large/4",
-      "tfcflorae:redwood_large/5",
-      "tfcflorae:redwood_large/6",
-      "tfcflorae:redwood_large/7",
-      "tfcflorae:redwood_large/8"
+      "tfc:redwood_large/1",
+      "tfc:redwood_large/2",
+      "tfc:redwood_large/3",
+      "tfc:redwood_large/4",
+      "tfc:redwood_large/5",
+      "tfc:redwood_large/6",
+      "tfc:redwood_large/7",
+      "tfc:redwood_large/8"
     ],
     "radius": 2,
     "placement": {

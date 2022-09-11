@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:logwood_large/1",
-      "tfcflorae:logwood_large/2",
-      "tfcflorae:logwood_large/3",
-      "tfcflorae:logwood_large/4",
-      "tfcflorae:logwood_large/5",
-      "tfcflorae:logwood_large/6",
-      "tfcflorae:logwood_large/7"
+      "tfc:logwood_large/1",
+      "tfc:logwood_large/2",
+      "tfc:logwood_large/3",
+      "tfc:logwood_large/4",
+      "tfc:logwood_large/5",
+      "tfc:logwood_large/6",
+      "tfc:logwood_large/7"
     ],
     "radius": 2,
     "placement": {

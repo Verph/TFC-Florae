@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:quince_large/1",
+      "tfc:quince_large/2",
+      "tfc:quince_large/3",
+      "tfc:quince_large/4",
+      "tfc:quince_large/5",
+      "tfc:quince_large/6",
+      "tfc:quince_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9,
+      "allow_submerged": true
+    }
+  }
+}

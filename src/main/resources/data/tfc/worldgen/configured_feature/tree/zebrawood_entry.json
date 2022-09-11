@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/zebrawood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/zebrawood",
-    "dead_tree": "tfcflorae:tree/zebrawood_dead",
+    "normal_tree": "tfc:tree/zebrawood",
+    "dead_tree": "tfc:tree/zebrawood_dead",
     "fallen_log": "tfcflorae:wood/log/zebrawood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/zebrawood",

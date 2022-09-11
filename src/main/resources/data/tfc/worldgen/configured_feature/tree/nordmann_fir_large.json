@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:nordmann_fir_large/1",
-      "tfcflorae:nordmann_fir_large/2",
-      "tfcflorae:nordmann_fir_large/3",
-      "tfcflorae:nordmann_fir_large/4"
+      "tfc:nordmann_fir_large/1",
+      "tfc:nordmann_fir_large/2",
+      "tfc:nordmann_fir_large/3",
+      "tfc:nordmann_fir_large/4"
     ],
     "radius": 2,
     "placement": {

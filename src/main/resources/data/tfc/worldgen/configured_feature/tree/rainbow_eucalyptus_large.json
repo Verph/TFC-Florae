@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:rainbow_eucalyptus_large/1",
-      "tfcflorae:rainbow_eucalyptus_large/2",
-      "tfcflorae:rainbow_eucalyptus_large/3",
-      "tfcflorae:rainbow_eucalyptus_large/4"
+      "tfc:rainbow_eucalyptus_large/1",
+      "tfc:rainbow_eucalyptus_large/2",
+      "tfc:rainbow_eucalyptus_large/3",
+      "tfc:rainbow_eucalyptus_large/4"
     ],
     "radius": 2,
     "placement": {

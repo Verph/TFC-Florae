@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:persimmon/1",
+      "tfc:persimmon/2",
+      "tfc:persimmon/3",
+      "tfc:persimmon/4",
+      "tfc:persimmon/5",
+      "tfc:persimmon/6",
+      "tfc:persimmon/7",
+      "tfc:persimmon/8",
+      "tfc:persimmon/9",
+      "tfc:persimmon/10",
+      "tfc:persimmon/11",
+      "tfc:persimmon/12",
+      "tfc:persimmon/13",
+      "tfc:persimmon/14",
+      "tfc:persimmon/15",
+      "tfc:persimmon/16",
+      "tfc:persimmon/17",
+      "tfc:persimmon/18",
+      "tfc:persimmon/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

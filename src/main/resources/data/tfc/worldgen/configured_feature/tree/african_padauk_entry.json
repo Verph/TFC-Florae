@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/african_padauk"
       }
     ],
-    "normal_tree": "tfcflorae:tree/african_padauk",
-    "dead_tree": "tfcflorae:tree/african_padauk_dead",
+    "normal_tree": "tfc:tree/african_padauk",
+    "dead_tree": "tfc:tree/african_padauk_dead",
     "fallen_log": "tfcflorae:wood/log/african_padauk",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/african_padauk",

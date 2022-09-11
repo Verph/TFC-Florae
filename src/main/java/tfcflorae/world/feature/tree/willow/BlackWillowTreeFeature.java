@@ -12,7 +12,9 @@ import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.LevelWriter;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
@@ -24,6 +26,7 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.world.TFCChunkGenerator;
 import net.dries007.tfc.world.biome.BiomeExtension;
 import net.dries007.tfc.world.biome.TFCBiomes;
 import net.dries007.tfc.world.chunkdata.ChunkData;
@@ -48,30 +51,29 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
         final WorldGenLevel level = context.level();
         final BlockPos pos = context.origin();
         final Random random = context.random();
-        final BlockState state = level.getBlockState(pos);
+        final BlockState state = level.getBlockState(pos.below());
         final DynamicTreeConfig config = context.config();
-        config.placement().height();
 
         final ChunkPos chunkPos = new ChunkPos(pos);
         final BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos().set(pos);
-        //BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
-        //mutablePos.set(pos).move(0, -1, 0);
+
         final StructureManager manager = TreeHelpers.getStructureManager(level);
         final StructurePlaceSettings settings = TreeHelpers.getPlacementSettings(level, chunkPos, random);
         final Biome biome = level.getBiome(pos).value();
         final BiomeExtension variants = TFCBiomes.getExtensionOrThrow(level, biome);
         final ChunkData data = ChunkData.get(level, pos);
+        final int seaLevel = TFCChunkGenerator.SEA_LEVEL_Y;
 
-        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
-
-        if (TreeHelpers.isValidLocation(level, pos, settings, config.placement()) && !Helpers.isBlock(level.getBlockState(mutablePos), TFCBlocks.SALT_WATER.get()))
+        if (TreeHelpers.isValidLocation(level, pos, settings, config.placement()) || TreeHelpers.isValidGround(level, pos, settings, config.placement()))
         {
-            if ((pos.getY() <= seaLevel + 10 || mutablePos.getY() <= seaLevel + 10) && (variants == TFCBiomes.LOWLANDS || variants == TFCBiomes.LOW_CANYONS || variants == TFCBiomes.LAKE || variants == TFCBiomes.OLD_MOUNTAIN_LAKE || variants == TFCBiomes.MOUNTAIN_LAKE || variants == TFCBiomes.RIVER || variants == TFCBiomes.OLD_MOUNTAIN_RIVER || variants == TFCBiomes.MOUNTAIN_RIVER))
-            {
+            //if (isLake(variants) || isRiver(variants) || isLow(variants))
+            //{
                 config.trunk().ifPresent(trunk -> {
                     final int height = TreeHelpers.placeTrunk(level, mutablePos, random, settings, trunk);
                     mutablePos.move(0, height, 0);
                 });
+
+                //final BlockPos genPos = new BlockPos(pos.getX(), pos.getY() - 2, pos.getZ());
 
                 final BlockState willowTreeLog = config.logState();
                 final BlockState willowTreeLeaves = config.leavesState();
@@ -80,29 +82,29 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
                 final int chance = random.nextInt(4);
                 if (chance == 0)
                 {
-                    TFCFlorae.LOGGER.debug("generating tree at XZ" + pos.getX() + ", " + pos.getZ());
+                    TFCFlorae.LOGGER.info("generating tree 1 at XZ " + pos.getX() + ", " + pos.getZ());
                     buildWillowVariant1(config, level, random, mutablePos, pos, willowTreeLog, willowTreeLeaves, willowTreeWood);
                     return true;
                 }
                 else if (chance == 1)
                 {
-                    TFCFlorae.LOGGER.debug("generating tree at XZ" + pos.getX() + ", " + pos.getZ());
+                    TFCFlorae.LOGGER.info("generating tree 2 at XZ " + pos.getX() + ", " + pos.getZ());
                     buildWillowVariant2(config, level, random, mutablePos, pos, willowTreeLog, willowTreeLeaves, willowTreeWood);
                     return true;
                 }
                 else if (chance == 2)
                 {
-                    TFCFlorae.LOGGER.debug("generating tree at XZ" + pos.getX() + ", " + pos.getZ());
+                    TFCFlorae.LOGGER.info("generating tree 3 at XZ " + pos.getX() + ", " + pos.getZ());
                     buildWillowVariant3(config, level, random, mutablePos, pos, willowTreeLog, willowTreeLeaves, willowTreeWood);
                     return true;
                 }
                 else
                 {
-                    TFCFlorae.LOGGER.debug("generating tree at XZ" + pos.getX() + ", " + pos.getZ());
+                    TFCFlorae.LOGGER.info("generating tree dead at XZ " + pos.getX() + ", " + pos.getZ());
                     buildWillowVariantDead(config, level, random, mutablePos, pos, willowTreeLog, willowTreeLeaves, willowTreeWood);
                     return true;
                 }
-            }
+            //}
         }
         return false;
     }
@@ -110,10 +112,6 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
     private void buildWillowVariant1(DynamicTreeConfig config, WorldGenLevel level, Random random, BlockPos.MutableBlockPos mutablePos, BlockPos pos, BlockState willowTreeLog, BlockState willowTreeLeaves, BlockState willowTreeWood)
     {
         int willowHeight = config.minHeight() + random.nextInt(config.placement().height());
-
-        /*BlockState willowTreeLog = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.WOOD).get().defaultBlockState();
-        BlockState willowTreeLeaves = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LEAVES).get().defaultBlockState();
-        BlockState willowTreeWood = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LOG).get().defaultBlockState();*/
 
         if (pos.getY() + willowHeight + 1 < level.getMaxBuildHeight())
         {
@@ -612,10 +610,6 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
     {
         int willowHeight = config.minHeight() + random.nextInt(config.placement().height());
 
-        /*BlockState willowTreeLog = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.WOOD).get().defaultBlockState();
-        BlockState willowTreeLeaves = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LEAVES).get().defaultBlockState();
-        BlockState willowTreeWood = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LOG).get().defaultBlockState();*/
-
         if (pos.getY() + willowHeight + 1 < level.getMaxBuildHeight())
         {
             for (int buildTrunk = 0; buildTrunk <= willowHeight; buildTrunk++)
@@ -1075,10 +1069,6 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
     private void buildWillowVariant3(DynamicTreeConfig config, WorldGenLevel level, Random random, BlockPos.MutableBlockPos mutablePos, BlockPos pos, BlockState willowTreeLog, BlockState willowTreeLeaves, BlockState willowTreeWood)
     {
         int willowHeight = config.minHeight() + random.nextInt(config.placement().height());
-
-        /*BlockState willowTreeLog = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.WOOD).get().defaultBlockState();
-        BlockState willowTreeLeaves = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LEAVES).get().defaultBlockState();
-        BlockState willowTreeWood = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LOG).get().defaultBlockState();*/
 
         BlockPos.MutableBlockPos mainmutable2 = mutablePos.set(pos.relative(Direction.NORTH));
         BlockPos.MutableBlockPos mainmutable3 = mutablePos.set(pos.relative(Direction.SOUTH));
@@ -1630,10 +1620,6 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
     {
         int willowHeight = config.minHeight() + random.nextInt(config.placement().height());
 
-        /*BlockState willowTreeLog = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.WOOD).get().defaultBlockState();
-        BlockState willowTreeLeaves = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LEAVES).get().defaultBlockState();
-        BlockState willowTreeWood = TFCFBlocks.WOODS.get(TFCFWood.BLACK_WILLOW).get(Wood.BlockType.LOG).get().defaultBlockState();*/
-
         if (pos.getY() + willowHeight + 1 < level.getMaxBuildHeight())
         {
             mutablePos.set(pos).move(-1, 0, -2).immutable();
@@ -1741,16 +1727,59 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
         }
     }
 
-    public boolean canLogPlaceHere(LevelSimulatedReader level, BlockPos pos)
+    public boolean isFreshWater(LevelAccessor level, BlockPos pos)
     {
-        //final BlockState stateAt = level.getBlockState(pos);
-        return level.isStateAtPosition(pos, (stateAt) -> stateAt.getMaterial() == Material.AIR || stateAt.getMaterial() == Material.WATER || EnvironmentHelpers.isWorldgenReplaceable(stateAt) || Helpers.isBlock(stateAt.getBlock(), BlockTags.LEAVES));
+        if (level != null && level.getBlockState(pos) != null)
+        {
+            BlockState state = level.getBlockState(pos);
+            if (state.getMaterial() != null)
+            {
+                return Helpers.isBlock(state, Blocks.WATER);
+            }
+            else
+            {
+                TFCFlorae.LOGGER.info("TFCFlorae: stateMat is null");
+            }
+        }
+        else
+        {
+            TFCFlorae.LOGGER.info("TFCFlorae: level or state is null");
+            if (level.getBlockState(pos) != null)
+            {
+                TFCFlorae.LOGGER.info("TFCFlorae: state is null");
+            }
+        }
+        return false;
+    }
+
+    public boolean canLogPlaceHere(LevelAccessor level, BlockPos pos)
+    {
+        if (level != null && level.getBlockState(pos) != null)
+        {
+            BlockState state = level.getBlockState(pos);
+            if (state.getMaterial() != null)
+            {
+                return state.isAir() || Helpers.isBlock(state, Blocks.WATER) || EnvironmentHelpers.isWorldgenReplaceable(state) || Helpers.isBlock(state.getBlock(), BlockTags.LEAVES);
+            }
+            else
+            {
+                TFCFlorae.LOGGER.info("TFCFlorae: stateMat is null");
+            }
+        }
+        else
+        {
+            TFCFlorae.LOGGER.info("TFCFlorae: level or state is null");
+            if (level.getBlockState(pos) != null)
+            {
+                TFCFlorae.LOGGER.info("TFCFlorae: state is null");
+            }
+        }
+        return false;
     }
 
     public void placeTrunk(BlockPos startPos, Random random, WorldGenLevel level, BlockPos pos, BlockState state)
     {
-        pos = getTransformedPos(startPos, pos);
-        if (canLogPlaceHere(level, pos))
+        if (canLogPlaceHere(level, pos) || isFreshWater(level, pos))
         {
             this.setFinalBlockState(level, pos, state);
         }
@@ -1758,8 +1787,7 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
 
     public void placeBranch(BlockPos startPos, Random random, WorldGenLevel level, BlockPos pos, BlockState state)
     {
-        pos = getTransformedPos(startPos, pos);
-        if (canLogPlaceHere(level, pos))
+        if (canLogPlaceHere(level, pos) || isFreshWater(level, pos))
         {
             this.setFinalBlockState(level, pos, state);
         }
@@ -1773,29 +1801,38 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
         }
     }
 
-    public final void setFinalBlockState(LevelWriter  level, BlockPos pos, BlockState blockState)
+    public final void setFinalBlockState(WorldGenLevel  level, BlockPos pos, BlockState blockState)
     {
         this.setBlockStateWithoutUpdates(level, pos, blockState);
     }
 
-    public void setBlockStateWithoutUpdates(LevelWriter  level, BlockPos pos, BlockState blockState)
+    public void setBlockStateWithoutUpdates(WorldGenLevel  level, BlockPos pos, BlockState blockState)
     {
         level.setBlock(pos, blockState, 18);
     }
 
-    public void setBlockStateWithoutUpdates(LevelWriter  level, BlockPos pos, BlockState blockState, int flags)
+    public void setBlockStateWithoutUpdates(WorldGenLevel  level, BlockPos pos, BlockState blockState, int flags)
     {
         level.setBlock(pos, blockState, flags);
-    }
-
-    public BlockPos getTransformedPos(BlockPos startPos, BlockPos pos)
-    {
-        BlockPos blockPos = extractOffset(startPos, pos);
-        return blockPos.offset(startPos.getX(), 0, startPos.getY());
     }
 
     public BlockPos extractOffset(BlockPos startPos, BlockPos pos)
     {
         return new BlockPos(startPos.getX() - pos.getX(), pos.getY(), startPos.getZ() - pos.getZ());
+    }
+
+    public static boolean isLake(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.LAKE || biome == TFCBiomes.OCEANIC_MOUNTAIN_LAKE || biome == TFCBiomes.OLD_MOUNTAIN_LAKE || biome == TFCBiomes.MOUNTAIN_LAKE || biome == TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_LAKE || biome == TFCBiomes.VOLCANIC_MOUNTAIN_LAKE || biome == TFCBiomes.PLATEAU_LAKE;
+    }
+
+    public static boolean isRiver(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.RIVER || biome == TFCBiomes.OCEANIC_MOUNTAIN_RIVER || biome == TFCBiomes.OLD_MOUNTAIN_RIVER || biome == TFCBiomes.MOUNTAIN_RIVER || biome == TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_RIVER || biome == TFCBiomes.VOLCANIC_MOUNTAIN_RIVER;
+    }
+
+    public static boolean isLow(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.LOW_CANYONS || biome == TFCBiomes.LOWLANDS;
     }
 }

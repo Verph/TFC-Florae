@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:red_cypress_dead/1",
+      "tfc:red_cypress_dead/2",
+      "tfc:red_cypress_dead/3",
+      "tfc:red_cypress_dead/4",
+      "tfc:red_cypress_dead/5",
+      "tfc:red_cypress_dead/6",
+      "tfc:red_cypress_dead/7",
+      "tfc:red_cypress_dead/8",
+      "tfc:red_cypress_dead/9",
+      "tfc:red_cypress_dead/10",
+      "tfc:red_cypress_dead/11",
+      "tfc:red_cypress_dead/12",
+      "tfc:red_cypress_dead/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 12,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    }
+  }
+}

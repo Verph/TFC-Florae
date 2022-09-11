@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/red_cedar"
       }
     ],
-    "normal_tree": "tfcflorae:tree/red_cedar",
-    "dead_tree": "tfcflorae:tree/red_cedar_dead",
+    "normal_tree": "tfc:tree/red_cedar",
+    "dead_tree": "tfc:tree/red_cedar_dead",
     "fallen_log": "tfcflorae:wood/log/red_cedar",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/red_cedar",

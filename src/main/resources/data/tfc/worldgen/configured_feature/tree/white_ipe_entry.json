@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/white_ipe"
       }
     ],
-    "normal_tree": "tfcflorae:tree/white_ipe",
-    "dead_tree": "tfcflorae:tree/white_ipe_dead",
+    "normal_tree": "tfc:tree/white_ipe",
+    "dead_tree": "tfc:tree/white_ipe_dead",
     "fallen_log": "tfcflorae:wood/log/white_ipe",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/white_ipe",

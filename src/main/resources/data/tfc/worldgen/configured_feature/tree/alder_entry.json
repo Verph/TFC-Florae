@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/alder"
       }
     ],
-    "normal_tree": "tfcflorae:tree/alder",
-    "dead_tree": "tfcflorae:tree/alder_dead",
+    "normal_tree": "tfc:tree/alder",
+    "dead_tree": "tfc:tree/alder_dead",
     "fallen_log": "tfcflorae:wood/log/alder",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/alder",

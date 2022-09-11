@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/poplar"
       }
     ],
-    "normal_tree": "tfcflorae:tree/poplar",
-    "dead_tree": "tfcflorae:tree/poplar_dead",
+    "normal_tree": "tfc:tree/poplar",
+    "dead_tree": "tfc:tree/poplar_dead",
     "fallen_log": "tfcflorae:wood/log/poplar",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/poplar",

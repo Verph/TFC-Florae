@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/pink_ivory"
       }
     ],
-    "normal_tree": "tfcflorae:tree/pink_ivory",
-    "dead_tree": "tfcflorae:tree/pink_ivory_dead",
+    "normal_tree": "tfc:tree/pink_ivory",
+    "dead_tree": "tfc:tree/pink_ivory_dead",
     "fallen_log": "tfcflorae:wood/log/pink_ivory",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/pink_ivory",

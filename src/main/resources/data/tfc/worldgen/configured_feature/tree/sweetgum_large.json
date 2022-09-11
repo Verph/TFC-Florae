@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:sweetgum_large/1",
-      "tfcflorae:sweetgum_large/2",
-      "tfcflorae:sweetgum_large/3",
-      "tfcflorae:sweetgum_large/4",
-      "tfcflorae:sweetgum_large/5",
-      "tfcflorae:sweetgum_large/6",
-      "tfcflorae:sweetgum_large/7"
+      "tfc:sweetgum_large/1",
+      "tfc:sweetgum_large/2",
+      "tfc:sweetgum_large/3",
+      "tfc:sweetgum_large/4",
+      "tfc:sweetgum_large/5",
+      "tfc:sweetgum_large/6",
+      "tfc:sweetgum_large/7"
     ],
     "radius": 2,
     "placement": {

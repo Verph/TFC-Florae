@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/redwood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/redwood",
-    "dead_tree": "tfcflorae:tree/redwood_dead",
+    "normal_tree": "tfc:tree/redwood",
+    "dead_tree": "tfc:tree/redwood_dead",
     "fallen_log": "tfcflorae:wood/log/redwood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/redwood",

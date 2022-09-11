@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:larch_large/1",
-      "tfcflorae:larch_large/2",
-      "tfcflorae:larch_large/3",
-      "tfcflorae:larch_large/4",
-      "tfcflorae:larch_large/5",
-      "tfcflorae:larch_large/6",
-      "tfcflorae:larch_large/7"
+      "tfc:larch_large/1",
+      "tfc:larch_large/2",
+      "tfc:larch_large/3",
+      "tfc:larch_large/4",
+      "tfc:larch_large/5",
+      "tfc:larch_large/6",
+      "tfc:larch_large/7"
     ],
     "radius": 2,
     "placement": {

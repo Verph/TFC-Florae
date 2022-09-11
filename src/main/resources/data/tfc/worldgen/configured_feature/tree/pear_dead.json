@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:pear_dead/1",
+      "tfc:pear_dead/2",
+      "tfc:pear_dead/3",
+      "tfc:pear_dead/4",
+      "tfc:pear_dead/5",
+      "tfc:pear_dead/6",
+      "tfc:pear_dead/7",
+      "tfc:pear_dead/8",
+      "tfc:pear_dead/9",
+      "tfc:pear_dead/10",
+      "tfc:pear_dead/11",
+      "tfc:pear_dead/12",
+      "tfc:pear_dead/13",
+      "tfc:pear_dead/14",
+      "tfc:pear_dead/15",
+      "tfc:pear_dead/16",
+      "tfc:pear_dead/17",
+      "tfc:pear_dead/18",
+      "tfc:pear_dead/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

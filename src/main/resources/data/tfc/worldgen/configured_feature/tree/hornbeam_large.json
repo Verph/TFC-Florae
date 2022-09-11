@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:hornbeam_large/1",
-      "tfcflorae:hornbeam_large/2",
-      "tfcflorae:hornbeam_large/3",
-      "tfcflorae:hornbeam_large/4",
-      "tfcflorae:hornbeam_large/5",
-      "tfcflorae:hornbeam_large/6",
-      "tfcflorae:hornbeam_large/7"
+      "tfc:hornbeam_large/1",
+      "tfc:hornbeam_large/2",
+      "tfc:hornbeam_large/3",
+      "tfc:hornbeam_large/4",
+      "tfc:hornbeam_large/5",
+      "tfc:hornbeam_large/6",
+      "tfc:hornbeam_large/7"
     ],
     "radius": 2,
     "placement": {

@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:limba/1",
-      "tfcflorae:limba/2",
-      "tfcflorae:limba/3",
-      "tfcflorae:limba/4",
-      "tfcflorae:limba/5",
-      "tfcflorae:limba/6",
-      "tfcflorae:limba/7",
-      "tfcflorae:limba/8",
-      "tfcflorae:limba/9"
+      "tfc:limba/1",
+      "tfc:limba/2",
+      "tfc:limba/3",
+      "tfc:limba/4",
+      "tfc:limba/5",
+      "tfc:limba/6",
+      "tfc:limba/7",
+      "tfc:limba/8",
+      "tfc:limba/9"
     ],
     "radius": 1,
     "placement": {

@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:brazilwood_large/1",
-      "tfcflorae:brazilwood_large/2",
-      "tfcflorae:brazilwood_large/3",
-      "tfcflorae:brazilwood_large/4"
+      "tfc:brazilwood_large/1",
+      "tfc:brazilwood_large/2",
+      "tfc:brazilwood_large/3",
+      "tfc:brazilwood_large/4"
     ],
     "radius": 2,
     "placement": {

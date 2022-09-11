@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:purple_ipe_large/1",
-      "tfcflorae:purple_ipe_large/2",
-      "tfcflorae:purple_ipe_large/3",
-      "tfcflorae:purple_ipe_large/4"
+      "tfc:purple_ipe_large/1",
+      "tfc:purple_ipe_large/2",
+      "tfc:purple_ipe_large/3",
+      "tfc:purple_ipe_large/4"
     ],
     "radius": 2,
     "placement": {

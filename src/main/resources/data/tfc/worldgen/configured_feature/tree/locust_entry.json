@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/locust"
       }
     ],
-    "normal_tree": "tfcflorae:tree/locust",
-    "dead_tree": "tfcflorae:tree/locust_dead",
+    "normal_tree": "tfc:tree/locust",
+    "dead_tree": "tfc:tree/locust_dead",
     "fallen_log": "tfcflorae:wood/log/locust",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/locust",

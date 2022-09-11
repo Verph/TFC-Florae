@@ -42,7 +42,7 @@ import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
-
+import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.*;
@@ -102,8 +102,9 @@ public class TFCFBlocks
 
     // Wood
 
-    public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = WoodMapper(TFCFWood.class);
-    public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = LeavesOnlyMapper(TFCFWood.class);
+    public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = woodMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = leavesOnlyMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> MANGROVE_ROOTS = mangroveRootsMapper(TFCFWood.class);
 
     // Misc
 
@@ -183,7 +184,7 @@ public class TFCFBlocks
         return Map;
     }
 
-    private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WoodMapper(Class<TFCFWood> enumClass)
+    private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> woodMapper(Class<TFCFWood> enumClass)
     {
         Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
         for (TFCFWood wood : enumClass.getEnumConstants())
@@ -194,11 +195,24 @@ public class TFCFBlocks
             Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
             for (Wood.BlockType type : Wood.BlockType.values())
             {
-                if (type == BlockType.LEAVES && wood.isFruitTree())
+                if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()))
                 {
-                    subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(90, 60), 
-                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    if (wood.isFruitTree())
+                    {
+                        subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(60, 30), 
+                            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    }
+                    else if (wood.isMangrove())
+                    {
+                        subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).flammable(60, 30), wood.maxDecayDistance()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    }
+                }
+                else if (type == BlockType.SAPLING && wood.isMangrove())
+                {
+                    subMap.put(type, register(("wood/sapling/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFMangrovePropaguleBlock(wood, ExtendedProperties.of(Block.Properties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS)).flammable(60, 30).blockEntity(TFCBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
                 }
                 else
                     subMap.put(type, register(type.nameFor(wood), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
@@ -208,7 +222,7 @@ public class TFCFBlocks
         return Map;
     }
 
-    private static Map<TFCFWood, RegistryObject<Block>> LeavesOnlyMapper(Class<TFCFWood> enumClass)
+    private static Map<TFCFWood, RegistryObject<Block>> leavesOnlyMapper(Class<TFCFWood> enumClass)
     {
         Map<TFCFWood,  RegistryObject<Block>> Map = new HashMap<>();
         for (TFCFWood wood : enumClass.getEnumConstants())
@@ -220,8 +234,25 @@ public class TFCFBlocks
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
 
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(90, 60), 
-            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
+                TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(60, 30), 
+                wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> mangroveRootsMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood,  RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.isMangrove())
+            {
+                BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+                Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+                Map.put(wood, register(("wood/roots/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                    new TFCFMangroveRootsBlocks(wood, ExtendedProperties.of(Block.Properties.of(Material.WOOD).noCollission().randomTicks().strength(0.7F).sound(TFCFSounds.MANGROVE_ROOTS)).flammable(60, 30)), blockItem));
+            }
         }
         return Map;
     }

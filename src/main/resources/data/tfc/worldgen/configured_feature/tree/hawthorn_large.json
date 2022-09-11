@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:hawthorn_large/1",
-      "tfcflorae:hawthorn_large/2",
-      "tfcflorae:hawthorn_large/3",
-      "tfcflorae:hawthorn_large/4",
-      "tfcflorae:hawthorn_large/5",
-      "tfcflorae:hawthorn_large/6",
-      "tfcflorae:hawthorn_large/7"
+      "tfc:hawthorn_large/1",
+      "tfc:hawthorn_large/2",
+      "tfc:hawthorn_large/3",
+      "tfc:hawthorn_large/4",
+      "tfc:hawthorn_large/5",
+      "tfc:hawthorn_large/6",
+      "tfc:hawthorn_large/7"
     ],
     "radius": 2,
     "placement": {

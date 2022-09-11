@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:common_oak_large/1",
-      "tfcflorae:common_oak_large/2",
-      "tfcflorae:common_oak_large/3",
-      "tfcflorae:common_oak_large/4",
-      "tfcflorae:common_oak_large/5",
-      "tfcflorae:common_oak_large/6",
-      "tfcflorae:common_oak_large/7"
+      "tfc:common_oak_large/1",
+      "tfc:common_oak_large/2",
+      "tfc:common_oak_large/3",
+      "tfc:common_oak_large/4",
+      "tfc:common_oak_large/5",
+      "tfc:common_oak_large/6",
+      "tfc:common_oak_large/7"
     ],
     "radius": 2,
     "placement": {

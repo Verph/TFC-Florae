@@ -10,6 +10,8 @@ public class TFCFTags
 {
     public static class Blocks
     {
+        public static final TagKey<Block> CLAY = create("clay");
+
         private static TagKey<Block> create(String id)
         {
             return TagKey.create(Registry.BLOCK_REGISTRY, TFCFHelpers.identifier(id));

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:black_willow_dead/1",
+      "tfc:black_willow_dead/2",
+      "tfc:black_willow_dead/3"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 12,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    }
+  }
+}

@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/hornbeam"
       }
     ],
-    "normal_tree": "tfcflorae:tree/hornbeam",
-    "dead_tree": "tfcflorae:tree/hornbeam_dead",
+    "normal_tree": "tfc:tree/hornbeam",
+    "dead_tree": "tfc:tree/hornbeam_dead",
     "fallen_log": "tfcflorae:wood/log/hornbeam",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/hornbeam",

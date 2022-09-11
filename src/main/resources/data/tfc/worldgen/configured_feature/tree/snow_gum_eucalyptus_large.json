@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:snow_gum_eucalyptus_large/1",
-      "tfcflorae:snow_gum_eucalyptus_large/2",
-      "tfcflorae:snow_gum_eucalyptus_large/3",
-      "tfcflorae:snow_gum_eucalyptus_large/4"
+      "tfc:snow_gum_eucalyptus_large/1",
+      "tfc:snow_gum_eucalyptus_large/2",
+      "tfc:snow_gum_eucalyptus_large/3",
+      "tfc:snow_gum_eucalyptus_large/4"
     ],
     "radius": 2,
     "placement": {

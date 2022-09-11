@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:white_jacaranda_large/1",
-      "tfcflorae:white_jacaranda_large/2",
-      "tfcflorae:white_jacaranda_large/3"
+      "tfc:white_jacaranda_large/1",
+      "tfc:white_jacaranda_large/2",
+      "tfc:white_jacaranda_large/3"
     ],
     "radius": 2,
     "placement": {

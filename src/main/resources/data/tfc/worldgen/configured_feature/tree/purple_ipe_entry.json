@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/purple_ipe"
       }
     ],
-    "normal_tree": "tfcflorae:tree/purple_ipe",
-    "dead_tree": "tfcflorae:tree/purple_ipe_dead",
+    "normal_tree": "tfc:tree/purple_ipe",
+    "dead_tree": "tfc:tree/purple_ipe_dead",
     "fallen_log": "tfcflorae:wood/log/purple_ipe",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/purple_ipe",

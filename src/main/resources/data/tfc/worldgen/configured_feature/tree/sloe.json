@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:sloe/1",
+      "tfc:sloe/2",
+      "tfc:sloe/3",
+      "tfc:sloe/4",
+      "tfc:sloe/5",
+      "tfc:sloe/6",
+      "tfc:sloe/7",
+      "tfc:sloe/8",
+      "tfc:sloe/9",
+      "tfc:sloe/10",
+      "tfc:sloe/11",
+      "tfc:sloe/12",
+      "tfc:sloe/13",
+      "tfc:sloe/14",
+      "tfc:sloe/15",
+      "tfc:sloe/16",
+      "tfc:sloe/17",
+      "tfc:sloe/18",
+      "tfc:sloe/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

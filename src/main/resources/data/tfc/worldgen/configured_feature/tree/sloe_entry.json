@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 100,
+    "max_rain": 390,
+    "min_temp": -16,
+    "max_temp": 19,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/sloe"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/sloe"
+      }
+    ],
+    "normal_tree": "tfc:tree/sloe",
+    "dead_tree": "tfc:tree/sloe_dead",
+    "fallen_log": "tfcflorae:wood/log/sloe",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/sloe",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/sloe",
+    "old_growth_tree": "tfcflorae:tree/sloe_large"
+  }
+}

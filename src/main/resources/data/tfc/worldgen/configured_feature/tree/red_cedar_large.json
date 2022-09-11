@@ -3,12 +3,12 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:red_cedar_large/1",
-      "tfcflorae:red_cedar_large/2",
-      "tfcflorae:red_cedar_large/3",
-      "tfcflorae:red_cedar_large/4",
-      "tfcflorae:red_cedar_large/5",
-      "tfcflorae:red_cedar_large/6"
+      "tfc:red_cedar_large/1",
+      "tfc:red_cedar_large/2",
+      "tfc:red_cedar_large/3",
+      "tfc:red_cedar_large/4",
+      "tfc:red_cedar_large/5",
+      "tfc:red_cedar_large/6"
     ],
     "radius": 2,
     "placement": {

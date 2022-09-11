@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:alder_large/1",
-      "tfcflorae:alder_large/2",
-      "tfcflorae:alder_large/3",
-      "tfcflorae:alder_large/4"
+      "tfc:alder_large/1",
+      "tfc:alder_large/2",
+      "tfc:alder_large/3",
+      "tfc:alder_large/4"
     ],
     "radius": 2,
     "placement": {

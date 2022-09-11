@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:pink_ivory_large/1",
-      "tfcflorae:pink_ivory_large/2",
-      "tfcflorae:pink_ivory_large/3",
-      "tfcflorae:pink_ivory_large/4",
-      "tfcflorae:pink_ivory_large/5",
-      "tfcflorae:pink_ivory_large/6",
-      "tfcflorae:pink_ivory_large/7"
+      "tfc:pink_ivory_large/1",
+      "tfc:pink_ivory_large/2",
+      "tfc:pink_ivory_large/3",
+      "tfc:pink_ivory_large/4",
+      "tfc:pink_ivory_large/5",
+      "tfc:pink_ivory_large/6",
+      "tfc:pink_ivory_large/7"
     ],
     "radius": 2,
     "placement": {

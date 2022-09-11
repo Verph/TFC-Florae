@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/greenheart"
       }
     ],
-    "normal_tree": "tfcflorae:tree/greenheart",
-    "dead_tree": "tfcflorae:tree/greenheart_dead",
+    "normal_tree": "tfc:tree/greenheart",
+    "dead_tree": "tfc:tree/greenheart_dead",
     "fallen_log": "tfcflorae:wood/log/greenheart",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/greenheart",

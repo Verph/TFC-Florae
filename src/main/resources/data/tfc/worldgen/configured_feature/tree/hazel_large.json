@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:hazel_large/1",
-      "tfcflorae:hazel_large/2",
-      "tfcflorae:hazel_large/3",
-      "tfcflorae:hazel_large/4",
-      "tfcflorae:hazel_large/5",
-      "tfcflorae:hazel_large/6",
-      "tfcflorae:hazel_large/7"
+      "tfc:hazel_large/1",
+      "tfc:hazel_large/2",
+      "tfc:hazel_large/3",
+      "tfc:hazel_large/4",
+      "tfc:hazel_large/5",
+      "tfc:hazel_large/6",
+      "tfc:hazel_large/7"
     ],
     "radius": 2,
     "placement": {

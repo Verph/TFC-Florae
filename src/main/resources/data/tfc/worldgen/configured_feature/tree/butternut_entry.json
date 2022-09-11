@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/butternut"
       }
     ],
-    "normal_tree": "tfcflorae:tree/butternut",
-    "dead_tree": "tfcflorae:tree/butternut_dead",
+    "normal_tree": "tfc:tree/butternut",
+    "dead_tree": "tfc:tree/butternut_dead",
     "fallen_log": "tfcflorae:wood/log/butternut",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/butternut",

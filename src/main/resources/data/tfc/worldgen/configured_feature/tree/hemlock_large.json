@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:hemlock_large/1",
-      "tfcflorae:hemlock_large/2",
-      "tfcflorae:hemlock_large/3",
-      "tfcflorae:hemlock_large/4"
+      "tfc:hemlock_large/1",
+      "tfc:hemlock_large/2",
+      "tfc:hemlock_large/3",
+      "tfc:hemlock_large/4"
     ],
     "radius": 2,
     "placement": {

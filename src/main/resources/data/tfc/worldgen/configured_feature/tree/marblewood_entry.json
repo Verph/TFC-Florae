@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/marblewood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/marblewood",
-    "dead_tree": "tfcflorae:tree/marblewood_dead",
+    "normal_tree": "tfc:tree/marblewood",
+    "dead_tree": "tfc:tree/marblewood_dead",
     "fallen_log": "tfcflorae:wood/log/marblewood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/marblewood",

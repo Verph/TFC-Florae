@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/holly"
       }
     ],
-    "normal_tree": "tfcflorae:tree/holly",
-    "dead_tree": "tfcflorae:tree/holly_dead",
+    "normal_tree": "tfc:tree/holly",
+    "dead_tree": "tfc:tree/holly_dead",
     "fallen_log": "tfcflorae:wood/log/holly",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/holly",

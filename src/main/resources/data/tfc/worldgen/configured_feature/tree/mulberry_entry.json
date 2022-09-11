@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/mulberry"
       }
     ],
-    "normal_tree": "tfcflorae:tree/mulberry",
-    "dead_tree": "tfcflorae:tree/mulberry_dead",
+    "normal_tree": "tfc:tree/mulberry",
+    "dead_tree": "tfc:tree/mulberry_dead",
     "fallen_log": "tfcflorae:wood/log/mulberry",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/mulberry",

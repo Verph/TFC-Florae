@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/teak"
       }
     ],
-    "normal_tree": "tfcflorae:tree/teak",
-    "dead_tree": "tfcflorae:tree/teak_dead",
+    "normal_tree": "tfc:tree/teak",
+    "dead_tree": "tfc:tree/teak_dead",
     "fallen_log": "tfcflorae:wood/log/teak",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/teak",

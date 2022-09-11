@@ -3,8 +3,8 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:cypress_large/1",
-      "tfcflorae:cypress_large/2"
+      "tfc:cypress_large/1",
+      "tfc:cypress_large/2"
     ],
     "radius": 2,
     "placement": {

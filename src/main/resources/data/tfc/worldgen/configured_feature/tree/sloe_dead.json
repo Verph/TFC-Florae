@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:sloe_dead/1",
+      "tfc:sloe_dead/2",
+      "tfc:sloe_dead/3",
+      "tfc:sloe_dead/4",
+      "tfc:sloe_dead/5",
+      "tfc:sloe_dead/6",
+      "tfc:sloe_dead/7",
+      "tfc:sloe_dead/8",
+      "tfc:sloe_dead/9",
+      "tfc:sloe_dead/10",
+      "tfc:sloe_dead/11",
+      "tfc:sloe_dead/12",
+      "tfc:sloe_dead/13",
+      "tfc:sloe_dead/14",
+      "tfc:sloe_dead/15",
+      "tfc:sloe_dead/16",
+      "tfc:sloe_dead/17",
+      "tfc:sloe_dead/18",
+      "tfc:sloe_dead/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

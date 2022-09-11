@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/brazilwood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/brazilwood",
-    "dead_tree": "tfcflorae:tree/brazilwood_dead",
+    "normal_tree": "tfc:tree/brazilwood",
+    "dead_tree": "tfc:tree/brazilwood_dead",
     "fallen_log": "tfcflorae:wood/log/brazilwood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/brazilwood",

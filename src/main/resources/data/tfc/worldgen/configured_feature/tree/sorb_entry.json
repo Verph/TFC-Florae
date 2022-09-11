@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 150,
+    "max_rain": 400,
+    "min_temp": -19,
+    "max_temp": 29,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/sorb"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/sorb"
+      }
+    ],
+    "normal_tree": "tfc:tree/sorb",
+    "dead_tree": "tfc:tree/sorb_dead",
+    "fallen_log": "tfcflorae:wood/log/sorb",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/sorb",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/sorb",
+    "old_growth_tree": "tfcflorae:tree/sorb_large"
+  }
+}

@@ -3,11 +3,11 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:yew_large/1",
-      "tfcflorae:yew_large/2",
-      "tfcflorae:yew_large/3",
-      "tfcflorae:yew_large/4",
-      "tfcflorae:yew_large/5"
+      "tfc:yew_large/1",
+      "tfc:yew_large/2",
+      "tfc:yew_large/3",
+      "tfc:yew_large/4",
+      "tfc:yew_large/5"
     ],
     "radius": 2,
     "placement": {

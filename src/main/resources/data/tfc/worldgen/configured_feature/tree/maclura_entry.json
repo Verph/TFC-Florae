@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/maclura"
       }
     ],
-    "normal_tree": "tfcflorae:tree/maclura",
-    "dead_tree": "tfcflorae:tree/maclura_dead",
+    "normal_tree": "tfc:tree/maclura",
+    "dead_tree": "tfc:tree/maclura_dead",
     "fallen_log": "tfcflorae:wood/log/maclura",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/maclura",

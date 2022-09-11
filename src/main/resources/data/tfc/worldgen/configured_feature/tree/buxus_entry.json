@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/buxus"
       }
     ],
-    "normal_tree": "tfcflorae:tree/buxus",
-    "dead_tree": "tfcflorae:tree/buxus_dead",
+    "normal_tree": "tfc:tree/buxus",
+    "dead_tree": "tfc:tree/buxus_dead",
     "fallen_log": "tfcflorae:wood/log/buxus",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/buxus",

@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/larch"
       }
     ],
-    "normal_tree": "tfcflorae:tree/larch",
-    "dead_tree": "tfcflorae:tree/larch_dead",
+    "normal_tree": "tfc:tree/larch",
+    "dead_tree": "tfc:tree/larch_dead",
     "fallen_log": "tfcflorae:wood/log/larch",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/larch",

@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/angelim"
       }
     ],
-    "normal_tree": "tfcflorae:tree/angelim",
-    "dead_tree": "tfcflorae:tree/angelim_dead",
+    "normal_tree": "tfc:tree/angelim",
+    "dead_tree": "tfc:tree/angelim_dead",
     "fallen_log": "tfcflorae:wood/log/angelim",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/angelim",

@@ -1,0 +1,37 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:bald_cypress/1",
+      "tfc:bald_cypress/2",
+      "tfc:bald_cypress/3",
+      "tfc:bald_cypress/4",
+      "tfc:bald_cypress/5",
+      "tfc:bald_cypress/6",
+      "tfc:bald_cypress/7",
+      "tfc:bald_cypress/8",
+      "tfc:bald_cypress/9",
+      "tfc:bald_cypress/10",
+      "tfc:bald_cypress/11",
+      "tfc:bald_cypress/12",
+      "tfc:bald_cypress/13",
+      "tfc:bald_cypress/14",
+      "tfc:bald_cypress/15",
+      "tfc:bald_cypress/16",
+      "tfc:bald_cypress/17",
+      "tfc:bald_cypress/18",
+      "tfc:bald_cypress/19",
+      "tfc:bald_cypress/20",
+      "tfc:bald_cypress/21",
+      "tfc:bald_cypress/22"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 12,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    }
+  }
+}

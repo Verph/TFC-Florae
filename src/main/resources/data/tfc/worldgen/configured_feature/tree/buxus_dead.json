@@ -3,12 +3,12 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:buxus_dead/1",
-      "tfcflorae:buxus_dead/2",
-      "tfcflorae:buxus_dead/3",
-      "tfcflorae:buxus_dead/4",
-      "tfcflorae:buxus_dead/5",
-      "tfcflorae:buxus_dead/6"
+      "tfc:buxus_dead/1",
+      "tfc:buxus_dead/2",
+      "tfc:buxus_dead/3",
+      "tfc:buxus_dead/4",
+      "tfc:buxus_dead/5",
+      "tfc:buxus_dead/6"
     ],
     "radius": 1,
     "placement": {

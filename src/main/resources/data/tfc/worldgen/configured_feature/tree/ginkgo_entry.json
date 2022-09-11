@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/ginkgo"
       }
     ],
-    "normal_tree": "tfcflorae:tree/ginkgo",
-    "dead_tree": "tfcflorae:tree/ginkgo_dead",
+    "normal_tree": "tfc:tree/ginkgo",
+    "dead_tree": "tfc:tree/ginkgo_dead",
     "fallen_log": "tfcflorae:wood/log/ginkgo",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/ginkgo",

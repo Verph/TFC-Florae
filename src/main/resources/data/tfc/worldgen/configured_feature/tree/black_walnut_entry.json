@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/black_walnut"
       }
     ],
-    "normal_tree": "tfcflorae:tree/black_walnut",
-    "dead_tree": "tfcflorae:tree/black_walnut_dead",
+    "normal_tree": "tfc:tree/black_walnut",
+    "dead_tree": "tfc:tree/black_walnut_dead",
     "fallen_log": "tfcflorae:wood/log/black_walnut",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/black_walnut",

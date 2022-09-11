@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/yellow_jacaranda"
       }
     ],
-    "normal_tree": "tfcflorae:tree/yellow_jacaranda",
-    "dead_tree": "tfcflorae:tree/yellow_jacaranda_dead",
+    "normal_tree": "tfc:tree/yellow_jacaranda",
+    "dead_tree": "tfc:tree/yellow_jacaranda_dead",
     "fallen_log": "tfcflorae:wood/log/yellow_jacaranda",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/yellow_jacaranda",

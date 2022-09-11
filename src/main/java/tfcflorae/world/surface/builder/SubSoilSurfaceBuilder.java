@@ -3,6 +3,8 @@ package tfcflorae.world.surface.builder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
@@ -14,19 +16,32 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.world.TFCChunkGenerator;
+import net.dries007.tfc.world.biome.BiomeExtension;
+import net.dries007.tfc.world.biome.BiomeNoise;
+import net.dries007.tfc.world.biome.TFCBiomes;
 import net.dries007.tfc.world.chunkdata.ChunkData;
+import net.dries007.tfc.world.noise.Noise2D;
+import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.settings.RockSettings;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.world.surface.SurfaceStates;
 import net.dries007.tfc.world.surface.builder.*;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.world.surface.TFCFSoilSurfaceState;
 
 public class SubSoilSurfaceBuilder implements SurfaceBuilder
 {
+    public static final int SEA_LEVEL_Y = TFCChunkGenerator.SEA_LEVEL_Y; // Matches vanilla
+    private final Noise2D lowlands;
+    private final Noise2D lake;
+    private final Noise2D river;
+    private final Noise2D lowCanyons;
+
     public static SurfaceBuilderFactory create(SurfaceBuilderFactory parent)
     {
         return seed -> new SubSoilSurfaceBuilder(parent.apply(seed), seed);
@@ -37,6 +52,10 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
     public SubSoilSurfaceBuilder(SurfaceBuilder parent, long seed)
     {
         this.parent = parent;
+        this.lowlands = new OpenSimplex2D(seed).octaves(6).spread(0.55f).scaled(SEA_LEVEL_Y - 5, SEA_LEVEL_Y + 2).clamped(SEA_LEVEL_Y - 2, SEA_LEVEL_Y + 2);
+        this.lake = new OpenSimplex2D(seed).octaves(4).spread(0.15f).scaled(SEA_LEVEL_Y - 12, SEA_LEVEL_Y - 2);
+        this.river = new OpenSimplex2D(seed).octaves(4).spread(0.2f).scaled(SEA_LEVEL_Y - 11, SEA_LEVEL_Y - 5);
+        this.lowCanyons = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
     }
 
     @Override
@@ -50,9 +69,16 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
     {
         final NormalSurfaceBuilder surfaceBuilder = NormalSurfaceBuilder.INSTANCE;
 
+        final float lowlandsNoise = lowlands.noise(context.pos().getX(), context.pos().getZ());
+        final float lakeNoise = lake.noise(context.pos().getX(), context.pos().getZ());
+        final float riverNoise = river.noise(context.pos().getX(), context.pos().getZ());
+        final float lowCanyonsNoise = lowCanyons.noise(context.pos().getX(), context.pos().getZ());
+
         ChunkData data = context.getChunkData();
         BlockPos pos = new BlockPos(context.pos().getX(), startY - 1, context.pos().getZ());
         RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
+        final Biome biome = context.biome();
+        final BiomeExtension variants = TFCBiomes.getExtensionOrThrow(context.level(), biome);
 
         Rock rock = Rock.GRANITE;
         for (Rock r : Rock.values())
@@ -73,6 +99,7 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
             }
         }
         final BlockState localGravelType = TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
+        final BlockState localRawType = TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get().defaultBlockState();
         final BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get().defaultBlockState();
 
         final SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
@@ -102,97 +129,129 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
             for (int y = gravelY; y < transitionHeight; ++y)
             {
                 final double randomGauss = context.random().nextGaussian();
+                final BlockState stateAt = context.getBlockState(y);
 
-                BlockPos posY = new BlockPos(context.pos().getX(), y, context.pos().getZ());
-                if (y == gravelY && canPlaceHere(context.level(), posY))
+                /*BlockPos posChecker = new BlockPos(context.pos().getX(), y, context.pos().getZ());
+                TFCFlorae.LOGGER.info("generating subsoil block at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ());
+                TFCFlorae.LOGGER.info("blockstate at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ() + " is " + context.getBlockState(y).toString());*/
+                //if (canPlaceHere(context, y) && (((isLow(variants) && y > context.getSeaLevel()) || (isLake(variants) && y > context.getSeaLevel()) || (isRiver(variants) && y > context.getSeaLevel()) || (isCanyon(variants) && y > context.getSeaLevel())) || !isLow(variants) || !isLake(variants) || !isRiver(variants) || !isCanyon(variants)))
+                if (canPlaceHere(context, y) && pos.getY() > context.getSeaLevel())
                 {
-                    if (randomGauss >= -0.3f)
+                    if (y == gravelY)
                     {
-                        if (randomGauss >= 0.8f)
+                        if (randomGauss >= -0.3f)
                         {
-                            context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
-                        }
-                        else if (randomGauss >= 0.45f && randomGauss < 0.8f)
-                        {
-                            context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
-                        }
-                        else
-                        {
-                            context.setBlockState(y, ROCKIEST_COMPACT_DIRT.getState(context));
+                            if (randomGauss >= 0.8f)
+                            {
+                                context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
+                            }
+                            else if (randomGauss >= 0.45f && randomGauss < 0.8f)
+                            {
+                                context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIEST_COMPACT_DIRT.getState(context));
+                            }
                         }
                     }
-                }
-                else if (y == gravelY + 1)
-                {
-                    if (randomGauss >= 0f)
+                    else if (y == gravelY + 1)
                     {
-                        if (randomGauss >= 0.7f)
+                        if (randomGauss >= 0f)
                         {
-                            context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
-                        }
-                        else if (randomGauss >= 0.45f && randomGauss < 0.7f)
-                        {
-                            context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
-                        }
-                        else
-                        {
-                            context.setBlockState(y, ROCKIEST_COMPACT_DIRT.getState(context));
+                            if (randomGauss >= 0.7f)
+                            {
+                                context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
+                            }
+                            else if (randomGauss >= 0.45f && randomGauss < 0.7f)
+                            {
+                                context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIEST_COMPACT_DIRT.getState(context));
+                            }
                         }
                     }
-                }
-                else if (y == gravelY + 2)
-                {
-                    if (randomGauss >= 0.1f)
+                    else if (y == gravelY + 2)
                     {
-                        if (randomGauss >= 0.7f)
+                        if (randomGauss >= 0.1f)
                         {
-                            context.setBlockState(y, PEBBLE_COMPACT_DIRT.getState(context));
-                        }
-                        else if (randomGauss >= 0.4f && randomGauss < 0.7f)
-                        {
-                            context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
-                        }
-                        else
-                        {
-                            context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
+                            if (randomGauss >= 0.7f)
+                            {
+                                context.setBlockState(y, PEBBLE_COMPACT_DIRT.getState(context));
+                            }
+                            else if (randomGauss >= 0.4f && randomGauss < 0.7f)
+                            {
+                                context.setBlockState(y, ROCKY_COMPACT_DIRT.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIER_COMPACT_DIRT.getState(context));
+                            }
                         }
                     }
-                }
-                else if (y == gravelY + 3)
-                {
-                    if (randomGauss >= 0.2f)
+                    else if (y == gravelY + 3)
                     {
-                        if (randomGauss >= 0.6f)
+                        if (randomGauss >= 0.2f)
+                        {
+                            if (randomGauss >= 0.6f)
+                            {
+                                context.setBlockState(y, COMPACT_DIRT.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, PEBBLE_COMPACT_DIRT.getState(context));
+                            }
+                        }
+                    }
+                    else if (y > gravelY + 3)
+                    {
+                        if (0.3f >= randomGauss)
                         {
                             context.setBlockState(y, COMPACT_DIRT.getState(context));
                         }
-                        else
-                        {
-                            context.setBlockState(y, PEBBLE_COMPACT_DIRT.getState(context));
-                        }
-                    }
-                }
-                else if (y > gravelY + 3)
-                {
-                    if (0.3f >= randomGauss)
-                    {
-                        context.setBlockState(y, COMPACT_DIRT.getState(context));
                     }
                 }
             }
         }
     }
 
-    public boolean canPlaceHere(LevelAccessor level, BlockPos pos)
+    public boolean canPlaceHere(SurfaceBuilderContext context, int y)
     {
-        return !level.getBlockState(pos).isAir() || 
-            !Helpers.isFluid(level.getBlockState(pos).getFluidState(), FluidTags.WATER) || 
-            level.getBlockState(pos).getMaterial() != Material.WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SALT_WATER || 
-            level.getBlockState(pos).getMaterial() != TFCMaterials.SPRING_WATER || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SALT_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.SPRING_WATER.get() || 
-            level.getBlockState(pos).getBlock() != TFCBlocks.RIVER_WATER.get() || 
-            !level.getBlockState(pos).hasProperty(RiverWaterBlock.FLOW);
+        BlockState state = context.getBlockState(y);
+        Material stateMat = state.getMaterial();
+        Block stateBlock = state.getBlock();
+
+        return (state != SurfaceStates.RAW || 
+            !state.isAir() || 
+            !Helpers.isFluid(state.getFluidState(), FluidTags.WATER) || 
+            stateMat != Material.WATER || 
+            stateMat != TFCMaterials.SALT_WATER || 
+            stateMat != TFCMaterials.SPRING_WATER || 
+            stateBlock != TFCBlocks.SALT_WATER.get() || 
+            stateBlock != TFCBlocks.SPRING_WATER.get() || 
+            stateBlock != TFCBlocks.RIVER_WATER.get() || 
+            !state.hasProperty(RiverWaterBlock.FLOW));
+    }
+
+    public static boolean isLake(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.LAKE || biome == TFCBiomes.OCEANIC_MOUNTAIN_LAKE || biome == TFCBiomes.OLD_MOUNTAIN_LAKE || biome == TFCBiomes.MOUNTAIN_LAKE || biome == TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_LAKE || biome == TFCBiomes.VOLCANIC_MOUNTAIN_LAKE || biome == TFCBiomes.PLATEAU_LAKE;
+    }
+
+    public static boolean isRiver(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.RIVER || biome == TFCBiomes.OCEANIC_MOUNTAIN_RIVER || biome == TFCBiomes.OLD_MOUNTAIN_RIVER || biome == TFCBiomes.MOUNTAIN_RIVER || biome == TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_RIVER || biome == TFCBiomes.VOLCANIC_MOUNTAIN_RIVER;
+    }
+
+    public static boolean isLow(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.PLAINS || biome == TFCBiomes.HILLS || biome == TFCBiomes.LOWLANDS;
+    }
+
+    public static boolean isCanyon(BiomeExtension biome)
+    {
+        return biome == TFCBiomes.LOW_CANYONS || biome == TFCBiomes.CANYONS;
     }
 }

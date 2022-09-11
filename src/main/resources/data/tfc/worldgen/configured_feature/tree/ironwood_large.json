@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:ironwood_large/1",
-      "tfcflorae:ironwood_large/2",
-      "tfcflorae:ironwood_large/3",
-      "tfcflorae:ironwood_large/4"
+      "tfc:ironwood_large/1",
+      "tfc:ironwood_large/2",
+      "tfc:ironwood_large/3",
+      "tfc:ironwood_large/4"
     ],
     "radius": 2,
     "placement": {

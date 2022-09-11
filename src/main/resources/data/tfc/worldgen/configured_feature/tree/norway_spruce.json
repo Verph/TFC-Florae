@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:norway_spruce/1",
-      "tfcflorae:norway_spruce/2",
-      "tfcflorae:norway_spruce/3",
-      "tfcflorae:norway_spruce/4",
-      "tfcflorae:norway_spruce/5",
-      "tfcflorae:norway_spruce/6",
-      "tfcflorae:norway_spruce/7",
-      "tfcflorae:norway_spruce/8",
-      "tfcflorae:norway_spruce/9"
+      "tfc:norway_spruce/1",
+      "tfc:norway_spruce/2",
+      "tfc:norway_spruce/3",
+      "tfc:norway_spruce/4",
+      "tfc:norway_spruce/5",
+      "tfc:norway_spruce/6",
+      "tfc:norway_spruce/7",
+      "tfc:norway_spruce/8",
+      "tfc:norway_spruce/9"
     ],
     "radius": 1,
     "placement": {

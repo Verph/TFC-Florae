@@ -3,10 +3,10 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:teak_large/1",
-      "tfcflorae:teak_large/2",
-      "tfcflorae:teak_large/3",
-      "tfcflorae:teak_large/4"
+      "tfc:teak_large/1",
+      "tfc:teak_large/2",
+      "tfc:teak_large/3",
+      "tfc:teak_large/4"
     ],
     "radius": 2,
     "placement": {

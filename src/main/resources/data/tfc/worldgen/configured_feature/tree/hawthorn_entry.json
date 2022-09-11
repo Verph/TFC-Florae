@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/hawthorn"
       }
     ],
-    "normal_tree": "tfcflorae:tree/hawthorn",
-    "dead_tree": "tfcflorae:tree/hawthorn_dead",
+    "normal_tree": "tfc:tree/hawthorn",
+    "dead_tree": "tfc:tree/hawthorn_dead",
     "fallen_log": "tfcflorae:wood/log/hawthorn",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/hawthorn",

@@ -3,15 +3,15 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:nordmann_fir_dead/1",
-      "tfcflorae:nordmann_fir_dead/2",
-      "tfcflorae:nordmann_fir_dead/3",
-      "tfcflorae:nordmann_fir_dead/4",
-      "tfcflorae:nordmann_fir_dead/5",
-      "tfcflorae:nordmann_fir_dead/6",
-      "tfcflorae:nordmann_fir_dead/7",
-      "tfcflorae:nordmann_fir_dead/8",
-      "tfcflorae:nordmann_fir_dead/9"
+      "tfc:nordmann_fir_dead/1",
+      "tfc:nordmann_fir_dead/2",
+      "tfc:nordmann_fir_dead/3",
+      "tfc:nordmann_fir_dead/4",
+      "tfc:nordmann_fir_dead/5",
+      "tfc:nordmann_fir_dead/6",
+      "tfc:nordmann_fir_dead/7",
+      "tfc:nordmann_fir_dead/8",
+      "tfc:nordmann_fir_dead/9"
     ],
     "radius": 1,
     "placement": {

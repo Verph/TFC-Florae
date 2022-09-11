@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/limba"
       }
     ],
-    "normal_tree": "tfcflorae:tree/limba",
-    "dead_tree": "tfcflorae:tree/limba_dead",
+    "normal_tree": "tfc:tree/limba",
+    "dead_tree": "tfc:tree/limba_dead",
     "fallen_log": "tfcflorae:wood/log/limba",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/limba",

@@ -14,8 +14,8 @@
         "block": "tfcflorae:wood/fallen_leaves/ironwood"
       }
     ],
-    "normal_tree": "tfcflorae:tree/ironwood",
-    "dead_tree": "tfcflorae:tree/ironwood_dead",
+    "normal_tree": "tfc:tree/ironwood",
+    "dead_tree": "tfc:tree/ironwood_dead",
     "fallen_log": "tfcflorae:wood/log/ironwood",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/ironwood",

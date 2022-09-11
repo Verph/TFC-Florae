@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:mahoe_large/1",
-      "tfcflorae:mahoe_large/2",
-      "tfcflorae:mahoe_large/3",
-      "tfcflorae:mahoe_large/4",
-      "tfcflorae:mahoe_large/5",
-      "tfcflorae:mahoe_large/6",
-      "tfcflorae:mahoe_large/7"
+      "tfc:mahoe_large/1",
+      "tfc:mahoe_large/2",
+      "tfc:mahoe_large/3",
+      "tfc:mahoe_large/4",
+      "tfc:mahoe_large/5",
+      "tfc:mahoe_large/6",
+      "tfc:mahoe_large/7"
     ],
     "radius": 2,
     "placement": {

@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:black_walnut_large/1",
-      "tfcflorae:black_walnut_large/2",
-      "tfcflorae:black_walnut_large/3"
+      "tfc:black_walnut_large/1",
+      "tfc:black_walnut_large/2",
+      "tfc:black_walnut_large/3"
     ],
     "radius": 2,
     "placement": {

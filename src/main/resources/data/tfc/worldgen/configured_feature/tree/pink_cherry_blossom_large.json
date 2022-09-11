@@ -3,9 +3,9 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:pink_cherry_blossom_large/1",
-      "tfcflorae:pink_cherry_blossom_large/2",
-      "tfcflorae:pink_cherry_blossom_large/3"
+      "tfc:pink_cherry_blossom_large/1",
+      "tfc:pink_cherry_blossom_large/2",
+      "tfc:pink_cherry_blossom_large/3"
     ],
     "radius": 2,
     "placement": {

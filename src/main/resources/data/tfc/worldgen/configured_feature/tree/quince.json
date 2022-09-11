@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:quince/1",
+      "tfc:quince/2",
+      "tfc:quince/3",
+      "tfc:quince/4",
+      "tfc:quince/5",
+      "tfc:quince/6",
+      "tfc:quince/7",
+      "tfc:quince/8",
+      "tfc:quince/9",
+      "tfc:quince/10",
+      "tfc:quince/11",
+      "tfc:quince/12",
+      "tfc:quince/13",
+      "tfc:quince/14",
+      "tfc:quince/15",
+      "tfc:quince/16",
+      "tfc:quince/17",
+      "tfc:quince/18",
+      "tfc:quince/19"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

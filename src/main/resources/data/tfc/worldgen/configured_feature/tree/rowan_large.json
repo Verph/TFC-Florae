@@ -3,13 +3,13 @@
   "type": "tfc:random_tree",
   "config": {
     "structures": [
-      "tfcflorae:rowan_large/1",
-      "tfcflorae:rowan_large/2",
-      "tfcflorae:rowan_large/3",
-      "tfcflorae:rowan_large/4",
-      "tfcflorae:rowan_large/5",
-      "tfcflorae:rowan_large/6",
-      "tfcflorae:rowan_large/7"
+      "tfc:rowan_large/1",
+      "tfc:rowan_large/2",
+      "tfc:rowan_large/3",
+      "tfc:rowan_large/4",
+      "tfc:rowan_large/5",
+      "tfc:rowan_large/6",
+      "tfc:rowan_large/7"
     ],
     "radius": 2,
     "placement": {
