@@ -26,6 +26,7 @@ resources_old
 resources_old/*
 src/main/resources_copy
 src/main/resources/assets/tfcflorae111
+.vscode
 
 # Files from Forge MDK
 forge*changelog.txt
