@@ -31,13 +31,14 @@ import net.dries007.tfc.world.biome.BiomeNoise;
 import net.dries007.tfc.world.biome.*;
 import net.dries007.tfc.world.surface.builder.*;
 
+import tfcflorae.interfaces.TFCBiomesMixinInterface;
 import tfcflorae.world.surface.builder.*;
 
 import static net.dries007.tfc.TerraFirmaCraft.MOD_ID;
 import static net.dries007.tfc.world.biome.BiomeBuilder.builder;
 
 @Mixin(TFCBiomes.class)
-public final class TFCBiomesMixin
+public final class TFCBiomesMixin implements TFCBiomesMixinInterface
 {
     @Shadow
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, MOD_ID);
@@ -65,13 +66,13 @@ public final class TFCBiomesMixin
     @Shadow @Mutable @Final
     public static final BiomeExtension LOW_CANYONS = register("low_canyons", builder().heightmap(seed -> BiomeNoise.canyons(seed, -8, 21)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).aquiferHeightOffset(-16).spawnable()); // Sharp, small hills, with lots of water / snaking winding rivers.
 
-    @Unique @Mutable @Final
+    @Unique @Final
     private static final BiomeExtension GRASSLANDS = register("grasslands", builder().heightmap(seed -> BiomeNoise.hills(seed, 0, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE)))).spawnable()); // Incredibly flat, slightly above sea level.
-    @Unique @Mutable @Final
-    private static final BiomeExtension WETLANDS = register("wetlands", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
-    @Unique @Mutable @Final
+    @Unique @Final
+    private static final BiomeExtension WETLANDS = register("wetlands", builder().heightmap(seed -> BiomeNoise.canyons(seed, -5, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
+    @Unique @Final
     private static final BiomeExtension MARSHES = register("marshes", builder().heightmap(seed -> BiomeNoise.hills(seed, -4, -2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
-    @Unique @Mutable @Final
+    @Unique @Final
     private static final BiomeExtension SWAMPS = register("swamps", builder().heightmap(seed -> BiomeNoise.hills(seed, -8, 2)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(ForestSurfaceBuilder.create(LowlandsSurfaceBuilder.INSTANCE)))).aquiferHeightOffset(-8).spawnable()); // Flat, swamp-like, lots of shallow pools below sea level.
 
     // Mid biomes
@@ -133,30 +134,6 @@ public final class TFCBiomesMixin
 
     @Shadow @Mutable @Final
     public static final BiomeExtension PLATEAU_LAKE = register("plateau_lake", builder().heightmap(seed -> BiomeNoise.hills(seed, 20, 30)).surface(RoadNetworkBuilder.create(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(BiomeNoise::undergroundLakes).group(BiomeExtension.Group.LAKE));
-
-    @Unique @Mutable @Final
-    private static final BiomeExtension getGrasslands()
-    {
-        return GRASSLANDS;
-    }
-
-    @Unique @Mutable @Final
-    private static final BiomeExtension getWetlands()
-    {
-        return WETLANDS;
-    }
-
-    @Unique @Mutable @Final
-    private static final BiomeExtension getMarshes()
-    {
-        return MARSHES;
-    }
-
-    @Unique @Mutable @Final
-    private static final BiomeExtension getSwamps()
-    {
-        return SWAMPS;
-    }
 
     @Shadow
     public static BiomeExtension getExtensionOrThrow(LevelAccessor level, Biome biome)
@@ -223,5 +200,29 @@ public final class TFCBiomesMixin
         TFCBiomes.BIOMES.register(name, OverworldBiomes::theVoid);
 
         return variants;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticGrasslands()
+    {
+        return GRASSLANDS;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticWetlands()
+    {
+        return WETLANDS;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticMarshes()
+    {
+        return MARSHES;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticSwamps()
+    {
+        return SWAMPS;
     }
 }

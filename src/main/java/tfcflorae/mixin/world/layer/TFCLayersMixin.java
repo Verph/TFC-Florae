@@ -19,11 +19,15 @@ import net.dries007.tfc.world.layer.framework.TypedAreaFactory;
 import net.dries007.tfc.world.noise.*;
 import net.dries007.tfc.world.river.*;
 
-import tfcflorae.mixin.world.biome.TFCBiomesMixinAccessor;
+import tfcflorae.interfaces.*;
+import tfcflorae.world.layer.EdgeBiomeLayer;
+import tfcflorae.world.layer.PlateBiomeLayer;
 
 @Mixin(TFCLayers.class)
-public class TFCLayersMixin
+public class TFCLayersMixin implements TFCLayersMixinInterface
 {
+    @Unique private static TFCBiomes staticBiomes = new TFCBiomes();
+
     /**
      * These IDs are used during plate tectonic layer generation
      * They're declared here as compile time constants so they can be used optimally in switch statements later
@@ -90,10 +94,15 @@ public class TFCLayersMixin
     @Shadow public static final int VOLCANIC_OCEANIC_MOUNTAIN_LAKE;
     @Shadow public static final int PLATEAU_LAKE;
 
-    @Unique public static final int GRASSLANDS;
-    @Unique public static final int WETLANDS;
-    @Unique public static final int MARSHES;
-    @Unique public static final int SWAMPS;
+    /*@Unique private static final int GRASSLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticGrasslands);
+    @Unique private static final int WETLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticWetlands);
+    @Unique private static final int MARSHES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMarshes);
+    @Unique private static final int SWAMPS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSwamps);*/
+
+    @Unique private static final int GRASSLANDS;
+    @Unique private static final int WETLANDS;
+    @Unique private static final int MARSHES;
+    @Unique private static final int SWAMPS;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
@@ -143,10 +152,10 @@ public class TFCLayersMixin
         VOLCANIC_OCEANIC_MOUNTAIN_LAKE = register(() -> TFCBiomes.VOLCANIC_OCEANIC_MOUNTAIN_LAKE);
         PLATEAU_LAKE = register(() -> TFCBiomes.PLATEAU_LAKE);
 
-        GRASSLANDS = register(TFCBiomesMixinAccessor::getGrasslands);
-        WETLANDS = register(TFCBiomesMixinAccessor::getWetlands);
-        MARSHES = register(TFCBiomesMixinAccessor::getMarshes);
-        SWAMPS = register(TFCBiomesMixinAccessor::getSwamps);
+        GRASSLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticGrasslands);
+        WETLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticWetlands);
+        MARSHES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMarshes);
+        SWAMPS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSwamps);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -156,7 +165,31 @@ public class TFCLayersMixin
         OCEAN_REEF_MARKER = register();
     }
 
-    @Shadow
+    @Override
+    public int getStaticGrasslands()
+    {
+        return GRASSLANDS;
+    }
+
+    @Override
+    public int getStaticWetlands()
+    {
+        return WETLANDS;
+    }
+
+    @Override
+    public int getStaticMarshes()
+    {
+        return MARSHES;
+    }
+
+    @Override
+    public int getStaticSwamps()
+    {
+        return SWAMPS;
+    }
+
+    @Overwrite(remap = false)
     public static BiomeExtension getFromLayerId(int id)
     {
         final BiomeExtension v = BIOME_LAYERS[id];
@@ -167,7 +200,7 @@ public class TFCLayersMixin
         return v;
     }
 
-    @Shadow @Mutable @Final
+    @Overwrite(remap = false)
     public static AreaFactory createOverworldBiomeLayer(long seed, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
     {
         final Random random = new Random(seed);
@@ -189,7 +222,7 @@ public class TFCLayersMixin
         layerArtist.draw("plate_boundary", 3, mainLayer);
 
         // Plates -> Biomes
-        mainLayer = PlateBiomeLayerMixin.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = PlateBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 1, mainLayer);
 
         // Initial Biomes -> Lake Setup
@@ -220,7 +253,7 @@ public class TFCLayersMixin
         layerArtist.draw("biomes", 5, mainLayer);
         mainLayer = ZoomLayer.NORMAL.apply(1002, mainLayer);
         layerArtist.draw("biomes", 6, mainLayer);
-        mainLayer = EdgeBiomeLayerMixin.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 7, mainLayer);
         mainLayer = ZoomLayer.NORMAL.apply(1003, mainLayer);
         layerArtist.draw("biomes", 8, mainLayer);
@@ -247,14 +280,14 @@ public class TFCLayersMixin
         return new MergeRiverLayer(watersheds).apply(seed, createOverworldBiomeLayer(seed, plateArtist, layerArtist));
     }
 
-    @Shadow @Mutable @Final
+    /*@Shadow @Mutable @Final
     public static AreaFactory createOverworldForestLayer(long seed, IArtist<AreaFactory> artist)
     {
         final Random random = new Random(seed);
 
         AreaFactory layer;
 
-        layer = new ForestInitLayerMixin(new OpenSimplex2D(random.nextInt()).spread(0.3f)).apply(random.nextLong());
+        layer = new ForestInitLayer(new OpenSimplex2D(random.nextInt()).spread(0.3f)).apply(random.nextLong());
         artist.draw("forest", 1, layer);
         layer = ForestRandomizeLayer.INSTANCE.apply(random.nextLong(), layer);
         artist.draw("forest", 2, layer);
@@ -278,7 +311,7 @@ public class TFCLayersMixin
         }
 
         return layer;
-    }
+    }*/
 
     @Shadow
     public static TypedAreaFactory<Plate> createEarlyPlateLayers(long seed)
@@ -473,10 +506,10 @@ public class TFCLayersMixin
         return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS;
     }
 
-    @Shadow @Mutable @Final
+    @Overwrite(remap = false)
     public static boolean isLow(int value)
     {
-        return value == PLAINS || value == HILLS || value == LOW_CANYONS || value == LOWLANDS || value == GRASSLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS;
+        return value == TFCLayers.PLAINS || value == TFCLayers.HILLS || value == TFCLayers.LOW_CANYONS || value == TFCLayers.LOWLANDS || value == GRASSLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS;
     }
 
     @Shadow

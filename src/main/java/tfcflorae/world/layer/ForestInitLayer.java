@@ -1,24 +1,20 @@
-package tfcflorae.mixin.world.layer;
+package tfcflorae.world.layer;
 
-import org.spongepowered.asm.mixin.*;
-
-import net.dries007.tfc.world.layer.ForestInitLayer;
 import net.dries007.tfc.world.layer.framework.AreaContext;
 import net.dries007.tfc.world.layer.framework.SourceLayer;
 import net.dries007.tfc.world.noise.Noise2D;
+import tfcflorae.mixin.world.layer.TFCLayersMixin;
 
-@Mixin(ForestInitLayer.class)
-public class ForestInitLayerMixin implements SourceLayer
+public class ForestInitLayer implements SourceLayer
 {
-    @Shadow
     private final Noise2D forestBaseNoise;
 
-    ForestInitLayerMixin(Noise2D forestBaseNoise)
+    ForestInitLayer(Noise2D forestBaseNoise)
     {
         this.forestBaseNoise = forestBaseNoise;
     }
 
-    @Shadow @Mutable @Override
+    @Override
     public int apply(AreaContext context, int x, int z)
     {
         final float noise = forestBaseNoise.noise(x, z);

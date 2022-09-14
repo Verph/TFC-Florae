@@ -33,7 +33,8 @@ public record DynamicTreeConfig(Optional<TrunkConfig> trunk, int minHeight, int 
         Codecs.BLOCK_STATE.fieldOf("leavesState").forGetter(c -> c.leavesState)
     ).apply(instance, DynamicTreeConfig::new));
 
-    /*public static class Builder {
+    /*public static class Builder
+    {
         public final BlockStateProvider trunkProvider;
         private final TrunkPlacer trunkPlacer;
         public final BlockStateProvider foliageProvider;
@@ -45,7 +46,8 @@ public record DynamicTreeConfig(Optional<TrunkConfig> trunk, int minHeight, int 
         private boolean ignoreVines;
         private boolean forceDirt;
 
-        public Builder(BlockStateProvider trunkProvider, TrunkPlacer trunkPlacer, BlockStateProvider foliageProvider, FoliagePlacer foliagePlacer, Optional<RootPlacer> rootPlacer, FeatureSize minimumSize) {
+        public Builder(BlockStateProvider trunkProvider, TrunkPlacer trunkPlacer, BlockStateProvider foliageProvider, FoliagePlacer foliagePlacer, Optional<RootPlacer> rootPlacer, FeatureSize minimumSize)
+        {
             this.trunkProvider = trunkProvider;
             this.trunkPlacer = trunkPlacer;
             this.foliageProvider = foliageProvider;
@@ -55,31 +57,37 @@ public record DynamicTreeConfig(Optional<TrunkConfig> trunk, int minHeight, int 
             this.minimumSize = minimumSize;
         }
 
-        public Builder(BlockStateProvider trunkProvider, TrunkPlacer trunkPlacer, BlockStateProvider foliageProvider, FoliagePlacer foliagePlacer, FeatureSize minimumSize) {
+        public Builder(BlockStateProvider trunkProvider, TrunkPlacer trunkPlacer, BlockStateProvider foliageProvider, FoliagePlacer foliagePlacer, FeatureSize minimumSize)
+        {
             this(trunkProvider, trunkPlacer, foliageProvider, foliagePlacer, Optional.empty(), minimumSize);
         }
 
-        public Builder dirtProvider(BlockStateProvider dirtProvider) {
+        public Builder dirtProvider(BlockStateProvider dirtProvider)
+        {
             this.dirtProvider = dirtProvider;
             return this;
         }
 
-        public Builder decorators(List<TreeDecorator> decorators) {
+        public Builder decorators(List<TreeDecorator> decorators)
+        {
             this.decorators = decorators;
             return this;
         }
 
-        public Builder ignoreVines() {
+        public Builder ignoreVines()
+        {
             this.ignoreVines = true;
             return this;
         }
 
-        public Builder forceDirt() {
+        public Builder forceDirt()
+        {
             this.forceDirt = true;
             return this;
         }
 
-        public RootedTreeConfig build() {
+        public RootedTreeConfig build()
+        {
             return new RootedTreeConfig(this.trunkProvider, this.trunkPlacer, this.foliageProvider, this.foliagePlacer, this.rootPlacer, this.dirtProvider, this.minimumSize, this.decorators, this.ignoreVines, this.forceDirt);
         }
     }*/

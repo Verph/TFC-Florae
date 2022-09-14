@@ -1,13 +1,24 @@
-package tfcflorae.mixin.world.layer;
+package tfcflorae.world.layer;
 
+import net.dries007.tfc.world.layer.TFCLayers;
 import net.dries007.tfc.world.layer.framework.AreaContext;
 import net.dries007.tfc.world.layer.framework.CenterTransformLayer;
 
-import static tfcflorae.mixin.world.layer.TFCLayersMixin.*;
+import tfcflorae.interfaces.TFCLayersMixinInterface;
 
-public enum PlateBiomeLayerMixin implements CenterTransformLayer
+import static net.dries007.tfc.world.layer.TFCLayers.*;
+
+
+public enum PlateBiomeLayer implements CenterTransformLayer
 {
     INSTANCE;
+
+    public static TFCLayers staticBiomes = new TFCLayers();
+
+    static final int GRASSLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGrasslands();
+    static final int WETLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticWetlands();
+    static final int MARSHES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMarshes();
+    static final int SWAMPS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSwamps();
 
     private static final int[] SUBDUCTION_BIOMES = {VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, MOUNTAINS, PLATEAU};
     private static final int[] OROGENY_BIOMES = {MOUNTAINS, MOUNTAINS, MOUNTAINS, OLD_MOUNTAINS, PLATEAU};
