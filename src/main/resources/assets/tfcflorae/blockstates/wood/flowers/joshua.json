@@ -1,0 +1,548 @@
+{
+  "multipart": [
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_flowering"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_fruiting"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dormant"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "down",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "north",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 90,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "east",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 180,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "south",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_healthy"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "x" : 90,
+        "y" : 270,
+        "model" : "tfcflorae:block/wood/flowers/joshua_tree_flower_dead"
+      },
+      "when" : {
+        "facing" : "west",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    }
+  ]
+}

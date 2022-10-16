@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/bricks/gabbro_slab"
+      "model": "tfc:block/rock/bricks/gabbro_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/bricks/gabbro_slab_top"
+      "model": "tfc:block/rock/bricks/gabbro_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/bricks/gabbro"
+      "model": "tfc:block/rock/bricks/gabbro"
     }
   }
 }

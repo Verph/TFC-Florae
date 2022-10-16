@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/glow_berry"
+  },
+  "category": "fruit",
+  "hunger": 4,
+  "saturation": 0.5,
+  "water": 5,
+  "decay_modifier": 4.9,
+  "fruit": 0.75
+}

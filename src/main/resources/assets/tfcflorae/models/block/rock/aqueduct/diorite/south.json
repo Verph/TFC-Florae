@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/aqueduct/south",
+  "textures": {
+    "texture": "tfcflorae:block/rock/bricks/diorite",
+    "particle": "tfcflorae:block/rock/bricks/diorite"
+  }
+}

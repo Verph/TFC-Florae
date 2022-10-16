@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/devils_fingers/devils_fingers_0"
+  }
+}

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "tfcflorae:block/rock/mossy_cobble/carbonatite"
+    "wall": "tfc:block/rock/mossy_cobble/carbonatite"
   }
 }

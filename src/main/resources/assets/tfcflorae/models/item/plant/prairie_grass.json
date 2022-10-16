@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_3"
+  }
+}

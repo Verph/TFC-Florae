@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/marble",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/marble"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/marble",
+      "x": 90
+    }
+  }
+}

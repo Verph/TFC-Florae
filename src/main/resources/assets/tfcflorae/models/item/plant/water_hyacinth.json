@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_top_1"
+  }
+}

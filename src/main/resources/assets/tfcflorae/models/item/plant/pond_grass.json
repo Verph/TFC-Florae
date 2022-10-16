@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/pond_grass/pond_grass_2"
+  }
+}

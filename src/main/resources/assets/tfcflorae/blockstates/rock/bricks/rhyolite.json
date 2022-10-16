@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfcflorae:block/rock/bricks/rhyolite"
+      "model": "tfc:block/rock/bricks/rhyolite"
     }
   }
 }

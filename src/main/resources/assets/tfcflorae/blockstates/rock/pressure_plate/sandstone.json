@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfcflorae:block/rock/pressure_plate/sandstone"
+      "model": "tfc:block/rock/pressure_plate/sandstone"
     },
     "powered=true": {
-      "model": "tfcflorae:block/rock/pressure_plate/sandstone_down"
+      "model": "tfc:block/rock/pressure_plate/sandstone_down"
     }
   }
 }

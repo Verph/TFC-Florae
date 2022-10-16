@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/cup_plant/cup_plant_large_3"
+  }
+}

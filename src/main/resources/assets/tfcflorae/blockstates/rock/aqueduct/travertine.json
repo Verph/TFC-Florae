@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/travertine/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/travertine/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/travertine/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/travertine/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/travertine/west"
+      }
+    }
+  ]
+}

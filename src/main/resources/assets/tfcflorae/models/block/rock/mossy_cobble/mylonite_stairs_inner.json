@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobble/mylonite",
-    "top": "tfcflorae:block/rock/mossy_cobble/mylonite",
-    "side": "tfcflorae:block/rock/mossy_cobble/mylonite"
+    "bottom": "tfc:block/rock/mossy_cobble/mylonite",
+    "top": "tfc:block/rock/mossy_cobble/mylonite",
+    "side": "tfc:block/rock/mossy_cobble/mylonite"
   }
 }

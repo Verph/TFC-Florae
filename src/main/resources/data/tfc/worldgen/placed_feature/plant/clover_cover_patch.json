@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/clover_cover_patch",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": -6,
+      "max_temperature": 33,
+      "min_rainfall": 140,
+      "max_rainfall": 290,
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

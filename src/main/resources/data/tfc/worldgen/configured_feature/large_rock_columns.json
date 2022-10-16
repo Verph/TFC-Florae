@@ -1,0 +1,141 @@
+{
+  "type": "tfcflorae:rock_column",
+  "config": {
+    "states": [
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfcflorae:rock/column/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfcflorae:rock/column/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfcflorae:rock/column/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfcflorae:rock/column/shale"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfcflorae:rock/column/claystone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfcflorae:rock/column/limestone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfcflorae:rock/column/conglomerate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfcflorae:rock/column/dolomite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfcflorae:rock/column/chert"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfcflorae:rock/column/chalk"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfcflorae:rock/column/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfcflorae:rock/column/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfcflorae:rock/column/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfcflorae:rock/column/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfcflorae:rock/column/quartzite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfcflorae:rock/column/slate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfcflorae:rock/column/phyllite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfcflorae:rock/column/schist"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfcflorae:rock/column/gneiss"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfcflorae:rock/column/marble"
+        ]
+      }
+    ],
+    "height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "max_inclusive": 10,
+        "min_inclusive": 5
+      }
+    },
+    "reach": {
+      "type": "minecraft:uniform",
+      "value": {
+        "max_inclusive": 3,
+        "min_inclusive": 2
+      }
+    }
+  }
+}

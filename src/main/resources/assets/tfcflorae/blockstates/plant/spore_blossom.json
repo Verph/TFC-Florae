@@ -1,0 +1,155 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "up"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "down"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_0",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "up"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "down"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1",
+          "x": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/spore_blossom/spore_blossom_1",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

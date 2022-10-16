@@ -1,0 +1,292 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_upper"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2|3",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+		"lifecycle": "dormant"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_3"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_upper"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2|3",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+		"lifecycle": "healthy"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_3"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_upper"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2|3",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+		"lifecycle": "flowering"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_3"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_lower"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_upper"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2|3",
+        "part": "upper",
+        "stage": "2",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_2"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+		"lifecycle": "fruiting"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/barrel_cactus/barrel_cactus_flower_3"
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_wall_side",
   "textures": {
-    "wall": "tfcflorae:block/rock/smooth/boninite"
+    "wall": "tfc:block/rock/smooth/boninite"
   }
 }

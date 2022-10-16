@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bird_of_paradise/bird_of_paradise_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bird_of_paradise/bird_of_paradise_1"
+      }
+    }
+  ]
+}

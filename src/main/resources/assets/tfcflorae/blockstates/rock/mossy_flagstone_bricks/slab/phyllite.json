@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/mossy_flagstone_bricks/slab/bottom/phyllite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/mossy_flagstone_bricks/slab/top/phyllite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/mossy_flagstone_bricks/phyllite"
+    }
+  }
+}

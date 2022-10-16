@@ -1,0 +1,40 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+		"age": "0|1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/saltwort/saltwort_small_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "0",
+		"age": "2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/saltwort/saltwort_large_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+		"age": "0|1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/saltwort/saltwort_small_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+		"age": "2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/saltwort/saltwort_large_1"
+      }
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/smooth/sandstone_slab"
+      "model": "tfc:block/rock/smooth/sandstone_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/smooth/sandstone_slab_top"
+      "model": "tfc:block/rock/smooth/sandstone_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/smooth/sandstone"
+      "model": "tfc:block/rock/smooth/sandstone"
     }
   }
 }

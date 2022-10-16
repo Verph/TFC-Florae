@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/foidolite/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/foidolite/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/foidolite/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/foidolite/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/foidolite/west"
+      }
+    }
+  ]
+}

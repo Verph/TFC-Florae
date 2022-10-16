@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/bricks/phyllite",
-    "top": "tfcflorae:block/rock/bricks/phyllite",
-    "side": "tfcflorae:block/rock/bricks/phyllite"
-  }
-}

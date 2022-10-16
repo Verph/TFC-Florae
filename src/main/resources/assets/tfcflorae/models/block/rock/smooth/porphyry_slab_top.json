@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfcflorae:block/rock/smooth/porphyry",
-    "top": "tfcflorae:block/rock/smooth/porphyry",
-    "side": "tfcflorae:block/rock/smooth/porphyry"
+    "bottom": "tfc:block/rock/smooth/porphyry",
+    "top": "tfc:block/rock/smooth/porphyry",
+    "side": "tfc:block/rock/smooth/porphyry"
   }
 }

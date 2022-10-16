@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/european_bedstraw_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 6
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 8,
+      "max_temperature": 16,
+      "min_rainfall": 130,
+      "max_rainfall": 320,
+      "fuzzy": true
+    }
+  ]
+}

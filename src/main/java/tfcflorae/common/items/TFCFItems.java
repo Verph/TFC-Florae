@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
@@ -45,9 +47,7 @@ public class TFCFItems
 
     // Food
 
-    public static final Map<TFCFFood, RegistryObject<Item>> FOOD = Helpers.mapOfKeys(TFCFFood.class, food ->
-        register("food/" + food.name(), () -> new DecayingItem(food.createProperties()))
-    );
+    public static final Map<TFCFFood, RegistryObject<Item>> FOOD = foodMapper();
 
     // Wood
 
@@ -265,6 +265,53 @@ public class TFCFItems
                 continue;
 
             Map.put(wood, register("wood/sign/" + wood.name(), () -> new SignItem(new Item.Properties().tab(WOOD), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.SIGN).get(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WALL_SIGN).get())));
+        }
+        return Map;
+    }
+
+    @SuppressWarnings("deprecation")
+    private static Map<TFCFFood, RegistryObject<Item>> foodMapper()
+    {
+        Map<TFCFFood,  RegistryObject<Item>> Map = new HashMap<>();
+        for (TFCFFood food : TFCFFood.class.getEnumConstants())
+        {
+            if (food.hasEffect())
+            {
+                if (food == TFCFFood.ROASTED_ARTISTS_CONK)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 0), 0.25F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_SULPHUR_SHELF)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 300, 0), 0.25F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_TURKEY_TAIL)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 0), 0.25F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_AMANITA)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0), 0.5F).effect(new MobEffectInstance(MobEffects.WITHER, 150, 1), 1F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_DEATH_CAP)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0), 0.5F).effect(new MobEffectInstance(MobEffects.WITHER, 150, 1), 1F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_WOOLLY_GOMPHUS)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F).effect(new MobEffectInstance(MobEffects.POISON, 300, 0), 0.25F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_CHANTERELLE)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.REGENERATION, 80, 0), 0.5F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_STINKHORN)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.UNLUCK, 200, 0), 0.5F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_INDIGO_MILK_CAP)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 50, 0), 0.3F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.ROASTED_BLACK_POWDERPUFF)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
+                        .effect(new MobEffectInstance(MobEffects.INVISIBILITY, 25, 0), 0.5F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(food.createProperties())));
+            }
+            else
+                Map.put(food, register("food/" + food.name(), () -> new DecayingItem(food.createProperties())));
         }
         return Map;
     }

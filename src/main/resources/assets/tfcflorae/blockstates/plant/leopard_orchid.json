@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/leopard_orchid/leopard_orchid_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/leopard_orchid/leopard_orchid_1"
+      }
+    }
+  ]
+}

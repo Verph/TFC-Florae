@@ -103,6 +103,20 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Unique private static final int WETLANDS;
     @Unique private static final int MARSHES;
     @Unique private static final int SWAMPS;
+    @Unique private static final int MANGROVES;
+    @Unique private static final int PUY_MOUNTAINS;
+    @Unique private static final int BRYCE_CANYONS;
+    @Unique private static final int MESA_HILLS;
+    @Unique private static final int CANYON_RIVER;
+    @Unique private static final int ALPINE_MOUNTAIN_RIVER;
+    @Unique private static final int ALPINE_MOUNTAINS;
+    @Unique private static final int ALPINE_HIGHLANDS;
+    @Unique private static final int ROLLING_HIGHLANDS;
+    @Unique private static final int CALDERAS;
+    @Unique private static final int GRAVEL_SHORE;
+    @Unique private static final int THERMAL_CANYONS;
+    @Unique private static final int MESA_PLATEAU;
+    @Unique private static final int PEAT_BOG;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
@@ -156,6 +170,20 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         WETLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticWetlands);
         MARSHES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMarshes);
         SWAMPS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSwamps);
+        MANGROVES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMangroves);
+        PUY_MOUNTAINS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticPuyMountains);
+        BRYCE_CANYONS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticBryceCanyons);
+        MESA_HILLS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMesaHills);
+        CANYON_RIVER = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticCanyonRivers);
+        ALPINE_MOUNTAIN_RIVER = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticAlpineMountainRivers);
+        ALPINE_MOUNTAINS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticAlpineMountains);
+        ALPINE_HIGHLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticAlpineHighlands);
+        ROLLING_HIGHLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticRollingHighlands);
+        CALDERAS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticCalderas);
+        GRAVEL_SHORE = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticGravelShores);
+        THERMAL_CANYONS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticThermalCanyons);
+        MESA_PLATEAU = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMesaPlateau);
+        PEAT_BOG = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticPeatBog);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -187,6 +215,90 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     public int getStaticSwamps()
     {
         return SWAMPS;
+    }
+
+    @Override
+    public int getStaticMangroves()
+    {
+        return MANGROVES;
+    }
+
+    @Override
+    public int getStaticPuyMountains()
+    {
+        return PUY_MOUNTAINS;
+    }
+
+    @Override
+    public int getStaticBryceCanyons()
+    {
+        return BRYCE_CANYONS;
+    }
+
+    @Override
+    public int getStaticMesaHills()
+    {
+        return MESA_HILLS;
+    }
+
+    @Override
+    public int getStaticCanyonRivers()
+    {
+        return CANYON_RIVER;
+    }
+
+    @Override
+    public int getStaticAlpineMountainRivers()
+    {
+        return ALPINE_MOUNTAIN_RIVER;
+    }
+
+    @Override
+    public int getStaticAlpineMountains()
+    {
+        return ALPINE_MOUNTAINS;
+    }
+
+    @Override
+    public int getStaticAlpineHighlands()
+    {
+        return ALPINE_HIGHLANDS;
+    }
+
+    @Override
+    public int getStaticRollingHighlands()
+    {
+        return ROLLING_HIGHLANDS;
+    }
+
+    @Override
+    public int getStaticCalderas()
+    {
+        return CALDERAS;
+    }
+
+    @Override
+    public int getStaticGravelShores()
+    {
+        return GRAVEL_SHORE;
+    }
+
+    @Unique @Override
+    public int getStaticThermalCanyons()
+    {
+        return THERMAL_CANYONS;
+    }
+
+    @Unique @Override
+    public int getStaticMesaPlateau()
+    {
+        return MESA_PLATEAU;
+    }
+
+    @Unique @Override
+    public int getStaticPeatBog()
+    {
+        return PEAT_BOG;
     }
 
     @Overwrite(remap = false)
@@ -388,15 +500,27 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return value == CONTINENTAL_LOW || value == CONTINENTAL_MID || value == CONTINENTAL_HIGH;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean hasShore(int value)
     {
-        return value != LOWLANDS && value != LOW_CANYONS && value != CANYONS && value != OCEANIC_MOUNTAINS && value != VOLCANIC_OCEANIC_MOUNTAINS;
+        return value != LOW_CANYONS && value != CANYONS && value != OCEANIC_MOUNTAINS && value != VOLCANIC_OCEANIC_MOUNTAINS && value != MANGROVES;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static int shoreFor(int value)
     {
+        if (value == ALPINE_MOUNTAINS)
+        {
+            return ALPINE_HIGHLANDS;
+        }
+        if (value == ALPINE_HIGHLANDS)
+        {
+            return OLD_MOUNTAINS;
+        }
+        if (value == OLD_MOUNTAINS || value == PLATEAU || value == PUY_MOUNTAINS || value == CALDERAS)
+        {
+            return GRAVEL_SHORE;
+        }
         if (value == MOUNTAINS)
         {
             return OCEANIC_MOUNTAINS;
@@ -404,6 +528,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         if (value == VOLCANIC_MOUNTAINS)
         {
             return VOLCANIC_OCEANIC_MOUNTAINS;
+        }
+        if (value == LOWLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS)
+        {
+            return MANGROVES;
         }
         return SHORE;
     }
@@ -414,9 +542,25 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return !isOcean(value) && value != BADLANDS;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static int lakeFor(int value)
     {
+        if (value == ALPINE_MOUNTAINS)
+        {
+            return VOLCANIC_MOUNTAINS;
+        }
+        if (value == ALPINE_HIGHLANDS)
+        {
+            return CALDERAS;
+        }
+        if (value == THERMAL_CANYONS)
+        {
+            return THERMAL_CANYONS;
+        }
+        if (value == ROLLING_HIGHLANDS)
+        {
+            return MESA_PLATEAU;
+        }
         if (value == MOUNTAINS)
         {
             return MOUNTAIN_LAKE;
@@ -441,6 +585,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         {
             return PLATEAU_LAKE;
         }
+        if (value == ROLLING_HILLS)
+        {
+            return PUY_MOUNTAINS;
+        }
         return LAKE;
     }
 
@@ -450,9 +598,17 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return !isOcean(value) && !isLake(value);
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static int riverFor(int value)
     {
+        if (value == ALPINE_MOUNTAINS)
+        {
+            return ALPINE_MOUNTAIN_RIVER;
+        }
+        if (value == ALPINE_HIGHLANDS)
+        {
+            return RIVER;
+        }
         if (value == MOUNTAINS)
         {
             return MOUNTAIN_RIVER;
@@ -488,22 +644,22 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return isOcean(value) || value == OCEAN_OCEAN_CONVERGING_MARKER || value == OCEAN_OCEAN_DIVERGING_MARKER || value == OCEAN_REEF_MARKER;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean isLake(int value)
     {
-        return value == LAKE || value == OCEANIC_MOUNTAIN_LAKE || value == OLD_MOUNTAIN_LAKE || value == MOUNTAIN_LAKE || value == VOLCANIC_OCEANIC_MOUNTAIN_LAKE || value == VOLCANIC_MOUNTAIN_LAKE || value == PLATEAU_LAKE;
+        return value == LAKE || value == OCEANIC_MOUNTAIN_LAKE || value == OLD_MOUNTAIN_LAKE || value == MOUNTAIN_LAKE || value == VOLCANIC_OCEANIC_MOUNTAIN_LAKE || value == VOLCANIC_MOUNTAIN_LAKE || value == PLATEAU_LAKE || value == CALDERAS;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean isRiver(int value)
     {
-        return value == RIVER || value == OCEANIC_MOUNTAIN_RIVER || value == OLD_MOUNTAIN_RIVER || value == MOUNTAIN_RIVER || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER || value == VOLCANIC_MOUNTAIN_RIVER;
+        return value == RIVER || value == OCEANIC_MOUNTAIN_RIVER || value == OLD_MOUNTAIN_RIVER || value == MOUNTAIN_RIVER || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER || value == VOLCANIC_MOUNTAIN_RIVER || value == CANYON_RIVER || value == ALPINE_MOUNTAIN_RIVER;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean isMountains(int value)
     {
-        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS;
+        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == THERMAL_CANYONS || value == MESA_PLATEAU;
     }
 
     @Overwrite(remap = false)

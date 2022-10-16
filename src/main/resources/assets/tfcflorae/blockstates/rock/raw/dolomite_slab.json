@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/raw/dolomite_slab"
+      "model": "tfc:block/rock/raw/dolomite_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/raw/dolomite_slab_top"
+      "model": "tfc:block/rock/raw/dolomite_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/raw/dolomite"
+      "model": "tfc:block/rock/raw/dolomite"
     }
   }
 }

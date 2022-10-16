@@ -19,13 +19,23 @@ public enum PlateBiomeLayer implements CenterTransformLayer
     static final int WETLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticWetlands();
     static final int MARSHES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMarshes();
     static final int SWAMPS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSwamps();
+    static final int PUY_MOUNTAINS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPuyMountains();
+    static final int BRYCE_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBryceCanyons();
+    static final int MESA_HILLS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaHills();
+    static final int ALPINE_MOUNTAINS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineMountains();
+    static final int ALPINE_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineHighlands();
+    static final int ROLLING_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRollingHighlands();
+    static final int CALDERAS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticCalderas();
+    static final int THERMAL_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticThermalCanyons();
+    static final int MESA_PLATEAU = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaPlateau();
+    static final int PEAT_BOG = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPeatBog();
 
-    private static final int[] SUBDUCTION_BIOMES = {VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, MOUNTAINS, PLATEAU};
-    private static final int[] OROGENY_BIOMES = {MOUNTAINS, MOUNTAINS, MOUNTAINS, OLD_MOUNTAINS, PLATEAU};
-    private static final int[] RIFT_BIOMES = {CANYONS, CANYONS, CANYONS, CANYONS, ROLLING_HILLS, OLD_MOUNTAINS};
-    private static final int[] CONTINENT_LOW_BIOMES = {PLAINS, PLAINS, HILLS, ROLLING_HILLS, LOW_CANYONS, LOW_CANYONS, LOWLANDS, LOWLANDS, GRASSLANDS, GRASSLANDS, WETLANDS, WETLANDS, MARSHES, MARSHES, SWAMPS, SWAMPS};
-    private static final int[] CONTINENT_MID_BIOMES = {PLAINS, HILLS, ROLLING_HILLS, INVERTED_BADLANDS, BADLANDS, PLATEAU, LOW_CANYONS, LOWLANDS, GRASSLANDS, WETLANDS, MARSHES, SWAMPS};
-    private static final int[] CONTINENT_HIGH_BIOMES = {HILLS, ROLLING_HILLS, ROLLING_HILLS, INVERTED_BADLANDS, BADLANDS, PLATEAU, PLATEAU, OLD_MOUNTAINS, OLD_MOUNTAINS};
+    private static final int[] SUBDUCTION_BIOMES = {VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, VOLCANIC_MOUNTAINS, MOUNTAINS, PLATEAU, ALPINE_MOUNTAINS, ALPINE_HIGHLANDS, ROLLING_HIGHLANDS, CALDERAS, CALDERAS, THERMAL_CANYONS, THERMAL_CANYONS};
+    private static final int[] OROGENY_BIOMES = {MOUNTAINS, MOUNTAINS, MOUNTAINS, OLD_MOUNTAINS, PLATEAU, ALPINE_MOUNTAINS, ALPINE_HIGHLANDS, ROLLING_HIGHLANDS, CALDERAS, CALDERAS, THERMAL_CANYONS, THERMAL_CANYONS};
+    private static final int[] RIFT_BIOMES = {CANYONS, CANYONS, CANYONS, CANYONS, ROLLING_HILLS, OLD_MOUNTAINS, PUY_MOUNTAINS, BRYCE_CANYONS, MESA_HILLS, ROLLING_HIGHLANDS, CALDERAS, CALDERAS, THERMAL_CANYONS, THERMAL_CANYONS};
+    private static final int[] CONTINENT_LOW_BIOMES = {PLAINS, PLAINS, HILLS, ROLLING_HILLS, LOW_CANYONS, LOW_CANYONS, LOWLANDS, LOWLANDS, GRASSLANDS, GRASSLANDS, WETLANDS, WETLANDS, MARSHES, MARSHES, SWAMPS, SWAMPS, ROLLING_HIGHLANDS, MESA_PLATEAU, PEAT_BOG};
+    private static final int[] CONTINENT_MID_BIOMES = {PLAINS, HILLS, ROLLING_HILLS, INVERTED_BADLANDS, BADLANDS, PLATEAU, LOW_CANYONS, LOWLANDS, GRASSLANDS, WETLANDS, MARSHES, SWAMPS, PUY_MOUNTAINS, MESA_HILLS, ALPINE_HIGHLANDS, ROLLING_HIGHLANDS, MESA_PLATEAU};
+    private static final int[] CONTINENT_HIGH_BIOMES = {HILLS, ROLLING_HILLS, ROLLING_HILLS, INVERTED_BADLANDS, BADLANDS, PLATEAU, PLATEAU, OLD_MOUNTAINS, OLD_MOUNTAINS, PUY_MOUNTAINS, BRYCE_CANYONS, MESA_HILLS, ALPINE_MOUNTAINS, ALPINE_HIGHLANDS, ROLLING_HIGHLANDS, CALDERAS, THERMAL_CANYONS};
 
     @Override
     public int apply(AreaContext context, int value)

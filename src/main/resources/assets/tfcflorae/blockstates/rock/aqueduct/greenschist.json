@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/greenschist/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/greenschist/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/greenschist/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/greenschist/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/greenschist/west"
+      }
+    }
+  ]
+}

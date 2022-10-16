@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/maidenhair_fern/maidenhair_fern_frond_2"
+  }
+}

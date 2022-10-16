@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:land_emergent_plant",
+  "config": {
+    "block": "tfcflorae:plant/common_reeds"
+  }
+}

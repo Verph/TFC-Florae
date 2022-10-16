@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:ceramics/kaolinite/clay",
+          "name": "tfcflorae:ceramic/kaolinite/clay",
           "functions": [
             {
               "function": "minecraft:set_count",

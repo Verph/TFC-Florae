@@ -1,5 +1,6 @@
 package tfcflorae.common.blocks.wood;
 
+import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -7,6 +8,7 @@ import com.google.common.base.Preconditions;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -29,6 +31,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -43,7 +47,13 @@ import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.SeasonalPlantBlock;
+import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
+import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
 import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
@@ -52,7 +62,7 @@ import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock
+public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, IFluidLoggable
 {
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
     {
@@ -69,6 +79,13 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
 
     public static final BooleanProperty PERSISTENT = BlockStateProperties.PERSISTENT;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
+    /**
+     * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.
+     * Since most bushes have a 7 month non-dormant cycle, this means that it just needs to be in valid conditions for about 1 month a year in order to not die.
+     * It won't produce (it needs more months to properly advance the cycle from dormant -> healthy -> flowering -> fruiting, requiring 4 months at least), but it won't outright die.
+     */
+    public static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
 
     public final int maxDecayDistance;
 
@@ -112,14 +129,15 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        return defaultBlockState().setValue(PERSISTENT, context.getPlayer() != null);
+        final FluidState fluid = context.getLevel().getFluidState(context.getClickedPos());
+        return defaultBlockState().setValue(PERSISTENT, context.getPlayer() != null).setValue(getFluidProperty(), getFluidProperty().keyForOrEmpty(fluid.getType()));
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
-        if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING)
+        if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING && productItem != null)
         {
             level.playSound(player, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
             if (!level.isClientSide())
@@ -132,6 +150,19 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    {
+        super.randomTick(state, level, pos, random); // super calls tick()
+        IBushBlock.randomTick(this, state, level, pos, random);
+        if (state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT))
+        {
+            level.removeBlock(pos, false);
+            doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
+        }
     }
 
     @Override
@@ -175,7 +206,6 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                     {
                         currentLifecycle = Lifecycle.DORMANT;
                     }
-
                     if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                     {
                         monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
@@ -184,8 +214,8 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                     {
                         monthsSpentDying = 0;
                     }
-
-                } while (nextCalendarTick < currentCalendarTick);
+                }
+                while (nextCalendarTick < currentCalendarTick);
 
                 BlockState newState;
 
@@ -207,18 +237,26 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         });
     }
 
+    @Override
+    public void addHoeOverlayInfo(Level level, BlockPos pos, BlockState state, List<Component> text, boolean isDebug)
+    {
+        final ClimateRange range = climateRange.get();
+        text.add(FarmlandBlock.getHydrationTooltip(level, pos, range, false, getHydration(level, pos)));
+        text.add(FarmlandBlock.getTemperatureTooltip(level, pos, range, false));
+    }
+
     /**
      * Can this leaf block die, given that it spent {@code monthsSpentDying} consecutive months in a dormant state, when it should've been in a non-dormant state.
      */
     protected boolean mayDie(Level level, BlockPos pos, BlockState state, int monthsSpentDying)
     {
-        return false;
+        return monthsSpentDying >= MONTHS_SPENT_DORMANT_TO_DIE && state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT);
     }
 
     @Override
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(LIFECYCLE, PERSISTENT, getDistanceProperty()); // avoid "STAGE" property
+        builder.add(LIFECYCLE, PERSISTENT, getDistanceProperty(), getFluidProperty()); // avoid "STAGE" property
     }
 
     /**
@@ -229,14 +267,15 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
      */
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
-        int distance = getDistance(facingState) + 1;
-        if (distance != 1 || stateIn.getValue(getDistanceProperty()) != distance)
+        FluidHelpers.tickFluid(level, currentPos, state);
+        final int distance = getDistance(facingState) + 1;
+        if (distance != 1 || state.getValue(getDistanceProperty()) != distance)
         {
             level.scheduleTick(currentPos, this, 1);
         }
-        return stateIn;
+        return state;
     }
 
     @Override
@@ -269,8 +308,16 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         {
             if (!state.getValue(PERSISTENT))
             {
-                level.removeBlock(pos, false);
-                doParticles(level, pos.getX() + rand.nextFloat(), pos.getY() + rand.nextFloat(), pos.getZ() + rand.nextFloat(), 1);
+                if (!TFCConfig.SERVER.enableLeavesDecaySlowly.get())
+                {
+                    level.removeBlock(pos, false);
+                    doParticles(level, pos.getX() + rand.nextFloat(), pos.getY() + rand.nextFloat(), pos.getZ() + rand.nextFloat(), 1);
+                }
+                else
+                {
+                    // max + 1 means it must decay next random tick
+                    level.setBlockAndUpdate(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1));
+                }
             }
             else
             {
@@ -293,7 +340,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         for (Direction direction : Helpers.DIRECTIONS)
         {
             mutablePos.set(pos).move(direction);
-            if (Helpers.isBlock(level.getBlockState(mutablePos), TFCTags.Blocks.FRUIT_TREE_BRANCH))
+            if (Helpers.isBlock(level.getBlockState(mutablePos), BlockTags.LOGS))
             {
                 return true;
             }
@@ -305,11 +352,15 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     @SuppressWarnings("deprecation")
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity)
     {
-        /*if (TFCConfig.SERVER.enableLeavesSlowEntities.get())
+        final float modifier = TFCConfig.SERVER.leavesMovementModifier.get().floatValue();
+        if (modifier < 1 && state.getValue(getFluidProperty()).getFluid() == Fluids.EMPTY)
         {
-            Helpers.slowEntityInBlock(entity, 0.3f, 5);
-        }*/
-        Helpers.slowEntityInBlock(entity, 0.3f, 5);
+            Helpers.slowEntityInBlock(entity, modifier, 5);
+        }
+        if (Helpers.isEntity(entity, TFCTags.Entities.DESTROYED_BY_LEAVES))
+        {
+            entity.kill();
+        }
         if (level.random.nextInt(20) == 0 && level instanceof ServerLevel server)
         {
             doParticles(server, entity.getX(), entity.getEyeY() - 0.25D, entity.getZ(), 3);
@@ -360,5 +411,18 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     public boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
     {
         return true;
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public FluidState getFluidState(BlockState state)
+    {
+        return IFluidLoggable.super.getFluidState(state);
     }
 }

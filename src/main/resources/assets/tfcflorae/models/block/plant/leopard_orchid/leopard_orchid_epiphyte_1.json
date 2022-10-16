@@ -1,0 +1,30 @@
+{
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"cross": "tfcflorae:block/plant/leopard_orchid/leopard_orchid_epiphyte_1",
+		"particle": "tfcflorae:block/plant/leopard_orchid/leopard_orchid_epiphyte_1"
+    },
+	"elements": [
+		{
+			"from": [-4.89358, 14.10678, -7.15],
+			"to": [27.10642, 14.10678, 23.05],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "z", "origin": [11.10642, 14.10678, 8]},
+			"faces": {
+				"up": {"uv": [16, 0, 0, 16], "rotation": 90, "texture": "#cross"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 270, "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-4.89358, -1.09322, 8.05],
+			"to": [27.10642, 29.30678, 8.05],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "z", "origin": [11.10642, 14.10678, 8]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#cross"},
+				"south": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#cross"}
+			}
+		}
+	]
+}

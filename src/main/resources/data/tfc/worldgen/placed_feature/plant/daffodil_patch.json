@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/daffodil_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 12,
+      "max_temperature": 28,
+      "min_rainfall": 95,
+      "max_rainfall": 350,
+      "fuzzy": true
+    }
+  ]
+}

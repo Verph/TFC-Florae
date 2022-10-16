@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/woolly_gomphus/woolly_gomphus_0"
+      }
+    }
+  ]
+}

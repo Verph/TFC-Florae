@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/smooth/diorite_slab"
+      "model": "tfc:block/rock/smooth/diorite_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/smooth/diorite_slab_top"
+      "model": "tfc:block/rock/smooth/diorite_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/smooth/diorite"
+      "model": "tfc:block/rock/smooth/diorite"
     }
   }
 }

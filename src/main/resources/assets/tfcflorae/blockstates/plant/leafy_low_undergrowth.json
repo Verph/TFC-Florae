@@ -1,0 +1,28 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/leafy_low_undergrowth/leafy_low_undergrowth_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/leafy_low_undergrowth/leafy_low_undergrowth_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/leafy_low_undergrowth/leafy_low_undergrowth_2"
+      }
+    }
+  ]
+}

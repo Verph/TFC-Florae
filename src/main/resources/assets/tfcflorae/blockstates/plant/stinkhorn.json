@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/stinkhorn/stinkhorn_0"
+      }
+    }
+  ]
+}

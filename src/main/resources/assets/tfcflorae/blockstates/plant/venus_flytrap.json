@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/venus_flytrap/venus_flytrap_0"
+      }
+    }
+  ]
+}

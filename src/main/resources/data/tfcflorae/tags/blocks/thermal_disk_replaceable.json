@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"#tfcflorae:dirty_stone_tiles",
+	"#tfcflorae:rocky_compact_dirt",
+	"#tfcflorae:column_generates_on",
+	"#tfc:can_carve",
+	"#tfc:can_landslide",
+	"#tfc:clay",
+	"#tfc:dirt",
+	"#minecraft:dirt",
+	"#minecraft:sand",
+	"#forge:stone",
+	"#forge:gravel",
+	"#forge:sand"
+  ]
+}

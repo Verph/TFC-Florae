@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobbled_bricks/chalk_side",
+    "top": "tfcflorae:block/rock/cobbled_bricks/chalk_side",
+    "side": "tfcflorae:block/rock/cobbled_bricks/chalk_side"
+  }
+}

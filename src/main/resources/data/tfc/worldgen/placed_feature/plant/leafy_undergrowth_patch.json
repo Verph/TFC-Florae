@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/leafy_undergrowth_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 0,
+      "max_temperature": 40,
+      "min_rainfall": 150,
+      "max_rainfall": 500,
+      "min_forest": "edge",
+      "fuzzy": true
+    }
+  ]
+}

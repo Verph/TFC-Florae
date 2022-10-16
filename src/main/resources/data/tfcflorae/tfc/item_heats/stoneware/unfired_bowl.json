@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_bowl"
+    "item": "tfcflorae:ceramic/stoneware/unfired/bowl"
   },
   "heat_capacity": 0.2
 }

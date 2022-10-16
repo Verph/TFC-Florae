@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"minecraft:magma_block",
+	"tfc:rock/magma/andesite",
+    "tfc:rock/magma/basalt",
+    "tfc:rock/magma/dacite",
+    "tfc:rock/magma/diorite",
+    "tfc:rock/magma/gabbro",
+    "tfc:rock/magma/granite",
+    "tfc:rock/magma/rhyolite"
+  ]
+}

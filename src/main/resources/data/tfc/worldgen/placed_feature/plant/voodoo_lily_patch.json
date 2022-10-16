@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/voodoo_lily_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 16,
+      "max_temperature": 35,
+      "min_rainfall": 330,
+      "max_rainfall": 500,
+      "fuzzy": true
+    }
+  ]
+}

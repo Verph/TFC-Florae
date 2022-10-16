@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/angel_wing_cactus/angel_wing_cactus_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/angel_wing_cactus/angel_wing_cactus_1"
+      }
+    }
+  ]
+}

@@ -1,42 +1,33 @@
 package tfcflorae.client;
 
-import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import net.dries007.tfc.util.Helpers;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import tfcflorae.util.TFCFHelpers;
+
 import static tfcflorae.TFCFlorae.MOD_ID;
 
-public class TFCFSounds
+public final class TFCFSounds
 {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MOD_ID);
 
     // Blocks
-    /*public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_BREAK = create("block.mangrove_roots.break");
-    public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_FALL = create("block.mangrove_roots.fall");
-    public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_HIT = create("block.mangrove_roots.hit");
-    public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_PLACE = create("block.mangrove_roots.place");
-    public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_STEP = create("block.mangrove_roots.step");
 
-    public static final RegistryObject<SoundEvent> BLOCK_MUDDY_MANGROVE_ROOTS_BREAK = create("block.muddy_mangrove_roots.break");
-    public static final RegistryObject<SoundEvent> BLOCK_MUDDY_MANGROVE_ROOTS_FALL = create("block.muddy_mangrove_roots.fall");
-    public static final RegistryObject<SoundEvent> BLOCK_MUDDY_MANGROVE_ROOTS_HIT = create("block.muddy_mangrove_roots.hit");
-    public static final RegistryObject<SoundEvent> BLOCK_MUDDY_MANGROVE_ROOTS_PLACE = create("block.muddy_mangrove_roots.place");
-    public static final RegistryObject<SoundEvent> BLOCK_MUDDY_MANGROVE_ROOTS_STEP = create("block.muddy_mangrove_roots.step");*/
-
+    public static final ForgeSoundType MUD = createBlock("mud");
+    public static final ForgeSoundType MUD_BRICKS = createBlock("mud_bricks");
+    public static final ForgeSoundType PACKED_MUD = createBlock("packed_mud");
     public static final ForgeSoundType MANGROVE_ROOTS = createBlock("mangrove_roots");
     public static final ForgeSoundType MUDDY_MANGROVE_ROOTS = createBlock("muddy_mangrove_roots");
 
     private static RegistryObject<SoundEvent> create(String name)
     {
-        return SOUNDS.register(name, () -> new SoundEvent(Helpers.identifier(name)));
+        return SOUNDS.register(name, () -> new SoundEvent(TFCFHelpers.identifier(name)));
     }
 
     private static Optional<Supplier<SoundEvent>> createOptional(String name, boolean present)

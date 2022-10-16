@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:bush_plantable_on",
+    "tfc:peat",
+    "#tfc:mud",
+    "tfcflorae:dirt/bog_iron",
+    "tfcflorae:sparse_grass/bog_iron",
+    "tfcflorae:dense_grass/bog_iron",
+    "tfcflorae:grass/bog_iron",
+    "tfcflorae:rooted_dirt/bog_iron"
+  ]
+}

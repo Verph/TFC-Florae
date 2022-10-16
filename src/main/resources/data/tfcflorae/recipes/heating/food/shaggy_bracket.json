@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "tfcflorae:plant/shaggy_bracket"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "tfcflorae:food/roasted_shaggy_bracket"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

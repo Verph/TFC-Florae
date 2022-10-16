@@ -1,0 +1,84 @@
+{
+  "multipart": [
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_flowering"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_flowering"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "flowering"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_fruiting"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_fruiting"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "fruiting"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_dry"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_dry"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "dormant"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_healthy"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "0|1|2|3|4",
+        "lifecycle" : "healthy"
+      }
+    },
+    {
+      "apply" : {
+        "model" : "tfcflorae:block/wood/leaves_head/joshua_healthy"
+      },
+      "when" : {
+        "facing" : "up",
+        "age" : "5",
+        "lifecycle" : "healthy"
+      }
+    }
+  ]
+}

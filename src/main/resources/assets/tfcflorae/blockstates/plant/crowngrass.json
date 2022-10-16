@@ -1,0 +1,88 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shortest_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shortest_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shortest_4",
+		  "weight": 3
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shorter_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shorter_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_shorter_4",
+		  "weight": 4
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_short_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_short_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_short_4",
+		  "weight": 4
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/crowngrass/crowngrass_4",
+		  "weight": 5
+		}
+      ]
+    }
+  ]
+}

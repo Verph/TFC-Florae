@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/raw/blueschist",
-    "top": "tfcflorae:block/rock/raw/blueschist",
-    "side": "tfcflorae:block/rock/raw/blueschist"
+    "bottom": "tfc:block/rock/raw/blueschist",
+    "top": "tfc:block/rock/raw/blueschist",
+    "side": "tfc:block/rock/raw/blueschist"
   }
 }

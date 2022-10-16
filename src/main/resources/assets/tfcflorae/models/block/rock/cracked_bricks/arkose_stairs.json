@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/arkose",
-    "top": "tfcflorae:block/rock/cracked_bricks/arkose",
-    "side": "tfcflorae:block/rock/cracked_bricks/arkose"
+    "bottom": "tfc:block/rock/cracked_bricks/arkose",
+    "top": "tfc:block/rock/cracked_bricks/arkose",
+    "side": "tfc:block/rock/cracked_bricks/arkose"
   }
 }

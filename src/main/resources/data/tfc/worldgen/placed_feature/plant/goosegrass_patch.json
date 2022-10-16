@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/goosegrass_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 5,
+      "max_temperature": 20,
+      "min_rainfall": 80,
+      "max_rainfall": 300,
+      "fuzzy": true
+    }
+  ]
+}

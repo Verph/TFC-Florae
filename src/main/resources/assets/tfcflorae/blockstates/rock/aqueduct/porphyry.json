@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/porphyry/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/porphyry/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/porphyry/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/porphyry/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/porphyry/west"
+      }
+    }
+  ]
+}

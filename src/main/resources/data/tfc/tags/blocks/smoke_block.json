@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/smoke_block/andesite",
+    "tfcflorae:rock/smoke_block/basalt",
+    "tfcflorae:rock/smoke_block/dacite",
+    "tfcflorae:rock/smoke_block/diorite",
+    "tfcflorae:rock/smoke_block/gabbro",
+    "tfcflorae:rock/smoke_block/granite",
+    "tfcflorae:rock/smoke_block/rhyolite"
+  ]
+}

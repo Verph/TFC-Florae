@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/red_granite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/red_granite"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/red_granite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/red_granite",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/red_granite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/red_granite"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/red_granite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/red_granite",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/red_granite",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/red_granite"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/red_granite",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/red_granite",
+        "y": 270
+      }
+    ]
+  }
+}

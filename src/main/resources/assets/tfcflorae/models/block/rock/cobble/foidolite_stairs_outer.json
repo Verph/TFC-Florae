@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cobble/foidolite",
-    "top": "tfcflorae:block/rock/cobble/foidolite",
-    "side": "tfcflorae:block/rock/cobble/foidolite"
+    "bottom": "tfc:block/rock/cobble/foidolite",
+    "top": "tfc:block/rock/cobble/foidolite",
+    "side": "tfc:block/rock/cobble/foidolite"
   }
 }

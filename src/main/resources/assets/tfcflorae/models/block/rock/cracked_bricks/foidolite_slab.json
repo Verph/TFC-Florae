@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/foidolite",
-    "top": "tfcflorae:block/rock/cracked_bricks/foidolite",
-    "side": "tfcflorae:block/rock/cracked_bricks/foidolite"
+    "bottom": "tfc:block/rock/cracked_bricks/foidolite",
+    "top": "tfc:block/rock/cracked_bricks/foidolite",
+    "side": "tfc:block/rock/cracked_bricks/foidolite"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/egyptian_autumn_crocus_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 17,
+      "max_temperature": 26,
+      "min_rainfall": 70,
+      "max_rainfall": 130,
+      "fuzzy": true
+    }
+  ]
+}

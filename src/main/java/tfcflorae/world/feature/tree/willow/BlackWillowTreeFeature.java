@@ -62,7 +62,7 @@ public class BlackWillowTreeFeature extends TreeFeature<DynamicTreeConfig>
         final Biome biome = level.getBiome(pos).value();
         final BiomeExtension variants = TFCBiomes.getExtensionOrThrow(level, biome);
         final ChunkData data = ChunkData.get(level, pos);
-        final int seaLevel = TFCChunkGenerator.SEA_LEVEL_Y;
+        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         if (TreeHelpers.isValidLocation(level, pos, settings, config.placement()) || TreeHelpers.isValidGround(level, pos, settings, config.placement()))
         {

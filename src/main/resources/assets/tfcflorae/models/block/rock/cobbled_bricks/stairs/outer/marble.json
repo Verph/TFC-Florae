@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobbled_bricks/marble_side",
+    "top": "tfcflorae:block/rock/cobbled_bricks/marble_side",
+    "side": "tfcflorae:block/rock/cobbled_bricks/marble_side"
+  }
+}

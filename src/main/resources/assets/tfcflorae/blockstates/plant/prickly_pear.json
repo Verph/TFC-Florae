@@ -1,0 +1,112 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"lifecycle": "dormant",
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "dormant",
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "dormant",
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "healthy",
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "healthy",
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "healthy",
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "flowering",
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_1"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "flowering",
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_1"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "flowering",
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_1"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "fruiting",
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_2"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "fruiting",
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_2"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "fruiting",
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/prickly_pear/prickly_pear_2"
+      }
+    }
+  ]
+}

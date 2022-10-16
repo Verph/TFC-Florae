@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "tfcflorae:block/rock/cracked_bricks/novaculite"
+    "wall": "tfc:block/rock/cracked_bricks/novaculite"
   }
 }

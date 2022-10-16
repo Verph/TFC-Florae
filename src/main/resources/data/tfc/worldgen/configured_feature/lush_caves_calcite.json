@@ -1,0 +1,13 @@
+{
+  "config": {
+    "feature_true": {
+      "feature": "tfc:calcite_with_dripleaves",
+      "placement": []
+    },
+    "feature_false": {
+      "feature": "tfc:calcite_pool_with_dripleaves",
+      "placement": []
+    }
+  },
+  "type": "minecraft:random_boolean_selector"
+}

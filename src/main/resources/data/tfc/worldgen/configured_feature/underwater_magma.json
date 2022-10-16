@@ -1,0 +1,250 @@
+{
+  "type": "tfcflorae:underwater_magma",
+  "config": {
+    "states": [
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfc:rock/magma/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfc:rock/magma/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfc:rock/magma/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfc:rock/magma/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfc:rock/magma/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfc:rock/magma/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/granite",
+        "blocks": [
+          "tfc:rock/magma/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/diorite",
+        "blocks": [
+          "tfc:rock/magma/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/gabbro",
+        "blocks": [
+          "tfc:rock/magma/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/shale",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/claystone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/limestone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/conglomerate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/dolomite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/chert",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/chalk",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/rhyolite",
+        "blocks": [
+          "tfc:rock/magma/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/basalt",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/andesite",
+        "blocks": [
+          "tfc:rock/magma/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/dacite",
+        "blocks": [
+          "tfc:rock/magma/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/quartzite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/slate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/phyllite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/schist",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/gneiss",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/gravel/marble",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      }
+    ],
+    "floorSearchRange": 2,
+    "placementRadiusAroundFloor": 3,
+    "placementProbabilityPerValidPosition": 0.3
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "precipitation": "rain",
+  "category": "mesa",
+  "temperature": 0.5,
+  "temperature_modifier": "none",
+  "downfall": 0.5,
+  "effects": {
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.dripstone_caves"
+    },
+    "fog_color": 12638463,
+    "sky_color": 7254527,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": [
+      "tfc:cave",
+      "tfc:canyon",
+      "tfc:crack",
+      "tfc:deep_ravine",
+      "minecraft:cave_extra_underground"
+    ],
+    "liquid": []
+  },
+  "features": [
+    [
+      "tfc:in_biome/erosion"
+    ],
+    [
+      "tfc:in_biome/underground_lakes"
+    ],
+    [
+      "tfc:in_biome/soil_discs/mesa_plateau"
+    ],
+    [
+      "tfc:in_biome/underground_structures"
+    ],
+    [
+      "tfc:in_biome/surface_structures"
+    ],
+    [
+      "tfc:in_biome/strongholds"
+    ],
+    [
+      "tfc:in_biome/veins"
+    ],
+    [
+      "tfc:in_biome/underground_decoration"
+    ],
+    [
+      "tfc:in_biome/large_features/mesa_plateau"
+    ],
+    [
+      "tfc:in_biome/surface_decoration/mesa_plateau"
+    ],
+    [
+      "tfc:in_biome/top_layer_modification"
+    ],
+    [
+      "tfc:large_dripstone",
+      "tfc:dripstone_cluster",
+      "tfc:pointed_dripstone"
+    ]
+  ],
+  "starts": [],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:slime",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "creature": [
+      {
+        "type": "tfc:pig",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:cow",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:goat",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:yak",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:alpaca",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:sheep",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:musk_ox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:chicken",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:duck",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:quail",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:polar_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:grizzly_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:black_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:lion",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:sabertooth",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:rabbit",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:fox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:boar",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "tfc:donkey",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.05,
+  "spawn_costs": {}
+}

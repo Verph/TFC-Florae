@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobble/siltstone",
-    "top": "tfcflorae:block/rock/mossy_cobble/siltstone",
-    "side": "tfcflorae:block/rock/mossy_cobble/siltstone"
+    "bottom": "tfc:block/rock/mossy_cobble/siltstone",
+    "top": "tfc:block/rock/mossy_cobble/siltstone",
+    "side": "tfc:block/rock/mossy_cobble/siltstone"
   }
 }

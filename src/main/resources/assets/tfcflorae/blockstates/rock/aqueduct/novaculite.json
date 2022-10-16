@@ -1,0 +1,42 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/novaculite/base"
+      }
+    },
+    {
+      "when": {
+        "north": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/novaculite/north"
+      }
+    },
+    {
+      "when": {
+        "east": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/novaculite/east"
+      }
+    },
+    {
+      "when": {
+        "south": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/novaculite/south"
+      }
+    },
+    {
+      "when": {
+        "west": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/aqueduct/novaculite/west"
+      }
+    }
+  ]
+}

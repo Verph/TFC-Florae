@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/bricks/blackband_ironstone",
-    "top": "tfcflorae:block/rock/bricks/blackband_ironstone",
-    "side": "tfcflorae:block/rock/bricks/blackband_ironstone"
+    "bottom": "tfc:block/rock/bricks/blackband_ironstone",
+    "top": "tfc:block/rock/bricks/blackband_ironstone",
+    "side": "tfc:block/rock/bricks/blackband_ironstone"
   }
 }

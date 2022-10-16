@@ -1,0 +1,72 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_0",
+		  "weight": 3
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_1",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_1",
+		  "weight": 3
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_2",
+		  "weight": 2
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_4",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_5",
+		  "weight": 5
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_4",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/leaf_litter/deciduous_leaf_litter_3",
+		  "weight": 1
+		}
+      ]
+    }
+  ]
+}

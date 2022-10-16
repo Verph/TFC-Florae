@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/egyptian_autumn_crocus/egyptian_autumn_crocus_side_1"
+  }
+}

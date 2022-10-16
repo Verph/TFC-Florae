@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobble/arkose",
-    "top": "tfcflorae:block/rock/mossy_cobble/arkose",
-    "side": "tfcflorae:block/rock/mossy_cobble/arkose"
+    "bottom": "tfc:block/rock/mossy_cobble/arkose",
+    "top": "tfc:block/rock/mossy_cobble/arkose",
+    "side": "tfc:block/rock/mossy_cobble/arkose"
   }
 }

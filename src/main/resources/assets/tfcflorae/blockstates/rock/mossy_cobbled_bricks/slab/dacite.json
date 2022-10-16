@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/slab/bottom/dacite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/slab/top/dacite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/mossy_cobbled_bricks/dacite"
+    }
+  }
+}

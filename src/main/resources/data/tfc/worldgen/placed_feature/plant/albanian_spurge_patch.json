@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/albanian_spurge_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 6
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 15,
+      "max_temperature": 20,
+      "min_rainfall": 55,
+      "max_rainfall": 90,
+      "fuzzy": true
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/raw/blackband_ironstone",
-    "top": "tfcflorae:block/rock/raw/blackband_ironstone",
-    "side": "tfcflorae:block/rock/raw/blackband_ironstone"
+    "bottom": "tfc:block/rock/raw/blackband_ironstone",
+    "top": "tfc:block/rock/raw/blackband_ironstone",
+    "side": "tfc:block/rock/raw/blackband_ironstone"
   }
 }

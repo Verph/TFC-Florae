@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"top": "tfcflorae:block/plant/egyptian_autumn_crocus/egyptian_autumn_crocus_0",
+		"particle": "tfcflorae:block/plant/egyptian_autumn_crocus/egyptian_autumn_crocus_0"
+	},
+	"elements": [
+		{
+			"from": [0, 0.2, 0],
+			"to": [16, 0.2, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#top"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#top"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#top"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#top"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#top"}
+			}
+		}
+	]
+}

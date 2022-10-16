@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfcflorae:block/rock/pressure_plate/boninite"
+      "model": "tfc:block/rock/pressure_plate/boninite"
     },
     "powered=true": {
-      "model": "tfcflorae:block/rock/pressure_plate/boninite_down"
+      "model": "tfc:block/rock/pressure_plate/boninite_down"
     }
   }
 }

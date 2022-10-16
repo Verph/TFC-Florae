@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/glow_vines/glow_vines_middle_0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/lobster_claws_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 23,
+      "max_temperature": 40,
+      "min_rainfall": 390,
+      "max_rainfall": 500,
+      "fuzzy": true
+    }
+  ]
+}

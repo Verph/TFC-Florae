@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/rock/spike_tip",
+  "parent": "tfcflorae:block/rock/spike_tip",
   "textures": {
     "texture": "tfcflorae:block/rock/raw/greenschist",
     "particle": "tfcflorae:block/rock/raw/greenschist"

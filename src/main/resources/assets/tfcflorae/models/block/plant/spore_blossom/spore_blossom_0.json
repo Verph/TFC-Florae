@@ -1,0 +1,61 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"particle": "tfcflorae:block/plant/spore_blossom/spore_blossom_small",
+		"flower": "tfcflorae:block/plant/spore_blossom/spore_blossom_small",
+		"base": "tfcflorae:block/plant/spore_blossom/spore_blossom_base"
+	},
+	"elements": [
+		{
+			"from": [1, 0.01819, 1],
+			"to": [15, 0.01819, 15],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 2.60909, 8]},
+			"faces": {
+				"up": {"uv": [1, 1, 15, 15], "texture": "#base"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#base"}
+			}
+		},
+		{
+			"from": [9.62623, -1.24318, 0],
+			"to": [9.62623, 12.75682, 16],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 5.75682, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 14], "texture": "#flower"},
+				"west": {"uv": [0, 14, 16, 0], "rotation": 180, "texture": "#flower"}
+			}
+		},
+		{
+			"from": [6.37377, -1.24318, 0],
+			"to": [6.37377, 12.75682, 16],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 5.75682, 8]},
+			"faces": {
+				"east": {"uv": [0, 14, 16, 0], "rotation": 180, "texture": "#flower"},
+				"west": {"uv": [0, 0, 16, 14], "texture": "#flower"}
+			}
+		},
+		{
+			"from": [0, -1.24318, 6.37377],
+			"to": [16, 12.75682, 6.37377],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 5.75682, 8]},
+			"faces": {
+				"north": {"uv": [16, 14, 0, 0], "rotation": 180, "texture": "#flower"},
+				"south": {"uv": [16, 0, 0, 14], "texture": "#flower"}
+			}
+		},
+		{
+			"from": [0, -1.24318, 9.62623],
+			"to": [16, 12.75682, 9.62623],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 5.75682, 8]},
+			"faces": {
+				"north": {"uv": [0, 14, 16, 0], "rotation": 180, "texture": "#flower"},
+				"south": {"uv": [0, 0, 16, 14], "texture": "#flower"}
+			}
+		}
+	]
+}

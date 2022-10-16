@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_0",
+		"1": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_1",
+		"particle": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_1"
+	},
+	"elements": [
+		{
+			"from": [0, 8, -1],
+			"to": [16, 8, 15],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "z", "origin": [0, 8, 8]},
+			"faces": {
+				"up": {"uv": [4, 0, 12, 8], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 8, 4, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 6, 1],
+			"to": [16, 6, 17],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "z", "origin": [0, 6, 8]},
+			"faces": {
+				"up": {"uv": [4, 0, 12, 8], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [12, 8, 4, 16], "rotation": 90, "texture": "#1"}
+			}
+		}
+	]
+}

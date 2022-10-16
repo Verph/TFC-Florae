@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"stage": "0",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/ocotillo/ocotillo_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/ocotillo/ocotillo_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/ocotillo/ocotillo_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/ocotillo/ocotillo_upper_1"
+        }
+      ]
+    }
+  ]
+}

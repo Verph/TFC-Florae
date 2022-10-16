@@ -1,0 +1,204 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_lower_0"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_upper_0"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_lower_1"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_upper_1"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_lower_2"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_upper_2"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_lower_3"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_upper_3"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "4",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_lower_4"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "4",
+        "age": "0|1|2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_small_upper_4"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_lower_0"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_upper_0"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_lower_1"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_upper_1"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_lower_2"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_upper_2"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_lower_3"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_upper_3"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "4",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_lower_4"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "4",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/pokeweed/pokeweed_large_upper_4"
+      }
+    }
+  ]
+}

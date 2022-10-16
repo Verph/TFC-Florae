@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "tfcflorae:block/rock/bricks/cataclasite"
+    "wall": "tfc:block/rock/bricks/cataclasite"
   }
 }

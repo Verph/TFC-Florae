@@ -2,9 +2,9 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:forest_entry",
   "config": {
-    "min_rain": 30,
+    "min_rain": 15,
     "max_rain": 130,
-    "min_temp": 1,
+    "min_temp": 5,
     "max_temp": 42,
     "groundcover": [
       {
@@ -16,7 +16,6 @@
     ],
     "normal_tree": "tfc:tree/joshua",
     "dead_tree": "tfc:tree/joshua",
-    "fallen_log": "tfcflorae:wood/log/joshua",
     "bush_log": {
       "Name": "tfcflorae:wood/wood/joshua",
       "Properties": {
@@ -24,6 +23,6 @@
         "axis": "y"
       }
     },
-    "bush_leaves": "tfcflorae:wood/leaves/joshua"
+    "old_growth_tree": "tfc:tree/joshua"
   }
 }

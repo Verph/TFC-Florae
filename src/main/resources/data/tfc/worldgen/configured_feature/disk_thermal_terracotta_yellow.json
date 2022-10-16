@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state": {
+      "Name": "minecraft:yellow_terracotta"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 2
+      }
+    },
+    "half_height": 1,
+    "targets": [
+      {
+        "Name": "minecraft:orange_terracotta"
+      }
+    ]
+  }
+}

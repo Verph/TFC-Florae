@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_bricks/soapstone",
-    "top": "tfcflorae:block/rock/mossy_bricks/soapstone",
-    "side": "tfcflorae:block/rock/mossy_bricks/soapstone"
+    "bottom": "tfc:block/rock/mossy_bricks/soapstone",
+    "top": "tfc:block/rock/mossy_bricks/soapstone",
+    "side": "tfc:block/rock/mossy_bricks/soapstone"
   }
 }

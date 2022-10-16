@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cobble/siltstone",
-    "top": "tfcflorae:block/rock/cobble/siltstone",
-    "side": "tfcflorae:block/rock/cobble/siltstone"
+    "bottom": "tfc:block/rock/cobble/siltstone",
+    "top": "tfc:block/rock/cobble/siltstone",
+    "side": "tfc:block/rock/cobble/siltstone"
   }
 }

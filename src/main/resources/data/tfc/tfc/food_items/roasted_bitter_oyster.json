@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/roasted_bitter_oyster"
+  },
+  "category": "cooked_meat",
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 2,
+  "protein": 2.5
+}

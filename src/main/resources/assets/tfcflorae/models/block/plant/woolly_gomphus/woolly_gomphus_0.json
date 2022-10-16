@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/woolly_gomphus/woolly_gomphus_0",
+    "particle": "tfcflorae:block/plant/woolly_gomphus/woolly_gomphus_0"
+  }
+}

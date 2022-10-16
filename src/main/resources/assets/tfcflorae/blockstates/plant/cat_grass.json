@@ -1,0 +1,80 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shortest_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shortest_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shortest_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shorter_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shorter_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_shorter_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_short_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_short_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_short_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/cat_grass/cat_grass_2",
+		  "weight": 1
+		}
+      ]
+    }
+  ]
+}

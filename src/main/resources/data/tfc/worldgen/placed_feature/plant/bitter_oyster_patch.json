@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/bitter_oyster_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 14
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 4,
+      "max_temperature": 16,
+      "min_rainfall": 100,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/thistle/thistle_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/thistle/thistle_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/thistle/thistle_2"
+      }
+    },
+    {
+      "when": {
+        "stage": "3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/thistle/thistle_3"
+      }
+    },
+    {
+      "when": {
+        "stage": "4"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/thistle/thistle_4"
+      }
+    }
+  ]
+}

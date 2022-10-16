@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/parasol_mushroom/parasol_mushroom_0",
+    "particle": "tfcflorae:block/plant/parasol_mushroom/parasol_mushroom_0"
+  }
+}

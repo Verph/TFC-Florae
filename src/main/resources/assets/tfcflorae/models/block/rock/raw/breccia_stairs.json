@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/raw/breccia",
-    "top": "tfcflorae:block/rock/raw/breccia",
-    "side": "tfcflorae:block/rock/raw/breccia"
+    "bottom": "tfc:block/rock/raw/breccia",
+    "top": "tfc:block/rock/raw/breccia",
+    "side": "tfc:block/rock/raw/breccia"
   }
 }

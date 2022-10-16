@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/beech",
+    "wall": "tfcflorae:block/wood/log/beech",
+    "particle": "tfcflorae:block/wood/log/beech"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:weeping_vines",
+  "config": {
+    "body": "tfcflorae:plant/bearded_moss_plant",
+    "head": "tfcflorae:plant/bearded_moss",
+    "tries": 90,
+    "radius": 10,
+    "min_height": 14,
+    "max_height": 21
+  }
+}

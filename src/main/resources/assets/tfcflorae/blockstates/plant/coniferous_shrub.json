@@ -1,0 +1,218 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_dead",
+          "weight": 3
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_11",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_11",
+          "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+		"part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_dead",
+          "weight": 3
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_a_11",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/coniferous_shrub/shrub_b_11",
+          "weight": 1
+		}
+      ]
+    }
+  ]
+}

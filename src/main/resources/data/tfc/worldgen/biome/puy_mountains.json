@@ -1,0 +1,307 @@
+{
+  "precipitation": "rain",
+  "category": "extreme_hills",
+  "temperature": 0.5,
+  "temperature_modifier": "none",
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.lush_caves"
+    },
+    "sky_color": 8103167,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": [
+      "tfc:cave",
+      "tfc:canyon",
+      "tfc:crack",
+      "tfc:deep_ravine",
+      "minecraft:cave_extra_underground"
+    ],
+    "liquid": []
+  },
+  "features": [
+    [
+      "tfc:in_biome/erosion"
+    ],
+    [
+      "tfc:large_dripstone",
+      "tfc:dripstone_cluster",
+      "tfc:pointed_dripstone"
+    ],
+    [
+      "tfc:in_biome/all_lakes"
+    ],
+    [
+      "tfc:in_biome/underground_lakes"
+    ],
+    [
+      "tfc:in_biome/soil_discs/puy_mountains"
+    ],
+    [
+      "tfc:in_biome/underground_structures"
+    ],
+    [
+      "tfc:in_biome/surface_structures"
+    ],
+    [
+      "tfc:in_biome/strongholds"
+    ],
+    [
+      "tfc:in_biome/veins"
+    ],
+    [
+      "tfc:in_biome/underground_decoration"
+    ],
+    [
+      "tfc:in_biome/large_features/puy_mountains"
+    ],
+    [
+      "tfc:in_biome/surface_decoration/puy_mountains"
+    ],
+    [
+      "tfc:in_biome/top_layer_modification"
+    ],
+    [
+      "tfc:glow_lichen",
+      "tfc:lush_caves_ceiling_vegetation",
+      "tfc:lush_caves_calcite",
+      "tfc:lush_caves_vegetation",
+	  "tfc:plant/morning_glory_cave_patch",
+	  "tfc:plant/spore_blossom"
+    ]
+
+  ],
+  "starts": [],
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [
+      {
+        "type": "minecraft:axolotl",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 14
+      }
+    ],
+    "creature": [],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:slime",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "tfc:octopoteuthis",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "tfc:tropical_fish",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:salmon",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:bluegill",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:crayfish",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 4
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "tfc:manatee",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [
+      {
+        "type": "tfc:pig",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:cow",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:goat",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:yak",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:alpaca",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:sheep",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:musk_ox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:chicken",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:duck",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:quail",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:polar_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:grizzly_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:black_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:lion",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:sabertooth",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:rabbit",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:fox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:boar",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "tfc:donkey",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.05,
+  "spawn_costs": {}
+}

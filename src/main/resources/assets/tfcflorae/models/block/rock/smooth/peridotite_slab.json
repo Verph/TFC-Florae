@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/smooth/peridotite",
-    "top": "tfcflorae:block/rock/smooth/peridotite",
-    "side": "tfcflorae:block/rock/smooth/peridotite"
+    "bottom": "tfc:block/rock/smooth/peridotite",
+    "top": "tfc:block/rock/smooth/peridotite",
+    "side": "tfc:block/rock/smooth/peridotite"
   }
 }

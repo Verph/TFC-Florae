@@ -8,35 +8,23 @@ import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelSimulatedReader;
-import net.minecraft.world.level.LevelWriter;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.material.Material;
 
-import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.TFCMaterials;
-import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.TFCChunkGenerator;
 import net.dries007.tfc.world.biome.BiomeExtension;
 import net.dries007.tfc.world.biome.TFCBiomes;
-import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.feature.tree.TreeFeature;
 import net.dries007.tfc.world.feature.tree.TreeHelpers;
 
 import tfcflorae.TFCFlorae;
-import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.world.feature.tree.DynamicTreeConfig;
 
 public class MangroveTreeFeature extends TreeFeature<DynamicTreeConfig>
@@ -61,7 +49,7 @@ public class MangroveTreeFeature extends TreeFeature<DynamicTreeConfig>
         final StructurePlaceSettings settings = TreeHelpers.getPlacementSettings(level, chunkPos, random);
         final Biome biome = level.getBiome(pos).value();
         final BiomeExtension variants = TFCBiomes.getExtensionOrThrow(level, biome);
-        final int seaLevel = TFCChunkGenerator.SEA_LEVEL_Y;
+        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         if (TreeHelpers.isValidLocation(level, pos, settings, config.placement()) || TreeHelpers.isValidGround(level, pos, settings, config.placement()))
         {

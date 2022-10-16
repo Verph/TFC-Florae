@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/shiitake/shiitake_0"
+      }
+    }
+  ]
+}

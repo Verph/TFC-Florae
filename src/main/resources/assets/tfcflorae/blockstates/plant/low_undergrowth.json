@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/low_undergrowth/low_undergrowth_shortest"
+      }
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/low_undergrowth/low_undergrowth_shorter"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/low_undergrowth/low_undergrowth_short"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/low_undergrowth/low_undergrowth"
+      }
+    }
+  ]
+}

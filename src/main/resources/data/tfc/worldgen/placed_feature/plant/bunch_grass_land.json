@@ -1,0 +1,34 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/bunch_grass",
+  "placement": [
+    {
+      "type": "tfc:near_water",
+      "radius": 5
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:would_survive_with_fluid",
+        "state": {
+          "Name": "tfc:plant/bunch_grass",
+          "Properties": {
+            "age": "1",
+            "fluid": "empty",
+            "part": "lower"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shortest_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shortest_4",
+		  "weight": 2
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shorter_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shorter_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shorter_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_shorter_4",
+		  "weight": 2
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_short_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_short_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_short_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_short_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_short_4",
+		  "weight": 2
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_3",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/wheatgrass/wheatgrass_4",
+		  "weight": 2
+		}
+      ]
+    }
+  ]
+}

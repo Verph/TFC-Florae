@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/spike_base",
+  "textures": {
+    "texture": "tfcflorae:block/rock/raw/dripstone",
+    "particle": "tfcflorae:block/rock/raw/dripstone"
+  }
+}

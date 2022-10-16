@@ -7,7 +7,7 @@
     "tfcflorae:wood/leaves/holly",
     "tfcflorae:wood/leaves/joshua",
     "tfcflorae:wood/leaves/juniper",
-    "tfcflorae:wood/leaves/osage_orange",
+    "tfcflorae:wood/leaves/maclura",
     "tfcflorae:wood/leaves/mahogany",
     "tfcflorae:wood/leaves/medlar",
     "tfcflorae:wood/leaves/mulberry",
@@ -23,6 +23,8 @@
     "tfcflorae:wood/leaves/syzygium",
     "tfcflorae:wood/leaves/whitebeam",
     "tfcflorae:wood/leaves/white_cherry_blossom",
-    "tfcflorae:wood/leaves/yew"
+    "tfcflorae:wood/leaves/yew",
+    "tfcflorae:wood/leaves/white_mangrove",
+    "tfcflorae:wood/leaves/red_mangrove"
   ]
 }

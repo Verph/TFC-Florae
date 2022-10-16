@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/prickly_pear"
+  },
+  "category": "fruit",
+  "hunger": 4,
+  "water": 1,
+  "saturation": 0.5,
+  "fruit": 1.2,
+  "decay": 2.7
+}

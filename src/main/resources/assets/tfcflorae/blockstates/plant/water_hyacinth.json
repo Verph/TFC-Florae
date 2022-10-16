@@ -1,0 +1,93 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_0",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_hyacinth/water_hyacinth_1",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

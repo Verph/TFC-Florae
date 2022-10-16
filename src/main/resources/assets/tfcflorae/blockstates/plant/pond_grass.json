@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+		"age": "0|1|2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/pond_grass/pond_grass_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1",
+		"age": "0|1|2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/pond_grass/pond_grass_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "2",
+		"age": "0|1|2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/pond_grass/pond_grass_2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfc:block/wood/log_top/white_cedar",
+    "wall": "tfc:block/wood/log/white_cedar",
+    "particle": "tfc:block/wood/log/white_cedar"
+  }
+}

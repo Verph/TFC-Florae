@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/european_bedstraw/european_bedstraw_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/european_bedstraw/european_bedstraw_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/european_bedstraw/european_bedstraw_2"
+      }
+    },
+    {
+      "when": {
+        "stage": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/european_bedstraw/european_bedstraw_3"
+      }
+    }
+  ]
+}

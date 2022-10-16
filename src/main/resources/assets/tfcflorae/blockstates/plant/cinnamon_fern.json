@@ -1,0 +1,50 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern_shortest"
+      }
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern_shorter"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern_short",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern_big_short",
+          "weight": 2
+        }
+	  ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/cinnamon_fern/cinnamon_fern_big",
+          "weight": 3
+        }
+	  ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/bearded_moss_creeping_cover_patch",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": -10,
+      "max_temperature": 22,
+      "min_rainfall": 180,
+      "max_rainfall": 500,
+      "min_forest": "edge",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

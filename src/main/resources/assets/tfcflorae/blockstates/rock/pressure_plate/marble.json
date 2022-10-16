@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfcflorae:block/rock/pressure_plate/marble"
+      "model": "tfc:block/rock/pressure_plate/marble"
     },
     "powered=true": {
-      "model": "tfcflorae:block/rock/pressure_plate/marble_down"
+      "model": "tfc:block/rock/pressure_plate/marble_down"
     }
   }
 }

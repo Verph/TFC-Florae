@@ -60,7 +60,7 @@ public class CypressTreeFeature extends TreeFeature<DynamicTreeConfig>
         final StructurePlaceSettings settings = TreeHelpers.getPlacementSettings(level, chunkPos, random);
         final Biome biome = level.getBiome(pos).value();
         final BiomeExtension variants = TFCBiomes.getExtensionOrThrow(level, biome);
-        final int seaLevel = TFCChunkGenerator.SEA_LEVEL_Y;
+        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         if (TreeHelpers.isValidLocation(level, pos, settings, config.placement()) || TreeHelpers.isValidGround(level, pos, settings, config.placement()))
         {

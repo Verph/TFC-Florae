@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/jack_in_the_pulpit/jack_in_the_pulpit_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/jack_in_the_pulpit/jack_in_the_pulpit_1"
+      }
+    },
+    {
+      "when": {
+        "stage": "2"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/jack_in_the_pulpit/jack_in_the_pulpit_2"
+      }
+    },
+    {
+      "when": {
+        "stage": "3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/jack_in_the_pulpit/jack_in_the_pulpit_3"
+      }
+    }
+  ]
+}

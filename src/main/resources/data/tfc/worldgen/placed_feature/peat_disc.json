@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "feature": "tfcflorae:peat_disc",
+  "feature": "tfc:peat_disc",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

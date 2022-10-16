@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/egyptian_autumn_crocus/egyptian_autumn_crocus_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/egyptian_autumn_crocus/egyptian_autumn_crocus_1"
+      }
+    }
+  ]
+}

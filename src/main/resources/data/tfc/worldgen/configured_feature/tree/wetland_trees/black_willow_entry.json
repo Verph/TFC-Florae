@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 290,
+    "max_rain": 450,
+    "min_temp": 11,
+    "max_temp": 35,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/black_willow"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/black_willow"
+      }
+    ],
+    "normal_tree": "tfc:tree/wetland_trees/black_willow",
+    "dead_tree": "tfc:tree/wetland_trees/black_willow_dead",
+    "fallen_log": "tfcflorae:wood/log/black_willow",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/black_willow",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/black_willow",
+    "old_growth_tree": "tfc:tree/wetland_trees/black_willow"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/black_powderpuff/black_powderpuff_0"
+      }
+    }
+  ]
+}

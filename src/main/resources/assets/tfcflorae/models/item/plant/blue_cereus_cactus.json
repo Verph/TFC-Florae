@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_small_1"
+  }
+}

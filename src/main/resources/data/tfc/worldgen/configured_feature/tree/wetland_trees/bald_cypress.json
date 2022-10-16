@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:bald_cypress/1",
+      "tfc:bald_cypress/2",
+      "tfc:bald_cypress/3",
+      "tfc:bald_cypress/4",
+      "tfc:bald_cypress/5",
+      "tfc:bald_cypress/6",
+      "tfc:bald_cypress/7",
+      "tfc:bald_cypress/8",
+      "tfc:bald_cypress/9",
+      "tfc:bald_cypress/10",
+      "tfc:bald_cypress/11"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_top"
+    }
+  }
+}

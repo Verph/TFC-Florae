@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/shrub/shrub_leaves_coniferous_light_0"
+  }
+}

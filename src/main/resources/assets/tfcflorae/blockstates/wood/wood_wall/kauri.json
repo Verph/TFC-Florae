@@ -1,0 +1,91 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/post/kauri"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/kauri",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/kauri",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/kauri",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/kauri",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/tall/kauri",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/tall/kauri",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/tall/kauri",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/wood_wall/side/tall/kauri",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

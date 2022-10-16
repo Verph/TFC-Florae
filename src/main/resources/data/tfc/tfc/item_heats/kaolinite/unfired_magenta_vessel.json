@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/kaolinite/magenta_unfired_vessel"
+    "item": "tfcflorae:ceramic/kaolinite/unfired/glazed_vessel/magenta"
   },
   "heat_capacity": 0.2
 }

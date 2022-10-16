@@ -1,0 +1,91 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/post/spruce"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/spruce",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/spruce",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/spruce",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/spruce",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/tall/spruce",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/tall/spruce",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/tall/spruce",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/log_wall/side/tall/spruce",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

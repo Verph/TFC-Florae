@@ -1,0 +1,53 @@
+{
+  "feature": "tfc:tree/wetland_trees/red_cypress_random",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 5
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": {
+        "type": "minecraft:biased_to_bottom",
+        "value": {
+          "min_inclusive": 2,
+          "max_inclusive": 4
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "tfcflorae:wood/sapling/red_cypress",
+          "Properties": {
+            "age": "0",
+            "hanging": "false",
+            "stage": "0",
+            "waterlogged": "false"
+          }
+        }
+      }
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -1,
+      "max_temperature": 30,
+      "min_rainfall": 350,
+      "max_rainfall": 500,
+      "fuzzy": true
+    }
+  ]
+}

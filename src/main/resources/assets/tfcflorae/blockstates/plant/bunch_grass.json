@@ -1,0 +1,29 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/bunch_grass/bunch_grass_roots_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/bunch_grass/bunch_grass_upper_0",
+		  "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/bunch_grass/bunch_grass_upper_1",
+		  "weight": 1
+        }
+      ]
+    }
+  ]
+}

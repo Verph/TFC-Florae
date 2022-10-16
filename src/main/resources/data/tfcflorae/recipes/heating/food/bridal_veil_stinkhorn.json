@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "tfcflorae:plant/bridal_veil_stinkhorn"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "tfcflorae:food/roasted_bridal_veil_stinkhorn"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

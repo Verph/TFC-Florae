@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/mylonite",
-    "top": "tfcflorae:block/rock/cracked_bricks/mylonite",
-    "side": "tfcflorae:block/rock/cracked_bricks/mylonite"
+    "bottom": "tfc:block/rock/cracked_bricks/mylonite",
+    "top": "tfc:block/rock/cracked_bricks/mylonite",
+    "side": "tfc:block/rock/cracked_bricks/mylonite"
   }
 }

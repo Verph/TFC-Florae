@@ -1,0 +1,34 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/glow_vines_cave",
+  "placement": [
+    {
+      "type": "tfc:carving_mask",
+      "step": "air",
+      "min_y": {
+        "absolute": 20
+      },
+      "max_y": {
+        "absolute": 100
+      }
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 222
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -20,
+      "max_temperature": 50,
+      "min_rainfall": 90,
+      "max_rainfall": 500,
+      "fuzzy": true
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    }
+  ]
+}

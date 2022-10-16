@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "tfcflorae:plant/parasol_mushroom"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "tfcflorae:food/roasted_parasol_mushroom"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_bricks/chalk",
-    "top": "tfcflorae:block/rock/mossy_bricks/chalk",
-    "side": "tfcflorae:block/rock/mossy_bricks/chalk"
-  }
-}

@@ -9,11 +9,13 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.RegisteredDataManager;
 import net.dries007.tfc.util.climate.ClimateRange;
 
+import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.wood.TFCFWood;
 
 public class TFCFClimateRanges
 {
     public static final Map<TFCFWood, Supplier<ClimateRange>> LARGE_FRUIT_TREES = WoodClimateMapper(TFCFWood.class);
+    public static final Map<TFCFPlant, Supplier<ClimateRange>> SEASONAL_PLANT = PlantClimateMapper(TFCFPlant.class);
 
     private static Map<TFCFWood, Supplier<ClimateRange>> WoodClimateMapper(Class<TFCFWood> enumClass)
     {
@@ -22,7 +24,19 @@ public class TFCFClimateRanges
         {
             if (!wood.isFruitTree()) continue;
 
-            Map.put(wood, register("tree/" + wood.name()));
+            Map.put(wood, register("tree/" + wood.getSerializedName().toLowerCase(Locale.ROOT)));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFPlant, Supplier<ClimateRange>> PlantClimateMapper(Class<TFCFPlant> enumClass)
+    {
+        Map<TFCFPlant, Supplier<ClimateRange>> Map = new HashMap<>();
+        for (TFCFPlant plant : enumClass.getEnumConstants())
+        {
+            if (!plant.isSeasonalFruitPlant()) continue;
+
+            Map.put(plant, register("plant/" + plant.name().toLowerCase(Locale.ROOT)));
         }
         return Map;
     }

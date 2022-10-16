@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/chlorophos_foxfire/chlorophos_foxfire_0"
+  }
+}

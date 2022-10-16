@@ -12,18 +12,12 @@
     "water_fog_color": 329011
   },
   "carvers": {
-    "air": [
-      "tfc:cave",
-      "tfc:canyon"
-    ],
+    "air": [],
     "liquid": []
   },
   "features": [
     [
-      "tfc:in_biome/erosion"
-    ],
-    [
-      "tfc:in_biome/all_lakes"
+      "tfc:in_biome/underground_lakes"
     ],
     [
       "tfc:in_biome/soil_discs/grasslands"
@@ -55,6 +49,52 @@
   ],
   "starts": [],
   "spawners": {
+    "water_ambient": [
+      {
+        "type": "tfc:tropical_fish",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:salmon",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:bluegill",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:crayfish",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 4
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "tfc:salmon",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:bluegill",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:crayfish",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 4
+      }
+    ],
     "monster": [
       {
         "type": "minecraft:spider",

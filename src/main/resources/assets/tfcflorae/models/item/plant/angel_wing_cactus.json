@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/angel_wing_cactus/angel_wing_cactus_1"
+  }
+}

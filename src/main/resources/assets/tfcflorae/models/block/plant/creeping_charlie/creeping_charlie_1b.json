@@ -1,0 +1,18 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "layer0": "tfcflorae:block/plant/creeping_charlie/creeping_charlie_1",
+    "particle": "tfcflorae:block/plant/creeping_charlie/creeping_charlie_1"
+  },
+	"elements": [
+		{
+			"from": [-0.02, 0.25, -0.02],
+			"to": [16.02, 0.25, 16.02],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.25, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#layer0"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 270, "texture": "#layer0"}
+			}
+		}
+	]
+}

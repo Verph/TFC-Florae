@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/wood_bitter_vetch/wood_bitter_vetch_3"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/earthenware/pink_unfired_vessel"
+    "item": "tfcflorae:ceramic/earthenware/unfired/glazed_vessel/pink"
   },
   "heat_capacity": 0.2
 }

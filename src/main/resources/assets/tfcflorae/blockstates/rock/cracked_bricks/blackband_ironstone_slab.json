@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/cracked_bricks/blackband_ironstone_slab"
+      "model": "tfc:block/rock/cracked_bricks/blackband_ironstone_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/cracked_bricks/blackband_ironstone_slab_top"
+      "model": "tfc:block/rock/cracked_bricks/blackband_ironstone_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/cracked_bricks/blackband_ironstone"
+      "model": "tfc:block/rock/cracked_bricks/blackband_ironstone"
     }
   }
 }

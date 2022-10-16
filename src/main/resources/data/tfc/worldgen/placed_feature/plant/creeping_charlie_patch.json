@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/creeping_charlie_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -6,
+      "max_temperature": 33,
+      "min_rainfall": 140,
+      "max_rainfall": 320,
+      "fuzzy": true
+    }
+  ]
+}

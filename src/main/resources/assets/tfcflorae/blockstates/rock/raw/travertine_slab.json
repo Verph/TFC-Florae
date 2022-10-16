@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/raw/travertine_slab"
+      "model": "tfc:block/rock/raw/travertine_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/raw/travertine_slab_top"
+      "model": "tfc:block/rock/raw/travertine_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/raw/travertine"
+      "model": "tfc:block/rock/raw/travertine"
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/caralluma_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 7
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 16,
+      "max_temperature": 32,
+      "min_rainfall": 30,
+      "max_rainfall": 95,
+      "fuzzy": true
+    }
+  ]
+}

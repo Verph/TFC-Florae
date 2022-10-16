@@ -1,0 +1,275 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "precipitation": "rain",
+  "category": "river",
+  "temperature": 0.5,
+  "temperature_modifier": "none",
+  "downfall": 0.5,
+  "effects": {
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.basalt_deltas.mood",
+      "tick_delay": 6000
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:white_ash"
+      },
+      "probability": 0.118093334
+    },
+    "fog_color": 12638463,
+    "sky_color": 8756735,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": [
+      "tfc:cave",
+      "tfc:canyon",
+      "tfc:crack",
+      "tfc:deep_ravine",
+      "minecraft:cave_extra_underground"
+    ],
+    "liquid": []
+  },
+  "features": [
+    [
+      "tfc:in_biome/erosion"
+    ],
+    [
+	  "tfc:large_rock_columns",
+	  "tfc:small_rock_columns",
+	  "tfc:rock_pillar",
+	  "tfc:iceberg_blue",
+	  "tfc:iceberg_blue_rare",
+	  "tfc:iceberg_packed",
+	  "tfc:iceberg_packed_rare",
+	  "tfc:ice_and_snow",
+	  "tfc:glowstone"
+	],
+    [
+      "tfc:large_dripstone",
+      "tfc:dripstone_cluster",
+      "tfc:pointed_dripstone"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ],
+    [
+      "tfc:in_biome/all_lakes"
+    ],
+    [
+      "tfc:in_biome/soil_discs/alpine_mountain_river"
+    ],
+    [
+      "tfc:in_biome/underground_structures"
+    ],
+    [
+      "tfc:in_biome/surface_structures"
+    ],
+    [
+      "tfc:in_biome/strongholds"
+    ],
+    [
+      "tfc:in_biome/veins"
+    ],
+    [
+      "tfc:in_biome/underground_decoration"
+    ],
+    [
+      "tfc:in_biome/large_features/alpine_mountain_river"
+    ],
+    [
+      "tfc:in_biome/surface_decoration/alpine_mountain_river"
+    ],
+    [
+      "tfc:in_biome/top_layer_modification"
+    ]
+  ],
+  "starts": [],
+  "spawners": {
+    "water_ambient": [
+      {
+        "type": "tfc:salmon",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:bluegill",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:crayfish",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 4
+      }
+    ],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 95,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:slime",
+        "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      }
+    ],
+    "creature": [
+      {
+        "type": "tfc:pig",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:cow",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:goat",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:yak",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:alpaca",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:sheep",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:musk_ox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:chicken",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:duck",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:quail",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:polar_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:grizzly_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:black_bear",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:lion",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:sabertooth",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:rabbit",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:fox",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:boar",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "tfc:donkey",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "player_spawn_friendly": false,
+  "creature_spawn_probability": 0.05,
+  "spawn_costs": {}
+}

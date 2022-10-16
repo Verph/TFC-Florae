@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/quaqua_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 7
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 14,
+      "max_temperature": 29,
+      "min_rainfall": 40,
+      "max_rainfall": 120,
+      "fuzzy": true
+    }
+  ]
+}

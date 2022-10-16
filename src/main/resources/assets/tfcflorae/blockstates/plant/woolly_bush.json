@@ -1,0 +1,50 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/woolly_bush/woolly_bush_shortest"
+      }
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/woolly_bush/woolly_bush_shorter"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/woolly_bush/woolly_bush_short",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/woolly_bush/woolly_bush_big_short",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/woolly_bush/woolly_bush",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/woolly_bush/woolly_bush_big",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

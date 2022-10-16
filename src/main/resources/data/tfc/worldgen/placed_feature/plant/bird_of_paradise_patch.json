@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/bird_of_paradise_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 12,
+      "max_temperature": 16,
+      "min_rainfall": 60,
+      "max_rainfall": 400,
+      "min_forest": "edge"
+    }
+  ]
+}

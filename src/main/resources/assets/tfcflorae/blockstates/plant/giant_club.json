@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/giant_club/giant_club_0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"lifecycle": "dormant"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/glow_vines/glow_vines_middle_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "healthy"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/glow_vines/glow_vines_middle_0"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "flowering"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/glow_vines/glow_vines_middle_1"
+      }
+    },
+    {
+      "when": {
+		"lifecycle": "fruiting"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/glow_vines/glow_vines_middle_2"
+      }
+    }
+  ]
+}

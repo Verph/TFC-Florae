@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/indigo_milk_cap/indigo_milk_cap_0"
+  }
+}

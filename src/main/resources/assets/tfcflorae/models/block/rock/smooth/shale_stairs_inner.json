@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/smooth/shale",
-    "top": "tfcflorae:block/rock/smooth/shale",
-    "side": "tfcflorae:block/rock/smooth/shale"
-  }
-}

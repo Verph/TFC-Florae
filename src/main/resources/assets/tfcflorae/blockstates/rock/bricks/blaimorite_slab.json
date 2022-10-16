@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/bricks/blaimorite_slab"
+      "model": "tfc:block/rock/bricks/blaimorite_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/bricks/blaimorite_slab_top"
+      "model": "tfc:block/rock/bricks/blaimorite_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/bricks/blaimorite"
+      "model": "tfc:block/rock/bricks/blaimorite"
     }
   }
 }

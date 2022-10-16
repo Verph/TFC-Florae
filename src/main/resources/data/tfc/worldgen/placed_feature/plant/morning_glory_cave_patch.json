@@ -1,0 +1,45 @@
+{
+  "feature": "tfc:plant/morning_glory_cave_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 30
+    },
+    {
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 8
+        }
+      },
+      "type": "minecraft:count"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "min_inclusive": {
+          "above_bottom": -20
+        },
+        "max_inclusive": {
+          "absolute": 55
+        },
+        "type": "minecraft:uniform"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -6,
+      "max_temperature": 33,
+      "min_rainfall": 140,
+      "max_rainfall": 320,
+      "fuzzy": true
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/raw/mudstone",
-    "top": "tfcflorae:block/rock/raw/mudstone",
-    "side": "tfcflorae:block/rock/raw/mudstone"
+    "bottom": "tfc:block/rock/raw/mudstone",
+    "top": "tfc:block/rock/raw/mudstone",
+    "side": "tfc:block/rock/raw/mudstone"
   }
 }

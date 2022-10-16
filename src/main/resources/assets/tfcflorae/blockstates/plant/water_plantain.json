@@ -1,0 +1,280 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_0",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 2,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_0",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 2,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_1",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "weight": 2,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_1",
+          "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "weight": 2,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "weight": 2,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "weight": 2,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_lower_2",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2"
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/water_plantain/water_plantain_upper_2",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

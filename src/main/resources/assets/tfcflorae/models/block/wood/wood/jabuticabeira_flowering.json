@@ -1,0 +1,34 @@
+{
+	"__comment__": "This file was automatically created by mcresources",
+    "parent": "block/cube_column",
+	"textures": {
+		"end": "tfcflorae:block/wood/log/jabuticabeira",
+		"side": "tfcflorae:block/wood/log/jabuticabeira",
+		"flowers": "tfcflorae:block/wood/flowers/jabuticabeira"
+    },
+	"elements": [
+        {   "from": [0, 0, 0],
+            "to": [16, 16, 16],
+            "faces": {
+                "down":  { "texture": "#end", "cullface": "down"},
+                "up":    { "texture": "#end", "cullface": "up"},
+                "north": { "texture": "#side", "cullface": "north"},
+                "south": { "texture": "#side", "cullface": "south"},
+                "west":  { "texture": "#side", "cullface": "west"},
+                "east":  { "texture": "#side", "cullface": "east"}
+            }
+        },
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#flowers", "cullface": "down"}
+			}
+		}
+	]
+}

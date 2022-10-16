@@ -1,0 +1,114 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 0,
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 0,
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 0,
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 0,
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 1,
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_1",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 1,
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_1",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 1,
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_1",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+		"stage": 1,
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_1",
+		  "weight": 1
+        }
+      ]
+    }
+  ]
+}

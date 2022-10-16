@@ -1,0 +1,55 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_down"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+		"y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_up"
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side"
+      }
+    }
+  ]
+}

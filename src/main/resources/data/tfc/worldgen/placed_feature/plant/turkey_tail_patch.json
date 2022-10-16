@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/turkey_tail_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 14
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 4,
+      "max_temperature": 17,
+      "min_rainfall": 95,
+      "max_rainfall": 220,
+      "min_forest": "normal",
+      "fuzzy": true
+    }
+  ]
+}

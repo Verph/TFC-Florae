@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/parasol_mushroom/parasol_mushroom_0"
+      }
+    }
+  ]
+}

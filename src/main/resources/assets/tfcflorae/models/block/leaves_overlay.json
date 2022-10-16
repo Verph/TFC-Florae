@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"all": "argyle_eucalyptus",
-		"overlay": "argyle_eucalyptus",
-		"particle": "argyle_eucalyptus"
+		"all": "all",
+		"overlay": "overlay",
+		"particle": "all"
 	},
 	"elements": [
 		{

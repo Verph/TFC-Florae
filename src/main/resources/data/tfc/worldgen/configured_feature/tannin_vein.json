@@ -1,0 +1,38 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 0,
+    "min_y": {
+      "absolute": 59
+    },
+    "max_y": {
+      "absolute": 61
+    },
+    "size": 50,
+    "density": 1,
+    "blocks": [
+      {
+        "replace": [
+          "minecraft:water"
+        ],
+        "with": [
+          {
+            "block": "tfc:fluid/tannin"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:fluid/salt_water"
+        ],
+        "with": [
+          {
+            "block": "tfc:fluid/tannin"
+          }
+        ]
+      }
+    ],
+    "random_name": "hot_spring_water_vein"
+  }
+}

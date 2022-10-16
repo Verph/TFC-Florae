@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/column/marble_top",
+    "side": "tfcflorae:block/rock/column/marble_side"
+  }
+}

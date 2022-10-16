@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/bridal_veil_stinkhorn/bridal_veil_stinkhorn_0"
+      }
+    }
+  ]
+}

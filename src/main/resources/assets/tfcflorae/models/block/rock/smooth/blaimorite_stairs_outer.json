@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/smooth/blaimorite",
-    "top": "tfcflorae:block/rock/smooth/blaimorite",
-    "side": "tfcflorae:block/rock/smooth/blaimorite"
+    "bottom": "tfc:block/rock/smooth/blaimorite",
+    "top": "tfc:block/rock/smooth/blaimorite",
+    "side": "tfc:block/rock/smooth/blaimorite"
   }
 }

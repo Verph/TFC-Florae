@@ -1,0 +1,50 @@
+{
+  "config": {
+    "to_place": {
+      "entries": [
+        {
+          "data": {
+            "Name": "minecraft:flowering_azalea"
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "minecraft:azalea"
+          },
+          "weight": 7
+        },
+        {
+          "data": {
+            "Name": "minecraft:moss_carpet"
+          },
+          "weight": 25
+        },
+        {
+          "data": {
+            "Properties": {
+              "age": "1",
+              "stage": "1",
+              "part": "lower"
+            },
+            "Name": "tfc:plant/pampas_grass"
+          },
+          "weight": 50
+        },
+        {
+          "data": {
+            "Properties": {
+              "age": "1",
+              "stage": "1",
+              "part": "lower"
+            },
+            "Name": "tfcflorae:plant/monstera"
+          },
+          "weight": 10
+        }
+      ],
+      "type": "minecraft:weighted_state_provider"
+    }
+  },
+  "type": "minecraft:simple_block"
+}

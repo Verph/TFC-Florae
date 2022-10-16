@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/shiitake/shiitake_0",
+    "particle": "tfcflorae:block/plant/shiitake/shiitake_0"
+  }
+}

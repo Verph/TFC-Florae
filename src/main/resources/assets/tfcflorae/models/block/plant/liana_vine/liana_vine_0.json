@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "tfcflorae:block/plant/liana_vine/liana_vine_0",
+		"particle": "tfcflorae:block/plant/liana_vine/liana_vine_0"
+	},
+	"elements": [
+		{
+			"from": [0, 0.5, 0],
+			"to": [16, 0.5, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

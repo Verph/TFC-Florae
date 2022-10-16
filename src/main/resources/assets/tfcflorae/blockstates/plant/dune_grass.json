@@ -1,0 +1,136 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"stage": "0",
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shortest_0"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shorter_0"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_short_0"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_0"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shortest_1"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shorter_1"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_short_1"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_1"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "2",
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shortest_2"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "2",
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_shorter_2"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "2",
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_short_2"
+		}
+      ]
+    },
+    {
+      "when": {
+		"stage": "2",
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/dune_grass/dune_grass_2"
+		}
+      ]
+    }
+  ]
+}

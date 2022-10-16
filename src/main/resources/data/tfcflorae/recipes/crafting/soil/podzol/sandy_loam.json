@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:dirt/sandy_loam"
+      "item": "tfc:dirt/sandy_loam"
     },
     {
       "item": "tfc:groundcover/humus"

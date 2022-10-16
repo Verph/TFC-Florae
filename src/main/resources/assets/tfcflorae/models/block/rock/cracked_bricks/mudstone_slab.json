@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/mudstone",
-    "top": "tfcflorae:block/rock/cracked_bricks/mudstone",
-    "side": "tfcflorae:block/rock/cracked_bricks/mudstone"
+    "bottom": "tfc:block/rock/cracked_bricks/mudstone",
+    "top": "tfc:block/rock/cracked_bricks/mudstone",
+    "side": "tfc:block/rock/cracked_bricks/mudstone"
   }
 }

@@ -6,21 +6,22 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.dries007.tfc.common.blockentities.TickCounterBlockEntity;
+import net.dries007.tfc.common.blockentities.TFCBlockEntity;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.ICalendarTickable;
 
 // todo: don't extend tick counter anymore
-public class FruitTreeBlockEntity extends TickCounterBlockEntity implements ICalendarTickable
+public class FruitTreeBlockEntity extends TFCBlockEntity implements ICalendarTickable
 {
     public static void serverTick(Level level, BlockPos pos, BlockState state, FruitTreeBlockEntity bush)
     {
         bush.checkForCalendarUpdate();
     }
 
-    private long lastTick, lastUpdateTick;
+    private long lastTick; // The last tick this bush was ticked via the block entity's serverTick() method. A delta of > 1 is used to detect time skips
+    private long lastUpdateTick; // The last tick the bush block was ticked via IBushBlock#onUpdate()
 
     public FruitTreeBlockEntity(BlockPos pos, BlockState state)
     {
@@ -30,14 +31,13 @@ public class FruitTreeBlockEntity extends TickCounterBlockEntity implements ICal
     protected FruitTreeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state)
     {
         super(type, pos, state);
-        lastTick = lastUpdateTick = Calendars.SERVER.getTicks();
-    }
-
-    public void afterUpdate()
-    {
+        lastTick = Integer.MIN_VALUE;
         lastUpdateTick = Calendars.SERVER.getTicks();
     }
 
+    /**
+     * @return The number of ticks since this bush block was ticked in {@link IBushBlock#onUpdate(Level, BlockPos, BlockState)}
+     */
     public long getTicksSinceBushUpdate()
     {
         return Calendars.SERVER.getTicks() - lastUpdateTick;
@@ -67,18 +67,22 @@ public class FruitTreeBlockEntity extends TickCounterBlockEntity implements ICal
             final BlockState state = level.getBlockState(worldPosition);
             if (state.getBlock() instanceof IBushBlock bush)
             {
-                bush.onUpdate(level, worldPosition, state);
+                bush.onUpdate(level, worldPosition, state); // Update the bush
+                lastUpdateTick = Calendars.SERVER.getTicks(); // And the current time
+                setChanged();
             }
         }
     }
 
     @Override
+    @Deprecated
     public long getLastUpdateTick()
     {
         return lastTick;
     }
 
     @Override
+    @Deprecated
     public void setLastUpdateTick(long tick)
     {
         lastTick = tick;

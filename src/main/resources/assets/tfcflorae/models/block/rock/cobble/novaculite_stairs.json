@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cobble/novaculite",
-    "top": "tfcflorae:block/rock/cobble/novaculite",
-    "side": "tfcflorae:block/rock/cobble/novaculite"
+    "bottom": "tfc:block/rock/cobble/novaculite",
+    "top": "tfc:block/rock/cobble/novaculite",
+    "side": "tfc:block/rock/cobble/novaculite"
   }
 }

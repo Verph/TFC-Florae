@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/wall_inventory_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/purple_jacaranda",
+    "wall": "tfcflorae:block/wood/log/purple_jacaranda",
+    "particle": "tfcflorae:block/wood/log/purple_jacaranda"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/devils_tongue/devils_tongue_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/devils_tongue/devils_tongue_1"
+      }
+    }
+  ]
+}

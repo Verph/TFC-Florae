@@ -1,7 +1,16 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/leaves/white_mangrove_flowering"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/leaves/white_mangrove_fruiting"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/leaves/white_mangrove_dry"
+    },
+    "lifecycle=healthy": {
       "model": "tfcflorae:block/wood/leaves/white_mangrove"
     }
   }

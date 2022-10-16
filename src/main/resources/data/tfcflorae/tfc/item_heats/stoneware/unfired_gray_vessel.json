@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/gray_unfired_vessel"
+    "item": "tfcflorae:ceramic/stoneware/unfired/glazed_vessel/gray"
   },
   "heat_capacity": 0.2
 }

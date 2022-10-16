@@ -1,0 +1,207 @@
+{
+  "type": "minecraft:replace_single_block",
+  "config": {
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/diorite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/diorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/gabbro"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/gabbro",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/shale"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/andesite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/claystone"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/rhyolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/limestone"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/rhyolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/conglomerate"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/rhyolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/dolomite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/basalt",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/chert"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/gabbro",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/chalk"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/diorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/rhyolite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/rhyolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/basalt"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/basalt",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/andesite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/andesite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/dacite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/dacite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/quartzite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/granite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/slate"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/andesite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/phyllite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/andesite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/schist"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/gabbro",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/gneiss"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/granite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/marble"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/diorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/granite"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/granite",
+		  "Properties": {}
+        }
+      }
+    ]
+  }
+}

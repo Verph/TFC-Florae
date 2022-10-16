@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/prairie_junegrass_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 10,
+      "max_temperature": 27,
+      "min_rainfall": 75,
+      "max_rainfall": 200,
+      "fuzzy": true
+    }
+  ]
+}

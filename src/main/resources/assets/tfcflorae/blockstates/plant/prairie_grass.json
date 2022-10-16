@@ -1,0 +1,244 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_lower_0"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_upper_0"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_lower_1"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_upper_1"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_lower_2"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_upper_2"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_lower_3"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+        "age": "0|1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_small_upper_3"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_lower_0"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_upper_0"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_lower_1"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_upper_1"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_lower_2"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_upper_2"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_lower_3"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_medium_upper_3"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_lower_0"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_upper_0"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_lower_1"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_upper_1"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "2",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_lower_2"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "2",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_upper_2"
+      }
+    },
+    {
+      "when": {
+        "part": "lower",
+        "stage": "3",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_lower_3"
+      }
+    },
+    {
+      "when": {
+        "part": "upper",
+        "stage": "3",
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/prairie_grass/prairie_grass_large_upper_3"
+      }
+    }
+  ]
+}

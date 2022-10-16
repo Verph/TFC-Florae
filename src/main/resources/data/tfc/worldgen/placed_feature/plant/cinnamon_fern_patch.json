@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/cinnamon_fern_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -2,
+      "max_temperature": 30,
+      "min_rainfall": 180,
+      "max_rainfall": 480
+    }
+  ]
+}

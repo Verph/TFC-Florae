@@ -12,15 +12,15 @@
           "natural": "true"
         }
       },
-      "min_height": 3,
+      "min_height": 1,
       "max_height": 5,
       "width": 1
     },
     "radius": 1,
     "placement": {
       "width": 1,
-      "height": 5,
-      "allow_submerged": true
+      "height": 6,
+      "allow_submerged": false
     }
   }
 }

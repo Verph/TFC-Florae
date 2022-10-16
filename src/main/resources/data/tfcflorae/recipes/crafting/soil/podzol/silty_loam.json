@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:dirt/silty_loam"
+      "item": "tfc:dirt/silty_loam"
     },
     {
       "item": "tfc:groundcover/humus"

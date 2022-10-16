@@ -1,0 +1,692 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+        "down": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0b",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0c",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0d",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "east": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0a",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0b",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0c",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0d",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "north": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0a",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0b",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0c",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0d",
+			"weight": 1,
+			"x": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "south": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0a",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0b",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0c",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0d",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "up": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_0a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_0b",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_0c",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_0d",
+			"weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "west": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0a",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0b",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0c",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_0d",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "down": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1b",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1c",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1d",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "east": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1a",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1b",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1c",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1d",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "north": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1a",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1b",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1c",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1d",
+			"weight": 1,
+			"x": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "south": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1a",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1b",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1c",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1d",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "up": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_1a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_1b",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_1c",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_1d",
+			"weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "west": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1a",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1b",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1c",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_1d",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "down": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2b",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2c",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2d",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "east": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2a",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2b",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2c",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2d",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "north": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2a",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2b",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2c",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2d",
+			"weight": 1,
+			"x": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "south": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2a",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2b",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2c",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2d",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "up": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_2a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_2b",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_2c",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_2d",
+			"weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "2",
+        "west": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2a",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2b",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2c",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_2d",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "down": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3b",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3c",
+		  "weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3d",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "east": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3a",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3b",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3c",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3d",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "north": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3a",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3b",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3c",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3d",
+			"weight": 1,
+			"x": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "south": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3a",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3b",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3c",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3d",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "up": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_3a",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_3b",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_3c",
+			"weight": 1
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_top_3d",
+			"weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "stage": "3",
+        "west": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3a",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3b",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3c",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/plant/clover/clover_3d",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		}
+      ]
+    }
+  ]
+}

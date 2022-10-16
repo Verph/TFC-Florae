@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/breccia",
-    "top": "tfcflorae:block/rock/cracked_bricks/breccia",
-    "side": "tfcflorae:block/rock/cracked_bricks/breccia"
+    "bottom": "tfc:block/rock/cracked_bricks/breccia",
+    "top": "tfc:block/rock/cracked_bricks/breccia",
+    "side": "tfc:block/rock/cracked_bricks/breccia"
   }
 }

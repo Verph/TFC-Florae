@@ -1,0 +1,56 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "count=1": [
+      {
+        "model": "tfcflorae:block/rock/pebble/dripstone",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/dripstone"
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/dripstone",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/pebble/dripstone",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "tfcflorae:block/rock/rubble/dripstone",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/dripstone"
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/dripstone",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/rubble/dripstone",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "tfcflorae:block/rock/boulder/dripstone",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/dripstone"
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/dripstone",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/boulder/dripstone",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@
         "up": "true"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_post"
+        "model": "tfc:block/rock/smooth/granite_wall_post"
       }
     },
     {
@@ -14,7 +14,7 @@
         "north": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side",
+        "model": "tfc:block/rock/smooth/granite_wall_side",
         "uvlock": true
       }
     },
@@ -23,7 +23,7 @@
         "east": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side",
+        "model": "tfc:block/rock/smooth/granite_wall_side",
         "y": 90,
         "uvlock": true
       }
@@ -33,7 +33,7 @@
         "south": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side",
+        "model": "tfc:block/rock/smooth/granite_wall_side",
         "y": 180,
         "uvlock": true
       }
@@ -43,7 +43,7 @@
         "west": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side",
+        "model": "tfc:block/rock/smooth/granite_wall_side",
         "y": 270,
         "uvlock": true
       }
@@ -53,7 +53,7 @@
         "north": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side_tall",
+        "model": "tfc:block/rock/smooth/granite_wall_side_tall",
         "uvlock": true
       }
     },
@@ -62,7 +62,7 @@
         "east": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side_tall",
+        "model": "tfc:block/rock/smooth/granite_wall_side_tall",
         "y": 90,
         "uvlock": true
       }
@@ -72,7 +72,7 @@
         "south": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side_tall",
+        "model": "tfc:block/rock/smooth/granite_wall_side_tall",
         "y": 180,
         "uvlock": true
       }
@@ -82,7 +82,7 @@
         "west": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/smooth/granite_wall_side_tall",
+        "model": "tfc:block/rock/smooth/granite_wall_side_tall",
         "y": 270,
         "uvlock": true
       }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cobble/wackestone",
-    "top": "tfcflorae:block/rock/cobble/wackestone",
-    "side": "tfcflorae:block/rock/cobble/wackestone"
+    "bottom": "tfc:block/rock/cobble/wackestone",
+    "top": "tfc:block/rock/cobble/wackestone",
+    "side": "tfc:block/rock/cobble/wackestone"
   }
 }

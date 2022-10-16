@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfcflorae:block/rock/pressure_plate/andesite"
+      "model": "tfc:block/rock/pressure_plate/andesite"
     },
     "powered=true": {
-      "model": "tfcflorae:block/rock/pressure_plate/andesite_down"
+      "model": "tfc:block/rock/pressure_plate/andesite_down"
     }
   }
 }

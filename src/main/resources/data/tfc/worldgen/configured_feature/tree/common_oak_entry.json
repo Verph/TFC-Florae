@@ -25,6 +25,6 @@
       }
     },
     "bush_leaves": "tfcflorae:wood/leaves/common_oak",
-    "old_growth_tree": "tfcflorae:tree/common_oak_large"
+    "old_growth_tree": "tfc:tree/common_oak_large"
   }
 }

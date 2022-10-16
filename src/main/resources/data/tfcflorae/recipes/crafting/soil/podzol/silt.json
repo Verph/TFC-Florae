@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfcflorae:dirt/silt"
+      "item": "tfc:dirt/silt"
     },
     {
       "item": "tfc:groundcover/humus"

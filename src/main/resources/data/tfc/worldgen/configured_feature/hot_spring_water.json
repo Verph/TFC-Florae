@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state": {
+      "Name": "tfc:fluid/spring_water"
+    },
+    "radius": 8,
+    "half_height": 4,
+    "targets": [
+      {
+        "Name": "minecraft:water"
+      },
+      {
+        "Name": "tfc:fluid/salt_water"
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"part": "lower",
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/deciduous_shrub/shrub_dead"
+	  }
+    },
+    {
+      "when": {
+		"part": "lower",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_dead",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_11",
+          "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+		"part": "upper",
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/deciduous_shrub/shrub_dead"
+	  }
+    },
+    {
+      "when": {
+		"part": "upper",
+        "stage": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_dead",
+          "weight": 2
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_0",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_1",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_2",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_3",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_4",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_5",
+          "weight": 1
+		},
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_6",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_7",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_8",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_9",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_10",
+          "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/deciduous_shrub/shrub_a_11",
+          "weight": 1
+		}
+      ]
+    }
+  ]
+}

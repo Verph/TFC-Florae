@@ -1,0 +1,59 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_creeping"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_creeping",
+        "x": 270,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_creeping",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_creeping",
+        "x": 270,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_hanging"
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/bearded_moss/bearded_moss_creeping",
+        "x": 270,
+        "y": 270
+      }
+    }
+  ]
+}

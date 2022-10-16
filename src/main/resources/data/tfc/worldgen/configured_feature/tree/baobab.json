@@ -9,8 +9,23 @@
       "height": 25,
       "allow_submerged": false
     },
-    "logState": "tfcflorae:wood/log/baobab",
-    "woodState": "tfcflorae:wood/wood/baobab",
-    "leavesState": "tfcflorae:wood/leaves/baobab"
+    "logState": {
+        "Name": "tfcflorae:wood/log/baobab",
+        "Properties": {
+			"natural": "true"
+        }
+    },
+    "woodState": {
+        "Name": "tfcflorae:wood/wood/baobab",
+        "Properties": {
+			"natural": "true"
+        }
+    },
+    "leavesState": {
+        "Name": "tfcflorae:wood/leaves/baobab",
+        "Properties": {
+			"persistent": "false"
+        }
+    }
   }
 }

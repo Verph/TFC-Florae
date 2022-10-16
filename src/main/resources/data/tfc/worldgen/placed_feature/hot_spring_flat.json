@@ -1,0 +1,28 @@
+{
+  "feature": "tfc:hot_spring_flat",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 8
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 100
+        },
+        "min_inclusive": {
+          "absolute": 65
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "tfc:flat_enough",
+      "flatness": 0.8
+    }
+  ]
+}

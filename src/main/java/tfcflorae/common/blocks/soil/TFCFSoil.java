@@ -16,6 +16,7 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.devices.DryingBricksBlock;
 import net.dries007.tfc.common.blocks.soil.*;
 
+import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.items.TFCFItems;
 
@@ -23,15 +24,21 @@ public enum TFCFSoil
 {
     //Only TFCFVariants
     GRASS_PATH((self, variant) -> new PathBlock(Block.Properties.of(Material.DIRT).strength(0.65F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
-    DIRT((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
-    FARMLAND((self, variant) -> new FarmlandBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6f).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always)).blockEntity(TFCBlockEntities.FARMLAND), TFCFBlocks.TFCFSOIL.get(DIRT).get(variant))),
+    FARMLAND((self, variant) -> new FarmlandBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6f).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always)).blockEntity(TFCBlockEntities.FARMLAND), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
+    DIRT((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant))),
     GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant))),
     CLAY((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
     CLAY_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant))),
     ROOTED_DIRT((self, variant) -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.ROOTED_DIRT), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
-    MUD((self, variant) -> new MudBlock(mudProperties())),
-    MUD_BRICKS((self, variant) -> new Block(mudProperties())),
-    DRYING_BRICKS((self, variant) -> new DryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(SoundType.STEM).randomTicks()).blockEntity(TFCBlockEntities.TICK_COUNTER), variant.dried())),
+
+    PACKED_MUD((self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)), 
+                (self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCBlocks.SOIL.get(SoilBlockType.MUD).get(variant))),
+    /*MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant)), 
+        (self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCSOIL.get(PACKED_MUD).get(variant))),*/
+
+    MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant))),
+    MUD_BRICKS((self, variant) -> new Block(mudBrickProperties())),
+    DRYING_BRICKS((self, variant) -> new DryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks()).blockEntity(TFCBlockEntities.TICK_COUNTER), variant.dried())),
 
     //Both TFCFVariants and TFCVariants of soil types
     COARSE_DIRT((self, variant) -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)), 
@@ -91,8 +98,8 @@ public enum TFCFSoil
     SPARSE_STONEWARE_CLAY_GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant)),
                                 (self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCSOIL.get(SPARSE_GRASS_PATH).get(variant), TFCBlocks.SOIL.get(SoilBlockType.FARMLAND).get(variant))),
 
-    COMPACT_DIRT((self, variant) -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.75F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops()),
-                (self, variant) -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.75F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops()));
+    COMPACT_DIRT((self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.75F).sound(TFCFSounds.MUD).requiresCorrectToolForDrops(), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
+                (self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.75F).sound(TFCFSounds.MUD).requiresCorrectToolForDrops(), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant)));
 
     public static final TFCFSoil[] VALUES = values();
 
@@ -103,8 +110,12 @@ public enum TFCFSoil
 
     public static BlockBehaviour.Properties mudProperties()
     {
-        // todo: 1.19. correct sound
-        return BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0f).sound(SoundType.SHROOMLIGHT);
+        return BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0f).sound(TFCFSounds.MUD);
+    }
+
+    public static BlockBehaviour.Properties mudBrickProperties()
+    {
+        return BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0f).sound(TFCFSounds.MUD_BRICKS);
     }
 
     private final BiFunction<TFCFSoil, TFCFVariant, Block> TFCFFactory;
@@ -152,6 +163,8 @@ public enum TFCFSoil
     {
         switch (this)
         {
+            case PACKED_MUD:
+                return MUD;
             case DIRT:
                 return GRASS;
             case GRASS:
@@ -161,6 +174,7 @@ public enum TFCFSoil
             case MUD:
             case MUD_BRICKS:
             case DRYING_BRICKS:
+            case COMPACT_DIRT:
                 return DIRT;
             case CLAY:
                 return CLAY_GRASS;

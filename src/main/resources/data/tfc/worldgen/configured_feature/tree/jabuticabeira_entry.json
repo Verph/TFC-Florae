@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 200,
+    "max_rain": 405,
+    "min_temp": 10,
+    "max_temp": 34,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/jabuticabeira"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/jabuticabeira"
+      }
+    ],
+    "normal_tree": "tfc:tree/jabuticabeira",
+    "dead_tree": "tfc:tree/jabuticabeira_dead",
+    "fallen_log": "tfcflorae:wood/log/jabuticabeira",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/jabuticabeira",
+      "Properties": {
+        "lifecycle": "dormant",
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/jabuticabeira",
+    "old_growth_tree": "tfc:tree/jabuticabeira"
+  }
+}

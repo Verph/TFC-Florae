@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "#tfcflorae:earthenware_clay_knapping",
-    "#tfcflorae:kaolinite_clay_knapping",
-    "#tfcflorae:stoneware_clay_knapping"
+    "tfcflorae:ceramic/earthenware/clay",
+    "tfcflorae:ceramic/kaolinite/clay",
+    "tfcflorae:ceramic/stoneware/clay"
   ]
 }

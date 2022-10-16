@@ -1,0 +1,207 @@
+{
+  "type": "minecraft:replace_single_block",
+  "config": {
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/diorite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/diorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/gabbro"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/gabbro",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/shale"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/shale",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/claystone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/claystone",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/limestone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/limestone",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/conglomerate"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/conglomerate",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/dolomite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/dolomite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/chert"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/chert",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/chalk"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/chalk",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/rhyolite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/rhyolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/basalt"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/basalt",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/andesite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/andesite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/dacite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/dacite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/quartzite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/quartzite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/slate"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/slate",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/phyllite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/phyllite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/schist"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/schist",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/gneiss"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/gneiss",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/marble"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/marble",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfc:rock/gravel/granite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/smoke_block/granite",
+		  "Properties": {}
+        }
+      }
+    ]
+  }
+}

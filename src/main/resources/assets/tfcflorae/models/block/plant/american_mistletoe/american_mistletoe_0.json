@@ -1,0 +1,50 @@
+{
+    "ambientocclusion": false,
+    "texture_size": [32, 32],
+    "textures": {
+		"cross": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0",
+		"particle": "tfcflorae:block/plant/american_mistletoe/american_mistletoe_0"
+    },
+	"elements": [
+		{
+			"from": [0, 9, -7],
+			"to": [32, 9, 23.2],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [-1, 9, 8.1]},
+			"faces": {
+				"up": {"uv": [0, 16, 16, 0], "texture": "#cross"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 180, "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-0.25, 8.75, -7],
+			"to": [31.75, 8.75, 23.2],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [0, 9, 8.1]},
+			"faces": {
+				"up": {"uv": [0, 16, 16, 0], "texture": "#cross"},
+				"down": {"uv": [16, 16, 0, 0], "rotation": 180, "texture": "#cross"}
+			}
+		},
+		{
+			"from": [0, -6, 8],
+			"to": [32, 24.2, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [0, 9, 8]},
+			"faces": {
+				"north": {"uv": [16, 16, 0, 0], "texture": "#cross"},
+				"south": {"uv": [0, 16, 16, 0], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [0, -6, 8],
+			"to": [32, 24.2, 8],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [0, 9, 8]},
+			"faces": {
+				"north": {"uv": [16, 16, 0, 0], "texture": "#cross"},
+				"south": {"uv": [0, 16, 16, 0], "texture": "#cross"}
+			}
+		}
+	]
+}

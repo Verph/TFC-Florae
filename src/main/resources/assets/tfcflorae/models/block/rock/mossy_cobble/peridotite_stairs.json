@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobble/peridotite",
-    "top": "tfcflorae:block/rock/mossy_cobble/peridotite",
-    "side": "tfcflorae:block/rock/mossy_cobble/peridotite"
+    "bottom": "tfc:block/rock/mossy_cobble/peridotite",
+    "top": "tfc:block/rock/mossy_cobble/peridotite",
+    "side": "tfc:block/rock/mossy_cobble/peridotite"
   }
 }

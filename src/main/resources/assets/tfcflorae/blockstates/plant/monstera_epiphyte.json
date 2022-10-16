@@ -1,0 +1,131 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0|1|2|3",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_0",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_1",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_2",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_3",
+		  "weight": 1,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_4",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0|1|2|3",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_0",
+		  "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_1",
+		  "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_2",
+		  "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_3",
+		  "weight": 1
+        },
+        {
+          "model": "tfcflorae:block/plant/monstera/monstera_epiphyte_4",
+		  "weight": 1
+        }
+      ]
+    }
+  ]
+}

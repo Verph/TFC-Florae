@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "tfc:random_property",
+      "state": {
+        "Name": "tfcflorae:plant/wood_bitter_vetch",
+        "Properties": {
+          "age": "1",
+          "stage": "2"
+        }
+      },
+      "property": "age"
+    }
+  }
+}

@@ -1,8 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/leaves_overlay",
+  "parent": "block/leaves",
   "textures": {
-    "all": "tfcflorae:block/wood/leaves/yellow_ipe",
-    "overlay": "tfcflorae:block/wood/leaves/yellow_ipe"
+    "all": "tfcflorae:block/wood/leaves/yellow_ipe"
   }
 }

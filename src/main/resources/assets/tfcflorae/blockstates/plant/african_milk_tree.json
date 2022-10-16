@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"stage": "0",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/african_milk_tree/african_milk_tree_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/african_milk_tree/african_milk_tree_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/african_milk_tree/african_milk_tree_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/african_milk_tree/african_milk_tree_upper_1"
+        }
+      ]
+    }
+  ]
+}

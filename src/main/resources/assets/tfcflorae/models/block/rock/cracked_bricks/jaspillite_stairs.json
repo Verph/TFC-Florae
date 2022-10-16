@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_bricks/jaspillite",
-    "top": "tfcflorae:block/rock/cracked_bricks/jaspillite",
-    "side": "tfcflorae:block/rock/cracked_bricks/jaspillite"
+    "bottom": "tfc:block/rock/cracked_bricks/jaspillite",
+    "top": "tfc:block/rock/cracked_bricks/jaspillite",
+    "side": "tfc:block/rock/cracked_bricks/jaspillite"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "feature": "tfc:glow_lichen",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 25
+    },
+    {
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 20
+        }
+      },
+      "type": "minecraft:count"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "min_inclusive": {
+          "above_bottom": -20
+        },
+        "max_inclusive": {
+          "absolute": 120
+        },
+        "type": "minecraft:uniform"
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "heightmap": "OCEAN_FLOOR_WG",
+      "max_inclusive": -13,
+      "type": "minecraft:surface_relative_threshold_filter"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

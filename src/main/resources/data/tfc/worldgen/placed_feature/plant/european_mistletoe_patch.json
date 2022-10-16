@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/european_mistletoe_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 0,
+      "max_temperature": 15,
+      "min_rainfall": 150,
+      "max_rainfall": 330,
+      "fuzzy": true
+    }
+  ]
+}

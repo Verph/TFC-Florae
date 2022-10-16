@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/bird_of_paradise/bird_of_paradise_1"
+  }
+}

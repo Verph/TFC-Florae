@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/smooth/soapstone",
-    "top": "tfcflorae:block/rock/smooth/soapstone",
-    "side": "tfcflorae:block/rock/smooth/soapstone"
+    "bottom": "tfc:block/rock/smooth/soapstone",
+    "top": "tfc:block/rock/smooth/soapstone",
+    "side": "tfc:block/rock/smooth/soapstone"
   }
 }

@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfcflorae:block/rock/cobble/greenschist",
-    "top": "tfcflorae:block/rock/cobble/greenschist",
-    "side": "tfcflorae:block/rock/cobble/greenschist"
+    "bottom": "tfc:block/rock/cobble/greenschist",
+    "top": "tfc:block/rock/cobble/greenschist",
+    "side": "tfc:block/rock/cobble/greenschist"
   }
 }

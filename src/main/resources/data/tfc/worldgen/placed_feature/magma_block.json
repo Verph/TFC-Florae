@@ -1,0 +1,32 @@
+{
+  "feature": "tfc:magma_block",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+		"tag": "tfcflorae:smoke_block"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 49
+        },
+        "max_inclusive": {
+          "absolute": 61
+        }
+      }
+    }
+  ]
+}

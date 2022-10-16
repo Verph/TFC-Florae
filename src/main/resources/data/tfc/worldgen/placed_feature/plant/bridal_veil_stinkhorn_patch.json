@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/bridal_veil_stinkhorn_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 14
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 20,
+      "max_temperature": 32,
+      "min_rainfall": 150,
+      "max_rainfall": 450,
+      "min_forest": "normal",
+      "fuzzy": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcflorae:block/plant/jack_in_the_pulpit/jack_in_the_pulpit_3"
+  }
+}

@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:ceramics/earthenware/clay",
+          "name": "tfcflorae:ceramic/earthenware/clay",
           "functions": [
             {
               "function": "minecraft:set_count",

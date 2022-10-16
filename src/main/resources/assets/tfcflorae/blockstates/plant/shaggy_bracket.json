@@ -1,0 +1,192 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "0",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_1",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_1",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_2",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_2",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_2",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_3",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_3",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_3",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

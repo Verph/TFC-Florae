@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/cracked_bricks/schist_slab"
+      "model": "tfc:block/rock/cracked_bricks/schist_slab"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/cracked_bricks/schist_slab_top"
+      "model": "tfc:block/rock/cracked_bricks/schist_slab_top"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/cracked_bricks/schist"
+      "model": "tfc:block/rock/cracked_bricks/schist"
     }
   }
 }

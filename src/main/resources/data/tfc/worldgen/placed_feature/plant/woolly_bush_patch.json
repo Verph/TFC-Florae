@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/woolly_bush_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 8,
+      "max_temperature": 28,
+      "min_rainfall": 105,
+      "max_rainfall": 210,
+      "fuzzy": true
+    }
+  ]
+}

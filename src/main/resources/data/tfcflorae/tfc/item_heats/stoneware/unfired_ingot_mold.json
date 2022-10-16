@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired_ingot_mold"
+    "item": "tfcflorae:ceramic/stoneware/unfired/ingot_mold"
   },
   "heat_capacity": 0.2
 }

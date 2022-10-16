@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/bricks/porphyry",
-    "top": "tfcflorae:block/rock/bricks/porphyry",
-    "side": "tfcflorae:block/rock/bricks/porphyry"
+    "bottom": "tfc:block/rock/bricks/porphyry",
+    "top": "tfc:block/rock/bricks/porphyry",
+    "side": "tfc:block/rock/bricks/porphyry"
   }
 }

@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 320,
+    "max_rain": 500,
+    "min_temp": -1,
+    "max_temp": 30,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/bald_cypress"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/bald_cypress"
+      }
+    ],
+    "normal_tree": "tfc:tree/wetland_trees/bald_cypress",
+    "dead_tree": "tfc:tree/wetland_trees/bald_cypress_dead",
+    "fallen_log": "tfcflorae:wood/log/bald_cypress",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/bald_cypress",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/bald_cypress",
+    "old_growth_tree": "tfc:tree/wetland_trees/bald_cypress"
+  }
+}

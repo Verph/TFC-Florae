@@ -1,0 +1,96 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shortest_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shortest_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shortest_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shortest_3",
+		  "weight": 2
+		}
+	  ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shorter_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shorter_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shorter_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_shorter_3",
+		  "weight": 2
+		}
+	  ]
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_short_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_short_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_short_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_short_3",
+		  "weight": 2
+		}
+	  ]
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": [
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_0",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_1",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_2",
+		  "weight": 1
+		},
+		{
+		  "model": "tfcflorae:block/plant/goosegrass/goosegrass_3",
+		  "weight": 2
+		}
+	  ]
+    }
+  ]
+}

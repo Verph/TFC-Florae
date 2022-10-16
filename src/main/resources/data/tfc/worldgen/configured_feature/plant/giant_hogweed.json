@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:poison_tall_plant",
+  "config": {
+    "block": "tfcflorae:plant/giant_hogweed"
+  }
+}

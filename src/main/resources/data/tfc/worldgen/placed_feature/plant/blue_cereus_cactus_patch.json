@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/blue_cereus_cactus_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 17,
+      "max_temperature": 34,
+      "min_rainfall": 30,
+      "max_rainfall": 110,
+      "fuzzy": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/cobbled_bricks/slab/bottom/gneiss"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/cobbled_bricks/slab/top/gneiss"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/cobbled_bricks/gneiss"
+    }
+  }
+}

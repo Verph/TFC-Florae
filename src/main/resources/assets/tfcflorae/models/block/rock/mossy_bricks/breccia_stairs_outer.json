@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_bricks/breccia",
-    "top": "tfcflorae:block/rock/mossy_bricks/breccia",
-    "side": "tfcflorae:block/rock/mossy_bricks/breccia"
+    "bottom": "tfc:block/rock/mossy_bricks/breccia",
+    "top": "tfc:block/rock/mossy_bricks/breccia",
+    "side": "tfc:block/rock/mossy_bricks/breccia"
   }
 }

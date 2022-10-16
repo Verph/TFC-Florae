@@ -43,10 +43,13 @@ public class TFCFlorae
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
         TFCFFeatures.FEATURES.register(bus);
+        TFCFFeatures.TRUNK_DECOR.register(bus);
+        TFCFFeatures.LEAF_DECOR.register(bus);
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
         TFCFSounds.SOUNDS.register(bus);
+        TFCFForgeEventHandler.init();
 
         Packets.init();
 

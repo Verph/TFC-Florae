@@ -1,0 +1,27 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:jabuticabeira_dead/1",
+      "tfc:jabuticabeira_dead/2",
+      "tfc:jabuticabeira_dead/3",
+      "tfc:jabuticabeira_dead/4",
+      "tfc:jabuticabeira_dead/5",
+      "tfc:jabuticabeira_dead/6",
+      "tfc:jabuticabeira_dead/7",
+      "tfc:jabuticabeira_dead/8",
+      "tfc:jabuticabeira_dead/9",
+      "tfc:jabuticabeira_dead/10",
+      "tfc:jabuticabeira_dead/11",
+      "tfc:jabuticabeira_dead/12",
+      "tfc:jabuticabeira_dead/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true
+    }
+  }
+}

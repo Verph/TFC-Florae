@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_wall_side_tall",
   "textures": {
-    "wall": "tfcflorae:block/rock/smooth/siltstone"
+    "wall": "tfc:block/rock/smooth/siltstone"
   }
 }

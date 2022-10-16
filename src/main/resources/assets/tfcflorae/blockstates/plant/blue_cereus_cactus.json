@@ -1,0 +1,100 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"stage": "0",
+		"age": "0|1|2",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_small_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+		"age": "0|1|2",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_small_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+		"age": "0|1|2",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_small_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+		"age": "0|1|2",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_small_upper_1"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+		"age": "3",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_large_lower_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "0",
+		"age": "3",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_large_upper_0"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+		"age": "3",
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_large_lower_1"
+        }
+      ]
+    },
+    {
+      "when": {
+		"stage": "1",
+		"age": "3",
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/blue_cereus_cactus/blue_cereus_cactus_large_upper_1"
+        }
+      ]
+    }
+  ]
+}

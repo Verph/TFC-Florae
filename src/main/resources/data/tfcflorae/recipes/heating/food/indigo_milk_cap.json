@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "tfcflorae:plant/indigo_milk_cap"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "tfcflorae:food/roasted_indigo_milk_cap"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

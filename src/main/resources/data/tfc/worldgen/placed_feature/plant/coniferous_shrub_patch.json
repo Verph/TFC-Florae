@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/coniferous_shrub_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -25,
+      "max_temperature": 5,
+      "min_rainfall": 60,
+      "max_rainfall": 280,
+      "fuzzy": true
+    }
+  ]
+}

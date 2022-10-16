@@ -75,11 +75,8 @@
     "tfc:tree/yellow_meranti_entry",
     "tfc:tree/yew_entry",
     "tfc:tree/zebrawood_entry",
-    "tfc:tree/black_willow_entry",
-    "tfc:tree/bald_cypress_entry",
-    "tfc:tree/red_cypress_entry",
-    "tfc:tree/red_mangrove_entry",
-    "tfc:tree/white_mangrove_entry",
-    "tfc:tree/baobab_entry"
+    "tfc:tree/baobab_entry",
+    "tfc:tree/joshua_entry",
+    "tfc:tree/jabuticabeira_entry"
   ]
 }

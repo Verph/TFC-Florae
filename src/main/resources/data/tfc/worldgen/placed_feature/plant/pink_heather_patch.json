@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/pink_heather_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -5,
+      "max_temperature": 20,
+      "min_rainfall": 100,
+      "max_rainfall": 290,
+      "fuzzy": true
+    }
+  ]
+}

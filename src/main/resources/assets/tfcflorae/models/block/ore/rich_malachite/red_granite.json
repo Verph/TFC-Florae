@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/red_granite",
+    "particle": "tfcflorae:block/rock/raw/red_granite",
+    "overlay": "tfc:block/ore/rich_malachite"
+  }
+}

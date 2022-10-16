@@ -1,0 +1,218 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_roots_0"
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "0",
+        "part": "upper"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_4",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_5",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_6",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_7",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_8",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_9",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_10",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_11",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_12",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_13",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_14",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_short_15",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "1",
+        "part": "upper"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_4",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_5",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_6",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_7",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_8",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_9",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_10",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_11",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_12",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_13",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_14",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_single_15",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "2",
+        "part": "upper"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_4",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_tall_5",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "age": "3",
+        "part": "upper"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_mature_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_mature_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_mature_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_mature_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/sawgrass/sawgrass_mature_4",
+		  "weight": 1
+		}
+      ]
+    }
+  ]
+}
