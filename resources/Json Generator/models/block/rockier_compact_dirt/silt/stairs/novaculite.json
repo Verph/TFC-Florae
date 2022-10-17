@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rockier_compact_dirt/silt/novaculite",
+    "top": "tfcflorae:block/rockier_compact_dirt/silt/novaculite",
+    "side": "tfcflorae:block/rockier_compact_dirt/silt/novaculite"
+  }
+}

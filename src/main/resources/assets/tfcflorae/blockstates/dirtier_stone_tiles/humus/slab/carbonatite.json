@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/slab/bottom/carbonatite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/slab/top/carbonatite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/carbonatite"
+    }
+  }
+}

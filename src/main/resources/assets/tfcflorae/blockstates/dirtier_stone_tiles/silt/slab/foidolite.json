@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/slab/bottom/foidolite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/slab/top/foidolite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silt/foidolite"
+    }
+  }
+}

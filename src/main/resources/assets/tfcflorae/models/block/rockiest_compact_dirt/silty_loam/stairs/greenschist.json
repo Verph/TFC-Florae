@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rockiest_compact_dirt/silty_loam/greenschist",
+    "top": "tfcflorae:block/rockiest_compact_dirt/silty_loam/greenschist",
+    "side": "tfcflorae:block/rockiest_compact_dirt/silty_loam/greenschist"
+  }
+}

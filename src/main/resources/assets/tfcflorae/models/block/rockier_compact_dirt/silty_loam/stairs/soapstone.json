@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rockier_compact_dirt/silty_loam/soapstone",
+    "top": "tfcflorae:block/rockier_compact_dirt/silty_loam/soapstone",
+    "side": "tfcflorae:block/rockier_compact_dirt/silty_loam/soapstone"
+  }
+}

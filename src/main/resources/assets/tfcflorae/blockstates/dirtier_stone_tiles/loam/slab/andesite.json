@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "type=bottom": {	
+    "type=bottom": {
       "model": "tfcflorae:block/dirtier_stone_tiles/loam/slab/bottom/andesite"
     },
     "type=top": {

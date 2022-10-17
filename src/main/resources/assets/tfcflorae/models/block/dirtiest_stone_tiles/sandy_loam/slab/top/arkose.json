@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/arkose",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/arkose",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/arkose"
+  }
+}

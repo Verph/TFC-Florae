@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/humus/dripstone",
+    "top": "tfcflorae:block/pebble_compact_dirt/humus/dripstone",
+    "side": "tfcflorae:block/pebble_compact_dirt/humus/dripstone"
+  }
+}

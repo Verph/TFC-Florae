@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tfcflorae:block/pebble_compact_dirt/loam/boninite"
+  }
+}

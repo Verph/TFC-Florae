@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/pebble_compact_dirt/loam/slab/bottom/novaculite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/pebble_compact_dirt/loam/slab/top/novaculite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/pebble_compact_dirt/loam/novaculite"
+    }
+  }
+}

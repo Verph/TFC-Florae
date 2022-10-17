@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/flagstone/siltstone_top",
+    "side": "tfcflorae:block/rock/flagstone/siltstone_side"
+  }
+}

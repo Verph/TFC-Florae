@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rocky_compact_dirt/silt/claystone",
+    "top": "tfcflorae:block/rocky_compact_dirt/silt/claystone",
+    "side": "tfcflorae:block/rocky_compact_dirt/silt/claystone"
+  }
+}

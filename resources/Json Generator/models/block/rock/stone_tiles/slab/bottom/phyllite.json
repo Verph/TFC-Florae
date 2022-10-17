@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/stone_tiles/phyllite",
+    "top": "tfcflorae:block/rock/stone_tiles/phyllite",
+    "side": "tfcflorae:block/rock/stone_tiles/phyllite"
+  }
+}

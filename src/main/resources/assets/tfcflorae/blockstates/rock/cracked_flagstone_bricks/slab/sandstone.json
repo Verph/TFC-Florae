@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/cracked_flagstone_bricks/slab/bottom/sandstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/cracked_flagstone_bricks/slab/top/sandstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/cracked_flagstone_bricks/sandstone"
+    }
+  }
+}

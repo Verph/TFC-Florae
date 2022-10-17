@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/stone_tiles/peridotite",
+    "top": "tfcflorae:block/rock/stone_tiles/peridotite",
+    "side": "tfcflorae:block/rock/stone_tiles/peridotite"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/post/porphyry"
+      }
+    },
+    {
+      "when": {
+        "north": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/porphyry",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/porphyry",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/porphyry",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "low"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/porphyry",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/tall/porphyry",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/tall/porphyry",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/tall/porphyry",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "tall"
+      },
+      "apply": {
+        "model": "tfcflorae:block/rock/mossy_flagstone_bricks/wall/side/tall/porphyry",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

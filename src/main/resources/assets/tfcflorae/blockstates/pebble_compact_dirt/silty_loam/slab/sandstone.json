@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/slab/bottom/sandstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/slab/top/sandstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/sandstone"
+    }
+  }
+}

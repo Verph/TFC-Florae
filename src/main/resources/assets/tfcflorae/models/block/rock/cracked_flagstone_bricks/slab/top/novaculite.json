@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cracked_flagstone_bricks/novaculite",
+    "top": "tfcflorae:block/rock/cracked_flagstone_bricks/novaculite",
+    "side": "tfcflorae:block/rock/cracked_flagstone_bricks/novaculite"
+  }
+}

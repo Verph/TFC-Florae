@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/humus/sandstone",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/humus/sandstone",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/humus/sandstone"
+  }
+}

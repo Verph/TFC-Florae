@@ -123,22 +123,40 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
     @Override
     public Supplier<? extends SlabBlock> getSlabTFC(RegistryRock rock, TFCFBlockType type)
     {
-        //return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).slab();
-        return null;
+        if (TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null)
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).slab();
+        }
+        else
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFBlockType.COBBLED_BRICKS).slab();
+        }
     }
 
     @Override
     public Supplier<? extends StairBlock> getStairTFC(RegistryRock rock, TFCFBlockType type)
     {
-        //return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).stair();
-        return null;
+        if (TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null)
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).stair();
+        }
+        else
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFBlockType.COBBLED_BRICKS).stair();
+        }
     }
 
     @Override
     public Supplier<? extends WallBlock> getWallTFC(RegistryRock rock, TFCFBlockType type)
     {
-        //return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).wall();
-        return null;
+        if (TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null)
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).wall();
+        }
+        else
+        {
+            return TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFBlockType.COBBLED_BRICKS).wall();
+        }
     }
 
     @Override
@@ -167,14 +185,18 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
 
     public enum TFCFBlockType implements StringRepresentable
     {
-        STONE_TILES((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true),
+        STONE_TILES((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()),
+                    (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true),
         COBBLED_BRICKS((rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
                         (rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
         FLAGSTONE_BRICKS((rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
                         (rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
-        MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
-        MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
-        CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true);
+        MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                            (rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true);
 
         public static final TFCFBlockType[] VALUES = TFCFBlockType.values();
 
@@ -250,7 +272,7 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
         }
     }
 
-    /*public static void registerDefaultRocks()
+    public static void registerDefaultRocks()
     {
         for (TFCFRock rock : TFCFRock.values())
         {
@@ -273,5 +295,5 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
                 category == RockCategory.IGNEOUS_INTRUSIVE || category == RockCategory.METAMORPHIC
             ));
         }
-    }*/
+    }
 }

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/stone_tiles/arkose",
+    "top": "tfcflorae:block/rock/stone_tiles/arkose",
+    "side": "tfcflorae:block/rock/stone_tiles/arkose"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/slab/bottom/porphyry"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/slab/top/porphyry"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/loam/porphyry"
+    }
+  }
+}

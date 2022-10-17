@@ -2,206 +2,206 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite"
     },
     "facing=west,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite"
     },
     "facing=west,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite"
     },
     "facing=north,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite"
     },
     "facing=west,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite"
     },
     "facing=north,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/dolomite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/outer/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/dolomite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/stairs/inner/dolomite",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/dolomite",
       "x": 180,
       "y": 270,
       "uvlock": true

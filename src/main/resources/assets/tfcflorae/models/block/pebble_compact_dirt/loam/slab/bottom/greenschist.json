@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/greenschist",
+    "top": "tfcflorae:block/pebble_compact_dirt/loam/greenschist",
+    "side": "tfcflorae:block/pebble_compact_dirt/loam/greenschist"
+  }
+}

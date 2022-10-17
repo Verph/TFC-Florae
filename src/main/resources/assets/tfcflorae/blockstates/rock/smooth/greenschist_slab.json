@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfc:block/rock/smooth/greenschist_slab"
+      "model": "tfcflorae:block/rock/smooth/greenschist_slab"
     },
     "type=top": {
-      "model": "tfc:block/rock/smooth/greenschist_slab_top"
+      "model": "tfcflorae:block/rock/smooth/greenschist_slab_top"
     },
     "type=double": {
-      "model": "tfc:block/rock/smooth/greenschist"
+      "model": "tfcflorae:block/rock/smooth/greenschist"
     }
   }
 }

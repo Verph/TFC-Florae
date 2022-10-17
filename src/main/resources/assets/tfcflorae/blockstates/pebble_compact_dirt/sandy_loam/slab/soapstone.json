@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/slab/bottom/soapstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/slab/top/soapstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/soapstone"
+    }
+  }
+}

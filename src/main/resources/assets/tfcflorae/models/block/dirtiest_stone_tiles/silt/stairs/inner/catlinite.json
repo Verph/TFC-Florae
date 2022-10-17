@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/silt/catlinite",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/silt/catlinite",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/silt/catlinite"
+  }
+}

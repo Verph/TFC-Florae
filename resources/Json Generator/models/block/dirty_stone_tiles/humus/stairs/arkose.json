@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirty_stone_tiles/humus/arkose",
+    "top": "tfcflorae:block/dirty_stone_tiles/humus/arkose",
+    "side": "tfcflorae:block/dirty_stone_tiles/humus/arkose"
+  }
+}

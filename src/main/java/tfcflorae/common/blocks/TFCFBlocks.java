@@ -169,7 +169,7 @@ public class TFCFBlocks
     );
 
     public static final Map<TFCFRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> TFCF_ROCKTYPE_DECORATIONS = RockTypeDecoTFCMapper(TFCFRock.class);
-    //public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
+    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
     public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFCF_ROCK_DECORATIONS = RockDecoTFCFMapper(TFCFRock.class);
 
     // Wood
@@ -724,7 +724,7 @@ public class TFCFBlocks
         return Map;
     }
 
-    /*private static Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoTFCMapper(Class<Rock> enumClass)
+    private static Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoTFCMapper(Class<Rock> enumClass)
     {
         Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
         for (Rock rock : enumClass.getEnumConstants())
@@ -763,7 +763,7 @@ public class TFCFBlocks
             Map.put(rock, typeMap);
         }
         return Map;
-    }*/
+    }
 
     private static Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoTFCFMapper(Class<TFCFRock> enumClass)
     {

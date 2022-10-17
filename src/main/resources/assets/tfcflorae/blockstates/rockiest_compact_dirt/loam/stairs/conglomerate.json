@@ -2,206 +2,206 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate"
     },
     "facing=west,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate"
     },
     "facing=west,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate"
     },
     "facing=north,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate"
     },
     "facing=west,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate"
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate"
     },
     "facing=north,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/conglomerate",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/outer/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/conglomerate",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rockiest_compact_dirt/loam/stairs/inner/conglomerate",
+      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/conglomerate",
       "x": 180,
       "y": 270,
       "uvlock": true

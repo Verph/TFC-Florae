@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/humus/mylonite",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/humus/mylonite",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/humus/mylonite"
+  }
+}

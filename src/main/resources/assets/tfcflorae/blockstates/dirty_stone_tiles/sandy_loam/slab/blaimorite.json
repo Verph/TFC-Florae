@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/slab/bottom/blaimorite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/slab/top/blaimorite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/sandy_loam/blaimorite"
+    }
+  }
+}

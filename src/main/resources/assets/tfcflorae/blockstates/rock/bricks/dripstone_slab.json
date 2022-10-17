@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfc:block/rock/bricks/dripstone_slab"
+      "model": "tfcflorae:block/rock/bricks/dripstone_slab"
     },
     "type=top": {
-      "model": "tfc:block/rock/bricks/dripstone_slab_top"
+      "model": "tfcflorae:block/rock/bricks/dripstone_slab_top"
     },
     "type=double": {
-      "model": "tfc:block/rock/bricks/dripstone"
+      "model": "tfcflorae:block/rock/bricks/dripstone"
     }
   }
 }

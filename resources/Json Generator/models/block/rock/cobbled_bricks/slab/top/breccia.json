@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobbled_bricks/breccia_side",
+    "top": "tfcflorae:block/rock/cobbled_bricks/breccia_side",
+    "side": "tfcflorae:block/rock/cobbled_bricks/breccia_side"
+  }
+}

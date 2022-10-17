@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfc:block/rock/pressure_plate/chalk"
+      "model": "tfcflorae:block/rock/pressure_plate/chalk"
     },
     "powered=true": {
-      "model": "tfc:block/rock/pressure_plate/chalk_down"
+      "model": "tfcflorae:block/rock/pressure_plate/chalk_down"
     }
   }
 }

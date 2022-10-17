@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silty_loam/slab/bottom/catlinite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silty_loam/slab/top/catlinite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/silty_loam/catlinite"
+    }
+  }
+}

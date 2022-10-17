@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfc:block/rock/pressure_plate/dripstone"
+      "model": "tfcflorae:block/rock/pressure_plate/dripstone"
     },
     "powered=true": {
-      "model": "tfc:block/rock/pressure_plate/dripstone_down"
+      "model": "tfcflorae:block/rock/pressure_plate/dripstone_down"
     }
   }
 }

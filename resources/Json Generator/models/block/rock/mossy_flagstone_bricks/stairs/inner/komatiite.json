@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/mossy_flagstone_bricks/komatiite",
+    "top": "tfcflorae:block/rock/mossy_flagstone_bricks/komatiite",
+    "side": "tfcflorae:block/rock/mossy_flagstone_bricks/komatiite"
+  }
+}

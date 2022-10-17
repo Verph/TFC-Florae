@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtier_stone_tiles/silty_loam/laterite",
+    "top": "tfcflorae:block/dirtier_stone_tiles/silty_loam/laterite",
+    "side": "tfcflorae:block/dirtier_stone_tiles/silty_loam/laterite"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/stone_tiles/slab/bottom/travertine"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/stone_tiles/slab/top/travertine"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/stone_tiles/travertine"
+    }
+  }
+}

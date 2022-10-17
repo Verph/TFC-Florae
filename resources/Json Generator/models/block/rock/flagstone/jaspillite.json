@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/flagstone/jaspillite_top",
+    "side": "tfcflorae:block/rock/flagstone/jaspillite_side"
+  }
+}

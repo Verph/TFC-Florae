@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tfcflorae:block/rock/column/sandstone",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tfcflorae:block/rock/column/sandstone"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/rock/column/sandstone",
+      "x": 90
+    }
+  }
+}

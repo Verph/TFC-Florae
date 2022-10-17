@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rocky_compact_dirt/humus/slab/bottom/laterite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rocky_compact_dirt/humus/slab/top/laterite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rocky_compact_dirt/humus/laterite"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/slab/bottom/jaspillite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/slab/top/jaspillite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/jaspillite"
+    }
+  }
+}

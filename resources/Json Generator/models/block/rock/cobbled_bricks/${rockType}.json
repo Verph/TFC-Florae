@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/cobbled_bricks/${rockType}_top",
+    "side": "tfcflorae:block/rock/cobbled_bricks/${rockType}_side"
+  }
+}

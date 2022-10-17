@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/polished_column/soapstone_top",
+    "side": "tfcflorae:block/rock/polished_column/soapstone_side"
+  }
+}

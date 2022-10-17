@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/slab/bottom/breccia"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/slab/top/breccia"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtiest_stone_tiles/sandy_loam/breccia"
+    }
+  }
+}

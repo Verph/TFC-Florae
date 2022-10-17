@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/slab/bottom/peridotite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/slab/top/peridotite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rocky_compact_dirt/silt/peridotite"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rocky_compact_dirt/silt/diorite",
+    "top": "tfcflorae:block/rocky_compact_dirt/silt/diorite",
+    "side": "tfcflorae:block/rocky_compact_dirt/silt/diorite"
+  }
+}

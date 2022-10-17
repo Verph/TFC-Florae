@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtiest_stone_tiles/silt/gneiss",
+    "top": "tfcflorae:block/dirtiest_stone_tiles/silt/gneiss",
+    "side": "tfcflorae:block/dirtiest_stone_tiles/silt/gneiss"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/flagstone/arkose_top",
+    "side": "tfcflorae:block/rock/flagstone/arkose_side"
+  }
+}

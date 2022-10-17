@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtier_stone_tiles/loam/basalt",
+    "top": "tfcflorae:block/dirtier_stone_tiles/loam/basalt",
+    "side": "tfcflorae:block/dirtier_stone_tiles/loam/basalt"
+  }
+}

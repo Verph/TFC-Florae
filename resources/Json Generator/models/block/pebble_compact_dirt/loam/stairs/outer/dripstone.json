@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/dripstone",
+    "top": "tfcflorae:block/pebble_compact_dirt/loam/dripstone",
+    "side": "tfcflorae:block/pebble_compact_dirt/loam/dripstone"
+  }
+}

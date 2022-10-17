@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/rock/chiseled/travertine"
+      "model": "tfcflorae:block/rock/chiseled/travertine"
     }
   }
 }

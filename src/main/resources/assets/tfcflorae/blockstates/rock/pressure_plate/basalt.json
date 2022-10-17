@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfc:block/rock/pressure_plate/basalt"
+      "model": "tfcflorae:block/rock/pressure_plate/basalt"
     },
     "powered=true": {
-      "model": "tfc:block/rock/pressure_plate/basalt_down"
+      "model": "tfcflorae:block/rock/pressure_plate/basalt_down"
     }
   }
 }

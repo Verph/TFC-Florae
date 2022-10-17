@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tfcflorae:block/rock/cracked_flagstone_bricks/sandstone"
+  }
+}

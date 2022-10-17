@@ -2,10 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "powered=false": {
-      "model": "tfc:block/rock/pressure_plate/gabbro"
+      "model": "tfcflorae:block/rock/pressure_plate/gabbro"
     },
     "powered=true": {
-      "model": "tfc:block/rock/pressure_plate/gabbro_down"
+      "model": "tfcflorae:block/rock/pressure_plate/gabbro_down"
     }
   }
 }

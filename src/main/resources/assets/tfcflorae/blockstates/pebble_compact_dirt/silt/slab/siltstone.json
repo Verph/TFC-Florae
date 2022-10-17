@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/slab/bottom/siltstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/slab/top/siltstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/pebble_compact_dirt/silt/siltstone"
+    }
+  }
+}

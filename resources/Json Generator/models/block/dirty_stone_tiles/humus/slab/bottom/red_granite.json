@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/dirty_stone_tiles/humus/red_granite",
+    "top": "tfcflorae:block/dirty_stone_tiles/humus/red_granite",
+    "side": "tfcflorae:block/dirty_stone_tiles/humus/red_granite"
+  }
+}

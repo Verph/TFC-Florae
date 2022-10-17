@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/travertine",
+    "top": "tfcflorae:block/pebble_compact_dirt/loam/travertine",
+    "side": "tfcflorae:block/pebble_compact_dirt/loam/travertine"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/flagstone_bricks/red_granite",
+    "top": "tfcflorae:block/rock/flagstone_bricks/red_granite",
+    "side": "tfcflorae:block/rock/flagstone_bricks/red_granite"
+  }
+}

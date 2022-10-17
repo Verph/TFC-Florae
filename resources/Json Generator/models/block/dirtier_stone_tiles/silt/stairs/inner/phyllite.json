@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/dirtier_stone_tiles/silt/phyllite",
+    "top": "tfcflorae:block/dirtier_stone_tiles/silt/phyllite",
+    "side": "tfcflorae:block/dirtier_stone_tiles/silt/phyllite"
+  }
+}

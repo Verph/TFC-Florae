@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cracked_flagstone_bricks/chert",
+    "top": "tfcflorae:block/rock/cracked_flagstone_bricks/chert",
+    "side": "tfcflorae:block/rock/cracked_flagstone_bricks/chert"
+  }
+}

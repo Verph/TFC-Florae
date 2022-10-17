@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/rock/hardened/siltstone"
+      "model": "tfcflorae:block/rock/hardened/siltstone"
     }
   }
 }

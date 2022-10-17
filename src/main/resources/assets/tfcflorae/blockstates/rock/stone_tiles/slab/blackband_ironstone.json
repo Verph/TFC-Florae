@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/stone_tiles/slab/bottom/blackband_ironstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/stone_tiles/slab/top/blackband_ironstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/stone_tiles/blackband_ironstone"
+    }
+  }
+}

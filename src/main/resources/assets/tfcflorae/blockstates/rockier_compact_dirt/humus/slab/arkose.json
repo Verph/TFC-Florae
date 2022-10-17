@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rockier_compact_dirt/humus/slab/bottom/arkose"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rockier_compact_dirt/humus/slab/top/arkose"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rockier_compact_dirt/humus/arkose"
+    }
+  }
+}

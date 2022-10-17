@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/rock/raw/blackband_ironstone"
+      "model": "tfcflorae:block/rock/raw/blackband_ironstone"
     }
   }
 }

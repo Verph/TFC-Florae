@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rockier_compact_dirt/humus/dacite",
+    "top": "tfcflorae:block/rockier_compact_dirt/humus/dacite",
+    "side": "tfcflorae:block/rockier_compact_dirt/humus/dacite"
+  }
+}

@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfc:block/rock/cobble/breccia_slab"
+      "model": "tfcflorae:block/rock/cobble/breccia_slab"
     },
     "type=top": {
-      "model": "tfc:block/rock/cobble/breccia_slab_top"
+      "model": "tfcflorae:block/rock/cobble/breccia_slab_top"
     },
     "type=double": {
-      "model": "tfc:block/rock/cobble/breccia"
+      "model": "tfcflorae:block/rock/cobble/breccia"
     }
   }
 }

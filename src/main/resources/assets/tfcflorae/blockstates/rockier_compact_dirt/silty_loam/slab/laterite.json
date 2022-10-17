@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rockier_compact_dirt/silty_loam/slab/bottom/laterite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rockier_compact_dirt/silty_loam/slab/top/laterite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rockier_compact_dirt/silty_loam/laterite"
+    }
+  }
+}

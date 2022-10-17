@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/flagstone/carbonatite_top",
+    "side": "tfcflorae:block/rock/flagstone/carbonatite_side"
+  }
+}

@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "": {
-      "model": "tfc:block/rock/raw/laterite"
+      "model": "tfcflorae:block/rock/raw/laterite"
     }
   }
 }
