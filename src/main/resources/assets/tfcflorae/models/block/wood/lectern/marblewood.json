@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/marblewood",
-    "base": "tfcflorae:block/wood/lectern/marblewood/base",
-    "front": "tfcflorae:block/wood/lectern/marblewood/front",
-    "sides": "tfcflorae:block/wood/lectern/marblewood/sides",
-    "top": "tfcflorae:block/wood/lectern/marblewood/top",
-    "particle": "tfcflorae:block/wood/lectern/marblewood/sides"
+    "base": "tfcflorae:block/wood/lectern/base/marblewood",
+    "front": "tfcflorae:block/wood/lectern/front/marblewood",
+    "sides": "tfcflorae:block/wood/lectern/sides/marblewood",
+    "top": "tfcflorae:block/wood/lectern/top/marblewood",
+    "particle": "tfcflorae:block/wood/lectern/sides/marblewood"
   }
 }

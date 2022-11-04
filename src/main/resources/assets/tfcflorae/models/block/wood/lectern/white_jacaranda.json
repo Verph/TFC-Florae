@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/white_jacaranda",
-    "base": "tfcflorae:block/wood/lectern/white_jacaranda/base",
-    "front": "tfcflorae:block/wood/lectern/white_jacaranda/front",
-    "sides": "tfcflorae:block/wood/lectern/white_jacaranda/sides",
-    "top": "tfcflorae:block/wood/lectern/white_jacaranda/top",
-    "particle": "tfcflorae:block/wood/lectern/white_jacaranda/sides"
+    "base": "tfcflorae:block/wood/lectern/base/white_jacaranda",
+    "front": "tfcflorae:block/wood/lectern/front/white_jacaranda",
+    "sides": "tfcflorae:block/wood/lectern/sides/white_jacaranda",
+    "top": "tfcflorae:block/wood/lectern/top/white_jacaranda",
+    "particle": "tfcflorae:block/wood/lectern/sides/white_jacaranda"
   }
 }

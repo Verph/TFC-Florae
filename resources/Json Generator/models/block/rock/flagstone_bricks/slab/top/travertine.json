@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/flagstone_bricks/travertine",
-    "top": "tfcflorae:block/rock/flagstone_bricks/travertine",
-    "side": "tfcflorae:block/rock/flagstone_bricks/travertine"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobbled_bricks/laterite_side",
-    "top": "tfcflorae:block/rock/mossy_cobbled_bricks/laterite_side",
-    "side": "tfcflorae:block/rock/mossy_cobbled_bricks/laterite_side"
-  }
-}

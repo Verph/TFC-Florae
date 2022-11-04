@@ -5,6 +5,9 @@ import com.google.common.collect.Lists;
 import com.mojang.datafixers.Products;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
@@ -80,7 +83,7 @@ public class MangroveRootPlacer
 
     protected boolean canGrowThrough(LevelSimulatedReader level, BlockPos pos)
     {
-        return TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> state.is(this.mangroveRootPlacement.canGrowThrough()));
+        return TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> state.is(this.mangroveRootPlacement.canGrowThrough())) || level.isStateAtPosition(pos, state -> state.is(TFCBlocks.SALT_WATER.get()));
     }
 
     private boolean canGrow(LevelSimulatedReader level, Random random, BlockPos pos, Direction direction, BlockPos origin, List<BlockPos> offshootPositions, int rootLength) {
@@ -137,7 +140,7 @@ public class MangroveRootPlacer
 
     protected BlockState applyWaterlogging(LevelSimulatedReader level, BlockPos pos, BlockState state)
     {
-        return state.hasProperty(BlockStateProperties.WATERLOGGED) ? state.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, fluid -> fluid.is(FluidTags.WATER))) : state;
+        return state.hasProperty(BlockStateProperties.WATERLOGGED) ? state.setValue(BlockStateProperties.WATERLOGGED, level.isFluidAtPosition(pos, fluid -> (fluid.is(FluidTags.WATER) || fluid.is(TFCBlocks.SALT_WATER.get().getFluid())))) : state;
     }
 
     public BlockPos trunkOffset(BlockPos pos, Random random)

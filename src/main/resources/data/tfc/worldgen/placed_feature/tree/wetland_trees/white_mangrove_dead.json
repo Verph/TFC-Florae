@@ -1,20 +1,4 @@
 {
   "feature": "tfc:tree/wetland_trees/white_mangrove_dead",
-  "placement": [
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:would_survive",
-        "state": {
-          "Name": "tfcflorae:wood/sapling/white_mangrove",
-          "Properties": {
-            "age": "0",
-            "hanging": "false",
-            "stage": "0",
-            "waterlogged": "false"
-          }
-        }
-      }
-    }
-  ]
+  "placement": []
 }

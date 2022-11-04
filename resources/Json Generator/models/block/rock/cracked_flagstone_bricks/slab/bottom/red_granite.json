@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_flagstone_bricks/red_granite",
-    "top": "tfcflorae:block/rock/cracked_flagstone_bricks/red_granite",
-    "side": "tfcflorae:block/rock/cracked_flagstone_bricks/red_granite"
-  }
-}

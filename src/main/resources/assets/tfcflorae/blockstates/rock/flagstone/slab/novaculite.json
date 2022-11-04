@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/novaculite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/novaculite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/novaculite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/novaculite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/novaculite"
+      "model": "tfcflorae:block/rock/flagstone/novaculite"
     }
   }
 }

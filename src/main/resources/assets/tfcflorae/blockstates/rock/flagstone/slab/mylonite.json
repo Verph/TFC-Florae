@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/mylonite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/mylonite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/mylonite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/mylonite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/mylonite"
+      "model": "tfcflorae:block/rock/flagstone/mylonite"
     }
   }
 }

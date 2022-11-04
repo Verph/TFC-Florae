@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/cataclasite",
     "particle": "tfcflorae:block/rock/gravel/cataclasite",
-    "overlay": "tfcflorae:block/deposit/native_silver"
+    "overlay": "tfc:block/deposit/native_silver"
   }
 }

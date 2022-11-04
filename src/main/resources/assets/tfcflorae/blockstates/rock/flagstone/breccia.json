@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/breccia",
+      "model": "tfcflorae:block/rock/flagstone/breccia",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/breccia"
+      "model": "tfcflorae:block/rock/flagstone/breccia"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/breccia",
+      "model": "tfcflorae:block/rock/flagstone/breccia",
       "x": 90
     }
   }

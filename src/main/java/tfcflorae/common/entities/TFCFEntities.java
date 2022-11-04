@@ -29,20 +29,6 @@ import tfcflorae.common.items.TFCFItems;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
-/**
- * For reference, each living entity needs:
- * - A registered entity renderer
- * - A registered FaunaType for spawn placement
- * - A spawn egg item (and a bucket item if it's bucketable)
- * - Entity attributes, set in this class below
- * - In datagen, a json entry for fauna
- * - In datagen, an entry in biome spawners
- *
- * When making an entity, some rules:
- * - Each synced data parameter and any variable that needs to persist should be serialized
- * - Use Brain or Goals when appropriate, and do not mix the two
- * - Avoid creating unnecessary classes. See the anonymous constructors at the bottom of this class.
- */
 @SuppressWarnings("unused")
 public class TFCFEntities
 {

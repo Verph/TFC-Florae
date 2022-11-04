@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/humus/arkose",
-    "top": "tfcflorae:block/pebble_compact_dirt/humus/arkose",
-    "side": "tfcflorae:block/pebble_compact_dirt/humus/arkose"
-  }
-}

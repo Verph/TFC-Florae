@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/laterite",
-    "top": "tfc:block/rock/cracked_bricks/laterite",
-    "side": "tfc:block/rock/cracked_bricks/laterite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/laterite",
+    "top": "tfcflorae:block/rock/cracked_bricks/laterite",
+    "side": "tfcflorae:block/rock/cracked_bricks/laterite"
   }
 }

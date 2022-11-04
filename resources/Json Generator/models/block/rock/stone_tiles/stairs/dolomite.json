@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/stone_tiles/dolomite",
-    "top": "tfcflorae:block/rock/stone_tiles/dolomite",
-    "side": "tfcflorae:block/rock/stone_tiles/dolomite"
-  }
-}

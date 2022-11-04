@@ -2,206 +2,206 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite"
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite"
     },
     "facing=west,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite"
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite"
     },
     "facing=west,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite"
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite"
     },
     "facing=north,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite"
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite"
     },
     "facing=west,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite"
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite"
     },
     "facing=north,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/rhyolite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/outer/rhyolite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/rhyolite",
+      "model": "tfcflorae:block/rockier_compact_dirt/sandy_loam/stairs/inner/rhyolite",
       "x": 180,
       "y": 270,
       "uvlock": true

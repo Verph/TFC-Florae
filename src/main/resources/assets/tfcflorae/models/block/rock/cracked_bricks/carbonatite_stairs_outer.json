@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/carbonatite",
-    "top": "tfc:block/rock/cracked_bricks/carbonatite",
-    "side": "tfc:block/rock/cracked_bricks/carbonatite"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/carbonatite",
+    "top": "tfcflorae:block/rock/cracked_bricks/carbonatite",
+    "side": "tfcflorae:block/rock/cracked_bricks/carbonatite"
   }
 }

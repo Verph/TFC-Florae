@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/dirty_stone_tiles/sandy_loam/peridotite",
-    "top": "tfcflorae:block/dirty_stone_tiles/sandy_loam/peridotite",
-    "side": "tfcflorae:block/dirty_stone_tiles/sandy_loam/peridotite"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/red_granite",
-    "top": "tfcflorae:block/pebble_compact_dirt/loam/red_granite",
-    "side": "tfcflorae:block/pebble_compact_dirt/loam/red_granite"
-  }
-}

@@ -10,7 +10,7 @@
     },
     {
       "type":"heightmap",
-      "heightmap":"OCEAN_FLOOR"
+      "heightmap":"OCEAN_FLOOR_WG"
     },
     {
       "type":"minecraft:biome"

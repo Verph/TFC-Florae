@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/schist",
+      "model": "tfcflorae:block/rock/flagstone/schist",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/schist"
+      "model": "tfcflorae:block/rock/flagstone/schist"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/schist",
+      "model": "tfcflorae:block/rock/flagstone/schist",
       "x": 90
     }
   }

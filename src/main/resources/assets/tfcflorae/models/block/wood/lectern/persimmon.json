@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/persimmon",
-    "base": "tfcflorae:block/wood/lectern/persimmon/base",
-    "front": "tfcflorae:block/wood/lectern/persimmon/front",
-    "sides": "tfcflorae:block/wood/lectern/persimmon/sides",
-    "top": "tfcflorae:block/wood/lectern/persimmon/top",
-    "particle": "tfcflorae:block/wood/lectern/persimmon/sides"
+    "base": "tfcflorae:block/wood/lectern/base/persimmon",
+    "front": "tfcflorae:block/wood/lectern/front/persimmon",
+    "sides": "tfcflorae:block/wood/lectern/sides/persimmon",
+    "top": "tfcflorae:block/wood/lectern/top/persimmon",
+    "particle": "tfcflorae:block/wood/lectern/sides/persimmon"
   }
 }

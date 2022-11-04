@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockier_compact_dirt/silt/blaimorite",
-    "top": "tfcflorae:block/rockier_compact_dirt/silt/blaimorite",
-    "side": "tfcflorae:block/rockier_compact_dirt/silt/blaimorite"
-  }
-}

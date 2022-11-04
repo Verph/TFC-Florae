@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/rockier_compact_dirt/sandy_loam/dripstone",
-    "top": "tfcflorae:block/rockier_compact_dirt/sandy_loam/dripstone",
-    "side": "tfcflorae:block/rockier_compact_dirt/sandy_loam/dripstone"
-  }
-}

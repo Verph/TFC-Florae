@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirtier_stone_tiles/silt/marble",
-    "top": "tfcflorae:block/dirtier_stone_tiles/silt/marble",
-    "side": "tfcflorae:block/dirtier_stone_tiles/silt/marble"
-  }
-}

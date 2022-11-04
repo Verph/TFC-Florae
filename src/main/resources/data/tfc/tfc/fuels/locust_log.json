@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/locust"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/locust"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/locust"
     }
   ],
   "duration": 1750,

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/dirtier_stone_tiles/humus/diorite",
-    "top": "tfcflorae:block/dirtier_stone_tiles/humus/diorite",
-    "side": "tfcflorae:block/dirtier_stone_tiles/humus/diorite"
-  }
-}

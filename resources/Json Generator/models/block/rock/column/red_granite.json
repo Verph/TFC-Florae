@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/rock/column/red_granite_top",
-    "side": "tfcflorae:block/rock/column/red_granite_side"
-  }
-}

@@ -2,20 +2,6 @@
   "feature": "tfc:tree/wetland_trees/red_mangrove_random",
   "placement": [
     {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:surface_water_depth_filter",
-      "max_water_depth": 5
-    },
-    {
-      "type": "minecraft:heightmap",
-      "heightmap": "OCEAN_FLOOR"
-    },
-    {
-      "type": "minecraft:biome"
-    },
-    {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
@@ -29,6 +15,28 @@
           }
         }
       }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 54
+        },
+        "max_inclusive": {
+          "absolute": 68
+        }
+      }
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 5
     },
     {
       "type": "tfc:climate",

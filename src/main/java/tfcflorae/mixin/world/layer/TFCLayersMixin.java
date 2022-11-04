@@ -515,7 +515,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         }
         if (value == ALPINE_HIGHLANDS)
         {
-            return OLD_MOUNTAINS;
+            return GRAVEL_SHORE;
         }
         if (value == OLD_MOUNTAINS || value == PLATEAU || value == PUY_MOUNTAINS || value == CALDERAS)
         {

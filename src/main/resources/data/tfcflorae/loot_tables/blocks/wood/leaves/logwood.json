@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "type": "minecraft:block",
   "pools": [
     {
@@ -48,7 +47,7 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.0078
+                  "chance": 0.0083
                 }
               ]
             }

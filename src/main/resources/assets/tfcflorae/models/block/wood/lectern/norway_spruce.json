@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/norway_spruce",
-    "base": "tfcflorae:block/wood/lectern/norway_spruce/base",
-    "front": "tfcflorae:block/wood/lectern/norway_spruce/front",
-    "sides": "tfcflorae:block/wood/lectern/norway_spruce/sides",
-    "top": "tfcflorae:block/wood/lectern/norway_spruce/top",
-    "particle": "tfcflorae:block/wood/lectern/norway_spruce/sides"
+    "base": "tfcflorae:block/wood/lectern/base/norway_spruce",
+    "front": "tfcflorae:block/wood/lectern/front/norway_spruce",
+    "sides": "tfcflorae:block/wood/lectern/sides/norway_spruce",
+    "top": "tfcflorae:block/wood/lectern/top/norway_spruce",
+    "particle": "tfcflorae:block/wood/lectern/sides/norway_spruce"
   }
 }

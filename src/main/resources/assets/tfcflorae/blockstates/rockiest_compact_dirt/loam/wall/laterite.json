@@ -6,7 +6,7 @@
         "up": "true"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/post/laterite"
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/post/laterite"
       }
     },
     {
@@ -14,7 +14,7 @@
         "north": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/laterite",
         "uvlock": true
       }
     },
@@ -23,7 +23,7 @@
         "east": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/laterite",
         "y": 90,
         "uvlock": true
       }
@@ -33,7 +33,7 @@
         "south": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/laterite",
         "y": 180,
         "uvlock": true
       }
@@ -43,7 +43,7 @@
         "west": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/laterite",
         "y": 270,
         "uvlock": true
       }
@@ -53,7 +53,7 @@
         "north": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/laterite",
         "uvlock": true
       }
     },
@@ -62,7 +62,7 @@
         "east": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/laterite",
         "y": 90,
         "uvlock": true
       }
@@ -72,7 +72,7 @@
         "south": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/laterite",
         "y": 180,
         "uvlock": true
       }
@@ -82,7 +82,7 @@
         "west": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/laterite",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/laterite",
         "y": 270,
         "uvlock": true
       }

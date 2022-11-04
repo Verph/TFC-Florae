@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/stone_tiles/komatiite",
-    "top": "tfcflorae:block/rock/stone_tiles/komatiite",
-    "side": "tfcflorae:block/rock/stone_tiles/komatiite"
-  }
-}

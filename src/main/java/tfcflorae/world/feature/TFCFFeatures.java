@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
-import net.dries007.tfc.world.feature.BoulderConfig;
+import net.dries007.tfc.world.feature.tree.RandomTreeConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -22,11 +22,10 @@ import tfcflorae.mixin.accessor.TrunkPlacerTypeAccessor;
 import tfcflorae.world.feature.plant.*;
 import tfcflorae.world.feature.tree.DynamicTreeConfig;
 import tfcflorae.world.feature.tree.RootedTreeConfig;
+import tfcflorae.world.feature.tree.TFCFRandomTreeFeature;
 import tfcflorae.world.feature.tree.baobab.BaobabTreeFeature;
-import tfcflorae.world.feature.tree.cypress.CypressTreeFeature;
 import tfcflorae.world.feature.tree.joshua.JoshuaTreeFeature;
 import tfcflorae.world.feature.tree.mangrove.*;
-import tfcflorae.world.feature.tree.willow.BlackWillowTreeFeature;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
@@ -44,9 +43,7 @@ public class TFCFFeatures
 
     public static final RegistryObject<JoshuaTreeFeature> JOSHUA_TREE = register("joshua_tree", JoshuaTreeFeature::new, JoshuaTreeFeature.CODEC);
     public static final RegistryObject<BaobabTreeFeature> BAOBAB_TREE = register("baobab_tree", BaobabTreeFeature::new, DynamicTreeConfig.CODEC);
-    public static final RegistryObject<CypressTreeFeature> CYPRESS_TREE = register("cypress_tree", CypressTreeFeature::new, DynamicTreeConfig.CODEC);
-    public static final RegistryObject<MangroveTreeFeature> MANGROVE_TREE = register("mangrove_tree", MangroveTreeFeature::new, DynamicTreeConfig.CODEC);
-    public static final RegistryObject<BlackWillowTreeFeature> BLACK_WILLOW_TREE = register("black_willow_tree", BlackWillowTreeFeature::new, DynamicTreeConfig.CODEC);
+    public static final RegistryObject<TFCFRandomTreeFeature> RANDOM_TREE = register("random_tree", TFCFRandomTreeFeature::new, RandomTreeConfig.CODEC);
 
     public static final RegistryObject<PoisonTallPlantFeature> POISON_TALL_PLANT = register("poison_tall_plant", PoisonTallPlantFeature::new, PoisonTallPlantFeature.CODEC);
     public static final RegistryObject<LandEmergentPlantFeature> LAND_EMERGENT_PLANT = register("land_emergent_plant", LandEmergentPlantFeature::new, LandEmergentPlantFeature.CODEC);

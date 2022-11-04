@@ -51,7 +51,7 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.registry.RegistryPlant;
-
+import tfcflorae.common.blockentities.FruitPlantBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
 public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock
@@ -139,10 +139,6 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
             level.playSound(player, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
             if (!level.isClientSide())
             {
-                /*level.getBlockEntity(pos, TFCFBlockEntities.SEASONAL_PLANT.get()).ifPresent(bush -> {
-                    ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
-                    level.setBlockAndUpdate(pos, stateAfterPicking(state));
-                });*/
                 ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
                 level.setBlockAndUpdate(pos, stateAfterPicking(state));
             }
@@ -157,8 +153,9 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
     {
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
-        if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        level.getBlockEntity(pos, TFCFBlockEntities.SEASONAL_PLANT.get()).ifPresent(leaves -> {
+        // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
+        if (level.getBlockEntity(pos) instanceof FruitPlantBlockEntity leaves)
+        {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
             // if we are not working with a plant that is or should be dormant
@@ -222,7 +219,7 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
                     level.setBlock(pos, newState, 3);
                 }
             }
-        });
+        }
     }
 
     public BlockState stateAfterPicking(BlockState state)

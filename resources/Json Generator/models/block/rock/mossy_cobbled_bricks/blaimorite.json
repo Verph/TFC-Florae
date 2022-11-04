@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/rock/mossy_cobbled_bricks/blaimorite_top",
-    "side": "tfcflorae:block/rock/mossy_cobbled_bricks/blaimorite_side"
-  }
-}

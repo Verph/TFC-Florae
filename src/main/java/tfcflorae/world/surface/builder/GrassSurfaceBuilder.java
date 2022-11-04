@@ -31,6 +31,7 @@ import net.dries007.tfc.world.surface.builder.*;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.world.surface.TFCFSoilSurfaceState;
@@ -63,21 +64,8 @@ public class GrassSurfaceBuilder implements SurfaceBuilder
     private void buildSoilSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         int topBlock = startY - 1;
-        ChunkData data = context.getChunkData();
         BlockPos pos = new BlockPos(context.pos().getX(), topBlock, context.pos().getZ());
-        final float rainfallFraction = context.getChunkData().getRainfall(pos) * 0.0005f;
         final float rainfall = context.getChunkData().getRainfall(pos);
-        RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
-
-        Rock rock = Rock.GRANITE;
-        for (Rock r : Rock.values())
-        {
-            if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-            {
-                rock = r;
-                break;
-            }
-        }
 
         final SurfaceState SPARSE_GRASS = TFCFSoilSurfaceState.buildType(TFCFSoil.SPARSE_GRASS);
         final SurfaceState DENSE_GRASS = TFCFSoilSurfaceState.buildType(TFCFSoil.DENSE_GRASS);

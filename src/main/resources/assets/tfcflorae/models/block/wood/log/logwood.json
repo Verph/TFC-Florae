@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/cube_column",
   "textures": {
     "end": "tfcflorae:block/wood/log_top/logwood",

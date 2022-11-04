@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/diorite",
     "particle": "tfcflorae:block/rock/gravel/diorite",
-    "overlay": "tfcflorae:block/deposit/native_silver"
+    "overlay": "tfc:block/deposit/native_silver"
   }
 }

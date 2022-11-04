@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/redwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/redwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/redwood"
     }
   ],
   "duration": 1750,

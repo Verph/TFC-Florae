@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirty_stone_tiles/sandy_loam/andesite",
-    "top": "tfcflorae:block/dirty_stone_tiles/sandy_loam/andesite",
-    "side": "tfcflorae:block/dirty_stone_tiles/sandy_loam/andesite"
-  }
-}

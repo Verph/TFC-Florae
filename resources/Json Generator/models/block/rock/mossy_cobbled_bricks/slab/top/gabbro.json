@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/mossy_cobbled_bricks/gabbro_side",
-    "top": "tfcflorae:block/rock/mossy_cobbled_bricks/gabbro_side",
-    "side": "tfcflorae:block/rock/mossy_cobbled_bricks/gabbro_side"
-  }
-}

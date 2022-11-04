@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/hawthorn"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/hawthorn"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/hawthorn"
     }
   ],
   "duration": 1500,

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/humus/soapstone",
-    "top": "tfcflorae:block/pebble_compact_dirt/humus/soapstone",
-    "side": "tfcflorae:block/pebble_compact_dirt/humus/soapstone"
-  }
-}

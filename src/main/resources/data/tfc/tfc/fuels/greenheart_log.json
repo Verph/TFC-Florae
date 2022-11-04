@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/greenheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/greenheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/greenheart"
     }
   ],
   "duration": 1700,

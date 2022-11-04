@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/pink_ipe",
-    "base": "tfcflorae:block/wood/lectern/pink_ipe/base",
-    "front": "tfcflorae:block/wood/lectern/pink_ipe/front",
-    "sides": "tfcflorae:block/wood/lectern/pink_ipe/sides",
-    "top": "tfcflorae:block/wood/lectern/pink_ipe/top",
-    "particle": "tfcflorae:block/wood/lectern/pink_ipe/sides"
+    "base": "tfcflorae:block/wood/lectern/base/pink_ipe",
+    "front": "tfcflorae:block/wood/lectern/front/pink_ipe",
+    "sides": "tfcflorae:block/wood/lectern/sides/pink_ipe",
+    "top": "tfcflorae:block/wood/lectern/top/pink_ipe",
+    "particle": "tfcflorae:block/wood/lectern/sides/pink_ipe"
   }
 }

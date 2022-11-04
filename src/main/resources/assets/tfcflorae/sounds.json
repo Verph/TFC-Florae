@@ -1,4 +1,13 @@
 {
+  "item.brushing.brushing": {
+    "subtitle": "subtitles.item.tfcflorae.brushing.brushing",
+    "sounds": [
+      "tfcflorae:item/brushing/brushing1",
+      "tfcflorae:item/brushing/brushing2",
+      "tfcflorae:item/brushing/brushing3",
+      "tfcflorae:item/brushing/brushing4"
+    ]
+  },
   "block.mangrove_roots.break": {
     "sounds": [
       {
@@ -60,7 +69,8 @@
         "name": "tfcflorae:block/mangrove_roots/step6",
         "volume": 0.25
       }
-    ]
+    ],
+    "subtitle": "subtitles.entity.generic.big_fall"
   },
   "block.mangrove_roots.hit": {
     "sounds": [
@@ -210,7 +220,8 @@
         "name": "tfcflorae:block/mud/step6",
         "volume": 0.5
       }
-    ]
+    ],
+    "subtitle": "subtitles.entity.generic.big_fall"
   },
   "block.mud.hit": {
     "sounds": [
@@ -354,7 +365,8 @@
         "name": "tfcflorae:block/mud_bricks/step6",
         "volume": 0.5
       }
-    ]
+    ],
+    "subtitle": "subtitles.entity.generic.big_fall"
   },
   "block.mud_bricks.hit": {
     "sounds": [
@@ -498,7 +510,8 @@
         "name": "tfcflorae:block/muddy_mangrove_roots/step6",
         "volume": 0.25
       }
-    ]
+    ],
+    "subtitle": "subtitles.entity.generic.big_fall"
   },
   "block.muddy_mangrove_roots.hit": {
     "sounds": [
@@ -642,7 +655,8 @@
         "name": "tfcflorae:block/packed_mud/step6",
         "volume": 0.3
       }
-    ]
+    ],
+    "subtitle": "subtitles.entity.generic.big_fall"
   },
   "block.packed_mud.hit": {
     "sounds": [

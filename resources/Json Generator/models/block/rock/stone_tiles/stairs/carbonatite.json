@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/stone_tiles/carbonatite",
-    "top": "tfcflorae:block/rock/stone_tiles/carbonatite",
-    "side": "tfcflorae:block/rock/stone_tiles/carbonatite"
-  }
-}

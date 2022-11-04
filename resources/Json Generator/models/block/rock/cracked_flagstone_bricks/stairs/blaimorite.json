@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_flagstone_bricks/blaimorite",
-    "top": "tfcflorae:block/rock/cracked_flagstone_bricks/blaimorite",
-    "side": "tfcflorae:block/rock/cracked_flagstone_bricks/blaimorite"
-  }
-}

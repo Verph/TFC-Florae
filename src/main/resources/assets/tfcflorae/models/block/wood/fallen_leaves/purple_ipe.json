@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/groundcover/fallen_leaves",
   "textures": {
     "all": "tfcflorae:block/wood/leaves/purple_ipe"

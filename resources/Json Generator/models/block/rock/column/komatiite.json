@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/rock/column/komatiite_top",
-    "side": "tfcflorae:block/rock/column/komatiite_side"
-  }
-}

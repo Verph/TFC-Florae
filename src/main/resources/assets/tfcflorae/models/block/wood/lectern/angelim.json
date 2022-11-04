@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/angelim",
-    "base": "tfcflorae:block/wood/lectern/angelim/base",
-    "front": "tfcflorae:block/wood/lectern/angelim/front",
-    "sides": "tfcflorae:block/wood/lectern/angelim/sides",
-    "top": "tfcflorae:block/wood/lectern/angelim/top",
-    "particle": "tfcflorae:block/wood/lectern/angelim/sides"
+    "base": "tfcflorae:block/wood/lectern/base/angelim",
+    "front": "tfcflorae:block/wood/lectern/front/angelim",
+    "sides": "tfcflorae:block/wood/lectern/sides/angelim",
+    "top": "tfcflorae:block/wood/lectern/top/angelim",
+    "particle": "tfcflorae:block/wood/lectern/sides/angelim"
   }
 }

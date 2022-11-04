@@ -10,6 +10,7 @@
     "#tfc:feature/large_rock_columns",
     "#tfc:feature/small_rock_columns",
     "#tfc:feature/rock_pillar",
-    "#tfc:feature/icebergs"
+    "#tfc:feature/icebergs",
+    "tfc:fruit_forest"
   ]
 }

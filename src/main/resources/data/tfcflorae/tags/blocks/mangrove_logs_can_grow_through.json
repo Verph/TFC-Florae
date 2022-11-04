@@ -9,6 +9,9 @@
 	"#tfcflorae:muddy_roots",
 	"#tfcflorae:saplings",
 	"#minecraft:logs",
-	"#minecraft:leaves"
+	"#minecraft:leaves",
+	"tfc:fluid/spring_water",
+	"tfc:fluid/salt_water",
+	"minecraft:water"
   ]
 }

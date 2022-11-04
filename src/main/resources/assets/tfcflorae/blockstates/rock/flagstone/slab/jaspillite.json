@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/jaspillite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/jaspillite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/jaspillite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/jaspillite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/jaspillite"
+      "model": "tfcflorae:block/rock/flagstone/jaspillite"
     }
   }
 }

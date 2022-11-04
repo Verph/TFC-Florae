@@ -1,10 +1,9 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "tfcflorae:block/wood/barrel/marblewood",
   "overrides": [
     {
       "predicate": {
-        "tfc:sealed": 1.0
+        "tfc:sealed": 1
       },
       "model": "tfcflorae:block/wood/barrel_sealed/marblewood"
     }

@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/porphyry"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/porphyry"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/porphyry"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/porphyry"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/porphyry"
+      "model": "tfcflorae:block/rock/flagstone/porphyry"
     }
   }
 }

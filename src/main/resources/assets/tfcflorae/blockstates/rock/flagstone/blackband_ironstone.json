@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/blackband_ironstone",
+      "model": "tfcflorae:block/rock/flagstone/blackband_ironstone",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/blackband_ironstone"
+      "model": "tfcflorae:block/rock/flagstone/blackband_ironstone"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/blackband_ironstone",
+      "model": "tfcflorae:block/rock/flagstone/blackband_ironstone",
       "x": 90
     }
   }

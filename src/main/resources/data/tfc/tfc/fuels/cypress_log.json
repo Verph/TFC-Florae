@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/cypress"
     }
   ],
   "duration": 1100,

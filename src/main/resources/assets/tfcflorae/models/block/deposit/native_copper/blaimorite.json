@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/blaimorite",
     "particle": "tfcflorae:block/rock/gravel/blaimorite",
-    "overlay": "tfcflorae:block/deposit/native_copper"
+    "overlay": "tfc:block/deposit/native_copper"
   }
 }

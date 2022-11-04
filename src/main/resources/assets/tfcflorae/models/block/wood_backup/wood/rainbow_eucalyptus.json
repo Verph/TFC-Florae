@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/wood/log/rainbow_eucalyptus",
-    "side": "tfcflorae:block/wood/log/rainbow_eucalyptus"
-  }
-}

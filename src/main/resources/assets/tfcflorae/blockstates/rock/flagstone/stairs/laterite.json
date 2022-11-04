@@ -2,206 +2,206 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite"
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite"
     },
     "facing=west,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite"
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite"
     },
     "facing=west,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite"
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite"
     },
     "facing=north,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite"
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite"
     },
     "facing=west,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite"
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite"
     },
     "facing=north,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/laterite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/outer/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/outer/laterite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/stairs/inner/laterite",
+      "model": "tfcflorae:block/rock/flagstone/stairs/inner/laterite",
       "x": 180,
       "y": 270,
       "uvlock": true

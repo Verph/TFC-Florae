@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/african_padauk",
-    "base": "tfcflorae:block/wood/lectern/african_padauk/base",
-    "front": "tfcflorae:block/wood/lectern/african_padauk/front",
-    "sides": "tfcflorae:block/wood/lectern/african_padauk/sides",
-    "top": "tfcflorae:block/wood/lectern/african_padauk/top",
-    "particle": "tfcflorae:block/wood/lectern/african_padauk/sides"
+    "base": "tfcflorae:block/wood/lectern/base/african_padauk",
+    "front": "tfcflorae:block/wood/lectern/front/african_padauk",
+    "sides": "tfcflorae:block/wood/lectern/sides/african_padauk",
+    "top": "tfcflorae:block/wood/lectern/top/african_padauk",
+    "particle": "tfcflorae:block/wood/lectern/sides/african_padauk"
   }
 }

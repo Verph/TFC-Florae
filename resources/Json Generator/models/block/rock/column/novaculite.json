@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/rock/column/novaculite_top",
-    "side": "tfcflorae:block/rock/column/novaculite_side"
-  }
-}

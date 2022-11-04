@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirtiest_stone_tiles/humus/dacite",
-    "top": "tfcflorae:block/dirtiest_stone_tiles/humus/dacite",
-    "side": "tfcflorae:block/dirtiest_stone_tiles/humus/dacite"
-  }
-}

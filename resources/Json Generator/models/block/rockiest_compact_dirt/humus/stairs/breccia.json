@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockiest_compact_dirt/humus/breccia",
-    "top": "tfcflorae:block/rockiest_compact_dirt/humus/breccia",
-    "side": "tfcflorae:block/rockiest_compact_dirt/humus/breccia"
-  }
-}

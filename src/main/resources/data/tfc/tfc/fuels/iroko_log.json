@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/iroko"
     }
   ],
   "duration": 1200,

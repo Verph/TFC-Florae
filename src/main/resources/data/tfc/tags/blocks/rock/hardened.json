@@ -2,6 +2,31 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfcflorae:rock/hardened/dripstone"
+    "tfcflorae:rock/hardened/dripstone",
+	"tfcflorae:rock/hardened/red_granite",
+    "tfcflorae:rock/hardened/breccia",
+    "tfcflorae:rock/hardened/foidolite",
+    "tfcflorae:rock/hardened/porphyry",
+    "tfcflorae:rock/hardened/peridotite",
+    "tfcflorae:rock/hardened/blaimorite",
+    "tfcflorae:rock/hardened/boninite",
+    "tfcflorae:rock/hardened/carbonatite",
+    "tfcflorae:rock/hardened/laterite",
+    "tfcflorae:rock/hardened/mudstone",
+    "tfcflorae:rock/hardened/sandstone",
+    "tfcflorae:rock/hardened/siltstone",
+    "tfcflorae:rock/hardened/arkose",
+    "tfcflorae:rock/hardened/jaspillite",
+    "tfcflorae:rock/hardened/travertine",
+    "tfcflorae:rock/hardened/wackestone",
+    "tfcflorae:rock/hardened/blackband_ironstone",
+    "tfcflorae:rock/hardened/cataclasite",
+    "tfcflorae:rock/hardened/blueschist",
+    "tfcflorae:rock/hardened/catlinite",
+    "tfcflorae:rock/hardened/greenschist",
+    "tfcflorae:rock/hardened/novaculite",
+    "tfcflorae:rock/hardened/soapstone",
+    "tfcflorae:rock/hardened/komatiite",
+    "tfcflorae:rock/hardened/mylonite"
   ]
 }

@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/rubber_fig",
-    "base": "tfcflorae:block/wood/lectern/rubber_fig/base",
-    "front": "tfcflorae:block/wood/lectern/rubber_fig/front",
-    "sides": "tfcflorae:block/wood/lectern/rubber_fig/sides",
-    "top": "tfcflorae:block/wood/lectern/rubber_fig/top",
-    "particle": "tfcflorae:block/wood/lectern/rubber_fig/sides"
+    "base": "tfcflorae:block/wood/lectern/base/rubber_fig",
+    "front": "tfcflorae:block/wood/lectern/front/rubber_fig",
+    "sides": "tfcflorae:block/wood/lectern/sides/rubber_fig",
+    "top": "tfcflorae:block/wood/lectern/top/rubber_fig",
+    "particle": "tfcflorae:block/wood/lectern/sides/rubber_fig"
   }
 }

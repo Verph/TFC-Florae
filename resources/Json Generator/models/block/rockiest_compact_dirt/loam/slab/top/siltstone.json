@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "tfcflorae:block/rockiest_compact_dirt/loam/siltstone",
-    "top": "tfcflorae:block/rockiest_compact_dirt/loam/siltstone",
-    "side": "tfcflorae:block/rockiest_compact_dirt/loam/siltstone"
-  }
-}

@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/poplar",
-    "base": "tfcflorae:block/wood/lectern/poplar/base",
-    "front": "tfcflorae:block/wood/lectern/poplar/front",
-    "sides": "tfcflorae:block/wood/lectern/poplar/sides",
-    "top": "tfcflorae:block/wood/lectern/poplar/top",
-    "particle": "tfcflorae:block/wood/lectern/poplar/sides"
+    "base": "tfcflorae:block/wood/lectern/base/poplar",
+    "front": "tfcflorae:block/wood/lectern/front/poplar",
+    "sides": "tfcflorae:block/wood/lectern/sides/poplar",
+    "top": "tfcflorae:block/wood/lectern/top/poplar",
+    "particle": "tfcflorae:block/wood/lectern/sides/poplar"
   }
 }

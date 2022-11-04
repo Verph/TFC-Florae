@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/quince",
-    "base": "tfcflorae:block/wood/lectern/quince/base",
-    "front": "tfcflorae:block/wood/lectern/quince/front",
-    "sides": "tfcflorae:block/wood/lectern/quince/sides",
-    "top": "tfcflorae:block/wood/lectern/quince/top",
-    "particle": "tfcflorae:block/wood/lectern/quince/sides"
+    "base": "tfcflorae:block/wood/lectern/base/quince",
+    "front": "tfcflorae:block/wood/lectern/front/quince",
+    "sides": "tfcflorae:block/wood/lectern/sides/quince",
+    "top": "tfcflorae:block/wood/lectern/top/quince",
+    "particle": "tfcflorae:block/wood/lectern/sides/quince"
   }
 }

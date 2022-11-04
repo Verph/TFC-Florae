@@ -17,6 +17,9 @@ public final class TFCFSounds
 {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MOD_ID);
 
+    // Items
+    public static final RegistryObject<SoundEvent> BRUSHING = create("item.brushing.brushing");
+
     // Blocks
 
     public static final ForgeSoundType MUD = createBlock("mud");

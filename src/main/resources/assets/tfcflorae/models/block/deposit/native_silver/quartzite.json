@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/quartzite",
     "particle": "tfcflorae:block/rock/gravel/quartzite",
-    "overlay": "tfcflorae:block/deposit/native_silver"
+    "overlay": "tfc:block/deposit/native_silver"
   }
 }

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockier_compact_dirt/humus/basalt",
-    "top": "tfcflorae:block/rockier_compact_dirt/humus/basalt",
-    "side": "tfcflorae:block/rockier_compact_dirt/humus/basalt"
-  }
-}

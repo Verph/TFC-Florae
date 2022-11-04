@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockiest_compact_dirt/loam/claystone",
-    "top": "tfcflorae:block/rockiest_compact_dirt/loam/claystone",
-    "side": "tfcflorae:block/rockiest_compact_dirt/loam/claystone"
-  }
-}

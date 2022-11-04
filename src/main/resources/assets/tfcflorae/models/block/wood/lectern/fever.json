@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/fever",
-    "base": "tfcflorae:block/wood/lectern/fever/base",
-    "front": "tfcflorae:block/wood/lectern/fever/front",
-    "sides": "tfcflorae:block/wood/lectern/fever/sides",
-    "top": "tfcflorae:block/wood/lectern/fever/top",
-    "particle": "tfcflorae:block/wood/lectern/fever/sides"
+    "base": "tfcflorae:block/wood/lectern/base/fever",
+    "front": "tfcflorae:block/wood/lectern/front/fever",
+    "sides": "tfcflorae:block/wood/lectern/sides/fever",
+    "top": "tfcflorae:block/wood/lectern/top/fever",
+    "particle": "tfcflorae:block/wood/lectern/sides/fever"
   }
 }

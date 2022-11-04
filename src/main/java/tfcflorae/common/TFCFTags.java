@@ -23,6 +23,7 @@ public class TFCFTags
 
     public static class Items
     {
+        public static final TagKey<Item> BRUSHES = create("brushes");
         public static final TagKey<Item> EARTHENWARE_CLAY_KNAPPING = create("earthenware_clay_knapping");
         public static final TagKey<Item> KAOLINITE_CLAY_KNAPPING = create("kaolinite_clay_knapping");
         public static final TagKey<Item> STONEWARE_CLAY_KNAPPING = create("stoneware_clay_knapping");

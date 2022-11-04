@@ -59,7 +59,13 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:salt_water_forest"
+      "tfc:salt_water_forest",
+	  "tfc:plant/hanging_vines",
+	  "tfc:plant/hanging_vines_cave",
+	  "tfc:plant/spanish_moss",
+	  "tfc:plant/ivy",
+	  "tfc:plant/jungle_vines",
+	  "tfc:plant/liana"
     ]
   ],
   "starts": [],
@@ -140,12 +146,10 @@
         "weight": 1,
         "minCount": 1,
         "maxCount": 3
-      }
-    ],
-    "underground_water_creature": [
+      },
       {
-        "type": "tfc:octopoteuthis",
-        "weight": 1,
+        "type": "tfc:manatee",
+        "weight": 3,
         "minCount": 1,
         "maxCount": 2
       }
@@ -184,6 +188,6 @@
     ]
   },
   "player_spawn_friendly": true,
-  "creature_spawn_probability": 0.05,
+  "creature_spawn_probability": 0.08,
   "spawn_costs": {}
 }

@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/blueschist",
     "particle": "tfcflorae:block/rock/gravel/blueschist",
-    "overlay": "tfcflorae:block/deposit/native_gold"
+    "overlay": "tfc:block/deposit/native_gold"
   }
 }

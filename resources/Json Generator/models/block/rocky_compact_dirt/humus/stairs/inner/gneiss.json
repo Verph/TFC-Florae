@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rocky_compact_dirt/humus/gneiss",
-    "top": "tfcflorae:block/rocky_compact_dirt/humus/gneiss",
-    "side": "tfcflorae:block/rocky_compact_dirt/humus/gneiss"
-  }
-}

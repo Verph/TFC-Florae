@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/cracked_flagstone_bricks/foidolite",
-    "top": "tfcflorae:block/rock/cracked_flagstone_bricks/foidolite",
-    "side": "tfcflorae:block/rock/cracked_flagstone_bricks/foidolite"
-  }
-}

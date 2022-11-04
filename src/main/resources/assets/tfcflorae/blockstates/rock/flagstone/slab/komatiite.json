@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/komatiite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/komatiite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/komatiite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/komatiite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/komatiite"
+      "model": "tfcflorae:block/rock/flagstone/komatiite"
     }
   }
 }

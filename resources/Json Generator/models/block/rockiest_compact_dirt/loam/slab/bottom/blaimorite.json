@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/rockiest_compact_dirt/loam/blaimorite",
-    "top": "tfcflorae:block/rockiest_compact_dirt/loam/blaimorite",
-    "side": "tfcflorae:block/rockiest_compact_dirt/loam/blaimorite"
-  }
-}

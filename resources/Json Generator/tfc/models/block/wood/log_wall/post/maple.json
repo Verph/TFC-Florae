@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/template_wall_post_log",
-  "textures": {
-    "top": "tfc:block/wood/log_top/maple",
-    "wall": "tfc:block/wood/log/maple",
-    "particle": "tfc:block/wood/log/maple"
-  }
-}

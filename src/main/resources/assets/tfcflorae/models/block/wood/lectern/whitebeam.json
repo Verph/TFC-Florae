@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/whitebeam",
-    "base": "tfcflorae:block/wood/lectern/whitebeam/base",
-    "front": "tfcflorae:block/wood/lectern/whitebeam/front",
-    "sides": "tfcflorae:block/wood/lectern/whitebeam/sides",
-    "top": "tfcflorae:block/wood/lectern/whitebeam/top",
-    "particle": "tfcflorae:block/wood/lectern/whitebeam/sides"
+    "base": "tfcflorae:block/wood/lectern/base/whitebeam",
+    "front": "tfcflorae:block/wood/lectern/front/whitebeam",
+    "sides": "tfcflorae:block/wood/lectern/sides/whitebeam",
+    "top": "tfcflorae:block/wood/lectern/top/whitebeam",
+    "particle": "tfcflorae:block/wood/lectern/sides/whitebeam"
   }
 }

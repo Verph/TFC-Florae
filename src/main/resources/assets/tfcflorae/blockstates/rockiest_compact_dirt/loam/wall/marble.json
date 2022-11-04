@@ -6,7 +6,7 @@
         "up": "true"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/post/marble"
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/post/marble"
       }
     },
     {
@@ -14,7 +14,7 @@
         "north": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/marble",
         "uvlock": true
       }
     },
@@ -23,7 +23,7 @@
         "east": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/marble",
         "y": 90,
         "uvlock": true
       }
@@ -33,7 +33,7 @@
         "south": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/marble",
         "y": 180,
         "uvlock": true
       }
@@ -43,7 +43,7 @@
         "west": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/marble",
         "y": 270,
         "uvlock": true
       }
@@ -53,7 +53,7 @@
         "north": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/marble",
         "uvlock": true
       }
     },
@@ -62,7 +62,7 @@
         "east": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/marble",
         "y": 90,
         "uvlock": true
       }
@@ -72,7 +72,7 @@
         "south": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/marble",
         "y": 180,
         "uvlock": true
       }
@@ -82,7 +82,7 @@
         "west": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/cobbled_bricks/wall/side/tall/marble",
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/wall/side/tall/marble",
         "y": 270,
         "uvlock": true
       }

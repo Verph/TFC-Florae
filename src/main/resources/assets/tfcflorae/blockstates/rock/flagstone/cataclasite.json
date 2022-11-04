@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/cataclasite",
+      "model": "tfcflorae:block/rock/flagstone/cataclasite",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/cataclasite"
+      "model": "tfcflorae:block/rock/flagstone/cataclasite"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/cataclasite",
+      "model": "tfcflorae:block/rock/flagstone/cataclasite",
       "x": 90
     }
   }

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/walnut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/walnut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/walnut"
     }
   ],
   "duration": 1800,

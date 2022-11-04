@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/laterite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/laterite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/laterite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/laterite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/laterite"
+      "model": "tfcflorae:block/rock/flagstone/laterite"
     }
   }
 }

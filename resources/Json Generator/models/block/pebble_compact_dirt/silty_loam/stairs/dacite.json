@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/silty_loam/dacite",
-    "top": "tfcflorae:block/pebble_compact_dirt/silty_loam/dacite",
-    "side": "tfcflorae:block/pebble_compact_dirt/silty_loam/dacite"
-  }
-}

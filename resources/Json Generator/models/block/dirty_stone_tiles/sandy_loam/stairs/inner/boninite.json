@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirty_stone_tiles/sandy_loam/boninite",
-    "top": "tfcflorae:block/dirty_stone_tiles/sandy_loam/boninite",
-    "side": "tfcflorae:block/dirty_stone_tiles/sandy_loam/boninite"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirtier_stone_tiles/silty_loam/phyllite",
-    "top": "tfcflorae:block/dirtier_stone_tiles/silty_loam/phyllite",
-    "side": "tfcflorae:block/dirtier_stone_tiles/silty_loam/phyllite"
-  }
-}

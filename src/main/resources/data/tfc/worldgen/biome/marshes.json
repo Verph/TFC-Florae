@@ -58,7 +58,13 @@
       "tfc:lush_caves_calcite",
       "tfc:lush_caves_vegetation",
 	  "tfc:plant/morning_glory_cave_patch",
-	  "tfc:plant/spore_blossom"
+	  "tfc:plant/spore_blossom",
+	  "tfc:plant/hanging_vines",
+	  "tfc:plant/hanging_vines_cave",
+	  "tfc:plant/spanish_moss",
+	  "tfc:plant/ivy",
+	  "tfc:plant/jungle_vines",
+	  "tfc:plant/liana"
     ]
 
   ],
@@ -133,127 +139,127 @@
     "creature": [
       {
         "type": "tfc:pig",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:cow",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:goat",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:yak",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:alpaca",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:sheep",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:musk_ox",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "tfc:chicken",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "tfc:duck",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "tfc:quail",
-        "weight": 1,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "tfc:polar_bear",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "tfc:grizzly_bear",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "tfc:black_bear",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "tfc:lion",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "tfc:sabertooth",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "tfc:rabbit",
         "weight": 2,
         "minCount": 1,
         "maxCount": 4
       },
       {
+        "type": "tfc:cow",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:goat",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:yak",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:alpaca",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:sheep",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:musk_ox",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfc:chicken",
+        "weight": 2,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:duck",
+        "weight": 5,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:quail",
+        "weight": 4,
+        "minCount": 2,
+        "maxCount": 6
+      },
+      {
+        "type": "tfc:polar_bear",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:grizzly_bear",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:black_bear",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:lion",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:sabertooth",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "tfc:rabbit",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
         "type": "tfc:fox",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 1
       },
       {
         "type": "tfc:boar",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 2
       },
       {
         "type": "tfc:donkey",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 3
       },
       {
         "type": "tfc:mule",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 3
       },
       {
         "type": "tfc:horse",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 3
       }
@@ -261,13 +267,13 @@
     "water_creature": [
       {
         "type": "tfc:manatee",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 2
       }
     ]
   },
   "player_spawn_friendly": true,
-  "creature_spawn_probability": 0.05,
+  "creature_spawn_probability": 0.08,
   "spawn_costs": {}
 }

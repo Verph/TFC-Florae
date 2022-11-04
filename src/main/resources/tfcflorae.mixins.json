@@ -10,9 +10,7 @@
 		"accessor.TreeFeatureAccessor",
 		"accessor.TrunkPlacerTypeAccessor"
 	],
-	"client": [
-		"client.MultiPlayerGameModeMixin"
-	],
+	"client": [],
 	"injectors": {
 		"defaultRequire": 1
 	},

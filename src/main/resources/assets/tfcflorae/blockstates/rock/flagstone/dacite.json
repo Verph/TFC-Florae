@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/dacite",
+      "model": "tfcflorae:block/rock/flagstone/dacite",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/dacite"
+      "model": "tfcflorae:block/rock/flagstone/dacite"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/dacite",
+      "model": "tfcflorae:block/rock/flagstone/dacite",
       "x": 90
     }
   }

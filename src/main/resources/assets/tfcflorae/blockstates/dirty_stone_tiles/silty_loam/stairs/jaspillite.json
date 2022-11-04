@@ -2,206 +2,206 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite"
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite"
     },
     "facing=west,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite"
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite"
     },
     "facing=west,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite"
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite"
     },
     "facing=north,half=bottom,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite"
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite"
     },
     "facing=west,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 270,
       "uvlock": true
     },
     "facing=west,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 90,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite"
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite"
     },
     "facing=north,half=bottom,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "y": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/jaspillite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/outer/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/outer/jaspillite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
-      "model": "tfcflorae:block/rock/cobbled_bricks/stairs/inner/jaspillite",
+      "model": "tfcflorae:block/dirty_stone_tiles/silty_loam/stairs/inner/jaspillite",
       "x": 180,
       "y": 270,
       "uvlock": true

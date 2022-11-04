@@ -8,6 +8,8 @@
     "tfc:cave_vegetation",
     "tfc:random_empty_hot_spring",
     "tfc:random_active_hot_spring",
-    "#tfc:feature/rock_pillar"
+    "#tfc:feature/rock_pillar",
+    "tfc:charred_forest",
+    "tfc:fruit_forest"
   ]
 }

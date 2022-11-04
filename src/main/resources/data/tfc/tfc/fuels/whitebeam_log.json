@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/whitebeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/whitebeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/whitebeam"
     }
   ],
   "duration": 1750,

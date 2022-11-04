@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/mahoe",
-    "base": "tfcflorae:block/wood/lectern/mahoe/base",
-    "front": "tfcflorae:block/wood/lectern/mahoe/front",
-    "sides": "tfcflorae:block/wood/lectern/mahoe/sides",
-    "top": "tfcflorae:block/wood/lectern/mahoe/top",
-    "particle": "tfcflorae:block/wood/lectern/mahoe/sides"
+    "base": "tfcflorae:block/wood/lectern/base/mahoe",
+    "front": "tfcflorae:block/wood/lectern/front/mahoe",
+    "sides": "tfcflorae:block/wood/lectern/sides/mahoe",
+    "top": "tfcflorae:block/wood/lectern/top/mahoe",
+    "particle": "tfcflorae:block/wood/lectern/sides/mahoe"
   }
 }

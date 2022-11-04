@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockier_compact_dirt/silt/gneiss",
-    "top": "tfcflorae:block/rockier_compact_dirt/silt/gneiss",
-    "side": "tfcflorae:block/rockier_compact_dirt/silt/gneiss"
-  }
-}

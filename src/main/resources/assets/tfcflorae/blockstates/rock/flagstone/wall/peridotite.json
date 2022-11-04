@@ -6,7 +6,7 @@
         "up": "true"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/post/peridotite"
+        "model": "tfcflorae:block/rock/flagstone/wall/post/peridotite"
       }
     },
     {
@@ -14,7 +14,7 @@
         "north": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/peridotite",
         "uvlock": true
       }
     },
@@ -23,7 +23,7 @@
         "east": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/peridotite",
         "y": 90,
         "uvlock": true
       }
@@ -33,7 +33,7 @@
         "south": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/peridotite",
         "y": 180,
         "uvlock": true
       }
@@ -43,7 +43,7 @@
         "west": "low"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/peridotite",
         "y": 270,
         "uvlock": true
       }
@@ -53,7 +53,7 @@
         "north": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/tall/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/tall/peridotite",
         "uvlock": true
       }
     },
@@ -62,7 +62,7 @@
         "east": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/tall/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/tall/peridotite",
         "y": 90,
         "uvlock": true
       }
@@ -72,7 +72,7 @@
         "south": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/tall/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/tall/peridotite",
         "y": 180,
         "uvlock": true
       }
@@ -82,7 +82,7 @@
         "west": "tall"
       },
       "apply": {
-        "model": "tfcflorae:block/rock/flagstone_bricks/wall/side/tall/peridotite",
+        "model": "tfcflorae:block/rock/flagstone/wall/side/tall/peridotite",
         "y": 270,
         "uvlock": true
       }

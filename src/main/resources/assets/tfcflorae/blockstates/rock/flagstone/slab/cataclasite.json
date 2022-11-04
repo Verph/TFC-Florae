@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/cataclasite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/cataclasite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/cataclasite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/cataclasite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/cataclasite"
+      "model": "tfcflorae:block/rock/flagstone/cataclasite"
     }
   }
 }

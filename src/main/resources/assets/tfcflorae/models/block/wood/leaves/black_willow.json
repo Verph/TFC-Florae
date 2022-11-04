@@ -1,7 +1,8 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/leaves",
+  "parent": "tfcflorae:block/leaves_column",
   "textures": {
-    "all": "tfcflorae:block/wood/leaves/black_willow"
+    "side": "tfcflorae:block/wood/leaves/black_willow",
+    "end": "tfcflorae:block/wood/leaves/black_willow_end"
   }
 }

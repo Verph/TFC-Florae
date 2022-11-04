@@ -121,6 +121,156 @@
         "blocks": [
           "tfcflorae:rock/column/marble"
         ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/red_granite",
+        "blocks": [
+          "tfcflorae:rock/column/red_granite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/breccia",
+        "blocks": [
+          "tfcflorae:rock/column/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/foidolite",
+        "blocks": [
+          "tfcflorae:rock/column/foidolite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/porphyry",
+        "blocks": [
+          "tfcflorae:rock/column/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/peridotite",
+        "blocks": [
+          "tfcflorae:rock/column/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blaimorite",
+        "blocks": [
+          "tfcflorae:rock/column/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/boninite",
+        "blocks": [
+          "tfcflorae:rock/column/boninite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/carbonatite",
+        "blocks": [
+          "tfcflorae:rock/column/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/laterite",
+        "blocks": [
+          "tfcflorae:rock/column/laterite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mudstone",
+        "blocks": [
+          "tfcflorae:rock/column/mudstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/sandstone",
+        "blocks": [
+          "tfcflorae:rock/column/sandstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/siltstone",
+        "blocks": [
+          "tfcflorae:rock/column/siltstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/arkose",
+        "blocks": [
+          "tfcflorae:rock/column/arkose"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/jaspillite",
+        "blocks": [
+          "tfcflorae:rock/column/jaspillite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/travertine",
+        "blocks": [
+          "tfcflorae:rock/column/travertine"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/wackestone",
+        "blocks": [
+          "tfcflorae:rock/column/wackestone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blackband_ironstone",
+        "blocks": [
+          "tfcflorae:rock/column/blackband_ironstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/cataclasite",
+        "blocks": [
+          "tfcflorae:rock/column/cataclasite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blueschist",
+        "blocks": [
+          "tfcflorae:rock/column/blueschist"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/catlinite",
+        "blocks": [
+          "tfcflorae:rock/column/catlinite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/greenschist",
+        "blocks": [
+          "tfcflorae:rock/column/greenschist"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/novaculite",
+        "blocks": [
+          "tfcflorae:rock/column/novaculite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/soapstone",
+        "blocks": [
+          "tfcflorae:rock/column/soapstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/komatiite",
+        "blocks": [
+          "tfcflorae:rock/column/komatiite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mylonite",
+        "blocks": [
+          "tfcflorae:rock/column/mylonite"
+        ]
       }
     ],
     "height": {

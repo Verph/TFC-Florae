@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_wall_post",
   "textures": {
     "wall": "tfcflorae:block/wood/log/yew"

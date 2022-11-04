@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/cypress",
-    "base": "tfcflorae:block/wood/lectern/cypress/base",
-    "front": "tfcflorae:block/wood/lectern/cypress/front",
-    "sides": "tfcflorae:block/wood/lectern/cypress/sides",
-    "top": "tfcflorae:block/wood/lectern/cypress/top",
-    "particle": "tfcflorae:block/wood/lectern/cypress/sides"
+    "base": "tfcflorae:block/wood/lectern/base/cypress",
+    "front": "tfcflorae:block/wood/lectern/front/cypress",
+    "sides": "tfcflorae:block/wood/lectern/sides/cypress",
+    "top": "tfcflorae:block/wood/lectern/top/cypress",
+    "particle": "tfcflorae:block/wood/lectern/sides/cypress"
   }
 }

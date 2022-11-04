@@ -8,6 +8,9 @@
 	"#tfc:mud",
 	"#tfc:single_block_replaceable",
 	"#tfcflorae:roots",
-	"#tfcflorae:muddy_roots"
+	"#tfcflorae:muddy_roots",
+	"tfc:fluid/spring_water",
+	"tfc:fluid/salt_water",
+	"minecraft:water"
   ]
 }

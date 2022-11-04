@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/holly",
-    "base": "tfcflorae:block/wood/lectern/holly/base",
-    "front": "tfcflorae:block/wood/lectern/holly/front",
-    "sides": "tfcflorae:block/wood/lectern/holly/sides",
-    "top": "tfcflorae:block/wood/lectern/holly/top",
-    "particle": "tfcflorae:block/wood/lectern/holly/sides"
+    "base": "tfcflorae:block/wood/lectern/base/holly",
+    "front": "tfcflorae:block/wood/lectern/front/holly",
+    "sides": "tfcflorae:block/wood/lectern/sides/holly",
+    "top": "tfcflorae:block/wood/lectern/top/holly",
+    "particle": "tfcflorae:block/wood/lectern/sides/holly"
   }
 }

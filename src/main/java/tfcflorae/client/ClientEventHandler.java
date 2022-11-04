@@ -17,6 +17,7 @@ import net.minecraft.client.particle.ParticleEngine;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.LecternRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -31,20 +32,25 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.dries007.tfc.client.*;
 import net.dries007.tfc.client.model.ContainedFluidModel;
+import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
+import net.dries007.tfc.client.screen.KnappingScreen;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
+import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
+import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
-import tfcflorae.client.screen.TFCFKnappingScreen;
 import tfcflorae.client.screen.ceramics.*;
+import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.TFCFEntities;
+import tfcflorae.util.TFCFHelpers;
 
 import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
 
@@ -71,9 +77,9 @@ public class ClientEventHandler
         event.enqueueWork(() -> {
 
             // Screens
-            MenuScreens.register(TFCFContainerTypes.EARTHENWARE_CLAY_KNAPPING.get(), TFCFKnappingScreen::new);
-            MenuScreens.register(TFCFContainerTypes.KAOLINITE_CLAY_KNAPPING.get(), TFCFKnappingScreen::new);
-            MenuScreens.register(TFCFContainerTypes.STONEWARE_CLAY_KNAPPING.get(), TFCFKnappingScreen::new);
+            MenuScreens.register(TFCFContainerTypes.EARTHENWARE_CLAY_KNAPPING.get(), KnappingScreen::new);
+            MenuScreens.register(TFCFContainerTypes.KAOLINITE_CLAY_KNAPPING.get(), KnappingScreen::new);
+            MenuScreens.register(TFCFContainerTypes.STONEWARE_CLAY_KNAPPING.get(), KnappingScreen::new);
 
             MenuScreens.register(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), LargeEarthenwareVesselScreen::new);
             MenuScreens.register(TFCFContainerTypes.LARGE_KAOLINITE_VESSEL.get(), LargeKaoliniteVesselScreen::new);
@@ -83,7 +89,10 @@ public class ClientEventHandler
             //Stream.of(TFCFBlocks.LARGE_KAOLINITE_VESSEL, TFCFBlocks.GLAZED_LARGE_KAOLINITE_VESSELS.values()).<Supplier<? extends Block>>flatMap(Helpers::flatten).forEach(vessel -> ItemProperties.register(vessel.get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
             //Stream.of(TFCFBlocks.LARGE_STONEWARE_VESSEL, TFCFBlocks.GLAZED_LARGE_STONEWARE_VESSELS.values()).<Supplier<? extends Block>>flatMap(Helpers::flatten).forEach(vessel -> ItemProperties.register(vessel.get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
 
-            TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
+            //if (!hasLeavesOnly())
+            //{
+                TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
+            //}
         });
 
         // Keybindings
@@ -97,11 +106,15 @@ public class ClientEventHandler
         final RenderType cutoutMipped = RenderType.cutoutMipped();
         final RenderType translucent = RenderType.translucent();
 
-        // TFCFWood blocks
         TFCFBlocks.WOODS.values().forEach(map -> {
             Stream.of(SAPLING, DOOR, TRAPDOOR, FENCE, FENCE_GATE, BUTTON, PRESSURE_PLATE, SLAB, STAIRS, TWIG, BARREL, SCRIBING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
             Stream.of(LEAVES, FALLEN_LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
         });
+        TFCFBlocks.LEAVES_ONLY.values().forEach(map -> {
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+        });
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CHARRED_TREE_TWIG.get(), cutout);
+        TFCFBlocks.MANGROVE_ROOTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_EARTHENWARE_VESSEL.get(), cutout);
         //TFCFBlocks.GLAZED_LARGE_EARTHENWARE_VESSELS.values().forEach(vessel -> ItemBlockRenderTypes.setRenderLayer(vessel.get(), cutout));
@@ -181,8 +194,16 @@ public class ClientEventHandler
         // Entities
         for (TFCFWood wood : TFCFWood.VALUES)
         {
-            event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
+            //if (!wood.hasLeavesOnly())
+                event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
         }
+
+        // BEs
+        event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(TFCFBlockEntities.TRAPPED_CHEST.get(), TFCFChestBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(TFCFBlockEntities.SIGN.get(), TFCFSignBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(TFCFBlockEntities.LECTERN.get(), LecternRenderer::new);
+        event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
     }
 
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
@@ -192,7 +213,7 @@ public class ClientEventHandler
         for (TFCFWood wood : TFCFWood.VALUES)
         {
             event.registerLayerDefinition(TFCFBoatRenderer.boatName(wood.getSerializedName()), () -> boatLayer);
-            event.registerLayerDefinition(RenderHelpers.modelIdentifier("sign/" + wood.name().toLowerCase(Locale.ROOT)), () -> signLayer);
+            event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("sign/" + wood.name().toLowerCase(Locale.ROOT)), () -> signLayer);
         }
     }
 
@@ -203,7 +224,7 @@ public class ClientEventHandler
 
     public static void registerModelLoaders(ModelRegistryEvent event)
     {
-        ModelLoaderRegistry.registerLoader(Helpers.identifier("contained_fluid"), new ContainedFluidModel.Loader());
+        //ModelLoaderRegistry.registerLoader(Helpers.identifier("contained_fluid"), new ContainedFluidModel.Loader());
     }
 
     public static void registerColorHandlerBlocks(ColorHandlerEvent.Block event)
@@ -301,35 +322,32 @@ public class ClientEventHandler
     public static void onTextureStitch(TextureStitchEvent.Pre event)
     {
         final ResourceLocation sheet = event.getAtlas().location();
-        if (sheet.equals(RenderHelpers.BLOCKS_ATLAS))
-        {
-            event.addSprite(Helpers.identifier("block/burlap"));
-            event.addSprite(Helpers.identifier("block/devices/bellows/back"));
-            event.addSprite(Helpers.identifier("block/devices/bellows/side"));
-
-            for (Metal.Default metal : Metal.Default.values())
-            {
-                event.addSprite(Helpers.identifier("block/metal/full/" + metal.getSerializedName()));
-            }
-            for (String texture : TFCConfig.CLIENT.additionalMetalSheetTextures.get())
-            {
-                event.addSprite(new ResourceLocation(texture));
-            }
-        }
-        else if (sheet.equals(Sheets.CHEST_SHEET))
+        if (sheet.equals(Sheets.CHEST_SHEET)/* && hasLeavesOnly()*/)
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> {
-                event.addSprite(Helpers.identifier("entity/chest/normal/" + name));
-                event.addSprite(Helpers.identifier("entity/chest/normal_left/" + name));
-                event.addSprite(Helpers.identifier("entity/chest/normal_right/" + name));
-                event.addSprite(Helpers.identifier("entity/chest/trapped/" + name));
-                event.addSprite(Helpers.identifier("entity/chest/trapped_left/" + name));
-                event.addSprite(Helpers.identifier("entity/chest/trapped_right/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_right/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/" + name));
             });
         }
-        else if (sheet.equals(Sheets.SIGN_SHEET))
+        else if (sheet.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
         {
-            Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(Helpers.identifier("entity/signs/" + name)));
+            Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }
+    }
+
+    static final Boolean hasLeavesOnly()
+    {
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (!wood.hasLeavesOnly())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

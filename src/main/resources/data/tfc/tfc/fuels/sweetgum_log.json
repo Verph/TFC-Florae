@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/sweetgum"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/sweetgum"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/sweetgum"
     }
   ],
   "duration": 2000,

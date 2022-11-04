@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/quartzite",
+      "model": "tfcflorae:block/rock/flagstone/quartzite",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/quartzite"
+      "model": "tfcflorae:block/rock/flagstone/quartzite"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/quartzite",
+      "model": "tfcflorae:block/rock/flagstone/quartzite",
       "x": 90
     }
   }

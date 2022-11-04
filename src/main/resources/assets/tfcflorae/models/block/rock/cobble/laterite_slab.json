@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/cobble/laterite",
-    "top": "tfc:block/rock/cobble/laterite",
-    "side": "tfc:block/rock/cobble/laterite"
+    "bottom": "tfcflorae:block/rock/cobble/laterite",
+    "top": "tfcflorae:block/rock/cobble/laterite",
+    "side": "tfcflorae:block/rock/cobble/laterite"
   }
 }

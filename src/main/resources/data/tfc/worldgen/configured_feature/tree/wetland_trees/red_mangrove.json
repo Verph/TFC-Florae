@@ -98,8 +98,8 @@
       },
       "mangrove_root_placement": {
         "can_grow_through": "#tfcflorae:mangrove_roots_can_grow_through",
-        "max_root_length": 15,
         "max_root_width": 8,
+        "max_root_length": 9,
         "muddy_roots_in": [
           "tfcflorae:mud/humus",
           "tfc:mud/loam",
@@ -158,8 +158,8 @@
           "min_inclusive": 1
         }
       },
-      "height_rand_a": 2,
-      "height_rand_b": 5,
+      "height_rand_a": 1,
+      "height_rand_b": 4,
       "place_branch_per_log_probability": 0.5
     },
     "trunk_provider": {

@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/hemlock",
-    "base": "tfcflorae:block/wood/lectern/hemlock/base",
-    "front": "tfcflorae:block/wood/lectern/hemlock/front",
-    "sides": "tfcflorae:block/wood/lectern/hemlock/sides",
-    "top": "tfcflorae:block/wood/lectern/hemlock/top",
-    "particle": "tfcflorae:block/wood/lectern/hemlock/sides"
+    "base": "tfcflorae:block/wood/lectern/base/hemlock",
+    "front": "tfcflorae:block/wood/lectern/front/hemlock",
+    "sides": "tfcflorae:block/wood/lectern/sides/hemlock",
+    "top": "tfcflorae:block/wood/lectern/top/hemlock",
+    "particle": "tfcflorae:block/wood/lectern/sides/hemlock"
   }
 }

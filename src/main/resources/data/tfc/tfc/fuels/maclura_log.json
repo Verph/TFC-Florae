@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/maclura"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/maclura"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/maclura"
     }
   ],
   "duration": 1930,

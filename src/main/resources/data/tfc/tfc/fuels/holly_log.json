@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/holly"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/holly"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/holly"
     }
   ],
   "duration": 1000,

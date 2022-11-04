@@ -71,7 +71,9 @@
       "tfc:lush_caves_calcite",
       "tfc:lush_caves_vegetation",
 	  "tfc:plant/morning_glory_cave_patch",
-	  "tfc:plant/spore_blossom"
+	  "tfc:plant/spore_blossom",
+	  "tfc:plant/spanish_moss",
+	  "tfc:plant/ivy"
     ]
   ],
   "starts": [],
@@ -149,7 +151,7 @@
       },
       {
         "type": "tfc:musk_ox",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 4
       },
@@ -161,13 +163,13 @@
       },
       {
         "type": "tfc:duck",
-        "weight": 1,
+        "weight": 3,
         "minCount": 2,
         "maxCount": 6
       },
       {
         "type": "tfc:quail",
-        "weight": 1,
+        "weight": 2,
         "minCount": 2,
         "maxCount": 6
       },
@@ -203,13 +205,13 @@
       },
       {
         "type": "tfc:rabbit",
-        "weight": 2,
+        "weight": 4,
         "minCount": 1,
         "maxCount": 4
       },
       {
         "type": "tfc:fox",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 1
       },
@@ -241,6 +243,6 @@
     "water_creature": []
   },
   "player_spawn_friendly": true,
-  "creature_spawn_probability": 0.05,
+  "creature_spawn_probability": 0.08,
   "spawn_costs": {}
 }

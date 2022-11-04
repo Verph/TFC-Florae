@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/cataclasite",
-    "top": "tfc:block/rock/bricks/cataclasite",
-    "side": "tfc:block/rock/bricks/cataclasite"
+    "bottom": "tfcflorae:block/rock/bricks/cataclasite",
+    "top": "tfcflorae:block/rock/bricks/cataclasite",
+    "side": "tfcflorae:block/rock/bricks/cataclasite"
   }
 }

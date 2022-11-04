@@ -6,8 +6,14 @@
     },
     {
       "item": "tfcflorae:wood/wood/bald_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/bald_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/bald_cypress"
     }
   ],
-  "duration": 1300,
-  "temperature": 770
+  "duration": 1250,
+  "temperature": 627
 }

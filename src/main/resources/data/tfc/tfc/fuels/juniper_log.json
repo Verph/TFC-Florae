@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/juniper"
     }
   ],
   "duration": 1750,

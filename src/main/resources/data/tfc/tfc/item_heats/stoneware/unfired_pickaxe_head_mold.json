@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "tfcflorae:ceramic/stoneware/unfired/pickaxe_head_mold"
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/pickaxe_head"
   },
   "heat_capacity": 0.2
 }

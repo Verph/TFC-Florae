@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/template_wall_post",
   "textures": {
-    "wall": "tfc:block/rock/cobble/foidolite"
+    "wall": "tfcflorae:block/rock/cobble/foidolite"
   }
 }

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/flagstone_bricks/dripstone",
-    "top": "tfcflorae:block/rock/flagstone_bricks/dripstone",
-    "side": "tfcflorae:block/rock/flagstone_bricks/dripstone"
-  }
-}

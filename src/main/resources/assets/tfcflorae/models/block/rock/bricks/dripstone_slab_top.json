@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab_top",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/dripstone",
-    "top": "tfc:block/rock/bricks/dripstone",
-    "side": "tfc:block/rock/bricks/dripstone"
+    "bottom": "tfcflorae:block/rock/bricks/dripstone",
+    "top": "tfcflorae:block/rock/bricks/dripstone",
+    "side": "tfcflorae:block/rock/bricks/dripstone"
   }
 }

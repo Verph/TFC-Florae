@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/humus/chalk",
-    "top": "tfcflorae:block/pebble_compact_dirt/humus/chalk",
-    "side": "tfcflorae:block/pebble_compact_dirt/humus/chalk"
-  }
-}

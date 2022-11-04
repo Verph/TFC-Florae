@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/mahogany"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mahogany"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mahogany"
     }
   ],
   "duration": 1000,

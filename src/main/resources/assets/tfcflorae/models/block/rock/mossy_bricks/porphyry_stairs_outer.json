@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/porphyry",
-    "top": "tfc:block/rock/mossy_bricks/porphyry",
-    "side": "tfc:block/rock/mossy_bricks/porphyry"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/porphyry",
+    "top": "tfcflorae:block/rock/mossy_bricks/porphyry",
+    "side": "tfcflorae:block/rock/mossy_bricks/porphyry"
   }
 }

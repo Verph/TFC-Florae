@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/blueschist",
-    "top": "tfc:block/rock/mossy_bricks/blueschist",
-    "side": "tfc:block/rock/mossy_bricks/blueschist"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/blueschist",
+    "top": "tfcflorae:block/rock/mossy_bricks/blueschist",
+    "side": "tfcflorae:block/rock/mossy_bricks/blueschist"
   }
 }

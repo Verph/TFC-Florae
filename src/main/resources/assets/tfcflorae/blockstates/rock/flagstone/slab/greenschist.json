@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/greenschist"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/greenschist"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/greenschist"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/greenschist"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/greenschist"
+      "model": "tfcflorae:block/rock/flagstone/greenschist"
     }
   }
 }

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/baobab"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/baobab"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/baobab"
     }
   ],
   "duration": 1000,

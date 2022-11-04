@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "tfcflorae:block/rock/flagstone/foidolite_top",
-    "side": "tfcflorae:block/rock/flagstone/foidolite_side"
-  }
-}

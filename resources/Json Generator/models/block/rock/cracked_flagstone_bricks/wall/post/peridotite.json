@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/template_wall_post",
-  "textures": {
-    "wall": "tfcflorae:block/rock/cracked_flagstone_bricks/peridotite"
-  }
-}

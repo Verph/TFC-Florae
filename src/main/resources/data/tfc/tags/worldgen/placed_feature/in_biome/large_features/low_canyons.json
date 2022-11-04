@@ -8,6 +8,8 @@
     "tfc:cave_vegetation",
     "tfc:random_empty_hot_spring",
     "tfc:random_active_hot_spring",
-    "tfc:fresh_water_forest"
+    "tfc:fresh_water_forest",
+    "tfc:charred_forest",
+    "tfc:fruit_forest"
   ]
 }

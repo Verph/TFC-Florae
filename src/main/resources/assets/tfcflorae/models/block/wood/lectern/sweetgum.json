@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/sweetgum",
-    "base": "tfcflorae:block/wood/lectern/sweetgum/base",
-    "front": "tfcflorae:block/wood/lectern/sweetgum/front",
-    "sides": "tfcflorae:block/wood/lectern/sweetgum/sides",
-    "top": "tfcflorae:block/wood/lectern/sweetgum/top",
-    "particle": "tfcflorae:block/wood/lectern/sweetgum/sides"
+    "base": "tfcflorae:block/wood/lectern/base/sweetgum",
+    "front": "tfcflorae:block/wood/lectern/front/sweetgum",
+    "sides": "tfcflorae:block/wood/lectern/sides/sweetgum",
+    "top": "tfcflorae:block/wood/lectern/top/sweetgum",
+    "particle": "tfcflorae:block/wood/lectern/sides/sweetgum"
   }
 }

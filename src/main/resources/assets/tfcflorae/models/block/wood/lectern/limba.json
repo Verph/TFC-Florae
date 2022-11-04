@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/limba",
-    "base": "tfcflorae:block/wood/lectern/limba/base",
-    "front": "tfcflorae:block/wood/lectern/limba/front",
-    "sides": "tfcflorae:block/wood/lectern/limba/sides",
-    "top": "tfcflorae:block/wood/lectern/limba/top",
-    "particle": "tfcflorae:block/wood/lectern/limba/sides"
+    "base": "tfcflorae:block/wood/lectern/base/limba",
+    "front": "tfcflorae:block/wood/lectern/front/limba",
+    "sides": "tfcflorae:block/wood/lectern/sides/limba",
+    "top": "tfcflorae:block/wood/lectern/top/limba",
+    "particle": "tfcflorae:block/wood/lectern/sides/limba"
   }
 }

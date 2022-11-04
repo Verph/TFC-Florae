@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rockier_compact_dirt/silty_loam/andesite",
-    "top": "tfcflorae:block/rockier_compact_dirt/silty_loam/andesite",
-    "side": "tfcflorae:block/rockier_compact_dirt/silty_loam/andesite"
-  }
-}

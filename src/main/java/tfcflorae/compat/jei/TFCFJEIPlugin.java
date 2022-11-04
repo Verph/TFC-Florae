@@ -2,6 +2,7 @@ package tfcflorae.compat.jei;
 
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import net.minecraft.client.Minecraft;
@@ -12,6 +13,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import mezz.jei.api.IModPlugin;
@@ -22,14 +24,18 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.IVanillaCategoryExtensionRegistration;
+
+import net.dries007.tfc.common.recipes.KnappingRecipe;
+import net.dries007.tfc.compat.jei.category.KnappingRecipeCategory;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.items.TFCFItems;
-import tfcflorae.common.recipes.TFCFKnappingRecipe;
+import tfcflorae.common.recipes.BrushingRecipe;
+import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
-import tfcflorae.compat.jei.category.TFCFKnappingRecipeCategory;
+import tfcflorae.compat.jei.category.BrushingRecipeCategory;
 import tfcflorae.util.TFCFHelpers;
 
 @JeiPlugin
@@ -62,16 +68,17 @@ public class TFCFJEIPlugin implements IModPlugin
         return RecipeType.create(TFCFlorae.MOD_ID, name, tClass);
     }
 
-    private static final ResourceLocation EARTHENWARE_CLAY_TEXTURE = Helpers.identifier("textures/gui/knapping/earthenware_clay_ball.png");
-    private static final ResourceLocation KAOLINITE_CLAY_TEXTURE = Helpers.identifier("textures/gui/knapping/kaolinite_clay_ball.png");
-    private static final ResourceLocation STONEWARE_CLAY_TEXTURE = Helpers.identifier("textures/gui/knapping/stoneware_clay_ball.png");
-    private static final ResourceLocation EARTHENWARE_CLAY_DISABLED_TEXTURE = Helpers.identifier("textures/gui/knapping/earthenware_clay_ball_disabled.png");
-    private static final ResourceLocation KAOLINITE_CLAY_DISABLED_TEXTURE = Helpers.identifier("textures/gui/knapping/kaolinite_clay_ball_disabled.png");
-    private static final ResourceLocation STONEWARE_CLAY_DISABLED_TEXTURE = Helpers.identifier("textures/gui/knapping/stoneware_clay_ball_disabled.png");
+    private static final ResourceLocation EARTHENWARE_CLAY_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/earthenware/clay.png");
+    private static final ResourceLocation KAOLINITE_CLAY_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/kaolinite/clay.png");
+    private static final ResourceLocation STONEWARE_CLAY_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/stoneware/clay.png");
+    private static final ResourceLocation EARTHENWARE_CLAY_DISABLED_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/earthenware/clay_disabled.png");
+    private static final ResourceLocation KAOLINITE_CLAY_DISABLED_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/kaolinite/clay_disabled.png");
+    private static final ResourceLocation STONEWARE_CLAY_DISABLED_TEXTURE = TFCFHelpers.identifier("textures/gui/knapping/ceramic/stoneware/clay_disabled.png");
 
-    public static final RecipeType<TFCFKnappingRecipe> EARTHENWARE_CLAY_KNAPPING = type("earthenware_clay_knapping", TFCFKnappingRecipe.class);
-    public static final RecipeType<TFCFKnappingRecipe> KAOLINITE_CLAY_KNAPPING = type("kaolinite_clay_knapping", TFCFKnappingRecipe.class);
-    public static final RecipeType<TFCFKnappingRecipe> STONEWARE_CLAY_KNAPPING = type("stoneware_clay_knapping", TFCFKnappingRecipe.class);
+    public static final RecipeType<BrushingRecipe> BRUSHING = type("brushing", BrushingRecipe.class);
+    public static final RecipeType<KnappingRecipe> EARTHENWARE_CLAY_KNAPPING = type("earthenware_clay_knapping", KnappingRecipe.class);
+    public static final RecipeType<KnappingRecipe> KAOLINITE_CLAY_KNAPPING = type("kaolinite_clay_knapping", KnappingRecipe.class);
+    public static final RecipeType<KnappingRecipe> STONEWARE_CLAY_KNAPPING = type("stoneware_clay_knapping", KnappingRecipe.class);
 
     @Override
     public ResourceLocation getPluginUid()
@@ -83,17 +90,19 @@ public class TFCFJEIPlugin implements IModPlugin
     public void registerCategories(IRecipeCategoryRegistration r)
     {
         IGuiHelper gui = r.getJeiHelpers().getGuiHelper();
-        r.addRecipeCategories(new TFCFKnappingRecipeCategory<>(EARTHENWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.EARTHENWARE_CLAY_BALL.get()), EARTHENWARE_CLAY_TEXTURE, EARTHENWARE_CLAY_DISABLED_TEXTURE));
-        r.addRecipeCategories(new TFCFKnappingRecipeCategory<>(KAOLINITE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.KAOLINITE_CLAY_BALL.get()), KAOLINITE_CLAY_TEXTURE, KAOLINITE_CLAY_DISABLED_TEXTURE));
-        r.addRecipeCategories(new TFCFKnappingRecipeCategory<>(STONEWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.STONEWARE_CLAY_BALL.get()), STONEWARE_CLAY_TEXTURE, STONEWARE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new BrushingRecipeCategory(BRUSHING, gui));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(EARTHENWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.EARTHENWARE_CLAY_BALL.get()), EARTHENWARE_CLAY_TEXTURE, EARTHENWARE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(KAOLINITE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.KAOLINITE_CLAY_BALL.get()), KAOLINITE_CLAY_TEXTURE, KAOLINITE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(STONEWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.STONEWARE_CLAY_BALL.get()), STONEWARE_CLAY_TEXTURE, STONEWARE_CLAY_DISABLED_TEXTURE));
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration r)
     {
-        r.addRecipes(EARTHENWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING.get()));
-        r.addRecipes(KAOLINITE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING.get()));
-        r.addRecipes(STONEWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING.get()));
+        r.addRecipes(BRUSHING, getRecipes(TFCFRecipeTypes.BRUSHING.get()));
+        r.addRecipes(EARTHENWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING.get(), recipe -> recipe.getSerializer() == TFCFRecipeSerializers.EARTHENWARE_CLAY_KNAPPING.get()));
+        r.addRecipes(KAOLINITE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING.get(), recipe -> recipe.getSerializer() == TFCFRecipeSerializers.KAOLINITE_CLAY_KNAPPING.get()));
+        r.addRecipes(STONEWARE_CLAY_KNAPPING, getRecipes(TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING.get(), recipe -> recipe.getSerializer() == TFCFRecipeSerializers.STONEWARE_CLAY_KNAPPING.get()));
 
         addIngredientInfo(r);
     }
@@ -114,5 +123,15 @@ public class TFCFJEIPlugin implements IModPlugin
 
     private void addIngredientInfo(IRecipeRegistration r)
     {
+    }
+
+    private static void cat(IRecipeCatalystRegistration r, Supplier<? extends Block> supplier, RecipeType<?> type)
+    {
+        r.addRecipeCatalyst(new ItemStack(supplier.get()), type);
+    }
+
+    private static void cat(IRecipeCatalystRegistration r, Item item, RecipeType<?> type)
+    {
+        r.addRecipeCatalyst(new ItemStack(item), type);
     }
 }

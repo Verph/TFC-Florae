@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/boninite",
-    "top": "tfc:block/rock/bricks/boninite",
-    "side": "tfc:block/rock/bricks/boninite"
+    "bottom": "tfcflorae:block/rock/bricks/boninite",
+    "top": "tfcflorae:block/rock/bricks/boninite",
+    "side": "tfcflorae:block/rock/bricks/boninite"
   }
 }

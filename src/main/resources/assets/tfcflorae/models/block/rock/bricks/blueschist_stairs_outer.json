@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/bricks/blueschist",
-    "top": "tfc:block/rock/bricks/blueschist",
-    "side": "tfc:block/rock/bricks/blueschist"
+    "bottom": "tfcflorae:block/rock/bricks/blueschist",
+    "top": "tfcflorae:block/rock/bricks/blueschist",
+    "side": "tfcflorae:block/rock/bricks/blueschist"
   }
 }

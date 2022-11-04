@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/basalt"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/basalt"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/basalt"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/basalt"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/basalt"
+      "model": "tfcflorae:block/rock/flagstone/basalt"
     }
   }
 }

@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/peridotite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/peridotite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/peridotite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/peridotite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/peridotite"
+      "model": "tfcflorae:block/rock/flagstone/peridotite"
     }
   }
 }

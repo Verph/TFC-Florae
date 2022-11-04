@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/wackestone",
+      "model": "tfcflorae:block/rock/flagstone/wackestone",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/wackestone"
+      "model": "tfcflorae:block/rock/flagstone/wackestone"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/wackestone",
+      "model": "tfcflorae:block/rock/flagstone/wackestone",
       "x": 90
     }
   }

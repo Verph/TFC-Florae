@@ -1,39 +1,23 @@
 package tfcflorae.common.blocks.wood;
 
 import java.util.Locale;
-import java.util.Random;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
+import org.jetbrains.annotations.Nullable;
 
-import net.minecraft.core.Direction;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.ChestBlockEntity;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.registries.RegistryObject;
 
-import net.dries007.tfc.common.blockentities.*;
-import net.dries007.tfc.common.blocks.*;
-import net.dries007.tfc.common.blocks.devices.*;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.climate.ClimateRanges;
 import net.dries007.tfc.util.registry.RegistryWood;
 import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
-
-import org.jetbrains.annotations.Nullable;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.items.TFCFFood;
@@ -67,6 +51,7 @@ public enum TFCFWood implements RegistryWood
     CYPRESS(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     EBONY(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     FEVER(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
+    GHAF(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     GINKGO(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     GREENHEART(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 29),
     HAWTHORN(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19, TFCFItems.FOOD.get(TFCFFood.HAWTHORN), new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, HEALTHY, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}),
@@ -81,6 +66,7 @@ public enum TFCFWood implements RegistryWood
     JUNIPER(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19, TFCFItems.FOOD.get(TFCFFood.JUNIPER), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}),
     KAURI(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 29),
     LARCH(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
+    LAUREL(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     LIMBA(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     LOCUST(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     LOGWOOD(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),

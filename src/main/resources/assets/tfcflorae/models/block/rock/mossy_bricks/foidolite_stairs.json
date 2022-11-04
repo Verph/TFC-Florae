@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/foidolite",
-    "top": "tfc:block/rock/mossy_bricks/foidolite",
-    "side": "tfc:block/rock/mossy_bricks/foidolite"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/foidolite",
+    "top": "tfcflorae:block/rock/mossy_bricks/foidolite",
+    "side": "tfcflorae:block/rock/mossy_bricks/foidolite"
   }
 }

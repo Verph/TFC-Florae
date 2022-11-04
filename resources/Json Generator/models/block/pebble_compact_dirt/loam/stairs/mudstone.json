@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/loam/mudstone",
-    "top": "tfcflorae:block/pebble_compact_dirt/loam/mudstone",
-    "side": "tfcflorae:block/pebble_compact_dirt/loam/mudstone"
-  }
-}

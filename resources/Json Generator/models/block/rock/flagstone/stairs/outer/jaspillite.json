@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/flagstone/jaspillite_side",
-    "top": "tfcflorae:block/rock/flagstone/jaspillite_side",
-    "side": "tfcflorae:block/rock/flagstone/jaspillite_side"
-  }
-}

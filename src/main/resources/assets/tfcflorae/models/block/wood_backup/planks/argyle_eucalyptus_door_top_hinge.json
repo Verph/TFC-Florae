@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/door_top_rh",
-  "textures": {
-    "top": "tfcflorae:block/wood/planks/argyle_eucalyptus_top",
-    "bottom": "tfcflorae:block/wood/planks/argyle_eucalyptus_bottom"
-  }
-}

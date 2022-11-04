@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/butternut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/butternut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/butternut"
     }
   ],
   "duration": 1800,

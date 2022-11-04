@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/yew",
-    "base": "tfcflorae:block/wood/lectern/yew/base",
-    "front": "tfcflorae:block/wood/lectern/yew/front",
-    "sides": "tfcflorae:block/wood/lectern/yew/sides",
-    "top": "tfcflorae:block/wood/lectern/yew/top",
-    "particle": "tfcflorae:block/wood/lectern/yew/sides"
+    "base": "tfcflorae:block/wood/lectern/base/yew",
+    "front": "tfcflorae:block/wood/lectern/front/yew",
+    "sides": "tfcflorae:block/wood/lectern/sides/yew",
+    "top": "tfcflorae:block/wood/lectern/top/yew",
+    "particle": "tfcflorae:block/wood/lectern/sides/yew"
   }
 }

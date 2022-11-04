@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/nordmann_fir",
-    "base": "tfcflorae:block/wood/lectern/nordmann_fir/base",
-    "front": "tfcflorae:block/wood/lectern/nordmann_fir/front",
-    "sides": "tfcflorae:block/wood/lectern/nordmann_fir/sides",
-    "top": "tfcflorae:block/wood/lectern/nordmann_fir/top",
-    "particle": "tfcflorae:block/wood/lectern/nordmann_fir/sides"
+    "base": "tfcflorae:block/wood/lectern/base/nordmann_fir",
+    "front": "tfcflorae:block/wood/lectern/front/nordmann_fir",
+    "sides": "tfcflorae:block/wood/lectern/sides/nordmann_fir",
+    "top": "tfcflorae:block/wood/lectern/top/nordmann_fir",
+    "particle": "tfcflorae:block/wood/lectern/sides/nordmann_fir"
   }
 }

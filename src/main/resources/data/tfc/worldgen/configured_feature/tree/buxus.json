@@ -6,7 +6,7 @@
     "overlay": "tfc:buxus/overlay",
     "trunk": {
       "state": {
-        "Name": "tfc:wood/log/buxus",
+        "Name": "tfcflorae:wood/log/buxus",
         "Properties": {
           "axis": "y",
           "natural": "true"

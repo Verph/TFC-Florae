@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/log_fence_inventory",
-  "textures": {
-    "log": "tfcflorae:block/wood/log/nordmann_fir",
-    "planks": "tfcflorae:block/wood/planks/nordmann_fir"
-  }
-}

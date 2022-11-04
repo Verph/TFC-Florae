@@ -22,6 +22,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.dries007.tfc.common.*;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.entities.TFCEntities;
 import net.dries007.tfc.common.items.*;
@@ -30,6 +31,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
 
@@ -72,7 +74,6 @@ public class TFCFItems
 
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/fired_brick", MISC);
-    //public static final RegistryObject<Item> UNFIRED_EARTHENWARE_CRUCIBLE = register("ceramic/earthenware/unfired/crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_FLOWER_POT = register("ceramic/earthenware/unfired/flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_PAN = register("ceramic/earthenware/unfired/pan", MISC);
 
@@ -108,16 +109,12 @@ public class TFCFItems
     );
 
     public static final RegistryObject<Item> UNFIRED_LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/unfired/large_vessel", MISC);
-    /*public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_LARGE_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/earthenware/unfired/large_vessel/" + color, MISC)
-    );*/
 
     /* Kaolinite Clay Ceramics */
     public static final RegistryObject<Item> KAOLINITE_CLAY_BALL = register("ceramic/kaolinite/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/fired_brick", MISC);
-    //public static final RegistryObject<Item> UNFIRED_KAOLINITE_CRUCIBLE = register("ceramic/kaolinite/unfired/crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_FLOWER_POT = register("ceramic/kaolinite/unfired/flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_PAN = register("ceramic/kaolinite/unfired/pan", MISC);
 
@@ -153,16 +150,12 @@ public class TFCFItems
     );
 
     public static final RegistryObject<Item> UNFIRED_LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/unfired/large_vessel", MISC);
-    /*public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_LARGE_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/kaolinite/unfired/large_vessel/" + color, MISC)
-    );*/
 
     /* Stoneware Clay Ceramics */
     public static final RegistryObject<Item> STONEWARE_CLAY_BALL = register("ceramic/stoneware/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_STONEWARE_BRICK = register("ceramic/stoneware/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_STONEWARE_BRICK = register("ceramic/stoneware/fired_brick", MISC);
-    //public static final RegistryObject<Item> UNFIRED_STONEWARE_CRUCIBLE = register("ceramic/stoneware/unfired/crucible", MISC);
     public static final RegistryObject<Item> UNFIRED_STONEWARE_FLOWER_POT = register("ceramic/stoneware/unfired/flower_pot", MISC);
     public static final RegistryObject<Item> UNFIRED_STONEWARE_PAN = register("ceramic/stoneware/unfired/pan", MISC);
 
@@ -198,9 +191,20 @@ public class TFCFItems
     );
 
     public static final RegistryObject<Item> UNFIRED_LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/unfired/large_vessel", MISC);
-    /*public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_LARGE_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/stoneware/unfired/large_vessel/" + color, MISC)
-    );*/
+
+    // Soil stuff
+
+    public static final Map<SoilBlockType.Variant, RegistryObject<Item>> SOIL_PILE_TFC = Helpers.mapOfKeys(SoilBlockType.Variant.class, variant ->
+        register("soil_pile/" + variant.name(), EARTH)
+    );
+
+    public static final Map<TFCFSoil.TFCFVariant, RegistryObject<Item>> SOIL_PILE_TFCF = Helpers.mapOfKeys(TFCFSoil.TFCFVariant.class, variant ->
+        register("soil_pile/" + variant.name(), EARTH)
+    );
+
+    // Tools
+
+    public static final RegistryObject<Item> BRUSHES = register("tools/brush", () -> new BrushItem(new Item.Properties().tab(MISC).stacksTo(1).durability(250)));
 
     // Fin
 

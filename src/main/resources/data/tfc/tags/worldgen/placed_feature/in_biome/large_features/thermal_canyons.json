@@ -6,6 +6,8 @@
     "#tfc:feature/volcanoes",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-    "tfc:random_active_hot_spring"
+    "tfc:random_active_hot_spring",
+    "tfc:charred_forest",
+    "tfc:fruit_forest"
   ]
 }

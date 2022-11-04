@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/raw/travertine",
-    "top": "tfc:block/rock/raw/travertine",
-    "side": "tfc:block/rock/raw/travertine"
+    "bottom": "tfcflorae:block/rock/raw/travertine",
+    "top": "tfcflorae:block/rock/raw/travertine",
+    "side": "tfcflorae:block/rock/raw/travertine"
   }
 }

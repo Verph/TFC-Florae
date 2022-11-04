@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east": {
       "model": "tfcflorae:block/wood/scribing_table/larch",

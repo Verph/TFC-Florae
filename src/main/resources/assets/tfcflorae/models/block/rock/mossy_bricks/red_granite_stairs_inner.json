@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/red_granite",
-    "top": "tfc:block/rock/mossy_bricks/red_granite",
-    "side": "tfc:block/rock/mossy_bricks/red_granite"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/red_granite",
+    "top": "tfcflorae:block/rock/mossy_bricks/red_granite",
+    "side": "tfcflorae:block/rock/mossy_bricks/red_granite"
   }
 }

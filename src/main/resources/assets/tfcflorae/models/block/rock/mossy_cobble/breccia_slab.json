@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/slab",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_cobble/breccia",
-    "top": "tfc:block/rock/mossy_cobble/breccia",
-    "side": "tfc:block/rock/mossy_cobble/breccia"
+    "bottom": "tfcflorae:block/rock/mossy_cobble/breccia",
+    "top": "tfcflorae:block/rock/mossy_cobble/breccia",
+    "side": "tfcflorae:block/rock/mossy_cobble/breccia"
   }
 }

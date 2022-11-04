@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/phyllite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/phyllite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/phyllite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/phyllite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/phyllite"
+      "model": "tfcflorae:block/rock/flagstone/phyllite"
     }
   }
 }

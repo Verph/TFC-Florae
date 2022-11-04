@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/dripstone",
-    "top": "tfc:block/rock/mossy_bricks/dripstone",
-    "side": "tfc:block/rock/mossy_bricks/dripstone"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/dripstone",
+    "top": "tfcflorae:block/rock/mossy_bricks/dripstone",
+    "side": "tfcflorae:block/rock/mossy_bricks/dripstone"
   }
 }

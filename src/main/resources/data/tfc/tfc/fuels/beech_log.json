@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/beech"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/beech"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/beech"
     }
   ],
   "duration": 1750,

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rocky_compact_dirt/sandy_loam/conglomerate",
-    "top": "tfcflorae:block/rocky_compact_dirt/sandy_loam/conglomerate",
-    "side": "tfcflorae:block/rocky_compact_dirt/sandy_loam/conglomerate"
-  }
-}

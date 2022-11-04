@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/cobbled_bricks/catlinite_side",
-    "top": "tfcflorae:block/rock/cobbled_bricks/catlinite_side",
-    "side": "tfcflorae:block/rock/cobbled_bricks/catlinite_side"
-  }
-}

@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/greenschist",
+      "model": "tfcflorae:block/rock/flagstone/greenschist",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/greenschist"
+      "model": "tfcflorae:block/rock/flagstone/greenschist"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/greenschist",
+      "model": "tfcflorae:block/rock/flagstone/greenschist",
       "x": 90
     }
   }

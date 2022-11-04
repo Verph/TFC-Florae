@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/hawthorn",
-    "base": "tfcflorae:block/wood/lectern/hawthorn/base",
-    "front": "tfcflorae:block/wood/lectern/hawthorn/front",
-    "sides": "tfcflorae:block/wood/lectern/hawthorn/sides",
-    "top": "tfcflorae:block/wood/lectern/hawthorn/top",
-    "particle": "tfcflorae:block/wood/lectern/hawthorn/sides"
+    "base": "tfcflorae:block/wood/lectern/base/hawthorn",
+    "front": "tfcflorae:block/wood/lectern/front/hawthorn",
+    "sides": "tfcflorae:block/wood/lectern/sides/hawthorn",
+    "top": "tfcflorae:block/wood/lectern/top/hawthorn",
+    "particle": "tfcflorae:block/wood/lectern/sides/hawthorn"
   }
 }

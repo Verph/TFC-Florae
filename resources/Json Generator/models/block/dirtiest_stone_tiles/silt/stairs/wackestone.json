@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirtiest_stone_tiles/silt/wackestone",
-    "top": "tfcflorae:block/dirtiest_stone_tiles/silt/wackestone",
-    "side": "tfcflorae:block/dirtiest_stone_tiles/silt/wackestone"
-  }
-}

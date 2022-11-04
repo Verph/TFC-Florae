@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/sorb",
-    "base": "tfcflorae:block/wood/lectern/sorb/base",
-    "front": "tfcflorae:block/wood/lectern/sorb/front",
-    "sides": "tfcflorae:block/wood/lectern/sorb/sides",
-    "top": "tfcflorae:block/wood/lectern/sorb/top",
-    "particle": "tfcflorae:block/wood/lectern/sorb/sides"
+    "base": "tfcflorae:block/wood/lectern/base/sorb",
+    "front": "tfcflorae:block/wood/lectern/front/sorb",
+    "sides": "tfcflorae:block/wood/lectern/sides/sorb",
+    "top": "tfcflorae:block/wood/lectern/top/sorb",
+    "particle": "tfcflorae:block/wood/lectern/sides/sorb"
   }
 }

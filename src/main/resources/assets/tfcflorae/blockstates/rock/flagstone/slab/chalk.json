@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/chalk"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/chalk"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/chalk"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/chalk"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/chalk"
+      "model": "tfcflorae:block/rock/flagstone/chalk"
     }
   }
 }

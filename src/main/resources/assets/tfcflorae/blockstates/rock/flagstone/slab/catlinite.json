@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/catlinite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/catlinite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/catlinite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/catlinite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/catlinite"
+      "model": "tfcflorae:block/rock/flagstone/catlinite"
     }
   }
 }

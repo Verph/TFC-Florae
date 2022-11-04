@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/stairs",
   "textures": {
-    "bottom": "tfc:block/rock/mossy_bricks/novaculite",
-    "top": "tfc:block/rock/mossy_bricks/novaculite",
-    "side": "tfc:block/rock/mossy_bricks/novaculite"
+    "bottom": "tfcflorae:block/rock/mossy_bricks/novaculite",
+    "top": "tfcflorae:block/rock/mossy_bricks/novaculite",
+    "side": "tfcflorae:block/rock/mossy_bricks/novaculite"
   }
 }

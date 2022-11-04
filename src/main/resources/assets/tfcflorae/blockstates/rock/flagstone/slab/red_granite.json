@@ -2,13 +2,13 @@
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "type=bottom": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/red_granite"
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/red_granite"
     },
     "type=top": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/red_granite"
+      "model": "tfcflorae:block/rock/flagstone/slab/top/red_granite"
     },
     "type=double": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/red_granite"
+      "model": "tfcflorae:block/rock/flagstone/red_granite"
     }
   }
 }

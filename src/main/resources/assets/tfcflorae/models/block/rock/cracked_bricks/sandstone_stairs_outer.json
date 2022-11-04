@@ -2,8 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "tfc:block/rock/cracked_bricks/sandstone",
-    "top": "tfc:block/rock/cracked_bricks/sandstone",
-    "side": "tfc:block/rock/cracked_bricks/sandstone"
+    "bottom": "tfcflorae:block/rock/cracked_bricks/sandstone",
+    "top": "tfcflorae:block/rock/cracked_bricks/sandstone",
+    "side": "tfcflorae:block/rock/cracked_bricks/sandstone"
   }
 }

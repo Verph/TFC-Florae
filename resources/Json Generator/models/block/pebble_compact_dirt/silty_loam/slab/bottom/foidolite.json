@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/pebble_compact_dirt/silty_loam/foidolite",
-    "top": "tfcflorae:block/pebble_compact_dirt/silty_loam/foidolite",
-    "side": "tfcflorae:block/pebble_compact_dirt/silty_loam/foidolite"
-  }
-}

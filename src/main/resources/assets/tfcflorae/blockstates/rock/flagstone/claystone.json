@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/claystone",
+      "model": "tfcflorae:block/rock/flagstone/claystone",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/claystone"
+      "model": "tfcflorae:block/rock/flagstone/claystone"
     },
     "axis=z": {
-      "model": "tfcflorae:block/rock/flagstone_bricks/claystone",
+      "model": "tfcflorae:block/rock/flagstone/claystone",
       "x": 90
     }
   }

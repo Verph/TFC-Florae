@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "block/wall_inventory",
   "textures": {
-    "wall": "tfc:block/rock/smooth/dripstone"
+    "wall": "tfcflorae:block/rock/smooth/dripstone"
   }
 }

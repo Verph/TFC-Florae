@@ -201,6 +201,256 @@
           "Name": "tfc:rock/magma/granite",
 		  "Properties": {}
         }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/red_granite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/red_granite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/breccia"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/breccia",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/foidolite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/foidolite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/porphyry"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/porphyry",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/peridotite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/peridotite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/blaimorite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/blaimorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/boninite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/boninite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/carbonatite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/carbonatite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/laterite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/porphyry",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/mudstone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/breccia",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/sandstone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/carbonatite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/siltstone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/carbonatite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/arkose"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/breccia",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/jaspillite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/porphyry",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/travertine"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/carbonatite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/wackestone"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/basalt",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/blackband_ironstone"
+        },
+        "state": {
+          "Name": "tfc:rock/magma/basalt",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/cataclasite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/porphyry",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/blueschist"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/blaimorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/catlinite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/porphyry",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/greenschist"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/peridotite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/novaculite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/carbonatite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/soapstone"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/blaimorite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/komatiite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/peridotite",
+		  "Properties": {}
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "tfcflorae:rock/gravel/mylonite"
+        },
+        "state": {
+          "Name": "tfcflorae:rock/magma/breccia",
+		  "Properties": {}
+        }
       }
     ]
   }

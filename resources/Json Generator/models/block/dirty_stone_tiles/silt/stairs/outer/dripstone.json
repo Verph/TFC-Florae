@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/dirty_stone_tiles/silt/dripstone",
-    "top": "tfcflorae:block/dirty_stone_tiles/silt/dripstone",
-    "side": "tfcflorae:block/dirty_stone_tiles/silt/dripstone"
-  }
-}

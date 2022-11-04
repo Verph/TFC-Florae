@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/kauri"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/kauri"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/kauri"
     }
   ],
   "duration": 1250,

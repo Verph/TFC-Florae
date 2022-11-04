@@ -44,7 +44,6 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
-import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.SeasonalPlantBlock;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
@@ -59,10 +58,10 @@ import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
-
+import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, IFluidLoggable
+public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
 {
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
     {
@@ -142,10 +141,8 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
             level.playSound(player, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
             if (!level.isClientSide())
             {
-                level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(bush -> {
-                    ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
-                    level.setBlockAndUpdate(pos, stateAfterPicking(state));
-                });
+                ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
+                level.setBlockAndUpdate(pos, stateAfterPicking(state));
             }
             return InteractionResult.SUCCESS;
         }
@@ -156,8 +153,8 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        super.randomTick(state, level, pos, random); // super calls tick()
-        IBushBlock.randomTick(this, state, level, pos, random);
+        //super.randomTick(state, level, pos, random); // super calls tick()
+        ISeasonalLeavesBlock.randomTick(this, state, level, pos, random);
         if (state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT))
         {
             level.removeBlock(pos, false);
@@ -171,7 +168,8 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
-        level.getBlockEntity(pos, TFCFBlockEntities.LARGE_FRUIT_TREE.get()).ifPresent(leaves -> {
+        if (level.getBlockEntity(pos) instanceof FruitTreeBlockEntity leaves)
+        {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
             // if we are not working with a plant that is or should be dormant
@@ -234,7 +232,7 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                     level.setBlock(pos, newState, 3);
                 }
             }
-        });
+        }
     }
 
     @Override
