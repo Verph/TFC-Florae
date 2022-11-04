@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/gabbro",
     "particle": "tfcflorae:block/rock/gravel/gabbro",
-    "overlay": "tfcflorae:block/deposit/native_copper"
+    "overlay": "tfc:block/deposit/native_copper"
   }
 }

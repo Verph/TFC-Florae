@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/borax/red_granite",
+    "tfcflorae:ore/borax/breccia",
+    "tfcflorae:ore/borax/foidolite",
+    "tfcflorae:ore/borax/porphyry",
+    "tfcflorae:ore/borax/peridotite",
+    "tfcflorae:ore/borax/blaimorite",
+    "tfcflorae:ore/borax/boninite",
+    "tfcflorae:ore/borax/carbonatite",
+    "tfcflorae:ore/borax/laterite",
+    "tfcflorae:ore/borax/mudstone",
+    "tfcflorae:ore/borax/sandstone",
+    "tfcflorae:ore/borax/siltstone",
+    "tfcflorae:ore/borax/arkose",
+    "tfcflorae:ore/borax/jaspillite",
+    "tfcflorae:ore/borax/travertine",
+    "tfcflorae:ore/borax/wackestone",
+    "tfcflorae:ore/borax/blackband_ironstone",
+    "tfcflorae:ore/borax/cataclasite",
+    "tfcflorae:ore/borax/blueschist",
+    "tfcflorae:ore/borax/catlinite",
+    "tfcflorae:ore/borax/greenschist",
+    "tfcflorae:ore/borax/novaculite",
+    "tfcflorae:ore/borax/soapstone",
+    "tfcflorae:ore/borax/komatiite",
+    "tfcflorae:ore/borax/mylonite"
+  ]
+}

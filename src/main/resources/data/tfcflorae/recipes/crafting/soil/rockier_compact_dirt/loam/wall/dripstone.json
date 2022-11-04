@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/loam/dripstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/wall/dripstone",
+    "count": 6
+  }
+}

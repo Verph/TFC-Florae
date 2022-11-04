@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:ghaf/1",
+      "tfc:ghaf/2",
+      "tfc:ghaf/3",
+      "tfc:ghaf/4",
+      "tfc:ghaf/5",
+      "tfc:ghaf/6",
+      "tfc:ghaf/7",
+      "tfc:ghaf/8",
+      "tfc:ghaf/9",
+      "tfc:ghaf/10",
+      "tfc:ghaf/11",
+      "tfc:ghaf/12",
+      "tfc:ghaf/13",
+      "tfc:ghaf/14",
+      "tfc:ghaf/15",
+      "tfc:ghaf/16"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

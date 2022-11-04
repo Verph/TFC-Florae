@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/ebony_top",
+    "bottom": "tfcflorae:block/wood/door/ebony_bottom"
+  }
+}

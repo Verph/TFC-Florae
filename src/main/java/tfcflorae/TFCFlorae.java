@@ -11,7 +11,6 @@ import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 
 import tfcflorae.client.*;
-import tfcflorae.common.ForgeEventHandler;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.container.TFCFContainerTypes;
@@ -52,8 +51,6 @@ public class TFCFlorae
 
         bus.addListener(this::setup);
 
-        ForgeEventHandler.init();
-
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
             ClientEventHandler.init();
@@ -64,10 +61,16 @@ public class TFCFlorae
     {
         LOGGER.info("TFCFlorae Common Setup");
 
+<<<<<<< Updated upstream
         TFCFInteractionManager.registerDefaultInteractions();
+=======
+        TFCFRock.registerDefaultRocks();
+>>>>>>> Stashed changes
 
         event.enqueueWork(() -> {
+            TFCFInteractionManager.init();
             DispenserBehaviors.registerDispenserBehaviors();
+            TFCFBlocks.registerFlowerPotFlowers();
         });
     }
 }

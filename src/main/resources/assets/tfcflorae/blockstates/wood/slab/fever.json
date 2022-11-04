@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/fever"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/fever_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/fever"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/siltstone"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/flagstone/slab/top/siltstone"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/flagstone/siltstone"
+    }
+  }
+}

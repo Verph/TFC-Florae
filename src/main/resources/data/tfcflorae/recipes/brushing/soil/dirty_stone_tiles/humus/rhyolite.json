@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/rhyolite",
+  "result": "tfcflorae:rock/stone_tiles/rhyolite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/hawthorn",
+    "wall": "tfcflorae:block/wood/log/hawthorn",
+    "particle": "tfcflorae:block/wood/log/hawthorn"
+  }
+}

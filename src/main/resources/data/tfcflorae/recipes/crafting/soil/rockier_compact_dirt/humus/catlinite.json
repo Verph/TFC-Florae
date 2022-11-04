@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/catlinite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/catlinite"
+  }
+}

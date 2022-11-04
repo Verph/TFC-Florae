@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/poor_sphalerite/red_granite",
+    "tfcflorae:ore/poor_sphalerite/breccia",
+    "tfcflorae:ore/poor_sphalerite/foidolite",
+    "tfcflorae:ore/poor_sphalerite/porphyry",
+    "tfcflorae:ore/poor_sphalerite/peridotite",
+    "tfcflorae:ore/poor_sphalerite/blaimorite",
+    "tfcflorae:ore/poor_sphalerite/boninite",
+    "tfcflorae:ore/poor_sphalerite/carbonatite",
+    "tfcflorae:ore/poor_sphalerite/laterite",
+    "tfcflorae:ore/poor_sphalerite/mudstone",
+    "tfcflorae:ore/poor_sphalerite/sandstone",
+    "tfcflorae:ore/poor_sphalerite/siltstone",
+    "tfcflorae:ore/poor_sphalerite/arkose",
+    "tfcflorae:ore/poor_sphalerite/jaspillite",
+    "tfcflorae:ore/poor_sphalerite/travertine",
+    "tfcflorae:ore/poor_sphalerite/wackestone",
+    "tfcflorae:ore/poor_sphalerite/blackband_ironstone",
+    "tfcflorae:ore/poor_sphalerite/cataclasite",
+    "tfcflorae:ore/poor_sphalerite/blueschist",
+    "tfcflorae:ore/poor_sphalerite/catlinite",
+    "tfcflorae:ore/poor_sphalerite/greenschist",
+    "tfcflorae:ore/poor_sphalerite/novaculite",
+    "tfcflorae:ore/poor_sphalerite/soapstone",
+    "tfcflorae:ore/poor_sphalerite/komatiite",
+    "tfcflorae:ore/poor_sphalerite/mylonite"
+  ]
+}

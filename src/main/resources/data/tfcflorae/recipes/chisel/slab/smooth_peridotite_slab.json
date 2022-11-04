@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/peridotite",
+  "result": "tfcflorae:rock/smooth/peridotite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/smooth/peridotite_slab"
+  }
+}

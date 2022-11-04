@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/limba",
+    "north": "tfcflorae:block/wood/workbench/front/limba",
+    "south": "tfcflorae:block/wood/workbench/side/limba",
+    "east": "tfcflorae:block/wood/workbench/side/limba",
+    "west": "tfcflorae:block/wood/workbench/front/limba",
+    "up": "tfcflorae:block/wood/workbench/top/limba",
+    "down": "tfcflorae:block/wood/planks/limba"
+  }
+}

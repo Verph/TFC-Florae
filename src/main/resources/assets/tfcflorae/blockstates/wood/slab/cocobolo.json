@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/cocobolo"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/cocobolo_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/cocobolo"
+    }
+  }
+}

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/zebrawood"
     }
   ],
   "duration": 1570,

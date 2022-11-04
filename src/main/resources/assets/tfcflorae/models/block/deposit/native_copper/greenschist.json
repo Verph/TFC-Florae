@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/greenschist",
     "particle": "tfcflorae:block/rock/gravel/greenschist",
-    "overlay": "tfcflorae:block/deposit/native_copper"
+    "overlay": "tfc:block/deposit/native_copper"
   }
 }

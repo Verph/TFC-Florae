@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/sandy_loam/wall/blueschist",
+  "result": "tfcflorae:rock/stone_tiles/wall/blueschist",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/sandy_loam"
+  }
+}

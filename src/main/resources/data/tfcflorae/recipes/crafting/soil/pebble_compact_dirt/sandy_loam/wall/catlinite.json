@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/sandy_loam/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/wall/catlinite",
+    "count": 6
+  }
+}

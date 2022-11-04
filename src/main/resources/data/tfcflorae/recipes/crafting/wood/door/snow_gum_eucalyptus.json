@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/snow_gum_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/door/snow_gum_eucalyptus",
+    "count": 2
+  }
+}

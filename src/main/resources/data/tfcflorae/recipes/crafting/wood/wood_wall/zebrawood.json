@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/zebrawood"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/zebrawood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/zebrawood",
+    "count": 8
+  }
+}

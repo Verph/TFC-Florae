@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/marblewood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/marblewood",
+    "count": 8
+  }
+}

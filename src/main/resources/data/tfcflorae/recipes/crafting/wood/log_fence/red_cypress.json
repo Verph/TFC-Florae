@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/red_cypress"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/red_cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/red_cypress",
+    "count": 8
+  }
+}

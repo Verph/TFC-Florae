@@ -7,9 +7,7 @@
 		"world.biome.TFCBiomesMixin",
 		"world.layer.TFCLayersMixin"
 	],
-	"client": [
-		"client.MultiPlayerGameModeMixin"
-	],
+	"client": [],
 	"injectors": {
 		"defaultRequire": 1
 	},

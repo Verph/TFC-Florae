@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/novaculite",
+  "result": "tfcflorae:rock/raw/novaculite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/raw/novaculite_slab"
+  }
+}

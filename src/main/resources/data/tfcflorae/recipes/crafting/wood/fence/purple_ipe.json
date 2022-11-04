@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/purple_ipe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/purple_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/purple_ipe",
+    "count": 8
+  }
+}

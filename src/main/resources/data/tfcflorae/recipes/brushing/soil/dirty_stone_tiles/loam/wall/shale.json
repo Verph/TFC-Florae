@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/wall/shale",
+  "result": "tfcflorae:rock/stone_tiles/wall/shale",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

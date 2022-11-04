@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/ghaf"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/ghaf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/ghaf"
+  }
+}

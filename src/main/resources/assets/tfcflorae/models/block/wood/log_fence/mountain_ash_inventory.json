@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/mountain_ash",
+    "planks": "tfcflorae:block/wood/planks/mountain_ash"
+  }
+}

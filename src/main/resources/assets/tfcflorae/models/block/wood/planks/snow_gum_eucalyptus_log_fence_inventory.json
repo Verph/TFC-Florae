@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/log_fence_inventory",
-  "textures": {
-    "log": "tfcflorae:block/wood/log/snow_gum_eucalyptus",
-    "planks": "tfcflorae:block/wood/planks/snow_gum_eucalyptus"
-  }
-}

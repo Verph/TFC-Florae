@@ -1,7 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/kaolinite/unfired_ingot_mold"
+=======
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/ingot"
+>>>>>>> Stashed changes
   },
   "heat_capacity": 0.2
 }

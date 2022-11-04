@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/wall_inventory_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/sloe",
+    "wall": "tfcflorae:block/wood/log/sloe",
+    "particle": "tfcflorae:block/wood/log/sloe"
+  }
+}

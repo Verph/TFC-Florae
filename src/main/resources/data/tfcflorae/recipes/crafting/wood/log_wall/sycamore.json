@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/sycamore"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/sycamore"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/sycamore",
+    "count": 8
+  }
+}

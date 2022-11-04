@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/soapstone",
+  "result": "tfcflorae:rock/cobble/soapstone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobble/soapstone_slab"
+  }
+}

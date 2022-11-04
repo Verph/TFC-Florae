@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/walnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/trapdoor/walnut",
+    "count": 3
+  }
+}

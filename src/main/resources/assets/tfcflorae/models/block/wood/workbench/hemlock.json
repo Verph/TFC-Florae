@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/hemlock",
+    "north": "tfcflorae:block/wood/workbench/front/hemlock",
+    "south": "tfcflorae:block/wood/workbench/side/hemlock",
+    "east": "tfcflorae:block/wood/workbench/side/hemlock",
+    "west": "tfcflorae:block/wood/workbench/front/hemlock",
+    "up": "tfcflorae:block/wood/workbench/top/hemlock",
+    "down": "tfcflorae:block/wood/planks/hemlock"
+  }
+}

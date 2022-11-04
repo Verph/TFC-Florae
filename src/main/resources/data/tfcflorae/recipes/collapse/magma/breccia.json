@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": [
+	"tfcflorae:rock/magma/breccia"
+  ],
+  "result": "tfcflorae:rock/magma/breccia"
+}

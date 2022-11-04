@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/mountain_ash"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/trapdoor/mountain_ash",
+    "count": 3
+  }
+}

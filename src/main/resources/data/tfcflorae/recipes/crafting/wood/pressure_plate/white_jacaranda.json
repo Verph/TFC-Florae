@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/white_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/pressure_plate/white_jacaranda"
+  }
+}

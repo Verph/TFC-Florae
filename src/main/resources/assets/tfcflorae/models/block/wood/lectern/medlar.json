@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/medlar",
-    "base": "tfcflorae:block/wood/lectern/medlar/base",
-    "front": "tfcflorae:block/wood/lectern/medlar/front",
-    "sides": "tfcflorae:block/wood/lectern/medlar/sides",
-    "top": "tfcflorae:block/wood/lectern/medlar/top",
-    "particle": "tfcflorae:block/wood/lectern/medlar/sides"
+    "base": "tfcflorae:block/wood/lectern/base/medlar",
+    "front": "tfcflorae:block/wood/lectern/front/medlar",
+    "sides": "tfcflorae:block/wood/lectern/sides/medlar",
+    "top": "tfcflorae:block/wood/lectern/top/medlar",
+    "particle": "tfcflorae:block/wood/lectern/sides/medlar"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/zebrawood"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/zebrawood"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/zebrawood"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/zebrawood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/zebrawood",
+    "count": 1
+  }
+}

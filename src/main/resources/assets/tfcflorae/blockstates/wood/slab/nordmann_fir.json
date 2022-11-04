@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/nordmann_fir"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/nordmann_fir_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/nordmann_fir"
+    }
+  }
+}

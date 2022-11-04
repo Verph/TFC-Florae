@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/stairs/chalk",
+  "result": "tfcflorae:rock/stone_tiles/stairs/chalk",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

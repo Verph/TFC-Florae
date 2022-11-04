@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/mahogany"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/mahogany",
+    "count": 8
+  }
+}

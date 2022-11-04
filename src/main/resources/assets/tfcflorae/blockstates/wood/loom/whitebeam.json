@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/whitebeam",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/whitebeam",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/whitebeam"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/whitebeam",
+      "y": 90
+    }
+  }
+}

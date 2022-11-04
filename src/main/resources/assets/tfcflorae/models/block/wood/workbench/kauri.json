@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/kauri",
+    "north": "tfcflorae:block/wood/workbench/front/kauri",
+    "south": "tfcflorae:block/wood/workbench/side/kauri",
+    "east": "tfcflorae:block/wood/workbench/side/kauri",
+    "west": "tfcflorae:block/wood/workbench/front/kauri",
+    "up": "tfcflorae:block/wood/workbench/top/kauri",
+    "down": "tfcflorae:block/wood/planks/kauri"
+  }
+}

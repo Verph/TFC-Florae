@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/red_elm"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/red_elm"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/red_elm"
     }
   ],
   "duration": 1750,

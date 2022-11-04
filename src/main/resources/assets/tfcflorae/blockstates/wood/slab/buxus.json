@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/buxus"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/buxus_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/buxus"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/loose/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/loose/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/loose/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/loose/greenschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/greenschist"
+  }
+}

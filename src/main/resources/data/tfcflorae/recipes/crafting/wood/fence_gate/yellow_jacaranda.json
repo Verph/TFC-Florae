@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/yellow_jacaranda"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/yellow_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/yellow_jacaranda",
+    "count": 2
+  }
+}

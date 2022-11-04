@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/messmate"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/messmate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/messmate",
+    "count": 8
+  }
+}

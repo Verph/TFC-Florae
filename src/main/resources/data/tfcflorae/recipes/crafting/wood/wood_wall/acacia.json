@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/wood/acacia"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/acacia"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/acacia",
+    "count": 8
+  }
+}

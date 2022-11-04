@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/hornbeam"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/hornbeam"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/hornbeam"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/hornbeam"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/hornbeam",
+    "count": 1
+  }
+}

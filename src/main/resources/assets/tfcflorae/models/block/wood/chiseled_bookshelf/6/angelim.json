@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/angelim",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/angelim",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/angelim",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/angelim",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/angelim",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/angelim",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/angelim"
+  },
+  "render_type": "solid"
+}

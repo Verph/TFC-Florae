@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/raw/red_granite"
+  },
+  "result": "tfcflorae:rock/raw/red_granite_stairs",
+  "count": 1
+}

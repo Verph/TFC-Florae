@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/quince"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/quince",
+    "count": 2
+  }
+}

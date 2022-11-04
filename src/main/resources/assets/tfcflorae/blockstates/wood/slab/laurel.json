@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/laurel"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/laurel_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/laurel"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/persimmon",
+    "north": "tfcflorae:block/wood/workbench/front/persimmon",
+    "south": "tfcflorae:block/wood/workbench/side/persimmon",
+    "east": "tfcflorae:block/wood/workbench/side/persimmon",
+    "west": "tfcflorae:block/wood/workbench/front/persimmon",
+    "up": "tfcflorae:block/wood/workbench/top/persimmon",
+    "down": "tfcflorae:block/wood/planks/persimmon"
+  }
+}

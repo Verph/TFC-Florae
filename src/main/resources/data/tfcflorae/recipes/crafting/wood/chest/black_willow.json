@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/black_willow"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chest/black_willow"
+  }
+}

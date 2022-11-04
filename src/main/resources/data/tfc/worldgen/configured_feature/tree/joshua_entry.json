@@ -23,7 +23,11 @@
         "natural": "true",
         "axis": "y"
       }
+<<<<<<< Updated upstream
     },
     "bush_leaves": "tfcflorae:wood/leaves/joshua"
+=======
+    }
+>>>>>>> Stashed changes
   }
 }

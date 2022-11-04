@@ -1,0 +1,350 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 100,
+    "min_y": {
+      "absolute": -64
+    },
+    "max_y": {
+      "absolute": 30
+    },
+    "size": 30,
+    "density": 0.7,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/shale"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/shale"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/shale"
+          },
+          {
+            "weight": 11,
+            "block": "tfc:ore/ruby/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/claystone"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/claystone"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/limestone"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/limestone"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/limestone"
+          },
+          {
+            "weight": 11,
+            "block": "tfc:ore/ruby/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/conglomerate"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/conglomerate"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/dolomite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/dolomite"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/chert"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/chert"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfc:ore/poor_limonite/chalk"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/normal_limonite/chalk"
+          },
+          {
+            "weight": 60,
+            "block": "tfc:ore/rich_limonite/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/laterite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/laterite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/mudstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/mudstone"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/mudstone"
+          },
+          {
+            "weight": 11,
+            "block": "tfcflorae:ore/ruby/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/sandstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/sandstone"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/sandstone"
+          },
+          {
+            "weight": 11,
+            "block": "tfcflorae:ore/ruby/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/siltstone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/siltstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/siltstone"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/siltstone"
+          },
+          {
+            "weight": 11,
+            "block": "tfcflorae:ore/ruby/siltstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/arkose"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/arkose"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/jaspillite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/jaspillite"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/travertine"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/travertine"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/travertine"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/travertine"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/wackestone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/wackestone"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/wackestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blackband_ironstone"
+        ],
+        "with": [
+          {
+            "weight": 10,
+            "block": "tfcflorae:ore/poor_limonite/blackband_ironstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/normal_limonite/blackband_ironstone"
+          },
+          {
+            "weight": 60,
+            "block": "tfcflorae:ore/rich_limonite/blackband_ironstone"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_limonite"
+        }
+      ]
+    },
+    "random_name": "deep_limonite"
+  }
+}

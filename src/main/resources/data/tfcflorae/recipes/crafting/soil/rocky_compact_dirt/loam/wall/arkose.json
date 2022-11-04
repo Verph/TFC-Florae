@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/loam/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/loam/wall/arkose",
+    "count": 6
+  }
+}

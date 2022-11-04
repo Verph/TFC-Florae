@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/purple_ipe",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/purple_ipe",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/purple_ipe",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/purple_ipe",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/purple_ipe",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/purple_ipe",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/purple_ipe"
+  },
+  "render_type": "solid"
+}

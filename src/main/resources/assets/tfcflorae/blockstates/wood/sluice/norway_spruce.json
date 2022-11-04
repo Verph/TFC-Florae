@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "variants": {
     "facing=east,upper=true": {
       "model": "tfcflorae:block/wood/sluice/norway_spruce_upper",

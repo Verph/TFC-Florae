@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/red_cedar"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/red_cedar_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/red_cedar"
+    }
+  }
+}

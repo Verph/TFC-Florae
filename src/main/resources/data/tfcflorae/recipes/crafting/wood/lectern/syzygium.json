@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/syzygium"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/syzygium"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/syzygium"
+  }
+}

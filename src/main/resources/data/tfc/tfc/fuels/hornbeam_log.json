@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/hornbeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/hornbeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/hornbeam"
     }
   ],
   "duration": 2250,

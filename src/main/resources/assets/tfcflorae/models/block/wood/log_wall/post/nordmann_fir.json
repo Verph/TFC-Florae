@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/nordmann_fir",
+    "wall": "tfcflorae:block/wood/log/nordmann_fir",
+    "particle": "tfcflorae:block/wood/log/nordmann_fir"
+  }
+}

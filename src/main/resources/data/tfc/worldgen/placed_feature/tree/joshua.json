@@ -1,4 +1,27 @@
 {
   "feature": "tfc:tree/joshua",
+<<<<<<< Updated upstream
   "placement": []
+=======
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 63
+        },
+        "max_inclusive": {
+          "absolute": 80
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "tfc:replaceable"
+      }
+    }
+  ]
+>>>>>>> Stashed changes
 }

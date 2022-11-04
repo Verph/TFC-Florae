@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/african_padauk",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/african_padauk",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/african_padauk",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/african_padauk",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/african_padauk",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/african_padauk",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/african_padauk"
+  },
+  "render_type": "solid"
+}

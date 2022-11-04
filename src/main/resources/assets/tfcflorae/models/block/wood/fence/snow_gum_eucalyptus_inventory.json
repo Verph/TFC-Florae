@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/snow_gum_eucalyptus"
+  }
+}

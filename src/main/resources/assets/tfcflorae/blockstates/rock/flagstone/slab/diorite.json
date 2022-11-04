@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/flagstone/slab/bottom/diorite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/flagstone/slab/top/diorite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/flagstone/diorite"
+    }
+  }
+}

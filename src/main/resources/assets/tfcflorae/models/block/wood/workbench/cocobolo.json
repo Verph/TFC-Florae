@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/cocobolo",
+    "north": "tfcflorae:block/wood/workbench/front/cocobolo",
+    "south": "tfcflorae:block/wood/workbench/side/cocobolo",
+    "east": "tfcflorae:block/wood/workbench/side/cocobolo",
+    "west": "tfcflorae:block/wood/workbench/front/cocobolo",
+    "up": "tfcflorae:block/wood/workbench/top/cocobolo",
+    "down": "tfcflorae:block/wood/planks/cocobolo"
+  }
+}

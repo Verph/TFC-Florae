@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"minecraft:magma_block",
+	"tfc:rock/magma/andesite",
+    "tfc:rock/magma/basalt",
+    "tfc:rock/magma/dacite",
+    "tfc:rock/magma/diorite",
+    "tfc:rock/magma/gabbro",
+    "tfc:rock/magma/granite",
+    "tfc:rock/magma/rhyolite",
+	"tfcflorae:rock/magma/red_granite",
+    "tfcflorae:rock/magma/breccia",
+    "tfcflorae:rock/magma/foidolite",
+    "tfcflorae:rock/magma/porphyry",
+    "tfcflorae:rock/magma/peridotite",
+    "tfcflorae:rock/magma/blaimorite",
+    "tfcflorae:rock/magma/boninite",
+    "tfcflorae:rock/magma/carbonatite"
+  ]
+}

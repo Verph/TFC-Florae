@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/carbonatite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/carbonatite"
+  }
+}

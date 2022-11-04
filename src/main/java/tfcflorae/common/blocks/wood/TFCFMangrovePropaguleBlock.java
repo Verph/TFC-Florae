@@ -145,6 +145,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
                 if (days > daysToGrow)
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
+                    level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
                 }
             });
         }

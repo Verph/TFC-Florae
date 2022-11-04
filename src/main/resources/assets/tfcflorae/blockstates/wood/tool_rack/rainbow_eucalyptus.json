@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/rainbow_eucalyptus",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/rainbow_eucalyptus",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/rainbow_eucalyptus"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/rainbow_eucalyptus",
+      "y": 90
+    }
+  }
+}

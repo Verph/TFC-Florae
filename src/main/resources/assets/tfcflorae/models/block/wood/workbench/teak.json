@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/teak",
+    "north": "tfcflorae:block/wood/workbench/front/teak",
+    "south": "tfcflorae:block/wood/workbench/side/teak",
+    "east": "tfcflorae:block/wood/workbench/side/teak",
+    "west": "tfcflorae:block/wood/workbench/front/teak",
+    "up": "tfcflorae:block/wood/workbench/top/teak",
+    "down": "tfcflorae:block/wood/planks/teak"
+  }
+}

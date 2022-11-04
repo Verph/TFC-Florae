@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/rowan"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/barrel/rowan"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/white_mangrove"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/white_mangrove"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/white_mangrove",
+    "count": 2
+  }
+}

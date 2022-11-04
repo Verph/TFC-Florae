@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/sorb"
+    },
+    {
+      "item": "tfcflorae:wood/wood/sorb"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/sorb"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/sorb"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 696
+}

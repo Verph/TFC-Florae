@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",
+    "side": "tfcflorae:block/wood/bookshelf/snow_gum_eucalyptus"
+  }
+}

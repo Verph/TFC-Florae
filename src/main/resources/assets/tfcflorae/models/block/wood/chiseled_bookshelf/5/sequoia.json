@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/sequoia",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/sequoia",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/sequoia",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/sequoia",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/sequoia",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/sequoia",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/sequoia"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobble/red_granite",
+    "top": "tfcflorae:block/rock/cobble/red_granite",
+    "side": "tfcflorae:block/rock/cobble/red_granite"
+  }
+}

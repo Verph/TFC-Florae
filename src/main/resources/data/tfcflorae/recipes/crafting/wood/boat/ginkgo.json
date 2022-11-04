@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/boat/ginkgo"
+  }
+}

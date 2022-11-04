@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/locust"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/door/locust",
+    "count": 2
+  }
+}

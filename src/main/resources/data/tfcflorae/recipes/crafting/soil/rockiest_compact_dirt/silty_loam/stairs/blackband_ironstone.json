@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silty_loam/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/stairs/blackband_ironstone",
+    "count": 8
+  }
+}

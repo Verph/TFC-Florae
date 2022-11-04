@@ -1,18 +1,23 @@
 package tfcflorae.util;
 
+import java.util.function.Consumer;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-
+import net.minecraftforge.network.NetworkHooks;
 import tfcflorae.TFCFlorae;
 
 public class TFCFHelpers
@@ -81,5 +86,21 @@ public class TFCFHelpers
     public static Iterable<BlockPos> allPositionsCentered(BlockPos center, int radius, int height)
     {
         return BlockPos.betweenClosed(center.offset(-radius, -height, -radius), center.offset(radius, height, radius));
+    }
+
+    // todo: 1.19. inline and remove these
+    public static void openScreen(ServerPlayer player, MenuProvider containerSupplier)
+    {
+        NetworkHooks.openGui(player, containerSupplier);
+    }
+    
+    public static void openScreen(ServerPlayer player, MenuProvider containerSupplier, BlockPos pos)
+    {
+        NetworkHooks.openGui(player, containerSupplier, pos);
+    }
+
+    public static void openScreen(ServerPlayer player, MenuProvider containerSupplier, Consumer<FriendlyByteBuf> extraDataWriter)
+    {
+        NetworkHooks.openGui(player, containerSupplier, extraDataWriter);
     }
 }

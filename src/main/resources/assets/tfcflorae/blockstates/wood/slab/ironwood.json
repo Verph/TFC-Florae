@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/ironwood"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/ironwood_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/ironwood"
+    }
+  }
+}

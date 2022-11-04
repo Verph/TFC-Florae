@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/red_cedar",
-    "base": "tfcflorae:block/wood/lectern/red_cedar/base",
-    "front": "tfcflorae:block/wood/lectern/red_cedar/front",
-    "sides": "tfcflorae:block/wood/lectern/red_cedar/sides",
-    "top": "tfcflorae:block/wood/lectern/red_cedar/top",
-    "particle": "tfcflorae:block/wood/lectern/red_cedar/sides"
+    "base": "tfcflorae:block/wood/lectern/base/red_cedar",
+    "front": "tfcflorae:block/wood/lectern/front/red_cedar",
+    "sides": "tfcflorae:block/wood/lectern/sides/red_cedar",
+    "top": "tfcflorae:block/wood/lectern/top/red_cedar",
+    "particle": "tfcflorae:block/wood/lectern/sides/red_cedar"
   }
 }

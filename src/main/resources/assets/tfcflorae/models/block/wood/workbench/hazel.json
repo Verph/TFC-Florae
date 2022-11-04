@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/hazel",
+    "north": "tfcflorae:block/wood/workbench/front/hazel",
+    "south": "tfcflorae:block/wood/workbench/side/hazel",
+    "east": "tfcflorae:block/wood/workbench/side/hazel",
+    "west": "tfcflorae:block/wood/workbench/front/hazel",
+    "up": "tfcflorae:block/wood/workbench/top/hazel",
+    "down": "tfcflorae:block/wood/planks/hazel"
+  }
+}

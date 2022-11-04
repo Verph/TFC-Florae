@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/rich_magnetite/travertine",
+  "result": "tfcflorae:ore/normal_magnetite/travertine"
+}

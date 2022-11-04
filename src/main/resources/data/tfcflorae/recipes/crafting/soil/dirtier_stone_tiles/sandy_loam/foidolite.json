@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:dirt/sandy_loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/foidolite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/foidolite"
+  }
+}

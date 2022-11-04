@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/norway_spruce",
+    "side": "tfcflorae:block/wood/bookshelf/norway_spruce"
+  }
+}

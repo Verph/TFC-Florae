@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/ironwood"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/ironwood_down"
+    }
+  }
+}

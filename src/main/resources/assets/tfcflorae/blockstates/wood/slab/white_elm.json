@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/white_elm"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/white_elm_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/white_elm"
+    }
+  }
+}

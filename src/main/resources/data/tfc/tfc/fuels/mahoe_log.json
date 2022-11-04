@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mahoe"
     }
   ],
   "duration": 1100,

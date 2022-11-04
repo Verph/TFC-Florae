@@ -10,6 +10,7 @@ Tree = NamedTuple('Tree', name=str, feature=Literal['random', 'overlay', 'stacke
 DATA_VERSION = 2970
 
 NORMAL_TREES = [
+<<<<<<< Updated upstream
     Tree('bald_cypress', 'random', 'bald_cypress', 22),
     Tree('red_cypress', 'random', 'red_cypress', 22),
     Tree('black_willow', 'random', 'black_willow', 17)
@@ -19,12 +20,31 @@ LARGE_TREES = [
     Tree('bald_cypress', 'random', 'bald_cypress', 0),
     Tree('red_cypress', 'random', 'red_cypress', 0),
     Tree('black_willow', 'random', 'black_willow', 0)
+=======
+    Tree('bald_cypress', 'random', 'bald_cypress', 6),
+    Tree('red_cypress', 'random', 'red_cypress', 6),
+    Tree('black_willow', 'random', 'black_willow', 10),
+    Tree('jabuticabeira', 'random', 'jabuticabeira', 18),
+    Tree('ghaf', 'random', 'ghaf', 16),
+    Tree('laurel', 'random', 'laurel', 21)
+]
+
+LARGE_TREES = [
+    Tree('black_willow', 'random', 'black_willow_large', 14)
+>>>>>>> Stashed changes
 ]
 
 DEAD_TREES = [
     Tree('bald_cypress', 'random', 'bald_cypress_dead', 13),
     Tree('red_cypress', 'random', 'red_cypress_dead', 13),
+<<<<<<< Updated upstream
     Tree('black_willow', 'random', 'dead_stump', 3)
+=======
+    Tree('black_willow', 'random', 'dead_stump', 3),
+    Tree('jabuticabeira', 'random', 'jabuticabeira_dead', 13),
+    Tree('ghaf', 'random', 'dead_small', 6),
+    Tree('laurel', 'random', 'dead_small', 6)
+>>>>>>> Stashed changes
 ]
 
 
@@ -37,12 +57,25 @@ class Count:  # global mutable variables that doesn't require using the word "gl
 
 def main():
     print('Verifying tree structures')
+<<<<<<< Updated upstream
     verify_center_trunk('bald_cypress', 22)
     verify_center_trunk('red_cypress', 22)
     verify_center_trunk('black_willow', 17)
     verify_center_trunk('bald_cypress_dead', 13)
     verify_center_trunk('red_cypress_dead', 13)
     verify_center_trunk('dead_stump', 3)
+=======
+    verify_center_trunk('bald_cypress', 6)
+    verify_center_trunk('bald_cypress_dead', 13)
+    verify_center_trunk('red_cypress', 6)
+    verify_center_trunk('red_cypress_dead', 13)
+    verify_center_trunk('black_willow', 10)
+    verify_center_trunk('black_willow_large', 14)
+    verify_center_trunk('dead_stump', 3)
+    verify_center_trunk('dead_small', 6)
+    verify_center_trunk('jabuticabeira', 18)
+    verify_center_trunk('jabuticabeira_dead', 13)
+>>>>>>> Stashed changes
 
     print('Tree sapling drop chances:')
     for tree in NORMAL_TREES:
@@ -83,90 +116,95 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:spruce_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:birch_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:jungle_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:acacia_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:dark_oak_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:log2':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:oak_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:spruce_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:birch_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:jungle_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:acacia_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:dark_oak_wood':
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
+        elif block['Name'] == 'minecraft:stone':
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'natural': StringTag('true'),
+                'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:leaves2':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
@@ -177,67 +215,81 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:spruce_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:birch_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:jungle_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:acacia_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:dark_oak_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'byg:willow_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'byg:cypress_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'byg:willow_log':
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-                'axis': prop['axis']})
+                'axis': StringTag('y')})
         elif block['Name'] == 'byg:cypress_log':
+<<<<<<< Updated upstream
             block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': prop['axis']})
+=======
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'natural': StringTag('true'),
+                'axis': StringTag('y')})
+                
+        elif block['Name'] == 'tfc:wood/leaves/bald_cypress':
+            block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'persistent': StringTag('false')})
+        elif block['Name'] == 'tfc:wood/wood/bald_cypress':
+            block['Name'] = String('tfcflorae:wood/wood/%s' % wood)
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'natural': StringTag('true'),
+                'axis': StringTag('y'),
+                'lifecycle': StringTag('healthy')})
+                
+                
+>>>>>>> Stashed changes
         elif block['Name'] == 'minecraft:cocoa':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
-                'lifecycle': StringTag('healthy'),
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:fern':
             block['Name'] = StringTag('tfc:plant/jungle_vines')
@@ -245,12 +297,24 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             block['Name'] = StringTag('tfc:plant/jungle_vines')
         elif block['Name'] == 'minecraft:grass':
             block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'age': StringTag('13')})
         elif block['Name'] == 'minecraft:tall_grass':
             block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'age': StringTag('13')})
         elif block['Name'] == 'minecraft:tallgrass':
             block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'age': StringTag('13')})
         elif block['Name'] == 'minecraft:double_plant':
             block['Name'] = StringTag('tfc:plant/hanging_vines_plant')
+            prop = block['Properties']
+            block['Properties'] = Compound({
+                'age': StringTag('13')})
         elif block['Name'] == 'minecraft:air':
             block['Name'] = StringTag('minecraft:structure_void')
         else:

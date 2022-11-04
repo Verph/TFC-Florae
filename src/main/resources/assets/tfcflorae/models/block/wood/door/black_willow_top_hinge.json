@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/black_willow_top",
+    "bottom": "tfcflorae:block/wood/door/black_willow_bottom"
+  }
+}

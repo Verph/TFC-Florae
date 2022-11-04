@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/red_cedar"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/red_cedar_down"
+    }
+  }
+}

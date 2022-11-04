@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/cocobolo"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/cocobolo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/cocobolo",
+    "count": 8
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/chestnut",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/chestnut",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/chestnut",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/chestnut",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/chestnut",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/chestnut",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/chestnut"
+  },
+  "render_type": "solid"
+}

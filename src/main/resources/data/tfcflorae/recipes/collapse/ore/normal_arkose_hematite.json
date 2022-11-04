@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/rich_hematite/arkose",
+  "result": "tfcflorae:ore/normal_hematite/arkose"
+}

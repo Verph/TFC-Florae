@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/norway_spruce",
+    "particle": "tfcflorae:block/wood/planks/norway_spruce"
+  }
+}

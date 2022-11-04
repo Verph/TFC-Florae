@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/mahogany"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/mahogany"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/mahogany"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/mahogany"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/mahogany",
+    "count": 1
+  }
+}

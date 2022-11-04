@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/loam/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/loam/wall/catlinite",
+    "count": 6
+  }
+}

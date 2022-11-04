@@ -1,0 +1,176 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:vanilla_mangrove_tree",
+  "config": {
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    },
+    "decorators": [
+      {
+        "type": "tfcflorae:leave_vine",
+        "probability": 0.125
+      },
+      {
+        "type": "tfcflorae:attached_to_leaves",
+        "block_provider": {
+          "type": "minecraft:randomized_int_state_provider",
+          "property": "age",
+          "source": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "tfcflorae:wood/sapling/red_mangrove",
+              "Properties": {
+                "age": "0",
+                "hanging": "true",
+                "stage": "0",
+                "waterlogged": "false"
+              }
+            }
+          },
+          "values": {
+            "type": "minecraft:uniform",
+            "value": {
+              "max_inclusive": 4,
+              "min_inclusive": 0
+            }
+          }
+        },
+        "directions": [
+          "down"
+        ],
+        "exclusion_radius_xz": 1,
+        "exclusion_radius_y": 0,
+        "probability": 0.14,
+        "required_empty_blocks": 2
+      },
+      {
+        "type": "minecraft:beehive",
+        "probability": 0
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfcflorae:wood/roots/red_mangrove/loam"
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:random_spread_foliage_placer",
+      "foliage_height": 2,
+      "leaf_placement_attempts": 70,
+      "offset": 0,
+      "radius": 3
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfcflorae:wood/leaves/red_mangrove",
+        "Properties": {
+          "lifecycle": "healthy",
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 2,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "root_placer": {
+      "type": "tfcflorae:mangrove_root_placer",
+      "above_root_placement": {
+        "above_root_placement_chance": 0.5,
+        "above_root_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "minecraft:moss_carpet"
+          }
+        }
+      },
+      "mangrove_root_placement": {
+        "can_grow_through": "#tfcflorae:mangrove_roots_can_grow_through",
+        "max_root_width": 8,
+        "max_root_length": 9,
+        "muddy_roots_in": [
+          "tfcflorae:mud/humus",
+          "tfc:mud/loam",
+          "tfc:mud/sandy_loam",
+          "tfc:mud/silt",
+          "tfc:mud/silty_loam",
+          "tfcflorae:wood/roots/red_mangrove/humus",
+          "tfcflorae:wood/roots/red_mangrove/loam",
+          "tfcflorae:wood/roots/red_mangrove/sandy_loam",
+          "tfcflorae:wood/roots/red_mangrove/silt",
+          "tfcflorae:wood/roots/red_mangrove/silty_loam"
+        ],
+        "muddy_roots_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "tfcflorae:wood/roots/red_mangrove/loam",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        "random_skew_chance": 0.2
+      },
+      "root_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "tfcflorae:wood/roots/red_mangrove",
+          "Properties": {
+            "waterlogged": "false"
+          }
+        }
+      },
+      "trunk_offset_y": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 3,
+          "min_inclusive": 1
+        }
+      }
+    },
+    "trunk_placer": {
+      "type": "tfcflorae:upward_branching_trunk",
+      "base_height": 3,
+      "can_grow_through": "#tfcflorae:mangrove_logs_can_grow_through",
+      "extra_branch_length": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 1,
+          "min_inclusive": 0
+        }
+      },
+      "extra_branch_steps": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 4,
+          "min_inclusive": 1
+        }
+      },
+      "height_rand_a": 1,
+      "height_rand_b": 4,
+      "place_branch_per_log_probability": 0.5
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfcflorae:wood/log/red_mangrove",
+        "Properties": {
+          "natural": "true",
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

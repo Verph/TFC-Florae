@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/ebony",
+    "north": "tfcflorae:block/wood/workbench/front/ebony",
+    "south": "tfcflorae:block/wood/workbench/side/ebony",
+    "east": "tfcflorae:block/wood/workbench/side/ebony",
+    "west": "tfcflorae:block/wood/workbench/front/ebony",
+    "up": "tfcflorae:block/wood/workbench/top/ebony",
+    "down": "tfcflorae:block/wood/planks/ebony"
+  }
+}

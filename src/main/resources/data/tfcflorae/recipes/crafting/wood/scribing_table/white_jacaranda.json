@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F B",
+    "XXX",
+    "Y Y"
+  ],
+  "key": {
+    "F": {
+      "tag": "forge:feathers"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "X": {
+      "item": "tfcflorae:wood/slab/white_jacaranda"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/white_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/scribing_table/white_jacaranda"
+  }
+}

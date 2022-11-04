@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/sloe",
+    "north": "tfcflorae:block/wood/workbench/front/sloe",
+    "south": "tfcflorae:block/wood/workbench/side/sloe",
+    "east": "tfcflorae:block/wood/workbench/side/sloe",
+    "west": "tfcflorae:block/wood/workbench/front/sloe",
+    "up": "tfcflorae:block/wood/workbench/top/sloe",
+    "down": "tfcflorae:block/wood/planks/sloe"
+  }
+}

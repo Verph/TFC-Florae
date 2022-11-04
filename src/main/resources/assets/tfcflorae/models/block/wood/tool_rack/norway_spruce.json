@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/tool_rack",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/norway_spruce",
+    "particle": "tfcflorae:block/wood/planks/norway_spruce"
+  }
+}

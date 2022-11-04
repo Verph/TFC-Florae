@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/novaculite",
+  "result": "tfcflorae:dirtier_stone_tiles/silty_loam/novaculite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silty_loam"
+  }
+}

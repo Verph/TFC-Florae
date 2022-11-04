@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/iroko"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/iroko_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/iroko"
+    }
+  }
+}

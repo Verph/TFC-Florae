@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/loom",
-  "textures": {
-    "texture": "tfcflorae:block/wood/planks/purple_jacaranda",
-    "particle": "tfcflorae:block/wood/planks/purple_jacaranda"
-  }
-}

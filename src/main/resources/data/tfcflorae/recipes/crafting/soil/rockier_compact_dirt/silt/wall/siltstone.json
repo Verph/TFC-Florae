@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/silt/siltstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/wall/siltstone",
+    "count": 6
+  }
+}

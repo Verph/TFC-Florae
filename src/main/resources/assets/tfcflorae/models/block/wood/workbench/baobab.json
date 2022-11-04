@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/baobab",
+    "north": "tfcflorae:block/wood/workbench/front/baobab",
+    "south": "tfcflorae:block/wood/workbench/side/baobab",
+    "east": "tfcflorae:block/wood/workbench/side/baobab",
+    "west": "tfcflorae:block/wood/workbench/front/baobab",
+    "up": "tfcflorae:block/wood/workbench/top/baobab",
+    "down": "tfcflorae:block/wood/planks/baobab"
+  }
+}

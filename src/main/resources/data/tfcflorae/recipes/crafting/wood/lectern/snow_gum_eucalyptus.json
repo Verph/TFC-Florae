@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/snow_gum_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/snow_gum_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/snow_gum_eucalyptus"
+  }
+}

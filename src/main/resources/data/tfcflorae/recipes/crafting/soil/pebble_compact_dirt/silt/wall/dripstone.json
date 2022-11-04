@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silt/dripstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/wall/dripstone",
+    "count": 6
+  }
+}

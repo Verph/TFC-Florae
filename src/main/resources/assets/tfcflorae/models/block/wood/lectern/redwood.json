@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/redwood",
-    "base": "tfcflorae:block/wood/lectern/redwood/base",
-    "front": "tfcflorae:block/wood/lectern/redwood/front",
-    "sides": "tfcflorae:block/wood/lectern/redwood/sides",
-    "top": "tfcflorae:block/wood/lectern/redwood/top",
-    "particle": "tfcflorae:block/wood/lectern/redwood/sides"
+    "base": "tfcflorae:block/wood/lectern/base/redwood",
+    "front": "tfcflorae:block/wood/lectern/front/redwood",
+    "sides": "tfcflorae:block/wood/lectern/sides/redwood",
+    "top": "tfcflorae:block/wood/lectern/top/redwood",
+    "particle": "tfcflorae:block/wood/lectern/sides/redwood"
   }
 }

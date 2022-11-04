@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/greenheart",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/greenheart",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/greenheart",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/greenheart",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/greenheart",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/greenheart",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/greenheart"
+  },
+  "render_type": "solid"
+}

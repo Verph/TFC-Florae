@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/zebrawood",
-    "base": "tfcflorae:block/wood/lectern/zebrawood/base",
-    "front": "tfcflorae:block/wood/lectern/zebrawood/front",
-    "sides": "tfcflorae:block/wood/lectern/zebrawood/sides",
-    "top": "tfcflorae:block/wood/lectern/zebrawood/top",
-    "particle": "tfcflorae:block/wood/lectern/zebrawood/sides"
+    "base": "tfcflorae:block/wood/lectern/base/zebrawood",
+    "front": "tfcflorae:block/wood/lectern/front/zebrawood",
+    "sides": "tfcflorae:block/wood/lectern/sides/zebrawood",
+    "top": "tfcflorae:block/wood/lectern/top/zebrawood",
+    "particle": "tfcflorae:block/wood/lectern/sides/zebrawood"
   }
 }

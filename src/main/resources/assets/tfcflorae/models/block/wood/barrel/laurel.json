@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/laurel",
+    "planks": "tfcflorae:block/wood/planks/laurel",
+    "sheet": "tfcflorae:block/wood/sheet/laurel",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

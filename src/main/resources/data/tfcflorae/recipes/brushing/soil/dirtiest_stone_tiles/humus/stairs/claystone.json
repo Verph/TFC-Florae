@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/stairs/claystone",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/claystone",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

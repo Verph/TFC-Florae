@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/cocobolo"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/cocobolo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/cocobolo"
+  }
+}

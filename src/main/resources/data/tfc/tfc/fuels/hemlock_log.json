@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/hemlock"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/hemlock"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/hemlock"
     }
   ],
   "duration": 1000,

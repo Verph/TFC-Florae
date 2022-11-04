@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/baobab",
-    "base": "tfcflorae:block/wood/lectern/baobab/base",
-    "front": "tfcflorae:block/wood/lectern/baobab/front",
-    "sides": "tfcflorae:block/wood/lectern/baobab/sides",
-    "top": "tfcflorae:block/wood/lectern/baobab/top",
-    "particle": "tfcflorae:block/wood/lectern/baobab/sides"
+    "base": "tfcflorae:block/wood/lectern/base/baobab",
+    "front": "tfcflorae:block/wood/lectern/front/baobab",
+    "sides": "tfcflorae:block/wood/lectern/sides/baobab",
+    "top": "tfcflorae:block/wood/lectern/top/baobab",
+    "particle": "tfcflorae:block/wood/lectern/sides/baobab"
   }
 }

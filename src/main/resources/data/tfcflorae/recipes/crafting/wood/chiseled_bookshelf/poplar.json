@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/poplar"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/poplar"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/poplar"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/poplar"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/poplar"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/poplar"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/poplar"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/poplar"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/poplar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/poplar",
+    "count": 1
+  }
+}

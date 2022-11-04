@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/laterite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/laterite",
+    "count": 6
+  }
+}

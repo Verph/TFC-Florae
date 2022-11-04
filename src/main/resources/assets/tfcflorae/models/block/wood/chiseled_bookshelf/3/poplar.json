@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/poplar",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/poplar",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/poplar",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/poplar",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/poplar",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/poplar",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/poplar"
+  },
+  "render_type": "solid"
+}

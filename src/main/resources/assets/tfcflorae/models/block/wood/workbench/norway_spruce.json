@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/norway_spruce",
+    "north": "tfcflorae:block/wood/workbench/front/norway_spruce",
+    "south": "tfcflorae:block/wood/workbench/side/norway_spruce",
+    "east": "tfcflorae:block/wood/workbench/side/norway_spruce",
+    "west": "tfcflorae:block/wood/workbench/front/norway_spruce",
+    "up": "tfcflorae:block/wood/workbench/top/norway_spruce",
+    "down": "tfcflorae:block/wood/planks/norway_spruce"
+  }
+}

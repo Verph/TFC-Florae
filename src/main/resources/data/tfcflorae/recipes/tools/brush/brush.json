@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "f",
+    "c"
+  ],
+  "key": {
+    "f": {
+      "item": "minecraft:feather"
+    },
+    "c": {
+      "tag": "tfc:twigs"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:tools/brush",
+    "count": 1
+  }
+}

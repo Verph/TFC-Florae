@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/pink_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/pink_cherry_blossom",
+    "count": 8
+  }
+}

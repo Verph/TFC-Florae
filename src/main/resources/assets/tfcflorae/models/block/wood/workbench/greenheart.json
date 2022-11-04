@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/greenheart",
+    "north": "tfcflorae:block/wood/workbench/front/greenheart",
+    "south": "tfcflorae:block/wood/workbench/side/greenheart",
+    "east": "tfcflorae:block/wood/workbench/side/greenheart",
+    "west": "tfcflorae:block/wood/workbench/front/greenheart",
+    "up": "tfcflorae:block/wood/workbench/top/greenheart",
+    "down": "tfcflorae:block/wood/planks/greenheart"
+  }
+}

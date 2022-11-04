@@ -1,0 +1,191 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:soil_disc",
+  "config": {
+    "min_radius": 1,
+    "max_radius": 3,
+    "height": 2,
+    "states": [
+      {
+        "replace": "tfc:rock/gravel/granite",
+        "with": "tfc:deposit/native_gold/granite"
+      },
+      {
+        "replace": "tfc:rock/gravel/diorite",
+        "with": "tfc:deposit/native_gold/diorite"
+      },
+      {
+        "replace": "tfc:rock/gravel/gabbro",
+        "with": "tfc:deposit/native_gold/gabbro"
+      },
+      {
+        "replace": "tfc:rock/gravel/shale",
+        "with": "tfc:deposit/native_gold/shale"
+      },
+      {
+        "replace": "tfc:rock/gravel/claystone",
+        "with": "tfc:deposit/native_gold/claystone"
+      },
+      {
+        "replace": "tfc:rock/gravel/limestone",
+        "with": "tfc:deposit/native_gold/limestone"
+      },
+      {
+        "replace": "tfc:rock/gravel/conglomerate",
+        "with": "tfc:deposit/native_gold/conglomerate"
+      },
+      {
+        "replace": "tfc:rock/gravel/dolomite",
+        "with": "tfc:deposit/native_gold/dolomite"
+      },
+      {
+        "replace": "tfc:rock/gravel/chert",
+        "with": "tfc:deposit/native_gold/chert"
+      },
+      {
+        "replace": "tfc:rock/gravel/chalk",
+        "with": "tfc:deposit/native_gold/chalk"
+      },
+      {
+        "replace": "tfc:rock/gravel/rhyolite",
+        "with": "tfc:deposit/native_gold/rhyolite"
+      },
+      {
+        "replace": "tfc:rock/gravel/basalt",
+        "with": "tfc:deposit/native_gold/basalt"
+      },
+      {
+        "replace": "tfc:rock/gravel/andesite",
+        "with": "tfc:deposit/native_gold/andesite"
+      },
+      {
+        "replace": "tfc:rock/gravel/dacite",
+        "with": "tfc:deposit/native_gold/dacite"
+      },
+      {
+        "replace": "tfc:rock/gravel/quartzite",
+        "with": "tfc:deposit/native_gold/quartzite"
+      },
+      {
+        "replace": "tfc:rock/gravel/slate",
+        "with": "tfc:deposit/native_gold/slate"
+      },
+      {
+        "replace": "tfc:rock/gravel/phyllite",
+        "with": "tfc:deposit/native_gold/phyllite"
+      },
+      {
+        "replace": "tfc:rock/gravel/schist",
+        "with": "tfc:deposit/native_gold/schist"
+      },
+      {
+        "replace": "tfc:rock/gravel/gneiss",
+        "with": "tfc:deposit/native_gold/gneiss"
+      },
+      {
+        "replace": "tfc:rock/gravel/marble",
+        "with": "tfc:deposit/native_gold/marble"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/cataclasite",
+        "with": "tfcflorae:deposit/native_gold/cataclasite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/porphyry",
+        "with": "tfcflorae:deposit/native_gold/porphyry"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/red_granite",
+        "with": "tfcflorae:deposit/native_gold/red_granite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/laterite",
+        "with": "tfcflorae:deposit/native_gold/laterite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/breccia",
+        "with": "tfcflorae:deposit/native_gold/breccia"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/foidolite",
+        "with": "tfcflorae:deposit/native_gold/foidolite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/peridotite",
+        "with": "tfcflorae:deposit/native_gold/peridotite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/blaimorite",
+        "with": "tfcflorae:deposit/native_gold/blaimorite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/boninite",
+        "with": "tfcflorae:deposit/native_gold/boninite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/carbonatite",
+        "with": "tfcflorae:deposit/native_gold/carbonatite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/mudstone",
+        "with": "tfcflorae:deposit/native_gold/mudstone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/sandstone",
+        "with": "tfcflorae:deposit/native_gold/sandstone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/siltstone",
+        "with": "tfcflorae:deposit/native_gold/siltstone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/arkose",
+        "with": "tfcflorae:deposit/native_gold/arkose"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/jaspillite",
+        "with": "tfcflorae:deposit/native_gold/jaspillite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/travertine",
+        "with": "tfcflorae:deposit/native_gold/travertine"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/wackestone",
+        "with": "tfcflorae:deposit/native_gold/wackestone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/blackband_ironstone",
+        "with": "tfcflorae:deposit/native_gold/blackband_ironstone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/blueschist",
+        "with": "tfcflorae:deposit/native_gold/blueschist"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/catlinite",
+        "with": "tfcflorae:deposit/native_gold/catlinite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/greenschist",
+        "with": "tfcflorae:deposit/native_gold/greenschist"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/novaculite",
+        "with": "tfcflorae:deposit/native_gold/novaculite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/soapstone",
+        "with": "tfcflorae:deposit/native_gold/soapstone"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/komatiite",
+        "with": "tfcflorae:deposit/native_gold/komatiite"
+      },
+      {
+        "replace": "tfcflorae:rock/gravel/mylonite",
+        "with": "tfcflorae:deposit/native_gold/mylonite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 11,
+    "max_rain": 187,
+    "min_temp": 13,
+    "max_temp": 40,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/ghaf"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/ghaf"
+      }
+    ],
+    "normal_tree": "tfc:tree/ghaf",
+    "dead_tree": "tfc:tree/ghaf_dead",
+    "fallen_log": "tfcflorae:wood/log/ghaf",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/ghaf",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/ghaf"
+  }
+}

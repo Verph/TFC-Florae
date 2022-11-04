@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/yellow_meranti"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/yellow_meranti"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/yellow_meranti",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/raw/novaculite"
+  },
+  "result": "tfcflorae:rock/raw/novaculite_slab",
+  "count": 2
+}

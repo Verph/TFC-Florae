@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "tfc:block/barrel_sealed",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/white_ipe",

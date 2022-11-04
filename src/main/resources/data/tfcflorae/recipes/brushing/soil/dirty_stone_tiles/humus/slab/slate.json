@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/slab/slate",
+  "result": "tfcflorae:rock/stone_tiles/slab/slate",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

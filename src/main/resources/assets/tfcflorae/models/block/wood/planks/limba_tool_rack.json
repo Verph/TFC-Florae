@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/tool_rack",
-  "textures": {
-    "texture": "tfcflorae:block/wood/planks/limba",
-    "particle": "tfcflorae:block/wood/planks/limba"
-  }
-}

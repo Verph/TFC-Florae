@@ -29,8 +29,8 @@ import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.mixin.accessor.ChunkAccessAccessor;
 
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.soil.TFCFRockSoil;
-import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.*;
 
 public class TFCFSoilSurfaceState implements SurfaceState
 {
@@ -66,7 +66,7 @@ public class TFCFSoilSurfaceState implements SurfaceState
         return new TFCFSoilSurfaceState.NeedsPostProcessing(regions);
     }
 
-    public static SurfaceState buildTypeRock(TFCFRockSoil type, Rock rock)
+    public static SurfaceState buildTypeRockTFC(TFCFRockSoil type, Rock rock)
     {
         final ImmutableList<SurfaceState> regions = ImmutableList.of(
             sand(),
@@ -78,6 +78,22 @@ public class TFCFSoilSurfaceState implements SurfaceState
             rockSoilTFC(type, SoilBlockType.Variant.SILTY_LOAM, rock),
             transition(rockSoilTFC(type, SoilBlockType.Variant.SILTY_LOAM, rock), rockSoilTFC(type, SoilBlockType.Variant.SILT, rock)),
             rockSoilTFC(type, SoilBlockType.Variant.SILT, rock)
+        );
+        return new TFCFSoilSurfaceState(regions);
+    }
+
+    public static SurfaceState buildTypeRockTFCF(TFCFRockSoil type, TFCFRock rock)
+    {
+        final ImmutableList<SurfaceState> regions = ImmutableList.of(
+            sand(),
+            transition(sand(), rockSoilTFCF(type, SoilBlockType.Variant.SANDY_LOAM, rock)),
+            rockSoilTFCF(type, SoilBlockType.Variant.SANDY_LOAM, rock),
+            transition(rockSoilTFCF(type, SoilBlockType.Variant.SANDY_LOAM, rock), rockSoilTFCF(type, SoilBlockType.Variant.LOAM, rock)),
+            rockSoilTFCF(type, SoilBlockType.Variant.LOAM, rock),
+            transition(rockSoilTFCF(type, SoilBlockType.Variant.LOAM, rock), rockSoilTFCF(type, SoilBlockType.Variant.SILTY_LOAM, rock)),
+            rockSoilTFCF(type, SoilBlockType.Variant.SILTY_LOAM, rock),
+            transition(rockSoilTFCF(type, SoilBlockType.Variant.SILTY_LOAM, rock), rockSoilTFCF(type, SoilBlockType.Variant.SILT, rock)),
+            rockSoilTFCF(type, SoilBlockType.Variant.SILT, rock)
         );
         return new TFCFSoilSurfaceState(regions);
     }
@@ -138,6 +154,12 @@ public class TFCFSoilSurfaceState implements SurfaceState
     private static SurfaceState rockSoilTFC(TFCFRockSoil type, SoilBlockType.Variant variant, Rock rock)
     {
         final Supplier<Block> block = TFCFBlocks.TFCROCKSOIL.get(type).get(variant).get(rock);
+        return context -> block.get().defaultBlockState();
+    }
+
+    private static SurfaceState rockSoilTFCF(TFCFRockSoil type, SoilBlockType.Variant variant, TFCFRock rock)
+    {
+        final Supplier<Block> block = TFCFBlocks.TFCROCKSOIL2.get(type).get(variant).get(rock);
         return context -> block.get().defaultBlockState();
     }
 

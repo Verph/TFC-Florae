@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/alder"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/alder"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/alder"
     }
   ],
   "duration": 1000,

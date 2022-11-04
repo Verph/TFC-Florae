@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/hemlock_top",
+    "bottom": "tfcflorae:block/wood/door/hemlock_bottom"
+  }
+}

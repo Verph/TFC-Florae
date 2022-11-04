@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/white_ipe",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/white_ipe",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/white_ipe"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/white_ipe",
+      "y": 90
+    }
+  }
+}

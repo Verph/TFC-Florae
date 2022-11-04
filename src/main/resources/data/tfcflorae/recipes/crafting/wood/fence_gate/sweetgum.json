@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/sweetgum"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/sweetgum"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/sweetgum",
+    "count": 2
+  }
+}

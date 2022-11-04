@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/joshua"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/joshua_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/joshua"
+    }
+  }
+}

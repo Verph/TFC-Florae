@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/white_ipe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/white_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/white_ipe",
+    "count": 8
+  }
+}

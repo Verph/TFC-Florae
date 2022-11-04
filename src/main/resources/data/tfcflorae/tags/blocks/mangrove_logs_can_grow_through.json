@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:moss_carpet",
+    "minecraft:vine",
+	"#tfc:plants",
+	"#tfc:mud",
+	"#tfc:single_block_replaceable",
+	"#tfcflorae:roots",
+	"#tfcflorae:muddy_roots",
+	"#tfcflorae:saplings",
+	"#minecraft:logs",
+	"#minecraft:leaves",
+	"tfc:fluid/spring_water",
+	"tfc:fluid/salt_water",
+	"minecraft:water"
+  ]
+}

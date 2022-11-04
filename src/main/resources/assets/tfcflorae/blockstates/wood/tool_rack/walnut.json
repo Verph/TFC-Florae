@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/walnut",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/walnut",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/walnut"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/walnut",
+      "y": 90
+    }
+  }
+}

@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/porphyry",
     "particle": "tfcflorae:block/rock/gravel/porphyry",
-    "overlay": "tfcflorae:block/deposit/cassiterite"
+    "overlay": "tfc:block/deposit/cassiterite"
   }
 }

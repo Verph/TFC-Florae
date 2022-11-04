@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/norway_spruce",
+    "wall": "tfcflorae:block/wood/log/norway_spruce",
+    "particle": "tfcflorae:block/wood/log/norway_spruce"
+  }
+}

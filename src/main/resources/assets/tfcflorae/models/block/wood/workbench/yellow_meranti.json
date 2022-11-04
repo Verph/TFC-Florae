@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/yellow_meranti",
+    "north": "tfcflorae:block/wood/workbench/front/yellow_meranti",
+    "south": "tfcflorae:block/wood/workbench/side/yellow_meranti",
+    "east": "tfcflorae:block/wood/workbench/side/yellow_meranti",
+    "west": "tfcflorae:block/wood/workbench/front/yellow_meranti",
+    "up": "tfcflorae:block/wood/workbench/top/yellow_meranti",
+    "down": "tfcflorae:block/wood/planks/yellow_meranti"
+  }
+}

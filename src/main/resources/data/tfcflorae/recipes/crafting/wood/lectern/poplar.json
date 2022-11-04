@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/poplar"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/poplar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/poplar"
+  }
+}

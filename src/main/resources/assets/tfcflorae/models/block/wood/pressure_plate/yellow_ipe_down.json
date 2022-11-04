@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/yellow_ipe"
+  }
+}

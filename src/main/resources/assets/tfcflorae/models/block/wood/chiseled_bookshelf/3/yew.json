@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/yew",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/yew",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/yew",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/yew",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/yew",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/yew",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/yew"
+  },
+  "render_type": "solid"
+}

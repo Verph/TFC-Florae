@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/loam/wall/travertine",
+  "result": "tfcflorae:dirtier_stone_tiles/loam/wall/travertine",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

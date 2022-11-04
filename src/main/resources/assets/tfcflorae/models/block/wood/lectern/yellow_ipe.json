@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/yellow_ipe",
-    "base": "tfcflorae:block/wood/lectern/yellow_ipe/base",
-    "front": "tfcflorae:block/wood/lectern/yellow_ipe/front",
-    "sides": "tfcflorae:block/wood/lectern/yellow_ipe/sides",
-    "top": "tfcflorae:block/wood/lectern/yellow_ipe/top",
-    "particle": "tfcflorae:block/wood/lectern/yellow_ipe/sides"
+    "base": "tfcflorae:block/wood/lectern/base/yellow_ipe",
+    "front": "tfcflorae:block/wood/lectern/front/yellow_ipe",
+    "sides": "tfcflorae:block/wood/lectern/sides/yellow_ipe",
+    "top": "tfcflorae:block/wood/lectern/top/yellow_ipe",
+    "particle": "tfcflorae:block/wood/lectern/sides/yellow_ipe"
   }
 }

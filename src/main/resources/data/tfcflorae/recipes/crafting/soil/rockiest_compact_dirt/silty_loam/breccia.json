@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silty_loam"
+    },
+    {
+      "item": "tfcflorae:rock/loose/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/loose/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/loose/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/loose/breccia"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/breccia"
+  }
+}

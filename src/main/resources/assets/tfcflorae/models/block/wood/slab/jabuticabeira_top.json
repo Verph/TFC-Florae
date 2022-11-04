@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/jabuticabeira",
+    "top": "tfcflorae:block/wood/planks/jabuticabeira",
+    "side": "tfcflorae:block/wood/planks/jabuticabeira"
+  }
+}

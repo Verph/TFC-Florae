@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/red_cedar",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/red_cedar",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/red_cedar",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/red_cedar",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/red_cedar",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/red_cedar",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/red_cedar"
+  },
+  "render_type": "solid"
+}

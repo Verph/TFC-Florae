@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/sweetgum",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/sweetgum",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/sweetgum",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/sweetgum",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/sweetgum",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/sweetgum",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/sweetgum"
+  },
+  "render_type": "solid"
+}

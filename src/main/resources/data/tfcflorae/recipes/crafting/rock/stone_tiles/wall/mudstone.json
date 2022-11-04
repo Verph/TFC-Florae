@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/mudstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/mudstone",
+    "count": 6
+  }
+}

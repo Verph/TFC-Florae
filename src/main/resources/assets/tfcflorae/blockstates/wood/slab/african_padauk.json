@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/african_padauk"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/african_padauk_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/african_padauk"
+    }
+  }
+}

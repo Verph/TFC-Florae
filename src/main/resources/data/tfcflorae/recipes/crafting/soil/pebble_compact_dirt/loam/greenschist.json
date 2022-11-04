@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/loose/greenschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/greenschist"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/maclura"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/maclura_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/maclura"
+    }
+  }
+}

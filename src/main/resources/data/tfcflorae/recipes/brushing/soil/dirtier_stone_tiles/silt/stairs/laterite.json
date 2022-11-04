@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/stairs/laterite",
+  "result": "tfcflorae:dirty_stone_tiles/silt/stairs/laterite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

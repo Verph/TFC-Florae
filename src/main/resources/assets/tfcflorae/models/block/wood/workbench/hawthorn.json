@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/hawthorn",
+    "north": "tfcflorae:block/wood/workbench/front/hawthorn",
+    "south": "tfcflorae:block/wood/workbench/side/hawthorn",
+    "east": "tfcflorae:block/wood/workbench/side/hawthorn",
+    "west": "tfcflorae:block/wood/workbench/front/hawthorn",
+    "up": "tfcflorae:block/wood/workbench/top/hawthorn",
+    "down": "tfcflorae:block/wood/planks/hawthorn"
+  }
+}

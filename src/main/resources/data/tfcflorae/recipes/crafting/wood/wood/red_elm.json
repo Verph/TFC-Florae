@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/red_elm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood/red_elm",
+    "count": 3
+  }
+}

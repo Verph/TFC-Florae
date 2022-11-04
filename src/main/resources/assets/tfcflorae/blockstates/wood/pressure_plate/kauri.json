@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/kauri"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/kauri_down"
+    }
+  }
+}

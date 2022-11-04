@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/marblewood",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/marblewood",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/marblewood",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/marblewood",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/marblewood",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/marblewood",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/marblewood"
+  },
+  "render_type": "solid"
+}

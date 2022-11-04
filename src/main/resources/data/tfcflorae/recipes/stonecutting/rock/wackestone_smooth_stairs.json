@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/smooth/wackestone"
+  },
+  "result": "tfcflorae:rock/smooth/wackestone_stairs",
+  "count": 1
+}

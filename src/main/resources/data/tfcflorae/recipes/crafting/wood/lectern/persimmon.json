@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/persimmon"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/persimmon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/persimmon"
+  }
+}

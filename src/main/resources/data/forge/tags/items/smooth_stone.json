@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/smooth/red_granite",
+    "tfcflorae:rock/smooth/breccia",
+    "tfcflorae:rock/smooth/foidolite",
+    "tfcflorae:rock/smooth/porphyry",
+    "tfcflorae:rock/smooth/peridotite",
+    "tfcflorae:rock/smooth/blaimorite",
+    "tfcflorae:rock/smooth/boninite",
+    "tfcflorae:rock/smooth/carbonatite",
+    "tfcflorae:rock/smooth/laterite",
+    "tfcflorae:rock/smooth/mudstone",
+    "tfcflorae:rock/smooth/sandstone",
+    "tfcflorae:rock/smooth/siltstone",
+    "tfcflorae:rock/smooth/arkose",
+    "tfcflorae:rock/smooth/jaspillite",
+    "tfcflorae:rock/smooth/travertine",
+    "tfcflorae:rock/smooth/wackestone",
+    "tfcflorae:rock/smooth/blackband_ironstone",
+    "tfcflorae:rock/smooth/cataclasite",
+    "tfcflorae:rock/smooth/blueschist",
+    "tfcflorae:rock/smooth/catlinite",
+    "tfcflorae:rock/smooth/greenschist",
+    "tfcflorae:rock/smooth/novaculite",
+    "tfcflorae:rock/smooth/soapstone",
+    "tfcflorae:rock/smooth/komatiite",
+    "tfcflorae:rock/smooth/mylonite"
+  ]
+}

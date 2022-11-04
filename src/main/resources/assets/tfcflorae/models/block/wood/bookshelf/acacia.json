@@ -1,0 +1,7 @@
+{
+  "parent":"minecraft:block/bookshelf",
+  "textures":{
+    "end":"tfc:block/wood/planks/acacia",
+    "side":"tfcflorae:block/wood/bookshelf/acacia"
+  }
+}

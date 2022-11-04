@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/sweetgum",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/sweetgum",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/sweetgum"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/sweetgum",
+      "y": 90
+    }
+  }
+}

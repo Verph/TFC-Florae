@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobble/blackband_ironstone",
+  "result": "tfcflorae:rock/mossy_cobble/blackband_ironstone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_cobble/blackband_ironstone_slab"
+  }
+}

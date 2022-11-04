@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/white_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/white_ipe",
+    "count": 8
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/loose/laterite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/laterite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/laterite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/laterite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/laterite"
+  }
+}

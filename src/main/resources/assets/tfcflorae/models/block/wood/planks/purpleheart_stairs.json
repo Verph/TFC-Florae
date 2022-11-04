@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/wood/planks/purpleheart",
-    "top": "tfcflorae:block/wood/planks/purpleheart",
-    "side": "tfcflorae:block/wood/planks/purpleheart"
-  }
-}

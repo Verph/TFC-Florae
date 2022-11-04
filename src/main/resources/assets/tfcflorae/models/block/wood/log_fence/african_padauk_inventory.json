@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/african_padauk",
+    "planks": "tfcflorae:block/wood/planks/african_padauk"
+  }
+}

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/logwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/logwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/logwood"
     }
   ],
   "duration": 1000,

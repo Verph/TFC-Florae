@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/humus/novaculite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/stairs/novaculite",
+    "count": 8
+  }
+}

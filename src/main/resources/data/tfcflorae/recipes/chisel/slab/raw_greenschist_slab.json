@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/greenschist",
+  "result": "tfcflorae:rock/raw/greenschist_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/raw/greenschist_slab"
+  }
+}

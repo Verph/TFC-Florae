@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/rubber_fig",
+    "planks": "tfcflorae:block/wood/planks/rubber_fig"
+  }
+}

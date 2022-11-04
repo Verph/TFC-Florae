@@ -1,0 +1,35 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:laurel/1",
+      "tfc:laurel/2",
+      "tfc:laurel/3",
+      "tfc:laurel/4",
+      "tfc:laurel/5",
+      "tfc:laurel/6",
+      "tfc:laurel/7",
+      "tfc:laurel/8",
+      "tfc:laurel/9",
+      "tfc:laurel/10",
+      "tfc:laurel/11",
+      "tfc:laurel/12",
+      "tfc:laurel/13",
+      "tfc:laurel/14",
+      "tfc:laurel/15",
+      "tfc:laurel/16",
+      "tfc:laurel/17",
+      "tfc:laurel/18",
+      "tfc:laurel/19",
+      "tfc:laurel/20",
+      "tfc:laurel/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

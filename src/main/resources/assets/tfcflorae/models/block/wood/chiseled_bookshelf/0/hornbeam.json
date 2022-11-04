@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/hornbeam",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/hornbeam",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/hornbeam",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/hornbeam",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/hornbeam",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/hornbeam"
+  },
+  "render_type": "solid"
+}

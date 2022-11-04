@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/porphyry",
+    "tfcflorae:rock/loose/peridotite",
+    "tfcflorae:rock/loose/blaimorite",
+    "tfcflorae:rock/loose/boninite",
+    "tfcflorae:rock/loose/carbonatite",
+    "tfcflorae:rock/loose/red_granite",
+    "tfcflorae:rock/loose/breccia",
+    "tfcflorae:rock/loose/foidolite",
+    "tfcflorae:rock/loose/cataclasite",
+    "tfcflorae:rock/loose/blueschist",
+    "tfcflorae:rock/loose/catlinite",
+    "tfcflorae:rock/loose/greenschist",
+    "tfcflorae:rock/loose/novaculite",
+    "tfcflorae:rock/loose/soapstone",
+    "tfcflorae:rock/loose/komatiite",
+    "tfcflorae:rock/loose/mylonite",
+    "tfcflorae:rock/loose/laterite",
+    "tfcflorae:rock/loose/mudstone",
+    "tfcflorae:rock/loose/sandstone",
+    "tfcflorae:rock/loose/siltstone",
+    "tfcflorae:rock/loose/arkose",
+    "tfcflorae:rock/loose/jaspillite",
+    "tfcflorae:rock/loose/travertine",
+    "tfcflorae:rock/loose/wackestone",
+    "tfcflorae:rock/loose/blackband_ironstone"
+  ]
+}

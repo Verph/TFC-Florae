@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/black_walnut"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/black_walnut_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/black_walnut"
+    }
+  }
+}

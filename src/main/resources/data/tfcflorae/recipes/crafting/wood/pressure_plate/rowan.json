@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/rowan"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/pressure_plate/rowan"
+  }
+}

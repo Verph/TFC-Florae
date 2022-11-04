@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/tool_rack/cypress"
+  }
+}

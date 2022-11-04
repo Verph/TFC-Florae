@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/charred_tree"
+    },
+    {
+      "item": "tfcflorae:wood/wood/charred_tree"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/charred_tree"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/charred_tree"
+    },
+    {
+      "item": "tfcflorae:wood/twig/charred_tree"
+    }
+  ],
+  "duration": 1800,
+  "temperature": 1350
+}

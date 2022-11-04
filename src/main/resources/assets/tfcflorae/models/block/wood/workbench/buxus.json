@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/buxus",
+    "north": "tfcflorae:block/wood/workbench/front/buxus",
+    "south": "tfcflorae:block/wood/workbench/side/buxus",
+    "east": "tfcflorae:block/wood/workbench/side/buxus",
+    "west": "tfcflorae:block/wood/workbench/front/buxus",
+    "up": "tfcflorae:block/wood/workbench/top/buxus",
+    "down": "tfcflorae:block/wood/planks/buxus"
+  }
+}

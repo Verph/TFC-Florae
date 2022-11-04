@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/wood/aspen"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/aspen"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/aspen",
+    "count": 8
+  }
+}

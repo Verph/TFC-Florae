@@ -18,6 +18,9 @@ public class TFCFSounds
 {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MOD_ID);
 
+    // Items
+    public static final RegistryObject<SoundEvent> BRUSHING = create("item.brushing.brushing");
+
     // Blocks
     /*public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_BREAK = create("block.mangrove_roots.break");
     public static final RegistryObject<SoundEvent> BLOCK_MANGROVE_ROOTS_FALL = create("block.mangrove_roots.fall");

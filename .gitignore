@@ -24,6 +24,7 @@ libs
 resources/__pycache__
 resources_old
 resources_old/*
+resources/*
 src/main/resources_copy
 src/main/resources/assets/tfcflorae111
 .vscode

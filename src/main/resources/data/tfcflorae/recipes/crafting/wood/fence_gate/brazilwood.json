@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/brazilwood"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/brazilwood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/brazilwood",
+    "count": 2
+  }
+}

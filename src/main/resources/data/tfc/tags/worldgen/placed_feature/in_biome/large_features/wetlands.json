@@ -4,6 +4,13 @@
   "values": [
     "tfc:forest",
     "tfc:bamboo",
+<<<<<<< Updated upstream
     "tfc:cave_vegetation"
+=======
+    "tfc:cave_vegetation",
+    "tfc:fresh_water_forest",
+    "tfc:salt_water_forest",
+    "tfc:fruit_forest"
+>>>>>>> Stashed changes
   ]
 }

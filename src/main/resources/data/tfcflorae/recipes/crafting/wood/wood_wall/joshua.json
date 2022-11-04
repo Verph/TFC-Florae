@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/joshua"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/joshua"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/joshua",
+    "count": 8
+  }
+}

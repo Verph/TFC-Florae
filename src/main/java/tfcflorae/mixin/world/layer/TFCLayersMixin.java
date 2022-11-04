@@ -397,6 +397,21 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow
     public static int shoreFor(int value)
     {
+<<<<<<< Updated upstream
+=======
+        if (value == ALPINE_MOUNTAINS)
+        {
+            return ALPINE_HIGHLANDS;
+        }
+        if (value == ALPINE_HIGHLANDS)
+        {
+            return GRAVEL_SHORE;
+        }
+        if (value == OLD_MOUNTAINS || value == PLATEAU || value == PUY_MOUNTAINS || value == CALDERAS)
+        {
+            return GRAVEL_SHORE;
+        }
+>>>>>>> Stashed changes
         if (value == MOUNTAINS)
         {
             return OCEANIC_MOUNTAINS;

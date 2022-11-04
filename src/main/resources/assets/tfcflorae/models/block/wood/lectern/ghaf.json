@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/ghaf",
+    "base": "tfcflorae:block/wood/lectern/base/ghaf",
+    "front": "tfcflorae:block/wood/lectern/front/ghaf",
+    "sides": "tfcflorae:block/wood/lectern/sides/ghaf",
+    "top": "tfcflorae:block/wood/lectern/top/ghaf",
+    "particle": "tfcflorae:block/wood/lectern/sides/ghaf"
+  }
+}

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/mountain_ash"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mountain_ash"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mountain_ash"
     }
   ],
   "duration": 1250,

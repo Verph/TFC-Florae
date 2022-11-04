@@ -6,7 +6,11 @@
         "up": "true"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/post/andesite"
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/post/andesite"
+>>>>>>> Stashed changes
       }
     },
     {
@@ -14,7 +18,11 @@
         "north": "low"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/andesite",
+>>>>>>> Stashed changes
         "uvlock": true
       }
     },
@@ -23,7 +31,11 @@
         "east": "low"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/andesite",
+>>>>>>> Stashed changes
         "y": 90,
         "uvlock": true
       }
@@ -33,7 +45,11 @@
         "south": "low"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/andesite",
+>>>>>>> Stashed changes
         "y": 180,
         "uvlock": true
       }
@@ -43,7 +59,11 @@
         "west": "low"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/andesite",
+>>>>>>> Stashed changes
         "y": 270,
         "uvlock": true
       }
@@ -53,7 +73,11 @@
         "north": "tall"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/tall/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/tall/andesite",
+>>>>>>> Stashed changes
         "uvlock": true
       }
     },
@@ -62,7 +86,11 @@
         "east": "tall"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/tall/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/tall/andesite",
+>>>>>>> Stashed changes
         "y": 90,
         "uvlock": true
       }
@@ -72,7 +100,11 @@
         "south": "tall"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/tall/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/tall/andesite",
+>>>>>>> Stashed changes
         "y": 180,
         "uvlock": true
       }
@@ -82,7 +114,11 @@
         "west": "tall"
       },
       "apply": {
+<<<<<<< Updated upstream
         "model": "tfcflorae:block/pebble_compact_dirt/humus/wall/side/tall/andesite",
+=======
+        "model": "tfcflorae:block/pebble_compact_dirt/humus/side/tall/andesite",
+>>>>>>> Stashed changes
         "y": 270,
         "uvlock": true
       }

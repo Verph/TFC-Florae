@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/mountain_ash",
-    "base": "tfcflorae:block/wood/lectern/mountain_ash/base",
-    "front": "tfcflorae:block/wood/lectern/mountain_ash/front",
-    "sides": "tfcflorae:block/wood/lectern/mountain_ash/sides",
-    "top": "tfcflorae:block/wood/lectern/mountain_ash/top",
-    "particle": "tfcflorae:block/wood/lectern/mountain_ash/sides"
+    "base": "tfcflorae:block/wood/lectern/base/mountain_ash",
+    "front": "tfcflorae:block/wood/lectern/front/mountain_ash",
+    "sides": "tfcflorae:block/wood/lectern/sides/mountain_ash",
+    "top": "tfcflorae:block/wood/lectern/top/mountain_ash",
+    "particle": "tfcflorae:block/wood/lectern/sides/mountain_ash"
   }
 }

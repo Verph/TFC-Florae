@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/nordmann_fir"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/nordmann_fir"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/nordmann_fir",
+    "count": 8
+  }
+}

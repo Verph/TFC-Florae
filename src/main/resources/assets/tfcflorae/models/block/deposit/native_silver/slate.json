@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/slate",
     "particle": "tfcflorae:block/rock/gravel/slate",
-    "overlay": "tfcflorae:block/deposit/native_silver"
+    "overlay": "tfc:block/deposit/native_silver"
   }
 }

@@ -1,0 +1,235 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 60,
+    "min_y": {
+      "absolute": -32
+    },
+    "max_y": {
+      "absolute": 75
+    },
+    "size": 20,
+    "density": 0.6,
+    "blocks": [
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/jaspillite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/jaspillite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blackband_ironstone"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/blackband_ironstone"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/blackband_ironstone"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/blackband_ironstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_hematite/rhyolite"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_hematite/rhyolite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_hematite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_hematite/basalt"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_hematite/basalt"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_hematite/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_hematite/andesite"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_hematite/andesite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_hematite/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfc:ore/poor_hematite/dacite"
+          },
+          {
+            "weight": 50,
+            "block": "tfc:ore/normal_hematite/dacite"
+          },
+          {
+            "weight": 30,
+            "block": "tfc:ore/rich_hematite/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/porphyry"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/porphyry"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/peridotite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/peridotite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blaimorite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/blaimorite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/blaimorite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/blaimorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/boninite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/boninite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 20,
+            "block": "tfcflorae:ore/poor_hematite/carbonatite"
+          },
+          {
+            "weight": 50,
+            "block": "tfcflorae:ore/normal_hematite/carbonatite"
+          },
+          {
+            "weight": 30,
+            "block": "tfcflorae:ore/rich_hematite/carbonatite"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 12,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_hematite"
+        }
+      ]
+    },
+    "random_name": "normal_hematite"
+  }
+}

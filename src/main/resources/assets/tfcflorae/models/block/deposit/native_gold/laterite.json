@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/gravel/laterite",
+    "particle": "tfcflorae:block/rock/gravel/laterite",
+    "overlay": "tfc:block/deposit/native_gold"
+  }
+}

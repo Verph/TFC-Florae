@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/stairs/quartzite",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/quartzite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

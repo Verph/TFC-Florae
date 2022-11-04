@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/aspen",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/aspen",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/aspen",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/aspen",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/aspen",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/aspen",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/aspen"
+  },
+  "render_type": "solid"
+}

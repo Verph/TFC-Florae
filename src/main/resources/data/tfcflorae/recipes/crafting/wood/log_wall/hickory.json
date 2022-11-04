@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/hickory"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/hickory"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/hickory",
+    "count": 8
+  }
+}

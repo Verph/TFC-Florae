@@ -4,6 +4,6 @@
   "textures": {
     "all": "tfcflorae:block/rock/gravel/boninite",
     "particle": "tfcflorae:block/rock/gravel/boninite",
-    "overlay": "tfcflorae:block/deposit/cassiterite"
+    "overlay": "tfc:block/deposit/cassiterite"
   }
 }

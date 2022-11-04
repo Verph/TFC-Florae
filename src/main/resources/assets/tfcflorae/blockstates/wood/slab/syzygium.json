@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/syzygium"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/syzygium_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/syzygium"
+    }
+  }
+}

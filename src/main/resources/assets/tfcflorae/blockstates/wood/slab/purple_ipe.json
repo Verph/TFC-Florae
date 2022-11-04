@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/purple_ipe"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/purple_ipe_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/purple_ipe"
+    }
+  }
+}

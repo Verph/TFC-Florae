@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/purpleheart"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/purpleheart"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/purpleheart"
+  }
+}

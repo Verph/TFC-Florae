@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/fever",
+    "north": "tfcflorae:block/wood/workbench/front/fever",
+    "south": "tfcflorae:block/wood/workbench/side/fever",
+    "east": "tfcflorae:block/wood/workbench/side/fever",
+    "west": "tfcflorae:block/wood/workbench/front/fever",
+    "up": "tfcflorae:block/wood/workbench/top/fever",
+    "down": "tfcflorae:block/wood/planks/fever"
+  }
+}

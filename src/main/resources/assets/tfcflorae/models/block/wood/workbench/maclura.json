@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/maclura",
+    "north": "tfcflorae:block/wood/workbench/front/maclura",
+    "south": "tfcflorae:block/wood/workbench/side/maclura",
+    "east": "tfcflorae:block/wood/workbench/side/maclura",
+    "west": "tfcflorae:block/wood/workbench/front/maclura",
+    "up": "tfcflorae:block/wood/workbench/top/maclura",
+    "down": "tfcflorae:block/wood/planks/maclura"
+  }
+}

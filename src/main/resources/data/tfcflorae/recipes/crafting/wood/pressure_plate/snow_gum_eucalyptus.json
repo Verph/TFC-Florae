@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/snow_gum_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/pressure_plate/snow_gum_eucalyptus"
+  }
+}

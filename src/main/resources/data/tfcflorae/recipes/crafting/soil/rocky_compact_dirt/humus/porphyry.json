@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/porphyry"
+    },
+    {
+      "item": "tfcflorae:rock/loose/porphyry"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/porphyry"
+  }
+}

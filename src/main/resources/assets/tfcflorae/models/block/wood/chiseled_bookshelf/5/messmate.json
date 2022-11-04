@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/messmate",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/messmate",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/messmate",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/messmate",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/messmate",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/messmate",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/messmate"
+  },
+  "render_type": "solid"
+}

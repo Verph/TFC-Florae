@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/stairs/jaspillite",
+  "result": "tfcflorae:rock/stone_tiles/stairs/jaspillite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/whitebeam",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/whitebeam",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/whitebeam",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/whitebeam",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/whitebeam",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/whitebeam",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/whitebeam"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/arkose",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/outer/arkose",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/pebble_compact_dirt/sandy_loam/stairs/inner/arkose",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

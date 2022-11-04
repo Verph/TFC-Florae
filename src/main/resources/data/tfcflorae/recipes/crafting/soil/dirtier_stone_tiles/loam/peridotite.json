@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/peridotite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/peridotite"
+  }
+}

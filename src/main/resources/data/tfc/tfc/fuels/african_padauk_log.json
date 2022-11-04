@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/african_padauk"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/african_padauk"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/african_padauk"
     }
   ],
   "duration": 1500,

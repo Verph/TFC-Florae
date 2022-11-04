@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/komatiite",
+  "result": "tfcflorae:rock/cobble/komatiite_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobble/komatiite_slab"
+  }
+}

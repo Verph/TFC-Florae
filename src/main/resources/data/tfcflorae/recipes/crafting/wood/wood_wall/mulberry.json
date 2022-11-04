@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/mulberry"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/mulberry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/mulberry",
+    "count": 8
+  }
+}

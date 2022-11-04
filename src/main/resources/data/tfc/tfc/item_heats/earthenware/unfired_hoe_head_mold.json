@@ -1,7 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/earthenware/unfired_hoe_head_mold"
+=======
+    "item": "tfcflorae:ceramic/earthenware/unfired/mold/hoe_head"
+>>>>>>> Stashed changes
   },
   "heat_capacity": 0.2
 }

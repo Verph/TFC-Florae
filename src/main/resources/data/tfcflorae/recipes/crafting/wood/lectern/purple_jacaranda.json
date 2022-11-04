@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/purple_jacaranda"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/purple_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/purple_jacaranda"
+  }
+}

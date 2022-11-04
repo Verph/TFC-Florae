@@ -1,7 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/stoneware/unfired_saw_blade_mold"
+=======
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/saw_blade"
+>>>>>>> Stashed changes
   },
   "heat_capacity": 0.2
 }

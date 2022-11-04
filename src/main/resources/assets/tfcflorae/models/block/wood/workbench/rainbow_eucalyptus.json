@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/rainbow_eucalyptus",
+    "north": "tfcflorae:block/wood/workbench/front/rainbow_eucalyptus",
+    "south": "tfcflorae:block/wood/workbench/side/rainbow_eucalyptus",
+    "east": "tfcflorae:block/wood/workbench/side/rainbow_eucalyptus",
+    "west": "tfcflorae:block/wood/workbench/front/rainbow_eucalyptus",
+    "up": "tfcflorae:block/wood/workbench/top/rainbow_eucalyptus",
+    "down": "tfcflorae:block/wood/planks/rainbow_eucalyptus"
+  }
+}

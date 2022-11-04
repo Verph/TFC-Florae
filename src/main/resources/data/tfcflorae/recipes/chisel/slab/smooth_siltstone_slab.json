@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/siltstone",
+  "result": "tfcflorae:rock/smooth/siltstone_slab",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/smooth/siltstone_slab"
+  }
+}

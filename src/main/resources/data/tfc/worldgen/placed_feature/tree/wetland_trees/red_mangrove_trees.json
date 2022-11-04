@@ -1,0 +1,50 @@
+{
+  "feature": "tfc:tree/wetland_trees/red_mangrove_random",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "tfcflorae:wood/sapling/red_mangrove",
+          "Properties": {
+            "age": "0",
+            "hanging": "false",
+            "stage": "0",
+            "waterlogged": "false"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 54
+        },
+        "max_inclusive": {
+          "absolute": 68
+        }
+      }
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 5
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 6,
+      "max_temperature": 38,
+      "min_rainfall": 230,
+      "max_rainfall": 500,
+      "fuzzy": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/silt/breccia"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/stairs/breccia",
+    "count": 8
+  }
+}

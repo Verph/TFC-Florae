@@ -1,0 +1,45 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:charred_tree/1",
+      "tfc:charred_tree/2",
+      "tfc:charred_tree/3",
+      "tfc:charred_tree/4",
+      "tfc:charred_tree/5",
+      "tfc:charred_tree/6",
+      "tfc:charred_tree/7",
+      "tfc:charred_tree/8",
+      "tfc:charred_tree/9",
+      "tfc:charred_tree/10",
+      "tfc:charred_tree/11",
+      "tfc:charred_tree/12",
+      "tfc:charred_tree/13",
+      "tfc:charred_tree/14",
+      "tfc:charred_tree/15",
+      "tfc:charred_tree/16",
+      "tfc:charred_tree/17",
+      "tfc:charred_tree/18",
+      "tfc:charred_tree/19",
+      "tfc:charred_tree/20",
+      "tfc:charred_tree/21",
+      "tfc:charred_tree/22",
+      "tfc:charred_tree/23",
+      "tfc:charred_tree/24",
+      "tfc:charred_tree/25",
+      "tfc:charred_tree/26",
+      "tfc:charred_tree/27",
+      "tfc:charred_tree/28",
+      "tfc:charred_tree/29",
+      "tfc:charred_tree/30",
+      "tfc:charred_tree/31"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

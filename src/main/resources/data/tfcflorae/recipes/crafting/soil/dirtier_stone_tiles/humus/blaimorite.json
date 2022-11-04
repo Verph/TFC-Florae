@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/humus"
+    },
+    {
+      "item": "tfc:dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/blaimorite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/blaimorite"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/poor_native_silver/red_granite",
+    "tfcflorae:ore/poor_native_silver/breccia",
+    "tfcflorae:ore/poor_native_silver/foidolite",
+    "tfcflorae:ore/poor_native_silver/porphyry",
+    "tfcflorae:ore/poor_native_silver/peridotite",
+    "tfcflorae:ore/poor_native_silver/blaimorite",
+    "tfcflorae:ore/poor_native_silver/boninite",
+    "tfcflorae:ore/poor_native_silver/carbonatite",
+    "tfcflorae:ore/poor_native_silver/laterite",
+    "tfcflorae:ore/poor_native_silver/mudstone",
+    "tfcflorae:ore/poor_native_silver/sandstone",
+    "tfcflorae:ore/poor_native_silver/siltstone",
+    "tfcflorae:ore/poor_native_silver/arkose",
+    "tfcflorae:ore/poor_native_silver/jaspillite",
+    "tfcflorae:ore/poor_native_silver/travertine",
+    "tfcflorae:ore/poor_native_silver/wackestone",
+    "tfcflorae:ore/poor_native_silver/blackband_ironstone",
+    "tfcflorae:ore/poor_native_silver/cataclasite",
+    "tfcflorae:ore/poor_native_silver/blueschist",
+    "tfcflorae:ore/poor_native_silver/catlinite",
+    "tfcflorae:ore/poor_native_silver/greenschist",
+    "tfcflorae:ore/poor_native_silver/novaculite",
+    "tfcflorae:ore/poor_native_silver/soapstone",
+    "tfcflorae:ore/poor_native_silver/komatiite",
+    "tfcflorae:ore/poor_native_silver/mylonite"
+  ]
+}

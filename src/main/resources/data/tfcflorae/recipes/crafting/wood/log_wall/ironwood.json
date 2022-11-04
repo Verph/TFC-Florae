@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/ironwood"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/ironwood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/ironwood",
+    "count": 8
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/yellow_jacaranda"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/yellow_jacaranda_down"
+    }
+  }
+}

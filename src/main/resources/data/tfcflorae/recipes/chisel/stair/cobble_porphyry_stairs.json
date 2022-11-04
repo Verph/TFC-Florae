@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/porphyry",
+  "result": "tfcflorae:rock/cobble/porphyry_stairs",
+  "mode": "stair"
+}

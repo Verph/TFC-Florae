@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/zebrawood",
+    "north": "tfcflorae:block/wood/workbench/front/zebrawood",
+    "south": "tfcflorae:block/wood/workbench/side/zebrawood",
+    "east": "tfcflorae:block/wood/workbench/side/zebrawood",
+    "west": "tfcflorae:block/wood/workbench/front/zebrawood",
+    "up": "tfcflorae:block/wood/workbench/top/zebrawood",
+    "down": "tfcflorae:block/wood/planks/zebrawood"
+  }
+}

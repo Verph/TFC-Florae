@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/argyle_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/argyle_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/argyle_eucalyptus",
+    "count": 2
+  }
+}

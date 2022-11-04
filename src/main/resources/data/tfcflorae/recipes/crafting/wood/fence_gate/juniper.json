@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/juniper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/juniper",
+    "count": 2
+  }
+}

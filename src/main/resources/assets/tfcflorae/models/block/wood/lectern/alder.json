@@ -1,12 +1,11 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "parent": "minecraft:block/lectern",
   "textures": {
     "bottom": "tfcflorae:block/wood/planks/alder",
-    "base": "tfcflorae:block/wood/lectern/alder/base",
-    "front": "tfcflorae:block/wood/lectern/alder/front",
-    "sides": "tfcflorae:block/wood/lectern/alder/sides",
-    "top": "tfcflorae:block/wood/lectern/alder/top",
-    "particle": "tfcflorae:block/wood/lectern/alder/sides"
+    "base": "tfcflorae:block/wood/lectern/base/alder",
+    "front": "tfcflorae:block/wood/lectern/front/alder",
+    "sides": "tfcflorae:block/wood/lectern/sides/alder",
+    "top": "tfcflorae:block/wood/lectern/top/alder",
+    "particle": "tfcflorae:block/wood/lectern/sides/alder"
   }
 }

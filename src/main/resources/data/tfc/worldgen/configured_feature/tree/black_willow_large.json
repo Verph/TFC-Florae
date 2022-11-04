@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:random_tree",
+  "config": {
+    "structures": [
+      "tfc:black_willow_large/1",
+      "tfc:black_willow_large/2",
+      "tfc:black_willow_large/3",
+      "tfc:black_willow_large/4",
+      "tfc:black_willow_large/5",
+      "tfc:black_willow_large/6",
+      "tfc:black_willow_large/7",
+      "tfc:black_willow_large/8",
+      "tfc:black_willow_large/9",
+      "tfc:black_willow_large/10",
+      "tfc:black_willow_large/11",
+      "tfc:black_willow_large/12",
+      "tfc:black_willow_large/13",
+      "tfc:black_willow_large/14"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 4,
+      "allow_submerged": true,
+      "allow_deeply_submerged": true
+    }
+  }
+}

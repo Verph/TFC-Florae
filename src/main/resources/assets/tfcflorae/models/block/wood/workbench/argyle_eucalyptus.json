@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/argyle_eucalyptus",
+    "north": "tfcflorae:block/wood/workbench/front/argyle_eucalyptus",
+    "south": "tfcflorae:block/wood/workbench/side/argyle_eucalyptus",
+    "east": "tfcflorae:block/wood/workbench/side/argyle_eucalyptus",
+    "west": "tfcflorae:block/wood/workbench/front/argyle_eucalyptus",
+    "up": "tfcflorae:block/wood/workbench/top/argyle_eucalyptus",
+    "down": "tfcflorae:block/wood/planks/argyle_eucalyptus"
+  }
+}

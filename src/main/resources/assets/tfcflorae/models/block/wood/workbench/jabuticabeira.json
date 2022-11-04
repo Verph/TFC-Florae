@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/jabuticabeira",
+    "north": "tfcflorae:block/wood/workbench/front/jabuticabeira",
+    "south": "tfcflorae:block/wood/workbench/side/jabuticabeira",
+    "east": "tfcflorae:block/wood/workbench/side/jabuticabeira",
+    "west": "tfcflorae:block/wood/workbench/front/jabuticabeira",
+    "up": "tfcflorae:block/wood/workbench/top/jabuticabeira",
+    "down": "tfcflorae:block/wood/planks/jabuticabeira"
+  }
+}

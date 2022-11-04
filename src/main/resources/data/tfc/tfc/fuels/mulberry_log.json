@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/mulberry"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mulberry"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mulberry"
     }
   ],
   "duration": 1860,

@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/brazilwood"
     }
   ],
   "duration": 1000,

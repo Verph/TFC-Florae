@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/locust",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/locust",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/locust",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/locust",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/locust",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/locust",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/locust"
+  },
+  "render_type": "solid"
+}

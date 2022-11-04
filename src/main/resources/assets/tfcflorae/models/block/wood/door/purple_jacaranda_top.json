@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/purple_jacaranda_top",
+    "bottom": "tfcflorae:block/wood/door/purple_jacaranda_bottom"
+  }
+}

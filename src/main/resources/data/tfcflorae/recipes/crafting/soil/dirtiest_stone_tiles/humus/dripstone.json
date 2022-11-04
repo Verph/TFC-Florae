@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/humus"
+    },
+    {
+      "item": "tfc:dirt/humus"
+    },
+    {
+      "item": "tfc:dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/dripstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/humus/dripstone"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/normal_native_silver/greenschist",
+  "result": "tfcflorae:ore/poor_native_silver/greenschist"
+}

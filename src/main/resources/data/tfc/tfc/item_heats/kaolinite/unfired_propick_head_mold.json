@@ -1,7 +1,11 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/kaolinite/unfired_propick_head_mold"
+=======
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/propick_head"
+>>>>>>> Stashed changes
   },
   "heat_capacity": 0.2
 }

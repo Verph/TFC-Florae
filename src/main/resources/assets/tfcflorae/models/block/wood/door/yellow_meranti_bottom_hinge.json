@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/yellow_meranti_top",
+    "bottom": "tfcflorae:block/wood/door/yellow_meranti_bottom"
+  }
+}

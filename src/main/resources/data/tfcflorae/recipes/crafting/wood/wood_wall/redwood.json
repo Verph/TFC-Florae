@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/redwood"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/redwood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/redwood",
+    "count": 8
+  }
+}

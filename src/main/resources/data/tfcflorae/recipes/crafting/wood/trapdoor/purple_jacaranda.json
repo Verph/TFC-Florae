@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/purple_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/trapdoor/purple_jacaranda",
+    "count": 3
+  }
+}

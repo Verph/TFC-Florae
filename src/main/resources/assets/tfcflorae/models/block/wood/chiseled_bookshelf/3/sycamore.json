@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/sycamore",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/sycamore",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/sycamore",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/sycamore",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/sycamore",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/sycamore",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/sycamore"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/mountain_ash_top",
+    "bottom": "tfcflorae:block/wood/door/mountain_ash_bottom"
+  }
+}

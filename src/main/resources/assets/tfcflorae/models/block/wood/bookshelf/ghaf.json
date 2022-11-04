@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/ghaf",
+    "side": "tfcflorae:block/wood/bookshelf/ghaf"
+  }
+}

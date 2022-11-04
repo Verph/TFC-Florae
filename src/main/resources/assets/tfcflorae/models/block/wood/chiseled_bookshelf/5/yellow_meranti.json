@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/yellow_meranti",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/yellow_meranti",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/yellow_meranti",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/yellow_meranti",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/yellow_meranti",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/yellow_meranti",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/yellow_meranti"
+  },
+  "render_type": "solid"
+}

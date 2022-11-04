@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/teak",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/teak",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/teak",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/teak",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/teak",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/teak",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/teak"
+  },
+  "render_type": "solid"
+}

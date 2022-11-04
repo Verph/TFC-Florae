@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/ghaf"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/ghaf",
+    "count": 8
+  }
+}

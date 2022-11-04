@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/hemlock"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/hemlock_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/hemlock"
+    }
+  }
+}

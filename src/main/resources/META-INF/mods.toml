@@ -1,4 +1,4 @@
-license = "MIT" 
+license = "BSD 3" 
 loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 modLoader = "javafml" #mandatory
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional

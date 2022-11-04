@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/jabuticabeira"
+    },
+    {
+      "item": "tfcflorae:wood/wood/jabuticabeira"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/jabuticabeira"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/jabuticabeira"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 632
+}

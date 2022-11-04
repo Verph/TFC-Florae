@@ -19,6 +19,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
@@ -39,6 +40,7 @@ import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
+import net.dries007.tfc.common.items.ChestBlockItem;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
@@ -89,6 +91,31 @@ public class TFCFBlocks
 
     public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, DecorationBlockRegistryObject>>> TFCROCKSOILDECO = TFCRockSoilDecoMapper(TFCFRockSoil.class);
     public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO = TFCFRockSoilDecoMapper(TFCFRockSoil.class);
+<<<<<<< Updated upstream
+=======
+    public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCROCKSOILDECO2 = TFCRockSoilDeco2Mapper(TFCFRockSoil.class);
+    public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO2 = TFCFRockSoilDeco2Mapper(TFCFRockSoil.class);
+
+    // Ores
+
+    public static final Map<TFCFRock, Map<Ore, RegistryObject<Block>>> ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, ore -> !ore.isGraded(), ore ->
+            register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+        )
+    );
+    public static final Map<TFCFRock, Map<Ore, Map<Ore.Grade, RegistryObject<Block>>>> GRADED_ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, Ore::isGraded, ore ->
+            Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+            )
+        )
+    );
+    public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(OreDeposit.class, ore ->
+            register("deposit/" + ore.name() + "/" + rock.name(), () -> new TFCFOreDepositBlock(Block.Properties.of(Material.SAND, MaterialColor.STONE).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f)), rock, ore), TFCItemGroup.ORES) // Same hardness as gravel
+        )
+    );
+>>>>>>> Stashed changes
 
     // Rock Stuff
 
@@ -98,12 +125,36 @@ public class TFCFBlocks
         )
     );
 
+<<<<<<< Updated upstream
     public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> ROCK_DECORATIONS = RockDecoMapper(Rock.class);
+=======
+    public static final Map<TFCFRock, RegistryObject<Block>> MAGMA_BLOCKS = Helpers.mapOfKeys(TFCFRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
+        register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(TFCFBlocks::always)), ROCK_STUFFS)
+    );
+
+    public static final Map<TFCFRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> TFCF_ROCKTYPE_DECORATIONS = RockTypeDecoTFCMapper(TFCFRock.class);
+    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
+    public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFCF_ROCK_DECORATIONS = RockDecoTFCFMapper(TFCFRock.class);
+>>>>>>> Stashed changes
 
     // Wood
 
+    public static final RegistryObject<Block> CHARRED_TREE_LOG = register("wood/log/charred_tree", () -> new LogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.TERRACOTTA_BLACK : MaterialColor.TERRACOTTA_BLACK).strength(8f).sound(TFCSounds.CHARCOAL).requiresCorrectToolForDrops().flammableLikeLogs(), TFCFBlocks.CHARRED_TREE_STRIPPED_LOG), WOOD);
+    public static final RegistryObject<Block> CHARRED_TREE_STRIPPED_LOG = register("wood/stripped_log/charred_tree", () -> new LogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.TERRACOTTA_BLACK : MaterialColor.TERRACOTTA_BLACK).strength(7.5f).sound(TFCSounds.CHARCOAL).requiresCorrectToolForDrops().flammableLikeLogs(), null), WOOD);
+    public static final RegistryObject<Block> CHARRED_TREE_WOOD = register("wood/wood/charred_tree", () -> new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.TERRACOTTA_BLACK).strength(8f).sound(TFCSounds.CHARCOAL).requiresCorrectToolForDrops().flammableLikeLogs(), TFCFBlocks.CHARRED_TREE_STRIPPED_WOOD), WOOD);
+    public static final RegistryObject<Block> CHARRED_TREE_STRIPPED_WOOD = register("wood/stripped_wood/charred_tree", () -> new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.TERRACOTTA_BLACK).strength(7.5f).sound(TFCSounds.CHARCOAL).requiresCorrectToolForDrops().flammableLikeLogs(), null), WOOD);
+    public static final RegistryObject<Block> CHARRED_TREE_TWIG = register("wood/twig/charred_tree", () -> GroundcoverBlock.twig(ExtendedProperties.of(Material.GRASS).strength(0.05F, 0.0F).sound(TFCSounds.CHARCOAL).noCollission().flammableLikeWool()), WOOD);
+
     public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = woodMapper(TFCFWood.class);
+    public static final Map<Wood, RegistryObject<Block>> NORMAL_BOOKSHELF_TFC = normalBookshelfMapperTFC(Wood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = leavesOnlyMapper(TFCFWood.class);
+<<<<<<< Updated upstream
+=======
+    //public static final Map<Wood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFC = chiseledBookshelfMapperTFC(Wood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFCF = chiseledBookshelfMapperTFCF(TFCFWood.class);
+    public static final Map<Wood, RegistryObject<Block>> LOG_WALL = woodWallMapperTFC(Wood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> WOOD_WALL = woodWallMapperTFCF(TFCFWood.class);
+>>>>>>> Stashed changes
     public static final Map<TFCFWood, RegistryObject<Block>> MANGROVE_ROOTS = mangroveRootsMapper(TFCFWood.class);
 
     // Misc
@@ -112,19 +163,19 @@ public class TFCFBlocks
     public static final RegistryObject<StairBlock> FIRE_BRICKS_STAIRS = register(("ceramic/fire_bricks/brick_stairs"), () -> new StairBlock(() -> TFCBlocks.FIRE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<WallBlock> FIRE_BRICKS_WALL = register(("ceramic/fire_bricks/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> EARTHENWARE_BRICKS_CLAY = register("ceramic/earthenware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.GRAVEL)), DECORATIONS);
+    public static final RegistryObject<Block> EARTHENWARE_CLAY = register("ceramic/earthenware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_ORANGE).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
     public static final RegistryObject<Block> EARTHENWARE_BRICKS = register("ceramic/earthenware/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<SlabBlock> EARTHENWARE_BRICKS_SLAB = register(("ceramic/earthenware/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<StairBlock> EARTHENWARE_BRICKS_STAIRS = register(("ceramic/earthenware/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<WallBlock> EARTHENWARE_BRICKS_WALL = register(("ceramic/earthenware/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> KAOLINITE_BRICKS_CLAY = register("ceramic/kaolinite/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_PINK).strength(0.6F).sound(SoundType.GRAVEL)), DECORATIONS);
+    public static final RegistryObject<Block> KAOLINITE__CLAY = register("ceramic/kaolinite/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_PINK).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
     public static final RegistryObject<Block> KAOLINITE_BRICKS = register("ceramic/kaolinite/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<SlabBlock> KAOLINITE_BRICKS_SLAB = register(("ceramic/kaolinite/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<StairBlock> KAOLINITE_BRICKS_STAIRS = register(("ceramic/kaolinite/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<WallBlock> KAOLINITE_BRICKS_WALL = register(("ceramic/kaolinite/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> STONEWARE_BRICKS_CLAY = register("ceramic/stoneware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_GRAY).strength(0.6F).sound(SoundType.GRAVEL)), DECORATIONS);
+    public static final RegistryObject<Block> STONEWARE_CLAY = register("ceramic/stoneware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_GRAY).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
     public static final RegistryObject<Block> STONEWARE_BRICKS = register("ceramic/stoneware/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<SlabBlock> STONEWARE_BRICKS_SLAB = register(("ceramic/stoneware/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<StairBlock> STONEWARE_BRICKS_STAIRS = register(("ceramic/stoneware/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
@@ -195,29 +246,135 @@ public class TFCFBlocks
             Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
             for (Wood.BlockType type : Wood.BlockType.values())
             {
+<<<<<<< Updated upstream
                 if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()))
                 {
                     if (wood.isFruitTree())
                     {
                         subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                             TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammable(60, 30), 
+=======
+                if (type == BlockType.LOG && wood.isFruitTree() && wood.hasFruitingLog())
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(8f).sound(SoundType.WOOD).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_LOG), 
+                        wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.WOOD && wood.isFruitTree() && wood.hasFruitingLog())
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
+                        wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
+                {
+                    if (wood.isFruitTree())
+                    {
+                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), 
+>>>>>>> Stashed changes
                             wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
                     }
                     else if (wood.isMangrove())
                     {
+<<<<<<< Updated upstream
                         subMap.put(type, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                             TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).flammable(60, 30), wood.maxDecayDistance()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+=======
+                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), wood,
+                            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+>>>>>>> Stashed changes
                     }
                 }
                 else if (type == BlockType.SAPLING && wood.isMangrove())
                 {
+<<<<<<< Updated upstream
                     subMap.put(type, register(("wood/sapling/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         new TFCFMangrovePropaguleBlock(wood, ExtendedProperties.of(Block.Properties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS)).flammable(60, 30).blockEntity(TFCBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+=======
+                    if (wood.isMangrove())
+                    {
+                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFMangrovePropaguleBlock(wood, ExtendedProperties.of(Block.Properties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS)).flammableLikeLeaves().blockEntity(TFCBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    }
+                    else
+                    {
+                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFSaplingBlock(wood, wood.tree(), ExtendedProperties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    }
+>>>>>>> Stashed changes
+                }
+                else if (type == BlockType.TRAPPED_CHEST)
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.CHEST)
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.SIGN)
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCStandingSignBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(1F).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.WALL_SIGN)
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCWallSignBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(1F).dropsLike(wood.getBlock(BlockType.SIGN)).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.LECTERN)
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCLecternBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.LECTERN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.BOOKSHELF)
+                {
+                    subMap.put(type, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
                 }
                 else
-                    subMap.put(type, register(type.nameFor(wood), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
             }
             Map.put(wood, subMap);
+        }
+        return Map;
+    }
+
+    private static Map<Wood, RegistryObject<Block>> chiseledBookshelfMapperTFC(Class<Wood> enumClass)
+    {
+        Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
+        for (Wood wood : enumClass.getEnumConstants())
+        {
+            Map.put(wood, register(("wood/chiseled_bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                new ChiseledBookshelfBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).blockEntity(TFCFBlockEntities.CHISELED_BOOKSHELF).flammableLikePlanks()), WOOD));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> chiseledBookshelfMapperTFCF(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.hasLeavesOnly())
+                continue;
+
+            Map.put(wood, register(("wood/chiseled_bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                new ChiseledBookshelfBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).blockEntity(TFCFBlockEntities.CHISELED_BOOKSHELF).flammableLikePlanks()), WOOD));
+        }
+        return Map;
+    }
+
+    private static Map<Wood, RegistryObject<Block>> normalBookshelfMapperTFC(Class<Wood> enumClass)
+    {
+        Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
+        for (Wood wood : enumClass.getEnumConstants())
+        {
+            Map.put(wood, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
         }
         return Map;
     }
@@ -251,8 +408,96 @@ public class TFCFBlocks
                 Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
 
                 Map.put(wood, register(("wood/roots/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+<<<<<<< Updated upstream
                     new TFCFMangroveRootsBlocks(wood, ExtendedProperties.of(Block.Properties.of(Material.WOOD).noCollission().randomTicks().strength(0.7F).sound(TFCFSounds.MANGROVE_ROOTS)).flammable(60, 30)), blockItem));
+=======
+                    new TFCFMangroveRootsBlocks(wood, ExtendedProperties.of(Block.Properties.of(Material.WOOD).noCollission().randomTicks().strength(0.7F).sound(TFCFSounds.MANGROVE_ROOTS)).flammableLikeLeaves()), blockItem));
             }
+            else continue;
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, Map<SoilBlockType.Variant, RegistryObject<Block>>> TFCmangroveRootsMuddyMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, Map<SoilBlockType.Variant, RegistryObject<Block>>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.isMangrove())
+            {
+                Map<SoilBlockType.Variant, RegistryObject<Block>> soilVariantMap = new HashMap<>();
+                for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+                {
+                    BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+                    Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+                    soilVariantMap.put(soilVariant, register(("wood/roots/" + wood.getSerializedName() + "/" + soilVariant.name()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFMangroveMuddyRootsBlocks(wood, ExtendedProperties.of(Block.Properties.of(Material.WOOD).noCollission().randomTicks().strength(0.7F).sound(TFCFSounds.MANGROVE_ROOTS)).flammableLikeLeaves()), blockItem));
+                }
+                Map.put(wood, soilVariantMap);
+            }
+            else continue;
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> TFCFmangroveRootsMuddyMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.isMangrove())
+            {
+                Map<TFCFSoil.TFCFVariant, RegistryObject<Block>> soilVariantMap = new HashMap<>();
+                for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+                {
+                    BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+                    Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+                    soilVariantMap.put(soilVariant, register(("wood/roots/" + wood.getSerializedName() + "/" + soilVariant.name()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFMangroveMuddyRootsBlocks(wood, ExtendedProperties.of(Block.Properties.of(Material.WOOD).noCollission().randomTicks().strength(0.7F).sound(TFCFSounds.MUDDY_MANGROVE_ROOTS)).flammableLikeLeaves()), blockItem));
+                }
+                Map.put(wood, soilVariantMap);
+            }
+            else continue;
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> joshuaTrunkMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.isJoshua())
+            {
+                BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+                Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+                Map.put(wood, register(("wood/trunks/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                    TFCFJoshuaTrunkBlock.create(wood, BlockBehaviour.Properties.of(Material.WOOD).randomTicks().noOcclusion().strength(6F).sound(SoundType.WOOD).requiresCorrectToolForDrops().hasPostProcess(TFCFBlocks::always), ExtendedProperties.of(BlockBehaviour.Properties.of(Material.WOOD).randomTicks().noOcclusion().strength(6F).sound(SoundType.WOOD).requiresCorrectToolForDrops().hasPostProcess(TFCFBlocks::always)).flammableLikeLogs(), TFCBlockStateProperties.FRESH_WATER), blockItem));
+            }
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> joshuaLeavesMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (wood.isJoshua())
+            {
+                BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+                Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+                Map.put(wood, register(("wood/leaves_head/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                    TFCFJoshuaLeavesBlock.create(wood, ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).hasPostProcess(TFCFBlocks::always)).blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), 
+                    wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
+                    
+>>>>>>> Stashed changes
+            }
+            else continue;
         }
         return Map;
     }
@@ -345,7 +590,87 @@ public class TFCFBlocks
         return Map;
     }
 
+<<<<<<< Updated upstream
     private static Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoMapper(Class<Rock> enumClass)
+=======
+    private static Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCRockSoilDeco2Mapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<TFCFRock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            if (soilBlockType.getTFCFFactory2() == null || soilBlockType.getTFCFactory2() == null)
+                continue;
+
+            Map<SoilBlockType.Variant, Map<TFCFRock, DecorationBlockRegistryObject>> soilVariantMap = new HashMap<>();
+            for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+            {
+                Map<TFCFRock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
+                for (TFCFRock rock : TFCFRock.values())
+                {
+                    rockMap.put(rock, new DecorationBlockRegistryObject(
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/slab/" + rock.name()), () -> new SlabBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/stairs/" + rock.name()), () -> new StairBlock(() -> TFCFBlocks.TFCROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get().defaultBlockState(), BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/wall/" + rock.name()), () -> new WallBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH)
+                    ));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCFRockSoilDeco2Mapper(Class<TFCFRockSoil> enumClass)
+    {
+        Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
+        for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants())
+        {
+            if (soilBlockType.getTFCFFactory2() == null || soilBlockType.getTFCFactory2() == null)
+                continue;
+
+            Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>> soilVariantMap = new HashMap<>();
+            for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+            {
+                Map<TFCFRock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
+                for (TFCFRock rock : TFCFRock.values())
+                {
+                    rockMap.put(rock, new DecorationBlockRegistryObject(
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/slab/" + rock.name()), () -> new SlabBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/stairs/" + rock.name()), () -> new StairBlock(() -> TFCFBlocks.TFCFROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get().defaultBlockState(), BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH),
+                        register((soilBlockType.name() + "/" + soilVariant.name() + "/wall/" + rock.name()), () -> new WallBlock(BlockBehaviour.Properties.copy(TFCFBlocks.TFCFROCKSOIL2.get(soilBlockType).get(soilVariant).get(rock).get())), EARTH)
+                    ));
+                }
+                soilVariantMap.put(soilVariant, rockMap);
+            }
+            Map.put(soilBlockType, soilVariantMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> RockTypeDecoTFCMapper(Class<TFCFRock> enumClass)
+    {
+        Map<TFCFRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
+        for (TFCFRock rock : enumClass.getEnumConstants())
+        {
+            Map<Rock.BlockType, DecorationBlockRegistryObject> typeMap = new HashMap<>();
+            for (Rock.BlockType type : Rock.BlockType.values())
+            {
+                if (type.hasVariants())
+                {
+                    typeMap.put(type, new DecorationBlockRegistryObject(
+                        register(("rock/" + type.name() + "/slab/" + rock.name()), () -> type.createSlab(rock), ROCK_STUFFS),
+                        register(("rock/" + type.name() + "/stairs/" + rock.name()), () -> type.createStairs(rock), ROCK_STUFFS),
+                        register(("rock/" + type.name() + "/wall/" + rock.name()), () -> type.createWall(rock), ROCK_STUFFS)
+                    ));
+                }
+            }
+            Map.put(rock, typeMap);
+        }
+        return Map;
+    }
+
+    private static Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> RockDecoTFCMapper(Class<Rock> enumClass)
+>>>>>>> Stashed changes
     {
         Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
         for (Rock rock : enumClass.getEnumConstants())
@@ -367,6 +692,67 @@ public class TFCFBlocks
         return Map;
     }
 
+<<<<<<< Updated upstream
+=======
+    private static Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> rockTypeTFCMapper(Class<Rock> enumClass)
+    {
+        Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> Map = new HashMap<>();
+        for (Rock rock : enumClass.getEnumConstants())
+        {
+            Map<TFCFRock.TFCFBlockType, RegistryObject<Block>> typeMap = new HashMap<>();
+            for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values())
+            {
+                if (type.getTFCFactory() == null)
+                    continue;
+
+                typeMap.put(type, register(("rock/" + type.name() + "/" + rock.name()), () -> type.createTFC(rock), ROCK_STUFFS));
+            }
+            Map.put(rock, typeMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRock, Map<Rock.BlockType, RegistryObject<Block>>> rockMapper(Class<TFCFRock> enumClass)
+    {
+        Map<TFCFRock, Map<Rock.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
+        for (TFCFRock rock : enumClass.getEnumConstants())
+        {
+            Map<Rock.BlockType, RegistryObject<Block>> typeMap = new HashMap<>();
+            for (Rock.BlockType type : Rock.BlockType.values())
+            {
+                typeMap.put(type, register(("rock/" + type.name() + "/" + rock.name()), () -> type.create(rock), ROCK_STUFFS));
+            }
+            Map.put(rock, typeMap);
+        }
+        return Map;
+    }
+
+    private static Map<TFCFRock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> rockTypeMapper(Class<TFCFRock> enumClass)
+    {
+        Map<TFCFRock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> Map = new HashMap<>();
+        for (TFCFRock rock : enumClass.getEnumConstants())
+        {
+            Map<TFCFRock.TFCFBlockType, RegistryObject<Block>> typeMap = new HashMap<>();
+            for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values())
+            {
+                if (type.getTFCFFactory() == null)
+                    continue;
+
+                typeMap.put(type, register(("rock/" + type.name() + "/" + rock.name()), () -> type.createTFCF(rock), ROCK_STUFFS));
+            }
+            Map.put(rock, typeMap);
+        }
+        return Map;
+    }
+
+    public static void registerFlowerPotFlowers()
+    {
+        FlowerPotBlock pot = (FlowerPotBlock) Blocks.FLOWER_POT;
+        POTTED_PLANTS.forEach((plant, reg) -> pot.addPlant(PLANTS.get(plant).getId(), reg));
+        WOODS.forEach((wood, map) -> pot.addPlant(map.get(Wood.BlockType.SAPLING).getId(), map.get(Wood.BlockType.POTTED_SAPLING)));
+    }
+
+>>>>>>> Stashed changes
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier)
     {
         return register(name, blockSupplier, (Function<T, ? extends BlockItem>) null);

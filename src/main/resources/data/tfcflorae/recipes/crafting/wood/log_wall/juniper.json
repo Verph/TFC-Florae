@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/juniper"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/juniper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/juniper",
+    "count": 8
+  }
+}

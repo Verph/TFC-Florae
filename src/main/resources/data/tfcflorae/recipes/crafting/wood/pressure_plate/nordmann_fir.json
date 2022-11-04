@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/nordmann_fir"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/pressure_plate/nordmann_fir"
+  }
+}

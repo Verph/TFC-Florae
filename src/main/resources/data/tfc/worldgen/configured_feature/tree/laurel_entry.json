@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 345,
+    "max_rain": 500,
+    "min_temp": 15,
+    "max_temp": 42,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/laurel"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/laurel"
+      }
+    ],
+    "normal_tree": "tfc:tree/laurel",
+    "dead_tree": "tfc:tree/laurel_dead",
+    "fallen_log": "tfcflorae:wood/log/laurel",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/laurel",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/laurel"
+  }
+}

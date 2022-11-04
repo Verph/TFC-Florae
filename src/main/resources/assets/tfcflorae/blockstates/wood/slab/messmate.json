@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/messmate"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/messmate_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/messmate"
+    }
+  }
+}

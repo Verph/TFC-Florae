@@ -34,8 +34,8 @@ public enum TFCFSoil
     DRYING_BRICKS((self, variant) -> new DryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(SoundType.STEM).randomTicks()).blockEntity(TFCBlockEntities.TICK_COUNTER), variant.dried())),
 
     //Both TFCFVariants and TFCVariants of soil types
-    COARSE_DIRT((self, variant) -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)), 
-                (self, variant) -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCSOIL.get(self.transform()).get(variant))),
+    COARSE_DIRT((self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant)), 
+                (self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant))),
     PODZOL((self, variant) -> new PodzolBlock(Block.Properties.of(Material.DIRT, MaterialColor.PODZOL).randomTicks().strength(0.6F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant)),
             (self, variant) -> new PodzolBlock(Block.Properties.of(Material.DIRT, MaterialColor.PODZOL).randomTicks().strength(0.6F).sound(SoundType.GRAVEL), self.findSoil(self.transform(), SoilBlockType.DIRT, variant), TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH).get(variant), TFCBlocks.SOIL.get(SoilBlockType.FARMLAND).get(variant))),
     DRY_GRASS_PATH((self, variant) -> new PathBlock(Block.Properties.of(Material.DIRT).strength(0.65F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
@@ -161,6 +161,11 @@ public enum TFCFSoil
             case MUD:
             case MUD_BRICKS:
             case DRYING_BRICKS:
+<<<<<<< Updated upstream
+=======
+            case COMPACT_DIRT:
+            case COARSE_DIRT:
+>>>>>>> Stashed changes
                 return DIRT;
             case CLAY:
                 return CLAY_GRASS;

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/teak",
+    "top": "tfcflorae:block/wood/planks/teak",
+    "side": "tfcflorae:block/wood/planks/teak"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/sloe"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/sloe_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/sloe"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/yellow_meranti",
+    "wall": "tfcflorae:block/wood/log/yellow_meranti",
+    "particle": "tfcflorae:block/wood/log/yellow_meranti"
+  }
+}

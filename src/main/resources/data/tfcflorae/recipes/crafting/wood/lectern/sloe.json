@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/sloe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/sloe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/sloe"
+  }
+}

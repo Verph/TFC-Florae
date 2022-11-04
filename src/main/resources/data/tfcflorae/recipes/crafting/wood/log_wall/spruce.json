@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/spruce"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/spruce"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/spruce",
+    "count": 8
+  }
+}

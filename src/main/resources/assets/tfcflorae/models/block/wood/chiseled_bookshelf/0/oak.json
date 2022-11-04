@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/oak",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/oak",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/oak",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/oak",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/oak",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/oak",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/oak"
+  },
+  "render_type": "solid"
+}

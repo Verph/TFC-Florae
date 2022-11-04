@@ -6,6 +6,12 @@
     },
     {
       "item": "tfcflorae:wood/wood/angelim"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/angelim"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/angelim"
     }
   ],
   "duration": 1200,

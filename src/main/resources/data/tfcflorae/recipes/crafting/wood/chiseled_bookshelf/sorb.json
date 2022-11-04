@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/sorb"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/sorb"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/sorb"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/sorb"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/sorb",
+    "count": 1
+  }
+}

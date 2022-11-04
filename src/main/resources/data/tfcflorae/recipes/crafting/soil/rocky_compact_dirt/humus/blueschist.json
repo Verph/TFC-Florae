@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/loose/blueschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/blueschist"
+  }
+}
