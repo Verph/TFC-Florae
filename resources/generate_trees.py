@@ -11,6 +11,7 @@ DATA_VERSION = 2970
 
 NORMAL_TREES = [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Tree('bald_cypress', 'random', 'bald_cypress', 22),
     Tree('red_cypress', 'random', 'red_cypress', 22),
     Tree('black_willow', 'random', 'black_willow', 17)
@@ -32,18 +33,36 @@ LARGE_TREES = [
 LARGE_TREES = [
     Tree('black_willow', 'random', 'black_willow_large', 14)
 >>>>>>> Stashed changes
+=======
+    Tree('bald_cypress', 'random', 'bald_cypress', 6),
+    Tree('red_cypress', 'random', 'red_cypress', 6),
+    Tree('black_willow', 'random', 'black_willow', 10),
+    Tree('jabuticabeira', 'random', 'jabuticabeira', 18),
+    Tree('ghaf', 'random', 'ghaf', 16),
+    Tree('laurel', 'random', 'laurel', 21)
+]
+
+LARGE_TREES = [
+    Tree('black_willow', 'random', 'black_willow_large', 14)
+>>>>>>> Stashed changes
 ]
 
 DEAD_TREES = [
     Tree('bald_cypress', 'random', 'bald_cypress_dead', 13),
     Tree('red_cypress', 'random', 'red_cypress_dead', 13),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Tree('black_willow', 'random', 'dead_stump', 3)
 =======
+=======
+>>>>>>> Stashed changes
     Tree('black_willow', 'random', 'dead_stump', 3),
     Tree('jabuticabeira', 'random', 'jabuticabeira_dead', 13),
     Tree('ghaf', 'random', 'dead_small', 6),
     Tree('laurel', 'random', 'dead_small', 6)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ]
 
@@ -58,6 +77,7 @@ class Count:  # global mutable variables that doesn't require using the word "gl
 def main():
     print('Verifying tree structures')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     verify_center_trunk('bald_cypress', 22)
     verify_center_trunk('red_cypress', 22)
     verify_center_trunk('black_willow', 17)
@@ -65,6 +85,8 @@ def main():
     verify_center_trunk('red_cypress_dead', 13)
     verify_center_trunk('dead_stump', 3)
 =======
+=======
+>>>>>>> Stashed changes
     verify_center_trunk('bald_cypress', 6)
     verify_center_trunk('bald_cypress_dead', 13)
     verify_center_trunk('red_cypress', 6)
@@ -263,12 +285,15 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
+<<<<<<< Updated upstream
                 'axis': prop['axis']})
 =======
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
+=======
+>>>>>>> Stashed changes
                 'axis': StringTag('y')})
                 
         elif block['Name'] == 'tfc:wood/leaves/bald_cypress':

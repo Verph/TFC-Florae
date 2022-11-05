@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_pressure_plate",
     "tfcflorae:wood/planks/medlar_pressure_plate",
     "tfcflorae:wood/planks/persimmon_pressure_plate",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_pressure_plate",
     "tfcflorae:wood/planks/zebrawood_pressure_plate"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/pressure_plate/african_padauk",
     "tfcflorae:wood/pressure_plate/alder",
     "tfcflorae:wood/pressure_plate/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/pressure_plate/yew",
     "tfcflorae:wood/pressure_plate/zebrawood",
     "tfcflorae:wood/pressure_plate/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

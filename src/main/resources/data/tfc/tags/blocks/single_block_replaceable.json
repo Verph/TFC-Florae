@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/twig/black_willow",
     "tfcflorae:wood/fallen_leaves/black_willow",
     "tfcflorae:wood/twig/medlar",
@@ -17,6 +18,9 @@
     "tfcflorae:wood/fallen_leaves/sloe",
     "tfcflorae:wood/twig/pear",
     "tfcflorae:wood/fallen_leaves/pear",
+=======
+    "minecraft:glow_lichen",
+>>>>>>> Stashed changes
 =======
     "minecraft:glow_lichen",
 >>>>>>> Stashed changes
@@ -75,6 +79,7 @@
     "tfcflorae:wood/twig/ironwood",
     "tfcflorae:wood/fallen_leaves/ironwood",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/twig/purple_jacaranda",
     "tfcflorae:wood/fallen_leaves/purple_jacaranda",
     "tfcflorae:wood/twig/white_jacaranda",
@@ -82,6 +87,8 @@
     "tfcflorae:wood/twig/yellow_jacaranda",
     "tfcflorae:wood/fallen_leaves/yellow_jacaranda",
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/twig/jabuticabeira",
     "tfcflorae:wood/fallen_leaves/jabuticabeira",
 >>>>>>> Stashed changes

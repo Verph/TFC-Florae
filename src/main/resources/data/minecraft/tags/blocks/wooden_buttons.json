@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_button",
     "tfcflorae:wood/planks/medlar_button",
     "tfcflorae:wood/planks/persimmon_button",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_button",
     "tfcflorae:wood/planks/zebrawood_button"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/button/african_padauk",
     "tfcflorae:wood/button/alder",
     "tfcflorae:wood/button/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/button/yew",
     "tfcflorae:wood/button/zebrawood",
     "tfcflorae:wood/button/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

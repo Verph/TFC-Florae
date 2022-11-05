@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_workbench",
     "tfcflorae:wood/planks/medlar_workbench",
     "tfcflorae:wood/planks/persimmon_workbench",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_workbench",
     "tfcflorae:wood/planks/zebrawood_workbench"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/workbench/african_padauk",
     "tfcflorae:wood/workbench/alder",
     "tfcflorae:wood/workbench/angelim",
@@ -249,6 +252,9 @@
     "tfcflorae:wood/workbench/yew",
     "tfcflorae:wood/workbench/zebrawood",
     "tfcflorae:wood/workbench/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

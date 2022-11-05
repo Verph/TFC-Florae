@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_fence_gate",
     "tfcflorae:wood/planks/medlar_fence_gate",
     "tfcflorae:wood/planks/persimmon_fence_gate",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_fence_gate",
     "tfcflorae:wood/planks/zebrawood_fence_gate"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/fence_gate/african_padauk",
     "tfcflorae:wood/fence_gate/alder",
     "tfcflorae:wood/fence_gate/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/fence_gate/yew",
     "tfcflorae:wood/fence_gate/zebrawood",
     "tfcflorae:wood/fence_gate/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

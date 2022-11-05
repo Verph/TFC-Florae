@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_tool_rack",
     "tfcflorae:wood/planks/medlar_tool_rack",
     "tfcflorae:wood/planks/persimmon_tool_rack",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_tool_rack",
     "tfcflorae:wood/planks/zebrawood_tool_rack"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/tool_rack/african_padauk",
     "tfcflorae:wood/tool_rack/alder",
     "tfcflorae:wood/tool_rack/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/tool_rack/yew",
     "tfcflorae:wood/tool_rack/zebrawood",
     "tfcflorae:wood/tool_rack/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

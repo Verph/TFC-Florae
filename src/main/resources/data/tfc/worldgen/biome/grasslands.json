@@ -56,7 +56,10 @@
   "starts": [],
   "spawners": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     "water_ambient": [
       {
         "type": "tfc:salmon",

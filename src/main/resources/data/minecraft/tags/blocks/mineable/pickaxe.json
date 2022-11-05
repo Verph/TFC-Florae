@@ -459,6 +459,9 @@
     "tfcflorae:rock/cracked_flagstone_bricks/wall/schist",
     "tfcflorae:rock/cracked_flagstone_bricks/wall/shale",
     "tfcflorae:rock/cracked_flagstone_bricks/wall/slate",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "tfcflorae:rock/stone_tiles/andesite",
     "tfcflorae:rock/stone_tiles/basalt",
@@ -1741,7 +1744,10 @@
     "tfcflorae:dirty_stone_tiles/silty_loam/wall/shale",
     "tfcflorae:dirty_stone_tiles/silty_loam/wall/slate",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 	"tfcflorae:rock/smooth/red_granite",
     "tfcflorae:rock/smooth/breccia",
     "tfcflorae:rock/smooth/foidolite",
@@ -4465,6 +4471,9 @@
     "tfcflorae:rock/magma/blaimorite",
     "tfcflorae:rock/magma/boninite",
     "tfcflorae:rock/magma/carbonatite"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

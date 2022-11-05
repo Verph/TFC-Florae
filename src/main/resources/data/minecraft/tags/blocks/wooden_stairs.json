@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_stairs",
     "tfcflorae:wood/planks/medlar_stairs",
     "tfcflorae:wood/planks/persimmon_stairs",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_stairs",
     "tfcflorae:wood/planks/zebrawood_stairs"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/stairs/african_padauk",
     "tfcflorae:wood/stairs/alder",
     "tfcflorae:wood/stairs/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/stairs/yew",
     "tfcflorae:wood/stairs/zebrawood",
     "tfcflorae:wood/stairs/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

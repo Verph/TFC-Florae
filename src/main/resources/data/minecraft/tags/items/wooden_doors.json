@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_door",
     "tfcflorae:wood/planks/medlar_door",
     "tfcflorae:wood/planks/persimmon_door",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_door",
     "tfcflorae:wood/planks/zebrawood_door"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/door/african_padauk",
     "tfcflorae:wood/door/alder",
     "tfcflorae:wood/door/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/door/yew",
     "tfcflorae:wood/door/zebrawood",
     "tfcflorae:wood/door/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

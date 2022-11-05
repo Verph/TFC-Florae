@@ -62,8 +62,11 @@ public class TFCFlorae
         LOGGER.info("TFCFlorae Common Setup");
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         TFCFInteractionManager.registerDefaultInteractions();
 =======
+=======
+>>>>>>> Stashed changes
         TFCFRock.registerDefaultRocks();
 >>>>>>> Stashed changes
 

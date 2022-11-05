@@ -2,7 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/stoneware/unfired_scythe_blade_mold"
+=======
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/scythe_blade"
+>>>>>>> Stashed changes
 =======
     "item": "tfcflorae:ceramic/stoneware/unfired/mold/scythe_blade"
 >>>>>>> Stashed changes

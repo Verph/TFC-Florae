@@ -39,6 +39,9 @@ import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 
 public abstract class TFCFMangroveLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 {
     public final TFCFWood wood;

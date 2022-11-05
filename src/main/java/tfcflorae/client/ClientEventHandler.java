@@ -33,7 +33,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.dries007.tfc.client.*;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
 import net.dries007.tfc.client.screen.KnappingScreen;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -311,6 +314,7 @@ public class ClientEventHandler
             });
         }
         else if (sheet.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
+<<<<<<< Updated upstream
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }
@@ -320,6 +324,17 @@ public class ClientEventHandler
     {
         for (TFCFWood wood : TFCFWood.class.getEnumConstants())
         {
+=======
+        {
+            Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
+        }
+    }
+
+    static final Boolean hasLeavesOnly()
+    {
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+>>>>>>> Stashed changes
             if (!wood.hasLeavesOnly())
             {
                 return true;

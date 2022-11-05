@@ -2,7 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "item": "tfcflorae:ceramic/kaolinite/unfired_knife_blade_mold"
+=======
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/knife_blade"
+>>>>>>> Stashed changes
 =======
     "item": "tfcflorae:ceramic/kaolinite/unfired/mold/knife_blade"
 >>>>>>> Stashed changes

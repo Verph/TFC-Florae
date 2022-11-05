@@ -8,9 +8,12 @@
     "tfcflorae:ceramic/kaolinite/brick_slab",
     "tfcflorae:ceramic/stoneware/brick_slab",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "#tfcflorae:dirty_stone_tile_slabs",
     "#tfcflorae:rocky_compact_dirt_slabs"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/slab/african_padauk",
     "tfcflorae:wood/slab/alder",
     "tfcflorae:wood/slab/angelim",
@@ -2158,6 +2161,9 @@
     "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/soapstone",
     "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/komatiite",
     "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/mylonite"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

@@ -5,7 +5,14 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"world.biome.TFCBiomesMixin",
+<<<<<<< Updated upstream
 		"world.layer.TFCLayersMixin"
+=======
+		"world.layer.TFCLayersMixin",
+		"accessor.TreeDecoratorTypeAccessor",
+		"accessor.TreeFeatureAccessor",
+		"accessor.TrunkPlacerTypeAccessor"
+>>>>>>> Stashed changes
 	],
 	"client": [],
 	"injectors": {

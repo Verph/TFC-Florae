@@ -52,7 +52,11 @@ import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock
+=======
+public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
+>>>>>>> Stashed changes
 =======
 public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
 >>>>>>> Stashed changes
@@ -223,6 +227,17 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
                 }
             }
         }
+<<<<<<< Updated upstream
+=======
+    }
+
+    @Override
+    public void addHoeOverlayInfo(Level level, BlockPos pos, BlockState state, List<Component> text, boolean isDebug)
+    {
+        final ClimateRange range = climateRange.get();
+        text.add(FarmlandBlock.getHydrationTooltip(level, pos, range, false, getHydration(level, pos)));
+        text.add(FarmlandBlock.getTemperatureTooltip(level, pos, range, false));
+>>>>>>> Stashed changes
     }
 
     /**

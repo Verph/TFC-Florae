@@ -68,6 +68,9 @@
 	  "tfc:plant/ivy",
 	  "tfc:plant/jungle_vines",
 	  "tfc:plant/liana"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     ]
   ],
@@ -101,6 +104,9 @@
         "maxCount": 4
       }
     ],
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "monster": [
       {

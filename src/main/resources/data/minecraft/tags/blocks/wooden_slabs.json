@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_slab",
     "tfcflorae:wood/planks/medlar_slab",
     "tfcflorae:wood/planks/persimmon_slab",
@@ -84,6 +85,8 @@
     "tfcflorae:wood/planks/yew_slab",
     "tfcflorae:wood/planks/zebrawood_slab"
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/slab/african_padauk",
     "tfcflorae:wood/slab/alder",
     "tfcflorae:wood/slab/angelim",
@@ -167,6 +170,9 @@
     "tfcflorae:wood/slab/yew",
     "tfcflorae:wood/slab/zebrawood",
     "tfcflorae:wood/slab/persimmon"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

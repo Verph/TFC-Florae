@@ -18,6 +18,7 @@ import tfcflorae.util.TriFunction;
 public enum TFCFRockSoil
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     PEBBLE_COMPACT_DIRT((self, variant, rock) -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.8F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops()),
                         (self, variant, rock) -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.8F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops())),
     ROCKY_COMPACT_DIRT((self, variant, rock) -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.85F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops()),
@@ -34,6 +35,8 @@ public enum TFCFRockSoil
     DIRTY_STONE_TILES((self, variant, rock) -> new Block(Block.Properties.of(Material.STONE, MaterialColor.DIRT).strength(1.5f, 10).sound(SoundType.STONE).requiresCorrectToolForDrops()),
                         (self, variant, rock) -> new Block(Block.Properties.of(Material.STONE, MaterialColor.DIRT).strength(1.5f, 10).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 =======
+=======
+>>>>>>> Stashed changes
     PEBBLE_COMPACT_DIRT((self, variant, rock) -> new RockySoilBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.8F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops(), TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TFCFBlocks.TFCFROCKSOIL.get(self.transform()).get(variant).get(rock), TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant), null, false),
                         (self, variant, rock) -> new RockySoilBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.8F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops(), TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TFCFBlocks.TFCROCKSOIL.get(self.transform()).get(variant).get(rock), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant), null, false),
                         (self, variant, rock) -> new RockySoilBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.8F).sound(SoundType.GRAVEL).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE), TFCFBlocks.TFCFROCKSOIL2.get(self.transform()).get(variant).get(rock), TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant), null, false),
@@ -63,6 +66,9 @@ public enum TFCFRockSoil
                         (self, variant, rock) -> new TFCFRockySoilBlock(Block.Properties.of(Material.STONE, MaterialColor.DIRT).strength(1.5f, 10).sound(SoundType.TUFF).requiresCorrectToolForDrops(), TFCFItems.SOIL_PILE_TFC.get(variant), TFCFBlocks.TFCROCKSOIL.get(self.transform()).get(variant).get(rock), null, null, false),
                         (self, variant, rock) -> new TFCFRockySoilBlock(Block.Properties.of(Material.STONE, MaterialColor.DIRT).strength(1.5f, 10).sound(SoundType.TUFF).requiresCorrectToolForDrops(), TFCFItems.SOIL_PILE_TFCF.get(variant), TFCFBlocks.TFCFROCKSOIL2.get(self.transform()).get(variant).get(rock), null, null, false),
                         (self, variant, rock) -> new TFCFRockySoilBlock(Block.Properties.of(Material.STONE, MaterialColor.DIRT).strength(1.5f, 10).sound(SoundType.TUFF).requiresCorrectToolForDrops(), TFCFItems.SOIL_PILE_TFC.get(variant), TFCFBlocks.TFCROCKSOIL2.get(self.transform()).get(variant).get(rock), null, null, false));
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     public static final TFCFRockSoil[] VALUES = values();
