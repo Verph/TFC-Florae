@@ -1,0 +1,149 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_down"
+      }
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_up"
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "down": "true",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "down": "true",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "down": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "down": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side"
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror"
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/joshua_side_mirror"
+      }
+    }
+  ]
+}

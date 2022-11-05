@@ -1,6 +1,6 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "tfcflorae:block/wood/sapling/white_mangrove"
+    "cross": "tfcflorae:block/wood/sapling/white_mangrove_propagule"
   }
 }
