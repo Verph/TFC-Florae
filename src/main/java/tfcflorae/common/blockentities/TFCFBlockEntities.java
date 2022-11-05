@@ -1,11 +1,8 @@
 package tfcflorae.common.blockentities;
 
-import java.util.Map;
 import java.util.Objects;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
-
-import org.jetbrains.annotations.NotNull;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -36,9 +33,8 @@ import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 
 import tfcflorae.common.blockentities.ceramics.*;
-import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.*;
 import tfcflorae.common.blocks.plant.*;
-import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.*;
 
@@ -84,7 +80,6 @@ public final class TFCFBlockEntities
     );
 
     public static final RegistryObject<BlockEntityType<ChiseledBookshelfBlockEntity>> CHISELED_BOOKSHELF = register("chiseled_bookshelf", ChiseledBookshelfBlockEntity::new, Stream.of(
-            //TFCFBlocks.CHISELED_BOOKSHELF_TFC.values().stream().<Supplier<? extends Block>>flatMap(Helpers::flatten),
             TFCFBlocks.CHISELED_BOOKSHELF_TFCF.values().stream().<Supplier<? extends Block>>flatMap(Helpers::flatten)
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
@@ -94,7 +89,6 @@ public final class TFCFBlockEntities
     public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("barrel", BarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
     public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("loom", LoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));
     public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("sluice", SluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SLUICE)));
-    public static final RegistryObject<BlockEntityType<ToolRackBlockEntity>> TOOL_RACK = register("tool_rack", ToolRackBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.TOOL_RACK)));
     public static final RegistryObject<BlockEntityType<TFCFSignBlockEntity>> SIGN = register("sign", TFCFSignBlockEntity::new, TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SIGN, Wood.BlockType.WALL_SIGN).map(map::get)));
     public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("lectern", TFCFLecternBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LECTERN)));
     public static final RegistryObject<BlockEntityType<AnvilBlockEntity>> ANVIL = register("anvil", AnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream());
