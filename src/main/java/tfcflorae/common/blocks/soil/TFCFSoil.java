@@ -166,6 +166,9 @@ public enum TFCFSoil
             case COMPACT_DIRT:
             case COARSE_DIRT:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

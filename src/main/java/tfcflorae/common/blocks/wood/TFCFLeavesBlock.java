@@ -53,7 +53,11 @@ import tfcflorae.common.blockentities.TFCFBlockEntities;
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock
+=======
+public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
+>>>>>>> Stashed changes
 =======
 public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock, IFluidLoggable
 >>>>>>> Stashed changes
@@ -228,7 +232,10 @@ public abstract class TFCFLeavesBlock extends SeasonalPlantBlock implements IFor
             }
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     }
 
     @Override

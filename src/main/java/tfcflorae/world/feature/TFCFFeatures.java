@@ -22,10 +22,18 @@ import net.dries007.tfc.world.feature.tree.RandomTreeConfig;
 import tfcflorae.world.feature.tree.DynamicTreeConfig;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import tfcflorae.world.feature.tree.baobab.BaobabTreeFeature;
 import tfcflorae.world.feature.tree.cypress.CypressTreeFeature;
 import tfcflorae.world.feature.tree.mangrove.MangroveTreeFeature;
 import tfcflorae.world.feature.tree.willow.BlackWillowTreeFeature;
+=======
+import tfcflorae.world.feature.tree.RootedTreeConfig;
+import tfcflorae.world.feature.tree.TFCFRandomTreeFeature;
+import tfcflorae.world.feature.tree.baobab.BaobabTreeFeature;
+import tfcflorae.world.feature.tree.joshua.JoshuaTreeFeature;
+import tfcflorae.world.feature.tree.mangrove.*;
+>>>>>>> Stashed changes
 =======
 import tfcflorae.world.feature.tree.RootedTreeConfig;
 import tfcflorae.world.feature.tree.TFCFRandomTreeFeature;
@@ -51,7 +59,10 @@ public class TFCFFeatures
     public static final RegistryObject<BaobabTreeFeature> BAOBAB_TREE = register("baobab_tree", BaobabTreeFeature::new, DynamicTreeConfig.CODEC);
     public static final RegistryObject<TFCFRandomTreeFeature> RANDOM_TREE = register("random_tree", TFCFRandomTreeFeature::new, RandomTreeConfig.CODEC);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
     public static final RegistryObject<PoisonTallPlantFeature> POISON_TALL_PLANT = register("poison_tall_plant", PoisonTallPlantFeature::new, PoisonTallPlantFeature.CODEC);
     public static final RegistryObject<LandEmergentPlantFeature> LAND_EMERGENT_PLANT = register("land_emergent_plant", LandEmergentPlantFeature::new, LandEmergentPlantFeature.CODEC);

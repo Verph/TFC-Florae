@@ -34,7 +34,10 @@ import net.dries007.tfc.client.*;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
@@ -315,6 +318,7 @@ public class ClientEventHandler
         }
         else if (sheet.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }
@@ -325,6 +329,8 @@ public class ClientEventHandler
         for (TFCFWood wood : TFCFWood.class.getEnumConstants())
         {
 =======
+=======
+>>>>>>> Stashed changes
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }
@@ -334,6 +340,9 @@ public class ClientEventHandler
     {
         for (TFCFWood wood : TFCFWood.class.getEnumConstants())
         {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             if (!wood.hasLeavesOnly())
             {

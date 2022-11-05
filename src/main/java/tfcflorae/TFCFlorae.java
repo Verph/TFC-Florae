@@ -63,8 +63,11 @@ public class TFCFlorae
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         TFCFInteractionManager.registerDefaultInteractions();
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         TFCFRock.registerDefaultRocks();

@@ -13,10 +13,16 @@ public final class TFCFInteractionManager
     {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         // Knapping
         register(Ingredient.of(TFCFTags.Items.EARTHENWARE_CLAY_KNAPPING), true, createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.EARTHENWARE_CLAY_KNAPPING));
         register(Ingredient.of(TFCFTags.Items.KAOLINITE_CLAY_KNAPPING), true, createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.KAOLINITE_CLAY_KNAPPING));
         register(Ingredient.of(TFCFTags.Items.STONEWARE_CLAY_KNAPPING), true, createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.EARTHENWARE_CLAY_KNAPPING));
+=======
+        InteractionManager.register(Ingredient.of(TFCFTags.Items.EARTHENWARE_CLAY_KNAPPING), false, true, InteractionManager.createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.EARTHENWARE_CLAY_KNAPPING));
+        InteractionManager.register(Ingredient.of(TFCFTags.Items.KAOLINITE_CLAY_KNAPPING), false, true, InteractionManager.createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.KAOLINITE_CLAY_KNAPPING));
+        InteractionManager.register(Ingredient.of(TFCFTags.Items.STONEWARE_CLAY_KNAPPING), false, true, InteractionManager.createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.STONEWARE_CLAY_KNAPPING));
+>>>>>>> Stashed changes
 =======
         InteractionManager.register(Ingredient.of(TFCFTags.Items.EARTHENWARE_CLAY_KNAPPING), false, true, InteractionManager.createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.EARTHENWARE_CLAY_KNAPPING));
         InteractionManager.register(Ingredient.of(TFCFTags.Items.KAOLINITE_CLAY_KNAPPING), false, true, InteractionManager.createKnappingInteraction((stack, player) -> stack.getCount() >= 5, TFCFContainerProviders.KAOLINITE_CLAY_KNAPPING));

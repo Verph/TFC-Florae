@@ -169,4 +169,24 @@ public class TFCFRock implements RegistryRock
         }
         return selectedEnum;
     }
+
+    public static Enum<?> getEnum(RockSettings rockSettings)
+    {
+        Enum<?> selectedEnum = Rock.GRANITE;
+        for (Rock rock : Rock.values())
+        {
+            if (rockSettings.id() == Helpers.identifier(rock.getSerializedName()))
+            {
+                selectedEnum = rock;
+            }
+        }
+        for (TFCFRock tfcfRock : TFCFRock.values())
+        {
+            if (rockSettings.id() == Helpers.identifier(tfcfRock.getSerializedName()))
+            {
+                selectedEnum = tfcfRock;
+            }
+        }
+        return selectedEnum;
+    }
 }

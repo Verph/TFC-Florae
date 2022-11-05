@@ -57,9 +57,15 @@
     "tfcflorae:wood/chest/ironwood",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/chest/purple_jacaranda",
     "tfcflorae:wood/chest/white_jacaranda",
     "tfcflorae:wood/chest/yellow_jacaranda",
+=======
+    "tfcflorae:wood/trapped_chest/ironwood",
+    "tfcflorae:wood/chest/jabuticabeira",
+    "tfcflorae:wood/trapped_chest/jabuticabeira",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/trapped_chest/ironwood",
     "tfcflorae:wood/chest/jabuticabeira",
@@ -114,6 +120,7 @@
     "tfcflorae:wood/trapped_chest/pink_ipe",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/trapped_chest/purple_ipe",
     "tfcflorae:wood/trapped_chest/white_ipe",
     "tfcflorae:wood/trapped_chest/yellow_ipe",
@@ -140,6 +147,9 @@
     "tfcflorae:wood/trapped_chest/mulberry",
     "tfcflorae:wood/trapped_chest/nordmann_fir",
     "tfcflorae:wood/trapped_chest/norway_spruce",
+=======
+    "tfcflorae:wood/chest/pink_ivory",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/chest/pink_ivory",
 >>>>>>> Stashed changes

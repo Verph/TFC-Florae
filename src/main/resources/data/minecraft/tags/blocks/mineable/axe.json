@@ -4,6 +4,7 @@
   "values": [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/black_willow_loom",
     "tfcflorae:wood/barrel/black_willow",
     "tfcflorae:wood/lectern/black_willow",
@@ -988,10 +989,341 @@
 >>>>>>> Stashed changes
     "tfcflorae:wood/lectern/zebrawood",
     "tfcflorae:wood/scribing_table/zebrawood",
+=======
+    "tfcflorae:wood/loom/african_padauk",
+    "tfcflorae:wood/barrel/african_padauk",
+    "tfcflorae:wood/lectern/african_padauk",
+    "tfcflorae:wood/scribing_table/african_padauk",
+    "tfcflorae:wood/loom/alder",
+    "tfcflorae:wood/barrel/alder",
+    "tfcflorae:wood/lectern/alder",
+    "tfcflorae:wood/scribing_table/alder",
+    "tfcflorae:wood/loom/angelim",
+    "tfcflorae:wood/barrel/angelim",
+    "tfcflorae:wood/lectern/angelim",
+    "tfcflorae:wood/scribing_table/angelim",
+    "tfcflorae:wood/loom/argyle_eucalyptus",
+    "tfcflorae:wood/barrel/argyle_eucalyptus",
+    "tfcflorae:wood/lectern/argyle_eucalyptus",
+    "tfcflorae:wood/scribing_table/argyle_eucalyptus",
+    "tfcflorae:wood/loom/bald_cypress",
+    "tfcflorae:wood/barrel/bald_cypress",
+    "tfcflorae:wood/lectern/bald_cypress",
+    "tfcflorae:wood/scribing_table/bald_cypress",
+    "tfcflorae:wood/loom/baobab",
+    "tfcflorae:wood/barrel/baobab",
+    "tfcflorae:wood/lectern/baobab",
+    "tfcflorae:wood/scribing_table/baobab",
+    "tfcflorae:wood/loom/beech",
+    "tfcflorae:wood/barrel/beech",
+    "tfcflorae:wood/lectern/beech",
+    "tfcflorae:wood/scribing_table/beech",
+    "tfcflorae:wood/loom/black_walnut",
+    "tfcflorae:wood/barrel/black_walnut",
+    "tfcflorae:wood/lectern/black_walnut",
+    "tfcflorae:wood/scribing_table/black_walnut",
+    "tfcflorae:wood/loom/black_willow",
+    "tfcflorae:wood/barrel/black_willow",
+    "tfcflorae:wood/lectern/black_willow",
+    "tfcflorae:wood/scribing_table/black_willow",
+    "tfcflorae:wood/loom/brazilwood",
+    "tfcflorae:wood/barrel/brazilwood",
+    "tfcflorae:wood/lectern/brazilwood",
+    "tfcflorae:wood/scribing_table/brazilwood",
+    "tfcflorae:wood/loom/butternut",
+    "tfcflorae:wood/barrel/butternut",
+    "tfcflorae:wood/lectern/butternut",
+    "tfcflorae:wood/scribing_table/butternut",
+    "tfcflorae:wood/loom/buxus",
+    "tfcflorae:wood/barrel/buxus",
+    "tfcflorae:wood/lectern/buxus",
+    "tfcflorae:wood/scribing_table/buxus",
+    "tfcflorae:wood/loom/cocobolo",
+    "tfcflorae:wood/barrel/cocobolo",
+    "tfcflorae:wood/lectern/cocobolo",
+    "tfcflorae:wood/scribing_table/cocobolo",
+    "tfcflorae:wood/loom/common_oak",
+    "tfcflorae:wood/barrel/common_oak",
+    "tfcflorae:wood/lectern/common_oak",
+    "tfcflorae:wood/scribing_table/common_oak",
+    "tfcflorae:wood/loom/cypress",
+    "tfcflorae:wood/barrel/cypress",
+    "tfcflorae:wood/lectern/cypress",
+    "tfcflorae:wood/scribing_table/cypress",
+    "tfcflorae:wood/loom/ebony",
+    "tfcflorae:wood/barrel/ebony",
+    "tfcflorae:wood/lectern/ebony",
+    "tfcflorae:wood/scribing_table/ebony",
+    "tfcflorae:wood/loom/fever",
+    "tfcflorae:wood/barrel/fever",
+    "tfcflorae:wood/lectern/fever",
+    "tfcflorae:wood/scribing_table/fever",
+    "tfcflorae:wood/loom/ghaf",
+    "tfcflorae:wood/barrel/ghaf",
+    "tfcflorae:wood/lectern/ghaf",
+    "tfcflorae:wood/scribing_table/ghaf",
+    "tfcflorae:wood/loom/ginkgo",
+    "tfcflorae:wood/barrel/ginkgo",
+    "tfcflorae:wood/lectern/ginkgo",
+    "tfcflorae:wood/scribing_table/ginkgo",
+    "tfcflorae:wood/loom/greenheart",
+    "tfcflorae:wood/barrel/greenheart",
+    "tfcflorae:wood/lectern/greenheart",
+    "tfcflorae:wood/scribing_table/greenheart",
+    "tfcflorae:wood/loom/hawthorn",
+    "tfcflorae:wood/barrel/hawthorn",
+    "tfcflorae:wood/lectern/hawthorn",
+    "tfcflorae:wood/scribing_table/hawthorn",
+    "tfcflorae:wood/loom/hazel",
+    "tfcflorae:wood/barrel/hazel",
+    "tfcflorae:wood/lectern/hazel",
+    "tfcflorae:wood/scribing_table/hazel",
+    "tfcflorae:wood/loom/hemlock",
+    "tfcflorae:wood/barrel/hemlock",
+    "tfcflorae:wood/lectern/hemlock",
+    "tfcflorae:wood/scribing_table/hemlock",
+    "tfcflorae:wood/loom/holly",
+    "tfcflorae:wood/barrel/holly",
+    "tfcflorae:wood/lectern/holly",
+    "tfcflorae:wood/scribing_table/holly",
+    "tfcflorae:wood/loom/hornbeam",
+    "tfcflorae:wood/barrel/hornbeam",
+    "tfcflorae:wood/lectern/hornbeam",
+    "tfcflorae:wood/scribing_table/hornbeam",
+    "tfcflorae:wood/loom/iroko",
+    "tfcflorae:wood/barrel/iroko",
+    "tfcflorae:wood/lectern/iroko",
+    "tfcflorae:wood/scribing_table/iroko",
+    "tfcflorae:wood/loom/ironwood",
+    "tfcflorae:wood/barrel/ironwood",
+    "tfcflorae:wood/lectern/ironwood",
+    "tfcflorae:wood/scribing_table/ironwood",
+    "tfcflorae:wood/loom/jabuticabeira",
+    "tfcflorae:wood/barrel/jabuticabeira",
+    "tfcflorae:wood/lectern/jabuticabeira",
+    "tfcflorae:wood/scribing_table/jabuticabeira",
+    "tfcflorae:wood/loom/joshua",
+    "tfcflorae:wood/barrel/joshua",
+    "tfcflorae:wood/lectern/joshua",
+    "tfcflorae:wood/scribing_table/joshua",
+    "tfcflorae:wood/loom/juniper",
+    "tfcflorae:wood/barrel/juniper",
+    "tfcflorae:wood/lectern/juniper",
+    "tfcflorae:wood/scribing_table/juniper",
+    "tfcflorae:wood/loom/kauri",
+    "tfcflorae:wood/barrel/kauri",
+    "tfcflorae:wood/lectern/kauri",
+    "tfcflorae:wood/scribing_table/kauri",
+    "tfcflorae:wood/loom/larch",
+    "tfcflorae:wood/barrel/larch",
+    "tfcflorae:wood/lectern/larch",
+    "tfcflorae:wood/scribing_table/larch",
+    "tfcflorae:wood/loom/laurel",
+    "tfcflorae:wood/barrel/laurel",
+    "tfcflorae:wood/lectern/laurel",
+    "tfcflorae:wood/scribing_table/laurel",
+    "tfcflorae:wood/loom/limba",
+    "tfcflorae:wood/barrel/limba",
+    "tfcflorae:wood/lectern/limba",
+    "tfcflorae:wood/scribing_table/limba",
+    "tfcflorae:wood/loom/locust",
+    "tfcflorae:wood/barrel/locust",
+    "tfcflorae:wood/lectern/locust",
+    "tfcflorae:wood/scribing_table/locust",
+    "tfcflorae:wood/loom/logwood",
+    "tfcflorae:wood/barrel/logwood",
+    "tfcflorae:wood/lectern/logwood",
+    "tfcflorae:wood/scribing_table/logwood",
+    "tfcflorae:wood/loom/maclura",
+    "tfcflorae:wood/barrel/maclura",
+    "tfcflorae:wood/lectern/maclura",
+    "tfcflorae:wood/scribing_table/maclura",
+    "tfcflorae:wood/loom/mahoe",
+    "tfcflorae:wood/barrel/mahoe",
+    "tfcflorae:wood/lectern/mahoe",
+    "tfcflorae:wood/scribing_table/mahoe",
+    "tfcflorae:wood/loom/mahogany",
+    "tfcflorae:wood/barrel/mahogany",
+    "tfcflorae:wood/lectern/mahogany",
+    "tfcflorae:wood/scribing_table/mahogany",
+    "tfcflorae:wood/loom/marblewood",
+    "tfcflorae:wood/barrel/marblewood",
+    "tfcflorae:wood/lectern/marblewood",
+    "tfcflorae:wood/scribing_table/marblewood",
+    "tfcflorae:wood/loom/medlar",
+    "tfcflorae:wood/barrel/medlar",
+    "tfcflorae:wood/lectern/medlar",
+    "tfcflorae:wood/scribing_table/medlar",
+    "tfcflorae:wood/loom/messmate",
+    "tfcflorae:wood/barrel/messmate",
+    "tfcflorae:wood/lectern/messmate",
+    "tfcflorae:wood/scribing_table/messmate",
+    "tfcflorae:wood/loom/mountain_ash",
+    "tfcflorae:wood/barrel/mountain_ash",
+    "tfcflorae:wood/lectern/mountain_ash",
+    "tfcflorae:wood/scribing_table/mountain_ash",
+    "tfcflorae:wood/loom/mulberry",
+    "tfcflorae:wood/barrel/mulberry",
+    "tfcflorae:wood/lectern/mulberry",
+    "tfcflorae:wood/scribing_table/mulberry",
+    "tfcflorae:wood/loom/nordmann_fir",
+    "tfcflorae:wood/barrel/nordmann_fir",
+    "tfcflorae:wood/lectern/nordmann_fir",
+    "tfcflorae:wood/scribing_table/nordmann_fir",
+    "tfcflorae:wood/loom/norway_spruce",
+    "tfcflorae:wood/barrel/norway_spruce",
+    "tfcflorae:wood/lectern/norway_spruce",
+    "tfcflorae:wood/scribing_table/norway_spruce",
+    "tfcflorae:wood/loom/pear",
+    "tfcflorae:wood/barrel/pear",
+    "tfcflorae:wood/lectern/pear",
+    "tfcflorae:wood/scribing_table/pear",
+    "tfcflorae:wood/loom/pink_cherry_blossom",
+    "tfcflorae:wood/barrel/pink_cherry_blossom",
+    "tfcflorae:wood/lectern/pink_cherry_blossom",
+    "tfcflorae:wood/scribing_table/pink_cherry_blossom",
+    "tfcflorae:wood/loom/pink_ipe",
+    "tfcflorae:wood/barrel/pink_ipe",
+    "tfcflorae:wood/lectern/pink_ipe",
+    "tfcflorae:wood/scribing_table/pink_ipe",
+    "tfcflorae:wood/loom/pink_ivory",
+    "tfcflorae:wood/barrel/pink_ivory",
+    "tfcflorae:wood/lectern/pink_ivory",
+    "tfcflorae:wood/scribing_table/pink_ivory",
+    "tfcflorae:wood/loom/poplar",
+    "tfcflorae:wood/barrel/poplar",
+    "tfcflorae:wood/lectern/poplar",
+    "tfcflorae:wood/scribing_table/poplar",
+    "tfcflorae:wood/loom/purple_ipe",
+    "tfcflorae:wood/barrel/purple_ipe",
+    "tfcflorae:wood/lectern/purple_ipe",
+    "tfcflorae:wood/scribing_table/purple_ipe",
+    "tfcflorae:wood/loom/purple_jacaranda",
+    "tfcflorae:wood/barrel/purple_jacaranda",
+    "tfcflorae:wood/lectern/purple_jacaranda",
+    "tfcflorae:wood/scribing_table/purple_jacaranda",
+    "tfcflorae:wood/loom/purpleheart",
+    "tfcflorae:wood/barrel/purpleheart",
+    "tfcflorae:wood/lectern/purpleheart",
+    "tfcflorae:wood/scribing_table/purpleheart",
+    "tfcflorae:wood/loom/quince",
+    "tfcflorae:wood/barrel/quince",
+    "tfcflorae:wood/lectern/quince",
+    "tfcflorae:wood/scribing_table/quince",
+    "tfcflorae:wood/loom/rainbow_eucalyptus",
+    "tfcflorae:wood/barrel/rainbow_eucalyptus",
+    "tfcflorae:wood/lectern/rainbow_eucalyptus",
+    "tfcflorae:wood/scribing_table/rainbow_eucalyptus",
+    "tfcflorae:wood/loom/red_cedar",
+    "tfcflorae:wood/barrel/red_cedar",
+    "tfcflorae:wood/lectern/red_cedar",
+    "tfcflorae:wood/scribing_table/red_cedar",
+    "tfcflorae:wood/loom/red_cypress",
+    "tfcflorae:wood/barrel/red_cypress",
+    "tfcflorae:wood/lectern/red_cypress",
+    "tfcflorae:wood/scribing_table/red_cypress",
+    "tfcflorae:wood/loom/red_elm",
+    "tfcflorae:wood/barrel/red_elm",
+    "tfcflorae:wood/lectern/red_elm",
+    "tfcflorae:wood/scribing_table/red_elm",
+    "tfcflorae:wood/loom/red_mangrove",
+    "tfcflorae:wood/barrel/red_mangrove",
+    "tfcflorae:wood/lectern/red_mangrove",
+    "tfcflorae:wood/scribing_table/red_mangrove",
+    "tfcflorae:wood/loom/redwood",
+    "tfcflorae:wood/barrel/redwood",
+    "tfcflorae:wood/lectern/redwood",
+    "tfcflorae:wood/scribing_table/redwood",
+    "tfcflorae:wood/loom/rowan",
+    "tfcflorae:wood/barrel/rowan",
+    "tfcflorae:wood/lectern/rowan",
+    "tfcflorae:wood/scribing_table/rowan",
+    "tfcflorae:wood/loom/rubber_fig",
+    "tfcflorae:wood/barrel/rubber_fig",
+    "tfcflorae:wood/lectern/rubber_fig",
+    "tfcflorae:wood/scribing_table/rubber_fig",
+    "tfcflorae:wood/loom/sloe",
+    "tfcflorae:wood/barrel/sloe",
+    "tfcflorae:wood/lectern/sloe",
+    "tfcflorae:wood/scribing_table/sloe",
+    "tfcflorae:wood/loom/snow_gum_eucalyptus",
+    "tfcflorae:wood/barrel/snow_gum_eucalyptus",
+    "tfcflorae:wood/lectern/snow_gum_eucalyptus",
+    "tfcflorae:wood/scribing_table/snow_gum_eucalyptus",
+    "tfcflorae:wood/loom/sorb",
+    "tfcflorae:wood/barrel/sorb",
+    "tfcflorae:wood/lectern/sorb",
+    "tfcflorae:wood/scribing_table/sorb",
+    "tfcflorae:wood/loom/sweetgum",
+    "tfcflorae:wood/barrel/sweetgum",
+    "tfcflorae:wood/lectern/sweetgum",
+    "tfcflorae:wood/scribing_table/sweetgum",
+    "tfcflorae:wood/loom/syzygium",
+    "tfcflorae:wood/barrel/syzygium",
+    "tfcflorae:wood/lectern/syzygium",
+    "tfcflorae:wood/scribing_table/syzygium",
+    "tfcflorae:wood/loom/teak",
+    "tfcflorae:wood/barrel/teak",
+    "tfcflorae:wood/lectern/teak",
+    "tfcflorae:wood/scribing_table/teak",
+    "tfcflorae:wood/loom/walnut",
+    "tfcflorae:wood/barrel/walnut",
+    "tfcflorae:wood/lectern/walnut",
+    "tfcflorae:wood/scribing_table/walnut",
+    "tfcflorae:wood/loom/wenge",
+    "tfcflorae:wood/barrel/wenge",
+    "tfcflorae:wood/lectern/wenge",
+    "tfcflorae:wood/scribing_table/wenge",
+    "tfcflorae:wood/loom/white_cherry_blossom",
+    "tfcflorae:wood/barrel/white_cherry_blossom",
+    "tfcflorae:wood/lectern/white_cherry_blossom",
+    "tfcflorae:wood/scribing_table/white_cherry_blossom",
+    "tfcflorae:wood/loom/white_elm",
+    "tfcflorae:wood/barrel/white_elm",
+    "tfcflorae:wood/lectern/white_elm",
+    "tfcflorae:wood/scribing_table/white_elm",
+    "tfcflorae:wood/loom/white_ipe",
+    "tfcflorae:wood/barrel/white_ipe",
+    "tfcflorae:wood/lectern/white_ipe",
+    "tfcflorae:wood/scribing_table/white_ipe",
+    "tfcflorae:wood/loom/white_jacaranda",
+    "tfcflorae:wood/barrel/white_jacaranda",
+    "tfcflorae:wood/lectern/white_jacaranda",
+    "tfcflorae:wood/scribing_table/white_jacaranda",
+    "tfcflorae:wood/loom/white_mangrove",
+    "tfcflorae:wood/barrel/white_mangrove",
+    "tfcflorae:wood/lectern/white_mangrove",
+    "tfcflorae:wood/scribing_table/white_mangrove",
+    "tfcflorae:wood/loom/whitebeam",
+    "tfcflorae:wood/barrel/whitebeam",
+    "tfcflorae:wood/lectern/whitebeam",
+    "tfcflorae:wood/scribing_table/whitebeam",
+    "tfcflorae:wood/loom/yellow_ipe",
+    "tfcflorae:wood/barrel/yellow_ipe",
+    "tfcflorae:wood/lectern/yellow_ipe",
+    "tfcflorae:wood/scribing_table/yellow_ipe",
+    "tfcflorae:wood/loom/yellow_jacaranda",
+    "tfcflorae:wood/barrel/yellow_jacaranda",
+    "tfcflorae:wood/lectern/yellow_jacaranda",
+    "tfcflorae:wood/scribing_table/yellow_jacaranda",
+    "tfcflorae:wood/loom/yellow_meranti",
+    "tfcflorae:wood/barrel/yellow_meranti",
+    "tfcflorae:wood/lectern/yellow_meranti",
+    "tfcflorae:wood/scribing_table/yellow_meranti",
+    "tfcflorae:wood/loom/yew",
+    "tfcflorae:wood/barrel/yew",
+    "tfcflorae:wood/lectern/yew",
+    "tfcflorae:wood/scribing_table/yew",
+    "tfcflorae:wood/loom/zebrawood",
+    "tfcflorae:wood/barrel/zebrawood",
+    "tfcflorae:wood/lectern/zebrawood",
+    "tfcflorae:wood/scribing_table/zebrawood",
+>>>>>>> Stashed changes
     "tfcflorae:wood/loom/persimmon",
     "tfcflorae:wood/barrel/persimmon",
     "tfcflorae:wood/lectern/persimmon",
     "tfcflorae:wood/scribing_table/persimmon",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
@@ -1016,6 +1348,24 @@
     "tfcflorae:wood/log/rainbow_eucalyptus",
     "tfcflorae:wood/log/snow_gum_eucalyptus",
     "tfcflorae:wood/log/common_oak",
+=======
+    "tfcflorae:wood/log/african_padauk",
+    "tfcflorae:wood/log/alder",
+    "tfcflorae:wood/log/angelim",
+    "tfcflorae:wood/log/argyle_eucalyptus",
+    "tfcflorae:wood/log/bald_cypress",
+    "tfcflorae:wood/log/baobab",
+    "tfcflorae:wood/log/beech",
+    "tfcflorae:wood/log/black_walnut",
+    "tfcflorae:wood/log/black_willow",
+    "tfcflorae:wood/log/brazilwood",
+    "tfcflorae:wood/log/butternut",
+    "tfcflorae:wood/log/buxus",
+    "tfcflorae:wood/log/cocobolo",
+    "tfcflorae:wood/log/common_oak",
+    "tfcflorae:wood/log/cypress",
+    "tfcflorae:wood/log/ebony",
+>>>>>>> Stashed changes
     "tfcflorae:wood/log/fever",
     "tfcflorae:wood/log/ghaf",
     "tfcflorae:wood/log/ginkgo",
@@ -1025,6 +1375,7 @@
     "tfcflorae:wood/log/hemlock",
     "tfcflorae:wood/log/holly",
     "tfcflorae:wood/log/hornbeam",
+<<<<<<< Updated upstream
     "tfcflorae:wood/log/pink_ipe",
     "tfcflorae:wood/log/purple_ipe",
     "tfcflorae:wood/log/white_ipe",
@@ -1034,6 +1385,11 @@
     "tfcflorae:wood/log/purple_jacaranda",
     "tfcflorae:wood/log/white_jacaranda",
     "tfcflorae:wood/log/yellow_jacaranda",
+=======
+    "tfcflorae:wood/log/iroko",
+    "tfcflorae:wood/log/ironwood",
+    "tfcflorae:wood/log/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/log/joshua",
     "tfcflorae:wood/log/juniper",
     "tfcflorae:wood/log/kauri",
@@ -1045,14 +1401,20 @@
     "tfcflorae:wood/log/maclura",
     "tfcflorae:wood/log/mahoe",
     "tfcflorae:wood/log/mahogany",
+<<<<<<< Updated upstream
     "tfcflorae:wood/log/red_mangrove",
     "tfcflorae:wood/log/white_mangrove",
     "tfcflorae:wood/log/marblewood",
+=======
+    "tfcflorae:wood/log/marblewood",
+    "tfcflorae:wood/log/medlar",
+>>>>>>> Stashed changes
     "tfcflorae:wood/log/messmate",
     "tfcflorae:wood/log/mountain_ash",
     "tfcflorae:wood/log/mulberry",
     "tfcflorae:wood/log/nordmann_fir",
     "tfcflorae:wood/log/norway_spruce",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
     "tfcflorae:wood/log/pear",
@@ -1067,11 +1429,34 @@
     "tfcflorae:wood/log/redwood",
     "tfcflorae:wood/log/rowan",
     "tfcflorae:wood/log/rubber_fig",
+=======
+    "tfcflorae:wood/log/pear",
+    "tfcflorae:wood/log/pink_cherry_blossom",
+    "tfcflorae:wood/log/pink_ipe",
+    "tfcflorae:wood/log/pink_ivory",
+    "tfcflorae:wood/log/poplar",
+    "tfcflorae:wood/log/purple_ipe",
+    "tfcflorae:wood/log/purple_jacaranda",
+    "tfcflorae:wood/log/purpleheart",
+    "tfcflorae:wood/log/quince",
+    "tfcflorae:wood/log/rainbow_eucalyptus",
+    "tfcflorae:wood/log/red_cedar",
+    "tfcflorae:wood/log/red_cypress",
+    "tfcflorae:wood/log/red_elm",
+    "tfcflorae:wood/log/red_mangrove",
+    "tfcflorae:wood/log/redwood",
+    "tfcflorae:wood/log/rowan",
+    "tfcflorae:wood/log/rubber_fig",
+    "tfcflorae:wood/log/sloe",
+    "tfcflorae:wood/log/snow_gum_eucalyptus",
+    "tfcflorae:wood/log/sorb",
+>>>>>>> Stashed changes
     "tfcflorae:wood/log/sweetgum",
     "tfcflorae:wood/log/syzygium",
     "tfcflorae:wood/log/teak",
     "tfcflorae:wood/log/walnut",
     "tfcflorae:wood/log/wenge",
+<<<<<<< Updated upstream
     "tfcflorae:wood/log/white_elm",
     "tfcflorae:wood/log/whitebeam",
     "tfcflorae:wood/log/yellow_meranti",
@@ -1110,6 +1495,19 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/log/white_cherry_blossom",
+    "tfcflorae:wood/log/white_elm",
+    "tfcflorae:wood/log/white_ipe",
+    "tfcflorae:wood/log/white_jacaranda",
+    "tfcflorae:wood/log/white_mangrove",
+    "tfcflorae:wood/log/whitebeam",
+    "tfcflorae:wood/log/yellow_ipe",
+    "tfcflorae:wood/log/yellow_jacaranda",
+    "tfcflorae:wood/log/yellow_meranti",
+    "tfcflorae:wood/log/yew",
+    "tfcflorae:wood/log/zebrawood",
+>>>>>>> Stashed changes
     "tfcflorae:wood/log/persimmon",
     "tfcflorae:wood/stripped_log/african_padauk",
     "tfcflorae:wood/stripped_log/alder",
@@ -1130,6 +1528,9 @@
     "tfcflorae:wood/stripped_log/fever",
     "tfcflorae:wood/stripped_log/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1140,6 +1541,7 @@
     "tfcflorae:wood/stripped_log/hemlock",
     "tfcflorae:wood/stripped_log/holly",
     "tfcflorae:wood/stripped_log/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/stripped_log/pink_ipe",
@@ -1161,12 +1563,21 @@
     "tfcflorae:wood/stripped_log/ironwood",
     "tfcflorae:wood/stripped_log/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/stripped_log/iroko",
+    "tfcflorae:wood/stripped_log/ironwood",
+    "tfcflorae:wood/stripped_log/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/stripped_log/joshua",
     "tfcflorae:wood/stripped_log/juniper",
     "tfcflorae:wood/stripped_log/kauri",
     "tfcflorae:wood/stripped_log/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/stripped_log/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/stripped_log/laurel",
 >>>>>>> Stashed changes
@@ -1181,9 +1592,14 @@
     "tfcflorae:wood/stripped_log/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/stripped_log/red_mangrove",
     "tfcflorae:wood/stripped_log/white_mangrove",
     "tfcflorae:wood/stripped_log/marblewood",
+=======
+    "tfcflorae:wood/stripped_log/marblewood",
+    "tfcflorae:wood/stripped_log/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/stripped_log/marblewood",
     "tfcflorae:wood/stripped_log/medlar",
@@ -1199,6 +1615,7 @@
     "tfcflorae:wood/stripped_log/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/stripped_log/pink_ivory",
     "tfcflorae:wood/stripped_log/poplar",
     "tfcflorae:wood/stripped_log/purpleheart",
@@ -1208,6 +1625,8 @@
     "tfcflorae:wood/stripped_log/rowan",
     "tfcflorae:wood/stripped_log/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/stripped_log/pear",
@@ -1231,6 +1650,9 @@
     "tfcflorae:wood/stripped_log/snow_gum_eucalyptus",
     "tfcflorae:wood/stripped_log/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1239,6 +1661,7 @@
     "tfcflorae:wood/stripped_log/teak",
     "tfcflorae:wood/stripped_log/walnut",
     "tfcflorae:wood/stripped_log/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/stripped_log/white_elm",
@@ -1277,6 +1700,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/stripped_log/white_cherry_blossom",
     "tfcflorae:wood/stripped_log/white_elm",
     "tfcflorae:wood/stripped_log/white_ipe",
@@ -1308,6 +1733,9 @@
     "tfcflorae:wood/wood/fever",
     "tfcflorae:wood/wood/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1318,6 +1746,7 @@
     "tfcflorae:wood/wood/hemlock",
     "tfcflorae:wood/wood/holly",
     "tfcflorae:wood/wood/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/wood/pink_ipe",
@@ -1339,12 +1768,21 @@
     "tfcflorae:wood/wood/ironwood",
     "tfcflorae:wood/wood/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/wood/iroko",
+    "tfcflorae:wood/wood/ironwood",
+    "tfcflorae:wood/wood/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/wood/joshua",
     "tfcflorae:wood/wood/juniper",
     "tfcflorae:wood/wood/kauri",
     "tfcflorae:wood/wood/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/wood/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/wood/laurel",
 >>>>>>> Stashed changes
@@ -1359,9 +1797,14 @@
     "tfcflorae:wood/wood/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/wood/red_mangrove",
     "tfcflorae:wood/wood/white_mangrove",
     "tfcflorae:wood/wood/marblewood",
+=======
+    "tfcflorae:wood/wood/marblewood",
+    "tfcflorae:wood/wood/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/wood/marblewood",
     "tfcflorae:wood/wood/medlar",
@@ -1377,6 +1820,7 @@
     "tfcflorae:wood/wood/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/wood/pink_ivory",
     "tfcflorae:wood/wood/poplar",
     "tfcflorae:wood/wood/purpleheart",
@@ -1386,6 +1830,8 @@
     "tfcflorae:wood/wood/rowan",
     "tfcflorae:wood/wood/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/wood/pear",
@@ -1409,6 +1855,9 @@
     "tfcflorae:wood/wood/snow_gum_eucalyptus",
     "tfcflorae:wood/wood/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1417,6 +1866,7 @@
     "tfcflorae:wood/wood/teak",
     "tfcflorae:wood/wood/walnut",
     "tfcflorae:wood/wood/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/wood/white_elm",
@@ -1455,6 +1905,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/wood/white_cherry_blossom",
     "tfcflorae:wood/wood/white_elm",
     "tfcflorae:wood/wood/white_ipe",
@@ -1486,6 +1938,9 @@
     "tfcflorae:wood/stripped_wood/fever",
     "tfcflorae:wood/stripped_wood/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1496,6 +1951,7 @@
     "tfcflorae:wood/stripped_wood/hemlock",
     "tfcflorae:wood/stripped_wood/holly",
     "tfcflorae:wood/stripped_wood/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/stripped_wood/pink_ipe",
@@ -1517,12 +1973,21 @@
     "tfcflorae:wood/stripped_wood/ironwood",
     "tfcflorae:wood/stripped_wood/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/stripped_wood/iroko",
+    "tfcflorae:wood/stripped_wood/ironwood",
+    "tfcflorae:wood/stripped_wood/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/stripped_wood/joshua",
     "tfcflorae:wood/stripped_wood/juniper",
     "tfcflorae:wood/stripped_wood/kauri",
     "tfcflorae:wood/stripped_wood/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/stripped_wood/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/stripped_wood/laurel",
 >>>>>>> Stashed changes
@@ -1537,9 +2002,14 @@
     "tfcflorae:wood/stripped_wood/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/stripped_wood/red_mangrove",
     "tfcflorae:wood/stripped_wood/white_mangrove",
     "tfcflorae:wood/stripped_wood/marblewood",
+=======
+    "tfcflorae:wood/stripped_wood/marblewood",
+    "tfcflorae:wood/stripped_wood/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/stripped_wood/marblewood",
     "tfcflorae:wood/stripped_wood/medlar",
@@ -1555,6 +2025,7 @@
     "tfcflorae:wood/stripped_wood/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/stripped_wood/pink_ivory",
     "tfcflorae:wood/stripped_wood/poplar",
     "tfcflorae:wood/stripped_wood/purpleheart",
@@ -1564,6 +2035,8 @@
     "tfcflorae:wood/stripped_wood/rowan",
     "tfcflorae:wood/stripped_wood/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/stripped_wood/pear",
@@ -1587,6 +2060,9 @@
     "tfcflorae:wood/stripped_wood/snow_gum_eucalyptus",
     "tfcflorae:wood/stripped_wood/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1595,6 +2071,7 @@
     "tfcflorae:wood/stripped_wood/teak",
     "tfcflorae:wood/stripped_wood/walnut",
     "tfcflorae:wood/stripped_wood/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/stripped_wood/white_elm",
@@ -1633,6 +2110,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/stripped_wood/white_cherry_blossom",
     "tfcflorae:wood/stripped_wood/white_elm",
     "tfcflorae:wood/stripped_wood/white_ipe",
@@ -1664,6 +2143,9 @@
     "tfcflorae:wood/planks/fever",
     "tfcflorae:wood/planks/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1674,6 +2156,7 @@
     "tfcflorae:wood/planks/hemlock",
     "tfcflorae:wood/planks/holly",
     "tfcflorae:wood/planks/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/planks/pink_ipe",
@@ -1695,12 +2178,21 @@
     "tfcflorae:wood/planks/ironwood",
     "tfcflorae:wood/planks/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/planks/iroko",
+    "tfcflorae:wood/planks/ironwood",
+    "tfcflorae:wood/planks/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/planks/joshua",
     "tfcflorae:wood/planks/juniper",
     "tfcflorae:wood/planks/kauri",
     "tfcflorae:wood/planks/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/planks/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/planks/laurel",
 >>>>>>> Stashed changes
@@ -1715,9 +2207,14 @@
     "tfcflorae:wood/planks/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/red_mangrove",
     "tfcflorae:wood/planks/white_mangrove",
     "tfcflorae:wood/planks/marblewood",
+=======
+    "tfcflorae:wood/planks/marblewood",
+    "tfcflorae:wood/planks/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/planks/marblewood",
     "tfcflorae:wood/planks/medlar",
@@ -1733,6 +2230,7 @@
     "tfcflorae:wood/planks/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/planks/pink_ivory",
     "tfcflorae:wood/planks/poplar",
     "tfcflorae:wood/planks/purpleheart",
@@ -1742,6 +2240,8 @@
     "tfcflorae:wood/planks/rowan",
     "tfcflorae:wood/planks/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/planks/pear",
@@ -1765,6 +2265,9 @@
     "tfcflorae:wood/planks/snow_gum_eucalyptus",
     "tfcflorae:wood/planks/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1773,6 +2276,7 @@
     "tfcflorae:wood/planks/teak",
     "tfcflorae:wood/planks/walnut",
     "tfcflorae:wood/planks/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/planks/white_elm",
@@ -1811,6 +2315,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/planks/white_cherry_blossom",
     "tfcflorae:wood/planks/white_elm",
     "tfcflorae:wood/planks/white_ipe",
@@ -1842,6 +2348,9 @@
     "tfcflorae:wood/twig/fever",
     "tfcflorae:wood/twig/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1852,6 +2361,7 @@
     "tfcflorae:wood/twig/hemlock",
     "tfcflorae:wood/twig/holly",
     "tfcflorae:wood/twig/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/twig/pink_ipe",
@@ -1873,12 +2383,21 @@
     "tfcflorae:wood/twig/ironwood",
     "tfcflorae:wood/twig/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/twig/iroko",
+    "tfcflorae:wood/twig/ironwood",
+    "tfcflorae:wood/twig/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/twig/joshua",
     "tfcflorae:wood/twig/juniper",
     "tfcflorae:wood/twig/kauri",
     "tfcflorae:wood/twig/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/twig/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/twig/laurel",
 >>>>>>> Stashed changes
@@ -1891,6 +2410,7 @@
     "tfcflorae:wood/twig/maclura",
     "tfcflorae:wood/twig/mahoe",
     "tfcflorae:wood/twig/mahogany",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/twig/red_mangrove",
@@ -1977,6 +2497,8 @@
     "tfcflorae:wood/vertical_support/fever",
 =======
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/twig/marblewood",
     "tfcflorae:wood/twig/medlar",
     "tfcflorae:wood/twig/messmate",
@@ -2009,6 +2531,9 @@
     "tfcflorae:wood/twig/teak",
     "tfcflorae:wood/twig/walnut",
     "tfcflorae:wood/twig/wenge",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "tfcflorae:wood/twig/white_cherry_blossom",
     "tfcflorae:wood/twig/white_elm",
@@ -2041,6 +2566,9 @@
     "tfcflorae:wood/vertical_support/fever",
     "tfcflorae:wood/vertical_support/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2051,6 +2579,7 @@
     "tfcflorae:wood/vertical_support/hemlock",
     "tfcflorae:wood/vertical_support/holly",
     "tfcflorae:wood/vertical_support/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/vertical_support/pink_ipe",
@@ -2072,12 +2601,21 @@
     "tfcflorae:wood/vertical_support/ironwood",
     "tfcflorae:wood/vertical_support/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/vertical_support/iroko",
+    "tfcflorae:wood/vertical_support/ironwood",
+    "tfcflorae:wood/vertical_support/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/vertical_support/joshua",
     "tfcflorae:wood/vertical_support/juniper",
     "tfcflorae:wood/vertical_support/kauri",
     "tfcflorae:wood/vertical_support/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/vertical_support/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/vertical_support/laurel",
 >>>>>>> Stashed changes
@@ -2092,9 +2630,14 @@
     "tfcflorae:wood/vertical_support/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/vertical_support/red_mangrove",
     "tfcflorae:wood/vertical_support/white_mangrove",
     "tfcflorae:wood/vertical_support/marblewood",
+=======
+    "tfcflorae:wood/vertical_support/marblewood",
+    "tfcflorae:wood/vertical_support/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/vertical_support/marblewood",
     "tfcflorae:wood/vertical_support/medlar",
@@ -2110,6 +2653,7 @@
     "tfcflorae:wood/vertical_support/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/vertical_support/pink_ivory",
     "tfcflorae:wood/vertical_support/poplar",
     "tfcflorae:wood/vertical_support/purpleheart",
@@ -2119,6 +2663,8 @@
     "tfcflorae:wood/vertical_support/rowan",
     "tfcflorae:wood/vertical_support/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/vertical_support/pear",
@@ -2142,6 +2688,9 @@
     "tfcflorae:wood/vertical_support/snow_gum_eucalyptus",
     "tfcflorae:wood/vertical_support/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2150,6 +2699,7 @@
     "tfcflorae:wood/vertical_support/teak",
     "tfcflorae:wood/vertical_support/walnut",
     "tfcflorae:wood/vertical_support/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/vertical_support/white_elm",
@@ -2188,6 +2738,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/vertical_support/white_cherry_blossom",
     "tfcflorae:wood/vertical_support/white_elm",
     "tfcflorae:wood/vertical_support/white_ipe",
@@ -2219,6 +2771,9 @@
     "tfcflorae:wood/horizontal_support/fever",
     "tfcflorae:wood/horizontal_support/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2229,6 +2784,7 @@
     "tfcflorae:wood/horizontal_support/hemlock",
     "tfcflorae:wood/horizontal_support/holly",
     "tfcflorae:wood/horizontal_support/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/horizontal_support/pink_ipe",
@@ -2250,12 +2806,21 @@
     "tfcflorae:wood/horizontal_support/ironwood",
     "tfcflorae:wood/horizontal_support/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/horizontal_support/iroko",
+    "tfcflorae:wood/horizontal_support/ironwood",
+    "tfcflorae:wood/horizontal_support/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/horizontal_support/joshua",
     "tfcflorae:wood/horizontal_support/juniper",
     "tfcflorae:wood/horizontal_support/kauri",
     "tfcflorae:wood/horizontal_support/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/horizontal_support/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/horizontal_support/laurel",
 >>>>>>> Stashed changes
@@ -2270,9 +2835,14 @@
     "tfcflorae:wood/horizontal_support/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/horizontal_support/red_mangrove",
     "tfcflorae:wood/horizontal_support/white_mangrove",
     "tfcflorae:wood/horizontal_support/marblewood",
+=======
+    "tfcflorae:wood/horizontal_support/marblewood",
+    "tfcflorae:wood/horizontal_support/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/horizontal_support/marblewood",
     "tfcflorae:wood/horizontal_support/medlar",
@@ -2288,6 +2858,7 @@
     "tfcflorae:wood/horizontal_support/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/horizontal_support/pink_ivory",
     "tfcflorae:wood/horizontal_support/poplar",
     "tfcflorae:wood/horizontal_support/purpleheart",
@@ -2297,6 +2868,8 @@
     "tfcflorae:wood/horizontal_support/rowan",
     "tfcflorae:wood/horizontal_support/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/horizontal_support/pear",
@@ -2320,6 +2893,9 @@
     "tfcflorae:wood/horizontal_support/snow_gum_eucalyptus",
     "tfcflorae:wood/horizontal_support/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2328,6 +2904,7 @@
     "tfcflorae:wood/horizontal_support/teak",
     "tfcflorae:wood/horizontal_support/walnut",
     "tfcflorae:wood/horizontal_support/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/horizontal_support/white_elm",
@@ -2366,6 +2943,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/horizontal_support/white_cherry_blossom",
     "tfcflorae:wood/horizontal_support/white_elm",
     "tfcflorae:wood/horizontal_support/white_ipe",
@@ -2397,6 +2976,9 @@
     "tfcflorae:wood/sluice/fever",
     "tfcflorae:wood/sluice/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2434,6 +3016,10 @@
     "tfcflorae:wood/sluice/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/sluice/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/sluice/laurel",
 >>>>>>> Stashed changes
@@ -2448,8 +3034,32 @@
     "tfcflorae:wood/sluice/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/sluice/marblewood",
+    "tfcflorae:wood/sluice/medlar",
+    "tfcflorae:wood/sluice/messmate",
+    "tfcflorae:wood/sluice/mountain_ash",
+    "tfcflorae:wood/sluice/mulberry",
+    "tfcflorae:wood/sluice/nordmann_fir",
+    "tfcflorae:wood/sluice/norway_spruce",
+    "tfcflorae:wood/sluice/pear",
+    "tfcflorae:wood/sluice/pink_cherry_blossom",
+    "tfcflorae:wood/sluice/pink_ipe",
+    "tfcflorae:wood/sluice/pink_ivory",
+    "tfcflorae:wood/sluice/poplar",
+    "tfcflorae:wood/sluice/purple_ipe",
+    "tfcflorae:wood/sluice/purple_jacaranda",
+    "tfcflorae:wood/sluice/purpleheart",
+    "tfcflorae:wood/sluice/quince",
+    "tfcflorae:wood/sluice/rainbow_eucalyptus",
+    "tfcflorae:wood/sluice/red_cedar",
+    "tfcflorae:wood/sluice/red_cypress",
+    "tfcflorae:wood/sluice/red_elm",
+>>>>>>> Stashed changes
     "tfcflorae:wood/sluice/red_mangrove",
     "tfcflorae:wood/sluice/white_mangrove",
+<<<<<<< Updated upstream
     "tfcflorae:wood/sluice/marblewood",
 =======
     "tfcflorae:wood/sluice/marblewood",
@@ -2549,6 +3159,8 @@
     "tfcflorae:wood/sluice/white_ipe",
     "tfcflorae:wood/sluice/white_jacaranda",
     "tfcflorae:wood/sluice/white_mangrove",
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/sluice/whitebeam",
     "tfcflorae:wood/sluice/yellow_ipe",
     "tfcflorae:wood/sluice/yellow_jacaranda",
@@ -2575,6 +3187,9 @@
     "tfcflorae:wood/chest/fever",
     "tfcflorae:wood/chest/ghaf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2585,6 +3200,7 @@
     "tfcflorae:wood/chest/hemlock",
     "tfcflorae:wood/chest/holly",
     "tfcflorae:wood/chest/hornbeam",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/chest/pink_ipe",
@@ -2606,12 +3222,21 @@
     "tfcflorae:wood/chest/ironwood",
     "tfcflorae:wood/chest/jabuticabeira",
 >>>>>>> Stashed changes
+=======
+    "tfcflorae:wood/chest/iroko",
+    "tfcflorae:wood/chest/ironwood",
+    "tfcflorae:wood/chest/jabuticabeira",
+>>>>>>> Stashed changes
     "tfcflorae:wood/chest/joshua",
     "tfcflorae:wood/chest/juniper",
     "tfcflorae:wood/chest/kauri",
     "tfcflorae:wood/chest/larch",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "tfcflorae:wood/chest/laurel",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/chest/laurel",
 >>>>>>> Stashed changes
@@ -2626,9 +3251,14 @@
     "tfcflorae:wood/chest/mahogany",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/chest/red_mangrove",
     "tfcflorae:wood/chest/white_mangrove",
     "tfcflorae:wood/chest/marblewood",
+=======
+    "tfcflorae:wood/chest/marblewood",
+    "tfcflorae:wood/chest/medlar",
+>>>>>>> Stashed changes
 =======
     "tfcflorae:wood/chest/marblewood",
     "tfcflorae:wood/chest/medlar",
@@ -2644,6 +3274,7 @@
     "tfcflorae:wood/chest/norway_spruce",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "tfcflorae:wood/chest/pink_ivory",
     "tfcflorae:wood/chest/poplar",
     "tfcflorae:wood/chest/purpleheart",
@@ -2653,6 +3284,8 @@
     "tfcflorae:wood/chest/rowan",
     "tfcflorae:wood/chest/rubber_fig",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "tfcflorae:wood/chest/pear",
@@ -2676,6 +3309,9 @@
     "tfcflorae:wood/chest/snow_gum_eucalyptus",
     "tfcflorae:wood/chest/sorb",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2684,6 +3320,7 @@
     "tfcflorae:wood/chest/teak",
     "tfcflorae:wood/chest/walnut",
     "tfcflorae:wood/chest/wenge",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "tfcflorae:wood/chest/white_elm",
@@ -2701,6 +3338,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/chest/white_cherry_blossom",
     "tfcflorae:wood/chest/white_elm",
     "tfcflorae:wood/chest/white_ipe",
@@ -2713,6 +3352,7 @@
     "tfcflorae:wood/chest/yew",
     "tfcflorae:wood/chest/zebrawood",
     "tfcflorae:wood/chest/persimmon",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
     "tfcflorae:wood/trapped_chest/african_padauk",
@@ -2736,6 +3376,8 @@
     "tfcflorae:wood/trapped_chest/snow_gum_eucalyptus",
     "tfcflorae:wood/trapped_chest/common_oak",
 =======
+=======
+>>>>>>> Stashed changes
     "tfcflorae:wood/trapped_chest/african_padauk",
     "tfcflorae:wood/trapped_chest/alder",
     "tfcflorae:wood/trapped_chest/angelim",
@@ -3903,6 +4545,9 @@
     "tfcflorae:wood/trapped_chest/yellow_meranti",
     "tfcflorae:wood/trapped_chest/yew",
     "tfcflorae:wood/trapped_chest/zebrawood",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "tfcflorae:wood/trapped_chest/persimmon",
     "tfcflorae:wood/bookshelf/african_padauk",
@@ -5156,6 +5801,9 @@
     "tfcflorae:wood/stripped_wood/charred_tree",
     "tfcflorae:wood/twig/charred_tree"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
