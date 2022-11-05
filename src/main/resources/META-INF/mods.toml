@@ -7,7 +7,7 @@ modLoader = "javafml" #mandatory
 modId = "tfcflorae" #mandatory
 version = "${file.jarVersion}" #mandatory
 # A display name for the mod
-displayName = "TFCFlorae" #mandatory
+displayName = "TFC Florae" #mandatory
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile = "logo.png" #optional
@@ -20,7 +20,7 @@ An addon for TFC.
 [[dependencies.tfcflorae]]
 modId = "tfc"
 mandatory = true
-versionRange = "[1.18.2-2.0.34,)"
+versionRange = "[1.18.2-2.1.18,)"
 ordering = "AFTER"
 side = "BOTH"
 

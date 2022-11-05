@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/raw/komatiite"
-  },
-  "result": "tfcflorae:rock/raw/komatiite_wall",
-  "count": 1
-}

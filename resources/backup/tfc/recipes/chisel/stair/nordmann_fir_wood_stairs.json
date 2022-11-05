@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/nordmann_fir",
-  "result": "tfcflorae:wood/planks/nordmann_fir_stairs",
-  "mode": "stair"
-}

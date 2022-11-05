@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/raw/catlinite"
-  },
-  "result": "tfcflorae:rock/raw/catlinite_stairs",
-  "count": 1
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/gravel/conglomerate",
-    "particle": "tfcflorae:block/rock/gravel/conglomerate",
-    "overlay": "tfcflorae:block/deposit/native_silver"
-  }
-}

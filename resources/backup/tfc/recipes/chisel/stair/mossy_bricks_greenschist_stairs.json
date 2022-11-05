@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/mossy_bricks/greenschist",
-  "result": "tfcflorae:rock/mossy_bricks/greenschist_stairs",
-  "mode": "stair"
-}

@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/marblewood",
-  "result": "tfcflorae:wood/planks/marblewood_stairs",
-  "mode": "stair"
-}

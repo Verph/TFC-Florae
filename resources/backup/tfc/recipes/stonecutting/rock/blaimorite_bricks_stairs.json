@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/bricks/blaimorite"
-  },
-  "result": "tfcflorae:rock/bricks/blaimorite_stairs",
-  "count": 1
-}

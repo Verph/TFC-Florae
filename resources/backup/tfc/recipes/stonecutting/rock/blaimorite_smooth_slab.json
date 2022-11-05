@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/blaimorite"
-  },
-  "result": "tfcflorae:rock/smooth/blaimorite_slab",
-  "count": 2
-}

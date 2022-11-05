@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cracked_bricks/jaspillite"
-  },
-  "result": "tfcflorae:rock/cracked_bricks/jaspillite_stairs",
-  "count": 1
-}

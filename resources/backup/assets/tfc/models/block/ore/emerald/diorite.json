@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/raw/diorite",
-    "particle": "tfcflorae:block/rock/raw/diorite",
-    "overlay": "tfcflorae:block/ore/emerald"
-  }
-}

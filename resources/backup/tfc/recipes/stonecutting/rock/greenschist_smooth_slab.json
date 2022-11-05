@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/greenschist"
-  },
-  "result": "tfcflorae:rock/smooth/greenschist_slab",
-  "count": 2
-}

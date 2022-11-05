@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobble/travertine",
-  "result": "tfcflorae:rock/cobble/travertine_stairs",
-  "mode": "stair"
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/smooth/cataclasite"
-  },
-  "result": "tfcflorae:rock/smooth/cataclasite_wall",
-  "count": 1
-}

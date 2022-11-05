@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/raw/dolomite",
-    "particle": "tfcflorae:block/rock/raw/dolomite",
-    "overlay": "tfcflorae:block/ore/halite"
-  }
-}

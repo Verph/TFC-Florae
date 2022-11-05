@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/raw/mudstone",
-    "particle": "tfcflorae:block/rock/raw/mudstone",
-    "overlay": "tfcflorae:block/ore/rich_native_silver"
-  }
-}

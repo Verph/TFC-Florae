@@ -1167,5 +1167,4 @@ TREE_SAPLING_DROP_CHANCES = {
     'yellow_meranti': 0.0083,
     'yew': 0.0077,
     'zebrawood': 0.0083,
-    'jabuticabeira': 0.0067,
 }

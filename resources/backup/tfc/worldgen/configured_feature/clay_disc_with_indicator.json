@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:multiple",
-  "config": {
-    "features": "#tfc:clay_disc_with_indicator_features",
-    "biome_check": false
-  }
-}

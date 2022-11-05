@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/raw/soapstone",
-    "particle": "tfcflorae:block/rock/raw/soapstone",
-    "overlay": "tfcflorae:block/ore/poor_native_gold"
-  }
-}

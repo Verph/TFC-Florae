@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/smooth/mudstone",
-  "result": "tfcflorae:rock/smooth/mudstone_stairs",
-  "mode": "stair"
-}

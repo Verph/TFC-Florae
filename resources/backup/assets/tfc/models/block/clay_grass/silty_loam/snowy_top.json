@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfcflorae:block/grass_snowy_top",
-  "textures": {
-    "texture": "tfcflorae:block/clay/silty_loam"
-  }
-}

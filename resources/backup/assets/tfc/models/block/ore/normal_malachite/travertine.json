@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/rock/raw/travertine",
-    "particle": "tfcflorae:block/rock/raw/travertine",
-    "overlay": "tfcflorae:block/ore/normal_malachite"
-  }
-}

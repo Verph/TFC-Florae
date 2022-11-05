@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/blackband_ironstone"
-  },
-  "result": "tfcflorae:rock/cobble/blackband_ironstone_wall",
-  "count": 1
-}
