@@ -101,7 +101,7 @@
         "type": "minecraft:axolotl",
         "maxCount": 6,
         "minCount": 4,
-        "weight": 7
+        "weight": 18
       }
     ],
     "monster": [
