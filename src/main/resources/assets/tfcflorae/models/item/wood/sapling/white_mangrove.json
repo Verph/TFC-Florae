@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfcflorae:block/wood/sapling/white_mangrove"
+    "layer0": "tfcflorae:block/wood/sapling/white_mangrove_propagule"
   }
 }

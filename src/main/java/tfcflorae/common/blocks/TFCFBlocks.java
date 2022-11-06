@@ -192,8 +192,8 @@ public class TFCFBlocks
     public static final RegistryObject<Block> CHARRED_TREE_TWIG = register("wood/twig/charred_tree", () -> GroundcoverBlock.twig(ExtendedProperties.of(Material.GRASS).strength(0.05F, 0.0F).sound(TFCSounds.CHARCOAL).noCollission().flammableLikeWool()), WOOD);
 
     public static final Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> WOODS = woodMapper(TFCFWood.class);
-    public static final Map<Wood, RegistryObject<Block>> NORMAL_BOOKSHELF_TFC = normalBookshelfMapperTFC(Wood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = leavesOnlyMapper(TFCFWood.class);
+    public static final Map<Wood, RegistryObject<Block>> NORMAL_BOOKSHELF_TFC = normalBookshelfMapperTFC(Wood.class);
     //public static final Map<Wood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFC = chiseledBookshelfMapperTFC(Wood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFCF = chiseledBookshelfMapperTFCF(TFCFWood.class);
     public static final Map<Wood, RegistryObject<Block>> LOG_WALL = woodWallMapperTFC(Wood.class);

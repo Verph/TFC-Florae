@@ -47,303 +47,152 @@ public class TFCFForgeEventHandler
         final BlockState state = level.getBlockState(pos);
         final Block block = state.getBlock();
 
-        // Mud --> Compact Mud
-        if (block == TFCBlocks.SOIL.get(SoilBlockType.MUD).get(SoilBlockType.Variant.SILT).get())
+        for (SoilBlockType.Variant variant : SoilBlockType.Variant.values())
         {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
+            // Mud --> Compact Mud
+            if (block == TFCBlocks.SOIL.get(SoilBlockType.MUD).get(variant).get())
             {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(SoilBlockType.Variant.SILT).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
+                if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
+                {
+                    level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(variant).get().defaultBlockState());
+                    event.setCancellationResult(InteractionResult.SUCCESS);
+                }
+            }
+            // Soil --> Compact Soil
+            if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get())
+            {
+                if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
+                {
+                    level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.COMPACT_DIRT).get(variant).get().defaultBlockState());
+                    event.setCancellationResult(InteractionResult.SUCCESS);
+                }
             }
         }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.MUD).get(SoilBlockType.Variant.LOAM).get())
+        for (TFCFSoil.TFCFVariant variant : TFCFSoil.TFCFVariant.values())
         {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
+            // Soil --> Compact Soil
+            if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant).get())
             {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(SoilBlockType.Variant.LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.MUD).get(SoilBlockType.Variant.SANDY_LOAM).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(SoilBlockType.Variant.SANDY_LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.MUD).get(SoilBlockType.Variant.SILTY_LOAM).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(SoilBlockType.Variant.SILTY_LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
+                if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
+                {
+                    level.setBlockAndUpdate(pos, TFCFBlocks.TFCFSOIL.get(TFCFSoil.COMPACT_DIRT).get(variant).get().defaultBlockState());
+                    event.setCancellationResult(InteractionResult.SUCCESS);
+                }
             }
         }
 
         // Soil --> Compact Soil
-        if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILT).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.COMPACT_DIRT).get(SoilBlockType.Variant.SILT).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.LOAM).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.COMPACT_DIRT).get(SoilBlockType.Variant.LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.COMPACT_DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCSOIL.get(TFCFSoil.COMPACT_DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-        else if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get())
-        {
-            if (event.getHand() == InteractionHand.MAIN_HAND && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN))
-            {
-                level.setBlockAndUpdate(pos, TFCFBlocks.TFCFSOIL.get(TFCFSoil.COMPACT_DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get().defaultBlockState());
-                event.setCancellationResult(InteractionResult.SUCCESS);
-            }
-        }
-
         for (Rock rockTFC : Rock.values())
         {
-            // Soil --> Compact Soil
-            if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILT).get())
+            for (SoilBlockType.Variant variant : SoilBlockType.Variant.values())
             {
-                if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SILT).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(variant).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+                if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(variant).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
             }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.LOAM).get())
+            for (TFCFSoil.TFCFVariant variant : TFCFSoil.TFCFVariant.values())
             {
-                if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(variant).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
-            }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SILT).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SILT).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SANDY_LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SANDY_LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SILTY_LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SILTY_LOAM).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFCF.get(TFCFSoil.TFCFVariant.HUMUS).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(TFCFSoil.TFCFVariant.HUMUS).get(rockTFC).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFCF.get(variant).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
             }
         }
         for (TFCFRock rockTFCF : TFCFRock.values())
         {
-            // Soil --> Compact Soil
-            if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILT).get())
+            for (SoilBlockType.Variant variant : SoilBlockType.Variant.values())
             {
-                if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SILT).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(variant).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+                if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(variant).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
             }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.LOAM).get())
+            for (TFCFSoil.TFCFVariant variant : TFCFSoil.TFCFVariant.values())
             {
-                if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(variant).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
-            }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.PEBBLE_COMPACT_DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-            }
-            else if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
-            {
-                if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SILT).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SILT).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SANDY_LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SANDY_LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFC.get(SoilBlockType.Variant.SILTY_LOAM).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(SoilBlockType.Variant.SILTY_LOAM).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
-                }
-                else if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFCF.get(TFCFSoil.TFCFVariant.HUMUS).get()))
-                {
-                    event.getItemStack().shrink(1);
-                    final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(TFCFSoil.TFCFVariant.HUMUS).get(rockTFCF).get().defaultBlockState();
-                    level.setBlockAndUpdate(pos, placedBlock);
-                    Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
-                    event.setCancellationResult(InteractionResult.SUCCESS);
-                    break;
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SOIL_PILE_TFCF.get(variant).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
                 }
             }
         }
