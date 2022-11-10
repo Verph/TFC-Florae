@@ -35,9 +35,6 @@ public class TFCFlorae
     {
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        bus.addListener(this::setup);
-        bus.addListener(TFCFEntities::onEntityAttributeCreation);
-
         TFCFItems.ITEMS.register(bus);
         TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
@@ -49,11 +46,13 @@ public class TFCFlorae
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
         TFCFSounds.SOUNDS.register(bus);
-        TFCFForgeEventHandler.init();
 
         Packets.init();
 
         bus.addListener(this::setup);
+        bus.addListener(TFCFEntities::onEntityAttributeCreation);
+
+        TFCFForgeEventHandler.init();
 
         if (FMLEnvironment.dist == Dist.CLIENT)
         {

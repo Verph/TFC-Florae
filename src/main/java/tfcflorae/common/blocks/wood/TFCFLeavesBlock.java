@@ -33,6 +33,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
@@ -47,7 +48,7 @@ import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 
-public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements ISeasonalLeavesBlock, HoeOverlayBlock, EntityBlockExtension
+public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, EntityBlockExtension
 {
     /**
      * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.
@@ -142,7 +143,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements ISeasona
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        //ISeasonalLeavesBlock.randomTick(this, state, level, pos, random);
+        //IBushBlock.randomTick(this, state, level, pos, random);
         if (!state.getValue(PERSISTENT) && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
         {
             /*final int rarity = Math.max(1, (int) (ICalendar.TICKS_IN_DAY * (((level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING)) * (1 / 4096f)) * ((Calendars.SERVER.getCalendarDaysInMonth() / 15) + 1))));

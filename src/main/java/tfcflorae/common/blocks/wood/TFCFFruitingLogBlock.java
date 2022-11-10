@@ -31,6 +31,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
@@ -43,7 +44,7 @@ import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 
-public class TFCFFruitingLogBlock extends LogBlock implements ISeasonalLeavesBlock, HoeOverlayBlock
+public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOverlayBlock
 {
     /**
      * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.

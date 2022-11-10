@@ -998,6 +998,11 @@ public class TFCFBlocks
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
     {
+        return RegistrationHelpers.registerBlock(BLOCKS, TFCFItems.ITEMS, name, blockSupplier, blockItemFactory);
+    }
+
+    /*private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
+    {
         final String actualName = name.toLowerCase(Locale.ROOT);
         final RegistryObject<T> block = BLOCKS.register(actualName, blockSupplier);
         if (blockItemFactory != null)
@@ -1005,5 +1010,5 @@ public class TFCFBlocks
             TFCFItems.ITEMS.register(actualName, () -> blockItemFactory.apply(block.get()));
         }
         return block;
-    }
+    }*/
 }

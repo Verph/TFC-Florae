@@ -47,6 +47,7 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.SeasonalPlantBlock;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
@@ -67,7 +68,7 @@ import tfcflorae.common.blocks.TFCFBlocks;
 
 import org.jetbrains.annotations.Nullable;
 
-public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock
+public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock
 {
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
     {
@@ -229,7 +230,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
-        ISeasonalLeavesBlock.randomTick(this, state, level, pos, random);
+        IBushBlock.randomTick(this, state, level, pos, random);
         Fluid fluid = state.getValue(getFluidProperty()).getFluid();
 
         BlockPos abovePos = pos.above();
