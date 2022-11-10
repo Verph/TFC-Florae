@@ -8,6 +8,7 @@ import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
+import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 
 /**
@@ -24,7 +25,8 @@ public interface ISeasonalLeavesBlock
      */
     static void randomTick(ISeasonalLeavesBlock bush, BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        final int rarity = Math.max(1, (int) (ICalendar.TICKS_IN_DAY * (((level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING)) * (1 / 4096f)) * 5f)));
+        final int rarity = Math.max(1, (int) (ICalendar.TICKS_IN_DAY * (((level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING)) * (1 / 4096f)) * ((Calendars.SERVER.getCalendarDaysInMonth() / 15) + 1))));
+        //final int rarity = Math.max(1, (int) (ICalendar.TICKS_IN_DAY * level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING) * (1 / 4096f)));
         if (random.nextInt(rarity) == 0)
         { 
             bush.onUpdate(level, pos, state);

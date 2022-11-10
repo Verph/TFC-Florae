@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:collapse",
-  "ingredient": [
-    "tfcflorae:dirty_stone_tiles/humus/phyllite"
-  ],
-  "result": "tfcflorae:dirty_stone_tiles/humus/phyllite"
-}

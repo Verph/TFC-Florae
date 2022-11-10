@@ -87,4 +87,9 @@ public class FruitPlantBlockEntity extends TFCBlockEntity implements ICalendarTi
     {
         lastTick = tick;
     }
+
+    public void setLastBushTick(long ticks)
+    {
+        lastUpdateTick = ticks;
+    }
 }

@@ -1,41 +1,35 @@
-license = "BSD 3" 
-loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-modLoader = "javafml" #mandatory
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
-[[mods]] #mandatory
-# The modid of the mod
-modId = "tfcflorae" #mandatory
-version = "${file.jarVersion}" #mandatory
-# A display name for the mod
-displayName = "TFC Florae" #mandatory
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
-# A file name (in the root of the mod JAR) containing a logo for display
-#logoFile = "logo.png" #optional
-#credits="Thanks for this example mod goes to Java" #optional
-authors = "Verph, Loevendallund" #optional
-description = '''
-An addon for TFC.
-''' 
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.tfcflorae]]
-modId = "tfc"
-mandatory = true
-versionRange = "[1.18.2-2.1.18,)"
-ordering = "AFTER"
-side = "BOTH"
+# Loader metadata
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "BSD 3"
 
-[[dependencies.tfcflorae]] #optional
-mandatory = true #mandatory
-modId = "forge" #mandatory
-versionRange = "[40,)" #mandatory
-# An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-ordering = "AFTER"
-side = "BOTH"
+# TFC Florae
+[[mods]]
+    modId = "tfcflorae"
+    version = "${file.jarVersion}"
+    displayName = "TFC Florae"
+    credits = "By Verph and with help from Loevendallund, Blade67, SeriousCreeper and many more. Huge thanks and credits to cubey79 for allowing the usage of certain wood textures from their resource pack Vanilla Themed TFC+ & TFC TNG goes towards facetorched and yeahminecraft16 for allowing me to make use of many of their plant assets from TFC+ Aesthetics!"
+    authors = "Verph"
+    description = '''TFC Florae - A large and environmentally impactful addon for TerraFirmaCraft'''
 
-# Here's another dependency
+# Dependencies
 [[dependencies.tfcflorae]]
-mandatory = true
-modId = "minecraft"
-ordering = "AFTER"
-side = "BOTH"
-versionRange = "[1.18.2,1.19)"
+	modId = "tfc"
+	mandatory = true
+	versionRange = "[1.18.2-2.1.18,)"
+	side = "BOTH"
+	ordering = "AFTER"
+
+[[dependencies.tfcflorae]]
+	modId = "forge"
+	mandatory = true
+	versionRange = "[40,)"
+	side = "BOTH"
+	ordering = "AFTER"
+
+[[dependencies.tfcflorae]]
+	modId = "minecraft"
+	mandatory = true
+	versionRange = "[1.18.2,)"
+	side = "BOTH"
+	ordering = "AFTER"

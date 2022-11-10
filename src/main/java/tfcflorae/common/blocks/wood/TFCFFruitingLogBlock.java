@@ -6,77 +6,52 @@ import java.util.function.Supplier;
 
 import org.jetbrains.annotations.Nullable;
 
+import com.google.common.base.Preconditions;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
-import net.dries007.tfc.common.blocks.plant.fruit.SeasonalPlantBlock;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
-import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
 import net.dries007.tfc.common.blocks.wood.LogBlock;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
+
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
-import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBlockExtension, ILeavesBlock, ISeasonalLeavesBlock, HoeOverlayBlock
+public class TFCFFruitingLogBlock extends LogBlock implements ISeasonalLeavesBlock, HoeOverlayBlock
 {
-    protected static final VoxelShape COLLISION_SHAPE = box(0, 0, 0, 16, 16, 16);
-
     /**
-     * Taking into account only environment rainfall, on a scale [0, 100]
+     * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.
+     * Since most bushes have a 7 month non-dormant cycle, this means that it just needs to be in valid conditions for about 1 month a year in order to not die.
+     * It won't produce (it needs more months to properly advance the cycle from dormant -> healthy -> flowering -> fruiting, requiring 4 months at least), but it won't outright die.
      */
-    public static int getHydration(Level level, BlockPos pos)
-    {
-        return (int) (Climate.getRainfall(level, pos) / 5);
-    }
-
-    public static final IntegerProperty STAGE = TFCBlockStateProperties.STAGE_2;
-    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
-    public static final BooleanProperty NATURAL = TFCBlockStateProperties.NATURAL;
-    public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     private static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
+    public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
 
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
@@ -86,14 +61,17 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
 
     public TFCFFruitingLogBlock(ExtendedProperties properties, @Nullable Supplier<? extends Block> stripped, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, Supplier<ClimateRange> climateRange)
     {
-        super(properties, climateRange, productItem, lifecycle);
+        super(properties, stripped);
+
+        Preconditions.checkArgument(lifecycle.length == 12, "Lifecycle length must be 12");
+
         this.stripped = stripped;
         this.properties = properties;
         this.climateRange = climateRange;
         this.lifecycle = lifecycle;
         this.productItem = productItem;
 
-        registerDefaultState(getStateDefinition().any().setValue(AXIS, Direction.Axis.Y).setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
+        registerDefaultState(getStateDefinition().any().setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
     }
 
     @Override
@@ -102,112 +80,7 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
         return properties;
     }
 
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
-    {
-        return Shapes.block();
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
-    {
-        return COLLISION_SHAPE;
-    }
-
-    @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type)
-    {
-        return false;
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
-    {
-        //super.createBlockStateDefinition(builder.add(AXIS, NATURAL, LIFECYCLE));
-        builder.add(AXIS, NATURAL, LIFECYCLE);
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos)
-    {
-        // Modified from the super() method, including the Forge patch, to add the 2x hardness in natural state modifier.
-        final float baseSpeed = (state.getValue(NATURAL) ? 2 : 1) * state.getDestroySpeed(level, pos);
-        if (baseSpeed == -1.0F)
-        {
-            return 0.0F;
-        }
-        else
-        {
-            final int toolModifier = ForgeHooks.isCorrectToolForDrops(state, player) ? 30 : 100;
-            return player.getDigSpeed(state, pos) / baseSpeed / (float) toolModifier;
-        }
-    }
-
-    @Nullable
-    @Override
-    public BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction action, boolean simulate)
-    {
-        if (context.getItemInHand().canPerformAction(action) && action == ToolActions.AXE_STRIP && stripped != null)
-        {
-            return Helpers.copyProperties(stripped.get().defaultBlockState(), state);
-        }
-        return null;
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public BlockState rotate(BlockState state, Rotation rotation)
-    {
-        return rotatePillar(state, rotation);
-    }
-
-    public static BlockState rotatePillar(BlockState state, Rotation rotation)
-    {
-        switch(rotation)
-        {
-            case COUNTERCLOCKWISE_90:
-            case CLOCKWISE_90:
-            switch((Direction.Axis)state.getValue(AXIS))
-            {
-                case X:
-                    return state.setValue(AXIS, Direction.Axis.Z);
-                case Z:
-                    return state.setValue(AXIS, Direction.Axis.X);
-                default:
-                    return state;
-            }
-            default:
-                return state;
-        }
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public BlockState getStateForPlacement(BlockPlaceContext context)
-    {
-        return this.defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis());
-    }
-
-    /**
-     * Checks if the plant is outside its growing season, and if so sets it to dormant.
-     *
-     * @return if the plant is dormant
-     */
-    public static boolean checkAndSetDormant(Level level, BlockPos pos, BlockState state, Lifecycle current, Lifecycle expected)
-    {
-        if (expected == Lifecycle.DORMANT)
-        {
-            // When we're in dormant time, no matter what conditions, or time since appearance, the bush will be dormant.
-            if (expected != current)
-            {
-                level.setBlockAndUpdate(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT));
-            }
-            return true;
-        }
-        return false;
-    }
+    // Start of mixing Seasonal FruitTreeLeavesBlock
 
     @Override
     @SuppressWarnings("deprecation")
@@ -226,24 +99,33 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
         return InteractionResult.PASS;
     }
 
-    public BlockState stateAfterPicking(BlockState state)
-    {
-        return state.setValue(LIFECYCLE, Lifecycle.HEALTHY);
-    }
-
     @Override
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        ISeasonalLeavesBlock.randomTick(this, state, level, pos, random);
+        if (state.getValue(NATURAL) && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(level, pos, state);
+        }
     }
 
+    @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
+    {
+        if (state.getValue(NATURAL) && level instanceof ServerLevel server && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(server, currentPos, state);
+        }
+        return state;
+    }
+
+    // this is superficially the same as the StationaryBerryBushBlock onUpdate, we can condense them
     @Override
     public void onUpdate(Level level, BlockPos pos, BlockState state)
     {
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
-        if (state.getValue(NATURAL) == false) return; // logs placed by players don't grow
+        if (!state.getValue(NATURAL)) return; // persistent leaves don't grow
         if (level.getBlockEntity(pos) instanceof FruitTreeBlockEntity leaves)
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
@@ -280,6 +162,7 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
                     {
                         currentLifecycle = Lifecycle.DORMANT;
                     }
+
                     if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                     {
                         monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
@@ -288,14 +171,14 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
                     {
                         monthsSpentDying = 0;
                     }
-                }
-                while (nextCalendarTick < currentCalendarTick);
+
+                } while (nextCalendarTick < currentCalendarTick);
 
                 BlockState newState;
 
                 if (mayDie(level, pos, state, monthsSpentDying))
                 {
-                    newState = state.setValue(LIFECYCLE, Lifecycle.DORMANT);
+                    newState = Blocks.AIR.defaultBlockState();
                 }
                 else
                 {
@@ -311,14 +194,6 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
         }
     }
 
-    /**
-     * Can this bush die, given that it spent {@code monthsSpentDying} consecutive months in a dormant state, when it should've been in a non-dormant state.
-     */
-    protected boolean mayDie(Level level, BlockPos pos, BlockState state, int monthsSpentDying)
-    {
-        return monthsSpentDying >= MONTHS_SPENT_DORMANT_TO_DIE && state.getValue(NATURAL);
-    }
-
     @Override
     public void addHoeOverlayInfo(Level level, BlockPos pos, BlockState state, List<Component> text, boolean isDebug)
     {
@@ -327,39 +202,64 @@ public class TFCFFruitingLogBlock extends SeasonalPlantBlock implements IForgeBl
         text.add(FarmlandBlock.getTemperatureTooltip(level, pos, range, false));
     }
 
-    @Override
-    public boolean isRandomlyTicking(BlockState state)
+    /**
+     * Can this leaf block die, given that it spent {@code monthsSpentDying} consecutive months in a dormant state, when it should've been in a non-dormant state.
+     */
+    protected boolean mayDie(Level level, BlockPos pos, BlockState state, int monthsSpentDying)
     {
-        return true; // Not for the purposes of leaf decay, but for the purposes of seasonal updates
+        return monthsSpentDying >= MONTHS_SPENT_DORMANT_TO_DIE;
     }
 
     @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    {
+        super.createBlockStateDefinition(builder.add(LIFECYCLE));
+    }
+
+    /**
+     * Taking into account only environment rainfall, on a scale [0, 100]
+     */
+    public static int getHydration(Level level, BlockPos pos)
+    {
+        return (int) (Climate.getRainfall(level, pos) / 5);
+    }
+
+    /**
+     * Checks if the plant is outside its growing season, and if so sets it to dormant.
+     *
+     * @return if the plant is dormant
+     */
+    public static boolean checkAndSetDormant(Level level, BlockPos pos, BlockState state, Lifecycle current, Lifecycle expected)
+    {
+        if (expected == Lifecycle.DORMANT)
+        {
+            // When we're in dormant time, no matter what conditions, or time since appearance, the bush will be dormant.
+            if (expected != current)
+            {
+                level.setBlockAndUpdate(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT));
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public BlockState stateAfterPicking(BlockState state)
+    {
+        return state.setValue(LIFECYCLE, Lifecycle.HEALTHY);
+    }
+
     public ItemStack getProductItem(Random random)
     {
         return new ItemStack(productItem.get());
     }
 
-    @Override
     protected Lifecycle getLifecycleForCurrentMonth()
     {
         return getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear());
     }
 
-    @Override
     protected Lifecycle getLifecycleForMonth(Month month)
     {
         return lifecycle[month.ordinal()];
-    }
-
-    @Override
-    public boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
-    {
-        return true;
-    }
-
-    @Override
-    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
-    {
-        return true;
     }
 }

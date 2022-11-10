@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/rowan",
-  "result": "tfcflorae:wood/planks/rowan_stairs",
-  "mode": "stair"
-}

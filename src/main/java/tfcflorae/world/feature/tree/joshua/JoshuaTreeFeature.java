@@ -10,6 +10,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
+import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.TFCChunkGenerator;
 import net.dries007.tfc.world.feature.BlockConfig;
@@ -37,10 +38,12 @@ public class JoshuaTreeFeature extends Feature<BlockConfig<TFCFJoshuaLeavesBlock
         final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         //if (pos.getY() > seaLevel && (materialAt != Material.WATER || !Helpers.isFluid(fluidState, FluidTags.WATER)) && TFCFJoshuaTrunkBlock.canConnectTo(state))
-        //{
+        if (EnvironmentHelpers.isWorldgenReplaceable(state) && !state.getMaterial().isLiquid())
+        {
             final FluidState fluidAt = level.getFluidState(pos);
             return context.config().block().generatePlant(level, pos, context.random(), 8, fluidAt.getType());
-        //}
-        //return false;
+        }
+        else
+            return false;
     }
 }

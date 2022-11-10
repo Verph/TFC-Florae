@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,7 +14,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.LooseFlintBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
@@ -21,8 +24,10 @@ import tfcflorae.common.items.TFCFItems;
 
 import com.mojang.logging.LogUtils;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
+import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 
 import org.slf4j.Logger;
@@ -46,6 +51,18 @@ public class TFCFForgeEventHandler
         final BlockPos pos = event.getPos();
         final BlockState state = level.getBlockState(pos);
         final Block block = state.getBlock();
+
+        if (level.getBlockState(pos).getMaterial().isSolid() && (EnvironmentHelpers.isWorldgenReplaceable(level.getBlockState(pos.above())) || level.getBlockState(pos.above()).isAir()) && (level.getBlockState(pos.above()).getBlock() != TFCFBlocks.LOOSE_FLINT.get() || !(level.getBlockState(pos.above()).getBlock() instanceof LooseRockBlock)) && TFCFBlocks.LOOSE_FLINT.get().defaultBlockState().canSurvive(level, pos.above()))
+        {
+            if (event.getHand() == InteractionHand.MAIN_HAND && (Helpers.isItem(event.getItemStack(), TFCFTags.Items.FLINT_KNAPPING) || event.getItemStack().getItem() == Items.FLINT || event.getItemStack().getItem() == TFCFBlocks.LOOSE_FLINT.get().asItem()))
+            {
+                event.getItemStack().shrink(1);
+                //event.getPlayer().playSound(SoundType.STONE.getPlaceSound(), 1f, 1f);
+                Helpers.playSound(level, pos.above(), SoundType.STONE.getPlaceSound());
+                level.setBlockAndUpdate(pos.above(), TFCFBlocks.LOOSE_FLINT.get().defaultBlockState().setValue(LooseFlintBlock.COUNT, 1));
+                event.setCancellationResult(InteractionResult.SUCCESS);
+            }
+        }
 
         for (SoilBlockType.Variant variant : SoilBlockType.Variant.values())
         {

@@ -36,9 +36,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.Tags;
@@ -65,7 +63,6 @@ import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blockentities.FruitTreeBlockEntity;
-import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 
 import org.jetbrains.annotations.Nullable;
@@ -163,47 +160,6 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
     {
         return IFluidLoggable.super.getFluidState(state);
     }
-
-    /*@Override
-    @SuppressWarnings("deprecation")
-    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
-    {
-        BlockState blockstate = level.getBlockState(pos.below());
-        if (blockstate.getBlock() != TFCFBlocks.JOSHUA_TRUNK.get(wood).get() && !(Helpers.isBlock(blockstate, TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(blockstate, TFCTags.Blocks.TREE_GROWS_ON) || Helpers.isBlock(blockstate, BlockTags.SAND) || Helpers.isBlock(blockstate, Tags.Blocks.GRAVEL)))
-        {
-            if (!level.isEmptyBlock(pos.below()))
-            {
-                return false;
-            }
-            else
-            {
-                boolean isValid = false;
-                for (Direction direction : Direction.Plane.HORIZONTAL)
-                {
-                    BlockState relativeState = level.getBlockState(pos.relative(direction));
-                    if (Helpers.isBlock(relativeState, TFCFBlocks.JOSHUA_TRUNK.get(wood).get()))
-                    {
-                        if (isValid)
-                        {
-                            return false;
-                        }
-
-                        isValid = true;
-                    }
-                    else if (!level.isEmptyBlock(pos.relative(direction)))
-                    {
-                        return false;
-                    }
-                }
-
-                return isValid;
-            }
-        }
-        else
-        {
-            return true;
-        }
-    }*/
 
     @Override
     @SuppressWarnings("deprecation")
@@ -538,13 +494,6 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         }
         return -1;
     }
-
-    /*protected boolean isEmptyBlock(LevelReader level, BlockPos pos)
-    {
-        return Helpers.isBlock(level.getBlockState(pos).getBlock(), TFCTags.Blocks.SINGLE_BLOCK_REPLACEABLE) || 
-            Helpers.isBlock(level.getBlockState(pos).getBlock(), BlockTags.REPLACEABLE_PLANTS) || 
-            level.getBlockState(pos).getBlock() == Blocks.AIR;
-    }*/
 
     protected boolean allNeighborsEmpty(LevelReader level, BlockPos pos, @Nullable Direction excludingSide)
     {

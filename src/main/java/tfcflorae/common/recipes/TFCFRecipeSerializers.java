@@ -22,6 +22,7 @@ public class TFCFRecipeSerializers
     public static final RegistryObject<KnappingRecipe.Serializer> EARTHENWARE_CLAY_KNAPPING = register("earthenware_clay_knapping", () -> new KnappingRecipe.Serializer(TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING));
     public static final RegistryObject<KnappingRecipe.Serializer> KAOLINITE_CLAY_KNAPPING = register("kaolinite_clay_knapping", () -> new KnappingRecipe.Serializer(TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING));
     public static final RegistryObject<KnappingRecipe.Serializer> STONEWARE_CLAY_KNAPPING = register("stoneware_clay_knapping", () -> new KnappingRecipe.Serializer(TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING));
+    public static final RegistryObject<KnappingRecipe.Serializer> FLINT_KNAPPING = register("flint_knapping", () -> new KnappingRecipe.Serializer(TFCFRecipeTypes.FLINT_KNAPPING));
 
     private static <S extends RecipeSerializer<?>> RegistryObject<S> register(String name, Supplier<S> factory)
     {

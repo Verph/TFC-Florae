@@ -128,7 +128,7 @@ public enum TFCFPlant implements RegistryPlant
     VENUS_FLYTRAP(BlockType.TFCF_STANDARD, 0.8F, false),
 
     // Cacti plants or something
-    BARREL_CACTUS(BlockType.FRUITING_CACTUS, 0F, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 0}, TFCFItems.FOOD.get(TFCFFood.BARREL_CACTUS_FRUIT), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT}, false),
+    BARREL_CACTUS(BlockType.FRUITING_CACTUS, 0F, new int[] {0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 0}, TFCFItems.FOOD.get(TFCFFood.BARREL_CACTUS_FRUIT), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT}, false, true),
     AFRICAN_MILK_BARREL(BlockType.SHORT_CACTUS, 0.2F, new int[] {0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0}, false),
     AFRICAN_MILK_TREE(BlockType.TFCF_CACTUS, 0.2F, new int[] {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0}, false),
     ALBANIAN_SPURGE(BlockType.SHORT_CACTUS, 0.2F, new int[] {0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0}, false),
@@ -137,7 +137,7 @@ public enum TFCFPlant implements RegistryPlant
     CARALLUMA(BlockType.SHORT_CACTUS, 0.2F, new int[] {0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0}, false),
     OCOTILLO(BlockType.TFCF_CACTUS, 0.2F, new int[] {0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0}, false),
     QUAQUA(BlockType.SHORT_CACTUS, 0.2F, new int[] {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1}, false),
-    PRICKLY_PEAR(BlockType.SHORT_FRUITING_CACTUS, 0F, new int[] {0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 0, 0}, TFCFItems.FOOD.get(TFCFFood.PRICKLY_PEAR), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FLOWERING, FRUITING, FRUITING, DORMANT, DORMANT}, false),
+    PRICKLY_PEAR(BlockType.SHORT_FRUITING_CACTUS, 0F, new int[] {0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 0, 0}, TFCFItems.FOOD.get(TFCFFood.PRICKLY_PEAR), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FLOWERING, FRUITING, FRUITING, DORMANT, DORMANT}, false, true),
 
     // Other vanilla plants
     //GLOW_LICHEN(BlockType.CREEPING_WATER, 0.7F, false),
@@ -148,8 +148,8 @@ public enum TFCFPlant implements RegistryPlant
     //AZALEA(BlockType.CREEPING, 0.7F, false),
 
     // Unique
-    GLOW_VINES_PLANT(BlockType.FRUITING_WEEPING, 1.0F, null, TFCFItems.FOOD.get(TFCFFood.GLOW_BERRY), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FRUITING, HEALTHY, DORMANT, DORMANT, DORMANT}, false), // Needs custom block
-    GLOW_VINES(BlockType.FRUITING_WEEPING_TOP, 1.0F, null, TFCFItems.FOOD.get(TFCFFood.GLOW_BERRY), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FRUITING, HEALTHY, DORMANT, DORMANT, DORMANT}, false), // Needs custom block
+    GLOW_VINES_PLANT(BlockType.FRUITING_WEEPING, 1.0F, null, TFCFItems.FOOD.get(TFCFFood.GLOW_BERRY), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FRUITING, HEALTHY, DORMANT, DORMANT, DORMANT}, false, true), // Needs custom block
+    GLOW_VINES(BlockType.FRUITING_WEEPING_TOP, 1.0F, null, TFCFItems.FOOD.get(TFCFFood.GLOW_BERRY), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FLOWERING, FRUITING, HEALTHY, DORMANT, DORMANT, DORMANT}, false, true), // Needs custom block
 
     // Fungi
     AMANITA(BlockType.FUNGI, 0.9F, false),
@@ -187,7 +187,7 @@ public enum TFCFPlant implements RegistryPlant
     @Nullable private final IntegerProperty property;
     public final int @Nullable[] stagesByMonth;
     public final BlockType type;
-    public Boolean isSeasonalFruitPlant;
+    public final boolean isSeasonalFruitPlant;
     public Supplier<? extends Item> productItem;
     public Lifecycle[] stages;
     public final boolean conifer;
@@ -214,12 +214,12 @@ public enum TFCFPlant implements RegistryPlant
         this.property = maxStage > 0 ? TFCBlockStateProperties.getStageProperty(maxStage) : null;
     }
 
-    TFCFPlant(BlockType type, float speedFactor, int @Nullable[] stagesByMonth, Supplier<? extends Item> productItem, Lifecycle[] stages, boolean conifer)
+    TFCFPlant(BlockType type, float speedFactor, int @Nullable[] stagesByMonth, Supplier<? extends Item> productItem, Lifecycle[] stages, boolean conifer, boolean isSeasonalFruitPlant)
     {
         this.type = type;
         this.speedFactor = speedFactor;
         this.stagesByMonth = stagesByMonth;
-        this.isSeasonalFruitPlant = true;
+        this.isSeasonalFruitPlant = isSeasonalFruitPlant;
         this.conifer = conifer;
         this.productItem = productItem;
 

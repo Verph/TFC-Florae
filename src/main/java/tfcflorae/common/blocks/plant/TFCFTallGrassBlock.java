@@ -51,7 +51,7 @@ public abstract class TFCFTallGrassBlock extends TFCTallGrassBlock
             LivingEntity livingEntity = (LivingEntity) entity;
             if (!livingEntity.isInvulnerableTo(DamageSource.MAGIC))
             {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.POISON, 400, 0));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 0));
             }
         }
     }

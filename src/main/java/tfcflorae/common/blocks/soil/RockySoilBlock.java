@@ -21,6 +21,8 @@ import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
 
+import tfcflorae.common.items.WalkingCaneItem;
+
 public class RockySoilBlock extends Block
 {
     @Nullable private final Supplier<? extends Block> transformsTo;
@@ -69,7 +71,7 @@ public class RockySoilBlock extends Block
                 return InteractionResult.SUCCESS;
             }
         }
-        else if (player.getItemInHand(hand).canPerformAction(ToolActions.HOE_TILL) && transformsFrom != null)
+        else if ((player.getItemInHand(hand).canPerformAction(ToolActions.HOE_TILL) || player.getItemInHand(hand).getItem() instanceof WalkingCaneItem) && transformsFrom != null)
         {
             final BlockState block = transformsFrom.get().defaultBlockState();
             level.setBlockAndUpdate(pos, block);

@@ -31,6 +31,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
@@ -46,6 +47,12 @@ public class TFCFItems
     // Ores
 
     public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCItemGroup.ORES);
+
+    // Rock Stuff
+
+    public static final Map<TFCFRock, RegistryObject<Item>> BRICKS = Helpers.mapOfKeys(TFCFRock.class, type ->
+        register("brick/" + type.name(), ROCK_STUFFS)
+    );
 
     // Food
 
@@ -204,9 +211,30 @@ public class TFCFItems
 
     // Tools
 
+    public static final Map<RockCategory, Map<RockCategory.ItemType, RegistryObject<Item>>> FLINT_TOOLS = flintToolMapper();
+
     public static final RegistryObject<Item> BRUSHES = register("tools/brush", () -> new BrushItem(new Item.Properties().tab(MISC).stacksTo(1).durability(250)));
+    public static final RegistryObject<Item> WALKING_CANES = register("tools/walking_cane", () -> new WalkingCaneItem(new Item.Properties().tab(MISC).stacksTo(1).durability(200)));
 
     // Fin
+
+    private static Map<RockCategory, Map<RockCategory.ItemType, RegistryObject<Item>>> flintToolMapper()
+    {
+        Map<RockCategory, Map<RockCategory.ItemType, RegistryObject<Item>>> Map = new HashMap<>();
+        for (RockCategory category : RockCategory.class.getEnumConstants())
+        {
+            if (category != RockCategory.SEDIMENTARY)
+                continue;
+
+            Map<RockCategory.ItemType, RegistryObject<Item>> subMap = new HashMap<>();
+            for (RockCategory.ItemType type : RockCategory.ItemType.values())
+            {
+                subMap.put(type, register("tools/" + type.name() + "/flint", () -> type.create(category)));
+            }
+            Map.put(category, subMap);
+        }
+        return Map;
+    }
 
     private static Map<TFCFWood, RegistryObject<Item>> lumberWoodMapper()
     {

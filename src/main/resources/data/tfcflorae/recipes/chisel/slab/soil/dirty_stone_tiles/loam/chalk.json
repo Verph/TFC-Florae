@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:chisel",
   "ingredient": "tfcflorae:dirty_stone_tiles/loam/chalk",
   "result": "tfcflorae:dirty_stone_tiles/loam/slab/chalk",

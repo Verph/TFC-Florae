@@ -7,4 +7,5 @@ public class TFCFContainerProviders
     public static final ItemStackContainerProvider EARTHENWARE_CLAY_KNAPPING = new ItemStackContainerProvider(TFCFContainerTypes::createEarthenwareClay);
     public static final ItemStackContainerProvider KAOLINITE_CLAY_KNAPPING = new ItemStackContainerProvider(TFCFContainerTypes::createKaoliniteClay);
     public static final ItemStackContainerProvider STONEWARE_CLAY_KNAPPING = new ItemStackContainerProvider(TFCFContainerTypes::createStonewareClay);
+    public static final ItemStackContainerProvider FLINT_KNAPPING = new ItemStackContainerProvider(TFCFContainerTypes::createFlint);
 }

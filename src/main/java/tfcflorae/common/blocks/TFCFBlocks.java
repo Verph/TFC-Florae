@@ -183,6 +183,8 @@ public class TFCFBlocks
     public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
     public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFCF_ROCK_DECORATIONS = RockDecoTFCFMapper(TFCFRock.class);
 
+    public static final RegistryObject<Block> LOOSE_FLINT = register("rock/loose/flint", () -> new LooseFlintBlock(Block.Properties.of(TFCMaterials.NON_SOLID_STONE).strength(0.05f, 0.0f).sound(SoundType.STONE).noCollission()), ROCK_STUFFS);
+
     // Wood
 
     public static final RegistryObject<Block> CHARRED_TREE_LOG = register("wood/log/charred_tree", () -> new LogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.TERRACOTTA_BLACK : MaterialColor.TERRACOTTA_BLACK).strength(8f).sound(TFCSounds.CHARCOAL).requiresCorrectToolForDrops().flammableLikeLogs(), TFCFBlocks.CHARRED_TREE_STRIPPED_LOG), WOOD);
@@ -301,7 +303,7 @@ public class TFCFBlocks
                 else if (type == BlockType.WOOD && wood.isFruitTree() && wood.hasFruitingLog())
                 {
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
+                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).randomTicks().strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.LARGE_FRUIT_TREE).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
                         wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
                 }
                 else if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
@@ -904,7 +906,7 @@ public class TFCFBlocks
             Map<Rock.BlockType, RegistryObject<Block>> typeMap = new HashMap<>();
             for (Rock.BlockType type : Rock.BlockType.values())
             {
-                if (type == Rock.BlockType.RAW || type == Rock.BlockType.HARDENED || type == Rock.BlockType.SPIKE)
+                if (type == Rock.BlockType.RAW || type == Rock.BlockType.HARDENED || type == Rock.BlockType.SPIKE || type == Rock.BlockType.LOOSE)
                 {
                     if (type == Rock.BlockType.SPIKE)
                     {

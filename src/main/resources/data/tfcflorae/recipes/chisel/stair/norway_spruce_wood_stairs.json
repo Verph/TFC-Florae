@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/norway_spruce",
-  "result": "tfcflorae:wood/planks/norway_spruce_stairs",
-  "mode": "stair"
-}

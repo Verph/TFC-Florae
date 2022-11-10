@@ -1,7 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/yellow_ipe",
-  "result": "tfcflorae:wood/planks/yellow_ipe_stairs",
-  "mode": "stair"
-}

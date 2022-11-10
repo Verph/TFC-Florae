@@ -7,11 +7,11 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.dries007.tfc.common.blockentities.TFCBlockEntity;
-import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.ICalendarTickable;
 
+import tfcflorae.common.blocks.wood.ISeasonalLeavesBlock;
 // todo: don't extend tick counter anymore
 public class FruitTreeBlockEntity extends TFCBlockEntity implements ICalendarTickable
 {
@@ -36,7 +36,7 @@ public class FruitTreeBlockEntity extends TFCBlockEntity implements ICalendarTic
     }
 
     /**
-     * @return The number of ticks since this bush block was ticked in {@link IBushBlock#onUpdate(Level, BlockPos, BlockState)}
+     * @return The number of ticks since this bush block was ticked in {@link ISeasonalLeavesBlock#onUpdate(Level, BlockPos, BlockState)}
      */
     public long getTicksSinceBushUpdate()
     {
@@ -65,7 +65,7 @@ public class FruitTreeBlockEntity extends TFCBlockEntity implements ICalendarTic
         if (level != null && ticks >= ICalendar.TICKS_IN_DAY)
         {
             final BlockState state = level.getBlockState(worldPosition);
-            if (state.getBlock() instanceof IBushBlock bush)
+            if (state.getBlock() instanceof ISeasonalLeavesBlock bush)
             {
                 bush.onUpdate(level, worldPosition, state); // Update the bush
                 lastUpdateTick = Calendars.SERVER.getTicks(); // And the current time
@@ -86,5 +86,10 @@ public class FruitTreeBlockEntity extends TFCBlockEntity implements ICalendarTic
     public void setLastUpdateTick(long tick)
     {
         lastTick = tick;
+    }
+
+    public void setLastBushTick(long ticks)
+    {
+        lastUpdateTick = ticks;
     }
 }

@@ -21,6 +21,7 @@ public class TFCFRecipeTypes
     public static final RegistryObject<RecipeType<KnappingRecipe>> EARTHENWARE_CLAY_KNAPPING = register("earthenware_clay_knapping");
     public static final RegistryObject<RecipeType<KnappingRecipe>> KAOLINITE_CLAY_KNAPPING = register("kaolinite_clay_knapping");
     public static final RegistryObject<RecipeType<KnappingRecipe>> STONEWARE_CLAY_KNAPPING = register("stoneware_clay_knapping");
+    public static final RegistryObject<RecipeType<KnappingRecipe>> FLINT_KNAPPING = register("flint_knapping");
 
     private static <R extends Recipe<?>> RegistryObject<RecipeType<R>> register(String name)
     {
