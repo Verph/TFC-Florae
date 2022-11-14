@@ -4,7 +4,9 @@
 	"package": "tfcflorae.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"world.river.WatershedMixin",
 		"world.biome.TFCBiomesMixin",
+		"world.layer.MergeRiverLayerMixin",
 		"world.layer.TFCLayersMixin",
 		"accessor.TreeDecoratorTypeAccessor",
 		"accessor.TreeFeatureAccessor",

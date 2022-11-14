@@ -219,11 +219,6 @@ public class TFCFPointedDripstoneBlock extends PointedDripstoneBlock implements 
         }
     }
 
-    /**
-     * @deprecated call via {@link
-     * net.minecraft.world.level.block.state.BlockBehavior.BlockStateBase#getPistonPushReaction} whenever possible.
-     * Implementing/overriding is fine.
-     */
     @Override
     @SuppressWarnings("deprecation")
     public PushReaction getPistonPushReaction(BlockState pState)

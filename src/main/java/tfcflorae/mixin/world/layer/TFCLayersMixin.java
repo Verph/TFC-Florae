@@ -386,44 +386,26 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return mainLayer;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static AreaFactory createOverworldBiomeLayerWithRivers(long seed, Watershed.Context watersheds, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
-    {
-        return new MergeRiverLayer(watersheds).apply(seed, createOverworldBiomeLayer(seed, plateArtist, layerArtist));
-    }
-
-    /*@Shadow @Mutable @Final
-    public static AreaFactory createOverworldForestLayer(long seed, IArtist<AreaFactory> artist)
     {
         final Random random = new Random(seed);
 
-        AreaFactory layer;
+        AreaFactory riverLayer;
 
-        layer = new ForestInitLayer(new OpenSimplex2D(random.nextInt()).spread(0.3f)).apply(random.nextLong());
-        artist.draw("forest", 1, layer);
-        layer = ForestRandomizeLayer.INSTANCE.apply(random.nextLong(), layer);
-        artist.draw("forest", 2, layer);
-        layer = ZoomLayer.FUZZY.apply(random.nextLong(), layer);
-        artist.draw("forest", 3, layer);
-        layer = ForestRandomizeLayer.INSTANCE.apply(random.nextLong(), layer);
-        artist.draw("forest", 4, layer);
-        layer = ZoomLayer.FUZZY.apply(random.nextLong(), layer);
-        artist.draw("forest", 5, layer);
-        layer = ZoomLayer.NORMAL.apply(random.nextLong(), layer);
-        artist.draw("forest", 6, layer);
-        layer = ForestEdgeLayer.INSTANCE.apply(random.nextLong(), layer);
-        artist.draw("forest", 7, layer);
-        layer = ForestRandomizeSmallLayer.INSTANCE.apply(random.nextLong(), layer);
-        artist.draw("forest", 8, layer);
+        riverLayer = new MergeRiverLayer(watersheds).apply(seed, createOverworldBiomeLayer(seed, plateArtist, layerArtist));
+        /*layerArtist.draw("river", 1, riverLayer);
+        riverLayer = ZoomLayer.NORMAL.apply(1002, riverLayer);
+        layerArtist.draw("river", 2, riverLayer);
+        riverLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), riverLayer);
+        layerArtist.draw("river", 3, riverLayer);
+        riverLayer = ZoomLayer.NORMAL.apply(1003, riverLayer);
+        layerArtist.draw("river", 4, riverLayer);
+        riverLayer = SmoothLayer.INSTANCE.apply(random.nextLong(), riverLayer);
+        layerArtist.draw("river", 5, riverLayer);*/
 
-        for (int i = 0; i < 2; i++)
-        {
-            layer = ZoomLayer.NORMAL.apply(random.nextLong(), layer);
-            artist.draw("forest", 9 + i, layer);
-        }
-
-        return layer;
-    }*/
+        return riverLayer;
+    }
 
     @Shadow
     public static TypedAreaFactory<Plate> createEarlyPlateLayers(long seed)

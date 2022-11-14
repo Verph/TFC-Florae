@@ -30,6 +30,7 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
+import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
@@ -37,12 +38,11 @@ import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
 
 import static net.dries007.tfc.common.TFCItemGroup.*;
-import static tfcflorae.TFCFlorae.MOD_ID;
 
 @SuppressWarnings("unused")
 public class TFCFItems
 {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, tfcflorae.TFCFlorae.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TFCFlorae.MOD_ID);
 
     // Ores
 
