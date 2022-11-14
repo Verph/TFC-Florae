@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/boninite",
+  "result": "tfcflorae:rocky_compact_dirt/humus/stairs/boninite",
+  "mode": "stair"
+}

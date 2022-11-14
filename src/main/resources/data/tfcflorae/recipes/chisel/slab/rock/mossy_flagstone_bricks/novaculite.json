@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/novaculite",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/slab/novaculite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/slab/novaculite"
+  }
+}

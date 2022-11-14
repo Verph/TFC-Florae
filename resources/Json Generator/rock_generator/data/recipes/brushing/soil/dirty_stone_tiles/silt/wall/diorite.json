@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/wall/diorite",
+  "result": "tfcflorae:rock/stone_tiles/wall/diorite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

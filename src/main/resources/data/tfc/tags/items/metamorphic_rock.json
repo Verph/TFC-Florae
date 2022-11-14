@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/cataclasite",
+    "tfcflorae:rock/loose/blueschist",
+    "tfcflorae:rock/loose/catlinite",
+    "tfcflorae:rock/loose/greenschist",
+    "tfcflorae:rock/loose/novaculite",
+    "tfcflorae:rock/loose/soapstone",
+    "tfcflorae:rock/loose/komatiite",
+    "tfcflorae:rock/loose/mylonite"
+  ]
+}

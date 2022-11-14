@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mountain_ash",
+  "result": "tfcflorae:wood/stairs/mountain_ash",
+  "mode": "stair"
+}

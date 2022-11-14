@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:flint_knapping",
+  "outside_slot_required": false,
+  "pattern": [
+    "XXXXX",
+    "   XX"
+  ],
+  "result": {
+    "item": "tfcflorae:tools/hoe_head/flint"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:flint_knapping"
+  }
+}

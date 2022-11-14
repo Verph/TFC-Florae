@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/yellow_meranti",
+    "base": "tfcflorae:block/wood/lectern/base/yellow_meranti",
+    "front": "tfcflorae:block/wood/lectern/front/yellow_meranti",
+    "sides": "tfcflorae:block/wood/lectern/sides/yellow_meranti",
+    "top": "tfcflorae:block/wood/lectern/top/yellow_meranti",
+    "particle": "tfcflorae:block/wood/lectern/sides/yellow_meranti"
+  }
+}

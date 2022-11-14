@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/zebrawood",
+  "result": "tfcflorae:wood/stairs/zebrawood",
+  "mode": "stair"
+}

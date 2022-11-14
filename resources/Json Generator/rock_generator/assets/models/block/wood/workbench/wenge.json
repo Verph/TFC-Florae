@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/wenge",
+    "north": "tfcflorae:block/wood/workbench/front/wenge",
+    "south": "tfcflorae:block/wood/workbench/side/wenge",
+    "east": "tfcflorae:block/wood/workbench/side/wenge",
+    "west": "tfcflorae:block/wood/workbench/front/wenge",
+    "up": "tfcflorae:block/wood/workbench/top/wenge",
+    "down": "tfcflorae:block/wood/planks/wenge"
+  }
+}

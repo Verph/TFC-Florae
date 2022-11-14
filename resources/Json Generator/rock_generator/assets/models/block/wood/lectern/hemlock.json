@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/hemlock",
+    "base": "tfcflorae:block/wood/lectern/base/hemlock",
+    "front": "tfcflorae:block/wood/lectern/front/hemlock",
+    "sides": "tfcflorae:block/wood/lectern/sides/hemlock",
+    "top": "tfcflorae:block/wood/lectern/top/hemlock",
+    "particle": "tfcflorae:block/wood/lectern/sides/hemlock"
+  }
+}

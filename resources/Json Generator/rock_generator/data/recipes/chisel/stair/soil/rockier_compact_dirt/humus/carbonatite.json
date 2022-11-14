@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/carbonatite",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/carbonatite",
+  "mode": "stair"
+}

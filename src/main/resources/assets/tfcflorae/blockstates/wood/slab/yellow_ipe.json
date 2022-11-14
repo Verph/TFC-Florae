@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/yellow_ipe"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/yellow_ipe_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/yellow_ipe"
+    }
+  }
+}

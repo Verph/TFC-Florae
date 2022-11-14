@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/kauri"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/kauri"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/kauri",
+    "count": 8
+  }
+}

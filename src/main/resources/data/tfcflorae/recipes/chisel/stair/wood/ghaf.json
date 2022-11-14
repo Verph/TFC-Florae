@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ghaf",
+  "result": "tfcflorae:wood/stairs/ghaf",
+  "mode": "stair"
+}

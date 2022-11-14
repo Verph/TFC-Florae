@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/persimmon",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/persimmon"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/persimmon",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/persimmon",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/red_elm",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/red_elm",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/red_elm",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/red_elm",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/red_elm",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/red_elm",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/red_elm"
+  },
+  "render_type": "solid"
+}

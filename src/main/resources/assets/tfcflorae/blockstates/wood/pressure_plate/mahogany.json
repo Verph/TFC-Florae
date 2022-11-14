@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/mahogany"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/mahogany_down"
+    }
+  }
+}

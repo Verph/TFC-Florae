@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/catlinite",
+  "result": "tfcflorae:rock/stone_tiles/slab/catlinite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/catlinite"
+  }
+}

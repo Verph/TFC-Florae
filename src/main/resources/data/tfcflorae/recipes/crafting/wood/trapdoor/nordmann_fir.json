@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/nordmann_fir"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/trapdoor/nordmann_fir",
+    "count": 3
+  }
+}

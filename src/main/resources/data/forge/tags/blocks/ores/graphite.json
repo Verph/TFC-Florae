@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/graphite/red_granite",
+    "tfcflorae:ore/graphite/breccia",
+    "tfcflorae:ore/graphite/foidolite",
+    "tfcflorae:ore/graphite/porphyry",
+    "tfcflorae:ore/graphite/peridotite",
+    "tfcflorae:ore/graphite/blaimorite",
+    "tfcflorae:ore/graphite/boninite",
+    "tfcflorae:ore/graphite/carbonatite",
+    "tfcflorae:ore/graphite/laterite",
+    "tfcflorae:ore/graphite/mudstone",
+    "tfcflorae:ore/graphite/sandstone",
+    "tfcflorae:ore/graphite/siltstone",
+    "tfcflorae:ore/graphite/arkose",
+    "tfcflorae:ore/graphite/jaspillite",
+    "tfcflorae:ore/graphite/travertine",
+    "tfcflorae:ore/graphite/wackestone",
+    "tfcflorae:ore/graphite/blackband_ironstone",
+    "tfcflorae:ore/graphite/cataclasite",
+    "tfcflorae:ore/graphite/blueschist",
+    "tfcflorae:ore/graphite/catlinite",
+    "tfcflorae:ore/graphite/greenschist",
+    "tfcflorae:ore/graphite/novaculite",
+    "tfcflorae:ore/graphite/soapstone",
+    "tfcflorae:ore/graphite/komatiite",
+    "tfcflorae:ore/graphite/mylonite"
+  ]
+}

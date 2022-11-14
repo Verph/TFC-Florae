@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/gabbro",
+  "result": "tfcflorae:pebble_compact_dirt/humus/slab/gabbro",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/slab/gabbro"
+  }
+}

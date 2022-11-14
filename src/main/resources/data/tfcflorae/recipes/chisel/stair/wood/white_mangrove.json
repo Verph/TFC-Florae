@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_mangrove",
+  "result": "tfcflorae:wood/stairs/white_mangrove",
+  "mode": "stair"
+}

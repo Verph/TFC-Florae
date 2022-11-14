@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/novaculite",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/stairs/novaculite",
+  "mode": "stair"
+}

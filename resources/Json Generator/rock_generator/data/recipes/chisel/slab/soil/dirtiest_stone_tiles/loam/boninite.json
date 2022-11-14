@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/loam/boninite",
+  "result": "tfcflorae:dirtiest_stone_tiles/loam/slab/boninite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/slab/boninite"
+  }
+}

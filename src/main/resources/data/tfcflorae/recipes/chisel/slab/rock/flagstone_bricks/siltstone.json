@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/siltstone",
+  "result": "tfcflorae:rock/flagstone_bricks/slab/siltstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone_bricks/slab/siltstone"
+  }
+}

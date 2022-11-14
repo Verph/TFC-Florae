@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/rubber_fig"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/rubber_fig"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/rubber_fig",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/conglomerate",
+  "result": "tfcflorae:rock/flagstone_bricks/slab/conglomerate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone_bricks/slab/conglomerate"
+  }
+}

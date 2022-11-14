@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/horizontal",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/alder",
+    "particle": "tfcflorae:block/wood/sheet/alder"
+  }
+}

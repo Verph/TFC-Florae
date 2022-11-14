@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/messmate",
+    "planks": "tfcflorae:block/wood/planks/messmate",
+    "sheet": "tfcflorae:block/wood/sheet/messmate",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

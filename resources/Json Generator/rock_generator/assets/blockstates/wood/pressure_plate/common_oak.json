@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/common_oak"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/common_oak_down"
+    }
+  }
+}

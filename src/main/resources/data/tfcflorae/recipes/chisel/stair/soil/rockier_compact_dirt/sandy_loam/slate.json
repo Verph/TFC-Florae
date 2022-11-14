@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/sandy_loam/slate",
+  "result": "tfcflorae:rockier_compact_dirt/sandy_loam/stairs/slate",
+  "mode": "stair"
+}

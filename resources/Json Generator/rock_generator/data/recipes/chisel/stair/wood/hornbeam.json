@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/hornbeam",
+  "result": "tfcflorae:wood/stairs/hornbeam",
+  "mode": "stair"
+}

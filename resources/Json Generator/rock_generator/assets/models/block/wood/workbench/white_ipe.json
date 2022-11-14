@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/white_ipe",
+    "north": "tfcflorae:block/wood/workbench/front/white_ipe",
+    "south": "tfcflorae:block/wood/workbench/side/white_ipe",
+    "east": "tfcflorae:block/wood/workbench/side/white_ipe",
+    "west": "tfcflorae:block/wood/workbench/front/white_ipe",
+    "up": "tfcflorae:block/wood/workbench/top/white_ipe",
+    "down": "tfcflorae:block/wood/planks/white_ipe"
+  }
+}

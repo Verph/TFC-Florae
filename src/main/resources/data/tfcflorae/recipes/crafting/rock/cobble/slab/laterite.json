@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/cobble/laterite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/cobble/slab/laterite",
+    "count": 6
+  }
+}

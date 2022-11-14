@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/sorb"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/sorb"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/sorb",
+    "count": 2
+  }
+}

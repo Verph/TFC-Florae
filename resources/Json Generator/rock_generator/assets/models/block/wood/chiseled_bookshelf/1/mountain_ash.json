@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/mountain_ash",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/mountain_ash",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/mountain_ash",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/mountain_ash",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/mountain_ash",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/mountain_ash",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/mountain_ash"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/syzygium",
+  "result": "tfcflorae:wood/stairs/syzygium",
+  "mode": "stair"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/silt/phyllite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/wall/phyllite",
+    "count": 6
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/juniper"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/juniper"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/juniper"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/juniper"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/juniper"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/juniper",
+    "count": 1
+  }
+}

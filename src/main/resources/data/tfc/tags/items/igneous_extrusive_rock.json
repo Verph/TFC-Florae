@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/porphyry",
+    "tfcflorae:rock/loose/peridotite",
+    "tfcflorae:rock/loose/blaimorite",
+    "tfcflorae:rock/loose/boninite",
+    "tfcflorae:rock/loose/carbonatite"
+  ]
+}

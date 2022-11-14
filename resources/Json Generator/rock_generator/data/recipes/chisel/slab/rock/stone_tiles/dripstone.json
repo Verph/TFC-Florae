@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/dripstone",
+  "result": "tfcflorae:rock/stone_tiles/slab/dripstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/dripstone"
+  }
+}

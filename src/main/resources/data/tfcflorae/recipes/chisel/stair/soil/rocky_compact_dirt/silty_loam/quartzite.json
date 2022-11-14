@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silty_loam/quartzite",
+  "result": "tfcflorae:rocky_compact_dirt/silty_loam/stairs/quartzite",
+  "mode": "stair"
+}

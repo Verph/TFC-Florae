@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/sandy_loam/blaimorite",
+  "result": "tfcflorae:rockiest_compact_dirt/sandy_loam/stairs/blaimorite",
+  "mode": "stair"
+}

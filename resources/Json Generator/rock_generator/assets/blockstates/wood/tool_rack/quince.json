@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/quince",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/quince",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/quince"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/quince",
+      "y": 90
+    }
+  }
+}

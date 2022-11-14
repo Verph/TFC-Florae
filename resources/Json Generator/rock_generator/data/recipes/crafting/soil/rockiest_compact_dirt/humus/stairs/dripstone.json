@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/humus/dripstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/stairs/dripstone",
+    "count": 8
+  }
+}

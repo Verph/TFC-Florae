@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mulberry",
+  "result": "tfcflorae:wood/slab/mulberry",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/mulberry"
+  }
+}

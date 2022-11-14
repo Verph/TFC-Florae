@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/stripped_log_top/common_oak",
+    "side": "tfcflorae:block/wood/stripped_log/common_oak"
+  }
+}

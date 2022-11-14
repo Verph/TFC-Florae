@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/sandy_loam/catlinite",
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/catlinite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/catlinite"
+  }
+}

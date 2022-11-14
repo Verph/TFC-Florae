@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/sandy_loam/foidolite",
+  "result": "tfcflorae:rockiest_compact_dirt/sandy_loam/stairs/foidolite",
+  "mode": "stair"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/silt/soapstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/stairs/soapstone",
+    "count": 8
+  }
+}

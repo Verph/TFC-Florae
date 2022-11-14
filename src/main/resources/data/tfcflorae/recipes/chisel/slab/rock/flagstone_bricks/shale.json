@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/shale",
+  "result": "tfcflorae:rock/flagstone_bricks/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone_bricks/slab/shale"
+  }
+}

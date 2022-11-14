@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/red_granite",
+  "result": "tfcflorae:rocky_compact_dirt/humus/slab/red_granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/slab/red_granite"
+  }
+}

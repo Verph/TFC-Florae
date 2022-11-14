@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/dacite",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/dacite",
+  "mode": "stair"
+}

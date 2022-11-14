@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/dripstone",
+  "result": "tfcflorae:rock/stone_tiles/stairs/dripstone",
+  "mode": "stair"
+}

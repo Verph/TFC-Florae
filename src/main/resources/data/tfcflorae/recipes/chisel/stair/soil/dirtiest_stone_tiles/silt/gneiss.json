@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silt/gneiss",
+  "result": "tfcflorae:dirtiest_stone_tiles/silt/stairs/gneiss",
+  "mode": "stair"
+}

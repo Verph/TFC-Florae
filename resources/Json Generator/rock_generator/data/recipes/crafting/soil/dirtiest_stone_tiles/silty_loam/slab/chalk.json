@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/chalk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/chalk",
+    "count": 6
+  }
+}

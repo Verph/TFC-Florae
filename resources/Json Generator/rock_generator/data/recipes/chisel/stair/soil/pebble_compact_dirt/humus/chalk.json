@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/chalk",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/chalk",
+  "mode": "stair"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/red_cedar",
+    "count": 8
+  }
+}

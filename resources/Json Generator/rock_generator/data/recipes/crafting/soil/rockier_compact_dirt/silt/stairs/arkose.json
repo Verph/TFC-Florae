@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/silt/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/stairs/arkose",
+    "count": 8
+  }
+}

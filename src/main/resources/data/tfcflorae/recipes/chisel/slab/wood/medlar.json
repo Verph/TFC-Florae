@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/medlar",
+  "result": "tfcflorae:wood/slab/medlar",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/medlar"
+  }
+}

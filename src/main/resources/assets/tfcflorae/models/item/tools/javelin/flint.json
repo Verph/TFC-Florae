@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "loader": "forge:separate-perspective",
+  "gui_light": "front",
+  "overrides": [
+    {
+      "predicate": {
+        "tfc:throwing": 1
+      },
+      "model": "tfcflorae:item/tools/javelin/flint_throwing"
+    }
+  ],
+  "base": {
+    "parent": "tfcflorae:item/tools/javelin/flint_in_hand"
+  },
+  "perspectives": {
+    "none": {
+      "parent": "tfcflorae:item/tools/javelin/flint_gui"
+    },
+    "fixed": {
+      "parent": "tfcflorae:item/tools/javelin/flint_gui"
+    },
+    "ground": {
+      "parent": "tfcflorae:item/tools/javelin/flint_gui"
+    },
+    "gui": {
+      "parent": "tfcflorae:item/tools/javelin/flint_gui"
+    }
+  }
+}

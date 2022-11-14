@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/loam/chert",
+  "result": "tfcflorae:rocky_compact_dirt/loam/stairs/chert",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/catlinite",
+  "result": "tfcflorae:rock/flagstone_bricks/stairs/catlinite",
+  "mode": "stair"
+}

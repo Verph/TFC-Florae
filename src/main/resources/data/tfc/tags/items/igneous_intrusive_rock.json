@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/red_granite",
+    "tfcflorae:rock/loose/breccia",
+    "tfcflorae:rock/loose/foidolite"
+  ]
+}

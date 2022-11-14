@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/sorb",
+  "result": "tfcflorae:wood/slab/sorb",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/sorb"
+  }
+}

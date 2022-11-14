@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/siltstone",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/siltstone",
+  "mode": "stair"
+}

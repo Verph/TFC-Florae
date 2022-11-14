@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/loam/gabbro"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/stairs/gabbro",
+    "count": 8
+  }
+}

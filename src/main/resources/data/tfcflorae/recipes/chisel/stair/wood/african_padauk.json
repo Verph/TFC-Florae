@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/african_padauk",
+  "result": "tfcflorae:wood/stairs/african_padauk",
+  "mode": "stair"
+}

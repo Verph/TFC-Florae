@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silt/blueschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/stairs/blueschist",
+    "count": 8
+  }
+}

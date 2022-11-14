@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/argyle_eucalyptus",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/argyle_eucalyptus",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/argyle_eucalyptus",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/argyle_eucalyptus",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/argyle_eucalyptus",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/argyle_eucalyptus",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/argyle_eucalyptus"
+  },
+  "render_type": "solid"
+}

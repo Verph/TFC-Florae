@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/dripstone",
+  "result": "tfcflorae:rocky_compact_dirt/humus/stairs/dripstone",
+  "mode": "stair"
+}

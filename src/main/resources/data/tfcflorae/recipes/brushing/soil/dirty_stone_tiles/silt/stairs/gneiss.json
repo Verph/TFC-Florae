@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/stairs/gneiss",
+  "result": "tfcflorae:rock/stone_tiles/stairs/gneiss",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

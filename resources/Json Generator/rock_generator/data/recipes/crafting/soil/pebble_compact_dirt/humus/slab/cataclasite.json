@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/humus/cataclasite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/slab/cataclasite",
+    "count": 6
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/limestone",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/limestone",
+  "mode": "stair"
+}

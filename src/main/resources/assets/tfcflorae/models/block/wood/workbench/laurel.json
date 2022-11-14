@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/laurel",
+    "north": "tfcflorae:block/wood/workbench/front/laurel",
+    "south": "tfcflorae:block/wood/workbench/side/laurel",
+    "east": "tfcflorae:block/wood/workbench/side/laurel",
+    "west": "tfcflorae:block/wood/workbench/front/laurel",
+    "up": "tfcflorae:block/wood/workbench/top/laurel",
+    "down": "tfcflorae:block/wood/planks/laurel"
+  }
+}

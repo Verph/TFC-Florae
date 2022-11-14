@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/pink_ivory",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/pink_ivory"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/pink_ivory",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/pink_ivory",
+        "y": 270
+      }
+    ]
+  }
+}

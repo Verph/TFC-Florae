@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/rubber_fig",
+    "base": "tfcflorae:block/wood/lectern/base/rubber_fig",
+    "front": "tfcflorae:block/wood/lectern/front/rubber_fig",
+    "sides": "tfcflorae:block/wood/lectern/sides/rubber_fig",
+    "top": "tfcflorae:block/wood/lectern/top/rubber_fig",
+    "particle": "tfcflorae:block/wood/lectern/sides/rubber_fig"
+  }
+}

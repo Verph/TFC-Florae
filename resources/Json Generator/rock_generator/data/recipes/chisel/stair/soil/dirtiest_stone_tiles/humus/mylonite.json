@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/mylonite",
+  "result": "tfcflorae:dirtiest_stone_tiles/humus/stairs/mylonite",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/conglomerate",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/conglomerate",
+  "mode": "stair"
+}

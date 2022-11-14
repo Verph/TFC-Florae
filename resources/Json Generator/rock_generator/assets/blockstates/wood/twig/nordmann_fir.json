@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/nordmann_fir",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/nordmann_fir"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/nordmann_fir",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/nordmann_fir",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/rowan",
+    "north": "tfcflorae:block/wood/workbench/front/rowan",
+    "south": "tfcflorae:block/wood/workbench/side/rowan",
+    "east": "tfcflorae:block/wood/workbench/side/rowan",
+    "west": "tfcflorae:block/wood/workbench/front/rowan",
+    "up": "tfcflorae:block/wood/workbench/top/rowan",
+    "down": "tfcflorae:block/wood/planks/rowan"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/catlinite",
+  "result": "tfcflorae:dirty_stone_tiles/loam/stairs/catlinite",
+  "mode": "stair"
+}

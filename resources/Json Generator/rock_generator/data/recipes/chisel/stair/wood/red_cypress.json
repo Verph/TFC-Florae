@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/red_cypress",
+  "result": "tfcflorae:wood/stairs/red_cypress",
+  "mode": "stair"
+}

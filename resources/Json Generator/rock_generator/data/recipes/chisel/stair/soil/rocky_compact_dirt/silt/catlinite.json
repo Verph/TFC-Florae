@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/catlinite",
+  "result": "tfcflorae:rocky_compact_dirt/silt/stairs/catlinite",
+  "mode": "stair"
+}

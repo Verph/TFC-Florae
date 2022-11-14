@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/rainbow_eucalyptus"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/rainbow_eucalyptus_down"
+    }
+  }
+}

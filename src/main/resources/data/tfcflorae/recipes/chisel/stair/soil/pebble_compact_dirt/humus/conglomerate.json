@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/conglomerate",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/conglomerate",
+  "mode": "stair"
+}

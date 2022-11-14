@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/locust",
+    "north": "tfcflorae:block/wood/workbench/front/locust",
+    "south": "tfcflorae:block/wood/workbench/side/locust",
+    "east": "tfcflorae:block/wood/workbench/side/locust",
+    "west": "tfcflorae:block/wood/workbench/front/locust",
+    "up": "tfcflorae:block/wood/workbench/top/locust",
+    "down": "tfcflorae:block/wood/planks/locust"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "variants": {
+    "facing=north,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove"
+    },
+    "facing=east,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove"
+    },
+    "facing=east,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove"
+    },
+    "facing=east,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove"
+    },
+    "facing=east,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove"
+    },
+    "facing=east,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove"
+    },
+    "facing=east,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/red_mangrove",
+      "x": 90
+    },
+    "facing=north,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove"
+    },
+    "facing=east,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove",
+      "y": 90
+    },
+    "facing=south,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove",
+      "y": 180
+    },
+    "facing=west,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove",
+      "y": 270
+    },
+    "facing=up,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove",
+      "x": 270
+    },
+    "facing=down,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/red_mangrove",
+      "x": 90
+    }
+  }
+}

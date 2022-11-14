@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/ebony",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/ebony",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/ebony",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/ebony",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/ebony",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/ebony",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/ebony"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/loam/andesite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/stairs/andesite",
+    "count": 8
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/joshua",
+    "base": "tfcflorae:block/wood/lectern/base/joshua",
+    "front": "tfcflorae:block/wood/lectern/front/joshua",
+    "sides": "tfcflorae:block/wood/lectern/sides/joshua",
+    "top": "tfcflorae:block/wood/lectern/top/joshua",
+    "particle": "tfcflorae:block/wood/lectern/sides/joshua"
+  }
+}

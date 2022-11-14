@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/medlar",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/medlar",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/medlar",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/medlar",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/medlar",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/medlar",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/medlar"
+  },
+  "render_type": "solid"
+}

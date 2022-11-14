@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/basalt",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/basalt",
+  "mode": "stair"
+}

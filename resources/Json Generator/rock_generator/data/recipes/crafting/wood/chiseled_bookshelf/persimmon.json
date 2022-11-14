@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/persimmon"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/persimmon"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/persimmon"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/persimmon"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/persimmon",
+    "count": 1
+  }
+}

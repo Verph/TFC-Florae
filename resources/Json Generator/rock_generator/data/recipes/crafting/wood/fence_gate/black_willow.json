@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/black_willow"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/black_willow"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/black_willow",
+    "count": 2
+  }
+}

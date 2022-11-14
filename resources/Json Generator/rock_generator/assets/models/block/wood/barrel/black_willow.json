@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/black_willow",
+    "planks": "tfcflorae:block/wood/planks/black_willow",
+    "sheet": "tfcflorae:block/wood/sheet/black_willow",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

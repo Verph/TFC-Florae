@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/cobble/mylonite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/cobble/stairs/mylonite",
+    "count": 8
+  }
+}

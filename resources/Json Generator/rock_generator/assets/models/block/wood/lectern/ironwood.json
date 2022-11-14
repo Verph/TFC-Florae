@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/ironwood",
+    "base": "tfcflorae:block/wood/lectern/base/ironwood",
+    "front": "tfcflorae:block/wood/lectern/front/ironwood",
+    "sides": "tfcflorae:block/wood/lectern/sides/ironwood",
+    "top": "tfcflorae:block/wood/lectern/top/ironwood",
+    "particle": "tfcflorae:block/wood/lectern/sides/ironwood"
+  }
+}

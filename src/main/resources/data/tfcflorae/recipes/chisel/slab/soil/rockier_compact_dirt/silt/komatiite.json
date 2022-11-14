@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/komatiite",
+  "result": "tfcflorae:rockier_compact_dirt/silt/slab/komatiite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/slab/komatiite"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/butternut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/butternut",
+    "count": 8
+  }
+}

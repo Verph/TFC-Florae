@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/angelim",
+    "north": "tfcflorae:block/wood/workbench/front/angelim",
+    "south": "tfcflorae:block/wood/workbench/side/angelim",
+    "east": "tfcflorae:block/wood/workbench/side/angelim",
+    "west": "tfcflorae:block/wood/workbench/front/angelim",
+    "up": "tfcflorae:block/wood/workbench/top/angelim",
+    "down": "tfcflorae:block/wood/planks/angelim"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/normal_magnetite/blackband_ironstone",
+  "result": "tfcflorae:ore/poor_magnetite/blackband_ironstone"
+}

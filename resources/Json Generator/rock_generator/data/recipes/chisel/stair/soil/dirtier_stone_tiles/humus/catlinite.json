@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/catlinite",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/catlinite",
+  "mode": "stair"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/log_top/purple_ipe",
+    "side": "tfcflorae:block/wood/log/purple_ipe"
+  }
+}

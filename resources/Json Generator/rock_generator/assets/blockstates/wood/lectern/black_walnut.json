@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/black_walnut",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/black_walnut"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/black_walnut",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/black_walnut",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/white_elm",
+    "base": "tfcflorae:block/wood/lectern/base/white_elm",
+    "front": "tfcflorae:block/wood/lectern/front/white_elm",
+    "sides": "tfcflorae:block/wood/lectern/sides/white_elm",
+    "top": "tfcflorae:block/wood/lectern/top/white_elm",
+    "particle": "tfcflorae:block/wood/lectern/sides/white_elm"
+  }
+}

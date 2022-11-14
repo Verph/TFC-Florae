@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_cherry_blossom",
+  "result": "tfcflorae:wood/slab/white_cherry_blossom",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/white_cherry_blossom"
+  }
+}

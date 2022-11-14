@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/larch",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/larch",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/larch",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/larch",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/larch",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/larch",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/larch"
+  },
+  "render_type": "solid"
+}

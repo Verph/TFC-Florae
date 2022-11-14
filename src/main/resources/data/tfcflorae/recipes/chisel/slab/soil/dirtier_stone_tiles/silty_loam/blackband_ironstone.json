@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silty_loam/blackband_ironstone",
+  "result": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/blackband_ironstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/blackband_ironstone"
+  }
+}

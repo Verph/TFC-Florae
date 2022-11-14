@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/blackband_ironstone",
+  "result": "tfcflorae:rocky_compact_dirt/silt/stairs/blackband_ironstone",
+  "mode": "stair"
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/log/joshua"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/log/joshua",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/log/joshua",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

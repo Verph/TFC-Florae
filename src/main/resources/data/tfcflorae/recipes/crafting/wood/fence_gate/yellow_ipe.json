@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/yellow_ipe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/yellow_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/yellow_ipe",
+    "count": 2
+  }
+}

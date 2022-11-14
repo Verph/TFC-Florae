@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/hemlock"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/hemlock"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/hemlock"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/hemlock",
+    "count": 1
+  }
+}

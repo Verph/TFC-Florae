@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/marble"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/wall/marble",
+    "count": 6
+  }
+}

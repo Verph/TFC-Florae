@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/poplar",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/poplar"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/poplar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/poplar",
+      "y": 270
+    }
+  }
+}

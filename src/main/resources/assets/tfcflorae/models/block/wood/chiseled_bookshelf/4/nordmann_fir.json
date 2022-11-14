@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/nordmann_fir",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/nordmann_fir",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/4/nordmann_fir",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/nordmann_fir",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/nordmann_fir",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/nordmann_fir",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/nordmann_fir"
+  },
+  "render_type": "solid"
+}

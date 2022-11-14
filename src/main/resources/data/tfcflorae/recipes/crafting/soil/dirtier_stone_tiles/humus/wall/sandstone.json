@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/humus/sandstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/wall/sandstone",
+    "count": 6
+  }
+}

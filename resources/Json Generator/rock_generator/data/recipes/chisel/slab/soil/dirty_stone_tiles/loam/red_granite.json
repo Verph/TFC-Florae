@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/red_granite",
+  "result": "tfcflorae:dirty_stone_tiles/loam/slab/red_granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/loam/slab/red_granite"
+  }
+}

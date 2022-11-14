@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/wood/chestnut"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/chestnut"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/chestnut",
+    "count": 8
+  }
+}

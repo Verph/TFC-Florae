@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/schist",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/slab/schist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/schist"
+  }
+}

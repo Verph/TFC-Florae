@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/snow_gum_eucalyptus",
+  "result": "tfcflorae:wood/slab/snow_gum_eucalyptus",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/snow_gum_eucalyptus"
+  }
+}

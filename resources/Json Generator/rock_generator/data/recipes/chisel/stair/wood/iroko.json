@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/iroko",
+  "result": "tfcflorae:wood/stairs/iroko",
+  "mode": "stair"
+}

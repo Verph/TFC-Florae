@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/siltstone",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/siltstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/siltstone"
+  }
+}

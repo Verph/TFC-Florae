@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F B",
+    "XXX",
+    "Y Y"
+  ],
+  "key": {
+    "F": {
+      "tag": "forge:feathers"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "X": {
+      "item": "tfcflorae:wood/slab/red_cypress"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/red_cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/scribing_table/red_cypress"
+  }
+}

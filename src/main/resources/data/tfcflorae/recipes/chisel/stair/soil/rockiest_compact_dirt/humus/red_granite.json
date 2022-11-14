@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/red_granite",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/stairs/red_granite",
+  "mode": "stair"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/african_padauk",
+    "north": "tfcflorae:block/wood/workbench/front/african_padauk",
+    "south": "tfcflorae:block/wood/workbench/side/african_padauk",
+    "east": "tfcflorae:block/wood/workbench/side/african_padauk",
+    "west": "tfcflorae:block/wood/workbench/front/african_padauk",
+    "up": "tfcflorae:block/wood/workbench/top/african_padauk",
+    "down": "tfcflorae:block/wood/planks/african_padauk"
+  }
+}

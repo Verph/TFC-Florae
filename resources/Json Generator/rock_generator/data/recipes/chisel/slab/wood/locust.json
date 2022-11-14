@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/locust",
+  "result": "tfcflorae:wood/slab/locust",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/locust"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/white_ipe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/white_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/white_ipe"
+  }
+}

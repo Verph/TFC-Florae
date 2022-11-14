@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/pink_ivory",
+    "north": "tfcflorae:block/wood/workbench/front/pink_ivory",
+    "south": "tfcflorae:block/wood/workbench/side/pink_ivory",
+    "east": "tfcflorae:block/wood/workbench/side/pink_ivory",
+    "west": "tfcflorae:block/wood/workbench/front/pink_ivory",
+    "up": "tfcflorae:block/wood/workbench/top/pink_ivory",
+    "down": "tfcflorae:block/wood/planks/pink_ivory"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/joshua",
+  "result": "tfcflorae:wood/stairs/joshua",
+  "mode": "stair"
+}

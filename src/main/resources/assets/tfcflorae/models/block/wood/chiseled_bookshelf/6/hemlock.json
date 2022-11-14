@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/hemlock",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/hemlock",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/hemlock",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/hemlock",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/hemlock",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/hemlock",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/hemlock"
+  },
+  "render_type": "solid"
+}

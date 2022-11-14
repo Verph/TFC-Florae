@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/loam/mylonite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/stairs/mylonite",
+    "count": 8
+  }
+}

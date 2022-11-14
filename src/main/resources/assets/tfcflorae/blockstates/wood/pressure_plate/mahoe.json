@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/mahoe"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/mahoe_down"
+    }
+  }
+}

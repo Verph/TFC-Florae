@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/porphyry",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/porphyry",
+  "mode": "stair"
+}

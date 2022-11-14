@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/cocobolo",
+    "base": "tfcflorae:block/wood/lectern/base/cocobolo",
+    "front": "tfcflorae:block/wood/lectern/front/cocobolo",
+    "sides": "tfcflorae:block/wood/lectern/sides/cocobolo",
+    "top": "tfcflorae:block/wood/lectern/top/cocobolo",
+    "particle": "tfcflorae:block/wood/lectern/sides/cocobolo"
+  }
+}

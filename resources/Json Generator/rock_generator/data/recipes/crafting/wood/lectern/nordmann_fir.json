@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/nordmann_fir"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/nordmann_fir"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/nordmann_fir"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/loam/red_granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/stairs/red_granite",
+    "count": 8
+  }
+}

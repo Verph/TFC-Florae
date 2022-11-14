@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/humus/red_granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/wall/red_granite",
+    "count": 6
+  }
+}

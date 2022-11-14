@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/soapstone",
+  "result": "tfcflorae:rocky_compact_dirt/humus/slab/soapstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/slab/soapstone"
+  }
+}

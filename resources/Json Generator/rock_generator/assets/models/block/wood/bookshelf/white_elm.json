@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/white_elm",
+    "side": "tfcflorae:block/wood/bookshelf/white_elm"
+  }
+}

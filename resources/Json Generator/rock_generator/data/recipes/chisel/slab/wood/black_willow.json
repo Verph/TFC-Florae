@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/black_willow",
+  "result": "tfcflorae:wood/slab/black_willow",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/black_willow"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/persimmon",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/persimmon"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/persimmon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/persimmon",
+      "y": 270
+    }
+  }
+}

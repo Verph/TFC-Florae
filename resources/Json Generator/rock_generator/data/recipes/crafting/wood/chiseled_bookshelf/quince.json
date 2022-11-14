@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/quince"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/quince"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/quince"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/quince"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/quince"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/quince",
+    "count": 1
+  }
+}

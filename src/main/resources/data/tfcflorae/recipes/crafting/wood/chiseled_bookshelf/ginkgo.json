@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/ginkgo"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/ginkgo"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/ginkgo"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/ginkgo",
+    "count": 1
+  }
+}

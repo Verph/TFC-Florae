@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/novaculite",
+  "result": "tfcflorae:rockier_compact_dirt/humus/slab/novaculite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/slab/novaculite"
+  }
+}

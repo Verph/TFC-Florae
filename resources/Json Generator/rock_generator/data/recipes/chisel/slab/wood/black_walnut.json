@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/black_walnut",
+  "result": "tfcflorae:wood/slab/black_walnut",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/black_walnut"
+  }
+}

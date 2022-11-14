@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "loot_pool",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tfcflorae:wood/sluice/alder",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "tfcflorae:wood/sluice/alder",
+              "properties": {
+                "upper": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

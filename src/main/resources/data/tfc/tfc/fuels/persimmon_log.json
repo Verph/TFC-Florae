@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/persimmon"
+    },
+    {
+      "item": "tfcflorae:wood/wood/persimmon"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/persimmon"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/persimmon"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 696
+}

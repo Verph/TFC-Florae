@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/joshua",
+  "result": "tfcflorae:wood/slab/joshua",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/joshua"
+  }
+}

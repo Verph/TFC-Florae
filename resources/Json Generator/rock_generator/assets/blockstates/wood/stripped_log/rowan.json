@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/stripped_log/rowan"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/stripped_log/rowan",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/stripped_log/rowan",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

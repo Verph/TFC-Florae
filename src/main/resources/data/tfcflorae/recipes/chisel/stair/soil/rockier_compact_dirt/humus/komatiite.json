@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/komatiite",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/komatiite",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/claystone",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/claystone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/slab/claystone"
+  }
+}

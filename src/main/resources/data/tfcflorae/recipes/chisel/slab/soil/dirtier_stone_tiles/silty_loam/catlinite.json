@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silty_loam/catlinite",
+  "result": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/catlinite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/slab/catlinite"
+  }
+}

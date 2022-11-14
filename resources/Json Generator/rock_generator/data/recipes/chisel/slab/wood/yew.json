@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/yew",
+  "result": "tfcflorae:wood/slab/yew",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/yew"
+  }
+}

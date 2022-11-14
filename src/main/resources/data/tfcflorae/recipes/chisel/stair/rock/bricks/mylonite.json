@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/mylonite",
+  "result": "tfcflorae:rock/bricks/stairs/mylonite",
+  "mode": "stair"
+}

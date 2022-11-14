@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/whitebeam"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/whitebeam"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/whitebeam",
+    "count": 8
+  }
+}

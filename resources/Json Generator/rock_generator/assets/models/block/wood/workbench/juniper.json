@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/juniper",
+    "north": "tfcflorae:block/wood/workbench/front/juniper",
+    "south": "tfcflorae:block/wood/workbench/side/juniper",
+    "east": "tfcflorae:block/wood/workbench/side/juniper",
+    "west": "tfcflorae:block/wood/workbench/front/juniper",
+    "up": "tfcflorae:block/wood/workbench/top/juniper",
+    "down": "tfcflorae:block/wood/planks/juniper"
+  }
+}

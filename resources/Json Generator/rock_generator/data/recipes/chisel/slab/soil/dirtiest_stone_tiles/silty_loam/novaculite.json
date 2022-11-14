@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/novaculite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/novaculite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/novaculite"
+  }
+}

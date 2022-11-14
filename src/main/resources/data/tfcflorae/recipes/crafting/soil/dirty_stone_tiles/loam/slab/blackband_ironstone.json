@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/loam/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/loam/slab/blackband_ironstone",
+    "count": 6
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/pink_cherry_blossom",
+    "north": "tfcflorae:block/wood/workbench/front/pink_cherry_blossom",
+    "south": "tfcflorae:block/wood/workbench/side/pink_cherry_blossom",
+    "east": "tfcflorae:block/wood/workbench/side/pink_cherry_blossom",
+    "west": "tfcflorae:block/wood/workbench/front/pink_cherry_blossom",
+    "up": "tfcflorae:block/wood/workbench/top/pink_cherry_blossom",
+    "down": "tfcflorae:block/wood/planks/pink_cherry_blossom"
+  }
+}

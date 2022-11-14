@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/connection",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/black_walnut",
+    "particle": "tfcflorae:block/wood/sheet/black_walnut"
+  }
+}

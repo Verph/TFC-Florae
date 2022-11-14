@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/baobab_top",
+    "bottom": "tfcflorae:block/wood/door/baobab_bottom"
+  }
+}

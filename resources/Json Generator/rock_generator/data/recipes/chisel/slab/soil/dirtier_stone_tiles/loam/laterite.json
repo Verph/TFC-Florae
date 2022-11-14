@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/laterite",
+  "result": "tfcflorae:dirtier_stone_tiles/loam/slab/laterite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/slab/laterite"
+  }
+}

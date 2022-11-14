@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/sandy_loam/carbonatite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/wall/carbonatite",
+    "count": 6
+  }
+}

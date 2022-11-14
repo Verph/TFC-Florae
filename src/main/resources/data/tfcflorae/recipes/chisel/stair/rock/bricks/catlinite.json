@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/bricks/catlinite",
+  "result": "tfcflorae:rock/bricks/stairs/catlinite",
+  "mode": "stair"
+}

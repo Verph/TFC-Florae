@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/brazilwood",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/brazilwood"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/brazilwood",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/brazilwood",
+        "y": 270
+      }
+    ]
+  }
+}

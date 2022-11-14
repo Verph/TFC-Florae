@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/mylonite",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/stairs/mylonite",
+  "mode": "stair"
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/anvil/red_granite",
+    "tfcflorae:rock/anvil/breccia",
+    "tfcflorae:rock/anvil/foidolite",
+    "tfcflorae:rock/anvil/porphyry",
+    "tfcflorae:rock/anvil/peridotite",
+    "tfcflorae:rock/anvil/blaimorite",
+    "tfcflorae:rock/anvil/boninite",
+    "tfcflorae:rock/anvil/carbonatite"
+  ]
+}

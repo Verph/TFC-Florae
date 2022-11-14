@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/medlar",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/medlar"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/medlar",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/medlar",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/schist",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/schist",
+  "mode": "stair"
+}

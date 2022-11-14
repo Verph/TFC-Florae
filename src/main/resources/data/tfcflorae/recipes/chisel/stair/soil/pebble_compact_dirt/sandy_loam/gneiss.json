@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/gneiss",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/stairs/gneiss",
+  "mode": "stair"
+}

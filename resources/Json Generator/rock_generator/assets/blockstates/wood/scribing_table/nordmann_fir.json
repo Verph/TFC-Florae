@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/scribing_table/nordmann_fir",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/scribing_table/nordmann_fir"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/scribing_table/nordmann_fir",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/scribing_table/nordmann_fir",
+      "y": 270
+    }
+  }
+}

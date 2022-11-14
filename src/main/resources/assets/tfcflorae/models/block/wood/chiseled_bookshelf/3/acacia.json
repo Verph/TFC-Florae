@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/acacia",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/acacia",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/acacia",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/acacia",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/acacia",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/acacia",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/acacia"
+  },
+  "render_type": "solid"
+}

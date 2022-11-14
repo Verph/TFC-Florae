@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silty_loam/dolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/stairs/dolomite",
+    "count": 8
+  }
+}

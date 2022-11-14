@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/redwood",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/redwood"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/redwood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/redwood",
+      "y": 270
+    }
+  }
+}

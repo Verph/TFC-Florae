@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/quartzite",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/quartzite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/slab/quartzite"
+  }
+}

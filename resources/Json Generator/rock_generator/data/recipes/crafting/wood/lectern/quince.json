@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/quince"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/quince"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/quince"
+  }
+}

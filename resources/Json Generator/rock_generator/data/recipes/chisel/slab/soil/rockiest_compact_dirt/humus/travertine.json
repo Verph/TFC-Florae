@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/travertine",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/travertine",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/travertine"
+  }
+}

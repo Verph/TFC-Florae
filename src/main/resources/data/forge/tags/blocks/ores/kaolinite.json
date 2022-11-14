@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/kaolinite/red_granite",
+    "tfcflorae:ore/kaolinite/breccia",
+    "tfcflorae:ore/kaolinite/foidolite",
+    "tfcflorae:ore/kaolinite/porphyry",
+    "tfcflorae:ore/kaolinite/peridotite",
+    "tfcflorae:ore/kaolinite/blaimorite",
+    "tfcflorae:ore/kaolinite/boninite",
+    "tfcflorae:ore/kaolinite/carbonatite",
+    "tfcflorae:ore/kaolinite/laterite",
+    "tfcflorae:ore/kaolinite/mudstone",
+    "tfcflorae:ore/kaolinite/sandstone",
+    "tfcflorae:ore/kaolinite/siltstone",
+    "tfcflorae:ore/kaolinite/arkose",
+    "tfcflorae:ore/kaolinite/jaspillite",
+    "tfcflorae:ore/kaolinite/travertine",
+    "tfcflorae:ore/kaolinite/wackestone",
+    "tfcflorae:ore/kaolinite/blackband_ironstone",
+    "tfcflorae:ore/kaolinite/cataclasite",
+    "tfcflorae:ore/kaolinite/blueschist",
+    "tfcflorae:ore/kaolinite/catlinite",
+    "tfcflorae:ore/kaolinite/greenschist",
+    "tfcflorae:ore/kaolinite/novaculite",
+    "tfcflorae:ore/kaolinite/soapstone",
+    "tfcflorae:ore/kaolinite/komatiite",
+    "tfcflorae:ore/kaolinite/mylonite"
+  ]
+}

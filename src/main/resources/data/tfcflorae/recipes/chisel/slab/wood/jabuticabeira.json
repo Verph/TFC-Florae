@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/jabuticabeira",
+  "result": "tfcflorae:wood/slab/jabuticabeira",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/jabuticabeira"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/whitebeam",
+    "north": "tfcflorae:block/wood/workbench/front/whitebeam",
+    "south": "tfcflorae:block/wood/workbench/side/whitebeam",
+    "east": "tfcflorae:block/wood/workbench/side/whitebeam",
+    "west": "tfcflorae:block/wood/workbench/front/whitebeam",
+    "up": "tfcflorae:block/wood/workbench/top/whitebeam",
+    "down": "tfcflorae:block/wood/planks/whitebeam"
+  }
+}

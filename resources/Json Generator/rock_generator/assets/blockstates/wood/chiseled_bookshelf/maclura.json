@@ -1,0 +1,165 @@
+{
+  "variants": {
+    "facing=north,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura"
+    },
+    "facing=east,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura",
+      "y": 90
+    },
+    "facing=south,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura",
+      "y": 180
+    },
+    "facing=west,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura",
+      "y": 270
+    },
+    "facing=up,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura",
+      "x": 270
+    },
+    "facing=down,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/maclura",
+      "x": 90
+    },
+    "facing=north,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura"
+    },
+    "facing=east,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura",
+      "y": 90
+    },
+    "facing=south,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura",
+      "y": 180
+    },
+    "facing=west,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura",
+      "y": 270
+    },
+    "facing=up,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura",
+      "x": 270
+    },
+    "facing=down,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/maclura",
+      "x": 90
+    },
+    "facing=north,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura"
+    },
+    "facing=east,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura",
+      "y": 90
+    },
+    "facing=south,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura",
+      "y": 180
+    },
+    "facing=west,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura",
+      "y": 270
+    },
+    "facing=up,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura",
+      "x": 270
+    },
+    "facing=down,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/maclura",
+      "x": 90
+    },
+    "facing=north,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura"
+    },
+    "facing=east,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura",
+      "y": 90
+    },
+    "facing=south,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura",
+      "y": 180
+    },
+    "facing=west,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura",
+      "y": 270
+    },
+    "facing=up,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura",
+      "x": 270
+    },
+    "facing=down,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/maclura",
+      "x": 90
+    },
+    "facing=north,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura"
+    },
+    "facing=east,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura",
+      "y": 90
+    },
+    "facing=south,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura",
+      "y": 180
+    },
+    "facing=west,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura",
+      "y": 270
+    },
+    "facing=up,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura",
+      "x": 270
+    },
+    "facing=down,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/maclura",
+      "x": 90
+    },
+    "facing=north,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura"
+    },
+    "facing=east,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+      "y": 90
+    },
+    "facing=south,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+      "y": 180
+    },
+    "facing=west,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+      "y": 270
+    },
+    "facing=up,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+      "x": 270
+    },
+    "facing=down,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+      "x": 90
+    },
+    "facing=north,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura"
+    },
+    "facing=east,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura",
+      "y": 90
+    },
+    "facing=south,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura",
+      "y": 180
+    },
+    "facing=west,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura",
+      "y": 270
+    },
+    "facing=up,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura",
+      "x": 270
+    },
+    "facing=down,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/maclura",
+      "x": 90
+    }
+  }
+}

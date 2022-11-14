@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/breccia",
+  "result": "tfcflorae:rocky_compact_dirt/silt/slab/breccia",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/slab/breccia"
+  }
+}

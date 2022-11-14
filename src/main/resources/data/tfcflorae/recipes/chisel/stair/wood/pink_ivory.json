@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/pink_ivory",
+  "result": "tfcflorae:wood/stairs/pink_ivory",
+  "mode": "stair"
+}

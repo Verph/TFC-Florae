@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/common_oak"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/common_oak"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/common_oak"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/common_oak",
+    "count": 1
+  }
+}

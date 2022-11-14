@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/angelim",
+  "result": "tfcflorae:wood/stairs/angelim",
+  "mode": "stair"
+}

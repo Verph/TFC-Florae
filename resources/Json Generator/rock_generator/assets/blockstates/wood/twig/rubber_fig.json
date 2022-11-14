@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/rubber_fig",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rubber_fig"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rubber_fig",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rubber_fig",
+        "y": 270
+      }
+    ]
+  }
+}

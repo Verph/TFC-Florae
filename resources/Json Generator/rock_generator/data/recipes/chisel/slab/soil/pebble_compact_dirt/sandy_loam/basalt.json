@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/basalt",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/slab/basalt",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/slab/basalt"
+  }
+}

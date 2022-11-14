@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ironwood",
+  "result": "tfcflorae:wood/stairs/ironwood",
+  "mode": "stair"
+}

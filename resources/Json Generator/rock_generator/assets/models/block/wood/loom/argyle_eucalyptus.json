@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/argyle_eucalyptus",
+    "particle": "tfcflorae:block/wood/planks/argyle_eucalyptus"
+  }
+}

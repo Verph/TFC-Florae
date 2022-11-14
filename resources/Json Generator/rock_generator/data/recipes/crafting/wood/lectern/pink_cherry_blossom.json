@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/pink_cherry_blossom"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/pink_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/pink_cherry_blossom"
+  }
+}

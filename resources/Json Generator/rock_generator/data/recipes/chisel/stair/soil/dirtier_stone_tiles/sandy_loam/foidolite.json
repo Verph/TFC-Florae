@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/foidolite",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/foidolite",
+  "mode": "stair"
+}

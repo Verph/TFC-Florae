@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/foidolite",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/foidolite",
+  "mode": "stair"
+}

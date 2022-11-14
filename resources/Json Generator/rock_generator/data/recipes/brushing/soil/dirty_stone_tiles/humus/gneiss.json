@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/gneiss",
+  "result": "tfcflorae:rock/stone_tiles/gneiss",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

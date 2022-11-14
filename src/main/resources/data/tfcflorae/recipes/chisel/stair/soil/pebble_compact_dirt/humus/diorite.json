@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/diorite",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/diorite",
+  "mode": "stair"
+}

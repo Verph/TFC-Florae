@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/jaspillite",
+  "result": "tfcflorae:rocky_compact_dirt/silt/slab/jaspillite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/slab/jaspillite"
+  }
+}

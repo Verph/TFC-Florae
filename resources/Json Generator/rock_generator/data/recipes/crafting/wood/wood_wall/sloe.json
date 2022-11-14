@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/sloe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/sloe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/sloe",
+    "count": 8
+  }
+}

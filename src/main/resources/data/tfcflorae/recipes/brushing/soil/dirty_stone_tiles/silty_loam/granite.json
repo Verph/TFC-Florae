@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/granite",
+  "result": "tfcflorae:rock/stone_tiles/granite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silty_loam"
+  }
+}

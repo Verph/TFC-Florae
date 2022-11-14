@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/mulberry",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/mulberry",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/mulberry",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/mulberry",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/mulberry",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/mulberry",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/mulberry"
+  },
+  "render_type": "solid"
+}

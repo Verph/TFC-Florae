@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/conglomerate",
+    "count": 8
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/sloe",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/sloe",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/sloe",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/sloe",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/sloe",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/sloe",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/sloe"
+  },
+  "render_type": "solid"
+}

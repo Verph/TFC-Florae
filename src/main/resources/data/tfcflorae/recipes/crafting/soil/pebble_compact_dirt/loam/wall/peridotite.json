@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/loam/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/wall/peridotite",
+    "count": 6
+  }
+}

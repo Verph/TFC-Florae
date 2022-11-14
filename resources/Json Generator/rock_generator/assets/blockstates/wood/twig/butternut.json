@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/butternut",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/butternut"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/butternut",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/butternut",
+        "y": 270
+      }
+    ]
+  }
+}

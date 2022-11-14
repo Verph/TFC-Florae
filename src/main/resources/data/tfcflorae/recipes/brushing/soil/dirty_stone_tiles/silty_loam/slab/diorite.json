@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/slab/diorite",
+  "result": "tfcflorae:rock/stone_tiles/slab/diorite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silty_loam"
+  }
+}

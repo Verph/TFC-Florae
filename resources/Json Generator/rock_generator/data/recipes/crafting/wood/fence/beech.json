@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/beech"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/beech"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/beech",
+    "count": 8
+  }
+}

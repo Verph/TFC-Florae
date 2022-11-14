@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silt/dolomite",
+  "result": "tfcflorae:pebble_compact_dirt/silt/slab/dolomite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/slab/dolomite"
+  }
+}

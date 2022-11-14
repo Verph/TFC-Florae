@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/white_ipe",
+    "base": "tfcflorae:block/wood/lectern/base/white_ipe",
+    "front": "tfcflorae:block/wood/lectern/front/white_ipe",
+    "sides": "tfcflorae:block/wood/lectern/sides/white_ipe",
+    "top": "tfcflorae:block/wood/lectern/top/white_ipe",
+    "particle": "tfcflorae:block/wood/lectern/sides/white_ipe"
+  }
+}

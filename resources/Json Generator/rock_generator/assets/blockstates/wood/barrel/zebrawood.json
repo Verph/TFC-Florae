@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/zebrawood"
+    },
+    "sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/zebrawood"
+    }
+  }
+}

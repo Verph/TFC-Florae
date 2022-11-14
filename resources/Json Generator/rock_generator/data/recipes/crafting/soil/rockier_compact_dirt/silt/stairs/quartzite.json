@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/silt/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/stairs/quartzite",
+    "count": 8
+  }
+}

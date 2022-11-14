@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/slate",
+  "result": "tfcflorae:rocky_compact_dirt/silt/slab/slate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/slab/slate"
+  }
+}

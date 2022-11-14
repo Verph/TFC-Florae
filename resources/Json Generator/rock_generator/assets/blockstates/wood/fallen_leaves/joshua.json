@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/joshua",
+        "y": 270
+      }
+    ]
+  }
+}

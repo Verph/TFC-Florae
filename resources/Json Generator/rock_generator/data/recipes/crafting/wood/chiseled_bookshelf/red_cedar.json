@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/red_cedar"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/red_cedar"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/red_cedar"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/red_cedar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/red_cedar",
+    "count": 1
+  }
+}

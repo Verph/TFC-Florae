@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/wackestone",
+  "result": "tfcflorae:dirty_stone_tiles/silt/stairs/wackestone",
+  "mode": "stair"
+}

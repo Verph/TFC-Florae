@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/mulberry",
+    "base": "tfcflorae:block/wood/lectern/base/mulberry",
+    "front": "tfcflorae:block/wood/lectern/front/mulberry",
+    "sides": "tfcflorae:block/wood/lectern/sides/mulberry",
+    "top": "tfcflorae:block/wood/lectern/top/mulberry",
+    "particle": "tfcflorae:block/wood/lectern/sides/mulberry"
+  }
+}

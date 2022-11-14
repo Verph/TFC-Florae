@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/phyllite",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/phyllite",
+  "mode": "stair"
+}

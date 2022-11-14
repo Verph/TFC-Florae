@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/yellow_ipe",
+  "result": "tfcflorae:wood/slab/yellow_ipe",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/yellow_ipe"
+  }
+}

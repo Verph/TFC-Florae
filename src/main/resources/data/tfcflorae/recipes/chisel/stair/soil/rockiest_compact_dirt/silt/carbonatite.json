@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/carbonatite",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/carbonatite",
+  "mode": "stair"
+}

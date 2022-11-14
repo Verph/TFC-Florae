@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/mylonite",
+  "result": "tfcflorae:pebble_compact_dirt/loam/slab/mylonite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/slab/mylonite"
+  }
+}

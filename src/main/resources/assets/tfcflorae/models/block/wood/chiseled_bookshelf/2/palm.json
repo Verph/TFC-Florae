@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/palm",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/palm",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/palm",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/palm",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/palm",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/palm",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/palm"
+  },
+  "render_type": "solid"
+}

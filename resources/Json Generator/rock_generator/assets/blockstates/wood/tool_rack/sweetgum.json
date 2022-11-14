@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/sweetgum",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/sweetgum",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/sweetgum"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/sweetgum",
+      "y": 90
+    }
+  }
+}

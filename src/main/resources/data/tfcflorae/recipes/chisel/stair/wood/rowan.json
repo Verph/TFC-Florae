@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/rowan",
+  "result": "tfcflorae:wood/stairs/rowan",
+  "mode": "stair"
+}

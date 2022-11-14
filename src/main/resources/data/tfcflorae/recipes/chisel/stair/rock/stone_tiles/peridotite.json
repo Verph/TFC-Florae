@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/peridotite",
+  "result": "tfcflorae:rock/stone_tiles/stairs/peridotite",
+  "mode": "stair"
+}

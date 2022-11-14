@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/basalt",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/basalt",
+  "mode": "stair"
+}

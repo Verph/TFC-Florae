@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/foidolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/slab/foidolite",
+    "count": 6
+  }
+}

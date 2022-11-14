@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/scribing_table/sorb",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/scribing_table/sorb"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/scribing_table/sorb",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/scribing_table/sorb",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/angelim",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/angelim",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/angelim"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/angelim",
+      "y": 90
+    }
+  }
+}

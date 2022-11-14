@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/wenge",
+    "base": "tfcflorae:block/wood/lectern/base/wenge",
+    "front": "tfcflorae:block/wood/lectern/front/wenge",
+    "sides": "tfcflorae:block/wood/lectern/sides/wenge",
+    "top": "tfcflorae:block/wood/lectern/top/wenge",
+    "particle": "tfcflorae:block/wood/lectern/sides/wenge"
+  }
+}

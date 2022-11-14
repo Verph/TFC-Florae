@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/loam/mudstone",
+  "result": "tfcflorae:rocky_compact_dirt/loam/stairs/mudstone",
+  "mode": "stair"
+}

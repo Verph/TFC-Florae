@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/loam/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/loam/slab/rhyolite",
+    "count": 6
+  }
+}

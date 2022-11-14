@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/medlar"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/medlar_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/medlar"
+    }
+  }
+}

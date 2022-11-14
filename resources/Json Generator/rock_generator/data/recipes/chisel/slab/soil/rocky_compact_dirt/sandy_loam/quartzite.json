@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/sandy_loam/quartzite",
+  "result": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/quartzite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/quartzite"
+  }
+}

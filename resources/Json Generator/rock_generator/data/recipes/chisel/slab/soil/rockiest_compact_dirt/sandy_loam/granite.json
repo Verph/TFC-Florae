@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/sandy_loam/granite",
+  "result": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/granite"
+  }
+}

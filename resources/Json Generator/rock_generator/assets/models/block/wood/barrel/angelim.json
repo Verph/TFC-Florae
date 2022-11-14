@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/angelim",
+    "planks": "tfcflorae:block/wood/planks/angelim",
+    "sheet": "tfcflorae:block/wood/sheet/angelim",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

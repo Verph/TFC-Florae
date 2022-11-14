@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/slab/bottom/red_granite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/slab/top/red_granite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/dirtier_stone_tiles/humus/red_granite"
+    }
+  }
+}

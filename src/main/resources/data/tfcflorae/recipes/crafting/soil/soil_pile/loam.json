@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "tfc:dirt/loam"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:soil_pile/loam",
+    "count": 4
+  }
+}

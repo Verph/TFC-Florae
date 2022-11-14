@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/sorb"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/sorb_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/sorb"
+    }
+  }
+}

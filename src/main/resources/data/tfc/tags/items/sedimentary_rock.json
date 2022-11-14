@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/laterite",
+    "tfcflorae:rock/loose/mudstone",
+    "tfcflorae:rock/loose/sandstone",
+    "tfcflorae:rock/loose/siltstone",
+    "tfcflorae:rock/loose/arkose",
+    "tfcflorae:rock/loose/jaspillite",
+    "tfcflorae:rock/loose/travertine",
+    "tfcflorae:rock/loose/wackestone",
+    "tfcflorae:rock/loose/blackband_ironstone",
+    "tfcflorae:rock/loose/dripstone"
+  ]
+}

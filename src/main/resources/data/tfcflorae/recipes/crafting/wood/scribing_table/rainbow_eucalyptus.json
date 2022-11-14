@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F B",
+    "XXX",
+    "Y Y"
+  ],
+  "key": {
+    "F": {
+      "tag": "forge:feathers"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "X": {
+      "item": "tfcflorae:wood/slab/rainbow_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/scribing_table/rainbow_eucalyptus"
+  }
+}

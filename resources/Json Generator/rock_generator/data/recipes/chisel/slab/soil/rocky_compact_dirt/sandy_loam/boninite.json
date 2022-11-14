@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/sandy_loam/boninite",
+  "result": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/boninite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/slab/boninite"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/laterite",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/slab/laterite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/slab/laterite"
+  }
+}

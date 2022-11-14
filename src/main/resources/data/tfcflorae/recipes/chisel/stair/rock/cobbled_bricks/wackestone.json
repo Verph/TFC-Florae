@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/wackestone",
+  "result": "tfcflorae:rock/cobbled_bricks/stairs/wackestone",
+  "mode": "stair"
+}

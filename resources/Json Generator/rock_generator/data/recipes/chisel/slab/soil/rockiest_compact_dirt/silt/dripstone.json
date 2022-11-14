@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/dripstone",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/slab/dripstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/dripstone"
+  }
+}

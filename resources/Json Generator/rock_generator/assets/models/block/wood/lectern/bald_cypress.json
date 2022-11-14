@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/bald_cypress",
+    "base": "tfcflorae:block/wood/lectern/base/bald_cypress",
+    "front": "tfcflorae:block/wood/lectern/front/bald_cypress",
+    "sides": "tfcflorae:block/wood/lectern/sides/bald_cypress",
+    "top": "tfcflorae:block/wood/lectern/top/bald_cypress",
+    "particle": "tfcflorae:block/wood/lectern/sides/bald_cypress"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/hawthorn",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/hawthorn"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/hawthorn",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/hawthorn",
+      "y": 270
+    }
+  }
+}

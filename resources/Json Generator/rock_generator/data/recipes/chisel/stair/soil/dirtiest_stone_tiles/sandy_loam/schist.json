@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/sandy_loam/schist",
+  "result": "tfcflorae:dirtiest_stone_tiles/sandy_loam/stairs/schist",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/andesite",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/slab/andesite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/andesite"
+  }
+}

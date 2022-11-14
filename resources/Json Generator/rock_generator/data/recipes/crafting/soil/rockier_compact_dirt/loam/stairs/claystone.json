@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/loam/claystone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/stairs/claystone",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/conglomerate",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/slab/conglomerate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/slab/conglomerate"
+  }
+}

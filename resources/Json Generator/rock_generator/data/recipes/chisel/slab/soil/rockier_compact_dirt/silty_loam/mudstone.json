@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silty_loam/mudstone",
+  "result": "tfcflorae:rockier_compact_dirt/silty_loam/slab/mudstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/silty_loam/slab/mudstone"
+  }
+}

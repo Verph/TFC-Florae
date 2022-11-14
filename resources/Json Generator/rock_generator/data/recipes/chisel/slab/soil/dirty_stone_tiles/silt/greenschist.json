@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/greenschist",
+  "result": "tfcflorae:dirty_stone_tiles/silt/slab/greenschist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silt/slab/greenschist"
+  }
+}

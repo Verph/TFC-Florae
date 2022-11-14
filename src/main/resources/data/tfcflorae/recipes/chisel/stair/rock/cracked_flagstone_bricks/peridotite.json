@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/peridotite",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/stairs/peridotite",
+  "mode": "stair"
+}

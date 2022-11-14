@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/granite",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/stairs/granite",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/pink_ivory"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/pink_ivory_down"
+    }
+  }
+}

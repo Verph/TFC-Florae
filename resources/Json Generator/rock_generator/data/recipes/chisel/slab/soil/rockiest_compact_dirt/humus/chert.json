@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/chert",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/chert",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/chert"
+  }
+}

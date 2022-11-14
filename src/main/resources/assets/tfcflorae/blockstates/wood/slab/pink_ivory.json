@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/pink_ivory"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/pink_ivory_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/pink_ivory"
+    }
+  }
+}

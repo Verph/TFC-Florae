@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:dirtier_stone_tiles/humus/chalk"
+  ],
+  "result": "tfcflorae:dirtier_stone_tiles/humus/chalk"
+}

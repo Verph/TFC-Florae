@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silt/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/wall/blackband_ironstone",
+    "count": 6
+  }
+}

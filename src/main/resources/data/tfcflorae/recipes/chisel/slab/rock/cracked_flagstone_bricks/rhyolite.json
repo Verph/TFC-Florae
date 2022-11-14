@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/rhyolite",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/slab/rhyolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cracked_flagstone_bricks/slab/rhyolite"
+  }
+}

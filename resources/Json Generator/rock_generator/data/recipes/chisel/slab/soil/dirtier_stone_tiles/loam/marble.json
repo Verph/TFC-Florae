@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/marble",
+  "result": "tfcflorae:dirtier_stone_tiles/loam/slab/marble",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/slab/marble"
+  }
+}

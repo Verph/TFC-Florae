@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/wall/breccia",
+  "result": "tfcflorae:rock/stone_tiles/wall/breccia",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

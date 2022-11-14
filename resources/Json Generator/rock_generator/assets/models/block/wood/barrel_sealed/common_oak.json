@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/common_oak",
+    "planks": "tfcflorae:block/wood/planks/common_oak",
+    "sheet": "tfcflorae:block/wood/sheet/common_oak",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

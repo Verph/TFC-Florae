@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/yellow_jacaranda",
+    "side": "tfcflorae:block/wood/bookshelf/yellow_jacaranda"
+  }
+}

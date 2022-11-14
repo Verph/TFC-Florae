@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/humus/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/humus/wall/granite",
+    "count": 6
+  }
+}

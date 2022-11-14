@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silty_loam/laterite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/laterite",
+    "count": 8
+  }
+}

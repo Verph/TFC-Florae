@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/white_cherry_blossom",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/white_cherry_blossom",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/4/white_cherry_blossom",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/white_cherry_blossom",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/white_cherry_blossom",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/white_cherry_blossom",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/white_cherry_blossom"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/laterite",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/slab/laterite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cracked_flagstone_bricks/slab/laterite"
+  }
+}

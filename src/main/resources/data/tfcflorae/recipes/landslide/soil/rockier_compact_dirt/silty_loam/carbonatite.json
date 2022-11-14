@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:rockier_compact_dirt/silty_loam/carbonatite"
+  ],
+  "result": "tfcflorae:rockier_compact_dirt/silty_loam/carbonatite"
+}

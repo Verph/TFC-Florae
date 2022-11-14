@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/walnut",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/walnut"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/walnut",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/walnut",
+        "y": 270
+      }
+    ]
+  }
+}

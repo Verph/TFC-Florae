@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/jabuticabeira",
+  "result": "tfcflorae:wood/stairs/jabuticabeira",
+  "mode": "stair"
+}

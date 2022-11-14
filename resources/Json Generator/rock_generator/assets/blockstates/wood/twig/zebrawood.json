@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/zebrawood",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/zebrawood"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/zebrawood",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/zebrawood",
+        "y": 270
+      }
+    ]
+  }
+}

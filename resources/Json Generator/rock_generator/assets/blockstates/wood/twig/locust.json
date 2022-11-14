@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/locust",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/locust"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/locust",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/locust",
+        "y": 270
+      }
+    ]
+  }
+}

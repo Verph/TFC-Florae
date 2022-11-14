@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/wall_inventory_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/black_walnut",
+    "wall": "tfcflorae:block/wood/log/black_walnut",
+    "particle": "tfcflorae:block/wood/log/black_walnut"
+  }
+}

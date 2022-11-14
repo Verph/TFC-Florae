@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/fever_top",
+    "bottom": "tfcflorae:block/wood/door/fever_bottom"
+  }
+}

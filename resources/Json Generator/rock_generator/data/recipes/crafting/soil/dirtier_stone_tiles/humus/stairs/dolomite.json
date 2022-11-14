@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/humus/dolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/stairs/dolomite",
+    "count": 8
+  }
+}

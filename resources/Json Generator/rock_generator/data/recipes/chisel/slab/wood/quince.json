@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/quince",
+  "result": "tfcflorae:wood/slab/quince",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/quince"
+  }
+}

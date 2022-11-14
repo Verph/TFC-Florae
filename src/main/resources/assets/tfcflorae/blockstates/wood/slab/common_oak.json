@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/common_oak"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/common_oak_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/common_oak"
+    }
+  }
+}

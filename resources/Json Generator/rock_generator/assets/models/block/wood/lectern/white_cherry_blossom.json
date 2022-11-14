@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/white_cherry_blossom",
+    "base": "tfcflorae:block/wood/lectern/base/white_cherry_blossom",
+    "front": "tfcflorae:block/wood/lectern/front/white_cherry_blossom",
+    "sides": "tfcflorae:block/wood/lectern/sides/white_cherry_blossom",
+    "top": "tfcflorae:block/wood/lectern/top/white_cherry_blossom",
+    "particle": "tfcflorae:block/wood/lectern/sides/white_cherry_blossom"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/ebony"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/ebony"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/ebony"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/ebony"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/ebony"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/ebony"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/ebony"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/ebony"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/ebony"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/ebony",
+    "count": 1
+  }
+}

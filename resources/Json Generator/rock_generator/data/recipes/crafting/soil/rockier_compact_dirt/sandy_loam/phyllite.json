@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    },
+    {
+      "item": "tfc:rock/loose/phyllite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/sandy_loam/phyllite"
+  }
+}

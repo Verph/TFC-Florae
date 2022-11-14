@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/laterite",
+  "result": "tfcflorae:rocky_compact_dirt/silt/stairs/laterite",
+  "mode": "stair"
+}

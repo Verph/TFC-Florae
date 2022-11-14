@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/maclura",
+    "base": "tfcflorae:block/wood/lectern/base/maclura",
+    "front": "tfcflorae:block/wood/lectern/front/maclura",
+    "sides": "tfcflorae:block/wood/lectern/sides/maclura",
+    "top": "tfcflorae:block/wood/lectern/top/maclura",
+    "particle": "tfcflorae:block/wood/lectern/sides/maclura"
+  }
+}

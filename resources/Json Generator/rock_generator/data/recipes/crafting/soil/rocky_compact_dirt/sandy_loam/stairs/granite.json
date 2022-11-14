@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/sandy_loam/granite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/stairs/granite",
+    "count": 8
+  }
+}

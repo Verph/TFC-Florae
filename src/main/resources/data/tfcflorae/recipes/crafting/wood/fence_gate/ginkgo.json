@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/ginkgo"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/ginkgo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/ginkgo",
+    "count": 2
+  }
+}

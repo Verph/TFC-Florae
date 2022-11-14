@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/mudstone",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/slab/mudstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/mudstone"
+  }
+}

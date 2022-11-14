@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/rubber_fig",
+    "north": "tfcflorae:block/wood/workbench/front/rubber_fig",
+    "south": "tfcflorae:block/wood/workbench/side/rubber_fig",
+    "east": "tfcflorae:block/wood/workbench/side/rubber_fig",
+    "west": "tfcflorae:block/wood/workbench/front/rubber_fig",
+    "up": "tfcflorae:block/wood/workbench/top/rubber_fig",
+    "down": "tfcflorae:block/wood/planks/rubber_fig"
+  }
+}

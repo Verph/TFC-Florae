@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silt/phyllite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/phyllite",
+    "count": 6
+  }
+}

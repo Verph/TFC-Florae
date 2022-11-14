@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/joshua"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/joshua"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/joshua"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/joshua"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/joshua",
+    "count": 1
+  }
+}

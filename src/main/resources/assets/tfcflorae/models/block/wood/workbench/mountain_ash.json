@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/mountain_ash",
+    "north": "tfcflorae:block/wood/workbench/front/mountain_ash",
+    "south": "tfcflorae:block/wood/workbench/side/mountain_ash",
+    "east": "tfcflorae:block/wood/workbench/side/mountain_ash",
+    "west": "tfcflorae:block/wood/workbench/front/mountain_ash",
+    "up": "tfcflorae:block/wood/workbench/top/mountain_ash",
+    "down": "tfcflorae:block/wood/planks/mountain_ash"
+  }
+}

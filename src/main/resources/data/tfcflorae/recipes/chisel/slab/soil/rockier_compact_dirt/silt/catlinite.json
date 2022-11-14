@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/catlinite",
+  "result": "tfcflorae:rockier_compact_dirt/silt/slab/catlinite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/slab/catlinite"
+  }
+}

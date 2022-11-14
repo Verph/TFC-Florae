@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/purple_ipe"
+    },
+    {
+      "item": "tfcflorae:wood/wood/purple_ipe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/purple_ipe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/purple_ipe"
+    }
+  ],
+  "duration": 1200,
+  "temperature": 785
+}

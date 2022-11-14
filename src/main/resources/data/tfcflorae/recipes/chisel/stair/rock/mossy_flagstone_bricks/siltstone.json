@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/siltstone",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/stairs/siltstone",
+  "mode": "stair"
+}

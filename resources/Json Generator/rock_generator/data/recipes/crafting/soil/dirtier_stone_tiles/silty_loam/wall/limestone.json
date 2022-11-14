@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/silty_loam/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silty_loam/wall/limestone",
+    "count": 6
+  }
+}

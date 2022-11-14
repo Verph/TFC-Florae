@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silty_loam/greenschist",
+  "result": "tfcflorae:rockiest_compact_dirt/silty_loam/stairs/greenschist",
+  "mode": "stair"
+}

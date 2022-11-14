@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/locust"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/locust_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/locust"
+    }
+  }
+}

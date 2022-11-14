@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/stripped_log/jabuticabeira",
+    "side": "tfcflorae:block/wood/stripped_log/jabuticabeira"
+  }
+}

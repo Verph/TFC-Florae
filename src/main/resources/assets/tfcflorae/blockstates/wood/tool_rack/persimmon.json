@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/persimmon",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/persimmon",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/persimmon"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/persimmon",
+      "y": 90
+    }
+  }
+}

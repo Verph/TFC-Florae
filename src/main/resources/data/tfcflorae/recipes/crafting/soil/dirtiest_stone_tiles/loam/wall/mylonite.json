@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/loam/mylonite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/wall/mylonite",
+    "count": 6
+  }
+}

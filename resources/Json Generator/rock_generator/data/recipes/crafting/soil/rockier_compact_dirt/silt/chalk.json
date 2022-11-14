@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfc:rock/loose/chalk"
+    },
+    {
+      "item": "tfc:rock/loose/chalk"
+    },
+    {
+      "item": "tfc:rock/loose/chalk"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/chalk"
+  }
+}

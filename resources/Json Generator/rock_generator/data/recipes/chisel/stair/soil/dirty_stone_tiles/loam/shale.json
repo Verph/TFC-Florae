@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/shale",
+  "result": "tfcflorae:dirty_stone_tiles/loam/stairs/shale",
+  "mode": "stair"
+}

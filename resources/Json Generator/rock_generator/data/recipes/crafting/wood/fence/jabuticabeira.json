@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/jabuticabeira"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/jabuticabeira"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/jabuticabeira",
+    "count": 8
+  }
+}

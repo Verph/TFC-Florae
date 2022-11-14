@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/shale",
+  "result": "tfcflorae:dirtier_stone_tiles/silt/stairs/shale",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/blackband_ironstone",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/slab/blackband_ironstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/blackband_ironstone"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silty_loam/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silty_loam/stairs/rhyolite",
+    "count": 8
+  }
+}

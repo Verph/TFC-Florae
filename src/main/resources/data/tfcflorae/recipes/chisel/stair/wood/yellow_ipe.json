@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/yellow_ipe",
+  "result": "tfcflorae:wood/stairs/yellow_ipe",
+  "mode": "stair"
+}

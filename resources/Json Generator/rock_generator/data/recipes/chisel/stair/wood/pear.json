@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/pear",
+  "result": "tfcflorae:wood/stairs/pear",
+  "mode": "stair"
+}

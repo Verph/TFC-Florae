@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/porphyry",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/stairs/porphyry",
+  "mode": "stair"
+}

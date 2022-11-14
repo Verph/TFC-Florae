@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/porphyry",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/porphyry",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/slab/porphyry"
+  }
+}

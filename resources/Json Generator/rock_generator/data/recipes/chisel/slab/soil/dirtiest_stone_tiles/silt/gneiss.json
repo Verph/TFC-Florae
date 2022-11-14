@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silt/gneiss",
+  "result": "tfcflorae:dirtiest_stone_tiles/silt/slab/gneiss",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/slab/gneiss"
+  }
+}

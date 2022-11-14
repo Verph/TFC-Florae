@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/ghaf"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/ghaf_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/ghaf"
+    }
+  }
+}

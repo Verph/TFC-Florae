@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/silt/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/stairs/conglomerate",
+    "count": 8
+  }
+}

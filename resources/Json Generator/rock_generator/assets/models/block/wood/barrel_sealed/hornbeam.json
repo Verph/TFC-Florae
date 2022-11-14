@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/hornbeam",
+    "planks": "tfcflorae:block/wood/planks/hornbeam",
+    "sheet": "tfcflorae:block/wood/sheet/hornbeam",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

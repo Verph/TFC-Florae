@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/kapok",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/kapok",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/kapok",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/kapok",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/kapok",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/kapok",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/kapok"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/horizontal",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/persimmon",
+    "particle": "tfcflorae:block/wood/sheet/persimmon"
+  }
+}

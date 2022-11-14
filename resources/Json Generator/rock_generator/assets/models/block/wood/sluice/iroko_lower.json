@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/sluice_lower",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/iroko"
+  }
+}

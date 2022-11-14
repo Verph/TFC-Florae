@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/african_padauk",
+  "result": "tfcflorae:wood/slab/african_padauk",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/african_padauk"
+  }
+}

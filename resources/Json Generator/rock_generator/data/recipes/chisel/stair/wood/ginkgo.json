@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ginkgo",
+  "result": "tfcflorae:wood/stairs/ginkgo",
+  "mode": "stair"
+}

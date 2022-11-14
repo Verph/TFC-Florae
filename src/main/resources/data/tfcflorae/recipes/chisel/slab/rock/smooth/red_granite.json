@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/red_granite",
+  "result": "tfcflorae:rock/smooth/slab/red_granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/smooth/slab/red_granite"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "tfcflorae:block/wood/log/common_oak"
+  }
+}

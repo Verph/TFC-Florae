@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/wood/black_willow"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/wood/black_willow",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/wood/black_willow",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

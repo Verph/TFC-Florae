@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_bricks/red_granite",
+  "result": "tfcflorae:rock/cracked_bricks/stairs/red_granite",
+  "mode": "stair"
+}

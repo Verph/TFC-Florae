@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/loam/shale",
+  "result": "tfcflorae:rockier_compact_dirt/loam/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/slab/shale"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/peridotite",
+  "result": "tfcflorae:rock/flagstone_bricks/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone_bricks/slab/peridotite"
+  }
+}

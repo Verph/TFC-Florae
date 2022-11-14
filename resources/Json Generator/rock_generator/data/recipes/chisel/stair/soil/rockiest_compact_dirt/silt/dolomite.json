@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/dolomite",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/dolomite",
+  "mode": "stair"
+}

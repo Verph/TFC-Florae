@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/smooth/cataclasite",
+  "result": "tfcflorae:rock/smooth/slab/cataclasite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/smooth/slab/cataclasite"
+  }
+}

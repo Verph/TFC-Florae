@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/white_elm",
+    "particle": "tfcflorae:block/wood/planks/white_elm"
+  }
+}

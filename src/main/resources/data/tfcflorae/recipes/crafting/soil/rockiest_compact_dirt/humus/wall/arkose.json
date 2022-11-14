@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/humus/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/wall/arkose",
+    "count": 6
+  }
+}

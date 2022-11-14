@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/sweetgum",
+  "result": "tfcflorae:wood/stairs/sweetgum",
+  "mode": "stair"
+}

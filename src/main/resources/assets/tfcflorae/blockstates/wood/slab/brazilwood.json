@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/brazilwood"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/brazilwood_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/brazilwood"
+    }
+  }
+}

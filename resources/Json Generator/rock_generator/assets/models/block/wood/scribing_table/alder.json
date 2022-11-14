@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/alder",
+    "leg": "tfcflorae:block/wood/log/alder",
+    "side": "tfcflorae:block/wood/planks/alder",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/alder"
+  }
+}

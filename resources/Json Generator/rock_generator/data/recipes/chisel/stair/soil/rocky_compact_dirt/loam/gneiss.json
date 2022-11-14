@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/loam/gneiss",
+  "result": "tfcflorae:rocky_compact_dirt/loam/stairs/gneiss",
+  "mode": "stair"
+}

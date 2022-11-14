@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/joshua",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/joshua",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/joshua",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/joshua",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/joshua",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/joshua",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/joshua"
+  },
+  "render_type": "solid"
+}

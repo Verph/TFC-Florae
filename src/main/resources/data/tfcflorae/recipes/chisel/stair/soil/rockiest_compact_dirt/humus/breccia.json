@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/breccia",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/stairs/breccia",
+  "mode": "stair"
+}

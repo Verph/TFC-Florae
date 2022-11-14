@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silt/porphyry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/wall/porphyry",
+    "count": 6
+  }
+}

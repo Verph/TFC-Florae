@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/hawthorn"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/hawthorn"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/hawthorn",
+    "count": 8
+  }
+}

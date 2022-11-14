@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/sweetgum"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/sweetgum",
+    "count": 8
+  }
+}

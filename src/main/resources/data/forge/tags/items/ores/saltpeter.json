@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/saltpeter/red_granite",
+    "tfcflorae:ore/saltpeter/breccia",
+    "tfcflorae:ore/saltpeter/foidolite",
+    "tfcflorae:ore/saltpeter/porphyry",
+    "tfcflorae:ore/saltpeter/peridotite",
+    "tfcflorae:ore/saltpeter/blaimorite",
+    "tfcflorae:ore/saltpeter/boninite",
+    "tfcflorae:ore/saltpeter/carbonatite",
+    "tfcflorae:ore/saltpeter/laterite",
+    "tfcflorae:ore/saltpeter/mudstone",
+    "tfcflorae:ore/saltpeter/sandstone",
+    "tfcflorae:ore/saltpeter/siltstone",
+    "tfcflorae:ore/saltpeter/arkose",
+    "tfcflorae:ore/saltpeter/jaspillite",
+    "tfcflorae:ore/saltpeter/travertine",
+    "tfcflorae:ore/saltpeter/wackestone",
+    "tfcflorae:ore/saltpeter/blackband_ironstone",
+    "tfcflorae:ore/saltpeter/cataclasite",
+    "tfcflorae:ore/saltpeter/blueschist",
+    "tfcflorae:ore/saltpeter/catlinite",
+    "tfcflorae:ore/saltpeter/greenschist",
+    "tfcflorae:ore/saltpeter/novaculite",
+    "tfcflorae:ore/saltpeter/soapstone",
+    "tfcflorae:ore/saltpeter/komatiite",
+    "tfcflorae:ore/saltpeter/mylonite"
+  ]
+}

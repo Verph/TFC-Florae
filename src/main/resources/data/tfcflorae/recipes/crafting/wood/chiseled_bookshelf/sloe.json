@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/sloe"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/sloe"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/sloe"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/sloe"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/sloe"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/sloe"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/sloe"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/sloe"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/sloe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/sloe",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/ginkgo",
+    "base": "tfcflorae:block/wood/lectern/base/ginkgo",
+    "front": "tfcflorae:block/wood/lectern/front/ginkgo",
+    "sides": "tfcflorae:block/wood/lectern/sides/ginkgo",
+    "top": "tfcflorae:block/wood/lectern/top/ginkgo",
+    "particle": "tfcflorae:block/wood/lectern/sides/ginkgo"
+  }
+}

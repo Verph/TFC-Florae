@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/pear"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/pear_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/pear"
+    }
+  }
+}

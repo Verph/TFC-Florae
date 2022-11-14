@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/snow_gum_eucalyptus",
+  "result": "tfcflorae:wood/stairs/snow_gum_eucalyptus",
+  "mode": "stair"
+}

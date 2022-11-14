@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/rubber_fig"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/rubber_fig"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/rubber_fig"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/rubber_fig"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/rubber_fig",
+    "count": 1
+  }
+}

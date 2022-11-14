@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/walnut",
+    "base": "tfcflorae:block/wood/lectern/base/walnut",
+    "front": "tfcflorae:block/wood/lectern/front/walnut",
+    "sides": "tfcflorae:block/wood/lectern/sides/walnut",
+    "top": "tfcflorae:block/wood/lectern/top/walnut",
+    "particle": "tfcflorae:block/wood/lectern/sides/walnut"
+  }
+}

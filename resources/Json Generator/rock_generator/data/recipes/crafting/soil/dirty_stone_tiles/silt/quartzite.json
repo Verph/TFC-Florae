@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/quartzite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/silt/quartzite"
+  }
+}

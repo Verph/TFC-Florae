@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/loam/chert",
+  "result": "tfcflorae:dirtiest_stone_tiles/loam/stairs/chert",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/peridotite",
+  "result": "tfcflorae:rockier_compact_dirt/silt/stairs/peridotite",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/soapstone",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/stairs/soapstone",
+  "mode": "stair"
+}

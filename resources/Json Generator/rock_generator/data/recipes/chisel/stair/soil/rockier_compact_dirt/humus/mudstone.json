@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/mudstone",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/mudstone",
+  "mode": "stair"
+}

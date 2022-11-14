@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/loam"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    },
+    {
+      "item": "tfc:rock/loose/claystone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/claystone"
+  }
+}

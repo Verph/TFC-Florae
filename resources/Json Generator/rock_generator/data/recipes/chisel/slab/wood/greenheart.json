@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/greenheart",
+  "result": "tfcflorae:wood/slab/greenheart",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/greenheart"
+  }
+}

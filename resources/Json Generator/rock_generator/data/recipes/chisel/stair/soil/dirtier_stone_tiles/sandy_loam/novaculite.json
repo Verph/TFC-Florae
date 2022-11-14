@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/novaculite",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/novaculite",
+  "mode": "stair"
+}

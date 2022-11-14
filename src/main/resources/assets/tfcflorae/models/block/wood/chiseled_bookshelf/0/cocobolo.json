@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/cocobolo",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/cocobolo",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/cocobolo",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/cocobolo",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/cocobolo",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/cocobolo",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/cocobolo"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/komatiite",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/komatiite",
+  "mode": "stair"
+}

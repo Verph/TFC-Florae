@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/pink_ivory"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/pink_ivory"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/pink_ivory",
+    "count": 8
+  }
+}

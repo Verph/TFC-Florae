@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/jaspillite",
+  "result": "tfcflorae:dirty_stone_tiles/loam/stairs/jaspillite",
+  "mode": "stair"
+}

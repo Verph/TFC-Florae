@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silt/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/slab/limestone",
+    "count": 6
+  }
+}

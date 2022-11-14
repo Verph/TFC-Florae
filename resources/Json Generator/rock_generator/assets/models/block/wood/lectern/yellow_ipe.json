@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/yellow_ipe",
+    "base": "tfcflorae:block/wood/lectern/base/yellow_ipe",
+    "front": "tfcflorae:block/wood/lectern/front/yellow_ipe",
+    "sides": "tfcflorae:block/wood/lectern/sides/yellow_ipe",
+    "top": "tfcflorae:block/wood/lectern/top/yellow_ipe",
+    "particle": "tfcflorae:block/wood/lectern/sides/yellow_ipe"
+  }
+}

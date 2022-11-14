@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/bald_cypress",
+  "result": "tfcflorae:wood/slab/bald_cypress",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/bald_cypress"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/quartzite",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/quartzite",
+  "mode": "stair"
+}

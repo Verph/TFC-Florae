@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/persimmon",
+  "result": "tfcflorae:wood/stairs/persimmon",
+  "mode": "stair"
+}

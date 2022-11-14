@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silty_loam/travertine",
+  "result": "tfcflorae:rocky_compact_dirt/silty_loam/slab/travertine",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silty_loam/slab/travertine"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/maclura",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/maclura",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/maclura",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/maclura",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/maclura",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/maclura",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/maclura"
+  },
+  "render_type": "solid"
+}

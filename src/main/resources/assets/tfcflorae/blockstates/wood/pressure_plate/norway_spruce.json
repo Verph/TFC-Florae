@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/norway_spruce"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/norway_spruce_down"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/yellow_jacaranda"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/yellow_jacaranda",
+    "count": 8
+  }
+}

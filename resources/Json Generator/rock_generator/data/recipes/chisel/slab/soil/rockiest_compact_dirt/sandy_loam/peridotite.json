@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/sandy_loam/peridotite",
+  "result": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/peridotite"
+  }
+}

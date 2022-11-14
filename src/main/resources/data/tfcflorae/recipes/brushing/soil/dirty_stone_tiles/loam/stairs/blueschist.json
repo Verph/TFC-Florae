@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/stairs/blueschist",
+  "result": "tfcflorae:rock/stone_tiles/stairs/blueschist",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

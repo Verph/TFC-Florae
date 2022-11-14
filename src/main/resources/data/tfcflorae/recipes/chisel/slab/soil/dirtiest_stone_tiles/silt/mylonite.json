@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silt/mylonite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silt/slab/mylonite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/slab/mylonite"
+  }
+}

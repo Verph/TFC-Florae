@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/laurel",
+    "base": "tfcflorae:block/wood/lectern/base/laurel",
+    "front": "tfcflorae:block/wood/lectern/front/laurel",
+    "sides": "tfcflorae:block/wood/lectern/sides/laurel",
+    "top": "tfcflorae:block/wood/lectern/top/laurel",
+    "particle": "tfcflorae:block/wood/lectern/sides/laurel"
+  }
+}

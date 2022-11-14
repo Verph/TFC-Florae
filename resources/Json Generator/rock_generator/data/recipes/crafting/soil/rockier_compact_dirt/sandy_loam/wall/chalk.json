@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/sandy_loam/chalk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/sandy_loam/wall/chalk",
+    "count": 6
+  }
+}

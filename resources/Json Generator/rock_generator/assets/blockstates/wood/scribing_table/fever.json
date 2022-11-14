@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/scribing_table/fever",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/scribing_table/fever"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/scribing_table/fever",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/scribing_table/fever",
+      "y": 270
+    }
+  }
+}

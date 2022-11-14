@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/pink_ivory",
+  "result": "tfcflorae:wood/slab/pink_ivory",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/pink_ivory"
+  }
+}

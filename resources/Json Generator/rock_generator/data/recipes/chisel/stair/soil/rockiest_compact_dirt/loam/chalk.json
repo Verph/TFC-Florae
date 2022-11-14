@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/chalk",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/chalk",
+  "mode": "stair"
+}

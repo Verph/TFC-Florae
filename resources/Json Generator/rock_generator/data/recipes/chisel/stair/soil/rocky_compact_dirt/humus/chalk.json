@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/chalk",
+  "result": "tfcflorae:rocky_compact_dirt/humus/stairs/chalk",
+  "mode": "stair"
+}

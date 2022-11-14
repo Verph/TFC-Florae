@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/marble",
+  "result": "tfcflorae:rock/stone_tiles/stairs/marble",
+  "mode": "stair"
+}

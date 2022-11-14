@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/red_mangrove",
+    "planks": "tfcflorae:block/wood/planks/red_mangrove"
+  }
+}

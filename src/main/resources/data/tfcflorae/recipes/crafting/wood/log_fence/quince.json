@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/quince"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/quince"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/quince",
+    "count": 8
+  }
+}

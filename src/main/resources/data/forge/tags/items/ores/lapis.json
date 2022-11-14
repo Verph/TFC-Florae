@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/lapis_lazuli/red_granite",
+    "tfcflorae:ore/lapis_lazuli/breccia",
+    "tfcflorae:ore/lapis_lazuli/foidolite",
+    "tfcflorae:ore/lapis_lazuli/porphyry",
+    "tfcflorae:ore/lapis_lazuli/peridotite",
+    "tfcflorae:ore/lapis_lazuli/blaimorite",
+    "tfcflorae:ore/lapis_lazuli/boninite",
+    "tfcflorae:ore/lapis_lazuli/carbonatite",
+    "tfcflorae:ore/lapis_lazuli/laterite",
+    "tfcflorae:ore/lapis_lazuli/mudstone",
+    "tfcflorae:ore/lapis_lazuli/sandstone",
+    "tfcflorae:ore/lapis_lazuli/siltstone",
+    "tfcflorae:ore/lapis_lazuli/arkose",
+    "tfcflorae:ore/lapis_lazuli/jaspillite",
+    "tfcflorae:ore/lapis_lazuli/travertine",
+    "tfcflorae:ore/lapis_lazuli/wackestone",
+    "tfcflorae:ore/lapis_lazuli/blackband_ironstone",
+    "tfcflorae:ore/lapis_lazuli/cataclasite",
+    "tfcflorae:ore/lapis_lazuli/blueschist",
+    "tfcflorae:ore/lapis_lazuli/catlinite",
+    "tfcflorae:ore/lapis_lazuli/greenschist",
+    "tfcflorae:ore/lapis_lazuli/novaculite",
+    "tfcflorae:ore/lapis_lazuli/soapstone",
+    "tfcflorae:ore/lapis_lazuli/komatiite",
+    "tfcflorae:ore/lapis_lazuli/mylonite"
+  ]
+}

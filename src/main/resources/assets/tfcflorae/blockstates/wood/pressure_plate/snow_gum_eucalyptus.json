@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/snow_gum_eucalyptus"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/snow_gum_eucalyptus_down"
+    }
+  }
+}

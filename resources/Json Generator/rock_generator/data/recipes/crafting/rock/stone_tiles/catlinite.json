@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/chiseled/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/catlinite",
+    "count": 4
+  }
+}

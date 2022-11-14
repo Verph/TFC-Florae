@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/carbonatite",
+  "result": "tfcflorae:rock/stone_tiles/slab/carbonatite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/carbonatite"
+  }
+}

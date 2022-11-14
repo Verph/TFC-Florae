@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/loose/dripstone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/dripstone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/dripstone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/dripstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/dripstone"
+  }
+}

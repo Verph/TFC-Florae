@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/nordmann_fir",
+    "top": "tfcflorae:block/wood/planks/nordmann_fir",
+    "side": "tfcflorae:block/wood/planks/nordmann_fir"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/mylonite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/stairs/mylonite",
+  "mode": "stair"
+}

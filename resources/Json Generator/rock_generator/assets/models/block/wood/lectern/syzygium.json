@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/syzygium",
+    "base": "tfcflorae:block/wood/lectern/base/syzygium",
+    "front": "tfcflorae:block/wood/lectern/front/syzygium",
+    "sides": "tfcflorae:block/wood/lectern/sides/syzygium",
+    "top": "tfcflorae:block/wood/lectern/top/syzygium",
+    "particle": "tfcflorae:block/wood/lectern/sides/syzygium"
+  }
+}

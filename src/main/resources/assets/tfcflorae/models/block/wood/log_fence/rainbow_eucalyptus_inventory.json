@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/rainbow_eucalyptus",
+    "planks": "tfcflorae:block/wood/planks/rainbow_eucalyptus"
+  }
+}

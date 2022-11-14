@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfc:laurel_dead/1",
+      "tfc:laurel_dead/2",
+      "tfc:laurel_dead/3",
+      "tfc:laurel_dead/4",
+      "tfc:laurel_dead/5",
+      "tfc:laurel_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "allow_submerged": false
+    }
+  }
+}

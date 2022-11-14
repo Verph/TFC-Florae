@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/logwood",
+  "result": "tfcflorae:wood/slab/logwood",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/logwood"
+  }
+}

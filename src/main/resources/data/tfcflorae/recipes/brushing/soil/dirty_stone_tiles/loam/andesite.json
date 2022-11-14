@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/andesite",
+  "result": "tfcflorae:rock/stone_tiles/andesite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

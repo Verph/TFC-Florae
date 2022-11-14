@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/rubber_fig",
+  "result": "tfcflorae:wood/stairs/rubber_fig",
+  "mode": "stair"
+}

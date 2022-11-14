@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/mahoe",
+    "base": "tfcflorae:block/wood/lectern/base/mahoe",
+    "front": "tfcflorae:block/wood/lectern/front/mahoe",
+    "sides": "tfcflorae:block/wood/lectern/sides/mahoe",
+    "top": "tfcflorae:block/wood/lectern/top/mahoe",
+    "particle": "tfcflorae:block/wood/lectern/sides/mahoe"
+  }
+}

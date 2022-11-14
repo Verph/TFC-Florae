@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/sweetgum",
+  "result": "tfcflorae:wood/slab/sweetgum",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/sweetgum"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/norway_spruce"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/norway_spruce_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/norway_spruce"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/messmate",
+    "leg": "tfcflorae:block/wood/log/messmate",
+    "side": "tfcflorae:block/wood/planks/messmate",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/messmate"
+  }
+}

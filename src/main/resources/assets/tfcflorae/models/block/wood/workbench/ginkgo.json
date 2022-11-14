@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/ginkgo",
+    "north": "tfcflorae:block/wood/workbench/front/ginkgo",
+    "south": "tfcflorae:block/wood/workbench/side/ginkgo",
+    "east": "tfcflorae:block/wood/workbench/side/ginkgo",
+    "west": "tfcflorae:block/wood/workbench/front/ginkgo",
+    "up": "tfcflorae:block/wood/workbench/top/ginkgo",
+    "down": "tfcflorae:block/wood/planks/ginkgo"
+  }
+}

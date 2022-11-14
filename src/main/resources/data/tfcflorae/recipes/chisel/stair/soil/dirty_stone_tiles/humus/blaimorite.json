@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/blaimorite",
+  "result": "tfcflorae:dirty_stone_tiles/humus/stairs/blaimorite",
+  "mode": "stair"
+}

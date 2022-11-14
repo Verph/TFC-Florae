@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/rhyolite",
+  "result": "tfcflorae:rock/stone_tiles/slab/rhyolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/rhyolite"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/laurel",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/laurel",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/laurel",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/laurel",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/laurel",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/laurel",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/laurel"
+  },
+  "render_type": "solid"
+}

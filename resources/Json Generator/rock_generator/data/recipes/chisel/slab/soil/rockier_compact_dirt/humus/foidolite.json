@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/foidolite",
+  "result": "tfcflorae:rockier_compact_dirt/humus/slab/foidolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/slab/foidolite"
+  }
+}

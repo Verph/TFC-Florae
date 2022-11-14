@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/poplar",
+    "planks": "tfcflorae:block/wood/planks/poplar",
+    "sheet": "tfcflorae:block/wood/sheet/poplar",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

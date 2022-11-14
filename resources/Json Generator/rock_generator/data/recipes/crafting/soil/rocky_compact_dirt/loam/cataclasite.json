@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/loose/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/cataclasite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/loam/cataclasite"
+  }
+}

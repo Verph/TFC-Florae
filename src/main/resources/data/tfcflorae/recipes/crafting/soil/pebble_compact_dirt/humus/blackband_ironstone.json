@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/blackband_ironstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/blackband_ironstone"
+  }
+}

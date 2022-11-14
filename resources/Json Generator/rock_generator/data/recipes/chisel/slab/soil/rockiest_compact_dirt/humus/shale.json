@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/shale",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/shale"
+  }
+}

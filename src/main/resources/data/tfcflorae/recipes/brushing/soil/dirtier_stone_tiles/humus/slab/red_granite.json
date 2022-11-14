@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/slab/red_granite",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/red_granite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

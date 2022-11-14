@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/brazilwood",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/brazilwood",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/brazilwood"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/brazilwood",
+      "y": 90
+    }
+  }
+}

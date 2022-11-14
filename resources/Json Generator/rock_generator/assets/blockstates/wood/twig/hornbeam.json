@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/hornbeam",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/hornbeam"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/hornbeam",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/hornbeam",
+        "y": 270
+      }
+    ]
+  }
+}

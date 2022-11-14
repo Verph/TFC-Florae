@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/nordmann_fir",
+  "result": "tfcflorae:wood/stairs/nordmann_fir",
+  "mode": "stair"
+}

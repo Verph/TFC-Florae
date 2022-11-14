@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/sorb",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/sorb"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/sorb",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/sorb",
+        "y": 270
+      }
+    ]
+  }
+}

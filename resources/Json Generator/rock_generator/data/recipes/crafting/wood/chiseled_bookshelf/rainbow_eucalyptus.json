@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/rainbow_eucalyptus"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/rainbow_eucalyptus"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/rainbow_eucalyptus"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/rainbow_eucalyptus",
+    "count": 1
+  }
+}

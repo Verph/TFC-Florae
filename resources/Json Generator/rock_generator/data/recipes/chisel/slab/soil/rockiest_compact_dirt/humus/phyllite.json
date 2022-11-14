@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/phyllite",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/phyllite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/phyllite"
+  }
+}

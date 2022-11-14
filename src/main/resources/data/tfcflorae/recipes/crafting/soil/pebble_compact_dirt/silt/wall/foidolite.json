@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silt/foidolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/wall/foidolite",
+    "count": 6
+  }
+}

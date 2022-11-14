@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/greenheart"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/greenheart_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/greenheart"
+    }
+  }
+}

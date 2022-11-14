@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/mahoe",
+    "north": "tfcflorae:block/wood/workbench/front/mahoe",
+    "south": "tfcflorae:block/wood/workbench/side/mahoe",
+    "east": "tfcflorae:block/wood/workbench/side/mahoe",
+    "west": "tfcflorae:block/wood/workbench/front/mahoe",
+    "up": "tfcflorae:block/wood/workbench/top/mahoe",
+    "down": "tfcflorae:block/wood/planks/mahoe"
+  }
+}

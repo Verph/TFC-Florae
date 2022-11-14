@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/blackband_ironstone",
+  "result": "tfcflorae:rock/stone_tiles/blackband_ironstone",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

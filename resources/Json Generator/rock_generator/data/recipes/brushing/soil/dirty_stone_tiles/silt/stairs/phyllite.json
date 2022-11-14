@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/stairs/phyllite",
+  "result": "tfcflorae:rock/stone_tiles/stairs/phyllite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

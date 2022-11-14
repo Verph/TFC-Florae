@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/greenheart",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/greenheart",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/greenheart"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/greenheart",
+      "y": 90
+    }
+  }
+}

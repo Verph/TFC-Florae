@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/red_elm",
+  "result": "tfcflorae:wood/slab/red_elm",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/red_elm"
+  }
+}

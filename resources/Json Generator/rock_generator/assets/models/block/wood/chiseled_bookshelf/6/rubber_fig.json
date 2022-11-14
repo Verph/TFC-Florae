@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/rubber_fig",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/rubber_fig",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/rubber_fig",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/rubber_fig",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/rubber_fig",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/rubber_fig",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/rubber_fig"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/pink_ipe",
+  "result": "tfcflorae:wood/stairs/pink_ipe",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/white_mangrove"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/white_mangrove_down"
+    }
+  }
+}

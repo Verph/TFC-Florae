@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    },
+    {
+      "item": "tfc:rock/loose/granite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/granite"
+  }
+}

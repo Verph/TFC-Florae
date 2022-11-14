@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/yellow_jacaranda",
+    "base": "tfcflorae:block/wood/lectern/base/yellow_jacaranda",
+    "front": "tfcflorae:block/wood/lectern/front/yellow_jacaranda",
+    "sides": "tfcflorae:block/wood/lectern/sides/yellow_jacaranda",
+    "top": "tfcflorae:block/wood/lectern/top/yellow_jacaranda",
+    "particle": "tfcflorae:block/wood/lectern/sides/yellow_jacaranda"
+  }
+}

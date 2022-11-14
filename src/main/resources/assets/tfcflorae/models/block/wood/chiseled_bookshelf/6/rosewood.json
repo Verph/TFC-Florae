@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/rosewood",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/rosewood",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/6/rosewood",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/rosewood",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/rosewood",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/rosewood",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/rosewood"
+  },
+  "render_type": "solid"
+}

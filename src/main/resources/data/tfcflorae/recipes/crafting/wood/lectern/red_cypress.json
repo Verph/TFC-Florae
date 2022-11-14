@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/red_cypress"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/red_cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/red_cypress"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/carbonatite",
+  "result": "tfcflorae:rock/cobbled_bricks/slab/carbonatite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobbled_bricks/slab/carbonatite"
+  }
+}

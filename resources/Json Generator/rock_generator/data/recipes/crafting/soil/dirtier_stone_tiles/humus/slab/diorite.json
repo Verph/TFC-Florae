@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/humus/diorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/diorite",
+    "count": 6
+  }
+}

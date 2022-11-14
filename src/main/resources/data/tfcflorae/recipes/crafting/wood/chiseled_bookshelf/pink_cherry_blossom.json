@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/pink_cherry_blossom"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/pink_cherry_blossom"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/pink_cherry_blossom"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/pink_cherry_blossom",
+    "count": 1
+  }
+}

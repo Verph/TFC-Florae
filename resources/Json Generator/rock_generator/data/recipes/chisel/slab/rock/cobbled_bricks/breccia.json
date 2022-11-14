@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/breccia",
+  "result": "tfcflorae:rock/cobbled_bricks/slab/breccia",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobbled_bricks/slab/breccia"
+  }
+}

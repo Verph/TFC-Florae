@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "tfcflorae:dirt/humus"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:soil_pile/humus",
+    "count": 4
+  }
+}

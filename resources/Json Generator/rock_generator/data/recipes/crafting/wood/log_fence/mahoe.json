@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/mahoe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/mahoe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/mahoe",
+    "count": 8
+  }
+}

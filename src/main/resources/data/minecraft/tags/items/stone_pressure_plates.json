@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/pressure_plate/cataclasite",
+    "tfcflorae:rock/pressure_plate/porphyry",
+    "tfcflorae:rock/pressure_plate/red_granite",
+    "tfcflorae:rock/pressure_plate/laterite",
+    "tfcflorae:rock/pressure_plate/breccia",
+    "tfcflorae:rock/pressure_plate/foidolite",
+    "tfcflorae:rock/pressure_plate/peridotite",
+    "tfcflorae:rock/pressure_plate/blaimorite",
+    "tfcflorae:rock/pressure_plate/boninite",
+    "tfcflorae:rock/pressure_plate/carbonatite",
+    "tfcflorae:rock/pressure_plate/mudstone",
+    "tfcflorae:rock/pressure_plate/sandstone",
+    "tfcflorae:rock/pressure_plate/siltstone",
+    "tfcflorae:rock/pressure_plate/arkose",
+    "tfcflorae:rock/pressure_plate/jaspillite",
+    "tfcflorae:rock/pressure_plate/travertine",
+    "tfcflorae:rock/pressure_plate/wackestone",
+    "tfcflorae:rock/pressure_plate/blackband_ironstone",
+    "tfcflorae:rock/pressure_plate/blueschist",
+    "tfcflorae:rock/pressure_plate/catlinite",
+    "tfcflorae:rock/pressure_plate/greenschist",
+    "tfcflorae:rock/pressure_plate/novaculite",
+    "tfcflorae:rock/pressure_plate/soapstone",
+    "tfcflorae:rock/pressure_plate/komatiite",
+    "tfcflorae:rock/pressure_plate/mylonite"
+  ]
+}

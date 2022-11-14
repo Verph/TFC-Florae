@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/yellow_meranti",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/yellow_meranti",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/yellow_meranti"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/yellow_meranti",
+      "y": 90
+    }
+  }
+}

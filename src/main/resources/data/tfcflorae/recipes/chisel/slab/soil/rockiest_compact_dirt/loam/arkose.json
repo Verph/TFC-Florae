@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/arkose",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/slab/arkose",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/slab/arkose"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/sandstone",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/slab/sandstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/slab/sandstone"
+  }
+}

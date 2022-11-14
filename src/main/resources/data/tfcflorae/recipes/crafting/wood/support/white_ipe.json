@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:white_ipe_logs"
+      },
+      {
+        "tag": "tfc:white_ipe_logs"
+      },
+      {
+        "tag": "tfc:saws"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:wood/support/white_ipe",
+      "count": 8
+    }
+  }
+}

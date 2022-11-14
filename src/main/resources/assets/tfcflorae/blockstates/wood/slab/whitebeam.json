@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/whitebeam"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/whitebeam_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/whitebeam"
+    }
+  }
+}

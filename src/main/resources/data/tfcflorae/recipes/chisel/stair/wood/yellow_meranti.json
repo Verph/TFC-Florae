@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/yellow_meranti",
+  "result": "tfcflorae:wood/stairs/yellow_meranti",
+  "mode": "stair"
+}

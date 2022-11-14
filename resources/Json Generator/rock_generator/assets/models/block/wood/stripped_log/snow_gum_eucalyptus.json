@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/stripped_log_top/snow_gum_eucalyptus",
+    "side": "tfcflorae:block/wood/stripped_log/snow_gum_eucalyptus"
+  }
+}

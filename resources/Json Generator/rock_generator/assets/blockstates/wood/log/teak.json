@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/log/teak"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/log/teak",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/log/teak",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

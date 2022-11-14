@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/stone_tiles/marble"
+  },
+  "result": "tfcflorae:rock/stone_tiles/wall/marble",
+  "count": 1
+}

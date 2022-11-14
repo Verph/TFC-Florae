@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/porphyry",
+  "result": "tfcflorae:rocky_compact_dirt/humus/slab/porphyry",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/slab/porphyry"
+  }
+}

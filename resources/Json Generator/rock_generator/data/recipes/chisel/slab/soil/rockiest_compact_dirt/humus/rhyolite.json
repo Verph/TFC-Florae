@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/rhyolite",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/rhyolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/rhyolite"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/rubber_fig",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/rubber_fig",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/rubber_fig"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/rubber_fig",
+      "y": 90
+    }
+  }
+}

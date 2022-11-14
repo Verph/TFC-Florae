@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/rainbow_eucalyptus",
+    "side": "tfcflorae:block/wood/bookshelf/rainbow_eucalyptus"
+  }
+}

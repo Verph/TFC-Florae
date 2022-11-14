@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/wenge"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/wenge",
+    "count": 8
+  }
+}

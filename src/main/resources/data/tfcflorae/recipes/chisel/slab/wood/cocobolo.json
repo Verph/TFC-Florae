@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/cocobolo",
+  "result": "tfcflorae:wood/slab/cocobolo",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/cocobolo"
+  }
+}

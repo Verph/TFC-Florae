@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silt/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/wall/rhyolite",
+    "count": 6
+  }
+}

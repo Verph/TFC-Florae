@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/rainbow_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/rainbow_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/rainbow_eucalyptus",
+    "count": 8
+  }
+}

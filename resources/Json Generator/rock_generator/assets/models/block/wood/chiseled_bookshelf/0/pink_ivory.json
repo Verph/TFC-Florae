@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/pink_ivory",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/pink_ivory",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/pink_ivory",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/pink_ivory",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/pink_ivory",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/pink_ivory",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/pink_ivory"
+  },
+  "render_type": "solid"
+}

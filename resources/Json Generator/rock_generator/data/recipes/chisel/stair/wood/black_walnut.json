@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/black_walnut",
+  "result": "tfcflorae:wood/stairs/black_walnut",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silt/peridotite",
+  "result": "tfcflorae:pebble_compact_dirt/silt/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/slab/peridotite"
+  }
+}

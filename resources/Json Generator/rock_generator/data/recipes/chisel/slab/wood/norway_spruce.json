@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/norway_spruce",
+  "result": "tfcflorae:wood/slab/norway_spruce",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/norway_spruce"
+  }
+}

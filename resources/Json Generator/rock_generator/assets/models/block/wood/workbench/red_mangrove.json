@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/red_mangrove",
+    "north": "tfcflorae:block/wood/workbench/front/red_mangrove",
+    "south": "tfcflorae:block/wood/workbench/side/red_mangrove",
+    "east": "tfcflorae:block/wood/workbench/side/red_mangrove",
+    "west": "tfcflorae:block/wood/workbench/front/red_mangrove",
+    "up": "tfcflorae:block/wood/workbench/top/red_mangrove",
+    "down": "tfcflorae:block/wood/planks/red_mangrove"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/hawthorn",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/hawthorn",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/hawthorn",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/hawthorn",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/hawthorn",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/hawthorn",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/hawthorn"
+  },
+  "render_type": "solid"
+}

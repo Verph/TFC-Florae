@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/sloe",
+    "base": "tfcflorae:block/wood/lectern/base/sloe",
+    "front": "tfcflorae:block/wood/lectern/front/sloe",
+    "sides": "tfcflorae:block/wood/lectern/sides/sloe",
+    "top": "tfcflorae:block/wood/lectern/top/sloe",
+    "particle": "tfcflorae:block/wood/lectern/sides/sloe"
+  }
+}

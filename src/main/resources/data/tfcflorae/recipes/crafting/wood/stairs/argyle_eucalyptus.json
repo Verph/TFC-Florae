@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/argyle_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/argyle_eucalyptus",
+    "count": 8
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/purple_jacaranda",
+  "result": "tfcflorae:wood/stairs/purple_jacaranda",
+  "mode": "stair"
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/locust"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/locust"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/locust"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/locust"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/locust"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/locust"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/locust"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/locust"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/locust"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/locust",
+    "count": 1
+  }
+}

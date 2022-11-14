@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/sandy_loam/wackestone",
+  "result": "tfcflorae:rockier_compact_dirt/sandy_loam/slab/wackestone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/sandy_loam/slab/wackestone"
+  }
+}

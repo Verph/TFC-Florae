@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/laurel",
+  "result": "tfcflorae:wood/slab/laurel",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/laurel"
+  }
+}

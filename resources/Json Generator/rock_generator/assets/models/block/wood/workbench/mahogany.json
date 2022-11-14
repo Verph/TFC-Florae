@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/mahogany",
+    "north": "tfcflorae:block/wood/workbench/front/mahogany",
+    "south": "tfcflorae:block/wood/workbench/side/mahogany",
+    "east": "tfcflorae:block/wood/workbench/side/mahogany",
+    "west": "tfcflorae:block/wood/workbench/front/mahogany",
+    "up": "tfcflorae:block/wood/workbench/top/mahogany",
+    "down": "tfcflorae:block/wood/planks/mahogany"
+  }
+}

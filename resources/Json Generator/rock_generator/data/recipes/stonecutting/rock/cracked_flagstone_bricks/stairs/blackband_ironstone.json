@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cracked_flagstone_bricks/blackband_ironstone"
+  },
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/stairs/blackband_ironstone",
+  "count": 1
+}

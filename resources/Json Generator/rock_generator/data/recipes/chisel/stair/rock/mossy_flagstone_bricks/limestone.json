@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/limestone",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/stairs/limestone",
+  "mode": "stair"
+}

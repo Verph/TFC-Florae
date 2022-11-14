@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/stripped_wood/butternut"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/stripped_wood/butternut",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/stripped_wood/butternut",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

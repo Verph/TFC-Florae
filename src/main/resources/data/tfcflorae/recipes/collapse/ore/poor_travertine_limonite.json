@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/normal_limonite/travertine",
+  "result": "tfcflorae:ore/poor_limonite/travertine"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/travertine",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/travertine",
+  "mode": "stair"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/brazilwood",
+    "north": "tfcflorae:block/wood/workbench/front/brazilwood",
+    "south": "tfcflorae:block/wood/workbench/side/brazilwood",
+    "east": "tfcflorae:block/wood/workbench/side/brazilwood",
+    "west": "tfcflorae:block/wood/workbench/front/brazilwood",
+    "up": "tfcflorae:block/wood/workbench/top/brazilwood",
+    "down": "tfcflorae:block/wood/planks/brazilwood"
+  }
+}

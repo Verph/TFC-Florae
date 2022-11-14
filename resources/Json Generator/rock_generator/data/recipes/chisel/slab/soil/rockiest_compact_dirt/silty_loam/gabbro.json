@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silty_loam/gabbro",
+  "result": "tfcflorae:rockiest_compact_dirt/silty_loam/slab/gabbro",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/slab/gabbro"
+  }
+}

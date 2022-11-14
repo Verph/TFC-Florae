@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/iroko",
+    "base": "tfcflorae:block/wood/lectern/base/iroko",
+    "front": "tfcflorae:block/wood/lectern/front/iroko",
+    "sides": "tfcflorae:block/wood/lectern/sides/iroko",
+    "top": "tfcflorae:block/wood/lectern/top/iroko",
+    "particle": "tfcflorae:block/wood/lectern/sides/iroko"
+  }
+}

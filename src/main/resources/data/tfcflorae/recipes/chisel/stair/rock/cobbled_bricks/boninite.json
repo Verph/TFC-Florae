@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/boninite",
+  "result": "tfcflorae:rock/cobbled_bricks/stairs/boninite",
+  "mode": "stair"
+}

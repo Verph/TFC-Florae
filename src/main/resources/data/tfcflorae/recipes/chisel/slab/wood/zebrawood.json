@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/zebrawood",
+  "result": "tfcflorae:wood/slab/zebrawood",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/zebrawood"
+  }
+}

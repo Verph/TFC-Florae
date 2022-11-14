@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/beech",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/beech"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/beech",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/beech",
+        "y": 270
+      }
+    ]
+  }
+}

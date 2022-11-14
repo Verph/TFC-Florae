@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/zebrawood",
+    "planks": "tfcflorae:block/wood/planks/zebrawood",
+    "sheet": "tfcflorae:block/wood/sheet/zebrawood",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/stone_tiles/schist"
+  },
+  "result": "tfcflorae:rock/stone_tiles/slab/schist",
+  "count": 2
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/persimmon",
+  "result": "tfcflorae:wood/slab/persimmon",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/persimmon"
+  }
+}

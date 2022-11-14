@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/kauri"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/kauri_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/kauri"
+    }
+  }
+}

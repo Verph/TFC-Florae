@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/african_padauk"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/african_padauk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/african_padauk",
+    "count": 8
+  }
+}

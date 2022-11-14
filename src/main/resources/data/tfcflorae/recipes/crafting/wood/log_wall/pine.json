@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/pine"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/pine"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/pine",
+    "count": 8
+  }
+}

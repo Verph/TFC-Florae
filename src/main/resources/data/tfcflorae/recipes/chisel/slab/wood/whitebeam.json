@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/whitebeam",
+  "result": "tfcflorae:wood/slab/whitebeam",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/whitebeam"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/quince",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/quince"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/quince",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/quince",
+        "y": 270
+      }
+    ]
+  }
+}

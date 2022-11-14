@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/log/sorb"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/log/sorb",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/log/sorb",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

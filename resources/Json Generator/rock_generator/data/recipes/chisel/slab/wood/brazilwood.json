@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/brazilwood",
+  "result": "tfcflorae:wood/slab/brazilwood",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/brazilwood"
+  }
+}

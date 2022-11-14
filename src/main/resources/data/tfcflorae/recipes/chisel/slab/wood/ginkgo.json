@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ginkgo",
+  "result": "tfcflorae:wood/slab/ginkgo",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/ginkgo"
+  }
+}

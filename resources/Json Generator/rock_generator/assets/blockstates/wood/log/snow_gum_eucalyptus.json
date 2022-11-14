@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/log/snow_gum_eucalyptus"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/log/snow_gum_eucalyptus",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/log/snow_gum_eucalyptus",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

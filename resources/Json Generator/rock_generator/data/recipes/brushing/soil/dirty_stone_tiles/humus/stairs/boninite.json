@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/stairs/boninite",
+  "result": "tfcflorae:rock/stone_tiles/stairs/boninite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

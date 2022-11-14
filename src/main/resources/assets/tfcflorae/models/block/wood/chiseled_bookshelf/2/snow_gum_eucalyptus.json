@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/snow_gum_eucalyptus",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/snow_gum_eucalyptus",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/snow_gum_eucalyptus",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/snow_gum_eucalyptus",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/snow_gum_eucalyptus",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/snow_gum_eucalyptus",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/snow_gum_eucalyptus"
+  },
+  "render_type": "solid"
+}

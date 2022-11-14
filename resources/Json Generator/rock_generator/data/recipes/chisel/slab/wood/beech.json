@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/beech",
+  "result": "tfcflorae:wood/slab/beech",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/beech"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/marble"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/slab/marble",
+    "count": 6
+  }
+}

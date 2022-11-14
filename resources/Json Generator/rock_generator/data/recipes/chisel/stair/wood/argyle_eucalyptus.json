@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/argyle_eucalyptus",
+  "result": "tfcflorae:wood/stairs/argyle_eucalyptus",
+  "mode": "stair"
+}

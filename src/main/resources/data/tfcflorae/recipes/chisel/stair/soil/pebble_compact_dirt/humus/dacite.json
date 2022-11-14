@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/dacite",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/dacite",
+  "mode": "stair"
+}

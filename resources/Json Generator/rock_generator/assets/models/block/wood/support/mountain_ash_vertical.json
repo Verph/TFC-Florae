@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/vertical",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/mountain_ash",
+    "particle": "tfcflorae:block/wood/sheet/mountain_ash"
+  }
+}

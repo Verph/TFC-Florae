@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/rowan",
+  "result": "tfcflorae:wood/slab/rowan",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/rowan"
+  }
+}

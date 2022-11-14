@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/white_mangrove",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/white_mangrove",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/white_mangrove",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/white_mangrove",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/white_mangrove",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/white_mangrove",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/white_mangrove"
+  },
+  "render_type": "solid"
+}

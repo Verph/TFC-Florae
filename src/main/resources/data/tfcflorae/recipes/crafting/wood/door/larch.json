@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/larch"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/door/larch",
+    "count": 2
+  }
+}

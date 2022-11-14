@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/boninite",
+  "result": "tfcflorae:dirty_stone_tiles/humus/stairs/boninite",
+  "mode": "stair"
+}

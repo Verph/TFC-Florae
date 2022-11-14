@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/loam/dripstone",
+  "result": "tfcflorae:dirtiest_stone_tiles/loam/stairs/dripstone",
+  "mode": "stair"
+}

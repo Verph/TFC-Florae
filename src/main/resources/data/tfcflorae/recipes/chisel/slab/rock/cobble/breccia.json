@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/breccia",
+  "result": "tfcflorae:rock/cobble/slab/breccia",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobble/slab/breccia"
+  }
+}

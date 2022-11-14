@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/yellow_jacaranda"
+    },
+    {
+      "item": "tfcflorae:wood/wood/yellow_jacaranda"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/yellow_jacaranda"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/yellow_jacaranda"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 795
+}

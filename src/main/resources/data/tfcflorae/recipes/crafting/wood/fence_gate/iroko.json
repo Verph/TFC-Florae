@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/iroko"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/iroko"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/iroko",
+    "count": 2
+  }
+}

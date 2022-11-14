@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/vertical",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/norway_spruce",
+    "particle": "tfcflorae:block/wood/sheet/norway_spruce"
+  }
+}

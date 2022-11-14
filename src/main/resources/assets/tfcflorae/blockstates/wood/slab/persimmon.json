@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/persimmon"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/persimmon_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/persimmon"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/loam/gabbro",
+  "result": "tfcflorae:rockier_compact_dirt/loam/stairs/gabbro",
+  "mode": "stair"
+}

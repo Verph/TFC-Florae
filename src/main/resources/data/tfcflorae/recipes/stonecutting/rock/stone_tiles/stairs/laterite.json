@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/stone_tiles/laterite"
+  },
+  "result": "tfcflorae:rock/stone_tiles/stairs/laterite",
+  "count": 1
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/peridotite"
+  },
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/stairs/peridotite",
+  "count": 1
+}

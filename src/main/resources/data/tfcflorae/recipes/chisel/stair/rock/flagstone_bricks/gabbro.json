@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/gabbro",
+  "result": "tfcflorae:rock/flagstone_bricks/stairs/gabbro",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/dripstone",
+  "result": "tfcflorae:dirtiest_stone_tiles/humus/slab/dripstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/humus/slab/dripstone"
+  }
+}

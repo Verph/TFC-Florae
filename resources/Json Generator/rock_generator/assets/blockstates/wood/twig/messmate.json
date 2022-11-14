@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/messmate",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/messmate"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/messmate",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/messmate",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/catlinite",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/stairs/catlinite",
+  "mode": "stair"
+}

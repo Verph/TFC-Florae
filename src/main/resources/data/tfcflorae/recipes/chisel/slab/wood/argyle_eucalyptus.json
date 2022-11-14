@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/argyle_eucalyptus",
+  "result": "tfcflorae:wood/slab/argyle_eucalyptus",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/argyle_eucalyptus"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F B",
+    "XXX",
+    "Y Y"
+  ],
+  "key": {
+    "F": {
+      "tag": "forge:feathers"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    },
+    "X": {
+      "item": "tfcflorae:wood/slab/yellow_ipe"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/planks/yellow_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/scribing_table/yellow_ipe"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silt/diorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/slab/diorite",
+    "count": 6
+  }
+}

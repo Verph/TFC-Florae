@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/loam"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/gneiss"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/loam/gneiss"
+  }
+}

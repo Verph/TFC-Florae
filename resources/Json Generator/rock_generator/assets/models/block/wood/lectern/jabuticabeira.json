@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/jabuticabeira",
+    "base": "tfcflorae:block/wood/lectern/base/jabuticabeira",
+    "front": "tfcflorae:block/wood/lectern/front/jabuticabeira",
+    "sides": "tfcflorae:block/wood/lectern/sides/jabuticabeira",
+    "top": "tfcflorae:block/wood/lectern/top/jabuticabeira",
+    "particle": "tfcflorae:block/wood/lectern/sides/jabuticabeira"
+  }
+}

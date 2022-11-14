@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/loam/novaculite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/wall/novaculite",
+    "count": 6
+  }
+}

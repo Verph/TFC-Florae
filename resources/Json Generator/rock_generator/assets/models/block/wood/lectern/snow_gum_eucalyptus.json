@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",
+    "base": "tfcflorae:block/wood/lectern/base/snow_gum_eucalyptus",
+    "front": "tfcflorae:block/wood/lectern/front/snow_gum_eucalyptus",
+    "sides": "tfcflorae:block/wood/lectern/sides/snow_gum_eucalyptus",
+    "top": "tfcflorae:block/wood/lectern/top/snow_gum_eucalyptus",
+    "particle": "tfcflorae:block/wood/lectern/sides/snow_gum_eucalyptus"
+  }
+}

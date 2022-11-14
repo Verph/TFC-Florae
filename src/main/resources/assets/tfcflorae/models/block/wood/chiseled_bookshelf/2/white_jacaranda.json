@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/white_jacaranda",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/white_jacaranda",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/white_jacaranda",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/white_jacaranda",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/white_jacaranda",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/white_jacaranda",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/white_jacaranda"
+  },
+  "render_type": "solid"
+}

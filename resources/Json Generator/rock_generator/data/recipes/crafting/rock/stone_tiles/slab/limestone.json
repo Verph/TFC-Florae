@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/slab/limestone",
+    "count": 6
+  }
+}

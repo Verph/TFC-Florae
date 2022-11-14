@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/gneiss",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/slab/gneiss",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/slab/gneiss"
+  }
+}

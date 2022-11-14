@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/iroko",
+  "result": "tfcflorae:wood/slab/iroko",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/iroko"
+  }
+}

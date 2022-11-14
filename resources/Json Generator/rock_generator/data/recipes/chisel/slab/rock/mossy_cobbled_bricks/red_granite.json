@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/red_granite",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/slab/red_granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/slab/red_granite"
+  }
+}

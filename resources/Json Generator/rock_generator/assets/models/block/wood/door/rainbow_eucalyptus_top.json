@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/rainbow_eucalyptus_top",
+    "bottom": "tfcflorae:block/wood/planks/rainbow_eucalyptus_bottom"
+  }
+}

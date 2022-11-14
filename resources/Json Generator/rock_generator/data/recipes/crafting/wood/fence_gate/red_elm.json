@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/red_elm"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/red_elm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/red_elm",
+    "count": 2
+  }
+}

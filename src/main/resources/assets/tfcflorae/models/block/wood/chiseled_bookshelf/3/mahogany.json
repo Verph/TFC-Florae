@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/mahogany",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/mahogany",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/mahogany",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/mahogany",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/mahogany",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/mahogany",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/mahogany"
+  },
+  "render_type": "solid"
+}

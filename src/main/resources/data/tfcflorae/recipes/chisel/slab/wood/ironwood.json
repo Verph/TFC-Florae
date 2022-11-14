@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ironwood",
+  "result": "tfcflorae:wood/slab/ironwood",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/ironwood"
+  }
+}

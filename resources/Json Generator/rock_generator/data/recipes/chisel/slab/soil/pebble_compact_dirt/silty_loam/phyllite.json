@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/phyllite",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/slab/phyllite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/slab/phyllite"
+  }
+}

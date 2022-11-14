@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/pink_ivory",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/pink_ivory",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/pink_ivory"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/pink_ivory",
+      "y": 90
+    }
+  }
+}

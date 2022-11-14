@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/sandy_loam/breccia",
+  "result": "tfcflorae:rockier_compact_dirt/sandy_loam/slab/breccia",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/sandy_loam/slab/breccia"
+  }
+}

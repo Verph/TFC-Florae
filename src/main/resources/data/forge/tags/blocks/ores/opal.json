@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/opal/red_granite",
+    "tfcflorae:ore/opal/breccia",
+    "tfcflorae:ore/opal/foidolite",
+    "tfcflorae:ore/opal/porphyry",
+    "tfcflorae:ore/opal/peridotite",
+    "tfcflorae:ore/opal/blaimorite",
+    "tfcflorae:ore/opal/boninite",
+    "tfcflorae:ore/opal/carbonatite",
+    "tfcflorae:ore/opal/laterite",
+    "tfcflorae:ore/opal/mudstone",
+    "tfcflorae:ore/opal/sandstone",
+    "tfcflorae:ore/opal/siltstone",
+    "tfcflorae:ore/opal/arkose",
+    "tfcflorae:ore/opal/jaspillite",
+    "tfcflorae:ore/opal/travertine",
+    "tfcflorae:ore/opal/wackestone",
+    "tfcflorae:ore/opal/blackband_ironstone",
+    "tfcflorae:ore/opal/cataclasite",
+    "tfcflorae:ore/opal/blueschist",
+    "tfcflorae:ore/opal/catlinite",
+    "tfcflorae:ore/opal/greenschist",
+    "tfcflorae:ore/opal/novaculite",
+    "tfcflorae:ore/opal/soapstone",
+    "tfcflorae:ore/opal/komatiite",
+    "tfcflorae:ore/opal/mylonite"
+  ]
+}

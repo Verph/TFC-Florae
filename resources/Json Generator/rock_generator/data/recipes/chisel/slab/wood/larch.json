@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/larch",
+  "result": "tfcflorae:wood/slab/larch",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/larch"
+  }
+}

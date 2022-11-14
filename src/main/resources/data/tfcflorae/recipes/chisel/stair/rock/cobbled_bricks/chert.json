@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/chert",
+  "result": "tfcflorae:rock/cobbled_bricks/stairs/chert",
+  "mode": "stair"
+}

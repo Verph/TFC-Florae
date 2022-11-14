@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/cobble/greenschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/cobble/wall/greenschist",
+    "count": 6
+  }
+}

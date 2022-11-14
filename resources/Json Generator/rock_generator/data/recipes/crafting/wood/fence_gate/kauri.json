@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/kauri"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/kauri"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/kauri",
+    "count": 2
+  }
+}

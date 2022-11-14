@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/yew",
+    "planks": "tfcflorae:block/wood/planks/yew",
+    "sheet": "tfcflorae:block/wood/sheet/yew",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

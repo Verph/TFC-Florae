@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/conglomerate",
+  "result": "tfcflorae:rock/flagstone_bricks/stairs/conglomerate",
+  "mode": "stair"
+}

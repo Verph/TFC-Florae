@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/limba",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/limba"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/limba",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/limba",
+        "y": 270
+      }
+    ]
+  }
+}

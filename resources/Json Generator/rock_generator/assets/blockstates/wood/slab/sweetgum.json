@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/sweetgum"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/sweetgum_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/sweetgum"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/loose/wackestone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/wackestone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/wackestone"
+  }
+}

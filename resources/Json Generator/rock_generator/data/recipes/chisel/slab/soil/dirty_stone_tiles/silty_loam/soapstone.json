@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/soapstone",
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/slab/soapstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slab/soapstone"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/white_jacaranda",
+    "north": "tfcflorae:block/wood/workbench/front/white_jacaranda",
+    "south": "tfcflorae:block/wood/workbench/side/white_jacaranda",
+    "east": "tfcflorae:block/wood/workbench/side/white_jacaranda",
+    "west": "tfcflorae:block/wood/workbench/front/white_jacaranda",
+    "up": "tfcflorae:block/wood/workbench/top/white_jacaranda",
+    "down": "tfcflorae:block/wood/planks/white_jacaranda"
+  }
+}

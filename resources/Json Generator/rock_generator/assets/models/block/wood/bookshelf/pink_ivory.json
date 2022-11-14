@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/pink_ivory",
+    "side": "tfcflorae:block/wood/bookshelf/pink_ivory"
+  }
+}

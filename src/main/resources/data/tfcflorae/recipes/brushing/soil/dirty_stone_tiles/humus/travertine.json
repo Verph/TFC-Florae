@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/travertine",
+  "result": "tfcflorae:rock/stone_tiles/travertine",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/humus"
+  }
+}

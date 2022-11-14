@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/red_granite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/stairs/red_granite",
+  "mode": "stair"
+}

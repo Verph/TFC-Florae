@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/sandy_loam/claystone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/stairs/claystone",
+    "count": 8
+  }
+}

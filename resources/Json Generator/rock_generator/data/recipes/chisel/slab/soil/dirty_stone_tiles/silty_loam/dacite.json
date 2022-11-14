@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/dacite",
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/slab/dacite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slab/dacite"
+  }
+}

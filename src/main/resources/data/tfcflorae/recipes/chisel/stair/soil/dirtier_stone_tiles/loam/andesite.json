@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/andesite",
+  "result": "tfcflorae:dirtier_stone_tiles/loam/stairs/andesite",
+  "mode": "stair"
+}

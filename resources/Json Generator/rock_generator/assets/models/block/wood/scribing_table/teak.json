@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/teak",
+    "leg": "tfcflorae:block/wood/log/teak",
+    "side": "tfcflorae:block/wood/planks/teak",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/teak"
+  }
+}

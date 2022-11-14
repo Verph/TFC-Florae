@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/soapstone"
+  },
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/slab/soapstone",
+  "count": 2
+}

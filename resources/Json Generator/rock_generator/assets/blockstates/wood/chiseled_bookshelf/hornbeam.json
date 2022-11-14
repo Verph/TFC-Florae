@@ -1,0 +1,165 @@
+{
+  "variants": {
+    "facing=north,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam"
+    },
+    "facing=east,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam"
+    },
+    "facing=east,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam"
+    },
+    "facing=east,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam"
+    },
+    "facing=east,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam"
+    },
+    "facing=east,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam"
+    },
+    "facing=east,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/hornbeam",
+      "x": 90
+    },
+    "facing=north,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam"
+    },
+    "facing=east,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam",
+      "y": 90
+    },
+    "facing=south,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam",
+      "y": 180
+    },
+    "facing=west,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam",
+      "y": 270
+    },
+    "facing=up,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam",
+      "x": 270
+    },
+    "facing=down,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/hornbeam",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/white_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chest/white_cherry_blossom"
+  }
+}

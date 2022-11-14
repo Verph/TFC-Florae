@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone_bricks/phyllite"
+  },
+  "result": "tfcflorae:rock/flagstone_bricks/wall/phyllite",
+  "count": 1
+}

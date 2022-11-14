@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/loam/rhyolite",
+  "result": "tfcflorae:rockier_compact_dirt/loam/stairs/rhyolite",
+  "mode": "stair"
+}

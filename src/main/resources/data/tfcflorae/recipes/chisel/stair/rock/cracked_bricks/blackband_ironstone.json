@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_bricks/blackband_ironstone",
+  "result": "tfcflorae:rock/cracked_bricks/stairs/blackband_ironstone",
+  "mode": "stair"
+}

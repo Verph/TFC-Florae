@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/sandy_loam"
+    },
+    {
+      "item": "tfc:rock/loose/slate"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/slate"
+  }
+}

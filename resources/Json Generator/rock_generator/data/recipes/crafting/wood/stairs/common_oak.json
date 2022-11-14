@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/common_oak"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/common_oak",
+    "count": 8
+  }
+}

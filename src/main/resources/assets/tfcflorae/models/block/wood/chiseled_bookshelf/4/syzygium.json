@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/syzygium",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/syzygium",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/4/syzygium",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/syzygium",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/syzygium",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/syzygium",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/syzygium"
+  },
+  "render_type": "solid"
+}

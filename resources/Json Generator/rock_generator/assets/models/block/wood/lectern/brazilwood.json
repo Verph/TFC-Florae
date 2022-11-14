@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/brazilwood",
+    "base": "tfcflorae:block/wood/lectern/base/brazilwood",
+    "front": "tfcflorae:block/wood/lectern/front/brazilwood",
+    "sides": "tfcflorae:block/wood/lectern/sides/brazilwood",
+    "top": "tfcflorae:block/wood/lectern/top/brazilwood",
+    "particle": "tfcflorae:block/wood/lectern/sides/brazilwood"
+  }
+}

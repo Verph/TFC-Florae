@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/cocobolo",
+    "particle": "tfcflorae:block/wood/planks/cocobolo"
+  }
+}

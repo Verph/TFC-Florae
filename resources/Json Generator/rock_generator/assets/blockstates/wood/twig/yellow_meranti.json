@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_meranti",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_meranti"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_meranti",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_meranti",
+        "y": 270
+      }
+    ]
+  }
+}

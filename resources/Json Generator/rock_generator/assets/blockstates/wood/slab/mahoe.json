@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/mahoe"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/mahoe_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/mahoe"
+    }
+  }
+}

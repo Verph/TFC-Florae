@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/logwood",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/logwood"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/logwood",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/logwood",
+        "y": 270
+      }
+    ]
+  }
+}

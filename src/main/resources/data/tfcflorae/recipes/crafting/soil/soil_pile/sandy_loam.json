@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "tfc:dirt/sandy_loam"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:soil_pile/sandy_loam",
+    "count": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/raw/boninite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/raw/wall/boninite",
+    "count": 6
+  }
+}

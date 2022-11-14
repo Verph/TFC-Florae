@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silt/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silt/stairs/gneiss",
+    "count": 8
+  }
+}

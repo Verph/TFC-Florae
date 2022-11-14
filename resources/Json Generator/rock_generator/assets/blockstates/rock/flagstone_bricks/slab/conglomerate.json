@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/flagstone_bricks/slab/bottom/conglomerate"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/flagstone_bricks/slab/top/conglomerate"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/flagstone_bricks/conglomerate"
+    }
+  }
+}

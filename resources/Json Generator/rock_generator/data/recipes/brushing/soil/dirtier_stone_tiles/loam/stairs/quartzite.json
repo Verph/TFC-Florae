@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/stairs/quartzite",
+  "result": "tfcflorae:dirty_stone_tiles/loam/stairs/quartzite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/loam"
+  }
+}

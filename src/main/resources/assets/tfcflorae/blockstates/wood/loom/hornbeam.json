@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/hornbeam",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/hornbeam",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/hornbeam"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/hornbeam",
+      "y": 90
+    }
+  }
+}

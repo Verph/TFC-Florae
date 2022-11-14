@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 0,
+    "max_rain": 500,
+    "min_temp": -20,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/charred_tree"
+      }
+    ],
+    "normal_tree": "tfc:tree/charred_tree",
+    "dead_tree": "tfc:tree/charred_tree_large",
+    "fallen_log": "tfcflorae:wood/log/charred_tree",
+    "old_growth_tree": "tfc:tree/charred_tree_large"
+  }
+}

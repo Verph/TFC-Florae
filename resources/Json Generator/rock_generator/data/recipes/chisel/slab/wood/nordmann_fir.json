@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/nordmann_fir",
+  "result": "tfcflorae:wood/slab/nordmann_fir",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/nordmann_fir"
+  }
+}

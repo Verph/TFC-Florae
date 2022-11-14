@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/messmate",
+    "base": "tfcflorae:block/wood/lectern/base/messmate",
+    "front": "tfcflorae:block/wood/lectern/front/messmate",
+    "sides": "tfcflorae:block/wood/lectern/sides/messmate",
+    "top": "tfcflorae:block/wood/lectern/top/messmate",
+    "particle": "tfcflorae:block/wood/lectern/sides/messmate"
+  }
+}

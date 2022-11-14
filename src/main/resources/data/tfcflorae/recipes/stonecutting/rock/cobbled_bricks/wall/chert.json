@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cobbled_bricks/chert"
+  },
+  "result": "tfcflorae:rock/cobbled_bricks/wall/chert",
+  "count": 1
+}

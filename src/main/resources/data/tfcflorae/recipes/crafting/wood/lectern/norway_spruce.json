@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/norway_spruce"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/norway_spruce"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/norway_spruce"
+  }
+}

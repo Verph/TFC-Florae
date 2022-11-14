@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/sandy_loam/andesite",
+  "result": "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/andesite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/andesite"
+  }
+}

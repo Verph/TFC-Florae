@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/dolomite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/dolomite",
+    "count": 6
+  }
+}

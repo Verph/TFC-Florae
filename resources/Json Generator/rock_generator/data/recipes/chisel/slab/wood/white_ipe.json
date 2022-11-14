@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_ipe",
+  "result": "tfcflorae:wood/slab/white_ipe",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/white_ipe"
+  }
+}

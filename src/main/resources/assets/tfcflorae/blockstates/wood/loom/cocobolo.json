@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/cocobolo",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/cocobolo",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/cocobolo"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/cocobolo",
+      "y": 90
+    }
+  }
+}

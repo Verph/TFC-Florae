@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/blackband_ironstone",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/slab/blackband_ironstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_cobbled_bricks/slab/blackband_ironstone"
+  }
+}

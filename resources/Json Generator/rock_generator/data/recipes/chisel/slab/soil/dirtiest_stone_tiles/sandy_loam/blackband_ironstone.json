@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/sandy_loam/blackband_ironstone",
+  "result": "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/blackband_ironstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/blackband_ironstone"
+  }
+}

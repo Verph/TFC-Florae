@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/hemlock"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/hemlock"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/hemlock",
+    "count": 8
+  }
+}

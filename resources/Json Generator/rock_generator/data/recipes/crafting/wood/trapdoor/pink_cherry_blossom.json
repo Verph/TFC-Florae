@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/pink_cherry_blossom"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/trapdoor/pink_cherry_blossom",
+    "count": 3
+  }
+}

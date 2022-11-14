@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/humus/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/stairs/quartzite",
+    "count": 8
+  }
+}

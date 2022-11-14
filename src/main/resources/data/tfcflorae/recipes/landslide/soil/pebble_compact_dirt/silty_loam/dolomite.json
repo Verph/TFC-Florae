@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:pebble_compact_dirt/silty_loam/dolomite"
+  ],
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/dolomite"
+}

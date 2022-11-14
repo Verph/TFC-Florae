@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/loose/siltstone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/siltstone"
+    },
+    {
+      "item": "tfcflorae:rock/loose/siltstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/silt/siltstone"
+  }
+}

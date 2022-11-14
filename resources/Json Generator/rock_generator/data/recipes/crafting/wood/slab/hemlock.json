@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/hemlock"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/slab/hemlock",
+    "count": 6
+  }
+}

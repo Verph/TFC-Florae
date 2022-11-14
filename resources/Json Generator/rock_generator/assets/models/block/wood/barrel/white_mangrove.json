@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/white_mangrove",
+    "planks": "tfcflorae:block/wood/planks/white_mangrove",
+    "sheet": "tfcflorae:block/wood/sheet/white_mangrove",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

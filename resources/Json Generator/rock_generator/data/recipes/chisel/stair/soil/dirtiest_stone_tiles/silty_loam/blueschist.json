@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/blueschist",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/stairs/blueschist",
+  "mode": "stair"
+}

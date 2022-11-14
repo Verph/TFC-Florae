@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/stripped_log_top/yellow_jacaranda",
+    "side": "tfcflorae:block/wood/stripped_log/yellow_jacaranda"
+  }
+}

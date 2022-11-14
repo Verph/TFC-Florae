@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/ghaf",
+    "north": "tfcflorae:block/wood/workbench/front/ghaf",
+    "south": "tfcflorae:block/wood/workbench/side/ghaf",
+    "east": "tfcflorae:block/wood/workbench/side/ghaf",
+    "west": "tfcflorae:block/wood/workbench/front/ghaf",
+    "up": "tfcflorae:block/wood/workbench/top/ghaf",
+    "down": "tfcflorae:block/wood/planks/ghaf"
+  }
+}

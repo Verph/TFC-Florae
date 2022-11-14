@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mulberry",
+  "result": "tfcflorae:wood/stairs/mulberry",
+  "mode": "stair"
+}

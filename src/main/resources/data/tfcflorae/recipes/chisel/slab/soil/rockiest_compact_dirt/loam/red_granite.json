@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/red_granite",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/slab/red_granite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/slab/red_granite"
+  }
+}

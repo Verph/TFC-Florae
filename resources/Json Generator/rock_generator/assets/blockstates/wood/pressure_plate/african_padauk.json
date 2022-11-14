@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/african_padauk"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/african_padauk_down"
+    }
+  }
+}

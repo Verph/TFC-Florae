@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/walnut",
+    "leg": "tfcflorae:block/wood/log/walnut",
+    "side": "tfcflorae:block/wood/planks/walnut",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/walnut"
+  }
+}

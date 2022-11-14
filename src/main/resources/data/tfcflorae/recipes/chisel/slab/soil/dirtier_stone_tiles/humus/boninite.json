@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/boninite",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/slab/boninite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/boninite"
+  }
+}

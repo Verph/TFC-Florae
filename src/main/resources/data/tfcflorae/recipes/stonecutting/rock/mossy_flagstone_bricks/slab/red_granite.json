@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/red_granite"
+  },
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/slab/red_granite",
+  "count": 2
+}

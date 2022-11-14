@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/larch",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/larch"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/larch",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/larch",
+        "y": 270
+      }
+    ]
+  }
+}

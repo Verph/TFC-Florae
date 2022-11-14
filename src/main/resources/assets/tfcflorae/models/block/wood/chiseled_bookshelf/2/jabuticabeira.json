@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/jabuticabeira",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/jabuticabeira",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/jabuticabeira",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/jabuticabeira",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/jabuticabeira",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/jabuticabeira",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/jabuticabeira"
+  },
+  "render_type": "solid"
+}

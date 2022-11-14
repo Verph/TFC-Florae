@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/iroko",
+    "planks": "tfcflorae:block/wood/planks/iroko",
+    "sheet": "tfcflorae:block/wood/sheet/iroko",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

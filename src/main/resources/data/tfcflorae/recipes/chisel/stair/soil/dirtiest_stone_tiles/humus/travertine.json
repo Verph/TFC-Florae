@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/travertine",
+  "result": "tfcflorae:dirtiest_stone_tiles/humus/stairs/travertine",
+  "mode": "stair"
+}

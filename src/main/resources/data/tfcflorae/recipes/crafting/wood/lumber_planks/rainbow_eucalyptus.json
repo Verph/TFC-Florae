@@ -1,0 +1,18 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "tfcflorae:wood/planks/rainbow_eucalyptus"
+      },
+      {
+        "tag": "tfc:saws"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:wood/lumber/rainbow_eucalyptus",
+      "count": 4
+    }
+  }
+}

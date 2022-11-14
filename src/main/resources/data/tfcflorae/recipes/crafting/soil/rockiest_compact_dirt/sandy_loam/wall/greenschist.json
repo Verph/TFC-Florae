@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/greenschist"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/wall/greenschist",
+    "count": 6
+  }
+}

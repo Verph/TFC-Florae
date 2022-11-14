@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/redwood",
+    "top": "tfcflorae:block/wood/log_top/redwood"
+  }
+}

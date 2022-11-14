@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/purple_jacaranda",
+    "top": "tfcflorae:block/wood/log_top/purple_jacaranda"
+  }
+}

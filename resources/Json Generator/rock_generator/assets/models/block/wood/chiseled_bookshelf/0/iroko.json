@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/iroko",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/iroko",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/iroko",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/iroko",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/iroko",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/iroko",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/iroko"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/schist",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/slab/schist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/slab/schist"
+  }
+}

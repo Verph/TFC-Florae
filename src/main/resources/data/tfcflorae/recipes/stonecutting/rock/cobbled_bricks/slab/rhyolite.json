@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cobbled_bricks/rhyolite"
+  },
+  "result": "tfcflorae:rock/cobbled_bricks/slab/rhyolite",
+  "count": 2
+}

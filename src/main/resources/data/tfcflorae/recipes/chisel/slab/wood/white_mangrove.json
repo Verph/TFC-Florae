@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_mangrove",
+  "result": "tfcflorae:wood/slab/white_mangrove",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/white_mangrove"
+  }
+}

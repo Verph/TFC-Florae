@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/conglomerate",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/conglomerate",
+  "mode": "stair"
+}

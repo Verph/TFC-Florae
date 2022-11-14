@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/holly",
+    "north": "tfcflorae:block/wood/workbench/front/holly",
+    "south": "tfcflorae:block/wood/workbench/side/holly",
+    "east": "tfcflorae:block/wood/workbench/side/holly",
+    "west": "tfcflorae:block/wood/workbench/front/holly",
+    "up": "tfcflorae:block/wood/workbench/top/holly",
+    "down": "tfcflorae:block/wood/planks/holly"
+  }
+}

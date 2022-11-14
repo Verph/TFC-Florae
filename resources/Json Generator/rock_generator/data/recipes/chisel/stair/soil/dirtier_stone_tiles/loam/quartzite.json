@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/quartzite",
+  "result": "tfcflorae:dirtier_stone_tiles/loam/stairs/quartzite",
+  "mode": "stair"
+}

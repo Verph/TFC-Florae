@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_ipe",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_ipe"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_ipe",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/yellow_ipe",
+        "y": 270
+      }
+    ]
+  }
+}

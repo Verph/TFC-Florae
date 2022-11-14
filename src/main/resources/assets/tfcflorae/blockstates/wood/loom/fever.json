@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/fever",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/fever",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/fever"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/fever",
+      "y": 90
+    }
+  }
+}

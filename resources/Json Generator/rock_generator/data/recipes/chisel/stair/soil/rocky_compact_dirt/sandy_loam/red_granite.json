@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/sandy_loam/red_granite",
+  "result": "tfcflorae:rocky_compact_dirt/sandy_loam/stairs/red_granite",
+  "mode": "stair"
+}

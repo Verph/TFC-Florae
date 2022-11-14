@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/rainbow_eucalyptus",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/rainbow_eucalyptus",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/rainbow_eucalyptus",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/rainbow_eucalyptus",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/rainbow_eucalyptus",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/rainbow_eucalyptus",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/rainbow_eucalyptus"
+  },
+  "render_type": "solid"
+}

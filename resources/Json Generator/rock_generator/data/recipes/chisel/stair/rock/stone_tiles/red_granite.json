@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/red_granite",
+  "result": "tfcflorae:rock/stone_tiles/stairs/red_granite",
+  "mode": "stair"
+}

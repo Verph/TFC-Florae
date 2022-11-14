@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/humus/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/wall/blackband_ironstone",
+    "count": 6
+  }
+}

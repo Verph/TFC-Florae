@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/chert",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/slab/chert",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/slab/chert"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/juniper",
+    "base": "tfcflorae:block/wood/lectern/base/juniper",
+    "front": "tfcflorae:block/wood/lectern/front/juniper",
+    "sides": "tfcflorae:block/wood/lectern/sides/juniper",
+    "top": "tfcflorae:block/wood/lectern/top/juniper",
+    "particle": "tfcflorae:block/wood/lectern/sides/juniper"
+  }
+}

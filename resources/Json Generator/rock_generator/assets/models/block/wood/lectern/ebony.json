@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/ebony",
+    "base": "tfcflorae:block/wood/lectern/base/ebony",
+    "front": "tfcflorae:block/wood/lectern/front/ebony",
+    "sides": "tfcflorae:block/wood/lectern/sides/ebony",
+    "top": "tfcflorae:block/wood/lectern/top/ebony",
+    "particle": "tfcflorae:block/wood/lectern/sides/ebony"
+  }
+}

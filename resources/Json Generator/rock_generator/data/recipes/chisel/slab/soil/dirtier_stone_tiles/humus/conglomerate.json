@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/conglomerate",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/slab/conglomerate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/slab/conglomerate"
+  }
+}

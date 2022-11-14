@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/scribing_table/logwood",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/scribing_table/logwood"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/scribing_table/logwood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/scribing_table/logwood",
+      "y": 270
+    }
+  }
+}

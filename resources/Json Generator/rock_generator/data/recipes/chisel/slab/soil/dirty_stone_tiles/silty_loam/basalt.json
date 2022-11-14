@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silty_loam/basalt",
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/slab/basalt",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slab/basalt"
+  }
+}

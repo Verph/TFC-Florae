@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/chert",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/chert",
+  "mode": "stair"
+}

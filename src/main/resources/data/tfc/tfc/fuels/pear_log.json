@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/pear"
+    },
+    {
+      "item": "tfcflorae:wood/wood/pear"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/pear"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/pear"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 696
+}

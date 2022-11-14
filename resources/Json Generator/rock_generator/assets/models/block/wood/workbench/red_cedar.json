@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/red_cedar",
+    "north": "tfcflorae:block/wood/workbench/front/red_cedar",
+    "south": "tfcflorae:block/wood/workbench/side/red_cedar",
+    "east": "tfcflorae:block/wood/workbench/side/red_cedar",
+    "west": "tfcflorae:block/wood/workbench/front/red_cedar",
+    "up": "tfcflorae:block/wood/workbench/top/red_cedar",
+    "down": "tfcflorae:block/wood/planks/red_cedar"
+  }
+}

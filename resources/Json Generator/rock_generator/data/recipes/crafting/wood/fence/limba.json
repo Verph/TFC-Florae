@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/limba"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/limba"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/limba",
+    "count": 8
+  }
+}

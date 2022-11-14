@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/loam/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/loam/stairs/catlinite",
+    "count": 8
+  }
+}

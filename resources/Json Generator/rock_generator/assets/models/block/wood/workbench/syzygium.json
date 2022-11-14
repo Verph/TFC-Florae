@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/syzygium",
+    "north": "tfcflorae:block/wood/workbench/front/syzygium",
+    "south": "tfcflorae:block/wood/workbench/side/syzygium",
+    "east": "tfcflorae:block/wood/workbench/side/syzygium",
+    "west": "tfcflorae:block/wood/workbench/front/syzygium",
+    "up": "tfcflorae:block/wood/workbench/top/syzygium",
+    "down": "tfcflorae:block/wood/planks/syzygium"
+  }
+}

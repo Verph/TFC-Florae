@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/sweetgum",
+    "north": "tfcflorae:block/wood/workbench/front/sweetgum",
+    "south": "tfcflorae:block/wood/workbench/side/sweetgum",
+    "east": "tfcflorae:block/wood/workbench/side/sweetgum",
+    "west": "tfcflorae:block/wood/workbench/front/sweetgum",
+    "up": "tfcflorae:block/wood/workbench/top/sweetgum",
+    "down": "tfcflorae:block/wood/planks/sweetgum"
+  }
+}

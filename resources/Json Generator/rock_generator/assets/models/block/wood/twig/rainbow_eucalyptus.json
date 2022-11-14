@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/rainbow_eucalyptus",
+    "top": "tfcflorae:block/wood/log_top/rainbow_eucalyptus"
+  }
+}

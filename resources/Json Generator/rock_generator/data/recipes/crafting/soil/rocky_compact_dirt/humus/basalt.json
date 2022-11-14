@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfc:rock/loose/basalt"
+    },
+    {
+      "item": "tfc:rock/loose/basalt"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/basalt"
+  }
+}

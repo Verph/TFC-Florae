@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/sandy_loam/jaspillite",
+  "result": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/jaspillite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/sandy_loam/slab/jaspillite"
+  }
+}

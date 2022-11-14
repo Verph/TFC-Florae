@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/hickory",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/hickory",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/hickory",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/hickory",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/hickory",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/hickory",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/hickory"
+  },
+  "render_type": "solid"
+}

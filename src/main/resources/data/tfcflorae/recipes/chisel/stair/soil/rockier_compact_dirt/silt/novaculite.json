@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/novaculite",
+  "result": "tfcflorae:rockier_compact_dirt/silt/stairs/novaculite",
+  "mode": "stair"
+}

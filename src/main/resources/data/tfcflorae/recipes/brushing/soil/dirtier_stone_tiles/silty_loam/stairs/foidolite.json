@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silty_loam/stairs/foidolite",
+  "result": "tfcflorae:dirty_stone_tiles/silty_loam/stairs/foidolite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silty_loam"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/angelim",
+  "result": "tfcflorae:wood/slab/angelim",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/angelim"
+  }
+}

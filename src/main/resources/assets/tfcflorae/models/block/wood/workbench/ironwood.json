@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/ironwood",
+    "north": "tfcflorae:block/wood/workbench/front/ironwood",
+    "south": "tfcflorae:block/wood/workbench/side/ironwood",
+    "east": "tfcflorae:block/wood/workbench/side/ironwood",
+    "west": "tfcflorae:block/wood/workbench/front/ironwood",
+    "up": "tfcflorae:block/wood/workbench/top/ironwood",
+    "down": "tfcflorae:block/wood/planks/ironwood"
+  }
+}

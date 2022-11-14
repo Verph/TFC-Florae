@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/loam/sandstone",
+  "result": "tfcflorae:dirty_stone_tiles/loam/slab/sandstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/loam/slab/sandstone"
+  }
+}

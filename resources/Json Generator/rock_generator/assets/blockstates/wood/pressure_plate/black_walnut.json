@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/black_walnut"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/black_walnut_down"
+    }
+  }
+}

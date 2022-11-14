@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtier_stone_tiles/humus/blackband_ironstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/humus/stairs/blackband_ironstone",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/rubber_fig",
+  "result": "tfcflorae:wood/slab/rubber_fig",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/rubber_fig"
+  }
+}

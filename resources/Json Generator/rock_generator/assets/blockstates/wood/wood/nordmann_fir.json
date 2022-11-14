@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/wood/nordmann_fir"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/wood/nordmann_fir",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/wood/nordmann_fir",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

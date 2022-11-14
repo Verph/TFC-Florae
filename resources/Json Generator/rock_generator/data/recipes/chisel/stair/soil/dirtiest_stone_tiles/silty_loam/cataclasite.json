@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/cataclasite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/stairs/cataclasite",
+  "mode": "stair"
+}

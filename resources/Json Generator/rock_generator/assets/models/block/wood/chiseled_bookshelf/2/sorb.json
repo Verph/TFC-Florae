@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/sorb",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/sorb",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/2/sorb",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/sorb",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/sorb",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/sorb",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/sorb"
+  },
+  "render_type": "solid"
+}

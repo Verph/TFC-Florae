@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silty_loam/cataclasite",
+  "result": "tfcflorae:rocky_compact_dirt/silty_loam/slab/cataclasite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silty_loam/slab/cataclasite"
+  }
+}

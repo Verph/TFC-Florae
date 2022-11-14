@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_jacaranda",
+  "result": "tfcflorae:wood/slab/white_jacaranda",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/white_jacaranda"
+  }
+}

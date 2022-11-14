@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/sandy_loam/arkose"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/sandy_loam/stairs/arkose",
+    "count": 8
+  }
+}

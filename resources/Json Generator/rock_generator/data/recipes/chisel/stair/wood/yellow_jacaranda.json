@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/yellow_jacaranda",
+  "result": "tfcflorae:wood/stairs/yellow_jacaranda",
+  "mode": "stair"
+}

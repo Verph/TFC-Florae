@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/arkose",
+  "result": "tfcflorae:dirty_stone_tiles/silt/slab/arkose",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/silt/slab/arkose"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/hornbeam",
+  "result": "tfcflorae:wood/slab/hornbeam",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/hornbeam"
+  }
+}

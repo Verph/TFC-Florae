@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/yellow_meranti",
+    "planks": "tfcflorae:block/wood/planks/yellow_meranti",
+    "sheet": "tfcflorae:block/wood/sheet/yellow_meranti",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

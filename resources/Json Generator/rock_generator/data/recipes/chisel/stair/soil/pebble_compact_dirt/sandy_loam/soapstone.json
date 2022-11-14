@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/soapstone",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/stairs/soapstone",
+  "mode": "stair"
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/sweetgum",
+    "base": "tfcflorae:block/wood/lectern/base/sweetgum",
+    "front": "tfcflorae:block/wood/lectern/front/sweetgum",
+    "sides": "tfcflorae:block/wood/lectern/sides/sweetgum",
+    "top": "tfcflorae:block/wood/lectern/top/sweetgum",
+    "particle": "tfcflorae:block/wood/lectern/sides/sweetgum"
+  }
+}

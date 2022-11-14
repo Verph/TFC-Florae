@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cracked_flagstone_bricks/mylonite",
+  "result": "tfcflorae:rock/cracked_flagstone_bricks/slab/mylonite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cracked_flagstone_bricks/slab/mylonite"
+  }
+}

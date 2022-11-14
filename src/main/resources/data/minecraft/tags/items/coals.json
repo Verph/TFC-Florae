@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/charred_tree",
+    "tfcflorae:wood/wood/charred_tree",
+    "tfcflorae:wood/stripped_log/charred_tree",
+    "tfcflorae:wood/stripped_wood/charred_tree",
+	"tfcflorae:wood/twig/charred_tree"
+  ]
+}

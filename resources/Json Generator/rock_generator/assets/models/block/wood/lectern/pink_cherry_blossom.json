@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/pink_cherry_blossom",
+    "base": "tfcflorae:block/wood/lectern/base/pink_cherry_blossom",
+    "front": "tfcflorae:block/wood/lectern/front/pink_cherry_blossom",
+    "sides": "tfcflorae:block/wood/lectern/sides/pink_cherry_blossom",
+    "top": "tfcflorae:block/wood/lectern/top/pink_cherry_blossom",
+    "particle": "tfcflorae:block/wood/lectern/sides/pink_cherry_blossom"
+  }
+}

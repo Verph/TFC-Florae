@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/rowan",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rowan"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rowan",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/rowan",
+        "y": 270
+      }
+    ]
+  }
+}

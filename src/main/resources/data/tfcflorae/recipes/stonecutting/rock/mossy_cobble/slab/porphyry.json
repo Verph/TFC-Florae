@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_cobble/porphyry"
+  },
+  "result": "tfcflorae:rock/mossy_cobble/slab/porphyry",
+  "count": 2
+}

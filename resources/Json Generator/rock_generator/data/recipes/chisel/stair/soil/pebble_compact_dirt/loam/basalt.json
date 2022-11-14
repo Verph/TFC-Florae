@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/basalt",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/basalt",
+  "mode": "stair"
+}

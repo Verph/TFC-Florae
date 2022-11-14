@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/blueschist",
+  "result": "tfcflorae:rock/stone_tiles/slab/blueschist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/stone_tiles/slab/blueschist"
+  }
+}

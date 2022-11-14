@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/messmate",
+    "north": "tfcflorae:block/wood/workbench/front/messmate",
+    "south": "tfcflorae:block/wood/workbench/side/messmate",
+    "east": "tfcflorae:block/wood/workbench/side/messmate",
+    "west": "tfcflorae:block/wood/workbench/front/messmate",
+    "up": "tfcflorae:block/wood/workbench/top/messmate",
+    "down": "tfcflorae:block/wood/planks/messmate"
+  }
+}

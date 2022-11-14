@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/marble",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/marble",
+  "mode": "stair"
+}

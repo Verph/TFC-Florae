@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/loam/jaspillite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/wall/jaspillite",
+    "count": 6
+  }
+}

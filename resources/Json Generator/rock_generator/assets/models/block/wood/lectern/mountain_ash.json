@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/mountain_ash",
+    "base": "tfcflorae:block/wood/lectern/base/mountain_ash",
+    "front": "tfcflorae:block/wood/lectern/front/mountain_ash",
+    "sides": "tfcflorae:block/wood/lectern/sides/mountain_ash",
+    "top": "tfcflorae:block/wood/lectern/top/mountain_ash",
+    "particle": "tfcflorae:block/wood/lectern/sides/mountain_ash"
+  }
+}

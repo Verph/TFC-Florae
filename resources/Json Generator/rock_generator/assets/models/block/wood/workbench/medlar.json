@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/medlar",
+    "north": "tfcflorae:block/wood/workbench/front/medlar",
+    "south": "tfcflorae:block/wood/workbench/side/medlar",
+    "east": "tfcflorae:block/wood/workbench/side/medlar",
+    "west": "tfcflorae:block/wood/workbench/front/medlar",
+    "up": "tfcflorae:block/wood/workbench/top/medlar",
+    "down": "tfcflorae:block/wood/planks/medlar"
+  }
+}

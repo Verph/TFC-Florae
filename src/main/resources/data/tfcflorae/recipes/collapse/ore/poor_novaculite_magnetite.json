@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/normal_magnetite/novaculite",
+  "result": "tfcflorae:ore/poor_magnetite/novaculite"
+}

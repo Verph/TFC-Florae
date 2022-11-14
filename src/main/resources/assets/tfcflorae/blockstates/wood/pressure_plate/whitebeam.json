@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/whitebeam"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/whitebeam_down"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/snow_gum_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/snow_gum_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/snow_gum_eucalyptus",
+    "count": 2
+  }
+}

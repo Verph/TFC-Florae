@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/black_willow",
+    "planks": "tfcflorae:block/wood/planks/black_willow"
+  }
+}

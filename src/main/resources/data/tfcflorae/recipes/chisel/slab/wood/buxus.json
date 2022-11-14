@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/buxus",
+  "result": "tfcflorae:wood/slab/buxus",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/buxus"
+  }
+}

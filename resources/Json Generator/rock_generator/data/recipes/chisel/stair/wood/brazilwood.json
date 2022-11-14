@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/brazilwood",
+  "result": "tfcflorae:wood/stairs/brazilwood",
+  "mode": "stair"
+}

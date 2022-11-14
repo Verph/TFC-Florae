@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/greenheart",
+    "base": "tfcflorae:block/wood/lectern/base/greenheart",
+    "front": "tfcflorae:block/wood/lectern/front/greenheart",
+    "sides": "tfcflorae:block/wood/lectern/sides/greenheart",
+    "top": "tfcflorae:block/wood/lectern/top/greenheart",
+    "particle": "tfcflorae:block/wood/lectern/sides/greenheart"
+  }
+}

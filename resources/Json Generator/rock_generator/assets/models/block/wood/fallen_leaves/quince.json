@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/groundcover/fallen_leaves",
+  "textures": {
+    "all": "tfcflorae:block/wood/leaves/quince"
+  }
+}

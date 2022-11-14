@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/phyllite",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/phyllite",
+  "mode": "stair"
+}

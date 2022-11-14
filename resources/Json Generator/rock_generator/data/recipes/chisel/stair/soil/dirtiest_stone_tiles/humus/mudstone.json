@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/humus/mudstone",
+  "result": "tfcflorae:dirtiest_stone_tiles/humus/stairs/mudstone",
+  "mode": "stair"
+}

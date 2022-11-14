@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/novaculite",
+  "result": "tfcflorae:rock/cobbled_bricks/slab/novaculite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/cobbled_bricks/slab/novaculite"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/buxus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/buxus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/buxus",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/marble"
+  },
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/stairs/marble",
+  "count": 1
+}

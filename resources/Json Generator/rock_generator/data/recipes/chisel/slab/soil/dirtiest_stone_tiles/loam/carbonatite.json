@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/loam/carbonatite",
+  "result": "tfcflorae:dirtiest_stone_tiles/loam/slab/carbonatite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/slab/carbonatite"
+  }
+}

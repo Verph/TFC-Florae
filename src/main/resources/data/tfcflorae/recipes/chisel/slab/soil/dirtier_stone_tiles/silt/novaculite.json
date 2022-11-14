@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/novaculite",
+  "result": "tfcflorae:dirtier_stone_tiles/silt/slab/novaculite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/slab/novaculite"
+  }
+}

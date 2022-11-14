@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/sandstone",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/sandstone",
+  "mode": "stair"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/maclura"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/maclura"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/maclura",
+    "count": 8
+  }
+}

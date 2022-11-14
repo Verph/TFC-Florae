@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/red_mangrove"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/red_mangrove"
+  }
+}

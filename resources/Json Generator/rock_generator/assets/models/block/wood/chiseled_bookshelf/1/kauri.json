@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/kauri",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/kauri",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/kauri",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/kauri",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/kauri",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/kauri",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/kauri"
+  },
+  "render_type": "solid"
+}

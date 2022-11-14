@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/humus/granite",
+  "result": "tfcflorae:dirtier_stone_tiles/humus/stairs/granite",
+  "mode": "stair"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/brazilwood",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/brazilwood",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/brazilwood",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/brazilwood",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/brazilwood",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/brazilwood",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/brazilwood"
+  },
+  "render_type": "solid"
+}

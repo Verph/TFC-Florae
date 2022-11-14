@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/rowan",
+    "leg": "tfcflorae:block/wood/log/rowan",
+    "side": "tfcflorae:block/wood/planks/rowan",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/rowan"
+  }
+}

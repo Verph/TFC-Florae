@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/arkose",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/arkose",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/cocobolo",
+  "result": "tfcflorae:wood/stairs/cocobolo",
+  "mode": "stair"
+}

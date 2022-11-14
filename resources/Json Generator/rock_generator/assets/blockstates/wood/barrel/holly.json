@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/holly"
+    },
+    "sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/holly"
+    }
+  }
+}

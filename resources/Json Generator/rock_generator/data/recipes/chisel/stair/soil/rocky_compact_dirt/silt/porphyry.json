@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/porphyry",
+  "result": "tfcflorae:rocky_compact_dirt/silt/stairs/porphyry",
+  "mode": "stair"
+}

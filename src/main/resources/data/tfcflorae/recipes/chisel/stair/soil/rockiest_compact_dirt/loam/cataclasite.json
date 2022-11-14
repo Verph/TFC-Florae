@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/cataclasite",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/cataclasite",
+  "mode": "stair"
+}

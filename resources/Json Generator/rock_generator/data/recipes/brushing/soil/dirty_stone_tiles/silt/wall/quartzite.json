@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/silt/wall/quartzite",
+  "result": "tfcflorae:rock/stone_tiles/wall/quartzite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

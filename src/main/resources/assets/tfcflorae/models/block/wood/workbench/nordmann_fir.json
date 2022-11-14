@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/nordmann_fir",
+    "north": "tfcflorae:block/wood/workbench/front/nordmann_fir",
+    "south": "tfcflorae:block/wood/workbench/side/nordmann_fir",
+    "east": "tfcflorae:block/wood/workbench/side/nordmann_fir",
+    "west": "tfcflorae:block/wood/workbench/front/nordmann_fir",
+    "up": "tfcflorae:block/wood/workbench/top/nordmann_fir",
+    "down": "tfcflorae:block/wood/planks/nordmann_fir"
+  }
+}

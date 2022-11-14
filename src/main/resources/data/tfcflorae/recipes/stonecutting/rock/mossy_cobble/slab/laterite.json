@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_cobble/laterite"
+  },
+  "result": "tfcflorae:rock/mossy_cobble/slab/laterite",
+  "count": 2
+}

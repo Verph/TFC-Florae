@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/humus/siltstone",
+  "result": "tfcflorae:dirty_stone_tiles/humus/slab/siltstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/humus/slab/siltstone"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/baobab",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/baobab",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/baobab",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/baobab",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/baobab",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/baobab",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/baobab"
+  },
+  "render_type": "solid"
+}

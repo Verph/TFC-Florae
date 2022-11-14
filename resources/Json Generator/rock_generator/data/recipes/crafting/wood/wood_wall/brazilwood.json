@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/brazilwood"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/brazilwood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/brazilwood",
+    "count": 8
+  }
+}

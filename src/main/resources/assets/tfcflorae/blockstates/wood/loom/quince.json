@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/loom/quince",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/loom/quince",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/loom/quince"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/loom/quince",
+      "y": 90
+    }
+  }
+}

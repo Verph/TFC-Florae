@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/rhyolite",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/stairs/rhyolite",
+  "mode": "stair"
+}

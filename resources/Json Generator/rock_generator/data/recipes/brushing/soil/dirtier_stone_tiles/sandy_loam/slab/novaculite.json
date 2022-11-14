@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/novaculite",
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/novaculite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/sandy_loam"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/silty_loam/conglomerate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/stairs/conglomerate",
+    "count": 8
+  }
+}

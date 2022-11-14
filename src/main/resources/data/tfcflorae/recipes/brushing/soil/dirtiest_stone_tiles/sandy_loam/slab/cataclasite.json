@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/cataclasite",
+  "result": "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/cataclasite",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/sandy_loam"
+  }
+}

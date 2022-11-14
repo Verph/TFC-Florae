@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/fever",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/fever",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/fever",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/fever",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/fever",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/fever",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/fever"
+  },
+  "render_type": "solid"
+}

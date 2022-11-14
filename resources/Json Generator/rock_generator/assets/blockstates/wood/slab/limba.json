@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/limba"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/limba_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/limba"
+    }
+  }
+}

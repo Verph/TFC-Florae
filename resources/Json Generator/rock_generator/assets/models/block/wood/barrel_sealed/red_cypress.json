@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/red_cypress",
+    "planks": "tfcflorae:block/wood/planks/red_cypress",
+    "sheet": "tfcflorae:block/wood/sheet/red_cypress",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

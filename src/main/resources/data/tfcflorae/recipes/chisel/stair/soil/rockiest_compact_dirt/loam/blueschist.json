@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/blueschist",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/blueschist",
+  "mode": "stair"
+}

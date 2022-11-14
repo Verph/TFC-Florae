@@ -1,0 +1,6 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": "tfcflorae:ore/rich_garnierite/boninite",
+  "result": "tfcflorae:ore/normal_garnierite/boninite"
+}

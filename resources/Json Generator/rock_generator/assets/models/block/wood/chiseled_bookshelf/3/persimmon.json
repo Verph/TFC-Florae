@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/persimmon",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/persimmon",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/persimmon",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/persimmon",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/persimmon",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/persimmon",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/persimmon"
+  },
+  "render_type": "solid"
+}

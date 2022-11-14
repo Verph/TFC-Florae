@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/juniper",
+  "result": "tfcflorae:wood/stairs/juniper",
+  "mode": "stair"
+}

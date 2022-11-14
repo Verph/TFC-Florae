@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockier_compact_dirt/sandy_loam/andesite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/sandy_loam/wall/andesite",
+    "count": 6
+  }
+}

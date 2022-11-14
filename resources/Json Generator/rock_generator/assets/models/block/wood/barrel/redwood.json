@@ -1,0 +1,9 @@
+{
+  "parent": "tfc:block/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/redwood",
+    "planks": "tfcflorae:block/wood/planks/redwood",
+    "sheet": "tfcflorae:block/wood/sheet/redwood",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

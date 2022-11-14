@@ -1,0 +1,165 @@
+{
+  "variants": {
+    "facing=north,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce"
+    },
+    "facing=east,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce",
+      "y": 90
+    },
+    "facing=south,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce",
+      "y": 180
+    },
+    "facing=west,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce",
+      "y": 270
+    },
+    "facing=up,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce",
+      "x": 270
+    },
+    "facing=down,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/spruce",
+      "x": 90
+    },
+    "facing=north,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce"
+    },
+    "facing=east,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce",
+      "y": 90
+    },
+    "facing=south,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce",
+      "y": 180
+    },
+    "facing=west,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce",
+      "y": 270
+    },
+    "facing=up,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce",
+      "x": 270
+    },
+    "facing=down,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/spruce",
+      "x": 90
+    },
+    "facing=north,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce"
+    },
+    "facing=east,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce",
+      "y": 90
+    },
+    "facing=south,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce",
+      "y": 180
+    },
+    "facing=west,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce",
+      "y": 270
+    },
+    "facing=up,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce",
+      "x": 270
+    },
+    "facing=down,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/spruce",
+      "x": 90
+    },
+    "facing=north,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce"
+    },
+    "facing=east,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce",
+      "y": 90
+    },
+    "facing=south,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce",
+      "y": 180
+    },
+    "facing=west,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce",
+      "y": 270
+    },
+    "facing=up,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce",
+      "x": 270
+    },
+    "facing=down,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/spruce",
+      "x": 90
+    },
+    "facing=north,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce"
+    },
+    "facing=east,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce",
+      "y": 90
+    },
+    "facing=south,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce",
+      "y": 180
+    },
+    "facing=west,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce",
+      "y": 270
+    },
+    "facing=up,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce",
+      "x": 270
+    },
+    "facing=down,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/spruce",
+      "x": 90
+    },
+    "facing=north,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce"
+    },
+    "facing=east,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce",
+      "y": 90
+    },
+    "facing=south,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce",
+      "y": 180
+    },
+    "facing=west,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce",
+      "y": 270
+    },
+    "facing=up,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce",
+      "x": 270
+    },
+    "facing=down,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/spruce",
+      "x": 90
+    },
+    "facing=north,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce"
+    },
+    "facing=east,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce",
+      "y": 90
+    },
+    "facing=south,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce",
+      "y": 180
+    },
+    "facing=west,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce",
+      "y": 270
+    },
+    "facing=up,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce",
+      "x": 270
+    },
+    "facing=down,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/spruce",
+      "x": 90
+    }
+  }
+}

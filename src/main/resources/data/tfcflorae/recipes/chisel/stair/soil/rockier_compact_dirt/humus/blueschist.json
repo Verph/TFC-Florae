@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/humus/blueschist",
+  "result": "tfcflorae:rockier_compact_dirt/humus/stairs/blueschist",
+  "mode": "stair"
+}

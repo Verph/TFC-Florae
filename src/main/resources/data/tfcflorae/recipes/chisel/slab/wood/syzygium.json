@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/syzygium",
+  "result": "tfcflorae:wood/slab/syzygium",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/syzygium"
+  }
+}

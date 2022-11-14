@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/stripped_wood/redwood"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/stripped_wood/redwood",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/stripped_wood/redwood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

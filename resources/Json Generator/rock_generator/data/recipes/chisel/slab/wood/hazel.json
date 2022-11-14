@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/hazel",
+  "result": "tfcflorae:wood/slab/hazel",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/hazel"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/humus/blueschist",
+  "result": "tfcflorae:rockiest_compact_dirt/humus/slab/blueschist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/humus/slab/blueschist"
+  }
+}

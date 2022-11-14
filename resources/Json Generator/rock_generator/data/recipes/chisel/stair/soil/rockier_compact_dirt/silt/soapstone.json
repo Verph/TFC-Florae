@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/soapstone",
+  "result": "tfcflorae:rockier_compact_dirt/silt/stairs/soapstone",
+  "mode": "stair"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silty_loam/laterite",
+  "result": "tfcflorae:rocky_compact_dirt/silty_loam/slab/laterite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rocky_compact_dirt/silty_loam/slab/laterite"
+  }
+}

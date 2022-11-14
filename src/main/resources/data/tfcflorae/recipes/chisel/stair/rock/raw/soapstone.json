@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/raw/soapstone",
+  "result": "tfcflorae:rock/raw/stairs/soapstone",
+  "mode": "stair"
+}

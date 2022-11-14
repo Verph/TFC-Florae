@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/magma/red_granite",
+    "tfcflorae:rock/magma/breccia",
+    "tfcflorae:rock/magma/foidolite",
+    "tfcflorae:rock/magma/porphyry",
+    "tfcflorae:rock/magma/peridotite",
+    "tfcflorae:rock/magma/blaimorite",
+    "tfcflorae:rock/magma/boninite",
+    "tfcflorae:rock/magma/carbonatite"
+  ]
+}

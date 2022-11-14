@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/common_oak",
+    "north": "tfcflorae:block/wood/workbench/front/common_oak",
+    "south": "tfcflorae:block/wood/workbench/side/common_oak",
+    "east": "tfcflorae:block/wood/workbench/side/common_oak",
+    "west": "tfcflorae:block/wood/workbench/front/common_oak",
+    "up": "tfcflorae:block/wood/workbench/top/common_oak",
+    "down": "tfcflorae:block/wood/planks/common_oak"
+  }
+}

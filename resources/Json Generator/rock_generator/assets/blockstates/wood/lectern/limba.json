@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/limba",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/limba"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/limba",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/limba",
+      "y": 270
+    }
+  }
+}

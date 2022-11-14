@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/purple_jacaranda",
+    "base": "tfcflorae:block/wood/lectern/base/purple_jacaranda",
+    "front": "tfcflorae:block/wood/lectern/front/purple_jacaranda",
+    "sides": "tfcflorae:block/wood/lectern/sides/purple_jacaranda",
+    "top": "tfcflorae:block/wood/lectern/top/purple_jacaranda",
+    "particle": "tfcflorae:block/wood/lectern/sides/purple_jacaranda"
+  }
+}

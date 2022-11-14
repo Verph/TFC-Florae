@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/travertine",
+  "result": "tfcflorae:rock/cobbled_bricks/stairs/travertine",
+  "mode": "stair"
+}

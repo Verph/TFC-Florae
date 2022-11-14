@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/red_mangrove",
+    "base": "tfcflorae:block/wood/lectern/base/red_mangrove",
+    "front": "tfcflorae:block/wood/lectern/front/red_mangrove",
+    "sides": "tfcflorae:block/wood/lectern/sides/red_mangrove",
+    "top": "tfcflorae:block/wood/lectern/top/red_mangrove",
+    "particle": "tfcflorae:block/wood/lectern/sides/red_mangrove"
+  }
+}

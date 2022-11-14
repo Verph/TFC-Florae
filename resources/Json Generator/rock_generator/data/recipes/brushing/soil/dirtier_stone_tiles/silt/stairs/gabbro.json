@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/stairs/gabbro",
+  "result": "tfcflorae:dirty_stone_tiles/silt/stairs/gabbro",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/silt"
+  }
+}

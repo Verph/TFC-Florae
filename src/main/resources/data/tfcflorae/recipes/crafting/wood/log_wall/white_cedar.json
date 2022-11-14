@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/white_cedar"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/white_cedar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/white_cedar",
+    "count": 8
+  }
+}

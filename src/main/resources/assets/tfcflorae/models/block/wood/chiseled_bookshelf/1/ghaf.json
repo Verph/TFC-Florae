@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/ghaf",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/ghaf",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/ghaf",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/ghaf",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/ghaf",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/ghaf",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/ghaf"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/silty_loam/siltstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/siltstone",
+    "count": 8
+  }
+}

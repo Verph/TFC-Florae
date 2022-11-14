@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/silty_loam/dacite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/slab/dacite",
+    "count": 6
+  }
+}

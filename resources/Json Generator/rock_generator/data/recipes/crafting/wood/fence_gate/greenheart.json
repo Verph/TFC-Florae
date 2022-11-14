@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/greenheart"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/greenheart"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/greenheart",
+    "count": 2
+  }
+}

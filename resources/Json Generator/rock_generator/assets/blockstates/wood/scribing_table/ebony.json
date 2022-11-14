@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/scribing_table/ebony",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/scribing_table/ebony"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/scribing_table/ebony",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/scribing_table/ebony",
+      "y": 270
+    }
+  }
+}

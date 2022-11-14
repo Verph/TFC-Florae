@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/ginkgo"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/ginkgo_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/ginkgo"
+    }
+  }
+}

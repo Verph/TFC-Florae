@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    },
+    {
+      "item": "tfc:rock/loose/marble"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/marble"
+  }
+}

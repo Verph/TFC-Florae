@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mountain_ash",
+  "result": "tfcflorae:wood/slab/mountain_ash",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/mountain_ash"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/butternut",
+    "north": "tfcflorae:block/wood/workbench/front/butternut",
+    "south": "tfcflorae:block/wood/workbench/side/butternut",
+    "east": "tfcflorae:block/wood/workbench/side/butternut",
+    "west": "tfcflorae:block/wood/workbench/front/butternut",
+    "up": "tfcflorae:block/wood/workbench/top/butternut",
+    "down": "tfcflorae:block/wood/planks/butternut"
+  }
+}

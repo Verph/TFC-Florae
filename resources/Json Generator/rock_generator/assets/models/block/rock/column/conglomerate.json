@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/rock/column/conglomerate_top",
+    "side": "tfcflorae:block/rock/column/conglomerate_side"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:wood/log/rosewood"
+    },
+    "Y": {
+      "item": "tfc:wood/lumber/rosewood"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/rosewood",
+    "count": 8
+  }
+}

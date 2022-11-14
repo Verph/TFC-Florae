@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/wenge",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/wenge",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/wenge",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/wenge",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/wenge",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/wenge",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/wenge"
+  },
+  "render_type": "solid"
+}

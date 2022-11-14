@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/door/persimmon_top",
+    "bottom": "tfcflorae:block/wood/door/persimmon_bottom"
+  }
+}

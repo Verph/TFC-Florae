@@ -1,0 +1,11 @@
+{
+  "parent": "tfcflorae:block/wood/barrel/snow_gum_eucalyptus",
+  "overrides": [
+    {
+      "predicate": {
+        "tfc:sealed": 1
+      },
+      "model": "tfcflorae:block/wood/barrel_sealed/snow_gum_eucalyptus"
+    }
+  ]
+}

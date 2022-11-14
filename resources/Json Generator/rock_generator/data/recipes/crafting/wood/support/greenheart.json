@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:greenheart_logs"
+      },
+      {
+        "tag": "tfc:greenheart_logs"
+      },
+      {
+        "tag": "tfc:saws"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:wood/support/greenheart",
+      "count": 8
+    }
+  }
+}

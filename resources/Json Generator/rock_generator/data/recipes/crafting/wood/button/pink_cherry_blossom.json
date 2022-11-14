@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/button/pink_cherry_blossom"
+  }
+}

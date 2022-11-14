@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/pear",
+  "result": "tfcflorae:wood/slab/pear",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/pear"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfc:rock/loose/gabbro"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/humus/gabbro"
+  }
+}

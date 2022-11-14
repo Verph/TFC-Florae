@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/argyle_eucalyptus"
+    },
+    {
+      "item": "tfcflorae:wood/wood/argyle_eucalyptus"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/argyle_eucalyptus"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/argyle_eucalyptus"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 705
+}

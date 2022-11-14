@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silty_loam/marble",
+  "result": "tfcflorae:dirtier_stone_tiles/silty_loam/stairs/marble",
+  "mode": "stair"
+}

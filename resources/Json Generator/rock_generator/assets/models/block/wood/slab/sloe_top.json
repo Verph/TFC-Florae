@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/sloe",
+    "top": "tfcflorae:block/wood/planks/sloe",
+    "side": "tfcflorae:block/wood/planks/sloe"
+  }
+}

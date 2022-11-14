@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/vertical",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/yellow_meranti",
+    "particle": "tfcflorae:block/wood/sheet/yellow_meranti"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/red_granite",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/red_granite",
+  "mode": "stair"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/douglas_fir",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/douglas_fir",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/douglas_fir",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/douglas_fir",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/douglas_fir",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/douglas_fir",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/douglas_fir"
+  },
+  "render_type": "solid"
+}

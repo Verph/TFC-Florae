@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/conglomerate"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/conglomerate"
+  }
+}

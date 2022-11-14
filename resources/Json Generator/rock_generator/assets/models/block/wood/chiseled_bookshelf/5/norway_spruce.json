@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/norway_spruce",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/norway_spruce",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/5/norway_spruce",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/norway_spruce",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/norway_spruce",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/norway_spruce",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/norway_spruce"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/silt/schist",
+  "result": "tfcflorae:rockier_compact_dirt/silt/stairs/schist",
+  "mode": "stair"
+}

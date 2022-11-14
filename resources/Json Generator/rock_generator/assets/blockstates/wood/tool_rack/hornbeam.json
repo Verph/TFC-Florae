@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/hornbeam",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/hornbeam",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/hornbeam"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/hornbeam",
+      "y": 90
+    }
+  }
+}

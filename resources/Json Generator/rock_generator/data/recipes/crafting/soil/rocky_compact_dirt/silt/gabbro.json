@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/silt"
+    },
+    {
+      "item": "tfc:rock/loose/gabbro"
+    },
+    {
+      "item": "tfc:rock/loose/gabbro"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/gabbro"
+  }
+}

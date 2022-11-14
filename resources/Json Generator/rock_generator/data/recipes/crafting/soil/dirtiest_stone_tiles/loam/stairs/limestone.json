@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/loam/limestone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/stairs/limestone",
+    "count": 8
+  }
+}

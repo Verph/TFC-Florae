@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/snow_gum_eucalyptus",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/snow_gum_eucalyptus"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/snow_gum_eucalyptus",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/snow_gum_eucalyptus",
+        "y": 270
+      }
+    ]
+  }
+}

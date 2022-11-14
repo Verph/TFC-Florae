@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:dirty_stone_tiles/sandy_loam/conglomerate"
+  ],
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/conglomerate"
+}

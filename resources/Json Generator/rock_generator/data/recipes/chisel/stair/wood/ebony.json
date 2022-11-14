@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/ebony",
+  "result": "tfcflorae:wood/stairs/ebony",
+  "mode": "stair"
+}

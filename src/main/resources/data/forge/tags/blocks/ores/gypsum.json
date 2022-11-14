@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:ore/gypsum/red_granite",
+    "tfcflorae:ore/gypsum/breccia",
+    "tfcflorae:ore/gypsum/foidolite",
+    "tfcflorae:ore/gypsum/porphyry",
+    "tfcflorae:ore/gypsum/peridotite",
+    "tfcflorae:ore/gypsum/blaimorite",
+    "tfcflorae:ore/gypsum/boninite",
+    "tfcflorae:ore/gypsum/carbonatite",
+    "tfcflorae:ore/gypsum/laterite",
+    "tfcflorae:ore/gypsum/mudstone",
+    "tfcflorae:ore/gypsum/sandstone",
+    "tfcflorae:ore/gypsum/siltstone",
+    "tfcflorae:ore/gypsum/arkose",
+    "tfcflorae:ore/gypsum/jaspillite",
+    "tfcflorae:ore/gypsum/travertine",
+    "tfcflorae:ore/gypsum/wackestone",
+    "tfcflorae:ore/gypsum/blackband_ironstone",
+    "tfcflorae:ore/gypsum/cataclasite",
+    "tfcflorae:ore/gypsum/blueschist",
+    "tfcflorae:ore/gypsum/catlinite",
+    "tfcflorae:ore/gypsum/greenschist",
+    "tfcflorae:ore/gypsum/novaculite",
+    "tfcflorae:ore/gypsum/soapstone",
+    "tfcflorae:ore/gypsum/komatiite",
+    "tfcflorae:ore/gypsum/mylonite"
+  ]
+}

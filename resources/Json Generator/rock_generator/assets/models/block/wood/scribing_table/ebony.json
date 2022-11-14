@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/ebony",
+    "leg": "tfcflorae:block/wood/log/ebony",
+    "side": "tfcflorae:block/wood/planks/ebony",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/ebony"
+  }
+}

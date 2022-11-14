@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/flagstone_bricks/blueschist",
+    "top": "tfcflorae:block/rock/flagstone_bricks/blueschist",
+    "side": "tfcflorae:block/rock/flagstone_bricks/blueschist"
+  }
+}

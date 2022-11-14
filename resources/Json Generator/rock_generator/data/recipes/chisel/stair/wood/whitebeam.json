@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/whitebeam",
+  "result": "tfcflorae:wood/stairs/whitebeam",
+  "mode": "stair"
+}

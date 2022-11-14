@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/wenge"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/wenge_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/wenge"
+    }
+  }
+}

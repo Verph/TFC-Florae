@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/silt/claystone",
+  "result": "tfcflorae:rocky_compact_dirt/silt/stairs/claystone",
+  "mode": "stair"
+}

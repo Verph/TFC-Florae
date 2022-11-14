@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/poplar"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/poplar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/poplar",
+    "count": 8
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/holly",
+    "base": "tfcflorae:block/wood/lectern/base/holly",
+    "front": "tfcflorae:block/wood/lectern/front/holly",
+    "sides": "tfcflorae:block/wood/lectern/sides/holly",
+    "top": "tfcflorae:block/wood/lectern/top/holly",
+    "particle": "tfcflorae:block/wood/lectern/sides/holly"
+  }
+}

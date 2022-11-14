@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/messmate"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/messmate_down"
+    }
+  }
+}

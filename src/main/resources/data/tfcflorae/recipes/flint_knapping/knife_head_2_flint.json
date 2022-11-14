@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:flint_knapping",
+  "outside_slot_required": false,
+  "pattern": [
+    "X   X",
+    "XX XX",
+    "XX XX",
+    "XX XX",
+    "XX XX"
+  ],
+  "result": {
+    "item": "tfcflorae:tools/knife_head/flint",
+    "count": 2
+  },
+  "ingredient": {
+    "tag": "tfcflorae:flint_knapping"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/maclura",
+  "result": "tfcflorae:wood/slab/maclura",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/maclura"
+  }
+}

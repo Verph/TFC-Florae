@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/white_elm"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/white_elm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/white_elm",
+    "count": 8
+  }
+}

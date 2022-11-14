@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/humus/blackband_ironstone",
+  "result": "tfcflorae:rocky_compact_dirt/humus/stairs/blackband_ironstone",
+  "mode": "stair"
+}

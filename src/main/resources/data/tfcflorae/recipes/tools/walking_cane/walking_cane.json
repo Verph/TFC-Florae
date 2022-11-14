@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XY",
+    "X "
+  ],
+  "key": {
+    "X": {
+      "tag": "tfc:twigs"
+    },
+    "Y": {
+      "item": "tfc:straw"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:tools/walking_cane",
+    "count": 1
+  }
+}

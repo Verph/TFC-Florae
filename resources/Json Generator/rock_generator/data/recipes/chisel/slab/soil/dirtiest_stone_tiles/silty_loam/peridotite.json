@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silty_loam/peridotite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/slab/peridotite"
+  }
+}

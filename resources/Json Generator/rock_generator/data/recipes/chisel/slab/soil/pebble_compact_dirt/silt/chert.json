@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silt/chert",
+  "result": "tfcflorae:pebble_compact_dirt/silt/slab/chert",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silt/slab/chert"
+  }
+}

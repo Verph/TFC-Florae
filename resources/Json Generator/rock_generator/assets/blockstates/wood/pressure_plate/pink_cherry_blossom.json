@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/pink_cherry_blossom"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/pink_cherry_blossom_down"
+    }
+  }
+}

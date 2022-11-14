@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/pink_cherry_blossom"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/pink_cherry_blossom_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/pink_cherry_blossom"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_bricks/siltstone"
+  },
+  "result": "tfcflorae:rock/mossy_bricks/slab/siltstone",
+  "count": 2
+}

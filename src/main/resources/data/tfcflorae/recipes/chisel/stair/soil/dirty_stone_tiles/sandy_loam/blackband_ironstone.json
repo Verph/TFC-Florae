@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/sandy_loam/blackband_ironstone",
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/stairs/blackband_ironstone",
+  "mode": "stair"
+}

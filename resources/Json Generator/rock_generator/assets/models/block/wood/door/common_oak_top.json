@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/common_oak_top",
+    "bottom": "tfcflorae:block/wood/planks/common_oak_bottom"
+  }
+}

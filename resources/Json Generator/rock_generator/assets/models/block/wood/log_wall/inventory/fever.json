@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/wall_inventory_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/fever",
+    "wall": "tfcflorae:block/wood/log/fever",
+    "particle": "tfcflorae:block/wood/log/fever"
+  }
+}

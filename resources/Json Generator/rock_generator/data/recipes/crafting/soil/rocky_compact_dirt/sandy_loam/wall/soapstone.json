@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/sandy_loam/soapstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/sandy_loam/wall/soapstone",
+    "count": 6
+  }
+}

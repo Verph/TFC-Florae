@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/norway_spruce",
+  "result": "tfcflorae:wood/stairs/norway_spruce",
+  "mode": "stair"
+}

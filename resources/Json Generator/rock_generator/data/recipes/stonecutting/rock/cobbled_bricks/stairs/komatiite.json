@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/cobbled_bricks/komatiite"
+  },
+  "result": "tfcflorae:rock/cobbled_bricks/stairs/komatiite",
+  "count": 1
+}

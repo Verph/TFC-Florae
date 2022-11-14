@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/black_willow",
+    "north": "tfcflorae:block/wood/workbench/front/black_willow",
+    "south": "tfcflorae:block/wood/workbench/side/black_willow",
+    "east": "tfcflorae:block/wood/workbench/side/black_willow",
+    "west": "tfcflorae:block/wood/workbench/front/black_willow",
+    "up": "tfcflorae:block/wood/workbench/top/black_willow",
+    "down": "tfcflorae:block/wood/planks/black_willow"
+  }
+}

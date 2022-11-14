@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/cracked_bricks/sandstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/cracked_bricks/slab/sandstone",
+    "count": 6
+  }
+}

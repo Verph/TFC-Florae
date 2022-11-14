@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/laurel_top",
+    "bottom": "tfcflorae:block/wood/planks/laurel_bottom"
+  }
+}

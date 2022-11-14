@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/holly",
+  "result": "tfcflorae:wood/slab/holly",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/holly"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "variants": {
+    "facing=north,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba"
+    },
+    "facing=east,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba",
+      "y": 90
+    },
+    "facing=south,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba",
+      "y": 180
+    },
+    "facing=west,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba",
+      "y": 270
+    },
+    "facing=up,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba",
+      "x": 270
+    },
+    "facing=down,books=0": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/0/limba",
+      "x": 90
+    },
+    "facing=north,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba"
+    },
+    "facing=east,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba",
+      "y": 90
+    },
+    "facing=south,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba",
+      "y": 180
+    },
+    "facing=west,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba",
+      "y": 270
+    },
+    "facing=up,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba",
+      "x": 270
+    },
+    "facing=down,books=1": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/1/limba",
+      "x": 90
+    },
+    "facing=north,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba"
+    },
+    "facing=east,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba",
+      "y": 90
+    },
+    "facing=south,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba",
+      "y": 180
+    },
+    "facing=west,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba",
+      "y": 270
+    },
+    "facing=up,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba",
+      "x": 270
+    },
+    "facing=down,books=2": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/2/limba",
+      "x": 90
+    },
+    "facing=north,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba"
+    },
+    "facing=east,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba",
+      "y": 90
+    },
+    "facing=south,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba",
+      "y": 180
+    },
+    "facing=west,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba",
+      "y": 270
+    },
+    "facing=up,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba",
+      "x": 270
+    },
+    "facing=down,books=3": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/3/limba",
+      "x": 90
+    },
+    "facing=north,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba"
+    },
+    "facing=east,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba",
+      "y": 90
+    },
+    "facing=south,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba",
+      "y": 180
+    },
+    "facing=west,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba",
+      "y": 270
+    },
+    "facing=up,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba",
+      "x": 270
+    },
+    "facing=down,books=4": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/4/limba",
+      "x": 90
+    },
+    "facing=north,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba"
+    },
+    "facing=east,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba",
+      "y": 90
+    },
+    "facing=south,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba",
+      "y": 180
+    },
+    "facing=west,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba",
+      "y": 270
+    },
+    "facing=up,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba",
+      "x": 270
+    },
+    "facing=down,books=5": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/5/limba",
+      "x": 90
+    },
+    "facing=north,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba"
+    },
+    "facing=east,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba",
+      "y": 90
+    },
+    "facing=south,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba",
+      "y": 180
+    },
+    "facing=west,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba",
+      "y": 270
+    },
+    "facing=up,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba",
+      "x": 270
+    },
+    "facing=down,books=6": {
+      "model": "tfcflorae:block/wood/chiseled_bookshelf/6/limba",
+      "x": 90
+    }
+  }
+}

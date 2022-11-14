@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/buxus",
+    "top": "tfcflorae:block/wood/log_top/buxus"
+  }
+}

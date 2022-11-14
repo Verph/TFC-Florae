@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/red_cedar",
+    "wall": "tfcflorae:block/wood/log/red_cedar",
+    "particle": "tfcflorae:block/wood/log/red_cedar"
+  }
+}

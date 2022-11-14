@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/mylonite",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/mylonite",
+  "mode": "stair"
+}

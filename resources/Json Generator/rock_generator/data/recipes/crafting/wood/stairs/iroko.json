@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/iroko"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/stairs/iroko",
+    "count": 8
+  }
+}

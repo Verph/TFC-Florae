@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/purpleheart",
+    "base": "tfcflorae:block/wood/lectern/base/purpleheart",
+    "front": "tfcflorae:block/wood/lectern/front/purpleheart",
+    "sides": "tfcflorae:block/wood/lectern/sides/purpleheart",
+    "top": "tfcflorae:block/wood/lectern/top/purpleheart",
+    "particle": "tfcflorae:block/wood/lectern/sides/purpleheart"
+  }
+}

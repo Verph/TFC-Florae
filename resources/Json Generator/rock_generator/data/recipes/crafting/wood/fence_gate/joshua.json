@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/joshua"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/joshua"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/joshua",
+    "count": 2
+  }
+}

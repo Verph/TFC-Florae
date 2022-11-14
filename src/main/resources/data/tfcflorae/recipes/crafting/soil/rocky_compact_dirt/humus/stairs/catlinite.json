@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/humus/catlinite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/humus/stairs/catlinite",
+    "count": 8
+  }
+}

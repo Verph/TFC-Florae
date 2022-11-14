@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silt/blaimorite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silt/slab/blaimorite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/slab/blaimorite"
+  }
+}

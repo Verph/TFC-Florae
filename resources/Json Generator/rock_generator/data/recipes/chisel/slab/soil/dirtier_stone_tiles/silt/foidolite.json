@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/foidolite",
+  "result": "tfcflorae:dirtier_stone_tiles/silt/slab/foidolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/slab/foidolite"
+  }
+}

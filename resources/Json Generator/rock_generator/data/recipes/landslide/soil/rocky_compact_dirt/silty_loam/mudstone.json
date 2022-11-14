@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:rocky_compact_dirt/silty_loam/mudstone"
+  ],
+  "result": "tfcflorae:rocky_compact_dirt/silty_loam/mudstone"
+}

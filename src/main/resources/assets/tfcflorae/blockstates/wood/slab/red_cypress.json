@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/red_cypress"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/red_cypress_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/red_cypress"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_cobbled_bricks/sandstone",
+  "result": "tfcflorae:rock/mossy_cobbled_bricks/stairs/sandstone",
+  "mode": "stair"
+}

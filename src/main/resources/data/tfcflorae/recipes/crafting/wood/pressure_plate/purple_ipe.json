@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/purple_ipe"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/pressure_plate/purple_ipe"
+  }
+}

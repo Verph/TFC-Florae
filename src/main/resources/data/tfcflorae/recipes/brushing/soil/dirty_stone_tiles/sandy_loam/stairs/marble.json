@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:dirty_stone_tiles/sandy_loam/stairs/marble",
+  "result": "tfcflorae:rock/stone_tiles/stairs/marble",
+  "extra_drop": {
+    "item": "tfcflorae:soil_pile/sandy_loam"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/snow_gum_eucalyptus",
+    "north": "tfcflorae:block/wood/workbench/front/snow_gum_eucalyptus",
+    "south": "tfcflorae:block/wood/workbench/side/snow_gum_eucalyptus",
+    "east": "tfcflorae:block/wood/workbench/side/snow_gum_eucalyptus",
+    "west": "tfcflorae:block/wood/workbench/front/snow_gum_eucalyptus",
+    "up": "tfcflorae:block/wood/workbench/top/snow_gum_eucalyptus",
+    "down": "tfcflorae:block/wood/planks/snow_gum_eucalyptus"
+  }
+}

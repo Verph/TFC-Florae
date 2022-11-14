@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/white_ipe",
+  "result": "tfcflorae:wood/stairs/white_ipe",
+  "mode": "stair"
+}

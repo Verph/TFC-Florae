@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mahogany",
+  "result": "tfcflorae:wood/stairs/mahogany",
+  "mode": "stair"
+}

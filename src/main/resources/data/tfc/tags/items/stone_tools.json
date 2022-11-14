@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:tools/axe_head/flint",
+    "tfcflorae:tools/hammer_head/flint",
+    "tfcflorae:tools/hoe_head/flint",
+    "tfcflorae:tools/javelin_head/flint",
+    "tfcflorae:tools/knife_head/flint",
+    "tfcflorae:tools/shovel_head/flint"
+  ]
+}

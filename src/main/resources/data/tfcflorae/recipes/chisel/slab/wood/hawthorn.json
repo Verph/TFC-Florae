@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/hawthorn",
+  "result": "tfcflorae:wood/slab/hawthorn",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/hawthorn"
+  }
+}

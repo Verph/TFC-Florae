@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/travertine",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/slab/travertine",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:pebble_compact_dirt/silty_loam/slab/travertine"
+  }
+}

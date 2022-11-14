@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/tool_rack/redwood",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/tool_rack/redwood",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/tool_rack/redwood"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/tool_rack/redwood",
+      "y": 90
+    }
+  }
+}

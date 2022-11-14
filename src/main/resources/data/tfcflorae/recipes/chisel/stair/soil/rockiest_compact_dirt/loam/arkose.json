@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/loam/arkose",
+  "result": "tfcflorae:rockiest_compact_dirt/loam/stairs/arkose",
+  "mode": "stair"
+}

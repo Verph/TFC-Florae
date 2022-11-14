@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/fever",
+  "result": "tfcflorae:wood/slab/fever",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/fever"
+  }
+}

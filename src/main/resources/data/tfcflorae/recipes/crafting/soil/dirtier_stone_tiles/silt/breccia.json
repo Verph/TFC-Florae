@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfc:dirt/silt"
+    },
+    {
+      "item": "tfcflorae:rock/stone_tiles/breccia"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/breccia"
+  }
+}

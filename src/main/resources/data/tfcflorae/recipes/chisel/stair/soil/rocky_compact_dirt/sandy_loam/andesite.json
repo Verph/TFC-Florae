@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rocky_compact_dirt/sandy_loam/andesite",
+  "result": "tfcflorae:rocky_compact_dirt/sandy_loam/stairs/andesite",
+  "mode": "stair"
+}

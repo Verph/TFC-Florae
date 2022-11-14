@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silty_loam/carbonatite",
+  "result": "tfcflorae:rockiest_compact_dirt/silty_loam/slab/carbonatite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockiest_compact_dirt/silty_loam/slab/carbonatite"
+  }
+}

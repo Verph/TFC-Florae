@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/laurel"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/laurel"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence/laurel",
+    "count": 8
+  }
+}

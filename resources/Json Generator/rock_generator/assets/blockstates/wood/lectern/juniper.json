@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tfcflorae:block/wood/lectern/juniper",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/wood/lectern/juniper"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/wood/lectern/juniper",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/wood/lectern/juniper",
+      "y": 270
+    }
+  }
+}

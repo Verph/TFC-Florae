@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockiest_compact_dirt/silt/gneiss",
+  "result": "tfcflorae:rockiest_compact_dirt/silt/stairs/gneiss",
+  "mode": "stair"
+}

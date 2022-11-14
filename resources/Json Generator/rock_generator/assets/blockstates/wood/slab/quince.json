@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/quince"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/quince_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/quince"
+    }
+  }
+}

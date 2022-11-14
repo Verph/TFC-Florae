@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/kauri",
+    "top": "tfcflorae:block/wood/log_top/kauri"
+  }
+}

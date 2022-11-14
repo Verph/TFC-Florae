@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/basalt"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silty_loam/stairs/basalt",
+    "count": 8
+  }
+}

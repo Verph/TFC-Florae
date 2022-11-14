@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone_bricks/carbonatite"
+  },
+  "result": "tfcflorae:rock/flagstone_bricks/stairs/carbonatite",
+  "count": 1
+}

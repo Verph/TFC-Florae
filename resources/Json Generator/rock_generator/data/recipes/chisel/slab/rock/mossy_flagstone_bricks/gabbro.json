@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_flagstone_bricks/gabbro",
+  "result": "tfcflorae:rock/mossy_flagstone_bricks/slab/gabbro",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_flagstone_bricks/slab/gabbro"
+  }
+}

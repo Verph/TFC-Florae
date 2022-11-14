@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:pebble_compact_dirt/sandy_loam/komatiite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/stairs/komatiite",
+    "count": 8
+  }
+}

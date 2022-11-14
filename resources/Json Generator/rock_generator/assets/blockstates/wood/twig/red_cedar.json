@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/red_cedar",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/red_cedar"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/red_cedar",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/red_cedar",
+        "y": 270
+      }
+    ]
+  }
+}

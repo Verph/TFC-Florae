@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/laurel",
+    "tfcflorae:wood/wood/laurel",
+    "tfcflorae:wood/stripped_log/laurel",
+    "tfcflorae:wood/stripped_wood/laurel"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/andesite",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/andesite",
+  "mode": "stair"
+}

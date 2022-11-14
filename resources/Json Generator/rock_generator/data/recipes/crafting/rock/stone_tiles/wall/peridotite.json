@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/peridotite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/peridotite",
+    "count": 6
+  }
+}

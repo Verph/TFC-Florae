@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/humus/chert",
+  "result": "tfcflorae:pebble_compact_dirt/humus/stairs/chert",
+  "mode": "stair"
+}

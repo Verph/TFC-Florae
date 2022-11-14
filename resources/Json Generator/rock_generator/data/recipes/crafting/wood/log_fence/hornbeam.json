@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/hornbeam"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/hornbeam"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_fence/hornbeam",
+    "count": 8
+  }
+}

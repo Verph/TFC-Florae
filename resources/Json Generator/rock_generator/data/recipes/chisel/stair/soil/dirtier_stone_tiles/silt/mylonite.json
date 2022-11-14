@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/mylonite",
+  "result": "tfcflorae:dirtier_stone_tiles/silt/stairs/mylonite",
+  "mode": "stair"
+}

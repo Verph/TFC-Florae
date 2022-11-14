@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/ebony"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/ebony_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/ebony"
+    }
+  }
+}

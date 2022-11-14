@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/red_cedar",
+  "result": "tfcflorae:wood/stairs/red_cedar",
+  "mode": "stair"
+}

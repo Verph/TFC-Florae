@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rockiest_compact_dirt/loam/blaimorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rockiest_compact_dirt/loam/stairs/blaimorite",
+    "count": 8
+  }
+}

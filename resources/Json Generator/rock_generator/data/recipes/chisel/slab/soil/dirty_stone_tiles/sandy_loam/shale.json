@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirty_stone_tiles/sandy_loam/shale",
+  "result": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirty_stone_tiles/sandy_loam/slab/shale"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtiest_stone_tiles/silt/peridotite",
+  "result": "tfcflorae:dirtiest_stone_tiles/silt/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtiest_stone_tiles/silt/slab/peridotite"
+  }
+}

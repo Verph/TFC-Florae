@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/support/horizontal",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/african_padauk",
+    "particle": "tfcflorae:block/wood/sheet/african_padauk"
+  }
+}

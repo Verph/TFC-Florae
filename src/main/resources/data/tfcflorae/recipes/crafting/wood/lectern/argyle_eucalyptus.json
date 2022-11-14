@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/argyle_eucalyptus"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/argyle_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/argyle_eucalyptus"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone_bricks/diorite",
+  "result": "tfcflorae:rock/flagstone_bricks/stairs/diorite",
+  "mode": "stair"
+}

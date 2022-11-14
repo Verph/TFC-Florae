@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/mountain_ash"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/bookshelf/mountain_ash"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/lectern/mountain_ash"
+  }
+}

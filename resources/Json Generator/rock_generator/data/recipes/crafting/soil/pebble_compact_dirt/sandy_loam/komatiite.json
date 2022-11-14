@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/sandy_loam"
+    },
+    {
+      "item": "tfcflorae:rock/loose/komatiite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:pebble_compact_dirt/sandy_loam/komatiite"
+  }
+}

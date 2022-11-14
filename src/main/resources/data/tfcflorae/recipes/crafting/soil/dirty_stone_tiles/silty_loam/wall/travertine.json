@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirty_stone_tiles/silty_loam/travertine"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirty_stone_tiles/silty_loam/wall/travertine",
+    "count": 6
+  }
+}

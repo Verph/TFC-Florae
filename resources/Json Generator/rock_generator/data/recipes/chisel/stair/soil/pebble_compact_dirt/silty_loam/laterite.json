@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/silty_loam/laterite",
+  "result": "tfcflorae:pebble_compact_dirt/silty_loam/stairs/laterite",
+  "mode": "stair"
+}

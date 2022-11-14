@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/sandy_loam/jaspillite",
+  "result": "tfcflorae:pebble_compact_dirt/sandy_loam/stairs/jaspillite",
+  "mode": "stair"
+}

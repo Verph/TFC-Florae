@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/locust",
+  "result": "tfcflorae:wood/stairs/locust",
+  "mode": "stair"
+}

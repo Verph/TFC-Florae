@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:dirtiest_stone_tiles/loam/porphyry"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:dirtiest_stone_tiles/loam/stairs/porphyry",
+    "count": 8
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/stripped_wood/ironwood"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/stripped_wood/ironwood",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/stripped_wood/ironwood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

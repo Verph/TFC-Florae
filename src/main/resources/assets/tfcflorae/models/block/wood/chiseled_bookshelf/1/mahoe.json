@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/mahoe",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/mahoe",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/1/mahoe",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/mahoe",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/mahoe",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/mahoe",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/mahoe"
+  },
+  "render_type": "solid"
+}

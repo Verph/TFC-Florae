@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/norway_spruce",
+    "base": "tfcflorae:block/wood/lectern/base/norway_spruce",
+    "front": "tfcflorae:block/wood/lectern/front/norway_spruce",
+    "sides": "tfcflorae:block/wood/lectern/sides/norway_spruce",
+    "top": "tfcflorae:block/wood/lectern/top/norway_spruce",
+    "particle": "tfcflorae:block/wood/lectern/sides/norway_spruce"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/chert",
+  "result": "tfcflorae:dirtier_stone_tiles/silt/slab/chert",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:dirtier_stone_tiles/silt/slab/chert"
+  }
+}

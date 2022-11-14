@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/mahoe",
+  "result": "tfcflorae:wood/slab/mahoe",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/mahoe"
+  }
+}

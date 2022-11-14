@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rockier_compact_dirt/loam/conglomerate",
+  "result": "tfcflorae:rockier_compact_dirt/loam/slab/conglomerate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rockier_compact_dirt/loam/slab/conglomerate"
+  }
+}

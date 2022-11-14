@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:pebble_compact_dirt/loam/carbonatite",
+  "result": "tfcflorae:pebble_compact_dirt/loam/stairs/carbonatite",
+  "mode": "stair"
+}

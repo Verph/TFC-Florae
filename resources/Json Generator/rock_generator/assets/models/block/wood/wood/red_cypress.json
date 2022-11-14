@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/wood/log/red_cypress",
+    "side": "tfcflorae:block/wood/log/red_cypress"
+  }
+}

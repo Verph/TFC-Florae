@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/hornbeam",
+    "north": "tfcflorae:block/wood/workbench/front/hornbeam",
+    "south": "tfcflorae:block/wood/workbench/side/hornbeam",
+    "east": "tfcflorae:block/wood/workbench/side/hornbeam",
+    "west": "tfcflorae:block/wood/workbench/front/hornbeam",
+    "up": "tfcflorae:block/wood/workbench/top/hornbeam",
+    "down": "tfcflorae:block/wood/planks/hornbeam"
+  }
+}

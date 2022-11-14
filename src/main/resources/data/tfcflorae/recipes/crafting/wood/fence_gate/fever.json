@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/fever"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/fever"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/fever",
+    "count": 2
+  }
+}

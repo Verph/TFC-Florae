@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:compact_dirt/humus"
+    },
+    {
+      "item": "tfcflorae:rock/loose/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/loose/novaculite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rockier_compact_dirt/humus/novaculite"
+  }
+}

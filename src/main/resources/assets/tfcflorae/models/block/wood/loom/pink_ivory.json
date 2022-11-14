@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "texture": "tfcflorae:block/wood/planks/pink_ivory",
+    "particle": "tfcflorae:block/wood/planks/pink_ivory"
+  }
+}

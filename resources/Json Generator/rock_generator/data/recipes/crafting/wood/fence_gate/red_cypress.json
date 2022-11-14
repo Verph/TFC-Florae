@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/planks/red_cypress"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/red_cypress"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/fence_gate/red_cypress",
+    "count": 2
+  }
+}

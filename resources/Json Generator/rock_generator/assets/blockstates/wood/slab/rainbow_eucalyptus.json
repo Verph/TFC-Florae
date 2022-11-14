@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/rainbow_eucalyptus"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/rainbow_eucalyptus_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/rainbow_eucalyptus"
+    }
+  }
+}

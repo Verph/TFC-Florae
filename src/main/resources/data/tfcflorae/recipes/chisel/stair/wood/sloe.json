@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/sloe",
+  "result": "tfcflorae:wood/stairs/sloe",
+  "mode": "stair"
+}

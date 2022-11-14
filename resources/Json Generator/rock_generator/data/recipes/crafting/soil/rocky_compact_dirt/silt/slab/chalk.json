@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rocky_compact_dirt/silt/chalk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rocky_compact_dirt/silt/slab/chalk",
+    "count": 6
+  }
+}
