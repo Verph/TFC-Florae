@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/ebony"
+    },
+    {
+      "item": "tfcflorae:wood/wood/ebony"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/ebony"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/ebony"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 795
+}

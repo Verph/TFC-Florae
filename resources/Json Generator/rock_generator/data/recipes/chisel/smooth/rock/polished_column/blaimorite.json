@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/blaimorite",
+  "result": "tfcflorae:rock/polished_column/blaimorite",
+  "mode": "smooth"
+}

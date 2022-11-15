@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/jaspillite",
+  "result": "tfcflorae:rock/polished_column/jaspillite",
+  "mode": "smooth"
+}

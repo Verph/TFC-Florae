@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/blackband_ironstone",
+  "result": "tfcflorae:rock/polished_column/blackband_ironstone",
+  "mode": "smooth"
+}

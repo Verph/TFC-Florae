@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/greenschist",
+  "result": "tfcflorae:rock/polished_column/greenschist",
+  "mode": "smooth"
+}

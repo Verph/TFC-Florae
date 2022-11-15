@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/teak"
+    },
+    {
+      "item": "tfcflorae:wood/wood/teak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/teak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/teak"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 695
+}

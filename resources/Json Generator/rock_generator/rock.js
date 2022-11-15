@@ -2656,6 +2656,32 @@ function generateJSON(rockType)
     fs.writeFileSync(`./data/recipes/stonecutting/rock/${rockBlockType}/slab/${rockType}.json`, JSON.stringify(stonecuttingRockBlockTypeSlab, null, 2))
     fs.writeFileSync(`./data/recipes/stonecutting/rock/${rockBlockType}/stairs/${rockType}.json`, JSON.stringify(stonecuttingRockBlockTypeStairs, null, 2))
     fs.writeFileSync(`./data/recipes/stonecutting/rock/${rockBlockType}/wall/${rockType}.json`, JSON.stringify(stonecuttingRockBlockTypeWall, null, 2))
+
+    let craftingChiseledColumn = {
+      "type": "tfc:damage_inputs_shapeless_crafting",
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": `tfcflorae:rock/column/${rockType}`
+          },
+          {
+            "tag": "tfc:chisels"
+          }
+        ],
+        "result": {
+          "item": `tfcflorae:rock/polished_column/${rockType}`
+        }
+      }
+    }
+    let chiselChiseledColumnSmooth = {
+      "type": "tfc:chisel",
+      "ingredient": `tfcflorae:rock/column/${rockType}`,
+      "result": `tfcflorae:rock/polished_column/${rockType}`,
+      "mode": "smooth"
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/polished_column/${rockType}.json`, JSON.stringify(craftingChiseledColumn, null, 2))
+    fs.writeFileSync(`./data/recipes/chisel/smooth/rock/polished_column/${rockType}.json`, JSON.stringify(chiselChiseledColumnSmooth, null, 2))
   }
 
   for(let soilType in dirtTypes2)

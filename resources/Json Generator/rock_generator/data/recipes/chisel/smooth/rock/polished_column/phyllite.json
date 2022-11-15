@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/phyllite",
+  "result": "tfcflorae:rock/polished_column/phyllite",
+  "mode": "smooth"
+}

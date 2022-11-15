@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/black_walnut"
+    },
+    {
+      "item": "tfcflorae:wood/wood/black_walnut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/black_walnut"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/black_walnut"
+    }
+  ],
+  "duration": 1800,
+  "temperature": 758
+}

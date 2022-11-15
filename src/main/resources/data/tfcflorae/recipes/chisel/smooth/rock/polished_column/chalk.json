@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/chalk",
+  "result": "tfcflorae:rock/polished_column/chalk",
+  "mode": "smooth"
+}

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/purpleheart"
+    },
+    {
+      "item": "tfcflorae:wood/wood/purpleheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/purpleheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/purpleheart"
+    }
+  ],
+  "duration": 1700,
+  "temperature": 793
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/soapstone",
+  "result": "tfcflorae:rock/polished_column/soapstone",
+  "mode": "smooth"
+}

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/ghaf"
+    },
+    {
+      "item": "tfcflorae:wood/wood/ghaf"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/ghaf"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/ghaf"
+    }
+  ],
+  "duration": 1369,
+  "temperature": 669
+}

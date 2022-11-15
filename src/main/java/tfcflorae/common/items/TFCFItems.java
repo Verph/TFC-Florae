@@ -223,7 +223,7 @@ public class TFCFItems
         Map<RockCategory, Map<RockCategory.ItemType, RegistryObject<Item>>> Map = new HashMap<>();
         for (RockCategory category : RockCategory.class.getEnumConstants())
         {
-            if (category != RockCategory.SEDIMENTARY)
+            if (category != RockCategory.METAMORPHIC)
                 continue;
 
             Map<RockCategory.ItemType, RegistryObject<Item>> subMap = new HashMap<>();

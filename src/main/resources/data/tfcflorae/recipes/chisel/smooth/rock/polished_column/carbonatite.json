@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/carbonatite",
+  "result": "tfcflorae:rock/polished_column/carbonatite",
+  "mode": "smooth"
+}

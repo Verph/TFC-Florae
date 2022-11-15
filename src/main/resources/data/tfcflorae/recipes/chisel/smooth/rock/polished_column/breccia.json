@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/breccia",
+  "result": "tfcflorae:rock/polished_column/breccia",
+  "mode": "smooth"
+}

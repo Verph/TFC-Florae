@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/rubber_fig"
+    },
+    {
+      "item": "tfcflorae:wood/wood/rubber_fig"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/rubber_fig"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/rubber_fig"
+    }
+  ],
+  "duration": 1440,
+  "temperature": 785
+}

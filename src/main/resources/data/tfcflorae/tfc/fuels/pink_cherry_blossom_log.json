@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/pink_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/wood/pink_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/pink_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/pink_cherry_blossom"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 795
+}

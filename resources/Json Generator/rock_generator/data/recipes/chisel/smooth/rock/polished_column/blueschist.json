@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/blueschist",
+  "result": "tfcflorae:rock/polished_column/blueschist",
+  "mode": "smooth"
+}

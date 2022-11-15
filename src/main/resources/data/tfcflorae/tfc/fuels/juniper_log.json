@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/juniper"
+    }
+  ],
+  "duration": 1750,
+  "temperature": 632
+}

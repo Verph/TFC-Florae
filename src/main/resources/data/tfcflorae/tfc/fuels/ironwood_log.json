@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/ironwood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/ironwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/ironwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/ironwood"
+    }
+  ],
+  "duration": 1970,
+  "temperature": 694
+}

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/yew"
+    },
+    {
+      "item": "tfcflorae:wood/wood/yew"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/yew"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/yew"
+    }
+  ],
+  "duration": 2150,
+  "temperature": 813
+}

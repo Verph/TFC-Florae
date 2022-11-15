@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/catlinite",
+  "result": "tfcflorae:rock/polished_column/catlinite",
+  "mode": "smooth"
+}

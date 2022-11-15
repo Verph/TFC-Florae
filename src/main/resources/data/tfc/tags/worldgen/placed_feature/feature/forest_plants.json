@@ -9,6 +9,19 @@
     "tfc:salt_lick_patch",
     "tfc:dead_grass_patch",
     "tfc:humus_patch",
-    "tfc:rotten_flesh_patch"
+    "tfc:rotten_flesh_patch",
+    "tfc:native_copper_deposit",
+    "tfc:native_copper_deep_deposit",
+    "tfc:cassiterite_deposit",
+    "tfc:cassiterite_deep_deposit",
+    "tfc:native_silver_deposit",
+    "tfc:native_silver_deep_deposit",
+    "tfc:native_gold_deposit",
+    "tfc:native_gold_deep_deposit",
+    "tfc:vein/surface_bismuthinite",
+    "tfc:vein/surface_cassiterite",
+    "tfc:vein/surface_native_copper",
+    "tfc:vein/surface_sphalerite",
+    "tfc:vein/surface_tetrahedrite"
   ]
 }

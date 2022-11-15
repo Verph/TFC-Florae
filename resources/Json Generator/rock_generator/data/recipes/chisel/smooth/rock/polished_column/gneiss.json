@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/gneiss",
+  "result": "tfcflorae:rock/polished_column/gneiss",
+  "mode": "smooth"
+}

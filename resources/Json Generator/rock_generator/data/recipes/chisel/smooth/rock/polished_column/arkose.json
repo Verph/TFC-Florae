@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/arkose",
+  "result": "tfcflorae:rock/polished_column/arkose",
+  "mode": "smooth"
+}

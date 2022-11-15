@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/nordmann_fir"
+    },
+    {
+      "item": "tfcflorae:wood/wood/nordmann_fir"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/nordmann_fir"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/nordmann_fir"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 628
+}

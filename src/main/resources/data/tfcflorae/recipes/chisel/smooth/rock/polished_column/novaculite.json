@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/novaculite",
+  "result": "tfcflorae:rock/polished_column/novaculite",
+  "mode": "smooth"
+}

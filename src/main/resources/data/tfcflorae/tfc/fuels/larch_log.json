@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/larch"
+    },
+    {
+      "item": "tfcflorae:wood/wood/larch"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/larch"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/larch"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 632
+}

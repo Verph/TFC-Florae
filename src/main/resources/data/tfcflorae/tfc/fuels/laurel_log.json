@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/laurel"
+    },
+    {
+      "item": "tfcflorae:wood/wood/laurel"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/laurel"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/laurel"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 705
+}

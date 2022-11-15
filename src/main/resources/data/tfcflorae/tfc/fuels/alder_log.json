@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/alder"
+    },
+    {
+      "item": "tfcflorae:wood/wood/alder"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/alder"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/alder"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 601
+}

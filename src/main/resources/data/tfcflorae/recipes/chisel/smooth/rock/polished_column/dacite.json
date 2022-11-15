@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/dacite",
+  "result": "tfcflorae:rock/polished_column/dacite",
+  "mode": "smooth"
+}

@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/cocobolo"
+    },
+    {
+      "item": "tfcflorae:wood/wood/cocobolo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/cocobolo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/cocobolo"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 773
+}

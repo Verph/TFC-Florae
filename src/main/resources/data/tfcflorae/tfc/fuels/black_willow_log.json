@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/black_willow"
+    },
+    {
+      "item": "tfcflorae:wood/wood/black_willow"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/black_willow"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/black_willow"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 603
+}

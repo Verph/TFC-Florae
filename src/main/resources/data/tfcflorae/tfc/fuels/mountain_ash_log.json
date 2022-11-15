@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/mountain_ash"
+    },
+    {
+      "item": "tfcflorae:wood/wood/mountain_ash"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mountain_ash"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mountain_ash"
+    }
+  ],
+  "duration": 1250,
+  "temperature": 696
+}

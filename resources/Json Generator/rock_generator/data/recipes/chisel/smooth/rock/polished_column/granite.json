@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/granite",
+  "result": "tfcflorae:rock/polished_column/granite",
+  "mode": "smooth"
+}

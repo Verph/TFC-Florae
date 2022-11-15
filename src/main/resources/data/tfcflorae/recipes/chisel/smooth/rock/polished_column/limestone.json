@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/limestone",
+  "result": "tfcflorae:rock/polished_column/limestone",
+  "mode": "smooth"
+}

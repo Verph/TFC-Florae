@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/greenheart"
+    },
+    {
+      "item": "tfcflorae:wood/wood/greenheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/greenheart"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/greenheart"
+    }
+  ],
+  "duration": 1700,
+  "temperature": 793
+}

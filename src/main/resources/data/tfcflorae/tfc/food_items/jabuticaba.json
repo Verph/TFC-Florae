@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/jabuticaba"
+  },
+  "category": "fruit",
+  "hunger": 3,
+  "water": 5,
+  "saturation": 0.2,
+  "fruit": 1,
+  "decay": 3.8
+}

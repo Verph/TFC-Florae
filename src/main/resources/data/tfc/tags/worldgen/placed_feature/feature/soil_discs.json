@@ -14,6 +14,8 @@
     "tfcflorae:water_stoneware_clay_disc_with_indicator",
     "tfcflorae:bog_iron_disc_with_indicator",
     "tfcflorae:water_bog_iron_disc_with_indicator",
-    "tfcflorae:peat_disc"
+    "tfcflorae:peat_disc",
+    "tfc:peat_disc",
+    "tfc:powder_snow"
   ]
 }

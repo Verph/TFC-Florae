@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/yellow_meranti"
+    },
+    {
+      "item": "tfcflorae:wood/wood/yellow_meranti"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/yellow_meranti"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/yellow_meranti"
+    }
+  ],
+  "duration": 1200,
+  "temperature": 837
+}

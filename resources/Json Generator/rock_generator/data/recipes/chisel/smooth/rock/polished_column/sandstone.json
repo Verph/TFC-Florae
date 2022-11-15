@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/sandstone",
+  "result": "tfcflorae:rock/polished_column/sandstone",
+  "mode": "smooth"
+}

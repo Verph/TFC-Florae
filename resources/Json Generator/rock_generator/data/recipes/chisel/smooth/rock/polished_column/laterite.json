@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/laterite",
+  "result": "tfcflorae:rock/polished_column/laterite",
+  "mode": "smooth"
+}

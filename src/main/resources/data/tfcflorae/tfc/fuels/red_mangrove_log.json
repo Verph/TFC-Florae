@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/red_mangrove"
+    },
+    {
+      "item": "tfcflorae:wood/wood/red_mangrove"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/red_mangrove"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/red_mangrove"
+    }
+  ],
+  "duration": 1100,
+  "temperature": 783
+}

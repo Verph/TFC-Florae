@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/column/mudstone",
+  "result": "tfcflorae:rock/polished_column/mudstone",
+  "mode": "smooth"
+}

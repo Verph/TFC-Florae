@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/limba"
+    },
+    {
+      "item": "tfcflorae:wood/wood/limba"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/limba"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/limba"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 710
+}

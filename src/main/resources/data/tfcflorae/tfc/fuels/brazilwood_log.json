@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/brazilwood"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 710
+}
