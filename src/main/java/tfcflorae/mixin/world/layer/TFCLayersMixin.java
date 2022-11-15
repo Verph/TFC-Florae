@@ -22,8 +22,10 @@ import net.dries007.tfc.world.river.*;
 import tfcflorae.interfaces.*;
 import tfcflorae.world.layer.EdgeBiomeLayer;
 import tfcflorae.world.layer.EdgeRiverLayer;
+import tfcflorae.world.layer.MergeRiverBanksLayer;
 import tfcflorae.world.layer.PlateBiomeLayer;
 import tfcflorae.world.layer.TFCFMergeRiverLayer;
+import tfcflorae.world.layer.WatershedBank;
 
 @Mixin(TFCLayers.class)
 public class TFCLayersMixin implements TFCLayersMixinInterface
@@ -391,22 +393,14 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Overwrite(remap = false) // TODO
     public static AreaFactory createOverworldBiomeLayerWithRivers(long seed, Watershed.Context watersheds, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
     {
-        final Random random = new Random(seed);
-
+        WatershedBank.Context riverBankContext = new WatershedBank.Context(createEarlyPlateLayers(seed), seed, 0.5f, 0.8f, 14, 0.2f);
         AreaFactory mainLayer = createOverworldBiomeLayer(seed, plateArtist, layerArtist);
         AreaFactory riverLayer;
-        AreaFactory riverOverlayLayer;
+        AreaFactory riverBankLayer;
 
-        riverLayer = new MergeRiverLayer(watersheds).apply(seed, mainLayer);
-        riverLayer = TFCFMergeRiverLayer.INSTANCE.apply(seed, riverLayer, mainLayer);
-        riverLayer = EdgeRiverLayer.INSTANCE.apply(random.nextLong(), riverLayer);
-        riverLayer = ZoomLayer.NORMAL.apply(1001, riverLayer);
-        riverLayer = EdgeRiverLayer.INSTANCE.apply(random.nextLong(), riverLayer);
-        riverLayer = ZoomLayer.NORMAL.apply(1002, riverLayer);
-        riverLayer = EdgeRiverLayer.INSTANCE.apply(random.nextLong(), riverLayer);
-
-        riverOverlayLayer = new MergeRiverLayer(watersheds).apply(seed, mainLayer);
-        riverLayer = TFCFMergeRiverLayer.INSTANCE.apply(seed, riverOverlayLayer, riverLayer);
+        riverBankLayer = new MergeRiverBanksLayer(riverBankContext).apply(seed, mainLayer);
+        riverLayer = new MergeRiverLayer(watersheds).apply(seed, riverBankLayer);
+        riverLayer = TFCFMergeRiverLayer.INSTANCE.apply(seed, mainLayer, riverLayer);
 
         return riverLayer;
     }

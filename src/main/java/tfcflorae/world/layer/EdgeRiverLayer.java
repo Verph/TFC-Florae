@@ -41,50 +41,6 @@ public enum EdgeRiverLayer implements AdjacentTransformLayer
             {
                 return GRASSLANDS;
             }
-            /*if (matcher.test(TFCLayers::isLow))
-            {
-                return GRASSLANDS;
-            }
-            else if (matcher.test(TFCLayers::isLake))
-            {
-                return LAKE;
-            }
-            else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
-            {
-                return ALPINE_MOUNTAINS;
-            }
-            else if (matcher.test(i -> i == ALPINE_HIGHLANDS))
-            {
-                return GRASSLANDS;
-            }
-            else if (matcher.test(i -> i == MOUNTAINS))
-            {
-                return MOUNTAINS;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
-            {
-                return VOLCANIC_MOUNTAINS;
-            }
-            else if (matcher.test(i -> i == OLD_MOUNTAINS))
-            {
-                return OLD_MOUNTAINS;
-            }
-            else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
-            {
-                return OCEANIC_MOUNTAINS;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAIN_RIVER))
-            {
-                return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(TFCLayers::isOcean))
-            {
-                return SHORE;
-            }
-            else
-            {
-                return GRASSLANDS;
-            }*/
         }
         return center;
     }

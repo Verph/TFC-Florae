@@ -20,7 +20,7 @@ import net.dries007.tfc.world.river.*;
 @Mixin(Watershed.class)
 public abstract class WatershedMixin
 {
-    @Shadow @Mutable @Final public static final float RIVER_WIDTH = 0.013f;
+    @Shadow @Mutable @Final public static final float RIVER_WIDTH = 0.013f * 20f;
 
     @Mixin(Watershed.Context.class)
     public static class ContextMixin
