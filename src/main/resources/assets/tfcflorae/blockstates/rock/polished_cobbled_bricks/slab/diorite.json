@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/rock/polished_cobbled_bricks/slab/bottom/diorite"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/rock/polished_cobbled_bricks/slab/top/diorite"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/rock/polished_cobbled_bricks/diorite"
+    }
+  }
+}

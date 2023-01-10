@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/bitter_oyster"
-    }
+    "item": "tfcflorae:plant/bitter_oyster"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_bitter_oyster"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_bitter_oyster"
   },
   "temperature": 200
 }

@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "tfc:random_property",
+      "state": {
+        "Name": "tfcflorae:spider_cave/creeping_webs",
+        "Properties": {
+          "up": "false",
+          "down": "true",
+          "north": "false",
+          "east": "false",
+          "west": "false",
+          "south": "false"
+        }
+      },
+      "property": "age"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/siltstone"
+  },
+  "result": "tfcflorae:rock/flagstone/wall/siltstone",
+  "count": 1
+}

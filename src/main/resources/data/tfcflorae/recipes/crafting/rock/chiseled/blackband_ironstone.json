@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/blackband_ironstone"
+        "item": "tfcflorae:rock/bricks/blackband_ironstone"
       },
       {
         "tag": "tfc:chisels"

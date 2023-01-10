@@ -1,0 +1,48 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cave",
+  "config": {
+    "probability": 0.1,
+    "y": {
+      "type": "uniform",
+      "min_inclusive": {
+        "absolute": -90
+      },
+      "max_inclusive": {
+        "absolute": 32
+      }
+    },
+    "yScale": {
+      "type": "uniform",
+      "value": {
+        "min_inclusive": 0.1,
+        "max_exclusive": 0.3
+      }
+    },
+    "lava_level": {
+      "above_bottom": 8
+    },
+    "aquifers_enabled": true,
+    "horizontal_radius_multiplier": {
+      "type": "uniform",
+      "value": {
+        "min_inclusive": 3.7,
+        "max_exclusive": 5.2
+      }
+    },
+    "vertical_radius_multiplier": {
+      "type": "uniform",
+      "value": {
+        "min_inclusive": 2.1,
+        "max_exclusive": 2.9
+      }
+    },
+    "floor_level": {
+      "type": "uniform",
+      "value": {
+        "min_inclusive": -1,
+        "max_exclusive": -0.4
+      }
+    }
+  }
+}

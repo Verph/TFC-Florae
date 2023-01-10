@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/chalk",
+  "result": "tfcflorae:rock/cobbled_bricks/chalk",
+  "mode": "smooth"
+}

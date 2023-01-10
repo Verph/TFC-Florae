@@ -1,10 +1,10 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "feature": "tfcflorae:kaolinite_clay_disc",
+  "feature": "tfc:kaolinite_clay_disc",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 20
+      "chance": 16
     },
     {
       "type": "minecraft:in_square"

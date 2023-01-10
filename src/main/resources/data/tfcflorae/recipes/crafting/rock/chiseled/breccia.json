@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/breccia"
+        "item": "tfcflorae:rock/bricks/breccia"
       },
       {
         "tag": "tfc:chisels"

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/chalk",
+  "result": "tfcflorae:rock/flagstone/slab/chalk",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/chalk"
+  }
+}

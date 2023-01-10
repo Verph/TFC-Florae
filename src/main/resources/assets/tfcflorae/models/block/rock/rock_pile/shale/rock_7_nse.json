@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_7_nse",
+  "textures": {
+    "particle": "tfc:block/rock/raw/shale",
+    "texture": "tfc:block/rock/raw/shale"
+  }
+}

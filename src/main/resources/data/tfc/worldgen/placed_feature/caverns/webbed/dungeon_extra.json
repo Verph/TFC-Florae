@@ -1,0 +1,32 @@
+{
+	"feature": "tfc:caverns/monster_room",
+	"placement": [
+		{
+		  "type": "tfc:climate",
+		  "min_forest": "old_growth",
+		  "fuzzy": true
+		},
+		{
+			"type": "count",
+			"count": 26
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+		  "type": "minecraft:height_range",
+		  "height": {
+			"type": "minecraft:uniform",
+			"min_inclusive": {
+			  "absolute": -120
+			},
+			"max_inclusive": {
+			  "absolute": 40
+			}
+		  }
+		},
+		{
+			"type": "tfc:biome"
+		}
+	]
+}

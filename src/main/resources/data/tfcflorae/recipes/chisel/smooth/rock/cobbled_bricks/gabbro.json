@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/gabbro",
+  "result": "tfcflorae:rock/cobbled_bricks/gabbro",
+  "mode": "smooth"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/dacite",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/dacite",
+  "mode": "smooth"
+}

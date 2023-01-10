@@ -2,33 +2,26 @@
   "feature": "tfc:glowstone",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:biased_to_bottom",
-        "value": {
-          "min_inclusive": 0,
-          "max_inclusive": 16
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -80
         }
       }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 10
     },
     {
       "type": "minecraft:in_square"
     },
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "min_inclusive": {
-          "absolute": -60
-        },
-        "max_inclusive": {
-          "absolute": 48
-        },
-        "type": "minecraft:uniform"
-      }
-    },
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 20
+      "type": "tfc:biome"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "tfcflorae:rock/flagstone_bricks/komatiite"
+      },
+      {
+        "tag": "tfc:hammers"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:rock/cracked_flagstone_bricks/komatiite"
+    }
+  }
+}

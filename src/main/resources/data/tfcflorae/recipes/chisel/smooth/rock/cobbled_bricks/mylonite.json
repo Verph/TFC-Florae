@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/mylonite",
+  "result": "tfcflorae:rock/cobbled_bricks/mylonite",
+  "mode": "smooth"
+}

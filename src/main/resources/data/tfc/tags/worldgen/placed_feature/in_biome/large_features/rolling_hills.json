@@ -2,12 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "#tfc:feature/boulders",
-    "tfc:forest",
-    "tfc:bamboo",
-    "tfc:cave_vegetation",
-    "tfc:random_empty_hot_spring",
-    "tfc:charred_forest",
-    "tfc:fruit_forest"
+    "tfcflorae:fruit_forest",
+    "tfcflorae:charred_forest"
   ]
 }

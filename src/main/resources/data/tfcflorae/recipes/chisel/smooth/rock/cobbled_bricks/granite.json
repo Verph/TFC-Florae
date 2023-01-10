@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/granite",
+  "result": "tfcflorae:rock/cobbled_bricks/granite",
+  "mode": "smooth"
+}

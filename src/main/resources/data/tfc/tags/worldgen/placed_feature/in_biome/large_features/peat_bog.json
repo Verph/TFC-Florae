@@ -4,10 +4,6 @@
   "values": [
     "tfc:forest",
     "tfc:bamboo",
-    "tfc:cave_vegetation",
-    "tfc:fresh_water_forest",
-    "tfc:salt_water_forest",
-    "tfc:charred_forest",
-    "tfc:fruit_forest"
+    "tfc:cave_vegetation"
   ]
 }

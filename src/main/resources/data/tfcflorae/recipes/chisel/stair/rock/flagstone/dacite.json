@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/dacite",
+  "result": "tfcflorae:rock/flagstone/stairs/dacite",
+  "mode": "stair"
+}

@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfc:peat_disc_any",
+	"tfc:bog_iron_disc_with_indicator_any",
+	"tfc:humus_disc",
+	"tfc:tannin_lake",
+	"tfc:tannin_pool",
+	"tfc:glow_lichen",
+	"tfc:lush_caves_ceiling_vegetation",
+	"tfc:lush_caves_calcite",
+	"tfc:lush_caves_vegetation",
+	"tfcflorae:fruit_forest",
+	"tfcflorae:charred_forest",
+	"tfc:fossil",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation"
+  ]
+}

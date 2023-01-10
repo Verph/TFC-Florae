@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/limestone",
+  "result": "tfcflorae:rock/flagstone/slab/limestone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/limestone"
+  }
+}

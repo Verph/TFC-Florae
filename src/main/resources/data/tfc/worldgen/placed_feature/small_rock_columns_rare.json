@@ -34,7 +34,7 @@
       "count": 4
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
     },
     {
       "type": "tfc:on_top",

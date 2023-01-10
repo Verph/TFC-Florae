@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/beefsteak_fungus"
-    }
+    "item": "tfcflorae:plant/beefsteak_fungus"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_beefsteak_fungus"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_beefsteak_fungus"
   },
   "temperature": 200
 }

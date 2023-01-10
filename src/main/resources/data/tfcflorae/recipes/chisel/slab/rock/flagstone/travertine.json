@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/travertine",
+  "result": "tfcflorae:rock/flagstone/slab/travertine",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/travertine"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/jungle/cave_vegetation",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 11,
+      "max_temperature": 40,
+      "min_rainfall": 360,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    },
+    {
+      "type": "tfc:carving_mask",
+      "step": "air",
+      "min_y": {
+        "absolute": -100
+      },
+      "max_y": {
+        "absolute": 40
+      }
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

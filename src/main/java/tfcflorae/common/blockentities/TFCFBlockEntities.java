@@ -1,7 +1,9 @@
 package tfcflorae.common.blockentities;
 
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
@@ -38,36 +40,26 @@ import tfcflorae.common.blocks.*;
 import tfcflorae.common.blocks.plant.*;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.*;
+import tfcflorae.mixin.accessor.BlockEntityTypeAccessor;
 
 @SuppressWarnings("unused")
 public class TFCFBlockEntities
 {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFCFlorae.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("farmland", FarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
-
     public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SAPLING)),
-            TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values(),
-            TFCFBlocks.JOSHUA_TRUNK.values().stream()
+            TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> LARGE_FRUIT_TREE = register("large_fruit_tree", FruitTreeBlockEntity::new, Stream.of(
-            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOG)).filter(i -> i.get() instanceof TFCFFruitingLogBlock),
-            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.WOOD)).filter(i -> i.get() instanceof TFCFFruitingLogBlock),
-            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LEAVES)).filter(i -> i.get() instanceof TFCFLeavesBlock),
-            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LEAVES)).filter(i -> i.get() instanceof TFCFMangroveLeavesBlock),
+    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> BERRY_BUSH = register("berry_bush", FruitTreeBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS_SEASONAL_LEAVES.values().stream(),
+            TFCFBlocks.WOODS_SEASONAL_LOGS.values().stream(),
+            TFCFBlocks.WOODS_SEASONAL_WOOD.values().stream(),
             TFCFBlocks.LEAVES_ONLY.values().stream(),
-            TFCFBlocks.JOSHUA_LEAVES.values().stream()
-        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
-    );
-
-    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> SEASONAL_PLANT = register("seasonal_plant", FruitPlantBlockEntity::new, Stream.of(
-            TFCFBlocks.PLANTS.values().stream().filter(i -> i.get() instanceof FruitingBodyPlantBlock),
-            TFCFBlocks.PLANTS.values().stream().filter(i -> i.get() instanceof FruitingTopPlantBlock),
-            TFCFBlocks.PLANTS.values().stream().filter(i -> i.get() instanceof ShortFruitingCactusBlock),
-            TFCFBlocks.PLANTS.values().stream().filter(i -> i.get() instanceof TFCFFruitingCactusBlock)
+            TFCFBlocks.JOSHUA_LEAVES.values().stream(),
+            TFCFBlocks.FRUITING_PLANTS.values().stream()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
@@ -76,8 +68,28 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<TFCFChestBlockEntity>> CHEST = register("chest", TFCFChestBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.CHEST)));
-    public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register("trapped_chest", TFCFTrappedChestBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.TRAPPED_CHEST)));
+    public static final RegistryObject<BlockEntityType<TFCFChestBlockEntity>> CHEST = register("chest", TFCFChestBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.CHEST)),
+            TFCFBlocks.ROCK_CHEST,
+            TFCFBlocks.ROCK_CHESTS_TFC.values().stream(),
+            TFCFBlocks.ROCK_CHESTS_TFCF.values().stream()
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register("trapped_chest", TFCFTrappedChestBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.TRAPPED_CHEST)),
+            TFCFBlocks.ROCK_TRAPPED_CHEST,
+            TFCFBlocks.ROCK_TRAPPED_CHESTS_TFC.values().stream(),
+            TFCFBlocks.ROCK_TRAPPED_CHESTS_TFCF.values().stream()
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<WebbedChestBlockEntity>> WEBBED_CHEST = register("webbed_chest", WebbedChestBlockEntity::new, Stream.of(
+            TFCFBlocks.WEBBED_CHEST
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("farmland", FarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
     public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("barrel", BarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
     public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("loom", LoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));
     public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("sluice", SluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SLUICE)));
@@ -97,5 +109,14 @@ public class TFCFBlockEntities
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Stream<? extends Supplier<? extends Block>> blocks)
     {
         return RegistrationHelpers.register(BLOCK_ENTITIES, name, factory, blocks);
+    }
+
+    private static void modifyBlockEntityType(BlockEntityType<?> type, Stream<Block> extraBlocks)
+    {
+        TFCFlorae.LOGGER.debug("Modifying block entity type: " + ForgeRegistries.BLOCK_ENTITIES.getKey(type));
+        Set<Block> blocks = ((BlockEntityTypeAccessor) (Object) type).accessor$getValidBlocks();
+        blocks = new HashSet<>(blocks);
+        blocks.addAll(extraBlocks.toList());
+        ((BlockEntityTypeAccessor) (Object) type).accessor$setValidBlocks(blocks);
     }
 }

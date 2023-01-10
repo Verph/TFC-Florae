@@ -1,0 +1,43 @@
+{
+  "feature": "tfc:caverns/thermal/underwater_magma",
+  "placement": [
+    {
+      "type":"minecraft:count",
+      "count":{
+        "type":"minecraft:uniform",
+        "value":{
+          "min_inclusive":10,
+          "max_inclusive":30
+        }
+      }
+    },
+    {
+      "type":"minecraft:height_range",
+      "height":{
+        "min_inclusive":{
+          "absolute":-100
+        },
+        "max_inclusive":{
+          "absolute":40
+        },
+        "type":"minecraft:uniform"
+      }
+    },
+    {
+      "type":"minecraft:count",
+      "count":{
+        "type":"minecraft:uniform",
+        "value":{
+          "min_inclusive":4,
+          "max_inclusive":16
+        }
+      }
+    },
+    {
+      "type":"minecraft:in_square"
+    },
+    {
+      "type":"tfc:biome"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:volcano_rivulet",
+    "tfc:volcano_caldera",
+    "tfc:random_volcano_fissure",
+    "tfc:caverns/thermal/hot_spring_deep",
+    "tfc:caverns/thermal/ceiling",
+    "tfc:caverns/thermal/floor",
+	"tfc:caverns/thermal/lava",
+    "tfc:caverns/thermal/underwater_magma"
+  ]
+}

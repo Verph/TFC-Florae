@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:hot_spring",
+  "config": {
+    "fluid_state": "minecraft:lava",
+    "radius": 16,
+    "allow_underwater": true
+  }
+}

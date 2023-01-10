@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:volcano_fissure",
+  "placement": [
+    {
+      "type": "tfc:volcano",
+      "center": true
+    },
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:biased_to_bottom",
+        "min_inclusive": {
+          "absolute": -256
+        },
+        "max_inclusive": {
+          "absolute": -128
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

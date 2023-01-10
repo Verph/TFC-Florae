@@ -52,140 +52,88 @@
                   "type": "minecraft:any_of",
                   "predicates": [
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         0,
                         0
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         0,
                         0
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         0,
                         0,
                         -1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         0,
                         0,
                         1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         0,
                         -1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         0,
                         1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         0,
                         -1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         0,
                         1
                       ],
-                      "blocks": [
-                        "tfcflorae:rock/flagstone/basalt",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "minecraft:air",
-                        "lava"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     }
                   ]
                 }
               },
               {
-                "type": "minecraft:matching_blocks",
+                "type": "minecraft:matching_block_tag",
                 "offset": [
                   0,
                   0,
                   0
                 ],
-                "blocks": [
-                  "minecraft:yellow_terracotta",
-                  "tfc:rock/magma/basalt",
-                  "tfcflorae:rock/cobbled_bricks/basalt"
-                ]
+                "tag": "tfcflorae:replaceable"
               },
               {
                 "type": "minecraft:not",
@@ -193,172 +141,76 @@
                   "type": "minecraft:any_of",
                   "predicates": [
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         1,
                         0
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         1,
                         0
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         0,
                         1,
                         -1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         0,
                         1,
                         1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         1,
                         -1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         -1,
                         1,
                         1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         1,
                         -1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     },
                     {
-                      "type": "minecraft:matching_blocks",
+                      "type": "minecraft:matching_block_tag",
                       "offset": [
                         1,
                         1,
                         1
                       ],
-                      "blocks": [
-                        "minecraft:yellow_terracotta",
-                        "tfc:sand/red",
-                        "tfcflorae:rock/column/basalt",
-                        "tfc:rock/raw/chalk",
-                        "tfc:grass/loam",
-                        "tfc:dirt/loam",
-                        "tfcflorae:coarse_dirt/loam",
-                        "tfc:rock/gravel/basalt",
-                        "tfcflorae:rock/flagstone/basalt",
-                        "lava",
-						"tfcflorae:rock/cobbled_bricks/basalt"
-                      ]
+                      "tag": "tfcflorae:replaceable"
                     }
                   ]
                 }

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:jungle/mud_humus",
+    "tfc:jungle/mud_humus_water",
+    "tfc:jungle/mud_loam",
+    "tfc:jungle/mud_loam_water",
+    "tfc:jungle/mud_sandy_loam",
+    "tfc:jungle/mud_sandy_loam_water",
+    "tfc:jungle/mud_silt",
+    "tfc:jungle/mud_silt_water",
+    "tfc:jungle/mud_silty_loam",
+    "tfc:jungle/mud_silty_loam_water",
+    "tfc:jungle/plant/pampas_grass_patch",
+    "tfc:jungle/plant/pitahaya_patch"
+  ]
+}

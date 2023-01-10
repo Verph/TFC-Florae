@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/dolomite",
+  "result": "tfcflorae:rock/flagstone/slab/dolomite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/dolomite"
+  }
+}

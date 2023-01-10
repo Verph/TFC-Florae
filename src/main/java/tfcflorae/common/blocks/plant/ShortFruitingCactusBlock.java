@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -28,12 +30,17 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 
 import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import com.google.common.base.Preconditions;
+
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -51,10 +58,10 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.registry.RegistryPlant;
-import tfcflorae.common.blockentities.FruitPlantBlockEntity;
-import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock
+import tfcflorae.common.blockentities.*;
+
+public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
 {
     /**
      * Taking into account only environment rainfall, on a scale [0, 100]
@@ -91,11 +98,19 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
     {
         super(properties);
 
+        Preconditions.checkArgument(lifecycle.length == 12, "Lifecycle length must be 12");
+
         this.climateRange = climateRange;
         this.lifecycle = lifecycle;
         this.productItem = productItem;
 
         registerDefaultState(getStateDefinition().any().setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
+        return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
     @Override
@@ -108,7 +123,10 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        IBushBlock.randomTick(this, state, level, pos, random);
+        if (getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(level, pos, state);
+        }
     }
 
     /**
@@ -131,6 +149,16 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
     }
 
     @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
+    {
+        if (level instanceof ServerLevel server && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(server, currentPos, state);
+        }
+        return state;
+    }
+
+    @Override
     @SuppressWarnings("deprecation")
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
@@ -139,6 +167,11 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
             level.playSound(player, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.PLAYERS, 1.0f, level.getRandom().nextFloat() + 0.7f + 0.3f);
             if (!level.isClientSide())
             {
+                final ItemStack stack = player.getItemInHand(hand);
+                if (!(Helpers.isItem(stack, TFCTags.Items.KNIVES) || Helpers.isItem(stack, Items.STICK)))
+                {
+                    player.hurt(DamageSource.CACTUS, 2.0F);
+                }
                 ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
                 level.setBlockAndUpdate(pos, stateAfterPicking(state));
             }
@@ -154,7 +187,7 @@ public abstract class ShortFruitingCactusBlock extends ShortCactusBlock implemen
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        if (level.getBlockEntity(pos) instanceof FruitPlantBlockEntity leaves)
+        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();

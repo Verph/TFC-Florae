@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/red_granite"
+        "item": "tfcflorae:rock/bricks/red_granite"
       },
       {
         "tag": "tfc:chisels"

@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:wood/log/black_willow",
+    "tfcflorae:wood/wood/black_willow",
     "tfcflorae:wood/log/medlar",
     "tfcflorae:wood/wood/medlar",
     "tfcflorae:wood/log/persimmon",

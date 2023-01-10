@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/breccia",
+  "result": "tfcflorae:rock/cobbled_bricks/breccia",
+  "mode": "smooth"
+}

@@ -1,0 +1,49 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "tfcflorae:block/spider_cave/web_layer_bottom",
+		"bottom": "tfcflorae:block/spider_cave/web_ground",
+		"particle": "tfcflorae:block/spider_cave/web_ground"
+	},
+	"elements": [
+		{
+			"from": [-0.1, -8.8, -0.1],
+			"to": [16.1, 0.2, 16.1],
+			"faces": {
+				"north": {"uv": [12, 4, 4, 0], "texture": "#bottom", "cullface": "north"},
+				"east": {"uv": [12, 4, 16, 12], "rotation": 90, "texture": "#bottom", "cullface": "east"},
+				"south": {"uv": [4, 12, 12, 16], "texture": "#bottom", "cullface": "south"},
+				"west": {"uv": [4, 12, 0, 4], "rotation": 90, "texture": "#bottom", "cullface": "west"},
+				"up": {"uv": [4, 4, 12, 12], "texture": "#bottom", "cullface": "up"}
+			}
+		},
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [16, 8, 0, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"south": {"uv": [0, 8, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"up": {"uv": [0, 0, 8, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 8, 0], "texture": "#1"}
+			}
+		},
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [16, 8, 0, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"south": {"uv": [0, 8, 16, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 8], "texture": "#1"},
+				"up": {"uv": [0, 0, 8, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 8, 0], "texture": "#1"}
+			}
+		}
+	]
+}

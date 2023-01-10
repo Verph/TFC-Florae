@@ -1,0 +1,25 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "open=false": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1
+	  }
+    ],
+    "open=true": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1
+	  }
+    ]
+  }
+}

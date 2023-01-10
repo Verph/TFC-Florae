@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:crystal/cluster/opal"
+  },
+  "result": {
+    "item": "tfc:powder/opal",
+    "count": 3
+  }
+}

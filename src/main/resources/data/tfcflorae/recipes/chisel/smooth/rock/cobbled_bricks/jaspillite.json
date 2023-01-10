@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/jaspillite",
+  "result": "tfcflorae:rock/cobbled_bricks/jaspillite",
+  "mode": "smooth"
+}

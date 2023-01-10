@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:soil_disc",
+  "config": {
+    "min_radius": 3,
+    "max_radius": 6,
+    "height": 3,
+    "states": [
+      {
+        "replace": "tfcflorae:mud/humus",
+        "with": "tfcflorae:loose_mud/humus"
+      },
+      {
+        "replace": "tfc:mud/silt",
+        "with": "tfcflorae:loose_mud/silt"
+      },
+      {
+        "replace": "tfc:mud/loam",
+        "with": "tfcflorae:loose_mud/loam"
+      },
+      {
+        "replace": "tfc:mud/sandy_loam",
+        "with": "tfcflorae:loose_mud/sandy_loam"
+      },
+      {
+        "replace": "tfc:mud/silty_loam",
+        "with": "tfcflorae:loose_mud/silty_loam"
+      }
+    ]
+  }
+}

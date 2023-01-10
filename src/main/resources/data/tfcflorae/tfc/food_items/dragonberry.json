@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/dragonberry"
+  },
+  "category": "fruit",
+  "hunger": 2.3,
+  "water": 4.5,
+  "saturation": 0.7,
+  "fruit": 0.75,
+  "decay": 4.3
+}

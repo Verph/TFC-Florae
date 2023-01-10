@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_8",
+  "textures": {
+    "particle": "tfc:block/rock/raw/phyllite",
+    "texture": "tfc:block/rock/raw/phyllite"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/polished_cobbled_bricks/greenschist",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/slab/greenschist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/polished_cobbled_bricks/slab/greenschist"
+  }
+}

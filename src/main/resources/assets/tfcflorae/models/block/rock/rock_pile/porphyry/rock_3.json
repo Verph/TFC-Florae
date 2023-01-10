@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_3",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/porphyry",
+    "texture": "tfcflorae:block/rock/raw/porphyry"
+  }
+}

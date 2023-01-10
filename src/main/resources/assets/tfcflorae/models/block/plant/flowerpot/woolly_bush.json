@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/flower_pot_cross_large_tint",
+  "textures": {
+    "plant": "tfcflorae:block/plant/woolly_bush/woolly_bush_big",
+    "dirt": "tfcflorae:block/dirt/humus"
+  }
+}

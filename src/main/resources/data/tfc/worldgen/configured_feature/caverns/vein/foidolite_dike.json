@@ -1,0 +1,1373 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:pipe_vein",
+  "config": {
+    "rarity": 50,
+    "min_y": {
+      "absolute": -255
+    },
+    "max_y": {
+      "absolute": -64
+    },
+    "size": 150,
+    "density": 0.98,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/breccia"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/foidolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blaimorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/siltstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/travertine"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blackband_ironstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blueschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/catlinite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/greenschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/novaculite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/komatiite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mylonite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/shale"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/chert"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/slate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/schist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/gravel/marble"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/cataclasite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/porphyry"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/red_granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/laterite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/breccia"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/foidolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/peridotite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/blaimorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/boninite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/carbonatite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/mudstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/sandstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/siltstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/arkose"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/jaspillite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/travertine"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/wackestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/blackband_ironstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/blueschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/catlinite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/greenschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/novaculite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/soapstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/komatiite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/gravel/mylonite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/shale"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/claystone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/limestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/dolomite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/chert"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/chalk"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/quartzite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/slate"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/phyllite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/schist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/hardened/marble"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/cataclasite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/porphyry"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/red_granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/laterite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/breccia"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/foidolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/peridotite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/blaimorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/boninite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/carbonatite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/mudstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/sandstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/siltstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/arkose"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/jaspillite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/travertine"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/wackestone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/blackband_ironstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/blueschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/catlinite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/greenschist"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/novaculite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/soapstone"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/komatiite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/hardened/mylonite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:rock/raw/foidolite"
+          }
+        ]
+      }
+    ],
+    "random_name": "foidolite_dike",
+    "radius": 4,
+    "minSkew": 7,
+    "maxSkew": 20,
+    "minSlant": 2,
+    "maxSlant": 5
+  }
+}

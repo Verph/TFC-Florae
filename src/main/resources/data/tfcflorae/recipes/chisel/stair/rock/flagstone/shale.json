@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/shale",
+  "result": "tfcflorae:rock/flagstone/stairs/shale",
+  "mode": "stair"
+}

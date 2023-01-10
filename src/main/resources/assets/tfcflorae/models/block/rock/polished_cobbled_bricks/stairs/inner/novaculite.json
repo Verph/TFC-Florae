@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/polished_cobbled_bricks/novaculite",
+    "top": "tfcflorae:block/rock/polished_cobbled_bricks/novaculite",
+    "side": "tfcflorae:block/rock/polished_cobbled_bricks/novaculite"
+  }
+}

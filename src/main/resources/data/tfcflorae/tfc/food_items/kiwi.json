@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/kiwi"
+  },
+  "hunger": 4,
+  "saturation": 0.2,
+  "water": 5,
+  "decay_modifier": 3,
+  "fruit": 1
+}

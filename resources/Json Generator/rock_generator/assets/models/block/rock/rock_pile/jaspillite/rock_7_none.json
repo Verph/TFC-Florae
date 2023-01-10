@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_7_none",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/jaspillite",
+    "texture": "tfcflorae:block/rock/raw/jaspillite"
+  }
+}

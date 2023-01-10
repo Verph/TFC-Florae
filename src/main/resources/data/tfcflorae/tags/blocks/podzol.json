@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "minecraft:podzol",
     "tfc:groundcover/humus",
     "tfcflorae:podzol/silt",
     "tfcflorae:podzol/loam",

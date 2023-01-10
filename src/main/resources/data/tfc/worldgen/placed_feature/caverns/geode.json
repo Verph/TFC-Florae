@@ -1,0 +1,28 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/geode",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "biased_to_bottom",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

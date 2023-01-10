@@ -1,0 +1,17 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "tfc:rock/cobble/diorite"
+      },
+      {
+        "tag": "tfc:chisels"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:rock/cobbled_bricks/diorite"
+    }
+  }
+}

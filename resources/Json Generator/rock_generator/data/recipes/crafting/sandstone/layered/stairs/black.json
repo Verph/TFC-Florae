@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:sandstone/layered/black"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:sandstone/layered/stairs/black",
+    "count": 8
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "tfcflorae:lake",
+  "config": {
+    "state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfc:peat"
+      }
+    },
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Properties": {
+          "level": "0"
+        },
+        "Name": "tfc:fluid/tannin"
+      }
+    }
+  }
+}

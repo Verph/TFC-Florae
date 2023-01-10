@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:fruit_forest",
+	"tfcflorae:charred_forest",
+	"tfcflorae:salt_water_forest",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/cataclasite",
+  "result": "tfcflorae:rock/flagstone/stairs/cataclasite",
+  "mode": "stair"
+}

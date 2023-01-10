@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/sandstone",
+  "result": "tfcflorae:rock/cobbled_bricks/sandstone",
+  "mode": "smooth"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/shale",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/shale",
+  "mode": "smooth"
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/sandstone/layered/slab/bottom/white"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/sandstone/layered/slab/top/white"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/sandstone/layered/white"
+    }
+  }
+}

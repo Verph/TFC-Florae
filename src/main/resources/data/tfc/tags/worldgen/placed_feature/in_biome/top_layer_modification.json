@@ -2,8 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "#tfc:feature/surface_ore_deposits",
     "tfc:surface_loose_flint",
-    "tfc:surface_loose_rocks",
-    "tfc:ice_and_snow"
+    "tfc:rock_pile",
+    "tfc:deep_rock_pile",
+	"tfc:floor_surface"
   ]
 }

@@ -49,6 +49,7 @@ import tfcflorae.client.render.entity.TFCFBoatRenderer;
 import tfcflorae.client.screen.ceramics.*;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.container.TFCFContainerTypes;
@@ -100,11 +101,6 @@ public class ClientEventHandler
             //}
         });
 
-        // Keybindings
-        ClientRegistry.registerKeyBinding(TFCKeyBindings.PLACE_BLOCK);
-        ClientRegistry.registerKeyBinding(TFCKeyBindings.CYCLE_CHISEL_MODE);
-        ClientRegistry.registerKeyBinding(TFCKeyBindings.STACK_FOOD);
-
         // Render Types
         final RenderType solid = RenderType.solid();
         final RenderType cutout = RenderType.cutout();
@@ -120,9 +116,18 @@ public class ClientEventHandler
 
         TFCFBlocks.WOODS.values().forEach(map -> {
             Stream.of(SAPLING, DOOR, TRAPDOOR, FENCE, FENCE_GATE, BUTTON, PRESSURE_PLATE, SLAB, STAIRS, TWIG, BARREL, SCRIBING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
-            Stream.of(LEAVES, FALLEN_LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+            Stream.of(FALLEN_LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
         });
+
+        TFCFBlocks.WOODS.forEach((key, value) -> {
+            if (!key.isFruitTree() && !key.isMangrove())
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(value.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+        });
+
         TFCFBlocks.LEAVES_ONLY.values().forEach(map -> {
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+        });
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(map -> {
             Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
         });
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CHARRED_TREE_TWIG.get(), cutout);
@@ -188,9 +193,11 @@ public class ClientEventHandler
 
         TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
         // Plants
         TFCFBlocks.PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.FRUITING_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
         TFCFBlocks.POTTED_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
         // Rock blocks
@@ -198,7 +205,36 @@ public class ClientEventHandler
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutoutMipped);
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.AQUEDUCT).get(), cutoutMipped);
         });
+        TFCFBlocks.ROCK_BLOCKS.values().forEach(map -> {
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutoutMipped);
+        });
+        TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.values().forEach(map -> {
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutoutMipped);
+        });
         TFCFBlocks.DRIPSTONE_BLOCKS.values().stream().map(map -> map.get(Rock.BlockType.SPIKE)).forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+        TFCFBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_BUDDING.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_CLUSTER.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_GLOWSTONE_BUD.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MEDIUM_GLOWSTONE_BUD.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SMALL_GLOWSTONE_BUD.get(), cutoutMipped);
+
+        TFCFBlocks.GEM_BLOCKS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGG.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGGS.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_SPIDER_EGG.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_GLOW_BLOCK.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_TORCH_BLOCK.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CREEPING_WEBS.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_SLENDER.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_THICK.get(), cutoutMipped);
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
@@ -295,12 +331,20 @@ public class ClientEventHandler
         registry.register(grassColor, TFCFBlocks.DENSE_BOG_IRON_GRASS.get());
         registry.register(grassColor, TFCFBlocks.BOG_IRON_GRASS.get());
 
-        TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.LEAVES).get(), reg.get(Wood.BlockType.FALLEN_LEAVES).get()));
+        TFCFBlocks.WOODS.forEach((wood, reg) -> {
+            if (!wood.isFruitTree() && !wood.isMangrove())
+                registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.LEAVES).get(), reg.get(Wood.BlockType.FALLEN_LEAVES).get());
+            else
+                registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.FALLEN_LEAVES).get());
+        });
+        //TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.LEAVES).get(), reg.get(Wood.BlockType.FALLEN_LEAVES).get()));
         TFCFBlocks.LEAVES_ONLY.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
         TFCFBlocks.JOSHUA_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
 
         // Plants
         TFCFBlocks.PLANTS.forEach((plant, reg) -> registry.register(plant.isConifer() ? foliageColor : plant.isTallGrass() ? tallGrassColor : plant.isSeasonal() ? seasonalFoliageColor : plant.isFoliage() ? foliageColor : grassColor, reg.get()));
+        TFCFBlocks.FRUITING_PLANTS.forEach((plant, reg) -> registry.register(plant.isConifer() ? foliageColor : plant.isTallGrass() ? tallGrassColor : plant.isSeasonal() ? seasonalFoliageColor : plant.isFoliage() ? foliageColor : grassColor, reg.get()));
         TFCFBlocks.POTTED_PLANTS.forEach((plant, reg) -> registry.register(grassColor, reg.get()));
     }
 
@@ -310,12 +354,27 @@ public class ClientEventHandler
         final ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
         final ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
 
-        TFCFBlocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
+        TFCFBlocks.WOODS.forEach((key, value) -> {
+            if (!key.isFruitTree() && !key.isMangrove())
+                registry.register(seasonalFoliageColor, value.get(LEAVES).get());
+            else
+                registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
+        });
+        TFCFBlocks.WOODS.forEach((key, value) -> {
+            if (key.isFruitTree() || key.isMangrove())
+                registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
+        });
+        //TFCFBlocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
         TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
         TFCFBlocks.JOSHUA_LEAVES.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
 
         // Plants
         TFCFBlocks.PLANTS.forEach((plant, reg) -> {
+            if (plant.isItemTinted())
+                registry.register(plant.isConifer() ? seasonalFoliageColor : plant.isSeasonal() ? seasonalFoliageColor : grassColor, reg.get());
+        });
+        TFCFBlocks.FRUITING_PLANTS.forEach((plant, reg) -> {
             if (plant.isItemTinted())
                 registry.register(plant.isConifer() ? seasonalFoliageColor : plant.isSeasonal() ? seasonalFoliageColor : grassColor, reg.get());
         });
@@ -344,6 +403,28 @@ public class ClientEventHandler
                 event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/" + name));
                 event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/" + name));
             });
+            Arrays.stream(Rock.VALUES).map(Rock::getSerializedName).forEach(name -> {
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_right/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/" + name));
+            });
+            Arrays.stream(TFCFRock.VALUES).map(TFCFRock::getSerializedName).forEach(name -> {
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/normal_right/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/" + name));
+                event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/" + name));
+            });
+            event.addSprite(TFCFHelpers.identifier("entity/chest/normal/rock"));
+            event.addSprite(TFCFHelpers.identifier("entity/chest/normal_left/rock"));
+            event.addSprite(TFCFHelpers.identifier("entity/chest/normal_right/rock"));
+            event.addSprite(TFCFHelpers.identifier("entity/chest/trapped/rock"));
+            event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/rock"));
+            event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/rock"));
         }
         else if (sheet.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
         {

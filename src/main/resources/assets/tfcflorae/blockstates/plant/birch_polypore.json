@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/birch_polypore/birch_polypore_0"
+          "model": "tfcflorae:block/plant/birch_polypore/birch_polypore_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/birch_polypore/birch_polypore_0"
+          "model": "tfcflorae:block/plant/birch_polypore/birch_polypore_3"
         }
       ]
     },

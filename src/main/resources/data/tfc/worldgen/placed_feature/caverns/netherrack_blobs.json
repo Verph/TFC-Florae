@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/netherrack_blobs",
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "biased_to_bottom",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -128
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/foidolite",
+  "result": "tfcflorae:rock/flagstone_bricks/foidolite",
+  "mode": "smooth"
+}

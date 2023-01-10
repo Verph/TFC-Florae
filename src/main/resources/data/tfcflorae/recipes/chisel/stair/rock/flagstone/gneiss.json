@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/gneiss",
+  "result": "tfcflorae:rock/flagstone/stairs/gneiss",
+  "mode": "stair"
+}

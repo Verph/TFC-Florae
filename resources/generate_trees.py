@@ -1,7 +1,7 @@
 import os
 from typing import Set, Any, Tuple, NamedTuple, Literal, Union
 
-from nbtlib import nbt
+from nbtlib import *
 from nbtlib.tag import *
 from nbtlib.tag import String as StringTag, Int as IntTag
 
@@ -10,79 +10,13 @@ Tree = NamedTuple('Tree', name=str, feature=Literal['random', 'overlay', 'stacke
 DATA_VERSION = 2970
 
 NORMAL_TREES = [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    Tree('bald_cypress', 'random', 'bald_cypress', 22),
-    Tree('red_cypress', 'random', 'red_cypress', 22),
-    Tree('black_willow', 'random', 'black_willow', 17)
+    Tree('common_oak', 'random', 'common_oak', 8)
 ]
 
 LARGE_TREES = [
-    Tree('bald_cypress', 'random', 'bald_cypress', 0),
-    Tree('red_cypress', 'random', 'red_cypress', 0),
-    Tree('black_willow', 'random', 'black_willow', 0)
-=======
-    Tree('bald_cypress', 'random', 'bald_cypress', 6),
-    Tree('red_cypress', 'random', 'red_cypress', 6),
-    Tree('black_willow', 'random', 'black_willow', 10),
-    Tree('jabuticabeira', 'random', 'jabuticabeira', 18),
-    Tree('ghaf', 'random', 'ghaf', 16),
-    Tree('laurel', 'random', 'laurel', 21)
-]
-
-LARGE_TREES = [
-    Tree('black_willow', 'random', 'black_willow_large', 14)
->>>>>>> Stashed changes
-=======
-    Tree('bald_cypress', 'random', 'bald_cypress', 6),
-    Tree('red_cypress', 'random', 'red_cypress', 6),
-    Tree('black_willow', 'random', 'black_willow', 10),
-    Tree('jabuticabeira', 'random', 'jabuticabeira', 18),
-    Tree('ghaf', 'random', 'ghaf', 16),
-    Tree('laurel', 'random', 'laurel', 21)
-]
-
-LARGE_TREES = [
-    Tree('black_willow', 'random', 'black_willow_large', 14)
->>>>>>> Stashed changes
-=======
-    Tree('bald_cypress', 'random', 'bald_cypress', 6),
-    Tree('red_cypress', 'random', 'red_cypress', 6),
-    Tree('black_willow', 'random', 'black_willow', 10),
-    Tree('jabuticabeira', 'random', 'jabuticabeira', 18),
-    Tree('ghaf', 'random', 'ghaf', 16),
-    Tree('laurel', 'random', 'laurel', 21)
-]
-
-LARGE_TREES = [
-    Tree('black_willow', 'random', 'black_willow_large', 14)
->>>>>>> Stashed changes
 ]
 
 DEAD_TREES = [
-    Tree('bald_cypress', 'random', 'bald_cypress_dead', 13),
-    Tree('red_cypress', 'random', 'red_cypress_dead', 13),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    Tree('black_willow', 'random', 'dead_stump', 3)
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    Tree('black_willow', 'random', 'dead_stump', 3),
-    Tree('jabuticabeira', 'random', 'jabuticabeira_dead', 13),
-    Tree('ghaf', 'random', 'dead_small', 6),
-    Tree('laurel', 'random', 'dead_small', 6)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 
@@ -95,31 +29,7 @@ class Count:  # global mutable variables that doesn't require using the word "gl
 
 def main():
     print('Verifying tree structures')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    verify_center_trunk('bald_cypress', 22)
-    verify_center_trunk('red_cypress', 22)
-    verify_center_trunk('black_willow', 17)
-    verify_center_trunk('bald_cypress_dead', 13)
-    verify_center_trunk('red_cypress_dead', 13)
-    verify_center_trunk('dead_stump', 3)
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    verify_center_trunk('bald_cypress', 6)
-    verify_center_trunk('bald_cypress_dead', 13)
-    verify_center_trunk('red_cypress', 6)
-    verify_center_trunk('red_cypress_dead', 13)
-    verify_center_trunk('black_willow', 10)
-    verify_center_trunk('black_willow_large', 14)
-    verify_center_trunk('dead_stump', 3)
-    verify_center_trunk('dead_small', 6)
-    verify_center_trunk('jabuticabeira', 18)
-    verify_center_trunk('jabuticabeira_dead', 13)
->>>>>>> Stashed changes
+    verify_center_trunk('common_oak', 8)
 
     print('Tree sapling drop chances:')
     for tree in NORMAL_TREES:
@@ -153,52 +63,52 @@ def make_tree_structures(tree: Tree, suffix: str = ''):
 
 
 def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
-    f = nbt.load('./structure_templates/%s.nbt' % template)
+    f = nbt.load('./test_trees/%s.nbt' % template)
     for block in f['palette']:
         if block['Name'] == 'minecraft:oak_log':
-            block['Name'] = String('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = String('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:spruce_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:birch_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:jungle_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:acacia_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:dark_oak_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'minecraft:log2':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
@@ -257,7 +167,6 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:oak_leaves':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
-            prop = block['Properties']
             block['Properties'] = Compound({
                 'persistent': StringTag('false')})
         elif block['Name'] == 'minecraft:spruce_leaves':
@@ -296,31 +205,17 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
             block['Properties'] = Compound({
                 'persistent': StringTag('false')})
         elif block['Name'] == 'byg:willow_log':
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
+            block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
                 'axis': StringTag('y')})
         elif block['Name'] == 'byg:cypress_log':
-<<<<<<< Updated upstream
-            block['Name'] = StringTag('tfcflorae:wood/log/%s' % wood)
-            prop = block['Properties']
-            block['Properties'] = Compound({
-                'natural': StringTag('true'),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                'axis': prop['axis']})
-=======
             block['Name'] = StringTag('tfcflorae:wood/wood/%s' % wood)
             prop = block['Properties']
             block['Properties'] = Compound({
                 'natural': StringTag('true'),
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                 'axis': StringTag('y')})
-                
         elif block['Name'] == 'tfc:wood/leaves/bald_cypress':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
@@ -335,7 +230,6 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
                 'lifecycle': StringTag('healthy')})
                 
                 
->>>>>>> Stashed changes
         elif block['Name'] == 'minecraft:cocoa':
             block['Name'] = StringTag('tfcflorae:wood/leaves/%s' % wood)
             prop = block['Properties']
@@ -373,7 +267,7 @@ def make_tree_structure(template: str, wood: str, dest: str, wood_dir: str):
     # Hack the data version, to avoid needing to run DFU on anything
     f['DataVersion'] = IntTag(DATA_VERSION)
 
-    result_dir = '../src/main/resources/data/tfc/structures/%s/' % wood_dir
+    result_dir = './test_trees_structures/%s/' % wood_dir
     os.makedirs(result_dir, exist_ok=True)
 
     file_name = result_dir + dest + '.nbt'
@@ -417,8 +311,8 @@ def count_leaves_in_random_tree(base_name: str, count: int) -> float:
 
 
 def count_leaves_in_overlay_tree(base_name: str) -> float:
-    base = nbt.load('./structure_templates/%s.nbt' % base_name)
-    overlay = nbt.load('./structure_templates/%s_overlay.nbt' % base_name)
+    base = nbt.load('./test_trees/%s.nbt' % base_name)
+    overlay = nbt.load('./test_trees/%s_overlay.nbt' % base_name)
 
     base_leaves = leaf_ids(base)
     leaves = set(pos_key(block) for block in base['blocks'] if block['state'] in base_leaves)
@@ -434,7 +328,7 @@ def count_leaves_in_overlay_tree(base_name: str) -> float:
 
 
 def count_leaves_in_structure(file_name: str):
-    file = nbt.load('./structure_templates/%s.nbt' % file_name)
+    file = nbt.load('./test_trees/%s.nbt' % file_name)
     leaves = leaf_ids(file)
     return sum(block['state'] in leaves for block in file['blocks'])
 
@@ -450,7 +344,7 @@ def pos_key(tag: Any, key: str = 'pos') -> Tuple[int, int, int]:
 
 def verify_center_trunk(prefix: str, count: int):
     for i in range(1, 1 + count):
-        root = nbt.load('./structure_templates/%s%d.nbt' % (prefix, i))
+        root = nbt.load('./test_trees/%s%d.nbt' % (prefix, i))
         sx, sy, sz = pos_key(root, 'size')
         if sx % 2 != 1 or sz % 2 != 1:
             print('Non-odd dimensions: %d x %d x %d on %s%d' % (sx, sy, sz, prefix, i))

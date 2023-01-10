@@ -2,6 +2,7 @@ package tfcflorae.common.blocks.rock;
 
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
@@ -189,6 +190,8 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
                     (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true),
         COBBLED_BRICKS((rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
                         (rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
+        POLISHED_COBBLED_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()), true),
         FLAGSTONE_BRICKS((rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
                         (rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
         MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
@@ -196,7 +199,11 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
         MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
                                 (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
         CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
-                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true);
+                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        ROCK_PILE((rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
+                (rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), false),
+        MOSSY_ROCK_PILE((rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()),
+                        (rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()), false);
 
         public static final TFCFBlockType[] VALUES = TFCFBlockType.values();
 
@@ -267,6 +274,7 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
                 {
                     case COBBLED_BRICKS, MOSSY_COBBLED_BRICKS -> MOSSY_COBBLED_BRICKS;
                     case FLAGSTONE_BRICKS, MOSSY_FLAGSTONE_BRICKS -> MOSSY_FLAGSTONE_BRICKS;
+                    case ROCK_PILE, MOSSY_ROCK_PILE -> MOSSY_ROCK_PILE;
                     default -> null;
                 };
         }

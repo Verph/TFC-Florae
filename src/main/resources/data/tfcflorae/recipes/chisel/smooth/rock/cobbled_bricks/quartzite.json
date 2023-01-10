@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/quartzite",
+  "result": "tfcflorae:rock/cobbled_bricks/quartzite",
+  "mode": "smooth"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/cataclasite",
+  "result": "tfcflorae:rock/flagstone/slab/cataclasite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/cataclasite"
+  }
+}

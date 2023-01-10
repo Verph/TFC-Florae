@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/cave_spike",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 10
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "OCEAN_FLOOR",
+      "max_inclusive": -64
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:carving_mask",
+      "step": "air"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "X X",
+    "YXY"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/polished_cobbled_bricks/arkose"
+    },
+    "Y": {
+      "tag": "tfc:pileable_sheets"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/chest/arkose"
+  }
+}

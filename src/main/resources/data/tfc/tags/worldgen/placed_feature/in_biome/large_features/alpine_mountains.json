@@ -3,15 +3,10 @@
   "replace": false,
   "values": [
     "#tfc:feature/boulders",
-    "#tfc:feature/volcanoes",
+    "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-    "tfc:random_empty_hot_spring",
-    "tfc:random_active_hot_spring",
-    "#tfc:feature/large_rock_columns",
-    "#tfc:feature/small_rock_columns",
-    "#tfc:feature/rock_pillar",
-    "#tfc:feature/icebergs",
-    "tfc:fruit_forest"
+    "#tfc:feature/volcanoes",
+    "tfc:caverns/lava"
   ]
 }

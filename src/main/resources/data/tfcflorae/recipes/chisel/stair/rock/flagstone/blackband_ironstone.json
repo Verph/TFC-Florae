@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/blackband_ironstone",
+  "result": "tfcflorae:rock/flagstone/stairs/blackband_ironstone",
+  "mode": "stair"
+}

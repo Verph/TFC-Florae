@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/arkose"
+        "item": "tfcflorae:rock/bricks/arkose"
       },
       {
         "tag": "tfc:chisels"

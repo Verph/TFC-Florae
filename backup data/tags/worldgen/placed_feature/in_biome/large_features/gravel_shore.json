@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfcflorae:feature/glaciers",
+	"tfc:small_rock_columns_rare",
+    "#tfc:feature/icebergs"
+  ]
+}

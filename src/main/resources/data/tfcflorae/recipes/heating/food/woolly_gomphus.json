@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/woolly_gomphus"
-    }
+    "item": "tfcflorae:plant/woolly_gomphus"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_woolly_gomphus"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_woolly_gomphus"
   },
   "temperature": 200
 }

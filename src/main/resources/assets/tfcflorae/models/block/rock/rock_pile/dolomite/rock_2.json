@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_2",
+  "textures": {
+    "particle": "tfc:block/rock/raw/dolomite",
+    "texture": "tfc:block/rock/raw/dolomite"
+  }
+}

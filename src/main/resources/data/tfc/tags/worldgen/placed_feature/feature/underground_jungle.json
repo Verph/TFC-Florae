@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:feature/underground_trees",
+    "#tfc:feature/underground_plants",
+    "tfc:caverns/jungle/bamboo",
+    "tfc:caverns/jungle/blue_bamboo",
+    "tfc:caverns/jungle/dragon_bamboo",
+    "tfc:caverns/jungle/golden_bamboo",
+    "tfc:caverns/jungle/red_bamboo",
+    "tfc:caverns/jungle/glow_lichen",
+    "tfc:caverns/jungle/lake_water_underground",
+    "tfc:caverns/jungle/lush_caves_ceiling_vegetation",
+    "tfc:caverns/jungle/lush_caves_vegetation",
+    "tfc:caverns/jungle/monster_room",
+    "tfc:caverns/jungle/mud_humus",
+    "tfc:caverns/jungle/mud_humus_water",
+    "tfc:caverns/jungle/mud_loam",
+    "tfc:caverns/jungle/mud_loam_water",
+    "tfc:caverns/jungle/mud_sandy_loam",
+    "tfc:caverns/jungle/mud_sandy_loam_water",
+    "tfc:caverns/jungle/mud_silt",
+    "tfc:caverns/jungle/mud_silt_water",
+    "tfc:caverns/jungle/mud_silty_loam",
+    "tfc:caverns/jungle/mud_silty_loam_water",
+    "tfc:caverns/jungle/tannin_lake_underground"
+  ]
+}

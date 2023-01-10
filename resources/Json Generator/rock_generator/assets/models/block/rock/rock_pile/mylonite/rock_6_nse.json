@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_6_nse",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/mylonite",
+    "texture": "tfcflorae:block/rock/raw/mylonite"
+  }
+}

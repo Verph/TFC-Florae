@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/blaimorite",
+  "result": "tfcflorae:rock/cobbled_bricks/blaimorite",
+  "mode": "smooth"
+}

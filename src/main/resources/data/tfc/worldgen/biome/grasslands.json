@@ -6,18 +6,36 @@
   "temperature_modifier": "none",
   "downfall": 0.5,
   "effects": {
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.meadow",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
     "fog_color": 12638463,
     "sky_color": 8709887,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
   "carvers": {
-    "air": [],
+    "air": [
+      "tfc:cave_caverns",
+      "tfc:crack_caverns"
+	],
     "liquid": []
   },
   "features": [
     [
-      "tfc:in_biome/underground_lakes"
+      "tfc:in_biome/erosion"
+    ],
+    [
+      "tfc:in_biome/all_lakes"
     ],
     [
       "tfc:in_biome/soil_discs/grasslands"
@@ -41,6 +59,10 @@
       "tfc:in_biome/large_features/grasslands"
     ],
     [
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest"
+    ],
+    [
       "tfc:in_biome/surface_decoration/grasslands"
     ],
     [
@@ -49,6 +71,14 @@
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "water_ambient": [
       {
         "type": "tfc:salmon",
@@ -225,6 +255,12 @@
       {
         "type": "tfc:horse",
         "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
+        "weight": 1,
         "minCount": 1,
         "maxCount": 3
       }

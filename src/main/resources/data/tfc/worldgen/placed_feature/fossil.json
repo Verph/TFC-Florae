@@ -1,0 +1,27 @@
+{
+  "feature": "tfc:fossil",
+  "placement": [
+    {
+      "chance": 30,
+      "type": "minecraft:rarity_filter"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "height": {
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": 0
+        },
+        "type": "minecraft:uniform"
+      },
+      "type": "minecraft:height_range"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

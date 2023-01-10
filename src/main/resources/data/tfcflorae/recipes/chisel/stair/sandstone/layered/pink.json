@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:sandstone/layered/pink",
+  "result": "tfcflorae:sandstone/layered/stairs/pink",
+  "mode": "stair"
+}

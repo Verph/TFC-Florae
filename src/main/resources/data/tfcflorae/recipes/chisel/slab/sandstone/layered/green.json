@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:sandstone/layered/green",
+  "result": "tfcflorae:sandstone/layered/slab/green",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:sandstone/layered/slab/green"
+  }
+}

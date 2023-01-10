@@ -7,16 +7,16 @@
   "effects": {
     "fog_color": 12638463,
     "mood_sound": {
-      "block_search_extent": 8,
-      "offset": 2.0,
       "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
     },
     "music": {
-      "max_delay": 24000,
+      "sound": "minecraft:music.overworld.jagged_peaks",
       "min_delay": 12000,
-      "replace_current_music": false,
-      "sound": "minecraft:music.overworld.lush_caves"
+      "max_delay": 24000,
+      "replace_current_music": false
     },
     "sky_color": 8103167,
     "water_color": 4159204,
@@ -24,11 +24,16 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns_upper",
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
@@ -37,15 +42,7 @@
       "tfc:in_biome/erosion"
     ],
     [
-      "tfc:large_dripstone",
-      "tfc:dripstone_cluster",
-      "tfc:pointed_dripstone"
-    ],
-    [
       "tfc:in_biome/all_lakes"
-    ],
-    [
-      "tfc:in_biome/underground_lakes"
     ],
     [
       "tfc:in_biome/soil_discs/puy_mountains"
@@ -69,20 +66,25 @@
       "tfc:in_biome/large_features/puy_mountains"
     ],
     [
+	  "tfc:large_dripstone",
+	  "tfc:dripstone_cluster",
+	  "tfc:pointed_dripstone",
+	  "tfc:glow_lichen",
+	  "tfc:lush_caves_ceiling_vegetation",
+	  "tfc:lush_caves_calcite",
+	  "tfc:lush_caves_vegetation",
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest"
+    ],
+    [
       "tfc:in_biome/surface_decoration/puy_mountains"
     ],
     [
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:glow_lichen",
-      "tfc:lush_caves_ceiling_vegetation",
-      "tfc:lush_caves_calcite",
-      "tfc:lush_caves_vegetation",
-	  "tfc:plant/morning_glory_cave_patch",
-	  "tfc:plant/spore_blossom"
+      "tfc:in_biome/webbed_caves"
     ]
-
   ],
   "starts": [],
   "spawners": {
@@ -133,6 +135,12 @@
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "weight": 80,
+        "minCount": 5,
+        "maxCount": 5
       }
     ],
     "underground_water_creature": [
@@ -294,6 +302,12 @@
       },
       {
         "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
         "weight": 1,
         "minCount": 1,
         "maxCount": 3

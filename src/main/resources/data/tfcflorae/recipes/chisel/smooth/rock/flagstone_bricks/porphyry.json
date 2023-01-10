@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/porphyry",
+  "result": "tfcflorae:rock/flagstone_bricks/porphyry",
+  "mode": "smooth"
+}

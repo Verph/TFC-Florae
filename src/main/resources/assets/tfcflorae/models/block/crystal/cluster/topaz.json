@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/crystal/cluster/topaz"
+  }
+}

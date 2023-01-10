@@ -1,0 +1,1059 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 4000,
+      "xz_spread": 7,
+      "y_spread": 7,
+      "feature": {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "config": {
+            "features": [
+              {
+                "chance": 0.0015,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:random_patch",
+                    "config": {
+                      "tries": 60,
+                      "xz_spread": 3,
+                      "y_spread": 3,
+                      "feature": {
+                        "feature": {
+                          "type": "minecraft:simple_random_selector",
+                          "config": {
+                            "features": [
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "up",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "up",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "up",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "up",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            -1,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "down",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "down",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "down",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "down",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            1,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "south",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "south",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "south",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "south",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            -1
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "north",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "north",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "north",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "north",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            1
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "west",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "west",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "west",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "west",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            1,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "feature": {
+                                  "type": "minecraft:simple_block",
+                                  "config": {
+                                    "to_place": {
+                                      "type": "minecraft:weighted_state_provider",
+                                      "entries": [
+                                        {
+                                          "weight": 1,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/cluster/ruby",
+                                            "Properties": {
+                                              "facing": "east",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 2,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/large_bud/ruby",
+                                            "Properties": {
+                                              "facing": "east",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 4,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/medium_bud/ruby",
+                                            "Properties": {
+                                              "facing": "east",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "weight": 6,
+                                          "data": {
+                                            "Name": "tfcflorae:crystal/small_bud/ruby",
+                                            "Properties": {
+                                              "facing": "east",
+                                              "waterlogged": "false"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "placement": [
+                                  {
+                                    "type": "minecraft:block_predicate_filter",
+                                    "predicate": {
+                                      "type": "minecraft:all_of",
+                                      "predicates": [
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            -1,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "tfcflorae:crystal/ruby"
+                                          ]
+                                        },
+                                        {
+                                          "type": "minecraft:matching_blocks",
+                                          "offset": [
+                                            0,
+                                            0,
+                                            0
+                                          ],
+                                          "blocks": [
+                                            "minecraft:air",
+                                            "minecraft:cave_air"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "placement": []
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "tfcflorae:crystal/ruby",
+                          "minecraft:cave_air"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "chance": 0.495,
+                "feature": {
+                  "feature": {
+                    "type": "minecraft:simple_block",
+                    "config": {
+                      "to_place": {
+                        "type": "minecraft:noise_provider",
+                        "seed": 999,
+                        "noise": {
+                          "firstOctave": -3,
+                          "amplitudes": [
+                            1,
+                            0.75,
+                            0.85
+                          ]
+                        },
+                        "scale": 1,
+                        "states": [
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:cave_air"
+                          },
+                          {
+                            "Name": "minecraft:cave_air"
+                          },
+                          {
+                            "Name": "minecraft:cave_air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          },
+                          {
+                            "Name": "minecraft:air"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:block_predicate_filter",
+                      "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:air"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:any_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  1
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  -1,
+                                  0,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  0,
+                                  -1
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  -1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:cave_air",
+                                  "tfcflorae:crystal/ruby",
+                                  "minecraft:calcite"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:noise_provider",
+                    "seed": 9,
+                    "noise": {
+                      "firstOctave": -3,
+                      "amplitudes": [
+                        1,
+                        0.75,
+                        0.85
+                      ]
+                    },
+                    "scale": 1,
+                    "states": [
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "tfcflorae:crystal/ruby"
+                      },
+                      {
+                        "Name": "tfcflorae:crystal/ruby"
+                      },
+                      {
+                        "Name": "tfcflorae:crystal/ruby"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      },
+                      {
+                        "Name": "minecraft:cave_air"
+                      }
+                    ]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:cave_air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              0,
+                              0
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              1
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              0,
+                              0
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              0,
+                              -1
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "blocks": [
+                              "tfcflorae:crystal/ruby",
+                              "minecraft:tuff",
+                              "minecraft:calcite"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "placement": []
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 7
+    },
+    {
+      "type": "minecraft:count",
+      "count": 255
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -128
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  -1,
+                  0,
+                  0
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "tfcflorae:crystal/ruby",
+                  "minecraft:calcite"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

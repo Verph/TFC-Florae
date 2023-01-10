@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XY",
+    "YX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:sand/red"
+    },
+    "Y": {
+      "item": "tfc:raw_sandstone/red"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:sandstone/layered/red",
+    "count": 4
+  }
+}

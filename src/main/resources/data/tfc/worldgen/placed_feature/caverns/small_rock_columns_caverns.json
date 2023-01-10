@@ -1,0 +1,48 @@
+{
+  "feature": "tfc:caverns/small_rock_columns_caverns",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:count",
+      "count": 16
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -240
+        },
+        "max_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:biome"
+    },
+    {
+      "type": "tfc:on_top",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "tfcflorae:column_generates_on"
+      }
+    }
+  ]
+}

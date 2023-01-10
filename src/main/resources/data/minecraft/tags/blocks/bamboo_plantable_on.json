@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/blue_bamboo",
+    "tfcflorae:plant/dragon_bamboo",
+    "tfcflorae:plant/golden_bamboo",
+    "tfcflorae:plant/red_bamboo"
+  ]
+}

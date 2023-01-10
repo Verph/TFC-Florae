@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:sandstone/layered/light_green"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:sandstone/layered/slab/light_green",
+    "count": 6
+  }
+}

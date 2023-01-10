@@ -1,0 +1,25 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/jungle/plant/artists_conk",
+  "placement": [
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "would_survive",
+        "state": {
+          "Name": "tfcflorae:plant/artists_conk",
+          "Properties": {
+            "age": "1",
+            "facing": "north"
+          }
+        }
+      }
+    }
+  ]
+}

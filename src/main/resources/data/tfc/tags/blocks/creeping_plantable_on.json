@@ -4,6 +4,7 @@
   "values": [
     "minecraft:moss_block",
     "minecraft:calcite",
+    "minecraft:netherrack",
     "#minecraft:logs",
     "#forge:stone",
     "tfcflorae:wood/log/black_willow",

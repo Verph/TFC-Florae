@@ -1,0 +1,6 @@
+{
+  "type": "tfc:multiple",
+  "config": {
+    "features": "#tfc:in_biome/webbed_caves"
+  }
+}

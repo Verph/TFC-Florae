@@ -1,0 +1,99 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:shrubland",
+  "config": {
+    "entries": "#tfcflorae:forest_trees",
+    "types": {
+      "none": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 0
+          }
+        },
+        "groundcover_count": 2,
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          }
+        },
+        "enable_trees": false
+      },
+      "sparse": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 0
+          }
+        },
+        "groundcover_count": 2,
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 2
+          }
+        },
+        "enable_trees": false
+      },
+      "edge": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 0
+          }
+        },
+        "groundcover_count": 2,
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 3
+          }
+        },
+        "enable_trees": false
+      },
+      "normal": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 0
+          }
+        },
+        "groundcover_count": 2,
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 4
+          }
+        },
+        "enable_trees": false
+      },
+      "old_growth": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 0
+          }
+        },
+        "groundcover_count": 2,
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 5
+          }
+        },
+        "enable_trees": false
+      }
+    }
+  }
+}

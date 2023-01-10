@@ -1,0 +1,66 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"texture_size": [64, 64],
+	"textures": {
+		"web_hanging_glow": "tfcflorae:block/spider_cave/web_hanging_glow",
+		"web_layer_bottom": "tfcflorae:block/spider_cave/web_layer_bottom",
+		"particle": "minecraft:block/slime_block"
+	},
+	"elements": [
+		{
+			"name": "body",
+			"from": [1, 0.5, 1],
+			"to": [15, 15.5, 15],
+			"faces": {
+				"north": {"uv": [5.5, 11.5, 9, 15.25], "texture": "#web_hanging_glow"},
+				"east": {"uv": [2, 11.5, 5.5, 15.25], "texture": "#web_hanging_glow"},
+				"south": {"uv": [12.5, 11.5, 16, 15.25], "texture": "#web_hanging_glow"},
+				"west": {"uv": [9, 11.5, 12.5, 15.25], "texture": "#web_hanging_glow"},
+				"up": {"uv": [9, 11.5, 5.5, 8], "texture": "#web_hanging_glow"},
+				"down": {"uv": [12.5, 8, 9, 11.5], "texture": "#web_hanging_glow"}
+			}
+		},
+		{
+			"name": "body",
+			"from": [0.5, 0, 0.5],
+			"to": [15.5, 16, 15.5],
+			"faces": {
+				"north": {"uv": [4.75, 3.75, 8.5, 7.75], "texture": "#web_hanging_glow"},
+				"east": {"uv": [1, 3.75, 4.75, 7.75], "texture": "#web_hanging_glow"},
+				"south": {"uv": [12.25, 3.75, 16, 7.75], "texture": "#web_hanging_glow"},
+				"west": {"uv": [8.5, 3.75, 12.25, 7.75], "texture": "#web_hanging_glow"},
+				"up": {"uv": [8.5, 3.75, 4.75, 0], "texture": "#web_hanging_glow"},
+				"down": {"uv": [12.25, 0, 8.5, 3.75], "texture": "#web_hanging_glow"}
+			}
+		},
+		{
+			"from": [-8, -15.5, 8],
+			"to": [24, 0.5, 8],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, -7.5, 8]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 8], "texture": "#web_layer_bottom"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#web_layer_bottom"}
+			}
+		},
+		{
+			"from": [-8, -15.5, 8],
+			"to": [24, 0.5, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#web_layer_bottom"},
+				"south": {"uv": [16, 0, 0, 8], "texture": "#web_layer_bottom"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "body",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

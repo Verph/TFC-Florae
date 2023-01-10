@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_0"
+          "model": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_0"
+          "model": "tfcflorae:block/plant/sulphur_shelf/sulphur_shelf_3"
         }
       ]
     },

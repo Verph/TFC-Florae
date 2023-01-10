@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/phyllite",
+  "result": "tfcflorae:rock/flagstone/stairs/phyllite",
+  "mode": "stair"
+}

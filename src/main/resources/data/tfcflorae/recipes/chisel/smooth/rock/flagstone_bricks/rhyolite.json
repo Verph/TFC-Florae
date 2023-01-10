@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/rhyolite",
+  "result": "tfcflorae:rock/flagstone_bricks/rhyolite",
+  "mode": "smooth"
+}

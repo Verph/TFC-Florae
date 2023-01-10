@@ -1,0 +1,47 @@
+{
+  "feature": "tfc:caverns/lava",
+  "placement":[
+    {
+      "type":"minecraft:rarity_filter",
+      "chance":2
+    },
+    {
+      "type":"minecraft:count",
+      "count":{
+        "type":"minecraft:uniform",
+        "value":{
+          "min_inclusive":5,
+          "max_inclusive":25
+        }
+      }
+    },
+    {
+      "type":"minecraft:height_range",
+      "height":{
+        "type":"minecraft:biased_to_bottom",
+        "min_inclusive":{
+          "absolute":-255
+        },
+        "max_inclusive":{
+          "absolute":-180
+        }
+      }
+    },
+    {
+      "type":"minecraft:count",
+      "count":{
+        "type":"minecraft:uniform",
+        "value":{
+          "min_inclusive":5,
+          "max_inclusive":10
+        }
+      }
+    },
+    {
+      "type":"minecraft:in_square"
+    },
+    {
+      "type":"tfc:biome"
+    }
+  ]
+}

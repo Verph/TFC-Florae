@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "precipitation": "rain",
-  "category": "extreme_hills",
+  "category": "mountain",
   "temperature": 0.5,
   "temperature_modifier": "none",
   "downfall": 0.5,
@@ -13,10 +13,10 @@
       "tick_delay": 6000
     },
     "music": {
-      "max_delay": 24000,
+      "sound": "minecraft:music.overworld.frozen_peaks",
       "min_delay": 12000,
-      "replace_current_music": false,
-      "sound": "minecraft:music.overworld.dripstone_caves"
+      "max_delay": 24000,
+      "replace_current_music": false
     },
     "fog_color": 12638463,
     "sky_color": 7776511,
@@ -25,23 +25,20 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns_upper",
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
   "features": [
-    [
-	  "tfc:small_rock_columns",
-	  "tfc:rock_pillar",
-	  "tfc:iceberg_blue_rare",
-	  "tfc:iceberg_packed_rare",
-	  "tfc:ice_and_snow",
-	  "tfc:glowstone"
-	],
     [
       "tfc:in_biome/erosion"
     ],
@@ -69,6 +66,18 @@
     [
       "tfc:in_biome/large_features/alpine_highlands"
     ],
+	[
+      "tfc:glacier_packed",
+      "tfc:glacier_blue",
+      "tfc:glacier_packed_rare",
+      "tfc:glacier_blue_rare",
+	  "tfc:small_rock_columns",
+	  "tfc:large_dripstone",
+	  "tfc:dripstone_cluster",
+	  "tfc:pointed_dripstone",
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest"
+	],
     [
       "tfc:in_biome/surface_decoration/alpine_highlands"
     ],
@@ -76,13 +85,36 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:large_dripstone",
-      "tfc:dripstone_cluster",
-      "tfc:pointed_dripstone"
+      "tfc:caverns/crystals/amethyst/crystal_geode_start",
+      "tfc:caverns/crystals/amethyst/crystal_growth",
+      "tfc:caverns/crystals/amethyst/buds/crystal_up",
+      "tfc:caverns/crystals/amethyst/buds/crystal_down",
+      "tfc:caverns/crystals/amethyst/buds/crystal_north",
+      "tfc:caverns/crystals/amethyst/buds/crystal_south",
+      "tfc:caverns/crystals/amethyst/buds/crystal_east",
+      "tfc:caverns/crystals/amethyst/buds/crystal_west",
+      "tfc:caverns/crystals/amethyst/mega_geode",
+      "tfc:caverns/crystals/amethyst/mega_geode_extra"
+    ],
+    [
+      "tfc:caverns/thermal/hot_spring_deep",
+      "tfc:caverns/thermal/floor",
+	  "tfc:caverns/thermal/lava"
+    ],
+    [
+      "tfc:in_biome/webbed_caves"
     ]
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "monster": [
       {
         "type": "minecraft:spider",
@@ -113,6 +145,18 @@
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "weight": 80,
+        "minCount": 5,
+        "maxCount": 5
       }
     ],
     "creature": [
@@ -233,6 +277,12 @@
       {
         "type": "tfc:horse",
         "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
+        "weight": 1,
         "minCount": 1,
         "maxCount": 3
       }

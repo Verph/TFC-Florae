@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/foidolite",
+  "result": "tfcflorae:rock/flagstone/slab/foidolite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/foidolite"
+  }
+}

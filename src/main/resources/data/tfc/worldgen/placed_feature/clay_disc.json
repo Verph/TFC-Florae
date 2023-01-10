@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "feature": "tfcflorae:clay_disc",
+  "feature": "tfc:clay_disc",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

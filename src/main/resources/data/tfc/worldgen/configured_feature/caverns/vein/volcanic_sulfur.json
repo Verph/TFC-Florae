@@ -1,0 +1,169 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:disc_vein",
+  "config": {
+    "rarity": 12,
+    "min_y": {
+      "absolute": -255
+    },
+    "max_y": {
+      "absolute": -64
+    },
+    "size": 14,
+    "density": 0.4,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/peridotite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/peridotite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/blaimorite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/blaimorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/red_granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/breccia"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/breccia"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/foidolite"
+        ],
+        "with": [
+          {
+            "block": "tfcflorae:ore/sulfur/foidolite"
+          }
+        ]
+      }
+    ],
+    "random_name": "volcanic_sulfur",
+    "biomes": "#tfc:is_volcanic"
+  }
+}

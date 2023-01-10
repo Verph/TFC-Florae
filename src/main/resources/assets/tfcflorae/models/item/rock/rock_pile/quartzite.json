@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_item",
+  "textures": {
+    "particle": "tfc:block/rock/raw/quartzite",
+    "texture": "tfc:block/rock/raw/quartzite"
+  }
+}

@@ -37,56 +37,31 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 minecraft {
     mappings channel: 'parchment', version: '2022.03.13-1.18.2'
 
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
-
     runs {
-        client {
-            workingDirectory project.file('run')
-            args '-mixin.config=tfcflorae.mixins.json'
+        all {
+            args("-mixin.config=firmalife.mixins.json")
 
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            jvmArgs '-ea', '-Xmx8G', '-Xms8G'
+            property("mixin.env.remapRefMap", "true")
+            property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
+            property("forge.logging.markers", "REGISTRIES")
+            property("forge.logging.console.level", "debug")
+
+            jvmArgs("-ea", "-Xmx4G", "-Xms4G")
 
             mods {
-                tfcflorae {
+                firmalife {
                     source sourceSets.main
                 }
             }
+        }
+
+        client {
+            workingDirectory project.file("run")
         }
 
         server {
-            workingDirectory project.file('run')
-            args '-mixin.config=tfcflorae.mixins.json', '--nogui'
-
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                tfcflorae {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'tfcflorae', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                tfcflorae {
-                    source sourceSets.main
-                }
-            }
+            workingDirectory project.file("run/server")
+            arg("--nogui")
         }
     }
 }

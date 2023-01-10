@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_8_none",
+  "textures": {
+    "particle": "tfc:block/rock/raw/dacite",
+    "texture": "tfc:block/rock/raw/dacite"
+  }
+}

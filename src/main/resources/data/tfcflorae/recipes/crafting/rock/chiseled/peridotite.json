@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/peridotite"
+        "item": "tfcflorae:rock/bricks/peridotite"
       },
       {
         "tag": "tfc:chisels"

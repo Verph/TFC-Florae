@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_5_nse",
+  "textures": {
+    "particle": "tfc:block/rock/raw/diorite",
+    "texture": "tfc:block/rock/raw/diorite"
+  }
+}

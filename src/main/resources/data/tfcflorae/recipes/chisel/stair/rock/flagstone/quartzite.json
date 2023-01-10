@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/quartzite",
+  "result": "tfcflorae:rock/flagstone/stairs/quartzite",
+  "mode": "stair"
+}

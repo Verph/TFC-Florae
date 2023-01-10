@@ -1,0 +1,26 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/topaz_volcano_fissure",
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "tfc:volcano",
+      "center": true
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 20
+    }
+  ]
+}

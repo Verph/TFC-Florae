@@ -1,0 +1,476 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "false",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "dormant",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "healthy",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_top",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering_top",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering_top",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering_top",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "flowering",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_flowering_top",
+		  "weight": 1
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting_top",
+		  "weight": 1,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting_top",
+		  "weight": 1,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting_top",
+		  "weight": 1,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+		"top": "true",
+        "age": "0|1|2|3",
+		"lifecycle": "fruiting",
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/pitahaya/pitahaya_fruiting_top",
+		  "weight": 1
+        }
+      ]
+    }
+  ]
+}

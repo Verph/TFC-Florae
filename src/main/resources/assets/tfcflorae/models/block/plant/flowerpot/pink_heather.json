@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "tfcflorae:block/plant/heather/heather_pink_2",
+    "dirt": "tfcflorae:block/dirt/humus"
+  }
+}

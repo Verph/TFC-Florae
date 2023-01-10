@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/polished_cobbled_bricks/mylonite"
+  },
+  "result": "tfcflorae:rock/polished_cobbled_bricks/wall/mylonite",
+  "count": 1
+}

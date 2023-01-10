@@ -1,4 +1,5 @@
 {
+  "type": "minecraft:vegetation_patch",
   "config": {
     "vegetation_chance": 1,
     "xz_radius": {
@@ -24,6 +25,5 @@
       },
       "type": "minecraft:simple_state_provider"
     }
-  },
-  "type": "minecraft:vegetation_patch"
+  }
 }

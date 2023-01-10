@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/carambola"
+  },
+  "hunger": 4,
+  "saturation": 0.7,
+  "water": 5,
+  "decay_modifier": 3.9,
+  "fruit": 1.3
+}

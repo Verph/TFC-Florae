@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/carbonatite",
+  "result": "tfcflorae:rock/flagstone/stairs/carbonatite",
+  "mode": "stair"
+}

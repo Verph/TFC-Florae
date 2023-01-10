@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/greenschist",
+  "result": "tfcflorae:rock/flagstone_bricks/greenschist",
+  "mode": "smooth"
+}

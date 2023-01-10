@@ -3,6 +3,8 @@
   "replace": false,
   "values": [
     "tfc:alpine_mountain_river",
-    "tfc:canyon_river"
+    "tfc:canyon_river",
+    "tfc:riverbank",
+    "tfc:chasms"
   ]
 }

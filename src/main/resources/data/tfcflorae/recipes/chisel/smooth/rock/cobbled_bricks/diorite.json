@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/diorite",
+  "result": "tfcflorae:rock/cobbled_bricks/diorite",
+  "mode": "smooth"
+}

@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/reishi/reishi_0"
+          "model": "tfcflorae:block/plant/reishi/reishi_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/reishi/reishi_0"
+          "model": "tfcflorae:block/plant/reishi/reishi_3"
         }
       ]
     },

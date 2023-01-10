@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/turkey_tail"
-    }
+    "item": "tfcflorae:plant/turkey_tail"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_turkey_tail"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_turkey_tail"
   },
   "temperature": 200
 }

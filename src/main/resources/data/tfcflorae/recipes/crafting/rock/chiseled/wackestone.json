@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/wackestone"
+        "item": "tfcflorae:rock/bricks/wackestone"
       },
       {
         "tag": "tfc:chisels"

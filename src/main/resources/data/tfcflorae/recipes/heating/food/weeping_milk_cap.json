@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/weeping_milk_cap"
-    }
+    "item": "tfcflorae:plant/weeping_milk_cap"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_weeping_milk_cap"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_weeping_milk_cap"
   },
   "temperature": 200
 }

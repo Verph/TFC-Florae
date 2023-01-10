@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/gneiss"
+  },
+  "result": "tfcflorae:rock/flagstone/slab/gneiss",
+  "count": 2
+}

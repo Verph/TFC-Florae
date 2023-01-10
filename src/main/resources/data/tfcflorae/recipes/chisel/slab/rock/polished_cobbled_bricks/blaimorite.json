@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/polished_cobbled_bricks/blaimorite",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/slab/blaimorite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/polished_cobbled_bricks/slab/blaimorite"
+  }
+}

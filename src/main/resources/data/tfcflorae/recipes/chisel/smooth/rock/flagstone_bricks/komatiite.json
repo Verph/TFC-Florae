@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/komatiite",
+  "result": "tfcflorae:rock/flagstone_bricks/komatiite",
+  "mode": "smooth"
+}

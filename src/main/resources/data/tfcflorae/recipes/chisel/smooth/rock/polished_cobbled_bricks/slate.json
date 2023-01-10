@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobbled_bricks/slate",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/slate",
+  "mode": "smooth"
+}

@@ -1,0 +1,264 @@
+{
+  "feature": {
+    "type": "minecraft:block_column",
+    "config": {
+      "direction": "down",
+      "allowed_placement": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:air"
+        ]
+      },
+      "prioritize_tip": false,
+      "layers": [
+        {
+          "height": 1,
+          "provider": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 99,
+                "data": {
+                  "Name": "tfcflorae:crystal/sapphire"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "tfcflorae:crystal/budding/sapphire"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "height": 1,
+          "provider": {
+            "type": "minecraft:noise_provider",
+            "seed": 10,
+            "noise": {
+              "firstOctave": -3,
+              "amplitudes": [
+                1,
+                0.75,
+                1.25
+              ]
+            },
+            "scale": 1,
+            "states": [
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/medium_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/medium_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/large_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/cluster/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/large_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/medium_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/medium_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              },
+              {
+                "Name": "tfcflorae:crystal/small_bud/sapphire",
+                "Properties": {
+                  "facing": "down",
+                  "waterlogged": "false"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 3
+    },
+    {
+      "type": "minecraft:count",
+      "count": 255
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -255
+        },
+        "max_inclusive": {
+          "absolute": -128
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": 
+
+      {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "tfc:rock/raw/basalt","tfcflorae:crystal/sapphire"
+            ]
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:air"
+            ]
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

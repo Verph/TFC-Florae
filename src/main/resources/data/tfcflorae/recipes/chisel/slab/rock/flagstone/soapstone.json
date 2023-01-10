@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/soapstone",
+  "result": "tfcflorae:rock/flagstone/slab/soapstone",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/soapstone"
+  }
+}

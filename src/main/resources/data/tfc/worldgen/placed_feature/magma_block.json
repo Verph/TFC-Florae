@@ -14,7 +14,7 @@
       }
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
     },
     {
       "type": "minecraft:height_range",

@@ -1,59 +1,28 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:spring",
+  "type": "minecraft:delta_feature",
   "config": {
-    "state": {
+    "contents": {
       "Name": "minecraft:water",
       "Properties": {
-        "falling": "true"
+        "level": "0"
       }
     },
-    "valid_blocks": [
-      "tfc:rock/raw/granite",
-      "tfc:rock/raw/diorite",
-      "tfc:rock/raw/gabbro",
-      "tfc:rock/raw/shale",
-      "tfc:rock/raw/claystone",
-      "tfc:rock/raw/limestone",
-      "tfc:rock/raw/conglomerate",
-      "tfc:rock/raw/dolomite",
-      "tfc:rock/raw/chert",
-      "tfc:rock/raw/chalk",
-      "tfc:rock/raw/rhyolite",
-      "tfc:rock/raw/basalt",
-      "tfc:rock/raw/andesite",
-      "tfc:rock/raw/dacite",
-      "tfc:rock/raw/quartzite",
-      "tfc:rock/raw/slate",
-      "tfc:rock/raw/phyllite",
-      "tfc:rock/raw/schist",
-      "tfc:rock/raw/gneiss",
-      "tfc:rock/raw/marble",
-      "tfcflorae:rock/raw/cataclasite",
-      "tfcflorae:rock/raw/porphyry",
-      "tfcflorae:rock/raw/red_granite",
-      "tfcflorae:rock/raw/laterite",
-      "tfcflorae:rock/raw/breccia",
-      "tfcflorae:rock/raw/foidolite",
-      "tfcflorae:rock/raw/peridotite",
-      "tfcflorae:rock/raw/blaimorite",
-      "tfcflorae:rock/raw/boninite",
-      "tfcflorae:rock/raw/carbonatite",
-      "tfcflorae:rock/raw/mudstone",
-      "tfcflorae:rock/raw/sandstone",
-      "tfcflorae:rock/raw/siltstone",
-      "tfcflorae:rock/raw/arkose",
-      "tfcflorae:rock/raw/jaspillite",
-      "tfcflorae:rock/raw/travertine",
-      "tfcflorae:rock/raw/wackestone",
-      "tfcflorae:rock/raw/blackband_ironstone",
-      "tfcflorae:rock/raw/blueschist",
-      "tfcflorae:rock/raw/catlinite",
-      "tfcflorae:rock/raw/greenschist",
-      "tfcflorae:rock/raw/novaculite",
-      "tfcflorae:rock/raw/soapstone",
-      "tfcflorae:rock/raw/komatiite",
-      "tfcflorae:rock/raw/mylonite"
-    ]
+    "rim": {
+      "Name": "tfc:ore/halite/chalk"
+    },
+    "size": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 12
+      }
+    },
+    "rim_size": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0,
+        "max_inclusive": 3
+      }
+    }
   }
 }

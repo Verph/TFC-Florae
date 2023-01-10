@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/dryads_saddle/dryads_saddle_0"
+          "model": "tfcflorae:block/plant/dryads_saddle/dryads_saddle_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/dryads_saddle/dryads_saddle_0"
+          "model": "tfcflorae:block/plant/dryads_saddle/dryads_saddle_3"
         }
       ]
     },

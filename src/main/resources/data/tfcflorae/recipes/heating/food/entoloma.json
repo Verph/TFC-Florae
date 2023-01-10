@@ -2,18 +2,10 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfcflorae:plant/entoloma"
-    }
+    "item": "tfcflorae:plant/entoloma"
   },
   "result_item": {
-    "stack": {
-      "item": "tfcflorae:food/roasted_entoloma"
-    },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "tfcflorae:food/roasted_entoloma"
   },
   "temperature": 200
 }

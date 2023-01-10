@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:sandstone/layered/orange"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:sandstone/layered/stairs/orange",
+    "count": 8
+  }
+}

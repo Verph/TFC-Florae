@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/jungle/packed_mud_blobs",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 11,
+      "max_temperature": 40,
+      "min_rainfall": 360,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

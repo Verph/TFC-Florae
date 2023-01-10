@@ -1,7 +1,8 @@
 {
+  "type": "tfc:canyon",
   "config": {
     "lava_level": {
-      "above_bottom": 8
+      "above_bottom": 10
     },
     "aquifers_enabled": true,
     "debug_settings": {
@@ -78,6 +79,5 @@
       },
       "width_smoothness": 6
     }
-  },
-  "type": "minecraft:canyon"
+  }
 }

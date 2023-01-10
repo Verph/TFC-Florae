@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_6_ne",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/catlinite",
+    "texture": "tfcflorae:block/rock/raw/catlinite"
+  }
+}

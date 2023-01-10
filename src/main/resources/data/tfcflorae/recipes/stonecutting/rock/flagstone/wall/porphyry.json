@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/porphyry"
+  },
+  "result": "tfcflorae:rock/flagstone/wall/porphyry",
+  "count": 1
+}

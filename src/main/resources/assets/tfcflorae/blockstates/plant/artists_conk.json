@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/artists_conk/artists_conk_0"
+          "model": "tfcflorae:block/plant/artists_conk/artists_conk_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/artists_conk/artists_conk_0"
+          "model": "tfcflorae:block/plant/artists_conk/artists_conk_3"
         }
       ]
     },

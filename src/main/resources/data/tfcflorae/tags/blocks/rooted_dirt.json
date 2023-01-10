@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "minecraft:rooted_dirt",
+    "tfc:rooted_dirt/silt",
+    "tfc:rooted_dirt/loam",
+    "tfc:rooted_dirt/sandy_loam",
+    "tfc:rooted_dirt/silty_loam",
+    "tfcflorae:podzol/humus"
+  ]
+}

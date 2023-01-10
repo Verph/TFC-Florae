@@ -5,12 +5,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.RegisteredDataManager;
 import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.wood.TFCFWood;
+import tfcflorae.util.TFCFHelpers;
 
 public class TFCFClimateRanges
 {
@@ -24,7 +24,15 @@ public class TFCFClimateRanges
         {
             if (!wood.isFruitTree()) continue;
 
-            Map.put(wood, register("tree/" + wood.getSerializedName().toLowerCase(Locale.ROOT)));
+            if (wood.hasFruitingLog())
+            {
+                Map.put(wood, register("wood/log/" + wood.getSerializedName().toLowerCase(Locale.ROOT)));
+                Map.put(wood, register("wood/wood/" + wood.getSerializedName().toLowerCase(Locale.ROOT)));
+            }
+            else if (!wood.hasFruitingLog())
+            {
+                Map.put(wood, register("wood/leaves/" + wood.getSerializedName().toLowerCase(Locale.ROOT)));
+            }
         }
         return Map;
     }
@@ -43,6 +51,6 @@ public class TFCFClimateRanges
 
     private static RegisteredDataManager.Entry<ClimateRange> register(String name)
     {
-        return ClimateRange.MANAGER.register(Helpers.identifier(name.toLowerCase(Locale.ROOT)));
+        return ClimateRange.MANAGER.register(TFCFHelpers.identifier(name.toLowerCase(Locale.ROOT)));
     }
 }

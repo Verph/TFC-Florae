@@ -25,11 +25,16 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns_upper",
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
@@ -38,7 +43,7 @@
       "tfc:in_biome/erosion"
     ],
     [
-      "tfc:in_biome/all_lakes"
+      "tfc:in_biome/underground_lakes"
     ],
     [
       "tfc:in_biome/soil_discs/canyon_river"
@@ -65,16 +70,43 @@
       "tfc:in_biome/surface_decoration/canyon_river"
     ],
     [
-      "tfc:in_biome/top_layer_modification"
+	  "tfc:underwater_magma",
+	  "tfc:large_dripstone",
+	  "tfc:dripstone_cluster",
+	  "tfc:pointed_dripstone",
+	  "tfc:small_rock_columns_rare",
+	  "tfc:smoke_block",
+	  "tfc:magma_block",
+	  "tfc:glow_lichen",
+	  "tfc:lush_caves_ceiling_vegetation",
+	  "tfc:lush_caves_calcite",
+	  "tfc:lush_caves_vegetation",
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest",
+	  "tfc:fossil",
+	  "tfc:caldera_lakes",
+	  "tfc:hot_spring_flat",
+	  "tfc:volcanic_pools",
+	  "tfc:volcano_caldera"
     ],
     [
-      "tfc:large_dripstone",
-      "tfc:dripstone_cluster",
-      "tfc:pointed_dripstone"
+	  "tfc:plant/morning_glory_cave_patch",
+	  "tfc:plant/spore_blossom"
+    ],
+    [
+      "tfc:in_biome/top_layer_modification"
     ]
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "water_ambient": [
       {
         "type": "tfc:salmon",
@@ -131,6 +163,12 @@
       {
         "type": "minecraft:slime",
         "weight": 100,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
         "minCount": 4,
         "maxCount": 4
       }
@@ -252,6 +290,12 @@
       },
       {
         "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
         "weight": 1,
         "minCount": 1,
         "maxCount": 3

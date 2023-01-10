@@ -2,8 +2,15 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:plant/pitahaya",
     "tfcflorae:plant/liana_vine",
     "tfcflorae:plant/glow_vines_plant",
-    "tfcflorae:plant/glow_vines"
+    "tfcflorae:plant/glow_vines",
+    "tfcflorae:spider_cave/webbed_glow",
+    "tfcflorae:spider_cave/webbed_torch",
+    "tfcflorae:spider_cave/webbed_chest",
+    "tfcflorae:spider_cave/creeping_webs",
+    "tfcflorae:spider_cave/hanging_spider_web_slender",
+    "tfcflorae:spider_cave/hanging_spider_web_thick"
   ]
 }

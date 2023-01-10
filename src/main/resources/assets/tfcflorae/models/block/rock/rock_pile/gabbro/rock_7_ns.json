@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_7_ns",
+  "textures": {
+    "particle": "tfc:block/rock/raw/gabbro",
+    "texture": "tfc:block/rock/raw/gabbro"
+  }
+}

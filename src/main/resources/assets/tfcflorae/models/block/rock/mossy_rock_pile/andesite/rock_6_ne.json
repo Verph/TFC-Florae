@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_6_ne",
+  "textures": {
+    "particle": "tfcflorae:block/rock/mossy_raw/andesite",
+    "texture": "tfcflorae:block/rock/mossy_raw/andesite"
+  }
+}

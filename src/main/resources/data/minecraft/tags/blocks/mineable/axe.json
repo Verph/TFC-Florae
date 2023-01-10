@@ -2496,6 +2496,13 @@
     "tfcflorae:wood/stripped_log/charred_tree",
     "tfcflorae:wood/wood/charred_tree",
     "tfcflorae:wood/stripped_wood/charred_tree",
-    "tfcflorae:wood/twig/charred_tree"
+    "tfcflorae:wood/twig/charred_tree",
+    "tfcflorae:plant/blue_bamboo",
+    "tfcflorae:plant/dragon_bamboo",
+    "tfcflorae:plant/golden_bamboo",
+    "tfcflorae:plant/red_bamboo",
+    "tfcflorae:spider_cave/webbed_glow",
+    "tfcflorae:spider_cave/webbed_torch",
+    "tfcflorae:spider_cave/webbed_chest"
   ]
 }

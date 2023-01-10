@@ -37,4 +37,14 @@ public interface TFCLayersMixinInterface
     int getStaticMesaPlateau();
 
     int getStaticPeatBog();
+
+    int getStaticRiverbank();
+
+    int getStaticChasms();
+
+    int getStaticSteppes();
+
+    int getStaticShrublands();
+
+    int getStaticMoorlands();
 }

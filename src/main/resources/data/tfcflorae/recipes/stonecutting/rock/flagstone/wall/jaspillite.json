@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/jaspillite"
+  },
+  "result": "tfcflorae:rock/flagstone/wall/jaspillite",
+  "count": 1
+}

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/blueschist"
+        "item": "tfcflorae:rock/bricks/blueschist"
       },
       {
         "tag": "tfc:chisels"

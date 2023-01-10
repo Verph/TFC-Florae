@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/jaspillite",
+  "result": "tfcflorae:rock/flagstone/slab/jaspillite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/jaspillite"
+  }
+}

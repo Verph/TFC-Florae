@@ -51,7 +51,7 @@ public class RockPillarFeature extends Feature<RockPillarConfig>
                 state = () -> states.get(random.nextInt(states.size()));
             }
 
-            if (level.isEmptyBlock(pos) && !level.isEmptyBlock(pos.above()))
+            if ((level.isEmptyBlock(pos) || DripstoneUtils.isEmptyOrWaterOrLava(level, pos)) && (!level.isEmptyBlock(pos.above()) || !DripstoneUtils.isEmptyOrWaterOrLava(level, pos.above())))
             {
                 BlockPos.MutableBlockPos pos$mutableBlockPos = pos.mutable();
                 BlockPos.MutableBlockPos pos$mutableBlockPos1 = pos.mutable();
@@ -60,7 +60,7 @@ public class RockPillarFeature extends Feature<RockPillarConfig>
                 boolean flag2 = true;
                 boolean flag3 = true;
 
-                while(level.isEmptyBlock(pos$mutableBlockPos))
+                while(level.isEmptyBlock(pos$mutableBlockPos) || DripstoneUtils.isEmptyOrWaterOrLava(level, pos$mutableBlockPos))
                 {
                     if (level.isOutsideBuildHeight(pos$mutableBlockPos))
                     {
@@ -93,7 +93,7 @@ public class RockPillarFeature extends Feature<RockPillarConfig>
                             pos$mutableBlockPos2.set(pos$mutableBlockPos.offset(i, 0, j));
                             int l = 3;
 
-                            while(level.isEmptyBlock(pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)))
+                            while(level.isEmptyBlock(pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)) || DripstoneUtils.isEmptyOrWaterOrLava(level, pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)))
                             {
                                 pos$mutableBlockPos2.move(Direction.DOWN);
                                 --l;
@@ -102,7 +102,7 @@ public class RockPillarFeature extends Feature<RockPillarConfig>
                                     break;
                                 }
                             }
-                            if (!level.isEmptyBlock(pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)))
+                            if (!level.isEmptyBlock(pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)) || DripstoneUtils.isEmptyOrWaterOrLava(level, pos$mutableBlockPos1.setWithOffset(pos$mutableBlockPos2, Direction.DOWN)))
                             {
                                 level.setBlock(pos$mutableBlockPos2, state.get(), 2);
                             }

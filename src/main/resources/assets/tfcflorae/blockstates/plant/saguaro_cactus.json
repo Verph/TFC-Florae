@@ -1,0 +1,440 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "horizontal": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "horizontal": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "horizontal": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "horizontal": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "horizontal": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_regular",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "dormant",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 270,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "horizontal": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "horizontal": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "horizontal": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "horizontal": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "horizontal": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_regular",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "healthy",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 270,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "horizontal": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "horizontal": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "horizontal": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "horizontal": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "horizontal": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_regular_flowering",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "flowering",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 270,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "horizontal": "true",
+        "facing": "north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "horizontal": "true",
+        "facing": "south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "horizontal": "true",
+        "facing": "east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "horizontal": "true",
+        "facing": "west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk",
+        "uvlock": false,
+        "y": 270
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "horizontal": "false"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_regular_fruiting",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "north": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "east": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "south": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "lifecycle": "fruiting",
+        "west": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/saguaro_cactus/cactus_stalk_part",
+        "y": 270,
+        "uvlock": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"#forge:ores",
+	"#forge:stone",
+	"#forge:gravel",
+	"#forge:cobblestone",
+	"#minecraft:dirt",
+	"#minecraft:coarse_dirt",
+	"#minecraft:sand",
+	"#minecraft:moss_replaceable",
+	"#minecraft:terracotta",
+	"#tfc:magma_block",
+	"minecraft:clay",
+	"minecraft:calcite",
+	"minecraft:lava",
+	"minecraft:air",
+	"#tfcflorae:rocky_compact_dirt"
+  ]
+}

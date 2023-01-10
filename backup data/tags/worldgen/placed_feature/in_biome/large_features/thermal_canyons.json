@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfc:underwater_magma",
+	"tfc:disk_thermal_terracotta_white",
+	"tfc:disk_thermal_terracotta_orange",
+	"tfc:disk_thermal_terracotta_yellow",
+	"tfc:hot_spring_water_vein",
+	"tfc:small_rock_columns_rare",
+	"tfc:smoke_block",
+	"tfc:magma_block",
+	"tfc:glowstone",
+	"tfcflorae:fruit_forest",
+	"tfcflorae:charred_forest",
+	"tfc:fossil",
+    "#tfc:feature/boulders",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation",
+    "#tfc:feature/volcanoes",
+    "tfc:random_active_hot_spring"
+  ]
+}

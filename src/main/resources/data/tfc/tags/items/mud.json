@@ -2,6 +2,16 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfcflorae:mud/humus"
+    "tfcflorae:mud/humus",
+    "tfcflorae:packed_mud/humus",
+    "tfcflorae:packed_mud/loam",
+    "tfcflorae:packed_mud/silt",
+    "tfcflorae:packed_mud/sandy_loam",
+    "tfcflorae:packed_mud/silty_loam",
+    "tfcflorae:loose_mud/silt",
+    "tfcflorae:loose_mud/loam",
+    "tfcflorae:loose_mud/sandy_loam",
+    "tfcflorae:loose_mud/silty_loam",
+    "tfcflorae:loose_mud/humus"
   ]
 }

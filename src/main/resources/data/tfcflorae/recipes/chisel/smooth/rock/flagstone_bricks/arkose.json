@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/arkose",
+  "result": "tfcflorae:rock/flagstone_bricks/arkose",
+  "mode": "smooth"
+}

@@ -17,29 +17,24 @@ public enum EdgeRiverLayer implements AdjacentTransformLayer
 
     public static TFCLayers staticBiomes = new TFCLayers();
 
-    static final int GRASSLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGrasslands();
-    static final int WETLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticWetlands();
-    static final int MARSHES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMarshes();
-    static final int SWAMPS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSwamps();
     static final int BRYCE_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBryceCanyons();
     static final int MESA_HILLS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaHills();
-    static final int ALPINE_MOUNTAINS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineMountains();
     static final int ALPINE_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineHighlands();
     static final int ROLLING_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRollingHighlands();
-    static final int CALDERAS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticCalderas();
     static final int THERMAL_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticThermalCanyons();
     static final int MESA_PLATEAU = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaPlateau();
-    static final int PEAT_BOG = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPeatBog();
+    static final int PUY_MOUNTAINS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPuyMountains();
+    static final int RIVERBANK = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRiverbank();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
     {
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
-        if (TFCLayers.isRiver(center))
+        if (center == RIVER)
         {
-            if (matcher.test(i -> !TFCLayers.isRiver(i)))
+            if (matcher.test(i -> i == BRYCE_CANYONS || i == MESA_HILLS || i == ALPINE_HIGHLANDS || i == ROLLING_HIGHLANDS || i == THERMAL_CANYONS || i == MESA_PLATEAU || i == PUY_MOUNTAINS || i == PLAINS || i == HILLS || i == LOW_CANYONS || i == ROLLING_HILLS || i == BADLANDS || i == INVERTED_BADLANDS || i == PLATEAU || i == CANYONS)/* && matcher.test(i -> i != RIVER) */)
             {
-                return GRASSLANDS;
+                return RIVERBANK;
             }
         }
         return center;

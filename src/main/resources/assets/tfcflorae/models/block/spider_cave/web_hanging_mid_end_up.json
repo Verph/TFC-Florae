@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "tfcflorae:block/spider_cave/web_hanging_mid_end",
+		"cross": "tfcflorae:block/spider_cave/web_hanging_mid_end"
+	},
+	"elements": [
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 0], "texture": "#cross"},
+				"south": {"uv": [16, 8, 0, 0], "texture": "#cross"}
+			}
+		},
+		{
+			"from": [-8, 0, 8],
+			"to": [24, 16, 8],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [16, 8, 0, 0], "texture": "#cross"},
+				"south": {"uv": [0, 8, 16, 0], "texture": "#cross"}
+			}
+		}
+	]
+}

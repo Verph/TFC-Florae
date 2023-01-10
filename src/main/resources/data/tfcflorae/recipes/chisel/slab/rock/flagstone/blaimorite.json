@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/blaimorite",
+  "result": "tfcflorae:rock/flagstone/slab/blaimorite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/blaimorite"
+  }
+}

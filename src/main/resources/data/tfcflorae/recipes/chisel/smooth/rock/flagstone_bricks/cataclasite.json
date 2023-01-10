@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/cataclasite",
+  "result": "tfcflorae:rock/flagstone_bricks/cataclasite",
+  "mode": "smooth"
+}

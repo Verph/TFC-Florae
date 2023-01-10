@@ -129,6 +129,25 @@ let ROCK_NAMESPACES = {
   'mylonite': 'tfcflorae'
 }
 
+let sandColors = {
+  'black': 'black',
+  'blue': 'blue',
+  'brown': 'brown',
+  'gray': 'gray',
+  'green': 'green',
+  'light_green': 'light_green',
+  'orange': 'orange',
+  'pink': 'pink',
+  'purple': 'purple',
+  'red': 'red',
+  'white': 'white',
+  'yellow': 'yellow'
+}
+
+let sandstoneTypes = {
+  'layered': 'layered'
+}
+
 const dirtTypes = [
   "humus",
   "loam",
@@ -181,6 +200,36 @@ let soilCompactRockTypes = {
   'rocky_compact_dirt': 'rocky_compact_dirt',
   'rockier_compact_dirt': 'rockier_compact_dirt',
   'rockiest_compact_dirt': 'rockiest_compact_dirt'
+}
+
+let rockBoulderModels = {
+  'rock_2': 'rock_2',
+  'rock_2_ne': 'rock_2_ne',
+  'rock_2_none': 'rock_2_none',
+  'rock_2_nse': 'rock_2_nse',
+  'rock_3': 'rock_3',
+  'rock_3_n': 'rock_3_n',
+  'rock_3_ne': 'rock_3_ne',
+  'rock_3_none': 'rock_3_none',
+  'rock_4': 'rock_4',
+  'rock_5': 'rock_5',
+  'rock_5_ne': 'rock_5_ne',
+  'rock_5_none': 'rock_5_none',
+  'rock_5_nse': 'rock_5_nse',
+  'rock_6': 'rock_6',
+  'rock_6_n': 'rock_6_n',
+  'rock_6_ne': 'rock_6_ne',
+  'rock_6_nse': 'rock_6_nse',
+  'rock_7': 'rock_7',
+  'rock_7_n': 'rock_7_n',
+  'rock_7_ne': 'rock_7_ne',
+  'rock_7_none': 'rock_7_none',
+  'rock_7_ns': 'rock_7_ns',
+  'rock_7_nse': 'rock_7_nse',
+  'rock_8': 'rock_8',
+  'rock_8_n': 'rock_8_n',
+  'rock_8_ne': 'rock_8_ne',
+  'rock_8_none': 'rock_8_none'
 }
 
 for(let rockType of Object.keys(ROCK_TYPES))
@@ -2682,6 +2731,1065 @@ function generateJSON(rockType)
     }
     fs.writeFileSync(`./data/recipes/crafting/rock/polished_column/${rockType}.json`, JSON.stringify(craftingChiseledColumn, null, 2))
     fs.writeFileSync(`./data/recipes/chisel/smooth/rock/polished_column/${rockType}.json`, JSON.stringify(chiselChiseledColumnSmooth, null, 2))
+
+    let craftingRockChest = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "YXY",
+        "X X",
+        "YXY"
+      ],
+      "key": {
+        "X": {
+          "item": `tfcflorae:rock/polished_cobbled_bricks/${rockType}`
+        },
+        "Y": {
+          "tag": "tfc:pileable_sheets"
+        }
+      },
+      "result": {
+        "item": `tfcflorae:rock/chest/${rockType}`
+      }
+    }
+    let craftingRockTrappedChest = {
+      "type": "tfc:damage_inputs_shapeless_crafting",
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "tfc:chisels"
+          },
+          {
+            "item": `tfcflorae:rock/chest/${rockType}`
+          },
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "item": `tfcflorae:wood/trapped_chest/${rockType}`,
+          "count": 1
+        }
+      }
+    }
+    let itemRockChest = {
+      "parent": "item/chest",
+      "textures": {
+        "particle": `tfcflorae:block/rock/polished_cobbled_bricks/${rockType}`
+      }
+    }
+    let itemRockTrappedChest = {
+      "parent": "item/chest",
+      "textures": {
+        "particle": `tfcflorae:block/rock/polished_cobbled_bricks/${rockType}`
+      }
+    }
+    let modelRockChest = {
+      "textures": {
+        "particle": `tfcflorae:block/rock/polished_cobbled_bricks/${rockType}`
+      }
+    }
+    let modelRockTrappedChest = {
+      "textures": {
+        "particle": `tfcflorae:block/rock/polished_cobbled_bricks/${rockType}`
+      }
+    }
+    let blockstateRockChest = {
+      "variants": {
+        "": {
+          "model": `tfcflorae:block/rock/chest/${rockType}`
+        }
+      }
+    }
+    let blockstateRockTrappedChest = {
+      "variants": {
+        "": {
+          "model": `tfcflorae:block/rock/trapped_chest/${rockType}`
+        }
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/chest/${rockType}.json`, JSON.stringify(craftingRockChest, null, 2))
+    fs.writeFileSync(`./data/recipes/crafting/rock/trapped_chest/${rockType}.json`, JSON.stringify(craftingRockTrappedChest, null, 2))
+    fs.writeFileSync(`./assets/models/item/rock/chest/${rockType}.json`, JSON.stringify(itemRockChest, null, 2))
+    fs.writeFileSync(`./assets/models/item/rock/trapped_chest/${rockType}.json`, JSON.stringify(itemRockTrappedChest, null, 2))
+    fs.writeFileSync(`./assets/models/block/rock/chest/${rockType}.json`, JSON.stringify(modelRockChest, null, 2))
+    fs.writeFileSync(`./assets/models/block/rock/trapped_chest/${rockType}.json`, JSON.stringify(modelRockTrappedChest, null, 2))
+    fs.writeFileSync(`./assets/blockstates/rock/chest/${rockType}.json`, JSON.stringify(blockstateRockChest, null, 2))
+    fs.writeFileSync(`./assets/blockstates/rock/trapped_chest/${rockType}.json`, JSON.stringify(blockstateRockTrappedChest, null, 2))
+
+    let blockstateRockBoulderBlock = {
+      "variants": {
+        "": [
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_2_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_3_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_4`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_4`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_4`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_4`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_5_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_6_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ns`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ns`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ns`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_ns`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_7_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/rock_pile/${rockType}/rock_8_none`,
+            "y": 270
+          }
+        ]
+      }
+    }
+    fs.writeFileSync(`./assets/blockstates/rock/rock_pile/${rockType}.json`, JSON.stringify(blockstateRockBoulderBlock, null, 2))
+
+    let blockstateRockMossyBoulderBlock = {
+      "variants": {
+        "": [
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_2_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_3_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_4`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_4`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_4`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_4`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_5_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_6_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_none`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ns`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ns`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ns`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_ns`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_nse`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_nse`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_nse`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_7_nse`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_n`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_n`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_n`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_n`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_ne`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_ne`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_ne`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_ne`,
+            "y": 270
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_none`
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_none`,
+            "y": 90
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_none`,
+            "y": 180
+          },
+          {
+            "model": `tfcflorae:block/rock/mossy_rock_pile/${rockType}/rock_8_none`,
+            "y": 270
+          }
+        ]
+      }
+    }
+    fs.writeFileSync(`./assets/blockstates/rock/mossy_rock_pile/${rockType}.json`, JSON.stringify(blockstateRockMossyBoulderBlock, null, 2))
+
+    let modelsRockBoulderItem = {
+      "parent": "tfcflorae:block/rock/rock_pile/rock_item",
+      "textures": {
+        "particle": `${ROCK_NAMESPACES[rockType]}:block/rock/raw/${rockType}`,
+        "texture": `${ROCK_NAMESPACES[rockType]}:block/rock/raw/${rockType}`
+      }
+    }
+    let modelsRockMossyBoulderItem = {
+      "parent": "tfcflorae:block/rock/rock_pile/rock_item",
+      "textures": {
+        "particle": `tfcflorae:block/rock/mossy_raw/${rockType}`,
+        "texture": `tfcflorae:block/rock/mossy_raw/${rockType}`
+      }
+    }
+    fs.writeFileSync(`./assets/models/item/rock/rock_pile/${rockType}.json`, JSON.stringify(modelsRockBoulderItem, null, 2))
+    fs.writeFileSync(`./assets/models/item/rock/mossy_rock_pile/${rockType}.json`, JSON.stringify(modelsRockMossyBoulderItem, null, 2))
+
+    for(let rockBoulderModel in rockBoulderModels)
+    {
+      let modelsRockBoulderBlock = {
+        "parent": `tfcflorae:block/rock/rock_pile/${rockBoulderModel}`,
+        "textures": {
+          "particle": `${ROCK_NAMESPACES[rockType]}:block/rock/raw/${rockType}`,
+          "texture": `${ROCK_NAMESPACES[rockType]}:block/rock/raw/${rockType}`
+        }
+      }
+      let modelsRockMossyBoulderBlock = {
+        "parent": `tfcflorae:block/rock/rock_pile/${rockBoulderModel}`,
+        "textures": {
+          "particle": `tfcflorae:block/rock/mossy_raw/${rockType}`,
+          "texture": `tfcflorae:block/rock/mossy_raw/${rockType}`
+        }
+      }
+      fs.writeFileSync(`./assets/models/block/rock/rock_pile/${rockType}/${rockBoulderModel}.json`, JSON.stringify(modelsRockBoulderBlock, null, 2))
+      fs.writeFileSync(`./assets/models/block/rock/mossy_rock_pile/${rockType}/${rockBoulderModel}.json`, JSON.stringify(modelsRockMossyBoulderBlock, null, 2))
+    }
+
+    let lootTableRockBoulderBlock = {
+      "type": "minecraft:block",
+      "pools": [
+        {
+          "name": "loot_pool",
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": `tfcflorae:rock/rock_pile/${rockType}`,
+                  "conditions": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "enchantments": [
+                          {
+                            "enchantment": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": `${ROCK_NAMESPACES[rockType]}:rock/loose/${rockType}`,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 1,
+                        "max": 4
+                      }
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    let lootTableRockMossyBoulderBlock = {
+      "type": "minecraft:block",
+      "pools": [
+        {
+          "name": "loot_pool",
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": `tfcflorae:rock/mossy_rock_pile/${rockType}`,
+                  "conditions": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "enchantments": [
+                          {
+                            "enchantment": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": `${ROCK_NAMESPACES[rockType]}:rock/loose/${rockType}`,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 1,
+                        "max": 4
+                      }
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    fs.writeFileSync(`./loot_tables/blocks/rock/rock_pile/${rockType}.json`, JSON.stringify(lootTableRockBoulderBlock, null, 2))
+    fs.writeFileSync(`./loot_tables/blocks/rock/mossy_rock_pile/${rockType}.json`, JSON.stringify(lootTableRockMossyBoulderBlock, null, 2))
   }
 
   for(let soilType in dirtTypes2)
@@ -3002,6 +4110,689 @@ function generateJSON(rockType)
         "result": `tfcflorae:${soilRockType}/${soilType}/${rockType}`
       }
       fs.writeFileSync(`./data/recipes/collapse/soil/${soilRockType}/${soilType}/${rockType}.json`, JSON.stringify(collapseStoneTilesSoil, null, 2))
+    }
+  }
+
+
+  // Sandstone Stuff
+  for(let sandstoneType in sandstoneTypes)
+  {
+    for(let sandColor in sandColors)
+    {
+      let blockstateSandstone = {
+        "__comment__": "This file was automatically created by mcresources",
+        "variants": {
+          "": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+          }
+        }
+      }
+      let blockstateSandstoneSlab = {
+        "__comment__": "This file was automatically created by mcresources",
+        "variants": {
+          "type=bottom": {	
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/slab/bottom/${sandColor}`
+          },
+          "type=top": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/slab/top/${sandColor}`
+          },
+          "type=double": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+          }
+        }
+      }
+      let blockstateSandstoneStairs = {
+        "__comment__": "This file was automatically created by mcresources",
+        "variants": {
+          "facing=east,half=bottom,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`
+          },
+          "facing=west,half=bottom,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=bottom,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=bottom,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=east,half=bottom,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`
+          },
+          "facing=west,half=bottom,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=bottom,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=bottom,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=east,half=bottom,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=west,half=bottom,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=south,half=bottom,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`
+          },
+          "facing=north,half=bottom,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=east,half=bottom,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`
+          },
+          "facing=west,half=bottom,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=bottom,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=bottom,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=east,half=bottom,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=west,half=bottom,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=south,half=bottom,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`
+          },
+          "facing=north,half=bottom,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=east,half=top,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "x": 180,
+            "uvlock": true
+          },
+          "facing=west,half=top,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "x": 180,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=top,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "x": 180,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=top,shape=straight": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`,
+            "x": 180,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=east,half=top,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=west,half=top,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=south,half=top,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=north,half=top,shape=outer_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "uvlock": true
+          },
+          "facing=east,half=top,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "uvlock": true
+          },
+          "facing=west,half=top,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=top,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=top,shape=outer_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/outer/${sandColor}`,
+            "x": 180,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=east,half=top,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=west,half=top,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 270,
+            "uvlock": true
+          },
+          "facing=south,half=top,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=north,half=top,shape=inner_right": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "uvlock": true
+          },
+          "facing=east,half=top,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "uvlock": true
+          },
+          "facing=west,half=top,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 180,
+            "uvlock": true
+          },
+          "facing=south,half=top,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 90,
+            "uvlock": true
+          },
+          "facing=north,half=top,shape=inner_left": {
+            "model": `tfcflorae:block/sandstone/${sandstoneType}/stairs/inner/${sandColor}`,
+            "x": 180,
+            "y": 270,
+            "uvlock": true
+          }
+        }
+      }
+      let blockstateSandstoneWall = {
+        "__comment__": "This file was automatically created by mcresources",
+        "multipart": [
+          {
+            "when": {
+              "up": "true"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/post/${sandColor}`
+            }
+          },
+          {
+            "when": {
+              "north": "low"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/${sandColor}`,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "east": "low"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/${sandColor}`,
+              "y": 90,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "south": "low"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/${sandColor}`,
+              "y": 180,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "west": "low"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/${sandColor}`,
+              "y": 270,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "north": "tall"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/tall/${sandColor}`,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "east": "tall"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/tall/${sandColor}`,
+              "y": 90,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "south": "tall"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/tall/${sandColor}`,
+              "y": 180,
+              "uvlock": true
+            }
+          },
+          {
+            "when": {
+              "west": "tall"
+            },
+            "apply": {
+              "model": `tfcflorae:block/sandstone/${sandstoneType}/wall/side/tall/${sandColor}`,
+              "y": 270,
+              "uvlock": true
+            }
+          }
+        ]
+      }
+      fs.writeFileSync(`./assets/blockstates/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(blockstateSandstone, null, 2))
+      fs.writeFileSync(`./assets/blockstates/sandstone/${sandstoneType}/slab/${sandColor}.json`, JSON.stringify(blockstateSandstoneSlab, null, 2))
+      fs.writeFileSync(`./assets/blockstates/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(blockstateSandstoneStairs, null, 2))
+      fs.writeFileSync(`./assets/blockstates/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(blockstateSandstoneWall, null, 2))
+
+      // Models
+      let modelSandstone = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/cube_all",
+        "textures": {
+          "all": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneSlabBottom = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/slab",
+        "textures": {
+          "bottom": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "top": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "side": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneSlabTop = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/slab_top",
+        "textures": {
+          "bottom": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "top": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "side": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneStairs = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/stairs",
+        "textures": {
+          "bottom": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "top": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "side": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneStairsInner = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/inner_stairs",
+        "textures": {
+          "bottom": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "top": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "side": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneStairsOuter = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/outer_stairs",
+        "textures": {
+          "bottom": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "top": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`,
+          "side": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneWallInventory = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/wall_inventory",
+        "textures": {
+          "wall": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneWallPost = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/template_wall_post",
+        "textures": {
+          "wall": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneWallSide = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/template_wall_side",
+        "textures": {
+          "wall": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      let modelSandstoneWallSideTall = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "block/template_wall_side_tall",
+        "textures": {
+          "wall": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+        }
+      }
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(modelSandstone, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/slab/bottom/${sandColor}.json`, JSON.stringify(modelSandstoneSlabBottom, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/slab/top/${sandColor}.json`, JSON.stringify(modelSandstoneSlabTop, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(modelSandstoneStairs, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/stairs/inner/${sandColor}.json`, JSON.stringify(modelSandstoneStairsInner, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/stairs/outer/${sandColor}.json`, JSON.stringify(modelSandstoneStairsOuter, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/wall/inventory/${sandColor}.json`, JSON.stringify(modelSandstoneWallInventory, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/wall/post/${sandColor}.json`, JSON.stringify(modelSandstoneWallPost, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/wall/side/${sandColor}.json`, JSON.stringify(modelSandstoneWallSide, null, 2))
+      fs.writeFileSync(`./assets/models/block/sandstone/${sandstoneType}/wall/side/tall/${sandColor}.json`, JSON.stringify(modelSandstoneWallSideTall, null, 2))
+
+      // Models (Items)
+      let modelItemSandstone = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": `tfcflorae:block/sandstone/${sandstoneType}/${sandColor}`
+      }
+      let modelItemSandstoneSlab = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": `tfcflorae:block/sandstone/${sandstoneType}/slab/bottom/${sandColor}`
+      }
+      let modelItemSandstoneStairs = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": `tfcflorae:block/sandstone/${sandstoneType}/stairs/${sandColor}`
+      }
+      let modelItemSandstoneWall = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": `tfcflorae:block/sandstone/${sandstoneType}/wall/inventory/${sandColor}`
+      }
+      fs.writeFileSync(`./assets/models/item/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(modelItemSandstone, null, 2))
+      fs.writeFileSync(`./assets/models/item/sandstone/${sandstoneType}/slab/${sandColor}.json`, JSON.stringify(modelItemSandstoneSlab, null, 2))
+      fs.writeFileSync(`./assets/models/item/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(modelItemSandstoneStairs, null, 2))
+      fs.writeFileSync(`./assets/models/item/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(modelItemSandstoneWall, null, 2))
+
+      // Loot tables for sandstone blocks
+      let lootTableSandstone = {
+        "__comment__": "This file was automatically created by mcresources",
+        "type": "minecraft:block",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:survives_explosion"
+              }
+            ]
+          }
+        ]
+      }
+      let lootTableSandstoneSlab = {
+        "__comment__": "This file was automatically created by mcresources",
+        "type": "minecraft:block",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`,
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "conditions": [
+                      {
+                        "condition": "minecraft:block_state_property",
+                        "block": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`,
+                        "properties": {
+                          "type": "double"
+                        }
+                      }
+                    ],
+                    "count": 2,
+                    "add": false
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:survives_explosion"
+              }
+            ]
+          }
+        ]
+      }
+      let lootTableSandstoneStairs = {
+        "__comment__": "This file was automatically created by mcresources",
+        "type": "minecraft:block",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": `tfcflorae:sandstone/${sandstoneType}/stairs/${sandColor}`
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:survives_explosion"
+              }
+            ]
+          }
+        ]
+      }
+      let lootTableSandstoneWall = {
+        "__comment__": "This file was automatically created by mcresources",
+        "type": "minecraft:block",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": `tfcflorae:sandstone/${sandstoneType}/wall/${sandColor}`
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:survives_explosion"
+              }
+            ]
+          }
+        ]
+      }
+      fs.writeFileSync(`./data/loot_tables/blocks/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(lootTableSandstone, null, 2))
+      fs.writeFileSync(`./data/loot_tables/blocks/sandstone/${sandstoneType}/slab/${sandColor}.json`, JSON.stringify(lootTableSandstoneSlab, null, 2))
+      fs.writeFileSync(`./data/loot_tables/blocks/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(lootTableSandstoneStairs, null, 2))
+      fs.writeFileSync(`./data/loot_tables/blocks/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(lootTableSandstoneWall, null, 2))
+
+      /*"tfc:raw_sandstone/brown",
+      "tfc:raw_sandstone/white",
+      "tfc:raw_sandstone/black",
+      "tfc:raw_sandstone/red",
+      "tfc:raw_sandstone/yellow",
+      "tfc:raw_sandstone/green",
+      "tfc:raw_sandstone/pink",*/
+
+      // Recipes
+      let recipeSandstone = {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XY",
+          "YX"
+        ],
+        "key": {
+          "X": {
+            "item": `tfc:sand/${sandColor}`
+          },
+          "Y": {
+            "item": `tfc:raw_sandstone/${sandColor}`
+          }
+        },
+        "result": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`,
+          "count": 4
+        }
+      }
+      let recipeSandstoneSlab = {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+          }
+        },
+        "result": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`,
+          "count": 6
+        }
+      }
+      let recipeSandstoneStairs = {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X  ",
+          "XX ",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+          }
+        },
+        "result": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/stairs/${sandColor}`,
+          "count": 8
+        }
+      }
+      let recipeSandstoneWall = {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+          }
+        },
+        "result": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/wall/${sandColor}`,
+          "count": 6
+        }
+      }
+      fs.writeFileSync(`./data/recipes/crafting/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(recipeSandstone, null, 2))
+      fs.writeFileSync(`./data/recipes/crafting/sandstone/${sandstoneType}/slab/${sandColor}.json`, JSON.stringify(recipeSandstoneSlab, null, 2))
+      fs.writeFileSync(`./data/recipes/crafting/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(recipeSandstoneStairs, null, 2))
+      fs.writeFileSync(`./data/recipes/crafting/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(recipeSandstoneWall, null, 2))
+
+      let chiselSandstoneSlab = {
+        "type": "tfc:chisel",
+        "ingredient": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`,
+        "result": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`,
+        "mode": "slab",
+        "extra_drop": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`
+        }
+      }
+      let chiselSandstoneStair = {
+        "type": "tfc:chisel",
+        "ingredient": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`,
+        "result": `tfcflorae:sandstone/${sandstoneType}/stairs/${sandColor}`,
+        "mode": "stair"
+      }
+      fs.writeFileSync(`./data/recipes/chisel/slab/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(chiselSandstoneSlab, null, 2))
+      fs.writeFileSync(`./data/recipes/chisel/stair/sandstone/${sandstoneType}/${sandColor}.json`, JSON.stringify(chiselSandstoneStair, null, 2))
+
+      let stonecuttingSandstoneSlab = {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+        },
+        "result": `tfcflorae:sandstone/${sandstoneType}/slab/${sandColor}`,
+        "count": 2
+      }
+      let stonecuttingSandstoneStairs = {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+        },
+        "result": `tfcflorae:sandstone/${sandstoneType}/stairs/${sandColor}`,
+        "count": 1
+      }
+      let stonecuttingSandstoneWall = {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": `tfcflorae:sandstone/${sandstoneType}/${sandColor}`
+        },
+        "result": `tfcflorae:sandstone/${sandstoneType}/wall/${sandColor}`,
+        "count": 1
+      }
+      fs.writeFileSync(`./data/recipes/stonecutting/sandstone/${sandstoneType}/slab/${sandColor}.json`, JSON.stringify(stonecuttingSandstoneSlab, null, 2))
+      fs.writeFileSync(`./data/recipes/stonecutting/sandstone/${sandstoneType}/stairs/${sandColor}.json`, JSON.stringify(stonecuttingSandstoneStairs, null, 2))
+      fs.writeFileSync(`./data/recipes/stonecutting/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(stonecuttingSandstoneWall, null, 2))
     }
   }
 

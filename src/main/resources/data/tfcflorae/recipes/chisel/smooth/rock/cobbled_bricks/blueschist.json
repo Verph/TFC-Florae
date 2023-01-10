@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/blueschist",
+  "result": "tfcflorae:rock/cobbled_bricks/blueschist",
+  "mode": "smooth"
+}

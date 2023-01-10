@@ -7,7 +7,6 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "tfc:random_empty_hot_spring",
-    "tfc:random_active_hot_spring",
-    "tfc:fruit_forest"
+    "tfc:random_active_hot_spring"
   ]
 }

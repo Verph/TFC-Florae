@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_7",
+  "textures": {
+    "particle": "tfcflorae:block/rock/mossy_raw/travertine",
+    "texture": "tfcflorae:block/rock/mossy_raw/travertine"
+  }
+}

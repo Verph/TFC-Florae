@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/phyllite",
+  "result": "tfcflorae:rock/cobbled_bricks/phyllite",
+  "mode": "smooth"
+}

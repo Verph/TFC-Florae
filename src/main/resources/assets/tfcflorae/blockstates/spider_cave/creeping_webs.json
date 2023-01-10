@@ -1,0 +1,105 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1"
+		}
+      ]
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		},
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1",
+			"weight": 1,
+			"x": 270,
+			"y": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground",
+			"weight": 1,
+			"x": 270
+		},
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1",
+			"weight": 1,
+			"x": 270
+		}
+      ]
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		},
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1",
+			"weight": 1,
+			"x": 270,
+			"y": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground",
+			"weight": 1,
+			"x": 180
+		},
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1",
+			"weight": 1,
+			"x": 180
+		}
+      ]
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": [
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		},
+		{
+			"model": "tfcflorae:block/spider_cave/spider_web_ground_1",
+			"weight": 1,
+			"x": 270,
+			"y": 270
+		}
+      ]
+    }
+  ]
+}

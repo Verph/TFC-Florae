@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:canyon",
+  "type": "tfc:canyon",
   "config": {
     "probability": 0.00003,
     "y": {
@@ -13,7 +13,7 @@
     },
     "yScale": 13,
     "lava_level": {
-      "above_bottom": 8
+      "above_bottom": 10
     },
     "aquifers_enabled": true,
     "vertical_rotation": {

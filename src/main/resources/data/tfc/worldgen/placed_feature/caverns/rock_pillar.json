@@ -1,0 +1,14 @@
+{
+  "feature": "tfc:caverns/rock_pillar",
+  "placement": [
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "OCEAN_FLOOR",
+      "max_inclusive": -64
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 666
+    }
+  ]
+}

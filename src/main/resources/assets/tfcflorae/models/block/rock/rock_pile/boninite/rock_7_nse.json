@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_7_nse",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/boninite",
+    "texture": "tfcflorae:block/rock/raw/boninite"
+  }
+}

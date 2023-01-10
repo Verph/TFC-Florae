@@ -2,9 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfc:forest",
-    "tfc:bamboo",
-    "tfc:cave_vegetation",
-    "tfc:fruit_forest"
+    "tfcflorae:fruit_forest"
   ]
 }

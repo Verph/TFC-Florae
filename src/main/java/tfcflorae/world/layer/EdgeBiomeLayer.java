@@ -30,6 +30,10 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int THERMAL_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticThermalCanyons();
     static final int MESA_PLATEAU = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaPlateau();
     static final int PEAT_BOG = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPeatBog();
+    static final int GRAVEL_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGravelShores();
+    static final int STEPPES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSteppes();
+    static final int SHRUBLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShrublands();
+    static final int MOORLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMoorlands();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -64,6 +68,13 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return MESA_HILLS;
             }
         }
+        else if (center == CALDERAS)
+        {
+            if (matcher.test(i -> i != CALDERAS))
+            {
+                return ALPINE_HIGHLANDS;
+            }
+        }
         else if (center == ALPINE_MOUNTAINS)
         {
             if (matcher.test(i -> i != ALPINE_MOUNTAINS))
@@ -80,13 +91,6 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             if (matcher.test(i -> i != ALPINE_MOUNTAINS))
             {
                 return ROLLING_HIGHLANDS;
-            }
-        }
-        else if (center == CALDERAS)
-        {
-            if (matcher.test(i -> i != CALDERAS))
-            {
-                return ALPINE_HIGHLANDS;
             }
         }
         else if (center == THERMAL_CANYONS)
@@ -117,11 +121,25 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return PLAINS;
             }
         }
+        else if (center == MOORLANDS)
+        {
+            if (matcher.test(i -> i != MOORLANDS))
+            {
+                return MARSHES;
+            }
+        }
         else if (TFCLayers.isMountains(center))
         {
             if (matcher.test(TFCLayers::isLow))
             {
                 return ROLLING_HILLS;
+            }
+        }
+        else if (center == LAKE)
+        {
+            if (matcher.test(i -> i != LAKE))
+            {
+                return GRAVEL_SHORE;
             }
         }
         // Inverses of above conditions

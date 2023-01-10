@@ -1,0 +1,550 @@
+{
+  "type": "tfcflorae:underwater_magma",
+  "config": {
+    "states": [
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfc:rock/magma/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfc:rock/magma/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfc:rock/magma/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfc:rock/magma/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfc:rock/magma/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfc:rock/magma/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfc:rock/magma/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfc:rock/magma/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfc:rock/magma/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfc:rock/magma/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfc:rock/magma/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfc:rock/magma/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/red_granite",
+        "blocks": [
+          "tfcflorae:rock/magma/red_granite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/breccia",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/foidolite",
+        "blocks": [
+          "tfcflorae:rock/magma/foidolite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/porphyry",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/peridotite",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blaimorite",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/boninite",
+        "blocks": [
+          "tfcflorae:rock/magma/boninite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/carbonatite",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/laterite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mudstone",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/sandstone",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/siltstone",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/arkose",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/jaspillite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/travertine",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/wackestone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blackband_ironstone",
+        "blocks": [
+          "tfc:rock/magma/basalt"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/cataclasite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blueschist",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/catlinite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/greenschist",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/novaculite",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/soapstone",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/komatiite",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mylonite",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/red_granite",
+        "blocks": [
+          "tfcflorae:rock/magma/red_granite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/breccia",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/foidolite",
+        "blocks": [
+          "tfcflorae:rock/magma/foidolite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/porphyry",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/peridotite",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blaimorite",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/boninite",
+        "blocks": [
+          "tfcflorae:rock/magma/boninite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/carbonatite",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/laterite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mudstone",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/sandstone",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/siltstone",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/arkose",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/jaspillite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/travertine",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/wackestone",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blackband_ironstone",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/cataclasite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blueschist",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/catlinite",
+        "blocks": [
+          "tfcflorae:rock/magma/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/greenschist",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/novaculite",
+        "blocks": [
+          "tfcflorae:rock/magma/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/soapstone",
+        "blocks": [
+          "tfcflorae:rock/magma/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/komatiite",
+        "blocks": [
+          "tfcflorae:rock/magma/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mylonite",
+        "blocks": [
+          "tfcflorae:rock/magma/breccia"
+        ]
+      }
+    ],
+    "floorSearchRange": 5,
+    "placementRadiusAroundFloor": 1,
+    "placementProbabilityPerValidPosition": 0.5
+  }
+}

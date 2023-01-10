@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/dolomite",
+  "result": "tfcflorae:rock/flagstone/stairs/dolomite",
+  "mode": "stair"
+}

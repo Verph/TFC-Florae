@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:mossy_packed_mud/sandy_loam"
+  ],
+  "result": "tfcflorae:mossy_packed_mud/sandy_loam"
+}

@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/silty_loam_0"
+	  },
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/silty_loam_1"
+	  },
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/silty_loam_2"
+	  }
+    ]
+  }
+}

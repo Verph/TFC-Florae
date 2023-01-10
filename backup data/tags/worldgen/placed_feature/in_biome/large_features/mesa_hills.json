@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfc:large_dripstone",
+	"tfc:dripstone_cluster",
+	"tfc:pointed_dripstone",
+	"tfcflorae:fruit_forest",
+	"tfcflorae:charred_forest",
+	"tfc:fossil",
+    "#tfc:feature/boulders",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation",
+    "tfc:random_empty_hot_spring",
+    "tfc:random_active_hot_spring"
+  ]
+}

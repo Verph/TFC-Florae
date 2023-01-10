@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/granite",
+  "result": "tfcflorae:rock/flagstone_bricks/granite",
+  "mode": "smooth"
+}

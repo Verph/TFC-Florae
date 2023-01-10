@@ -13,11 +13,12 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.Tags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.EpiphytePlantBlock;
@@ -105,7 +106,7 @@ public abstract class FungiEpiphyteSolidBlock extends EpiphytePlantBlock
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
         BlockState attachedState = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
-        return (Helpers.isBlock(attachedState, BlockTags.LOGS) && level.getRawBrightness(pos, 0) < 13);
+        return ((Helpers.isBlock(attachedState, Tags.Blocks.STONE) || Helpers.isBlock(attachedState, BlockTags.LOGS) || attachedState.is(BlockTags.MUSHROOM_GROW_BLOCK) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON)) && level.getRawBrightness(pos, 0) < 13);
     }
 
     @Override

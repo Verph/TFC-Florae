@@ -1,0 +1,139 @@
+{
+  "variants": {
+    "age=0,facing=east,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 270
+    },
+    "age=0,facing=north,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 180
+    },
+    "age=0,facing=south,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem"
+    },
+    "age=0,facing=west,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 90
+    },
+    "age=1,facing=east,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 270
+    },
+    "age=1,facing=north,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 180
+    },
+    "age=1,facing=south,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem"
+    },
+    "age=1,facing=west,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 90
+    },
+    "age=2,facing=east,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 270
+    },
+    "age=2,facing=north,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 180
+    },
+    "age=2,facing=south,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem"
+    },
+    "age=2,facing=west,stage=0": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_stem",
+      "y": 90
+    },
+    "age=0,facing=east,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 270
+    },
+    "age=0,facing=north,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 180
+    },
+    "age=0,facing=south,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering"
+    },
+    "age=0,facing=west,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 90
+    },
+    "age=1,facing=east,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 270
+    },
+    "age=1,facing=north,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 180
+    },
+    "age=1,facing=south,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering"
+    },
+    "age=1,facing=west,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 90
+    },
+    "age=2,facing=east,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 270
+    },
+    "age=2,facing=north,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 180
+    },
+    "age=2,facing=south,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering"
+    },
+    "age=2,facing=west,stage=1": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage_flowering",
+      "y": 90
+    },
+    "age=0,facing=east,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage0",
+      "y": 270
+    },
+    "age=0,facing=north,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage0",
+      "y": 180
+    },
+    "age=0,facing=south,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage0"
+    },
+    "age=0,facing=west,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage0",
+      "y": 90
+    },
+    "age=1,facing=east,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage1",
+      "y": 270
+    },
+    "age=1,facing=north,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage1",
+      "y": 180
+    },
+    "age=1,facing=south,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage1"
+    },
+    "age=1,facing=west,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage1",
+      "y": 90
+    },
+    "age=2,facing=east,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage2",
+      "y": 270
+    },
+    "age=2,facing=north,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage2",
+      "y": 180
+    },
+    "age=2,facing=south,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage2"
+    },
+    "age=2,facing=west,stage=2": {
+      "model": "tfcflorae:block/plant/cacao/cacao_stage2",
+      "y": 90
+    }
+  }
+}

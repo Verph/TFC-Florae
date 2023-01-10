@@ -543,8 +543,8 @@
         ]
       }
     ],
-    "floorSearchRange": 2,
-    "placementRadiusAroundFloor": 3,
-    "placementProbabilityPerValidPosition": 0.3
+    "floorSearchRange": 5,
+    "placementRadiusAroundFloor": 1,
+    "placementProbabilityPerValidPosition": 0.6
   }
 }

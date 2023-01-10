@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/mylonite",
+  "result": "tfcflorae:rock/flagstone_bricks/mylonite",
+  "mode": "smooth"
+}

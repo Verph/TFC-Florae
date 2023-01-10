@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -44,6 +45,7 @@ import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.FluidType;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
@@ -75,6 +77,12 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
         this.daysToGrow = days;
 
         this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, 0).setValue(AGE, 0).setValue(WATERLOGGED, false).setValue(HANGING, false));
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
+        return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
     public ExtendedProperties getExtendedProperties()
@@ -112,7 +120,8 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
-        return isHanging(state) ? level.getBlockState(pos.above()).is(TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.LEAVES).get()) : (super.canSurvive(state, level, pos) || Helpers.isBlock(state, TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(state, TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON));
+        FluidState fluidState = level.getFluidState(pos);
+        return isHanging(state) ? level.getBlockState(pos.above()).is(TFCFBlocks.WOODS_SEASONAL_LEAVES.get(wood).get()) : (super.canSurvive(state, level, pos) || Helpers.isBlock(state, TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(state, TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON) || fluidState.getType() == TFCFluids.SALT_WATER.getSource() || fluidState.getType() == TFCFluids.SPRING_WATER.getSource() ||  fluidState.getType() == Fluids.WATER.getSource());
     }
 
     @Override

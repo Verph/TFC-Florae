@@ -1,0 +1,47 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/webbed/cave_vegetation",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "tfc:climate",
+      "min_forest": "old_growth",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 4,
+          "max_inclusive": 16
+        }
+      }
+    },
+    {
+      "type": "tfc:carving_mask",
+      "step": "air",
+      "min_y": {
+        "absolute": -120
+      },
+      "max_y": {
+        "absolute": 40
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:replaceable"
+      }
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

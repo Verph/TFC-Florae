@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:sandstone/layered/black",
+    "tfcflorae:sandstone/layered/blue",
+    "tfcflorae:sandstone/layered/brown",
+    "tfcflorae:sandstone/layered/gray",
+    "tfcflorae:sandstone/layered/green",
+    "tfcflorae:sandstone/layered/light_green",
+    "tfcflorae:sandstone/layered/orange",
+    "tfcflorae:sandstone/layered/pink",
+    "tfcflorae:sandstone/layered/purple",
+    "tfcflorae:sandstone/layered/red",
+    "tfcflorae:sandstone/layered/white",
+    "tfcflorae:sandstone/layered/yellow"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/red_granite"
+  },
+  "result": "tfcflorae:rock/flagstone/wall/red_granite",
+  "count": 1
+}

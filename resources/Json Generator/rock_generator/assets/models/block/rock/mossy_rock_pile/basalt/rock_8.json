@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_8",
+  "textures": {
+    "particle": "tfcflorae:block/rock/mossy_raw/basalt",
+    "texture": "tfcflorae:block/rock/mossy_raw/basalt"
+  }
+}

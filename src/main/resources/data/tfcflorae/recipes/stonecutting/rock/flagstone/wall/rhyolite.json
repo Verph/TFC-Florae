@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/rhyolite"
+  },
+  "result": "tfcflorae:rock/flagstone/wall/rhyolite",
+  "count": 1
+}

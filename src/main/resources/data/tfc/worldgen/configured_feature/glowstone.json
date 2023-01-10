@@ -1,4 +1,9 @@
 {
-  "type": "minecraft:glowstone_blob",
-  "config": {}
+  "type": "tfcflorae:crystal",
+  "config": {
+    "state": {
+      "Name": "minecraft:glowstone",
+      "Properties": {}
+    }
+  }
 }

@@ -6,6 +6,18 @@
   "temperature_modifier": "none",
   "downfall": 0.5,
   "effects": {
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.jagged_peaks",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
     "fog_color": 12638463,
     "sky_color": 8709887,
     "water_color": 4159204,
@@ -13,11 +25,15 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
@@ -50,6 +66,13 @@
       "tfc:in_biome/large_features/rolling_highlands"
     ],
     [
+	  "tfc:large_dripstone",
+	  "tfc:dripstone_cluster",
+	  "tfc:pointed_dripstone",
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest"
+    ],
+    [
       "tfc:in_biome/surface_decoration/rolling_highlands"
     ],
     [
@@ -58,6 +81,14 @@
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "monster": [
       {
         "type": "minecraft:spider",
@@ -207,6 +238,12 @@
       },
       {
         "type": "tfc:horse",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
         "weight": 1,
         "minCount": 1,
         "maxCount": 3

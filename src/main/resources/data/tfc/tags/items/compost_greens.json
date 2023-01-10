@@ -4,6 +4,7 @@
   "values": [
     "tfcflorae:food/baobab_fruit",
     "tfcflorae:food/barrel_cactus_fruit",
+    "tfcflorae:food/dragonberry",
     "tfcflorae:food/hawthorn",
     "tfcflorae:food/holly_berry",
     "tfcflorae:food/jabuticaba",
@@ -16,12 +17,25 @@
     "tfcflorae:food/pear",
     "tfcflorae:food/persimmon",
     "tfcflorae:food/pink_ivory_drupe",
+    "tfcflorae:food/pitahaya",
     "tfcflorae:food/quince",
     "tfcflorae:food/riberry",
     "tfcflorae:food/rowan_berry",
+    "tfcflorae:food/saguaro",
     "tfcflorae:food/sky_fruit",
     "tfcflorae:food/sloe",
     "tfcflorae:food/sorb_apple",
-    "tfcflorae:food/yew_berry"
+    "tfcflorae:food/yew_berry",
+    "tfcflorae:food/carambola",
+    "tfcflorae:food/kiwi",
+    "tfcflorae:food/papaya",
+    "tfcflorae:food/acorn_squash",
+    "tfcflorae:food/aehobak",
+    "tfcflorae:food/butternut",
+    "tfcflorae:food/crookneck",
+    "tfcflorae:food/cucumber",
+    "tfcflorae:food/scallopini",
+    "tfcflorae:food/tromboncino",
+    "tfcflorae:food/zucchini"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/wackestone",
+  "result": "tfcflorae:rock/flagstone_bricks/wackestone",
+  "mode": "smooth"
+}

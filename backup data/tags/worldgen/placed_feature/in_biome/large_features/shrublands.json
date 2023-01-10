@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfc:small_rock_columns_rare",
+	"tfcflorae:shrubbery",
+    "#tfc:feature/boulders",
+    "tfc:bamboo",
+    "tfc:cave_vegetation"
+  ]
+}

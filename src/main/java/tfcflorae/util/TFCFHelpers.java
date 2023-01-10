@@ -1,5 +1,7 @@
 package tfcflorae.util;
 
+import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 
 import net.minecraft.core.BlockPos;
@@ -22,6 +24,7 @@ import tfcflorae.TFCFlorae;
 
 public class TFCFHelpers
 {
+    public static final Random RANDOM = new Random();
     public static Direction[] NOT_DOWN = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP};
 
     public static ResourceLocation identifier(String id)
@@ -102,5 +105,51 @@ public class TFCFHelpers
     public static void openScreen(ServerPlayer player, MenuProvider containerSupplier, Consumer<FriendlyByteBuf> extraDataWriter)
     {
         NetworkHooks.openGui(player, containerSupplier, extraDataWriter);
+    }
+
+    public static int randomRange(int min, int max)
+    {
+        return RANDOM.nextInt(max - min) + min;
+    }
+
+    public static double randomRange(double min, double max)
+    {
+        return min + (max - min) * RANDOM.nextDouble();
+    }
+
+    public static float randomDirection(float value)
+    {
+        return RANDOM.nextBoolean() ? value : -value;
+    }
+
+    public static double randomDirection(double value)
+    {
+        return RANDOM.nextBoolean() ? value : -value;
+    }
+
+    public static int randomDirection(int value)
+    {
+        return RANDOM.nextBoolean() ? value : -value;
+    }
+
+    public static <T> T choose(T... values)
+    {
+        return values[RANDOM.nextInt(values.length)];
+    }
+
+    public static <T> T choose(List<T> values)
+    {
+        return values.get(RANDOM.nextInt(values.size()));
+    }
+
+    public static int randomBias(int min, int max)
+    {
+        int num = randomRange(min, max);
+        int mid = (max / 2) - (min / 2);
+        int halfMid = mid / 2;
+        if(num > mid) num -= RANDOM.nextInt((halfMid + 1));
+        else if(num < mid) num += RANDOM.nextInt((halfMid + 1));
+
+        return num;
     }
 }

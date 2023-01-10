@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": {
+    "item": "tfcflorae:food/pitahaya"
+  },
+  "category": "fruit",
+  "hunger": 4.5,
+  "water": 1.5,
+  "saturation": 0.4,
+  "fruit": 1.8,
+  "decay": 1.8
+}

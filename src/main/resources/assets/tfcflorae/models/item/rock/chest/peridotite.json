@@ -1,0 +1,6 @@
+{
+  "parent": "item/chest",
+  "textures": {
+    "particle": "tfcflorae:block/rock/polished_cobbled_bricks/peridotite"
+  }
+}

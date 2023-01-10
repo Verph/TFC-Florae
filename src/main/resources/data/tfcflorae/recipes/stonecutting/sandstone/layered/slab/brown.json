@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:sandstone/layered/brown"
+  },
+  "result": "tfcflorae:sandstone/layered/slab/brown",
+  "count": 2
+}

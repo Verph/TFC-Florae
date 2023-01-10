@@ -18,7 +18,7 @@
       }
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
     },
     {
       "type": "tfc:flat_enough",

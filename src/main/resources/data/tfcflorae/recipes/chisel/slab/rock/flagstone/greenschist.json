@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/greenschist",
+  "result": "tfcflorae:rock/flagstone/slab/greenschist",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/greenschist"
+  }
+}

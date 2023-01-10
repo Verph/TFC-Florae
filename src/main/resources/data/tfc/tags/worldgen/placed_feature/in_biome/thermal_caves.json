@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:caverns/thermal/hot_spring_deep",
+    "tfc:caverns/thermal/floor",
+	"tfc:caverns/thermal/lava",
+    "tfc:caverns/thermal/underwater_magma",
+    "tfc:caverns/dripstone_cluster",
+    "tfc:caverns/large_dripstone",
+    "tfc:caverns/pointed_dripstone",
+    "tfc:caverns/thermal/dripleaf_water",
+    "tfc:caverns/thermal/sea_pickle",
+    "tfc:caverns/thermal/dripleaf_clay",
+    "tfc:caverns/thermal/lichen_clay",
+    "tfc:caverns/thermal/smoke_block",
+    "tfc:glow_lichen"
+  ]
+}

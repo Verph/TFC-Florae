@@ -1,0 +1,58 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo1_age0"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo2_age0"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo3_age0"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo4_age0"
+        }
+      ]
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo1_age1"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo2_age1"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo3_age1"
+        },
+        {
+          "model": "tfcflorae:block/plant/golden_bamboo/bamboo4_age1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "leaves": "small"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/golden_bamboo/bamboo_small_leaves"
+      }
+    },
+    {
+      "when": {
+        "leaves": "large"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/golden_bamboo/bamboo_large_leaves"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/flower_pot_cross_wide",
+  "textures": {
+    "plant": "tfcflorae:block/plant/lavender/lavender_3",
+    "dirt": "tfcflorae:block/dirt/humus"
+  }
+}

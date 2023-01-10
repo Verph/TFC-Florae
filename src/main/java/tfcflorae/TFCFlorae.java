@@ -17,11 +17,11 @@ import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.common.items.TFCFItems;
-import tfcflorae.common.network.Packets;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
-import tfcflorae.util.DispenserBehaviors;
+import tfcflorae.util.TFCFDispenserBehaviors;
 import tfcflorae.util.TFCFInteractionManager;
+import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
 
 @Mod(TFCFlorae.MOD_ID)
@@ -35,10 +35,12 @@ public class TFCFlorae
     {
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        Config.init();
         TFCFItems.ITEMS.register(bus);
         TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
+        TFCFCarvers.CARVERS.register(bus);
         TFCFFeatures.FEATURES.register(bus);
         TFCFFeatures.TRUNK_DECOR.register(bus);
         TFCFFeatures.LEAF_DECOR.register(bus);
@@ -46,8 +48,6 @@ public class TFCFlorae
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
         TFCFSounds.SOUNDS.register(bus);
-
-        Packets.init();
 
         bus.addListener(this::setup);
         bus.addListener(TFCFEntities::onEntityAttributeCreation);
@@ -68,7 +68,7 @@ public class TFCFlorae
 
         event.enqueueWork(() -> {
             TFCFInteractionManager.init();
-            DispenserBehaviors.registerDispenserBehaviors();
+            TFCFDispenserBehaviors.registerDispenserBehaviors();
             TFCFBlocks.registerFlowerPotFlowers();
         });
     }

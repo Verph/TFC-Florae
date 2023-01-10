@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/polished_cobbled_bricks/mudstone",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/stairs/mudstone",
+  "mode": "stair"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/soapstone",
+  "result": "tfcflorae:rock/cobbled_bricks/soapstone",
+  "mode": "smooth"
+}

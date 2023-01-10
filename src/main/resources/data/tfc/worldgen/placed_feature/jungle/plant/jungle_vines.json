@@ -1,0 +1,62 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:jungle/plant/jungle_vines",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 16,
+      "max_temperature": 32,
+      "min_rainfall": 150,
+      "max_rainfall": 500,
+      "min_forest": "edge",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 10,
+      "noise_factor": 90,
+      "noise_offset": 0.2
+    },
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 63
+        },
+        "max_inclusive": {
+          "absolute": 128
+        }
+      }
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "would_survive",
+        "state": {
+		  "Name": "tfc:plant/jungle_vines",
+		  "Properties": {
+			"up": "false",
+			"north": "false",
+			"east": "false",
+			"south": "false",
+			"west": "false"
+		  }
+        }
+      }
+    }
+  ]
+}

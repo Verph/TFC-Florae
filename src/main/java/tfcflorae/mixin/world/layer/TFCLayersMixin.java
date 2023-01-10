@@ -17,15 +17,13 @@ import net.dries007.tfc.world.layer.*;
 import net.dries007.tfc.world.layer.framework.AreaFactory;
 import net.dries007.tfc.world.layer.framework.TypedAreaFactory;
 import net.dries007.tfc.world.noise.*;
-import net.dries007.tfc.world.river.*;
+import net.dries007.tfc.world.river.Watershed;
+import net.minecraft.util.Mth;
 
 import tfcflorae.interfaces.*;
+import tfcflorae.world.layer.*;
 import tfcflorae.world.layer.EdgeBiomeLayer;
-import tfcflorae.world.layer.EdgeRiverLayer;
-import tfcflorae.world.layer.MergeRiverBanksLayer;
 import tfcflorae.world.layer.PlateBiomeLayer;
-import tfcflorae.world.layer.TFCFMergeRiverLayer;
-import tfcflorae.world.layer.WatershedBank;
 
 @Mixin(TFCLayers.class)
 public class TFCLayersMixin implements TFCLayersMixinInterface
@@ -121,6 +119,11 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Unique private static final int THERMAL_CANYONS;
     @Unique private static final int MESA_PLATEAU;
     @Unique private static final int PEAT_BOG;
+    @Unique private static final int RIVERBANK;
+    @Unique private static final int CHASMS;
+    @Unique private static final int STEPPES;
+    @Unique private static final int SHRUBLANDS;
+    @Unique private static final int MOORLANDS;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
@@ -188,6 +191,11 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         THERMAL_CANYONS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticThermalCanyons);
         MESA_PLATEAU = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMesaPlateau);
         PEAT_BOG = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticPeatBog);
+        RIVERBANK = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticRiverbank);
+        CHASMS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticChasms);
+        STEPPES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSteppes);
+        SHRUBLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticShrublands);
+        MOORLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMoorlands);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -305,6 +313,36 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return PEAT_BOG;
     }
 
+    @Unique @Override
+    public int getStaticRiverbank()
+    {
+        return RIVERBANK;
+    }
+
+    @Unique @Override
+    public int getStaticChasms()
+    {
+        return CHASMS;
+    }
+
+    @Unique @Override
+    public int getStaticSteppes()
+    {
+        return STEPPES;
+    }
+
+    @Unique @Override
+    public int getStaticMoorlands()
+    {
+        return SHRUBLANDS;
+    }
+
+    @Unique @Override
+    public int getStaticShrublands()
+    {
+        return MOORLANDS;
+    }
+
     @Overwrite(remap = false)
     public static BiomeExtension getFromLayerId(int id)
     {
@@ -387,23 +425,25 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         mainLayer = SmoothLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 15, mainLayer);
 
+        Chasm.Context chasmContext = new Chasm.Context(createEarlyPlateLayers(seed), seed + 5, Mth.clamp(random.nextFloat(), 0.4f, 1f), Mth.clamp(random.nextFloat(), 0.3f, 1f), Mth.clamp(random.nextInt(16), 2, 16), Mth.clamp(random.nextFloat(), 0.1f, 1f));
+        mainLayer = new MergeChasmsLayer(chasmContext).apply(seed + 5, mainLayer);
+        layerArtist.draw("biomes", 16, mainLayer);
+
         return mainLayer;
     }
 
-    @Overwrite(remap = false) // TODO
+    /*@Overwrite(remap = false)
     public static AreaFactory createOverworldBiomeLayerWithRivers(long seed, Watershed.Context watersheds, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist)
     {
+        AreaFactory riverUnderlay, river;
+
         WatershedBank.Context riverBankContext = new WatershedBank.Context(createEarlyPlateLayers(seed), seed, 0.5f, 0.8f, 14, 0.2f);
-        AreaFactory mainLayer = createOverworldBiomeLayer(seed, plateArtist, layerArtist);
-        AreaFactory riverLayer;
-        AreaFactory riverBankLayer;
 
-        riverBankLayer = new MergeRiverBanksLayer(riverBankContext).apply(seed, mainLayer);
-        riverLayer = new MergeRiverLayer(watersheds).apply(seed, riverBankLayer);
-        riverLayer = TFCFMergeRiverLayer.INSTANCE.apply(seed, mainLayer, riverLayer);
+        riverUnderlay = new TFCFMergeRiverLayer(watersheds).apply(seed, createOverworldBiomeLayer(seed, plateArtist, layerArtist));
+        river = new MergeRiverBanksLayer(riverBankContext).apply(seed, riverUnderlay);
 
-        return riverLayer;
-    }
+        return river;
+    }*/
 
     @Shadow
     public static TypedAreaFactory<Plate> createEarlyPlateLayers(long seed)
@@ -575,12 +615,16 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow
     public static boolean hasRiver(int value)
     {
-        return !isOcean(value) && !isLake(value);
+        return !isOcean(value) && !(value == LAKE || value == OCEANIC_MOUNTAIN_LAKE || value == OLD_MOUNTAIN_LAKE || value == MOUNTAIN_LAKE || value == VOLCANIC_OCEANIC_MOUNTAIN_LAKE || value == VOLCANIC_MOUNTAIN_LAKE || value == PLATEAU_LAKE);
     }
 
     @Overwrite(remap = false)
     public static int riverFor(int value)
     {
+        if (value == CALDERAS)
+        {
+            return CANYON_RIVER;
+        }
         if (value == ALPINE_MOUNTAINS)
         {
             return ALPINE_MOUNTAIN_RIVER;
@@ -608,6 +652,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         if (value == VOLCANIC_OCEANIC_MOUNTAINS)
         {
             return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+        }
+        if (value == RIVERBANK)
+        {
+            return RIVERBANK;
         }
         return RIVER;
     }
@@ -639,13 +687,13 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Overwrite(remap = false)
     public static boolean isMountains(int value)
     {
-        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == THERMAL_CANYONS || value == MESA_PLATEAU;
+        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == THERMAL_CANYONS || value == MESA_PLATEAU || value == SHRUBLANDS;
     }
 
     @Overwrite(remap = false)
     public static boolean isLow(int value)
     {
-        return value == TFCLayers.PLAINS || value == TFCLayers.HILLS || value == TFCLayers.LOW_CANYONS || value == TFCLayers.LOWLANDS || value == GRASSLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS;
+        return value == TFCLayers.PLAINS || value == TFCLayers.HILLS || value == TFCLayers.LOW_CANYONS || value == TFCLayers.LOWLANDS || value == GRASSLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS || value == STEPPES;
     }
 
     @Shadow

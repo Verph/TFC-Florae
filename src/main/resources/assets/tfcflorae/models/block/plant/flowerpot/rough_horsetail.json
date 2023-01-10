@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "tfcflorae:block/plant/rough_horsetail/rough_horsetail_1",
+    "dirt": "tfcflorae:block/dirt/humus"
+  }
+}

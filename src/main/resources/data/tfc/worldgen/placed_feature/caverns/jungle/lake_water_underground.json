@@ -1,0 +1,69 @@
+{
+  "feature": "tfc:caverns/jungle/lake_water_underground",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 11,
+      "max_temperature": 40,
+      "min_rainfall": 360,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -100
+        },
+        "max_inclusive": {
+          "absolute": 40
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "direction_of_search": "down",
+      "target_condition": {
+        "predicates": [
+          {
+            "predicate": {
+              "blocks": "minecraft:air",
+              "type": "minecraft:matching_blocks"
+            },
+            "type": "minecraft:not"
+          },
+          {
+            "offset": [
+              0,
+              -5,
+              0
+            ],
+            "type": "minecraft:inside_world_bounds"
+          }
+        ],
+        "type": "minecraft:all_of"
+      },
+      "max_steps": 32,
+      "type": "minecraft:environment_scan"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

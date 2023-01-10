@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/breccia",
+  "result": "tfcflorae:rock/flagstone/stairs/breccia",
+  "mode": "stair"
+}

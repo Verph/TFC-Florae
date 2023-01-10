@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tfcflorae:block/rock/polished_cobbled_bricks/greenschist"
+  }
+}

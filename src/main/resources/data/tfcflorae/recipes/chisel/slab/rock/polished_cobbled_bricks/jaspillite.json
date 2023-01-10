@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/polished_cobbled_bricks/jaspillite",
+  "result": "tfcflorae:rock/polished_cobbled_bricks/slab/jaspillite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/polished_cobbled_bricks/slab/jaspillite"
+  }
+}

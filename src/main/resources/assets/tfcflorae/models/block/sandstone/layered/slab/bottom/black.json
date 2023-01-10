@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/sandstone/layered/black",
+    "top": "tfcflorae:block/sandstone/layered/black",
+    "side": "tfcflorae:block/sandstone/layered/black"
+  }
+}

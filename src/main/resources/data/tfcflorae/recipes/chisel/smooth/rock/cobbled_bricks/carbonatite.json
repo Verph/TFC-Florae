@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/carbonatite",
+  "result": "tfcflorae:rock/cobbled_bricks/carbonatite",
+  "mode": "smooth"
+}

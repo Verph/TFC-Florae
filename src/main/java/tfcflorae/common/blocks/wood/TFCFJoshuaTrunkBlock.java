@@ -25,6 +25,7 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.Tags;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.fluids.FluidHelpers;
@@ -34,7 +35,7 @@ import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 
-public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable
+public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, EntityBlockExtension
 {
     public static final FluidProperty FLUID = TFCBlockStateProperties.FRESH_WATER;
     public static final BooleanProperty NATURAL = TFCBlockStateProperties.NATURAL;

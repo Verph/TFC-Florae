@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"minecraft:bamboo",
+    "tfcflorae:plant/blue_bamboo",
+    "tfcflorae:plant/dragon_bamboo",
+    "tfcflorae:plant/golden_bamboo",
+    "tfcflorae:plant/red_bamboo"
+  ]
+}

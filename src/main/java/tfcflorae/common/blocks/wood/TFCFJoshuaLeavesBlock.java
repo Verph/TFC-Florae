@@ -24,6 +24,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -44,6 +45,8 @@ import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.client.particle.TFCParticles;
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -63,12 +66,11 @@ import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 
-import tfcflorae.common.blockentities.FruitTreeBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
 
 import org.jetbrains.annotations.Nullable;
 
-public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock
+public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
 {
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
     {
@@ -117,6 +119,13 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
 
         registerDefaultState(stateDefinition.any().setValue(AGE, 0).setValue(getFluidProperty(), getFluidProperty().keyFor(Fluids.EMPTY)).setValue(FACING, Direction.UP).setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
+
+    /*@Override
+    @Nullable
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
+        return EntityBlockExtension.super.newBlockEntity(pos, state);
+    }*/
 
     @Override
     public ExtendedProperties getExtendedProperties()
@@ -566,7 +575,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
-        if (level.getBlockEntity(pos) instanceof FruitTreeBlockEntity leaves)
+        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();

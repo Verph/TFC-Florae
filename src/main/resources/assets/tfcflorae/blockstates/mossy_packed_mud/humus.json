@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/humus_0"
+	  },
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/humus_1"
+	  },
+	  {
+        "model": "tfcflorae:block/mossy_packed_mud/humus_2"
+	  }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/cave_column",
+  "placement": [
+    {
+      "type": "tfc:carving_mask",
+      "step": "air",
+      "max_y": {
+        "absolute": -64
+      }
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 404
+    }
+  ]
+}

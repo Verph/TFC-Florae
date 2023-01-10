@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:crystal/cluster/diamond"
+  },
+  "result": {
+    "item": "tfc:powder/diamond",
+    "count": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/sandstone/layered/slab/bottom/light_green"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/sandstone/layered/slab/top/light_green"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/sandstone/layered/light_green"
+    }
+  }
+}

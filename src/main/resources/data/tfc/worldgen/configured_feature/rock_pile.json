@@ -1,0 +1,323 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:boulder_block",
+  "config": {
+    "states": [
+      {
+        "rock": "tfc:rock/raw/granite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/granite",
+          "tfcflorae:rock/mossy_rock_pile/granite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/diorite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/diorite",
+          "tfcflorae:rock/mossy_rock_pile/diorite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gabbro",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/gabbro",
+          "tfcflorae:rock/mossy_rock_pile/gabbro"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/shale",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/shale",
+          "tfcflorae:rock/mossy_rock_pile/shale"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/claystone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/claystone",
+          "tfcflorae:rock/mossy_rock_pile/claystone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/limestone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/limestone",
+          "tfcflorae:rock/mossy_rock_pile/limestone"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/conglomerate",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/conglomerate",
+          "tfcflorae:rock/mossy_rock_pile/conglomerate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dolomite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/dolomite",
+          "tfcflorae:rock/mossy_rock_pile/dolomite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chert",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/chert",
+          "tfcflorae:rock/mossy_rock_pile/chert"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/chalk",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/chalk",
+          "tfcflorae:rock/mossy_rock_pile/chalk"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/rhyolite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/rhyolite",
+          "tfcflorae:rock/mossy_rock_pile/rhyolite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/basalt",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/basalt",
+          "tfcflorae:rock/mossy_rock_pile/basalt"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/andesite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/andesite",
+          "tfcflorae:rock/mossy_rock_pile/andesite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/dacite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/dacite",
+          "tfcflorae:rock/mossy_rock_pile/dacite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/quartzite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/quartzite",
+          "tfcflorae:rock/mossy_rock_pile/quartzite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/slate",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/slate",
+          "tfcflorae:rock/mossy_rock_pile/slate"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/phyllite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/phyllite",
+          "tfcflorae:rock/mossy_rock_pile/phyllite"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/schist",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/schist",
+          "tfcflorae:rock/mossy_rock_pile/schist"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/gneiss",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/gneiss",
+          "tfcflorae:rock/mossy_rock_pile/gneiss"
+        ]
+      },
+      {
+        "rock": "tfc:rock/raw/marble",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/marble",
+          "tfcflorae:rock/mossy_rock_pile/marble"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/red_granite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/red_granite",
+          "tfcflorae:rock/mossy_rock_pile/red_granite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/breccia",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/breccia",
+          "tfcflorae:rock/mossy_rock_pile/breccia"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/foidolite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/foidolite",
+          "tfcflorae:rock/mossy_rock_pile/foidolite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/porphyry",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/porphyry",
+          "tfcflorae:rock/mossy_rock_pile/porphyry"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/peridotite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/peridotite",
+          "tfcflorae:rock/mossy_rock_pile/peridotite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blaimorite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/blaimorite",
+          "tfcflorae:rock/mossy_rock_pile/blaimorite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/boninite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/boninite",
+          "tfcflorae:rock/mossy_rock_pile/boninite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/carbonatite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/carbonatite",
+          "tfcflorae:rock/mossy_rock_pile/carbonatite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/laterite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/laterite",
+          "tfcflorae:rock/mossy_rock_pile/laterite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mudstone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/mudstone",
+          "tfcflorae:rock/mossy_rock_pile/mudstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/sandstone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/sandstone",
+          "tfcflorae:rock/mossy_rock_pile/sandstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/siltstone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/siltstone",
+          "tfcflorae:rock/mossy_rock_pile/siltstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/arkose",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/arkose",
+          "tfcflorae:rock/mossy_rock_pile/arkose"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/jaspillite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/jaspillite",
+          "tfcflorae:rock/mossy_rock_pile/jaspillite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/travertine",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/travertine",
+          "tfcflorae:rock/mossy_rock_pile/travertine"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/wackestone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/wackestone",
+          "tfcflorae:rock/mossy_rock_pile/wackestone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blackband_ironstone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/blackband_ironstone",
+          "tfcflorae:rock/mossy_rock_pile/blackband_ironstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/cataclasite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/cataclasite",
+          "tfcflorae:rock/mossy_rock_pile/cataclasite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/blueschist",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/blueschist",
+          "tfcflorae:rock/mossy_rock_pile/blueschist"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/catlinite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/catlinite",
+          "tfcflorae:rock/mossy_rock_pile/catlinite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/greenschist",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/greenschist",
+          "tfcflorae:rock/mossy_rock_pile/greenschist"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/novaculite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/novaculite",
+          "tfcflorae:rock/mossy_rock_pile/novaculite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/soapstone",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/soapstone",
+          "tfcflorae:rock/mossy_rock_pile/soapstone"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/komatiite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/komatiite",
+          "tfcflorae:rock/mossy_rock_pile/komatiite"
+        ]
+      },
+      {
+        "rock": "tfcflorae:rock/raw/mylonite",
+        "blocks": [
+          "tfcflorae:rock/rock_pile/mylonite",
+          "tfcflorae:rock/mossy_rock_pile/mylonite"
+        ]
+      }
+    ]
+  }
+}

@@ -29,7 +29,13 @@
       }
     },
     {
-      "type": "minecraft:biome"
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:solid"
+      }
+    },
+    {
+      "type": "tfc:biome"
     },
     {
       "type": "minecraft:height_range",

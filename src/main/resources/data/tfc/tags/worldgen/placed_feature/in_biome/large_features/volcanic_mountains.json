@@ -2,11 +2,9 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfc:forest",
-    "tfc:bamboo",
-    "tfc:cave_vegetation",
-    "#tfc:feature/volcanoes",
-    "tfc:random_active_hot_spring",
-    "tfc:fruit_forest"
+    "#tfc:feature/glaciers",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:charred_forest",
+    "tfc:caverns/lava"
   ]
 }

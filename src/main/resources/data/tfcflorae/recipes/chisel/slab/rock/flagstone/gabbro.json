@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/gabbro",
+  "result": "tfcflorae:rock/flagstone/slab/gabbro",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/gabbro"
+  }
+}

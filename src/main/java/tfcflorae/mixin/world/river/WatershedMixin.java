@@ -20,7 +20,7 @@ import net.dries007.tfc.world.river.*;
 @Mixin(Watershed.class)
 public abstract class WatershedMixin
 {
-    @Shadow @Mutable @Final public static final float RIVER_WIDTH = 0.013f * 20f;
+    @Shadow @Mutable @Final public static final float RIVER_WIDTH = 0.013f * 3f;
 
     @Mixin(Watershed.Context.class)
     public static class ContextMixin
@@ -104,7 +104,7 @@ public abstract class WatershedMixin
                 }
 
                 final float x1 = partitionToWatershedScale * partitionCenterX, z1 = partitionToWatershedScale * partitionCenterZ;
-                final float radius = partitionToWatershedScale * (PARTITION_RADIUS + 2 * (RIVER_WIDTH * rainfall));
+                final float radius = partitionToWatershedScale * (PARTITION_RADIUS + 2 * RIVER_WIDTH * 5f);
 
                 partition = new ArrayList<>(32);
                 for (Watershed shed : nearbySheds)

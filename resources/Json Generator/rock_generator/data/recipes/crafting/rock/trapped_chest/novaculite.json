@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:chisels"
+      },
+      {
+        "item": "tfcflorae:rock/chest/novaculite"
+      },
+      {
+        "item": "minecraft:tripwire_hook"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:wood/trapped_chest/novaculite",
+      "count": 1
+    }
+  }
+}

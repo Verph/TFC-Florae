@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:crystal/budding/lapis_lazuli"
+  },
+  "result": {
+    "item": "tfc:powder/lapis_lazuli",
+    "count": 4
+  }
+}

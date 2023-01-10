@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch",
+		"weight": 3
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch_1",
+		"weight": 1
+	  }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/gneiss",
+  "result": "tfcflorae:rock/flagstone/slab/gneiss",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/gneiss"
+  }
+}

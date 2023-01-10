@@ -33,6 +33,11 @@ public enum TFCFSoil
 
     PACKED_MUD((self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)), 
                 (self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCBlocks.SOIL.get(SoilBlockType.MUD).get(variant))),
+    MOSSY_PACKED_MUD((self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)), 
+                    (self, variant) -> new PackedMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.4F, 3.0F).sound(TFCFSounds.PACKED_MUD), TFCBlocks.SOIL.get(SoilBlockType.MUD).get(variant))),
+                
+    LOOSE_MUD((self, variant) -> new LooseMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.3F, 0.3F).sound(TFCFSounds.MUD)), 
+                (self, variant) -> new LooseMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.3F, 0.3F).sound(TFCFSounds.MUD))),
     /*MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant)), 
         (self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCSOIL.get(PACKED_MUD).get(variant))),*/
 

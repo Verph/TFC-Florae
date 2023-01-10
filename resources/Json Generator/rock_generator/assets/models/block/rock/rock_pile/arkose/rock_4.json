@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_4",
+  "textures": {
+    "particle": "tfcflorae:block/rock/raw/arkose",
+    "texture": "tfcflorae:block/rock/raw/arkose"
+  }
+}

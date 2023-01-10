@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 6
+      "chance": 3
     },
     {
       "count": {
@@ -21,7 +21,7 @@
     {
       "height": {
         "min_inclusive": {
-          "absolute": -60
+          "absolute": -64
         },
         "max_inclusive": {
           "absolute": 60
@@ -62,7 +62,7 @@
       "type": "minecraft:random_offset"
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
     }
   ]
 }

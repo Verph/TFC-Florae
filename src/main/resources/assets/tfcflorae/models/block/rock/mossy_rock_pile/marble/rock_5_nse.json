@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_5_nse",
+  "textures": {
+    "particle": "tfcflorae:block/rock/mossy_raw/marble",
+    "texture": "tfcflorae:block/rock/mossy_raw/marble"
+  }
+}

@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/turkey_tail/turkey_tail_0"
+          "model": "tfcflorae:block/plant/turkey_tail/turkey_tail_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/turkey_tail/turkey_tail_0"
+          "model": "tfcflorae:block/plant/turkey_tail/turkey_tail_3"
         }
       ]
     },

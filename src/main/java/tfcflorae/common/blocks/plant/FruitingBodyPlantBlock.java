@@ -7,6 +7,8 @@ import java.util.function.ToIntFunction;
 
 import javax.annotation.Nonnull;
 
+import com.google.common.base.Preconditions;
+
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
@@ -21,7 +23,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -30,6 +34,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 
+import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -45,10 +51,10 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 
-import tfcflorae.common.blockentities.FruitPlantBlockEntity;
+import tfcflorae.common.blockentities.*;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock
+public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
 {
     /**
      * Taking into account only environment rainfall, on a scale [0, 100]
@@ -71,6 +77,9 @@ public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBloc
     public FruitingBodyPlantBlock(ExtendedProperties properties, Supplier<? extends Block> headBlock, VoxelShape shape, Direction direction, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, Supplier<ClimateRange> climateRange)
     {
         super(properties, headBlock, shape, direction);
+
+        Preconditions.checkArgument(lifecycle.length == 12, "Lifecycle length must be 12");
+
         this.headBlock = headBlock;
         this.properties = properties;
         this.climateRange = climateRange;
@@ -78,6 +87,12 @@ public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBloc
         this.productItem = productItem;
 
         registerDefaultState(getStateDefinition().any().setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
+        return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
     @Override
@@ -96,7 +111,10 @@ public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBloc
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        IBushBlock.randomTick(this, state, level, pos, random);
+        if (getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(level, pos, state);
+        }
     }
 
     /**
@@ -116,6 +134,16 @@ public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBloc
             return true;
         }
         return false;
+    }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
+    {
+        if (level instanceof ServerLevel server && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        {
+            onUpdate(server, currentPos, state);
+        }
+        return state;
     }
 
     @Override
@@ -142,7 +170,7 @@ public class FruitingBodyPlantBlock extends BodyPlantBlock implements IForgeBloc
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        if (level.getBlockEntity(pos) instanceof FruitPlantBlockEntity leaves)
+        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();

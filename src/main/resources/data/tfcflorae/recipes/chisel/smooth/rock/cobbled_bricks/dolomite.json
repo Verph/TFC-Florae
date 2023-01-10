@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfc:rock/cobble/dolomite",
+  "result": "tfcflorae:rock/cobbled_bricks/dolomite",
+  "mode": "smooth"
+}

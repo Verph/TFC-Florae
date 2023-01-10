@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/peridotite",
+  "result": "tfcflorae:rock/cobbled_bricks/peridotite",
+  "mode": "smooth"
+}

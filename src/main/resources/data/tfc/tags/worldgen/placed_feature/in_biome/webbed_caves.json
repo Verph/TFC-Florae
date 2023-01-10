@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:caverns/webbed/floor",
+    "tfc:caverns/webbed/cave_vegetation",
+    "tfc:caverns/webbed/dungeon_extra",
+    "tfc:caverns/webbed/hanging_spider_webs_thick",
+    "tfc:caverns/webbed/hanging_spider_webs_slender",
+    "tfc:caverns/webbed/hanging_cobwebs",
+    "tfc:caverns/webbed/spider_egg_patch",
+    "tfc:caverns/webbed/spider_eggs_patch",
+    "tfc:caverns/webbed/spider_egg_large_patch",
+    "tfc:caverns/webbed/plant/switchgrass_patch",
+    "tfc:caverns/webbed/plant/sword_fern_patch",
+    "tfc:caverns/webbed/plant/tall_fescue_grass_patch",
+    "tfc:caverns/webbed/plant/liana_vine",
+    "tfc:caverns/webbed/plant/moss_patch",
+    "tfc:caverns/webbed/plant/reindeer_lichen_patch",
+    "tfc:caverns/webbed/plant/creeping_webs_patch"
+  ]
+}

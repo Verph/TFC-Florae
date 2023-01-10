@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:if_then",
   "config": {
-    "if": "tfcflorae:water_stoneware_clay_disc",
+    "if": "tfc:water_stoneware_clay_disc",
     "then": "tfc:clay_indicator"
   }
 }

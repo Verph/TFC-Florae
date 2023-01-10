@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/cobble/laterite",
+  "result": "tfcflorae:rock/cobbled_bricks/laterite",
+  "mode": "smooth"
+}

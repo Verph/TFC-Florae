@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/rock_pile/rock_6_n",
+  "textures": {
+    "particle": "tfc:block/rock/raw/rhyolite",
+    "texture": "tfc:block/rock/raw/rhyolite"
+  }
+}

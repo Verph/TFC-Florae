@@ -39,4 +39,14 @@ public interface TFCBiomesMixinInterface
     BiomeExtension getStaticMesaPlateau();
 
     BiomeExtension getStaticPeatBog();
+
+    BiomeExtension getStaticRiverbank();
+
+    BiomeExtension getStaticChasms();
+
+    BiomeExtension getStaticSteppes();
+
+    BiomeExtension getStaticShrublands();
+
+    BiomeExtension getStaticMoorlands();
 }

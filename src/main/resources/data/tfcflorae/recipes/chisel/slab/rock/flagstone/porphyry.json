@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/porphyry",
+  "result": "tfcflorae:rock/flagstone/slab/porphyry",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/porphyry"
+  }
+}

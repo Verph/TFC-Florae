@@ -11,7 +11,7 @@
     {
       "height": {
         "min_inclusive": {
-          "above_bottom": -20
+          "absolute": -20
         },
         "max_inclusive": {
           "absolute": 55
@@ -38,7 +38,13 @@
       "type": "minecraft:random_offset"
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "OCEAN_FLOOR_WG",
+      "max_inclusive": -20,
+	  "min_inclusive": 55
     }
   ]
 }

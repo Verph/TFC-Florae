@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/polished_cobbled_bricks/mylonite",
+    "top": "tfcflorae:block/rock/polished_cobbled_bricks/mylonite",
+    "side": "tfcflorae:block/rock/polished_cobbled_bricks/mylonite"
+  }
+}

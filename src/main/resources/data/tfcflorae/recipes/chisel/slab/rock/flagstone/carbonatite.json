@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/flagstone/carbonatite",
+  "result": "tfcflorae:rock/flagstone/slab/carbonatite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/flagstone/slab/carbonatite"
+  }
+}

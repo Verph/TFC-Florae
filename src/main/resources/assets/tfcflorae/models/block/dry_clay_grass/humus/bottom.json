@@ -2,6 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfcflorae:block/dry_grass_bottom",
   "textures": {
-    "texture": "tfc:block/clay/humus"
+    "texture": "tfcflorae:block/clay/humus"
   }
 }

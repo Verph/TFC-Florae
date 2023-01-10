@@ -3,28 +3,38 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 25
+      "chance": 4
     },
     {
+      "type": "minecraft:count",
       "count": {
-        "type": "minecraft:uniform",
+        "type": "minecraft:biased_to_bottom",
         "value": {
-          "min_inclusive": 1,
-          "max_inclusive": 20
+          "min_inclusive": 5,
+          "max_inclusive": 157
         }
-      },
-      "type": "minecraft:count"
+      }
     },
     {
       "type": "minecraft:height_range",
       "height": {
+        "type": "minecraft:uniform",
         "min_inclusive": {
-          "above_bottom": -20
+          "above_bottom": -230
         },
         "max_inclusive": {
-          "absolute": 120
-        },
-        "type": "minecraft:uniform"
+          "absolute": 40
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:biased_to_bottom",
+        "value": {
+          "min_inclusive": 8,
+          "max_inclusive": 32
+        }
       }
     },
     {
@@ -36,7 +46,7 @@
       "type": "minecraft:surface_relative_threshold_filter"
     },
     {
-      "type": "minecraft:biome"
+      "type": "tfc:biome"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "precipitation": "rain",
-  "category": "extreme_hills",
+  "category": "mountain",
   "temperature": 0.5,
   "temperature_modifier": "none",
   "downfall": 0.5,
@@ -9,15 +9,16 @@
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
-      "sound": "minecraft:ambient.cave",
+      "sound": "minecraft:ambient.basalt_deltas.mood",
       "tick_delay": 6000
     },
     "music": {
-      "max_delay": 24000,
+      "sound": "minecraft:music.nether.basalt_deltas",
       "min_delay": 12000,
-      "replace_current_music": false,
-      "sound": "minecraft:music.overworld.dripstone_caves"
+      "max_delay": 24000,
+      "replace_current_music": false
     },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
     "fog_color": 12638463,
     "sky_color": 7776511,
     "water_color": 4159204,
@@ -25,39 +26,22 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns_upper",
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
   "features": [
     [
       "tfc:in_biome/erosion"
-    ],
-    [
-	  "tfc:small_rock_columns_rare",
-	  "tfc:rock_pillar"
-	],
-    [
-      "tfc:caldera_lakes",
-      "tfc:volcano_caldera",
-	  "tfc:underwater_magma",
-	  "tfc:hot_spring_flat",
-	  "tfc:volcanic_pools",
-	  "tfc:smoke_block",
-	  "tfc:magma_block",
-	  "tfc:glowstone"
-    ],
-    [
-      "tfc:large_dripstone",
-      "tfc:dripstone_cluster",
-      "tfc:pointed_dripstone"
-    ],
-    [
-      "minecraft:freeze_top_layer"
     ],
     [
       "tfc:in_biome/underground_lakes"
@@ -87,20 +71,58 @@
       "tfc:in_biome/surface_decoration/calderas"
     ],
     [
+	  "tfc:underwater_magma",
+	  "tfc:large_dripstone",
+	  "tfc:dripstone_cluster",
+	  "tfc:pointed_dripstone",
+	  "tfc:small_rock_columns_rare",
+	  "tfc:smoke_block",
+	  "tfc:magma_block",
+	  "tfc:glow_lichen",
+	  "tfc:lush_caves_ceiling_vegetation",
+	  "tfc:lush_caves_calcite",
+	  "tfc:lush_caves_vegetation",
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest",
+	  "tfc:fossil",
+	  "tfc:caldera_lakes",
+	  "tfc:hot_spring_flat",
+	  "tfc:volcanic_pools",
+	  "tfc:volcano_caldera"
+    ],
+    [
+	  "tfc:plant/morning_glory_cave_patch",
+	  "tfc:plant/spore_blossom"
+    ],
+    [
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:glow_lichen",
-      "tfc:lush_caves_ceiling_vegetation",
-      "tfc:lush_caves_calcite",
-      "tfc:lush_caves_vegetation",
-	  "tfc:plant/morning_glory_cave_patch",
-	  "tfc:plant/spore_blossom"
+      "tfc:caverns/crystals/emerald/crystal_geode_start",
+      "tfc:caverns/crystals/emerald/crystal_growth",
+      "tfc:caverns/crystals/emerald/buds/crystal_up",
+      "tfc:caverns/crystals/emerald/buds/crystal_down",
+      "tfc:caverns/crystals/emerald/buds/crystal_north",
+      "tfc:caverns/crystals/emerald/buds/crystal_south",
+      "tfc:caverns/crystals/emerald/buds/crystal_east",
+      "tfc:caverns/crystals/emerald/buds/crystal_west",
+      "tfc:caverns/crystals/emerald/mega_geode",
+      "tfc:caverns/crystals/emerald/mega_geode_extra"
+    ],
+    [
+      "tfc:in_biome/thermal_caves"
     ]
-
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "water_ambient": [
       {
         "type": "tfc:isopod",
@@ -124,6 +146,12 @@
         "type": "tfc:crayfish",
         "weight": 4,
         "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
+        "minCount": 4,
         "maxCount": 4
       }
     ],
@@ -277,6 +305,12 @@
       {
         "type": "tfc:horse",
         "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
+        "weight": 1,
         "minCount": 1,
         "maxCount": 3
       }

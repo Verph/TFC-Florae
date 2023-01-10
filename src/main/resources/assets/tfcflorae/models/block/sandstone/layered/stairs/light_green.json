@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/sandstone/layered/light_green",
+    "top": "tfcflorae:block/sandstone/layered/light_green",
+    "side": "tfcflorae:block/sandstone/layered/light_green"
+  }
+}

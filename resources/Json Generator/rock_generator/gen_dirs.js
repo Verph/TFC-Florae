@@ -98,6 +98,25 @@ let ROCK_NAMESPACES = {
   'mylonite': 'tfcflorae'
 }
 
+let sandColors = {
+  'black': 'black',
+  'blue': 'blue',
+  'brown': 'brown',
+  'gray': 'gray',
+  'green': 'green',
+  'light_green': 'light_green',
+  'orange': 'orange',
+  'pink': 'pink',
+  'purple': 'purple',
+  'red': 'red',
+  'white': 'white',
+  'yellow': 'yellow'
+}
+
+let sandstoneTypes = {
+  'layered': 'layered'
+}
+
 let dirtTypes = {
   'humus': 'humus',
   'loam': 'loam',
@@ -151,6 +170,54 @@ fs.ensureDir(`./loot_tables/blocks/deposit/cassiterite`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_copper`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_gold`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_silver`)
+
+
+for(let sandstoneType in sandstoneTypes)
+{
+  fs.ensureDir(`./assets/blockstates/sandstone/${sandstoneType}`)
+  fs.ensureDir(`./assets/blockstates/sandstone/${sandstoneType}/slab`)
+  fs.ensureDir(`./assets/blockstates/sandstone/${sandstoneType}/stairs`)
+  fs.ensureDir(`./assets/blockstates/sandstone/${sandstoneType}/wall`)
+
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/slab/bottom`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/slab/top`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/stairs`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/stairs/inner`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/stairs/outer`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/wall/inventory`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/wall/post`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/wall/side`)
+  fs.ensureDir(`./assets/models/block/sandstone/${sandstoneType}/wall/side/tall`)
+
+	fs.ensureDir(`./assets/models/item/sandstone/${sandstoneType}`)
+	fs.ensureDir(`./assets/models/item/sandstone/${sandstoneType}/slab`)
+	fs.ensureDir(`./assets/models/item/sandstone/${sandstoneType}/stairs`)
+	fs.ensureDir(`./assets/models/item/sandstone/${sandstoneType}/wall`)
+
+  fs.ensureDir(`./data/loot_tables/blocks/sandstone/${sandstoneType}`)
+  fs.ensureDir(`./data/loot_tables/blocks/sandstone/${sandstoneType}/slab`)
+  fs.ensureDir(`./data/loot_tables/blocks/sandstone/${sandstoneType}/stairs`)
+  fs.ensureDir(`./data/loot_tables/blocks/sandstone/${sandstoneType}/wall`)
+
+  fs.ensureDir(`./data/recipes/crafting/sandstone/${sandstoneType}`)
+  fs.ensureDir(`./data/recipes/crafting/sandstone/${sandstoneType}/slab`)
+  fs.ensureDir(`./data/recipes/crafting/sandstone/${sandstoneType}/stairs`)
+  fs.ensureDir(`./data/recipes/crafting/sandstone/${sandstoneType}/wall`)
+
+  fs.ensureDir(`./data/recipes/chisel/slab/sandstone/${sandstoneType}`)
+  fs.ensureDir(`./data/recipes/chisel/stair/sandstone/${sandstoneType}`)
+
+  fs.ensureDir(`./data/recipes/stonecutting/sandstone/${sandstoneType}/slab`)
+  fs.ensureDir(`./data/recipes/stonecutting/sandstone/${sandstoneType}/stairs`)
+  fs.ensureDir(`./data/recipes/stonecutting/sandstone/${sandstoneType}/wall`)
+}
+
+for(let ROCK_TYPE in ROCK_TYPES)
+{
+  fs.ensureDir(`./assets/models/block/rock/rock_pile/${ROCK_TYPE}`)
+  fs.ensureDir(`./assets/models/block/rock/mossy_rock_pile/${ROCK_TYPE}`)
+}
 
 for(let blockType in rockBlockTypes)
 {

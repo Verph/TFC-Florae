@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/flagstone/schist"
+  },
+  "result": "tfcflorae:rock/flagstone/slab/schist",
+  "count": 2
+}

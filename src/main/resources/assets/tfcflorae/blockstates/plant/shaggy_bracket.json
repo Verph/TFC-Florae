@@ -101,7 +101,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0"
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_2"
         }
       ]
     },
@@ -148,7 +148,7 @@
       },
       "apply": [
         {
-          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_0"
+          "model": "tfcflorae:block/plant/shaggy_bracket/shaggy_bracket_3"
         }
       ]
     },

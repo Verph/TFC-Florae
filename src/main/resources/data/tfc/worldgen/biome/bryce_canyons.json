@@ -13,10 +13,10 @@
       "tick_delay": 6000
     },
     "music": {
-      "max_delay": 24000,
+      "sound": "minecraft:music.overworld.jagged_peaks",
       "min_delay": 12000,
-      "replace_current_music": false,
-      "sound": "minecraft:music.overworld.dripstone_caves"
+      "max_delay": 24000,
+      "replace_current_music": false
     },
     "fog_color": 12638463,
     "sky_color": 7254527,
@@ -25,11 +25,16 @@
   },
   "carvers": {
     "air": [
+      "tfc:caverns_upper",
+      "tfc:caverns",
+      "tfc:canyon_caverns",
+      "tfc:cave_caverns",
+      "tfc:crack_caverns",
       "tfc:cave",
       "tfc:canyon",
       "tfc:crack",
       "tfc:deep_ravine",
-      "minecraft:cave_extra_underground"
+      "tfc:cave_extra_underground"
     ],
     "liquid": []
   },
@@ -62,19 +67,41 @@
       "tfc:in_biome/large_features/bryce_canyons"
     ],
     [
+	  "tfcflorae:fruit_forest",
+	  "tfcflorae:charred_forest"
+    ],
+    [
       "tfc:in_biome/surface_decoration/bryce_canyons"
     ],
     [
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:large_dripstone",
-      "tfc:dripstone_cluster",
-      "tfc:pointed_dripstone"
+      "tfc:caverns/crystals/glowstone/crystal_geode_start",
+      "tfc:caverns/crystals/glowstone/crystal_growth",
+      "tfc:caverns/crystals/glowstone/buds/crystal_up",
+      "tfc:caverns/crystals/glowstone/buds/crystal_down",
+      "tfc:caverns/crystals/glowstone/buds/crystal_north",
+      "tfc:caverns/crystals/glowstone/buds/crystal_south",
+      "tfc:caverns/crystals/glowstone/buds/crystal_east",
+      "tfc:caverns/crystals/glowstone/buds/crystal_west",
+      "tfc:caverns/crystals/glowstone/mega_geode",
+      "tfc:caverns/crystals/glowstone/mega_geode_extra"
+    ],
+    [
+      "tfc:in_biome/webbed_caves"
     ]
   ],
   "starts": [],
   "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
     "monster": [
       {
         "type": "minecraft:spider",
@@ -105,6 +132,18 @@
         "weight": 100,
         "minCount": 4,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "weight": 80,
+        "minCount": 5,
+        "maxCount": 5
       }
     ],
     "creature": [
@@ -225,6 +264,12 @@
       {
         "type": "tfc:horse",
         "weight": 2,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "tfc:ocelot",
+        "weight": 1,
         "minCount": 1,
         "maxCount": 3
       }

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/polished_cobbled_bricks/catlinite",
+    "top": "tfcflorae:block/rock/polished_cobbled_bricks/catlinite",
+    "side": "tfcflorae:block/rock/polished_cobbled_bricks/catlinite"
+  }
+}

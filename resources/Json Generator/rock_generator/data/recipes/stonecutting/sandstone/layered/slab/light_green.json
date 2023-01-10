@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:sandstone/layered/light_green"
+  },
+  "result": "tfcflorae:sandstone/layered/slab/light_green",
+  "count": 2
+}

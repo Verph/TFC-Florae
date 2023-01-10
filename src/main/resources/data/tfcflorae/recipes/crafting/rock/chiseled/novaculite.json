@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/novaculite"
+        "item": "tfcflorae:rock/bricks/novaculite"
       },
       {
         "tag": "tfc:chisels"

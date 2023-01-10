@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:sandstone/layered/pink"
+  },
+  "result": "tfcflorae:sandstone/layered/wall/pink",
+  "count": 1
+}

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "tfcflorae:rock/smooth/siltstone"
+        "item": "tfcflorae:rock/bricks/siltstone"
       },
       {
         "tag": "tfc:chisels"

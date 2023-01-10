@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:if_then",
-  "config": {
-    "if": "tfcflorae:water_kaolinite_clay_disc",
-    "then": "tfc:clay_indicator"
-  }
-}

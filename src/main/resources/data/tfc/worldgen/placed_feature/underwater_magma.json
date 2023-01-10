@@ -2,18 +2,25 @@
   "feature":"tfc:underwater_magma",
   "placement":[
     {
-      "type":"minecraft:count",
-      "count":3
+      "type":"count",
+      "count":{
+        "type":"minecraft:uniform",
+        "value":{
+          "min_inclusive":5,
+          "max_inclusive":30
+        }
+      }
     },
     {
       "type":"minecraft:in_square"
     },
     {
-      "type":"heightmap",
-      "heightmap":"OCEAN_FLOOR_WG"
+      "type":"minecraft:surface_relative_threshold_filter",
+      "heightmap":"OCEAN_FLOOR_WG",
+      "max_inclusive":-5
     },
     {
-      "type":"minecraft:biome"
+      "type":"tfc:biome"
     }
   ]
 }

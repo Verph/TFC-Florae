@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire"
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/crystal/cluster/sapphire",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

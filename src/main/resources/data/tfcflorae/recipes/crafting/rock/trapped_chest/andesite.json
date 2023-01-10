@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:chisels"
+      },
+      {
+        "item": "tfcflorae:rock/chest/andesite"
+      },
+      {
+        "item": "minecraft:tripwire_hook"
+      }
+    ],
+    "result": {
+      "item": "tfcflorae:rock/trapped_chest/andesite",
+      "count": 1
+    }
+  }
+}

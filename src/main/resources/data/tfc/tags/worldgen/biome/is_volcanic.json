@@ -4,6 +4,7 @@
   "values": [
     "tfc:alpine_mountains",
     "tfc:alpine_highlands",
-    "tfc:calderas"
+    "tfc:calderas",
+    "tfc:thermal_canyons"
   ]
 }

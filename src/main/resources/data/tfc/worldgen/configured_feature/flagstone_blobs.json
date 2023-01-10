@@ -2,12 +2,12 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:cluster_vein",
   "config": {
-    "rarity": 70,
+    "rarity": 50,
     "min_y": {
-      "absolute": -64
+      "absolute": -255
     },
     "max_y": {
-      "absolute": 320
+      "absolute": 511
     },
     "size": 140,
     "density": 0.7,
@@ -404,16 +404,16 @@
       },
       {
         "replace": [
-          "tfcflorae:rock/raw/blaimorite"
+          "tfcflorae:rock/raw/boninite"
         ],
         "with": [
           {
             "weight": 30,
-            "block": "tfcflorae:rock/cobbled_bricks/blaimorite"
+            "block": "tfcflorae:rock/cobbled_bricks/boninite"
           },
           {
             "weight": 70,
-            "block": "tfcflorae:rock/flagstone/blaimorite"
+            "block": "tfcflorae:rock/flagstone/boninite"
           }
         ]
       },

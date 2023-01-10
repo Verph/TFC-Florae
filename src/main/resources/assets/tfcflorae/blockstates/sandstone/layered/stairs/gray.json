@@ -1,0 +1,210 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "facing=east,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray"
+    },
+    "facing=west,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray"
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray"
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray"
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=straight": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/gray",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=outer_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/outer/gray",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_right": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=east,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=west,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=north,half=top,shape=inner_left": {
+      "model": "tfcflorae:block/sandstone/layered/stairs/inner/gray",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

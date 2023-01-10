@@ -2,6 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:loose_mud/silt",
+    "tfcflorae:loose_mud/loam",
+    "tfcflorae:loose_mud/sandy_loam",
+    "tfcflorae:loose_mud/silty_loam",
+    "tfcflorae:loose_mud/humus",
     "tfcflorae:dirt/bog_iron",
     "tfcflorae:sparse_grass/bog_iron",
     "tfcflorae:dense_grass/bog_iron",
