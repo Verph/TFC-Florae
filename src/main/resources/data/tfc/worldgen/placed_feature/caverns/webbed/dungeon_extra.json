@@ -7,23 +7,39 @@
 		  "fuzzy": true
 		},
 		{
-			"type": "count",
-			"count": 26
-		},
-		{
-			"type": "minecraft:in_square"
+		  "type": "minecraft:count",
+		  "count": {
+			"type": "minecraft:biased_to_bottom",
+			"value": {
+			  "min_inclusive": 1,
+			  "max_inclusive": 15
+			}
+		  }
 		},
 		{
 		  "type": "minecraft:height_range",
 		  "height": {
 			"type": "minecraft:uniform",
 			"min_inclusive": {
-			  "absolute": -120
+			  "absolute": -60
 			},
 			"max_inclusive": {
 			  "absolute": 40
 			}
 		  }
+		},
+		{
+		  "type": "minecraft:count",
+		  "count": {
+			"type": "minecraft:biased_to_bottom",
+			"value": {
+			  "min_inclusive": 1,
+			  "max_inclusive": 3
+			}
+		  }
+		},
+		{
+			"type": "minecraft:in_square"
 		},
 		{
 			"type": "tfc:biome"

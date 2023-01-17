@@ -4,7 +4,7 @@
   "config": {
     "tries": 10,
     "xz_spread": 10,
-    "y_spread": 1,
+    "y_spread": 2,
     "feature": "tfc:caverns/webbed/plant/switchgrass"
   }
 }

@@ -24,7 +24,6 @@ public class MergeChasmsLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        //if (TFCLayers.isMountains(value))
         if (!(TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value)))
         {
             final float scale = 1f / (1 << 7);

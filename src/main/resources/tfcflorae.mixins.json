@@ -8,6 +8,7 @@
 		"world.features.StructurePieceMixin",
 		"world.features.NetherFortressFeatureMixin",
 		"world.river.WatershedMixin",
+		"world.biome.BiomeExtensionMixin",
 		"world.biome.TFCBiomesMixin",
 		"world.layer.TFCLayersMixin",
 		"accessor.BlockEntityTypeAccessor",

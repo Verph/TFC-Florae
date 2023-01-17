@@ -1,0 +1,51 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:caverns/jungle/plant/liana",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": 11,
+      "max_temperature": 40,
+      "min_rainfall": 360,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 5,
+          "max_inclusive": 40
+        }
+      }
+    },
+    {
+      "type": "tfc:carving_mask",
+      "step": "air",
+      "min_y": {
+        "absolute": -100
+      },
+      "max_y": {
+        "absolute": 40
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 14
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

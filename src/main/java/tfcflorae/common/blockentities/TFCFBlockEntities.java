@@ -111,12 +111,12 @@ public class TFCFBlockEntities
         return RegistrationHelpers.register(BLOCK_ENTITIES, name, factory, blocks);
     }
 
-    private static void modifyBlockEntityType(BlockEntityType<?> type, Stream<Block> extraBlocks)
+    /*private static void modifyBlockEntityType(BlockEntityType<?> type, Stream<Block> extraBlocks)
     {
         TFCFlorae.LOGGER.debug("Modifying block entity type: " + ForgeRegistries.BLOCK_ENTITIES.getKey(type));
         Set<Block> blocks = ((BlockEntityTypeAccessor) (Object) type).accessor$getValidBlocks();
         blocks = new HashSet<>(blocks);
         blocks.addAll(extraBlocks.toList());
         ((BlockEntityTypeAccessor) (Object) type).accessor$setValidBlocks(blocks);
-    }
+    }*/
 }

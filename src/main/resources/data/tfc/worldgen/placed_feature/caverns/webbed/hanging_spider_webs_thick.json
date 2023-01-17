@@ -1,6 +1,6 @@
 {
   "feature":{
-    "type":"minecraft:block_column",
+    "type":"tfcflorae:block_column",
     "config":{
       "direction":"down",
       "allowed_placement":{
@@ -74,10 +74,7 @@
               {
                 "weight":1,
                 "data":{
-                  "Name":"tfcflorae:spider_cave/webbed_chest",
-                  "BlockEntityTag": {
-                    "LootTable":"minecraft:chests/simple_dungeon"
-                  }
+                  "Name":"tfcflorae:spider_cave/webbed_chest"
                 }
               }
             ]
@@ -110,8 +107,8 @@
       "count":{
         "type":"minecraft:uniform",
         "value":{
-          "min_inclusive":30,
-          "max_inclusive":130
+          "min_inclusive":5,
+          "max_inclusive":90
         }
       }
     },
@@ -120,7 +117,7 @@
       "height":{
         "type":"minecraft:uniform",
         "min_inclusive":{
-          "absolute": -120
+          "absolute": -60
         },
         "max_inclusive":{
           "absolute":40
@@ -132,8 +129,8 @@
       "count":{
         "type":"minecraft:uniform",
         "value":{
-          "min_inclusive":7,
-          "max_inclusive":20
+          "min_inclusive":4,
+          "max_inclusive":16
         }
       }
     },
@@ -155,9 +152,10 @@
       }
     },
     {
-      "type":"block_predicate_filter",
-      "predicate":{
-        "type":"tfc:air_or_empty_fluid"
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "tfcflorae:replaceable_air_or_plant"
       }
     },
     {

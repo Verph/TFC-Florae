@@ -3,7 +3,6 @@ package tfcflorae.world.layer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
 import net.minecraft.util.Mth;
@@ -26,7 +25,7 @@ import org.jetbrains.annotations.VisibleForTesting;
 
 public abstract class WatershedBank
 {
-    public static final float RIVER_WIDTH = 0.013f;
+    public static final float RIVER_WIDTH = 0.06f;
 
     private static final int[] DIRECTIONS = new int[] {-1, -1, -1, 0, -1, 1, 0, -1, 0, 1, 1, -1, 1, 0, 1, 1};
 

@@ -2,7 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 70,
+    "tries": 40,
     "xz_spread": 8,
     "y_spread": 8,
     "feature": "tfc:caverns/webbed/plant/reindeer_lichen"

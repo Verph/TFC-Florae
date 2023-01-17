@@ -17,6 +17,7 @@ public class TFCFMergeRiverLayer implements TransformLayer
     public static TFCLayers staticBiomes = new TFCLayers();
 
     static final int RIVERBANK = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRiverbank();
+    static final int RIVER_EDGE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRiverEdge();
 
     public TFCFMergeRiverLayer(Watershed.Context watersheds)
     {
@@ -27,14 +28,27 @@ public class TFCFMergeRiverLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        if (TFCLayers.hasRiver(value))
+        /*if (value == RIVERBANK)
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;
             for (MidpointFractal fractal : watersheds.getFractalsByPartition(x, z))
             {
                 // maybeIntersect will skip the more expensive calculation if it fails
-                if (fractal.maybeIntersect(x0, z0, Watershed.RIVER_WIDTH * 2f) && fractal.intersect(x0, z0, Watershed.RIVER_WIDTH * 2f))
+                if (fractal.maybeIntersect(x0, z0, Watershed.RIVER_WIDTH) && fractal.intersect(x0, z0, Watershed.RIVER_WIDTH))
+                {
+                    return RIVER;
+                }
+            }
+        }*/
+        if (TFCLayers.hasRiver(value) || value == RIVER_EDGE)
+        {
+            final float scale = 1f / (1 << 7);
+            final float x0 = x * scale, z0 = z * scale;
+            for (MidpointFractal fractal : watersheds.getFractalsByPartition(x, z))
+            {
+                // maybeIntersect will skip the more expensive calculation if it fails
+                if (fractal.maybeIntersect(x0, z0, Watershed.RIVER_WIDTH) && fractal.intersect(x0, z0, Watershed.RIVER_WIDTH))
                 {
                     return TFCLayers.riverFor(value);
                 }

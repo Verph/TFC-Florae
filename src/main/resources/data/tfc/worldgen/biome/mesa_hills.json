@@ -19,13 +19,12 @@
       "replace_current_music": false
     },
     "fog_color": 12638463,
-    "sky_color": 7254527,
+    "sky_color": 8709887,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
   "carvers": {
     "air": [
-      "tfc:caverns_upper",
       "tfc:caverns",
       "tfc:canyon_caverns",
       "tfc:cave_caverns",

@@ -97,7 +97,7 @@
       },
       {
         "type": "tfc:turtle",
-        "weight": 1,
+        "weight": 5,
         "minCount": 2,
         "maxCount": 5
       }

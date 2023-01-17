@@ -432,7 +432,7 @@ public class ClientEventHandler
         }
     }
 
-    static final Boolean hasLeavesOnly()
+    /*static final Boolean hasLeavesOnly()
     {
         for (TFCFWood wood : TFCFWood.class.getEnumConstants())
         {
@@ -442,5 +442,5 @@ public class ClientEventHandler
             }
         }
         return false;
-    }
+    }*/
 }

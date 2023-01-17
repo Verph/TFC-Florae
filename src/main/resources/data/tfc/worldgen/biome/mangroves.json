@@ -103,9 +103,9 @@
       },
       {
         "type": "tfc:turtle",
-        "weight": 5,
-        "minCount": 3,
-        "maxCount": 5
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 6
       }
     ],
     "water_ambient": [

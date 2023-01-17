@@ -23,6 +23,7 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int SWAMPS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSwamps();
     static final int BRYCE_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBryceCanyons();
     static final int MESA_HILLS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaHills();
+    static final int BADLANDS_PLATEAU = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBadlandsPlateau();
     static final int ALPINE_MOUNTAINS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineMountains();
     static final int ALPINE_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineHighlands();
     static final int ROLLING_HIGHLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRollingHighlands();
@@ -66,6 +67,17 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             if (matcher.test(i -> i == BRYCE_CANYONS))
             {
                 return MESA_HILLS;
+            }
+            else if (matcher.test(i -> i != MESA_HILLS))
+            {
+                return STEPPES;
+            }
+        }
+        else if (center == BADLANDS_PLATEAU)
+        {
+            if (matcher.test(i -> i == MESA_HILLS || i == BRYCE_CANYONS))
+            {
+                return BADLANDS;
             }
         }
         else if (center == CALDERAS)

@@ -25,7 +25,7 @@
       "type": "tfc:carving_mask",
       "step": "air",
       "min_y": {
-        "absolute": -120
+        "absolute": -60
       },
       "max_y": {
         "absolute": 40

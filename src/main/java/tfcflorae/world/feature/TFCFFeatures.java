@@ -72,6 +72,7 @@ public class TFCFFeatures
     public static final RegistryObject<PointedDripstoneFeature> POINTED_DRIPSTONE = register("pointed_dripstone", PointedDripstoneFeature::new, PointedDripstoneConfiguration.CODEC);
     public static final RegistryObject<LakeFeature> LAKE = register("lake", LakeFeature::new, LakeConfig.CODEC);
     public static final RegistryObject<SaguaroCactusFeature> SAGUARO_CACTUS_FEATURE = register ("saguaro_cactus",  SaguaroCactusFeature::new, SaguaroCactusFeature.CODEC);
+    public static final RegistryObject<ColumnFeature> BLOCK_COLUMN = register ("block_column",  ColumnFeature::new, BlockColumnConfiguration.CODEC);
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(String name, Function<Codec<C>, F> factory, Codec<C> codec)
     {

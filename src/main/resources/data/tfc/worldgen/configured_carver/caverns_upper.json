@@ -22,7 +22,7 @@
     "lava_level": {
       "above_bottom": 8
     },
-    "aquifers_enabled": true,
+    "aquifers_enabled": false,
     "horizontal_radius_multiplier": {
       "type": "uniform",
       "value": {

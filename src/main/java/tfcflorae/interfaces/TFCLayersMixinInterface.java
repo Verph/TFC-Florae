@@ -18,6 +18,8 @@ public interface TFCLayersMixinInterface
 
     int getStaticMesaHills();
 
+    int getStaticBadlandsPlateau();
+
     int getStaticCanyonRivers();
 
     int getStaticAlpineMountainRivers();
@@ -39,6 +41,8 @@ public interface TFCLayersMixinInterface
     int getStaticPeatBog();
 
     int getStaticRiverbank();
+
+    int getStaticRiverEdge();
 
     int getStaticChasms();
 

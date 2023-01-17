@@ -20,6 +20,8 @@ public interface TFCBiomesMixinInterface
 
     BiomeExtension getStaticMesaHills();
 
+    BiomeExtension getStaticBadlandsPlateau();
+
     BiomeExtension getStaticCanyonRivers();
 
     BiomeExtension getStaticAlpineMountainRivers();
@@ -41,6 +43,8 @@ public interface TFCBiomesMixinInterface
     BiomeExtension getStaticPeatBog();
 
     BiomeExtension getStaticRiverbank();
+
+    BiomeExtension getStaticRiverEdge();
 
     BiomeExtension getStaticChasms();
 

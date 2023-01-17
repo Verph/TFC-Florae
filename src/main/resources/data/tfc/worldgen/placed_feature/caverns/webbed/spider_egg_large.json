@@ -3,9 +3,10 @@
   "feature": "tfc:caverns/webbed/spider_egg_large",
   "placement": [
     {
-      "type": "block_predicate_filter",
+      "type": "minecraft:block_predicate_filter",
       "predicate": {
-        "type": "tfc:air_or_empty_fluid"
+        "type": "minecraft:matching_block_tag",
+        "tag": "tfcflorae:replaceable_air_or_plant"
       }
     },
     {

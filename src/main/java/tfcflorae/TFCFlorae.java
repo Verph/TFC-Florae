@@ -25,7 +25,7 @@ import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
 
 @Mod(TFCFlorae.MOD_ID)
-public class TFCFlorae
+public final class TFCFlorae
 {
     public static final String MOD_ID = "tfcflorae";
     public static final String MOD_NAME = "TFCFlorae";
@@ -35,23 +35,24 @@ public class TFCFlorae
     {
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Config.init();
-        TFCFItems.ITEMS.register(bus);
         TFCFBlocks.BLOCKS.register(bus);
+        TFCFItems.ITEMS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
-        TFCFCarvers.CARVERS.register(bus);
+        TFCFRecipeTypes.RECIPE_TYPES.register(bus);
+        TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
+        TFCFSounds.SOUNDS.register(bus);
+        TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
+
         TFCFFeatures.FEATURES.register(bus);
         TFCFFeatures.TRUNK_DECOR.register(bus);
         TFCFFeatures.LEAF_DECOR.register(bus);
-        TFCFRecipeTypes.RECIPE_TYPES.register(bus);
-        TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
-        TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
-        TFCFSounds.SOUNDS.register(bus);
+        TFCFCarvers.CARVERS.register(bus);
 
         bus.addListener(this::setup);
         bus.addListener(TFCFEntities::onEntityAttributeCreation);
 
+        Config.init();
         TFCFForgeEventHandler.init();
 
         if (FMLEnvironment.dist == Dist.CLIENT)
