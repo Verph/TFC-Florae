@@ -25,7 +25,7 @@ import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
 
 @Mod(TFCFlorae.MOD_ID)
-public final class TFCFlorae
+public class TFCFlorae
 {
     public static final String MOD_ID = "tfcflorae";
     public static final String MOD_NAME = "TFCFlorae";
@@ -35,8 +35,8 @@ public final class TFCFlorae
     {
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        TFCFBlocks.BLOCKS.register(bus);
         TFCFItems.ITEMS.register(bus);
+        TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);

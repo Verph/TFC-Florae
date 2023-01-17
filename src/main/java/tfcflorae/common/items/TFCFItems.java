@@ -40,7 +40,7 @@ import tfcflorae.common.entities.TFCFEntities;
 import static net.dries007.tfc.common.TFCItemGroup.*;
 
 @SuppressWarnings("unused")
-public class TFCFItems
+public final class TFCFItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TFCFlorae.MOD_ID);
 
