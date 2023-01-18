@@ -4,7 +4,7 @@
   "config": {
     "body": "tfc:plant/liana_plant",
     "head": "tfc:plant/liana",
-    "tries": 5,
+    "tries": 1,
     "radius": 8,
     "min_height": 8,
     "max_height": 10

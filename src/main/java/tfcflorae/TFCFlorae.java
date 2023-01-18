@@ -1,13 +1,26 @@
 package tfcflorae;
 
+import net.dries007.tfc.util.Helpers;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 
 import com.mojang.logging.LogUtils;
+
+import java.util.function.BiConsumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
 import org.slf4j.Logger;
 
 import tfcflorae.client.*;
@@ -20,6 +33,7 @@ import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
 import tfcflorae.util.TFCFDispenserBehaviors;
+import tfcflorae.util.TFCFHelpers;
 import tfcflorae.util.TFCFInteractionManager;
 import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
@@ -29,10 +43,15 @@ public class TFCFlorae
 {
     public static final String MOD_ID = "tfcflorae";
     public static final String MOD_NAME = "TFCFlorae";
+    public static final String MOD_VERSION = "${version}";
     public static final Logger LOGGER = LogUtils.getLogger();
+    //public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(TFCFHelpers.identifier(MOD_ID), () -> MOD_VERSION, MOD_VERSION::equals, MOD_VERSION::equals);
 
     public TFCFlorae()
     {
+        LOGGER.info("Initializing TFC-Florae");
+        LOGGER.info("Options: Assertions Enabled = {}, Boostrap = {}, Test = {}, Debug Logging = {}", Helpers.ASSERTIONS_ENABLED, Helpers.BOOTSTRAP_ENVIRONMENT, Helpers.TEST_ENVIRONMENT, LOGGER.isDebugEnabled());
+
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         TFCFItems.ITEMS.register(bus);
@@ -73,4 +92,20 @@ public class TFCFlorae
             TFCFBlocks.registerFlowerPotFlowers();
         });
     }
+
+    /*private static <T> void register(int id, Class<T> cls, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, NetworkEvent.Context> handler)
+    {
+        CHANNEL.registerMessage(id, cls, encoder, decoder, (packet, context) -> {
+            context.get().setPacketHandled(true);
+            handler.accept(packet, context.get());
+        });
+    }
+
+    private static <T> void register(int id, Class<T> cls, Supplier<T> factory, BiConsumer<T, NetworkEvent.Context> handler)
+    {
+        CHANNEL.registerMessage(id, cls, (packet, buffer) -> {}, buffer -> factory.get(), (packet, context) -> {
+            context.get().setPacketHandled(true);
+            handler.accept(packet, context.get());
+        });
+    }*/
 }

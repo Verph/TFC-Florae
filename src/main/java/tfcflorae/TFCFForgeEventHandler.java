@@ -42,10 +42,6 @@ import org.slf4j.Logger;
 
 public class TFCFForgeEventHandler
 {
-    private static final Logger LOGGER = LogUtils.getLogger();
-    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    private static final BlockHitResult FAKE_MISS = BlockHitResult.miss(Vec3.ZERO, Direction.UP, BlockPos.ZERO);
-
     public static void init()
     {
         final IEventBus bus = MinecraftForge.EVENT_BUS;

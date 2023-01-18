@@ -19,11 +19,14 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -78,15 +81,22 @@ public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOve
     }
 
     @Override
+    public ExtendedProperties getExtendedProperties()
+    {
+        return properties;
+    }
+
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
         return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
+    @Nullable
     @Override
-    public ExtendedProperties getExtendedProperties()
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> givenType)
     {
-        return properties;
+        return EntityBlockExtension.super.getTicker(level, state, givenType);
     }
 
     // Start of mixing Seasonal FruitTreeLeavesBlock
@@ -110,23 +120,49 @@ public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOve
 
     @Override
     @SuppressWarnings("deprecation")
-    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        if (state.getValue(NATURAL) && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
+        super.tick(state, level, pos, random);
+        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+        if (state.getValue(NATURAL) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
-            onUpdate(level, pos, state);
+            final int delay = ICalendar.TICKS_IN_DAY / (random.nextInt(4) + 1);
+            if (leaves.getTicksSinceBushUpdate() > delay)
+            {
+                onUpdate(level, pos, state);
+            }
         }
     }
 
     @Override
+    @SuppressWarnings("deprecation")
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    {
+        super.randomTick(state, level, pos, random);
+        tick(state, level, pos, random);
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
-        if (state.getValue(NATURAL) && level instanceof ServerLevel server && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
-        {
-            onUpdate(server, currentPos, state);
-        }
+        super.updateShape(state, facing, facingState, level, facingPos, facingPos);
         return state;
     }
+
+    /*@Override
+    @SuppressWarnings("deprecation")
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
+    {
+        if (level instanceof ServerLevel server && state.getValue(NATURAL))
+        {
+            onUpdate(server, currentPos, state);
+            server.scheduleTick(currentPos, this, 1);
+        }
+        return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+    }*/
 
     // this is superficially the same as the StationaryBerryBushBlock onUpdate, we can condense them
     @Override
@@ -270,5 +306,11 @@ public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOve
     protected Lifecycle getLifecycleForMonth(Month month)
     {
         return lifecycle[month.ordinal()];
+    }
+
+    @Override
+    public boolean isRandomlyTicking(BlockState state)
+    {
+        return true; // Not for the purposes of leaf decay, but for the purposes of seasonal updates
     }
 }

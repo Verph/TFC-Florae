@@ -47,13 +47,13 @@ public class TFCFBlockEntities
 {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFCFlorae.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
+    public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tfcf_tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SAPLING)),
             TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> BERRY_BUSH = register("berry_bush", FruitTreeBlockEntity::new, Stream.of(
+    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS_SEASONAL_LEAVES.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_LOGS.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_WOOD.values().stream(),
@@ -68,7 +68,7 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<TFCFChestBlockEntity>> CHEST = register("chest", TFCFChestBlockEntity::new, Stream.of(
+    public static final RegistryObject<BlockEntityType<TFCFChestBlockEntity>> CHEST = register("tfcf_chest", TFCFChestBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.CHEST)),
             TFCFBlocks.ROCK_CHEST,
             TFCFBlocks.ROCK_CHESTS_TFC.values().stream(),
@@ -76,7 +76,7 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register("trapped_chest", TFCFTrappedChestBlockEntity::new, Stream.of(
+    public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register("tfcf_trapped_chest", TFCFTrappedChestBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.TRAPPED_CHEST)),
             TFCFBlocks.ROCK_TRAPPED_CHEST,
             TFCFBlocks.ROCK_TRAPPED_CHESTS_TFC.values().stream(),
@@ -89,13 +89,13 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("farmland", FarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
-    public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("barrel", BarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
-    public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("loom", LoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));
-    public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("sluice", SluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SLUICE)));
-    public static final RegistryObject<BlockEntityType<TFCFSignBlockEntity>> SIGN = register("sign", TFCFSignBlockEntity::new, TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SIGN, Wood.BlockType.WALL_SIGN).map(map::get)));
-    public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("lectern", TFCFLecternBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LECTERN)));
-    public static final RegistryObject<BlockEntityType<AnvilBlockEntity>> ANVIL = register("anvil", AnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream());
+    public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("tfcf_farmland", FarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
+    public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("tfcf_barrel", BarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
+    public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("tfcf_loom", LoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));
+    public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("tfcf_sluice", SluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SLUICE)));
+    public static final RegistryObject<BlockEntityType<TFCFSignBlockEntity>> SIGN = register("tfcf_sign", TFCFSignBlockEntity::new, TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SIGN, Wood.BlockType.WALL_SIGN).map(map::get)));
+    public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("tfcf_lectern", TFCFLecternBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LECTERN)));
+    public static final RegistryObject<BlockEntityType<AnvilBlockEntity>> ANVIL = register("tfcf_anvil", AnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream());
 
     public static final RegistryObject<BlockEntityType<LargeEarthenwareVesselBlockEntity>> LARGE_EARTHENWARE_VESSEL = register("large_earthenware_vessel", LargeEarthenwareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_EARTHENWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
     public static final RegistryObject<BlockEntityType<LargeKaoliniteVesselBlockEntity>> LARGE_KAOLINITE_VESSEL = register("large_kaolinite_vessel", LargeKaoliniteVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_KAOLINITE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));

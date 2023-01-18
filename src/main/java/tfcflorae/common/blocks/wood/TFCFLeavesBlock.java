@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import org.jetbrains.annotations.Nullable;
+
 import com.google.common.base.Preconditions;
 
 import net.minecraft.core.BlockPos;
@@ -24,6 +26,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -104,9 +108,22 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     }
 
     @Override
+    public ExtendedProperties getExtendedProperties()
+    {
+        return properties;
+    }
+
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
         return EntityBlockExtension.super.newBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> givenType)
+    {
+        return EntityBlockExtension.super.getTicker(level, state, givenType);
     }
 
     /**
@@ -114,7 +131,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
      */
     protected abstract IntegerProperty getDistanceProperty();
 
-    private int getDistance(BlockState neighbor)
+    public int getDistance(BlockState neighbor)
     {
         if (Helpers.isBlock(neighbor.getBlock(), BlockTags.LOGS))
         {
@@ -148,38 +165,33 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
 
     @Override
     @SuppressWarnings("deprecation")
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    {
+        super.tick(state, level, pos, random);
+        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+        if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        {
+            final int delay = ICalendar.TICKS_IN_DAY / (random.nextInt(4) + 1);
+            if (leaves.getTicksSinceBushUpdate() > delay)
+            {
+                onUpdate(level, pos, state);
+            }
+        }
+    }
+
+    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        //IBushBlock.randomTick(this, state, level, pos, random);
-        if (!state.getValue(PERSISTENT) && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
-        {
-            /*final int rarity = Math.max(1, (int) (ICalendar.TICKS_IN_DAY * (((level.getGameRules().getInt(GameRules.RULE_RANDOMTICKING)) * (1 / 4096f)) * ((Calendars.SERVER.getCalendarDaysInMonth() / 15) + 1))));
-            if (random.nextInt(rarity) == 0)
-            { 
-                this.onUpdate(level, pos, state);
-            }*/
-            onUpdate(level, pos, state);
-        }
-        if (state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT))
-        {
-            level.removeBlock(pos, false);
-            doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
-        }
+        super.randomTick(state, level, pos, random);
+        tick(state, level, pos, random);
     }
 
     @Override
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
-        FluidHelpers.tickFluid(level, currentPos, state);
-        final int distance = getDistance(facingState) + 1;
-        if (distance != 1 || state.getValue(getDistanceProperty()) != distance)
-        {
-            level.scheduleTick(currentPos, this, 1);
-        }
-        if (!state.getValue(PERSISTENT) && level instanceof ServerLevel server && getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
-        {
-            onUpdate(server, currentPos, state);
-        }
+        super.updateShape(state, facing, facingState, level, facingPos, facingPos);
         return state;
     }
 
@@ -326,5 +338,11 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     protected Lifecycle getLifecycleForMonth(Month month)
     {
         return lifecycle[month.ordinal()];
+    }
+
+    @Override
+    public boolean isRandomlyTicking(BlockState state)
+    {
+        return true; // Not for the purposes of leaf decay, but for the purposes of seasonal updates
     }
 }
