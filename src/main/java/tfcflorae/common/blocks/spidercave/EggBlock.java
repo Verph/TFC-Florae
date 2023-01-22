@@ -2,6 +2,8 @@ package tfcflorae.common.blocks.spidercave;
 
 import java.util.Random;
 
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -14,6 +16,7 @@ import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Explosion;
@@ -22,8 +25,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
@@ -40,6 +47,7 @@ import tfcflorae.common.blocks.TFCFBlocks;
 
 public class EggBlock extends Block implements IForgeBlockExtension, IFluidLoggable
 {
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_3;
     private final ExtendedProperties properties;
@@ -49,7 +57,7 @@ public class EggBlock extends Block implements IForgeBlockExtension, IFluidLogga
         super(properties.properties());
         this.properties = properties;
 
-        this.registerDefaultState(this.defaultBlockState().setValue(AGE, 0));
+        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(AGE, 0));
     }
 
     @Override
@@ -61,7 +69,7 @@ public class EggBlock extends Block implements IForgeBlockExtension, IFluidLogga
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(AGE, getFluidProperty());
+        builder.add(FACING, AGE, getFluidProperty());
     }
 
     @Override
@@ -253,5 +261,27 @@ public class EggBlock extends Block implements IForgeBlockExtension, IFluidLogga
     public FluidState getFluidState(BlockState state)
     {
         return IFluidLoggable.super.getFluidState(state);
+    }
+
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context)
+    {
+        return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Nullable
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation)
+    {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Nullable
+    @Override
+    @SuppressWarnings("deprecation")
+    public BlockState mirror(BlockState state, Mirror mirror)
+    {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 }

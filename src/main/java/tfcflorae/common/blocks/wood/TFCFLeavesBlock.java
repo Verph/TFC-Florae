@@ -15,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -163,7 +164,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         return InteractionResult.PASS;
     }
 
-    @Override
+    /*@Override
     @SuppressWarnings("deprecation")
     public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
@@ -173,19 +174,29 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
 
         if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
-            final int delay = ICalendar.TICKS_IN_DAY / (random.nextInt(4) + 1);
+            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
             if (leaves.getTicksSinceBushUpdate() > delay)
             {
                 onUpdate(level, pos, state);
             }
         }
-    }
+    }*/
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         super.randomTick(state, level, pos, random);
-        tick(state, level, pos, random);
+        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+        if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        {
+            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
+            if (leaves.getTicksSinceBushUpdate() > delay)
+            {
+                onUpdate(level, pos, state);
+            }
+        }
     }
 
     @Override

@@ -1,7 +1,18 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "open=false": [
+    "facing=east,open=false": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 90
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 90
+	  }
+    ],
+    "facing=north,open=false": [
 	  {
         "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
 		"weight": 3
@@ -11,7 +22,43 @@
 		"weight": 1
 	  }
     ],
-    "open=true": [
+    "facing=south,open=false": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 180
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 180
+	  }
+    ],
+    "facing=west,open=false": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 270
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 270
+	  }
+    ],
+    "facing=east,open=true": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 90
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 90
+	  }
+    ],
+    "facing=north,open=true": [
 	  {
         "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
 		"weight": 3
@@ -19,6 +66,30 @@
 	  {
         "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
 		"weight": 1
+	  }
+    ],
+    "facing=south,open=true": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 180
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 180
+	  }
+    ],
+    "facing=west,open=true": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure",
+		"weight": 3,
+		"y": 270
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_treasure_1",
+		"weight": 1,
+		"y": 270
 	  }
     ]
   }

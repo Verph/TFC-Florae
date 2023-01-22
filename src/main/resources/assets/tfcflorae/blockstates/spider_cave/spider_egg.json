@@ -1,8 +1,19 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "tfcflorae:block/spider_cave/spider_egg_dungeons",
+      "y": 90
+    },
+    "facing=north": {
       "model": "tfcflorae:block/spider_cave/spider_egg_dungeons"
+    },
+    "facing=south": {
+      "model": "tfcflorae:block/spider_cave/spider_egg_dungeons",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tfcflorae:block/spider_cave/spider_egg_dungeons",
+      "y": 270
     }
   }
 }

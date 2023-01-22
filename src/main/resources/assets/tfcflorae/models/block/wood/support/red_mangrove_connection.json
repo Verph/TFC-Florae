@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/wood/support/connection",
+  "parent": "tfcflorae:block/wood/connection",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/red_mangrove",
     "particle": "tfcflorae:block/wood/sheet/red_mangrove"

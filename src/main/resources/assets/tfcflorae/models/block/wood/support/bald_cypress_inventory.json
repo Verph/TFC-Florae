@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/wood/support/inventory",
+  "parent": "tfcflorae:block/wood/inventory",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/bald_cypress"
   }

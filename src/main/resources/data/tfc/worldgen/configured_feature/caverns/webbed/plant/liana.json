@@ -6,7 +6,7 @@
     "head": "tfc:plant/liana",
     "tries": 1,
     "radius": 8,
-    "min_height": 8,
-    "max_height": 10
+    "min_height": 2,
+    "max_height": 6
   }
 }

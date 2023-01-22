@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/wood/support/horizontal",
+  "parent": "tfcflorae:block/wood/horizontal",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/jabuticabeira",
     "particle": "tfcflorae:block/wood/sheet/jabuticabeira"

@@ -4,7 +4,7 @@
   "config": {
     "body": "tfcflorae:plant/glow_vines_plant",
     "head": "tfcflorae:plant/glow_vines",
-    "tries": 90,
+    "tries": 16,
     "radius": 10,
     "min_height": 14,
     "max_height": 21

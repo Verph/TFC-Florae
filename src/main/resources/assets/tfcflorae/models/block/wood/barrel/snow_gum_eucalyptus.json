@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/barrel",
+  "parent": "tfcflorae:block/wood/barrel",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",
     "planks": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",

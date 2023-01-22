@@ -187,13 +187,13 @@ public class ClientEventHandler
         TFCFBlocks.TFCFSOIL.get(TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCFSOIL.get(TFCFSoil.DENSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPARSE_BOG_IRON_GRASS.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.DENSE_BOG_IRON_GRASS.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.BOG_IRON_GRASS.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPARSE_BOG_IRON_GRASS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.DENSE_BOG_IRON_GRASS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.BOG_IRON_GRASS.get(), cutout);
 
-        TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
-        TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
-        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
         // Plants
         TFCFBlocks.PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
@@ -202,39 +202,48 @@ public class ClientEventHandler
 
         // Rock blocks
         TFCFBlocks.TFCF_ROCK_BLOCKS.values().forEach(map -> {
-            ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutoutMipped);
-            ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.AQUEDUCT).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutout);
+            ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.AQUEDUCT).get(), cutout);
         });
         TFCFBlocks.ROCK_BLOCKS.values().forEach(map -> {
-            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutoutMipped);
-            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutout);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutout);
         });
         TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.values().forEach(map -> {
-            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutoutMipped);
-            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutoutMipped);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.ROCK_PILE).get(), cutout);
+            ItemBlockRenderTypes.setRenderLayer(map.get(TFCFRock.TFCFBlockType.MOSSY_ROCK_PILE).get(), cutout);
         });
-        TFCFBlocks.DRIPSTONE_BLOCKS.values().stream().map(map -> map.get(Rock.BlockType.SPIKE)).forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.DRIPSTONE_BLOCKS.values().forEach(map -> {
+            ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutout);
+        });
+        //TFCFBlocks.DRIPSTONE_BLOCKS.values().stream().map(map -> map.get(Rock.BlockType.SPIKE)).forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
         TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         TFCFBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
         TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
 
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_BUDDING.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_CLUSTER.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_GLOWSTONE_BUD.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MEDIUM_GLOWSTONE_BUD.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SMALL_GLOWSTONE_BUD.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_BUDDING.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_CLUSTER.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_GLOWSTONE_BUD.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MEDIUM_GLOWSTONE_BUD.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SMALL_GLOWSTONE_BUD.get(), cutout);
 
-        TFCFBlocks.GEM_BLOCKS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.BUDDING_CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.CLUSTER_CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.LARGE_BUD_CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.MEDIUM_BUD_CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.SMALL_BUD_CRYSTAL.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGG.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGGS.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_SPIDER_EGG.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_GLOW_BLOCK.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_TORCH_BLOCK.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CREEPING_WEBS.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_SLENDER.get(), cutoutMipped);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_THICK.get(), cutoutMipped);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGG.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPIDER_EGGS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_SPIDER_EGG.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_GLOW_BLOCK.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_TORCH_BLOCK.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.WEBBED_CHEST.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CREEPING_WEBS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_SLENDER.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_THICK.get(), cutout);
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)

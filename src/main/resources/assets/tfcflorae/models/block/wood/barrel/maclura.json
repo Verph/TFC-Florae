@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/barrel",
+  "parent": "tfcflorae:block/wood/barrel",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/maclura",
     "planks": "tfcflorae:block/wood/planks/maclura",

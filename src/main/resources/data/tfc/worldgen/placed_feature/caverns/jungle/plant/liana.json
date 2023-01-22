@@ -16,8 +16,8 @@
       "count": {
         "type": "minecraft:uniform",
         "value": {
-          "min_inclusive": 5,
-          "max_inclusive": 40
+          "min_inclusive": 1,
+          "max_inclusive": 15
         }
       }
     },
@@ -29,16 +29,6 @@
       },
       "max_y": {
         "absolute": 40
-      }
-    },
-    {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:uniform",
-        "value": {
-          "min_inclusive": 1,
-          "max_inclusive": 14
-        }
       }
     },
     {

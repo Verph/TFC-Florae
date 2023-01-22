@@ -1,7 +1,19 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": [
+    "facing=east": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch",
+		"weight": 3,
+		"y": 90
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch_1",
+		"weight": 1,
+		"y": 90
+	  }
+    ],
+    "facing=north": [
 	  {
         "model": "tfcflorae:block/spider_cave/web_hanging_torch",
 		"weight": 3
@@ -9,6 +21,30 @@
 	  {
         "model": "tfcflorae:block/spider_cave/web_hanging_torch_1",
 		"weight": 1
+	  }
+    ],
+    "facing=south": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch",
+		"weight": 3,
+		"y": 180
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch_1",
+		"weight": 1,
+		"y": 180
+	  }
+    ],
+    "facing=west": [
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch",
+		"weight": 3,
+		"y": 270
+	  },
+	  {
+        "model": "tfcflorae:block/spider_cave/web_hanging_torch_1",
+		"weight": 1,
+		"y": 270
 	  }
     ]
   }

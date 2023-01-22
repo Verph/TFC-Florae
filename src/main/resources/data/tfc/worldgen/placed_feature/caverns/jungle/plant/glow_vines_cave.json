@@ -13,7 +13,13 @@
     },
     {
       "type": "minecraft:count",
-      "count": 20
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 20
+        }
+      }
     },
     {
       "type": "minecraft:height_range",
@@ -29,7 +35,13 @@
     },
     {
       "type": "minecraft:count",
-      "count": 16
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 8
+        }
+      }
     },
     {
       "type": "minecraft:in_square"

@@ -138,7 +138,41 @@ public final class TFCFBlocks
     public static final RegistryObject<Block> MEDIUM_GLOWSTONE_BUD =register("crystal/medium_bud/glowstone", () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 7;})), TFCItemGroup.ORES);
     public static final RegistryObject<Block> SMALL_GLOWSTONE_BUD = register("crystal/small_bud/glowstone", () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 6;})), TFCItemGroup.ORES);
 
-    public static final Map<Gem, RegistryObject<Block>> GEM_BLOCKS = gemBlockMapper(Gem.class);
+    public static final Map<Gem, RegistryObject<Block>> CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/" + gem.name(), () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST, MaterialColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES)
+    );
+    public static final Map<Gem, RegistryObject<Block>> BUDDING_CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/budding/" + gem.name(), () -> new BuddingAmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES)
+    );
+    public static final Map<Gem, RegistryObject<Block>> CLUSTER_CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/cluster/" + gem.name(), () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel((p_152632_) -> {return 5;})), TFCItemGroup.ORES)
+    );
+    public static final Map<Gem, RegistryObject<Block>> LARGE_BUD_CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/large_bud/" + gem.name(), () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.LARGE_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 4;})), TFCItemGroup.ORES)
+    );
+    public static final Map<Gem, RegistryObject<Block>> MEDIUM_BUD_CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/medium_bud/" + gem.name(), () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 2;})), TFCItemGroup.ORES)
+    );
+    public static final Map<Gem, RegistryObject<Block>> SMALL_BUD_CRYSTAL = Helpers.mapOfKeys(Gem.class, gem ->
+        register("crystal/small_bud/" + gem.name(), () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 1;})), TFCItemGroup.ORES)
+    );
+
+    /*public static final Map<Gem, RegistryObject<Block>> GEM_BLOCKS = gemBlockMapper(Gem.class);
+    private static Map<Gem, RegistryObject<Block>> gemBlockMapper(Class<Gem> enumClass)
+    {
+        Map<Gem, RegistryObject<Block>> Map = new HashMap<>();
+        for (Gem gem : Gem.values())
+        {
+            Map.put(gem, register("crystal/" + gem.name(), () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST, MaterialColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES));
+            Map.put(gem, register("crystal/budding/" + gem.name(), () -> new BuddingAmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES));
+            Map.put(gem, register("crystal/cluster/" + gem.name(), () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel((p_152632_) -> {return 5;})), TFCItemGroup.ORES));
+            Map.put(gem, register("crystal/large_bud/" + gem.name(), () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.LARGE_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 4;})), TFCItemGroup.ORES));
+            Map.put(gem, register("crystal/medium_bud/" + gem.name(), () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 2;})), TFCItemGroup.ORES));
+            Map.put(gem, register("crystal/small_bud/" + gem.name(), () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 1;})), TFCItemGroup.ORES));
+        }
+        return Map;
+    }*/
+
 
     // Rock Stuff
 
@@ -431,182 +465,6 @@ public final class TFCFBlocks
         }
         return Map;
     }
-
-    /*private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> woodMapper(Class<TFCFWood> enumClass)
-    {
-        Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
-        for (TFCFWood wood : enumClass.getEnumConstants())
-        {
-            if (wood.hasLeavesOnly())
-                continue;
-
-            Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
-            for (Wood.BlockType type : Wood.BlockType.values())
-            {
-                if (type == BlockType.LOG && wood.isFruitTree() && wood.hasFruitingLog())
-                {
-                    continue;
-                }
-                else if (type == BlockType.WOOD && wood.isFruitTree() && wood.hasFruitingLog())
-                {
-                    continue;
-                }
-                else if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
-                {
-                    continue;
-                }
-                else if (type == BlockType.SAPLING)
-                {
-                    if (wood.isMangrove())
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFMangrovePropaguleBlock(wood, ExtendedProperties.of(Block.Properties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS)).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                    else
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFSaplingBlock(wood, wood.tree(), ExtendedProperties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                }
-                else if (type == BlockType.TRAPPED_CHEST)
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.CHEST)
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.SIGN)
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCStandingSignBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(1F).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.WALL_SIGN)
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCWallSignBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(1F).dropsLike(wood.getBlock(BlockType.SIGN)).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.LECTERN)
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCLecternBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).noCollission().strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.LECTERN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.BOOKSHELF)
-                {
-                    subMap.put(type, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
-                }
-                else
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            Map.put(wood, subMap);
-        }
-        return Map;
-    }*/
-
-    /*private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> BEWoodMapper(Class<TFCFWood> enumClass)
-    {
-        Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
-        for (TFCFWood wood : enumClass.getEnumConstants())
-        {
-            if (wood.hasLeavesOnly())
-                continue;
-
-            Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
-            for (Wood.BlockType type : Wood.BlockType.values())
-            {
-                if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
-                {
-                    if (wood.isFruitTree())
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammableLikeLeaves(), 
-                            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                    else if (wood.isMangrove())
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammableLikeLeaves(), wood,
-                            wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                }
-                else if (type == BlockType.LOG && wood.hasFruitingLog())
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(8f).sound(SoundType.WOOD).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_LOG), 
-                        wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else if (type == BlockType.WOOD && wood.hasFruitingLog())
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).randomTicks().strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
-                        wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else continue;
-            }
-            Map.put(wood, subMap);
-        }
-        return Map;
-    }*/
-
-    /*private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> mangroveLeavesMapper(Class<TFCFWood> enumClass)
-    {
-        Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
-        for (TFCFWood wood : enumClass.getEnumConstants())
-        {
-            if (wood.hasLeavesOnly())
-                continue;
-
-            Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
-            for (Wood.BlockType type : Wood.BlockType.values())
-            {
-                if (type == BlockType.LEAVES && wood.isMangrove())
-                {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick).flammableLikeLeaves(), wood,
-                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                }
-                else continue;
-            }
-            Map.put(wood, subMap);
-        }
-        return Map;
-    }
-
-    private static Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> fruitingLogMapper(Class<TFCFWood> enumClass)
-    {
-        Map<TFCFWood, Map<Wood.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
-        for (TFCFWood wood : enumClass.getEnumConstants())
-        {
-            if (wood.hasLeavesOnly())
-                continue;
-
-            Map<Wood.BlockType, RegistryObject<Block>> subMap = new HashMap<>();
-            for (Wood.BlockType type : Wood.BlockType.values())
-            {
-                if (wood.hasFruitingLog())
-                {
-                    if (type == BlockType.LOG)
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(8f).sound(SoundType.WOOD).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_LOG), 
-                            wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                    else if (type == BlockType.WOOD)
-                    {
-                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).randomTicks().strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(BerryBushBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
-                            wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-                    }
-                }
-                else continue;
-            }
-            Map.put(wood, subMap);
-        }
-        return Map;
-    }*/
 
     private static Map<Wood, RegistryObject<Block>> chiseledBookshelfMapperTFC(Class<Wood> enumClass)
     {
@@ -1303,21 +1161,6 @@ public final class TFCFBlocks
                 typeMap.put(type, register(("rock/" + type.name() + "/" + rock.name()), () -> type.createTFCF(rock), ROCK_STUFFS));
             }
             Map.put(rock, typeMap);
-        }
-        return Map;
-    }
-
-    private static Map<Gem, RegistryObject<Block>> gemBlockMapper(Class<Gem> enumClass)
-    {
-        Map<Gem, RegistryObject<Block>> Map = new HashMap<>();
-        for (Gem gem : Gem.values())
-        {
-            Map.put(gem, register("crystal/" + gem.name(), () -> new AmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST, MaterialColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES));
-            Map.put(gem, register("crystal/budding/" + gem.name(), () -> new BuddingAmethystBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.AMETHYST).lightLevel((p_152632_) -> {return 5;}).requiresCorrectToolForDrops()), TFCItemGroup.ORES));
-            Map.put(gem, register("crystal/cluster/" + gem.name(), () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel((p_152632_) -> {return 5;})), TFCItemGroup.ORES));
-            Map.put(gem, register("crystal/large_bud/" + gem.name(), () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.LARGE_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 4;})), TFCItemGroup.ORES));
-            Map.put(gem, register("crystal/medium_bud/" + gem.name(), () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.MEDIUM_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 2;})), TFCItemGroup.ORES));
-            Map.put(gem, register("crystal/small_bud/" + gem.name(), () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion().randomTicks().sound(SoundType.SMALL_AMETHYST_BUD).strength(1.5F).lightLevel((p_152632_) -> {return 1;})), TFCItemGroup.ORES));
         }
         return Map;
     }

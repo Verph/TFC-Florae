@@ -18,6 +18,9 @@
       }
     },
     {
+      "type": "minecraft:in_square"
+    },
+    {
       "type": "tfc:carving_mask",
       "step": "air",
       "min_y": {

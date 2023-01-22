@@ -17,19 +17,25 @@ import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
+
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
@@ -42,6 +48,7 @@ import tfcflorae.common.blockentities.WebbedChestBlockEntity;
 
 public class WebbedChestBlock extends BaseEntityBlock implements IForgeBlockExtension, IFluidLoggable, EntityBlockExtension
 {
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     private final ExtendedProperties properties;
@@ -51,7 +58,7 @@ public class WebbedChestBlock extends BaseEntityBlock implements IForgeBlockExte
         super(properties.properties());
         this.properties = properties;
 
-        this.registerDefaultState(this.defaultBlockState().setValue(OPEN, Boolean.valueOf(false)));
+        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(OPEN, Boolean.valueOf(false)));
     }
 
     @Override
@@ -63,7 +70,7 @@ public class WebbedChestBlock extends BaseEntityBlock implements IForgeBlockExte
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        builder.add(OPEN, getFluidProperty());
+        builder.add(FACING, OPEN, getFluidProperty());
     }
 
     @Override
@@ -168,11 +175,11 @@ public class WebbedChestBlock extends BaseEntityBlock implements IForgeBlockExte
 
     @Nullable
     @Override
-    public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, @Nullable LivingEntity pPlacer, ItemStack pStack)
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity pPlacer, ItemStack pStack)
     {
         if (pStack.hasCustomHoverName())
         {
-            BlockEntity blockentity = pLevel.getBlockEntity(pPos);
+            BlockEntity blockentity = level.getBlockEntity(pos);
             if (blockentity instanceof WebbedChestBlockEntity)
             {
                 ((WebbedChestBlockEntity)blockentity).setCustomName(pStack.getHoverName());
@@ -181,14 +188,36 @@ public class WebbedChestBlock extends BaseEntityBlock implements IForgeBlockExte
     }
 
     @Override
-    public boolean hasAnalogOutputSignal(BlockState pState)
+    public boolean hasAnalogOutputSignal(BlockState state)
     {
         return true;
     }
 
     @Override
-    public int getAnalogOutputSignal(BlockState pBlockState, Level pLevel, BlockPos pPos)
+    public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos)
     {
-        return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(pLevel.getBlockEntity(pPos));
+        return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(level.getBlockEntity(pos));
+    }
+
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context)
+    {
+        return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Nullable
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation)
+    {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Nullable
+    @Override
+    @SuppressWarnings("deprecation")
+    public BlockState mirror(BlockState state, Mirror mirror)
+    {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 }

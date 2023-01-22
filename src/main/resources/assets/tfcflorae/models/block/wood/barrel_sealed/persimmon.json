@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/barrel_sealed",
+  "parent": "tfcflorae:block/wood/barrel_sealed",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/persimmon",
     "planks": "tfcflorae:block/wood/planks/persimmon",

@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/wood/support/vertical",
+  "parent": "tfcflorae:block/wood/vertical",
   "textures": {
     "texture": "tfcflorae:block/wood/sheet/holly",
     "particle": "tfcflorae:block/wood/sheet/holly"
