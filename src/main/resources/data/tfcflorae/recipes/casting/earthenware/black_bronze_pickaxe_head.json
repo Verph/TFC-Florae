@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/pickaxe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc:metal/black_bronze",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc:metal/pickaxe_head/black_bronze"
+  },
+  "break_chance": 1
+}

@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/mace_head"
+  },
+  "fluid": {
+    "ingredient": "tfc:metal/copper",
+    "amount": 200
+  },
+  "result": {
+    "item": "tfc:metal/mace_head/copper"
+  },
+  "break_chance": 1
+}

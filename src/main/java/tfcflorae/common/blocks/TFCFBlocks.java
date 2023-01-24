@@ -1189,6 +1189,7 @@ public final class TFCFBlocks
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
     {
+        //TFCFlorae.LOGGER.warn("\"block." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\":" );
         return RegistrationHelpers.registerBlock(TFCFBlocks.BLOCKS, TFCFItems.ITEMS, name, blockSupplier, blockItemFactory);
     }
 

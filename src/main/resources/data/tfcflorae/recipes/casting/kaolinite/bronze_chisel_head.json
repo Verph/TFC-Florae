@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/chisel_head"
+  },
+  "fluid": {
+    "ingredient": "tfc:metal/bronze",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc:metal/chisel_head/bronze"
+  },
+  "break_chance": 1
+}

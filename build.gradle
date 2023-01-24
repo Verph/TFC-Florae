@@ -115,7 +115,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "tfcflorae",
+                "Specification-Title"     : "TFC Florae",
                 "Specification-Vendor"    : "Verph",
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,

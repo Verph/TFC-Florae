@@ -371,6 +371,7 @@ public final class TFCFItems
 
     private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item)
     {
+        //TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\":" );
         return ITEMS.register(name.toLowerCase(Locale.ROOT), item);
     }
 }

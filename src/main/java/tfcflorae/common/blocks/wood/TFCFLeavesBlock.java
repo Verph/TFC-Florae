@@ -191,8 +191,8 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
 
         if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
-            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > delay)
+            //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
+            if (leaves.getTicksSinceBushUpdate() > 7200)
             {
                 onUpdate(level, pos, state);
             }
@@ -276,6 +276,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
                 if (state != newState)
                 {
                     level.setBlock(pos, newState, 3);
+                    leaves.markForSync();
                 }
             }
         }

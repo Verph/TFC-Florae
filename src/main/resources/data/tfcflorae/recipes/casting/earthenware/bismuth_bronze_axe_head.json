@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/axe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc:metal/bismuth_bronze",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc:metal/axe_head/bismuth_bronze"
+  },
+  "break_chance": 1
+}
