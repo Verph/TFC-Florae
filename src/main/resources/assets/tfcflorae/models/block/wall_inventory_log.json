@@ -4,8 +4,7 @@
     "ambientocclusion": false,
     "textures": {
 		"top": "#top",
-		"wall": "#wall",
-		"particle": "#wall"
+		"wall": "#wall"
     },
 	"elements": [
 		{
