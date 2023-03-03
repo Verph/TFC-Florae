@@ -64,7 +64,8 @@
     [
 	  "tfcflorae:fruit_forest",
 	  "tfcflorae:charred_forest",
-	  "tfcflorae:salt_water_forest"
+	  "tfcflorae:salt_water_forest",
+      "tfc:in_biome/salt_water_roots"
     ],
     [
       "tfc:in_biome/surface_decoration/mangroves"

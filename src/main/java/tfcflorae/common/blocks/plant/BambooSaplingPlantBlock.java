@@ -3,11 +3,14 @@ package tfcflorae.common.blocks.plant;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -16,7 +19,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BambooLeaves;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -24,14 +30,19 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ToolActions;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.PlantBlock;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
-public abstract class BambooSaplingPlantBlock extends PlantBlock
+public abstract class BambooSaplingPlantBlock extends PlantBlock implements IFluidLoggable
 {
     protected static final float SAPLING_AABB_OFFSET = 4.0F;
     protected static final VoxelShape SAPLING_SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 12.0D, 12.0D);
+
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     private final Supplier<? extends Block> bambooStem;
 
@@ -54,6 +65,12 @@ public abstract class BambooSaplingPlantBlock extends PlantBlock
         this.bambooStem = bambooStem;
 
         this.registerDefaultState(getStateDefinition().any());
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    {
+        super.createBlockStateDefinition(builder.add(getFluidProperty()));
     }
 
     @Override
@@ -110,5 +127,32 @@ public abstract class BambooSaplingPlantBlock extends PlantBlock
     public void growBamboo(Level level, BlockPos state)
     {
         level.setBlock(state.above(), bambooStem.get().defaultBlockState().setValue(BambooPlantBlock.LEAVES, BambooLeaves.SMALL), 3);
+    }
+
+    @Override
+    @Nullable
+    public BlockState getStateForPlacement(BlockPlaceContext context)
+    {
+        BlockPos pos = context.getClickedPos();
+        FluidState fluidState = context.getLevel().getFluidState(pos);
+        BlockState state = updateStateWithCurrentMonth(defaultBlockState());
+        if (getFluidProperty().canContain(fluidState.getType()))
+        {
+            state = state.setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
+        }
+        return state;
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public FluidState getFluidState(BlockState state)
+    {
+        return IFluidLoggable.super.getFluidState(state);
     }
 }

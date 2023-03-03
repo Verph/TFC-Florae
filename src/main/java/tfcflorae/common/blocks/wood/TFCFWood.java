@@ -39,6 +39,7 @@ public enum TFCFWood implements RegistryWood
     ANGELIM(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 29),
     ARGYLE_EUCALYPTUS(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17, null, new Lifecycle[] {HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, HEALTHY, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY}),
     BALD_CYPRESS(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 17),
+    BAMBOO(false, false, false, false, false, MaterialColor.COLOR_LIGHT_GREEN, MaterialColor.COLOR_LIGHT_GREEN, 7, 9),
     BAOBAB(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 32, TFCFItems.FOOD.get(TFCFFood.BAOBAB_FRUIT), new Lifecycle[] {FLOWERING, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY}),
     BEECH(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),
     BLACK_WALNUT(false, false, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 7, 19),

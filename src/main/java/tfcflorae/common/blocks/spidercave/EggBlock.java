@@ -33,6 +33,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -57,7 +58,7 @@ public class EggBlock extends Block implements IForgeBlockExtension, IFluidLogga
         super(properties.properties());
         this.properties = properties;
 
-        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(AGE, 0));
+        this.registerDefaultState(this.defaultBlockState().setValue(getFluidProperty(), getFluidProperty().keyFor(Fluids.EMPTY)).setValue(FACING, Direction.NORTH).setValue(AGE, 0));
     }
 
     @Override

@@ -25,6 +25,7 @@ import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.LooseFlintBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.spidercave.EggBlock;
@@ -34,6 +35,7 @@ import com.mojang.logging.LogUtils;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
@@ -106,6 +108,7 @@ public class TFCFForgeEventHandler
         // Soil --> Compact Soil
         for (Rock rockTFC : Rock.values())
         {
+            // Soil
             for (SoilBlockType.Variant variant : SoilBlockType.Variant.values())
             {
                 if (block == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get())
@@ -153,6 +156,35 @@ public class TFCFForgeEventHandler
                     {
                         event.getItemStack().shrink(1);
                         final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+            }
+
+            // Sand
+            for (SandBlockType sandColor : SandBlockType.values())
+            {
+                if (block == TFCBlocks.SAND.get(sandColor).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.PEBBLE).get(sandColor).get(rockTFC).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+                if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SAND_PILE_TFC.get(sandColor).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFC).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);
@@ -210,6 +242,35 @@ public class TFCFForgeEventHandler
                     {
                         event.getItemStack().shrink(1);
                         final BlockState placedBlock = TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variant).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+            }
+
+            // Sand
+            for (SandBlockType sandColor : SandBlockType.values())
+            {
+                if (block == TFCBlocks.SAND.get(sandColor).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.PEBBLE).get(sandColor).get(rockTFCF).get().defaultBlockState();
+                        level.setBlockAndUpdate(pos, placedBlock);
+                        Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                        event.setCancellationResult(InteractionResult.SUCCESS);
+                        break;
+                    }
+                }
+                if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                {
+                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SAND_PILE_TFC.get(sandColor).get()))
+                    {
+                        event.getItemStack().shrink(1);
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFCF).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);

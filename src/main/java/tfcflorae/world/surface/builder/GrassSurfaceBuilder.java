@@ -1,9 +1,3 @@
-/*
- * Licensed under the EUPL, Version 1.2.
- * You may obtain a copy of the Licence at:
- * https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
- */
-
 package tfcflorae.world.surface.builder;
 
 import net.minecraft.core.BlockPos;
@@ -73,7 +67,7 @@ public class GrassSurfaceBuilder implements SurfaceBuilder
         final double gauss = context.random().nextGaussian();
         final double heightNoise = this.heightNoise.noise(context.pos().getX(), context.pos().getZ()) * 4f + startY;
 
-        if (pos.getY() > context.getSeaLevel() && heightNoise <= 130 && canPlaceHere(context, topBlock) && canPlaceHere(context, startY))
+        if (pos.getY() > context.getSeaLevel() && heightNoise <= 130)
         {
             if (rainfall < +1.5 * gauss + 100f)
             {
@@ -87,27 +81,5 @@ public class GrassSurfaceBuilder implements SurfaceBuilder
                 }
             }
         }
-    }
-
-    public boolean canPlaceHere(SurfaceBuilderContext context, int y)
-    {
-        BlockState state = context.getBlockState(y);
-        Material stateMat = state.getMaterial();
-        Block stateBlock = state.getBlock();
-
-        return (state != SurfaceStates.SANDSTONE_OR_GRAVEL || 
-            state != SurfaceStates.SAND_OR_GRAVEL || 
-            state != SurfaceStates.DIRT || 
-            state != SurfaceStates.GRAVEL || 
-            state != SurfaceStates.COBBLE || 
-            !state.isAir() || 
-            !Helpers.isFluid(state.getFluidState(), FluidTags.WATER) || 
-            !state.hasProperty(RiverWaterBlock.FLOW) ||
-            stateMat != Material.WATER || 
-            stateMat != TFCMaterials.SALT_WATER || 
-            stateMat != TFCMaterials.SPRING_WATER || 
-            stateBlock != TFCBlocks.SALT_WATER.get() || 
-            stateBlock != TFCBlocks.SPRING_WATER.get() || 
-            stateBlock != TFCBlocks.RIVER_WATER.get());
     }
 }

@@ -216,7 +216,7 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
                 TFCFlorae.LOGGER.info("generating subsoil block at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ());
                 TFCFlorae.LOGGER.info("blockstate at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ() + " is " + context.getBlockState(y).toString());*/
                 //if (canPlaceHere(context, y) && (((isLow(variants) && y > context.getSeaLevel()) || (isLake(variants) && y > context.getSeaLevel()) || (isRiver(variants) && y > context.getSeaLevel()) || (isCanyon(variants) && y > context.getSeaLevel())) || !isLow(variants) || !isLake(variants) || !isRiver(variants) || !isCanyon(variants)))
-                if (canPlaceHere(context, y) && pos.getY() > context.getSeaLevel())
+                if (pos.getY() > context.getSeaLevel())
                 {
                     if (y == gravelY)
                     {
@@ -296,24 +296,6 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
                 }
             }
         }
-    }
-
-    public boolean canPlaceHere(SurfaceBuilderContext context, int y)
-    {
-        BlockState state = context.getBlockState(y);
-        Material stateMat = state.getMaterial();
-        Block stateBlock = state.getBlock();
-
-        return (state != SurfaceStates.RAW || 
-            !state.isAir() || 
-            !Helpers.isFluid(state.getFluidState(), FluidTags.WATER) || 
-            stateMat != Material.WATER || 
-            stateMat != TFCMaterials.SALT_WATER || 
-            stateMat != TFCMaterials.SPRING_WATER || 
-            stateBlock != TFCBlocks.SALT_WATER.get() || 
-            stateBlock != TFCBlocks.SPRING_WATER.get() || 
-            stateBlock != TFCBlocks.RIVER_WATER.get() || 
-            !state.hasProperty(RiverWaterBlock.FLOW));
     }
 
     public static boolean isLake(BiomeExtension biome)

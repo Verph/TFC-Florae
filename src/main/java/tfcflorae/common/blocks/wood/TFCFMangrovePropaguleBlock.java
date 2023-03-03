@@ -63,7 +63,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_4;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
-    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     public final TFCFWood wood;
     public final ExtendedProperties properties;

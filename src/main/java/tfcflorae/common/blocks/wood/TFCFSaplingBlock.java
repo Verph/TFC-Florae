@@ -38,7 +38,7 @@ import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable, IForgeBlockExtension, EntityBlockExtension
 {
-    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     public final TFCFWood wood;
     private final ExtendedProperties properties;

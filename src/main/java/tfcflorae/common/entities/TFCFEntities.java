@@ -1,5 +1,6 @@
 package tfcflorae.common.entities;
 
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
@@ -35,9 +36,21 @@ public class TFCFEntities
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, MOD_ID);
 
     // Misc
-    public static final Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> BOATS = Helpers.mapOfKeys(TFCFWood.class, wood ->
-        register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10))
-    );
+    public static final Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> BOATS = boatEntityMapper();
+
+    private static Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> boatEntityMapper()
+    {
+        Map<TFCFWood,  RegistryObject<EntityType<TFCFBoat>>> Map = new HashMap<>();
+        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
+        {
+            if (wood == TFCFWood.BAMBOO)
+                Map.put(wood, register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10)));
+            else
+                Map.put(wood, register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10)));
+
+        }
+        return Map;
+    }
 
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder)
     {

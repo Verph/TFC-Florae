@@ -35,9 +35,9 @@ import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 
-public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, EntityBlockExtension
+public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable
 {
-    public static final FluidProperty FLUID = TFCBlockStateProperties.FRESH_WATER;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
     public static final BooleanProperty NATURAL = TFCBlockStateProperties.NATURAL;
     public final TFCFWood wood;
     private final ExtendedProperties properties;
@@ -59,7 +59,7 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, E
         super(0.3125F, properties.properties());
         this.properties = properties;
         this.wood = wood;
-        this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(UP, false).setValue(DOWN, false).setValue(getFluidProperty(), getFluidProperty().keyFor(Fluids.EMPTY)).setValue(NATURAL, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, false).setValue(EAST, false).setValue(SOUTH, false).setValue(WEST, false).setValue(UP, false).setValue(DOWN, false).setValue(NATURAL, false));
     }
 
     public ExtendedProperties getExtendedProperties()
@@ -106,13 +106,21 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, E
 
     public BlockState getStateForPlacement(BlockGetter world, BlockPos pos)
     {
+        FluidState fluidState = world.getFluidState(pos);
+        BlockState state = defaultBlockState();
+
         BlockState downBlockState = world.getBlockState(pos.below());
         BlockState upBlockState = world.getBlockState(pos.above());
         BlockState northBlockState = world.getBlockState(pos.north());
         BlockState eastBlockState = world.getBlockState(pos.east());
         BlockState southBlockState = world.getBlockState(pos.south());
         BlockState westBlockState = world.getBlockState(pos.west());
-        return defaultBlockState()
+
+        if (getFluidProperty().canContain(fluidState.getType()))
+        {
+            state = state.setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
+        }
+        return state
             .setValue(DOWN, (getJoshuaTrunkBlock(downBlockState) || canConnectTo(downBlockState)) && !getJoshuaLeavesBlock(northBlockState))
             .setValue(UP, getJoshuaTreeBlocks(upBlockState))
             .setValue(NORTH, getJoshuaTrunkBlock(northBlockState) && !getJoshuaLeavesBlock(northBlockState))
@@ -161,16 +169,16 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, E
     }
 
     @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
+    }
+
+    @Override
     @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState state)
     {
         return IFluidLoggable.super.getFluidState(state);
-    }
-
-    @Override
-    public FluidProperty getFluidProperty()
-    {
-        return FLUID;
     }
 
     /**
@@ -218,5 +226,17 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable, E
     public boolean isPathfindable(BlockState pState, BlockGetter pLevel, BlockPos pPos, PathComputationType pType)
     {
         return false;
+    }
+
+    public void setBodyStateWithFluidStatic(LevelAccessor level, BlockPos pos)
+    {
+        BlockState state = TFCFBlocks.JOSHUA_TRUNK.get(wood).get().defaultBlockState();
+        FluidState fluidState = level.getFluidState(pos);
+
+        if (getFluidProperty().canContain(fluidState.getType()))
+        {
+            state = state.setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
+        }
+        level.setBlock(pos, state, 2);
     }
 }

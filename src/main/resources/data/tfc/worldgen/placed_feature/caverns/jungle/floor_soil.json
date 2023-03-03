@@ -133,7 +133,7 @@
   "placement": [
     {
       "type": "tfc:climate",
-      "min_forest": "normal",
+      "min_forest": "old_growth",
       "fuzzy": true
     },
     {

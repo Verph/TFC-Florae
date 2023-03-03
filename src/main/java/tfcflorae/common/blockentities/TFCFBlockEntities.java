@@ -49,7 +49,8 @@ public class TFCFBlockEntities
 
     public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tfcf_tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SAPLING)),
-            TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values()
+            TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values(),
+            TFCFBlocks.BAMBOO_SAPLINGS.values().stream()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
@@ -73,6 +74,7 @@ public class TFCFBlockEntities
             TFCFBlocks.ROCK_CHEST,
             TFCFBlocks.ROCK_CHESTS_TFC.values().stream(),
             TFCFBlocks.ROCK_CHESTS_TFCF.values().stream()
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.CHEST))
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
@@ -81,6 +83,7 @@ public class TFCFBlockEntities
             TFCFBlocks.ROCK_TRAPPED_CHEST,
             TFCFBlocks.ROCK_TRAPPED_CHESTS_TFC.values().stream(),
             TFCFBlocks.ROCK_TRAPPED_CHESTS_TFCF.values().stream()
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.TRAPPED_CHEST))
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
@@ -88,6 +91,36 @@ public class TFCFBlockEntities
             TFCFBlocks.WEBBED_CHEST
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
+
+    /*public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("tfcf_barrel", BarrelBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.BARREL).map(map::get))
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.BARREL)))
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("tfcf_loom", LoomBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.LOOM).map(map::get))
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.LOOM)))
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("tfcf_sluice", SluiceBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SLUICE).map(map::get))
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.SLUICE)))
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<TFCFSignBlockEntity>> SIGN = register("tfcf_sign", TFCFSignBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SIGN, Wood.BlockType.WALL_SIGN).map(map::get))
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.SIGN), TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.WALL_SIGN)))
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
+    public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("tfcf_lectern", TFCFLecternBlockEntity::new, Stream.of(
+            TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.LECTERN).map(map::get))
+            //TFCFBlocks.BAMBOO_BLOCKS.values().stream().flatMap(map -> Stream.of(TFCFBlocks.BAMBOO_BLOCKS.get(Wood.BlockType.LECTERN)))
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );*/
 
     public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("tfcf_farmland", FarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
     public static final RegistryObject<BlockEntityType<BarrelBlockEntity>> BARREL = register("tfcf_barrel", BarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));

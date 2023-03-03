@@ -4,6 +4,9 @@
   "values": [
     "tfcflorae:fruit_forest",
     "tfcflorae:charred_forest",
-    "tfcflorae:fresh_water_forest"
+    "tfcflorae:fresh_water_forest",
+    "tfc:in_biome/fresh_water_roots",
+	"tfcflorae:jungle",
+	"#tfc:feature/bamboo_forest"
   ]
 }

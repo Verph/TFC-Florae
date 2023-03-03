@@ -4,6 +4,8 @@
   "values": [
     "tfcflorae:rock/raw/dripstone",
     "tfcflorae:rock/hardened/dripstone",
+    "tfcflorae:rock/raw/gypsum",
+    "tfcflorae:rock/hardened/gypsum",
 	"tfcflorae:rock/smoke_block/andesite",
 	"tfcflorae:rock/smoke_block/basalt",
 	"tfcflorae:rock/smoke_block/chalk",

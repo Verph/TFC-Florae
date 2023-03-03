@@ -27,6 +27,7 @@
     "tfcflorae:rock/raw/soapstone",
     "tfcflorae:rock/raw/komatiite",
     "tfcflorae:rock/raw/mylonite",
+    "tfcflorae:rock/raw/dripstone",
 	"tfcflorae:rock/hardened/red_granite",
     "tfcflorae:rock/hardened/breccia",
     "tfcflorae:rock/hardened/foidolite",
@@ -51,6 +52,8 @@
     "tfcflorae:rock/hardened/novaculite",
     "tfcflorae:rock/hardened/soapstone",
     "tfcflorae:rock/hardened/komatiite",
-    "tfcflorae:rock/hardened/mylonite"
+    "tfcflorae:rock/hardened/mylonite",
+    "tfcflorae:rock/raw/gypsum",
+    "tfcflorae:rock/hardened/gypsum"
   ]
 }

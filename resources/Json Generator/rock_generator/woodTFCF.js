@@ -88,9 +88,37 @@ let WOOD_TYPES = {
     'zebrawood': 'zebrawood'
 }
 
+let WOOD_TYPES_TFC = {
+
+  'acacia': 'acacia',
+  'ash': 'ash',
+  'aspen': 'aspen',
+  'birch': 'birch',
+  'blackwood': 'blackwood',
+  'chestnut': 'chestnut',
+  'douglas_fir': 'douglas_fir',
+  'hickory': 'hickory',
+  'kapok': 'kapok',
+  'maple': 'maple',
+  'oak': 'oak',
+  'palm': 'palm',
+  'pine': 'pine',
+  'rosewood': 'rosewood',
+  'sequoia': 'sequoia',
+  'spruce': 'spruce',
+  'sycamore': 'sycamore',
+  'white_cedar': 'white_cedar',
+  'willow': 'willow'
+}
+
 for(let woodType of Object.keys(WOOD_TYPES))
 {
     generateJSON(woodType)
+}
+
+for(let woodTypeTFC of Object.keys(WOOD_TYPES_TFC))
+{
+    generateJSONTFC(woodTypeTFC)
 }
 
 function generateJSON(woodType)
@@ -4690,6 +4718,269 @@ function generateJSON(woodType)
     ]
   }
 
+  let animalCartItemModel = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/animal_cart/${woodType}`
+    }
+  }
+  let plowItemModel = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/plow/${woodType}`
+    }
+  }
+  let supplyCartItemModel = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/supply_cart/${woodType}`
+    }
+  }
+  let wheelItemModel = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/wheel/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/item/animal_cart/${woodType}.json`, JSON.stringify(animalCartItemModel, null, 2))
+	fs.writeFileSync(`./assets/models/item/plow/${woodType}.json`, JSON.stringify(plowItemModel, null, 2))
+	fs.writeFileSync(`./assets/models/item/supply_cart/${woodType}.json`, JSON.stringify(supplyCartItemModel, null, 2))
+	fs.writeFileSync(`./assets/models/item/wheel/${woodType}.json`, JSON.stringify(wheelItemModel, null, 2))
+
+  let recipeAnimalCart = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ppp",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "p": {
+        "item": `tfcflorae:wood/lumber/${woodType}`
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodType}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:animal_cart/${woodType}`
+    }
+  }
+  let recipePlow = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "sss",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "p": {
+        "item": `tfcflorae:wood/lumber/${woodType}`
+      },
+      "s": {
+        "tag": "forge:rods/wooden"
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodType}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:plow/${woodType}`
+    }
+  }
+  let recipeSupplyCart = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ccc",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "c": {
+        "tag": "forge:chests/wooden"
+      },
+      "p": {
+        "item": `tfcflorae:wood/lumber/${woodType}`
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodType}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:supply_cart/${woodType}`
+    }
+  }
+  let recipeWheel = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "sss",
+      "sps",
+      "sss"
+    ],
+    "key": {
+      "p": {
+        "item": `tfcflorae:wood/lumber/${woodType}`
+      },
+      "s": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": `astikorcarts:wheel/${woodType}`
+    }
+  }
+  fs.writeFileSync(`./data/recipes/crafting/animal_cart/${woodType}.json`, JSON.stringify(recipeAnimalCart, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/plow/${woodType}.json`, JSON.stringify(recipePlow, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/supply_cart/${woodType}.json`, JSON.stringify(recipeSupplyCart, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/wheel/${woodType}.json`, JSON.stringify(recipeWheel, null, 2))
+
+  let advancementAnimalCart = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/animal_cart/${woodType}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/animal_cart/${woodType}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodType}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementPlow = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/plow/${woodType}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/plow/${woodType}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodType}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementSupplyCart = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/supply_cart/${woodType}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/supply_cart/${woodType}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodType}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementWheel = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/wheel/${woodType}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/wheel/${woodType}`
+        }
+      },
+      "has_planks": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "tag": "minecraft:planks"
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_planks"
+      ]
+    ]
+  }
+  fs.writeFileSync(`./data/advancements/crafting/animal_cart/${woodType}.json`, JSON.stringify(advancementAnimalCart, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/plow/${woodType}.json`, JSON.stringify(advancementPlow, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/supply_cart/${woodType}.json`, JSON.stringify(advancementSupplyCart, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/wheel/${woodType}.json`, JSON.stringify(advancementWheel, null, 2))
+
   let chiselWoodBlockTypeStairs = {
     "type": "tfc:chisel",
     "ingredient": `tfcflorae:wood/planks/${woodType}`,
@@ -4959,4 +5250,270 @@ function generateJSON(woodType)
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/potted_sapling/${woodType}.json`, JSON.stringify(lootPottedSapling, null, 2))
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/scribing_Table/${woodType}.json`, JSON.stringify(lootScribingTable, null, 2))
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/chiseled_bookshelf/${woodType}.json`, JSON.stringify(lootChiseledBookshelf, null, 2))
+}
+
+function generateJSONTFC(woodTypeTFC)
+{
+  let animalCartItemModelTFC = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/animal_cart/${woodTypeTFC}`
+    }
+  }
+  let plowItemModelTFC = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/plow/${woodTypeTFC}`
+    }
+  }
+  let supplyCartItemModelTFC = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/supply_cart/${woodTypeTFC}`
+    }
+  }
+  let wheelItemModelTFC = {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": `astikorcarts:items/wheel/${woodTypeTFC}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/item/animal_cart/${woodTypeTFC}.json`, JSON.stringify(animalCartItemModelTFC, null, 2))
+	fs.writeFileSync(`./assets/models/item/plow/${woodTypeTFC}.json`, JSON.stringify(plowItemModelTFC, null, 2))
+	fs.writeFileSync(`./assets/models/item/supply_cart/${woodTypeTFC}.json`, JSON.stringify(supplyCartItemModelTFC, null, 2))
+	fs.writeFileSync(`./assets/models/item/wheel/${woodTypeTFC}.json`, JSON.stringify(wheelItemModelTFC, null, 2))
+
+  let recipeAnimalCartTFC = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ppp",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "p": {
+        "item": `tfc:wood/lumber/${woodTypeTFC}`
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodTypeTFC}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:animal_cart/${woodTypeTFC}`
+    }
+  }
+  let recipePlowTFC = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "sss",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "p": {
+        "item": `tfc:wood/lumber/${woodTypeTFC}`
+      },
+      "s": {
+        "tag": "forge:rods/wooden"
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodTypeTFC}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:plow/${woodTypeTFC}`
+    }
+  }
+  let recipeSupplyCartTFC = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ccc",
+      "pbp",
+      "wrw"
+    ],
+    "key": {
+      "b": {
+        "item": "tfc:brass_mechanisms"
+      },
+      "r": {
+        "tag": "forge:rods"
+      },
+      "c": {
+        "tag": "forge:chests/wooden"
+      },
+      "p": {
+        "item": `tfc:wood/lumber/${woodTypeTFC}`
+      },
+      "w": {
+        "item": `astikorcarts:wheel/${woodTypeTFC}`
+      }
+    },
+    "result": {
+      "item": `astikorcarts:supply_cart/${woodTypeTFC}`
+    }
+  }
+  let recipeWheelTFC = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "sss",
+      "sps",
+      "sss"
+    ],
+    "key": {
+      "p": {
+        "item": `tfc:wood/lumber/${woodTypeTFC}`
+      },
+      "s": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": `astikorcarts:wheel/${woodTypeTFC}`
+    }
+  }
+  fs.writeFileSync(`./data/recipes/crafting/animal_cart/${woodTypeTFC}.json`, JSON.stringify(recipeAnimalCartTFC, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/plow/${woodTypeTFC}.json`, JSON.stringify(recipePlowTFC, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/supply_cart/${woodTypeTFC}.json`, JSON.stringify(recipeSupplyCartTFC, null, 2))
+  fs.writeFileSync(`./data/recipes/crafting/wheel/${woodTypeTFC}.json`, JSON.stringify(recipeWheelTFC, null, 2))
+
+  let advancementAnimalCartTFC = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/animal_cart/${woodTypeTFC}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/animal_cart/${woodTypeTFC}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodTypeTFC}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementPlowTFC = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/plow/${woodTypeTFC}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/plow/${woodTypeTFC}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodTypeTFC}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementSupplyCartTFC = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/supply_cart/${woodTypeTFC}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/supply_cart/${woodTypeTFC}`
+        }
+      },
+      "has_wheel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "item": `astikorcarts:wheel/${woodTypeTFC}`
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_wheel"
+      ]
+    ]
+  }
+  let advancementWheelTFC = {
+    "rewards": {
+      "recipes": [
+        `astikorcarts:crafting/wheel/${woodTypeTFC}`
+      ]
+    },
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": `astikorcarts:crafting/wheel/${woodTypeTFC}`
+        }
+      },
+      "has_planks": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "tag": "minecraft:planks"
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_planks"
+      ]
+    ]
+  }
+  fs.writeFileSync(`./data/advancements/crafting/animal_cart/${woodTypeTFC}.json`, JSON.stringify(advancementAnimalCartTFC, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/plow/${woodTypeTFC}.json`, JSON.stringify(advancementPlowTFC, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/supply_cart/${woodTypeTFC}.json`, JSON.stringify(advancementSupplyCartTFC, null, 2))
+  fs.writeFileSync(`./data/advancements/crafting/wheel/${woodTypeTFC}.json`, JSON.stringify(advancementWheelTFC, null, 2))
 }

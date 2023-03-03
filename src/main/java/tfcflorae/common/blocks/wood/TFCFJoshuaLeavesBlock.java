@@ -70,7 +70,7 @@ import tfcflorae.common.blocks.TFCFBlocks;
 
 import org.jetbrains.annotations.Nullable;
 
-public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
+public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, ILeavesBlock, IBushBlock, HoeOverlayBlock
 {
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
     {
@@ -85,7 +85,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         return (int) (Climate.getRainfall(level, pos) / 5);
     }
 
-    public static final FluidProperty FLUID = TFCBlockStateProperties.FRESH_WATER;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
     public static final BooleanProperty PERSISTENT = BlockStateProperties.PERSISTENT;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
@@ -117,7 +117,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         this.wood = wood;
         this.properties = properties;
 
-        registerDefaultState(stateDefinition.any().setValue(AGE, 0).setValue(getFluidProperty(), getFluidProperty().keyFor(Fluids.EMPTY)).setValue(FACING, Direction.UP).setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
+        registerDefaultState(stateDefinition.any().setValue(AGE, 0).setValue(FACING, Direction.UP).setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
 
     /*@Override
@@ -137,6 +137,13 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
     public FluidProperty getFluidProperty()
     {
         return FLUID;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public FluidState getFluidState(BlockState state)
+    {
+        return IFluidLoggable.super.getFluidState(state);
     }
 
     @Override
@@ -162,13 +169,6 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
             return Blocks.AIR.defaultBlockState();
         }
         return state;
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public FluidState getFluidState(BlockState state)
-    {
-        return IFluidLoggable.super.getFluidState(state);
     }
 
     @Override
@@ -240,7 +240,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
     {
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
         IBushBlock.randomTick(this, state, level, pos, random);
-        Fluid fluid = state.getValue(getFluidProperty()).getFluid();
+        Fluid fluid = level.getFluidState(pos).getType();
 
         BlockPos abovePos = pos.above();
         if (level.isEmptyBlock(abovePos) && abovePos.getY() < level.getMaxBuildHeight() && TFCConfig.SERVER.plantGrowthChance.get() > random.nextDouble())
@@ -287,7 +287,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
 
                 if (shouldPlaceNewBody && allNeighborsEmpty(level, abovePos, null) && level.isEmptyBlock(pos.above(2)))
                 {
-                    setTrunkWithFluid(level, pos, fluid);
+                    setTrunkWithFluid(level, pos);
                     placeGrownLeaves(level, abovePos, i, Direction.UP);
                 }
                 else if (i < 4)
@@ -320,7 +320,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
                     }
                     if (foundValidGrowthSpace)
                     {
-                        setTrunkWithFluid(level, pos, fluid);
+                        setTrunkWithFluid(level, pos);
                     }
                     else
                     {
@@ -355,7 +355,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         if (getFluidProperty().canContain(fluid))
         {
             final BlockState originalState = level.getBlockState(pos);
-            setTrunkWithFluid(level, pos, fluid);
+            setTrunkWithFluid(level, pos);
             if (growTreeRecursive(level, pos, rand, pos, maxHorizontalDistance, 0, fluid))
             {
                 return true;
@@ -448,7 +448,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
 
                 if (flag && allNeighborsEmpty(level, blockpos, null) && level.getBlockState(currentBlock.above(2)).getBlock() == Blocks.AIR)
                 {
-                    setTrunkWithFluid(level, currentBlock, fluid);
+                    setTrunkWithFluid(level, currentBlock);
                     placeGrownLeaves(level, blockpos, 5, Direction.UP);
                     return 0;
                 }
@@ -477,8 +477,8 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
 
                         if (level.getBlockState(blockpos1).getBlock() == Blocks.AIR && level.getBlockState(blockpos1.below()).getBlock() == Blocks.AIR && allNeighborsEmpty(level, blockpos1, direction.getOpposite()) && Math.abs(blockpos1.getX() - originalBranchPos.getX()) < maxHorizontalDistance && Math.abs(blockpos1.getZ() - originalBranchPos.getZ()) < maxHorizontalDistance && level.isEmptyBlock(blockpos1))
                         {
-                            setTrunkWithFluid(level, currentBlock, fluid);
-                            setTrunkWithFluid(level, blockpos1, fluid);
+                            setTrunkWithFluid(level, currentBlock);
+                            setTrunkWithFluid(level, blockpos1);
                             placeGrownLeaves(level, blockpos1.above(), 5, Direction.UP);
                             growTreeRecursive(level, blockpos1.above(), random, originalBranchPos, maxHorizontalDistance, Mth.clamp(iterations + random.nextInt(5 - iterations) + 1, 0, 4), fluid);
                             flag2 = true;
@@ -529,16 +529,26 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         level.setBlock(pos, defaultBlockState().setValue(getFluidProperty(), getFluidProperty().keyFor(fluid)).setValue(AGE, 5).setValue(FACING, facing), 2);
     }
 
-    protected void setTrunkWithFluid(LevelAccessor level, BlockPos pos, Fluid fluid)
+    protected void setTrunkWithFluid(LevelAccessor level, BlockPos pos)
     {
-        BlockState state = getBodyStateWithFluid(level, pos, fluid);
+        BlockState state = getBodyStateWithFluid(level, pos);
         level.setBlock(pos, state, 2);
     }
 
-    protected BlockState getBodyStateWithFluid(LevelAccessor level, BlockPos pos, Fluid fluid)
+    protected BlockState getBodyStateWithFluid(LevelAccessor level, BlockPos pos)
     {
-        TFCFJoshuaTrunkBlock block = (TFCFJoshuaTrunkBlock) TFCFBlocks.JOSHUA_TRUNK.get(wood).get();
-        return block.getStateForPlacement(level, pos).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid));
+        TFCFJoshuaTrunkBlock state = (TFCFJoshuaTrunkBlock) TFCFBlocks.JOSHUA_TRUNK.get(wood).get();
+        return state.getStateForPlacement(level, pos);
+        /*FluidState fluidState = level.getFluidState(pos);
+
+        if (!fluidState.isEmpty() && getFluidProperty().canContain(fluidState.getType()))
+        {
+            return state.getStateForPlacement(level, pos).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
+        }
+        else
+        {
+            return state.getStateForPlacement(level, pos);
+        }*/
     }
 
     @Override

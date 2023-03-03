@@ -8,6 +8,7 @@
     "tfc:cave_vegetation",
     "#tfc:feature/volcanoes",
     "tfc:random_active_hot_spring",
-    "tfc:caverns/lava"
+    "tfc:caverns/lava",
+	"tfcflorae:jungle"
   ]
 }

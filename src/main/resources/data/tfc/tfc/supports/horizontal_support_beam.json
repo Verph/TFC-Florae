@@ -84,7 +84,8 @@
     "tfcflorae:wood/horizontal_support/yellow_jacaranda",
     "tfcflorae:wood/horizontal_support/yellow_meranti",
     "tfcflorae:wood/horizontal_support/yew",
-    "tfcflorae:wood/horizontal_support/zebrawood"
+    "tfcflorae:wood/horizontal_support/zebrawood",
+    "tfcflorae:wood/horizontal_support/bamboo"
   ],
   "support_up": 2,
   "support_down": 2,

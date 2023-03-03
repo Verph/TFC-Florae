@@ -6,6 +6,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -17,16 +19,23 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 
+import java.util.stream.Stream;
+
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.GroundcoverBlock;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.TFCFTags;
 
 public class LooseFlintBlock extends GroundcoverBlock implements IFluidLoggable
 {
+    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, Fluids.LAVA));
+    public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
+
     public static final IntegerProperty COUNT = TFCBlockStateProperties.COUNT_1_3;
 
     private static final VoxelShape ONE = box(5.0D, 0.0D, 5.0D, 11.0D, 2.0D, 11.0D);
@@ -80,5 +89,11 @@ public class LooseFlintBlock extends GroundcoverBlock implements IFluidLoggable
                 return THREE;
         }
         throw new IllegalStateException("Unknown value for property LooseFlintBlock: " + state.getValue(COUNT));
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
     }
 }

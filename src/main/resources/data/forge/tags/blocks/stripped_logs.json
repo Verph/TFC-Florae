@@ -165,6 +165,14 @@
     "tfcflorae:wood/stripped_wood/yellow_jacaranda",
     "tfcflorae:wood/stripped_wood/yellow_meranti",
     "tfcflorae:wood/stripped_wood/yew",
-    "tfcflorae:wood/stripped_wood/zebrawood"
+    "tfcflorae:wood/stripped_wood/zebrawood",
+    "tfcflorae:wood/stripped_log/persimmon",
+    "tfcflorae:wood/stripped_wood/persimmon",
+    "tfcflorae:wood/stripped_log/bamboo",
+    "tfcflorae:wood/stripped_log/blue_bamboo",
+    "tfcflorae:wood/stripped_log/dragon_bamboo",
+    "tfcflorae:wood/stripped_log/golden_bamboo",
+    "tfcflorae:wood/stripped_log/red_bamboo",
+    "tfcflorae:wood/stripped_log_bundle/bamboo"
   ]
 }

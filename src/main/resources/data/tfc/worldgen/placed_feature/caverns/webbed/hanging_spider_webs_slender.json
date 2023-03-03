@@ -20,7 +20,8 @@
               "Name":"tfcflorae:spider_cave/hanging_spider_web_slender",
               "Properties": {
                 "thickness": "base",
-                "vertical_direction": "down"
+                "vertical_direction": "down",
+				"fluid": "empty"
               }
             }
           }
@@ -39,7 +40,8 @@
               "Name":"tfcflorae:spider_cave/hanging_spider_web_slender",
               "Properties": {
                 "thickness": "middle",
-                "vertical_direction": "down"
+                "vertical_direction": "down",
+				"fluid": "empty"
               }
             }
           }
@@ -55,26 +57,36 @@
                   "Name":"tfcflorae:spider_cave/hanging_spider_web_slender",
 				  "Properties": {
 					"thickness": "frustum",
-					"vertical_direction": "down"
+					"vertical_direction": "down",
+					"fluid": "empty"
 				  }
                 }
               },
               {
                 "weight":9,
                 "data":{
-                  "Name":"tfcflorae:spider_cave/webbed_glow"
+				  "Name":"tfcflorae:spider_cave/webbed_glow",
+				  "Properties": {
+					"fluid": "empty"
+				  }
                 }
               },
               {
                 "weight":5,
                 "data":{
-                  "Name":"tfcflorae:spider_cave/webbed_torch"
+				  "Name":"tfcflorae:spider_cave/webbed_torch",
+				  "Properties": {
+					"fluid": "empty"
+				  }
                 }
               },
               {
                 "weight":1,
                 "data":{
-                  "Name":"tfcflorae:spider_cave/webbed_chest"
+				  "Name":"tfcflorae:spider_cave/webbed_chest",
+				  "Properties": {
+					"fluid": "empty"
+				  }
                 }
               }
             ]
@@ -88,7 +100,8 @@
               "Name":"tfcflorae:spider_cave/hanging_spider_web_slender",
               "Properties": {
                 "thickness": "tip",
-                "vertical_direction": "down"
+                "vertical_direction": "down",
+                "fluid": "empty"
               }
             }
           }

@@ -8,7 +8,7 @@
       "max_temperature": 40,
       "min_rainfall": 360,
       "max_rainfall": 500,
-      "min_forest": "normal",
+      "min_forest": "old_growth",
       "fuzzy": true
     },
     {
@@ -17,18 +17,20 @@
         "type": "minecraft:uniform",
         "value": {
           "min_inclusive": 1,
-          "max_inclusive": 15
+          "max_inclusive": 8
         }
       }
     },
     {
-      "type": "tfc:carving_mask",
-      "step": "air",
-      "min_y": {
-        "absolute": -100
-      },
-      "max_y": {
-        "absolute": 40
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -100
+        },
+        "max_inclusive": {
+          "absolute": 40
+        }
       }
     },
     {

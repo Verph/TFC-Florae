@@ -337,6 +337,21 @@
     "tfcflorae:wood/log/charred_tree",
     "tfcflorae:wood/wood/charred_tree",
     "tfcflorae:wood/stripped_log/charred_tree",
-    "tfcflorae:wood/stripped_wood/charred_tree"
+    "tfcflorae:wood/stripped_wood/charred_tree",
+    "#tfc:bamboo_logs",
+    "#tfc:blue_bamboo_logs",
+    "#tfc:dragon_bamboo_logs",
+    "#tfc:golden_bamboo_logs",
+    "#tfc:red_bamboo_logs",
+    "minecraft:bamboo",
+    "tfcflorae:plant/blue_bamboo",
+    "tfcflorae:plant/dragon_bamboo",
+    "tfcflorae:plant/golden_bamboo",
+    "tfcflorae:plant/red_bamboo",
+    "minecraft:bamboo_sapling",
+    "tfcflorae:plant/blue_bamboo_sapling",
+    "tfcflorae:plant/dragon_bamboo_sapling",
+    "tfcflorae:plant/golden_bamboo_sapling",
+    "tfcflorae:plant/red_bamboo_sapling"
   ]
 }

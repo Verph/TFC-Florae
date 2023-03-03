@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
@@ -15,9 +16,16 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.material.FluidState;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
+
+import net.dries007.tfc.common.blocks.RiverWaterBlock;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.util.EnvironmentHelpers;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.settings.RockSettings;
@@ -25,10 +33,6 @@ import net.dries007.tfc.world.settings.RockSettings;
 public class RockColumnFeature extends Feature<RockColumnConfig>
 {
     private static final ImmutableList<Block> CANNOT_PLACE_ON = ImmutableList.of(Blocks.LAVA, Blocks.BEDROCK, Blocks.MAGMA_BLOCK, Blocks.SOUL_SAND, Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_STAIRS, Blocks.NETHER_WART, Blocks.CHEST, Blocks.SPAWNER);
-    private static final int CLUSTERED_REACH = 5;
-    private static final int CLUSTERED_SIZE = 50;
-    private static final int UNCLUSTERED_REACH = 8;
-    private static final int UNCLUSTERED_SIZE = 15;
 
     public RockColumnFeature(Codec<RockColumnConfig> codec)
     {
@@ -47,11 +51,10 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
         final ChunkData data = provider.get(context.level(), pos);
         final RockSettings rock = data.getRockData().getRock(pos);
         final List<BlockState> states = config.getStates(rock.raw());
-        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         if (states != null)
         {
-            if (!canPlaceAt(level, seaLevel, pos.mutable()))
+            if (!canPlaceAt(level, pos.mutable()))
             {
                 return false;
             }
@@ -67,7 +70,7 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
                     int i1 = j - blockpos1.distManhattan(pos);
                     if (i1 >= 0)
                     {
-                        flag1 |= this.placeColumn(level, seaLevel, blockpos1, i1, config.reach().sample(random), states, random);
+                        flag1 |= this.placeColumn(level, blockpos1, i1, config.reach().sample(random), states, random);
                     }
                 }
                 return flag1;
@@ -76,8 +79,13 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
         return false;
     }
 
-    private boolean placeColumn(LevelAccessor level, int seaLevel, BlockPos pos, int distance, int reach, List<BlockState> states, Random random)
+    private boolean placeColumn(LevelAccessor level, BlockPos pos, int distance, int reach, List<BlockState> states, Random random)
     {
+        /*BlockState state;
+        if (states.size() == 1)
+            state = states.get(0);
+        else
+            state = states.get(random.nextInt(states.size()));*/
         Supplier<BlockState> state;
         if (states.size() == 1)
         {
@@ -93,13 +101,13 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
         for(BlockPos blockpos : BlockPos.betweenClosed(pos.getX() - reach, pos.getY(), pos.getZ() - reach, pos.getX() + reach, pos.getY(), pos.getZ() + reach))
         {
             int i = blockpos.distManhattan(pos);
-            BlockPos blockpos1 = isAirOrLavaOcean(level, seaLevel, blockpos) ? findSurface(level, seaLevel, blockpos.mutable(), i) : findAir(level, blockpos.mutable(), i);
+            BlockPos blockpos1 = isAirOrLavaOcean(level, blockpos) ? findSurface(level, blockpos.mutable(), i) : findAir(level, blockpos.mutable(), i);
             if (blockpos1 != null)
             {
                 int j = distance - i / 2;
                 for(BlockPos.MutableBlockPos blockpos$mutableBlockPos = blockpos1.mutable(); j >= 0; --j)
                 {
-                    if (isAirOrLavaOcean(level, seaLevel, blockpos$mutableBlockPos))
+                    if (isAirOrLavaOcean(level, blockpos$mutableBlockPos))
                     {
                         this.setBlock(level, blockpos$mutableBlockPos, state.get());
                         blockpos$mutableBlockPos.move(Direction.UP);
@@ -120,12 +128,12 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
     }
 
     @Nullable
-    private static BlockPos findSurface(LevelAccessor level, int seaLevel, BlockPos.MutableBlockPos pos, int distance)
+    private static BlockPos findSurface(LevelAccessor level, BlockPos.MutableBlockPos pos, int distance)
     {
         while(pos.getY() > level.getMinBuildHeight() + 1 && distance > 0)
         {
             --distance;
-            if (canPlaceAt(level, seaLevel, pos))
+            if (canPlaceAt(level, pos))
             {
                 return pos;
             }
@@ -134,9 +142,9 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
         return null;
     }
 
-    private static boolean canPlaceAt(LevelAccessor level, int seaLevel, BlockPos.MutableBlockPos pos)
+    private static boolean canPlaceAt(LevelAccessor level, BlockPos.MutableBlockPos pos)
     {
-        if (!isAirOrLavaOcean(level, seaLevel, pos))
+        if (!isAirOrLavaOcean(level, pos))
         {
             return false;
         }
@@ -159,7 +167,7 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
             {
                 return null;
             }
-            if (blockstate.isAir())
+            if (isAirOrLavaOcean(level, pos))
             {
                 return pos;
             }
@@ -168,9 +176,16 @@ public class RockColumnFeature extends Feature<RockColumnConfig>
         return null;
     }
 
-    private static boolean isAirOrLavaOcean(LevelAccessor level, int seaLevel, BlockPos pos)
+    private static boolean isAirOrLavaOcean(LevelAccessor level, BlockPos pos)
     {
-        BlockState blockstate = level.getBlockState(pos);
-        return blockstate.isAir() || blockstate.is(Blocks.LAVA) && pos.getY() <= seaLevel;
+        BlockState state = level.getBlockState(pos);
+        return isUnderwater(level, pos) ||  EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state) || state.isAir() || state.is(Blocks.LAVA);
+    }
+
+    private static boolean isUnderwater(LevelAccessor level, BlockPos pos)
+    {
+        final BlockState stateAt = level.getBlockState(pos);
+        final FluidState fluid = stateAt.getFluidState();
+        return (Helpers.isFluid(fluid, FluidTags.WATER) || Helpers.isBlock(stateAt, TFCBlocks.SALT_WATER.get())) || stateAt.hasProperty(RiverWaterBlock.FLOW);
     }
 }

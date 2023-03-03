@@ -96,11 +96,6 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow public static final int VOLCANIC_OCEANIC_MOUNTAIN_LAKE;
     @Shadow public static final int PLATEAU_LAKE;
 
-    /*@Unique private static final int GRASSLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticGrasslands);
-    @Unique private static final int WETLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticWetlands);
-    @Unique private static final int MARSHES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMarshes);
-    @Unique private static final int SWAMPS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSwamps);*/
-
     @Unique private static final int GRASSLANDS;
     @Unique private static final int WETLANDS;
     @Unique private static final int MARSHES;
@@ -126,6 +121,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Unique private static final int STEPPES;
     @Unique private static final int SHRUBLANDS;
     @Unique private static final int MOORLANDS;
+    @Unique private static final int MISTY_PEAKS;
+    @Unique private static final int COASTAL_CLIFFS;
+    @Unique private static final int SHORE_DUNES;
+    @Unique private static final int VINICUNCA_MOUNTAINS;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
@@ -137,7 +136,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow public static final int INLAND_MARKER;
     @Shadow public static final int OCEAN_REEF_MARKER;
 
-    @Shadow private static final BiomeExtension[] BIOME_LAYERS = new BiomeExtension[64];
+    @Shadow @Mutable @Final private static final BiomeExtension[] BIOME_LAYERS = new BiomeExtension[128];
     @Shadow private static final MutableInt BIOME_LAYER_INDEX = new MutableInt(0);
 
     static
@@ -200,6 +199,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         STEPPES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSteppes);
         SHRUBLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticShrublands);
         MOORLANDS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMoorlands);
+        MISTY_PEAKS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticMistyPeaks);
+        COASTAL_CLIFFS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticCoastalCliffs);
+        SHORE_DUNES = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticShoreDunes);
+        VINICUNCA_MOUNTAINS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticVinicuncaMountains);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -359,6 +362,30 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return MOORLANDS;
     }
 
+    @Unique @Override
+    public int getStaticMistyPeaks()
+    {
+        return MISTY_PEAKS;
+    }
+
+    @Unique @Override
+    public int getStaticCoastalCliffs()
+    {
+        return COASTAL_CLIFFS;
+    }
+
+    @Unique @Override
+    public int getStaticShoreDunes()
+    {
+        return SHORE_DUNES;
+    }
+
+    @Unique @Override
+    public int getStaticVinicuncaMountains()
+    {
+        return VINICUNCA_MOUNTAINS;
+    }
+
     @Overwrite(remap = false)
     public static BiomeExtension getFromLayerId(int id)
     {
@@ -440,23 +467,41 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
 
         mainLayer = SmoothLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 15, mainLayer);
+        mainLayer = ExtraDunesShoreLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        layerArtist.draw("biomes", 16, mainLayer);
+
+        ShoreDunes.Context shoreDunesContext = new ShoreDunes.Context(createEarlyPlateLayers(seed), seed + random.nextLong(), 0.6f, 0.8f, 14, 0.2f);
+        mainLayer = new MergeShoreDunesLayer(shoreDunesContext).apply(seed + random.nextLong(), mainLayer);
+        layerArtist.draw("biomes", 17, mainLayer);
+
+        CoastalCliffs.Context cliffContext = new CoastalCliffs.Context(createEarlyPlateLayers(seed), seed + 2, 0.5f, 0.8f, 14, 0.2f);
+        mainLayer = new MergeCoastalCliffsLayer(cliffContext).apply(seed + 2, mainLayer);
+        layerArtist.draw("biomes", 18, mainLayer);
+
+        for (int i = 0; i < 4; i++)
+        {
+            mainLayer = ExtraDunesShoreLayer.INSTANCE.apply(seed + random.nextLong(), mainLayer);
+            layerArtist.draw("biomes", 19 + i, mainLayer);
+            mainLayer = EdgeDunesShoreLayer.INSTANCE.apply(seed + random.nextLong(), mainLayer);
+            layerArtist.draw("biomes", 23 + i, mainLayer);
+        }
 
         riverLayer = createEarlyPlateLayers(seed);
         Watershed.Context riverContext = new Watershed.Context(riverLayer, seed, 0.5f, 0.8f, 14, 0.2f);
         WatershedBank.Context riverbankContext = new WatershedBank.Context(riverLayer, seed, 0.5f, 0.8f, 14, 0.2f);
 
         mainLayer = new TFCFMergeRiverLayer(riverContext).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 16, mainLayer);
+        layerArtist.draw("biomes", 27, mainLayer);
         mainLayer = new MergeRiverBanksLayer(riverbankContext).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 17, mainLayer);
+        layerArtist.draw("biomes", 28, mainLayer);
         mainLayer = new TFCFMergeRiverLayer(riverContext).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 18, mainLayer);
+        layerArtist.draw("biomes", 29, mainLayer);
         mainLayer = EdgeRiverbankLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 19, mainLayer);
+        layerArtist.draw("biomes", 30, mainLayer);
 
         Chasm.Context chasmContext = new Chasm.Context(createEarlyPlateLayers(seed), seed + 5, Mth.clamp(random.nextFloat(), 0.4f, 1f), Mth.clamp(random.nextFloat(), 0.3f, 1f), Mth.clamp(random.nextInt(16), 2, 16), Mth.clamp(random.nextFloat(), 0.1f, 1f));
         mainLayer = new MergeChasmsLayer(chasmContext).apply(seed + 5, mainLayer);
-        layerArtist.draw("biomes", 20, mainLayer);
+        layerArtist.draw("biomes", 31, mainLayer);
 
         return mainLayer;
     }
@@ -715,7 +760,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Overwrite(remap = false)
     public static boolean isMountains(int value)
     {
-        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == THERMAL_CANYONS || value == MESA_PLATEAU || value == SHRUBLANDS;
+        return value == MOUNTAINS || value == OCEANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == THERMAL_CANYONS || value == MESA_PLATEAU || value == SHRUBLANDS || value == MISTY_PEAKS || value == VINICUNCA_MOUNTAINS;
     }
 
     @Overwrite(remap = false)

@@ -18,52 +18,52 @@ THISDIR = str(Path(__file__).resolve().parent)
 sys.path.insert(0, str(Path(THISDIR).parent))
 
 
-def blendRockBricks():
-    for filename in os.listdir(f"{THISDIR}/base/"):
-        background = Image.open(f"{THISDIR}/base/" + filename)
-        background.putalpha(255)
-        converter = ImageEnhance.Color(background)
-        img2 = converter.enhance(1)
-        backgroundBlur = img2.filter(
-            ImageFilter.GaussianBlur(radius=0.1))
-        foreground = Image.open(f"{THISDIR}/overlay/brick.png")
-        cut = Image.open(f"{THISDIR}/overlay/brick.png")
-        result = blendLayers(backgroundBlur, foreground, BlendType.HARDLIGHT)
-        resultCut = blendLayers(result, cut, BlendType.DESTIN)
-
-        resultCut.save(f"{THISDIR}/result/brick/" + filename)
-
-
-blendRockBricks()
-
-def blendImage():
-    for filename in os.listdir(f"{THISDIR}/base/"):
-        background = Image.open(f"{THISDIR}/base/" + filename)
-        background.putalpha(200)
-        converter = ImageEnhance.Color(background)
-        img2 = converter.enhance(1)
-        foreground = Image.open(f"{THISDIR}/overlay/gravel1.png")
-        backgroundBlur = img2.filter(
-            ImageFilter.GaussianBlur(radius=2))
-        result = blendLayers(backgroundBlur, foreground, BlendType.GRAINMERGE)
-        result.save(f"{THISDIR}/result/" + filename)
-
-
-def blendImageMossOverlay():
-    for filename in os.listdir(f"{THISDIR}/base/"):
-        background = Image.open(f"{THISDIR}/base/" + filename)
-        background.putalpha(255)
-        converter = ImageEnhance.Color(background)
-        img2 = converter.enhance(1)
-        foreground = Image.open(f"{THISDIR}/overlay/cobble.png")
-        backgroundBlur = img2.filter(
-            ImageFilter.GaussianBlur(radius=0.1))
-        result = blendLayers(backgroundBlur, foreground, BlendType.HARDLIGHT)
-        overlay = Image.open(
-            f"{THISDIR}/overlay/overlay_mossy_cobble.png")
-        resultOverlay = blendLayers(overlay, result, BlendType.DESTATOP)
-
-        resultOverlay.save(f"{THISDIR}/result/" + filename)
+# def blendRockBricks():
+#    for filename in os.listdir(f"{THISDIR}/base/"):
+#        background = Image.open(f"{THISDIR}/base/" + filename)
+#        background.putalpha(255)
+#        converter = ImageEnhance.Color(background)
+#        img2 = converter.enhance(1)
+#        backgroundBlur = img2.filter(
+#            ImageFilter.GaussianBlur(radius=0.1))
+#        foreground = Image.open(f"{THISDIR}/overlay/brick.png")
+#        cut = Image.open(f"{THISDIR}/overlay/brick.png")
+#        result = blendLayers(backgroundBlur, foreground, BlendType.HARDLIGHT)
+#        resultCut = blendLayers(result, cut, BlendType.DESTIN)
+#
+#        resultCut.save(f"{THISDIR}/result/brick/" + filename)
+#
+#
+# blendRockBricks()
+#
+# def blendImage():
+#    for filename in os.listdir(f"{THISDIR}/base/"):
+#        background = Image.open(f"{THISDIR}/base/" + filename)
+#        background.putalpha(200)
+#        converter = ImageEnhance.Color(background)
+#        img2 = converter.enhance(1)
+#        foreground = Image.open(f"{THISDIR}/overlay/gravel1.png")
+#        backgroundBlur = img2.filter(
+#            ImageFilter.GaussianBlur(radius=2))
+#        result = blendLayers(backgroundBlur, foreground, BlendType.GRAINMERGE)
+#        result.save(f"{THISDIR}/result/" + filename)
+#
+#
+# def blendImageMossOverlay():
+#    for filename in os.listdir(f"{THISDIR}/base/"):
+#        background = Image.open(f"{THISDIR}/base/" + filename)
+#        background.putalpha(255)
+#        converter = ImageEnhance.Color(background)
+#        img2 = converter.enhance(1)
+#        foreground = Image.open(f"{THISDIR}/overlay/cobble.png")
+#        backgroundBlur = img2.filter(
+#            ImageFilter.GaussianBlur(radius=0.1))
+#        result = blendLayers(backgroundBlur, foreground, BlendType.HARDLIGHT)
+#        overlay = Image.open(
+#            f"{THISDIR}/overlay/overlay_mossy_cobble.png")
+#        resultOverlay = blendLayers(overlay, result, BlendType.DESTATOP)
+#
+#        resultOverlay.save(f"{THISDIR}/result/" + filename)
 
 
 def imageMossOverlay():

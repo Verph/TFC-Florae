@@ -8,6 +8,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
@@ -41,6 +42,10 @@ public class TFCFFeatures
     public static final Supplier<TreeDecoratorType<WeightedLeaveVineDecorator>> WEIGHTED_LEAVE_VINE = LEAF_DECOR.register("leave_vine", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(WeightedLeaveVineDecorator.CODEC));
     public static final Supplier<TreeDecoratorType<AttachedToLeavesDecorator>> ATTACHED_TO_LEAVES = LEAF_DECOR.register("attached_to_leaves", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(AttachedToLeavesDecorator.CODEC));
     public static final RegistryObject<Feature<RootedTreeConfig>> VANILLA_MANGROVE_TREE = register("vanilla_mangrove_tree", RootedTreeFeature::new, RootedTreeConfig.CODEC);
+    
+    public static final RegistryObject<Feature<TreeConfiguration>> BAMBOO_TREE = register("bamboo_tree", TreeFeature::new, TreeConfiguration.CODEC);
+    public static final RegistryObject<Feature<TreeConfiguration>> VANILLA_BAMBOO_TREE = register("vanilla_bamboo_tree", TreeFeature::new, TreeConfiguration.CODEC);
+    public static final Supplier<TreeDecoratorType<BambooLeavesDecorator>> BAMBOO_LEAVES = LEAF_DECOR.register("bamboo_leaves", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(BambooLeavesDecorator.CODEC));
 
     public static final RegistryObject<JoshuaTreeFeature> JOSHUA_TREE = register("joshua_tree", JoshuaTreeFeature::new, JoshuaTreeFeature.CODEC);
     public static final RegistryObject<BaobabTreeFeature> BAOBAB_TREE = register("baobab_tree", BaobabTreeFeature::new, DynamicTreeConfig.CODEC);
@@ -49,6 +54,8 @@ public class TFCFFeatures
     public static final RegistryObject<PoisonTallPlantFeature> POISON_TALL_PLANT = register("poison_tall_plant", PoisonTallPlantFeature::new, PoisonTallPlantFeature.CODEC);
     public static final RegistryObject<LandEmergentPlantFeature> LAND_EMERGENT_PLANT = register("land_emergent_plant", LandEmergentPlantFeature::new, LandEmergentPlantFeature.CODEC);
 
+    public static final RegistryObject<BeeNestFeature> BEE_NEST = register("bee_nest", BeeNestFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<TallSeagrassFeature> TALL_PLANT = register("tall_seagrass", TallSeagrassFeature::new, TallSeagrassFeature.CODEC);
     public static final RegistryObject<BlueBambooFeature> BLUE_BAMBOO = register("blue_bamboo", BlueBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);
     public static final RegistryObject<DragonBambooFeature> DRAGON_BAMBOO = register("dragon_bamboo", DragonBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);
     public static final RegistryObject<GoldenBambooFeature> GOLDEN_BAMBOO = register("golden_bamboo", GoldenBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);
@@ -67,12 +74,13 @@ public class TFCFFeatures
     public static final RegistryObject<RockPillarFeature> ROCK_PILLAR = register("rock_pillar", RockPillarFeature::new, RockPillarConfig.CODEC);
     public static final RegistryObject<SnowAndFreezeFeature> FREEZE_TOP_LAYER = register("freeze_top_layer", SnowAndFreezeFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<UnderwaterMagmaFeature> UNDERWATER_MAGMA = register("underwater_magma", UnderwaterMagmaFeature::new, UnderwaterMagmaConfig.CODEC);
-    public static final RegistryObject<DripstoneClusterFeature> DRIPSTONE_CLUSTER = register("dripstone_cluster", DripstoneClusterFeature::new, DripstoneClusterConfiguration.CODEC);
-    public static final RegistryObject<LargeDripstoneFeature> LARGE_DRIPSTONE = register("large_dripstone", LargeDripstoneFeature::new, LargeDripstoneConfiguration.CODEC);
-    public static final RegistryObject<PointedDripstoneFeature> POINTED_DRIPSTONE = register("pointed_dripstone", PointedDripstoneFeature::new, PointedDripstoneConfiguration.CODEC);
+    public static final RegistryObject<DripstoneClusterFeature> DRIPSTONE_CLUSTER = register("dripstone_cluster", DripstoneClusterFeature::new, DripstoneClusterConfig.CODEC);
+    public static final RegistryObject<LargeDripstoneFeature> LARGE_DRIPSTONE = register("large_dripstone", LargeDripstoneFeature::new, LargeDripstoneConfig.CODEC);
+    public static final RegistryObject<PointedDripstoneFeature> POINTED_DRIPSTONE = register("pointed_dripstone", PointedDripstoneFeature::new, PointedDripstoneConfig.CODEC);
     public static final RegistryObject<LakeFeature> LAKE = register("lake", LakeFeature::new, LakeConfig.CODEC);
     public static final RegistryObject<SaguaroCactusFeature> SAGUARO_CACTUS_FEATURE = register ("saguaro_cactus",  SaguaroCactusFeature::new, SaguaroCactusFeature.CODEC);
     public static final RegistryObject<ColumnFeature> BLOCK_COLUMN = register ("block_column",  ColumnFeature::new, BlockColumnConfiguration.CODEC);
+    public static final RegistryObject<BouldersFeature> ROCK_BOULDER = register("boulder", BouldersFeature::new, BoulderConfig.CODEC);
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(String name, Function<Codec<C>, F> factory, Codec<C> codec)
     {

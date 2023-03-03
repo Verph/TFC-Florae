@@ -9,14 +9,11 @@
       "count": {
         "type": "minecraft:uniform",
         "value": {
-          "min_inclusive": 48,
-          "max_inclusive": 96
+          "min_inclusive": 1,
+          "max_inclusive": 15
         }
       },
       "type": "minecraft:count"
-    },
-    {
-      "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:height_range",
@@ -29,6 +26,19 @@
           "absolute": 60
         }
       }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 3
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
     },
     {
       "type": "tfc:biome"

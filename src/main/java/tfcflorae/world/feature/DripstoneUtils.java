@@ -9,16 +9,20 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.PointedDripstoneBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DripstoneThickness;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraftforge.common.Tags;
 
-import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.util.EnvironmentHelpers;
-import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.rock.DripstoneRock;
+import net.dries007.tfc.util.Helpers;
+
+import tfcflorae.common.blocks.rock.TFCFPointedDripstoneBlock;
 
 public class DripstoneUtils
 {
@@ -78,38 +82,41 @@ public class DripstoneUtils
         return level.isStateAtPosition(pos, DripstoneUtils::isEmptyOrWaterOrLava);
     }
 
-    public static void buildBaseToTipColumn(Direction direction, int height, boolean mergeTip, Consumer<BlockState> pBlockSetter)
+    public static void buildBaseToTipColumn(LevelAccessor level, BlockPos pos, BlockState inputState, Direction direction, int height, boolean mergeTip, Consumer<BlockState> pBlockSetter)
     {
         if (height >= 3)
         {
-            pBlockSetter.accept(createPointedDripstone(direction, DripstoneThickness.BASE));
+            pBlockSetter.accept(createPointedDripstone(level, pos, inputState, direction, DripstoneThickness.BASE));
 
             for(int i = 0; i < height - 3; ++i)
             {
-                pBlockSetter.accept(createPointedDripstone(direction, DripstoneThickness.MIDDLE));
+                pBlockSetter.accept(createPointedDripstone(level, pos, inputState, direction, DripstoneThickness.MIDDLE));
             }
         }
 
         if (height >= 2)
         {
-            pBlockSetter.accept(createPointedDripstone(direction, DripstoneThickness.FRUSTUM));
+            pBlockSetter.accept(createPointedDripstone(level, pos, inputState, direction, DripstoneThickness.FRUSTUM));
         }
 
         if (height >= 1)
         {
-            pBlockSetter.accept(createPointedDripstone(direction, mergeTip ? DripstoneThickness.TIP_MERGE : DripstoneThickness.TIP));
+            pBlockSetter.accept(createPointedDripstone(level, pos, inputState, direction, mergeTip ? DripstoneThickness.TIP_MERGE : DripstoneThickness.TIP));
         }
     }
 
-    public static void growPointedDripstone(LevelAccessor level, BlockPos pos, Direction direction, int height, boolean mergeTip)
+    public static void growPointedDripstone(BlockState inputState, Boolean hasSurface, LevelAccessor level, BlockPos pos, Direction direction, int height, boolean mergeTip)
     {
-        if (isDripstoneBase(level.getBlockState(pos.relative(direction.getOpposite()))))
+        if (isDripstoneBase(level.getBlockState(pos.relative(direction.getOpposite())), inputState))
         {
             BlockPos.MutableBlockPos blockpos$mutableblockpos = pos.mutable();
-            buildBaseToTipColumn(direction, height, mergeTip, (state) -> {
-                if (state.is(TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.SPIKE).get()))
+            buildBaseToTipColumn(level, pos, inputState, direction, height, mergeTip, (state) -> {
+                //if (state == inputState)
+                if (state.getBlock() instanceof TFCFPointedDripstoneBlock)
                 {
-                    state = state.setValue(PointedDripstoneBlock.WATERLOGGED, Boolean.valueOf(EnvironmentHelpers.isWater(level.getBlockState(blockpos$mutableblockpos))));
+                    final FluidProperty property = ((IFluidLoggable) state.getBlock()).getFluidProperty();
+                    final FluidState fluid = level.getFluidState(blockpos$mutableblockpos);
+                    state = state.setValue(property, property.keyForOrEmpty(fluid.getType()));
                 }
 
                 level.setBlock(blockpos$mutableblockpos, state, 2);
@@ -118,12 +125,15 @@ public class DripstoneUtils
         }
     }
 
-    public static boolean placeDripstoneBlockIfPossible(LevelAccessor level, BlockPos pos)
+    public static boolean placeDripstoneBlockIfPossible(BlockState inputSurfaceState, LevelAccessor level, BlockPos pos, Boolean hasSurface)
     {
         BlockState blockstate = level.getBlockState(pos);
-        if (blockstate.is(BlockTags.DRIPSTONE_REPLACEABLE))
+        if (hasSurface && (isBaseState(blockstate)))
         {
-            level.setBlock(pos, TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.RAW).get().defaultBlockState(), 2);
+            if (inputSurfaceState != null)
+            {
+                level.setBlock(pos, inputSurfaceState, 2);
+            }
             return true;
         }
         else
@@ -132,33 +142,45 @@ public class DripstoneUtils
         }
     }
 
-    public static BlockState createPointedDripstone(Direction direction, DripstoneThickness pDripstoneThickness)
+    public static BlockState createPointedDripstone(LevelAccessor level, BlockPos pos, BlockState inputState, Direction direction, DripstoneThickness pDripstoneThickness)
     {
-        return TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.SPIKE).get().defaultBlockState().setValue(PointedDripstoneBlock.TIP_DIRECTION, direction).setValue(PointedDripstoneBlock.THICKNESS, pDripstoneThickness);
+        BlockPos.MutableBlockPos blockpos$mutableblockpos = pos.mutable();
+        if (inputState.getBlock() instanceof TFCFPointedDripstoneBlock)
+        {
+            final FluidProperty property = ((IFluidLoggable) inputState.getBlock()).getFluidProperty();
+            final FluidState fluid = level.getFluidState(blockpos$mutableblockpos);
+            inputState = inputState.setValue(property, property.keyForOrEmpty(fluid.getType()));
+        }
+        return inputState.setValue(TFCFPointedDripstoneBlock.TIP_DIRECTION, direction).setValue(TFCFPointedDripstoneBlock.THICKNESS, pDripstoneThickness);
     }
 
-    public static boolean isDripstoneBaseOrLava(BlockState state)
+    public static boolean isDripstoneBaseOrLava(BlockState state, BlockState inputSurfaceState)
     {
-        return isDripstoneBase(state) || state.is(Blocks.LAVA) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
+        return isDripstoneBase(state, inputSurfaceState) || state.is(Blocks.LAVA) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
     }
 
-    public static boolean isDripstoneBase(BlockState state)
+    public static boolean isDripstoneBase(BlockState state, BlockState inputSurfaceState)
     {
-        return state.is(TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.RAW).get()) || state.is(BlockTags.DRIPSTONE_REPLACEABLE);
+        return state.is(inputSurfaceState.getBlock()) || isBaseState(state);
     }
 
     public static boolean isEmptyOrWater(BlockState state)
     {
-        return state.isAir() || state.is(Blocks.WATER) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
+        return state.isAir() || state.is(Blocks.WATER) || state.is(TFCBlocks.SALT_WATER.get()) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
     }
 
     public static boolean isNeitherEmptyNorWater(BlockState state)
     {
-        return !state.isAir() && !state.is(Blocks.WATER) && !EnvironmentHelpers.isWater(state) && !FluidHelpers.isAirOrEmptyFluid(state);
+        return !state.isAir() && !state.is(Blocks.WATER) && !state.is(TFCBlocks.SALT_WATER.get()) && !EnvironmentHelpers.isWater(state) && !FluidHelpers.isAirOrEmptyFluid(state);
     }
 
     public static boolean isEmptyOrWaterOrLava(BlockState state)
     {
-        return state.isAir() || state.is(Blocks.WATER) || state.is(Blocks.LAVA) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
+        return state.isAir() || state.is(Blocks.WATER) || state.is(TFCBlocks.SALT_WATER.get()) || state.is(Blocks.LAVA) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
+    }
+
+    public static boolean isBaseState(BlockState state)
+    {
+        return state.is(BlockTags.DRIPSTONE_REPLACEABLE) || state.is(Tags.Blocks.STONE) || state.is(Tags.Blocks.GRAVEL) || state.is(Tags.Blocks.SAND) || state.is(BlockTags.DIRT) || Helpers.isBlock(state, TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON);
     }
 }

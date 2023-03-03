@@ -7,6 +7,7 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "#tfc:feature/volcanoes",
-    "tfc:caverns/lava"
+    "tfc:caverns/lava",
+	"tfcflorae:jungle"
   ]
 }

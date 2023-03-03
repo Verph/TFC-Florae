@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "tfc:caverns/webbed/floor",
-    "tfc:caverns/webbed/cave_vegetation",
     "tfc:caverns/webbed/dungeon_extra",
     "tfc:caverns/webbed/hanging_spider_webs_thick",
     "tfc:caverns/webbed/hanging_spider_webs_slender",

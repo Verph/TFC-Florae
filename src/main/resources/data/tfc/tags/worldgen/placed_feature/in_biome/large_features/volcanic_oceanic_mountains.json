@@ -5,6 +5,7 @@
     "#tfc:feature/glaciers",
     "tfcflorae:fruit_forest",
     "tfcflorae:charred_forest",
-    "tfc:caverns/lava"
+    "tfc:caverns/lava",
+	"tfcflorae:jungle"
   ]
 }

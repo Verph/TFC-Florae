@@ -8,12 +8,13 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
+import net.dries007.tfc.common.blockentities.TFCChestBlockEntity;
 import net.dries007.tfc.common.capabilities.size.ItemSizeManager;
 import net.dries007.tfc.common.container.RestrictedChestContainer;
 import net.dries007.tfc.common.container.TFCContainerTypes;
 import net.dries007.tfc.config.TFCConfig;
 
-public class TFCFChestBlockEntity extends ChestBlockEntity
+public class TFCFChestBlockEntity extends TFCChestBlockEntity
 {
     public static boolean isValid(ItemStack stack)
     {

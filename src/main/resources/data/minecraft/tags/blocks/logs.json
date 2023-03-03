@@ -85,6 +85,11 @@
     "#tfc:yew_logs",
     "#tfc:zebrawood_logs",
     "#tfc:persimmon_logs",
-    "#tfc:charred_tree_logs"
+    "#tfc:charred_tree_logs",
+    "#tfc:bamboo_logs",
+    "#tfc:blue_bamboo_logs",
+    "#tfc:dragon_bamboo_logs",
+    "#tfc:golden_bamboo_logs",
+    "#tfc:red_bamboo_logs"
   ]
 }

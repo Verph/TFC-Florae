@@ -5,6 +5,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import com.mojang.serialization.Codec;
+
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.util.EnvironmentHelpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
@@ -13,6 +17,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -94,13 +99,17 @@ public class RootedTreeFeature extends Feature<RootedTreeConfig>
                 for (int z = -size; z <= size; ++z)
                 {
                     mutable.setWithOffset(pos, x, y, z);
-                    boolean isValid = TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> state.is(BlockTags.LOGS)) || (config.trunkPlacer instanceof UpwardBranchingTrunk trunk && level.isStateAtPosition(pos, state -> state.is(trunk.canGrowThrough)));
+                    boolean isValid = TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> isEmptyOrWater(state)) || level.isStateAtPosition(pos, state -> state.is(BlockTags.LOGS)) || (config.trunkPlacer instanceof UpwardBranchingTrunk trunk && level.isStateAtPosition(pos, state -> state.is(trunk.canGrowThrough)));
                     if (!isValid || (!config.ignoreVines && TreeFeatureAccessor.isVine(level, mutable))) return y - 2;
                 }
             }
         }
-
         return height;
+    }
+
+    public static boolean isEmptyOrWater(BlockState state)
+    {
+        return state.isAir() || state.is(Blocks.WATER) || state.is(TFCBlocks.SALT_WATER.get()) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
     }
 
     @Override

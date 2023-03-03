@@ -53,4 +53,12 @@ public interface TFCBiomesMixinInterface
     BiomeExtension getStaticShrublands();
 
     BiomeExtension getStaticMoorlands();
+
+    BiomeExtension getStaticMistyPeaks();
+
+    BiomeExtension getStaticCoastalCliffs();
+
+    BiomeExtension getStaticShoreDunes();
+
+    BiomeExtension getStaticVinicuncaMountains();
 }

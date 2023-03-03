@@ -6,6 +6,12 @@
     "tfcflorae:plant/blue_bamboo",
     "tfcflorae:plant/dragon_bamboo",
     "tfcflorae:plant/golden_bamboo",
-    "tfcflorae:plant/red_bamboo"
+    "tfcflorae:plant/red_bamboo",
+    "#tfc:bamboo_logs",
+    "#tfc:blue_bamboo_logs",
+    "#tfc:dragon_bamboo_logs",
+    "#tfc:golden_bamboo_logs",
+    "#tfc:red_bamboo_logs",
+    "tfcflorae:wood/lumber/bamboo"
   ]
 }

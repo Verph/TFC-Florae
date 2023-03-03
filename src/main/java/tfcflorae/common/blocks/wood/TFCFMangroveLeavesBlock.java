@@ -21,6 +21,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -50,7 +51,9 @@ import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
@@ -60,7 +63,7 @@ import net.dries007.tfc.util.climate.ClimateRange;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 
-public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, IForgeBlockExtension, EntityBlockExtension
+public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, IForgeBlockExtension, EntityBlockExtension, IFluidLoggable
 {
     /**
      * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.
@@ -69,6 +72,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
      */
     private static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     public final TFCFWood wood;
 
@@ -141,7 +145,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
      */
     protected abstract IntegerProperty getDistanceProperty();
 
-    private int getDistance(BlockState neighbor)
+    private int getDistanceNew(BlockState neighbor)
     {
         if (Helpers.isBlock(neighbor.getBlock(), BlockTags.LOGS))
         {
@@ -173,28 +177,47 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
         return InteractionResult.PASS;
     }
 
-    /*@Override
+    @Override
     @SuppressWarnings("deprecation")
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random rand)
     {
-        super.tick(state, level, pos, random);
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-
-        if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        int distance = updateDistanceNew(level, pos);
+        if (distance > maxDecayDistance)
         {
-            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > delay)
+            if (!state.getValue(PERSISTENT))
             {
-                onUpdate(level, pos, state);
+                if (!TFCConfig.SERVER.enableLeavesDecaySlowly.get())
+                {
+                    level.removeBlock(pos, false);
+                    doParticles(level, pos.getX() + rand.nextFloat(), pos.getY() + rand.nextFloat(), pos.getZ() + rand.nextFloat(), 1);
+                }
+                else
+                {
+                    // max + 1 means it must decay next random tick
+                    level.setBlockAndUpdate(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1));
+                }
+            }
+            else
+            {
+                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), 3);
             }
         }
-    }*/
+        else
+        {
+            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), 3);
+        }
+    }
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         super.randomTick(state, level, pos, random);
+        if (state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT))
+        {
+            level.removeBlock(pos, false);
+            doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
+        }
+
         Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
         Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
@@ -372,5 +395,33 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
     public boolean isRandomlyTicking(BlockState state)
     {
         return true; // Not for the purposes of leaf decay, but for the purposes of seasonal updates
+    }
+
+    private int updateDistanceNew(LevelAccessor level, BlockPos pos)
+    {
+        int distance = 1 + maxDecayDistance;
+        BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
+        for (Direction direction : Helpers.DIRECTIONS)
+        {
+            mutablePos.set(pos).move(direction);
+            distance = Math.min(distance, getDistanceNew(level.getBlockState(mutablePos)) + 1);
+            if (distance == 1)
+            {
+                break;
+            }
+        }
+        return distance;
+    }
+
+    @Override
+    public boolean isCollisionShapeFullBlock(BlockState state, BlockGetter level, BlockPos pos)
+    {
+        return true;
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
     }
 }

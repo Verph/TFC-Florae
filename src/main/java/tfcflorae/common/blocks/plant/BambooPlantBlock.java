@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -33,21 +34,25 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.ToolActions;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.PlantBlock;
 import net.dries007.tfc.common.blocks.plant.TFCBushBlock;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
-public abstract class BambooPlantBlock extends TFCBushBlock
+public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLoggable
 {
     protected static final float SMALL_LEAVES_AABB_OFFSET = 3.0F;
     protected static final float LARGE_LEAVES_AABB_OFFSET = 5.0F;
     protected static final float COLLISION_AABB_OFFSET = 1.5F;
     protected static final VoxelShape SMALL_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 16.0D, 11.0D);
     protected static final VoxelShape LARGE_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
-    protected static final VoxelShape COLLISION_SHAPE = Block.box(6.5D, 0.0D, 6.5D, 9.5D, 16.0D, 9.5D);
+    protected static final VoxelShape COLLISION_SHAPE = Block.box(7.5D, 0.0D, 7.5D, 10.5D, 16.0D, 10.5D);
     public static final IntegerProperty AGE = BlockStateProperties.AGE_1;
     public static final EnumProperty<BambooLeaves> LEAVES = BlockStateProperties.BAMBOO_LEAVES;
     public static final IntegerProperty GROWTH_STAGE = BlockStateProperties.STAGE;
@@ -56,6 +61,8 @@ public abstract class BambooPlantBlock extends TFCBushBlock
     public static final int GROWTH_STAGE_DONE_GROWING = 1;
     public static final int AGE_THIN_BAMBOO = 0;
     public static final int AGE_THICK_BAMBOO = 1;
+
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     private final Supplier<? extends Block> bambooStem;
     private final Supplier<? extends Block> bambooSapling;
@@ -91,12 +98,11 @@ public abstract class BambooPlantBlock extends TFCBushBlock
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        //super.createBlockStateDefinition(builder.add(AGE, LEAVES, GROWTH_STAGE));
         if (getPlant().getStageProperty() != null)
         {
             builder.add(getPlant().getStageProperty());
         }
-        builder.add(AGE, LEAVES, GROWTH_STAGE);
+        builder.add(AGE, LEAVES, GROWTH_STAGE, getFluidProperty());
     }
 
     @Override
@@ -143,29 +149,33 @@ public abstract class BambooPlantBlock extends TFCBushBlock
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
         super.getStateForPlacement(context);
-        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        if (!fluidstate.isEmpty())
+
+        BlockPos pos = context.getClickedPos();
+        FluidState fluidState = context.getLevel().getFluidState(pos);
+        BlockState state = updateStateWithCurrentMonth(defaultBlockState());
+
+        if (getFluidProperty().canContain(fluidState.getType()))
         {
-            return null;
+            state = state.setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
         }
         else
         {
             BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos().below());
-            if (blockstate.is(BlockTags.BAMBOO_PLANTABLE_ON))
+            if (context.getLevel().getBlockState(context.getClickedPos().below()).is(BlockTags.BAMBOO_PLANTABLE_ON))
             {
                 if (blockstate.is(bambooSapling.get()))
                 {
-                    return this.defaultBlockState().setValue(AGE, Integer.valueOf(0));
+                    return state.setValue(AGE, Integer.valueOf(0));
                 }
                 else if (blockstate.is(bambooStem.get()))
                 {
                     int i = blockstate.getValue(AGE) > 0 ? 1 : 0;
-                    return this.defaultBlockState().setValue(AGE, Integer.valueOf(i));
+                    return state.setValue(AGE, Integer.valueOf(i));
                 }
                 else
                 {
                     BlockState blockstate1 = context.getLevel().getBlockState(context.getClickedPos().above());
-                    return blockstate1.is(bambooStem.get()) ? this.defaultBlockState().setValue(AGE, blockstate1.getValue(AGE)) : bambooSapling.get().defaultBlockState();
+                    return blockstate1.is(bambooStem.get()) ? state.setValue(AGE, blockstate1.getValue(AGE)) : bambooSapling.get().defaultBlockState();
                 }
             }
             else
@@ -173,6 +183,7 @@ public abstract class BambooPlantBlock extends TFCBushBlock
                 return null;
             }
         }
+        return state;
     }
 
     @Override
@@ -217,6 +228,7 @@ public abstract class BambooPlantBlock extends TFCBushBlock
     @Override
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
+        FluidHelpers.tickFluid(level, currentPos, state);
         if (!state.canSurvive(level, currentPos))
         {
             level.scheduleTick(currentPos, this, 1);
@@ -305,5 +317,18 @@ public abstract class BambooPlantBlock extends TFCBushBlock
     protected BlockState updateStateWithCurrentMonth(BlockState state)
     {
         return getPlant().getStageProperty() != null ? state.setValue(getPlant().getStageProperty(), getPlant().stageFor(Calendars.SERVER.getCalendarMonthOfYear())) : state;
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public FluidState getFluidState(BlockState state)
+    {
+        return IFluidLoggable.super.getFluidState(state);
     }
 }

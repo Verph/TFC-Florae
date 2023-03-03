@@ -3,6 +3,8 @@
   "replace": false,
   "values": [
     "tfcflorae:fruit_forest",
-    "tfcflorae:charred_forest"
+    "tfcflorae:charred_forest",
+	"tfcflorae:jungle",
+	"#tfc:feature/bamboo_forest"
   ]
 }

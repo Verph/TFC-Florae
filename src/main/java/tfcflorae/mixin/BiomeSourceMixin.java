@@ -26,9 +26,9 @@ public abstract class BiomeSourceMixin
     @Inject(method = "buildFeaturesPerStep", at = @At("HEAD"), cancellable = true)
     private void buildFeaturesPerStepWithAdvancedCycleDetection(List<Holder<Biome>> biomes, boolean topLevel, CallbackInfoReturnable<List<BiomeSource.StepFeatureData>> cir)
     {
-        if (Config.COMMON.enableDebug.get())
+        /*if (Config.COMMON.enableDebug.get())
         {
             cir.setReturnValue(MixinHooks.buildFeaturesPerStepAndPopulateErrors(biomes));
-        }
+        }*/
     }
 }

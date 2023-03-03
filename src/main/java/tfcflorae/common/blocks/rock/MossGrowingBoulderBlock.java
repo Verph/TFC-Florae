@@ -3,6 +3,7 @@ package tfcflorae.common.blocks.rock;
 import java.util.Locale;
 import java.util.Random;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,6 +32,7 @@ import net.dries007.tfc.common.blocks.rock.IMossGrowingBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.common.recipes.CollapseRecipe;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
@@ -38,8 +40,10 @@ import net.dries007.tfc.util.Helpers;
 @SuppressWarnings("deprecation")
 public class MossGrowingBoulderBlock extends Block implements IFluidLoggable, IMossGrowingBlock
 {
+    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, Fluids.LAVA));
+
     public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
-    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER_AND_LAVA;
+    public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
     public final Supplier<? extends Block> mossy;
 
     public MossGrowingBoulderBlock(Properties properties, Supplier<? extends Block> mossy)

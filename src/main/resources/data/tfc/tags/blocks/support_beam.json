@@ -167,6 +167,8 @@
     "tfcflorae:wood/vertical_support/zebrawood",
     "tfcflorae:wood/horizontal_support/zebrawood",
     "tfcflorae:wood/vertical_support/persimmon",
-    "tfcflorae:wood/horizontal_support/persimmon"
+    "tfcflorae:wood/horizontal_support/persimmon",
+    "tfcflorae:wood/vertical_support/bamboo",
+    "tfcflorae:wood/horizontal_support/bamboo"
   ]
 }

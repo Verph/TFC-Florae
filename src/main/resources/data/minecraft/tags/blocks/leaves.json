@@ -85,7 +85,6 @@
     "tfcflorae:wood/leaves/yew",
     "tfcflorae:wood/leaves/zebrawood",
     "tfcflorae:wood/leaves/persimmon",
-    "tfcflorae:wood/leaves/african_padauk",
     "tfcflorae:wood/leaves/alder",
     "tfcflorae:wood/leaves/angelim",
     "tfcflorae:wood/leaves/argyle_eucalyptus",
@@ -167,6 +166,11 @@
     "tfcflorae:wood/leaves/yellow_meranti",
     "tfcflorae:wood/leaves/yew",
     "tfcflorae:wood/leaves/zebrawood",
-    "tfcflorae:wood/leaves/persimmon"
+    "tfcflorae:wood/leaves/persimmon",
+    "tfcflorae:wood/leaves/bamboo",
+    "tfcflorae:wood/leaves/blue_bamboo",
+    "tfcflorae:wood/leaves/dragon_bamboo",
+    "tfcflorae:wood/leaves/golden_bamboo",
+    "tfcflorae:wood/leaves/red_bamboo"
   ]
 }

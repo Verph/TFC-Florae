@@ -13,8 +13,9 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.world.TFCChunkGenerator;
 import net.dries007.tfc.world.chunkdata.ChunkData;
@@ -124,6 +125,18 @@ public class TFCFSoilSurfaceState implements SurfaceState
         };
     }
 
+    public static SurfaceState rockTFC(Rock rock, Rock.BlockType type)
+    {
+        final Supplier<Block> block = TFCBlocks.ROCK_BLOCKS.get(rock).get(type);
+        return context -> block.get().defaultBlockState();
+    }
+
+    public static SurfaceState rockTFCF(TFCFRock rock, Rock.BlockType type)
+    {
+        final Supplier<Block> block = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(type);
+        return context -> block.get().defaultBlockState();
+    }
+
     public static SurfaceState sand()
     {
         return context -> context.getRock().sand().defaultBlockState();
@@ -151,16 +164,146 @@ public class TFCFSoilSurfaceState implements SurfaceState
         return context -> block.get().defaultBlockState();
     }
 
-    private static SurfaceState rockSoilTFC(TFCFRockSoil type, SoilBlockType.Variant variant, Rock rock)
+    public static SurfaceState rockSoilTFC(TFCFRockSoil type, SoilBlockType.Variant variant, Rock rock)
     {
         final Supplier<Block> block = TFCFBlocks.TFCROCKSOIL.get(type).get(variant).get(rock);
         return context -> block.get().defaultBlockState();
     }
 
-    private static SurfaceState rockSoilTFCF(TFCFRockSoil type, SoilBlockType.Variant variant, TFCFRock rock)
+    public static SurfaceState rockSoilTFCF(TFCFRockSoil type, SoilBlockType.Variant variant, TFCFRock rock)
     {
         final Supplier<Block> block = TFCFBlocks.TFCROCKSOIL2.get(type).get(variant).get(rock);
         return context -> block.get().defaultBlockState();
+    }
+
+    public static SurfaceState rockSandGrass(SandBlockType sandColor)
+    {
+        return context -> TFCFBlocks.SAND_GRASS.get(sandColor).get().defaultBlockState();
+    }
+
+    public static SurfaceState rockSandSparseGrass(SandBlockType sandColor)
+    {
+        return context -> TFCFBlocks.SPARSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
+    }
+
+    public static SurfaceState rockSandDenseGrass(SandBlockType sandColor)
+    {
+        return context -> TFCFBlocks.DENSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
+    }
+
+    public static SurfaceState rockSandTFC(TFCFRockSand type, SandBlockType sandColor, Rock rock)
+    {
+        return context -> TFCFBlocks.ROCKY_SAND_TFC.get(type).get(sandColor).get(rock).get().defaultBlockState();
+    }
+
+    public static SurfaceState rockSandTFCF(TFCFRockSand type, SandBlockType sandColor, TFCFRock rock)
+    {
+        return context -> TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(sandColor).get(rock).get().defaultBlockState();
+    }
+
+    public static SurfaceState rockRareSandGrass(SandBlockType sandColor)
+    {
+        final Supplier<Block> pinkSand = TFCFBlocks.SAND_GRASS.get(SandBlockType.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.SAND_GRASS.get(SandBlockType.BLACK);
+
+        return context -> {
+            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
+            {
+                return pinkSand.get().defaultBlockState();
+            }
+            else if (context.rainfall() > 300f)
+            {
+                return blackSand.get().defaultBlockState();
+            }
+            else
+            {
+                return TFCFBlocks.SAND_GRASS.get(sandColor).get().defaultBlockState();
+            }
+        };
+    }
+
+    public static SurfaceState rockRareSandSparseGrass(SandBlockType sandColor)
+    {
+        final Supplier<Block> pinkSand = TFCFBlocks.SPARSE_SAND_GRASS.get(SandBlockType.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.SPARSE_SAND_GRASS.get(SandBlockType.BLACK);
+
+        return context -> {
+            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
+            {
+                return pinkSand.get().defaultBlockState();
+            }
+            else if (context.rainfall() > 300f)
+            {
+                return blackSand.get().defaultBlockState();
+            }
+            else
+            {
+                return TFCFBlocks.SPARSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
+            }
+        };
+    }
+
+    public static SurfaceState rockRareSandDenseGrass(SandBlockType sandColor)
+    {
+        final Supplier<Block> pinkSand = TFCFBlocks.DENSE_SAND_GRASS.get(SandBlockType.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.DENSE_SAND_GRASS.get(SandBlockType.BLACK);
+
+        return context -> {
+            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
+            {
+                return pinkSand.get().defaultBlockState();
+            }
+            else if (context.rainfall() > 300f)
+            {
+                return blackSand.get().defaultBlockState();
+            }
+            else
+            {
+                return TFCFBlocks.DENSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
+            }
+        };
+    }
+
+    public static SurfaceState rockRareSandTFC(TFCFRockSand type, SandBlockType sandColor, Rock rock)
+    {
+        final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.PINK).get(rock);
+        final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.BLACK).get(rock);
+
+        return context -> {
+            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
+            {
+                return pinkSand.get().defaultBlockState();
+            }
+            else if (context.rainfall() > 300f)
+            {
+                return blackSand.get().defaultBlockState();
+            }
+            else
+            {
+                return TFCFBlocks.ROCKY_SAND_TFC.get(type).get(sandColor).get(rock).get().defaultBlockState();
+            }
+        };
+    }
+
+    public static SurfaceState rockRareSandTFCF(TFCFRockSand type, SandBlockType sandColor, TFCFRock rock)
+    {
+        final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(SandBlockType.PINK).get(rock);
+        final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(SandBlockType.BLACK).get(rock);
+
+        return context -> {
+            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
+            {
+                return pinkSand.get().defaultBlockState();
+            }
+            else if (context.rainfall() > 300f)
+            {
+                return blackSand.get().defaultBlockState();
+            }
+            else
+            {
+                return TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(sandColor).get(rock).get().defaultBlockState();
+            }
+        };
     }
 
     public final List<SurfaceState> regions;

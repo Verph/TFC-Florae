@@ -3,9 +3,6 @@
   "feature": "tfcflorae:fresh_water_forest",
   "placement": [
     {
-      "type": "minecraft:biome"
-    },
-    {
       "type": "minecraft:height_range",
       "height": {
         "type": "uniform",

@@ -136,14 +136,14 @@ public enum TFCFRockSoil
                 return DIRTIER_STONE_TILES;
             case DIRTIER_STONE_TILES:
                 return DIRTIEST_STONE_TILES;
+            case DIRTIEST_STONE_TILES:
+                return ROCKY_COMPACT_DIRT;
             case PEBBLE_COMPACT_DIRT:
                 return ROCKY_COMPACT_DIRT;
             case ROCKY_COMPACT_DIRT:
                 return ROCKIER_COMPACT_DIRT;
             case ROCKIER_COMPACT_DIRT:
                 return ROCKIEST_COMPACT_DIRT;
-            case DIRTIEST_STONE_TILES:
-                return ROCKY_COMPACT_DIRT;
             default:
                 return this;
         }

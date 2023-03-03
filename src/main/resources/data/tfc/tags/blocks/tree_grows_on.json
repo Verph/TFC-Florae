@@ -19,6 +19,27 @@
     "tfcflorae:mossy_packed_mud/sandy_loam",
     "tfcflorae:mossy_packed_mud/silty_loam",
     "tfcflorae:mossy_packed_mud/humus",
-    "minecraft:moss_block"
+    "minecraft:moss_block",
+    "tfcflorae:sand/sparse_grass/brown",
+    "tfcflorae:sand/sparse_grass/white",
+    "tfcflorae:sand/sparse_grass/black",
+    "tfcflorae:sand/sparse_grass/red",
+    "tfcflorae:sand/sparse_grass/yellow",
+    "tfcflorae:sand/sparse_grass/green",
+    "tfcflorae:sand/sparse_grass/pink",
+    "tfcflorae:sand/dense_grass/brown",
+    "tfcflorae:sand/dense_grass/white",
+    "tfcflorae:sand/dense_grass/black",
+    "tfcflorae:sand/dense_grass/red",
+    "tfcflorae:sand/dense_grass/yellow",
+    "tfcflorae:sand/dense_grass/green",
+    "tfcflorae:sand/dense_grass/pink",
+    "tfcflorae:sand/grass/brown",
+    "tfcflorae:sand/grass/white",
+    "tfcflorae:sand/grass/black",
+    "tfcflorae:sand/grass/red",
+    "tfcflorae:sand/grass/yellow",
+    "tfcflorae:sand/grass/green",
+    "tfcflorae:sand/grass/pink"
   ]
 }

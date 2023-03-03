@@ -5,7 +5,10 @@
     "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "tfcflorae:spider_cave/spider_egg_large"
+        "Name": "tfcflorae:spider_cave/spider_egg_large",
+        "Properties": {
+		  "fluid": "empty"
+        }
       }
     }
   }

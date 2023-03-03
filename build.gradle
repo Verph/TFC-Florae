@@ -39,7 +39,7 @@ minecraft {
 
     runs {
         all {
-            args("-mixin.config=firmalife.mixins.json")
+            args("-mixin.config=tfcflorae.mixins.json")
 
             property("mixin.env.remapRefMap", "true")
             property("mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg")
@@ -49,7 +49,7 @@ minecraft {
             jvmArgs("-ea", "-Xmx4G", "-Xms4G")
 
             mods {
-                firmalife {
+                tfcflorae {
                     source sourceSets.main
                 }
             }

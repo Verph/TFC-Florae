@@ -1,7 +1,3 @@
-/**
- * Based on TreeConfiguration from Minecraft 1.19 to add a rootplacer in minecraft 1.18.x
- */
-
 package tfcflorae.world.feature.tree;
 
 import java.util.List;
@@ -23,6 +19,9 @@ import net.dries007.tfc.world.feature.tree.TreePlacementConfig;
 
 import tfcflorae.world.feature.tree.mangrove.MangroveRootPlacer;
 
+/**
+ * Based on TreeConfiguration from Minecraft 1.19 to add a rootplacer in minecraft 1.18.x
+ */
 public class RootedTreeConfig extends TreeConfiguration
 {
     public static final Codec<RootedTreeConfig> CODEC = RecordCodecBuilder.create(instance -> {

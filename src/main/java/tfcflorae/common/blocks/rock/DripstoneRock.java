@@ -10,7 +10,6 @@ import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.Material;
 
-import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.rock.Rock.BlockType;
 import net.dries007.tfc.common.blocks.soil.*;
@@ -20,7 +19,8 @@ import tfcflorae.common.blocks.TFCFBlocks;
 
 public enum DripstoneRock implements RegistryRock
 {
-    DRIPSTONE(RockCategory.SEDIMENTARY, SandBlockType.YELLOW);
+    DRIPSTONE(RockCategory.SEDIMENTARY, SandBlockType.YELLOW),
+    GYPSUM(RockCategory.SEDIMENTARY, SandBlockType.WHITE);
 
     public static final DripstoneRock[] VALUES = values();
 

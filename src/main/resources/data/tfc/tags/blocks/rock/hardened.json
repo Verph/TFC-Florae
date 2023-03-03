@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:rock/hardened/gypsum",
     "tfcflorae:rock/hardened/dripstone",
 	"tfcflorae:rock/hardened/red_granite",
     "tfcflorae:rock/hardened/breccia",

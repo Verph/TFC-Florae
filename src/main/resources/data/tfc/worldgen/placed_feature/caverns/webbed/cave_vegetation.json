@@ -16,8 +16,8 @@
       "count": {
         "type": "minecraft:uniform",
         "value": {
-          "min_inclusive": 4,
-          "max_inclusive": 16
+          "min_inclusive": 1,
+          "max_inclusive": 10
         }
       }
     },
@@ -30,18 +30,6 @@
       "max_y": {
         "absolute": 40
       }
-    },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "block_predicate_filter",
-      "predicate": {
-        "type": "tfc:replaceable"
-      }
-    },
-    {
-      "type": "tfc:biome"
     }
   ]
 }

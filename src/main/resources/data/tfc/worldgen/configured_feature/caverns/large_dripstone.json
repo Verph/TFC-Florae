@@ -1,6 +1,19 @@
 {
   "type": "tfcflorae:large_dripstone",
   "config": {
+	"has_surface": true,
+    "surface_state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfcflorae:rock/raw/dripstone"
+      }
+    },
+    "state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "tfcflorae:rock/spike/dripstone"
+      }
+    },
     "wind_speed": {
       "type": "minecraft:uniform",
       "value": {

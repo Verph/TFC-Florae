@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"all": "all",
-		"overlay": "overlay",
-		"particle": "all"
+		"all": "#all",
+		"overlay": "#overlay",
+		"particle": "#all"
 	},
 	"elements": [
 		{

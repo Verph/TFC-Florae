@@ -49,6 +49,35 @@ let ROCK_TYPES = {
   'mylonite': 'mylonite'
 }
 
+let ROCK_TYPES_TFCF = {
+  'cataclasite': 'cataclasite',
+  'porphyry': 'porphyry',
+  'red_granite': 'red_granite',
+  'laterite': 'laterite',
+  'dripstone': 'dripstone',
+  'breccia': 'breccia',
+  'foidolite': 'foidolite',
+  'peridotite': 'peridotite',
+  'blaimorite': 'blaimorite',
+  'boninite': 'boninite',
+  'carbonatite': 'carbonatite',
+  'mudstone': 'mudstone',
+  'sandstone': 'sandstone',
+  'siltstone': 'siltstone',
+  'arkose': 'arkose',
+  'jaspillite': 'jaspillite',
+  'travertine': 'travertine',
+  'wackestone': 'wackestone',
+  'blackband_ironstone': 'blackband_ironstone',
+  'blueschist': 'blueschist',
+  'catlinite': 'catlinite',
+  'greenschist': 'greenschist',
+  'novaculite': 'novaculite',
+  'soapstone': 'soapstone',
+  'komatiite': 'komatiite',
+  'mylonite': 'mylonite'
+}
+
 let ROCK_NAMESPACES = {
   'granite': 'tfc',
   'diorite': 'tfc',
@@ -96,6 +125,29 @@ let ROCK_NAMESPACES = {
   'soapstone': 'tfcflorae',
   'komatiite': 'tfcflorae',
   'mylonite': 'tfcflorae'
+}
+
+let METALLUM_ORES = {
+  'bauxite': 'bauxite',
+  'bertrandite': 'bertrandite',
+  'cobaltite': 'cobaltite',
+  'kernite': 'kernite',
+  'galena': 'galena',
+  'monazite': 'monazite',
+  'native_osmium': 'native_osmium',
+  'native_iridium': 'native_iridium',
+  'native_platinum': 'native_platinum',
+  'rutile': 'rutile',
+  'stibnite': 'stibnite',
+  'uraninite': 'uraninite',
+  'wolframite': 'wolframite',
+  'certus_quartz': 'certus_quartz'
+}
+
+let oreGrades = {
+  'rich': 'rich',
+  'normal': 'normal',
+  'poor': 'poor'
 }
 
 let sandColors = {
@@ -166,11 +218,83 @@ let soilRockTypes2 = {
   'dirty_stone_tiles': 'dirty_stone_tiles'
 }
 
+let sandColorsTFC = {
+  'black': 'black',
+  'brown': 'brown',
+  'green': 'green',
+  'pink': 'pink',
+  'red': 'red',
+  'white': 'white',
+  'yellow': 'yellow'
+}
+
+let sandRockTypes = {
+  'sandiest_tiles': 'sandiest_tiles',
+  'sandier_tiles': 'sandier_tiles',
+  'sandy_tiles': 'sandy_tiles',
+  'pebble': 'pebble',
+  'rocky': 'rocky',
+  'rockier': 'rockier',
+  'rockiest': 'rockiest'
+}
+
+let grassTypes = {
+  'grass': 'grass',
+  'dense_grass': 'dense_grass',
+  'sparse_grass': 'sparse_grass'
+}
+
 fs.ensureDir(`./loot_tables/blocks/deposit/cassiterite`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_copper`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_gold`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_silver`)
 
+for(let sandColor in sandColorsTFC)
+{
+  for(let sandRockType in sandRockTypes)
+  {
+    for(let grassType in grassTypes)
+    {
+      fs.ensureDir(`./assets/blockstates/sand/${grassType}`)
+      fs.ensureDir(`./assets/models/block/sand/${grassType}/${sandColor}`)
+      fs.ensureDir(`./assets/models/item/sand/${grassType}`)
+      fs.ensureDir(`./data/loot_tables/blocks/sand/${grassType}`)
+      fs.ensureDir(`./data/recipes/landslide/sand/${grassType}`)
+      fs.ensureDir(`./data/recipes/collapse/sand/${grassType}`)
+    }
+    fs.ensureDir(`./assets/blockstates/sand/${sandRockType}/${sandColor}`)
+    fs.ensureDir(`./assets/models/block/sand/${sandRockType}/${sandColor}`)
+    fs.ensureDir(`./assets/models/item/sand/${sandRockType}/${sandColor}`)
+    fs.ensureDir(`./data/loot_tables/blocks/sand/${sandRockType}/${sandColor}`)
+
+    fs.ensureDir(`./data/recipes/brushing/sand/sandy_tiles/${sandColor}`)
+    fs.ensureDir(`./data/recipes/brushing/sand/sandier_tiles/${sandColor}`)
+    fs.ensureDir(`./data/recipes/brushing/sand/sandiest_tiles/${sandColor}`)
+    fs.ensureDir(`./data/recipes/landslide/sand/${sandRockType}/${sandColor}`)
+    fs.ensureDir(`./data/recipes/collapse/sand/${sandRockType}/${sandColor}`)
+  }
+}
+
+for(let metallumOre in METALLUM_ORES)
+{
+  if (metallumOre != "certus_quartz")
+  {
+    for(let oreGrade in oreGrades)
+    {
+      fs.ensureDir(`./metallum_florae/assets/blockstates/ore/${oreGrade}_${metallumOre}`)
+      fs.ensureDir(`./metallum_florae/assets/models/block/ore/${oreGrade}_${metallumOre}`)
+      fs.ensureDir(`./metallum_florae/assets/models/item/ore/${oreGrade}_${metallumOre}`)
+      fs.ensureDir(`./metallum_florae/data/loot_tables/blocks/ore/${oreGrade}_${metallumOre}`)
+    }
+  }
+  else if (metallumOre == "certus_quartz")
+  {
+    fs.ensureDir(`./metallum_florae/assets/blockstates/ore/${metallumOre}`)
+    fs.ensureDir(`./metallum_florae/assets/models/block/ore/${metallumOre}`)
+    fs.ensureDir(`./metallum_florae/assets/models/item/ore/${metallumOre}`)
+    fs.ensureDir(`./metallum_florae/data/loot_tables/blocks/ore/${metallumOre}`)
+  }
+}
 
 for(let sandstoneType in sandstoneTypes)
 {

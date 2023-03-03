@@ -8,12 +8,12 @@
       "max_temperature": 40,
       "min_rainfall": 360,
       "max_rainfall": 500,
-      "min_forest": "normal",
+      "min_forest": "old_growth",
       "fuzzy": true
     },
     {
       "type": "minecraft:noise_based_count",
-      "noise_to_count_ratio": 110,
+      "noise_to_count_ratio": 50,
       "noise_factor": 80,
       "noise_offset": 0.5
     },
@@ -44,7 +44,7 @@
       "count": {
         "type": "minecraft:uniform",
         "value": {
-          "min_inclusive": 5,
+          "min_inclusive": 1,
           "max_inclusive": 25
         }
       }

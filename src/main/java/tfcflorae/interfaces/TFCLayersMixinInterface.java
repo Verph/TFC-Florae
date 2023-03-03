@@ -51,4 +51,12 @@ public interface TFCLayersMixinInterface
     int getStaticShrublands();
 
     int getStaticMoorlands();
+
+    int getStaticMistyPeaks();
+
+    int getStaticCoastalCliffs();
+
+    int getStaticShoreDunes();
+
+    int getStaticVinicuncaMountains();
 }

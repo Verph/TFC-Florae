@@ -6,6 +6,7 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-    "tfc:random_active_hot_spring"
+    "tfc:random_active_hot_spring",
+	"tfcflorae:jungle"
   ]
 }

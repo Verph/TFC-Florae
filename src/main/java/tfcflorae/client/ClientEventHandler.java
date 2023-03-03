@@ -91,14 +91,7 @@ public class ClientEventHandler
             MenuScreens.register(TFCFContainerTypes.LARGE_KAOLINITE_VESSEL.get(), LargeKaoliniteVesselScreen::new);
             MenuScreens.register(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), LargeStonewareVesselScreen::new);
 
-            //Stream.of(TFCFBlocks.LARGE_EARTHENWARE_VESSEL, TFCFBlocks.GLAZED_LARGE_EARTHENWARE_VESSELS.values()).<Supplier<? extends Block>>flatMap(Helpers::flatten).forEach(vessel -> ItemProperties.register(vessel.get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
-            //Stream.of(TFCFBlocks.LARGE_KAOLINITE_VESSEL, TFCFBlocks.GLAZED_LARGE_KAOLINITE_VESSELS.values()).<Supplier<? extends Block>>flatMap(Helpers::flatten).forEach(vessel -> ItemProperties.register(vessel.get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
-            //Stream.of(TFCFBlocks.LARGE_STONEWARE_VESSEL, TFCFBlocks.GLAZED_LARGE_STONEWARE_VESSELS.values()).<Supplier<? extends Block>>flatMap(Helpers::flatten).forEach(vessel -> ItemProperties.register(vessel.get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
-
-            //if (!hasLeavesOnly())
-            //{
-                TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
-            //}
+            TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
         });
 
         // Render Types
@@ -121,26 +114,21 @@ public class ClientEventHandler
 
         TFCFBlocks.WOODS.forEach((key, value) -> {
             if (!key.isFruitTree() && !key.isMangrove())
-            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(value.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(value.get(type).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == cutoutMipped));
         });
 
         TFCFBlocks.LEAVES_ONLY.values().forEach(map -> {
-            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == cutoutMipped));
         });
         TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(map -> {
-            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == solid));
+            Stream.of(LEAVES).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == cutoutMipped));
         });
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CHARRED_TREE_TWIG.get(), cutout);
         TFCFBlocks.MANGROVE_ROOTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_EARTHENWARE_VESSEL.get(), cutout);
-        //TFCFBlocks.GLAZED_LARGE_EARTHENWARE_VESSELS.values().forEach(vessel -> ItemBlockRenderTypes.setRenderLayer(vessel.get(), cutout));
-
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_KAOLINITE_VESSEL.get(), cutout);
-        //TFCFBlocks.GLAZED_LARGE_KAOLINITE_VESSELS.values().forEach(vessel -> ItemBlockRenderTypes.setRenderLayer(vessel.get(), cutout));
-
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_STONEWARE_VESSEL.get(), cutout);
-        //TFCFBlocks.GLAZED_LARGE_STONEWARE_VESSELS.values().forEach(vessel -> ItemBlockRenderTypes.setRenderLayer(vessel.get(), cutout));
 
         // Grasses and such
         //TFCFBlocks.TFCSOIL.get(TFCFSoil.GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
@@ -191,12 +179,18 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.DENSE_BOG_IRON_GRASS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.BOG_IRON_GRASS.get(), cutout);
 
-        TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
-        TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
-        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.ROOT_SPIKES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
         // Plants
-        TFCFBlocks.PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.PLANTS.forEach((key, reg) -> {
+            if (key.isVine())
+                ItemBlockRenderTypes.setRenderLayer(reg.get(), translucent);
+            else
+                ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout);
+        });
         TFCFBlocks.FRUITING_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
         TFCFBlocks.POTTED_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
@@ -216,7 +210,7 @@ public class ClientEventHandler
         TFCFBlocks.DRIPSTONE_BLOCKS.values().forEach(map -> {
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutout);
         });
-        //TFCFBlocks.DRIPSTONE_BLOCKS.values().stream().map(map -> map.get(Rock.BlockType.SPIKE)).forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+
         TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         TFCFBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
         TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
@@ -244,6 +238,18 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CREEPING_WEBS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_SLENDER.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.HANGING_SPIDER_WEB_THICK.get(), cutout);
+
+        TFCFBlocks.SPARSE_SAND_GRASS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.DENSE_SAND_GRASS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.SAND_GRASS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+
+        TFCFBlocks.BAMBOO_LOGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.STRIPPED_BAMBOO_LOGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.BAMBOO_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.BAMBOO_SAPLINGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VANILLA_BAMBOO_LOGS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VANILLA_STRIPPED_BAMBOO_LOGS.get(), cutout);
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
@@ -251,8 +257,7 @@ public class ClientEventHandler
         // Entities
         for (TFCFWood wood : TFCFWood.VALUES)
         {
-            //if (!wood.hasLeavesOnly())
-                event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
+            event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
         }
 
         // BEs
@@ -276,7 +281,7 @@ public class ClientEventHandler
 
     public static void onConfigReload(ModConfigEvent.Reloading event)
     {
-        IngameOverlays.reloadOverlays();
+        //IngameOverlays.reloadOverlays();
     }
 
     public static void registerModelLoaders(ModelRegistryEvent event)
@@ -355,6 +360,12 @@ public class ClientEventHandler
         TFCFBlocks.PLANTS.forEach((plant, reg) -> registry.register(plant.isConifer() ? foliageColor : plant.isTallGrass() ? tallGrassColor : plant.isSeasonal() ? seasonalFoliageColor : plant.isFoliage() ? foliageColor : grassColor, reg.get()));
         TFCFBlocks.FRUITING_PLANTS.forEach((plant, reg) -> registry.register(plant.isConifer() ? foliageColor : plant.isTallGrass() ? tallGrassColor : plant.isSeasonal() ? seasonalFoliageColor : plant.isFoliage() ? foliageColor : grassColor, reg.get()));
         TFCFBlocks.POTTED_PLANTS.forEach((plant, reg) -> registry.register(grassColor, reg.get()));
+
+        TFCFBlocks.SPARSE_SAND_GRASS.forEach((grass, reg) -> registry.register(grassColor, reg.get()));
+        TFCFBlocks.DENSE_SAND_GRASS.forEach((grass, reg) -> registry.register(grassColor, reg.get()));
+        TFCFBlocks.SAND_GRASS.forEach((grass, reg) -> registry.register(grassColor, reg.get()));
+
+        TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(seasonalFoliageColor, reg.get()));
     }
 
     public static void registerColorHandlerItems(ColorHandlerEvent.Item event)
@@ -373,7 +384,7 @@ public class ClientEventHandler
             if (key.isFruitTree() || key.isMangrove())
                 registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
         });
-        //TFCFBlocks.WOODS.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get(), value.get(LEAVES).get()));
+
         TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
         TFCFBlocks.JOSHUA_LEAVES.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
         TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
@@ -387,6 +398,8 @@ public class ClientEventHandler
             if (plant.isItemTinted())
                 registry.register(plant.isConifer() ? seasonalFoliageColor : plant.isSeasonal() ? seasonalFoliageColor : grassColor, reg.get());
         });
+
+        TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(seasonalFoliageColor, reg.get()));
     }
 
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event)

@@ -25,6 +25,7 @@
   },
   "carvers": {
     "air": [
+      "tfc:cave_mountains",
       "tfc:caverns_upper",
       "tfc:caverns",
       "tfc:canyon_caverns",

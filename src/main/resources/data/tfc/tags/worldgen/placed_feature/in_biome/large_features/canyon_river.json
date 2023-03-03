@@ -6,6 +6,7 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"tfc:volcano_caldera"
+	"tfc:volcano_caldera",
+	"tfcflorae:jungle"
   ]
 }

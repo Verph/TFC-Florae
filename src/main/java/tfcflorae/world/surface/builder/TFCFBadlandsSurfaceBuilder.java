@@ -235,7 +235,8 @@ public class TFCFBadlandsSurfaceBuilder implements SurfaceBuilder
         }*/
 
         int surfaceDepth = -1;
-        for (int y = startHeight; y >= minSurfaceHeight; --y)
+        int randomDepth = (int) context.random().nextGaussian() * 4;
+        for (int y = startHeight; y >= (minSurfaceHeight - 15) + randomDepth; --y)
         {
             BlockState stateAt = context.getBlockState(y);
             if (stateAt.isAir())

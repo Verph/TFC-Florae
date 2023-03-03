@@ -21,6 +21,7 @@ build
 eclipse
 run
 libs
+resources
 resources/Json Generator/assets/*
 resources/Json Generator/data/*
 resources/Json Generator/__pycache__

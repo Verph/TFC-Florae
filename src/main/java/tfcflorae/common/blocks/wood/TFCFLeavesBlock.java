@@ -15,13 +15,12 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -47,6 +46,9 @@ import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
@@ -54,7 +56,7 @@ import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 
-public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, IForgeBlockExtension, EntityBlockExtension
+public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, IForgeBlockExtension, EntityBlockExtension, IFluidLoggable
 {
     /**
      * Any leaf block that spends four consecutive months dormant when it shouldn't be, should die.
@@ -63,6 +65,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
      */
     private static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
     {
@@ -132,19 +135,6 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
      */
     protected abstract IntegerProperty getDistanceProperty();
 
-    public int getDistance(BlockState neighbor)
-    {
-        if (Helpers.isBlock(neighbor.getBlock(), BlockTags.LOGS))
-        {
-            return 0;
-        }
-        else
-        {
-            // Check against this leaf block only, not any leaves
-            return neighbor.getBlock() == this ? neighbor.getValue(getDistanceProperty()) : maxDecayDistance;
-        }
-    }
-
     // Start of mixing Seasonal FruitTreeLeavesBlock
 
     @Override
@@ -164,28 +154,48 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         return InteractionResult.PASS;
     }
 
-    /*@Override
+    @Override
     @SuppressWarnings("deprecation")
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random rand)
     {
-        super.tick(state, level, pos, random);
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-
-        if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        super.tick(state, level, pos, rand);
+        int distance = updateDistanceNew(level, pos);
+        if (distance > maxDecayDistance)
         {
-            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > delay)
+            if (!state.getValue(PERSISTENT))
             {
-                onUpdate(level, pos, state);
+                if (!TFCConfig.SERVER.enableLeavesDecaySlowly.get())
+                {
+                    level.removeBlock(pos, false);
+                    doParticles(level, pos.getX() + rand.nextFloat(), pos.getY() + rand.nextFloat(), pos.getZ() + rand.nextFloat(), 1);
+                }
+                else
+                {
+                    // max + 1 means it must decay next random tick
+                    level.setBlockAndUpdate(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1));
+                }
+            }
+            else
+            {
+                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), 3);
             }
         }
-    }*/
+        else
+        {
+            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), 3);
+        }
+    }
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         super.randomTick(state, level, pos, random);
+        if (state.getValue(getDistanceProperty()) > maxDecayDistance && !state.getValue(PERSISTENT))
+        {
+            level.removeBlock(pos, false);
+            doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
+        }
+
         Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
         Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
@@ -203,6 +213,12 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
         super.updateShape(state, facing, facingState, level, facingPos, facingPos);
+        FluidHelpers.tickFluid(level, currentPos, state);
+        final int distance = getDistanceNew(facingState) + 1;
+        if (distance != 1 || state.getValue(getDistanceProperty()) != distance)
+        {
+            level.scheduleTick(currentPos, this, 1);
+        }
         return state;
     }
 
@@ -356,5 +372,46 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     public boolean isRandomlyTicking(BlockState state)
     {
         return true; // Not for the purposes of leaf decay, but for the purposes of seasonal updates
+    }
+
+    private int updateDistanceNew(LevelAccessor level, BlockPos pos)
+    {
+        int distance = 1 + maxDecayDistance;
+        BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
+        for (Direction direction : Helpers.DIRECTIONS)
+        {
+            mutablePos.set(pos).move(direction);
+            distance = Math.min(distance, getDistanceNew(level.getBlockState(mutablePos)) + 1);
+            if (distance == 1)
+            {
+                break;
+            }
+        }
+        return distance;
+    }
+
+    public int getDistanceNew(BlockState neighbor)
+    {
+        if (Helpers.isBlock(neighbor.getBlock(), BlockTags.LOGS))
+        {
+            return 0;
+        }
+        else
+        {
+            // Check against this leaf block only, not any leaves
+            return neighbor.getBlock() == this ? neighbor.getValue(getDistanceProperty()) : maxDecayDistance;
+        }
+    }
+
+    @Override
+    public boolean isCollisionShapeFullBlock(BlockState state, BlockGetter level, BlockPos pos)
+    {
+        return true;
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
     }
 }

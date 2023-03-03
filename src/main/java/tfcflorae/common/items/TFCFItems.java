@@ -1,9 +1,12 @@
 package tfcflorae.common.items;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
+
+import org.apache.commons.lang3.StringUtils;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,6 +25,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.dries007.tfc.common.*;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.entities.TFCEntities;
@@ -29,13 +33,14 @@ import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
-
+import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
+import tfcflorae.util.TFCFHelpers;
 
 import static net.dries007.tfc.common.TFCItemGroup.*;
 
@@ -66,13 +71,9 @@ public final class TFCFItems
     // Wood
 
     public static final Map<TFCFWood, RegistryObject<Item>> LUMBER = lumberWoodMapper();
-
     public static final Map<TFCFWood, RegistryObject<Item>> SUPPORTS = supportWoodMapper();
-
     public static final Map<TFCFWood, RegistryObject<Item>> BOATS = boatsWoodMapper();
-
     public static final Map<TFCFWood, RegistryObject<Item>> CHEST_MINECARTS = minecartChestWoodMapper();
-
     public static final Map<TFCFWood, RegistryObject<Item>> SIGNS = signWoodMapper();
 
     // Decorations
@@ -206,6 +207,10 @@ public final class TFCFItems
 
     // Soil stuff
 
+    public static final Map<SandBlockType, RegistryObject<Item>> SAND_PILE_TFC = Helpers.mapOfKeys(SandBlockType.class, type ->
+        register("sand_pile/" + type.name(), EARTH)
+    );
+
     public static final Map<SoilBlockType.Variant, RegistryObject<Item>> SOIL_PILE_TFC = Helpers.mapOfKeys(SoilBlockType.Variant.class, variant ->
         register("soil_pile/" + variant.name(), EARTH)
     );
@@ -274,8 +279,11 @@ public final class TFCFItems
         {
             if (TFCFBlocks.WOODS.get(wood) == null)
                 continue;
-
-            Map.put(wood, register("wood/boat/" + wood.name(), () -> new TFCFBoatItem(TFCFEntities.BOATS.get(wood), new Item.Properties().tab(WOOD))));
+            
+            if (wood == TFCFWood.BAMBOO)
+                Map.put(wood, register("wood/boat/" + wood.name(), () -> new TFCFBoatItem(TFCFEntities.BOATS.get(wood), new Item.Properties().tab(WOOD))));
+            else
+                Map.put(wood, register("wood/boat/" + wood.name(), () -> new TFCFBoatItem(TFCFEntities.BOATS.get(wood), new Item.Properties().tab(WOOD))));
         }
         return Map;
     }
@@ -371,7 +379,12 @@ public final class TFCFItems
 
     private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item)
     {
-        //TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\":" );
+        if (Config.COMMON.enableDebug.get())
+        {
+            String replace = name.replace("/", " ");
+            String replace2 = replace.replace("_", " ");
+            TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
+        }
         return ITEMS.register(name.toLowerCase(Locale.ROOT), item);
     }
 }

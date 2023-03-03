@@ -14,7 +14,10 @@
       "predicate": {
         "type": "would_survive",
         "state": {
-          "Name": "tfcflorae:spider_cave/spider_egg"
+          "Name": "tfcflorae:spider_cave/spider_egg",
+		  "Properties": {
+			"fluid": "empty"
+		  }
         }
       }
     },

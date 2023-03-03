@@ -37,7 +37,7 @@ import tfcflorae.common.blocks.TFCFBlocks;
 
 public class TFCFMangroveRootsBlocks extends Block implements IFluidLoggable
 {
-    public static final FluidProperty FLUID = TFCBlockStateProperties.WATER;
+    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
     public final TFCFWood wood;
     public final ExtendedProperties properties;

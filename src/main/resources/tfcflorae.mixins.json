@@ -11,10 +11,12 @@
 		"world.biome.BiomeExtensionMixin",
 		"world.biome.TFCBiomesMixin",
 		"world.layer.TFCLayersMixin",
+		"world.surface.SoilSurfaceStateMixin",
 		"accessor.BlockEntityTypeAccessor",
 		"accessor.TreeDecoratorTypeAccessor",
 		"accessor.TreeFeatureAccessor",
-		"accessor.TrunkPlacerTypeAccessor"
+		"accessor.TrunkPlacerTypeAccessor",
+		"block.VineBlockMixin"
 	],
 	"client": [],
 	"injectors": {

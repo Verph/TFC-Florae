@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:plant/bluebell",
+          "name": "tfcflorae:plant/bird_of_paradise",
           "conditions": [
             {
               "condition": "minecraft:match_tool",

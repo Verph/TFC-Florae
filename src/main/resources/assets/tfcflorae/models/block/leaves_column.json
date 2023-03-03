@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
     "textures": {
-		"end": "end",
-		"side": "side",
-		"particle": "side"
+		"end": "#end",
+		"side": "#side",
+		"particle": "#side"
     },
 	"elements": [
 		{

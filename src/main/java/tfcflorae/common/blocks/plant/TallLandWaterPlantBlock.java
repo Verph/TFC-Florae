@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -122,14 +123,22 @@ public abstract class TallLandWaterPlantBlock extends TFCTallGrassBlock implemen
     @Override
     public void placeTwoHalves(LevelAccessor level, BlockPos pos, int flags, Random random)
     {
+        IntegerProperty stageProperty = getPlant().getStageProperty();
         final BlockPos posAbove = pos.above();
         final int age = random.nextInt(4);
         final Fluid fluidBottom = level.getFluidState(pos).getType();
         final Fluid fluidTop = level.getFluidState(posAbove).getType();
         if (!fluidBottom.isSame(Fluids.EMPTY))
         {
-            final BlockState state = FluidHelpers.fillWithFluid(defaultBlockState().setValue(AGE, age).setValue(PART, Part.LOWER), fluidBottom);
-            final BlockState stateUp = FluidHelpers.fillWithFluid(defaultBlockState().setValue(AGE, age).setValue(PART, Part.UPPER), fluidTop);
+            BlockState state = FluidHelpers.fillWithFluid(defaultBlockState().setValue(AGE, age).setValue(PART, Part.LOWER), fluidBottom);
+            BlockState stateUp = FluidHelpers.fillWithFluid(defaultBlockState().setValue(AGE, age).setValue(PART, Part.UPPER), fluidTop);
+
+            if (stageProperty != null)
+            {
+                state = state.setValue(stageProperty, 2);
+                stateUp = stateUp.setValue(stageProperty, 2);
+            }
+
             if (state != null && stateUp != null)
             {
                 level.setBlock(pos, state, flags);

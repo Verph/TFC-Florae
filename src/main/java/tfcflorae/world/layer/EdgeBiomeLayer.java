@@ -35,6 +35,7 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int STEPPES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSteppes();
     static final int SHRUBLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShrublands();
     static final int MOORLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMoorlands();
+    static final int MISTY_PEAKS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMistyPeaks();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -78,6 +79,13 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             if (matcher.test(i -> i == MESA_HILLS || i == BRYCE_CANYONS))
             {
                 return BADLANDS;
+            }
+        }
+        else if (center == MISTY_PEAKS)
+        {
+            if (matcher.test(TFCLayers::isLow))
+            {
+                return MESA_PLATEAU;
             }
         }
         else if (center == CALDERAS)
