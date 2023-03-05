@@ -40,7 +40,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.common.TFCItemGroup;
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.devices.*;
 import net.dries007.tfc.common.blocks.plant.BodyPlantBlock;
@@ -48,6 +47,7 @@ import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
+import net.dries007.tfc.common.items.BarrelBlockItem;
 import net.dries007.tfc.common.items.ChestBlockItem;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
@@ -58,6 +58,7 @@ import tfcflorae.TFCFlorae;
 import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.*;
 import tfcflorae.common.blocks.ceramics.*;
+import tfcflorae.common.blocks.devices.*;
 import tfcflorae.common.blocks.plant.*;
 import tfcflorae.common.blocks.rock.*;
 import tfcflorae.common.blocks.soil.*;
@@ -67,6 +68,7 @@ import tfcflorae.common.blocks.spidercave.EggBlock;
 import tfcflorae.common.blocks.spidercave.WebbedBlock;
 import tfcflorae.common.blocks.spidercave.WebbedChestBlock;
 import tfcflorae.common.blocks.wood.*;
+import tfcflorae.common.items.TFCFBarrelBlockItem;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 import tfcflorae.util.climate.TFCFClimateRanges;
@@ -234,7 +236,7 @@ public final class TFCFBlocks
     );
 
     public static final Map<TFCFRock, RegistryObject<Block>> ROCK_ANVILS = Helpers.mapOfKeys(TFCFRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
-        register("rock/anvil/" + rock.name(), () -> new RockAnvilBlock(ExtendedProperties.of(Material.STONE).sound(SoundType.STONE).strength(2, 10).requiresCorrectToolForDrops().blockEntity(TFCBlockEntities.ANVIL), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW)), ROCK_STUFFS)
+        register("rock/anvil/" + rock.name(), () -> new TFCFRockAnvilBlock(ExtendedProperties.of(Material.STONE).sound(SoundType.STONE).strength(2, 10).requiresCorrectToolForDrops().blockEntity(TFCFBlockEntities.ANVIL), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW)), ROCK_STUFFS)
     );
 
     public static final Map<TFCFRock, RegistryObject<Block>> MAGMA_BLOCKS = Helpers.mapOfKeys(TFCFRock.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
@@ -261,7 +263,6 @@ public final class TFCFBlocks
     public static final Map<TFCFWood, RegistryObject<Block>> WOODS_SEASONAL_WOOD = seasonalWoodMapper(TFCFWood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = leavesOnlyMapper(TFCFWood.class);
     public static final Map<Wood, RegistryObject<Block>> NORMAL_BOOKSHELF_TFC = normalBookshelfMapperTFC(Wood.class);
-    //public static final Map<Wood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFC = chiseledBookshelfMapperTFC(Wood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFCF = chiseledBookshelfMapperTFCF(TFCFWood.class);
     public static final Map<Wood, RegistryObject<Block>> LOG_WALL_TFC = woodWallMapperTFC(Wood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> LOG_WALL_TFCF = woodWallMapperTFCF(TFCFWood.class);
@@ -278,8 +279,6 @@ public final class TFCFBlocks
     public static final Map<TFCFPlant, RegistryObject<Block>> BAMBOO_SAPLINGS = bambooSaplingMapper(TFCFPlant.class);
     public static final RegistryObject<Block> VANILLA_BAMBOO_LOGS = register("wood/log/bamboo", () -> new BambooLogBlock(ExtendedProperties.of(Material.WOOD).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs().sound(SoundType.BAMBOO).noOcclusion().dynamicShape().hasPostProcess(TFCFBlocks::always), TFCFBlocks.VANILLA_STRIPPED_BAMBOO_LOGS), WOOD);
     public static final RegistryObject<Block> VANILLA_STRIPPED_BAMBOO_LOGS = register("wood/stripped_log/bamboo", () -> new BambooLogBlock(ExtendedProperties.of(Material.WOOD).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs().sound(SoundType.BAMBOO).noOcclusion().dynamicShape().hasPostProcess(TFCFBlocks::always), null), WOOD);
-    //public static final RegistryObject<Block> VANILLA_BAMBOO_LEAVES = register("wood/leaves/bamboo", () -> TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCBlocks::never).flammableLikeLeaves(), 7), WOOD)
-    //public static final RegistryObject<Block> VANILLA_BAMBOO_SAPLINGS = register("wood/sapling/bamboo", () -> new VanillaBambooSaplingBlock(new BambooTreeGrower(), ExtendedProperties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), 6), WOOD);
     public static final RegistryObject<Block> BAMBOO_MOSAIC = register("wood/mosaic/bamboo", () -> new ExtendedBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(1.5f, 3.0F).flammableLikePlanks()), WOOD);
     public static final Map<TFCFPlant, RegistryObject<Block>> BAMBOO_BUNDLED_LOGS = bambooBundledLogMapper(TFCFPlant.class);
     
@@ -434,12 +433,12 @@ public final class TFCFBlocks
                     else if (type == BlockType.TRAPPED_CHEST)
                     {
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                            new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(TFCFChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new ChestBlockItem.Properties().tab(WOOD))));
                     }
                     else if (type == BlockType.CHEST)
                     {
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                            new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(TFCFChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new ChestBlockItem.Properties().tab(WOOD))));
                     }
                     else if (type == BlockType.SIGN)
                     {
@@ -460,6 +459,21 @@ public final class TFCFBlocks
                     {
                         subMap.put(type, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                             new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
+                    }
+                    else if (type == BlockType.BARREL)
+                    {
+                        subMap.put(type, register(("wood/barrel/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFBarrelBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5f).flammableLikePlanks().blockEntity(TFCFBlockEntities.BARREL).serverTicks(TFCFBarrelBlockEntity::serverTick)), WOOD));
+                    }
+                    else if (type == BlockType.LOOM)
+                    {
+                        subMap.put(type, register(("wood/loom/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFLoomBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.LOOM).ticks(TFCFLoomBlockEntity::tick), TFCFHelpers.identifier("block/wood/planks/" + wood.getSerializedName())), WOOD));
+                    }
+                    else if (type == BlockType.SLUICE)
+                    {
+                        subMap.put(type, register(("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFSluiceBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(TFCFBlockEntities.SLUICE).serverTicks(TFCFSluiceBlockEntity::serverTick)), WOOD));
                     }
                     else
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
@@ -492,12 +506,12 @@ public final class TFCFBlocks
                 else if (type == BlockType.TRAPPED_CHEST)
                 {
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                        new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(TFCFChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new ChestBlockItem.Properties().tab(WOOD))));
                 }
                 else if (type == BlockType.CHEST)
                 {
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                        new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(TFCFChestBlockEntity::lidAnimateTick), wood.getSerializedName()), type.createBlockItem(new ChestBlockItem.Properties().tab(WOOD))));
                 }
                 else if (type == BlockType.SIGN)
                 {
@@ -518,6 +532,21 @@ public final class TFCFBlocks
                 {
                     subMap.put(type, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
+                }
+                else if (type == BlockType.BARREL)
+                {
+                    subMap.put(type, register(("wood/barrel/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFBarrelBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5f).flammableLikePlanks().blockEntity(TFCFBlockEntities.BARREL).serverTicks(TFCFBarrelBlockEntity::serverTick)), type.createBlockItem(new TFCFBarrelBlockItem.Properties().tab(WOOD))));
+                }
+                else if (type == BlockType.LOOM)
+                {
+                    subMap.put(type, register(("wood/loom/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFLoomBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.LOOM).ticks(TFCFLoomBlockEntity::tick), TFCFHelpers.identifier("block/wood/planks/" + wood.getSerializedName())), WOOD));
+                }
+                else if (type == BlockType.SLUICE)
+                {
+                    subMap.put(type, register(("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFSluiceBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(TFCFBlockEntities.SLUICE).serverTicks(TFCFSluiceBlockEntity::serverTick)), WOOD));
                 }
                 else if (!(wood == TFCFWood.BAMBOO && (type == BlockType.PLANKS || type == BlockType.LOG || type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD || type == BlockType.STRIPPED_LOG || type == BlockType.SAPLING || type == BlockType.LEAVES)))
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
@@ -1458,9 +1487,9 @@ public final class TFCFBlocks
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
     {
-        /*String replace = name.replace("/", " ");
+        String replace = name.replace("/", " ");
         String replace2 = replace.replace("_", " ");
-        TFCFlorae.LOGGER.warn("\"block." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");*/
+        TFCFlorae.LOGGER.warn("\"block." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
         //TFCFlorae.LOGGER.warn(TFCFlorae.MOD_ID + ":" + name.toLowerCase());
         return RegistrationHelpers.registerBlock(TFCFBlocks.BLOCKS, TFCFItems.ITEMS, name, blockSupplier, blockItemFactory);
     }

@@ -379,12 +379,9 @@ public final class TFCFItems
 
     private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item)
     {
-        if (Config.COMMON.enableDebug.get())
-        {
-            String replace = name.replace("/", " ");
-            String replace2 = replace.replace("_", " ");
-            TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
-        }
+        String replace = name.replace("/", " ");
+        String replace2 = replace.replace("_", " ");
+        TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
         return ITEMS.register(name.toLowerCase(Locale.ROOT), item);
     }
 }

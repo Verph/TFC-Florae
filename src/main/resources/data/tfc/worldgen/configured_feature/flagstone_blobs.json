@@ -2,14 +2,14 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:cluster_vein",
   "config": {
-    "rarity": 50,
+    "rarity": 25,
     "min_y": {
       "absolute": -255
     },
     "max_y": {
       "absolute": 511
     },
-    "size": 140,
+    "size": 70,
     "density": 0.7,
     "blocks": [
       {

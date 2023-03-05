@@ -35,6 +35,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.dries007.tfc.client.*;
 import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
+import net.dries007.tfc.client.render.blockentity.BarrelBlockEntityRenderer;
+import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.screen.KnappingScreen;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
@@ -46,6 +48,9 @@ import net.dries007.tfc.util.Metal;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
+import tfcflorae.client.screen.TFCFAnvilPlanScreen;
+import tfcflorae.client.screen.TFCFAnvilScreen;
+import tfcflorae.client.screen.TFCFBarrelScreen;
 import tfcflorae.client.screen.ceramics.*;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -90,6 +95,10 @@ public class ClientEventHandler
             MenuScreens.register(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), LargeEarthenwareVesselScreen::new);
             MenuScreens.register(TFCFContainerTypes.LARGE_KAOLINITE_VESSEL.get(), LargeKaoliniteVesselScreen::new);
             MenuScreens.register(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), LargeStonewareVesselScreen::new);
+
+            MenuScreens.register(TFCFContainerTypes.BARREL.get(), TFCFBarrelScreen::new);
+            MenuScreens.register(TFCFContainerTypes.ANVIL.get(), TFCFAnvilScreen::new);
+            MenuScreens.register(TFCFContainerTypes.ANVIL_PLAN.get(), TFCFAnvilPlanScreen::new);
 
             TFCFBlocks.WOODS.values().forEach(map -> ItemProperties.register(map.get(BARREL).get().asItem(), Helpers.identifier("sealed"), (stack, level, entity, unused) -> stack.hasTag() ? 1.0f : 0f));
         });
@@ -266,6 +275,8 @@ public class ClientEventHandler
         event.registerBlockEntityRenderer(TFCFBlockEntities.SIGN.get(), TFCFSignBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(TFCFBlockEntities.LECTERN.get(), LecternRenderer::new);
         event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
+        event.registerBlockEntityRenderer(TFCFBlockEntities.BARREL.get(), ctx -> new BarrelBlockEntityRenderer());
+        event.registerBlockEntityRenderer(TFCFBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
     }
 
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)

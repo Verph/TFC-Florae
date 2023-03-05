@@ -47,11 +47,11 @@ public class RainbowMountainsSurfaceBuilder implements SurfaceBuilder
 
         final NormalSurfaceBuilder surfaceBuilder = NormalSurfaceBuilder.INSTANCE;
         //final double randomGauss = Math.abs(context.random().nextGaussian()) * 0.1f;
-        final double gaussSpread = context.random().nextGaussian() * 4;
+        final double gaussSpread = context.random().nextGaussian() * 2;
         //final double colorNoise = surfaceMaterialNoise.noise(context.pos().getX(), context.pos().getZ());
         final double heightNoise = this.heightNoise.noise(context.pos().getX(), context.pos().getZ()) * 4f + startY;
 
-        if (heightNoise > 125 + gaussSpread)
+        if (heightNoise > 130 + gaussSpread)
         {
             float surfaceMaterialValue = surfaceMaterialNoise.noise(context.pos().getX(), context.pos().getZ()) + 0.1f * context.random().nextFloat() - 0.05f;
             if (surfaceMaterialValue > 0.3f)

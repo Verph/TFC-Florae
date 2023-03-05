@@ -10,21 +10,21 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.devices.DryingBricksBlock;
 import net.dries007.tfc.common.blocks.soil.*;
 
 import tfcflorae.client.TFCFSounds;
+import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.devices.TFCFDryingBricksBlock;
 import tfcflorae.common.items.TFCFItems;
 
 public enum TFCFSoil
 {
     //Only TFCFVariants
     GRASS_PATH((self, variant) -> new PathBlock(Block.Properties.of(Material.DIRT).strength(0.65F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
-    FARMLAND((self, variant) -> new FarmlandBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6f).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always)).blockEntity(TFCBlockEntities.FARMLAND), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
+    FARMLAND((self, variant) -> new TFCFFarmlandBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6f).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always)).blockEntity(TFCFBlockEntities.FARMLAND), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
     DIRT((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant))),
     GRASS((self, variant) -> new ConnectedGrassBlock(Block.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant))),
     CLAY((self, variant) -> new DirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant), TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant))),
@@ -43,7 +43,7 @@ public enum TFCFSoil
 
     MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant))),
     MUD_BRICKS((self, variant) -> new Block(mudBrickProperties())),
-    DRYING_BRICKS((self, variant) -> new DryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks()).blockEntity(TFCBlockEntities.TICK_COUNTER), variant.dried())),
+    DRYING_BRICKS((self, variant) -> new TFCFDryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks()).blockEntity(TFCFBlockEntities.TICK_COUNTER), variant.dried())),
 
     //Both TFCFVariants and TFCVariants of soil types
     COARSE_DIRT((self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant)), 

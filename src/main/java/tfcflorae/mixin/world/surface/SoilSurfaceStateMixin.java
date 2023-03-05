@@ -98,7 +98,7 @@ public class SoilSurfaceStateMixin implements SurfaceState
                     if (noiseGauss > 0)
                         return sand().getState(context);
                     else if (noiseGauss > -0.5F)
-                        return TFCFSoilSurfaceState.rockSandSparseGrass(sandColor).getState(context);
+                        return TFCFSoilSurfaceState.rockSandSparseGrass(sandColor).getState(context); // Fix crashing from stack overflow error. Applies to all entries here.
                     else
                         return TFCFSoilSurfaceState.rockSandDenseGrass(sandColor).getState(context);
                 }

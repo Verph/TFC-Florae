@@ -157,4 +157,12 @@ public class TFCFHelpers
     {
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
+
+    /**
+     * Use over invoking the constructor, as Mojang refactors this in 1.19
+     */
+    public static TranslatableComponent translatable(String key)
+    {
+        return new TranslatableComponent(key);
+    }
 }
