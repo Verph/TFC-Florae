@@ -13,6 +13,7 @@ public class MergeChasmsLayer implements TransformLayer
     private final Chasm.Context chasm;
     public static TFCLayers staticBiomes = new TFCLayers();
 
+    static final int RIVERBANK = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRiverbank();
     static final int CHASMS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticChasms();
 
     public MergeChasmsLayer(Chasm.Context chasm)
@@ -24,7 +25,7 @@ public class MergeChasmsLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        if (!(TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value)))
+        if (!(TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value) || value == RIVERBANK))
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;
