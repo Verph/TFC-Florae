@@ -57,7 +57,12 @@ public class ForestSurfaceBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        buildForestSurface(context, startY, endY);
+
+        float noiseRainfall = context.rainfall() + (10 * (float) context.random().nextGaussian());
+        if (noiseRainfall >= 80f)
+        {
+            buildForestSurface(context, startY, endY);
+        }
     }
 
     private void buildForestSurface(SurfaceBuilderContext context, int startY, int endY)

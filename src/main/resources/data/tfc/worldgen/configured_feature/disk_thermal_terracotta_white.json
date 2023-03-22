@@ -2,7 +2,7 @@
   "type": "minecraft:disk",
   "config": {
     "state": {
-      "Name": "minecraft:white_terracotta"
+      "Name": "tfcflorae:sand/weathered_terracotta/white"
     },
     "radius": {
       "type": "minecraft:uniform",

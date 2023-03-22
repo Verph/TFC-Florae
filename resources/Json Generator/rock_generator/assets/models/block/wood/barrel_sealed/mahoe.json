@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/mahoe",
     "planks": "tfcflorae:block/wood/planks/mahoe",
-    "sheet": "tfcflorae:block/wood/sheet/mahoe",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/mahoe"
   }
 }

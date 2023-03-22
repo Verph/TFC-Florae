@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/holly",
     "planks": "tfcflorae:block/wood/planks/holly",
-    "sheet": "tfcflorae:block/wood/sheet/holly",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/holly"
   }
 }

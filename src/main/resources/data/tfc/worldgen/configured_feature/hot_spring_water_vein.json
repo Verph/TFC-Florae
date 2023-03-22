@@ -4,12 +4,12 @@
   "config": {
     "rarity": 0,
     "min_y": {
-      "absolute": 40
+      "absolute": 55
     },
     "max_y": {
-      "absolute": 80
+      "absolute": 63
     },
-    "size": 200,
+    "size": 80,
     "density": 1,
     "blocks": [
       {

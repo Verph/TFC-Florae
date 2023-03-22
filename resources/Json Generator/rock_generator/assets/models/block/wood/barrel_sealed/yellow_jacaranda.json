@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/yellow_jacaranda",
     "planks": "tfcflorae:block/wood/planks/yellow_jacaranda",
-    "sheet": "tfcflorae:block/wood/sheet/yellow_jacaranda",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/yellow_jacaranda"
   }
 }

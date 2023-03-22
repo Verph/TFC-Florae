@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/joshua",
     "planks": "tfcflorae:block/wood/planks/joshua",
-    "sheet": "tfcflorae:block/wood/sheet/joshua",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/joshua"
   }
 }

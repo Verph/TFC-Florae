@@ -1,9 +1,8 @@
 {
-  "parent": "tfcflorae:block/wood/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/quince",
     "planks": "tfcflorae:block/wood/planks/quince",
-    "sheet": "tfcflorae:block/wood/sheet/quince",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/quince"
   }
 }

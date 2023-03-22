@@ -22,8 +22,8 @@ import net.dries007.tfc.world.surface.SoilSurfaceState;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
-import tfcflorae.world.surface.TFCFSoilSurfaceState;
 
 @Mixin(SoilSurfaceState.class)
 public class SoilSurfaceStateMixin implements SurfaceState
@@ -35,26 +35,26 @@ public class SoilSurfaceStateMixin implements SurfaceState
     {
         final ImmutableList<SurfaceState> regions = ImmutableList.of(
             sand(),
-            transitionSoil(sand(), soil(type, SoilBlockType.Variant.SANDY_LOAM)),
+            transitionSoil(sand(), soil(type, SoilBlockType.Variant.SANDY_LOAM), SoilBlockType.Variant.SANDY_LOAM),
             soil(type, SoilBlockType.Variant.SANDY_LOAM),
-            transitionSoil(soil(type, SoilBlockType.Variant.SANDY_LOAM), soil(type, SoilBlockType.Variant.LOAM)),
+            transitionSoil(soil(type, SoilBlockType.Variant.SANDY_LOAM), soil(type, SoilBlockType.Variant.LOAM), SoilBlockType.Variant.LOAM),
             soil(type, SoilBlockType.Variant.LOAM),
-            transitionSoil(soil(type, SoilBlockType.Variant.LOAM), soil(type, SoilBlockType.Variant.SILTY_LOAM)),
+            transitionSoil(soil(type, SoilBlockType.Variant.LOAM), soil(type, SoilBlockType.Variant.SILTY_LOAM), SoilBlockType.Variant.SILTY_LOAM),
             soil(type, SoilBlockType.Variant.SILTY_LOAM),
-            transitionSoil(soil(type, SoilBlockType.Variant.SILTY_LOAM), soil(type, SoilBlockType.Variant.SILT)),
+            transitionSoil(soil(type, SoilBlockType.Variant.SILTY_LOAM), soil(type, SoilBlockType.Variant.SILT), SoilBlockType.Variant.SILT),
             soil(type, SoilBlockType.Variant.SILT)
         );
         return type == SoilBlockType.GRASS ? new SoilSurfaceStateMixin.NeedsPostProcessing(regions) : new SoilSurfaceStateMixin(regions);
     }
 
-    @Overwrite(remap = false)
+    /*@Overwrite(remap = false)
     public static SurfaceState buildSandOrGravel(boolean sandIsSandstone)
     {
         final SurfaceState sand = sandIsSandstone ? sandstone() : sand();
         final SurfaceState gravel = gravel();
         return new SoilSurfaceStateMixin(ImmutableList.of(
             sand,
-            transitionSoil(sand, gravel),
+            transitionVanilla(sand, gravel),
             gravel,
             gravel,
             gravel,
@@ -63,10 +63,10 @@ public class SoilSurfaceStateMixin implements SurfaceState
             gravel,
             gravel
         ));
-    }
+    }*/
 
     @Unique
-    private static SurfaceState transitionSoil(SurfaceState first, SurfaceState second)
+    private static SurfaceState transitionSoil(SurfaceState first, SurfaceState second, SoilBlockType.Variant variant)
     {
         return context -> {
             final BlockPos pos = context.pos();
@@ -75,45 +75,59 @@ public class SoilSurfaceStateMixin implements SurfaceState
             float noiseGauss = noise + (2 * (float) random.nextGaussian());
             float noiseRainfall = context.rainfall() + (10 * (float) random.nextGaussian());
 
-            if (noiseRainfall <= 80f)
+            if (first != buildType(SoilBlockType.DIRT))
             {
-                if (noiseRainfall <= 50f)
+                if (noiseRainfall <= 80f)
                 {
-                    return sand().getState(context);
-                }
-                else
-                {
-                    SandBlockType sandColor = SandBlockType.YELLOW;
-                    if (context.getRock().sand() != null)
+                    if (noiseRainfall <= 50f)
                     {
-                        for (SandBlockType sandColors : SandBlockType.values())
+                        return context.getRock().sand().defaultBlockState();
+                    }
+                    else
+                    {
+                        if (noiseGauss > 0.2F)
                         {
-                            if (context.getRock().sand().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SAND.get(sandColors).get().getRegistryName().toString()))
+                            return context.getRock().sand().defaultBlockState();
+                        }
+                        else
+                        {
+                            SandBlockType sandColor = SandBlockType.YELLOW;
+                            if (context.getRock().sand() != null)
                             {
-                                sandColor = sandColors;
-                                break;
+                                for (SandBlockType sandColors : SandBlockType.values())
+                                {
+                                    if (context.getRock().sand().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SAND.get(sandColors).get().getRegistryName().toString()))
+                                    {
+                                        sandColor = sandColors;
+                                        break;
+                                    }
+                                }
+                            }
+                            float randomRainfall = random.nextFloat(context.rainfall()) * 0.01F;
+                            if (randomRainfall <= Mth.abs(noiseGauss))
+                            {
+                                return TFCFBlocks.SPARSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
+                            }
+                            else
+                            {
+                                return TFCFBlocks.DENSE_SAND_GRASS.get(sandColor).get().defaultBlockState();
                             }
                         }
                     }
+                }
+                else if (noiseRainfall <= 110f)
+                {
                     if (noiseGauss > 0)
-                        return sand().getState(context);
-                    else if (noiseGauss > -0.5F)
-                        return TFCFSoilSurfaceState.rockSandSparseGrass(sandColor).getState(context); // Fix crashing from stack overflow error. Applies to all entries here.
+                    {
+                        return TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_GRASS).get(variant).get().defaultBlockState();
+                    }
                     else
-                        return TFCFSoilSurfaceState.rockSandDenseGrass(sandColor).getState(context);
+                    {
+                        return TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_GRASS).get(variant).get().defaultBlockState();
+                    }
                 }
             }
-            else if (noiseRainfall <= 110f)
-            {
-                if (noiseGauss > 0)
-                    return TFCFSoilSurfaceState.buildType(TFCFSoil.DENSE_GRASS).getState(context);
-                else
-                    return TFCFSoilSurfaceState.buildType(TFCFSoil.SPARSE_GRASS).getState(context);
-            }
-            else
-            {
-                return noiseGauss > 0 ? first.getState(context) : second.getState(context);
-            }
+            return noiseGauss > 0 ? first.getState(context) : second.getState(context);
         };
     }
 

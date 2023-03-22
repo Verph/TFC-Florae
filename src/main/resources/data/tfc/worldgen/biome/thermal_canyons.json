@@ -68,11 +68,16 @@
       "tfc:in_biome/large_features/thermal_canyons"
     ],
     [
-	  "tfc:underwater_magma",
-	  "tfc:disk_thermal_terracotta_white",
-	  "tfc:disk_thermal_terracotta_orange",
-	  "tfc:disk_thermal_terracotta_yellow",
-	  "tfc:hot_spring_water_vein",
+      "tfc:thermal/lakes",
+      "tfc:thermal/terra_sand",
+      "tfc:thermal/acid_yellow",
+      "tfc:thermal/acid_orange",
+      "tfc:thermal/acid_white",
+      "tfc:thermal/acid_cyan",
+      "tfc:thermal/acid_black",
+      "tfc:thermal/acid_light_gray"
+    ],
+    [
  	  "tfc:small_rock_columns_rare",
 	  "tfc:smoke_block",
 	  "tfc:magma_block",

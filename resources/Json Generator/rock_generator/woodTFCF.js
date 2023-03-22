@@ -9,6 +9,7 @@ let WOOD_TYPES = {
     'argyle_eucalyptus': 'argyle_eucalyptus',
     'bald_cypress': 'bald_cypress',
     'baobab': 'baobab',
+    'bamboo': 'bamboo',
     'beech': 'beech',
     'black_walnut': 'black_walnut',
     'black_willow': 'black_willow',
@@ -5250,6 +5251,144 @@ function generateJSON(woodType)
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/potted_sapling/${woodType}.json`, JSON.stringify(lootPottedSapling, null, 2))
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/scribing_Table/${woodType}.json`, JSON.stringify(lootScribingTable, null, 2))
 	fs.writeFileSync(`./data/loot_tables/blocks/wood/chiseled_bookshelf/${woodType}.json`, JSON.stringify(lootChiseledBookshelf, null, 2))
+
+  let blockStateBarrelNew = {
+    "variants": {
+      "facing=up,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}`
+      },
+      "facing=up,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}`
+      },
+      "facing=up,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}`
+      },
+      "facing=up,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}`
+      },
+      "facing=east,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`
+      },
+      "facing=east,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`
+      },
+      "facing=east,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`
+      },
+      "facing=east,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`
+      },
+      "facing=west,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 180
+      },
+      "facing=west,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 180
+      },
+      "facing=west,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 180
+      },
+      "facing=west,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 180
+      },
+      "facing=south,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 90
+      },
+      "facing=south,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 90
+      },
+      "facing=south,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 90
+      },
+      "facing=south,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 90
+      },
+      "facing=north,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 270
+      },
+      "facing=north,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 270
+      },
+      "facing=north,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 270
+      },
+      "facing=north,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 270
+      }
+    }
+  }
+	fs.writeFileSync(`./assets/blockstates/wood/barrel/${woodType}.json`, JSON.stringify(blockStateBarrelNew, null, 2))
+
+  let modelBarrelNew = {
+    "parent": "tfc:block/barrel",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel/${woodType}.json`, JSON.stringify(modelBarrelNew, null, 2))
+
+  let modelBarrelSide = {
+    "parent": "tfc:block/barrel_side",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel/${woodType}_side.json`, JSON.stringify(modelBarrelSide, null, 2))
+
+  let modelBarrelSideRack = {
+    "parent": "tfc:block/barrel_side_rack",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel/${woodType}_side_rack.json`, JSON.stringify(modelBarrelSideRack, null, 2))
+
+  let modelBarrelSealedNew = {
+    "parent": "tfc:block/barrel_sealed",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}.json`, JSON.stringify(modelBarrelSealedNew, null, 2))
+
+  let modelBarrelSealedSide = {
+    "parent": "tfc:block/barrel_side_sealed",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}_side.json`, JSON.stringify(modelBarrelSealedSide, null, 2))
+
+  let modelBarrelSealedSideRack = {
+    "parent": "tfc:block/barrel_side_sealed_rack",
+    "textures": {
+      "particle": `tfcflorae:block/wood/planks/${woodType}`,
+      "planks": `tfcflorae:block/wood/planks/${woodType}`,
+      "sheet": `tfcflorae:block/wood/sheet/${woodType}`
+    }
+  }
+	fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}_side_rack.json`, JSON.stringify(modelBarrelSealedSideRack, null, 2))
 }
 
 function generateJSONTFC(woodTypeTFC)

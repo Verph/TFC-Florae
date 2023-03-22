@@ -29,6 +29,7 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
     static final int CANYON_RIVER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticCanyonRivers();
     static final int ALPINE_MOUNTAIN_RIVER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAlpineMountainRivers();
     static final int GRAVEL_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGravelShores();
+    static final int THERMAL_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticThermalCanyons();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -36,7 +37,35 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
         if (center == RIVER_EDGE)
         {
-            if (matcher.test(i -> i == SHORE))
+            if (matcher.test(i -> i == CALDERAS))
+            {
+                return CANYON_RIVER;
+            }
+            else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
+            {
+                return ALPINE_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == MOUNTAINS))
+            {
+                return MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
+            {
+                return VOLCANIC_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == OLD_MOUNTAINS))
+            {
+                return OLD_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
+            {
+                return OCEANIC_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
+            {
+                return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == SHORE))
             {
                 return SHORE;
             }
@@ -48,17 +77,17 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
             {
                 return OCEAN;
             }
-            else if (matcher.test(i -> !TFCLayers.isRiver(i) && TFCLayers.hasRiver(i) && !hasRiverCave(i)))
-            {
-                return RIVERBANK;
-            }
-            else if (matcher.test(i -> i == RIVER))
-            {
-                return RIVER;
-            }
             else if (matcher.test(i -> i == LOWLANDS))
             {
                 return LOWLANDS;
+            }
+            else if (matcher.test(i -> i == THERMAL_CANYONS))
+            {
+                return THERMAL_CANYONS;
+            }
+            else if (matcher.test(i -> i == LOW_CANYONS))
+            {
+                return LOW_CANYONS;
             }
             else if (matcher.test(i -> i == WETLANDS))
             {
@@ -75,6 +104,46 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
             else if (matcher.test(i -> i == LAKE))
             {
                 return LAKE;
+            }
+            else if (matcher.test(i -> !TFCLayers.isRiver(i) && TFCLayers.hasRiver(i) && !hasRiverCave(i) && !(i == LOWLANDS || i == THERMAL_CANYONS || i == LOW_CANYONS || i == WETLANDS || i == MARSHES || i == SWAMPS)))
+            {
+                return RIVERBANK;
+            }
+            else if (matcher.test(i -> i == RIVER))
+            {
+                return RIVER;
+            }
+            return RIVER;
+        }
+        else if (center == RIVER)
+        {
+            if (matcher.test(i -> i == CALDERAS))
+            {
+                return CANYON_RIVER;
+            }
+            else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
+            {
+                return ALPINE_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == MOUNTAINS))
+            {
+                return MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
+            {
+                return VOLCANIC_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == OLD_MOUNTAINS))
+            {
+                return OLD_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
+            {
+                return OCEANIC_MOUNTAIN_RIVER;
+            }
+            else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
+            {
+                return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
             }
             return RIVER;
         }
@@ -110,6 +179,11 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
 
     public static boolean hasRiverCave(int value)
     {
-        return value == CALDERAS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == OCEANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == OCEANIC_MOUNTAIN_RIVER || value == OLD_MOUNTAIN_RIVER || value == MOUNTAIN_RIVER || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER || value == VOLCANIC_MOUNTAIN_RIVER || value == CANYON_RIVER || value == ALPINE_MOUNTAIN_RIVER;
+        return value == ALPINE_MOUNTAINS || value == MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == OCEANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS;
     }
+
+    /*public static boolean hasRiverCave(int value)
+    {
+        return value == CALDERAS || value == ALPINE_MOUNTAINS || value == ALPINE_HIGHLANDS || value == MOUNTAINS || value == VOLCANIC_MOUNTAINS || value == OLD_MOUNTAINS || value == OCEANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS || value == OCEANIC_MOUNTAIN_RIVER || value == OLD_MOUNTAIN_RIVER || value == MOUNTAIN_RIVER || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER || value == VOLCANIC_MOUNTAIN_RIVER || value == CANYON_RIVER || value == ALPINE_MOUNTAIN_RIVER;
+    }*/
 }

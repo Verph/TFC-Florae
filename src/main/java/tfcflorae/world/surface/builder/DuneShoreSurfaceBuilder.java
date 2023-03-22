@@ -41,7 +41,12 @@ public class DuneShoreSurfaceBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        buildSandySurface(context, startY, endY);
+
+        float noiseRainfall = context.rainfall() + (10 * (float) context.random().nextGaussian());
+        if (noiseRainfall >= 50f)
+        {
+            buildSandySurface(context, startY, endY);
+        }
     }
 
     private void buildSandySurface(SurfaceBuilderContext context, int startY, int endY)
@@ -56,10 +61,10 @@ public class DuneShoreSurfaceBuilder implements SurfaceBuilder
         Rock rockTFC = Rock.GRANITE;
         TFCFRock rockTFCF = TFCFRock.ARKOSE;
 
-        SurfaceState PEBBLE = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.PEBBLE, sandColor, rockTFC);
-        SurfaceState ROCKY = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKY, sandColor, rockTFC);
-        SurfaceState ROCKIER = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIER,sandColor, rockTFC);
-        SurfaceState ROCKIEST = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIEST, sandColor, rockTFC);
+        SurfaceState PEBBLE = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
+        SurfaceState ROCKY = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKY, rockTFC);
+        SurfaceState ROCKIER = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
+        SurfaceState ROCKIEST = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
 
         if (context.getRock().sand() != null)
         {
@@ -82,17 +87,17 @@ public class DuneShoreSurfaceBuilder implements SurfaceBuilder
                     rockTFC = r;
                     if (variantNoiseValue > 0.6f)
                     {
-                        PEBBLE = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.PEBBLE, sandColor, rockTFC);
-                        ROCKY = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKY, sandColor, rockTFC);
-                        ROCKIER = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKIER, sandColor, rockTFC);
-                        ROCKIEST = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKIEST, sandColor, rockTFC);
+                        PEBBLE = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.PEBBLE, rockTFC);
+                        ROCKY = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKY, rockTFC);
+                        ROCKIER = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKIER, rockTFC);
+                        ROCKIEST = TFCFSoilSurfaceState.rockRareSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
                     }
                     else
                     {
-                        PEBBLE = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.PEBBLE, sandColor, rockTFC);
-                        ROCKY = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKY, sandColor, rockTFC);
-                        ROCKIER = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIER, sandColor, rockTFC);
-                        ROCKIEST = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIEST, sandColor, rockTFC);
+                        PEBBLE = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
+                        ROCKY = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKY, rockTFC);
+                        ROCKIER = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
+                        ROCKIEST = TFCFSoilSurfaceState.rockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
                     }
                     break;
                 }
@@ -105,17 +110,17 @@ public class DuneShoreSurfaceBuilder implements SurfaceBuilder
                             rockTFCF = r2;
                             if (variantNoiseValue > 0.6f)
                             {
-                                PEBBLE = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.PEBBLE, sandColor, rockTFCF);
-                                ROCKY = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKY, sandColor, rockTFCF);
-                                ROCKIER = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKIER, sandColor, rockTFCF);
-                                ROCKIEST = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKIEST, sandColor, rockTFCF);
+                                PEBBLE = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.PEBBLE, rockTFCF);
+                                ROCKY = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKY, rockTFCF);
+                                ROCKIER = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKIER, rockTFCF);
+                                ROCKIEST = TFCFSoilSurfaceState.rockRareSandTFCF(TFCFRockSand.ROCKIEST, rockTFCF);
                             }
                             else
                             {
-                                PEBBLE = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.PEBBLE, sandColor, rockTFCF);
-                                ROCKY = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKY, sandColor, rockTFCF);
-                                ROCKIER = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKIER, sandColor, rockTFCF);
-                                ROCKIEST = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKIEST, sandColor, rockTFCF);
+                                PEBBLE = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.PEBBLE, rockTFCF);
+                                ROCKY = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKY, rockTFCF);
+                                ROCKIER = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKIER, rockTFCF);
+                                ROCKIEST = TFCFSoilSurfaceState.rockSandTFCF(TFCFRockSand.ROCKIEST, rockTFCF);
                             }
                             break;
                         }
@@ -124,15 +129,15 @@ public class DuneShoreSurfaceBuilder implements SurfaceBuilder
             }
         }
 
-        SurfaceState SPARSE_GRASS = TFCFSoilSurfaceState.rockSandSparseGrass(sandColor);
-        SurfaceState DENSE_GRASS = TFCFSoilSurfaceState.rockSandDenseGrass(sandColor);
+        SurfaceState SPARSE_GRASS = TFCFSoilSurfaceState.rockSandSparseGrass();
+        SurfaceState DENSE_GRASS = TFCFSoilSurfaceState.rockSandDenseGrass();
         SurfaceState SHORE_SAND = SurfaceStates.SHORE_SAND;
 
         if (variantNoiseValue > 0.6f)
         {
             SHORE_SAND = SurfaceStates.RARE_SHORE_SAND;
-            SPARSE_GRASS = TFCFSoilSurfaceState.rockRareSandSparseGrass(sandColor);
-            DENSE_GRASS = TFCFSoilSurfaceState.rockRareSandDenseGrass(sandColor);
+            SPARSE_GRASS = TFCFSoilSurfaceState.rockRareSandSparseGrass();
+            DENSE_GRASS = TFCFSoilSurfaceState.rockRareSandDenseGrass();
         }
 
         final double randomGauss = Math.abs(context.random().nextGaussian()) * 0.1f;

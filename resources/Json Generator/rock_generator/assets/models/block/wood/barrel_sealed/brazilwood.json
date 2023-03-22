@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/brazilwood",
     "planks": "tfcflorae:block/wood/planks/brazilwood",
-    "sheet": "tfcflorae:block/wood/sheet/brazilwood",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/brazilwood"
   }
 }

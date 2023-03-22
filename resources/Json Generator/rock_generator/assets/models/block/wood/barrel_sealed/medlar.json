@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/medlar",
     "planks": "tfcflorae:block/wood/planks/medlar",
-    "sheet": "tfcflorae:block/wood/sheet/medlar",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/medlar"
   }
 }

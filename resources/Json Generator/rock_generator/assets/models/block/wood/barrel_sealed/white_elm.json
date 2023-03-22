@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/white_elm",
     "planks": "tfcflorae:block/wood/planks/white_elm",
-    "sheet": "tfcflorae:block/wood/sheet/white_elm",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/white_elm"
   }
 }

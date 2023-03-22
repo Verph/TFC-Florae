@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/norway_spruce",
     "planks": "tfcflorae:block/wood/planks/norway_spruce",
-    "sheet": "tfcflorae:block/wood/sheet/norway_spruce",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/norway_spruce"
   }
 }

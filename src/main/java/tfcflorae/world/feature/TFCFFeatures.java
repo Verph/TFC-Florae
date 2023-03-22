@@ -77,6 +77,8 @@ public class TFCFFeatures
     public static final RegistryObject<DripstoneClusterFeature> DRIPSTONE_CLUSTER = register("dripstone_cluster", DripstoneClusterFeature::new, DripstoneClusterConfig.CODEC);
     public static final RegistryObject<LargeDripstoneFeature> LARGE_DRIPSTONE = register("large_dripstone", LargeDripstoneFeature::new, LargeDripstoneConfig.CODEC);
     public static final RegistryObject<PointedDripstoneFeature> POINTED_DRIPSTONE = register("pointed_dripstone", PointedDripstoneFeature::new, PointedDripstoneConfig.CODEC);
+    public static final RegistryObject<GeyserClusterFeature> GEYSER_CLUSTER = register("geyser_cluster", GeyserClusterFeature::new, GeyserClusterConfig.CODEC);
+    public static final RegistryObject<GeyserPointedFeature> GEYSER_POINTED = register("geyser_pointed", GeyserPointedFeature::new, GeyserPointedConfig.CODEC);
     public static final RegistryObject<LakeFeature> LAKE = register("lake", LakeFeature::new, LakeConfig.CODEC);
     public static final RegistryObject<SaguaroCactusFeature> SAGUARO_CACTUS_FEATURE = register ("saguaro_cactus",  SaguaroCactusFeature::new, SaguaroCactusFeature.CODEC);
     public static final RegistryObject<ColumnFeature> BLOCK_COLUMN = register ("block_column",  ColumnFeature::new, BlockColumnConfiguration.CODEC);

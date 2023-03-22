@@ -34,6 +34,7 @@ import net.dries007.tfc.world.surface.builder.*;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.world.surface.TFCFSoilSurfaceState;
@@ -66,7 +67,16 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        buildSubSoil(context, startY, endY);
+
+        float noiseRainfall = context.rainfall() + (10 * (float) context.random().nextGaussian());
+        if (noiseRainfall >= 80f)
+        {
+            buildSubSoil(context, startY, endY);
+        }
+        else
+        {
+            buildSubSand(context, startY, endY);
+        }
     }
 
     private void buildSubSoil(SurfaceBuilderContext context, int startY, int endY)
@@ -283,6 +293,171 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
                             else
                             {
                                 context.setBlockState(y, PEBBLE_COMPACT_DIRT.getState(context));
+                            }
+                        }
+                    }
+                    else if (y > gravelY + 3)
+                    {
+                        if (0.3f >= randomGauss)
+                        {
+                            context.setBlockState(y, COMPACT_DIRT.getState(context));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void buildSubSand(SurfaceBuilderContext context, int startY, int endY)
+    {
+        ChunkData data = context.getChunkData();
+        BlockPos pos = new BlockPos(context.pos().getX(), startY - 1, context.pos().getZ());
+        RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
+
+        Rock rockTFC = Rock.GRANITE;
+        TFCFRock rockTFCF = TFCFRock.ARKOSE;
+        SurfaceState PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
+        SurfaceState ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKY, rockTFC);
+        SurfaceState ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
+        SurfaceState ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
+        BlockState localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
+
+        if (surfaceRock != null)
+        {
+            for (Rock r : Rock.values())
+            {
+                if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
+                {
+                    rockTFC = r;
+                    PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
+                    ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKY, rockTFC);
+                    ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
+                    ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
+                    localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
+                    break;
+                }
+                else
+                {
+                    for (TFCFRock r2 : TFCFRock.values())
+                    {
+                        if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
+                        {
+                            rockTFCF = r2;
+                            PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.PEBBLE, rockTFCF);
+                            ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKY, rockTFCF);
+                            ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKIER, rockTFCF);
+                            ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKIEST, rockTFCF);
+                            localGravelType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        SoilBlockType.Variant variant = SoilBlockType.Variant.SILT; // Fallback
+        for (SoilBlockType.Variant r : SoilBlockType.Variant.values())
+        {
+            if (context.getBlockState(startY).getBlock().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(r).get().getRegistryName().toString()))
+            {
+                variant = r;
+                break;
+            }
+        }
+
+        final BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get().defaultBlockState();
+
+        final SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
+
+        int grassY = startY - 1;
+        int gravelY = -1;
+        int transitionHeight = -1;
+
+        for (int y = startY - 2; y >= endY; --y)
+        {
+            final BlockState stateAt = context.getBlockState(y);
+            if (y < startY - 2 && y > endY + 2 && !stateAt.isAir() && (stateAt == localGravelType || stateAt == localDirtSoilVariant))
+            {
+                gravelY = y - 1;
+                transitionHeight = gravelY + 4;
+                break;
+            }
+        }
+
+        if (gravelY != -1)
+        {
+            if (transitionHeight >= grassY - 1) transitionHeight = grassY - 1;
+            for (int y = gravelY; y < transitionHeight; ++y)
+            {
+                final double randomGauss = context.random().nextGaussian();
+
+                if (pos.getY() > context.getSeaLevel())
+                {
+                    if (y == gravelY)
+                    {
+                        if (randomGauss >= -0.3f)
+                        {
+                            if (randomGauss >= 0.8f)
+                            {
+                                context.setBlockState(y, ROCKY.getState(context));
+                            }
+                            else if (randomGauss >= 0.45f && randomGauss < 0.8f)
+                            {
+                                context.setBlockState(y, ROCKIER.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIEST.getState(context));
+                            }
+                        }
+                    }
+                    else if (y == gravelY + 1)
+                    {
+                        if (randomGauss >= 0f)
+                        {
+                            if (randomGauss >= 0.7f)
+                            {
+                                context.setBlockState(y, ROCKY.getState(context));
+                            }
+                            else if (randomGauss >= 0.45f && randomGauss < 0.7f)
+                            {
+                                context.setBlockState(y, ROCKIER.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIEST.getState(context));
+                            }
+                        }
+                    }
+                    else if (y == gravelY + 2)
+                    {
+                        if (randomGauss >= 0.1f)
+                        {
+                            if (randomGauss >= 0.7f)
+                            {
+                                context.setBlockState(y, PEBBLE.getState(context));
+                            }
+                            else if (randomGauss >= 0.4f && randomGauss < 0.7f)
+                            {
+                                context.setBlockState(y, ROCKY.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, ROCKIER.getState(context));
+                            }
+                        }
+                    }
+                    else if (y == gravelY + 3)
+                    {
+                        if (randomGauss >= 0.2f)
+                        {
+                            if (randomGauss >= 0.6f)
+                            {
+                                context.setBlockState(y, COMPACT_DIRT.getState(context));
+                            }
+                            else
+                            {
+                                context.setBlockState(y, PEBBLE.getState(context));
                             }
                         }
                     }

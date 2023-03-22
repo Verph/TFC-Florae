@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/alder",
     "planks": "tfcflorae:block/wood/planks/alder",
-    "sheet": "tfcflorae:block/wood/sheet/alder",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/alder"
   }
 }

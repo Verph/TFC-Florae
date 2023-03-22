@@ -45,6 +45,7 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
+import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
@@ -219,6 +220,8 @@ public class ClientEventHandler
         TFCFBlocks.DRIPSTONE_BLOCKS.values().forEach(map -> {
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.SPIKE).get(), cutout);
         });
+        TFCFBlocks.GEYSER_TFC.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.GEYSER_TFCF.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
         TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         TFCFBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
@@ -259,6 +262,8 @@ public class ClientEventHandler
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VANILLA_BAMBOO_LOGS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VANILLA_STRIPPED_BAMBOO_LOGS.get(), cutout);
+
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MINERAL_SHEET.get(), cutout);
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
@@ -277,6 +282,7 @@ public class ClientEventHandler
         event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
         event.registerBlockEntityRenderer(TFCFBlockEntities.BARREL.get(), ctx -> new BarrelBlockEntityRenderer());
         event.registerBlockEntityRenderer(TFCFBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
+        event.registerBlockEntityRenderer(TFCFBlockEntities.MINERAL_SHEET.get(), ctx -> new MineralSheetBlockEntityRenderer());
     }
 
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)

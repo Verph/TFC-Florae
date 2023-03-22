@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/ginkgo",
     "planks": "tfcflorae:block/wood/planks/ginkgo",
-    "sheet": "tfcflorae:block/wood/sheet/ginkgo",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/ginkgo"
   }
 }

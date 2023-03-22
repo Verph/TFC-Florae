@@ -14,7 +14,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.client.RenderHelpers;
 import net.dries007.tfc.client.screen.BlockEntityScreen;
-import net.dries007.tfc.client.screen.button.BarrelSealButton;
 import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.recipes.BarrelRecipe;
 import net.dries007.tfc.config.TFCConfig;
@@ -23,6 +22,7 @@ import net.dries007.tfc.util.Tooltips;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 
+import tfcflorae.client.screen.button.TFCFBarrelSealButton;
 import tfcflorae.common.blockentities.TFCFBarrelBlockEntity;
 import tfcflorae.common.blocks.devices.TFCFBarrelBlock;
 import tfcflorae.common.container.TFCFBarrelContainer;
@@ -46,7 +46,7 @@ public class TFCFBarrelScreen extends BlockEntityScreen<TFCFBarrelBlockEntity, T
     public void init()
     {
         super.init();
-        addRenderableWidget(new BarrelSealButton(blockEntity, getGuiLeft(), getGuiTop(), new Button.OnTooltip()
+        addRenderableWidget(new TFCFBarrelSealButton(blockEntity, getGuiLeft(), getGuiTop(), new Button.OnTooltip()
         {
             @Override
             public void onTooltip(Button button, PoseStack poseStack, int x, int y)

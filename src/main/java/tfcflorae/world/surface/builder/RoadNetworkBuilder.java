@@ -52,7 +52,12 @@ public class RoadNetworkBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        //buildRoadSurface(context, startY, endY);
+
+        /*float noiseRainfall = context.rainfall() + (10 * (float) context.random().nextGaussian());
+        if (noiseRainfall >= 80f)
+        {
+            buildRoadSurface(context, startY, endY);
+        }*/
     }
 
     private void buildRoadSurface(SurfaceBuilderContext context, int startY, int endY)

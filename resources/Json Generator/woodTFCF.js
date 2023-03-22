@@ -181,12 +181,86 @@ function generateJSON(woodType)
     }
   }
   let blockstateBarrel = {
-    "variants": {
+    /*"variants": {
       "sealed=true": {
         "model": `tfcflorae:block/wood/barrel_sealed/${woodType}`
       },
       "sealed=false": {
         "model": `tfcflorae:block/wood/barrel/${woodType}`
+      }
+    }*/
+    "variants": {
+      "facing=up,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}`
+      },
+      "facing=up,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}`
+      },
+      "facing=up,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}`
+      },
+      "facing=up,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}`
+      },
+      "facing=east,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`
+      },
+      "facing=east,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`
+      },
+      "facing=east,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`
+      },
+      "facing=east,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`
+      },
+      "facing=west,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 180
+      },
+      "facing=west,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 180
+      },
+      "facing=west,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 180
+      },
+      "facing=west,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 180
+      },
+      "facing=south,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 90
+      },
+      "facing=south,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 90
+      },
+      "facing=south,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 90
+      },
+      "facing=south,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 90
+      },
+      "facing=north,rack=true,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side_rack`,
+        "y": 270
+      },
+      "facing=north,rack=true,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side_rack`,
+        "y": 270
+      },
+      "facing=north,rack=false,sealed=true": {
+        "model": `tfcflorae:block/wood/barrel_sealed/${woodType}_side`,
+        "y": 270
+      },
+      "facing=north,rack=false,sealed=false": {
+        "model": `tfcflorae:block/wood/barrel/${woodType}_side`,
+        "y": 270
       }
     }
   }
@@ -4743,8 +4817,8 @@ function generateJSON(woodType)
 	fs.writeFileSync(`./assets/models/block/wood/wood/${woodType}.json`, JSON.stringify(blockmodelWood, null, 2))
 	fs.writeFileSync(`./assets/models/block/wood/log/${woodType}.json`, JSON.stringify(blockmodelLog, null, 2))
 	fs.writeFileSync(`./assets/models/block/wood/twig/${woodType}.json`, JSON.stringify(blockmodelTwig, null, 2))
-	fs.writeFileSync(`./assets/models/block/wood/barrel/${woodType}.json`, JSON.stringify(blockmodelBarrel, null, 2))
-	fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}.json`, JSON.stringify(blockmodelBarrelSealed, null, 2))
+	//fs.writeFileSync(`./assets/models/block/wood/barrel/${woodType}.json`, JSON.stringify(blockmodelBarrel, null, 2))
+	//fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}.json`, JSON.stringify(blockmodelBarrelSealed, null, 2))
 	fs.writeFileSync(`./assets/models/block/wood/chest/${woodType}.json`, JSON.stringify(blockmodelChest, null, 2))
 	fs.writeFileSync(`./assets/models/block/wood/fallen_leaves/${woodType}.json`, JSON.stringify(blockmodelFallenLeaves, null, 2))
 	//fs.writeFileSync(`./assets/models/block/wood/leaves/${woodType}.json`, JSON.stringify(blockmodelLeaves, null, 2))

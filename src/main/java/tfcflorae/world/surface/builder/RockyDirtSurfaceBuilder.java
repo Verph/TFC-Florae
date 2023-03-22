@@ -48,7 +48,12 @@ public class RockyDirtSurfaceBuilder implements SurfaceBuilder
     public void buildSurface(SurfaceBuilderContext context, int startY, int endY)
     {
         parent.buildSurface(context, startY, endY);
-        buildSoilSurface(context, startY, endY);
+
+        float noiseRainfall = context.rainfall() + (10 * (float) context.random().nextGaussian());
+        if (noiseRainfall >= 80f)
+        {
+            buildSoilSurface(context, startY, endY);
+        }
     }
 
     private void buildSoilSurface(SurfaceBuilderContext context, int startY, int endY)

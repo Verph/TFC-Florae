@@ -29,6 +29,7 @@ public class Config
 
     public final ForgeConfigSpec.IntValue maxFortressHeight;
     public final ForgeConfigSpec.IntValue minFortressHeight;
+    public final ForgeConfigSpec.IntValue mineralGenFrequency;
 
     Config(ForgeConfigSpec.Builder innerBuilder)
     {
@@ -40,5 +41,7 @@ public class Config
 
         maxFortressHeight = builder.apply("maxFortressHeight").comment("Heighest Y-value the Nether Fortress can generate at.").defineInRange("maxFortressHeight", -170, -256, 512);
         minFortressHeight = builder.apply("minFortressHeight").comment("Lowest Y-value the Nether Fortress can generate at.").defineInRange("minFortressHeight", -220, -256, 512);
+
+        mineralGenFrequency = builder.apply("mineralGenFrequency").comment("How often minerals can generate near hot springs and lava.").defineInRange("mineralGenFrequency", 32, 0, 1000000);
     }
 }

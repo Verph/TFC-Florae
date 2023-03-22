@@ -5,7 +5,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import net.dries007.tfc.common.blocks.devices.BarrelBlock;
 import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.capabilities.heat.HeatCapability;
 import net.dries007.tfc.common.container.BlockEntityContainer;
@@ -13,6 +12,7 @@ import net.dries007.tfc.common.container.ButtonHandlerContainer;
 import net.dries007.tfc.common.container.CallbackSlot;
 
 import tfcflorae.common.blockentities.TFCFBarrelBlockEntity;
+import tfcflorae.common.blocks.devices.TFCFBarrelBlock;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -34,7 +34,7 @@ public class TFCFBarrelContainer extends BlockEntityContainer<TFCFBarrelBlockEnt
         Level level = blockEntity.getLevel();
         if (level != null)
         {
-            BarrelBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState());
+            TFCFBarrelBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState());
         }
     }
 
@@ -51,7 +51,7 @@ public class TFCFBarrelContainer extends BlockEntityContainer<TFCFBarrelBlockEnt
     @Override
     protected boolean moveStack(ItemStack stack, int slotIndex)
     {
-        if (blockEntity.getBlockState().getValue(BarrelBlock.SEALED)) return true;
+        if (blockEntity.getBlockState().getValue(TFCFBarrelBlock.SEALED)) return true;
         final int containerSlot = stack.getCapability(Capabilities.FLUID_ITEM).isPresent() && stack.getCapability(HeatCapability.CAPABILITY).map(cap -> cap.getTemperature() == 0f).orElse(false) ? TFCFBarrelBlockEntity.SLOT_FLUID_CONTAINER_IN : TFCFBarrelBlockEntity.SLOT_ITEM;
 
         return switch (typeOf(slotIndex))

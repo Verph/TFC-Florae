@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/mahogany",
     "planks": "tfcflorae:block/wood/planks/mahogany",
-    "sheet": "tfcflorae:block/wood/sheet/mahogany",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/mahogany"
   }
 }

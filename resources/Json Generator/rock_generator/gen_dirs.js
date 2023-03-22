@@ -49,6 +49,55 @@ let ROCK_TYPES = {
   'mylonite': 'mylonite'
 }
 
+let allRocks = {
+  'granite': 'granite',
+  'diorite': 'diorite',
+  'gabbro': 'gabbro',
+  'shale': 'shale',
+  'claystone': 'claystone',
+  'limestone': 'limestone',
+  'conglomerate': 'conglomerate',
+  'dolomite': 'dolomite',
+  'chert': 'chert',
+  'chalk': 'chalk',
+  'rhyolite': 'rhyolite',
+  'basalt': 'basalt',
+  'andesite': 'andesite',
+  'dacite': 'dacite',
+  'quartzite': 'quartzite',
+  'slate': 'slate',
+  'phyllite': 'phyllite',
+  'schist': 'schist',
+  'gneiss': 'gneiss',
+  'marble': 'marble',
+  'cataclasite': 'cataclasite',
+  'porphyry': 'porphyry',
+  'red_granite': 'red_granite',
+  'laterite': 'laterite',
+  //'dripstone': 'dripstone',
+  'breccia': 'breccia',
+  'foidolite': 'foidolite',
+  'peridotite': 'peridotite',
+  'blaimorite': 'blaimorite',
+  'boninite': 'boninite',
+  'carbonatite': 'carbonatite',
+  'mudstone': 'mudstone',
+  'sandstone': 'sandstone',
+  'siltstone': 'siltstone',
+  'arkose': 'arkose',
+  'jaspillite': 'jaspillite',
+  'travertine': 'travertine',
+  'wackestone': 'wackestone',
+  'blackband_ironstone': 'blackband_ironstone',
+  'blueschist': 'blueschist',
+  'catlinite': 'catlinite',
+  'greenschist': 'greenschist',
+  'novaculite': 'novaculite',
+  'soapstone': 'soapstone',
+  'komatiite': 'komatiite',
+  'mylonite': 'mylonite'
+}
+
 let ROCK_TYPES_TFCF = {
   'cataclasite': 'cataclasite',
   'porphyry': 'porphyry',
@@ -244,10 +293,46 @@ let grassTypes = {
   'sparse_grass': 'sparse_grass'
 }
 
+let allColors = {
+  'black': 'black',
+  'blue': 'blue',
+  'brown': 'brown',
+  'cyan': 'cyan',
+  'gray': 'gray',
+  'green': 'green',
+  'light_blue': 'light_blue',
+  'light_gray': 'light_gray',
+  'light_green': 'light_green',
+  'magenta': 'magenta',
+  'orange': 'orange',
+  'pink': 'pink',
+  'purple': 'purple',
+  'red': 'red',
+  'white': 'white',
+  'yellow': 'yellow'
+}
+
 fs.ensureDir(`./loot_tables/blocks/deposit/cassiterite`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_copper`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_gold`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_silver`)
+
+fs.ensureDir(`./assets/blockstates/rock/geyser`)
+fs.ensureDir(`./assets/models/item/rock/geyser`)
+fs.ensureDir(`./data/loot_tables/blocks/rock/geyser`)
+for (let rock in allRocks)
+{
+  fs.ensureDir(`./assets/models/block/rock/geyser/${rock}`)
+}
+
+fs.ensureDir(`./assets/blockstates/sand/weathered_terracotta`)
+fs.ensureDir(`./assets/models/block/sand//weathered_terracotta`)
+fs.ensureDir(`./assets/models/item/sand//weathered_terracotta`)
+fs.ensureDir(`./data/loot_tables/blocks/sand//weathered_terracotta`)
+fs.ensureDir(`./data/recipes/crafting/sand//weathered_terracotta`)
+fs.ensureDir(`./data/recipes/landslide/sand//weathered_terracotta`)
+fs.ensureDir(`./data/recipes/collapse/sand//weathered_terracotta`)
+fs.ensureDir(`./data/recipes/barrel/sand//weathered_terracotta`)
 
 for(let sandColor in sandColorsTFC)
 {

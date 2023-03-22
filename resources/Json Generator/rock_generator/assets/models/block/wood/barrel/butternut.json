@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/butternut",
     "planks": "tfcflorae:block/wood/planks/butternut",
-    "sheet": "tfcflorae:block/wood/sheet/butternut",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/butternut"
   }
 }

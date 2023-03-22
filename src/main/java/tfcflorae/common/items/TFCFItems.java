@@ -33,10 +33,13 @@ import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
+
 import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.Mineral;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.entities.TFCFEntities;
@@ -49,6 +52,12 @@ public final class TFCFItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TFCFlorae.MOD_ID);
 
+    // Sand
+
+    public static final Map<Colors, RegistryObject<Item>> WEATHERED_TERRACOTTA = Helpers.mapOfKeys(Colors.class, type ->
+        register("sand/weathered_terracotta_shard/" + type.name(), EARTH)
+    );
+
     // Ores
 
     public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCItemGroup.ORES);
@@ -56,6 +65,10 @@ public final class TFCFItems
     public static final RegistryObject<Item> GLOWSTONE_SHARDS = register("crystal/shard/glowstone", TFCItemGroup.ORES);
     public static final Map<Gem, RegistryObject<Item>> GEM_SHARDS = Helpers.mapOfKeys(Gem.class, gem ->
         register("crystal/shard/" + gem.name(), TFCItemGroup.ORES)
+    );
+
+    public static final Map<Mineral, RegistryObject<Item>> MINERALS = Helpers.mapOfKeys(Mineral.class, mineral ->
+        register("mineral/" + mineral.name(), TFCItemGroup.ORES)
     );
 
     // Rock Stuff
@@ -379,9 +392,9 @@ public final class TFCFItems
 
     private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item)
     {
-        String replace = name.replace("/", " ");
+        /*String replace = name.replace("/", " ");
         String replace2 = replace.replace("_", " ");
-        TFCFlorae.LOGGER.warn("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
+        TFCFlorae.LOGGER.debug("\"item." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");*/
         return ITEMS.register(name.toLowerCase(Locale.ROOT), item);
     }
 }

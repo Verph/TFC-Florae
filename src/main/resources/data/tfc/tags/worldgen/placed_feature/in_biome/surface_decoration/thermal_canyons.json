@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "#tfc:feature/land_plants"
+    "#tfc:feature/land_plants",
+    "tfc:thermal_spring",
+    "tfc:geyser_cluster"
   ]
 }

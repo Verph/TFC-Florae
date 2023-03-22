@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/sweetgum",
     "planks": "tfcflorae:block/wood/planks/sweetgum",
-    "sheet": "tfcflorae:block/wood/sheet/sweetgum",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/sweetgum"
   }
 }

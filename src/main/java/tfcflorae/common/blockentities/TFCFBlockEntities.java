@@ -98,6 +98,8 @@ public class TFCFBlockEntities
     public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("tfcf_lectern", TFCFLecternBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LECTERN)));
     public static final RegistryObject<BlockEntityType<TFCFAnvilBlockEntity>> ANVIL = register("tfcf_anvil", TFCFAnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream());
 
+    public static final RegistryObject<BlockEntityType<MineralSheetBlockEntity>> MINERAL_SHEET = register("mineral_sheet", MineralSheetBlockEntity::new, TFCFBlocks.MINERAL_SHEET);
+
     public static final RegistryObject<BlockEntityType<LargeEarthenwareVesselBlockEntity>> LARGE_EARTHENWARE_VESSEL = register("large_earthenware_vessel", LargeEarthenwareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_EARTHENWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
     public static final RegistryObject<BlockEntityType<LargeKaoliniteVesselBlockEntity>> LARGE_KAOLINITE_VESSEL = register("large_kaolinite_vessel", LargeKaoliniteVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_KAOLINITE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
     public static final RegistryObject<BlockEntityType<LargeStonewareVesselBlockEntity>> LARGE_STONEWARE_VESSEL = register("large_stoneware_vessel", LargeStonewareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_STONEWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));

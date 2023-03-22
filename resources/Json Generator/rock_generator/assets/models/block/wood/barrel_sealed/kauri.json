@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/kauri",
     "planks": "tfcflorae:block/wood/planks/kauri",
-    "sheet": "tfcflorae:block/wood/sheet/kauri",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/kauri"
   }
 }

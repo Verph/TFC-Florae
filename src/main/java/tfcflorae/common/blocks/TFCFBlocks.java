@@ -127,6 +127,10 @@ public final class TFCFBlocks
         ))
     );
 
+    public static final Map<Colors, RegistryObject<Block>> WEATHERED_TERRACOTTA = Helpers.mapOfKeys(Colors.class, type ->
+        register(("sand/weathered_terracotta/" + type.name()), type::create, EARTH)
+    );
+
     // Ores
 
     public static final Map<TFCFRock, Map<Ore, RegistryObject<Block>>> ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
@@ -243,11 +247,20 @@ public final class TFCFBlocks
         register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(TFCFBlocks::always)), ROCK_STUFFS)
     );
 
+    public static final Map<Rock, RegistryObject<Block>> GEYSER_TFC = Helpers.mapOfKeys(Rock.class, rock -> 
+        register("rock/geyser/" + rock.name(), () -> Geyser.create(ExtendedProperties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(9f), 15).requiresCorrectToolForDrops().noOcclusion().randomTicks().dynamicShape().hasPostProcess(TFCFBlocks::always), () -> TFCFBlocks.GEYSER_TFC.get(rock).get(), true), ROCK_STUFFS)
+    );
+    public static final Map<TFCFRock, RegistryObject<Block>> GEYSER_TFCF = Helpers.mapOfKeys(TFCFRock.class, rock -> 
+        register("rock/geyser/" + rock.name(), () -> Geyser.create(ExtendedProperties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(9f), 15).requiresCorrectToolForDrops().noOcclusion().randomTicks().dynamicShape().hasPostProcess(TFCFBlocks::always), () -> TFCFBlocks.GEYSER_TFCF.get(rock).get(), true), ROCK_STUFFS)
+    );
+
     public static final Map<TFCFRock, Map<Rock.BlockType, DecorationBlockRegistryObject>> TFCF_ROCKTYPE_DECORATIONS = RockTypeDecoTFCMapper(TFCFRock.class);
     public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
     public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFCF_ROCK_DECORATIONS = RockDecoTFCFMapper(TFCFRock.class);
 
     public static final RegistryObject<Block> LOOSE_FLINT = register("rock/loose/flint", () -> new LooseFlintBlock(Block.Properties.of(TFCMaterials.NON_SOLID_STONE).strength(0.05f, 0.0f).sound(SoundType.STONE).noCollission()), ROCK_STUFFS);
+
+    public static final RegistryObject<Block> MINERAL_SHEET = register("mineral/mineral_sheet", () -> new MineralSheetBlock(ExtendedProperties.of(Material.STONE).strength(0.5F, 4F).sound(TFCSounds.CHARCOAL).noOcclusion().blockEntity(TFCFBlockEntities.MINERAL_SHEET)));
 
     // Wood
 
@@ -1487,12 +1500,46 @@ public final class TFCFBlocks
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
     {
+        /*String replaceName = name.replace("/", ".");
         String replace = name.replace("/", " ");
         String replace2 = replace.replace("_", " ");
-        TFCFlorae.LOGGER.warn("\"block." + TFCFlorae.MOD_ID + "." + name.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");
-        //TFCFlorae.LOGGER.warn(TFCFlorae.MOD_ID + ":" + name.toLowerCase());
+        TFCFlorae.LOGGER.debug("\"block." + TFCFlorae.MOD_ID + "." + replaceName.toLowerCase() + "\": " + "\"" + StringUtils.capitalize(replace2) + "\"" + ",");*/
+        /*for (Ore ore : Ore.values())
+        {
+            for (TFCFRock rock : TFCFRock.values())
+            {
+                if (ore.isGraded())
+                {
+                    for (Ore.Grade grade : Ore.Grade.values())
+                    {
+                        String replaceOre = ore.name().toLowerCase().replace("/", " ");
+                        String replaceOre2 = replaceOre.replace("_", " ");
+                        TFCFlorae.LOGGER.debug("\"block." + TFCFlorae.MOD_ID + ".ore." + grade.name().toLowerCase() + "_" + ore.name().toLowerCase() + "." + rock.name().toLowerCase() + ".prospected" + "\": " + "\"" + StringUtils.capitalize(replaceOre2) + "\"" + ",");
+                    }
+                }
+                else
+                {
+                    String replaceOre = ore.name().toLowerCase().replace("/", " ");
+                    String replaceOre2 = replaceOre.replace("_", " ");
+                    TFCFlorae.LOGGER.debug("\"block." + TFCFlorae.MOD_ID + ".ore." + ore.name().toLowerCase() + "." + rock.name().toLowerCase() + ".prospected" + "\": " + "\"" + StringUtils.capitalize(replaceOre2) + "\"" + ",");
+                }
+            }
+        }*/
         return RegistrationHelpers.registerBlock(TFCFBlocks.BLOCKS, TFCFItems.ITEMS, name, blockSupplier, blockItemFactory);
     }
+
+    /*public static final Map<TFCFRock, Map<Ore, RegistryObject<Block>>> ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, ore -> !ore.isGraded(), ore ->
+            register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+        )
+    );
+    public static final Map<TFCFRock, Map<Ore, Map<Ore.Grade, RegistryObject<Block>>>> GRADED_ORES = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(Ore.class, Ore::isGraded, ore ->
+            Helpers.mapOfKeys(Ore.Grade.class, grade ->
+                register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+            )
+        )
+    );*/
 
     /*private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier, @Nullable Function<T, ? extends BlockItem> blockItemFactory)
     {

@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/maclura",
     "planks": "tfcflorae:block/wood/planks/maclura",
-    "sheet": "tfcflorae:block/wood/sheet/maclura",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/maclura"
   }
 }

@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/logwood",
     "planks": "tfcflorae:block/wood/planks/logwood",
-    "sheet": "tfcflorae:block/wood/sheet/logwood",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/logwood"
   }
 }

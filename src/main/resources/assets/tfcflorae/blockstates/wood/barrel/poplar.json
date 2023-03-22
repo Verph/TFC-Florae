@@ -1,10 +1,76 @@
 {
   "variants": {
-    "sealed=true": {
+    "facing=up,rack=true,sealed=true": {
       "model": "tfcflorae:block/wood/barrel_sealed/poplar"
     },
-    "sealed=false": {
+    "facing=up,rack=true,sealed=false": {
       "model": "tfcflorae:block/wood/barrel/poplar"
+    },
+    "facing=up,rack=false,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar"
+    },
+    "facing=up,rack=false,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar"
+    },
+    "facing=east,rack=true,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side_rack"
+    },
+    "facing=east,rack=true,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side_rack"
+    },
+    "facing=east,rack=false,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side"
+    },
+    "facing=east,rack=false,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side"
+    },
+    "facing=west,rack=true,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side_rack",
+      "y": 180
+    },
+    "facing=west,rack=true,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side_rack",
+      "y": 180
+    },
+    "facing=west,rack=false,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side",
+      "y": 180
+    },
+    "facing=west,rack=false,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side",
+      "y": 180
+    },
+    "facing=south,rack=true,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side_rack",
+      "y": 90
+    },
+    "facing=south,rack=true,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side_rack",
+      "y": 90
+    },
+    "facing=south,rack=false,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side",
+      "y": 90
+    },
+    "facing=south,rack=false,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side",
+      "y": 90
+    },
+    "facing=north,rack=true,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side_rack",
+      "y": 270
+    },
+    "facing=north,rack=true,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side_rack",
+      "y": 270
+    },
+    "facing=north,rack=false,sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/poplar_side",
+      "y": 270
+    },
+    "facing=north,rack=false,sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/poplar_side",
+      "y": 270
     }
   }
 }

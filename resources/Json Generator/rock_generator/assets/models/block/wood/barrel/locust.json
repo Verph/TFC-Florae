@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/locust",
     "planks": "tfcflorae:block/wood/planks/locust",
-    "sheet": "tfcflorae:block/wood/sheet/locust",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/locust"
   }
 }

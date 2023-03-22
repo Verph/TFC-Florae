@@ -53,7 +53,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
-import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
@@ -64,18 +63,18 @@ public abstract class TFCFPointedDripstoneBlock extends Block implements Fallabl
     public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, Fluids.LAVA));
 
     public final ExtendedProperties properties;
-    @Nullable private final Supplier<? extends Block> thisBlock;
+    @Nullable public final Supplier<? extends Block> thisBlock;
 
     public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
     public static final DirectionProperty TIP_DIRECTION = BlockStateProperties.VERTICAL_DIRECTION;
     public static final EnumProperty<DripstoneThickness> THICKNESS = BlockStateProperties.DRIPSTONE_THICKNESS;
 
-    private final VoxelShape TIP_MERGE_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 16.0D, 11.0D);
-    private final VoxelShape TIP_SHAPE_UP = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 11.0D, 11.0D);
-    private final VoxelShape TIP_SHAPE_DOWN = Block.box(5.0D, 5.0D, 5.0D, 11.0D, 16.0D, 11.0D);
-    private final VoxelShape FRUSTUM_SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 16.0D, 12.0D);
-    private final VoxelShape MIDDLE_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
-    private final VoxelShape BASE_SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    public final VoxelShape TIP_MERGE_SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 16.0D, 11.0D);
+    public final VoxelShape TIP_SHAPE_UP = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 11.0D, 11.0D);
+    public final VoxelShape TIP_SHAPE_DOWN = Block.box(5.0D, 5.0D, 5.0D, 11.0D, 16.0D, 11.0D);
+    public final VoxelShape FRUSTUM_SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 16.0D, 12.0D);
+    public final VoxelShape MIDDLE_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
+    public final VoxelShape BASE_SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public final VoxelShape REQUIRED_SPACE_TO_DRIP_THROUGH_NON_SOLID_BLOCK = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 16.0D, 10.0D);
 
     public static TFCFPointedDripstoneBlock create(ExtendedProperties properties, @Nullable Supplier<? extends Block> thisBlock)
@@ -333,7 +332,7 @@ public abstract class TFCFPointedDripstoneBlock extends Block implements Fallabl
         return EntitySelector.NO_CREATIVE_OR_SPECTATOR.and(EntitySelector.LIVING_ENTITY_STILL_ALIVE);
     }
 
-    private void spawnFallingStalactite(BlockState pState, ServerLevel pLevel, BlockPos pPos)
+    public void spawnFallingStalactite(BlockState pState, ServerLevel pLevel, BlockPos pPos)
     {
         BlockPos.MutableBlockPos blockpos$mutableblockpos = pPos.mutable();
         for (BlockState blockstate = pState; isStalactite(blockstate); blockstate = pLevel.getBlockState(blockpos$mutableblockpos))
@@ -745,7 +744,7 @@ public abstract class TFCFPointedDripstoneBlock extends Block implements Fallabl
     }
 
     @Nullable
-    private BlockPos findFillableCauldronBelowStalactiteTip(Level pLevel, BlockPos pos, Fluid pFluid)
+    public BlockPos findFillableCauldronBelowStalactiteTip(Level pLevel, BlockPos pos, Fluid pFluid)
     {
         BiPredicate<BlockPos, BlockState> bipredicate = (p_202034_, p_202035_) -> {
             return canDripThrough(pLevel, p_202034_, p_202035_);

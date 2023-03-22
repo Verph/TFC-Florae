@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/beech",
     "planks": "tfcflorae:block/wood/planks/beech",
-    "sheet": "tfcflorae:block/wood/sheet/beech",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/beech"
   }
 }

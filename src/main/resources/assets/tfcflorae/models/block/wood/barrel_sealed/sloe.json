@@ -1,9 +1,8 @@
 {
-  "parent": "tfcflorae:block/wood/barrel_sealed",
+  "parent": "tfc:block/barrel_sealed",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/sloe",
     "planks": "tfcflorae:block/wood/planks/sloe",
-    "sheet": "tfcflorae:block/wood/sheet/sloe",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/sloe"
   }
 }

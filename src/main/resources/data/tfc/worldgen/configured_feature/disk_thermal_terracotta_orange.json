@@ -2,7 +2,7 @@
   "type": "minecraft:disk",
   "config": {
     "state": {
-      "Name": "minecraft:orange_terracotta"
+      "Name": "tfcflorae:sand/weathered_terracotta/orange"
     },
     "radius": {
       "type": "minecraft:uniform",
@@ -14,7 +14,7 @@
     "half_height": 2,
     "targets": [
       {
-        "Name": "minecraft:white_terracotta"
+        "Name": "tfcflorae:sand/weathered_terracotta/white"
       }
     ]
   }

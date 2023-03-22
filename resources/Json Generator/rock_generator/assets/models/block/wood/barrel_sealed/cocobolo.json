@@ -3,7 +3,6 @@
   "textures": {
     "particle": "tfcflorae:block/wood/planks/cocobolo",
     "planks": "tfcflorae:block/wood/planks/cocobolo",
-    "sheet": "tfcflorae:block/wood/sheet/cocobolo",
-    "hoop": "tfc:block/barrel_hoop"
+    "sheet": "tfcflorae:block/wood/sheet/cocobolo"
   }
 }

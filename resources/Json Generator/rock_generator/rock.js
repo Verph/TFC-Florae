@@ -202,6 +202,19 @@ let soilCompactRockTypes = {
   'rockiest_compact_dirt': 'rockiest_compact_dirt'
 }
 
+let geyserModelTypes = {
+  'down_base': 'down_base',
+  'down_middle': 'down_middle',
+  'down_frustum': 'down_frustum',
+  'down_tip': 'down_tip',
+  'down_tip_merge': 'down_tip_merge',
+  'up_base': 'up_base',
+  'up_middle': 'up_middle',
+  'up_frustum': 'up_frustum',
+  'up_tip': 'up_tip',
+  'up_tip_merge': 'up_tip_merge'
+}
+
 let rockBoulderModels = {
   'rock_2': 'rock_2',
   'rock_2_ne': 'rock_2_ne',
@@ -4795,6 +4808,93 @@ function generateJSON(rockType)
       fs.writeFileSync(`./data/recipes/stonecutting/sandstone/${sandstoneType}/wall/${sandColor}.json`, JSON.stringify(stonecuttingSandstoneWall, null, 2))
     }
   }
+
+  let blockstateGeyser = {
+    "variants": {
+      "thickness=base,vertical_direction=down": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/down_base`
+      },
+      "thickness=middle,vertical_direction=down": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/down_middle`
+      },
+      "thickness=frustum,vertical_direction=down": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/down_frustum`
+      },
+      "thickness=tip,vertical_direction=down": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/down_tip`
+      },
+      "thickness=tip_merge,vertical_direction=down": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/down_tip_merge`
+      },
+      "thickness=base,vertical_direction=up": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/up_base`
+      },
+      "thickness=middle,vertical_direction=up": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/up_middle`
+      },
+      "thickness=frustum,vertical_direction=up": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/up_frustum`
+      },
+      "thickness=tip,vertical_direction=up": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/up_tip`
+      },
+      "thickness=tip_merge,vertical_direction=up": {
+        "model": `tfcflorae:block/rock/geyser/${rockType}/up_tip_merge`
+      }
+    }
+  }
+  fs.writeFileSync(`./assets/blockstates/rock/geyser/${rockType}.json`, JSON.stringify(blockstateGeyser, null, 2))
+
+  for (let geyserModelType in geyserModelTypes)
+  {
+    let modelGeyser = {
+      "parent": `tfcflorae:block/rock/geyser/${geyserModelType}`,
+      "textures": {
+        "side": `tfcflorae:block/rock/geyser_side/${rockType}`,
+        "top": `tfcflorae:block/rock/geyser_top/${rockType}`,
+        "bottom": `tfcflorae:block/rock/geyser_bottom/${rockType}`,
+        "particle": `tfcflorae:block/rock/geyser_side/${rockType}`
+      }
+    }
+    fs.writeFileSync(`./assets/models/block/rock/geyser/${rockType}/${geyserModelType}.json`, JSON.stringify(modelGeyser, null, 2))
+  }
+
+  let modelItemGeyser = {
+    "parent": `tfcflorae:block/rock/geyser/${rockType}/up_middle`
+  }
+  fs.writeFileSync(`./assets/models/item/rock/geyser/${rockType}.json`, JSON.stringify(modelItemGeyser, null, 2))
+
+  let lootTableGeyser = {
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name":  `${ROCK_NAMESPACES[rockType]}:rock/loose/${rockType}`,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 2
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    ]
+  }
+  fs.writeFileSync(`./data/loot_tables/blocks/rock/geyser/${rockType}.json`, JSON.stringify(lootTableGeyser, null, 2))
 
   fs.writeFileSync(`./loot_tables/blocks/deposit/cassiterite/${rockType}.json`, JSON.stringify(deposit_cassiterite, null, 2))
   fs.writeFileSync(`./loot_tables/blocks/deposit/native_copper/${rockType}.json`, JSON.stringify(deposit_native_copper, null, 2))

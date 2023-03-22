@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+	"#minecraft:small_flowers",
     "tfcflorae:wood/twig/african_padauk",
     "tfcflorae:wood/fallen_leaves/african_padauk",
     "tfcflorae:wood/twig/alder",
@@ -196,6 +197,7 @@
     "tfcflorae:rock/loose/soapstone",
     "tfcflorae:rock/loose/komatiite",
     "tfcflorae:rock/loose/mylonite",
-    "tfcflorae:rock/loose/dripstone"
+    "tfcflorae:rock/loose/dripstone",
+    "tfcflorae:rock/loose/flint"
   ]
 }
