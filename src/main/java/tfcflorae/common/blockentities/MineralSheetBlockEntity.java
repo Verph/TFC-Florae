@@ -1,6 +1,7 @@
 package tfcflorae.common.blockentities;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -106,7 +107,7 @@ public class MineralSheetBlockEntity extends TFCBlockEntity
             mineral = Mineral.getMineral(stack);
             if (mineral == null)
             {
-                mineral = Mineral.SALT;
+                mineral = Mineral.BRIMSTONE;
             }
             cachedMinerals[index] = mineral;
         }
@@ -132,4 +133,42 @@ public class MineralSheetBlockEntity extends TFCBlockEntity
         Arrays.fill(cachedMinerals, null); // Invalidate metal cache
         super.loadAdditional(tag);
     }
+
+	public int directionInt(Direction direction)
+	{
+        switch (direction)
+        {
+            case NORTH:
+                return 1;
+            case SOUTH:
+                return 2;
+            case EAST:
+                return 3;
+            case WEST:
+                return 0;
+            case UP:
+                return 1;
+            case DOWN:
+                return 2;
+            default:
+                return 3;
+        }
+	}
+
+	public String mineralName(Mineral mineral, int number)
+	{
+        switch (number)
+        {
+            case 0:
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_0";
+            case 1:
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_1";
+            case 2:
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_2";
+            case 3:
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_3";
+            default:
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_0";
+        }
+	}
 }

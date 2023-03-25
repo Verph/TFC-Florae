@@ -44,7 +44,7 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
-
+import tfcflorae.Config;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
@@ -55,6 +55,7 @@ import tfcflorae.client.screen.TFCFBarrelScreen;
 import tfcflorae.client.screen.ceramics.*;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.Mineral;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
@@ -431,8 +432,22 @@ public class ClientEventHandler
 
     public static void onTextureStitch(TextureStitchEvent.Pre event)
     {
-        final ResourceLocation sheet = event.getAtlas().location();
-        if (sheet.equals(Sheets.CHEST_SHEET)/* && hasLeavesOnly()*/)
+        final ResourceLocation texture = event.getAtlas().location();
+        if (texture.equals(TFCFRenderHelpers.BLOCKS_ATLAS))
+        {
+            for (Mineral mineral : Mineral.values())
+            {
+                event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_0"));
+                event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_1"));
+                event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_2"));
+                event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_3"));
+            }
+            for (String extraTexture : Config.COMMON.additionalMineralSheetTextures.get())
+            {
+                event.addSprite(new ResourceLocation(extraTexture));
+            }
+        }
+        else if (texture.equals(Sheets.CHEST_SHEET)/* && hasLeavesOnly()*/)
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> {
                 event.addSprite(TFCFHelpers.identifier("entity/chest/normal/" + name));
@@ -465,7 +480,7 @@ public class ClientEventHandler
             event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_left/rock"));
             event.addSprite(TFCFHelpers.identifier("entity/chest/trapped_right/rock"));
         }
-        else if (sheet.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
+        else if (texture.equals(Sheets.SIGN_SHEET)/* && hasLeavesOnly()*/)
         {
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }

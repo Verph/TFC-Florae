@@ -22,6 +22,7 @@ import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.Config;
+import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.Mineral;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
@@ -37,6 +38,8 @@ public abstract class FluidMixin
         {
             Fluid type = state.getType();
             Mineral mineral = null;
+
+            TFCFlorae.LOGGER.debug("Current fluid type is: " + type.toString());
 
             if (type == Fluids.LAVA)
             {
@@ -57,18 +60,20 @@ public abstract class FluidMixin
 
             if (mineral != null)
             {
-                final ItemStack mineralDeposit = new ItemStack(TFCFItems.MINERALS.get(mineral).get());
+                final ItemStack mineralDeposit = new ItemStack(TFCFItems.MINERALS.get(mineral).get().asItem());
 
                 final Direction genFace = Direction.getRandom(random);
                 final Direction sheetFace = genFace.getOpposite();
 
-                final BlockPos genPos = new BlockPos(random.nextInt(7) - 3, random.nextInt(7) - 3, random.nextInt(7) - 3);
+                final BlockPos genPos = pos.offset(random.nextInt(7) - 3, random.nextInt(7) - 3, random.nextInt(7) - 3);
                 final BlockPos relativePos = genPos.relative(genFace);
 
                 final BlockState genState = serverLevel.getBlockState(genPos);
                 final BlockState relativeState = serverLevel.getBlockState(relativePos);
 
                 final BooleanProperty property = DirectionPropertyBlock.getProperty(sheetFace);
+
+                TFCFlorae.LOGGER.debug("Trying to generate mineral deposit at XYZ: " + genPos.getX() + ", " + genPos.getY() + ", " + genPos.getZ());
 
                 if (Helpers.isBlock(relativeState, TFCFBlocks.MINERAL_SHEET.get()))
                 {
@@ -77,7 +82,7 @@ public abstract class FluidMixin
                         MineralSheetBlock.addSheet(serverLevel, relativePos, relativeState, sheetFace, mineralDeposit);
                     }
                 }
-                else if (EnvironmentHelpers.isWorldgenReplaceable(serverLevel, relativePos))
+                else if (EnvironmentHelpers.isWorldgenReplaceable(serverLevel, relativePos) && level.getFluidState(genPos).getType() == Fluids.EMPTY)
                 {
                     final BlockState placingState = TFCFBlocks.MINERAL_SHEET.get().defaultBlockState().setValue(property, true);
                     if (MineralSheetBlock.canPlace(serverLevel, genPos, placingState) && genState.isFaceSturdy(serverLevel, genPos, genFace))

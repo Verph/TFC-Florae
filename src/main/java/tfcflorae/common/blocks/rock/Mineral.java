@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import tfcflorae.common.items.TFCFItems;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -66,13 +67,18 @@ public enum Mineral
     @Nullable
     public static Mineral getMineral(ItemStack stack)
     {
-        for (Mineral mineral : Mineral.values())
+        Mineral mineral = Mineral.BRIMSTONE; // Fallback
+        if (stack != null)
         {
-            if (mineral != null)
+            for (Mineral minerals : Mineral.values())
             {
-                return mineral;
+                if (stack.getItem().equals(TFCFItems.MINERALS.get(minerals).get()))
+                {
+                    mineral = minerals;
+                    break;
+                }
             }
         }
-        return null;
+        return mineral;
     }
 }
