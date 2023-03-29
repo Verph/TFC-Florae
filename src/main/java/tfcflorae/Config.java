@@ -34,9 +34,6 @@ public class Config
     public final ForgeConfigSpec.IntValue minFortressHeight;
     public final ForgeConfigSpec.IntValue mineralGenFrequency;
 
-    // Compatibility
-    public final ForgeConfigSpec.ConfigValue<List<? extends String>> additionalMineralSheetTextures;
-
     Config(ForgeConfigSpec.Builder innerBuilder)
     {
         Function<String, ForgeConfigSpec.Builder> builder = name -> innerBuilder.translation(MOD_ID + ".config.common." + name);
@@ -49,10 +46,5 @@ public class Config
         minFortressHeight = builder.apply("minFortressHeight").comment("Lowest Y-value the Nether Fortress can generate at.").defineInRange("minFortressHeight", -220, -256, 512);
 
         mineralGenFrequency = builder.apply("mineralGenFrequency").comment("How often minerals can generate near hot springs and lava.").defineInRange("mineralGenFrequency", 32, 0, 1000000);
-
-        additionalMineralSheetTextures = builder.apply("additionalMineralSheetTextures").comment(
-            "Defines additional mineral sheet textures that should be added to the block atlas, as they would be otherwise unused, for use in mineral sheet blocks.",
-            "For Pack Makers: When adding a mineral via a datapack, with a custom texture \"domain:block/my_texture\", and you get missing textures in mineral blocks, that texture needs to be added here"
-        ).defineList("additionalMineralSheetTextures", ArrayList::new, o -> o instanceof String s && ResourceLocation.isValidResourceLocation(s));
     }
 }

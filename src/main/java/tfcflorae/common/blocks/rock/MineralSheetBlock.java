@@ -293,6 +293,6 @@ public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExten
 
     public static boolean canPlace(Level level, BlockPos pos, BlockState stateToPlace)
     {
-        return stateToPlace.canSurvive(level, pos) && (level.getBlockState(pos).isAir() || EnvironmentHelpers.isWorldgenReplaceable((ServerLevel) level, pos));
+        return stateToPlace.canSurvive(level, pos);
     }
 }

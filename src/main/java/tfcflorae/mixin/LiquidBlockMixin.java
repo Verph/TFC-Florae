@@ -3,6 +3,7 @@ package tfcflorae.mixin;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
+import java.util.Locale;
 import java.util.Random;
 
 import net.minecraft.core.BlockPos;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.Material;
 
 import net.dries007.tfc.common.blocks.DirectionPropertyBlock;
 import net.dries007.tfc.common.fluids.TFCFluids;
@@ -31,63 +33,69 @@ import tfcflorae.common.items.TFCFItems;
 public abstract class LiquidBlockMixin
 {
     @Overwrite(remap = true)
+    @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         state.getFluidState().randomTick(level, pos, random);
-        if (random.nextInt(Config.COMMON.mineralGenFrequency.get()) == 0)
+        if (level.isAreaLoaded(pos, 10))
         {
-            Fluid type = level.getFluidState(pos).getType();
-            Mineral mineral = null;
-
-            TFCFlorae.LOGGER.debug("Current fluid type is: " + type.toString());
-
-            if (type == Fluids.LAVA)
+            if (random.nextInt(Config.COMMON.mineralGenFrequency.get()) == 0)
             {
-                mineral = Mineral.BRIMSTONE;
-            }
-            else if (type == TFCFluids.SPRING_WATER.getSource())
-            {
-                mineral = Mineral.SALMIAK;
-            }
-            else if (type == TFCFluids.SALT_WATER.getSource())
-            {
-                mineral = Mineral.SALT;
-            }
-            else
-            {
-                mineral = Mineral.SPHEROCOBALTITE;
-            }
+                Fluid type = level.getFluidState(pos).getType();
+                Mineral mineral = null;
 
-            if (mineral != null)
-            {
-                final ItemStack mineralDeposit = new ItemStack(TFCFItems.MINERALS.get(mineral).get().asItem());
+                TFCFlorae.LOGGER.debug("Current fluid type is: " + type.toString());
 
-                final Direction genFace = Direction.getRandom(random);
-                final Direction sheetFace = genFace.getOpposite();
-
-                final BlockPos genPos = pos.offset(random.nextInt(7) - 3, random.nextInt(7) - 3, random.nextInt(7) - 3);
-                final BlockPos relativePos = genPos.relative(genFace);
-
-                final BlockState genState = level.getBlockState(genPos);
-                final BlockState relativeState = level.getBlockState(relativePos);
-
-                final BooleanProperty property = DirectionPropertyBlock.getProperty(sheetFace);
-
-                TFCFlorae.LOGGER.debug("Trying to generate mineral deposit at XYZ: " + genPos.getX() + ", " + genPos.getY() + ", " + genPos.getZ());
-
-                if (Helpers.isBlock(relativeState, TFCFBlocks.MINERAL_SHEET.get()))
+                if (type == Fluids.LAVA)
                 {
-                    if (!relativeState.getValue(property) && MineralSheetBlock.canPlace(level, genPos, genState) && genState.isFaceSturdy(level, genPos, genFace))
-                    {
-                        MineralSheetBlock.addSheet(level, relativePos, relativeState, sheetFace, mineralDeposit);
-                    }
+                    mineral = Mineral.BRIMSTONE;
                 }
-                else if (EnvironmentHelpers.isWorldgenReplaceable(level, relativePos) && level.getFluidState(genPos).getType() == Fluids.EMPTY)
+                else if (type == TFCFluids.SPRING_WATER.getSource())
                 {
-                    final BlockState placingState = TFCFBlocks.MINERAL_SHEET.get().defaultBlockState().setValue(property, true);
-                    if (MineralSheetBlock.canPlace(level, genPos, placingState) && genState.isFaceSturdy(level, genPos, genFace))
+                    mineral = Mineral.SALMIAK;
+                }
+                else if (type == TFCFluids.SALT_WATER.getSource())
+                {
+                    mineral = Mineral.SALT;
+                }
+                else
+                {
+                    mineral = Mineral.SPHEROCOBALTITE;
+                }
+
+                if (mineral != null)
+                {
+                    ItemStack mineralDeposit = new ItemStack(TFCFItems.MINERALS.get(mineral).get().asItem());
+
+                    BlockPos genPos = pos.offset(random.nextInt(7) - 3, random.nextInt(7) - 3, random.nextInt(7) - 3);
+                    Direction face = Direction.getRandom(random);
+                    BlockPos posAt = genPos.relative(face);
+                    BlockState stateAt = level.getBlockState(posAt);
+                    Direction sheetFace = face.getOpposite();
+                    BooleanProperty property = DirectionPropertyBlock.getProperty(sheetFace);
+
+                    if (Helpers.isBlock(stateAt, TFCFBlocks.MINERAL_SHEET.get()))
                     {
-                        MineralSheetBlock.addSheet(level, relativePos, placingState, sheetFace, mineralDeposit);
+                        TFCFlorae.LOGGER.debug("Passed is mineral block check");
+                        if (!stateAt.getValue(property) && MineralSheetBlock.canPlace(level, genPos, stateAt))
+                        {
+                            TFCFlorae.LOGGER.debug("Trying to generate mineral deposit at XYZ: " + posAt.getX() + " " + posAt.getY() + " " + posAt.getZ());
+                            TFCFlorae.LOGGER.debug("Current mineral is: " + mineral.name().toLowerCase(Locale.ROOT));
+
+                            MineralSheetBlock.addSheet(level, posAt, stateAt, sheetFace, mineralDeposit);
+                        }
+                    }
+                    else if (stateAt.getMaterial().isReplaceable() && (stateAt.getMaterial() != Material.LAVA || stateAt.getMaterial() != Material.WATER))
+                    {
+                        TFCFlorae.LOGGER.debug("Passed material/replaceable check");
+                        BlockState placingState = TFCFBlocks.MINERAL_SHEET.get().defaultBlockState().setValue(property, true);
+                        if (MineralSheetBlock.canPlace(level, genPos, placingState))
+                        {
+                            TFCFlorae.LOGGER.debug("Trying to generate new mineral deposit at XYZ: " + posAt.getX() + " " + posAt.getY() + " " + posAt.getZ());
+                            TFCFlorae.LOGGER.debug("Current mineral is: " + mineral.name().toLowerCase(Locale.ROOT));
+
+                            MineralSheetBlock.addSheet(level, posAt, placingState, sheetFace, mineralDeposit);
+                        }
                     }
                 }
             }

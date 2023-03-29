@@ -442,10 +442,6 @@ public class ClientEventHandler
                 event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_2"));
                 event.addSprite(TFCFHelpers.identifier("block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_3"));
             }
-            for (String extraTexture : Config.COMMON.additionalMineralSheetTextures.get())
-            {
-                event.addSprite(new ResourceLocation(extraTexture));
-            }
         }
         else if (texture.equals(Sheets.CHEST_SHEET)/* && hasLeavesOnly()*/)
         {
