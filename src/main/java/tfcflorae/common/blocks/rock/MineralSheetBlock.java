@@ -3,6 +3,7 @@ package tfcflorae.common.blocks.rock;
 import java.util.Map;
 import java.util.Random;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -31,6 +32,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -41,13 +43,18 @@ import net.dries007.tfc.common.blocks.DirectionPropertyBlock;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedBlock;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.common.fluids.TFCFluids;
+import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExtension, DirectionPropertyBlock
+public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExtension, DirectionPropertyBlock, IFluidLoggable
 {
+    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, Fluids.LAVA));
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty MIRROR = BooleanProperty.create("mirror");
 
@@ -60,6 +67,7 @@ public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExten
         .put(DOWN, box(0, 0, 0, 16, 1, 16))
         .build();
 
+    public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
     private final Map<BlockState, VoxelShape> shapeCache;
 
     public MineralSheetBlock(ExtendedProperties properties)
@@ -262,7 +270,7 @@ public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExten
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        super.createBlockStateDefinition(builder.add(PROPERTIES).add(FACING).add(MIRROR));
+        super.createBlockStateDefinition(builder.add(PROPERTIES).add(FACING).add(MIRROR).add(getFluidProperty()));
     }
 
     @Override
@@ -294,5 +302,18 @@ public class MineralSheetBlock extends ExtendedBlock implements EntityBlockExten
     public static boolean canPlace(Level level, BlockPos pos, BlockState stateToPlace)
     {
         return stateToPlace.canSurvive(level, pos);
+    }
+
+    @Override
+    public FluidProperty getFluidProperty()
+    {
+        return FLUID;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public FluidState getFluidState(BlockState state)
+    {
+        return IFluidLoggable.super.getFluidState(state);
     }
 }

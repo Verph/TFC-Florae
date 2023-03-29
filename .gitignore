@@ -20,7 +20,6 @@ build
 # other
 eclipse
 run
-libs
 resources
 resources/Json Generator/assets/*
 resources/Json Generator/data/*
