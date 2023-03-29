@@ -4,10 +4,9 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import net.dries007.tfc.common.blockentities.LargeVesselBlockEntity;
-import net.dries007.tfc.common.blocks.LargeVesselBlock;
+import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.container.*;
 
 import org.jetbrains.annotations.Nullable;
@@ -16,7 +15,7 @@ import tfcflorae.common.blockentities.ceramics.LargeEarthenwareVesselBlockEntity
 import tfcflorae.common.blocks.ceramics.LargeEarthenwareVesselBlock;
 import tfcflorae.common.container.TFCFContainerTypes;
 
-public class LargeEarthenwareVesselContainer extends BlockEntityContainer<LargeEarthenwareVesselBlockEntity> implements ButtonHandlerContainer
+public class LargeEarthenwareVesselContainer extends BlockEntityContainer<LargeEarthenwareVesselBlockEntity> implements ButtonHandlerContainer, PestContainer
 {
     public static LargeEarthenwareVesselContainer create(LargeEarthenwareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
     {
@@ -25,23 +24,27 @@ public class LargeEarthenwareVesselContainer extends BlockEntityContainer<LargeE
 
     public LargeEarthenwareVesselContainer(LargeEarthenwareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
     {
-        super(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), windowId, vessel);
+        super(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), windowId, vessel);
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void onButtonPress(int buttonID, @Nullable CompoundTag extraNBT)
     {
         Level level = blockEntity.getLevel();
         if (level != null)
         {
-            LargeEarthenwareVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState());
+            LargeEarthenwareVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState(), (BlockEntityType<? extends LargeEarthenwareVesselBlockEntity>) blockEntity.getType());
         }
     }
 
     @Override
     protected boolean moveStack(ItemStack stack, int slotIndex)
     {
-        if (blockEntity.getBlockState().getValue(LargeVesselBlock.SEALED)) return true;
+        if (blockEntity.getBlockState().getValue(LargeEarthenwareVesselBlock.SEALED))
+        {
+            return true;
+        }
         return switch (typeOf(slotIndex))
             {
                 case MAIN_INVENTORY, HOTBAR -> !moveItemStackTo(stack, 0, LargeEarthenwareVesselBlockEntity.SLOTS, false);
@@ -52,7 +55,7 @@ public class LargeEarthenwareVesselContainer extends BlockEntityContainer<LargeE
     @Override
     protected void addContainerSlots()
     {
-        blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        blockEntity.getCapability(Capabilities.ITEM).ifPresent(handler -> {
             addSlot(new CallbackSlot(blockEntity, handler, 0, 62, 19));
             addSlot(new CallbackSlot(blockEntity, handler, 1, 80, 19));
             addSlot(new CallbackSlot(blockEntity, handler, 2, 98, 19));
@@ -63,5 +66,16 @@ public class LargeEarthenwareVesselContainer extends BlockEntityContainer<LargeE
             addSlot(new CallbackSlot(blockEntity, handler, 7, 80, 55));
             addSlot(new CallbackSlot(blockEntity, handler, 8, 98, 55));
         });
+    }
+
+    @Override
+    public boolean canBeInfested()
+    {
+        return !isSealed();
+    }
+
+    public boolean isSealed()
+    {
+        return blockEntity.getBlockState().hasProperty(LargeEarthenwareVesselBlock.SEALED) && blockEntity.getBlockState().getValue(LargeEarthenwareVesselBlock.SEALED);
     }
 }

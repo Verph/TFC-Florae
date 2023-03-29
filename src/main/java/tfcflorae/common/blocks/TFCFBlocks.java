@@ -260,7 +260,7 @@ public final class TFCFBlocks
 
     public static final RegistryObject<Block> LOOSE_FLINT = register("rock/loose/flint", () -> new LooseFlintBlock(Block.Properties.of(TFCMaterials.NON_SOLID_STONE).strength(0.05f, 0.0f).sound(SoundType.STONE).noCollission()), ROCK_STUFFS);
 
-    public static final RegistryObject<Block> MINERAL_SHEET = register("mineral/mineral_sheet", () -> new MineralSheetBlock(ExtendedProperties.of(Material.STONE).strength(0.5F, 4F).sound(TFCSounds.CHARCOAL).noOcclusion().blockEntity(TFCFBlockEntities.MINERAL_SHEET)));
+    public static final RegistryObject<Block> MINERAL_SHEET = register("mineral/mineral_sheet", () -> new MineralSheetBlock(ExtendedProperties.of(Material.STONE).strength(0.5F, 4F).sound(TFCSounds.CHARCOAL).noCollission().noOcclusion().blockEntity(TFCFBlockEntities.MINERAL_SHEET)));
 
     // Wood
 

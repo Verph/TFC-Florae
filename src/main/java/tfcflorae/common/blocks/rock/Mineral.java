@@ -44,7 +44,7 @@ public enum Mineral
     public Block create(RegistryRock rock)
     {
         // Same hardness as raw rock
-        final BlockBehaviour.Properties properties = Block.Properties.of(Material.STONE).sound(SoundType.STONE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops();
+        final BlockBehaviour.Properties properties = Block.Properties.of(Material.STONE).sound(SoundType.STONE).strength(rock.category().hardness(6.5f), 10).noCollission().requiresCorrectToolForDrops();
         if (this == BRIMSTONE)
         {
             return new ExtendedBlock(ExtendedProperties.of(properties).flammable(5, 120));

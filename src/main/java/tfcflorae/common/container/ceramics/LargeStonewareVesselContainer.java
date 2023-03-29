@@ -4,9 +4,9 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import net.dries007.tfc.common.blocks.LargeVesselBlock;
+import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.container.*;
 
 import org.jetbrains.annotations.Nullable;
@@ -15,7 +15,7 @@ import tfcflorae.common.blockentities.ceramics.LargeStonewareVesselBlockEntity;
 import tfcflorae.common.blocks.ceramics.LargeStonewareVesselBlock;
 import tfcflorae.common.container.TFCFContainerTypes;
 
-public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeStonewareVesselBlockEntity> implements ButtonHandlerContainer
+public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeStonewareVesselBlockEntity> implements ButtonHandlerContainer, PestContainer
 {
     public static LargeStonewareVesselContainer create(LargeStonewareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
     {
@@ -28,19 +28,23 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void onButtonPress(int buttonID, @Nullable CompoundTag extraNBT)
     {
         Level level = blockEntity.getLevel();
         if (level != null)
         {
-            LargeStonewareVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState());
+            LargeStonewareVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState(), (BlockEntityType<? extends LargeStonewareVesselBlockEntity>) blockEntity.getType());
         }
     }
 
     @Override
     protected boolean moveStack(ItemStack stack, int slotIndex)
     {
-        if (blockEntity.getBlockState().getValue(LargeVesselBlock.SEALED)) return true;
+        if (blockEntity.getBlockState().getValue(LargeStonewareVesselBlock.SEALED))
+        {
+            return true;
+        }
         return switch (typeOf(slotIndex))
             {
                 case MAIN_INVENTORY, HOTBAR -> !moveItemStackTo(stack, 0, LargeStonewareVesselBlockEntity.SLOTS, false);
@@ -51,7 +55,7 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
     @Override
     protected void addContainerSlots()
     {
-        blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        blockEntity.getCapability(Capabilities.ITEM).ifPresent(handler -> {
             addSlot(new CallbackSlot(blockEntity, handler, 0, 62, 19));
             addSlot(new CallbackSlot(blockEntity, handler, 1, 80, 19));
             addSlot(new CallbackSlot(blockEntity, handler, 2, 98, 19));
@@ -62,5 +66,16 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
             addSlot(new CallbackSlot(blockEntity, handler, 7, 80, 55));
             addSlot(new CallbackSlot(blockEntity, handler, 8, 98, 55));
         });
+    }
+
+    @Override
+    public boolean canBeInfested()
+    {
+        return !isSealed();
+    }
+
+    public boolean isSealed()
+    {
+        return blockEntity.getBlockState().hasProperty(LargeStonewareVesselBlock.SEALED) && blockEntity.getBlockState().getValue(LargeStonewareVesselBlock.SEALED);
     }
 }
