@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "replace": false,
-  "values": [
-    "#tfc:feature/land_plants",
-	"tfc:plant/deciduous_shrub_patch",
-	"tfc:plant/coniferous_shrub_patch"
-  ]
-}
