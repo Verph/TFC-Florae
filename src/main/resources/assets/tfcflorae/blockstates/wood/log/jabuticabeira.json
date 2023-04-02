@@ -1,13 +1,49 @@
 {
   "variants": {
-    "axis=y": {
+    "axis=y,lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_flowering"
+    },
+    "axis=z,lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_flowering",
+      "x": 90
+    },
+    "axis=x,lifecycle=flowering": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_flowering",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_fruiting"
+    },
+    "axis=z,lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_fruiting",
+      "x": 90
+    },
+    "axis=x,lifecycle=fruiting": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_fruiting",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_dry"
+    },
+    "axis=z,lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_dry",
+      "x": 90
+    },
+    "axis=x,lifecycle=dormant": {
+      "model": "tfcflorae:block/wood/log/jabuticabeira_dry",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lifecycle=healthy": {
       "model": "tfcflorae:block/wood/log/jabuticabeira"
     },
-    "axis=z": {
+    "axis=z,lifecycle=healthy": {
       "model": "tfcflorae:block/wood/log/jabuticabeira",
       "x": 90
     },
-    "axis=x": {
+    "axis=x,lifecycle=healthy": {
       "model": "tfcflorae:block/wood/log/jabuticabeira",
       "x": 90,
       "y": 90
