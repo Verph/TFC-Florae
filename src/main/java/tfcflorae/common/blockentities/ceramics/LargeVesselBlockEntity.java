@@ -1,13 +1,16 @@
 package tfcflorae.common.blockentities.ceramics;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.util.INBTSerializable;
 
@@ -18,30 +21,32 @@ import net.dries007.tfc.common.capabilities.food.FoodTraits;
 import net.dries007.tfc.common.capabilities.size.ItemSizeManager;
 import net.dries007.tfc.common.capabilities.size.Size;
 import net.dries007.tfc.common.recipes.inventory.EmptyInventory;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import tfcflorae.common.blockentities.TFCFBlockEntities;
-import tfcflorae.common.blocks.ceramics.LargeEarthenwareVesselBlock;
-import tfcflorae.common.container.ceramics.LargeEarthenwareVesselContainer;
+import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
+import tfcflorae.common.container.ceramics.LargeVesselContainer;
+import tfcflorae.util.TFCFHelpers;
 
-import static tfcflorae.TFCFlorae.MOD_ID;
-
-public class LargeEarthenwareVesselBlockEntity extends InventoryBlockEntity<LargeEarthenwareVesselBlockEntity.VesselInventory>
+public class LargeVesselBlockEntity extends InventoryBlockEntity<LargeVesselBlockEntity.VesselInventory>
 {
     public static final int SLOTS = 9;
-    private static final Component NAME = new TranslatableComponent(MOD_ID + ".block_entity.large_earthenware_vessel");
+    private static final Component NAME = TFCFHelpers.translatable("tfcflorae.block_entity.large_vessel");
 
-    public LargeEarthenwareVesselBlockEntity(BlockPos pos, BlockState state)
+    public LargeVesselBlockEntity(BlockPos pos, BlockState state)
     {
-        super(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL.get(), pos, state, VesselInventory::new, NAME);
+        super(TFCFBlockEntities.LARGE_VESSEL.get(), pos, state, VesselInventory::new, NAME);
+    }
+
+    public LargeVesselBlockEntity(BlockEntityType<? extends LargeVesselBlockEntity> type, BlockPos pos, BlockState state)
+    {
+        super(type, pos, state, VesselInventory::new, NAME);
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int windowID, Inventory inv, Player player)
     {
-        return LargeEarthenwareVesselContainer.create(this, inv, windowID);
+        return LargeVesselContainer.create(this, inv, windowID);
     }
 
     public void onUnseal()
@@ -62,12 +67,12 @@ public class LargeEarthenwareVesselBlockEntity extends InventoryBlockEntity<Larg
 
     public static class VesselInventory extends InventoryItemHandler implements INBTSerializable<CompoundTag>, EmptyInventory
     {
-        private final LargeEarthenwareVesselBlockEntity vessel;
+        private final LargeVesselBlockEntity vessel;
 
         VesselInventory(InventoryBlockEntity<?> entity)
         {
             super(entity, SLOTS);
-            vessel = (LargeEarthenwareVesselBlockEntity) entity;
+            vessel = (LargeVesselBlockEntity) entity;
         }
 
         @NotNull
@@ -92,7 +97,7 @@ public class LargeEarthenwareVesselBlockEntity extends InventoryBlockEntity<Larg
 
         private boolean canModify()
         {
-            return !vessel.getBlockState().getValue(LargeEarthenwareVesselBlock.SEALED);
+            return !vessel.getBlockState().getValue(LargeVesselBlock.SEALED);
         }
     }
 }

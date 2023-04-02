@@ -40,7 +40,16 @@ import net.minecraftforge.registries.RegistryObject;
 import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.common.TFCItemGroup;
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
-import net.dries007.tfc.common.blocks.*;
+import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
+import net.dries007.tfc.common.blocks.ExtendedBlock;
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.Gem;
+import net.dries007.tfc.common.blocks.GroundcoverBlock;
+import net.dries007.tfc.common.blocks.OreDeposit;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.TFCMagmaBlock;
+import net.dries007.tfc.common.blocks.TFCMaterials;
 import net.dries007.tfc.common.blocks.devices.*;
 import net.dries007.tfc.common.blocks.plant.BodyPlantBlock;
 import net.dries007.tfc.common.blocks.rock.*;
@@ -310,13 +319,18 @@ public final class TFCFBlocks
     public static final RegistryObject<StairBlock> FIRE_BRICKS_STAIRS = register(("ceramic/fire_bricks/brick_stairs"), () -> new StairBlock(() -> TFCBlocks.FIRE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<WallBlock> FIRE_BRICKS_WALL = register(("ceramic/fire_bricks/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> EARTHENWARE_CLAY = register("ceramic/earthenware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_ORANGE).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
+    public static final Map<Clay, RegistryObject<Block>> CLAY_BLOCKS = clayBlocksMap(Clay.class);
+    public static final Map<Clay, RegistryObject<Block>> CLAY_BRICKS = clayBricksMap(Clay.class);
+    public static final Map<Clay, DecorationBlockRegistryObject> CLAY_DECO_BLOCKS = clayDecoMap(Clay.class);
+    public static final Map<Clay, RegistryObject<Block>> CLAY_LARGE_VESSELS= clayLargeVesselMap(Clay.class);
+
+    /*public static final RegistryObject<Block> EARTHENWARE_CLAY = register("ceramic/earthenware/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_ORANGE).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
     public static final RegistryObject<Block> EARTHENWARE_BRICKS = register("ceramic/earthenware/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<SlabBlock> EARTHENWARE_BRICKS_SLAB = register(("ceramic/earthenware/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<StairBlock> EARTHENWARE_BRICKS_STAIRS = register(("ceramic/earthenware/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<WallBlock> EARTHENWARE_BRICKS_WALL = register(("ceramic/earthenware/brick_wall"), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
 
-    public static final RegistryObject<Block> KAOLINITE__CLAY = register("ceramic/kaolinite/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_PINK).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
+    public static final RegistryObject<Block> KAOLINITE_CLAY = register("ceramic/kaolinite/clay_block", () -> new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_PINK).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS);
     public static final RegistryObject<Block> KAOLINITE_BRICKS = register("ceramic/kaolinite/bricks", () -> new Block(Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<SlabBlock> KAOLINITE_BRICKS_SLAB = register(("ceramic/kaolinite/brick_slab"), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
     public static final RegistryObject<StairBlock> KAOLINITE_BRICKS_STAIRS = register(("ceramic/kaolinite/brick_stairs"), () -> new StairBlock(() -> EARTHENWARE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS);
@@ -330,7 +344,7 @@ public final class TFCFBlocks
 
     public static final RegistryObject<Block> LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/fired/large_vessel", () -> new LargeEarthenwareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_EARTHENWARE_VESSEL)), MISC);
     public static final RegistryObject<Block> LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/fired/large_vessel", () -> new LargeKaoliniteVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_KAOLINITE_VESSEL)), MISC);
-    public static final RegistryObject<Block> LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/fired/large_vessel", () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC);
+    public static final RegistryObject<Block> LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/fired/large_vessel", () -> new LargeStonewareVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_STONEWARE_VESSEL)), MISC);*/
 
     public static final RegistryObject<Block> SPIDER_EGG = register("spider_cave/spider_egg", () -> new EggBlock(ExtendedProperties.of(Material.EGG, MaterialColor.COLOR_CYAN).strength(1.0F).instabreak().flammableLikeWool().lightLevel((state) -> {return 5;}).sound(TFCFSounds.MUD).speedFactor(0.3f).hasPostProcess(TFCFBlocks::always)), DECORATIONS);
     public static final RegistryObject<Block> SPIDER_EGGS = register("spider_cave/spider_eggs", () -> new EggBlock(ExtendedProperties.of(Material.EGG, MaterialColor.TERRACOTTA_WHITE).strength(1.0F).instabreak().flammableLikeWool().noOcclusion().sound(TFCFSounds.MUD).speedFactor(0.3f).hasPostProcess(TFCFBlocks::always)), DECORATIONS);
@@ -374,6 +388,57 @@ public final class TFCFBlocks
     public static int lightEmission(BlockState state)
     {
         return state.getValue(BlockStateProperties.LIT) ? 15 : 0;
+    }
+
+    private static Map<Clay, RegistryObject<Block>> clayBlocksMap(Class<Clay> enumClass)
+    {
+        Map<Clay, RegistryObject<Block>> Map = new HashMap<>();
+
+        for (Clay clay : Clay.values())
+        {
+            Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/clay_block", () -> 
+                new Block(Properties.of(Material.CLAY, MaterialColor.COLOR_GRAY).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS));
+        }
+        return Map;
+    }
+
+    private static Map<Clay, RegistryObject<Block>> clayBricksMap(Class<Clay> enumClass)
+    {
+        Map<Clay, RegistryObject<Block>> Map = new HashMap<>();
+
+        for (Clay clay : Clay.values())
+        {
+            Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/bricks", () -> 
+                new Block(Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS));
+        }
+        return Map;
+    }
+
+    private static Map<Clay, DecorationBlockRegistryObject> clayDecoMap(Class<Clay> enumClass)
+    {
+        Map<Clay, DecorationBlockRegistryObject> Map = new HashMap<>();
+
+        for (Clay clay : Clay.values())
+        {
+            Map.put(clay, new DecorationBlockRegistryObject(
+                register(("ceramic/" + clay.getSerializedName() + "/brick_slab").toLowerCase(Locale.ROOT), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS),
+                register(("ceramic/" + clay.getSerializedName() + "/brick_stairs").toLowerCase(Locale.ROOT), () -> new StairBlock(() -> CLAY_BRICKS.get(clay).get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS),
+                register(("ceramic/" + clay.getSerializedName() + "/brick_wall").toLowerCase(Locale.ROOT), () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS)
+            ));
+        }
+        return Map;
+    }
+
+    private static Map<Clay, RegistryObject<Block>> clayLargeVesselMap(Class<Clay> enumClass)
+    {
+        Map<Clay, RegistryObject<Block>> Map = new HashMap<>();
+
+        for (Clay clay : Clay.values())
+        {
+            Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/fired/large_vessel", () -> 
+                new LargeVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_VESSEL)), MISC));
+        }
+        return Map;
     }
 
     private static Map<TFCFSoil, Map<SoilBlockType.Variant, RegistryObject<Block>>> TFCSoilMap(Class<TFCFSoil> enumClass)
@@ -441,7 +506,7 @@ public final class TFCFBlocks
                     else if (type == BlockType.LEAVES)
                     {
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCBlocks::never).flammableLikeLeaves(), 7), WOOD));
+                            TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7), WOOD));
                     }
                     else if (type == BlockType.TRAPPED_CHEST)
                     {
@@ -865,7 +930,7 @@ public final class TFCFBlocks
             if (!(plant == TFCFPlant.BLUE_BAMBOO || plant == TFCFPlant.DRAGON_BAMBOO || plant == TFCFPlant.GOLDEN_BAMBOO || plant == TFCFPlant.RED_BAMBOO))
                 continue;
 
-            Map.put(plant, register(("wood/leaves/" + plant.name()).toLowerCase(Locale.ROOT), () -> TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCBlocks::never).flammableLikeLeaves(), 7), plant.createBlockItem(new Item.Properties().tab(WOOD))));
+            Map.put(plant, register(("wood/leaves/" + plant.name()).toLowerCase(Locale.ROOT), () -> TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7), plant.createBlockItem(new Item.Properties().tab(WOOD))));
         }
         return Map;
     }

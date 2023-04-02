@@ -2,10 +2,6 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
     "ambientocclusion": false,
-    "textures": {
-		"top": "#top",
-		"wall": "#wall"
-    },
 	"elements": [
 		{
 			"name": "Center post",

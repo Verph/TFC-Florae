@@ -8,48 +8,33 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.network.NetworkHooks;
 
 import net.dries007.tfc.client.TFCSounds;
-import net.dries007.tfc.common.blockentities.InventoryBlockEntity;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
-import net.dries007.tfc.common.blocks.devices.DeviceBlock;
 import net.dries007.tfc.common.blocks.devices.SealableDeviceBlock;
-import net.dries007.tfc.common.capabilities.size.IItemSize;
-import net.dries007.tfc.common.capabilities.size.Size;
-import net.dries007.tfc.common.capabilities.size.Weight;
 import net.dries007.tfc.util.Helpers;
 
-import tfcflorae.common.blockentities.TFCFBlockEntities;
-import tfcflorae.common.blockentities.ceramics.LargeEarthenwareVesselBlockEntity;
+import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
 
-public class LargeEarthenwareVesselBlock extends SealableDeviceBlock
+public class LargeVesselBlock extends SealableDeviceBlock
 {
     public static final VoxelShape OPENED_SHAPE = box(3D, 0D, 3D, 13D, 10D, 13D);
     public static final VoxelShape CLOSED_SHAPE = Shapes.or(
@@ -58,7 +43,7 @@ public class LargeEarthenwareVesselBlock extends SealableDeviceBlock
         box(7D, 11D, 7D, 9D, 12D, 9D)
     );
 
-    public static <T extends LargeEarthenwareVesselBlockEntity> void toggleSeal(Level level, BlockPos pos, BlockState state, BlockEntityType<T> type)
+    public static <T extends LargeVesselBlockEntity> void toggleSeal(Level level, BlockPos pos, BlockState state, BlockEntityType<T> type)
     {
         level.getBlockEntity(pos, type).ifPresent(barrel -> {
             final boolean previousSealed = state.getValue(SEALED);
@@ -76,7 +61,7 @@ public class LargeEarthenwareVesselBlock extends SealableDeviceBlock
         });
     }
 
-    public LargeEarthenwareVesselBlock(ExtendedProperties properties)
+    public LargeVesselBlock(ExtendedProperties properties)
     {
         super(properties);
     }
@@ -134,7 +119,7 @@ public class LargeEarthenwareVesselBlock extends SealableDeviceBlock
         }
         else
         {
-            level.getBlockEntity(pos, getExtendedProperties().<LargeEarthenwareVesselBlockEntity>blockEntity()).ifPresent(vessel -> {
+            level.getBlockEntity(pos, getExtendedProperties().<LargeVesselBlockEntity>blockEntity()).ifPresent(vessel -> {
                 if (player instanceof ServerPlayer serverPlayer)
                 {
                     Helpers.openScreen(serverPlayer, vessel, pos);

@@ -9,8 +9,8 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public class DripstoneClusterConfig implements FeatureConfiguration
 {
-    public static final Codec<DripstoneClusterConfig> CODEC = RecordCodecBuilder.create((p_160784_) -> {
-        return p_160784_.group(
+    public static final Codec<DripstoneClusterConfig> CODEC = RecordCodecBuilder.create((instance) -> {
+        return instance.group(
             Codec.BOOL.optionalFieldOf("has_surface", false).forGetter(c -> c.hasSurface),
             BlockStateProvider.CODEC.fieldOf("state").forGetter(c -> c.state),
             BlockStateProvider.CODEC.fieldOf("surface_state").forGetter(c -> c.surfaceState),
@@ -36,7 +36,7 @@ public class DripstoneClusterConfig implements FeatureConfiguration
             return p_160788_.maxDistanceFromEdgeAffectingChanceOfDripstoneColumn;
         }), Codec.intRange(1, 64).fieldOf("max_distance_from_center_affecting_height_bias").forGetter((p_160786_) -> {
             return p_160786_.maxDistanceFromCenterAffectingHeightBias;
-        })).apply(p_160784_, DripstoneClusterConfig::new);
+        })).apply(instance, DripstoneClusterConfig::new);
     });
 
     public final Boolean hasSurface;

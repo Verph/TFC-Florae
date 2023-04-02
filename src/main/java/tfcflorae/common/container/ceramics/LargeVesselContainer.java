@@ -1,5 +1,7 @@
 package tfcflorae.common.container.ceramics;
 
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
@@ -7,24 +9,25 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import net.dries007.tfc.common.capabilities.Capabilities;
-import net.dries007.tfc.common.container.*;
+import net.dries007.tfc.common.container.BlockEntityContainer;
+import net.dries007.tfc.common.container.ButtonHandlerContainer;
+import net.dries007.tfc.common.container.CallbackSlot;
+import net.dries007.tfc.common.container.PestContainer;
 
-import org.jetbrains.annotations.Nullable;
-
-import tfcflorae.common.blockentities.ceramics.LargeStonewareVesselBlockEntity;
-import tfcflorae.common.blocks.ceramics.LargeStonewareVesselBlock;
+import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
+import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
 import tfcflorae.common.container.TFCFContainerTypes;
 
-public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeStonewareVesselBlockEntity> implements ButtonHandlerContainer, PestContainer
+public class LargeVesselContainer extends BlockEntityContainer<LargeVesselBlockEntity> implements ButtonHandlerContainer, PestContainer
 {
-    public static LargeStonewareVesselContainer create(LargeStonewareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
+    public static LargeVesselContainer create(LargeVesselBlockEntity vessel, Inventory playerInventory, int windowId)
     {
-        return new LargeStonewareVesselContainer(vessel, playerInventory, windowId).init(playerInventory);
+        return new LargeVesselContainer(vessel, windowId).init(playerInventory);
     }
 
-    public LargeStonewareVesselContainer(LargeStonewareVesselBlockEntity vessel, Inventory playerInventory, int windowId)
+    public LargeVesselContainer(LargeVesselBlockEntity vessel, int windowId)
     {
-        super(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), windowId, vessel);
+        super(TFCFContainerTypes.LARGE_VESSEL.get(), windowId, vessel);
     }
 
     @Override
@@ -34,20 +37,20 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
         Level level = blockEntity.getLevel();
         if (level != null)
         {
-            LargeStonewareVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState(), (BlockEntityType<? extends LargeStonewareVesselBlockEntity>) blockEntity.getType());
+            LargeVesselBlock.toggleSeal(level, blockEntity.getBlockPos(), blockEntity.getBlockState(), (BlockEntityType<? extends LargeVesselBlockEntity>) blockEntity.getType());
         }
     }
 
     @Override
     protected boolean moveStack(ItemStack stack, int slotIndex)
     {
-        if (blockEntity.getBlockState().getValue(LargeStonewareVesselBlock.SEALED))
+        if (blockEntity.getBlockState().getValue(LargeVesselBlock.SEALED))
         {
             return true;
         }
         return switch (typeOf(slotIndex))
             {
-                case MAIN_INVENTORY, HOTBAR -> !moveItemStackTo(stack, 0, LargeStonewareVesselBlockEntity.SLOTS, false);
+                case MAIN_INVENTORY, HOTBAR -> !moveItemStackTo(stack, 0, LargeVesselBlockEntity.SLOTS, false);
                 case CONTAINER -> !moveItemStackTo(stack, containerSlots, slots.size(), false);
             };
     }
@@ -76,6 +79,6 @@ public class LargeStonewareVesselContainer extends BlockEntityContainer<LargeSto
 
     public boolean isSealed()
     {
-        return blockEntity.getBlockState().hasProperty(LargeStonewareVesselBlock.SEALED) && blockEntity.getBlockState().getValue(LargeStonewareVesselBlock.SEALED);
+        return blockEntity.getBlockState().hasProperty(LargeVesselBlock.SEALED) && blockEntity.getBlockState().getValue(LargeVesselBlock.SEALED);
     }
 }

@@ -81,124 +81,16 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
 
     private void buildSubSoil(SurfaceBuilderContext context, int startY, int endY)
     {
-        ChunkData data = context.getChunkData();
         BlockPos pos = new BlockPos(context.pos().getX(), startY - 1, context.pos().getZ());
-        RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
 
-        Rock rockTFC = Rock.GRANITE;
-        TFCFRock rockTFCF = TFCFRock.ARKOSE;
-        SurfaceState PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rockTFC);
-        SurfaceState ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKY_COMPACT_DIRT, rockTFC);
-        SurfaceState ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rockTFC);
-        SurfaceState ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rockTFC);
-        BlockState localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-        BlockState localRawType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get().defaultBlockState();
+        SurfaceState PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.PEBBLE_COMPACT_DIRT);
+        SurfaceState ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKY_COMPACT_DIRT);
+        SurfaceState ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKIER_COMPACT_DIRT);
+        SurfaceState ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKIEST_COMPACT_DIRT);
+        SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
 
-        if (surfaceRock != null)
-        {
-            for (Rock r : Rock.values())
-            {
-                if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                {
-                    rockTFC = r;
-                    PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rockTFC);
-                    ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKY_COMPACT_DIRT, rockTFC);
-                    ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rockTFC);
-                    ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rockTFC);
-                    localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                    localRawType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get().defaultBlockState();
-                    break;
-                }
-                else
-                {
-                    for (TFCFRock r2 : TFCFRock.values())
-                    {
-                        if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                        {
-                            rockTFCF = r2;
-                            PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rockTFCF);
-                            ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKY_COMPACT_DIRT, rockTFCF);
-                            ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rockTFCF);
-                            ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rockTFCF);
-                            localGravelType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                            localRawType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get().defaultBlockState();
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        /*Boolean bool = false;
-        if (surfaceRock != null)
-        {
-            if (bool == false)
-            {
-                for (Rock r : Rock.values())
-                {
-                    if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                    {
-                        rockTFC = r;
-                        bool = false;
-                        break;
-                    }
-                    else
-                    {
-                        bool = true;
-                        break;
-                    }
-                }
-                PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rockTFC);
-                ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKY_COMPACT_DIRT, rockTFC);
-                ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rockTFC);
-                ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFC(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rockTFC);
-                localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                localRawType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get().defaultBlockState();
-            }
-            if (bool == true)
-            {
-                for (TFCFRock r : TFCFRock.values())
-                {
-                    if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCFBlocks.TFCF_ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                    {
-                        rockTFCF = r;
-                        bool = true;
-                        break;
-                    }
-                    else
-                    {
-                        bool = false;
-                        break;
-                    }
-                }
-                PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rockTFCF);
-                ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKY_COMPACT_DIRT, rockTFCF);
-                ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rockTFCF);
-                ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRockTFCF(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rockTFCF);
-                localGravelType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                localRawType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get().defaultBlockState();
-            }
-        }*/
-
-        SoilBlockType.Variant variant = SoilBlockType.Variant.SILT; // Fallback
-        for (SoilBlockType.Variant r : SoilBlockType.Variant.values())
-        {
-            if (context.getBlockState(startY).getBlock().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(r).get().getRegistryName().toString()))
-            {
-                variant = r;
-                break;
-            }
-        }
-
-        /*final BlockState localGravelType = TFCBlocks.ROCK_BLOCKS.get((Rock) (Object) surfaceRock).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-        final BlockState localRawType = TFCBlocks.ROCK_BLOCKS.get((Rock) (Object) surfaceRock).get(Rock.BlockType.RAW).get().defaultBlockState();*/
-        final BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get().defaultBlockState();
-
-        final SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
-        /*final SurfaceState PEBBLE_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.PEBBLE_COMPACT_DIRT, rock);
-        final SurfaceState ROCKY_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKY_COMPACT_DIRT, rock);
-        final SurfaceState ROCKIER_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKIER_COMPACT_DIRT, rock);
-        final SurfaceState ROCKIEST_COMPACT_DIRT = TFCFSoilSurfaceState.buildTypeRock(TFCFRockSoil.ROCKIEST_COMPACT_DIRT, rock);*/
+        BlockState localGravelType = TFCFSoilSurfaceState.rock(Rock.BlockType.GRAVEL).getState(context);
+        BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(TFCFSoilSurfaceState.currentSoilVariant(context)).get().defaultBlockState();
 
         int grassY = startY - 1;
         int gravelY = -1;
@@ -222,10 +114,6 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
             {
                 final double randomGauss = context.random().nextGaussian();
 
-                /*BlockPos posChecker = new BlockPos(context.pos().getX(), y, context.pos().getZ());
-                TFCFlorae.LOGGER.info("generating subsoil block at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ());
-                TFCFlorae.LOGGER.info("blockstate at XYZ " + posChecker.getX() + ", " + posChecker.getY() + ", " + posChecker.getZ() + " is " + context.getBlockState(y).toString());*/
-                //if (canPlaceHere(context, y) && (((isLow(variants) && y > context.getSeaLevel()) || (isLake(variants) && y > context.getSeaLevel()) || (isRiver(variants) && y > context.getSeaLevel()) || (isCanyon(variants) && y > context.getSeaLevel())) || !isLow(variants) || !isLake(variants) || !isRiver(variants) || !isCanyon(variants)))
                 if (pos.getY() > context.getSeaLevel())
                 {
                     if (y == gravelY)
@@ -310,64 +198,17 @@ public class SubSoilSurfaceBuilder implements SurfaceBuilder
 
     private void buildSubSand(SurfaceBuilderContext context, int startY, int endY)
     {
-        ChunkData data = context.getChunkData();
         BlockPos pos = new BlockPos(context.pos().getX(), startY - 1, context.pos().getZ());
-        RockSettings surfaceRock = data.getRockData().getRock(context.pos().getX(), startY, context.pos().getZ());
 
-        Rock rockTFC = Rock.GRANITE;
-        TFCFRock rockTFCF = TFCFRock.ARKOSE;
-        SurfaceState PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
-        SurfaceState ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKY, rockTFC);
-        SurfaceState ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
-        SurfaceState ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
-        BlockState localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
+        SurfaceState PEBBLE = TFCFSoilSurfaceState.buildTypeRockSand(TFCFRockSand.PEBBLE);
+        SurfaceState ROCKY = TFCFSoilSurfaceState.buildTypeRockSand(TFCFRockSand.ROCKY);
+        SurfaceState ROCKIER = TFCFSoilSurfaceState.buildTypeRockSand(TFCFRockSand.ROCKIER);
+        SurfaceState ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSand(TFCFRockSand.ROCKIEST);
+        SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
 
-        if (surfaceRock != null)
-        {
-            for (Rock r : Rock.values())
-            {
-                if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                {
-                    rockTFC = r;
-                    PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.PEBBLE, rockTFC);
-                    ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKY, rockTFC);
-                    ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIER, rockTFC);
-                    ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFC(TFCFRockSand.ROCKIEST, rockTFC);
-                    localGravelType = TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                    break;
-                }
-                else
-                {
-                    for (TFCFRock r2 : TFCFRock.values())
-                    {
-                        if (surfaceRock.get(Rock.BlockType.RAW).getRegistryName().toString().equalsIgnoreCase(TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get().getRegistryName().toString()))
-                        {
-                            rockTFCF = r2;
-                            PEBBLE = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.PEBBLE, rockTFCF);
-                            ROCKY = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKY, rockTFCF);
-                            ROCKIER = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKIER, rockTFCF);
-                            ROCKIEST = TFCFSoilSurfaceState.buildTypeRockSandTFCF(TFCFRockSand.ROCKIEST, rockTFCF);
-                            localGravelType = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.GRAVEL).get().defaultBlockState();
-                            break;
-                        }
-                    }
-                }
-            }
-        }
+        BlockState localGravelType = TFCFSoilSurfaceState.rock(Rock.BlockType.GRAVEL).getState(context);
+        BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(TFCFSoilSurfaceState.currentSoilVariant(context)).get().defaultBlockState();
 
-        SoilBlockType.Variant variant = SoilBlockType.Variant.SILT; // Fallback
-        for (SoilBlockType.Variant r : SoilBlockType.Variant.values())
-        {
-            if (context.getBlockState(startY).getBlock().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(r).get().getRegistryName().toString()))
-            {
-                variant = r;
-                break;
-            }
-        }
-
-        final BlockState localDirtSoilVariant = TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant).get().defaultBlockState();
-
-        final SurfaceState COMPACT_DIRT = TFCFSoilSurfaceState.buildType(TFCFSoil.COMPACT_DIRT);
 
         int grassY = startY - 1;
         int gravelY = -1;

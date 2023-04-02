@@ -39,6 +39,7 @@
 	"tfcflorae.brushing.cannot_place": "The brushed version of this block cannot exist here",
 	"tfcflorae.brushing.no_recipe": "This block cannot be brushed",
 	"tfcflorae.brushing.bad_fluid": "The brushed version of this block cannot contain the fluid here",
+	"tfcflorae.block_entity.large_vessel": "Large Vessel",
     "block.tfcflorae.sand.weathered_terracotta.black": "Weathered Black Terracotta",
     "block.tfcflorae.sand.weathered_terracotta.blue": "Weathered Blue Terracotta",
     "block.tfcflorae.sand.weathered_terracotta.brown": "Weathered Brown Terracotta",

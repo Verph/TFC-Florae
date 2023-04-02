@@ -32,6 +32,7 @@ import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.TFCFTags;
+import tfcflorae.common.blocks.ceramics.Clay;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.BrushingRecipe;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
@@ -94,9 +95,9 @@ public class TFCFJEIPlugin implements IModPlugin
     {
         IGuiHelper gui = r.getJeiHelpers().getGuiHelper();
         r.addRecipeCategories(new BrushingRecipeCategory(BRUSHING, gui));
-        r.addRecipeCategories(new KnappingRecipeCategory<>(EARTHENWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.EARTHENWARE_CLAY_BALL.get()), EARTHENWARE_CLAY_TEXTURE, EARTHENWARE_CLAY_DISABLED_TEXTURE));
-        r.addRecipeCategories(new KnappingRecipeCategory<>(KAOLINITE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.KAOLINITE_CLAY_BALL.get()), KAOLINITE_CLAY_TEXTURE, KAOLINITE_CLAY_DISABLED_TEXTURE));
-        r.addRecipeCategories(new KnappingRecipeCategory<>(STONEWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.STONEWARE_CLAY_BALL.get()), STONEWARE_CLAY_TEXTURE, STONEWARE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(EARTHENWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.CLAY_BALLS.get(Clay.EARTHENWARE).get()), EARTHENWARE_CLAY_TEXTURE, EARTHENWARE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(KAOLINITE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.CLAY_BALLS.get(Clay.KAOLINITE).get()), KAOLINITE_CLAY_TEXTURE, KAOLINITE_CLAY_DISABLED_TEXTURE));
+        r.addRecipeCategories(new KnappingRecipeCategory<>(STONEWARE_CLAY_KNAPPING, gui, new ItemStack(TFCFItems.CLAY_BALLS.get(Clay.STONEWARE).get()), STONEWARE_CLAY_TEXTURE, STONEWARE_CLAY_DISABLED_TEXTURE));
         r.addRecipeCategories(new KnappingRecipeCategory<>(FLINT_KNAPPING, gui, new ItemStack(Items.FLINT), FLINT_TEXTURE, null));
     }
 

@@ -499,7 +499,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         mainLayer = EdgeRiverbankLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 30, mainLayer);
 
-        Chasm.Context chasmContext = new Chasm.Context(createEarlyPlateLayers(seed), seed + 5, Mth.clamp(random.nextFloat(), 0.4f, 1f), Mth.clamp(random.nextFloat(), 0.3f, 1f), Mth.clamp(random.nextInt(16), 2, 16), Mth.clamp(random.nextFloat(), 0.1f, 1f));
+        Chasm.Context chasmContext = new Chasm.Context(createEarlyPlateLayers(seed), seed + 5, 0.4F, 0.5F, 16, 0.9F);
         mainLayer = new MergeChasmsLayer(chasmContext).apply(seed + 5, mainLayer);
         layerArtist.draw("biomes", 31, mainLayer);
 

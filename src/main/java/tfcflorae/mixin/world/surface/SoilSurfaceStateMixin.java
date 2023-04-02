@@ -96,7 +96,7 @@ public class SoilSurfaceStateMixin implements SurfaceState
                             {
                                 for (SandBlockType sandColors : SandBlockType.values())
                                 {
-                                    if (context.getRock().sand().getRegistryName().toString().equalsIgnoreCase(TFCBlocks.SAND.get(sandColors).get().getRegistryName().toString()))
+                                    if (context.getRock().sand() == TFCBlocks.SAND.get(sandColors).get())
                                     {
                                         sandColor = sandColors;
                                         break;

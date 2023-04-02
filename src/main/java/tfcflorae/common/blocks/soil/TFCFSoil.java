@@ -13,6 +13,7 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.soil.*;
+import net.dries007.tfc.util.registry.RegistrySoilVariant;
 
 import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
@@ -43,7 +44,7 @@ public enum TFCFSoil
 
     MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant))),
     MUD_BRICKS((self, variant) -> new Block(mudBrickProperties())),
-    DRYING_BRICKS((self, variant) -> new TFCFDryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks()).blockEntity(TFCFBlockEntities.TICK_COUNTER), variant.dried())),
+    DRYING_BRICKS((self, variant) -> new TFCFDryingBricksBlock(ExtendedProperties.of(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks()).blockEntity(TFCFBlockEntities.TICK_COUNTER), variant.getDriedMudBrick())),
 
     //Both TFCFVariants and TFCVariants of soil types
     COARSE_DIRT((self, variant) -> new CompactDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL), TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant)), 
@@ -234,7 +235,7 @@ public enum TFCFSoil
             return i >= 0 && i < VALUES.length ? VALUES[i] : HUMUS;
         }
 
-        public Supplier<? extends Item> dried()
+        public Supplier<? extends Item> getDriedMudBrick()
         {
             return switch (this)
             {

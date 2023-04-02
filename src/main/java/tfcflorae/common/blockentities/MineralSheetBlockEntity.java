@@ -2,11 +2,15 @@ package tfcflorae.common.blockentities;
 
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -134,41 +138,31 @@ public class MineralSheetBlockEntity extends TFCBlockEntity
         super.loadAdditional(tag);
     }
 
-	public int directionInt(Direction direction)
+	public String mineralName(Mineral mineral, Direction direction)
 	{
+        //String suffix = String.valueOf(Mth.clamp(new Random().nextInt(direction.ordinal() + 1), 0, 3));
+        String suffix = String.valueOf(Mth.clamp(direction.ordinal(), 0, 3));
+        if (suffix == null)
+        {
+            suffix = "0";
+        }
+
         switch (direction)
         {
             case NORTH:
-                return 1;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             case SOUTH:
-                return 2;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             case EAST:
-                return 3;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             case WEST:
-                return 0;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             case UP:
-                return 1;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             case DOWN:
-                return 2;
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
             default:
-                return 3;
-        }
-	}
-
-	public String mineralName(Mineral mineral, int number)
-	{
-        switch (number)
-        {
-            case 0:
-                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_0";
-            case 1:
-                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_1";
-            case 2:
-                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_2";
-            case 3:
-                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_3";
-            default:
-                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_0";
+                return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
         }
 	}
 }

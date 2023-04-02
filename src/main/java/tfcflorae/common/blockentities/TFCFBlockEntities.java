@@ -1,9 +1,5 @@
 package tfcflorae.common.blockentities;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
@@ -15,34 +11,20 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import net.dries007.tfc.common.blockentities.AnvilBlockEntity;
-import net.dries007.tfc.common.blockentities.BarrelBlockEntity;
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.FarmlandBlockEntity;
-import net.dries007.tfc.common.blockentities.LargeVesselBlockEntity;
 import net.dries007.tfc.common.blockentities.LoomBlockEntity;
 import net.dries007.tfc.common.blockentities.SluiceBlockEntity;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blockentities.TFCChestBlockEntity;
-import net.dries007.tfc.common.blockentities.TFCSignBlockEntity;
-import net.dries007.tfc.common.blockentities.TFCTrappedChestBlockEntity;
-import net.dries007.tfc.common.blockentities.ToolRackBlockEntity;
-import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 
 import tfcflorae.TFCFlorae;
-import tfcflorae.common.blockentities.ceramics.*;
-import tfcflorae.common.blocks.*;
-import tfcflorae.common.blocks.plant.*;
+import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
-import tfcflorae.common.blocks.wood.*;
-import tfcflorae.mixin.accessor.BlockEntityTypeAccessor;
 
-@SuppressWarnings("unused")
+@SuppressWarnings("RedundantTypeArguments")
 public class TFCFBlockEntities
 {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFCFlorae.MOD_ID);
@@ -90,6 +72,11 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
+    public static final RegistryObject<BlockEntityType<LargeVesselBlockEntity>> LARGE_VESSEL = register("large_vessel", LargeVesselBlockEntity::new, Stream.of(
+            TFCFBlocks.CLAY_LARGE_VESSELS.values().stream()
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
     public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("tfcf_farmland", TFCFFarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
     public static final RegistryObject<BlockEntityType<TFCFBarrelBlockEntity>> BARREL = register("tfcf_barrel", TFCFBarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
     public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("tfcf_loom", TFCFLoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));
@@ -100,9 +87,9 @@ public class TFCFBlockEntities
 
     public static final RegistryObject<BlockEntityType<MineralSheetBlockEntity>> MINERAL_SHEET = register("mineral_sheet", MineralSheetBlockEntity::new, TFCFBlocks.MINERAL_SHEET);
 
-    public static final RegistryObject<BlockEntityType<LargeEarthenwareVesselBlockEntity>> LARGE_EARTHENWARE_VESSEL = register("large_earthenware_vessel", LargeEarthenwareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_EARTHENWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
+    /*public static final RegistryObject<BlockEntityType<LargeEarthenwareVesselBlockEntity>> LARGE_EARTHENWARE_VESSEL = register("large_earthenware_vessel", LargeEarthenwareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_EARTHENWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
     public static final RegistryObject<BlockEntityType<LargeKaoliniteVesselBlockEntity>> LARGE_KAOLINITE_VESSEL = register("large_kaolinite_vessel", LargeKaoliniteVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_KAOLINITE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
-    public static final RegistryObject<BlockEntityType<LargeStonewareVesselBlockEntity>> LARGE_STONEWARE_VESSEL = register("large_stoneware_vessel", LargeStonewareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_STONEWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));
+    public static final RegistryObject<BlockEntityType<LargeStonewareVesselBlockEntity>> LARGE_STONEWARE_VESSEL = register("large_stoneware_vessel", LargeStonewareVesselBlockEntity::new, Stream.of(TFCFBlocks.LARGE_STONEWARE_VESSEL).<Supplier<? extends Block>>flatMap(Helpers::flatten));*/
 
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {

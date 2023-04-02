@@ -9,22 +9,23 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.client.screen.BlockEntityScreen;
 import net.dries007.tfc.util.Helpers;
 
-import tfcflorae.client.screen.button.StonewareVesselSealButton;
-import tfcflorae.common.blockentities.ceramics.LargeStonewareVesselBlockEntity;
-import tfcflorae.common.blocks.ceramics.LargeStonewareVesselBlock;
-import tfcflorae.common.container.ceramics.LargeStonewareVesselContainer;
+import tfcflorae.client.screen.button.VesselSealButton;
+import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
+import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
+import tfcflorae.common.container.ceramics.LargeVesselContainer;
 
-public class LargeStonewareVesselScreen extends BlockEntityScreen<LargeStonewareVesselBlockEntity, LargeStonewareVesselContainer>
+public class LargeVesselScreen extends BlockEntityScreen<LargeVesselBlockEntity, LargeVesselContainer>
 {
     private static final Component SEAL = new TranslatableComponent(TerraFirmaCraft.MOD_ID + ".tooltip.seal_barrel");
     private static final Component UNSEAL = new TranslatableComponent(TerraFirmaCraft.MOD_ID + ".tooltip.unseal_barrel");
     public static final ResourceLocation BACKGROUND = Helpers.identifier("textures/gui/large_vessel.png");
 
-    public LargeStonewareVesselScreen(LargeStonewareVesselContainer container, Inventory playerInventory, Component name)
+    public LargeVesselScreen(LargeVesselContainer container, Inventory playerInventory, Component name)
     {
         super(container, playerInventory, name, BACKGROUND);
     }
@@ -33,7 +34,7 @@ public class LargeStonewareVesselScreen extends BlockEntityScreen<LargeStoneware
     public void init()
     {
         super.init();
-        addRenderableWidget(new StonewareVesselSealButton(blockEntity, getGuiLeft() + 9, getGuiTop(), new Button.OnTooltip()
+        addRenderableWidget(new VesselSealButton(blockEntity, getGuiLeft() + 9, getGuiTop(), new Button.OnTooltip()
         {
             @Override
             public void onTooltip(Button button, PoseStack poseStack, int x, int y)
@@ -55,12 +56,12 @@ public class LargeStonewareVesselScreen extends BlockEntityScreen<LargeStoneware
         super.renderLabels(poseStack, mouseX, mouseY);
         if (isSealed())
         {
-            drawDisabled(poseStack, 0, LargeStonewareVesselBlockEntity.SLOTS - 1);
+            drawDisabled(poseStack, 0, LargeVesselBlockEntity.SLOTS - 1);
         }
     }
 
     private boolean isSealed()
     {
-        return blockEntity.getBlockState().getValue(LargeStonewareVesselBlock.SEALED);
+        return blockEntity.getBlockState().getValue(LargeVesselBlock.SEALED);
     }
 }

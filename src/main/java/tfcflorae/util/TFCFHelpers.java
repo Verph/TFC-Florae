@@ -4,12 +4,18 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Consumer;
 
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
+import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
+import net.dries007.tfc.world.settings.RockSettings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
@@ -21,6 +27,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.network.NetworkHooks;
 import tfcflorae.TFCFlorae;
+import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.TFCFRock;
 
 public class TFCFHelpers
 {
@@ -164,5 +172,43 @@ public class TFCFHelpers
     public static TranslatableComponent translatable(String key)
     {
         return new TranslatableComponent(key);
+    }
+
+    public static RegistryRock rockType(ServerLevel level, BlockPos pos)
+    {
+        ChunkDataProvider provider = ChunkDataProvider.get(level);
+        RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
+
+        Rock rockTFC = null;
+        TFCFRock rockTFCF = null;
+
+        if (surfaceRock != null)
+        {
+            for (Rock r : Rock.values())
+            {
+                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                {
+                    rockTFC = r;
+                    break;
+                }
+                else
+                {
+                    for (TFCFRock r2 : TFCFRock.values())
+                    {
+                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                        {
+                            rockTFCF = r2;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if (rockTFC != null)
+            return rockTFC;
+        else if (rockTFCF != null)
+            return rockTFCF;
+        else
+            return Rock.GRANITE;
     }
 }

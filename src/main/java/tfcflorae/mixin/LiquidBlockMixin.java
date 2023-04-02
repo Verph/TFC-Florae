@@ -9,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -17,15 +18,19 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.Material;
 
 import net.dries007.tfc.common.blocks.DirectionPropertyBlock;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.world.noise.OpenSimplex2D;
 
 import tfcflorae.Config;
-import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.Mineral;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
 import tfcflorae.common.items.TFCFItems;
+import tfcflorae.util.TFCFHelpers;
+
+import static net.dries007.tfc.common.blocks.rock.RockCategory.*;
 
 @Mixin(LiquidBlock.class)
 public abstract class LiquidBlockMixin
@@ -42,19 +47,90 @@ public abstract class LiquidBlockMixin
                 Fluid type = level.getFluidState(pos).getType();
                 Mineral mineral = null;
 
-                TFCFlorae.LOGGER.debug("Current fluid type is: " + type.toString());
+                float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
+                Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;
+                Boolean categoryIgneousIntrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_INTRUSIVE;
+                Boolean categoryMetamorphic = TFCFHelpers.rockType(level, pos).category() == METAMORPHIC;
+                Boolean categorySedimentary = TFCFHelpers.rockType(level, pos).category() == SEDIMENTARY;
 
-                if (type == Fluids.LAVA)
+                if (type == Fluids.LAVA.getSource() || state.getBlock() == Blocks.LAVA)
                 {
-                    mineral = Mineral.BRIMSTONE;
+                    if (variantNoiseValue > 0.25F)
+                    {
+                        if (categoryIgneousExtrusive)
+                        {
+                            mineral = Mineral.GREIGITE;
+                        }
+                        else if (categoryIgneousIntrusive)
+                        {
+                            mineral = Mineral.SMITHSONITE;
+                        }
+                        else if (categoryMetamorphic)
+                        {
+                            mineral = Mineral.BRIMSTONE;
+                        }
+                        else if (categorySedimentary)
+                        {
+                            mineral = Mineral.MAGNESITE;
+                        }
+                    }
+                    else if (variantNoiseValue > -0.75F)
+                    {
+                        if (categoryIgneousExtrusive)
+                        {
+                            mineral = Mineral.ZABUYELITE;
+                        }
+                        else if (categoryIgneousIntrusive)
+                        {
+                            mineral = Mineral.SPHEROCOBALTITE;
+                        }
+                        else if (categoryMetamorphic)
+                        {
+                            mineral = Mineral.ALABANDITE;
+                        }
+                        else if (categorySedimentary)
+                        {
+                            mineral = Mineral.GREIGITE;
+                        }
+                    }
+                    else
+                    {
+                        if (categoryIgneousExtrusive)
+                        {
+                            mineral = Mineral.BRIMSTONE;
+                        }
+                        else if (categoryIgneousIntrusive)
+                        {
+                            mineral = Mineral.BRIMSTONE;
+                        }
+                        else if (categoryMetamorphic)
+                        {
+                            mineral = Mineral.BASTNASITE;
+                        }
+                        else if (categorySedimentary)
+                        {
+                            mineral = Mineral.APATITE;
+                        }
+                    }
                 }
-                else if (type == TFCFluids.SPRING_WATER.getSource())
+                if (type == TFCFluids.SPRING_WATER.getSource() || state.getBlock() == TFCBlocks.SPRING_WATER.get())
                 {
-                    mineral = Mineral.SALMIAK;
-                }
-                else if (type == TFCFluids.SALT_WATER.getSource())
-                {
-                    mineral = Mineral.SALT;
+                    if (categoryIgneousExtrusive)
+                    {
+                        mineral = Mineral.SALMIAK;
+                    }
+                    else if (categoryIgneousIntrusive)
+                    {
+                        mineral = Mineral.SALTPETER;
+                    }
+                    else if (categoryMetamorphic)
+                    {
+                        mineral = Mineral.SALT;
+                    }
+                    else if (categorySedimentary)
+                    {
+                        mineral = Mineral.CALCITE;
+                    }
                 }
 
                 if (mineral != null && type != null)
@@ -72,15 +148,10 @@ public abstract class LiquidBlockMixin
                     BlockPos adjacentPos = genPos.relative(face);
                     BlockState adjacentState = level.getBlockState(adjacentPos);
 
-                    //Boolean canSurvive = TFCFBlocks.MINERAL_SHEET.get().canSurvive(stateAt, level, genPos);
-
                     if (Helpers.isBlock(stateAt, TFCFBlocks.MINERAL_SHEET.get()))
                     {
                         if (!stateAt.getValue(property) && adjacentState.isFaceSturdy(level, adjacentPos, sheetFace))
                         {
-                            TFCFlorae.LOGGER.debug("Passed is mineral block check");
-                            TFCFlorae.LOGGER.debug("Trying to generate mineral deposit at XYZ: " + genPos.getX() + " " + genPos.getY() + " " + genPos.getZ());
-
                             MineralSheetBlock.addSheet(level, genPos, stateAt, face, itemMineral);
                         }
                     }
@@ -89,10 +160,6 @@ public abstract class LiquidBlockMixin
                         if (adjacentState.isFaceSturdy(level, adjacentPos, sheetFace))
                         {
                             BlockState placingState = TFCFBlocks.MINERAL_SHEET.get().defaultBlockState().setValue(property, true);
-
-                            TFCFlorae.LOGGER.debug("Passed material/replaceable check");
-                            TFCFlorae.LOGGER.debug("Trying to generate new mineral deposit at XYZ: " + genPos.getX() + " " + genPos.getY() + " " + genPos.getZ());
-
                             MineralSheetBlock.addSheet(level, genPos, placingState, face, itemMineral);
                         }
                     }

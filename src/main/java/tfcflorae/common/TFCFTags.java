@@ -17,6 +17,7 @@ public class TFCFTags
         public static final TagKey<Block> MOSSY_PACKED_MUD = create("mossy_packed_mud");
         public static final TagKey<Block> MANGROVE_LOGS_CAN_GROW_THROUGH = create("mangrove_logs_can_grow_through");
         public static final TagKey<Block> MANGROVE_ROOTS_CAN_GROW_THROUGH = create("mangrove_roots_can_grow_through");
+        public static final TagKey<Block> REPLACEABLE = create("replaceable");
 
         private static TagKey<Block> create(String id)
         {

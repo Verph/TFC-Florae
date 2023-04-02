@@ -44,6 +44,7 @@ import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
+
 import tfcflorae.Config;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
@@ -94,9 +95,10 @@ public class ClientEventHandler
             MenuScreens.register(TFCFContainerTypes.STONEWARE_CLAY_KNAPPING.get(), KnappingScreen::new);
             MenuScreens.register(TFCFContainerTypes.FLINT_KNAPPING.get(), KnappingScreen::new);
 
-            MenuScreens.register(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), LargeEarthenwareVesselScreen::new);
+            MenuScreens.register(TFCFContainerTypes.LARGE_VESSEL.get(), LargeVesselScreen::new);
+            /*MenuScreens.register(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), LargeEarthenwareVesselScreen::new);
             MenuScreens.register(TFCFContainerTypes.LARGE_KAOLINITE_VESSEL.get(), LargeKaoliniteVesselScreen::new);
-            MenuScreens.register(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), LargeStonewareVesselScreen::new);
+            MenuScreens.register(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), LargeStonewareVesselScreen::new);*/
 
             MenuScreens.register(TFCFContainerTypes.BARREL.get(), TFCFBarrelScreen::new);
             MenuScreens.register(TFCFContainerTypes.ANVIL.get(), TFCFAnvilScreen::new);
@@ -137,9 +139,11 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.CHARRED_TREE_TWIG.get(), cutout);
         TFCFBlocks.MANGROVE_ROOTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_EARTHENWARE_VESSEL.get(), cutout);
+        TFCFBlocks.CLAY_LARGE_VESSELS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+
+        /*ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_EARTHENWARE_VESSEL.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_KAOLINITE_VESSEL.get(), cutout);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_STONEWARE_VESSEL.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_STONEWARE_VESSEL.get(), cutout);*/
 
         // Grasses and such
         //TFCFBlocks.TFCSOIL.get(TFCFSoil.GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));

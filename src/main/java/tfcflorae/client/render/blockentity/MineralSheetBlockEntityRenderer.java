@@ -1,6 +1,5 @@
 package tfcflorae.client.render.blockentity;
 
-import java.util.Random;
 import java.util.function.Function;
 
 import net.minecraft.client.Minecraft;
@@ -29,8 +28,8 @@ public class MineralSheetBlockEntityRenderer implements BlockEntityRenderer<Mine
     @Override
     public void render(MineralSheetBlockEntity pile, float partialTick, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int packedOverlay)
     {
-        final Random random = new Random();
         final BlockState state = pile.getBlockState();
+
         if (state.getBlock() instanceof DirectionPropertyBlock)
         {
             final Function<ResourceLocation, TextureAtlasSprite> textureAtlas = Minecraft.getInstance().getTextureAtlas(TFCFRenderHelpers.BLOCKS_ATLAS);
@@ -41,7 +40,7 @@ public class MineralSheetBlockEntityRenderer implements BlockEntityRenderer<Mine
                 if (state.getValue(DirectionPropertyBlock.getProperty(direction))) // The properties are authoritative on which sides should be rendered
                 {
                     Mineral mineral = pile.getOrCacheMineral(direction);
-                    String mineralName = pile.mineralName(mineral, pile.directionInt(Direction.getRandom(random)));
+                    String mineralName = pile.mineralName(mineral, direction);
 
                     final ResourceLocation textureId = TFCFHelpers.identifier(mineralName);
                     final TextureAtlasSprite sprite = textureAtlas.apply(textureId);
@@ -52,7 +51,7 @@ public class MineralSheetBlockEntityRenderer implements BlockEntityRenderer<Mine
         }
     }
 
-    public void renderSheet(PoseStack poseStack, TextureAtlasSprite sprite, VertexConsumer buffer, Direction direction, int packedLight, int packedOverlay)
+    private void renderSheet(PoseStack poseStack, TextureAtlasSprite sprite, VertexConsumer buffer, Direction direction, int packedLight, int packedOverlay)
     {
         TFCFRenderHelpers.renderTexturedCuboid(poseStack, buffer, sprite, packedLight, packedOverlay, MineralSheetBlock.getShapeForSingleFace(direction).bounds());
     }

@@ -37,6 +37,7 @@ import net.dries007.tfc.util.Metal;
 import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.ceramics.Clay;
 import tfcflorae.common.blocks.rock.Mineral;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
@@ -95,8 +96,13 @@ public final class TFCFItems
 
     // Pottery
 
+    public static final Map<Clay, RegistryObject<Item>> CLAY_BALLS = clayBallMapper();
+    public static final Map<Clay, RegistryObject<Item>> CLAY_ITEMS = clayItemMapper();
+    public static final Map<Clay, Map<DyeColor, RegistryObject<Item>>> CLAY_VESSELS = clayVesselMapper();
+    public static final Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> CLAY_MOLDS = clayMoldMapper();
+
     /* Earthenware Clay Ceramics */
-    public static final RegistryObject<Item> EARTHENWARE_CLAY_BALL = register("ceramic/earthenware/clay", MISC);
+    /*public static final RegistryObject<Item> EARTHENWARE_CLAY_BALL = register("ceramic/earthenware/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/fired_brick", MISC);
@@ -134,10 +140,10 @@ public final class TFCFItems
         register("ceramic/earthenware/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
     );
 
-    public static final RegistryObject<Item> UNFIRED_LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/unfired/large_vessel", MISC);
+    public static final RegistryObject<Item> UNFIRED_LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/unfired/large_vessel", MISC);*/
 
     /* Kaolinite Clay Ceramics */
-    public static final RegistryObject<Item> KAOLINITE_CLAY_BALL = register("ceramic/kaolinite/clay", MISC);
+    /*public static final RegistryObject<Item> KAOLINITE_CLAY_BALL = register("ceramic/kaolinite/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/fired_brick", MISC);
@@ -175,10 +181,10 @@ public final class TFCFItems
         register("ceramic/kaolinite/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
     );
 
-    public static final RegistryObject<Item> UNFIRED_LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/unfired/large_vessel", MISC);
+    public static final RegistryObject<Item> UNFIRED_LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/unfired/large_vessel", MISC);*/
 
     /* Stoneware Clay Ceramics */
-    public static final RegistryObject<Item> STONEWARE_CLAY_BALL = register("ceramic/stoneware/clay", MISC);
+    /*public static final RegistryObject<Item> STONEWARE_CLAY_BALL = register("ceramic/stoneware/clay", MISC);
 
     public static final RegistryObject<Item> UNFIRED_STONEWARE_BRICK = register("ceramic/stoneware/unfired_brick", MISC);
     public static final RegistryObject<Item> FIRED_STONEWARE_BRICK = register("ceramic/stoneware/fired_brick", MISC);
@@ -216,7 +222,7 @@ public final class TFCFItems
         register("ceramic/stoneware/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
     );
 
-    public static final RegistryObject<Item> UNFIRED_LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/unfired/large_vessel", MISC);
+    public static final RegistryObject<Item> UNFIRED_LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/unfired/large_vessel", MISC);*/
 
     // Soil stuff
 
@@ -240,6 +246,85 @@ public final class TFCFItems
     public static final RegistryObject<Item> WALKING_CANES = register("tools/walking_cane", () -> new WalkingCaneItem(new Item.Properties().tab(MISC).stacksTo(1).durability(200)));
 
     // Fin
+
+    private static Map<Clay, RegistryObject<Item>> clayBallMapper()
+    {
+        Map<Clay,  RegistryObject<Item>> Map = new HashMap<>();
+        for (Clay clay : Clay.values())
+        {
+            String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
+
+            Map.put(clay, register("ceramic/" + clayName + "/clay", MISC));
+        }
+        return Map;
+    }
+
+    private static Map<Clay, RegistryObject<Item>> clayItemMapper()
+    {
+        Map<Clay,  RegistryObject<Item>> Map = new HashMap<>();
+        for (Clay clay : Clay.values())
+        {
+            String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
+
+            Map.put(clay, register("ceramic/" + clayName + "/unfired_brick", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired_brick", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/flower_pot", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/pan", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/bowl", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired/bowl", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/jug", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG)));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/pot", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired/pot", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/spindle_head", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired/spindle_head", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/vessel", MISC));
+            Map.put(clay, register("ceramic/" + clayName + "/fired/vessel", () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1))));
+            Map.put(clay, register("ceramic/" + clayName + "/unfired/large_vessel", MISC));
+        }
+        return Map;
+    }
+
+    private static Map<Clay, Map<DyeColor, RegistryObject<Item>>> clayVesselMapper()
+    {
+        Map<Clay, Map<DyeColor, RegistryObject<Item>>> Map = new HashMap<>();
+        for (Clay clay : Clay.values())
+        {
+            Map<DyeColor, RegistryObject<Item>> subMap = new HashMap<>();
+            for (DyeColor color : DyeColor.values())
+            {
+                String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
+                String colorName = color.name().toLowerCase(Locale.ROOT);
+
+                subMap.put(color, register("ceramic/" + clayName + "/unfired/glazed_vessel/" + colorName, MISC));
+                subMap.put(color, register("ceramic/" + clayName + "/fired/glazed_vessel/" + colorName, () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1))));
+            }
+            Map.put(clay, subMap);
+        }
+        return Map;
+    }
+
+    private static Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> clayMoldMapper()
+    {
+        Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> Map = new HashMap<>();
+        for (Clay clay : Clay.values())
+        {
+            Map<Metal.ItemType, RegistryObject<Item>> subMap = new HashMap<>();
+            for (Metal.ItemType type : Metal.ItemType.values())
+            {
+                if (!type.hasMold())
+                    continue;
+
+                String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
+                String typeName = type.name().toLowerCase(Locale.ROOT);
+
+                subMap.put(type, register("ceramic/" + clayName + "/unfired/mold/" + typeName, MISC));
+                subMap.put(type, register("ceramic/" + clayName + "/fired/mold/" + typeName, () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1))));
+            }
+            Map.put(clay, subMap);
+        }
+        return Map;
+    }
 
     private static Map<RockCategory, Map<RockCategory.ItemType, RegistryObject<Item>>> flintToolMapper()
     {

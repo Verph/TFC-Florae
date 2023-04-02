@@ -41,58 +41,58 @@ public class CliffSurfaceBuilder implements SurfaceBuilder
         final NormalSurfaceBuilder surfaceBuilder = NormalSurfaceBuilder.INSTANCE;
         final double jitterNoise = this.jitterNoise.noise(context.pos().getX(), context.pos().getZ());
 
-        SurfaceState rockType = TFCFSoilSurfaceState.rockTFC(Rock.CHERT, Rock.BlockType.RAW); // Fallback
+        SurfaceState rockType = TFCFSoilSurfaceState.rockCustom(Rock.CHERT, Rock.BlockType.RAW); // Fallback
         if (jitterNoise > 0.85f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.CLAYSTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.CLAYSTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > 0.7f && jitterNoise <= 0.85f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.LIMESTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.LIMESTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > 0.55f && jitterNoise <= 0.7f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.CHERT, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.CHERT, Rock.BlockType.RAW);
         }
         else if (jitterNoise > 0.4f && jitterNoise <= 0.55f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.CHALK, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.CHALK, Rock.BlockType.RAW);
         }
         else if (jitterNoise > 0.25f && jitterNoise <= 0.4f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.MARBLE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.MARBLE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > 0.1f && jitterNoise <= 0.25f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.CATLINITE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.CATLINITE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.05f && jitterNoise <= 0.1f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.MUDSTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.MUDSTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.2f && jitterNoise <= -0.05f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.SANDSTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.SANDSTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.35f && jitterNoise <= -0.2f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.SILTSTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.SILTSTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.5f && jitterNoise <= -0.35f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.SOAPSTONE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.SOAPSTONE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.65f && jitterNoise <= -0.5f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFCF(TFCFRock.TRAVERTINE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(TFCFRock.TRAVERTINE, Rock.BlockType.RAW);
         }
         else if (jitterNoise > -0.8f && jitterNoise <= -0.65f)
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.GRANITE, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.GRANITE, Rock.BlockType.RAW);
         }
         else
         {
-            rockType = TFCFSoilSurfaceState.rockTFC(Rock.CHALK, Rock.BlockType.RAW);
+            rockType = TFCFSoilSurfaceState.rockCustom(Rock.CHALK, Rock.BlockType.RAW);
         }
         surfaceBuilder.buildSurface(context, startY, endY, rockType, rockType, rockType);
         context.setBlockState(startY, SurfaceStates.GRASS);
