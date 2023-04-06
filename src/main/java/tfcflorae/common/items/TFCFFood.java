@@ -77,7 +77,10 @@ public enum TFCFFood
     ROASTED_TURKEY_TAIL(false, false, true),
     ROASTED_WEEPING_MILK_CAP(false, false),
     ROASTED_WOOD_BLEWIT(false, false),
-    ROASTED_WOOLLY_GOMPHUS(false, false, true);
+    ROASTED_WOOLLY_GOMPHUS(false, false, true),
+
+    // Other
+    EUCALYPTUS_LEAVES(false, false, true);
 
     public final boolean meat, fast, hasEffect;
 

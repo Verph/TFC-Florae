@@ -101,129 +101,6 @@ public final class TFCFItems
     public static final Map<Clay, Map<DyeColor, RegistryObject<Item>>> CLAY_VESSELS = clayVesselMapper();
     public static final Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> CLAY_MOLDS = clayMoldMapper();
 
-    /* Earthenware Clay Ceramics */
-    /*public static final RegistryObject<Item> EARTHENWARE_CLAY_BALL = register("ceramic/earthenware/clay", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/unfired_brick", MISC);
-    public static final RegistryObject<Item> FIRED_EARTHENWARE_BRICK = register("ceramic/earthenware/fired_brick", MISC);
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_FLOWER_POT = register("ceramic/earthenware/unfired/flower_pot", MISC);
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_PAN = register("ceramic/earthenware/unfired/pan", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_BOWL = register("ceramic/earthenware/unfired/bowl", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_BOWL = register("ceramic/earthenware/fired/bowl", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_JUG = register("ceramic/earthenware/unfired/jug", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_JUG = register("ceramic/earthenware/fired/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_POT = register("ceramic/earthenware/unfired/pot", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_POT = register("ceramic/earthenware/fired/pot", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_SPINDLE_HEAD = register("ceramic/earthenware/unfired/spindle_head", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_SPINDLE_HEAD = register("ceramic/earthenware/fired/spindle_head", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_EARTHENWARE_VESSEL = register("ceramic/earthenware/unfired/vessel", MISC);
-    public static final RegistryObject<Item> EARTHENWARE_VESSEL = register("ceramic/earthenware/fired/vessel", () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)));
-
-    public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/earthenware/unfired/glazed_vessel/" + color, MISC)
-    );
-
-    public static final Map<DyeColor, RegistryObject<Item>> GLAZED_EARTHENWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/earthenware/fired/glazed_vessel/" + color, () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> UNFIRED_EARTHENWARE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/earthenware/unfired/mold/" + type.name(), MISC)
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> EARTHENWARE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/earthenware/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final RegistryObject<Item> UNFIRED_LARGE_EARTHENWARE_VESSEL = register("ceramic/earthenware/unfired/large_vessel", MISC);*/
-
-    /* Kaolinite Clay Ceramics */
-    /*public static final RegistryObject<Item> KAOLINITE_CLAY_BALL = register("ceramic/kaolinite/clay", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/unfired_brick", MISC);
-    public static final RegistryObject<Item> FIRED_KAOLINITE_BRICK = register("ceramic/kaolinite/fired_brick", MISC);
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_FLOWER_POT = register("ceramic/kaolinite/unfired/flower_pot", MISC);
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_PAN = register("ceramic/kaolinite/unfired/pan", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_BOWL = register("ceramic/kaolinite/unfired/bowl", MISC);
-    public static final RegistryObject<Item> KAOLINITE_BOWL = register("ceramic/kaolinite/fired/bowl", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_JUG = register("ceramic/kaolinite/unfired/jug", MISC);
-    public static final RegistryObject<Item> KAOLINITE_JUG = register("ceramic/kaolinite/fired/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_POT = register("ceramic/kaolinite/unfired/pot", MISC);
-    public static final RegistryObject<Item> KAOLINITE_POT = register("ceramic/kaolinite/fired/pot", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_SPINDLE_HEAD = register("ceramic/kaolinite/unfired/spindle_head", MISC);
-    public static final RegistryObject<Item> KAOLINITE_SPINDLE_HEAD = register("ceramic/kaolinite/fired/spindle_head", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_KAOLINITE_VESSEL = register("ceramic/kaolinite/unfired/vessel", MISC);
-    public static final RegistryObject<Item> KAOLINITE_VESSEL = register("ceramic/kaolinite/fired/vessel", () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)));
-
-    public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/kaolinite/unfired/glazed_vessel/" + color, MISC)
-    );
-
-    public static final Map<DyeColor, RegistryObject<Item>> GLAZED_KAOLINITE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/kaolinite/fired/glazed_vessel/" + color, () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> UNFIRED_KAOLINITE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/kaolinite/unfired/mold/" + type.name(), MISC)
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> KAOLINITE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/kaolinite/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final RegistryObject<Item> UNFIRED_LARGE_KAOLINITE_VESSEL = register("ceramic/kaolinite/unfired/large_vessel", MISC);*/
-
-    /* Stoneware Clay Ceramics */
-    /*public static final RegistryObject<Item> STONEWARE_CLAY_BALL = register("ceramic/stoneware/clay", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_BRICK = register("ceramic/stoneware/unfired_brick", MISC);
-    public static final RegistryObject<Item> FIRED_STONEWARE_BRICK = register("ceramic/stoneware/fired_brick", MISC);
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_FLOWER_POT = register("ceramic/stoneware/unfired/flower_pot", MISC);
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_PAN = register("ceramic/stoneware/unfired/pan", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_BOWL = register("ceramic/stoneware/unfired/bowl", MISC);
-    public static final RegistryObject<Item> STONEWARE_BOWL = register("ceramic/stoneware/fired/bowl", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_JUG = register("ceramic/stoneware/unfired/jug", MISC);
-    public static final RegistryObject<Item> STONEWARE_JUG = register("ceramic/stoneware/fired/jug", () -> new JugItem(new Item.Properties().tab(MISC).stacksTo(1), TFCConfig.SERVER.jugCapacity::get, TFCTags.Fluids.USABLE_IN_JUG));
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_POT = register("ceramic/stoneware/unfired/pot", MISC);
-    public static final RegistryObject<Item> STONEWARE_POT = register("ceramic/stoneware/fired/pot", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_SPINDLE_HEAD = register("ceramic/stoneware/unfired/spindle_head", MISC);
-    public static final RegistryObject<Item> STONEWARE_SPINDLE_HEAD = register("ceramic/stoneware/fired/spindle_head", MISC);
-
-    public static final RegistryObject<Item> UNFIRED_STONEWARE_VESSEL = register("ceramic/stoneware/unfired/vessel", MISC);
-    public static final RegistryObject<Item> STONEWARE_VESSEL = register("ceramic/stoneware/fired/vessel", () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)));
-
-    public static final Map<DyeColor, RegistryObject<Item>> UNFIRED_GLAZED_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/stoneware/unfired/glazed_vessel/" + color, MISC)
-    );
-
-    public static final Map<DyeColor, RegistryObject<Item>> GLAZED_STONEWARE_VESSELS = Helpers.mapOfKeys(DyeColor.class, color ->
-        register("ceramic/stoneware/fired/glazed_vessel/" + color, () -> new VesselItem(new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> UNFIRED_STONEWARE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/stoneware/unfired/mold/" + type.name(), MISC)
-    );
-
-    public static final Map<Metal.ItemType, RegistryObject<Item>> STONEWARE_MOLDS = Helpers.mapOfKeys(Metal.ItemType.class, Metal.ItemType::hasMold, type ->
-        register("ceramic/stoneware/fired/mold/" + type.name(), () -> new MoldItem(type, new Item.Properties().tab(MISC).stacksTo(1)))
-    );
-
-    public static final RegistryObject<Item> UNFIRED_LARGE_STONEWARE_VESSEL = register("ceramic/stoneware/unfired/large_vessel", MISC);*/
-
     // Soil stuff
 
     public static final Map<SandBlockType, RegistryObject<Item>> SAND_PILE_TFC = Helpers.mapOfKeys(SandBlockType.class, type ->
@@ -456,6 +333,9 @@ public final class TFCFItems
                 else if (food == TFCFFood.ROASTED_BLACK_POWDERPUFF)
                     Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(0.3f)
                         .effect(new MobEffectInstance(MobEffects.INVISIBILITY, 25, 0), 0.5F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
+                else if (food == TFCFFood.EUCALYPTUS_LEAVES)
+                    Map.put(food, register("food/" + food.name(), () -> new DecayingItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).saturationMod(0)
+                        .effect(new MobEffectInstance(MobEffects.POISON, 35, 0), 0.2F).alwaysEat().build()).tab(TFCItemGroup.FOOD))));
                 else
                     Map.put(food, register("food/" + food.name(), () -> new DecayingItem(food.createProperties())));
             }

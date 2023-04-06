@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.RegistryObject;
 
 import net.dries007.tfc.common.blocks.SandstoneBlockType;
@@ -27,44 +28,46 @@ import net.dries007.tfc.world.settings.RockSettings;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.util.registry.TFCFRegistryRock;
 
-public enum TFCFRock implements RegistryRock, TFCFRegistryRock
+public enum TFCFRock implements TFCFRegistryRock
 {
-    RED_GRANITE(RockCategory.IGNEOUS_INTRUSIVE, SandBlockType.RED),
-    BRECCIA(RockCategory.IGNEOUS_INTRUSIVE, SandBlockType.WHITE),
-    FOIDOLITE(RockCategory.IGNEOUS_INTRUSIVE, SandBlockType.WHITE),
-    PORPHYRY(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.RED),
-    PERIDOTITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.GREEN),
-    BLAIMORITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.GREEN),
-    BONINITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.BLACK),
-    CARBONATITE(RockCategory.IGNEOUS_EXTRUSIVE, SandBlockType.BROWN),
-    LATERITE(RockCategory.SEDIMENTARY, SandBlockType.RED),
-    MUDSTONE(RockCategory.SEDIMENTARY, SandBlockType.WHITE),
-    SANDSTONE(RockCategory.SEDIMENTARY, SandBlockType.YELLOW),
-    SILTSTONE(RockCategory.SEDIMENTARY, SandBlockType.PINK),
-    ARKOSE(RockCategory.SEDIMENTARY, SandBlockType.BROWN),
-    JASPILLITE(RockCategory.SEDIMENTARY, SandBlockType.BROWN),
-    TRAVERTINE(RockCategory.SEDIMENTARY, SandBlockType.WHITE),
-    WACKESTONE(RockCategory.SEDIMENTARY, SandBlockType.BLACK),
-    BLACKBAND_IRONSTONE(RockCategory.SEDIMENTARY, SandBlockType.BLACK),
-    CATACLASITE(RockCategory.METAMORPHIC, SandBlockType.RED),
-    BLUESCHIST(RockCategory.METAMORPHIC, SandBlockType.WHITE),
-    CATLINITE(RockCategory.METAMORPHIC, SandBlockType.PINK),
-    GREENSCHIST(RockCategory.METAMORPHIC, SandBlockType.GREEN),
-    NOVACULITE(RockCategory.METAMORPHIC, SandBlockType.WHITE),
-    SOAPSTONE(RockCategory.METAMORPHIC, SandBlockType.WHITE),
-    KOMATIITE(RockCategory.METAMORPHIC, SandBlockType.GREEN),
-    MYLONITE(RockCategory.METAMORPHIC, SandBlockType.YELLOW);
+    RED_GRANITE(RockCategory.IGNEOUS_INTRUSIVE, MaterialColor.COLOR_RED, SandBlockType.RED),
+    BRECCIA(RockCategory.IGNEOUS_INTRUSIVE, MaterialColor.SAND, SandBlockType.WHITE),
+    FOIDOLITE(RockCategory.IGNEOUS_INTRUSIVE, MaterialColor.COLOR_PURPLE, SandBlockType.WHITE),
+    PORPHYRY(RockCategory.IGNEOUS_EXTRUSIVE, MaterialColor.TERRACOTTA_RED, SandBlockType.RED),
+    PERIDOTITE(RockCategory.IGNEOUS_EXTRUSIVE, MaterialColor.STONE, SandBlockType.GREEN),
+    BLAIMORITE(RockCategory.IGNEOUS_EXTRUSIVE, MaterialColor.COLOR_GREEN, SandBlockType.GREEN),
+    BONINITE(RockCategory.IGNEOUS_EXTRUSIVE, MaterialColor.COLOR_GRAY, SandBlockType.BLACK),
+    CARBONATITE(RockCategory.IGNEOUS_EXTRUSIVE, MaterialColor.SAND, SandBlockType.BROWN),
+    LATERITE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_ORANGE, SandBlockType.RED),
+    MUDSTONE(RockCategory.SEDIMENTARY, MaterialColor.STONE, SandBlockType.WHITE),
+    SANDSTONE(RockCategory.SEDIMENTARY, MaterialColor.SAND, SandBlockType.YELLOW),
+    SILTSTONE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_WHITE, SandBlockType.PINK),
+    ARKOSE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_WHITE, SandBlockType.BROWN),
+    JASPILLITE(RockCategory.SEDIMENTARY, MaterialColor.DIRT, SandBlockType.BROWN),
+    TRAVERTINE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_WHITE, SandBlockType.WHITE),
+    WACKESTONE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_BLACK, SandBlockType.BLACK),
+    BLACKBAND_IRONSTONE(RockCategory.SEDIMENTARY, MaterialColor.TERRACOTTA_MAGENTA, SandBlockType.BLACK),
+    CATACLASITE(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_BROWN, SandBlockType.RED),
+    BLUESCHIST(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_LIGHT_BLUE, SandBlockType.WHITE),
+    CATLINITE(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_PINK, SandBlockType.PINK),
+    GREENSCHIST(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_GREEN, SandBlockType.GREEN),
+    NOVACULITE(RockCategory.METAMORPHIC, MaterialColor.QUARTZ, SandBlockType.WHITE),
+    SOAPSTONE(RockCategory.METAMORPHIC, MaterialColor.STONE, SandBlockType.WHITE),
+    KOMATIITE(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_CYAN, SandBlockType.GREEN),
+    MYLONITE(RockCategory.METAMORPHIC, MaterialColor.TERRACOTTA_WHITE, SandBlockType.YELLOW);
 
     public static final TFCFRock[] VALUES = values();
 
     private final String serializedName;
     private final RockCategory category;
+    private final MaterialColor color;
     private final SandBlockType sandType;
 
-    TFCFRock(RockCategory category, SandBlockType sandType)
+    TFCFRock(RockCategory category, MaterialColor color, SandBlockType sandType)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.category = category;
+        this.color = color;
         this.sandType = sandType;
     }
 
@@ -77,6 +80,12 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
     public RockCategory category()
     {
         return category;
+    }
+
+    @Override
+    public MaterialColor color()
+    {
+        return color;
     }
 
     @Override
@@ -186,24 +195,24 @@ public enum TFCFRock implements RegistryRock, TFCFRegistryRock
 
     public enum TFCFBlockType implements StringRepresentable
     {
-        STONE_TILES((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()),
-                    (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true),
-        COBBLED_BRICKS((rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
-                        (rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
-        POLISHED_COBBLED_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()),
-                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()), true),
-        FLAGSTONE_BRICKS((rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
-                        (rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
-        MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
-                            (rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
-        MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
-                                (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
-        CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
-                                (rock, self) -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
-        ROCK_PILE((rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
-                (rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), false),
-        MOSSY_ROCK_PILE((rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()),
-                        (rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()), false);
+        STONE_TILES((rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()),
+                    (rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5f), 10).requiresCorrectToolForDrops()), true),
+        COBBLED_BRICKS((rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
+                        (rock, self) -> new MossGrowingRotatedPillarBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
+        POLISHED_COBBLED_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7f), 10).requiresCorrectToolForDrops()), true),
+        FLAGSTONE_BRICKS((rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
+                        (rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
+        MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                            (rock, self) -> new MossSpreadingRotatedPillarBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()),
+                                (rock, self) -> new Block(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9f), 10).requiresCorrectToolForDrops()), true),
+        ROCK_PILE((rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
+                (rock, self) -> new MossGrowingBoulderBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), false),
+        MOSSY_ROCK_PILE((rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()),
+                        (rock, self) -> new MossSpreadingBoulderBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.BASALT).strength(rock.category().hardness(1.5f), 10).requiresCorrectToolForDrops().randomTicks().speedFactor(0.8F).noCollission().hasPostProcess(TFCFBlocks::always).noOcclusion().dynamicShape()), false);
 
         public static final TFCFBlockType[] VALUES = TFCFBlockType.values();
 

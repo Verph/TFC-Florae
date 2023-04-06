@@ -18,7 +18,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-
+import net.minecraft.world.level.levelgen.RandomSource;
+import net.minecraft.world.level.levelgen.WorldgenRandom;
 import net.dries007.tfc.common.blockentities.TFCBlockEntity;
 import net.dries007.tfc.util.Helpers;
 
@@ -138,10 +139,16 @@ public class MineralSheetBlockEntity extends TFCBlockEntity
         super.loadAdditional(tag);
     }
 
-	public String mineralName(Mineral mineral, Direction direction)
+	public String mineralNameRandom(Mineral mineral, RandomSource random)
 	{
-        //String suffix = String.valueOf(Mth.clamp(new Random().nextInt(direction.ordinal() + 1), 0, 3));
-        String suffix = String.valueOf(Mth.clamp(direction.ordinal(), 0, 3));
+        String suffix = String.valueOf(random.nextInt(4));
+        return "block/mineral/" + mineral.name().toLowerCase(Locale.ROOT) + "_" + suffix;
+	}
+
+	public String mineralName(Mineral mineral, Direction direction, Random random)
+	{
+        String suffix = String.valueOf(random.nextInt(4));
+        //String suffix = String.valueOf(Mth.clamp(direction.ordinal(), 0, 3));
         if (suffix == null)
         {
             suffix = "0";
