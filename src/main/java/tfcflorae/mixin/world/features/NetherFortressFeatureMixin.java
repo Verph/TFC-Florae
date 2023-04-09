@@ -50,6 +50,9 @@ public class NetherFortressFeatureMixin extends StructureFeature<NoneFeatureConf
             structurepiece.addChildren(netherbridgepieces$startpiece, builder, context.random());
         }
 
-        builder.moveInsideHeights(context.random(), Config.COMMON.minFortressHeight.get(), Config.COMMON.maxFortressHeight.get());
+        if (context.chunkGenerator().getMinY() < -64)
+            builder.moveInsideHeights(context.random(), Config.COMMON.minFortressHeight.get(), Config.COMMON.maxFortressHeight.get());
+        else
+            builder.moveInsideHeights(context.random(), 48, 70);
     }
 }

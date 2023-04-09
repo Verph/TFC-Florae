@@ -4,6 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,7 +13,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.INBTSerializable;
+import net.minecraftforge.common.util.LazyOptional;
 
 import net.dries007.tfc.common.blockentities.InventoryBlockEntity;
 import net.dries007.tfc.common.capabilities.InventoryItemHandler;
@@ -20,17 +23,18 @@ import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.FoodTraits;
 import net.dries007.tfc.common.capabilities.size.ItemSizeManager;
 import net.dries007.tfc.common.capabilities.size.Size;
-import net.dries007.tfc.common.recipes.inventory.EmptyInventory;
 
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
 import tfcflorae.common.container.ceramics.LargeVesselContainer;
 import tfcflorae.util.TFCFHelpers;
 
+import static tfcflorae.TFCFlorae.MOD_ID;
+
 public class LargeVesselBlockEntity extends InventoryBlockEntity<LargeVesselBlockEntity.VesselInventory>
 {
     public static final int SLOTS = 9;
-    private static final Component NAME = TFCFHelpers.translatable("tfcflorae.block_entity.large_vessel");
+    private static final Component NAME = TFCFHelpers.translatable(MOD_ID + ".block_entity.large_vessel");
 
     public LargeVesselBlockEntity(BlockPos pos, BlockState state)
     {
@@ -65,7 +69,38 @@ public class LargeVesselBlockEntity extends InventoryBlockEntity<LargeVesselBloc
         }
     }
 
-    public static class VesselInventory extends InventoryItemHandler implements INBTSerializable<CompoundTag>, EmptyInventory
+    @Override
+    public void loadAdditional(CompoundTag nbt)
+    {
+        super.loadAdditional(nbt);
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag nbt)
+    {
+        super.saveAdditional(nbt);
+    }
+
+    @NotNull
+    @Override
+    public <T> LazyOptional<T> getCapability(Capability<T> cap, @Nullable Direction side)
+    {
+        return super.getCapability(cap, side);
+    }
+
+    @Override
+    public void clearContent()
+    {
+        super.clearContent();
+    }
+
+    @Override
+    public void ejectInventory()
+    {
+        super.ejectInventory();
+    }
+
+    public static class VesselInventory extends InventoryItemHandler implements INBTSerializable<CompoundTag>
     {
         private final LargeVesselBlockEntity vessel;
 

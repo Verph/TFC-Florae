@@ -36,6 +36,14 @@
 	"tfc.screen.kaolinite_clay_knapping": "Kaolinite Clay Knapping",
 	"tfc.screen.stoneware_clay_knapping": "Stoneware Clay Knapping",
 	"tfc.screen.flint_knapping": "Flint Knapping",
+	"tfcflorae.jei.earthenware_clay_knapping": "Earthenware Clay Knapping",
+	"tfcflorae.jei.kaolinite_clay_knapping": "Kaolinite Clay Knapping",
+	"tfcflorae.jei.stoneware_clay_knapping": "Stoneware Clay Knapping",
+	"tfcflorae.jei.flint_knapping": "Flint Knapping",
+	"tfc.jei.earthenware_clay_knapping": "Earthenware Clay Knapping",
+	"tfc.jei.kaolinite_clay_knapping": "Kaolinite Clay Knapping",
+	"tfc.jei.stoneware_clay_knapping": "Stoneware Clay Knapping",
+	"tfc.jei.flint_knapping": "Flint Knapping",
 	"tfcflorae.brushing.cannot_place": "The brushed version of this block cannot exist here",
 	"tfcflorae.brushing.no_recipe": "This block cannot be brushed",
 	"tfcflorae.brushing.bad_fluid": "The brushed version of this block cannot contain the fluid here",
@@ -18719,5 +18727,8 @@
 	"block.tfcflorae.mineral.smithsonite.prospected": "Smithsonite Deposit",
 	"block.tfcflorae.mineral.spherocobaltite.prospected": "Spherocobaltite Deposit",
 	"block.tfcflorae.mineral.zabuyelite.prospected": "Zabuyelite Deposit",
-	"block.tfcflorae.mineral.mineral_sheet.prospected": "Mineral Deposit"
+	"block.tfcflorae.mineral.mineral_sheet.prospected": "Mineral Deposit",
+	"block.tfcflorae.rock.raw.gypsum": "Raw Gypsum",
+	"block.tfcflorae.rock.hardened.gypsum": "Hardened Gypsum",
+	"block.tfcflorae.rock.spike.gypsum": "Gypsum Spike"
 }

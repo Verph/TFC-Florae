@@ -11,7 +11,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.valueproviders.FloatProvider;
 import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Column;
@@ -19,14 +18,6 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.phys.Vec3;
-
-import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.world.chunkdata.ChunkData;
-import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
-import net.dries007.tfc.world.settings.RockSettings;
-
-import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.rock.DripstoneRock;
 
 public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
 {
@@ -82,12 +73,12 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
                boolean flag1 = largedripstonefeature$largedripstone1.moveBackUntilBaseIsInsideStoneAndShrinkRadiusIfNecessary(level, largedripstonefeature$windoffsetter);
                if (flag)
                {
-                  largedripstonefeature$largedripstone.placeBlocks(level, random, largedripstonefeature$windoffsetter);
+                  largedripstonefeature$largedripstone.placeBlocks(level, random, largedripstonefeature$windoffsetter, config);
                }
 
                if (flag1)
                {
-                  largedripstonefeature$largedripstone1.placeBlocks(level, random, largedripstonefeature$windoffsetter);
+                  largedripstonefeature$largedripstone1.placeBlocks(level, random, largedripstonefeature$windoffsetter, config);
                }
 
                return true;
@@ -105,17 +96,17 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
       return new LargeDripstoneFeature.LargeDripstone(root, pointingUp, radius, (double)bluntnessBase.sample(random), (double)scaleBase.sample(random));
    }
 
-   private void placeDebugMarkers(WorldGenLevel pLevel, BlockPos pPos, Column.Range pRange, LargeDripstoneFeature.WindOffsetter pWindOffsetter)
+   private void placeDebugMarkers(WorldGenLevel level, BlockPos pPos, Column.Range pRange, LargeDripstoneFeature.WindOffsetter pWindOffsetter, LargeDripstoneConfig config)
    {
-      pLevel.setBlock(pWindOffsetter.offset(pPos.atY(pRange.ceiling() - 1)), Blocks.DIAMOND_BLOCK.defaultBlockState(), 2);
-      pLevel.setBlock(pWindOffsetter.offset(pPos.atY(pRange.floor() + 1)), Blocks.GOLD_BLOCK.defaultBlockState(), 2);
+      level.setBlock(pWindOffsetter.offset(pPos.atY(pRange.ceiling() - 1)), Blocks.DIAMOND_BLOCK.defaultBlockState(), 2);
+      level.setBlock(pWindOffsetter.offset(pPos.atY(pRange.floor() + 1)), Blocks.GOLD_BLOCK.defaultBlockState(), 2);
 
       for(BlockPos.MutableBlockPos pos$mutablepos = pPos.atY(pRange.floor() + 2).mutable(); pos$mutablepos.getY() < pRange.ceiling() - 1; pos$mutablepos.move(Direction.UP))
       {
          BlockPos pos = pWindOffsetter.offset(pos$mutablepos);
-         if (DripstoneUtils.isEmptyOrWater(pLevel, pPos) || pLevel.getBlockState(pos).is(TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.RAW).get()))
+         if (DripstoneUtils.isEmptyOrWater(level, pPos) || level.getBlockState(pos) == config.surfaceState.getState(level.getRandom(), pos))
          {
-            pLevel.setBlock(pos, Blocks.CREEPER_HEAD.defaultBlockState(), 2);
+            level.setBlock(pos, Blocks.CREEPER_HEAD.defaultBlockState(), 2);
          }
       }
    }
@@ -152,7 +143,7 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
          return !this.pointingUp ? this.root.getY() : this.root.getY() + this.getHeight();
       }
 
-      boolean moveBackUntilBaseIsInsideStoneAndShrinkRadiusIfNecessary(WorldGenLevel pLevel, LargeDripstoneFeature.WindOffsetter pWindOffsetter)
+      boolean moveBackUntilBaseIsInsideStoneAndShrinkRadiusIfNecessary(WorldGenLevel level, LargeDripstoneFeature.WindOffsetter pWindOffsetter)
       {
          while(this.radius > 1)
          {
@@ -161,11 +152,11 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
 
             for(int j = 0; j < i; ++j)
             {
-               if (pLevel.getBlockState(pos$mutablepos).is(Blocks.LAVA))
+               if (level.getBlockState(pos$mutablepos).is(Blocks.LAVA))
                {
                   return false;
                }
-               if (DripstoneUtils.isCircleMostlyEmbeddedInStone(pLevel, pWindOffsetter.offset(pos$mutablepos), this.radius))
+               if (DripstoneUtils.isCircleMostlyEmbeddedInStone(level, pWindOffsetter.offset(pos$mutablepos), this.radius))
                {
                   this.root = pos$mutablepos;
                   return true;
@@ -182,7 +173,7 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
          return (int)DripstoneUtils.getDripstoneHeight((double)radius, (double)this.radius, this.scale, this.bluntness);
       }
 
-      void placeBlocks(WorldGenLevel pLevel, Random random, LargeDripstoneFeature.WindOffsetter pWindOffsetter)
+      void placeBlocks(WorldGenLevel level, Random random, LargeDripstoneFeature.WindOffsetter pWindOffsetter, LargeDripstoneConfig config)
       {
          for(int i = -this.radius; i <= this.radius; ++i)
          {
@@ -201,18 +192,17 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
 
                      BlockPos.MutableBlockPos pos$mutablepos = this.root.offset(i, 0, j).mutable();
                      boolean flag = false;
-                     int l = this.pointingUp ? pLevel.getHeight(Heightmap.Types.WORLD_SURFACE_WG, pos$mutablepos.getX(), pos$mutablepos.getZ()) : Integer.MAX_VALUE;
+                     int l = this.pointingUp ? /*level.getHeight(Heightmap.Types.OCEAN_FLOOR_WG, pos$mutablepos.getX(), pos$mutablepos.getZ())*/ level.getMaxBuildHeight() : Integer.MAX_VALUE;
 
                      for(int i1 = 0; i1 < k && pos$mutablepos.getY() < l; ++i1)
                      {
                         BlockPos pos = pWindOffsetter.offset(pos$mutablepos);
-                        if (DripstoneUtils.isEmptyOrWaterOrLava(pLevel, pos))
+                        if (DripstoneUtils.isEmptyOrWaterOrLava(level, pos))
                         {
                            flag = true;
-                           Block block = TFCFBlocks.DRIPSTONE_BLOCKS.get(DripstoneRock.DRIPSTONE).get(Rock.BlockType.RAW).get();
-                           pLevel.setBlock(pos, block.defaultBlockState(), 2);
+                           level.setBlock(pos, config.surfaceState.getState(random, pos), 2);
                         }
-                        else if (flag && pLevel.getBlockState(pos).is(BlockTags.BASE_STONE_OVERWORLD))
+                        else if (flag && level.getBlockState(pos).is(BlockTags.BASE_STONE_OVERWORLD))
                         {
                            break;
                         }

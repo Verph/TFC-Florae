@@ -33,6 +33,7 @@ public class TFCFTags
         public static final TagKey<Item> STONEWARE_CLAY_KNAPPING = create("stoneware_clay_knapping");
         public static final TagKey<Item> FLINT_KNAPPING = create("flint_knapping");
         public static final TagKey<Item> MINERAL_SHEETS = create("mineral_sheets"); // Sheets that can be added to piles
+        public static final TagKey<Item> POTS = create("pots"); // Sheets that can be added to piles
 
         private static TagKey<Item> create(String id)
         {
