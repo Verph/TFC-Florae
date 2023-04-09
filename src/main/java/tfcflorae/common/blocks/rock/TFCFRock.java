@@ -109,7 +109,7 @@ public enum TFCFRock implements TFCFRegistryRock
     @Override
     public Supplier<? extends Block> getAnvil()
     {
-        return null;
+        return TFCFBlocks.ROCK_ANVILS.get(this);
     }
 
     @Override
