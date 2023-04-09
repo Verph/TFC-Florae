@@ -224,7 +224,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
         if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
         {
             //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > 7200)
+            if (leaves.getTicksSinceBushUpdate() > 24000)
             {
                 onUpdate(level, pos, state);
             }
