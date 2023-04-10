@@ -6,6 +6,8 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
 	"tfcflorae:jungle",
-	"#tfc:feature/bamboo_forest"
+	"#tfc:feature/bamboo_forest",
+	"tfcflorae:redwood_forest",
+	"#tfc:feature/redwood_forest"
   ]
 }

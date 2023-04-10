@@ -4,6 +4,8 @@
   "values": [
     "#tfc:feature/glaciers",
     "tfcflorae:fruit_forest",
-    "tfcflorae:charred_forest"
+    "tfcflorae:charred_forest",
+	"tfcflorae:redwood_forest",
+	"#tfc:feature/redwood_forest"
   ]
 }

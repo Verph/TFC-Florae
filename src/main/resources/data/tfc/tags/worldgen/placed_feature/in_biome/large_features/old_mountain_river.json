@@ -5,6 +5,8 @@
     "#tfc:feature/glaciers",
     "tfcflorae:fruit_forest",
     "tfcflorae:charred_forest",
-	"tfcflorae:jungle"
+	"tfcflorae:jungle",
+	"tfcflorae:redwood_forest",
+	"#tfc:feature/redwood_forest"
   ]
 }

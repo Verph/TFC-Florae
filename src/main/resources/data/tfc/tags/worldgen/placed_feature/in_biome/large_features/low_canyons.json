@@ -7,6 +7,8 @@
     "tfcflorae:fresh_water_forest",
     "tfc:in_biome/fresh_water_roots",
 	"tfcflorae:jungle",
-	"#tfc:feature/bamboo_forest"
+	"#tfc:feature/bamboo_forest",
+	"tfcflorae:redwood_forest",
+	"#tfc:feature/redwood_forest"
   ]
 }
