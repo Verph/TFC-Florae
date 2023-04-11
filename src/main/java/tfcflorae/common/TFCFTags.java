@@ -18,6 +18,8 @@ public class TFCFTags
         public static final TagKey<Block> MANGROVE_LOGS_CAN_GROW_THROUGH = create("mangrove_logs_can_grow_through");
         public static final TagKey<Block> MANGROVE_ROOTS_CAN_GROW_THROUGH = create("mangrove_roots_can_grow_through");
         public static final TagKey<Block> REPLACEABLE = create("replaceable");
+        public static final TagKey<Block> SILKMOTH_TARGET_BLOCKS = create("silkmoth_target_blocks");
+        public static final TagKey<Block> SILKMOTH_NESTS = create("silkmoth_nests");
 
         private static TagKey<Block> create(String id)
         {
@@ -33,7 +35,8 @@ public class TFCFTags
         public static final TagKey<Item> STONEWARE_CLAY_KNAPPING = create("stoneware_clay_knapping");
         public static final TagKey<Item> FLINT_KNAPPING = create("flint_knapping");
         public static final TagKey<Item> MINERAL_SHEETS = create("mineral_sheets"); // Sheets that can be added to piles
-        public static final TagKey<Item> POTS = create("pots"); // Sheets that can be added to piles
+        public static final TagKey<Item> POTS = create("pots");
+        public static final TagKey<Item> SILKMOTH_TEMPTATION_ITEMS = create("silkmoth_temptation_items");
 
         private static TagKey<Item> create(String id)
         {

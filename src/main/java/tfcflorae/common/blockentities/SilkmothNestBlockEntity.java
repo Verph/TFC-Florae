@@ -38,13 +38,13 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
     public static final String TICKS_IN_NEST = "TicksInNest";
     public static final String HAS_NECTAR = "HasNectar";
     public static final String MOTHS = "Moths";
-    private static final List<String> IGNORED_MOTH_TAGS = Arrays.asList("Air", "ArmorDropChances", "ArmorItems", "Brain", "CanPickUpLoot", "DeathTime", "FallDistance", "FallFlying", "Fire", "HandDropChances", "HandItems", "HurtByTimestamp", "HurtTime", "LeftHanded", "Motion", "NoGravity", "OnGround", "PortalCooldown", "Pos", "Rotation", "CannotEnterHiveTicks", "TicksSincePollination", "CropsGrownSincePollination", "HivePos", "Passengers", "Leash", "UUID");
+    public static final List<String> IGNORED_MOTH_TAGS = Arrays.asList("Air", "ArmorDropChances", "ArmorItems", "Brain", "CanPickUpLoot", "DeathTime", "FallDistance", "FallFlying", "Fire", "HandDropChances", "HandItems", "HurtByTimestamp", "HurtTime", "LeftHanded", "Motion", "NoGravity", "OnGround", "PortalCooldown", "Pos", "Rotation", "CannotEnterHiveTicks", "TicksSincePollination", "CropsGrownSincePollination", "HivePos", "Passengers", "Leash", "UUID");
     public static final int MAX_OCCUPANTS = 3;
-    private static final int MIN_TICKS_BEFORE_REENTERING_NEST = 400;
-    private static final int MIN_OCCUPATION_TICKS_NECTAR = 2400;
+    public static final int MIN_TICKS_BEFORE_REENTERING_NEST = 400;
+    public static final int MIN_OCCUPATION_TICKS_NECTAR = 2400;
     public static final int MIN_OCCUPATION_TICKS_NECTARLESS = 600;
-    private final List<SilkmothNestBlockEntity.MothData> stored = Lists.newArrayList();
-    @Nullable private BlockPos savedTargetPos;
+    public final List<SilkmothNestBlockEntity.MothData> stored = Lists.newArrayList();
+    @Nullable public BlockPos savedTargetPos;
 
     public SilkmothNestBlockEntity(BlockPos pos, BlockState state)
     {
@@ -52,7 +52,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag)
+    public void loadAdditional(CompoundTag tag)
     {
         super.loadAdditional(tag);
         this.stored.clear();
@@ -71,7 +71,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag)
+    public void saveAdditional(CompoundTag tag)
     {
         super.saveAdditional(tag);
         tag.put(MOTHS, this.writeMoths());
@@ -97,6 +97,18 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         return listtag;
     }
 
+    public static void serverTick(Level level, BlockPos pos, BlockState state, SilkmothNestBlockEntity blockEntity)
+    {
+        tickOccupants(level, pos, state, blockEntity.stored, blockEntity.savedTargetPos);
+        if (!blockEntity.stored.isEmpty() && level.getRandom().nextDouble() < 0.005D)
+        {
+            double d0 = (double)pos.getX() + 0.5D;
+            double d1 = (double)pos.getY();
+            double d2 = (double)pos.getZ() + 0.5D;
+            level.playSound((Player)null, d0, d1, d2, SoundEvents.BEEHIVE_WORK, SoundSource.BLOCKS, 1.0F, 1.0F);
+        }
+    }
+
     static void removeIgnoredMothTags(CompoundTag tag)
     {
         for(String s : IGNORED_MOTH_TAGS)
@@ -105,7 +117,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         }
     }
 
-    private static void setMothReleaseData(int age, Silkmoth mothEntity)
+    public static void setMothReleaseData(int age, Silkmoth mothEntity)
     {
         int i = mothEntity.getAge();
         if (i < 0)
@@ -119,12 +131,12 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         mothEntity.setInLoveTime(Math.max(0, mothEntity.getInLoveTime() - age));
     }
 
-    private boolean hasSavedTargetPos()
+    public boolean hasSavedTargetPos()
     {
         return this.savedTargetPos != null;
     }
 
-    private static void tickOccupants(Level level, BlockPos pos, BlockState state, List<SilkmothNestBlockEntity.MothData> list, @Nullable BlockPos pos1)
+    public static void tickOccupants(Level level, BlockPos pos, BlockState state, List<SilkmothNestBlockEntity.MothData> list, @Nullable BlockPos pos1)
     {
         boolean flag = false;
 
@@ -148,7 +160,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         }
     }
 
-    private static boolean releaseOccupant(Level level, BlockPos pos, BlockState state, SilkmothNestBlockEntity.MothData blockEntity, @Nullable List<Entity> listEntity, SilkmothNestBlockEntity.MothReleaseStatus releaseStatus, @Nullable BlockPos pos1)
+    public static boolean releaseOccupant(Level level, BlockPos pos, BlockState state, SilkmothNestBlockEntity.MothData blockEntity, @Nullable List<Entity> listEntity, SilkmothNestBlockEntity.MothReleaseStatus releaseStatus, @Nullable BlockPos pos1)
     {
         if ((level.isNight() || level.isRaining()) && releaseStatus != SilkmothNestBlockEntity.MothReleaseStatus.EMERGENCY)
         {
@@ -259,9 +271,10 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
 
     public void storeBee(CompoundTag tag, int ticksInNest, boolean minOccupationTicks)
     {
-        this.stored.add(new SilkmothNestBlockEntity.MothData(tag, ticksInNest, minOccupationTicks ? 2400 : 600));
+        this.stored.add(new SilkmothNestBlockEntity.MothData(tag, ticksInNest, minOccupationTicks ? MIN_OCCUPATION_TICKS_NECTAR : MIN_OCCUPATION_TICKS_NECTARLESS));
     }
 
+    @Override
     public void setChanged()
     {
         if (this.isFireNearby())
@@ -318,7 +331,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
                         }
                         else
                         {
-                            moth.setStayOutOfHiveCountdown(400);
+                            moth.setStayOutOfNestCountdown(MIN_TICKS_BEFORE_REENTERING_NEST);
                         }
                     }
                 }
@@ -326,7 +339,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         }
     }
 
-    private List<Entity> releaseAllOccupants(BlockState state, SilkmothNestBlockEntity.MothReleaseStatus releaseStatus)
+    public List<Entity> releaseAllOccupants(BlockState state, SilkmothNestBlockEntity.MothReleaseStatus releaseStatus)
     {
         List<Entity> list = Lists.newArrayList();
         this.stored.removeIf((p_58766_) -> {
@@ -359,7 +372,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         return CampfireBlock.isSmokeyPos(this.level, this.getBlockPos());
     }
 
-    static class MothData
+    public static class MothData
     {
         final CompoundTag entityData;
         int ticksInNest;

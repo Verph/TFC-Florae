@@ -358,6 +358,8 @@ public final class TFCFBlocks
     public static final RegistryObject<Block> HANGING_SPIDER_WEB_SLENDER = register("spider_cave/hanging_spider_web_slender", () -> new BodyWebBlock(ExtendedProperties.of(Material.WEB).sound(SoundType.TWISTING_VINES).flammableLikeLeaves().noCollission().strength(3.0F).noOcclusion().randomTicks().dynamicShape().speedFactor(0.7f).hasPostProcess(TFCFBlocks::always)), DECORATIONS);
     public static final RegistryObject<Block> HANGING_SPIDER_WEB_THICK = register("spider_cave/hanging_spider_web_thick", () -> new BodyWebBlock(ExtendedProperties.of(Material.WEB).sound(SoundType.TWISTING_VINES).flammableLikeLeaves().noCollission().strength(4.0F).noOcclusion().randomTicks().dynamicShape().speedFactor(0.9f).hasPostProcess(TFCFBlocks::always)), DECORATIONS);
 
+    public static final RegistryObject<Block> SILKMOTH_NEST = register("devices/silkmoth_nest", () -> new SilkmothNestBlock(ExtendedProperties.of(Material.WOOD).sound(SoundType.HANGING_ROOTS).flammableLikeLeaves().strength(1.0F).noOcclusion().randomTicks().dynamicShape().blockEntity(TFCFBlockEntities.SILKMOTH_NEST).serverTicks(SilkmothNestBlockEntity::serverTick).hasPostProcess(TFCFBlocks::always)), MISC);
+
     // Rocky Soils
 
     public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<Rock, RegistryObject<Block>>>> TFCROCKSOIL = TFCRockSoilMapper(TFCFRockSoil.class);

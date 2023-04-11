@@ -52,6 +52,8 @@ public class TFCFEntities
         return Map;
     }
 
+    public static final RegistryObject<EntityType<Silkmoth>> SILKMOTH = register("silk_moth", EntityType.Builder.of(Silkmoth::new, MobCategory.CREATURE).sized(0.7F, 0.6F).clientTrackingRange(8));
+
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder)
     {
         return register(name, builder, true);

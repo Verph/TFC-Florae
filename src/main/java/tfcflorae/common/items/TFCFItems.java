@@ -122,6 +122,15 @@ public final class TFCFItems
     public static final RegistryObject<Item> BRUSHES = register("tools/brush", () -> new BrushItem(new Item.Properties().tab(MISC).stacksTo(1).durability(250)));
     public static final RegistryObject<Item> WALKING_CANES = register("tools/walking_cane", () -> new WalkingCaneItem(new Item.Properties().tab(MISC).stacksTo(1).durability(200)));
 
+    public static final RegistryObject<Item> MULBERRY_LEAVES = register("wood/leaf/mulberry", TFCItemGroup.MISC);
+    public static final RegistryObject<Item> SILK_MOTH_EGG = register("animal/product/silk_moth_egg", TFCItemGroup.MISC);
+    public static final RegistryObject<Item> SILK_WORM_HATCHERY = register("animal/product/silk_moth_hatchery", TFCItemGroup.MISC);
+    public static final RegistryObject<Item> SILK_WORM = register("animal/product/silk_worm", TFCItemGroup.MISC);
+    public static final RegistryObject<Item> SILK_WORM_COCOON = register("animal/product/silk_worm_cocoon", TFCItemGroup.MISC);
+    public static final RegistryObject<Item> SILK_WORM_COCOON_BOILED = register("animal/product/silk_worm_cocoon_boiled", TFCItemGroup.MISC);
+
+    public static final RegistryObject<Item> SILKMOTH_EGG = registerSpawnEgg(TFCFEntities.SILKMOTH, 0xd78ed7, 0xd9fff9);
+
     // Fin
 
     private static Map<Clay, RegistryObject<Item>> clayBallMapper()
@@ -348,6 +357,11 @@ public final class TFCFItems
     private static Item.Properties prop()
     {
         return new Item.Properties().tab(MISC);
+    }
+
+    private static <T extends EntityType<? extends Mob>> RegistryObject<Item> registerSpawnEgg(RegistryObject<T> entity, int color1, int color2)
+    {
+        return register("spawn_egg/" + entity.getId().getPath(), () -> new ForgeSpawnEggItem(entity, color1, color2, new Item.Properties().tab(MISC)));
     }
 
     private static RegistryObject<Item> register(String name, CreativeModeTab group)

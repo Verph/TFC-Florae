@@ -31,8 +31,8 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.entity.BeehiveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -44,21 +44,28 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.devices.DeviceBlock;
 import net.dries007.tfc.common.blocks.plant.ITallPlant;
 
+import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
+import tfcflorae.common.blockentities.SilkmothNestBlockEntity.*;
+import tfcflorae.common.entities.Silkmoth;
+import tfcflorae.common.entities.TFCFEntities;
+import tfcflorae.common.blockentities.TFCFBlockEntities;
+import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
-public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
+public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
 {
     public static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final EnumProperty<Part> PART = TFCBlockStateProperties.TALL_PLANT_PART;
     public static final int MIN_SILK_LEVELS = 0;
-    public static final int MAX_SILK_LEVELS = 5;
+    public static final int MAX_SILK_LEVELS = 3;
     public static final IntegerProperty SILK_LEVEL = IntegerProperty.create("silk_level", MIN_SILK_LEVELS, MAX_SILK_LEVELS);
 
     public SilkmothNestBlock(ExtendedProperties properties)
@@ -170,7 +177,7 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
 
     public static void dropSilkwormPupae(Level level, BlockPos pos)
     {
-        popResource(level, pos, new ItemStack(Items.HONEYCOMB, level.getBlockState(pos).getValue(SILK_LEVEL)));
+        popResource(level, pos, new ItemStack(TFCFItems.SILK_WORM_COCOON.get(), level.getBlockState(pos).getValue(SILK_LEVEL)));
     }
 
     @Override
@@ -198,11 +205,21 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
                 player.awardStat(Stats.ITEM_USED.get(item));
             }
         }
+        if (stack.getItem() == TFCFItems.SILK_WORM.get())
+        {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof SilkmothNestBlockEntity silkmothBlockEntity) 
+            {
+                silkmothBlockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
+                stack.shrink(1);
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
         if (flag)
         {
             if (!CampfireBlock.isSmokeyPos(level, pos))
             {
-                this.releaseMothsAndResetSilkLevel(level, state, pos, player, BeehiveBlockEntity.BeeReleaseStatus.EMERGENCY);
+                this.releaseMothsAndResetSilkLevel(level, state, pos, player, SilkmothNestBlockEntity.MothReleaseStatus.EMERGENCY);
             }
             else
             {
@@ -221,12 +238,12 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
         level.setBlock(pos, state.setValue(SILK_LEVEL, MIN_SILK_LEVELS), 3);
     }
 
-    private boolean hiveContainsMoths(Level level, BlockPos pos)
+    private boolean nestContainsMoths(Level level, BlockPos pos)
     {
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof BeehiveBlockEntity)
+        if (blockEntity instanceof SilkmothNestBlockEntity)
         {
-            BeehiveBlockEntity silkmothBlockEntity = (BeehiveBlockEntity)blockEntity;
+            SilkmothNestBlockEntity silkmothBlockEntity = (SilkmothNestBlockEntity)blockEntity;
             return !silkmothBlockEntity.isEmpty();
         }
         else
@@ -235,14 +252,14 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
         }
     }
 
-    public void releaseMothsAndResetSilkLevel(Level level, BlockState state, BlockPos pos, @Nullable Player player, BeehiveBlockEntity.BeeReleaseStatus mothReleaseStatus)
+    public void releaseMothsAndResetSilkLevel(Level level, BlockState state, BlockPos pos, @Nullable Player player, MothReleaseStatus mothReleaseStatus)
     {
         this.resetSilkLevel(level, state, pos);
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof BeehiveBlockEntity) 
+        if (blockEntity instanceof SilkmothNestBlockEntity) 
         {
-            BeehiveBlockEntity silkmothBlockEntity = (BeehiveBlockEntity)blockEntity;
-            silkmothBlockEntity.emptyAllLivingFromHive(player, state, mothReleaseStatus);
+            SilkmothNestBlockEntity silkmothBlockEntity = (SilkmothNestBlockEntity)blockEntity;
+            silkmothBlockEntity.emptyAllLivingFromNest(player, state, mothReleaseStatus);
         }
     }
 
@@ -252,9 +269,9 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
         if (!level.isClientSide && player.isCreative() && level.getGameRules().getBoolean(GameRules.RULE_DOBLOCKDROPS))
         {
             BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof BeehiveBlockEntity)
+            if (blockEntity instanceof SilkmothNestBlockEntity)
             {
-                BeehiveBlockEntity silkmothBlockEntity = (BeehiveBlockEntity)blockEntity;
+                SilkmothNestBlockEntity silkmothBlockEntity = (SilkmothNestBlockEntity)blockEntity;
                 ItemStack itemstack = new ItemStack(this);
                 int i = state.getValue(SILK_LEVEL);
                 boolean flag = !silkmothBlockEntity.isEmpty();
@@ -263,8 +280,8 @@ public class SilkmothNestBlock extends DeviceBlock implements  ITallPlant
                     if (flag)
                     {
                         CompoundTag compoundtag = new CompoundTag();
-                        compoundtag.put("Moths", silkmothBlockEntity.writeBees());
-                        BlockItem.setBlockEntityData(itemstack, BlockEntityType.BEEHIVE, compoundtag);
+                        compoundtag.put("Moths", silkmothBlockEntity.writeMoths());
+                        BlockItem.setBlockEntityData(itemstack, TFCFBlockEntities.SILKMOTH_NEST.get(), compoundtag);
                     }
                     CompoundTag compoundtag1 = new CompoundTag();
                     compoundtag1.putInt("silk_level", i);

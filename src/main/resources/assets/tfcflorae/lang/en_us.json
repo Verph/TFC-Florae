@@ -18730,5 +18730,13 @@
 	"block.tfcflorae.mineral.mineral_sheet.prospected": "Mineral Deposit",
 	"block.tfcflorae.rock.raw.gypsum": "Raw Gypsum",
 	"block.tfcflorae.rock.hardened.gypsum": "Hardened Gypsum",
-	"block.tfcflorae.rock.spike.gypsum": "Gypsum Spike"
+	"block.tfcflorae.rock.spike.gypsum": "Gypsum Spike",
+	"block.tfcflorae.devices.silkmoth_nest": "Silk Moth Nest",
+	"entity.tfcflorae.silk_moth": "Silk Moth",
+	"item.tfcflorae.wood.leaf.mulberry.": "Mulberry Leaves",
+	"item.tfcflorae.animal.silk_moth_egg.": "Silk Moth Eggs",
+	"item.tfcflorae.animal.silk_moth_hatchery.": "Silk Moth Hatchery",
+	"item.tfcflorae.animal.silk_worm.": "Silk Worm",
+	"item.tfcflorae.animal.silk_worm_cocoon.": "Silk Worm Cocoon",
+	"item.tfcflorae.animal.silk_worm_cocoon_boiled.": "Boiled Silk Worm Cocoon"
 }

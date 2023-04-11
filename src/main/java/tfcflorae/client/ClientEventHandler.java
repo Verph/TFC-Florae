@@ -19,6 +19,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.LecternRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.BeeRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Monster;
@@ -49,6 +50,7 @@ import tfcflorae.Config;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
+import tfcflorae.client.render.entity.SilkmothRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
 import tfcflorae.client.screen.TFCFAnvilPlanScreen;
 import tfcflorae.client.screen.TFCFAnvilScreen;
@@ -269,6 +271,8 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VANILLA_STRIPPED_BAMBOO_LOGS.get(), cutout);
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MINERAL_SHEET.get(), cutout);
+
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SILKMOTH_NEST.get(), cutout);
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
@@ -278,6 +282,7 @@ public class ClientEventHandler
         {
             event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
         }
+        event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), SilkmothRenderer::new);
 
         // BEs
         event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);

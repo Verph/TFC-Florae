@@ -312,6 +312,29 @@ let allColors = {
   'yellow': 'yellow'
 }
 
+let moldTypes = {
+  'axe_head': 'axe_head',
+  'chisel_head': 'chisel_head',
+  'hammer_head': 'hammer_head',
+  'hoe_head': 'hoe_head',
+  'ingot': 'ingot',
+  'javelin_head': 'javelin_head',
+  'knife_head': 'knife_head',
+  'mace_head': 'mace_head',
+  'pickaxe_head': 'pickaxe_head',
+  'propick_head': 'propick_head',
+  'saw_blade': 'saw_blade',
+  'scythe_blade': 'scythe_blade',
+  'shovel_head': 'shovel_head',
+  'sword_blade': 'sword_blade'
+}
+
+let clayTypes = {
+  'earthenware': 'earthenware',
+  'kaolinite': 'kaolinite',
+  'stoneware': 'stoneware'
+}
+
 fs.ensureDir(`./loot_tables/blocks/deposit/cassiterite`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_copper`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_gold`)
@@ -622,4 +645,12 @@ for(let decoType in decoTypes)
   fs.ensureDir(`./assets/models/block/wood/${decoType}`)
   fs.ensureDir(`./assets/blockstates/wood/${decoType}`)
 	fs.ensureDir(`./data/advancements/crafting/wood/${decoType}`)
+}
+
+for(let moldType in moldTypes)
+{
+  for(let clayType in clayTypes)
+  {
+    fs.ensureDir(`./metallum/data/recipes/casting/${clayType}/${moldType}`)
+  }
 }
