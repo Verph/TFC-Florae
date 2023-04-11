@@ -77,6 +77,10 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
+    public static final RegistryObject<BlockEntityType<SilkmothNestBlockEntity>> SILKMOTH_NEST = register("silkmoth_nest", SilkmothNestBlockEntity::new, Stream.of(
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
     public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register("tfcf_farmland", TFCFFarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream());
     public static final RegistryObject<BlockEntityType<TFCFBarrelBlockEntity>> BARREL = register("tfcf_barrel", TFCFBarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.BARREL)));
     public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register("tfcf_loom", TFCFLoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LOOM)));

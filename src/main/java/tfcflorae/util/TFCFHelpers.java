@@ -1,14 +1,11 @@
 package tfcflorae.util;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Consumer;
 
-import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.util.registry.RegistryRock;
-import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
-import net.dries007.tfc.world.settings.RockSettings;
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.FriendlyByteBuf;
@@ -26,6 +23,13 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.network.NetworkHooks;
+
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
+import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
+import net.dries007.tfc.world.settings.RockSettings;
+
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
@@ -34,10 +38,17 @@ public class TFCFHelpers
 {
     public static final Random RANDOM = new Random();
     public static Direction[] NOT_DOWN = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP};
+    public static final Direction[] DIRECTIONS = Direction.values();
+    public static final Direction[] DIRECTIONS_HORIZONTAL = Arrays.stream(DIRECTIONS).filter(d -> d != Direction.DOWN && d != Direction.UP).toArray(Direction[]::new);
 
     public static ResourceLocation identifier(String id)
     {
         return new ResourceLocation(TFCFlorae.MOD_ID, id);
+    }
+
+    public static Direction getRandom(Random random)
+    {
+        return Util.getRandom(DIRECTIONS_HORIZONTAL, random);
     }
 
     public static Component blockEntityName(String name)
