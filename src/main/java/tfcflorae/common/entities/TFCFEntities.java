@@ -35,7 +35,6 @@ public class TFCFEntities
 {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, MOD_ID);
 
-    // Misc
     public static final Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> BOATS = boatEntityMapper();
 
     private static Map<TFCFWood, RegistryObject<EntityType<TFCFBoat>>> boatEntityMapper()
@@ -43,16 +42,20 @@ public class TFCFEntities
         Map<TFCFWood,  RegistryObject<EntityType<TFCFBoat>>> Map = new HashMap<>();
         for (TFCFWood wood : TFCFWood.class.getEnumConstants())
         {
-            if (wood == TFCFWood.BAMBOO)
+            /*if (wood == TFCFWood.BAMBOO) // To be changed
                 Map.put(wood, register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10)));
-            else
+            else*/
                 Map.put(wood, register("boat/" + wood.name(), EntityType.Builder.<TFCFBoat>of((type, level) -> new TFCFBoat(type, level, TFCFItems.BOATS.get(wood)), MobCategory.MISC).sized(1.375F, 0.5625F).clientTrackingRange(10)));
-
         }
         return Map;
     }
 
     public static final RegistryObject<EntityType<Silkmoth>> SILKMOTH = register("silk_moth", EntityType.Builder.of(Silkmoth::new, MobCategory.CREATURE).sized(0.7F, 0.6F).clientTrackingRange(8));
+
+    public static void onEntityAttributeCreation(EntityAttributeCreationEvent event)
+    {
+        event.put(SILKMOTH.get(), Silkmoth.createLivingAttributes().build());
+    }
 
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder)
     {
@@ -62,10 +65,9 @@ public class TFCFEntities
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder, boolean serialize)
     {
         final String id = name.toLowerCase(Locale.ROOT);
-        return ENTITIES.register(id, () -> builder.build(MOD_ID + ":" + id));
-    }
-
-    public static void onEntityAttributeCreation(EntityAttributeCreationEvent event)
-    {
+        return ENTITIES.register(id, () -> {
+            if (!serialize) builder.noSave();
+            return builder.build(MOD_ID + ":" + id);
+        });
     }
 }

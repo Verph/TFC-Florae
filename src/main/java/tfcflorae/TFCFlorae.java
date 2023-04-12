@@ -54,6 +54,9 @@ public class TFCFlorae
 
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        bus.addListener(this::setup);
+        bus.addListener(TFCFEntities::onEntityAttributeCreation);
+
         TFCFItems.ITEMS.register(bus);
         TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
@@ -67,9 +70,6 @@ public class TFCFlorae
         TFCFFeatures.TRUNK_DECOR.register(bus);
         TFCFFeatures.LEAF_DECOR.register(bus);
         TFCFCarvers.CARVERS.register(bus);
-
-        bus.addListener(this::setup);
-        bus.addListener(TFCFEntities::onEntityAttributeCreation);
 
         Config.init();
         TFCFForgeEventHandler.init();

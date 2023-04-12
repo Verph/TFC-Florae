@@ -38,6 +38,7 @@ import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.BarrelBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
+import net.dries007.tfc.client.render.entity.SimpleMobRenderer;
 import net.dries007.tfc.client.screen.KnappingScreen;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
@@ -47,11 +48,13 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 
 import tfcflorae.Config;
+import tfcflorae.client.model.entity.SilkmothModel;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
 import tfcflorae.client.render.entity.SilkmothRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
+import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
 import tfcflorae.client.screen.TFCFAnvilPlanScreen;
 import tfcflorae.client.screen.TFCFAnvilScreen;
 import tfcflorae.client.screen.TFCFBarrelScreen;
@@ -282,7 +285,8 @@ public class ClientEventHandler
         {
             event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
         }
-        event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), SilkmothRenderer::new);
+
+        event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), ctx -> new TFCFSimpleMobRenderer.Builder<>(ctx, SilkmothModel::new, "silk_moth").build());
 
         // BEs
         event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);

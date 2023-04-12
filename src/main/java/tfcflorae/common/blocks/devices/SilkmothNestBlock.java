@@ -7,11 +7,16 @@ import org.jetbrains.annotations.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.EntityTypeTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -43,12 +48,14 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.devices.DeviceBlock;
 import net.dries007.tfc.common.blocks.plant.ITallPlant;
+import net.dries007.tfc.util.calendar.ICalendar;
 
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity.*;
@@ -66,13 +73,19 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     public static final EnumProperty<Part> PART = TFCBlockStateProperties.TALL_PLANT_PART;
     public static final int MIN_SILK_LEVELS = 0;
     public static final int MAX_SILK_LEVELS = 3;
+    public static final int MIN_SILK_WORM_EGGS = 0;
+    public static final int MAX_SILK_WORM_EGGS = 8;
+    public static final int MIN_MULBERRY_LEAVES = 0;
+    public static final int MAX_MULBERRY_LEAVES = 16;
     public static final IntegerProperty SILK_LEVEL = IntegerProperty.create("silk_level", MIN_SILK_LEVELS, MAX_SILK_LEVELS);
+    public static final IntegerProperty SILK_WORM_EGGS = IntegerProperty.create("silk_worm_eggs", MIN_SILK_WORM_EGGS, MAX_SILK_WORM_EGGS);
+    public static final IntegerProperty MULBERRY_LEAVES = IntegerProperty.create("mulberry_leaves", MIN_MULBERRY_LEAVES, MAX_MULBERRY_LEAVES);
 
     public SilkmothNestBlock(ExtendedProperties properties)
     {
         super(properties, InventoryRemoveBehavior.NOOP);
 
-        registerDefaultState(stateDefinition.any().setValue(SILK_LEVEL, 0).setValue(PART, Part.UPPER));
+        registerDefaultState(stateDefinition.any().setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0).setValue(PART, Part.UPPER));
     }
 
     @Override
@@ -109,7 +122,7 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        super.createBlockStateDefinition(builder.add(PART, FACING, SILK_LEVEL));
+        super.createBlockStateDefinition(builder.add(PART, FACING, SILK_LEVEL, SILK_WORM_EGGS));
     }
 
     @Override
@@ -137,7 +150,7 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     {
         Direction direction = context.getHorizontalDirection();
         BlockPos pos = context.getClickedPos();
-        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? super.getStateForPlacement(context).setValue(FACING, direction).setValue(SILK_LEVEL, 0) : null;
+        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? super.getStateForPlacement(context).setValue(FACING, direction).setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0) : null;
     }
 
     @Override
@@ -182,6 +195,66 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
 
     @Override
     @SuppressWarnings("deprecation")
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    {
+        if (level.isAreaLoaded(pos, 4) && level.getBlockEntity(pos) instanceof SilkmothNestBlockEntity blockEntity)
+        {
+            if (blockEntity.getOccupantCount() > 0)
+            {
+                final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
+                if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) <= MAX_SILK_WORM_EGGS)
+                {
+                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST - 200) == 0)
+                    {
+                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) + 1);
+                    }
+                }
+                if (state.getValue(MULBERRY_LEAVES) >= MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
+                {
+                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(blockEntity.getOccupantCount() * (state.getValue(SILK_LEVEL) + 1)) > 2)
+                    {
+                        state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) - 1);
+                    }
+                }
+                if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS)
+                {
+                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0 && blockEntity.getOccupantCount() >= SilkmothNestBlockEntity.MAX_OCCUPANTS)
+                    {
+                        blockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
+                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                    }
+                    else
+                    {
+                        boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
+                        Direction direction = state.getValue(FACING);
+                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                        Entity entity = TFCFEntities.SILKMOTH.get().create(level);
+                        if (entity != null)
+                        {
+                            if (entity instanceof Silkmoth moth)
+                            {
+                                if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F)
+                                {
+                                    moth.setSavedTargetPos(moth.getSavedTargetPos());
+                                }
+                                float f = entity.getBbWidth();
+                                double d3 = flag ? 0.0D : 0.55D + (double)(f / 2.0F);
+                                double d0 = (double)pos.getX() + 0.5D + d3 * (double)direction.getStepX();
+                                double d1 = (double)pos.getY() + 0.5D - (double)(entity.getBbHeight() / 2.0F);
+                                double d2 = (double)pos.getZ() + 0.5D + d3 * (double)direction.getStepZ();
+                                entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
+                            }
+                            level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                            level.addFreshEntity(entity);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
         ItemStack stack = player.getItemInHand(hand);
@@ -190,6 +263,16 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
         if (i >= MAX_SILK_LEVELS)
         {
             Item item = stack.getItem();
+            if (stack.isEmpty())
+            {
+                if (state.getValue(SILK_WORM_EGGS) > MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) <= MAX_SILK_WORM_EGGS)
+                {
+                    state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                    level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(TFCFItems.SILK_MOTH_EGG.get()));
+                    return InteractionResult.sidedSuccess(level.isClientSide);
+                }
+            }
             if (stack.canPerformAction(net.minecraftforge.common.ToolActions.SHEARS_HARVEST))
             {
                 level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BEEHIVE_SHEAR, SoundSource.NEUTRAL, 1.0F, 1.0F);
@@ -203,6 +286,16 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
             if (!level.isClientSide() && flag)
             {
                 player.awardStat(Stats.ITEM_USED.get(item));
+            }
+        }
+        if (stack.getItem() == TFCFItems.MULBERRY_LEAVES.get())
+        {
+            if (state.getValue(MULBERRY_LEAVES) >= MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
+            {
+                state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) + 1);
+                level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.SWEET_BERRY_BUSH_PLACE, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }
         if (stack.getItem() == TFCFItems.SILK_WORM.get())

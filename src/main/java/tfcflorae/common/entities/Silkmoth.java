@@ -135,7 +135,7 @@ public class Silkmoth extends Animal implements FlyingAnimal
     private static final int COOLDOWN_BEFORE_LOCATING_NEW_FLOWER = 200;
     int remainingCooldownBeforeLocatingNewTarget = Mth.nextInt(this.random, 20, 60);
     @Nullable
-    BlockPos savedTargetPos;
+    public BlockPos savedTargetPos;
     @Nullable
     BlockPos nestPos;
     Silkmoth.SilkmothPollinateGoal silkmothPollinateGoal;
@@ -146,6 +146,11 @@ public class Silkmoth extends Animal implements FlyingAnimal
     public Silkmoth(EntityType<? extends Silkmoth> type, Level level)
     {
         super(type, level);
+    }
+
+    public static AttributeSupplier.Builder createAttributes()
+    {
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 4.0D).add(Attributes.MOVEMENT_SPEED, 1F);
     }
 
     @Override
@@ -324,7 +329,8 @@ public class Silkmoth extends Animal implements FlyingAnimal
         return this.savedTargetPos != null;
     }
 
-    public void setSavedTargetPos(BlockPos pPos) {
+    public void setSavedTargetPos(BlockPos pPos)
+    {
         this.savedTargetPos = pPos;
     }
 

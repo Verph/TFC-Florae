@@ -222,4 +222,9 @@ public class TFCFHelpers
         else
             return Rock.GRANITE;
     }
+
+    public static ResourceLocation animalTexture(String name)
+    {
+        return identifier("textures/entity/animal/" + name + ".png");
+    }
 }

@@ -15,7 +15,7 @@ import tfcflorae.common.entities.Silkmoth;
 
 public class SilkmothModel extends EntityModel<Silkmoth>
 {
-	public static LayerDefinition getTexturedModelData()
+	public static LayerDefinition createBodyLayer()
 	{
 		MeshDefinition modelData = new MeshDefinition();
 		PartDefinition modelPartData = modelData.getRoot();
@@ -131,7 +131,7 @@ public class SilkmothModel extends EntityModel<Silkmoth>
 
 	public SilkmothModel(ModelPart modelPart)
 	{
-		super(RenderType::entityCutout);
+		//super(RenderType::entityCutout);
 
 		legsL = modelPart.getChild(PartNames.LEFT_LEG);
 		cube_r1 = legsL.getChild("cube_r1");
