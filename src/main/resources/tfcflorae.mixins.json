@@ -18,9 +18,20 @@
 		"accessor.BlockEntityTypeAccessor",
 		"accessor.TreeDecoratorTypeAccessor",
 		"accessor.TreeFeatureAccessor",
-		"accessor.TrunkPlacerTypeAccessor"
+		"accessor.TrunkPlacerTypeAccessor",
+		"packet.CompressionDecoderMixin",
+		"packet.CompressionEncoderMixin",
+		"packet.PacketEncoderMixin"
 	],
-	"client": [],
+	"client": [
+		"packet.ClientboundCustomPayloadPacketMixin",
+		"packet.ClientboundCustomQueryPacketMixin",
+		"packet.ServerLoginPacketListenerImplMixin"
+	],
+	"server": [
+		"packet.ServerboundCustomPayloadPacketMixin",
+		"packet.ServerGamePacketListenerImplMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},

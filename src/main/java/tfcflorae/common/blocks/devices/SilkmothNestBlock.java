@@ -160,31 +160,41 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
     @SuppressWarnings("deprecation")
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
-        if (state.getValue(PART) == Part.UPPER)
-        {
-            return (state.isFaceSturdy(level, pos.above(), Direction.DOWN) || state.isCollisionShapeFullBlock(level, pos.above())) && level.getBlockState(pos.below()).getValue(PART) == Part.LOWER;
-        }
-        else if (state.getValue(PART) == Part.LOWER)
-        {
-            BlockState stateAbove = level.getBlockState(pos.above());
-            return stateAbove.getBlock() instanceof SilkmothNestBlock;
-        }
-        return state.isFaceSturdy(level, pos.above(), Direction.DOWN) || state.isCollisionShapeFullBlock(level, pos.above()) || state.isFaceSturdy(level, pos.above(), Direction.DOWN, SupportType.CENTER);
+        return isValidPlacement(level, pos, Direction.UP);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
-        if (facing == Direction.UP)
+        if (state.getValue(PART) == Part.UPPER)
         {
-            if (facingState.isCollisionShapeFullBlock(level, facingPos) || facingState.isFaceSturdy(level, facingPos, Direction.UP, SupportType.CENTER) || facingState.getBlock() instanceof SilkmothNestBlock)
+            if (isValidPlacement(level, currentPos, Direction.UP) && level.getBlockState(currentPos.below()).getBlock() instanceof SilkmothNestBlock)
+            {
+                return state;
+            }
+            return Blocks.AIR.defaultBlockState();
+        }
+        else if (state.getValue(PART) == Part.LOWER)
+        {
+            if (level.getBlockState(currentPos.above()).getBlock() instanceof SilkmothNestBlock && level.getBlockState(currentPos.above()).getValue(PART) == Part.UPPER)
             {
                 return state;
             }
             return Blocks.AIR.defaultBlockState();
         }
         return state;
+    }
+
+    public static boolean isValidPlacement(LevelReader level, BlockPos pos, Direction direction)
+    {
+        BlockPos blockpos = pos.relative(direction.getOpposite());
+        BlockState blockstate = level.getBlockState(blockpos);
+
+        BlockPos abovePos = pos.above();
+        BlockState aboveState = level.getBlockState(abovePos);
+
+        return blockstate.isFaceSturdy(level, blockpos, direction) || aboveState.isFaceSturdy(level, abovePos, Direction.DOWN) || level.getBlockState(abovePos).getBlock() instanceof SilkmothNestBlock;
     }
 
     public static void dropSilkwormPupae(Level level, BlockPos pos)
