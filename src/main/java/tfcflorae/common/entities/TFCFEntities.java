@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import net.dries007.tfc.common.entities.predator.FelinePredator;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
@@ -20,6 +19,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.dries007.tfc.common.entities.predator.FelinePredator;
 import net.dries007.tfc.client.TFCSounds;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.config.TFCConfig;
@@ -54,7 +54,7 @@ public class TFCFEntities
 
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event)
     {
-        event.put(SILKMOTH.get(), Silkmoth.createLivingAttributes().build());
+        event.put(SILKMOTH.get(), Silkmoth.createAttributes().build());
     }
 
     public static <E extends Entity> RegistryObject<EntityType<E>> register(String name, EntityType.Builder<E> builder)

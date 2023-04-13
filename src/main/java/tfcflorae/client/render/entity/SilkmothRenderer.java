@@ -18,6 +18,6 @@ public class SilkmothRenderer extends TFCFSimpleMobRenderer<Silkmoth, SilkmothMo
     @Override
     public ResourceLocation getTextureLocation(Silkmoth entity)
     {
-        return TFCFHelpers.identifier("textures/entity/animals/silk_moth.png");
+        return TFCFHelpers.identifier("textures/entity/animal/silk_moth.png");
     }
 }

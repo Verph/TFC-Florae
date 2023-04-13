@@ -18733,10 +18733,11 @@
 	"block.tfcflorae.rock.spike.gypsum": "Gypsum Spike",
 	"block.tfcflorae.devices.silkmoth_nest": "Silk Moth Nest",
 	"entity.tfcflorae.silk_moth": "Silk Moth",
-	"item.tfcflorae.wood.leaf.mulberry.": "Mulberry Leaves",
-	"item.tfcflorae.animal.silk_moth_egg.": "Silk Moth Eggs",
-	"item.tfcflorae.animal.silk_moth_hatchery.": "Silk Moth Hatchery",
-	"item.tfcflorae.animal.silk_worm.": "Silk Worm",
-	"item.tfcflorae.animal.silk_worm_cocoon.": "Silk Worm Cocoon",
-	"item.tfcflorae.animal.silk_worm_cocoon_boiled.": "Boiled Silk Worm Cocoon"
+	"item.tfcflorae.wood.leaf.mulberry": "Mulberry Leaves",
+	"item.tfcflorae.animal.product.silk_moth_egg": "Silk Moth Eggs",
+	"item.tfcflorae.animal.product.silk_moth_hatchery": "Silk Moth Hatchery",
+	"item.tfcflorae.animal.product.silk_worm": "Silk Worm",
+	"item.tfcflorae.animal.product.silk_worm_cocoon": "Silk Worm Cocoon",
+	"item.tfcflorae.animal.product.silk_worm_cocoon_boiled": "Boiled Silk Worm Cocoon",
+	"item.tfcflorae.spawn_egg.silk_moth": "Silk Moth Spawn Egg"
 }

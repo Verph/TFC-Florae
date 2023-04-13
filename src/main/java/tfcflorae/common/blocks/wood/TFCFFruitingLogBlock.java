@@ -145,12 +145,15 @@ public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOve
         Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
         Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
-        if (state.getValue(NATURAL) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        if (state.getValue(NATURAL) && level.isAreaLoaded(pos, 3))
         {
-            //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > 24000)
+            if (currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
             {
-                onUpdate(level, pos, state);
+                //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
+                if (leaves.getTicksSinceBushUpdate() > ICalendar.TICKS_IN_DAY + random.nextInt(ICalendar.TICKS_IN_DAY))
+                {
+                    onUpdate(level, pos, state);
+                }
             }
         }
     }

@@ -12,16 +12,13 @@ import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
 
-import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
-import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -31,19 +28,12 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.TimeUtil;
 import net.minecraft.util.VisibleForDebug;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.NeutralMob;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -54,11 +44,7 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowParentGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.GoalSelector;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.util.AirAndWaterRandomPos;
@@ -69,7 +55,6 @@ import net.minecraft.world.entity.ai.village.poi.PoiRecord;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.FlyingAnimal;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
@@ -78,21 +63,22 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.pathfinder.Path;
 import net.minecraft.world.phys.Vec3;
+
+import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
+
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
+import tfcflorae.util.TFCFHelpers;
 
 public class Silkmoth extends Animal implements FlyingAnimal
 {
@@ -146,11 +132,23 @@ public class Silkmoth extends Animal implements FlyingAnimal
     public Silkmoth(EntityType<? extends Silkmoth> type, Level level)
     {
         super(type, level);
+        this.moveControl = new FlyingMoveControl(this, 20, true);
+        this.lookControl = new Silkmoth.SilkmothLookControl(this);
+        this.setPathfindingMalus(BlockPathTypes.DANGER_FIRE, -1.0F);
+        this.setPathfindingMalus(BlockPathTypes.WATER, -1.0F);
+        this.setPathfindingMalus(BlockPathTypes.WATER_BORDER, 16.0F);
+        this.setPathfindingMalus(BlockPathTypes.COCOA, -1.0F);
+        this.setPathfindingMalus(BlockPathTypes.FENCE, -1.0F);
     }
 
     public static AttributeSupplier.Builder createAttributes()
     {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 4.0D).add(Attributes.MOVEMENT_SPEED, 1F);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 6.0D).add(Attributes.FLYING_SPEED, (double)0.6F).add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.ATTACK_DAMAGE, 2.0D).add(Attributes.FOLLOW_RANGE, 48.0D);
+    }
+
+    public ResourceLocation getTextureLocation()
+    {
+        return TFCFHelpers.animalTexture("silk_moth");
     }
 
     @Override
@@ -188,6 +186,68 @@ public class Silkmoth extends Animal implements FlyingAnimal
         pCompound.putInt("TicksSincePollination", this.ticksWithoutNectarSinceExitingNest);
         pCompound.putInt("CannotEnterNestTicks", this.stayOutOfNestCountdown);
         pCompound.putInt("CropsGrownSincePollination", this.numCropsGrownSincePollination);
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag pCompound)
+    {
+        this.nestPos = null;
+        if (pCompound.contains("NestPos"))
+        {
+            this.nestPos = NbtUtils.readBlockPos(pCompound.getCompound("NestPos"));
+        }
+
+        this.savedTargetPos = null;
+        if (pCompound.contains("TargetPos"))
+        {
+            this.savedTargetPos = NbtUtils.readBlockPos(pCompound.getCompound("TargetPos"));
+        }
+
+        super.readAdditionalSaveData(pCompound);
+        this.setHasNectar(pCompound.getBoolean("HasNectar"));
+        this.ticksWithoutNectarSinceExitingNest = pCompound.getInt("TicksSincePollination");
+        this.stayOutOfNestCountdown = pCompound.getInt("CannotEnterNestTicks");
+        this.numCropsGrownSincePollination = pCompound.getInt("CropsGrownSincePollination");
+    }
+
+    @Override
+    protected void defineSynchedData()
+    {
+        super.defineSynchedData();
+        this.entityData.define(DATA_FLAGS_ID, (byte)0);
+    }
+
+    @Override
+    public float getWalkTargetValue(BlockPos pPos, LevelReader pLevel)
+    {
+        return pLevel.getBlockState(pPos).isAir() ? 10.0F : 0.0F;
+    }
+
+    @Override
+    protected PathNavigation createNavigation(Level pLevel)
+    {
+        FlyingPathNavigation flyingpathnavigation = new FlyingPathNavigation(this, pLevel)
+        {
+            @Override
+            public boolean isStableDestination(BlockPos p_27947_)
+            {
+                return !this.level.getBlockState(p_27947_.below()).isAir();
+            }
+
+            @Override
+            public void tick()
+            {
+                if (!Silkmoth.this.silkmothPollinateGoal.isPollinating())
+                {
+                    super.tick();
+                }
+            }
+        };
+
+        flyingpathnavigation.setCanOpenDoors(false);
+        flyingpathnavigation.setCanFloat(false);
+        flyingpathnavigation.setCanPassDoors(true);
+        return flyingpathnavigation;
     }
 
     public boolean hasNest()
@@ -285,6 +345,7 @@ public class Silkmoth extends Animal implements FlyingAnimal
     {
         return pos.closerThan(this.blockPosition(), (double)distance);
     }
+
 
     void pathfindRandomlyTowards(BlockPos pPos)
     {
@@ -548,6 +609,151 @@ public class Silkmoth extends Animal implements FlyingAnimal
         else
         {
             return false;
+        }
+    }
+
+    public class SilkmothGoToNestGoal extends Silkmoth.BaseSilkmothGoal
+    {
+        public static final int MAX_TRAVELLING_TICKS = 600;
+        int travellingTicks = Silkmoth.this.level.random.nextInt(10);
+        private static final int MAX_BLACKLISTED_TARGETS = 3;
+        final List<BlockPos> blacklistedTargets = Lists.newArrayList();
+        @Nullable private Path lastPath;
+        private static final int TICKS_BEFORE_HIVE_DROP = 60;
+        private int ticksStuck;
+
+        SilkmothGoToNestGoal()
+        {
+            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+        }
+
+        public boolean canSilkmothUse()
+        {
+            return Silkmoth.this.nestPos != null && !Silkmoth.this.hasRestriction() && Silkmoth.this.wantsToEnterNest() && !this.hasReachedTarget(Silkmoth.this.nestPos) && Silkmoth.this.level.getBlockState(Silkmoth.this.nestPos).is(BlockTags.BEEHIVES);
+        }
+
+        public boolean canSilkmothContinueToUse()
+        {
+            return this.canSilkmothUse();
+        }
+
+        @Override
+        public void start()
+        {
+            this.travellingTicks = 0;
+            this.ticksStuck = 0;
+            super.start();
+        }
+
+        @Override
+        public void stop()
+        {
+            this.travellingTicks = 0;
+            this.ticksStuck = 0;
+            Silkmoth.this.navigation.stop();
+            Silkmoth.this.navigation.resetMaxVisitedNodesMultiplier();
+        }
+
+        @Override
+        public void tick()
+        {
+            if (Silkmoth.this.nestPos != null)
+            {
+                ++this.travellingTicks;
+                if (this.travellingTicks > this.adjustedTickDelay(600))
+                {
+                    this.dropAndBlacklistNest();
+                }
+                else if (!Silkmoth.this.navigation.isInProgress())
+                {
+                    if (!Silkmoth.this.closerThan(Silkmoth.this.nestPos, 16))
+                    {
+                        if (Silkmoth.this.isTooFarAway(Silkmoth.this.nestPos))
+                        {
+                            this.dropNest();
+                        }
+                        else
+                        {
+                            Silkmoth.this.pathfindRandomlyTowards(Silkmoth.this.nestPos);
+                        }
+                    }
+                    else
+                    {
+                        boolean flag = this.pathfindDirectlyTowards(Silkmoth.this.nestPos);
+                        if (!flag)
+                        {
+                            this.dropAndBlacklistNest();
+                        }
+                        else if (this.lastPath != null && Silkmoth.this.navigation.getPath().sameAs(this.lastPath))
+                        {
+                            ++this.ticksStuck;
+                            if (this.ticksStuck > 60)
+                            {
+                                this.dropNest();
+                                this.ticksStuck = 0;
+                            }
+                        }
+                        else
+                        {
+                            this.lastPath = Silkmoth.this.navigation.getPath();
+                        }
+                    }
+                }
+            }
+        }
+
+        private boolean pathfindDirectlyTowards(BlockPos pPos)
+        {
+            Silkmoth.this.navigation.setMaxVisitedNodesMultiplier(10.0F);
+            Silkmoth.this.navigation.moveTo((double)pPos.getX(), (double)pPos.getY(), (double)pPos.getZ(), 1.0D);
+            return Silkmoth.this.navigation.getPath() != null && Silkmoth.this.navigation.getPath().canReach();
+        }
+
+        boolean isTargetBlacklisted(BlockPos pPos)
+        {
+            return this.blacklistedTargets.contains(pPos);
+        }
+
+        private void blacklistTarget(BlockPos pPos)
+        {
+            this.blacklistedTargets.add(pPos);
+            while(this.blacklistedTargets.size() > 3)
+            {
+                this.blacklistedTargets.remove(0);
+            }
+        }
+
+        void clearBlacklist()
+        {
+            this.blacklistedTargets.clear();
+        }
+
+        private void dropAndBlacklistNest()
+        {
+            if (Silkmoth.this.nestPos != null)
+            {
+                this.blacklistTarget(Silkmoth.this.nestPos);
+            }
+            this.dropNest();
+        }
+
+        private void dropNest()
+        {
+            Silkmoth.this.nestPos = null;
+            Silkmoth.this.remainingCooldownBeforeLocatingNewNest = 200;
+        }
+
+        private boolean hasReachedTarget(BlockPos pPos)
+        {
+            if (Silkmoth.this.closerThan(pPos, 2))
+            {
+                return true;
+            }
+            else
+            {
+                Path path = Silkmoth.this.navigation.getPath();
+                return path != null && path.getTarget().equals(pPos) && path.canReach() && path.isDone();
+            }
         }
     }
 
@@ -892,153 +1098,6 @@ public class Silkmoth extends Animal implements FlyingAnimal
         }
     }
 
-    public class SilkmothGoToNestGoal extends Silkmoth.BaseSilkmothGoal
-    {
-        public static final int MAX_TRAVELLING_TICKS = 600;
-        int travellingTicks = Silkmoth.this.level.random.nextInt(10);
-        private static final int MAX_BLACKLISTED_TARGETS = 3;
-        final List<BlockPos> blacklistedTargets = Lists.newArrayList();
-        @Nullable
-        private Path lastPath;
-        private static final int TICKS_BEFORE_HIVE_DROP = 60;
-        private int ticksStuck;
-
-        SilkmothGoToNestGoal()
-        {
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
-        }
-
-        public boolean canSilkmothUse()
-        {
-            return Silkmoth.this.nestPos != null && !Silkmoth.this.hasRestriction() && Silkmoth.this.wantsToEnterNest() && !this.hasReachedTarget(Silkmoth.this.nestPos) && Silkmoth.this.level.getBlockState(Silkmoth.this.nestPos).is(TFCFTags.Blocks.SILKMOTH_NESTS);
-        }
-
-        public boolean canSilkmothContinueToUse()
-        {
-            return this.canSilkmothUse();
-        }
-
-        @Override
-        public void start()
-        {
-            this.travellingTicks = 0;
-            this.ticksStuck = 0;
-            super.start();
-        }
-
-        @Override
-        public void stop()
-        {
-            this.travellingTicks = 0;
-            this.ticksStuck = 0;
-            Silkmoth.this.navigation.stop();
-            Silkmoth.this.navigation.resetMaxVisitedNodesMultiplier();
-        }
-
-        @Override
-        public void tick()
-        {
-            if (Silkmoth.this.nestPos != null)
-            {
-                ++this.travellingTicks;
-                if (this.travellingTicks > this.adjustedTickDelay(MAX_TRAVELLING_TICKS))
-                {
-                    this.dropAndBlacklistNest();
-                }
-                else if (!Silkmoth.this.navigation.isInProgress())
-                {
-                    if (!Silkmoth.this.closerThan(Silkmoth.this.nestPos, 16))
-                    {
-                        if (Silkmoth.this.isTooFarAway(Silkmoth.this.nestPos))
-                        {
-                            this.dropNest();
-                        }
-                        else
-                        {
-                            Silkmoth.this.pathfindRandomlyTowards(Silkmoth.this.nestPos);
-                        }
-                    }
-                    else
-                    {
-                        boolean flag = this.pathfindDirectlyTowards(Silkmoth.this.nestPos);
-                        if (!flag)
-                        {
-                            this.dropAndBlacklistNest();
-                        }
-                        else if (this.lastPath != null && Silkmoth.this.navigation.getPath().sameAs(this.lastPath))
-                        {
-                            ++this.ticksStuck;
-                            if (this.ticksStuck > 60)
-                            {
-                                this.dropNest();
-                                this.ticksStuck = 0;
-                            }
-                        }
-                        else
-                        {
-                            this.lastPath = Silkmoth.this.navigation.getPath();
-                        }
-                    }
-                }
-            }
-        }
-
-        private boolean pathfindDirectlyTowards(BlockPos pPos)
-        {
-            Silkmoth.this.navigation.setMaxVisitedNodesMultiplier(10.0F);
-            Silkmoth.this.navigation.moveTo((double)pPos.getX(), (double)pPos.getY(), (double)pPos.getZ(), 1.0D);
-            return Silkmoth.this.navigation.getPath() != null && Silkmoth.this.navigation.getPath().canReach();
-        }
-
-        boolean isTargetBlacklisted(BlockPos pPos)
-        {
-            return this.blacklistedTargets.contains(pPos);
-        }
-
-        private void blacklistTarget(BlockPos pPos)
-        {
-            this.blacklistedTargets.add(pPos);
-
-            while(this.blacklistedTargets.size() > 3)
-            {
-                this.blacklistedTargets.remove(0);
-            }
-        }
-
-        void clearBlacklist()
-        {
-            this.blacklistedTargets.clear();
-        }
-
-        private void dropAndBlacklistNest()
-        {
-            if (Silkmoth.this.nestPos != null)
-            {
-                this.blacklistTarget(Silkmoth.this.nestPos);
-            }
-            this.dropNest();
-        }
-
-        private void dropNest()
-        {
-            Silkmoth.this.nestPos = null;
-            Silkmoth.this.remainingCooldownBeforeLocatingNewNest = 200;
-        }
-
-        private boolean hasReachedTarget(BlockPos pPos)
-        {
-            if (Silkmoth.this.closerThan(pPos, 2))
-            {
-                return true;
-            }
-            else
-            {
-                Path path = Silkmoth.this.navigation.getPath();
-                return path != null && path.getTarget().equals(pPos) && path.canReach() && path.isDone();
-            }
-        }
-    }
-
     public class SilkmothGoToKnownTargetGoal extends Silkmoth.BaseSilkmothGoal
     {
         private static final int MAX_TRAVELLING_TICKS = 600;
@@ -1234,6 +1293,20 @@ public class Silkmoth extends Animal implements FlyingAnimal
             int i = 8;
             Vec3 vec32 = HoverRandomPos.getPos(Silkmoth.this, 8, 7, vec3.x, vec3.z, ((float)Math.PI / 2F), 3, 1);
             return vec32 != null ? vec32 : AirAndWaterRandomPos.getPos(Silkmoth.this, 8, 4, -2, vec3.x, vec3.z, (double)((float)Math.PI / 2F));
+        }
+    }
+
+    class SilkmothLookControl extends LookControl
+    {
+        SilkmothLookControl(Mob entity)
+        {
+            super(entity);
+        }
+
+        @Override
+        protected boolean resetXRotOnTick()
+        {
+            return !Silkmoth.this.silkmothPollinateGoal.isPollinating();
         }
     }
 }

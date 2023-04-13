@@ -209,6 +209,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         super.randomTick(state, level, pos, random);
@@ -221,12 +222,16 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
         Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
         Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
-        if (!state.getValue(PERSISTENT) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+        if (!state.getValue(PERSISTENT) && level.isAreaLoaded(pos, 3))
         {
-            //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > 24000)
+            if (currentLifecycle != expectedLifecycle /*&& level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves*/)
             {
-                onUpdate(level, pos, state);
+                //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
+                //if (leaves.getTicksSinceBushUpdate() > 24000 + random.nextInt(ICalendar.TICKS_IN_DAY))
+                if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                {
+                    onUpdate(level, pos, state);
+                }
             }
         }
     }

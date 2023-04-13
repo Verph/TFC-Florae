@@ -11,8 +11,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -23,7 +21,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.GameRules;
@@ -36,9 +33,8 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SupportType;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -50,10 +46,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
-import net.dries007.tfc.common.blocks.devices.DeviceBlock;
 import net.dries007.tfc.common.blocks.plant.ITallPlant;
 import net.dries007.tfc.util.calendar.ICalendar;
 
@@ -65,7 +60,7 @@ import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
-public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
+public class SilkmothNestBlock extends Block implements IForgeBlockExtension, ITallPlant
 {
     public static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
 
@@ -80,12 +75,20 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     public static final IntegerProperty SILK_LEVEL = IntegerProperty.create("silk_level", MIN_SILK_LEVELS, MAX_SILK_LEVELS);
     public static final IntegerProperty SILK_WORM_EGGS = IntegerProperty.create("silk_worm_eggs", MIN_SILK_WORM_EGGS, MAX_SILK_WORM_EGGS);
     public static final IntegerProperty MULBERRY_LEAVES = IntegerProperty.create("mulberry_leaves", MIN_MULBERRY_LEAVES, MAX_MULBERRY_LEAVES);
+    public final ExtendedProperties properties;
 
     public SilkmothNestBlock(ExtendedProperties properties)
     {
-        super(properties, InventoryRemoveBehavior.NOOP);
+        super(properties.properties());
+        this.properties = properties;
 
-        registerDefaultState(stateDefinition.any().setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0).setValue(PART, Part.UPPER));
+        registerDefaultState(getStateDefinition().any().setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0).setValue(PART, Part.UPPER));
+    }
+
+    @Override
+    public ExtendedProperties getExtendedProperties()
+    {
+        return properties;
     }
 
     @Override
@@ -122,7 +125,7 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
-        super.createBlockStateDefinition(builder.add(PART, FACING, SILK_LEVEL, SILK_WORM_EGGS));
+        super.createBlockStateDefinition(builder.add(PART, FACING, SILK_LEVEL, SILK_WORM_EGGS, MULBERRY_LEAVES));
     }
 
     @Override
@@ -148,9 +151,9 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        Direction direction = context.getHorizontalDirection();
+        Direction direction = context.getHorizontalDirection().getOpposite();
         BlockPos pos = context.getClickedPos();
-        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? super.getStateForPlacement(context).setValue(FACING, direction).setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0) : null;
+        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? defaultBlockState().setValue(FACING, direction).setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0) : null;
     }
 
     @Override
@@ -159,33 +162,29 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
     {
         if (state.getValue(PART) == Part.UPPER)
         {
-            return super.canSurvive(state, level, pos) && level.getBlockState(pos.below()).getValue(PART) == Part.LOWER;
+            return (state.isFaceSturdy(level, pos.above(), Direction.DOWN) || state.isCollisionShapeFullBlock(level, pos.above())) && level.getBlockState(pos.below()).getValue(PART) == Part.LOWER;
         }
-        else
+        else if (state.getValue(PART) == Part.LOWER)
         {
-            BlockState blockstate = level.getBlockState(pos.above());
-            if (state.getBlock() != this)
-            {
-                return super.canSurvive(state, level, pos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
-            }
-            return blockstate.getBlock() == this && blockstate.getValue(PART) == Part.UPPER;
+            BlockState stateAbove = level.getBlockState(pos.above());
+            return stateAbove.getBlock() instanceof SilkmothNestBlock;
         }
+        return state.isFaceSturdy(level, pos.above(), Direction.DOWN) || state.isCollisionShapeFullBlock(level, pos.above()) || state.isFaceSturdy(level, pos.above(), Direction.DOWN, SupportType.CENTER);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
     {
-        //super.updateShape(state, facing, facingState, level, currentPos, facingPos);
-        Part part = state.getValue(PART);
-        if (facing.getAxis() != Direction.Axis.Y || part == Part.LOWER != (facing == Direction.UP) || facingState.getBlock() == this && facingState.getValue(PART) != part)
+        if (facing == Direction.UP)
         {
-            return part == Part.LOWER && facing == Direction.DOWN && !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
-        }
-        else
-        {
+            if (facingState.isCollisionShapeFullBlock(level, facingPos) || facingState.isFaceSturdy(level, facingPos, Direction.UP, SupportType.CENTER) || facingState.getBlock() instanceof SilkmothNestBlock)
+            {
+                return state;
+            }
             return Blocks.AIR.defaultBlockState();
         }
+        return state;
     }
 
     public static void dropSilkwormPupae(Level level, BlockPos pos)
@@ -218,10 +217,13 @@ public class SilkmothNestBlock extends DeviceBlock implements ITallPlant
                 }
                 if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS)
                 {
-                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0 && blockEntity.getOccupantCount() >= SilkmothNestBlockEntity.MAX_OCCUPANTS)
+                    if (blockEntity.getOccupantCount() >= SilkmothNestBlockEntity.MAX_OCCUPANTS)
                     {
-                        blockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
-                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                        if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0)
+                        {
+                            blockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
+                            state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                        }
                     }
                     else
                     {

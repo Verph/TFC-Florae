@@ -66,6 +66,7 @@ import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.container.TFCFContainerTypes;
+import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
@@ -286,7 +287,7 @@ public class ClientEventHandler
             event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
         }
 
-        event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), ctx -> new TFCFSimpleMobRenderer.Builder<>(ctx, SilkmothModel::new, "silk_moth").build());
+        event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), ctx -> new TFCFSimpleMobRenderer.Builder<>(ctx, SilkmothModel::new, "silk_moth").texture(Silkmoth::getTextureLocation).build());
 
         // BEs
         event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);
@@ -308,16 +309,15 @@ public class ClientEventHandler
             event.registerLayerDefinition(TFCFBoatRenderer.boatName(wood.getSerializedName()), () -> boatLayer);
             event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("sign/" + wood.name().toLowerCase(Locale.ROOT)), () -> signLayer);
         }
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("silk_moth"), SilkmothModel::createBodyLayer);
     }
 
     public static void onConfigReload(ModConfigEvent.Reloading event)
     {
-        //IngameOverlays.reloadOverlays();
     }
 
     public static void registerModelLoaders(ModelRegistryEvent event)
     {
-        //ModelLoaderRegistry.registerLoader(Helpers.identifier("contained_fluid"), new ContainedFluidModel.Loader());
     }
 
     public static void registerColorHandlerBlocks(ColorHandlerEvent.Block event)

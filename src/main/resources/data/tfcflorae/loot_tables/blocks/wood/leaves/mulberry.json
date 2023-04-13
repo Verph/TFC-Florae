@@ -112,6 +112,10 @@
                   }
                 }
               ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "tfcflorae:wood/leaf/mulberry"
             }
           ]
         }
