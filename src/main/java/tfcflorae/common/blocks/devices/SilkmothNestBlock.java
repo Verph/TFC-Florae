@@ -33,8 +33,9 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.SupportType;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -46,6 +47,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
 
+import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
@@ -60,7 +62,7 @@ import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
-public class SilkmothNestBlock extends Block implements IForgeBlockExtension, ITallPlant
+public class SilkmothNestBlock extends Block implements IForgeBlockExtension, ITallPlant, EntityBlockExtension
 {
     public static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
 
@@ -89,6 +91,20 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
     public ExtendedProperties getExtendedProperties()
     {
         return properties;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
+        return EntityBlockExtension.super.newBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type)
+    {
+        return EntityBlockExtension.super.getTicker(level, state, type);
     }
 
     @Override
@@ -211,35 +227,35 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
             if (blockEntity.getOccupantCount() > 0)
             {
                 final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-                if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) <= MAX_SILK_WORM_EGGS)
+                if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) < MAX_SILK_WORM_EGGS)
                 {
                     if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST - 200) == 0)
                     {
-                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) + 1);
+                        level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) + 1));
                     }
                 }
-                if (state.getValue(MULBERRY_LEAVES) >= MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
+                if (state.getValue(SILK_LEVEL) >= MIN_SILK_LEVELS && state.getValue(MULBERRY_LEAVES) > MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
                 {
                     if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(blockEntity.getOccupantCount() * (state.getValue(SILK_LEVEL) + 1)) > 2)
                     {
-                        state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) - 1);
+                        level.setBlockAndUpdate(pos, state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) - 1));
                     }
                 }
-                if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS)
+                if (state.getValue(SILK_WORM_EGGS) > MIN_SILK_WORM_EGGS)
                 {
                     if (blockEntity.getOccupantCount() >= SilkmothNestBlockEntity.MAX_OCCUPANTS)
                     {
                         if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0)
                         {
                             blockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
-                            state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                            level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1));
                         }
                     }
                     else
                     {
                         boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
                         Direction direction = state.getValue(FACING);
-                        state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                        level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1));
                         Entity entity = TFCFEntities.SILKMOTH.get().create(level);
                         if (entity != null)
                         {
@@ -277,9 +293,9 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
             Item item = stack.getItem();
             if (stack.isEmpty())
             {
-                if (state.getValue(SILK_WORM_EGGS) > MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) <= MAX_SILK_WORM_EGGS)
+                if (state.getValue(SILK_WORM_EGGS) > MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) < MAX_SILK_WORM_EGGS)
                 {
-                    state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1);
+                    level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1));
                     level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.NEUTRAL, 1.0F, 1.0F);
                     ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(TFCFItems.SILK_MOTH_EGG.get()));
                     return InteractionResult.sidedSuccess(level.isClientSide);
@@ -302,9 +318,9 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
         }
         if (stack.getItem() == TFCFItems.MULBERRY_LEAVES.get())
         {
-            if (state.getValue(MULBERRY_LEAVES) >= MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
+            if (state.getValue(MULBERRY_LEAVES) >= MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) < MAX_MULBERRY_LEAVES)
             {
-                state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) + 1);
+                level.setBlockAndUpdate(pos, state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) + 1));
                 level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.SWEET_BERRY_BUSH_PLACE, SoundSource.NEUTRAL, 1.0F, 1.0F);
                 stack.shrink(1);
                 return InteractionResult.sidedSuccess(level.isClientSide);
@@ -313,12 +329,22 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
         if (stack.getItem() == TFCFItems.SILK_WORM.get())
         {
             BlockEntity blockEntity = level.getBlockEntity(pos);
-            if (blockEntity instanceof SilkmothNestBlockEntity silkmothBlockEntity) 
+            if (blockEntity instanceof SilkmothNestBlockEntity silkmothBlockEntity && silkmothBlockEntity.stored.size() < 3) 
             {
                 silkmothBlockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
                 stack.shrink(1);
+                return InteractionResult.sidedSuccess(level.isClientSide);
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        if (stack.getItem() == TFCFItems.SILK_MOTH_EGG.get())
+        {
+            if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) < MAX_SILK_WORM_EGGS) 
+            {
+                level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) + 1));
+                level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BEEHIVE_ENTER, SoundSource.BLOCKS, 1.0F, 1.0F);
+                stack.shrink(1);
+                return InteractionResult.sidedSuccess(level.isClientSide);
+            }
         }
         if (flag)
         {

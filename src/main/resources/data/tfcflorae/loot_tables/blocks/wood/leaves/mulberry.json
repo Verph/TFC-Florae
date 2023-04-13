@@ -116,6 +116,19 @@
             {
               "type": "minecraft:item",
               "name": "tfcflorae:wood/leaf/mulberry"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "tfcflorae:animal/product/silk_moth_egg",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.01
+                }
+              ]
             }
           ]
         }

@@ -9,9 +9,9 @@ import net.minecraft.network.CompressionEncoder;
 @Mixin({CompressionEncoder.class})
 public class CompressionEncoderMixin
 {
-    @ModifyConstant(method = "encode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V", constant = @Constant(intValue = 2097152))
+    /*@ModifyConstant(method = "encode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V", constant = @Constant(intValue = 2097152))
     private int packetDoubler(int value) 
     {
         return value*10;
-    }
+    }*/
 }

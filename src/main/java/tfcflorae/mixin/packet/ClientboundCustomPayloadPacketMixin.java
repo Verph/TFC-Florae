@@ -9,9 +9,9 @@ import net.minecraft.network.protocol.game.ClientboundCustomPayloadPacket;
 @Mixin(ClientboundCustomPayloadPacket.class)
 public class ClientboundCustomPayloadPacketMixin
 {
-    @ModifyConstant(method = "<init>*", constant = @Constant(intValue = 1048576))
+    /*@ModifyConstant(method = "<init>*", constant = @Constant(intValue = 1048576))
     private int packetDoubler(int value)
     {
         return value*100;
-    }
+    }*/
 }

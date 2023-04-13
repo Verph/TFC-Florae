@@ -100,13 +100,13 @@ public class Silkmoth extends Animal implements FlyingAnimal
     private static final int HIVE_CLOSE_ENOUGH_DISTANCE = 2;
     private static final int PATHFIND_TO_HIVE_WHEN_CLOSER_THAN = 16;
     private static final int HIVE_SEARCH_DISTANCE = 20;
-    public static final String TAG_CROPS_GROWN_SINCE_POLLINATION = "CropsGrownSincePollination";
-    public static final String TAG_CANNOT_ENTER_HIVE_TICKS = "CannotEnterNestTicks";
-    public static final String TAG_TICKS_SINCE_POLLINATION = "TicksSincePollination";
-    public static final String TAG_HAS_STUNG = "HasStung";
-    public static final String TAG_HAS_NECTAR = "HasNectar";
-    public static final String TAG_FLOWER_POS = "TargetPos";
-    public static final String TAG_HIVE_POS = "NestPos";
+    public static final String TAG_CROPS_GROWN_SINCE_POLLINATION = "crops_grown_since_pollination";
+    public static final String TAG_CANNOT_ENTER_HIVE_TICKS = "cannot_enter_nest_ticks";
+    public static final String TAG_TICKS_SINCE_POLLINATION = "ticks_since_pollination";
+    public static final String TAG_HAS_STUNG = "has_stung";
+    public static final String TAG_HAS_NECTAR = "has_nectar";
+    public static final String TAG_FLOWER_POS = "target_pos";
+    public static final String TAG_HIVE_POS = "nest_os";
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
     @Nullable
     private UUID persistentAngerTarget;
@@ -143,7 +143,7 @@ public class Silkmoth extends Animal implements FlyingAnimal
 
     public static AttributeSupplier.Builder createAttributes()
     {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 6.0D).add(Attributes.FLYING_SPEED, (double)0.6F).add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.ATTACK_DAMAGE, 2.0D).add(Attributes.FOLLOW_RANGE, 48.0D);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 6.0D).add(Attributes.FLYING_SPEED, (double)0.8F).add(Attributes.MOVEMENT_SPEED, (double)0.2F).add(Attributes.ATTACK_DAMAGE, 2.0D).add(Attributes.FOLLOW_RANGE, 100.0D);
     }
 
     public ResourceLocation getTextureLocation()
@@ -176,38 +176,38 @@ public class Silkmoth extends Animal implements FlyingAnimal
         super.addAdditionalSaveData(pCompound);
         if (this.hasNest())
         {
-            pCompound.put("NestPos", NbtUtils.writeBlockPos(this.getNestPos()));
+            pCompound.put(TAG_HIVE_POS, NbtUtils.writeBlockPos(this.getNestPos()));
         }
         if (this.hasSavedTargetPos())
         {
-            pCompound.put("TargetPos", NbtUtils.writeBlockPos(this.getSavedTargetPos()));
+            pCompound.put(TAG_FLOWER_POS, NbtUtils.writeBlockPos(this.getSavedTargetPos()));
         }
-        pCompound.putBoolean("HasNectar", this.hasNectar());
-        pCompound.putInt("TicksSincePollination", this.ticksWithoutNectarSinceExitingNest);
-        pCompound.putInt("CannotEnterNestTicks", this.stayOutOfNestCountdown);
-        pCompound.putInt("CropsGrownSincePollination", this.numCropsGrownSincePollination);
+        pCompound.putBoolean(TAG_HAS_NECTAR, this.hasNectar());
+        pCompound.putInt(TAG_TICKS_SINCE_POLLINATION, this.ticksWithoutNectarSinceExitingNest);
+        pCompound.putInt(TAG_CANNOT_ENTER_HIVE_TICKS, this.stayOutOfNestCountdown);
+        pCompound.putInt(TAG_CROPS_GROWN_SINCE_POLLINATION, this.numCropsGrownSincePollination);
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag pCompound)
     {
         this.nestPos = null;
-        if (pCompound.contains("NestPos"))
+        if (pCompound.contains(TAG_HIVE_POS))
         {
-            this.nestPos = NbtUtils.readBlockPos(pCompound.getCompound("NestPos"));
+            this.nestPos = NbtUtils.readBlockPos(pCompound.getCompound(TAG_HIVE_POS));
         }
 
         this.savedTargetPos = null;
-        if (pCompound.contains("TargetPos"))
+        if (pCompound.contains(TAG_FLOWER_POS))
         {
-            this.savedTargetPos = NbtUtils.readBlockPos(pCompound.getCompound("TargetPos"));
+            this.savedTargetPos = NbtUtils.readBlockPos(pCompound.getCompound(TAG_FLOWER_POS));
         }
 
         super.readAdditionalSaveData(pCompound);
-        this.setHasNectar(pCompound.getBoolean("HasNectar"));
-        this.ticksWithoutNectarSinceExitingNest = pCompound.getInt("TicksSincePollination");
-        this.stayOutOfNestCountdown = pCompound.getInt("CannotEnterNestTicks");
-        this.numCropsGrownSincePollination = pCompound.getInt("CropsGrownSincePollination");
+        this.setHasNectar(pCompound.getBoolean(TAG_HAS_NECTAR));
+        this.ticksWithoutNectarSinceExitingNest = pCompound.getInt(TAG_TICKS_SINCE_POLLINATION);
+        this.stayOutOfNestCountdown = pCompound.getInt(TAG_CANNOT_ENTER_HIVE_TICKS);
+        this.numCropsGrownSincePollination = pCompound.getInt(TAG_CROPS_GROWN_SINCE_POLLINATION);
     }
 
     @Override

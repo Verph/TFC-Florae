@@ -12,6 +12,6 @@ public class ServerLoginPacketListenerImplMixin
     @ModifyConstant(method = "tick", constant = @Constant(intValue = 600))
     private int injected(int value)
     {
-        return value*100;
+        return value * 100;
     }
 }

@@ -410,7 +410,7 @@ public final class TFCFBlocks
 
         for (Clay clay : Clay.values())
         {
-            Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/bricks", () -> 
+            Map.put(clay, register(("ceramic/" + clay.getSerializedName() + "/bricks").toLowerCase(Locale.ROOT), () -> 
                 new Block(Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS));
         }
         return Map;
