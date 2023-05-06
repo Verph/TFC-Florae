@@ -661,7 +661,7 @@ public final class TFCFBlocks
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
 
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), 
+                TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), 
                 wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.FALLEN_LEAVES), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.TWIG)), blockItem));
         }
         return Map;
@@ -683,13 +683,13 @@ public final class TFCFBlocks
                 if (wood.isFruitTree())
                 {
                     Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), 
+                        TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), 
                         wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG)), blockItem));
                 }
                 else if (wood.isMangrove())
                 {
                     Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), wood,
+                        TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), wood,
                         wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG)), blockItem));
                 }
             }
@@ -712,7 +712,7 @@ public final class TFCFBlocks
             if (wood.isFruitTree() && wood.hasFruitingLog())
             {
                 Map.put(wood, register(("wood/log/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                    new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(8f).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().hasPostProcess(TFCFBlocks::always).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_LOG), 
+                    new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? wood.woodColor() : wood.barkColor()).strength(8f).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().hasPostProcess(TFCFBlocks::always).randomTicks(), wood.getBlock(Wood.BlockType.STRIPPED_LOG), 
                     wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
             }
             else continue;
@@ -734,7 +734,7 @@ public final class TFCFBlocks
             if (wood.isFruitTree() && wood.hasFruitingLog())
             {
                 Map.put(wood, register(("wood/wood/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                    new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().hasPostProcess(TFCFBlocks::always).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
+                    new TFCFFruitingLogBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(8f).requiresCorrectToolForDrops().flammableLikeLogs().hasPostProcess(TFCFBlocks::always).randomTicks(), wood.getBlock(Wood.BlockType.STRIPPED_WOOD), 
                     wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
             }
             else continue;
@@ -879,7 +879,7 @@ public final class TFCFBlocks
                 Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
 
                 Map.put(wood, register(("wood/leaves_head/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                    TFCFJoshuaLeavesBlock.create(wood, ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).hasPostProcess(TFCFBlocks::always)).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick).flammableLikeLeaves(), 
+                    TFCFJoshuaLeavesBlock.create(wood, ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).hasPostProcess(TFCFBlocks::always)).randomTicks().flammableLikeLeaves(), 
                     wood.getProductItem(), wood.getStages(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), blockItem));
                     
             }
@@ -1054,37 +1054,37 @@ public final class TFCFBlocks
             if (plant == TFCFPlant.PRICKLY_PEAR)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    ShortFruitingCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    ShortFruitingCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks(), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if (plant == TFCFPlant.BARREL_CACTUS)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    TFCFFruitingCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    TFCFFruitingCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks(), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if (plant == TFCFPlant.SAGUARO_CACTUS)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    SaguaroCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    SaguaroCactusBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks(), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if ( plant == TFCFPlant.GLOW_VINES_PLANT)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    new FruitingBodyPlantBlock(TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolidTallPlant(plant).hasPostProcess(TFCFBlocks::always)).lightLevel(FruitingBodyPlantBlock.emission(14, true)).instabreak().sound(SoundType.CAVE_VINES).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.transformFruiting(), BodyPlantBlock.BODY_SHAPE, Direction.DOWN, plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    new FruitingBodyPlantBlock(TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolidTallPlant(plant).hasPostProcess(TFCFBlocks::always)).lightLevel(FruitingBodyPlantBlock.emission(14, true)).instabreak().sound(SoundType.CAVE_VINES).randomTicks(), plant.transformFruiting(), BodyPlantBlock.BODY_SHAPE, Direction.DOWN, plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if (plant == TFCFPlant.GLOW_VINES)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    new FruitingTopPlantBlock(TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolidTallPlant(plant).hasPostProcess(TFCFBlocks::always)).lightLevel(FruitingBodyPlantBlock.emission(14, true)).instabreak().sound(SoundType.CAVE_VINES).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.transformFruiting(), BodyPlantBlock.WEEPING_SHAPE, Direction.DOWN, plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    new FruitingTopPlantBlock(TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolidTallPlant(plant).hasPostProcess(TFCFBlocks::always)).lightLevel(FruitingBodyPlantBlock.emission(14, true)).instabreak().sound(SoundType.CAVE_VINES).randomTicks(), plant.transformFruiting(), BodyPlantBlock.WEEPING_SHAPE, Direction.DOWN, plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if (plant == TFCFPlant.PITAHAYA)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    PitahayaBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    PitahayaBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always)).pathType(BlockPathTypes.DAMAGE_CACTUS).randomTicks(), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else if (plant == TFCFPlant.POKEWEED)
             {
                 Map.put(plant, register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), () -> 
-                    FruitingTallPlantBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolid(plant).hasPostProcess(TFCFBlocks::always)).randomTicks().blockEntity(TFCFBlockEntities.BERRY_BUSH).serverTicks(FruitTreeBlockEntity::serverTick), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
+                    FruitingTallPlantBlock.create(plant, TFCFPlant.BlockType.fire(TFCFPlant.BlockType.nonSolid(plant).hasPostProcess(TFCFBlocks::always)).randomTicks(), plant.getProductItem(), plant.getStages(), TFCFClimateRanges.SEASONAL_PLANT.get(plant)), plant.createBlockItem(new Item.Properties().tab(FLORA))));
             }
             else continue;
         }

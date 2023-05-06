@@ -18,9 +18,9 @@ public class FruitTreeBlockEntity extends BerryBushBlockEntity
         super(type, pos, state);
     }
 
-    @Override
+    /*@Override
     public BlockEntityType<?> getType()
     {
         return TFCFBlockEntities.BERRY_BUSH.get();
-    }
+    }*/
 }

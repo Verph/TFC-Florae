@@ -84,7 +84,7 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
         super(properties.properties());
         this.properties = properties;
 
-        registerDefaultState(getStateDefinition().any().setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0).setValue(PART, Part.UPPER));
+        registerDefaultState(getStateDefinition().any().setValue(SILK_LEVEL, MIN_SILK_LEVELS).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0).setValue(PART, Part.UPPER));
     }
 
     @Override
@@ -169,7 +169,7 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
     {
         Direction direction = context.getHorizontalDirection().getOpposite();
         BlockPos pos = context.getClickedPos();
-        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? defaultBlockState().setValue(FACING, direction).setValue(SILK_LEVEL, 0).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0) : null;
+        return pos.getY() > context.getLevel().getMinBuildHeight() + 1 && context.getLevel().getBlockState(pos.below()).canBeReplaced(context) ? defaultBlockState().setValue(FACING, direction).setValue(SILK_LEVEL, MIN_SILK_LEVELS).setValue(SILK_WORM_EGGS, 0).setValue(MULBERRY_LEAVES, 0) : null;
     }
 
     @Override
@@ -219,7 +219,12 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    public boolean isRandomlyTicking(BlockState state)
+    {
+        return true;
+    }
+
+    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         if (level.getBlockEntity(pos) instanceof SilkmothNestBlockEntity blockEntity)

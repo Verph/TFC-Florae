@@ -35,7 +35,7 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<FruitTreeBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
+    /*public static final RegistryObject<BlockEntityType<FruitTreeBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS_SEASONAL_LEAVES.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_LOGS.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_WOOD.values().stream(),
@@ -43,7 +43,7 @@ public class TFCFBlockEntities
             TFCFBlocks.JOSHUA_LEAVES.values().stream(),
             TFCFBlocks.FRUITING_PLANTS.values().stream()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
-    );
+    );*/
 
     public static final RegistryObject<BlockEntityType<ChiseledBookshelfBlockEntity>> CHISELED_BOOKSHELF = register("chiseled_bookshelf", ChiseledBookshelfBlockEntity::new, Stream.of(
             TFCFBlocks.CHISELED_BOOKSHELF_TFCF.values().stream()
