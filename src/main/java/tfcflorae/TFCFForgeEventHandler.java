@@ -1,25 +1,25 @@
 package tfcflorae;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.resource.PathResourcePack;
 
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -28,10 +28,8 @@ import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
-import tfcflorae.common.blocks.spidercave.EggBlock;
 import tfcflorae.common.items.TFCFItems;
 
-import com.mojang.logging.LogUtils;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -40,16 +38,53 @@ import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 
-import org.slf4j.Logger;
+import java.io.IOException;
+import java.nio.file.Path;
+
+import javax.annotation.Nonnull;
 
 public class TFCFForgeEventHandler
 {
     public static void init()
     {
         final IEventBus bus = MinecraftForge.EVENT_BUS;
+        IEventBus busMod = FMLJavaModLoadingContext.get().getModEventBus();
 
         bus.addListener(TFCFForgeEventHandler::onPlayerRightClickBlock);
-        //bus.addListener(EventPriority.HIGHEST, TFCFForgeEventHandler::breakBlock);
+        busMod.addListener(TFCFForgeEventHandler::onPackFinder);
+    }
+
+    public static void onPackFinder(AddPackFindersEvent event)
+    {
+        try
+        {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES)
+            {
+                var modFile = ModList.get().getModFileById(TFCFlorae.MOD_ID).getFile();
+                var resourcePath = modFile.getFilePath();
+                var pack = new PathResourcePack(modFile.getFileName() + ":overload", resourcePath)
+                {
+                    @Nonnull
+                    @Override
+                    protected Path resolve(@Nonnull String... paths)
+                    {
+                        return modFile.findResource(paths);
+                    }
+                };
+                var metadata = pack.getMetadataSection(PackMetadataSection.SERIALIZER);
+                if (metadata != null)
+                {
+                    TFCFlorae.LOGGER.info("Injecting Florae override pack");
+                    event.addRepositorySource((consumer, constructor) ->
+                        consumer.accept(constructor.create("builtin/tfcflorae_data", new TextComponent("TFC Florae Resources"), true, () -> pack, metadata, Pack.Position.TOP, PackSource.BUILT_IN, false))
+                    );
+                }
+            }
+        }
+        catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event)
@@ -281,25 +316,4 @@ public class TFCFForgeEventHandler
         }
         event.setCancellationResult(InteractionResult.PASS);
     }
-
-    /*public static void breakBlock(LivingEvent.LivingUpdateEvent event)
-    {
-        if (event.getEntity() != null && event.getEntity().getType() != EntityType.SPIDER && event.getEntity().getType() != EntityType.CAVE_SPIDER && event.getEntity().getType() != EntityType.SILVERFISH && event.getEntity().getType() != EntityType.ENDERMITE)
-        {
-            final LivingEntity entity = event.getEntityLiving();
-            final BlockPos posEntity = entity.blockPosition().below();
-            final Level level = entity.getLevel();
-
-            double mob_speed = entity.getSpeed();
-
-            if (level != null && mob_speed > 0.08f)
-            {
-                if (level.getBlockState(posEntity).getBlock() instanceof EggBlock)
-                {
-                    level.destroyBlock(posEntity, true);
-                    return;
-                }
-            }
-        }
-    }*/
 }

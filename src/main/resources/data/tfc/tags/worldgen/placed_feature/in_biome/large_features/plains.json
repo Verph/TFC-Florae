@@ -2,9 +2,9 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfcflorae:fruit_forest",
+	  "#tfc:feature/bamboo_forest",
     "tfcflorae:charred_forest",
-	"tfcflorae:jungle",
-	"#tfc:feature/bamboo_forest"
+    "tfcflorae:fruit_forest",
+	  "tfcflorae:jungle"
   ]
 }

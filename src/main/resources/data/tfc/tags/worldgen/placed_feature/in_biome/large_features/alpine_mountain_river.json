@@ -8,6 +8,11 @@
     "tfc:cave_vegetation",
     "tfc:random_empty_hot_spring",
     "tfc:random_active_hot_spring",
-	"tfcflorae:jungle"
+    "#tfc:feature/geode/diamond",
+    "#tfc:feature/glaciers",
+    "tfc:small_rock_columns",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle"
   ]
 }

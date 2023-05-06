@@ -23,6 +23,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.FireBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.dries007.tfc.common.blockentities.TFCBlockEntity;
@@ -32,13 +33,13 @@ import tfcflorae.common.entities.Silkmoth;
 
 public class SilkmothNestBlockEntity extends TFCBlockEntity
 {
-    public static final String TAG_TARGET_POS = "TargetPos";
-    public static final String MIN_OCCUPATION_TICKS = "MinOccupationTicks";
-    public static final String ENTITY_DATA = "EntityData";
-    public static final String TICKS_IN_NEST = "TicksInNest";
-    public static final String HAS_NECTAR = "HasNectar";
-    public static final String MOTHS = "Moths";
-    public static final List<String> IGNORED_MOTH_TAGS = Arrays.asList("Air", "ArmorDropChances", "ArmorItems", "Brain", "CanPickUpLoot", "DeathTime", "FallDistance", "FallFlying", "Fire", "HandDropChances", "HandItems", "HurtByTimestamp", "HurtTime", "LeftHanded", "Motion", "NoGravity", "OnGround", "PortalCooldown", "Pos", "Rotation", "CannotEnterHiveTicks", "TicksSincePollination", "CropsGrownSincePollination", "HivePos", "Passengers", "Leash", "UUID");
+    public static final String TAG_TARGET_POS = "target_pos";
+    public static final String MIN_OCCUPATION_TICKS = "min_occupation_ticks";
+    public static final String ENTITY_DATA = "entity_data";
+    public static final String TICKS_IN_NEST = "ticks_in_nest";
+    public static final String HAS_NECTAR = "has_nectar";
+    public static final String MOTHS = "moths";
+    public static final List<String> IGNORED_MOTH_TAGS = Arrays.asList("air", "armor_drop_chances", "armor_items", "brain", "can_pick_up_loot", "death_time", "fall_distance", "fall_flying", "fire", "hand_drop_chances", "hand_items", "hurt_by_timestamp", "hurt_time", "left_handed", "motion", "no_gravity", "on_ground", "portal_cooldown", "pos", "rotation", "cannot_enter_nest_ticks", "ticks_since_pollination", "crops_grown_since_pollination", "nest_pos", "passengers", "leash", "uuid");
     public static final int MAX_OCCUPANTS = 3;
     public static final int MIN_TICKS_BEFORE_REENTERING_NEST = 400;
     public static final int MIN_OCCUPATION_TICKS_NECTAR = 2400;
@@ -49,6 +50,12 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
     public SilkmothNestBlockEntity(BlockPos pos, BlockState state)
     {
         super(TFCFBlockEntities.SILKMOTH_NEST.get(), pos, state);
+    }
+
+    @Override
+    public BlockEntityType<?> getType()
+    {
+        return TFCFBlockEntities.SILKMOTH_NEST.get();
     }
 
     @Override
@@ -64,9 +71,9 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
             this.stored.add(SilkmothNestBlockEntity$mothdata);
         }
         this.savedTargetPos = null;
-        if (tag.contains("TargetPos"))
+        if (tag.contains(TAG_TARGET_POS))
         {
-            this.savedTargetPos = NbtUtils.readBlockPos(tag.getCompound("TargetPos"));
+            this.savedTargetPos = NbtUtils.readBlockPos(tag.getCompound(TAG_TARGET_POS));
         }
     }
 
@@ -77,7 +84,7 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
         tag.put(MOTHS, this.writeMoths());
         if (this.hasSavedTargetPos())
         {
-            tag.put("TargetPos", NbtUtils.writeBlockPos(this.savedTargetPos));
+            tag.put(TAG_TARGET_POS, NbtUtils.writeBlockPos(this.savedTargetPos));
         }
     }
 
@@ -106,7 +113,9 @@ public class SilkmothNestBlockEntity extends TFCBlockEntity
             double d1 = (double)pos.getY();
             double d2 = (double)pos.getZ() + 0.5D;
             level.playSound((Player)null, d0, d1, d2, SoundEvents.BEEHIVE_WORK, SoundSource.BLOCKS, 1.0F, 1.0F);
+            blockEntity.markForSync();
         }
+        blockEntity.markForSync();
     }
 
     static void removeIgnoredMothTags(CompoundTag tag)

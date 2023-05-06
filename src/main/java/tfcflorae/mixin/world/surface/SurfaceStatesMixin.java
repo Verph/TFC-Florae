@@ -23,7 +23,7 @@ public final class SurfaceStatesMixin
 
     @Shadow @Mutable @Final
     public static final SurfaceState WATER = context ->
-        THERMAL_CANYONS == TFCBiomes.getExtensionOrThrow(context.level(), context.biome()) ? TFCFluids.SPRING_WATER.createSourceBlock() : 
+        THERMAL_CANYONS == TFCBiomes.getExtension(context.level(), context.biome()) ? TFCFluids.SPRING_WATER.createSourceBlock() : 
         context.salty() ? TFCFluids.SALT_WATER.createSourceBlock() : 
         Fluids.WATER.defaultFluidState().createLegacyBlock();
 }

@@ -26,7 +26,7 @@ import org.jetbrains.annotations.VisibleForTesting;
 
 public abstract class CoastalCliffs
 {
-    public static final float CLIFF_WIDTH = 0.25f;
+    public static final float CLIFF_WIDTH = 0.35f;
 
     private static final int[] DIRECTIONS = new int[] {-1, -1, -1, 0, -1, 1, 0, -1, 0, 1, 1, -1, 1, 0, 1, 1};
 

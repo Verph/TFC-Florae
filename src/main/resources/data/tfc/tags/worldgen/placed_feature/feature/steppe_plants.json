@@ -47,12 +47,14 @@
     "tfc:plant/yucca_patch",
     "#tfc:feature/berry_bushes",
     "tfc:plant/marram_grass_patch",
+    "tfc:plant/marram_grass_sand_patch",
     "tfc:plant/prairie_junegrass_patch",
     "tfc:plant/wheatgrass_patch",
     "tfc:plant/bunch_grass_patch",
     "tfc:plant/sawgrass_patch",
     "tfc:plant/common_reeds_patch",
     "tfc:plant/dune_grass_patch",
+    "tfc:plant/dune_grass_sand_patch",
     "tfc:plant/elephant_grass_patch",
     "tfc:plant/pink_heather_patch",
     "tfc:plant/white_heather_patch",
@@ -70,7 +72,6 @@
     "tfc:plant/ocotillo_patch",
     "tfc:plant/quaqua_patch",
     "tfc:plant/prickly_pear_patch",
-    "tfc:plant/saguaro_cactus_patch",
-    "tfc:plant/flower_cherry"
+    "tfc:plant/saguaro_cactus_patch"
   ]
 }

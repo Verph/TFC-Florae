@@ -63,7 +63,7 @@ public enum TFCFPlant implements RegistryPlant
     DECIDUOUS_SHRUB(BlockType.TALL_GRASS, 0.5F, new int[] {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0}, false, false, true),
     CONIFEROUS_SHRUB(BlockType.TALL_GRASS, 0.5F, true, false, false),
     LARGE_RED_SEALING_WAX_PALM(BlockType.TALL_GRASS, 0.2F, false, false, false),
-    FLOWER_CHERRY(BlockType.SHORT_GRASS, 1.0F, new int[] {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0}, false, false, false),
+    //FLOWER_CHERRY(BlockType.SHORT_GRASS, 1.0F, new int[] {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0}, false, false, false), TFC has this implemented natively.
     SHIELD_FERN(BlockType.SHORT_GRASS, 0.7F, true, false, false),
     LICORICE_FERN(BlockType.SHORT_GRASS, 0.7F, true, false, false),
 

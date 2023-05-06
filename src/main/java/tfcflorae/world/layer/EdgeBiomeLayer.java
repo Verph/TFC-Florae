@@ -36,6 +36,9 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int SHRUBLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShrublands();
     static final int MOORLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMoorlands();
     static final int MISTY_PEAKS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMistyPeaks();
+    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
+    static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
+    static final int PLATEAU_CLIFFS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPlateauCliffs();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -122,7 +125,7 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
         }
         else if (center == MESA_PLATEAU)
         {
-            if (matcher.test(i -> i != MESA_PLATEAU))
+            if (matcher.test(i -> i != MESA_PLATEAU && !isLow(i)))
             {
                 return ROLLING_HIGHLANDS;
             }
@@ -187,7 +190,7 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
         }
         else if (center == DEEP_OCEAN_TRENCH)
         {
-            if (matcher.test(i -> !TFCLayers.isOcean(i)))
+            if (matcher.test(i -> !isOcean(i)))
             {
                 return OCEAN;
             }

@@ -2,10 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+	  "#tfc:feature/geode/ruby",
+	  "#tfc:feature/geode/topaz",
     "#tfc:feature/glaciers",
-    "tfcflorae:fruit_forest",
     "tfcflorae:charred_forest",
-    "tfc:caverns/lava",
-	"tfcflorae:jungle"
+    "tfcflorae:fruit_forest",
+	  "tfcflorae:jungle"
   ]
 }

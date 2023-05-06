@@ -11,7 +11,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.FarmlandBlockEntity;
 import net.dries007.tfc.common.blockentities.LoomBlockEntity;
 import net.dries007.tfc.common.blockentities.SluiceBlockEntity;
@@ -36,7 +35,7 @@ public class TFCFBlockEntities
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 
-    public static final RegistryObject<BlockEntityType<BerryBushBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
+    public static final RegistryObject<BlockEntityType<FruitTreeBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS_SEASONAL_LEAVES.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_LOGS.values().stream(),
             TFCFBlocks.WOODS_SEASONAL_WOOD.values().stream(),

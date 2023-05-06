@@ -119,14 +119,14 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:animal/product/silk_moth_egg",
+              "name": "tfcflorae:animal/product/silk_moth_hatchery",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.01
+                  "chance": 0.05
                 }
               ]
             }

@@ -14,6 +14,7 @@ public enum ExtraDunesShoreLayer implements AdjacentTransformLayer
     INSTANCE;
 
     public static TFCLayers staticBiomes = new TFCLayers();
+
     static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
     static final int COASTAL_CLIFFS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticCoastalCliffs();
     static final int GRAVEL_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGravelShores();
@@ -22,7 +23,7 @@ public enum ExtraDunesShoreLayer implements AdjacentTransformLayer
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
     {
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
-        if (!TFCLayers.isOcean(center) && (center == SHORE_DUNES || center == COASTAL_CLIFFS))
+        if (!TFCLayers.isOcean(center) && (center == SHORE_DUNES))// || center == COASTAL_CLIFFS))
         {
             if (matcher.test(TFCLayers::isOcean))
             {

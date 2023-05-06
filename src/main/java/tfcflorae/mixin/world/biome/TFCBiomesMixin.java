@@ -86,7 +86,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     @Unique @Final
     private static final BiomeExtension BADLANDS_PLATEAU = register("badlands_plateau", builder().heightmap(seed -> TFCFBiomeNoise.mountainsBadlands(seed, 0, 20)).surface(SubSoilSurfaceBuilder.create(TFCFBadlandsSurfaceBuilder.INVERTED)).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable());
     @Unique @Final
-    private static final BiomeExtension CANYON_RIVER = register("canyon_river", builder().heightmap(seed -> BiomeNoise.canyons(seed, 21, 32)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(BiomeNoise::undergroundRivers).group(BiomeExtension.Group.RIVER));
+    private static final BiomeExtension CANYON_RIVER = register("canyon_river", builder().heightmap(seed -> TFCFBiomeNoise.badlands(seed, 21, 32)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(BiomeNoise::undergroundRivers).group(BiomeExtension.Group.RIVER));
     @Unique @Final
     private static final BiomeExtension ALPINE_MOUNTAIN_RIVER = register("alpine_mountain_river", builder().heightmap(seed -> BiomeNoise.mountains(seed, 72, 100)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(BiomeNoise::undergroundRivers).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).group(BiomeExtension.Group.RIVER));
     @Unique @Final
@@ -98,7 +98,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     @Unique @Final
     private static final BiomeExtension CALDERAS = register("calderas", builder().heightmap(seed -> TFCFBiomeNoise.badlands(seed, 21, 32)).surface(SubSoilSurfaceBuilder.create(LowMountainSurfaceBuilder.INSTANCE)).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).group(BiomeExtension.Group.LAKE).aquiferHeightOffset(24).volcanoes(5, -12, 20, 10));
     @Unique @Final
-    private static final BiomeExtension GRAVEL_SHORE = register("gravel_shore", builder().heightmap(BiomeNoise::shore).surface(GravelShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).carving(TFCFBiomeNoise::undergroundCavesUpper).group(BiomeExtension.Group.OCEAN).salty());
+    private static final BiomeExtension GRAVEL_SHORE = register("gravel_shore", builder().heightmap(BiomeNoise::shore).surface(GravelShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).carving(TFCFBiomeNoise::undergroundCavesUpper).group(BiomeExtension.Group.OCEAN).salty().spawnable());
     @Unique @Final
     private static final BiomeExtension THERMAL_CANYONS = register("thermal_canyons", builder().heightmap(seed -> BiomeNoise.canyons(seed, -10, 18)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable().volcanoes(2, -12, 20, 10).aquiferHeightOffset(-16));
     @Unique @Final
@@ -113,6 +113,8 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     @Unique @Final
     private static final BiomeExtension CHASMS = register("chasms", builder().noise(TFCFBiomeNoise::chasmSampler).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).aquiferHeight(h -> TFCChunkGenerator.SEA_LEVEL_Y - 16).group(BiomeExtension.Group.RIVER).spawnable());
     @Unique @Final
+    private static final BiomeExtension PLATEAU_CLIFFS = register("plateau_cliffs", builder().noise(TFCFBiomeNoise::plateauCliffsSampler).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).aquiferHeight(h -> TFCChunkGenerator.SEA_LEVEL_Y - 16).group(BiomeExtension.Group.RIVER).spawnable());
+    @Unique @Final
     private static final BiomeExtension STEPPES = register("steppes", builder().heightmap(seed -> BiomeNoise.hills(seed, 2, 5)).surface(SubSoilSurfaceBuilder.create(GrassSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE)))).spawnable());
     @Unique @Final
     private static final BiomeExtension SHRUBLANDS = register("shrublands", builder().heightmap(seed -> BiomeNoise.canyons(seed, 10, 38)).surface(SubSoilSurfaceBuilder.create(GrassSurfaceBuilder.create(ForestSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE)))).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).spawnable());
@@ -121,11 +123,15 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     @Unique @Final // Zhangjiajie National Forest Park biome
     private static final BiomeExtension MISTY_PEAKS = register("misty_peaks", builder().heightmap(seed -> TFCFBiomeNoise.mistyPeaks(seed, -5, 35)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable());
     @Unique @Final
-    private static final BiomeExtension COASTAL_CLIFFS = register("coastal_cliffs", builder().heightmap(seed -> TFCFBiomeNoise.coastalCliffs(seed, 0, 10)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable());
+    private static final BiomeExtension COASTAL_CLIFFS = register("coastal_cliffs", builder().noise(TFCFBiomeNoise::coastalCliffsSampler).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE)))).spawnable());
     @Unique @Final // Beach dunes
-    private static final BiomeExtension SHORE_DUNES = register("shore_dunes", builder().heightmap(seed -> TFCFBiomeNoise.dunes(seed, 2, 14)).surface(SubSoilSurfaceBuilder.create(DuneShoreSurfaceBuilder.create(ShoreSurfaceBuilder.INSTANCE))).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty().spawnable()); // Standard shore / beach. Material will vary based on location
+    private static final BiomeExtension SHORE_DUNES = register("shore_dunes", builder().heightmap(seed -> TFCFBiomeNoise.dunes(seed, 3, 18)).surface(SubSoilSurfaceBuilder.create(DuneShoreSurfaceBuilder.create(ShoreSurfaceBuilder.INSTANCE))).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty().spawnable());
     @Unique @Final // Zhangjiajie National Forest Park biome
     private static final BiomeExtension VINICUNCA_MOUNTAINS = register("vinicunca_mountains", builder().heightmap(seed -> TFCFBiomeNoise.rainbowMountains(seed, 30, 50)).surface(SubSoilSurfaceBuilder.create(RainbowMountainsSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(RockyDirtSurfaceBuilder.create((MountainSurfaceBuilder.INSTANCE))))))).carving(TFCFBiomeNoise::undergroundCavesUpper).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable());
+    @Unique @Final
+    private static final BiomeExtension NEAR_SHORE = register("near_shore", builder().heightmap(seed -> TFCFBiomeNoise.dunes(seed, -8, 2)).surface(ShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty());
+    @Unique @Final
+    private static final BiomeExtension LAKE_SHORE = register("lake_shore", builder().heightmap(seed -> TFCFBiomeNoise.lakeShore(seed, -8, 2)).surface(LakeShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.LAKE).spawnable());
 
     // Mid biomes
     @Shadow @Mutable @Final
@@ -153,7 +159,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
 
     // Shores
     @Shadow @Mutable @Final
-    public static final BiomeExtension SHORE = register("shore", builder().heightmap(BiomeNoise::shore).surface(ShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty()); // Standard shore / beach. Material will vary based on location
+    public static final BiomeExtension SHORE = register("shore", builder().heightmap(BiomeNoise::shore).surface(ShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty().spawnable()); // Standard shore / beach. Material will vary based on location
 
     // Water
     @Shadow @Mutable @Final
@@ -387,6 +393,12 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     }
 
     @Unique @Override
+    public BiomeExtension getStaticPlateauCliffs()
+    {
+        return PLATEAU_CLIFFS;
+    }
+
+    @Unique @Override
     public BiomeExtension getStaticSteppes()
     {
         return STEPPES;
@@ -426,5 +438,17 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     public BiomeExtension getStaticVinicuncaMountains()
     {
         return VINICUNCA_MOUNTAINS;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticNearShore()
+    {
+        return NEAR_SHORE;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticLakeShore()
+    {
+        return LAKE_SHORE;
     }
 }

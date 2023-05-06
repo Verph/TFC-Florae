@@ -5,6 +5,10 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"tfcflorae:jungle"
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle",
+    "tfcflorae:salt_water_forest",
+    "tfc:in_biome/salt_water_roots"
   ]
 }

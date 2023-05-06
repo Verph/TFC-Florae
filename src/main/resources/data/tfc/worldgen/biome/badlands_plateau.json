@@ -66,14 +66,6 @@
       "tfc:in_biome/large_features/badlands_plateau"
     ],
     [
-	  "tfc:large_dripstone",
-	  "tfc:dripstone_cluster",
-	  "tfc:pointed_dripstone",
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest",
-	  "tfc:fossil"
-    ],
-    [
       "tfc:in_biome/surface_decoration/badlands_plateau"
     ],
     [
@@ -81,6 +73,9 @@
     ],
     [
       "tfc:in_biome/webbed_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

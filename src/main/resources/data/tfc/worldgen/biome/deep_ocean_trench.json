@@ -74,18 +74,10 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:lava_hot_spring_ocean_trench",
-      "tfc:small_rock_columns_deep",
-      "tfc:caverns/crystals/opal/crystal_geode_start",
-      "tfc:caverns/crystals/opal/crystal_growth",
-      "tfc:caverns/crystals/opal/buds/crystal_up",
-      "tfc:caverns/crystals/opal/buds/crystal_down",
-      "tfc:caverns/crystals/opal/buds/crystal_north",
-      "tfc:caverns/crystals/opal/buds/crystal_south",
-      "tfc:caverns/crystals/opal/buds/crystal_east",
-      "tfc:caverns/crystals/opal/buds/crystal_west",
-      "tfc:caverns/crystals/opal/mega_geode",
-      "tfc:caverns/crystals/opal/mega_geode_extra"
+      "tfc:in_biome/thermal_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

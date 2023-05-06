@@ -67,18 +67,6 @@
     [
       "tfc:in_biome/large_features/alpine_highlands"
     ],
-	[
-      "tfc:glacier_packed",
-      "tfc:glacier_blue",
-      "tfc:glacier_packed_rare",
-      "tfc:glacier_blue_rare",
-	  "tfc:small_rock_columns",
-	  "tfc:large_dripstone",
-	  "tfc:dripstone_cluster",
-	  "tfc:pointed_dripstone",
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest"
-	],
     [
       "tfc:in_biome/surface_decoration/alpine_highlands"
     ],
@@ -86,24 +74,16 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:caverns/crystals/amethyst/crystal_geode_start",
-      "tfc:caverns/crystals/amethyst/crystal_growth",
-      "tfc:caverns/crystals/amethyst/buds/crystal_up",
-      "tfc:caverns/crystals/amethyst/buds/crystal_down",
-      "tfc:caverns/crystals/amethyst/buds/crystal_north",
-      "tfc:caverns/crystals/amethyst/buds/crystal_south",
-      "tfc:caverns/crystals/amethyst/buds/crystal_east",
-      "tfc:caverns/crystals/amethyst/buds/crystal_west",
-      "tfc:caverns/crystals/amethyst/mega_geode",
-      "tfc:caverns/crystals/amethyst/mega_geode_extra"
-    ],
-    [
-      "tfc:caverns/thermal/hot_spring_deep",
-      "tfc:caverns/thermal/floor",
-	  "tfc:caverns/thermal/lava"
-    ],
-    [
       "tfc:in_biome/webbed_caves"
+    ],
+    [
+      "tfc:in_biome/thermal_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
+    ],
+    [
+      "tfc:in_biome/gypsum_spikes"
     ]
   ],
   "starts": [],

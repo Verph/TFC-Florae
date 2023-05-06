@@ -48,6 +48,8 @@ public interface TFCBiomesMixinInterface
 
     BiomeExtension getStaticChasms();
 
+    BiomeExtension getStaticPlateauCliffs();
+
     BiomeExtension getStaticSteppes();
 
     BiomeExtension getStaticShrublands();
@@ -61,4 +63,8 @@ public interface TFCBiomesMixinInterface
     BiomeExtension getStaticShoreDunes();
 
     BiomeExtension getStaticVinicuncaMountains();
+
+    BiomeExtension getStaticNearShore();
+
+    BiomeExtension getStaticLakeShore();
 }

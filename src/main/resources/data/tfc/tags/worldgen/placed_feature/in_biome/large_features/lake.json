@@ -2,8 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfcflorae:fruit_forest",
-	"tfcflorae:redwood_forest",
-	"#tfc:feature/redwood_forest"
+	  "#tfc:feature/redwood_forest",
+    "tfcflorae:fruit_forest"
   ]
 }

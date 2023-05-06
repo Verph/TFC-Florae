@@ -11,7 +11,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -52,13 +51,14 @@ import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.ITallPlant;
-import net.dries007.tfc.util.calendar.ICalendar;
 
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity.*;
 import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
+import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
@@ -222,33 +222,35 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        if (level.isAreaLoaded(pos, 4) && level.getBlockEntity(pos) instanceof SilkmothNestBlockEntity blockEntity)
+        if (level.getBlockEntity(pos) instanceof SilkmothNestBlockEntity blockEntity)
         {
             if (blockEntity.getOccupantCount() > 0)
             {
-                final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
                 if (state.getValue(SILK_WORM_EGGS) >= MIN_SILK_WORM_EGGS && state.getValue(SILK_WORM_EGGS) < MAX_SILK_WORM_EGGS)
                 {
-                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST - 200) == 0)
+                    if (random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST - 200) == 0)
                     {
                         level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) + 1));
+                        blockEntity.markForSync();
                     }
                 }
                 if (state.getValue(SILK_LEVEL) >= MIN_SILK_LEVELS && state.getValue(MULBERRY_LEAVES) > MIN_MULBERRY_LEAVES && state.getValue(MULBERRY_LEAVES) <= MAX_MULBERRY_LEAVES)
                 {
-                    if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(blockEntity.getOccupantCount() * (state.getValue(SILK_LEVEL) + 1)) > 2)
+                    if (random.nextInt(blockEntity.getOccupantCount() * (state.getValue(SILK_LEVEL) + 1)) > 2)
                     {
                         level.setBlockAndUpdate(pos, state.setValue(MULBERRY_LEAVES, state.getValue(MULBERRY_LEAVES) - 1));
+                        blockEntity.markForSync();
                     }
                 }
                 if (state.getValue(SILK_WORM_EGGS) > MIN_SILK_WORM_EGGS)
                 {
-                    if (blockEntity.getOccupantCount() >= SilkmothNestBlockEntity.MAX_OCCUPANTS)
+                    if (blockEntity.getOccupantCount() <= SilkmothNestBlockEntity.MAX_OCCUPANTS)
                     {
-                        if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0)
+                        if (random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0)
                         {
-                            blockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
+                            blockEntity.addOccupantWithPresetTicks(TFCFEntities.SILKMOTH.get().create(level), true, SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST);
                             level.setBlockAndUpdate(pos, state.setValue(SILK_WORM_EGGS, state.getValue(SILK_WORM_EGGS) - 1));
+                            blockEntity.markForSync();
                         }
                     }
                     else
@@ -274,8 +276,18 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
                             }
                             level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
                             level.addFreshEntity(entity);
+                            blockEntity.markForSync();
                         }
                     }
+                }
+            }
+            if (blockEntity.getOccupantCount() < SilkmothNestBlockEntity.MAX_OCCUPANTS && random.nextInt(SilkmothNestBlockEntity.MIN_TICKS_BEFORE_REENTERING_NEST) == 0)
+            {
+                BlockPos checkPos = pos.offset(random.nextInt(8) - 8, random.nextInt(8) - 8, random.nextInt(8) - 8);
+                if (level.getBlockState(checkPos).getBlock() == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get())
+                {
+                    blockEntity.addOccupantWithPresetTicks(TFCFEntities.SILKMOTH.get().create(level), true, SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR);
+                    blockEntity.markForSync();
                 }
             }
         }
@@ -331,8 +343,9 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
             BlockEntity blockEntity = level.getBlockEntity(pos);
             if (blockEntity instanceof SilkmothNestBlockEntity silkmothBlockEntity && silkmothBlockEntity.stored.size() < 3) 
             {
-                silkmothBlockEntity.addOccupant(TFCFEntities.SILKMOTH.get().create(level), true);
+                silkmothBlockEntity.addOccupantWithPresetTicks(TFCFEntities.SILKMOTH.get().create(level), true, SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR);
                 stack.shrink(1);
+                silkmothBlockEntity.markForSync();
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }

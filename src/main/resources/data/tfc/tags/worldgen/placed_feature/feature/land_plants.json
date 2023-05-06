@@ -16,6 +16,7 @@
     "tfc:plant/goosegrass_patch",
     "tfc:plant/halfa_grass_patch",
     "tfc:plant/marram_grass_patch",
+    "tfc:plant/marram_grass_sand_patch",
     "tfc:plant/prairie_junegrass_patch",
     "tfc:plant/wheatgrass_patch",
     "tfc:plant/bunch_grass_patch",
@@ -43,6 +44,7 @@
     "tfc:plant/daffodil_patch",
     "tfc:plant/devils_tongue_patch",
     "tfc:plant/dune_grass_patch",
+    "tfc:plant/dune_grass_sand_patch",
     "tfc:plant/egyptian_autumn_crocus_patch",
     "tfc:plant/elephant_grass_patch",
     "tfc:plant/european_bedstraw_patch",
@@ -157,7 +159,6 @@
     "tfc:plant/sea_anemone_patch",
     "tfc:plant/seagrass_patch",
     "tfc:plant/seaweed_patch",
-    "tfc:plant/flower_cherry_patch",
     "tfc:plant/shield_fern_patch",
     "tfc:plant/licorice_fern_ground_patch"
   ]

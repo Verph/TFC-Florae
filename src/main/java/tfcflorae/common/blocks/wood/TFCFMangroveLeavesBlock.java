@@ -60,7 +60,9 @@ import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
+import net.dries007.tfc.util.registry.RegistryWood;
 
+import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 
 public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock, IForgeBlockExtension, EntityBlockExtension, IFluidLoggable
@@ -74,12 +76,12 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
-    public final TFCFWood wood;
+    public final RegistryWood wood;
 
-    public static TFCFMangroveLeavesBlock create(ExtendedProperties properties, TFCFWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
+    public static TFCFMangroveLeavesBlock create(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
     {
         final IntegerProperty distanceProperty = getDistanceProperty(maxDecayDistance);
-        return new TFCFMangroveLeavesBlock(properties, wood, productItem, lifecycle, maxDecayDistance, climateRange)
+        return new TFCFMangroveLeavesBlock(properties, wood, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig)
         {
             @Override
             protected IntegerProperty getDistanceProperty()
@@ -104,10 +106,12 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
     private final Lifecycle[] lifecycle;
+    @Nullable private final Supplier<? extends Block> fallenLeaves;
+    @Nullable private final Supplier<? extends Block> fallenTwig;
 
-    public TFCFMangroveLeavesBlock(ExtendedProperties properties, TFCFWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
+    public TFCFMangroveLeavesBlock(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
     {
-        super(properties, maxDecayDistance);
+        super(properties, maxDecayDistance, fallenLeaves, fallenTwig);
 
         Preconditions.checkArgument(lifecycle.length == 12, "Lifecycle length must be 12");
 
@@ -117,6 +121,8 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
         this.climateRange = climateRange;
         this.lifecycle = lifecycle;
         this.productItem = productItem;
+        this.fallenLeaves = fallenLeaves;
+        this.fallenTwig = fallenTwig;
 
         registerDefaultState(getStateDefinition().any().setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
@@ -219,18 +225,19 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
         }
 
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-
-        if (!state.getValue(PERSISTENT) && level.isAreaLoaded(pos, 3))
+        if (level.getGameTime() % Config.COMMON.fruitingLeavesUpdateChance.get() == 0 && level.isAreaLoaded(pos, 3))
         {
-            if (currentLifecycle != expectedLifecycle /*&& level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves*/)
+            Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+            Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+            if (!state.getValue(PERSISTENT))
             {
-                //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-                //if (leaves.getTicksSinceBushUpdate() > 24000 + random.nextInt(ICalendar.TICKS_IN_DAY))
-                if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
                 {
-                    onUpdate(level, pos, state);
+                    if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                    {
+                        onUpdate(level, pos, state);
+                    }
                 }
             }
         }

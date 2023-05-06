@@ -74,13 +74,11 @@ public final class TFCFBiomeNoise
 
     public static Noise2D dunes(long seed, int minHeight, int maxHeight)
     {
-        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.05f).scaled(0f, 200f);
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.05f).scaled(-100f, 100f);
         return new OpenSimplex2D(seed + 1)
             .octaves(4)
-            .spread(0.03f)
+            .spread(0.06f)
             .warped(warp)
-            .ridged()
-            .terraces(15)
             .map(x -> x > 0.4 ? x - 0.8f : -x)
             .scaled(-0.4f, 1.2f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
     }
@@ -187,7 +185,7 @@ public final class TFCFBiomeNoise
         final Noise2D cliffHeightNoiseUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(120 - 20, 140 + 20);
 
         return (x, z) -> {
-            final Random generator = new Random((int)(x + z));
+            final Random generator = new Random((long) baseNoise.noise(x, z));
             final int extra = (int) generator.nextGaussian() * 4;
             float height = baseNoise.noise(x, z);
             if (height > 75 + extra)
@@ -250,7 +248,7 @@ public final class TFCFBiomeNoise
         final Noise2D cliffHeightNoiseHighUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(110 - 20, 160 + 20);
 
         return (x, z) -> {
-            final Random generator = new Random((int)(x + z));
+            final Random generator = new Random((long) warp.noise(x, z));
             final int extra = (int) generator.nextGaussian() * 4;
             float height = baseNoise.noise(x, z);
             if (height > 70 + extra)
@@ -357,6 +355,11 @@ public final class TFCFBiomeNoise
     public static Noise2D riverShore(long seed)
     {
         return new OpenSimplex2D(seed).octaves(6).spread(0.15f).scaled(SEA_LEVEL_Y - 1.5f, SEA_LEVEL_Y + 1.3f);
+    }
+
+    public static Noise2D lakeShore(long seed, int minHeight, int maxHeight)
+    {
+        return new OpenSimplex2D(seed).octaves(4).spread(0.17f).scaled(SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
     }
 
     public static Noise2D lake(long seed, int minHeight, int maxHeight)
@@ -530,10 +533,10 @@ public final class TFCFBiomeNoise
         };
     }
 
-    public static BiomeNoiseSampler coastalCliffsSampler(long seed)
+    public static BiomeNoiseSampler plateauCliffsSampler(long seed)
     {
-        Noise2D riverBankHeight = new OpenSimplex2D(seed).octaves(4).spread(0.2f).scaled(SEA_LEVEL_Y - 1, SEA_LEVEL_Y + 32);
-        Noise3D cliffNoise = new OpenSimplex3D(seed).octaves(2).spread(0.1f).scaled(0, 5);
+        Noise2D riverBankHeight = new OpenSimplex2D(seed).octaves(4).spread(0.2f).scaled(SEA_LEVEL_Y - 1, SEA_LEVEL_Y + 11);
+        Noise3D cliffNoise = new OpenSimplex3D(seed).octaves(2).spread(0.1f).scaled(0, 3);
 
         return new BiomeNoiseSampler()
         {
@@ -557,16 +560,47 @@ public final class TFCFBiomeNoise
             @Override
             public double noise(int y)
             {
-                /*if (y > SEA_LEVEL_Y + 2)
+                if (y > SEA_LEVEL_Y + 40 + (cliffNoise.noise(x, y, z) / 2))
                 {
-                    return -(cliffNoise.noise(x, y, z));
+                    return -((Math.pow(1.08D, y) - (SEA_LEVEL_Y * SEA_LEVEL_Y)) / -2800) * (cliffNoise.noise(x, y, z) / 2);
                 }
-                else if (y > SEA_LEVEL_Y - 6)
+                else if (y > SEA_LEVEL_Y + 8)
                 {
-                    double easing = (y - SEA_LEVEL_Y + 8) / 8d;
-                    return -(easing * cliffNoise.noise(x, y, z));
-                }*/
+                    return ((Math.sin(y * 8) / 15) + Math.pow(1.02D, y - SEA_LEVEL_Y) - 0.4D) * (cliffNoise.noise(x, y, z) / 2);
+                }
                 return SOLID;
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler coastalCliffsSampler(long seed)
+    {
+        Noise2D riverHeight = new OpenSimplex2D(seed).octaves(4).spread(0.2f).scaled(SEA_LEVEL_Y - 20, SEA_LEVEL_Y + 100);
+        Noise3D cliffNoise = new OpenSimplex3D(seed).octaves(2).spread(0.1f).scaled(0, 5);
+
+        return new BiomeNoiseSampler()
+        {
+            private double height;
+            private int x, z;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                height = riverHeight.noise(x, z);
+                this.x = x;
+                this.z = z;
+            }
+
+            @Override
+            public double height()
+            {
+                return height;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                return SOLID * cliffNoise.noise(x, y, z);
             }
         };
     }

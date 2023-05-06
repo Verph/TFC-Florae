@@ -4,9 +4,9 @@
   "values": [
     "tfc:plant/dry_phragmite",
     "#tfc:feature/land_plants",
-	"tfc:plant/morning_glory_cave_patch",
-	"tfc:plant/spore_blossom",
-	"tfc:plant/spanish_moss",
-	"tfc:plant/ivy"
+    "tfc:plant/morning_glory_cave_patch",
+    "tfc:plant/spore_blossom",
+    "tfc:plant/spanish_moss",
+    "tfc:plant/ivy"
   ]
 }

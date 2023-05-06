@@ -74,31 +74,10 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:caverns/crystals/topaz/crystal_geode_start",
-      "tfc:caverns/crystals/topaz/crystal_growth",
-      "tfc:caverns/crystals/topaz/buds/crystal_up",
-      "tfc:caverns/crystals/topaz/buds/crystal_down",
-      "tfc:caverns/crystals/topaz/buds/crystal_north",
-      "tfc:caverns/crystals/topaz/buds/crystal_south",
-      "tfc:caverns/crystals/topaz/buds/crystal_east",
-      "tfc:caverns/crystals/topaz/buds/crystal_west",
-      "tfc:caverns/crystals/topaz/mega_geode",
-      "tfc:caverns/crystals/topaz/mega_geode_extra"
-    ],
-    [
-      "tfc:caverns/crystals/ruby/crystal_geode_start",
-      "tfc:caverns/crystals/ruby/crystal_growth",
-      "tfc:caverns/crystals/ruby/buds/crystal_up",
-      "tfc:caverns/crystals/ruby/buds/crystal_down",
-      "tfc:caverns/crystals/ruby/buds/crystal_north",
-      "tfc:caverns/crystals/ruby/buds/crystal_south",
-      "tfc:caverns/crystals/ruby/buds/crystal_east",
-      "tfc:caverns/crystals/ruby/buds/crystal_west",
-      "tfc:caverns/crystals/ruby/mega_geode",
-      "tfc:caverns/crystals/ruby/mega_geode_extra"
-    ],
-    [
       "tfc:in_biome/thermal_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

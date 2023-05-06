@@ -2,14 +2,27 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfc:thermal_floor_surface",
     "#tfc:feature/boulders",
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "#tfc:feature/volcanoes",
     "tfc:random_active_hot_spring",
-    "tfc:caverns/lava",
-	"tfcflorae:jungle"
+    "tfc:fossil",
+    "tfc:glow_lichen",
+    "tfc:lush_caves_calcite",
+    "tfc:lush_caves_ceiling_vegetation",
+    "tfc:lush_caves_vegetation",
+    "tfc:magma_block",
+    "tfc:small_rock_columns_rare",
+    "tfc:smoke_block",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle",
+    "tfc:thermal_floor_surface",
+    "tfc:caverns/thermal/dripleaf_water",
+    "tfc:caverns/thermal/sea_pickle",
+    "tfc:caverns/thermal/dripleaf_clay",
+    "tfc:caverns/thermal/lichen_clay"
   ]
 }

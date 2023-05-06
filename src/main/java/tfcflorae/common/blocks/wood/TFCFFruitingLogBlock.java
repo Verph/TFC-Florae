@@ -33,7 +33,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
-
+import tfcflorae.Config;
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -119,40 +119,25 @@ public class TFCFFruitingLogBlock extends LogBlock implements IBushBlock, HoeOve
         return InteractionResult.PASS;
     }
 
-    /*@Override
-    @SuppressWarnings("deprecation")
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
-    {
-        super.tick(state, level, pos, random);
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-
-        if (state.getValue(NATURAL) && currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
-        {
-            final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-            if (leaves.getTicksSinceBushUpdate() > delay)
-            {
-                onUpdate(level, pos, state);
-            }
-        }
-    }*/
-
     @Override
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
         super.randomTick(state, level, pos, random);
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
-        if (state.getValue(NATURAL) && level.isAreaLoaded(pos, 3))
+        if (level.getGameTime() % Config.COMMON.fruitingLeavesUpdateChance.get() == 0 && level.isAreaLoaded(pos, 3))
         {
-            if (currentLifecycle != expectedLifecycle && level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+            Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+            Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+            if (state.getValue(NATURAL))
             {
-                //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-                if (leaves.getTicksSinceBushUpdate() > ICalendar.TICKS_IN_DAY + random.nextInt(ICalendar.TICKS_IN_DAY))
+                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
                 {
-                    onUpdate(level, pos, state);
+                    if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                    {
+                        onUpdate(level, pos, state);
+                    }
                 }
             }
         }

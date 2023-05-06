@@ -67,6 +67,12 @@
     ],
     [
       "tfc:in_biome/top_layer_modification"
+    ],
+    [
+      "tfc:in_biome/thermal_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

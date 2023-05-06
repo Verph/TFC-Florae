@@ -66,17 +66,6 @@
       "tfc:in_biome/large_features/puy_mountains"
     ],
     [
-	  "tfc:large_dripstone",
-	  "tfc:dripstone_cluster",
-	  "tfc:pointed_dripstone",
-	  "tfc:glow_lichen",
-	  "tfc:lush_caves_ceiling_vegetation",
-	  "tfc:lush_caves_calcite",
-	  "tfc:lush_caves_vegetation",
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest"
-    ],
-    [
       "tfc:in_biome/surface_decoration/puy_mountains"
     ],
     [
@@ -84,6 +73,9 @@
     ],
     [
       "tfc:in_biome/webbed_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

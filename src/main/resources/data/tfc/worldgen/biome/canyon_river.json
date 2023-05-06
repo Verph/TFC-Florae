@@ -70,31 +70,10 @@
       "tfc:in_biome/surface_decoration/canyon_river"
     ],
     [
-	  "tfc:underwater_magma",
-	  "tfc:large_dripstone",
-	  "tfc:dripstone_cluster",
-	  "tfc:pointed_dripstone",
-	  "tfc:small_rock_columns_rare",
-	  "tfc:smoke_block",
-	  "tfc:magma_block",
-	  "tfc:glow_lichen",
-	  "tfc:lush_caves_ceiling_vegetation",
-	  "tfc:lush_caves_calcite",
-	  "tfc:lush_caves_vegetation",
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest",
-	  "tfc:fossil",
-	  "tfc:caldera_lakes",
-	  "tfc:hot_spring_flat",
-	  "tfc:volcanic_pools",
-	  "tfc:volcano_caldera"
-    ],
-    [
-	  "tfc:plant/morning_glory_cave_patch",
-	  "tfc:plant/spore_blossom"
-    ],
-    [
       "tfc:in_biome/top_layer_modification"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

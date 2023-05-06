@@ -10,6 +10,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.util.valueproviders.FloatProvider;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -76,7 +77,7 @@ public class LargeDripstoneFeature extends Feature<LargeDripstoneConfig>
                   largedripstonefeature$largedripstone.placeBlocks(level, random, largedripstonefeature$windoffsetter, config);
                }
 
-               if (flag1)
+               if (flag1 && pos.atY(column$range.floor() + 1).getY() < level.getHeight(Heightmap.Types.WORLD_SURFACE_WG, pos.getX(), pos.getZ()) - 8)
                {
                   largedripstonefeature$largedripstone1.placeBlocks(level, random, largedripstonefeature$windoffsetter, config);
                }

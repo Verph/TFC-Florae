@@ -67,6 +67,12 @@
     ],
     [
       "tfc:in_biome/webbed_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
+    ],
+    [
+      "tfc:in_biome/gypsum_spikes"
     ]
   ],
   "starts": [],

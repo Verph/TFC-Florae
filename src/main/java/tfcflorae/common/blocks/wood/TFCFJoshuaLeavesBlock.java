@@ -241,6 +241,19 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
         if (state.getValue(PERSISTENT)) return; // persistent leaves don't grow
         IBushBlock.randomTick(this, state, level, pos, random);
         Fluid fluid = level.getFluidState(pos).getType();
+        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+        if (!state.getValue(PERSISTENT) && level.isAreaLoaded(pos, 3))
+        {
+            if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
+            {
+                if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                {
+                    onUpdate(level, pos, state);
+                }
+            }
+        }
 
         BlockPos abovePos = pos.above();
         if (level.isEmptyBlock(abovePos) && abovePos.getY() < level.getMaxBuildHeight() && TFCConfig.SERVER.plantGrowthChance.get() > random.nextDouble())

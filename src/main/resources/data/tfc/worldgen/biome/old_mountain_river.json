@@ -63,16 +63,7 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:caverns/crystals/diamond/crystal_geode_start",
-      "tfc:caverns/crystals/diamond/crystal_growth",
-      "tfc:caverns/crystals/diamond/buds/crystal_up",
-      "tfc:caverns/crystals/diamond/buds/crystal_down",
-      "tfc:caverns/crystals/diamond/buds/crystal_north",
-      "tfc:caverns/crystals/diamond/buds/crystal_south",
-      "tfc:caverns/crystals/diamond/buds/crystal_east",
-      "tfc:caverns/crystals/diamond/buds/crystal_west",
-      "tfc:caverns/crystals/diamond/mega_geode",
-      "tfc:caverns/crystals/diamond/mega_geode_extra"
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

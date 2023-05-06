@@ -7,7 +7,14 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "#tfc:feature/volcanoes",
-    "tfc:caverns/lava",
-	"tfcflorae:jungle"
+    "#tfc:feature/geode/diamond",
+    "#tfc:feature/geode/opal",
+    "#tfc:feature/glaciers",
+    "tfc:large_rock_columns",
+    "tfc:small_rock_columns",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle",
+    "#tfc:feature/gypsum_caverns"
   ]
 }

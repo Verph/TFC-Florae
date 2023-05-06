@@ -2,7 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "#tfc:feature/underground_trees",
     "#tfc:feature/underground_plants",
     "tfc:caverns/jungle/bamboo",
     "tfc:caverns/jungle/blue_bamboo",

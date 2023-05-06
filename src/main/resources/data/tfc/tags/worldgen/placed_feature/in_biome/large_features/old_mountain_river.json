@@ -2,11 +2,11 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+	  "#tfc:feature/geode/diamond",
     "#tfc:feature/glaciers",
-    "tfcflorae:fruit_forest",
+	  "#tfc:feature/redwood_forest",
     "tfcflorae:charred_forest",
-	"tfcflorae:jungle",
-	"tfcflorae:redwood_forest",
-	"#tfc:feature/redwood_forest"
+    "tfcflorae:fruit_forest",
+	  "tfcflorae:jungle"
   ]
 }

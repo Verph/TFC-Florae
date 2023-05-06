@@ -6,7 +6,26 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"tfc:volcano_caldera",
-	"tfcflorae:jungle"
+    "#tfc:feature/volcanoes",
+	"tfc:caldera_lake",
+	"tfc:caldera_lakes",
+	"tfc:fossil",
+	"tfc:glow_lichen",
+	"tfc:hot_spring_flat",
+	"tfc:lush_caves_calcite",
+	"tfc:lush_caves_ceiling_vegetation",
+	"tfc:lush_caves_vegetation",
+	"tfc:magma_block",
+	"tfc:small_rock_columns_rare",
+	"tfc:smoke_block",
+	"tfc:underwater_magma",
+	"tfc:volcanic_pools",
+	"tfcflorae:charred_forest",
+	"tfcflorae:fruit_forest",
+	"tfcflorae:jungle",
+    "tfc:caverns/thermal/dripleaf_water",
+    "tfc:caverns/thermal/sea_pickle",
+    "tfc:caverns/thermal/dripleaf_clay",
+    "tfc:caverns/thermal/lichen_clay"
   ]
 }

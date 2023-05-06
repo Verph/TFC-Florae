@@ -67,29 +67,16 @@
       "tfc:in_biome/large_features/bryce_canyons"
     ],
     [
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest"
-    ],
-    [
       "tfc:in_biome/surface_decoration/bryce_canyons"
     ],
     [
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:caverns/crystals/glowstone/crystal_geode_start",
-      "tfc:caverns/crystals/glowstone/crystal_growth",
-      "tfc:caverns/crystals/glowstone/buds/crystal_up",
-      "tfc:caverns/crystals/glowstone/buds/crystal_down",
-      "tfc:caverns/crystals/glowstone/buds/crystal_north",
-      "tfc:caverns/crystals/glowstone/buds/crystal_south",
-      "tfc:caverns/crystals/glowstone/buds/crystal_east",
-      "tfc:caverns/crystals/glowstone/buds/crystal_west",
-      "tfc:caverns/crystals/glowstone/mega_geode",
-      "tfc:caverns/crystals/glowstone/mega_geode_extra"
+      "tfc:in_biome/webbed_caves"
     ],
     [
-      "tfc:in_biome/webbed_caves"
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

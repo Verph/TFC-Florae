@@ -2,8 +2,9 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+	  "#tfc:feature/geode/ruby",
     "#tfc:feature/glaciers",
-    "tfcflorae:fruit_forest",
-    "tfcflorae:charred_forest"
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest"
   ]
 }

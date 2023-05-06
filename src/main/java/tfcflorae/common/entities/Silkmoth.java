@@ -78,6 +78,7 @@ import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
+import tfcflorae.common.entities.ai.TFCFPoiType;
 import tfcflorae.util.TFCFHelpers;
 
 public class Silkmoth extends Animal implements FlyingAnimal
@@ -85,7 +86,6 @@ public class Silkmoth extends Animal implements FlyingAnimal
     public static final float FLAP_DEGREES_PER_TICK = 120.32113F;
     public static final int TICKS_PER_FLAP = Mth.ceil(1.4959966F);
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(Silkmoth.class, EntityDataSerializers.BYTE);
-    private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(Silkmoth.class, EntityDataSerializers.INT);
     private static final int FLAG_ROLL = 2;
     private static final int FLAG_HAS_STUNG = 4;
     private static final int FLAG_HAS_NECTAR = 8;
@@ -106,8 +106,7 @@ public class Silkmoth extends Animal implements FlyingAnimal
     public static final String TAG_HAS_STUNG = "has_stung";
     public static final String TAG_HAS_NECTAR = "has_nectar";
     public static final String TAG_FLOWER_POS = "target_pos";
-    public static final String TAG_HIVE_POS = "nest_os";
-    private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
+    public static final String TAG_HIVE_POS = "nest_pos";
     @Nullable
     private UUID persistentAngerTarget;
     private float rollAmount;
@@ -447,6 +446,34 @@ public class Silkmoth extends Animal implements FlyingAnimal
     }
 
     @Override
+    public void aiStep()
+    {
+        super.aiStep();
+        if (!this.level.isClientSide)
+        {
+            if (this.stayOutOfNestCountdown > 0)
+            {
+                --this.stayOutOfNestCountdown;
+            }
+
+            if (this.remainingCooldownBeforeLocatingNewNest > 0)
+            {
+                --this.remainingCooldownBeforeLocatingNewNest;
+            }
+
+            if (this.remainingCooldownBeforeLocatingNewTarget > 0)
+            {
+                --this.remainingCooldownBeforeLocatingNewTarget;
+            }
+
+            if (this.tickCount % 20 == 0 && !this.isNestValid())
+            {
+                this.nestPos = null;
+            }
+        }
+    }
+
+    @Override
     protected void customServerAiStep()
     {
         if (this.isInWaterOrBubble())
@@ -610,6 +637,13 @@ public class Silkmoth extends Animal implements FlyingAnimal
         {
             return false;
         }
+    }
+
+    @Override
+    public void tick()
+    {
+        super.tick();
+        this.updateRollAmount();
     }
 
     public class SilkmothGoToNestGoal extends Silkmoth.BaseSilkmothGoal
@@ -1089,8 +1123,8 @@ public class Silkmoth extends Animal implements FlyingAnimal
         {
             BlockPos blockpos = Silkmoth.this.blockPosition();
             PoiManager poimanager = ((ServerLevel)Silkmoth.this.level).getPoiManager();
-            Stream<PoiRecord> stream = poimanager.getInRange((p_28045_) -> {
-                return p_28045_ == PoiType.BEEHIVE || p_28045_ == PoiType.BEE_NEST;
+            Stream<PoiRecord> stream = poimanager.getInRange((poiType) -> {
+                return poiType == TFCFPoiType.MOTH_NEST.get();
             }, blockpos, 20, PoiManager.Occupancy.ANY);
             return stream.map(PoiRecord::getPos).filter(Silkmoth.this::doesNestHaveSpace).sorted(Comparator.comparingDouble((p_148811_) -> {
                 return p_148811_.distSqr(blockpos);

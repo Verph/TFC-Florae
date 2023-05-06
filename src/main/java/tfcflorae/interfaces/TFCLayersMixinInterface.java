@@ -46,6 +46,8 @@ public interface TFCLayersMixinInterface
 
     int getStaticChasms();
 
+    int getStaticPlateauCliffs();
+
     int getStaticSteppes();
 
     int getStaticShrublands();
@@ -59,4 +61,14 @@ public interface TFCLayersMixinInterface
     int getStaticShoreDunes();
 
     int getStaticVinicuncaMountains();
+
+    int getStaticNearShore();
+
+    int getStaticLakeShore();
+
+    int getStaticCalderaMarker();
+
+    int getStaticPuyMountainsMarker();
+
+    int getStaticMesaPlateauMarker();
 }

@@ -3,6 +3,14 @@
   "replace": false,
   "values": [
     "#tfc:feature/ore_deposits",
-    "#tfc:feature/soil_discs"
+    "#tfc:feature/soil_discs",
+    "tfc:thermal/lakes",
+    "tfc:thermal/terra_sand",
+    "tfc:thermal/acid_yellow",
+    "tfc:thermal/acid_orange",
+    "tfc:thermal/acid_white",
+    "tfc:thermal/acid_cyan",
+    "tfc:thermal/acid_black",
+    "tfc:thermal/acid_light_gray"
   ]
 }

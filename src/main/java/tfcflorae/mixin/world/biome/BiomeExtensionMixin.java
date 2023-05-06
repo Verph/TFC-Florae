@@ -27,6 +27,7 @@ public class BiomeExtensionMixin
     @Unique @Final private static TFCBiomes staticBiomes = new TFCBiomes();
     @Unique @Final private static final BiomeExtension RIVERBANK = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticRiverbank();
     @Unique @Final private static final BiomeExtension GRAVEL_SHORE = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticGravelShores();
+    @Unique @Final private static final BiomeExtension LAKE_SHORE = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticLakeShore();
     @Unique @Final private static final BiomeExtension SHORE_DUNES = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
     @Unique @Final private static final BiomeExtension COASTAL_CLIFFS = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticCoastalCliffs();
 
@@ -65,6 +66,6 @@ public class BiomeExtensionMixin
     public boolean isShore()
     {
         BiomeExtension biome = (BiomeExtension) (Object) this;
-        return biome == TFCBiomes.SHORE || biome == GRAVEL_SHORE || biome == RIVERBANK /*|| biome == SHORE_DUNES || biome == COASTAL_CLIFFS*/;
+        return biome == TFCBiomes.SHORE || biome == GRAVEL_SHORE || biome == RIVERBANK || biome == LAKE_SHORE /*|| biome == SHORE_DUNES || biome == COASTAL_CLIFFS*/;
     }
 }

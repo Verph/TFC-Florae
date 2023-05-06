@@ -5,6 +5,8 @@
     "#tfc:feature/boulders",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"#tfc:feature/bamboo_forest"
+    "tfc:small_rock_columns_rare",
+    "#tfc:feature/bamboo_forest",
+    "tfcflorae:shrubbery"
   ]
 }

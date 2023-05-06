@@ -4,6 +4,7 @@
   "values": [
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"#tfc:feature/bamboo_forest"
+    "#tfc:feature/bamboo_forest",
+    "tfcflorae:steppe"
   ]
 }

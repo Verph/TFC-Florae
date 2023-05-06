@@ -213,29 +213,37 @@ public class EggBlock extends Block implements IForgeBlockExtension, IFluidLogga
 
     public void spawnSpider(Level level, BlockPos pos)
     {
-        final Random random = new Random();
-        final int chance = random.nextInt(5);
-        if (chance > 2 || level.getBlockState(pos).getBlock() == TFCFBlocks.LARGE_SPIDER_EGG.get())
+        final Random random = level.getRandom();
+        final int chance = random.nextInt(4);
+        final Block block = level.getBlockState(pos).getBlock();
+
+        for (int amount = 1; amount <= random.nextInt(spiderSpawnAmount(block)); amount++)
         {
-            Spider spider = EntityType.SPIDER.create(level);
-            spider.moveTo((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-            level.addFreshEntity(spider);
-            if (level.getBlockState(pos).getBlock() == TFCFBlocks.LARGE_SPIDER_EGG.get())
+            if (chance >= 3 || block == TFCFBlocks.LARGE_SPIDER_EGG.get())
             {
+                Spider spider = EntityType.SPIDER.create(level);
+                spider.moveTo((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
                 level.addFreshEntity(spider);
             }
-        }
-        else
-        {
-            CaveSpider spider = EntityType.CAVE_SPIDER.create(level);
-            spider.moveTo((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-            level.addFreshEntity(spider);
-            if (level.getBlockState(pos).getBlock() == TFCFBlocks.SPIDER_EGGS.get())
+            else if (block != TFCFBlocks.LARGE_SPIDER_EGG.get())
             {
+                CaveSpider spider = EntityType.CAVE_SPIDER.create(level);
+                spider.moveTo((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
                 level.addFreshEntity(spider);
             }
         }
     }
+
+	public int spiderSpawnAmount(Block block)
+	{
+        if (block == TFCFBlocks.LARGE_SPIDER_EGG.get())
+            return 1;
+        else if (block == TFCFBlocks.SPIDER_EGGS.get())
+            return 3;
+        else if (block == TFCFBlocks.SPIDER_EGG.get())
+            return 1;
+        else return 1;
+	}
 
     @Override
     public int getExpDrop(BlockState state, LevelReader world, BlockPos pos, int fortune, int silkTouch)

@@ -27,7 +27,7 @@ public class MergeCoastalCliffsLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        if (value == SHORE || value == GRAVEL_SHORE)
+        if (value == GRAVEL_SHORE)
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;

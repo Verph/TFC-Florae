@@ -4,6 +4,12 @@
   "values": [
     "tfc:forest",
     "tfc:bamboo",
-    "tfc:cave_vegetation"
+    "tfc:cave_vegetation",
+    "tfc:glow_lichen",
+    "tfc:lush_caves_calcite",
+    "tfc:lush_caves_ceiling_vegetation",
+    "tfc:lush_caves_vegetation",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest"
   ]
 }

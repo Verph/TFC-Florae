@@ -7,6 +7,12 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "tfc:random_active_hot_spring",
-	"tfcflorae:jungle"
+    "#tfc:feature/geode/glowstone",
+    "#tfc:feature/geode/ruby",
+    "tfc:large_rock_columns",
+    "tfc:small_rock_columns",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle"
   ]
 }

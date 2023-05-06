@@ -3,7 +3,15 @@
   "replace": false,
   "values": [
     "#tfc:feature/land_plants",
-    "tfc:thermal_spring",
-    "tfc:geyser_cluster"
+	"tfc:plant/morning_glory_cave_patch",
+	"tfc:plant/spore_blossom",
+	"tfc:plant/hanging_vines",
+	"tfc:plant/hanging_vines_cave",
+	"tfc:plant/spanish_moss",
+	"tfc:plant/ivy",
+	"tfc:plant/jungle_vines",
+	"tfc:plant/liana",
+    "tfc:geyser_cluster",
+    "tfc:thermal_spring"
   ]
 }

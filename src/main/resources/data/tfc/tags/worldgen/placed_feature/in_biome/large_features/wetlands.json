@@ -6,6 +6,17 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"tfcflorae:jungle"
+    "tfc:fossil",
+    "tfc:glow_lichen",
+    "tfc:lush_caves_calcite",
+    "tfc:lush_caves_ceiling_vegetation",
+    "tfc:lush_caves_vegetation",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle",
+    "tfcflorae:fresh_water_forest",
+    "tfcflorae:salt_water_forest",
+    "tfc:in_biome/fresh_water_roots",
+    "tfc:in_biome/salt_water_roots"
   ]
 }

@@ -67,15 +67,6 @@
       "tfc:in_biome/large_features/chasms"
     ],
     [
-	  "tfc:large_rock_columns",
-	  "tfc:small_rock_columns",
-	  "tfc:large_dripstone",
-	  "tfc:dripstone_cluster",
-	  "tfc:pointed_dripstone",
-	  "tfcflorae:fruit_forest",
-	  "tfcflorae:charred_forest"
-    ],
-    [
       "tfc:in_biome/surface_decoration/chasms"
     ],
     [
@@ -85,26 +76,10 @@
       "tfc:in_biome/webbed_caves"
     ],
     [
-      "tfc:caverns/crystals/glowstone/crystal_geode_start",
-      "tfc:caverns/crystals/glowstone/crystal_growth",
-      "tfc:caverns/crystals/glowstone/buds/crystal_up",
-      "tfc:caverns/crystals/glowstone/buds/crystal_down",
-      "tfc:caverns/crystals/glowstone/buds/crystal_north",
-      "tfc:caverns/crystals/glowstone/buds/crystal_south",
-      "tfc:caverns/crystals/glowstone/buds/crystal_east",
-      "tfc:caverns/crystals/glowstone/buds/crystal_west",
-      "tfc:caverns/crystals/glowstone/mega_geode",
-      "tfc:caverns/crystals/glowstone/mega_geode_extra",
-      "tfc:caverns/crystals/ruby/crystal_geode_start",
-      "tfc:caverns/crystals/ruby/crystal_growth",
-      "tfc:caverns/crystals/ruby/buds/crystal_up",
-      "tfc:caverns/crystals/ruby/buds/crystal_down",
-      "tfc:caverns/crystals/ruby/buds/crystal_north",
-      "tfc:caverns/crystals/ruby/buds/crystal_south",
-      "tfc:caverns/crystals/ruby/buds/crystal_east",
-      "tfc:caverns/crystals/ruby/buds/crystal_west",
-      "tfc:caverns/crystals/ruby/mega_geode",
-      "tfc:caverns/crystals/ruby/mega_geode_extra"
+      "tfc:in_biome/thermal_caves"
+    ],
+    [
+      "tfc:in_biome/dripstone_spikes"
     ]
   ],
   "starts": [],

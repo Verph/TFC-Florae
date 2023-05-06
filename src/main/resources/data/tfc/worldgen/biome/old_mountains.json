@@ -63,16 +63,10 @@
       "tfc:in_biome/top_layer_modification"
     ],
     [
-      "tfc:caverns/crystals/amethyst/crystal_geode_start",
-      "tfc:caverns/crystals/amethyst/crystal_growth",
-      "tfc:caverns/crystals/amethyst/buds/crystal_up",
-      "tfc:caverns/crystals/amethyst/buds/crystal_down",
-      "tfc:caverns/crystals/amethyst/buds/crystal_north",
-      "tfc:caverns/crystals/amethyst/buds/crystal_south",
-      "tfc:caverns/crystals/amethyst/buds/crystal_east",
-      "tfc:caverns/crystals/amethyst/buds/crystal_west",
-      "tfc:caverns/crystals/amethyst/mega_geode",
-      "tfc:caverns/crystals/amethyst/mega_geode_extra"
+      "tfc:in_biome/dripstone_spikes"
+    ],
+    [
+      "tfc:in_biome/gypsum_spikes"
     ]
   ],
   "starts": [],

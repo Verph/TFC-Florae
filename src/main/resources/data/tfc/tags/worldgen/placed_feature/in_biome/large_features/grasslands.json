@@ -5,6 +5,8 @@
     "tfc:forest",
     "tfc:bamboo",
     "tfc:cave_vegetation",
-	"#tfc:feature/bamboo_forest"
+    "#tfc:feature/bamboo_forest",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest"
   ]
 }

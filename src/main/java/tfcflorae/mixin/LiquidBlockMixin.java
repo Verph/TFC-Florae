@@ -2,6 +2,7 @@ package tfcflorae.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Unique;
 
 import java.util.Random;
 
@@ -46,91 +47,13 @@ public abstract class LiquidBlockMixin
             {
                 Fluid type = level.getFluidState(pos).getType();
                 Mineral mineral = null;
-
-                float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
-                Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;
-                Boolean categoryIgneousIntrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_INTRUSIVE;
-                Boolean categoryMetamorphic = TFCFHelpers.rockType(level, pos).category() == METAMORPHIC;
-                Boolean categorySedimentary = TFCFHelpers.rockType(level, pos).category() == SEDIMENTARY;
-
                 if (type == Fluids.LAVA.getSource() || state.getBlock() == Blocks.LAVA)
                 {
-                    if (variantNoiseValue > 0.25F)
-                    {
-                        if (categoryIgneousExtrusive)
-                        {
-                            mineral = Mineral.GREIGITE;
-                        }
-                        else if (categoryIgneousIntrusive)
-                        {
-                            mineral = Mineral.SMITHSONITE;
-                        }
-                        else if (categoryMetamorphic)
-                        {
-                            mineral = Mineral.BRIMSTONE;
-                        }
-                        else if (categorySedimentary)
-                        {
-                            mineral = Mineral.MAGNESITE;
-                        }
-                    }
-                    else if (variantNoiseValue > -0.75F)
-                    {
-                        if (categoryIgneousExtrusive)
-                        {
-                            mineral = Mineral.ZABUYELITE;
-                        }
-                        else if (categoryIgneousIntrusive)
-                        {
-                            mineral = Mineral.SPHEROCOBALTITE;
-                        }
-                        else if (categoryMetamorphic)
-                        {
-                            mineral = Mineral.ALABANDITE;
-                        }
-                        else if (categorySedimentary)
-                        {
-                            mineral = Mineral.GREIGITE;
-                        }
-                    }
-                    else
-                    {
-                        if (categoryIgneousExtrusive)
-                        {
-                            mineral = Mineral.BRIMSTONE;
-                        }
-                        else if (categoryIgneousIntrusive)
-                        {
-                            mineral = Mineral.BRIMSTONE;
-                        }
-                        else if (categoryMetamorphic)
-                        {
-                            mineral = Mineral.BASTNASITE;
-                        }
-                        else if (categorySedimentary)
-                        {
-                            mineral = Mineral.APATITE;
-                        }
-                    }
+                    mineral = lavaMineral(level, pos, random, mineral);
                 }
                 if (type == TFCFluids.SPRING_WATER.getSource() || state.getBlock() == TFCBlocks.SPRING_WATER.get())
                 {
-                    if (categoryIgneousExtrusive)
-                    {
-                        mineral = Mineral.SALMIAK;
-                    }
-                    else if (categoryIgneousIntrusive)
-                    {
-                        mineral = Mineral.SALTPETER;
-                    }
-                    else if (categoryMetamorphic)
-                    {
-                        mineral = Mineral.SALT;
-                    }
-                    else if (categorySedimentary)
-                    {
-                        mineral = Mineral.CALCITE;
-                    }
+                    mineral = waterMineral(level, pos, random, mineral);
                 }
 
                 if (mineral != null && type != null)
@@ -167,4 +90,104 @@ public abstract class LiquidBlockMixin
             }
         }
     }
+
+    @Unique
+	private Mineral lavaMineral(ServerLevel level, BlockPos pos, Random random, Mineral mineral)
+	{
+        float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
+        Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;
+        Boolean categoryIgneousIntrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_INTRUSIVE;
+        Boolean categoryMetamorphic = TFCFHelpers.rockType(level, pos).category() == METAMORPHIC;
+        Boolean categorySedimentary = TFCFHelpers.rockType(level, pos).category() == SEDIMENTARY;
+
+        if (variantNoiseValue > 0.25F)
+        {
+            if (categoryIgneousExtrusive)
+            {
+                mineral = Mineral.GREIGITE;
+            }
+            else if (categoryIgneousIntrusive)
+            {
+                mineral = Mineral.SMITHSONITE;
+            }
+            else if (categoryMetamorphic)
+            {
+                mineral = Mineral.BRIMSTONE;
+            }
+            else if (categorySedimentary)
+            {
+                mineral = Mineral.MAGNESITE;
+            }
+        }
+        else if (variantNoiseValue > -0.75F)
+        {
+            if (categoryIgneousExtrusive)
+            {
+                mineral = Mineral.ZABUYELITE;
+            }
+            else if (categoryIgneousIntrusive)
+            {
+                mineral = Mineral.SPHEROCOBALTITE;
+            }
+            else if (categoryMetamorphic)
+            {
+                mineral = Mineral.ALABANDITE;
+            }
+            else if (categorySedimentary)
+            {
+                mineral = Mineral.GREIGITE;
+            }
+        }
+        else
+        {
+            if (categoryIgneousExtrusive)
+            {
+                mineral = Mineral.BRIMSTONE;
+            }
+            else if (categoryIgneousIntrusive)
+            {
+                mineral = Mineral.BRIMSTONE;
+            }
+            else if (categoryMetamorphic)
+            {
+                mineral = Mineral.BASTNASITE;
+            }
+            else if (categorySedimentary)
+            {
+                mineral = Mineral.APATITE;
+            }
+        }
+        return mineral;
+	}
+
+    @Unique
+	private Mineral waterMineral(ServerLevel level, BlockPos pos, Random random, Mineral mineral)
+	{
+        float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
+        Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;
+        Boolean categoryIgneousIntrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_INTRUSIVE;
+        Boolean categoryMetamorphic = TFCFHelpers.rockType(level, pos).category() == METAMORPHIC;
+        Boolean categorySedimentary = TFCFHelpers.rockType(level, pos).category() == SEDIMENTARY;
+
+        if (variantNoiseValue > 0.25F)
+        {
+            if (categoryIgneousExtrusive)
+            {
+                mineral = Mineral.SALMIAK;
+            }
+            else if (categoryIgneousIntrusive)
+            {
+                mineral = Mineral.SALTPETER;
+            }
+            else if (categoryMetamorphic)
+            {
+                mineral = Mineral.SALT;
+            }
+            else if (categorySedimentary)
+            {
+                mineral = Mineral.CALCITE;
+            }
+        }
+        return mineral;
+	}
 }

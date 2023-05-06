@@ -36,10 +36,13 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
+
+import tfcflorae.Config;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
+
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -50,7 +53,6 @@ import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
-import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
@@ -74,10 +76,10 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
-    public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
+    public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
     {
         final IntegerProperty distanceProperty = getDistanceProperty(maxDecayDistance);
-        return new TFCFLeavesBlock(properties, productItem, lifecycle, maxDecayDistance, climateRange)
+        return new TFCFLeavesBlock(properties, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig)
         {
             @Override
             protected IntegerProperty getDistanceProperty()
@@ -102,10 +104,12 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
     private final Lifecycle[] lifecycle;
+    @Nullable private final Supplier<? extends Block> fallenLeaves;
+    @Nullable private final Supplier<? extends Block> fallenTwig;
 
-    public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
+    public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
     {
-        super(properties, maxDecayDistance);
+        super(properties, maxDecayDistance, fallenLeaves, fallenTwig);
 
         Preconditions.checkArgument(lifecycle.length == 12, "Lifecycle length must be 12");
 
@@ -114,6 +118,8 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         this.climateRange = climateRange;
         this.lifecycle = lifecycle;
         this.productItem = productItem;
+        this.fallenLeaves = fallenLeaves;
+        this.fallenTwig = fallenTwig;
 
         registerDefaultState(getStateDefinition().any().setValue(PERSISTENT, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
@@ -204,47 +210,47 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
         }
 
-        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-
-        if (!state.getValue(PERSISTENT) && level.isAreaLoaded(pos, 3))
+        if (level.getGameTime() % Config.COMMON.fruitingLeavesUpdateChance.get() == 0 && level.isAreaLoaded(pos, 3))
         {
-            if (currentLifecycle != expectedLifecycle /*&& level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves*/)
+            Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+            Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+
+            if (!state.getValue(PERSISTENT))
             {
-                //final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-                //if (leaves.getTicksSinceBushUpdate() > 24000 + random.nextInt(ICalendar.TICKS_IN_DAY))
-                if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
+                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
                 {
-                    onUpdate(level, pos, state);
-                }
-            }
-            if (this == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get())
-            {
-                Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
-                Season season = currentMonth.getSeason();
-                final int delay = (int) (ICalendar.TICKS_IN_DAY * Mth.clamp((random.nextFloat(0.75f)), 0.25f, 0.75f));
-                if (delay > SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR && random.nextInt(48000) == 0 && season == Season.SUMMER && Climate.getTemperature(level, pos) >= 2)
-                {
-                    boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
-                    Direction direction = Direction.getRandom(random);
-                    Entity entity = TFCFEntities.SILKMOTH.get().create(level);
-                    if (entity != null)
+                    if (random.nextInt(ICalendar.TICKS_IN_DAY) == 0)
                     {
-                        if (entity instanceof Silkmoth moth)
+                        onUpdate(level, pos, state);
+                    }
+                }
+                if (state.getBlock() == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && Calendars.SERVER.getCalendarDayTime() != level.getDayTime() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
+                {
+                    Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
+                    Season season = currentMonth.getSeason();
+                    if (random.nextInt(ICalendar.TICKS_IN_DAY + SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR) == 0 && season == Season.SUMMER && Climate.getTemperature(level, pos) >= 2)
+                    {
+                        boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
+                        Direction direction = Direction.getRandom(random);
+                        Entity entity = TFCFEntities.SILKMOTH.get().create(level);
+                        if (entity != null)
                         {
-                            if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F)
+                            if (entity instanceof Silkmoth moth)
                             {
-                                moth.setSavedTargetPos(moth.getSavedTargetPos());
+                                if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F)
+                                {
+                                    moth.setSavedTargetPos(moth.getSavedTargetPos());
+                                }
+                                float f = entity.getBbWidth();
+                                double d3 = flag ? 0.0D : 0.55D + (double)(f / 2.0F);
+                                double d0 = (double)pos.getX() + 0.5D + d3 * (double)direction.getStepX();
+                                double d1 = (double)pos.getY() + 0.5D - (double)(entity.getBbHeight() / 2.0F);
+                                double d2 = (double)pos.getZ() + 0.5D + d3 * (double)direction.getStepZ();
+                                entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
                             }
-                            float f = entity.getBbWidth();
-                            double d3 = flag ? 0.0D : 0.55D + (double)(f / 2.0F);
-                            double d0 = (double)pos.getX() + 0.5D + d3 * (double)direction.getStepX();
-                            double d1 = (double)pos.getY() + 0.5D - (double)(entity.getBbHeight() / 2.0F);
-                            double d2 = (double)pos.getZ() + 0.5D + d3 * (double)direction.getStepZ();
-                            entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
+                            level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                            level.addFreshEntity(entity);
                         }
-                        level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
-                        level.addFreshEntity(entity);
                     }
                 }
             }

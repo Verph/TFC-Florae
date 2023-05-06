@@ -8,9 +8,10 @@
     "tfc:cave_vegetation",
     "tfc:random_empty_hot_spring",
     "tfc:random_active_hot_spring",
-	"tfcflorae:jungle",
-	"#tfc:feature/bamboo_forest",
-	"tfcflorae:redwood_forest",
-	"#tfc:feature/redwood_forest"
+    "#tfc:feature/bamboo_forest",
+    "#tfc:feature/redwood_forest",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle"
   ]
 }
