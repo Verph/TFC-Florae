@@ -28,7 +28,7 @@ import net.dries007.tfc.util.Helpers;
 public abstract class TFCSeaPickleBlockMixin extends Block implements IFluidLoggable
 {
     @Unique @Final
-    private static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
+    private static final FluidProperty FLUID_ALL = TFCBlockStateProperties.ALL_WATER;
 
     public TFCSeaPickleBlockMixin(Properties properties)
     {
@@ -86,6 +86,6 @@ public abstract class TFCSeaPickleBlockMixin extends Block implements IFluidLogg
     @Override
     public FluidProperty getFluidProperty()
     {
-        return FLUID;
+        return FLUID_ALL;
     }
 }

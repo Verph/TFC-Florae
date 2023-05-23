@@ -105,9 +105,22 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
                 return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
             }
         }
+        else if (state.getValue(SINGLE) && level.getBlockState(currentPos.below()).getBlock() instanceof TFCFSeagrassBlock && level.getBlockState(currentPos.below()).getValue(SINGLE))
+        {
+            return Blocks.AIR.defaultBlockState();
+        }
         else
         {
             return Blocks.AIR.defaultBlockState();
+        }
+    }
+
+    @Override
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
+    {
+        if (!state.canSurvive(level, pos))
+        {
+            level.destroyBlock(pos, true);
         }
     }
 
@@ -119,9 +132,17 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
             return true;
         }
 
-        if (state.getValue(PART) == Part.LOWER || state.getValue(SINGLE) == true)
+        if (state.getValue(PART) == Part.LOWER || state.getValue(SINGLE))
         {
+            if (level.getBlockState(pos.below()).getBlock() instanceof TFCFSeagrassBlock && level.getBlockState(pos.below()).getValue(SINGLE))
+            {
+                return false;
+            }
             return super.canSurvive(state, level, pos);
+        }
+        else if (level.getBlockState(pos.below()).getValue(SINGLE) || (!level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP) && !state.getValue(SINGLE)))
+        {
+            return false;
         }
         else
         {
@@ -193,14 +214,20 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
 
         if (random.nextDouble() < TFCConfig.SERVER.plantGrowthChance.get())
         {
-            if (j == 3 && canGrow(level, pos, state) && level.getBlockState(pos.above()).getValue(getFluidProperty()) != getFluidProperty().keyFor(Fluids.EMPTY))
+            if (j == 3 && canGrow(level, pos, state))
             {
-                grow(level, random, pos, state);
+                if (canContainDouble(level, pos))
+                {
+                    grow(level, random, pos, state);
+                }
             }
             else if (j < 3)
             {
                 FluidState fluidState = level.getFluidState(pos);
-                level.setBlockAndUpdate(pos, state.setValue(AGE, j + 1).setValue(PART, state.getValue(PART)).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType())));
+                if (getFluidProperty().canContain(fluidState.getType()))
+                {
+                    level.setBlockAndUpdate(pos, state.setValue(AGE, j + 1).setValue(PART, state.getValue(PART)).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType())));
+                }
             }
         }
     }
@@ -213,17 +240,19 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
     public void grow(ServerLevel level, Random rand, BlockPos pos, BlockState state)
     {
         IntegerProperty stageProperty = getPlant().getStageProperty();
+        FluidState fluidState = level.getFluidState(pos);
+        FluidState fluidStateAbove = level.getFluidState(pos.above());
         if (stageProperty != null)
         {
-            level.setBlockAndUpdate(pos.above(1), state.setValue(AGE, 0).setValue(stageProperty, getPlant().stageFor(Calendars.SERVER.getCalendarMonthOfYear())).setValue(PART, Part.UPPER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(level.getFluidState(pos.above()).getType())));
-            BlockState blockState = state.setValue(AGE, 0).setValue(stageProperty, getPlant().stageFor(Calendars.SERVER.getCalendarMonthOfYear())).setValue(PART, Part.LOWER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(level.getFluidState(pos).getType()));
+            level.setBlockAndUpdate(pos.above(1), state.setValue(AGE, 0).setValue(stageProperty, getPlant().stageFor(Calendars.SERVER.getCalendarMonthOfYear())).setValue(PART, Part.UPPER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidStateAbove.getType())));
+            BlockState blockState = state.setValue(AGE, 0).setValue(stageProperty, getPlant().stageFor(Calendars.SERVER.getCalendarMonthOfYear())).setValue(PART, Part.LOWER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
             level.setBlockAndUpdate(pos, blockState);
             blockState.neighborChanged(level, pos.above(1), this, pos, false);
         }
         else
         {
-            level.setBlockAndUpdate(pos.above(1), state.setValue(AGE, 0).setValue(PART, Part.UPPER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(level.getFluidState(pos.above()).getType())));
-            BlockState blockState = state.setValue(AGE, 0).setValue(PART, Part.LOWER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(level.getFluidState(pos).getType()));
+            level.setBlockAndUpdate(pos.above(1), state.setValue(AGE, 0).setValue(PART, Part.UPPER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidStateAbove.getType())));
+            BlockState blockState = state.setValue(AGE, 0).setValue(PART, Part.LOWER).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
             level.setBlockAndUpdate(pos, blockState);
             blockState.neighborChanged(level, pos.above(1), this, pos, false);
         }
@@ -231,15 +260,19 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
 
     public void placeTwoHalves(LevelAccessor level, BlockPos pos, int flags, Random random, Fluid fluid)
     {
-        if (level.getBlockState(pos.above()).isAir())
+        FluidState fluidState = level.getFluidState(pos);
+        if (getFluidProperty().canContain(fluidState.getType()) && fluidState.getType() != Fluids.EMPTY)
         {
-            placeSingle(level, pos, flags, random, fluid);
-        }
-        else
-        {
-            int age = random.nextInt(3);
-            level.setBlock(pos, updateStateWithCurrentMonth(defaultBlockState().setValue(TFCBlockStateProperties.TALL_PLANT_PART, Part.LOWER).setValue(TFCBlockStateProperties.AGE_3, age).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid))), flags);
-            level.setBlock(pos.above(), updateStateWithCurrentMonth(defaultBlockState().setValue(TFCBlockStateProperties.TALL_PLANT_PART, Part.UPPER).setValue(TFCBlockStateProperties.AGE_3, age).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid))), flags);
+            if (level.getBlockState(pos.above()).isAir())
+            {
+                placeSingle(level, pos, flags, random, fluid);
+            }
+            else if (canContainDouble(level, pos))
+            {
+                int age = random.nextInt(3);
+                level.setBlock(pos, updateStateWithCurrentMonth(defaultBlockState().setValue(TFCBlockStateProperties.TALL_PLANT_PART, Part.LOWER).setValue(TFCBlockStateProperties.AGE_3, age).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid))), flags);
+                level.setBlock(pos.above(), updateStateWithCurrentMonth(defaultBlockState().setValue(TFCBlockStateProperties.TALL_PLANT_PART, Part.UPPER).setValue(TFCBlockStateProperties.AGE_3, age).setValue(SINGLE, false).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid))), flags);
+            }
         }
     }
 
@@ -247,5 +280,12 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
     {
         int age = random.nextInt(3);
         level.setBlock(pos, updateStateWithCurrentMonth(defaultBlockState().setValue(TFCBlockStateProperties.TALL_PLANT_PART, Part.LOWER).setValue(TFCBlockStateProperties.AGE_3, age).setValue(SINGLE, true).setValue(getFluidProperty(), getFluidProperty().keyFor(fluid))), flags);
+    }
+
+    public boolean canContainDouble(LevelAccessor level, BlockPos pos)
+    {
+        FluidState fluidState = level.getFluidState(pos);
+        FluidState fluidStateAbove = level.getFluidState(pos.above());
+        return getFluidProperty().canContain(fluidState.getType()) && fluidState.getType() != Fluids.EMPTY && getFluidProperty().canContain(fluidStateAbove.getType()) && fluidStateAbove.getType() != Fluids.EMPTY;
     }
 }

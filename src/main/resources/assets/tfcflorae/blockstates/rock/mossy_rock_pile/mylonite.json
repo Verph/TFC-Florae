@@ -1,411 +1,1450 @@
 {
-  "variants": {
-    "": [
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
-        "y": 270
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none"
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
-        "y": 90
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
-        "y": 180
-      },
-      {
-        "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
-        "y": 270
-      }
-    ]
-  }
+  "multipart": [
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none"
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "y": 270,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 90,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 180,
+          "x": 180
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "y": 270,
+          "x": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "x": 90,
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "x": 90,
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "x": 90,
+          "y": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "x": 90,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "x": 90
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "x": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_none",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_2_nse",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_n",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_3_none",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_4",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_none",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_5_nse",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_n",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_6_nse",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_n",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_none",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_ns",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_7_nse",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_n",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_ne",
+          "x": 270
+        },
+        {
+          "model": "tfcflorae:block/rock/mossy_rock_pile/mylonite/rock_8_none",
+          "x": 270
+        }
+      ]
+    }
+  ]
 }

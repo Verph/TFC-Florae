@@ -87,6 +87,7 @@ public class TFCFBlockEntities
     public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register("tfcf_sluice", TFCFSluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SLUICE)));
     public static final RegistryObject<BlockEntityType<TFCFSignBlockEntity>> SIGN = register("tfcf_sign", TFCFSignBlockEntity::new, TFCFBlocks.WOODS.values().stream().flatMap(map -> Stream.of(Wood.BlockType.SIGN, Wood.BlockType.WALL_SIGN).map(map::get)));
     public static final RegistryObject<BlockEntityType<LecternBlockEntity>> LECTERN = register("tfcf_lectern", TFCFLecternBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.LECTERN)));
+    public static final RegistryObject<BlockEntityType<TFCFToolRackBlockEntity>> TOOL_RACK = register("tfcf_tool_rack", TFCFToolRackBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.TOOL_RACK)));
     public static final RegistryObject<BlockEntityType<TFCFAnvilBlockEntity>> ANVIL = register("tfcf_anvil", TFCFAnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream());
 
     public static final RegistryObject<BlockEntityType<MineralSheetBlockEntity>> MINERAL_SHEET = register("mineral_sheet", MineralSheetBlockEntity::new, TFCFBlocks.MINERAL_SHEET);

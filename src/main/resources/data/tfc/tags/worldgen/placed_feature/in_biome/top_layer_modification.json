@@ -5,7 +5,7 @@
     "#tfc:feature/surface_ore_deposits",
     "tfc:surface_loose_flint",
     "tfc:rock_pile",
-    "tfc:deep_rock_pile",
-	"tfc:floor_surface"
+	"tfc:floor_surface",
+    "tfc:rotated_rock_pile"
   ]
 }

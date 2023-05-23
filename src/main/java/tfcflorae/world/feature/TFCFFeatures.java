@@ -68,6 +68,7 @@ public class TFCFFeatures
     public static final RegistryObject<GlacierFeature> GLACIER = register("glacier", GlacierFeature::new, BlockStateConfiguration.CODEC);
     public static final RegistryObject<CrystalFeature> CRYSTAL = register("crystal", CrystalFeature::new, BlockStateConfiguration.CODEC);
     public static final RegistryObject<BoulderRockFeature> BOULDER_BLOCK = register("boulder_block", BoulderRockFeature::new, RockConfig.CODEC);
+    public static final RegistryObject<RotatedBoulderRockFeature> ROTATED_BOULDER_BLOCK = register("rotated_boulder_block", RotatedBoulderRockFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<BoulderDeepRockFeature> DEEP_BOULDER_BLOCK = register("deep_boulder_block", BoulderDeepRockFeature::new, RockConfig.CODEC);
     public static final RegistryObject<LooseFlintFeature> LOOSE_FLINT = register("loose_flint", LooseFlintFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<RockColumnFeature> ROCK_COLUMN = register("rock_column", RockColumnFeature::new, RockColumnConfig.CODEC);

@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/cross",
+  "parent": "block/cross",
   "textures": {
     "cross": "tfcflorae:block/plant/indigo_milk_cap/indigo_milk_cap_0",
     "particle": "tfcflorae:block/plant/indigo_milk_cap/indigo_milk_cap_0"

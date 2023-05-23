@@ -16,7 +16,7 @@ license = "BSD 3"
 [[dependencies.tfcflorae]]
 	modId = "tfc"
 	mandatory = true
-	versionRange = "[1.18.2-2.1.18,)"
+	versionRange = "[1.18.2-2.2.20,)"
 	side = "BOTH"
 	ordering = "AFTER"
 

@@ -5389,10 +5389,66 @@ function generateJSON(woodType)
     }
   }
 	fs.writeFileSync(`./assets/models/block/wood/barrel_sealed/${woodType}_side_rack.json`, JSON.stringify(modelBarrelSealedSideRack, null, 2))
+
+  let recipeSledTFCF = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "##S",
+      "SSS"
+    ],
+    "key": {
+      "#": {
+        "item": `tfcflorae:wood/lumber/${woodType}`
+      },
+      "S": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": `tfcsleghs:sled/${woodType}`
+    }
+  }
+  fs.writeFileSync(`./data/recipes/crafting/sled/${woodType}.json`, JSON.stringify(recipeSledTFCF, null, 2))
+
+  let modelSledTFCF = {
+    "parent": "item/generated",
+    "textures": {
+      "layer0": `tfcsleghs:items/wood/sled/${woodType}`
+    }
+  }
+  fs.writeFileSync(`./assets/models/item/wood/sled/${woodType}.json`, JSON.stringify(modelSledTFCF, null, 2))
 }
 
 function generateJSONTFC(woodTypeTFC)
 {
+  let recipeSledTFC = {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "##S",
+      "SSS"
+    ],
+    "key": {
+      "#": {
+        "item": `tfc:wood/lumber/${woodTypeTFC}`
+      },
+      "S": {
+        "tag": "forge:rods/wooden"
+      }
+    },
+    "result": {
+      "item": `tfcsleghs:sled/${woodTypeTFC}`
+    }
+  }
+  fs.writeFileSync(`./data/recipes/crafting/sled/${woodTypeTFC}.json`, JSON.stringify(recipeSledTFC, null, 2))
+
+  let modelSledTFC = {
+    "parent": "item/generated",
+    "textures": {
+      "layer0": `tfcsleghs:items/wood/sled/${woodTypeTFC}`
+    }
+  }
+  fs.writeFileSync(`./assets/models/item/wood/sled/${woodTypeTFC}.json`, JSON.stringify(modelSledTFC, null, 2))
+
   let animalCartItemModelTFC = {
     "parent": "minecraft:item/generated",
     "textures": {

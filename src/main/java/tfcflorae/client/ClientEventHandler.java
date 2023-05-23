@@ -52,6 +52,7 @@ import tfcflorae.client.model.entity.SilkmothModel;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
+import tfcflorae.client.render.blockentity.TFCFToolRackBlockEntityRenderer;
 import tfcflorae.client.render.entity.SilkmothRenderer;
 import tfcflorae.client.render.entity.TFCFBoatRenderer;
 import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
@@ -297,6 +298,7 @@ public class ClientEventHandler
         event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
         event.registerBlockEntityRenderer(TFCFBlockEntities.BARREL.get(), ctx -> new BarrelBlockEntityRenderer());
         event.registerBlockEntityRenderer(TFCFBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
+        event.registerBlockEntityRenderer(TFCFBlockEntities.TOOL_RACK.get(), ctx -> new TFCFToolRackBlockEntityRenderer());
         event.registerBlockEntityRenderer(TFCFBlockEntities.MINERAL_SHEET.get(), ctx -> new MineralSheetBlockEntityRenderer());
     }
 

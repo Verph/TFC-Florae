@@ -15,7 +15,7 @@
     "placement": {
       "width": 2,
       "height": 9,
-      "allow_submerged": true
+      "allow_submerged": false
     }
   }
 }

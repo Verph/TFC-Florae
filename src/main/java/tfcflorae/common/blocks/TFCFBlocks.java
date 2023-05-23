@@ -532,6 +532,11 @@ public final class TFCFBlocks
                         subMap.put(type, register(("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                             new TFCFSluiceBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(TFCFBlockEntities.SLUICE).serverTicks(TFCFSluiceBlockEntity::serverTick)), WOOD));
                     }
+                    else if (type == BlockType.TOOL_RACK)
+                    {
+                        subMap.put(type, register(("wood/tool_rack/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            new TFCFToolRackBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.TOOL_RACK)), WOOD));
+                    }
                     else
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
                 }
@@ -604,6 +609,11 @@ public final class TFCFBlocks
                 {
                     subMap.put(type, register(("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         new TFCFSluiceBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(TFCFBlockEntities.SLUICE).serverTicks(TFCFSluiceBlockEntity::serverTick)), WOOD));
+                }
+                else if (type == BlockType.TOOL_RACK)
+                {
+                    subMap.put(type, register(("wood/tool_rack/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        new TFCFToolRackBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.TOOL_RACK)), WOOD));
                 }
                 else if (!(wood == TFCFWood.BAMBOO && (type == BlockType.PLANKS || type == BlockType.LOG || type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD || type == BlockType.STRIPPED_LOG || type == BlockType.SAPLING || type == BlockType.LEAVES)))
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));

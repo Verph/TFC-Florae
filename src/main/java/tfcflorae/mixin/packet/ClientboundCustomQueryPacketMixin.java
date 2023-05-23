@@ -12,6 +12,6 @@ public class ClientboundCustomQueryPacketMixin
     @ModifyConstant(method = "<init>(Lnet/minecraft/network/FriendlyByteBuf;)V", constant = @Constant(intValue = 1048576))
     private int injected(int value)
     {
-        return value * 100;
+        return Integer.MAX_VALUE;
     }
 }

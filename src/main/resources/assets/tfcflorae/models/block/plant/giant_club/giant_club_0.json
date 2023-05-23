@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/cross",
+  "parent": "block/cross",
   "textures": {
     "cross": "tfcflorae:block/plant/giant_club/giant_club_0",
     "particle": "tfcflorae:block/plant/giant_club/giant_club_0"

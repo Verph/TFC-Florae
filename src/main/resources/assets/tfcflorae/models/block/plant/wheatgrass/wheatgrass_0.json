@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/tinted_cross",
+  "parent": "block/tinted_cross",
   "textures": {
     "cross": "tfcflorae:block/plant/wheatgrass/wheatgrass_0",
     "particle": "tfcflorae:block/plant/wheatgrass/wheatgrass_0"

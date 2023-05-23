@@ -6,17 +6,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.FluidTags;
+
 import net.dries007.tfc.util.EnvironmentHelpers;
-import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.world.TFCChunkGenerator;
 import net.dries007.tfc.world.feature.BlockConfig;
 
 import tfcflorae.common.blocks.wood.TFCFJoshuaLeavesBlock;
-import tfcflorae.common.blocks.wood.TFCFJoshuaTrunkBlock;
 
 public class JoshuaTreeFeature extends Feature<BlockConfig<TFCFJoshuaLeavesBlock>>
 {
@@ -33,9 +28,6 @@ public class JoshuaTreeFeature extends Feature<BlockConfig<TFCFJoshuaLeavesBlock
         final WorldGenLevel level = context.level();
         final BlockPos pos = context.origin();
         final BlockState state = level.getBlockState(pos);
-        final Material materialAt = level.getBlockState(pos).getMaterial();
-        final FluidState fluidState = context.level().getFluidState(pos);
-        final int seaLevel = level.getLevel().getChunkSource().getGenerator().getSeaLevel();
 
         //if (pos.getY() > seaLevel && (materialAt != Material.WATER || !Helpers.isFluid(fluidState, FluidTags.WATER)) && TFCFJoshuaTrunkBlock.canConnectTo(state))
         if (EnvironmentHelpers.isWorldgenReplaceable(state) && !state.getMaterial().isLiquid())

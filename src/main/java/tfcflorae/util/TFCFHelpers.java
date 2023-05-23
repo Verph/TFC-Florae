@@ -22,7 +22,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.levelgen.RandomSource;
+import net.minecraft.world.level.levelgen.LegacyRandomSource;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.network.NetworkHooks;
@@ -318,8 +320,52 @@ public class TFCFHelpers
             return Rock.GRANITE;
     }
 
+    public static RegistryRock rockType(WorldGenLevel level, BlockPos pos)
+    {
+        ChunkDataProvider provider = ChunkDataProvider.get(level);
+        RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
+
+        Rock rockTFC = null;
+        TFCFRock rockTFCF = null;
+
+        if (surfaceRock != null)
+        {
+            for (Rock r : Rock.values())
+            {
+                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                {
+                    rockTFC = r;
+                    break;
+                }
+                else
+                {
+                    for (TFCFRock r2 : TFCFRock.values())
+                    {
+                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                        {
+                            rockTFCF = r2;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        if (rockTFC != null)
+            return rockTFC;
+        else if (rockTFCF != null)
+            return rockTFCF;
+        else
+            return Rock.GRANITE;
+    }
+
     public static ResourceLocation animalTexture(String name)
     {
         return identifier("textures/entity/animal/" + name + ".png");
+    }
+
+    public static RandomSource randomSource(int posX, int posY, int posZ)
+    {
+        long i = Mth.getSeed(posX, posY, posZ);
+        return new LegacyRandomSource(i);
     }
 }

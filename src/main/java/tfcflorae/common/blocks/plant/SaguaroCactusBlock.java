@@ -24,7 +24,6 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -38,10 +37,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.PlantBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
@@ -67,7 +63,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
+public abstract class SaguaroCactusBlock extends PlantBlock implements ILeavesBlock, IBushBlock, HoeOverlayBlock
 {
     /**
      * Taking into account only environment rainfall, on a scale [0, 100]
@@ -90,6 +86,7 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
     private final Lifecycle[] lifecycle;
+    private long lastUpdateTick;
 
     public static SaguaroCactusBlock create(RegistryPlant plant, ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, Supplier<ClimateRange> climateRange)
     {
@@ -113,6 +110,8 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
         this.lifecycle = lifecycle;
         this.productItem = productItem;
 
+        lastUpdateTick = Calendars.SERVER.getTicks();
+
         this.registerDefaultState(getStateDefinition().any()
                 .setValue(HORIZONTAL, false)
                 .setValue(HORIZONTAL_DIRECTION, Direction.NORTH)
@@ -121,12 +120,6 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
                 .setValue(EAST, false)
                 .setValue(WEST, false)
                 .setValue(LIFECYCLE, Lifecycle.HEALTHY));
-    }
-
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
-    {
-        return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
     @Nullable
@@ -262,6 +255,7 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
         if (getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
         {
             onUpdate(serverLevel, blockPos, blockState);
+            lastUpdateTick = Calendars.SERVER.getTicks();
         }
         if (blockState.getValue(AGE) >= 3 && random.nextInt(10) == 0 && blockState.equals(defaultBlockState()) && isGrowBlock(serverLevel.getBlockState(blockPos.below())) && serverLevel.getBlockState(blockPos.above()).isAir())
         {
@@ -421,7 +415,7 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves && !state.getValue(HORIZONTAL)  && level.getBlockState(pos.above()).isAir() && level.getBlockState(pos.below()).is(this))
+        if (!state.getValue(HORIZONTAL)  && level.getBlockState(pos.above()).isAir() && level.getBlockState(pos.below()).is(this))
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
@@ -430,23 +424,23 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
             {
                 // Otherwise, we do a month-by-month evaluation of how the bush should have grown.
                 // We only do this up to a year. Why? Because eventually, it will have become dormant, and any 'progress' during that year would've been lost anyway because it would unconditionally become dormant.
-                long deltaTicks = Math.min(leaves.getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
+                long deltaTicks = Math.min(getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
                 long currentCalendarTick = Calendars.SERVER.getCalendarTicks();
                 long nextCalendarTick = currentCalendarTick - deltaTicks;
-
+    
                 final ClimateRange range = climateRange.get();
                 final int hydration = getHydration(level, pos);
-
+    
                 int monthsSpentDying = 0;
                 do
                 {
                     // This always runs at least once. It is called through random ticks, and calendar updates - although calendar updates will only call this if they've waited at least a day, or the average delta between random ticks.
                     // Otherwise it will just wait for the next random tick.
-
+    
                     // Jump forward to nextTick.
                     // Advance the lifecycle (if the at-the-time conditions were valid)
                     nextCalendarTick = Math.min(nextCalendarTick + Calendars.SERVER.getCalendarTicksInMonth(), currentCalendarTick);
-
+    
                     float temperatureAtNextTick = Climate.getTemperature(level, pos, nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth());
                     Lifecycle lifecycleAtNextTick = getLifecycleForMonth(ICalendar.getMonthOfYear(nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth()));
                     if (range.checkBoth(hydration, temperatureAtNextTick, false))
@@ -457,7 +451,7 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
                     {
                         currentLifecycle = Lifecycle.DORMANT;
                     }
-
+    
                     if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                     {
                         monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
@@ -466,10 +460,11 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
                     {
                         monthsSpentDying = 0;
                     }
+    
                 } while (nextCalendarTick < currentCalendarTick);
-
+    
                 BlockState newState;
-
+    
                 if (mayDie(level, pos, state, monthsSpentDying))
                 {
                     newState = state.setValue(LIFECYCLE, Lifecycle.DORMANT);
@@ -478,7 +473,7 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
                 {
                     newState = state.setValue(LIFECYCLE, currentLifecycle);
                 }
-
+    
                 // And update the block
                 if (state != newState)
                 {
@@ -486,6 +481,11 @@ public abstract class SaguaroCactusBlock extends PlantBlock implements IForgeBlo
                 }
             }
         }
+    }
+
+    public long getTicksSinceBushUpdate()
+    {
+        return Calendars.SERVER.getTicks() - lastUpdateTick;
     }
 
     public BlockState stateAfterPicking(BlockState state)

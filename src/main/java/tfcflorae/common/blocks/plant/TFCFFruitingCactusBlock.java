@@ -7,12 +7,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,12 +20,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -39,10 +34,7 @@ import java.util.function.Supplier;
 import com.google.common.base.Preconditions;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.TFCCactusBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
@@ -58,10 +50,7 @@ import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
-import tfcflorae.common.blockentities.*;
-import tfcflorae.common.blockentities.TFCFBlockEntities;
-
-public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
+public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements ILeavesBlock, IBushBlock, HoeOverlayBlock
 {
     /**
      * Taking into account only environment rainfall, on a scale [0, 100]
@@ -78,6 +67,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
     private final Lifecycle[] lifecycle;
+    private long lastUpdateTick;
 
     public static TFCFFruitingCactusBlock create(RegistryPlant plant, ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, Supplier<ClimateRange> climateRange)
     {
@@ -104,13 +94,9 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
         this.lifecycle = lifecycle;
         this.productItem = productItem;
 
-        registerDefaultState(getStateDefinition().any().setValue(PART, Part.LOWER).setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
-    }
+        lastUpdateTick = Calendars.SERVER.getTicks();
 
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
-    {
-        return EntityBlockExtension.super.newBlockEntity(pos, state);
+        registerDefaultState(getStateDefinition().any().setValue(PART, Part.LOWER).setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
     }
 
     @Override
@@ -156,6 +142,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
         if (getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
         {
             onUpdate(level, pos, state);
+            lastUpdateTick = Calendars.SERVER.getTicks();
         }
     }
 
@@ -217,7 +204,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves && state.getValue(PART) == Part.UPPER)
+        if (state.getValue(PART) == Part.UPPER)
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
@@ -226,23 +213,23 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
             {
                 // Otherwise, we do a month-by-month evaluation of how the bush should have grown.
                 // We only do this up to a year. Why? Because eventually, it will have become dormant, and any 'progress' during that year would've been lost anyway because it would unconditionally become dormant.
-                long deltaTicks = Math.min(leaves.getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
+                long deltaTicks = Math.min(getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
                 long currentCalendarTick = Calendars.SERVER.getCalendarTicks();
                 long nextCalendarTick = currentCalendarTick - deltaTicks;
-
+    
                 final ClimateRange range = climateRange.get();
                 final int hydration = getHydration(level, pos);
-
+    
                 int monthsSpentDying = 0;
                 do
                 {
                     // This always runs at least once. It is called through random ticks, and calendar updates - although calendar updates will only call this if they've waited at least a day, or the average delta between random ticks.
                     // Otherwise it will just wait for the next random tick.
-
+    
                     // Jump forward to nextTick.
                     // Advance the lifecycle (if the at-the-time conditions were valid)
                     nextCalendarTick = Math.min(nextCalendarTick + Calendars.SERVER.getCalendarTicksInMonth(), currentCalendarTick);
-
+    
                     float temperatureAtNextTick = Climate.getTemperature(level, pos, nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth());
                     Lifecycle lifecycleAtNextTick = getLifecycleForMonth(ICalendar.getMonthOfYear(nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth()));
                     if (range.checkBoth(hydration, temperatureAtNextTick, false))
@@ -253,7 +240,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
                     {
                         currentLifecycle = Lifecycle.DORMANT;
                     }
-
+    
                     if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                     {
                         monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
@@ -262,11 +249,11 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
                     {
                         monthsSpentDying = 0;
                     }
-
+    
                 } while (nextCalendarTick < currentCalendarTick);
-
+    
                 BlockState newState;
-
+    
                 if (mayDie(level, pos, state, monthsSpentDying))
                 {
                     newState = state.setValue(LIFECYCLE, Lifecycle.DORMANT);
@@ -275,7 +262,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
                 {
                     newState = state.setValue(LIFECYCLE, currentLifecycle);
                 }
-
+    
                 // And update the block
                 if (state != newState)
                 {
@@ -283,6 +270,11 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
                 }
             }
         }
+    }
+
+    public long getTicksSinceBushUpdate()
+    {
+        return Calendars.SERVER.getTicks() - lastUpdateTick;
     }
 
     public BlockState stateAfterPicking(BlockState state)

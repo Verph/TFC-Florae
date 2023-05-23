@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/cross",
+  "parent": "block/cross",
   "textures": {
     "cross": "tfcflorae:block/plant/chlorophos_foxfire/chlorophos_foxfire_0",
     "particle": "tfcflorae:block/plant/chlorophos_foxfire/chlorophos_foxfire_0"

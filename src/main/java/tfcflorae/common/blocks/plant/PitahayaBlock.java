@@ -12,9 +12,6 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SupportType;
-import net.minecraft.world.level.block.VineBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -30,7 +27,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Direction.Plane;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -40,16 +36,13 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import tfcflorae.common.blocks.TFCFBlocks;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
+
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.PlantBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
@@ -67,7 +60,7 @@ import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
-public abstract class PitahayaBlock extends PlantBlock implements IForgeBlockExtension, ILeavesBlock, IBushBlock, HoeOverlayBlock, EntityBlockExtension
+public abstract class PitahayaBlock extends PlantBlock implements ILeavesBlock, IBushBlock, HoeOverlayBlock
 {
     /**
      * Taking into account only environment rainfall, on a scale [0, 100]
@@ -91,6 +84,7 @@ public abstract class PitahayaBlock extends PlantBlock implements IForgeBlockExt
     protected final Supplier<? extends Item> productItem;
     protected final Supplier<ClimateRange> climateRange;
     private final Lifecycle[] lifecycle;
+    private long lastUpdateTick;
 
     protected static final Map<Direction, VoxelShape> SHAPES = ImmutableMap.of(Direction.NORTH, NORTH_SHAPE, Direction.SOUTH, SOUTH_SHAPE, Direction.WEST, WEST_SHAPE, Direction.EAST, EAST_SHAPE);
 
@@ -116,13 +110,9 @@ public abstract class PitahayaBlock extends PlantBlock implements IForgeBlockExt
         this.lifecycle = lifecycle;
         this.productItem = productItem;
 
-        registerDefaultState(getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(TOP, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
-    }
+        lastUpdateTick = Calendars.SERVER.getTicks();
 
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
-    {
-        return EntityBlockExtension.super.newBlockEntity(pos, state);
+        registerDefaultState(getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(TOP, false).setValue(LIFECYCLE, Lifecycle.HEALTHY));
     }
 
     @Override
@@ -204,6 +194,7 @@ public abstract class PitahayaBlock extends PlantBlock implements IForgeBlockExt
         if (getLifecycleForCurrentMonth() != getLifecycleForMonth(Calendars.SERVER.getCalendarMonthOfYear()))
         {
             onUpdate(level, pos, state);
+            lastUpdateTick = Calendars.SERVER.getTicks();
         }
         if (random.nextDouble() < TFCConfig.SERVER.plantGrowthChance.get() && state.getValue(AGE) >= 3 && (level.getBlockState(pos.above()).isAir() || EnvironmentHelpers.isWorldgenReplaceable(level.getBlockState(pos.above()))) && 
             (Helpers.isBlock(attachedState, BlockTags.LOGS) || Helpers.isBlock(attachedState, TFCTags.Blocks.WILD_CROP_GROWS_ON)) && (level.getBlockState(pos.below()).is(this) || (Helpers.isBlock(level.getBlockState(pos.below()), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(level.getBlockState(pos.below()), TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(level.getBlockState(pos.below()), TFCTags.Blocks.WILD_CROP_GROWS_ON))))
@@ -262,71 +253,75 @@ public abstract class PitahayaBlock extends PlantBlock implements IForgeBlockExt
         // Fruit tree leaves work like berry bushes, but don't have propagation or growth functionality.
         // Which makes them relatively simple, as then they only need to keep track of their lifecycle.
         // if (state.getValue(NATURAL) == false) return; // plants placed by players don't grow
-        if (level.getBlockEntity(pos) instanceof BerryBushBlockEntity leaves)
+
+        Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
+        Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
+        // if we are not working with a plant that is or should be dormant
+        if (!checkAndSetDormant(level, pos, state, currentLifecycle, expectedLifecycle))
         {
-            Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
-            Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
-            // if we are not working with a plant that is or should be dormant
-            if (!checkAndSetDormant(level, pos, state, currentLifecycle, expectedLifecycle))
+            // Otherwise, we do a month-by-month evaluation of how the bush should have grown.
+            // We only do this up to a year. Why? Because eventually, it will have become dormant, and any 'progress' during that year would've been lost anyway because it would unconditionally become dormant.
+            long deltaTicks = Math.min(getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
+            long currentCalendarTick = Calendars.SERVER.getCalendarTicks();
+            long nextCalendarTick = currentCalendarTick - deltaTicks;
+
+            final ClimateRange range = climateRange.get();
+            final int hydration = getHydration(level, pos);
+
+            int monthsSpentDying = 0;
+            do
             {
-                // Otherwise, we do a month-by-month evaluation of how the bush should have grown.
-                // We only do this up to a year. Why? Because eventually, it will have become dormant, and any 'progress' during that year would've been lost anyway because it would unconditionally become dormant.
-                long deltaTicks = Math.min(leaves.getTicksSinceBushUpdate(), Calendars.SERVER.getCalendarTicksInYear());
-                long currentCalendarTick = Calendars.SERVER.getCalendarTicks();
-                long nextCalendarTick = currentCalendarTick - deltaTicks;
+                // This always runs at least once. It is called through random ticks, and calendar updates - although calendar updates will only call this if they've waited at least a day, or the average delta between random ticks.
+                // Otherwise it will just wait for the next random tick.
 
-                final ClimateRange range = climateRange.get();
-                final int hydration = getHydration(level, pos);
+                // Jump forward to nextTick.
+                // Advance the lifecycle (if the at-the-time conditions were valid)
+                nextCalendarTick = Math.min(nextCalendarTick + Calendars.SERVER.getCalendarTicksInMonth(), currentCalendarTick);
 
-                int monthsSpentDying = 0;
-                do
+                float temperatureAtNextTick = Climate.getTemperature(level, pos, nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth());
+                Lifecycle lifecycleAtNextTick = getLifecycleForMonth(ICalendar.getMonthOfYear(nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth()));
+                if (range.checkBoth(hydration, temperatureAtNextTick, false))
                 {
-                    // This always runs at least once. It is called through random ticks, and calendar updates - although calendar updates will only call this if they've waited at least a day, or the average delta between random ticks.
-                    // Otherwise it will just wait for the next random tick.
-
-                    // Jump forward to nextTick.
-                    // Advance the lifecycle (if the at-the-time conditions were valid)
-                    nextCalendarTick = Math.min(nextCalendarTick + Calendars.SERVER.getCalendarTicksInMonth(), currentCalendarTick);
-
-                    float temperatureAtNextTick = Climate.getTemperature(level, pos, nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth());
-                    Lifecycle lifecycleAtNextTick = getLifecycleForMonth(ICalendar.getMonthOfYear(nextCalendarTick, Calendars.SERVER.getCalendarDaysInMonth()));
-                    if (range.checkBoth(hydration, temperatureAtNextTick, false))
-                    {
-                        currentLifecycle = currentLifecycle.advanceTowards(lifecycleAtNextTick);
-                    }
-                    else
-                    {
-                        currentLifecycle = Lifecycle.DORMANT;
-                    }
-
-                    if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
-                    {
-                        monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
-                    }
-                    else
-                    {
-                        monthsSpentDying = 0;
-                    }
-                } while (nextCalendarTick < currentCalendarTick);
-
-                BlockState newState;
-
-                if (mayDie(level, pos, state, monthsSpentDying))
-                {
-                    newState = state.setValue(LIFECYCLE, Lifecycle.DORMANT);
+                    currentLifecycle = currentLifecycle.advanceTowards(lifecycleAtNextTick);
                 }
                 else
                 {
-                    newState = state.setValue(LIFECYCLE, currentLifecycle);
+                    currentLifecycle = Lifecycle.DORMANT;
                 }
 
-                // And update the block
-                if (state != newState)
+                if (lifecycleAtNextTick != Lifecycle.DORMANT && currentLifecycle == Lifecycle.DORMANT)
                 {
-                    level.setBlock(pos, newState, 3);
+                    monthsSpentDying++; // consecutive months spent where the conditions were invalid, but they shouldn't've been
                 }
+                else
+                {
+                    monthsSpentDying = 0;
+                }
+
+            } while (nextCalendarTick < currentCalendarTick);
+
+            BlockState newState;
+
+            if (mayDie(level, pos, state, monthsSpentDying))
+            {
+                newState = state.setValue(LIFECYCLE, Lifecycle.DORMANT);
+            }
+            else
+            {
+                newState = state.setValue(LIFECYCLE, currentLifecycle);
+            }
+
+            // And update the block
+            if (state != newState)
+            {
+                level.setBlock(pos, newState, 3);
             }
         }
+    }
+
+    public long getTicksSinceBushUpdate()
+    {
+        return Calendars.SERVER.getTicks() - lastUpdateTick;
     }
 
     public BlockState stateAfterPicking(BlockState state)

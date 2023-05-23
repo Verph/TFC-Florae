@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "loot_pool",
+      "name": "loot_pool1",
       "rolls": 1,
       "entries": [
         {
@@ -112,10 +112,42 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    },
+    {
+      "name": "loot_pool2",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/leaf/mulberry"
+              "name": "tfcflorae:wood/leaf/mulberry",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 2,
+                    "type": "minecraft:uniform"
+                  }
+                }
+              ]
             },
             {
               "type": "minecraft:item",
