@@ -39,6 +39,10 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
     static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
     static final int PLATEAU_CLIFFS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPlateauCliffs();
+    static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
+    static final int SEAMOUNTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamounts();
+    static final int GUYOTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGuyots();
+    static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -188,11 +192,41 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return ROLLING_HILLS;
             }
         }
+        else if (center == PELAGIC_ZONE)
+        {
+            if (matcher.test(i -> i == SEAMOUNTS))
+            {
+                return SEAMOUNTS;
+            }
+            else if (matcher.test(i -> i == GUYOTS))
+            {
+                return GUYOTS;
+            }
+            else if (matcher.test(i -> i == DEEP_OCEAN))
+            {
+                return DEEP_OCEAN_TRENCH;
+            }
+            else if (matcher.test(i -> i == OCEAN))
+            {
+                return DEEP_OCEAN;
+            }
+            else if (matcher.test(i -> !isOcean(i)))
+            {
+                return DEEP_OCEAN;
+            }
+        }
         else if (center == DEEP_OCEAN_TRENCH)
         {
             if (matcher.test(i -> !isOcean(i)))
             {
                 return OCEAN;
+            }
+        }
+        else if (center == ATOLL)
+        {
+            if (matcher.test(i -> i != ATOLL))
+            {
+                return SHORE_DUNES;
             }
         }
         return center;

@@ -1,5 +1,7 @@
 package tfcflorae.common.blocks.soil;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Map;
 import java.util.Random;
 import java.util.function.Supplier;
@@ -24,10 +26,10 @@ import net.minecraftforge.common.ToolActions;
 
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.PlantRegrowth;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
-import org.jetbrains.annotations.Nullable;
 
 public class ConnectedDryGrassBlock extends ConnectedGrassBlock
 {
@@ -127,6 +129,7 @@ public class ConnectedDryGrassBlock extends ConnectedGrassBlock
                     }
                 }
             }
+            PlantRegrowth.placeRisingRock(level, pos.above(), random);
         }
     }
 

@@ -48,24 +48,24 @@ public class TFCFContainerTypes
     public static final RegistryObject<MenuType<KnappingContainer>> STONEWARE_CLAY_KNAPPING = TFCFContainerTypes.registerItem("stoneware_clay_knapping", TFCFContainerTypes::createStonewareClay);
     public static final RegistryObject<MenuType<KnappingContainer>> FLINT_KNAPPING = TFCFContainerTypes.registerItem("flint_knapping", TFCFContainerTypes::createFlint);
 
-    public static KnappingContainer createEarthenwareClay(ItemStack stack, InteractionHand hand, Inventory playerInventory, int windowId)
+    public static KnappingContainer createEarthenwareClay(ItemStack stack, InteractionHand hand, int slot, Inventory playerInventory, int windowId)
     {
-        return new KnappingContainer(EARTHENWARE_CLAY_KNAPPING.get(), TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
+        return new KnappingContainer(EARTHENWARE_CLAY_KNAPPING.get(), TFCFRecipeTypes.EARTHENWARE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, slot, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
     }
 
-    public static KnappingContainer createKaoliniteClay(ItemStack stack, InteractionHand hand, Inventory playerInventory, int windowId)
+    public static KnappingContainer createKaoliniteClay(ItemStack stack, InteractionHand hand, int slot, Inventory playerInventory, int windowId)
     {
-        return new KnappingContainer(KAOLINITE_CLAY_KNAPPING.get(), TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
+        return new KnappingContainer(KAOLINITE_CLAY_KNAPPING.get(), TFCFRecipeTypes.KAOLINITE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, slot, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
     }
 
-    public static KnappingContainer createStonewareClay(ItemStack stack, InteractionHand hand, Inventory playerInventory, int windowId)
+    public static KnappingContainer createStonewareClay(ItemStack stack, InteractionHand hand, int slot, Inventory playerInventory, int windowId)
     {
-        return new KnappingContainer(STONEWARE_CLAY_KNAPPING.get(), TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
+        return new KnappingContainer(STONEWARE_CLAY_KNAPPING.get(), TFCFRecipeTypes.STONEWARE_CLAY_KNAPPING.get(), windowId, playerInventory, stack, hand, slot, 5, true, true, TFCSounds.KNAP_CLAY.get()).init(playerInventory, 20);
     }
 
-    public static KnappingContainer createFlint(ItemStack stack, InteractionHand hand, Inventory playerInventory, int windowId)
+    public static KnappingContainer createFlint(ItemStack stack, InteractionHand hand, int slot, Inventory playerInventory, int windowId)
     {
-        return new KnappingContainer(FLINT_KNAPPING.get(), TFCFRecipeTypes.FLINT_KNAPPING.get(), windowId, playerInventory, stack, hand, 1, false, false, TFCSounds.KNAP_STONE.get()).init(playerInventory, 20);
+        return new KnappingContainer(FLINT_KNAPPING.get(), TFCFRecipeTypes.FLINT_KNAPPING.get(), windowId, playerInventory, stack, hand, slot, 1, false, false, TFCSounds.KNAP_STONE.get()).init(playerInventory, 20);
     }
 
     private static <T extends InventoryBlockEntity<?>, C extends BlockEntityContainer<T>> RegistryObject<MenuType<C>> registerBlock(String name, Supplier<BlockEntityType<T>> type, BlockEntityContainer.Factory<T, C> factory)

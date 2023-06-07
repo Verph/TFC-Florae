@@ -6,8 +6,6 @@ import net.dries007.tfc.world.layer.framework.CenterMergeLayer;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
-import static net.dries007.tfc.world.layer.TFCLayers.*;
-
 public enum MergeMesaPlateauLayer implements CenterMergeLayer
 {
     INSTANCE;

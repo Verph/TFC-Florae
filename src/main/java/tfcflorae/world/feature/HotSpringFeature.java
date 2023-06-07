@@ -5,6 +5,7 @@ import java.util.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
 import com.mojang.serialization.Codec;
@@ -117,7 +119,7 @@ public class HotSpringFeature extends Feature<HotSpringConfig>
                     if (startY == -1)
                     {
                         mutablePos.set(localX, y, localZ);
-                        setBlock(level, mutablePos, Blocks.AIR.defaultBlockState());
+                        placeWaterOrAir(level, mutablePos);
                     }
                 }
                 else
@@ -186,5 +188,21 @@ public class HotSpringFeature extends Feature<HotSpringConfig>
     private static boolean isEmptyBlock(HotSpringConfig config, BlockState state)
     {
         return config.allowUnderwater() ? FluidHelpers.isAirOrEmptyFluid(state) : state.isAir();
+    }
+
+    public void placeWaterOrAir(WorldGenLevel level, BlockPos pos)
+    {
+        for (Direction direction : Helpers.DIRECTIONS)
+        {
+            FluidState fluidState = level.getFluidState(pos.relative(direction));
+            if (fluidState.getType() != Fluids.EMPTY)
+            {
+                setBlock(level, pos, fluidState.createLegacyBlock());
+                markAboveForPostProcessing(level, pos);
+                return;
+            }
+        }
+        setBlock(level, pos, Blocks.AIR.defaultBlockState());
+        markAboveForPostProcessing(level, pos);
     }
 }

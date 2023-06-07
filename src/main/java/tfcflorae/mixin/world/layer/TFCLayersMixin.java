@@ -131,6 +131,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Unique private static final int VINICUNCA_MOUNTAINS;
     @Unique private static final int NEAR_SHORE;
     @Unique private static final int LAKE_SHORE;
+    @Unique private static final int PELAGIC_ZONE;
+    @Unique private static final int SEAMOUNTS;
+    @Unique private static final int GUYOTS;
+    @Unique private static final int ATOLL;
 
     /**
      * These IDs are used as markers for biomes. They should all be removed by the time the biome layers are finished
@@ -144,6 +148,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Unique private static final int CALDERA_MARKER;
     @Unique private static final int PUY_MOUNTAINS_MARKER;
     @Unique private static final int MESA_PLATEAU_MARKER;
+    @Unique private static final int PELAGIC_ZONE_MARKER;
+    @Unique private static final int SEAMOUNTS_MARKER;
+    @Unique private static final int GUYOTS_MARKER;
+    @Unique private static final int ATOLL_MARKER;
 
     @Shadow @Mutable @Final private static final BiomeExtension[] BIOME_LAYERS = new BiomeExtension[128];
     @Shadow private static final MutableInt BIOME_LAYER_INDEX = new MutableInt(0);
@@ -215,6 +223,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         VINICUNCA_MOUNTAINS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticVinicuncaMountains);
         NEAR_SHORE = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticNearShore);
         LAKE_SHORE = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticLakeShore);
+        PELAGIC_ZONE = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticPelagicZone);
+        SEAMOUNTS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticSeamounts);
+        GUYOTS = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticGuyots);
+        ATOLL = register(((TFCBiomesMixinInterface) (Object) staticBiomes)::getStaticAtoll);
 
         OCEAN_OCEAN_CONVERGING_MARKER = register();
         OCEAN_OCEAN_DIVERGING_MARKER = register();
@@ -225,6 +237,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         CALDERA_MARKER = register();
         PUY_MOUNTAINS_MARKER = register();
         MESA_PLATEAU_MARKER = register();
+        PELAGIC_ZONE_MARKER = register();
+        SEAMOUNTS_MARKER = register();
+        GUYOTS_MARKER = register();
+        ATOLL_MARKER = register();
     }
 
     @Unique @Override
@@ -243,6 +259,30 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     public int getStaticMesaPlateauMarker()
     {
         return MESA_PLATEAU_MARKER;
+    }
+
+    @Unique @Override
+    public int getStaticPelagicZoneMarker()
+    {
+        return PELAGIC_ZONE_MARKER;
+    }
+
+    @Unique @Override
+    public int getStaticSeamountsMarker()
+    {
+        return SEAMOUNTS_MARKER;
+    }
+
+    @Unique @Override
+    public int getStaticGuyotsMarker()
+    {
+        return GUYOTS_MARKER;
+    }
+
+    @Unique @Override
+    public int getStaticAtollMarker()
+    {
+        return ATOLL_MARKER;
     }
 
     @Override
@@ -437,6 +477,30 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return LAKE_SHORE;
     }
 
+    @Unique @Override
+    public int getStaticPelagicZone()
+    {
+        return PELAGIC_ZONE;
+    }
+
+    @Unique @Override
+    public int getStaticSeamounts()
+    {
+        return SEAMOUNTS;
+    }
+
+    @Unique @Override
+    public int getStaticGuyots()
+    {
+        return GUYOTS;
+    }
+
+    @Unique @Override
+    public int getStaticAtoll()
+    {
+        return ATOLL;
+    }
+
     @Overwrite(remap = false)
     public static BiomeExtension getFromLayerId(int id)
     {
@@ -454,7 +518,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         final Random random = new Random(seed);
 
         TypedAreaFactory<Plate> plateLayer, riverLayer;
-        AreaFactory mainLayer, lakeLayer, calderaLayer, puyMountainsLayer, mesaPlateauLayer;
+        AreaFactory mainLayer, lakeLayer, calderaLayer, puyMountainsLayer, mesaPlateauLayer, pelagicZoneLayer, seamountsLayer, guyotsLayer, atollLayer;
 
         // Tectonic Plates - generate plates and annotate border regions with converging / diverging boundaries
         plateLayer = new PlateGenerationLayer(new Cellular2D(random.nextInt()).spread(0.2f), 40).apply(random.nextLong());
@@ -537,65 +601,137 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         mesaPlateauLayer = ZoomLayer.NORMAL.apply(1003, mesaPlateauLayer);
         layerArtist.draw("mesa_plateau", 6, mesaPlateauLayer);
 
+        // Initial Biomes -> Pelagic Zones Setup
+        pelagicZoneLayer = InlandLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        layerArtist.draw("pelagic_zone", 1, pelagicZoneLayer);
+        pelagicZoneLayer = ZoomLayer.NORMAL.apply(1001, pelagicZoneLayer);
+        layerArtist.draw("pelagic_zone", 2, pelagicZoneLayer);
+
+        // Pelagic Zones
+        pelagicZoneLayer = AddPelagicZonesLayer.LARGE.apply(random.nextLong(), pelagicZoneLayer);
+        layerArtist.draw("pelagic_zone", 3, pelagicZoneLayer);
+        pelagicZoneLayer = ZoomLayer.NORMAL.apply(1002, pelagicZoneLayer);
+        layerArtist.draw("pelagic_zone", 4, pelagicZoneLayer);
+        pelagicZoneLayer = AddPelagicZonesLayer.SMALL.apply(random.nextLong(), pelagicZoneLayer);
+        layerArtist.draw("pelagic_zone", 5, pelagicZoneLayer);
+        pelagicZoneLayer = ZoomLayer.NORMAL.apply(1003, pelagicZoneLayer);
+        layerArtist.draw("pelagic_zone", 6, pelagicZoneLayer);
+
+        // Initial Biomes -> Seamounts Setup
+        seamountsLayer = InlandLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        layerArtist.draw("seamounts", 1, seamountsLayer);
+        seamountsLayer = ZoomLayer.NORMAL.apply(1001, seamountsLayer);
+        layerArtist.draw("seamounts", 2, seamountsLayer);
+
+        // Seamounts
+        seamountsLayer = AddSeamountsLayer.LARGE.apply(random.nextLong(), seamountsLayer);
+        layerArtist.draw("seamounts", 3, seamountsLayer);
+        seamountsLayer = ZoomLayer.NORMAL.apply(1002, seamountsLayer);
+        layerArtist.draw("seamounts", 4, seamountsLayer);
+        seamountsLayer = AddSeamountsLayer.SMALL.apply(random.nextLong(), seamountsLayer);
+        layerArtist.draw("seamounts", 5, seamountsLayer);
+        seamountsLayer = ZoomLayer.NORMAL.apply(1003, seamountsLayer);
+        layerArtist.draw("seamounts", 6, seamountsLayer);
+
+        // Initial Biomes -> Guyots Setup
+        guyotsLayer = InlandLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        layerArtist.draw("guyots", 1, guyotsLayer);
+        guyotsLayer = ZoomLayer.NORMAL.apply(1001, guyotsLayer);
+        layerArtist.draw("guyots", 2, guyotsLayer);
+
+        // Guyots
+        guyotsLayer = AddGuyotsLayer.LARGE.apply(random.nextLong(), guyotsLayer);
+        layerArtist.draw("guyots", 3, guyotsLayer);
+        guyotsLayer = ZoomLayer.NORMAL.apply(1002, guyotsLayer);
+        layerArtist.draw("guyots", 4, guyotsLayer);
+        guyotsLayer = AddGuyotsLayer.SMALL.apply(random.nextLong(), guyotsLayer);
+        layerArtist.draw("guyots", 5, guyotsLayer);
+        guyotsLayer = ZoomLayer.NORMAL.apply(1003, guyotsLayer);
+        layerArtist.draw("guyots", 6, guyotsLayer);
+
+        // Initial Biomes -> Guyots Setup
+        atollLayer = InlandLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        layerArtist.draw("atoll", 1, atollLayer);
+        atollLayer = ZoomLayer.NORMAL.apply(1001, atollLayer);
+        layerArtist.draw("atoll", 2, atollLayer);
+
+        // Guyots
+        atollLayer = AddAtollLayer.LARGE.apply(random.nextLong(), atollLayer);
+        layerArtist.draw("atoll", 3, atollLayer);
+        atollLayer = ZoomLayer.NORMAL.apply(1002, atollLayer);
+        layerArtist.draw("atoll", 4, atollLayer);
+        atollLayer = AddAtollLayer.SMALL.apply(random.nextLong(), atollLayer);
+        layerArtist.draw("atoll", 5, atollLayer);
+        atollLayer = ZoomLayer.NORMAL.apply(1003, atollLayer);
+        layerArtist.draw("atoll", 6, atollLayer);
+
         // Biome level features - ocean borders, lakes, island chains, edge biomes, shores
         // Apply lakes back to biomes
-        mainLayer = OceanBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = MergePelagicZonesLayer.INSTANCE.apply(random.nextLong(), mainLayer, seamountsLayer);
         layerArtist.draw("biomes", 2, mainLayer);
-        mainLayer = ZoomLayer.NORMAL.apply(1001, mainLayer);
+        mainLayer = MergeSeamountsLayer.INSTANCE.apply(random.nextLong(), mainLayer, seamountsLayer);
         layerArtist.draw("biomes", 3, mainLayer);
-        mainLayer = ArchipelagoLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = MergeGuyotsLayer.INSTANCE.apply(random.nextLong(), mainLayer, guyotsLayer);
         layerArtist.draw("biomes", 4, mainLayer);
-        mainLayer = ReefBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = OceanBorderLayerTFCF.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 5, mainLayer);
-        mainLayer = ZoomLayer.NORMAL.apply(1002, mainLayer);
+        mainLayer = ZoomLayer.NORMAL.apply(1001, mainLayer);
         layerArtist.draw("biomes", 6, mainLayer);
-        mainLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = ArchipelagoLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 7, mainLayer);
-        mainLayer = ZoomLayer.NORMAL.apply(1003, mainLayer);
+        mainLayer = ReefBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 8, mainLayer);
-        mainLayer = MergeLakeLayer.INSTANCE.apply(random.nextLong(), mainLayer, lakeLayer);
+        mainLayer = ZoomLayer.NORMAL.apply(1002, mainLayer);
         layerArtist.draw("biomes", 9, mainLayer);
-        mainLayer = MergeCalderaLayer.INSTANCE.apply(random.nextLong(), mainLayer, calderaLayer);
+        mainLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 10, mainLayer);
-        mainLayer = MergePuyMountainsLayer.INSTANCE.apply(random.nextLong(), mainLayer, puyMountainsLayer);
+        mainLayer = ZoomLayer.NORMAL.apply(1003, mainLayer);
         layerArtist.draw("biomes", 11, mainLayer);
-        mainLayer = MergeMesaPlateauLayer.INSTANCE.apply(random.nextLong(), mainLayer, mesaPlateauLayer);
+        mainLayer = MergeLakeLayer.INSTANCE.apply(random.nextLong(), mainLayer, lakeLayer);
         layerArtist.draw("biomes", 12, mainLayer);
+        mainLayer = MergeCalderaLayer.INSTANCE.apply(random.nextLong(), mainLayer, calderaLayer);
+        layerArtist.draw("biomes", 13, mainLayer);
+        mainLayer = MergePuyMountainsLayer.INSTANCE.apply(random.nextLong(), mainLayer, puyMountainsLayer);
+        layerArtist.draw("biomes", 14, mainLayer);
+        mainLayer = MergeMesaPlateauLayer.INSTANCE.apply(random.nextLong(), mainLayer, mesaPlateauLayer);
+        layerArtist.draw("biomes", 15, mainLayer);
+        mainLayer = MergeAtollLayer.INSTANCE.apply(random.nextLong(), mainLayer, atollLayer);
+        layerArtist.draw("biomes", 16, mainLayer);
 
         mainLayer = ShoreLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 13, mainLayer);
+        layerArtist.draw("biomes", 17, mainLayer);
         mainLayer = LakeEdgeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 14, mainLayer);
+        layerArtist.draw("biomes", 18, mainLayer);
         mainLayer = NearShoreLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 15, mainLayer);
+        layerArtist.draw("biomes", 19, mainLayer);
         mainLayer = PlateauCliffsLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 16, mainLayer);
+        layerArtist.draw("biomes", 20, mainLayer);
 
         for (int i = 0; i < 4; i++)
         {
             mainLayer = ZoomLayer.NORMAL.apply(random.nextLong(), mainLayer);
-            layerArtist.draw("biomes", 17 + i, mainLayer);
+            layerArtist.draw("biomes", 21 + i, mainLayer);
         }
 
         mainLayer = SmoothLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 21, mainLayer);
+        layerArtist.draw("biomes", 25, mainLayer);
         mainLayer = ExtraDunesShoreLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 22, mainLayer);
+        layerArtist.draw("biomes", 26, mainLayer);
 
         ShoreDunes.Context shoreDunesContext = new ShoreDunes.Context(createEarlyPlateLayers(seed), seed + random.nextLong(), 0.6f, 0.8f, 14, 0.2f);
         mainLayer = new MergeShoreDunesLayer(shoreDunesContext).apply(seed + random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 23, mainLayer);
+        layerArtist.draw("biomes", 27, mainLayer);
 
         CoastalCliffs.Context cliffContext = new CoastalCliffs.Context(createEarlyPlateLayers(seed), seed + 2, 0.5f, 0.8f, 14, 0.2f);
         mainLayer = new MergeCoastalCliffsLayer(cliffContext).apply(seed + 2, mainLayer);
-        layerArtist.draw("biomes", 24, mainLayer);
+        layerArtist.draw("biomes", 28, mainLayer);
 
         for (int i = 0; i < 4; i++)
         {
             mainLayer = ExtraDunesShoreLayer.INSTANCE.apply(seed + random.nextLong(), mainLayer);
-            layerArtist.draw("biomes", 25 + i, mainLayer);
-            mainLayer = EdgeDunesShoreLayer.INSTANCE.apply(seed + random.nextLong(), mainLayer);
             layerArtist.draw("biomes", 29 + i, mainLayer);
+            mainLayer = EdgeDunesShoreLayer.INSTANCE.apply(seed + random.nextLong(), mainLayer);
+            layerArtist.draw("biomes", 33 + i, mainLayer);
         }
 
         riverLayer = createEarlyPlateLayers(seed);
@@ -604,22 +740,22 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         //WatershedTertiary.Context riverTertiaryContext = new WatershedTertiary.Context(riverLayer, mainLayer, seed, 0.2f, 0.8f, 14, 0.2f);
 
         mainLayer = new TFCFMergeRiverLayer(riverContext, seed).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 33, mainLayer);
+        layerArtist.draw("biomes", 38, mainLayer);
         /*mainLayer = new MergeRiverTertiaryLayer(riverTertiaryContext).apply(seed, mainLayer);
         layerArtist.draw("biomes", 34, mainLayer);*/
         mainLayer = new MergeRiverBanksLayer(riverbankContext, riverContext, seed).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 35, mainLayer);
+        layerArtist.draw("biomes", 39, mainLayer);
         mainLayer = new TFCFMergeRiverLayer(riverContext, seed).apply(seed, mainLayer);
-        layerArtist.draw("biomes", 36, mainLayer);
+        layerArtist.draw("biomes", 40, mainLayer);
         mainLayer = EdgeRiverbankLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 37, mainLayer);
+        layerArtist.draw("biomes", 41, mainLayer);
 
         Chasm.Context chasmContext = new Chasm.Context(createEarlyPlateLayers(seed), seed + 5, 0.58F, 0.7F, 16, 0.9F);
         mainLayer = new MergeChasmsLayer(chasmContext).apply(seed + 5, mainLayer);
-        layerArtist.draw("biomes", 38, mainLayer);
+        layerArtist.draw("biomes", 42, mainLayer);
 
         mainLayer = PlateauCliffsLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 39, mainLayer);
+        layerArtist.draw("biomes", 43, mainLayer);
 
         return mainLayer;
     }
@@ -744,7 +880,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow
     public static boolean hasLake(int value)
     {
-        return !isOcean(value) && value != BADLANDS && value != CALDERAS;
+        return !isOcean(value) && value != BADLANDS && value != CALDERAS && value != NEAR_SHORE && value != ATOLL;
     }
 
     @Overwrite(remap = false)
@@ -788,7 +924,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow
     public static boolean hasRiver(int value)
     {
-        return !isOcean(value) && !isLake(value) && value != RIVERBANK && value != RIVER_EDGE;
+        return !isOcean(value) && !isLake(value) && value != RIVERBANK && value != RIVER_EDGE && value != NEAR_SHORE && value != ATOLL;
     }
 
     @Overwrite(remap = false)
@@ -828,13 +964,13 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Shadow
     public static boolean isOcean(int value)
     {
-        return value == OCEAN || value == DEEP_OCEAN || value == DEEP_OCEAN_TRENCH || value == OCEAN_REEF;
+        return value == OCEAN || value == DEEP_OCEAN || value == DEEP_OCEAN_TRENCH || value == OCEAN_REEF || value == PELAGIC_ZONE || value == SEAMOUNTS || value == GUYOTS || value == ATOLL;
     }
 
     @Shadow
     public static boolean isOceanOrMarker(int value)
     {
-        return isOcean(value) || value == OCEAN_OCEAN_CONVERGING_MARKER || value == OCEAN_OCEAN_DIVERGING_MARKER || value == OCEAN_REEF_MARKER;
+        return isOcean(value) || value == OCEAN_OCEAN_CONVERGING_MARKER || value == OCEAN_OCEAN_DIVERGING_MARKER || value == OCEAN_REEF_MARKER || value == PELAGIC_ZONE_MARKER || value == SEAMOUNTS_MARKER || value == GUYOTS_MARKER;
     }
 
     @Overwrite(remap = false)

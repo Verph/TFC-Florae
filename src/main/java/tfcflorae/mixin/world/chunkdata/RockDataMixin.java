@@ -52,7 +52,18 @@ public class RockDataMixin
         final int rh = rockLayerHeight[i];
         final int gaussSpread = (int) (Mth.abs((float) random.nextGaussian()) * Mth.sqrt(sh * 0.5F));
 
-        if (y > (int) ((SEA_LEVEL_Y + SEA_LEVEL_Y - 0.2 * sh + rh) + (gaussSpread * 0.2F)))
+        if (y >= (int) ((SEA_LEVEL_Y + 92 - 0.2 * (sh * 1.15F) + rh) + (gaussSpread * 0.05F)) && y <= (int) ((SEA_LEVEL_Y + 106 - 0.2 * (sh * 1.15F) + rh) + (gaussSpread * 0.05F)))
+        {
+            if (y > (int) ((SEA_LEVEL_Y + 98 - 0.2 * (sh * 1.15F) + rh) + (gaussSpread * 0.05F)))
+            {
+                return middleLayer[i];
+            }
+            else
+            {
+                return bottomLayer[i];
+            }
+        }
+        else if (y > (int) ((SEA_LEVEL_Y + SEA_LEVEL_Y - 0.2 * sh + rh) + (gaussSpread * 0.2F)))
         {
             return topLayer[i];
         }

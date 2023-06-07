@@ -134,6 +134,13 @@ public class LooseMudBlock extends Block
     @Override
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType pType)
     {
-        return true;
+        return false;
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public float getShadeBrightness(BlockState state, BlockGetter level, BlockPos pos)
+    {
+        return 0.2f;
     }
 }

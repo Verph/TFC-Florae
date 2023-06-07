@@ -8,8 +8,6 @@ import net.dries007.tfc.world.river.MidpointFractal;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
-import static net.dries007.tfc.world.layer.TFCLayers.*;
-
 public class MergeCoastalCliffsLayer implements TransformLayer
 {
     private final CoastalCliffs.Context cliff;

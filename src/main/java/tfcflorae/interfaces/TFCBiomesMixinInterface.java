@@ -67,4 +67,12 @@ public interface TFCBiomesMixinInterface
     BiomeExtension getStaticNearShore();
 
     BiomeExtension getStaticLakeShore();
+
+    BiomeExtension getStaticPelagicZone();
+
+    BiomeExtension getStaticSeamounts();
+
+    BiomeExtension getStaticGuyots();
+
+    BiomeExtension getStaticAtoll();
 }

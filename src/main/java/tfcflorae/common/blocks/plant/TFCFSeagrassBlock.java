@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.WaterFluid;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -33,6 +34,7 @@ import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
 import net.dries007.tfc.common.blocks.plant.WaterPlantBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.registry.RegistryPlant;
@@ -98,7 +100,7 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
         {
             if (facing.getAxis() != Direction.Axis.Y || part == Part.LOWER != (facing == Direction.UP) || facingState.getBlock() == this && facingState.getValue(PART) != part)
             {
-                return part == Part.LOWER && facing == Direction.DOWN && !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+                return part == Part.LOWER && facing == Direction.DOWN && !state.canSurvive(level, currentPos) ? placeWaterOrAir(level, currentPos) : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
             }
             else
             {
@@ -107,12 +109,32 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
         }
         else if (state.getValue(SINGLE) && level.getBlockState(currentPos.below()).getBlock() instanceof TFCFSeagrassBlock && level.getBlockState(currentPos.below()).getValue(SINGLE))
         {
+            FluidState fluidState = level.getFluidState(currentPos.below());
+            if (fluidState.getType() != Fluids.EMPTY)
+            {
+                return fluidState.createLegacyBlock();
+            }
             return Blocks.AIR.defaultBlockState();
         }
         else
         {
+            FluidState fluidState = level.getFluidState(currentPos);
+            if (fluidState.getType() != Fluids.EMPTY)
+            {
+                return fluidState.createLegacyBlock();
+            }
             return Blocks.AIR.defaultBlockState();
         }
+    }
+
+    public BlockState placeWaterOrAir(LevelAccessor level, BlockPos currentPos)
+    {
+        FluidState fluidState = level.getFluidState(currentPos.below());
+        if (fluidState.getType() != Fluids.EMPTY)
+        {
+            return fluidState.createLegacyBlock();
+        }
+        return Blocks.AIR.defaultBlockState();
     }
 
     @Override
@@ -120,7 +142,7 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
     {
         if (!state.canSurvive(level, pos))
         {
-            level.destroyBlock(pos, true);
+            placeWaterOrAir(level, pos);
         }
     }
 
@@ -129,30 +151,25 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
     {
         if (state.getValue(getFluidProperty()) != getFluidProperty().keyFor(Fluids.EMPTY))
         {
-            return true;
-        }
-
-        if (state.getValue(PART) == Part.LOWER || state.getValue(SINGLE))
-        {
-            if (level.getBlockState(pos.below()).getBlock() instanceof TFCFSeagrassBlock && level.getBlockState(pos.below()).getValue(SINGLE))
+            if (state.getValue(PART) == Part.LOWER || state.getValue(SINGLE))
             {
-                return false;
+                if (level.getBlockState(pos.below()).getBlock() instanceof TFCFSeagrassBlock)
+                {
+                    return !level.getBlockState(pos.below()).getValue(SINGLE);
+                }
+                return super.canSurvive(state, level, pos) && level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP);
             }
-            return super.canSurvive(state, level, pos);
-        }
-        else if (level.getBlockState(pos.below()).getValue(SINGLE) || (!level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP) && !state.getValue(SINGLE)))
-        {
-            return false;
-        }
-        else
-        {
-            BlockState blockstate = level.getBlockState(pos.below());
-            if (state.getBlock() != this)
+            else
             {
-                return super.canSurvive(state, level, pos);
+                BlockState blockstate = level.getBlockState(pos.below());
+                if (state.getBlock() != this)
+                {
+                    return super.canSurvive(state, level, pos);
+                }
+                return blockstate.getBlock() == this && blockstate.getValue(PART) == Part.LOWER;
             }
-            return blockstate.getBlock() == this && blockstate.getValue(PART) == Part.LOWER;
         }
+        return false;
     }
 
     @Override
@@ -168,7 +185,7 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
     @Override
     public OffsetType getOffsetType()
     {
-        return OffsetType.XYZ;
+        return OffsetType.XZ;
     }
 
     @Override

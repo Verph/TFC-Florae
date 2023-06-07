@@ -71,4 +71,20 @@ public interface TFCLayersMixinInterface
     int getStaticPuyMountainsMarker();
 
     int getStaticMesaPlateauMarker();
+
+    int getStaticPelagicZone();
+
+    int getStaticSeamounts();
+
+    int getStaticGuyots();
+
+    int getStaticAtoll();
+
+    int getStaticPelagicZoneMarker();
+
+    int getStaticSeamountsMarker();
+
+    int getStaticGuyotsMarker();
+
+    int getStaticAtollMarker();
 }

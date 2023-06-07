@@ -48,15 +48,39 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     private static final Map<ResourceKey<Biome>, BiomeExtension> EXTENSIONS = new IdentityHashMap<>();
 
     // Aquatic biomes
+
+    /**
+     * Add more aquatic biomes! Such as:
+     * Littoral zone,
+     * Intertidal zone,
+     * Estuaries,
+     * Continental shelfs,
+     * Neritic zone,
+     * Pelagic zones;
+     * - Mesopelagic,
+     * - Bathypelagic,
+     * - Abyssopelagic,
+     * - Hadopelagic,
+     * Seamounts (works like lakes - with underwater volcanoes?)
+     */
+
     @Shadow @Mutable @Final
     public static final BiomeExtension OCEAN = register("ocean", builder().heightmap(seed -> BiomeNoise.ocean(seed, -26, -12)).surface(OceanSurfaceBuilder.INSTANCE).aquiferHeightOffset(-24).salty().group(BiomeExtension.Group.OCEAN)); // Ocean biome found near continents.
     @Shadow @Mutable @Final
     public static final BiomeExtension OCEAN_REEF = register("ocean_reef", builder().heightmap(seed -> BiomeNoise.ocean(seed, -16, -8)).surface(OceanSurfaceBuilder.INSTANCE).aquiferHeightOffset(-24).salty().group(BiomeExtension.Group.OCEAN)); // Ocean biome with reefs depending on climate. Could be interpreted as either barrier, fringe, or platform reefs.
     @Shadow @Mutable @Final
-    public static final BiomeExtension DEEP_OCEAN = register("deep_ocean", builder().heightmap(seed -> BiomeNoise.ocean(seed, -30, -100)).surface(OceanSurfaceBuilder.INSTANCE).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).aquiferHeightOffset(-24).group(BiomeExtension.Group.OCEAN).salty()); // Deep ocean biome covering most all oceans.
+    public static final BiomeExtension DEEP_OCEAN = register("deep_ocean", builder().heightmap(seed -> BiomeNoise.ocean(seed, -100, -30)).surface(OceanSurfaceBuilder.INSTANCE).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).aquiferHeightOffset(-24).group(BiomeExtension.Group.OCEAN).salty()); // Deep ocean biome covering most all oceans.
     @Shadow @Mutable @Final
-    public static final BiomeExtension DEEP_OCEAN_TRENCH = register("deep_ocean_trench", builder().heightmap(seed -> BiomeNoise.oceanRidge(seed, -30, -128)).surface(OceanSurfaceBuilder.INSTANCE).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).aquiferHeightOffset(-24).group(BiomeExtension.Group.OCEAN).salty()); // Deeper ocean with sharp relief carving to create very deep trenches
-
+    public static final BiomeExtension DEEP_OCEAN_TRENCH = register("deep_ocean_trench", builder().heightmap(seed -> BiomeNoise.oceanRidge(seed, -128, -30)).surface(OceanSurfaceBuilder.INSTANCE).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).aquiferHeightOffset(-24).group(BiomeExtension.Group.OCEAN).salty()); // Deeper ocean with sharp relief carving to create very deep trenches
+    @Unique @Final
+    private static final BiomeExtension PELAGIC_ZONE = register("pelagic_zone", builder().heightmap(seed -> BiomeNoise.ocean(seed, -250, -168)).surface(OceanSurfaceBuilder.INSTANCE).group(BiomeExtension.Group.OCEAN).salty());
+    @Unique @Final
+    private static final BiomeExtension SEAMOUNTS = register("seamounts", builder().heightmap(seed -> TFCFBiomeNoise.seamounts(seed, -240, -168)).surface(OceanSurfaceBuilder.INSTANCE).group(BiomeExtension.Group.OCEAN).salty().volcanoes(3, 1, 30, -256));
+    @Unique @Final
+    private static final BiomeExtension GUYOTS = register("guyots", builder().heightmap(seed -> TFCFBiomeNoise.seamounts(seed, -250, -230)).surface(OceanSurfaceBuilder.INSTANCE).group(BiomeExtension.Group.OCEAN).salty().volcanoes(1, 1, 30, -256));
+    @Unique @Final
+    private static final BiomeExtension ATOLL = register("atoll", builder().heightmap(seed -> BiomeNoise.oceanRidge(seed, -100, -30)).surface(DuneShoreSurfaceBuilder.create(ShoreSurfaceBuilder.INSTANCE)).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).group(BiomeExtension.Group.OCEAN).salty());
+    
     // Low biomes
     @Shadow @Mutable @Final
     public static final BiomeExtension PLAINS = register("plains", builder().heightmap(seed -> BiomeNoise.hills(seed, 4, 10)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).spawnable()); // Very flat, slightly above sea level.
@@ -100,7 +124,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     @Unique @Final
     private static final BiomeExtension GRAVEL_SHORE = register("gravel_shore", builder().heightmap(BiomeNoise::shore).surface(GravelShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).carving(TFCFBiomeNoise::undergroundCavesUpper).group(BiomeExtension.Group.OCEAN).salty().spawnable());
     @Unique @Final
-    private static final BiomeExtension THERMAL_CANYONS = register("thermal_canyons", builder().heightmap(seed -> BiomeNoise.canyons(seed, -10, 18)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable().volcanoes(2, -12, 20, 10).aquiferHeightOffset(-16));
+    private static final BiomeExtension THERMAL_CANYONS = register("thermal_canyons", builder().heightmap(seed -> BiomeNoise.canyons(seed, -10, 18)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesMiddle).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).carving(TFCFBiomeNoise::undergroundCavesDeep).spawnable().volcanoes(2, -12, 20, 0).aquiferHeightOffset(-16));
     @Unique @Final
     private static final BiomeExtension MESA_PLATEAU = register("mesa_plateau", builder().heightmap(seed -> BiomeNoise.canyons(seed, 60, 66)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(NormalSurfaceBuilder.INSTANCE))))).spawnable());
     @Unique @Final
@@ -450,5 +474,29 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     public BiomeExtension getStaticLakeShore()
     {
         return LAKE_SHORE;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticPelagicZone()
+    {
+        return PELAGIC_ZONE;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticSeamounts()
+    {
+        return SEAMOUNTS;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticGuyots()
+    {
+        return GUYOTS;
+    }
+
+    @Unique @Override
+    public BiomeExtension getStaticAtoll()
+    {
+        return ATOLL;
     }
 }

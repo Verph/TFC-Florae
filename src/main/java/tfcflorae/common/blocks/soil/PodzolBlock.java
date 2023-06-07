@@ -23,6 +23,7 @@ import net.minecraftforge.common.ToolActions;
 
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.PlantRegrowth;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
@@ -106,6 +107,10 @@ public class PodzolBlock extends ConnectedGrassBlock
                 // Turn to not-grass
                 level.setBlockAndUpdate(pos, getDirt());
             }
+        }
+        else
+        {
+            PlantRegrowth.placeRisingRock(level, pos.above(), random);
         }
     }
 

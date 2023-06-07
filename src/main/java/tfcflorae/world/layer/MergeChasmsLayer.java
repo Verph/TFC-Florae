@@ -8,6 +8,8 @@ import net.dries007.tfc.world.river.MidpointFractal;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
+import static net.dries007.tfc.world.layer.TFCLayers.*;
+
 public class MergeChasmsLayer implements TransformLayer
 {
     private final Chasm.Context chasm;
@@ -15,6 +17,9 @@ public class MergeChasmsLayer implements TransformLayer
 
     static final int RIVERBANK = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticRiverbank();
     static final int CHASMS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticChasms();
+    static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
+    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
+    static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
 
     public MergeChasmsLayer(Chasm.Context chasm)
     {
@@ -25,7 +30,7 @@ public class MergeChasmsLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        if (!(TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value) || value == RIVERBANK))
+        if (!currentBiome(value) || value == RIVERBANK)
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;
@@ -39,5 +44,10 @@ public class MergeChasmsLayer implements TransformLayer
             }
         }
         return value;
+    }
+
+    public boolean currentBiome(int value)
+    {
+        return TFCLayers.isOceanOrMarker(value) && TFCLayers.isLake(value) && TFCLayers.isRiver(value) && TFCLayers.isLow(value) && value == ATOLL && value == NEAR_SHORE && value == SHORE && value == SHORE_DUNES;
     }
 }

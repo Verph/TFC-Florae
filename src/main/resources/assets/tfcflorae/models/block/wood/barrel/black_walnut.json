@@ -1,5 +1,5 @@
 {
-  "parent": "tfc:block/barrel",
+  "parent": "tfcflorae:block/barrel",
   "textures": {
     "particle": "tfcflorae:block/wood/planks/black_walnut",
     "planks": "tfcflorae:block/wood/planks/black_walnut",
