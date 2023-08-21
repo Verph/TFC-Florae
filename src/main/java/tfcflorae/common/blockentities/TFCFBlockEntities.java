@@ -28,6 +28,11 @@ public class TFCFBlockEntities
 {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFCFlorae.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<SandPileBlockEntity>> SAND_PILE = register("sand_pile", SandPileBlockEntity::new, Stream.of(
+            TFCFBlocks.SAND_LAYERS.values().stream()
+        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
+    );
+
     public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tfcf_tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SAPLING)),
             TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values(),

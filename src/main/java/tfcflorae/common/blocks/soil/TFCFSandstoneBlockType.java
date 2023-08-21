@@ -9,14 +9,14 @@ public enum TFCFSandstoneBlockType
 {
     LAYERED(color -> BlockBehaviour.Properties.of(Material.STONE, color.getMaterialColor()).strength(0.8f).requiresCorrectToolForDrops());
 
-    private final Function<TFCFSandBlockType, BlockBehaviour.Properties> factory;
+    private final Function<Colors, BlockBehaviour.Properties> factory;
 
-    TFCFSandstoneBlockType(Function<TFCFSandBlockType, BlockBehaviour.Properties> factory)
+    TFCFSandstoneBlockType(Function<Colors, BlockBehaviour.Properties> factory)
     {
         this.factory = factory;
     }
 
-    public BlockBehaviour.Properties properties(TFCFSandBlockType color)
+    public BlockBehaviour.Properties properties(Colors color)
     {
         return factory.apply(color);
     }

@@ -5069,6 +5069,22 @@
     "tfcflorae:sand/weathered_terracotta/purple",
     "tfcflorae:sand/weathered_terracotta/red",
     "tfcflorae:sand/weathered_terracotta/white",
-    "tfcflorae:sand/weathered_terracotta/yellow"
+    "tfcflorae:sand/weathered_terracotta/yellow",
+    "tfcflorae:sand/sand_layer/black",
+    "tfcflorae:sand/sand_layer/blue",
+    "tfcflorae:sand/sand_layer/brown",
+    "tfcflorae:sand/sand_layer/cyan",
+    "tfcflorae:sand/sand_layer/gray",
+    "tfcflorae:sand/sand_layer/green",
+    "tfcflorae:sand/sand_layer/light_blue",
+    "tfcflorae:sand/sand_layer/light_gray",
+    "tfcflorae:sand/sand_layer/light_green",
+    "tfcflorae:sand/sand_layer/magenta",
+    "tfcflorae:sand/sand_layer/orange",
+    "tfcflorae:sand/sand_layer/pink",
+    "tfcflorae:sand/sand_layer/purple",
+    "tfcflorae:sand/sand_layer/red",
+    "tfcflorae:sand/sand_layer/white",
+    "tfcflorae:sand/sand_layer/yellow"
   ]
 }

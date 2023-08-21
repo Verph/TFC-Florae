@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
 
-@Mixin({ServerGamePacketListenerImpl.class})
+@Mixin(value = ServerGamePacketListenerImpl.class, priority = 999999)
 public class ServerGamePacketListenerImplMixin
 {
     @ModifyConstant(method = "tick", constant = @Constant(longValue = 15000L, ordinal = 0))

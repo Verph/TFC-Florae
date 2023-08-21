@@ -31,16 +31,16 @@ public class TFCFRockySoilBlock extends Block
     @Nullable private final Supplier<? extends Block> transformsTo;
     @Nullable private final Supplier<? extends Block> transformsFrom;
     @Nullable private final Supplier<? extends Block> soilVariantDrop;
-    @Nullable private final Supplier<? extends Item> requiredItem;
+    @Nullable private final Supplier<?> requiredInput;
     private final Boolean transformsToCobble;
 
-    public TFCFRockySoilBlock(Properties properties, @Nullable Supplier<? extends Item> requiredItem, @Nullable Supplier<? extends Block> transformsTo, @Nullable Supplier<? extends Block> transformsFrom, @Nullable Supplier<? extends Block> soilVariantDrop, Boolean transformsToCobble)
+    public TFCFRockySoilBlock(Properties properties, @Nullable Supplier<?> requiredInput, @Nullable Supplier<? extends Block> transformsTo, @Nullable Supplier<? extends Block> transformsFrom, @Nullable Supplier<? extends Block> soilVariantDrop, Boolean transformsToCobble)
     {
         super(properties);
         this.transformsTo = transformsTo;
         this.transformsFrom = transformsFrom;
         this.soilVariantDrop = soilVariantDrop;
-        this.requiredItem = requiredItem;
+        this.requiredInput = requiredInput;
         this.transformsToCobble = transformsToCobble;
     }
 
@@ -53,35 +53,54 @@ public class TFCFRockySoilBlock extends Block
     @SuppressWarnings("deprecation")
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
     {
-        final ItemStack stack = player.getItemInHand(hand);
-        if (Helpers.isItem(stack, requiredItem.get().asItem()) && transformsTo != null)
+        if (requiredInput instanceof Block)
         {
-            if (transformsToCobble && soilVariantDrop != null)
+            final ItemStack stack = player.getItemInHand(hand);
+            if (Helpers.isItem(stack, ((Block) requiredInput.get()).asItem()) && transformsTo != null)
             {
-                stack.shrink(1);
-                final BlockState block = transformsTo.get().defaultBlockState();
-                level.setBlockAndUpdate(pos, block);
-                ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(soilVariantDrop.get()));
-                Helpers.playSound(level, pos, SoundType.STONE.getPlaceSound());
-                return InteractionResult.SUCCESS;
-            }
-            else
-            {
-                stack.shrink(1);
-                final BlockState block = transformsTo.get().defaultBlockState();
-                level.setBlockAndUpdate(pos, block);
-                Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-                return InteractionResult.SUCCESS;
+                if (transformsToCobble && soilVariantDrop != null)
+                {
+                    stack.shrink(1);
+                    final BlockState block = transformsTo.get().defaultBlockState();
+                    level.setBlockAndUpdate(pos, block);
+                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(soilVariantDrop.get()));
+                    Helpers.playSound(level, pos, SoundType.STONE.getPlaceSound());
+                    return InteractionResult.SUCCESS;
+                }
+                else
+                {
+                    stack.shrink(1);
+                    final BlockState block = transformsTo.get().defaultBlockState();
+                    level.setBlockAndUpdate(pos, block);
+                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                    return InteractionResult.SUCCESS;
+                }
             }
         }
-        /*else if ((player.getItemInHand(hand).canPerformAction(ToolActions.HOE_TILL) || player.getItemInHand(hand).getItem() instanceof WalkingCaneItem) && transformsFrom != null)
+        if (requiredInput instanceof Item)
         {
-            final BlockState block = transformsFrom.get().defaultBlockState();
-            level.setBlockAndUpdate(pos, block);
-            ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(requiredItem.get().asItem()));
-            Helpers.playSound(level, pos, SoundType.GRAVEL.getBreakSound());
-            return InteractionResult.SUCCESS;
-        }*/
+            final ItemStack stack = player.getItemInHand(hand);
+            if (Helpers.isItem(stack, ((Item) requiredInput.get()).asItem()) && transformsTo != null)
+            {
+                if (transformsToCobble && soilVariantDrop != null)
+                {
+                    stack.shrink(1);
+                    final BlockState block = transformsTo.get().defaultBlockState();
+                    level.setBlockAndUpdate(pos, block);
+                    ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(soilVariantDrop.get()));
+                    Helpers.playSound(level, pos, SoundType.STONE.getPlaceSound());
+                    return InteractionResult.SUCCESS;
+                }
+                else
+                {
+                    stack.shrink(1);
+                    final BlockState block = transformsTo.get().defaultBlockState();
+                    level.setBlockAndUpdate(pos, block);
+                    Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
+                    return InteractionResult.SUCCESS;
+                }
+            }
+        }
         return InteractionResult.PASS;
     }
 
@@ -93,7 +112,14 @@ public class TFCFRockySoilBlock extends Block
         {
             if (context.getPlayer() != null)
             {
-                ItemHandlerHelper.giveItemToPlayer(context.getPlayer(), new ItemStack(requiredItem.get().asItem()));
+                if (requiredInput instanceof Block)
+                {
+                    ItemHandlerHelper.giveItemToPlayer(context.getPlayer(), new ItemStack(((Block) requiredInput.get()).asItem()));
+                }
+                else if (requiredInput instanceof Item)
+                {
+                    ItemHandlerHelper.giveItemToPlayer(context.getPlayer(), new ItemStack(((Item) requiredInput.get()).asItem()));
+                }
             }
             else
             {

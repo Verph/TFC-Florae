@@ -6,6 +6,8 @@ import net.dries007.tfc.world.layer.framework.CenterMergeLayer;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
+import static net.dries007.tfc.world.layer.TFCLayers.*;
+
 public enum MergeSeamountsLayer implements CenterMergeLayer
 {
     INSTANCE;
@@ -15,6 +17,7 @@ public enum MergeSeamountsLayer implements CenterMergeLayer
     static final int SEAMOUNTS_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamountsMarker();
     static final int SEAMOUNTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamounts();
     static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
+    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
 
     @Override
     public int apply(AreaContext context, int center, int layer)

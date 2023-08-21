@@ -6,7 +6,257 @@
       "tfcflorae:item/brushing/brushing2",
       "tfcflorae:item/brushing/brushing3",
       "tfcflorae:item/brushing/brushing4"
-    ]
+    ],
+    "subtitle": "subtitles.item.tfcflorae.brushing.brushing"
+  },
+  "block.froglight.break": {
+    "sounds": [
+      "tfcflorae:block/froglight/break1",
+      "tfcflorae:block/froglight/break2",
+      "tfcflorae:block/froglight/break3",
+      "tfcflorae:block/froglight/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.froglight.fall": {
+    "sounds": [
+      "tfcflorae:block/froglight/step1",
+      "tfcflorae:block/froglight/step2",
+      "tfcflorae:block/froglight/step3",
+      "tfcflorae:block/froglight/step4",
+      "tfcflorae:block/froglight/step5",
+      "tfcflorae:block/froglight/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.froglight.hit": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/froglight/step1",
+        "pitch": 1.3,
+        "volume": 0.83
+      },
+      {
+        "name": "tfcflorae:block/froglight/step2",
+        "pitch": 1.3,
+        "volume": 0.83
+      },
+      {
+        "name": "tfcflorae:block/froglight/step3",
+        "pitch": 1.3,
+        "volume": 0.83
+      },
+      {
+        "name": "tfcflorae:block/froglight/step4",
+        "pitch": 1.3,
+        "volume": 0.83
+      },
+      {
+        "name": "tfcflorae:block/froglight/step5",
+        "pitch": 1.3,
+        "volume": 0.83
+      },
+      {
+        "name": "tfcflorae:block/froglight/step6",
+        "pitch": 1.3,
+        "volume": 0.83
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.froglight.place": {
+    "sounds": [
+      "tfcflorae:block/froglight/break1",
+      "tfcflorae:block/froglight/break2",
+      "tfcflorae:block/froglight/break3",
+      "tfcflorae:block/froglight/break4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.froglight.step": {
+    "sounds": [
+      "tfcflorae:block/froglight/step1",
+      "tfcflorae:block/froglight/step2",
+      "tfcflorae:block/froglight/step3",
+      "tfcflorae:block/froglight/step4",
+      "tfcflorae:block/froglight/step5",
+      "tfcflorae:block/froglight/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.frogspawn.break": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/break1",
+        "pitch": 1.2,
+        "volume": 0.1
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break2",
+        "pitch": 1.2,
+        "volume": 0.1
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break3",
+        "pitch": 1.2,
+        "volume": 0.1
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break4",
+        "pitch": 1.2,
+        "volume": 0.1
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.frogspawn.fall": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/step1",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step2",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step3",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step4",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step5",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step6",
+        "pitch": 1.3,
+        "volume": 0.3
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.frogspawn.hatch": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/hatch1",
+        "pitch": 1.2,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/hatch2",
+        "pitch": 1.2,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/hatch3",
+        "pitch": 1.2,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/hatch4",
+        "pitch": 1.2,
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "subtitles.block.tfcflorae.frogspawn.hatch"
+  },
+  "block.frogspawn.hit": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/step1",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step2",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step3",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step4",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step5",
+        "pitch": 1.3,
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step6",
+        "pitch": 1.3,
+        "volume": 0.3
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.frogspawn.place": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/break1",
+        "pitch": 1.5,
+        "volume": 0.2
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break2",
+        "pitch": 1.5,
+        "volume": 0.2
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break3",
+        "pitch": 1.5,
+        "volume": 0.2
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/break4",
+        "pitch": 1.5,
+        "volume": 0.2
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.frogspawn.step": {
+    "sounds": [
+      {
+        "name": "tfcflorae:block/frogspawn/step1",
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step2",
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step3",
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step4",
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step5",
+        "volume": 0.3
+      },
+      {
+        "name": "tfcflorae:block/frogspawn/step6",
+        "volume": 0.3
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   },
   "block.mangrove_roots.break": {
     "sounds": [
@@ -750,5 +1000,620 @@
       }
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "entity.frog.ambient": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/idle1",
+        "pitch": 0.95,
+        "volume": 0.8
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle2",
+        "pitch": 0.9
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle3",
+        "pitch": 0.9,
+        "volume": 0.9
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle4",
+        "pitch": 0.95,
+        "volume": 0.8
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle5",
+        "pitch": 0.9,
+        "volume": 0.85
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle6",
+        "pitch": 0.9,
+        "volume": 0.9
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle7",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle8",
+        "pitch": 0.9,
+        "volume": 0.3
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.ambient"
+  },
+  "entity.frog.death": {
+    "sounds": [
+      "tfcflorae:mob/frog/death1",
+      "tfcflorae:mob/frog/death2",
+      "tfcflorae:mob/frog/death3"
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.death"
+  },
+  "entity.frog.eat": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/eat1",
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat1",
+        "pitch": 0.9,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat2",
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat2",
+        "pitch": 0.9,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat3",
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat3",
+        "pitch": 0.9,
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat4",
+        "volume": 0.6
+      },
+      {
+        "name": "tfcflorae:mob/frog/eat4",
+        "pitch": 0.9,
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.eat"
+  },
+  "entity.frog.hurt": {
+    "sounds": [
+      "tfcflorae:mob/frog/hurt1",
+      "tfcflorae:mob/frog/hurt2",
+      "tfcflorae:mob/frog/hurt3",
+      "tfcflorae:mob/frog/hurt4",
+      "tfcflorae:mob/frog/hurt5"
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.hurt"
+  },
+  "entity.frog.lay_spawn": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/lay_spawn1",
+        "volume": 0.25
+      },
+      {
+        "name": "tfcflorae:mob/frog/lay_spawn2",
+        "volume": 0.25
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.lay_spawn"
+  },
+  "entity.frog.long_jump": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/long_jump1",
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump1",
+        "pitch": 0.8,
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump2",
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump2",
+        "pitch": 0.8,
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump3",
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump3",
+        "pitch": 0.8,
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump4",
+        "volume": 0.12
+      },
+      {
+        "name": "tfcflorae:mob/frog/long_jump4",
+        "pitch": 0.8,
+        "volume": 0.12
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.frog.long_jump"
+  },
+  "entity.frog.step": {
+    "sounds": [
+      "tfcflorae:mob/frog/step1",
+      "tfcflorae:mob/frog/step2",
+      "tfcflorae:mob/frog/step3",
+      "tfcflorae:mob/frog/step4"
+    ]
+  },
+  "item.bucket.empty_tadpole": {
+    "sounds": [
+      {
+        "name": "item/bucket/empty_fish1",
+        "pitch": 1.5,
+        "volume": 0.5
+      },
+      {
+        "name": "item/bucket/empty_fish2",
+        "pitch": 1.5,
+        "volume": 0.5
+      },
+      {
+        "name": "item/bucket/empty_fish3",
+        "pitch": 1.5,
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.item.bucket.empty"
+  },
+  "entity.frog.tongue": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/tongue1",
+        "volume": 0.5
+      },
+      {
+        "name": "tfcflorae:mob/frog/tongue2",
+        "volume": 0.5
+      },
+      {
+        "name": "tfcflorae:mob/frog/tongue3",
+        "volume": 0.5
+      },
+      {
+        "name": "tfcflorae:mob/frog/tongue4",
+        "volume": 0.5
+      }
+    ]
+  },
+  "item.bucket.fill_tadpole": {
+    "sounds": [
+      {
+        "name": "item/bucket/fill_fish1",
+        "pitch": 1.5,
+        "volume": 0.5
+      },
+      {
+        "name": "item/bucket/fill_fish2",
+        "pitch": 1.5,
+        "volume": 0.5
+      },
+      {
+        "name": "item/bucket/fill_fish3",
+        "pitch": 1.5,
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "subtitles.item.tfcflorae.bucket.fill_tadpole"
+  },
+  "entity.tadpole.death": {
+    "sounds": [
+      "tfcflorae:mob/tadpole/death1",
+      "tfcflorae:mob/tadpole/death2"
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.tadpole.death"
+  },
+  "entity.tadpole.flop": {
+    "sounds": [
+      {
+        "name": "entity.tropical_fish.flop",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.tadpole.flop"
+  },
+  "entity.tadpole.grow_up": {
+    "sounds": [
+      {
+        "name": "tfcflorae:mob/frog/idle1",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle2",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle3",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle4",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle5",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle6",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle7",
+        "pitch": 1.2,
+        "volume": 0.75
+      },
+      {
+        "name": "tfcflorae:mob/frog/idle8",
+        "pitch": 1.2,
+        "volume": 0.75
+      }
+    ],
+    "subtitle": "subtitles.entity.tfcflorae.tadpole.grow_up"
+  },
+  "entity.tadpole.hurt": {
+    "sounds": [
+      "tfcflorae:mob/tadpole/hurt1",
+      "tfcflorae:mob/tadpole/hurt2",
+      "tfcflorae:mob/tadpole/hurt3",
+      "tfcflorae:mob/tadpole/hurt4"
+    ],
+    "subtitle": "subtitles.entity.tadpole.hurt"
+  },
+  "entity.crappie.ambient": {
+    "subtitle": "subtitles.entity.tfcflorae.crappie.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:mob/dolphin/splash1",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.crappie.hurt": {
+    "subtitle": "subtitles.entity.tfcflorae.crappie.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.crappie.death": {
+    "subtitle": "subtitles.entity.tfcflorae.crappie.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.crappie.flop": {
+    "subtitle": "subtitles.entity.tfcflorae.crappie.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.largemouth_bass.ambient": {
+    "subtitle": "subtitles.entity.tfcflorae.largemouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:mob/dolphin/splash1",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.largemouth_bass.hurt": {
+    "subtitle": "subtitles.entity.tfcflorae.largemouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.largemouth_bass.death": {
+    "subtitle": "subtitles.entity.tfcflorae.largemouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.largemouth_bass.flop": {
+    "subtitle": "subtitles.entity.tfcflorae.largemouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.smallmouth_bass.ambient": {
+    "subtitle": "subtitles.entity.tfcflorae.smallmouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:mob/dolphin/splash1",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.smallmouth_bass.hurt": {
+    "subtitle": "subtitles.entity.tfcflorae.smallmouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.smallmouth_bass.death": {
+    "subtitle": "subtitles.entity.tfcflorae.smallmouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.smallmouth_bass.flop": {
+    "subtitle": "subtitles.entity.tfcflorae.smallmouth_bass.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.rainbow_trout.ambient": {
+    "subtitle": "subtitles.entity.tfcflorae.rainbow_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:mob/dolphin/splash1",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.rainbow_trout.hurt": {
+    "subtitle": "subtitles.entity.tfcflorae.rainbow_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.rainbow_trout.death": {
+    "subtitle": "subtitles.entity.tfcflorae.rainbow_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.rainbow_trout.flop": {
+    "subtitle": "subtitles.entity.tfcflorae.rainbow_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
+  },
+  "entity.lake_trout.ambient": {
+    "subtitle": "subtitles.entity.tfcflorae.lake_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:mob/dolphin/splash1",
+        "volume": 0.9
+      }
+    ]
+  },
+  "entity.lake_trout.hurt": {
+    "subtitle": "subtitles.entity.tfcflorae.lake_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.lake_trout.death": {
+    "subtitle": "subtitles.entity.tfcflorae.lake_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/hurt1"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt2"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt3"
+      },
+      {
+        "name": "minecraft:entity/fish/hurt4"
+      }
+    ]
+  },
+  "entity.lake_trout.flop": {
+    "subtitle": "subtitles.entity.tfcflorae.lake_trout.ambient",
+    "sounds": [
+      {
+        "name": "minecraft:entity/fish/flop1",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop2",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop3",
+        "volume": 0.3
+      },
+      {
+        "name": "minecraft:entity/fish/flop4",
+        "volume": 0.3
+      }
+    ]
   }
 }

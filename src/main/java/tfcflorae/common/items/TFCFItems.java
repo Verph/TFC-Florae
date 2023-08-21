@@ -36,6 +36,7 @@ import net.dries007.tfc.util.Metal;
 
 import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
+import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.ceramics.Clay;
 import tfcflorae.common.blocks.rock.Mineral;
@@ -43,6 +44,7 @@ import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
+import tfcflorae.common.entities.Fish;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.util.TFCFHelpers;
 
@@ -103,9 +105,9 @@ public final class TFCFItems
 
     // Soil stuff
 
-    public static final Map<SandBlockType, RegistryObject<Item>> SAND_PILE_TFC = Helpers.mapOfKeys(SandBlockType.class, type ->
+    /*public static final Map<SandBlockType, RegistryObject<Item>> SAND_PILE_TFC = Helpers.mapOfKeys(SandBlockType.class, type ->
         register("sand_pile/" + type.name(), EARTH)
-    );
+    );*/
 
     public static final Map<SoilBlockType.Variant, RegistryObject<Item>> SOIL_PILE_TFC = Helpers.mapOfKeys(SoilBlockType.Variant.class, variant ->
         register("soil_pile/" + variant.name(), EARTH)
@@ -129,7 +131,16 @@ public final class TFCFItems
     public static final RegistryObject<Item> SILK_WORM_COCOON = register("animal/product/silk_worm_cocoon", TFCItemGroup.MISC);
     public static final RegistryObject<Item> SILK_WORM_COCOON_BOILED = register("animal/product/silk_worm_cocoon_boiled", TFCItemGroup.MISC);
 
+    public static final RegistryObject<Item> TADPOLE_BUCKET = register("bucket/tadpole", () -> new MobBucketItem(TFCFEntities.TADPOLE, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(MISC)));
+    public static final Map<Fish, RegistryObject<MobBucketItem>> FRESHWATER_FISH_BUCKETS = Helpers.mapOfKeys(Fish.class, fish -> register("bucket/" + fish.getSerializedName(), () -> new MobBucketItem(TFCFEntities.FRESHWATER_FISH.get(fish), () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))));
+
+
     public static final RegistryObject<Item> SILKMOTH_EGG = registerSpawnEgg(TFCFEntities.SILKMOTH, 0xd78ed7, 0xd9fff9);
+    public static final RegistryObject<Item> FROG_EGG = registerSpawnEgg(TFCFEntities.FROG, 0xD07444, 0xFFC77C);
+    public static final RegistryObject<Item> TADPOLE = registerSpawnEgg(TFCFEntities.TADPOLE, 0x6D533D, 0x160A00);
+    public static final RegistryObject<Item> PARROT = registerSpawnEgg(TFCFEntities.PARROT, 0x0DA70B, 0xFF0000);
+    public static final Map<Fish, RegistryObject<Item>> FRESHWATER_FISH_EGGS = Helpers.mapOfKeys(Fish.class, fish -> !fish.isCod(), fish -> registerSpawnEgg(TFCFEntities.FRESHWATER_FISH.get(fish), fish.getEggColor1(), fish.getEggColor2()));
+    public static final Map<Fish, RegistryObject<Item>> FRESHWATER_COD_FISH_EGGS = Helpers.mapOfKeys(Fish.class, fish -> fish.isCod(), fish -> registerSpawnEgg(TFCFEntities.FRESHWATER_COD_FISH.get(fish), fish.getEggColor1(), fish.getEggColor2()));
 
     // Fin
 

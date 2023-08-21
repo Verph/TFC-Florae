@@ -10,6 +10,7 @@ import com.google.common.collect.ImmutableList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -21,9 +22,10 @@ import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.surface.SoilSurfaceState;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
-
+import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.util.TFCFHelpers;
 
 @Mixin(SoilSurfaceState.class)
 public class SoilSurfaceStateMixin implements SurfaceState
@@ -46,24 +48,6 @@ public class SoilSurfaceStateMixin implements SurfaceState
         );
         return type == SoilBlockType.GRASS ? new SoilSurfaceStateMixin.NeedsPostProcessing(regions) : new SoilSurfaceStateMixin(regions);
     }
-
-    /*@Overwrite(remap = false)
-    public static SurfaceState buildSandOrGravel(boolean sandIsSandstone)
-    {
-        final SurfaceState sand = sandIsSandstone ? sandstone() : sand();
-        final SurfaceState gravel = gravel();
-        return new SoilSurfaceStateMixin(ImmutableList.of(
-            sand,
-            transitionVanilla(sand, gravel),
-            gravel,
-            gravel,
-            gravel,
-            gravel,
-            gravel,
-            gravel,
-            gravel
-        ));
-    }*/
 
     @Unique
     private static SurfaceState transitionSoil(SurfaceState first, SurfaceState second, SoilBlockType.Variant variant)
@@ -91,8 +75,8 @@ public class SoilSurfaceStateMixin implements SurfaceState
                         }
                         else
                         {
-                            SandBlockType sandColor = SandBlockType.YELLOW;
-                            if (context.getRock().sand() != null)
+                            SandBlockType sandColor = context.level() instanceof WorldGenLevel level ? TFCFHelpers.getSandColor(level, pos, Config.COMMON.toggleCheapSandColourCalculations.get()) : SandBlockType.YELLOW;
+                            /*if (context.getRock().sand() != null)
                             {
                                 for (SandBlockType sandColors : SandBlockType.values())
                                 {
@@ -102,7 +86,7 @@ public class SoilSurfaceStateMixin implements SurfaceState
                                         break;
                                     }
                                 }
-                            }
+                            }*/
                             float randomRainfall = random.nextFloat(context.rainfall()) * 0.01F;
                             if (randomRainfall <= Mth.abs(noiseGauss))
                             {

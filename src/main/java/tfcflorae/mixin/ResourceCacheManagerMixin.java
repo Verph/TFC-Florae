@@ -9,8 +9,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.resource.ResourceCacheManager;
 
-import tfcflorae.TFCFlorae;
-
 /**
  * From FirmaLife by EERussianGuy.
  */
@@ -27,5 +25,4 @@ public class ResourceCacheManagerMixin
             //TFCFlorae.LOGGER.info("Namespace REJECTED: " + namespace);
         }
     }
-
 }

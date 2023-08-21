@@ -18,6 +18,7 @@ public interface TFCFRegistryRock extends RegistryRock
 {
     RockCategory category();
 
+    @Override
     default MaterialColor color()
     {
         return Material.STONE.getColor();

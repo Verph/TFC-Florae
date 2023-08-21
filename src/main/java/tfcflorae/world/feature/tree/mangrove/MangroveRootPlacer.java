@@ -6,7 +6,10 @@ import com.mojang.datafixers.Products;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -83,7 +86,7 @@ public class MangroveRootPlacer
 
     protected boolean canGrowThrough(LevelSimulatedReader level, BlockPos pos)
     {
-        return TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> state.is(this.mangroveRootPlacement.canGrowThrough())) || level.isStateAtPosition(pos, state -> state.is(TFCBlocks.SALT_WATER.get()));
+        return TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, FluidHelpers::isAirOrEmptyFluid) || level.isStateAtPosition(pos, state -> state.is(TFCTags.Blocks.SINGLE_BLOCK_REPLACEABLE)) || level.isStateAtPosition(pos, state -> state.is(this.mangroveRootPlacement.canGrowThrough())) || level.isStateAtPosition(pos, state -> state.is(TFCBlocks.SALT_WATER.get())) || level.isStateAtPosition(pos, state -> state.is(TFCBlocks.RIVER_WATER.get())) || level.isStateAtPosition(pos, state -> state.is(TFCBlocks.SPRING_WATER.get()));
     }
 
     private boolean canGrow(LevelSimulatedReader level, Random random, BlockPos pos, Direction direction, BlockPos origin, List<BlockPos> offshootPositions, int rootLength) {

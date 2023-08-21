@@ -55,6 +55,7 @@
     "tfc:caverns/vein/surface_tetrahedrite",
     "tfc:caverns/vein/sylvite",
     "tfc:caverns/vein/volcanic_sulfur",
+    "tfc:vein/high_native_gold",
     "tfc:caverns/geode"
   ]
 }

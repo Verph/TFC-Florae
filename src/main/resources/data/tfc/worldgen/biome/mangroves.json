@@ -100,6 +100,24 @@
     ],
     "water_ambient": [
       {
+        "type": "tfcflorae:crappie",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:largemouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:smallmouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
         "type": "tfc:isopod",
         "weight": 1,
         "minCount": 1,

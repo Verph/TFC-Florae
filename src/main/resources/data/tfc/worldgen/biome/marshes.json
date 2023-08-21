@@ -86,6 +86,24 @@
     ],
     "water_ambient": [
       {
+        "type": "tfcflorae:crappie",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:largemouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:smallmouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
         "type": "tfc:tropical_fish",
         "weight": 10,
         "minCount": 1,
@@ -108,6 +126,12 @@
         "weight": 3,
         "minCount": 1,
         "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:tadpole",
+        "weight": 4,
+        "minCount": 2,
+        "maxCount": 8
       }
     ],
     "axolotls": [
@@ -151,6 +175,18 @@
       }
     ],
     "creature": [
+      {
+        "type": "tfc:direwolf",
+        "weight": 1,
+        "minCount": 3,
+        "maxCount": 7
+      },
+      {
+        "type": "tfc:moose",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
       {
         "type": "tfc:pig",
         "weight": 2,
@@ -282,6 +318,12 @@
         "weight": 1,
         "minCount": 1,
         "maxCount": 3
+      },
+      {
+        "type": "tfcflorae:frog",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 4
       }
     ],
     "water_creature": [

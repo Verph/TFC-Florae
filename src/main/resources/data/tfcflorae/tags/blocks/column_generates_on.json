@@ -5,8 +5,6 @@
 	"#forge:stone",
 	"#forge:gravel",
 	"#minecraft:sand",
-	"tfc:fluid/salt_water",
-	"tfc:fluid/spring_water",
 	"tfcflorae:pebble_compact_dirt/humus/andesite",
     "tfcflorae:pebble_compact_dirt/humus/basalt",
     "tfcflorae:pebble_compact_dirt/humus/chalk",

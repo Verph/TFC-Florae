@@ -49,6 +49,8 @@ public enum TFCFFood
     TROMBONCINO(false, false),
     ZUCCHINI(false, false),
 
+    FRESH_SEAWEED(false, true),
+
     // Fungi
     ROASTED_AMANITA(false, false, true),
     ROASTED_ARTISTS_CONK(false, false, true),
@@ -80,7 +82,21 @@ public enum TFCFFood
     ROASTED_WOOLLY_GOMPHUS(false, false, true),
 
     // Other
-    EUCALYPTUS_LEAVES(false, false, true);
+    EUCALYPTUS_LEAVES(false, false, true),
+
+    // Fish
+    CRAPPIE(true, false),
+    LAKE_TROUT(true, false),
+    LARGEMOUTH_BASS(true, false),
+    RAINBOW_TROUT(true, false),
+    SMALLMOUTH_BASS(true, false),
+    FROG_LEGS(true, false),
+    COOKED_CRAPPIE(true, false),
+    COOKED_LAKE_TROUT(true, false),
+    COOKED_LARGEMOUTH_BASS(true, false),
+    COOKED_RAINBOW_TROUT(true, false),
+    COOKED_SMALLMOUTH_BASS(true, false),
+    COOKED_FROG_LEGS(true, false);
 
     public final boolean meat, fast, hasEffect;
 

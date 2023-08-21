@@ -78,7 +78,7 @@ import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
-import tfcflorae.common.entities.ai.TFCFPoiType;
+import tfcflorae.common.entities.ai.TFCFBrain;
 import tfcflorae.util.TFCFHelpers;
 
 public class Silkmoth extends Animal implements FlyingAnimal
@@ -1124,7 +1124,7 @@ public class Silkmoth extends Animal implements FlyingAnimal
             BlockPos blockpos = Silkmoth.this.blockPosition();
             PoiManager poimanager = ((ServerLevel)Silkmoth.this.level).getPoiManager();
             Stream<PoiRecord> stream = poimanager.getInRange((poiType) -> {
-                return poiType == TFCFPoiType.MOTH_NEST.get();
+                return poiType == TFCFBrain.MOTH_NEST.get();
             }, blockpos, 20, PoiManager.Occupancy.ANY);
             return stream.map(PoiRecord::getPos).filter(Silkmoth.this::doesNestHaveSpace).sorted(Comparator.comparingDouble((p_148811_) -> {
                 return p_148811_.distSqr(blockpos);

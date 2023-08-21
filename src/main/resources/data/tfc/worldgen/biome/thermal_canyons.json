@@ -26,8 +26,8 @@
   },
   "carvers": {
     "air": [
+      "tfc:deep_caves",
       "tfc:caverns_upper",
-      "tfc:caverns",
       "tfc:canyon_caverns",
       "tfc:cave_caverns",
       "tfc:crack_caverns",
@@ -166,6 +166,18 @@
       }
     ],
     "creature": [
+      {
+        "type": "tfc:direwolf",
+        "weight": 1,
+        "minCount": 3,
+        "maxCount": 7
+      },
+      {
+        "type": "tfc:moose",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
       {
         "type": "tfc:pig",
         "weight": 1,

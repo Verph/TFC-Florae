@@ -23,7 +23,6 @@ public enum OceanBorderLayerTFCF implements AdjacentTransformLayer
     static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
     static final int SEAMOUNTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamounts();
     static final int GUYOTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGuyots();
-    static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
     static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
 
     @Override
@@ -53,12 +52,26 @@ public enum OceanBorderLayerTFCF implements AdjacentTransformLayer
                 return DEEP_OCEAN;
             }
         }
+        else if (center == GUYOTS)
+        {
+            if (matcher.test(i -> i != GUYOTS))
+            {
+                return DEEP_OCEAN_TRENCH;
+            }
+        }
+        else if (center == SEAMOUNTS)
+        {
+            if (matcher.test(i -> i != SEAMOUNTS))
+            {
+                return DEEP_OCEAN_TRENCH;
+            }
+        }
         else if (center == DEEP_OCEAN)
         {
             // Add ocean to land - deep ocean borders
-            if (matcher.test(i -> i == ATOLL))
+            if (matcher.test(TFCLayers::isOceanOrMarker))
             {
-                return SHORE_DUNES;
+                return PELAGIC_ZONE;
             }
             else if (matcher.test(i -> !TFCLayers.isOceanOrMarker(i)))
             {
@@ -68,20 +81,9 @@ public enum OceanBorderLayerTFCF implements AdjacentTransformLayer
         else if (center == OCEAN)
         {
             // And in the reverse, in large sections of ocean, add deep ocean in fully ocean-locked area
-            if (matcher.test(i -> i == ATOLL))
-            {
-                return SHORE_DUNES;
-            }
-            else if (matcher.test(i -> !TFCLayers.isOceanOrMarker(i)))
+            if (matcher.test(TFCLayers::isOceanOrMarker))
             {
                 return DEEP_OCEAN;
-            }
-        }
-        else if (center == ATOLL)
-        {
-            if (matcher.test(i -> i != ATOLL))
-            {
-                return SHORE_DUNES;
             }
         }
         return center;

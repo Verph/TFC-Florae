@@ -8,6 +8,7 @@
     "tfcflorae:wood/barrel/argyle_eucalyptus",
     "tfcflorae:wood/barrel/bald_cypress",
     "tfcflorae:wood/barrel/baobab",
+    "tfcflorae:wood/barrel/bamboo",
     "tfcflorae:wood/barrel/beech",
     "tfcflorae:wood/barrel/black_walnut",
     "tfcflorae:wood/barrel/black_willow",
@@ -84,7 +85,6 @@
     "tfcflorae:wood/barrel/yellow_meranti",
     "tfcflorae:wood/barrel/yew",
     "tfcflorae:wood/barrel/zebrawood",
-    "tfcflorae:wood/barrel/persimmon",
-    "tfcflorae:wood/barrel/bamboo"
+    "tfcflorae:wood/barrel/persimmon"
   ]
 }

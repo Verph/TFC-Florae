@@ -160,6 +160,8 @@
     "tfc:plant/seagrass_patch",
     "tfc:plant/seaweed_patch",
     "tfc:plant/shield_fern_patch",
-    "tfc:plant/licorice_fern_ground_patch"
+    "tfc:plant/licorice_fern_ground_patch",
+    "tfc:plant/floating_green_algae_patch",
+    "tfc:plant/cobblestone_lichen_patch"
   ]
 }

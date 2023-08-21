@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -45,7 +46,7 @@ public class RotatedBoulderRockFeature extends Feature<NoneFeatureConfiguration>
         final float forestDensity = data.getForestDensity();
         final float forestWeirdness = data.getForestWeirdness();
 
-        final Boolean generateMossy = random.nextFloat(rainfall * forestDensity) > random.nextFloat(rainfall * forestWeirdness);
+        final Boolean generateMossy = random.nextFloat(Mth.clamp(Mth.abs((rainfall + 1) * forestDensity), 1, Float.MAX_VALUE)) > random.nextFloat(Mth.clamp(Mth.abs((rainfall + 1) * forestWeirdness), 1, Float.MAX_VALUE));
 
         TFCFRock.TFCFBlockType rockType = TFCFRock.TFCFBlockType.ROCK_PILE;
         if (generateMossy)

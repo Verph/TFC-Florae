@@ -67,6 +67,18 @@
     ],
     "water_ambient": [
       {
+        "type": "tfcflorae:lake_trout",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:rainbow_trout",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
         "type": "tfc:salmon",
         "weight": 10,
         "minCount": 2,
@@ -118,6 +130,18 @@
       }
     ],
     "creature": [
+      {
+        "type": "tfc:direwolf",
+        "weight": 1,
+        "minCount": 3,
+        "maxCount": 7
+      },
+      {
+        "type": "tfc:moose",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
       {
         "type": "tfc:pig",
         "weight": 1,
@@ -267,6 +291,18 @@
         "weight": 1,
         "minCount": 1,
         "maxCount": 3
+      },
+      {
+        "type": "tfcflorae:frog",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:tadpole",
+        "weight": 2,
+        "minCount": 2,
+        "maxCount": 8
       }
     ]
   },

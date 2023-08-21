@@ -5,6 +5,7 @@
 	  "tfc:fossil",
 	  "#tfc:feature/bamboo_forest",
     "tfcflorae:fruit_forest",
-	  "tfcflorae:jungle"
+	  "tfcflorae:jungle",
+	"tfc:frogspawn_patch"
   ]
 }

@@ -30,7 +30,7 @@ public class MergeChasmsLayer implements TransformLayer
     public int apply(AreaContext context, Area area, int x, int z)
     {
         final int value = area.get(x, z);
-        if (!currentBiome(value) || value == RIVERBANK)
+        if (!currentBiome(value))
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;
@@ -48,6 +48,6 @@ public class MergeChasmsLayer implements TransformLayer
 
     public boolean currentBiome(int value)
     {
-        return TFCLayers.isOceanOrMarker(value) && TFCLayers.isLake(value) && TFCLayers.isRiver(value) && TFCLayers.isLow(value) && value == ATOLL && value == NEAR_SHORE && value == SHORE && value == SHORE_DUNES;
+        return TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value) || value == ATOLL || value == NEAR_SHORE || value == SHORE || value == SHORE_DUNES || value == NULL_MARKER || value == LAKE_MARKER;
     }
 }

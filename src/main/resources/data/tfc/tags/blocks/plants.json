@@ -161,6 +161,11 @@
     "tfcflorae:plant/seagrass",
     "tfcflorae:plant/seaweed",
     "tfcflorae:plant/shield_fern",
-    "tfcflorae:plant/licorice_fern"
+    "tfcflorae:plant/licorice_fern",
+    "tfcflorae:plant/beachgrass",
+    "tfcflorae:plant/sea_palm",
+    "tfcflorae:plant/cobblestone_lichen",
+    "tfcflorae:plant/floating_red_algae",
+    "tfcflorae:plant/floating_green_algae"
   ]
 }

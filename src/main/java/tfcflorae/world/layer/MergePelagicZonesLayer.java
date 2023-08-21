@@ -16,6 +16,7 @@ public enum MergePelagicZonesLayer implements CenterMergeLayer
 
     static final int PELAGIC_ZONE_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZoneMarker();
     static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
+    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
 
     @Override
     public int apply(AreaContext context, int center, int layer)

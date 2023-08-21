@@ -159,8 +159,7 @@ public abstract class Chasm
                 }
             });
 
-
-            this.riverBanks = context.build();
+            this.riverBanks = context.buildFractals();
         }
 
         @Override
@@ -178,7 +177,7 @@ public abstract class Chasm
         class Builder extends RiverFractal.MultiParallelBuilder
         {
             @Override
-            protected boolean isLegal(RiverFractal.Vertex vertex)
+            protected boolean isLegal(RiverFractal.Vertex prev, RiverFractal.Vertex vertex)
             {
                 final int x = RiverHelpers.floor(vertex.x()), z = RiverHelpers.floor(vertex.y());
                 final long key = RiverHelpers.pack(x, z);

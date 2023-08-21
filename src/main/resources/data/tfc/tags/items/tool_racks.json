@@ -8,6 +8,7 @@
     "tfcflorae:wood/tool_rack/argyle_eucalyptus",
     "tfcflorae:wood/tool_rack/bald_cypress",
     "tfcflorae:wood/tool_rack/baobab",
+    "tfcflorae:wood/tool_rack/bamboo",
     "tfcflorae:wood/tool_rack/beech",
     "tfcflorae:wood/tool_rack/black_walnut",
     "tfcflorae:wood/tool_rack/black_willow",
@@ -84,7 +85,6 @@
     "tfcflorae:wood/tool_rack/yellow_meranti",
     "tfcflorae:wood/tool_rack/yew",
     "tfcflorae:wood/tool_rack/zebrawood",
-    "tfcflorae:wood/tool_rack/persimmon",
-    "tfcflorae:wood/tool_rack/bamboo"
+    "tfcflorae:wood/tool_rack/persimmon"
   ]
 }

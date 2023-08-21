@@ -8,7 +8,6 @@ import java.util.function.Function;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.world.noise.Noise2D;
 import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
@@ -19,7 +18,7 @@ import net.dries007.tfc.world.surface.builder.SurfaceBuilder;
 import net.dries007.tfc.world.surface.builder.SurfaceBuilderFactory;
 
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.soil.TFCFSandBlockType;
+import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFSandstoneBlockType;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.world.surface.TFCFSoilSurfaceState;
@@ -36,13 +35,13 @@ public class TFCFBadlandsSurfaceBuilder implements SurfaceBuilder
     private static final int UNCOMMON_SIZE = 3;
     private static final int LAYER_SIZE = PRIMARY_SIZE + SECONDARY_SIZE + UNCOMMON_SIZE; // 16
 
-    private static void fill(Random random, BlockState[] sandLayers, BlockState[] sandstoneLayers, TFCFSandBlockType primary, TFCFSandBlockType secondary, TFCFSandBlockType uncommon)
+    private static void fill(Random random, BlockState[] sandLayers, BlockState[] sandstoneLayers, Colors primary, Colors secondary, Colors uncommon)
     {
         fill(random, sandLayers, primary, secondary, uncommon, TFCFBadlandsSurfaceBuilder::sand);
         fill(random, sandstoneLayers, primary, secondary, uncommon, TFCFBadlandsSurfaceBuilder::sandstone);
     }
 
-    private static void fill(Random random, BlockState[] layers, TFCFSandBlockType primary, TFCFSandBlockType secondary, TFCFSandBlockType uncommon, Function<TFCFSandBlockType, BlockState> block)
+    private static void fill(Random random, BlockState[] layers, Colors primary, Colors secondary, Colors uncommon, Function<Colors, BlockState> block)
     {
         // 8 - 5 - 3 of primary, secondary, and uncommon across the 16 block sequence.
         // This should make it near impossible to get completely 'undesirable' combinations
@@ -52,35 +51,21 @@ public class TFCFBadlandsSurfaceBuilder implements SurfaceBuilder
         Collections.shuffle(Arrays.asList(layers), random);
     }
 
-    private static BlockState sand(TFCFSandBlockType color)
+    private static BlockState sand(Colors color)
     {
-        return TFCBlocks.SAND.get(convertTFCFColToTFCCol(color)).get().defaultBlockState();
-    }
-
-    private static SandBlockType convertTFCFColToTFCCol(TFCFSandBlockType color)
-    {
-        switch(color)
+        if (color.hasSandTFC())
         {
-            case BROWN:
-                return SandBlockType.BROWN;
-            case WHITE:
-                return SandBlockType.WHITE;
-            case BLACK:
-                return SandBlockType.BLACK;
-            case YELLOW:
-                return SandBlockType.YELLOW;
-            case GREEN:
-                return SandBlockType.GREEN;
-            case PINK:
-                return SandBlockType.PINK;
-            default:
-                return SandBlockType.RED;
+            return TFCBlocks.SAND.get(color.toSandTFC(true)).get().defaultBlockState();
+        }
+        else
+        {
+            return TFCFBlocks.SAND.get(color).get().defaultBlockState();
         }
     }
 
-    private static BlockState sandstone(TFCFSandBlockType color)
+    private static BlockState sandstone(Colors color)
     {
-        return TFCFBlocks.SANDSTONE.get(color).get(TFCFSandstoneBlockType.LAYERED).get().defaultBlockState();
+        return TFCFBlocks.SANDSTONE.get(color.hasLayered() ? color : Colors.ORANGE).get(TFCFSandstoneBlockType.LAYERED).get().defaultBlockState();
     }
 
     private final boolean inverted;
@@ -150,45 +135,41 @@ public class TFCFBadlandsSurfaceBuilder implements SurfaceBuilder
         {
             if (context.rainfall() > 300f && context.averageTemperature() > 15f)
             {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.GREEN, TFCFSandBlockType.WHITE, TFCFSandBlockType.YELLOW);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.GREEN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.LIGHT_GREEN);
+                fill(random, sandLayers0, sandstoneLayers0, Colors.GREEN, Colors.WHITE, Colors.YELLOW);
+                fill(random, sandLayers1, sandstoneLayers1, Colors.GREEN, Colors.YELLOW, Colors.LIGHT_GREEN);
             }
             else if (context.rainfall() > 200f && context.getChunkData().getForestDensity() < 0.5f)
             {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.RED, TFCFSandBlockType.ORANGE, TFCFSandBlockType.YELLOW);
+                fill(random, sandLayers0, sandstoneLayers0, Colors.RED, Colors.YELLOW, Colors.WHITE);
+                fill(random, sandLayers1, sandstoneLayers1, Colors.RED, Colors.ORANGE, Colors.YELLOW);
             }
             else if (context.rainfall() > 100f && context.getChunkData().getForestDensity() > 0.5f && context.averageTemperature() < 15f)
             {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.BLACK, TFCFSandBlockType.WHITE, TFCFSandBlockType.RED);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.GRAY, TFCFSandBlockType.BLACK, TFCFSandBlockType.WHITE);
+                fill(random, sandLayers0, sandstoneLayers0, Colors.BLACK, Colors.WHITE, Colors.RED);
+                fill(random, sandLayers1, sandstoneLayers1, Colors.GRAY, Colors.BLACK, Colors.WHITE);
             }
             else
             {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.PINK, TFCFSandBlockType.RED, TFCFSandBlockType.WHITE);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.PURPLE, TFCFSandBlockType.PINK, TFCFSandBlockType.BLUE);
+                fill(random, sandLayers0, sandstoneLayers0, Colors.PINK, Colors.RED, Colors.WHITE);
+                fill(random, sandLayers1, sandstoneLayers1, Colors.PURPLE, Colors.PINK, Colors.BLUE);
             }
         }
         else
         {
-            fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW);
-            fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);
+            fill(random, sandLayers0, sandstoneLayers0, Colors.RED, Colors.BROWN, Colors.YELLOW);
+            fill(random, sandLayers1, sandstoneLayers1, Colors.BROWN, Colors.YELLOW, Colors.WHITE);
         }
 
         final float heightVariation = grassHeightVariationNoise.noise(context.pos().getX(), context.pos().getZ());
         final float weightVariation = (float) (1f - context.weight()) * 23f;
         if (inverted ? startY + 5 < heightVariation + weightVariation : startY - 5 > heightVariation - weightVariation)
         {
-            /*fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW);
-            fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);*/
             NormalSurfaceBuilder.INSTANCE.buildSurface(context, startY, endY, grass, SurfaceStates.DIRT, SurfaceStates.SANDSTONE_OR_GRAVEL);
         }
         else
         {
             if (startY < 81 + (context.random().nextGaussian() * 4))
             {
-                /*fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);*/
                 NormalSurfaceBuilder.INSTANCE.buildSurface(context, startY, endY, grass, SurfaceStates.DIRT, SurfaceStates.SANDSTONE_OR_GRAVEL);
             }
             else
@@ -200,39 +181,8 @@ public class TFCFBadlandsSurfaceBuilder implements SurfaceBuilder
 
     private void buildSandySurface(SurfaceBuilderContext context, int startHeight, int minSurfaceHeight)
     {
-        //final Random random = new Random(context.getSeed());
         final float style = sandStyleNoise.noise(context.pos().getX(), context.pos().getZ());
         final int height = (int) sandHeightOffsetNoise.noise(context.pos().getX(), context.pos().getZ());
-
-        /*float variantNoiseValue = variantNoise.noise(context.pos().getX(), context.pos().getZ());
-        if (variantNoiseValue > 0f)
-        {
-            if (context.rainfall() > 300f && context.averageTemperature() > 15f)
-            {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.GREEN, TFCFSandBlockType.WHITE, TFCFSandBlockType.YELLOW);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.GREEN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.LIGHT_GREEN);
-            }
-            else if (context.rainfall() > 200f && context.getChunkData().getForestDensity() < 0.5f)
-            {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.RED, TFCFSandBlockType.ORANGE, TFCFSandBlockType.YELLOW);
-            }
-            else if (context.rainfall() > 100f && context.getChunkData().getForestDensity() > 0.5f && context.averageTemperature() < 15f)
-            {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.BLACK, TFCFSandBlockType.WHITE, TFCFSandBlockType.RED);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.GRAY, TFCFSandBlockType.BLACK, TFCFSandBlockType.WHITE);
-            }
-            else
-            {
-                fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.PINK, TFCFSandBlockType.RED, TFCFSandBlockType.WHITE);
-                fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.PURPLE, TFCFSandBlockType.PINK, TFCFSandBlockType.BLUE);
-            }
-        }
-        else
-        {
-            fill(random, sandLayers0, sandstoneLayers0, TFCFSandBlockType.RED, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW);
-            fill(random, sandLayers1, sandstoneLayers1, TFCFSandBlockType.BROWN, TFCFSandBlockType.YELLOW, TFCFSandBlockType.WHITE);
-        }*/
 
         int surfaceDepth = -1;
         int randomDepth = (int) context.random().nextGaussian() * 4;

@@ -1,6 +1,5 @@
 package tfcflorae.world.surface.builder;
 
-import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.world.noise.Noise2D;
 import net.dries007.tfc.world.noise.OpenSimplex2D;
@@ -9,7 +8,6 @@ import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.world.surface.SurfaceStates;
 import net.dries007.tfc.world.surface.builder.*;
 
-import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.world.surface.TFCFSoilSurfaceState;
 

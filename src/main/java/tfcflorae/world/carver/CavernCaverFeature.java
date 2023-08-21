@@ -16,6 +16,8 @@ import net.minecraft.world.level.levelgen.carver.CaveCarverConfiguration;
 import net.minecraft.world.level.levelgen.carver.CaveWorldCarver;
 import org.apache.commons.lang3.mutable.MutableBoolean;
 
+import net.dries007.tfc.world.carver.CarverHelpers;
+
 public class CavernCaverFeature extends CaveWorldCarver
 {
    public CavernCaverFeature(Codec<CaveCarverConfiguration> codec)
@@ -52,10 +54,10 @@ public class CavernCaverFeature extends CaveWorldCarver
    @Override
    protected boolean carveBlock(CarvingContext context, CaveCarverConfiguration config, ChunkAccess chunk, Function<BlockPos, Holder<Biome>> biome, CarvingMask mask, BlockPos.MutableBlockPos mutablePos, BlockPos.MutableBlockPos mutablePos2, Aquifer aquifer, MutableBoolean bool)
    {
-      if (this.canReplaceBlock(chunk.getBlockState(mutablePos)))
+      if (CarverHelpers.canReplaceBlock(chunk.getBlockState(mutablePos)))
       {
          BlockState blockstate;
-         if (mutablePos.getY() <= context.getMinGenY() + 31)
+         if (mutablePos.getY() <= context.getMinGenY() + 15)
          {
             blockstate = LAVA.createLegacyBlock();
          }
@@ -63,7 +65,6 @@ public class CavernCaverFeature extends CaveWorldCarver
          {
             blockstate = CAVE_AIR;
          }
-
          chunk.setBlockState(mutablePos, blockstate, false);
          return true;
       }

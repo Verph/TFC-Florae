@@ -20,7 +20,7 @@ import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
-
+import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.*;
@@ -59,22 +59,6 @@ public class TFCFSoilSurfaceState implements SurfaceState
         return new TFCFSoilSurfaceState.NeedsPostProcessing(regions);
     }
 
-    /*public static SurfaceState buildTypeRockTFC(TFCFRockSoil type, Rock rock)
-    {
-        final ImmutableList<SurfaceState> regions = ImmutableList.of(
-            sand(),
-            transition(sand(), rockSoilTFC(type, SoilBlockType.Variant.SANDY_LOAM, rock)),
-            rockSoilTFC(type, SoilBlockType.Variant.SANDY_LOAM, rock),
-            transition(rockSoilTFC(type, SoilBlockType.Variant.SANDY_LOAM, rock), rockSoilTFC(type, SoilBlockType.Variant.LOAM, rock)),
-            rockSoilTFC(type, SoilBlockType.Variant.LOAM, rock),
-            transition(rockSoilTFC(type, SoilBlockType.Variant.LOAM, rock), rockSoilTFC(type, SoilBlockType.Variant.SILTY_LOAM, rock)),
-            rockSoilTFC(type, SoilBlockType.Variant.SILTY_LOAM, rock),
-            transition(rockSoilTFC(type, SoilBlockType.Variant.SILTY_LOAM, rock), rockSoilTFC(type, SoilBlockType.Variant.SILT, rock)),
-            rockSoilTFC(type, SoilBlockType.Variant.SILT, rock)
-        );
-        return new TFCFSoilSurfaceState(regions);
-    }*/
-
     public static SurfaceState buildTypeRock(TFCFRockSoil type)
     {
         final ImmutableList<SurfaceState> regions = ImmutableList.of(
@@ -90,22 +74,6 @@ public class TFCFSoilSurfaceState implements SurfaceState
         );
         return new TFCFSoilSurfaceState(regions);
     }
-
-    /*public static SurfaceState buildTypeRockSandTFC(TFCFRockSand type, Rock rock)
-    {
-        final ImmutableList<SurfaceState> regions = ImmutableList.of(
-            sand(),
-            transition(sand(), rockSandTFC(type, rock)),
-            rockSandTFC(type, rock),
-            transition(rockSandTFC(type, rock), rockSandTFC(type, rock)),
-            rockSandTFC(type, rock),
-            transition(rockSandTFC(type, rock), rockSandTFC(type, rock)),
-            rockSandTFC(type, rock),
-            transition(rockSandTFC(type, rock), rockSandTFC(type, rock)),
-            rockSandTFC(type, rock)
-        );
-        return new TFCFSoilSurfaceState(regions);
-    }*/
 
     public static SurfaceState buildTypeRockSand(TFCFRockSand type)
     {

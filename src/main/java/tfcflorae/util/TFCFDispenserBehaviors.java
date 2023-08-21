@@ -6,6 +6,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.DispenserBlock;
 
 import net.dries007.tfc.common.blocks.wood.Wood;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.DispenserBehaviors;
 
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -88,10 +89,13 @@ public final class TFCFDispenserBehaviors
      */
     public static void registerDispenserBehaviors()
     {
-        // chest
+        // Chest
         TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.CHEST).get()).forEach(chest -> DispenserBlock.registerBehavior(chest, DispenserBehaviors.CHEST_BEHAVIOR));
 
-        // minecart chest
+        // Minecart Chest
         TFCFItems.CHEST_MINECARTS.values().forEach(reg -> DispenserBlock.registerBehavior(reg.get(), DispenserBehaviors.MINECART_BEHAVIOR));
+
+        // Fish
+        TFCFItems.FRESHWATER_FISH_BUCKETS.values().forEach(reg -> DispenserBlock.registerBehavior(reg.get(), DispenserBehaviors.VANILLA_BUCKET_BEHAVIOR));
     }
 }

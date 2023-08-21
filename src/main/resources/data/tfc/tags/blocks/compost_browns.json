@@ -3,8 +3,6 @@
   "replace": false,
   "values": [
     "tfcflorae:loose_mud/humus",
-    "tfcflorae:packed_mud/humus",
-    "tfcflorae:mossy_packed_mud/humus",
     "tfcflorae:dirt/humus",
     "tfcflorae:grass/humus",
     "tfcflorae:grass_path/humus",
@@ -37,6 +35,7 @@
     "tfcflorae:sparse_stoneware_clay_grass/humus",
     "tfcflorae:dense_earthenware_clay_grass/humus",
     "tfcflorae:dense_kaolinite_clay_grass/humus",
-    "tfcflorae:dense_stoneware_clay_grass/humus"
+    "tfcflorae:dense_stoneware_clay_grass/humus",
+    "tfcflorae:plant/floating_red_algae"
   ]
 }

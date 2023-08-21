@@ -1,6 +1,6 @@
 {
   "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:fissure",
+  "type": "tfcflorae:fissure",
   "config": {
     "wall_state": "tfc:rock/raw/basalt",
     "fluid_state": "minecraft:lava",

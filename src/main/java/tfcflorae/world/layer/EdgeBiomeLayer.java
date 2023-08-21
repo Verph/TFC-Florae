@@ -42,7 +42,10 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
     static final int SEAMOUNTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamounts();
     static final int GUYOTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGuyots();
-    static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
+    static final int SAWTOOTH_CLIFFS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSawtoothCliffs();
+    static final int TABLELANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticTablelands();
+    static final int PITLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPitlands();
+    static final int FRACTURED_MISTY_PEAKS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticFracturedMistyPeaks();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -86,6 +89,13 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             if (matcher.test(i -> i == MESA_HILLS || i == BRYCE_CANYONS))
             {
                 return BADLANDS;
+            }
+        }
+        else if (center == FRACTURED_MISTY_PEAKS)
+        {
+            if (matcher.test(i -> i != FRACTURED_MISTY_PEAKS))
+            {
+                return MISTY_PEAKS;
             }
         }
         else if (center == MISTY_PEAKS)
@@ -155,6 +165,20 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return MARSHES;
             }
         }
+        else if (center == TABLELANDS)
+        {
+            if (matcher.test(i -> i != TABLELANDS))
+            {
+                return PITLANDS;
+            }
+        }
+        else if (center == SAWTOOTH_CLIFFS)
+        {
+            if (matcher.test(i -> i != SAWTOOTH_CLIFFS))
+            {
+                return TABLELANDS;
+            }
+        }
         else if (TFCLayers.isMountains(center))
         {
             if (matcher.test(TFCLayers::isLow))
@@ -220,13 +244,6 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             if (matcher.test(i -> !isOcean(i)))
             {
                 return OCEAN;
-            }
-        }
-        else if (center == ATOLL)
-        {
-            if (matcher.test(i -> i != ATOLL))
-            {
-                return SHORE_DUNES;
             }
         }
         return center;

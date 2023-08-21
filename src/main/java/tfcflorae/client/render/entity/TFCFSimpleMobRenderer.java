@@ -2,20 +2,25 @@ package tfcflorae.client.render.entity;
 
 import java.util.function.Function;
 
+import org.jetbrains.annotations.Nullable;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Mob;
 
-import net.dries007.tfc.client.render.entity.SimpleMobRenderer;
-
-import org.jetbrains.annotations.Nullable;
+import net.dries007.tfc.client.RenderHelpers;
+import net.dries007.tfc.common.entities.livestock.TFCAnimalProperties;
 
 import tfcflorae.client.TFCFRenderHelpers;
 import tfcflorae.util.TFCFHelpers;
 
-public class TFCFSimpleMobRenderer<T extends Mob, M extends EntityModel<T>> extends SimpleMobRenderer<T, M>
+public class TFCFSimpleMobRenderer<T extends Mob, M extends EntityModel<T>> extends MobRenderer<T, M>
 {
     private final ResourceLocation texture;
     @Nullable
@@ -27,12 +32,45 @@ public class TFCFSimpleMobRenderer<T extends Mob, M extends EntityModel<T>> exte
 
     public TFCFSimpleMobRenderer(EntityRendererProvider.Context ctx, M model, String name, float shadow, boolean flop, float scale, boolean hasBabyTexture, boolean itemInMouth, @Nullable Function<T, ResourceLocation> textureGetter)
     {
-        super(ctx, model, name, shadow, itemInMouth, scale, itemInMouth, itemInMouth, textureGetter);
+        super(ctx, model, shadow);
         doesFlop = flop;
         texture = TFCFHelpers.animalTexture(name);
         babyTexture = hasBabyTexture ? TFCFHelpers.animalTexture(name + "_young") : null;
         this.textureGetter = textureGetter != null ? textureGetter : e -> babyTexture != null && e.isBaby() ? babyTexture : texture;
         this.scale = scale;
+    }
+
+    @Override
+    protected void setupRotations(T entity, PoseStack poseStack, float ageInTicks, float yaw, float partialTicks)
+    {
+        super.setupRotations(entity, poseStack, ageInTicks, yaw, partialTicks);
+        if (doesFlop)
+        {
+            poseStack.mulPose(RenderHelpers.rotateDegreesZ(Mth.sin(0.6F * ageInTicks)));
+            if (!entity.isInWater())
+            {
+                poseStack.translate(0.1f, 0.1f, -0.1f);
+                poseStack.mulPose(RenderHelpers.rotateDegreesZ(90f));
+            }
+        }
+    }
+
+    @Override
+    protected void scale(T entity, PoseStack poseStack, float scale)
+    {
+        float amount = entity.isBaby() ? this.scale * 0.7f : this.scale;
+        if (entity instanceof TFCAnimalProperties animal)
+        {
+            amount *= animal.getAgeScale();
+        }
+        poseStack.scale(amount, amount, amount);
+        super.scale(entity, poseStack, scale);
+    }
+
+    @Override
+    public ResourceLocation getTextureLocation(T entity)
+    {
+        return textureGetter.apply(entity);
     }
 
     public static class Builder<T extends Mob, M extends EntityModel<T>>
@@ -91,9 +129,9 @@ public class TFCFSimpleMobRenderer<T extends Mob, M extends EntityModel<T>> exte
             return this;
         }
 
-        public SimpleMobRenderer<T, M> build()
+        public TFCFSimpleMobRenderer<T, M> build()
         {
-            return new SimpleMobRenderer<>(ctx, model.apply(TFCFRenderHelpers.bakeSimple(ctx, name)), name, shadow, flop, scale, hasBabyTexture, itemInMouth, textureGetter);
+            return new TFCFSimpleMobRenderer<>(ctx, model.apply(TFCFRenderHelpers.bakeSimple(ctx, name)), name, shadow, flop, scale, hasBabyTexture, itemInMouth, textureGetter);
         }
     }
 }

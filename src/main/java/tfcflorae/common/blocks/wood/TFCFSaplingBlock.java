@@ -15,15 +15,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraftforge.common.Tags;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blockentities.TickCounterBlockEntity;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
@@ -35,6 +32,9 @@ import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
+
+import tfcflorae.common.blockentities.TFCFBlockEntities;
+import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
 
 public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable, IForgeBlockExtension, EntityBlockExtension
 {
@@ -89,23 +89,11 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable,
             {
                 return;
             }
-            level.getBlockEntity(pos, TFCBlockEntities.TICK_COUNTER.get()).ifPresent(counter -> {
+            level.getBlockEntity(pos, TFCFBlockEntities.TICK_COUNTER.get()).ifPresent(counter -> {
                 long days = counter.getTicksSinceUpdate() / ICalendar.TICKS_IN_DAY;
                 if (days > daysToGrow)
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
-                    //level.destroyBlock(pos, false);
-                    /*if (wood != TFCFWood.JOSHUA)
-                    {
-                        if (wood.hasFruitingLog())
-                        {
-                            level.setBlockAndUpdate(pos, TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState().setValue(TFCFFruitingLogBlock.NATURAL, true).setValue(TFCFFruitingLogBlock.LIFECYCLE, Lifecycle.HEALTHY).setValue(BlockStateProperties.AXIS, Direction.Axis.Y));
-                        }
-                        else
-                        {
-                            level.setBlockAndUpdate(pos, TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState().setValue(LogBlock.NATURAL, true).setValue(BlockStateProperties.AXIS, Direction.Axis.Y));
-                        }
-                    }*/
                 }
             });
         }
@@ -114,7 +102,7 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable,
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
     {
-        TickCounterBlockEntity.reset(level, pos);
+        TFCFTickCounterBlockEntity.reset(level, pos);
         super.setPlacedBy(level, pos, state, placer, stack);
     }
 

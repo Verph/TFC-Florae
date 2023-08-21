@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 	  "#tfc:feature/redwood_forest",
-    "tfcflorae:fruit_forest"
+    "tfcflorae:fruit_forest",
+	"tfc:frogspawn_patch"
   ]
 }

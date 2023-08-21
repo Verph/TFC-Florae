@@ -6,6 +6,7 @@
     "tfc:surface_loose_flint",
     "tfc:rock_pile",
 	"tfc:floor_surface",
-    "tfc:rotated_rock_pile"
+    "tfc:rotated_rock_pile",
+    "tfc:sand_layer"
   ]
 }

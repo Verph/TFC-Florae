@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
 	"#minecraft:small_flowers",
+	"#tfcflorae:groundcover_rocks",
     "tfcflorae:wood/twig/african_padauk",
     "tfcflorae:wood/fallen_leaves/african_padauk",
     "tfcflorae:wood/twig/alder",
@@ -198,6 +199,8 @@
     "tfcflorae:rock/loose/komatiite",
     "tfcflorae:rock/loose/mylonite",
     "tfcflorae:rock/loose/dripstone",
-    "tfcflorae:rock/loose/flint"
+    "tfcflorae:rock/loose/flint",
+    "tfcflorae:plant/beachgrass",
+    "tfcflorae:groundcover/sea_urchin"
   ]
 }

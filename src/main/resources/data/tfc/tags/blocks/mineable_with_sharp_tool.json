@@ -75,6 +75,7 @@
     "tfcflorae:wood/leaves/wenge",
     "tfcflorae:wood/leaves/white_cherry_blossom",
     "tfcflorae:wood/leaves/white_elm",
+    "tfcflorae:wood/leaves/white_cedar",
     "tfcflorae:wood/leaves/white_ipe",
     "tfcflorae:wood/leaves/white_jacaranda",
     "tfcflorae:wood/leaves/white_mangrove",
@@ -446,6 +447,10 @@
     "tfcflorae:plant/blue_bamboo_sapling",
     "tfcflorae:plant/dragon_bamboo_sapling",
     "tfcflorae:plant/golden_bamboo_sapling",
-    "tfcflorae:plant/red_bamboo_sapling"
+    "tfcflorae:plant/red_bamboo_sapling",
+    "tfcflorae:plant/beachgrass",
+    "tfcflorae:plant/sea_palm",
+    "tfcflorae:plant/floating_green_algae",
+    "tfcflorae:plant/floating_red_algae"
   ]
 }

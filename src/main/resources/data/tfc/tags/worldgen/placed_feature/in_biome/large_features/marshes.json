@@ -10,6 +10,7 @@
     "tfc:lush_caves_ceiling_vegetation",
     "tfc:lush_caves_vegetation",
     "tfcflorae:charred_forest",
-    "tfcflorae:fruit_forest"
+    "tfcflorae:fruit_forest",
+	"tfc:frogspawn_patch"
   ]
 }

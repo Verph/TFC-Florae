@@ -8,6 +8,7 @@
     "tfcflorae:wood/lectern/argyle_eucalyptus",
     "tfcflorae:wood/lectern/bald_cypress",
     "tfcflorae:wood/lectern/baobab",
+    "tfcflorae:wood/lectern/bamboo",
     "tfcflorae:wood/lectern/beech",
     "tfcflorae:wood/lectern/black_walnut",
     "tfcflorae:wood/lectern/black_willow",
@@ -84,7 +85,6 @@
     "tfcflorae:wood/lectern/yellow_meranti",
     "tfcflorae:wood/lectern/yew",
     "tfcflorae:wood/lectern/zebrawood",
-    "tfcflorae:wood/lectern/persimmon",
-    "tfcflorae:wood/lectern/bamboo"
+    "tfcflorae:wood/lectern/persimmon"
   ]
 }

@@ -17,6 +17,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import net.dries007.tfc.world.Codecs;
+import net.dries007.tfc.world.feature.FissureConfig;
 import net.dries007.tfc.world.feature.HotSpringConfig;
 import net.dries007.tfc.world.feature.tree.ForestConfig;
 import net.dries007.tfc.world.feature.tree.RandomTreeConfig;
@@ -85,6 +87,12 @@ public class TFCFFeatures
     public static final RegistryObject<ColumnFeature> BLOCK_COLUMN = register ("block_column",  ColumnFeature::new, BlockColumnConfiguration.CODEC);
     public static final RegistryObject<BouldersFeature> ROCK_BOULDER = register("boulder", BouldersFeature::new, BoulderConfig.CODEC);
     public static final RegistryObject<DeltaFeature> DELTA = register("delta", DeltaFeature::new, DeltaConfig.CODEC);
+    public static final RegistryObject<FissureFeature> FISSURE = register("fissure", FissureFeature::new, FissureConfig.CODEC);
+    public static final RegistryObject<RivuletFeature> RIVULET = register("rivulet", RivuletFeature::new, Codecs.BLOCK_STATE_CONFIG);
+    public static final RegistryObject<SandDunesFeature> SAND_DUNES = register("sand_dunes", SandDunesFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<SandLayerFeature> SAND_LAYER = register("sand_layer", SandLayerFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<TidePoolFeature> TIDE_POOL = register("tide_pool", TidePoolFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<SubTerraneanRiver> UNDERGROUND_RIVER = register("underground_river", SubTerraneanRiver::new, NoneFeatureConfiguration.CODEC);
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(String name, Function<Codec<C>, F> factory, Codec<C> codec)
     {

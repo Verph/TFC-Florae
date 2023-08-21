@@ -5,7 +5,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
-
+import net.minecraftforge.common.Tags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.plant.*;
@@ -24,6 +24,25 @@ public abstract class DesertShortGrassBlock extends ShortGrassBlock
                 return plant;
             }
         };
+    }
+
+    public static DesertShortGrassBlock createBeachGrass(RegistryPlant plant, ExtendedProperties properties)
+    {
+        return new DesertShortGrassBlock(properties)
+        {
+            @Override
+            public RegistryPlant getPlant()
+            {
+                return plant;
+            }
+
+            @Override
+            protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
+            {
+                return Helpers.isBlock(state.getBlock(), BlockTags.SAND) || Helpers.isBlock(state.getBlock(), Tags.Blocks.SAND);
+            }
+        };
+
     }
 
     protected DesertShortGrassBlock(ExtendedProperties properties)

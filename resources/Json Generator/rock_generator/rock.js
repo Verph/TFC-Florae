@@ -129,6 +129,55 @@ let ROCK_NAMESPACES = {
   'mylonite': 'tfcflorae'
 }
 
+let GEM_FOR_ROCK = {
+  'granite': 'tfc:gem/topaz',
+  'diorite': 'tfc:gem/emerald',
+  'gabbro': 'tfc:gem/diamond',
+  'shale': 'tfc:ore/borax',
+  'claystone': 'tfc:gem/amethyst',
+  'limestone': 'tfc:gem/lapis_lazuli',
+  'conglomerate': 'tfc:ore/lignite',
+  'dolomite': 'tfc:gem/amethyst',
+  'chert': 'tfc:gem/ruby',
+  'chalk': 'tfc:gem/sapphire',
+  'rhyolite': 'tfc:gem/pyrite',
+  'basalt': 'tfc:gem/pyrite',
+  'andesite': 'tfc:gem/pyrite',
+  'dacite': 'tfc:gem/pyrite',
+  'quartzite': 'tfc:gem/opal',
+  'slate': 'tfc:gem/pyrite',
+  'phyllite': 'tfc:gem/pyrite',
+  'schist': 'tfc:gem/pyrite',
+  'gneiss': 'tfc:ore/gypsum',
+  'marble': 'tfc:gem/lapis_lazuli',
+  'cataclasite': 'tfc:gem/emerald',
+  'porphyry': 'tfcflorae:mineral/greigite',
+  'red_granite': 'tfcflorae:mineral/smithsonite',
+  'laterite': 'tfcflorae:mineral/magnesite',
+  'dripstone': 'tfc:gem/amethyst',
+  'breccia': 'tfcflorae:mineral/spherocobaltite',
+  'foidolite': 'tfcflorae:mineral/smithsonite',
+  'peridotite': 'tfcflorae:mineral/zabuyelite',
+  'blaimorite': 'tfcflorae:mineral/brimstone',
+  'boninite': 'tfcflorae:mineral/greigite',
+  'carbonatite': 'tfcflorae:mineral/zabuyelite',
+  'mudstone': 'tfcflorae:mineral/greigite',
+  'sandstone': 'tfcflorae:mineral/apatite',
+  'siltstone': 'tfcflorae:mineral/magnesite',
+  'arkose': 'tfcflorae:mineral/greigite',
+  'jaspillite': 'tfcflorae:mineral/apatite',
+  'travertine': 'tfcflorae:mineral/magnesite',
+  'wackestone': 'tfcflorae:mineral/greigite',
+  'blackband_ironstone': 'tfcflorae:mineral/apatite',
+  'blueschist': 'tfcflorae:mineral/alabandite',
+  'catlinite': 'tfcflorae:mineral/bastnasite',
+  'greenschist': 'tfcflorae:mineral/brimstone',
+  'novaculite': 'tfcflorae:mineral/alabandite',
+  'soapstone': 'tfcflorae:mineral/bastnasite',
+  'komatiite': 'tfcflorae:mineral/spherocobaltite',
+  'mylonite': 'tfcflorae:mineral/apatite'
+}
+
 let sandColors = {
   'black': 'black',
   'blue': 'blue',
@@ -160,6 +209,21 @@ let decoTypes = {
   'slab': 'slab',
   'stairs': 'stairs',
   'wall': 'wall'
+}
+
+let panTypes = {
+  'full': 'full',
+  'half': 'half'
+}
+
+let mortarCobbles = {
+  'mortar_and_cobble': 'mortar_and_cobble',
+  'mossy_mortar_and_cobble': 'mossy_mortar_and_cobble'
+}
+
+let cobbleEquivalent = {
+  'mortar_and_cobble': 'cobble',
+  'mossy_mortar_and_cobble': 'mossy_cobble'
 }
 
 let dirtTypes2 = {
@@ -243,6 +307,13 @@ let rockBoulderModels = {
   'rock_8_n': 'rock_8_n',
   'rock_8_ne': 'rock_8_ne',
   'rock_8_none': 'rock_8_none'
+}
+
+let depositTypes = {
+  'cassiterite': 'cassiterite',
+  'native_copper': 'native_copper',
+  'native_gold': 'native_gold',
+  'native_silver': 'native_silver'
 }
 
 for(let rockType of Object.keys(ROCK_TYPES))
@@ -2270,6 +2341,127 @@ function generateJSON(rockType)
   }
 
   // Loot tables deposits
+  for (let rockTypeTFCF in ROCK_TYPES_TFCF)
+  {
+    for (let depositType in depositTypes)
+    {
+      let panningDeposits = {
+        "ingredient": `tfcflorae:deposit/${depositType}/${rockTypeTFCF}`,
+        "model_stages": [
+          `tfcflorae:item/pan/full/${rockTypeTFCF}`,
+          `tfcflorae:item/pan/half/${rockTypeTFCF}`,
+          `tfc:item/pan/${depositType}/result`
+        ],
+        "loot_table": `tfcflorae:panning/deposits/${depositType}/${rockTypeTFCF}`
+      }
+      fs.writeFileSync(`./data/tfc/panning/deposits/${depositType}/${rockTypeTFCF}.json`, JSON.stringify(panningDeposits, null, 2))
+
+      let panningSluicing = {
+        "ingredient": {
+          "item": `${ROCK_NAMESPACES[rockTypeTFCF]}:deposit/${depositType}/${rockTypeTFCF}`
+        },
+        "loot_table": `tfcflorae:panning/deposits/${depositType}/${rockTypeTFCF}`
+      }
+      fs.writeFileSync(`./data/tfc/sluicing/deposits/${depositType}/${rockTypeTFCF}.json`, JSON.stringify(panningSluicing, null, 2))
+
+      let lootTablesPanningDeposits = {
+        "type": "minecraft:fishing",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:alternatives",
+                "children": [
+                  {
+                    "type": "minecraft:item",
+                    "name": `tfc:ore/small_${depositType}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": `${ROCK_NAMESPACES[rockTypeTFCF]}:rock/loose/${rockTypeTFCF}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": `${GEM_FOR_ROCK[rockTypeTFCF]}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.04
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+      fs.writeFileSync(`./data/loot_tables/panning/deposits/${depositType}/${rockTypeTFCF}.json`, JSON.stringify(lootTablesPanningDeposits, null, 2))
+
+      let lootTablesSluicingDeposits = {
+        "type": "minecraft:empty",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:alternatives",
+                "children": [
+                  {
+                    "type": "minecraft:item",
+                    "name": `tfc:ore/small_${depositType}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.55
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": `${ROCK_NAMESPACES[rockTypeTFCF]}:rock/loose/${rockTypeTFCF}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:item",
+                    "name": `${GEM_FOR_ROCK[rockTypeTFCF]}`,
+                    "conditions": [
+                      {
+                        "condition": "minecraft:random_chance",
+                        "chance": 0.04
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+      fs.writeFileSync(`./data/loot_tables/sluicing/deposits/${depositType}/${rockTypeTFCF}.json`, JSON.stringify(lootTablesSluicingDeposits, null, 2))
+    }
+  }
+
   let deposit_cassiterite = {
     "__comment__": "This file was automatically created by mcresources",
     "type": "minecraft:block",
@@ -6348,6 +6540,217 @@ function generateJSON(rockType)
     ]
   }
   fs.writeFileSync(`./data/loot_tables/blocks/rock/geyser/${rockType}.json`, JSON.stringify(lootTableGeyser, null, 2))
+
+  for (let decoType in decoTypes)
+  {
+    if (`${ROCK_NAMESPACES[rockType]}` == "tfc")
+    {
+      let landslideCobbleVariants = {
+        "type": "tfc:landslide",
+        "ingredient": `${ROCK_NAMESPACES[rockType]}:rock/cobble/${rockType}_${decoType}`,
+        "result": `${ROCK_NAMESPACES[rockType]}:rock/cobble/${rockType}_${decoType}`
+      }
+      fs.writeFileSync(`./data/recipes/landslide/rock/cobble/${decoType}/${rockType}.json`, JSON.stringify(landslideCobbleVariants, null, 2))
+    }
+    else
+    {
+      let landslideCobbleVariants = {
+        "type": "tfc:landslide",
+        "ingredient": `${ROCK_NAMESPACES[rockType]}:rock/cobble/${decoType}/${rockType}`,
+        "result": `${ROCK_NAMESPACES[rockType]}:rock/cobble/${decoType}/${rockType}`
+      }
+      fs.writeFileSync(`./data/recipes/landslide/rock/cobble/${decoType}/${rockType}.json`, JSON.stringify(landslideCobbleVariants, null, 2))
+    }
+  }
+
+  for (let mortarCobble in mortarCobbles)
+  {
+    let mortarCobbleCrafting = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        " M ",
+        "MXM",
+        " M "
+      ],
+      "key": {
+        "X": {
+          "item": `${ROCK_NAMESPACES[rockType]}:rock/cobble/${rockType}`
+        },
+        "M": {
+          "tag": "tfc:mortar"
+        }
+      },
+      "result": {
+        "item": `tfcflorae:rock/mortar_and_cobble/${rockType}`,
+        "count": 1
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/mortar_and_cobble/${rockType}.json`, JSON.stringify(mortarCobbleCrafting, null, 2))
+
+    let mortarCobbleCraftingSlab = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "XXX"
+      ],
+      "key": {
+        "X": {
+          "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+        }
+      },
+      "result": {
+        "item": `tfcflorae:rock/${mortarCobble}/slab/${rockType}`,
+        "count": 6
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/${mortarCobble}/slab/${rockType}.json`, JSON.stringify(mortarCobbleCraftingSlab, null, 2))
+
+    let mortarCobbleCraftingStairs = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "X  ",
+        "XX ",
+        "XXX"
+      ],
+      "key": {
+        "X": {
+          "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+        }
+      },
+      "result": {
+        "item": `tfcflorae:rock/${mortarCobble}/stairs/${rockType}`,
+        "count": 8
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/${mortarCobble}/stairs/${rockType}.json`, JSON.stringify(mortarCobbleCraftingStairs, null, 2))
+
+    let mortarCobbleCraftingWall = {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "XXX",
+        "XXX"
+      ],
+      "key": {
+        "X": {
+          "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+        }
+      },
+      "result": {
+        "item": `tfcflorae:rock/${mortarCobble}/wall/${rockType}`,
+        "count": 6
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/${mortarCobble}/wall/${rockType}.json`, JSON.stringify(mortarCobbleCraftingWall, null, 2))
+
+    let mortarCobbleChiselSlab = {
+      "type": "tfc:chisel",
+      "ingredient": `tfcflorae:rock/${mortarCobble}/${rockType}`,
+      "result": `tfcflorae:rock/${mortarCobble}/slab/${rockType}`,
+      "mode": "slab",
+      "extra_drop": {
+        "item": `tfcflorae:rock/${mortarCobble}/slab/${rockType}`
+      }
+    }
+    fs.writeFileSync(`./data/recipes/chisel/slab/rock/${mortarCobble}/${rockType}.json`, JSON.stringify(mortarCobbleChiselSlab, null, 2))
+
+    let mortarCobbleChiselStairs = {
+      "type": "tfc:chisel",
+      "ingredient": `tfcflorae:rock/${mortarCobble}/${rockType}`,
+      "result": `tfcflorae:rock/${mortarCobble}/stairs/${rockType}`,
+      "mode": "stair"
+    }
+    fs.writeFileSync(`./data/recipes/chisel/stair/rock/${mortarCobble}/${rockType}.json`, JSON.stringify(mortarCobbleChiselStairs, null, 2))
+
+    let mortarCobbleStoneCuttingSlab = {
+      "type": "minecraft:stonecutting",
+      "ingredient": {
+        "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+      },
+      "result": `tfcflorae:rock/${mortarCobble}/slab/${rockType}`,
+      "count": 2
+    }
+    fs.writeFileSync(`./data/recipes/stonecutting/rock/${mortarCobble}/slab/${rockType}.json`, JSON.stringify(mortarCobbleStoneCuttingSlab, null, 2))
+
+    let mortarCobbleStoneCuttingStairs = {
+      "type": "minecraft:stonecutting",
+      "ingredient": {
+        "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+      },
+      "result": `tfcflorae:rock/${mortarCobble}/stairs/${rockType}`,
+      "count": 1
+    }
+    fs.writeFileSync(`./data/recipes/stonecutting/rock/${mortarCobble}/stairs/${rockType}.json`, JSON.stringify(mortarCobbleStoneCuttingStairs, null, 2))
+
+    let mortarCobbleStoneCuttingWall = {
+      "type": "minecraft:stonecutting",
+      "ingredient": {
+        "item": `tfcflorae:rock/${mortarCobble}/${rockType}`
+      },
+      "result": `tfcflorae:rock/${mortarCobble}/wall/${rockType}`,
+      "count": 1
+    }
+    fs.writeFileSync(`./data/recipes/stonecutting/rock/${mortarCobble}/wall/${rockType}.json`, JSON.stringify(mortarCobbleStoneCuttingWall, null, 2))
+
+    let mortarCobbleLoottable = {
+      "type": "minecraft:block",
+      "pools": [
+        {
+          "name": "loot_pool",
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:item",
+              "name": `tfcflorae:rock/${mortarCobble}/${rockType}`
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ]
+        }
+      ]
+    }
+    fs.writeFileSync(`./data/loot_tables/blocks/rock/${mortarCobble}/${rockType}.json`, JSON.stringify(mortarCobbleLoottable, null, 2))
+
+    for (let decoType in decoTypes)
+    {
+      let mortarCobbleLoottableVariants = {
+        "type": "minecraft:block",
+        "pools": [
+          {
+            "name": "loot_pool",
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": `tfcflorae:rock/${mortarCobble}/${decoType}/${rockType}`
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:survives_explosion"
+              }
+            ]
+          }
+        ]
+      }
+      fs.writeFileSync(`./data/loot_tables/blocks/rock/${mortarCobble}/${decoType}/${rockType}.json`, JSON.stringify(mortarCobbleLoottableVariants, null, 2))
+    }
+
+    for (let rockTypeTFCF in ROCK_TYPES_TFCF)
+    {
+      for (let panType in panTypes)
+      {
+        let panItemModelDeposit = {
+          "parent": `tfc:item/pan/${panType}`,
+          "textures": {
+            "material": `tfcflorae:block/rock/gravel/${rockTypeTFCF}`
+          }
+        }
+        fs.writeFileSync(`./assets/models/item/pan/${panType}/${rockTypeTFCF}.json`, JSON.stringify(panItemModelDeposit, null, 2))
+      }
+    }
+  }
 
   fs.writeFileSync(`./loot_tables/blocks/deposit/cassiterite/${rockType}.json`, JSON.stringify(deposit_cassiterite, null, 2))
   fs.writeFileSync(`./loot_tables/blocks/deposit/native_copper/${rockType}.json`, JSON.stringify(deposit_native_copper, null, 2))

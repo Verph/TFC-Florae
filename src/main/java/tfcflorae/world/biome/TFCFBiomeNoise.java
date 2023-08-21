@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.util.Mth;
 
 import net.dries007.tfc.world.BiomeNoiseSampler;
+import net.dries007.tfc.world.biome.BiomeNoise;
 import net.dries007.tfc.world.noise.*;
 
 import static net.dries007.tfc.world.TFCChunkGenerator.SEA_LEVEL_Y;
@@ -15,6 +16,129 @@ import static net.dries007.tfc.world.TFCChunkGenerator.SEA_LEVEL_Y;
  */
 public final class TFCFBiomeNoise
 {
+    public static Noise2D lowlandsNew(long seed)
+    {
+        return BiomeNoise.hills(seed, -3, -2)
+            .add(new OpenSimplex2D(seed + 1)
+                .octaves(6)
+                .spread(0.55f)
+                .scaled(-2, 2)
+                .clamped(-2, 1)
+            );
+    }
+
+    public static Noise2D sandDunes(long seed, int baseHeight, int scaleHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(3).spread(0.01f).scaled(-100f, 100f);
+        final Noise2D baseNoise = new OpenSimplex2D(seed)
+            .octaves(3)
+            .spread(0.05f)
+            .ridged()
+            .warped(warp)
+            .scaled(-0.2f, 0.8f)
+            .ridged()
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1);
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0;
+            });
+
+        return (x, z) -> {
+            float height = baseNoise.noise(x, z);
+            return height;
+        };
+    }
+
+    public static Noise2D sandDunesOld(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.01f).scaled(0.8f, -0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+        return new OpenSimplex2D(seed + 1)
+            .octaves(5)
+            .spread(0.1f)
+            .ridged()
+            .warped(warp)
+            .scaled(1f, 0f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight)
+            .ridged();
+    }
+
+    public static Noise2D tablelands(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(4).spread(0.05f).scaled(-100f, 100f);
+        return new Cellular2D(seed + 1)
+            .octaves(4)
+            .spread(0.025f)
+            .ridged()
+            .warped(warp)
+            .scaled(-0.4f, 0.4f)
+            .ridged()
+            .clamped(SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+    }
+
+    public static Noise2D funk(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.01f).scaled(0.8f, -0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+        return new OpenSimplex2D(seed + 1)
+            .octaves(5)
+            .spread(0.001f)
+            .ridged()
+            .warped(warp)
+            .scaled(0.4f, -0.4f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight)
+            .ridged();
+    }
+
+    public static Noise2D sawtoothCliffs(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.05f).scaled(-100f, 100f);
+        return new OpenSimplex2D(seed + 1)
+            .octaves(3)
+            .spread(0.01f)
+            .ridged()
+            .warped(warp)
+            .add(tablelands(seed + 2, -5, 15))
+            .scaled(-0.3f, 0.5f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight)
+            .ridged()
+            .clamped(SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+    }
+
+    public static Noise2D pitlandCanyons(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.05f).scaled(-100f, 100f);
+        return new Cellular2D(seed)
+            .warped(warp)
+            .ridged()
+            .octaves(4)
+            .spread(0.055f)
+            .ridged()
+            .warped(warp)
+            .scaled(-0.4f, 0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight)
+            .add(BiomeNoise.hills(seed + 1, 20, 30))
+            .terraces(8);
+    }
+
+    public static Noise2D pitlandCanyonsTweaked(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.01f).scaled(-0.8f, 0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+        final Noise2D baseNoise = new OpenSimplex2D(seed + 1)
+            .octaves(5)
+            .spread(0.1f)
+            .ridged()
+            .warped(warp)
+            .scaled(-30, 30)
+            .ridged();
+
+        return (x, z) -> {
+            float height = baseNoise.noise(x, z);
+            if (height < BiomeNoise.hills(seed, minHeight, minHeight + 10).noise(x, z))
+            {
+                height = BiomeNoise.hills(seed, minHeight, minHeight + 10).noise(x, z);
+            }
+            if (height > BiomeNoise.hills(seed + 1, maxHeight, maxHeight + 10).noise(x, z))
+            {
+                height = BiomeNoise.hills(seed + 1, maxHeight, maxHeight + 10).noise(x, z);
+            }
+            return height;
+        };
+    }
+
     /**
      * Generates a flat base with twisting carved canyons using many smaller terraces.
      * Inspired by imagery of Drumheller, Alberta
@@ -81,6 +205,49 @@ public final class TFCFBiomeNoise
             .warped(warp)
             .map(x -> x > 0.4 ? x - 0.8f : -x)
             .scaled(-0.4f, 1.2f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+    }
+
+    public static Noise2D pitlands(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
+        final Noise2D baseNoise = new OpenSimplex2D(seed + 1)
+            .octaves(4)
+            .spread(0.06f)
+            .warped(warp)
+            .map(x -> x > 0.4 ? x - 0.8f : -x)
+            .scaled(-0.4f, 0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+
+        final Noise2D upperNoise = new OpenSimplex2D(seed)
+            .octaves(4)
+            .spread(0.05f)
+            .scaled(-0.4f, 0.8f, SEA_LEVEL_Y + minHeight + 8, SEA_LEVEL_Y + maxHeight - 8);
+
+        /*final Noise2D baseNoise = new OpenSimplex2D(seed) // A simplex noise forms the majority of the base
+            .octaves(4) // High octaves to create highly fractal terrain
+            .spread(0.14f)
+            .add(new OpenSimplex2D(seed + 1) // Ridge noise is added to mimic real mountain ridges. It is scaled smaller than the base noise to not be overpowering
+                .octaves(4)
+                .spread(0.02f)
+                .scaled(-0.7f, 0.7f)
+                .ridged() // Ridges are applied after octaves as it creates less directional artifacts this way
+            )
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1); // Power scaled, flattens most areas but maximizes peaks
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0; // Scale the entire thing to mountain ranges
+            });*/
+
+        return (x, z) -> {
+            float height = baseNoise.noise(x, z);
+            if (height > SEA_LEVEL_Y + 18)
+            {
+                height = upperNoise.noise(x, z);
+            }
+            if (height < SEA_LEVEL_Y + 1)
+            {
+                height = upperNoise.noise(x, z);
+            }
+            return height;
+        };
     }
 
     /**
@@ -275,6 +442,18 @@ public final class TFCFBiomeNoise
         };
     }
 
+    public static Noise2D pits(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed + 1).octaves(3).spread(0.01f).scaled(0.8f, -0.8f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight);
+        return new OpenSimplex2D(seed + 1)
+            .octaves(5)
+            .spread(0.1f)
+            .ridged()
+            .warped(warp)
+            .scaled(-1f, -0.1f, SEA_LEVEL_Y + minHeight, SEA_LEVEL_Y + maxHeight)
+            .ridged();
+    }
+
     public static Noise2D mistyPeaks(long seed, int baseHeight, int scaleHeight)
     {
         final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
@@ -347,12 +526,304 @@ public final class TFCFBiomeNoise
         };
     }
 
-    public static Noise2D coastalCliffs(long seed, int minHeight, int maxHeight)
+    public static Noise2D mistyPeaksNew(long seed, int baseHeight, int scaleHeight)
     {
         final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
 
+        final Noise2D baseNoise = new OpenSimplex2D(seed) // A simplex noise forms the majority of the base
+            .octaves(6) // High octaves to create highly fractal terrain
+            .spread(0.1f)
+            .warped(warp)
+            .add(new OpenSimplex2D(seed + 1) // Ridge noise is added to mimic real mountain ridges. It is scaled smaller than the base noise to not be overpowering
+                .octaves(8)
+                .spread(0.1f)
+                .warped(warp)
+                .scaled(-0.2f, 0.8f)
+                .ridged() // Ridges are applied after octaves as it creates less directional artifacts this way
+            )
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1); // Power scaled, flattens most areas but maximizes peaks
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0; // Scale the entire thing to mountain ranges
+            });
+
+        // Cliff noise consists of noise that's been artificially clamped over half the domain, which is then selectively added above a base height level
+        // This matches up with the distinction between dirt and stone
+        final Noise2D cliffNoise = new OpenSimplex2D(seed + 2).octaves(2).spread(0.01f).scaled(0, 25).map(x -> x > 0 ? x : 0);
+        final Noise2D cliffHeightNoiseLower = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(70 - 15, 80 + 15);
+        final Noise2D cliffHeightNoiseMiddle = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(80 - 10, 90 + 10);
+        final Noise2D cliffHeightNoiseUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(90 - 15, 110 + 15);
+        final Noise2D cliffHeightNoiseHighUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(110 - 20, 160 + 20);
+
+        return (x, z) -> {
+            /*final Random generator = new Random((long) warp.noise(x, z));
+            final int extra = (int) generator.nextGaussian() * 4;*/
+            final float extra = pits(seed + 1, -70, -50).noise(x, z);
+            float height = baseNoise.noise(x, z);
+            if (height > 70 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseLower.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 80 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseMiddle.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 90 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 110 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseHighUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            return height;
+        };
+    }
+
+    public static Noise2D mistyPeaksFractured(long seed, int baseHeight, int scaleHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
+
+        final Noise2D baseNoise = new Cellular2D(seed) // A simplex noise forms the majority of the base
+            .octaves(4) // High octaves to create highly fractal terrain
+            .spread(0.1f)
+            .warped(warp)
+            .add(new Cellular2D(seed + 1) // Ridge noise is added to mimic real mountain ridges. It is scaled smaller than the base noise to not be overpowering
+                .octaves(6)
+                .spread(0.1f)
+                .warped(warp)
+                .scaled(-0.2f, 0.8f)
+                .ridged() // Ridges are applied after octaves as it creates less directional artifacts this way
+            )
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1); // Power scaled, flattens most areas but maximizes peaks
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0; // Scale the entire thing to mountain ranges
+            });
+
+        // Cliff noise consists of noise that's been artificially clamped over half the domain, which is then selectively added above a base height level
+        // This matches up with the distinction between dirt and stone
+        final Noise2D cliffNoise = new OpenSimplex2D(seed + 2).octaves(2).spread(0.01f).scaled(0, 25).map(x -> x > 0 ? x : 0);
+        final Noise2D cliffHeightNoiseLower = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(70 - 15, 80 + 15);
+        final Noise2D cliffHeightNoiseMiddle = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(80 - 10, 90 + 10);
+        final Noise2D cliffHeightNoiseUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(90 - 15, 110 + 15);
+        final Noise2D cliffHeightNoiseHighUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(110 - 20, 160 + 20);
+
+        return (x, z) -> {
+            /*final Random generator = new Random((long) warp.noise(x, z));
+            final int extra = (int) generator.nextGaussian() * 4;*/
+            final float extra = pits(seed + 1, -70, -50).noise(x, z);
+            float height = baseNoise.noise(x, z);
+            if (height > 70 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseLower.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 80 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseMiddle.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 90 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 110 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseHighUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            return height;
+        };
+    }
+
+    public static Noise2D mistyPeaksCell(long seed, int baseHeight, int scaleHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
+
+        final Noise2D baseNoise = new OpenSimplex2D(seed) // A simplex noise forms the majority of the base
+            .octaves(6) // High octaves to create highly fractal terrain
+            .spread(0.1f)
+            .warped(warp)
+            .add(new OpenSimplex2D(seed + 1) // Ridge noise is added to mimic real mountain ridges. It is scaled smaller than the base noise to not be overpowering
+                .octaves(8)
+                .spread(0.1f)
+                .warped(warp)
+                .scaled(-0.2f, 0.8f)
+                .ridged() // Ridges are applied after octaves as it creates less directional artifacts this way
+            )
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1); // Power scaled, flattens most areas but maximizes peaks
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0; // Scale the entire thing to mountain ranges
+            });
+
+        // Cliff noise consists of noise that's been artificially clamped over half the domain, which is then selectively added above a base height level
+        // This matches up with the distinction between dirt and stone
+        final Noise2D cliffNoise = new OpenSimplex2D(seed + 2).octaves(2).spread(0.01f).scaled(0, 25).map(x -> x > 0 ? x : 0);
+        final Noise2D cliffHeightNoiseLower = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(70 - 15, 80 + 15);
+        final Noise2D cliffHeightNoiseMiddle = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(80 - 10, 90 + 10);
+        final Noise2D cliffHeightNoiseUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(90 - 15, 110 + 15);
+        final Noise2D cliffHeightNoiseHighUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(110 - 20, 160 + 20);
+
+        return (x, z) -> {
+            /*final Random generator = new Random((long) warp.noise(x, z));
+            final int extra = (int) generator.nextGaussian() * 4;*/
+            final float extra = sawtoothCliffs(seed + 1, baseHeight, scaleHeight).noise(x, z);
+            float height = baseNoise.noise(x, z);
+            if (height > 70 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseLower.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 80 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseMiddle.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 90 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 110 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseHighUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            return height;
+        };
+    }
+
+    public static Noise2D frostedGlass(long seed, int baseHeight, int scaleHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(4).spread(0.03f).scaled(-100f, 100f);
+
+        final Noise2D baseNoise = new OpenSimplex2D(seed) // A simplex noise forms the majority of the base
+            .octaves(6) // High octaves to create highly fractal terrain
+            .spread(0.1f)
+            .warped(warp)
+            .add(new OpenSimplex2D(seed + 1) // Ridge noise is added to mimic real mountain ridges. It is scaled smaller than the base noise to not be overpowering
+                .octaves(2)
+                .spread(0.1f)
+                .warped(warp)
+                .scaled(-0.2f, 0.8f)
+                .ridged() // Ridges are applied after octaves as it creates less directional artifacts this way
+            )
+            .map(x -> {
+                final float x0 = 0.125f * (x + 1) * (x + 1) * (x + 1); // Power scaled, flattens most areas but maximizes peaks
+                return SEA_LEVEL_Y + baseHeight + scaleHeight * x0; // Scale the entire thing to mountain ranges
+            });
+
+        // Cliff noise consists of noise that's been artificially clamped over half the domain, which is then selectively added above a base height level
+        // This matches up with the distinction between dirt and stone
+        final Noise2D cliffNoise = new OpenSimplex2D(seed + 2).octaves(2).spread(0.01f).scaled(0, 25).map(x -> x > 0 ? x : 0);
+        final Noise2D cliffHeightNoiseLower = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(70 - 15, 80 + 15);
+        final Noise2D cliffHeightNoiseMiddle = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(80 - 10, 90 + 10);
+        final Noise2D cliffHeightNoiseUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(90 - 15, 110 + 15);
+        final Noise2D cliffHeightNoiseHighUpper = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(110 - 20, 160 + 20);
+
+        return (x, z) -> {
+            /*final Random generator = new Random((long) warp.noise(x, z));
+            final int extra = (int) generator.nextGaussian() * 4;*/
+            final float extra = pits(seed + 1, -70, -50).noise(x, z);
+            float height = baseNoise.noise(x, z);
+            if (height > 70 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseLower.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 80 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseMiddle.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 90 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            if (height > 110 + extra)
+            {
+                final float cliffHeight = cliffHeightNoiseHighUpper.noise(x, z) - height;
+                if (cliffHeight < 0)
+                {
+                    final float mappedCliffHeight = Mth.clampedMap(cliffHeight, 0, -1, 0, 1);
+                    height += mappedCliffHeight * cliffNoise.noise(x, z);
+                }
+            }
+            return height;
+        };
+    }
+
+    public static Noise2D coastalCliffs(long seed, int minHeight, int maxHeight)
+    {
+        final OpenSimplex2D warp = new OpenSimplex2D(seed).octaves(3).spread(0.03f).scaled(-100f, 100f);
+
         final Noise2D baseNoise = new OpenSimplex2D(seed + 1)
-            .octaves(4)
+            .octaves(6)
             .spread(0.06f)
             .warped(warp)
             .map(x -> x > 0.4 ? x - 0.8f : -x)
@@ -631,8 +1102,8 @@ public final class TFCFBiomeNoise
 
     public static BiomeNoiseSampler coastalCliffsSampler(long seed)
     {
-        Noise2D riverHeight = new OpenSimplex2D(seed).octaves(4).spread(0.2f).scaled(SEA_LEVEL_Y - 20, SEA_LEVEL_Y + 100);
-        Noise3D cliffNoise = new OpenSimplex3D(seed).octaves(2).spread(0.1f).scaled(0, 5);
+        Noise2D riverHeight = new OpenSimplex2D(seed).octaves(5).spread(0.2f).scaled(SEA_LEVEL_Y - 20, SEA_LEVEL_Y + 100);
+        Noise3D cliffNoise = new OpenSimplex3D(seed).octaves(8).spread(0.1f).scaled(0, 5);
 
         return new BiomeNoiseSampler()
         {
@@ -705,11 +1176,83 @@ public final class TFCFBiomeNoise
         };
     }
 
-    public static BiomeNoiseSampler undergroundCavesUpper(long seed, Noise2D heightNoise)
+    public static BiomeNoiseSampler undergroundCavesUpper1(long seed, Noise2D heightNoise)
     {
         final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(4).spread(0.016f).abs();
         final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(4).scaled(0, 18).spread(0.02f);
         final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesUpper2(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(4).spread(0.016f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(4).scaled(0, 18).spread(0.02f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesUpper3(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 3).octaves(4).spread(0.016f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 6).octaves(4).scaled(0, 18).spread(0.02f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 9).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
 
         return new BiomeNoiseSampler()
         {
@@ -772,16 +1315,16 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
             }
         };
     }
 
-    public static BiomeNoiseSampler undergroundCavesMiddle(long seed, Noise2D heightNoise)
+    public static BiomeNoiseSampler undergroundCavesMiddle1(long seed, Noise2D heightNoise)
     {
         final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(4).spread(0.018f).abs();
         final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(4).scaled(2, 18).spread(0.05f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(2).spread(0.05f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
 
         return new BiomeNoiseSampler()
         {
@@ -808,16 +1351,16 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
             }
         };
     }
 
-    public static BiomeNoiseSampler undergroundCavesDeep(long seed, Noise2D heightNoise)
+    public static BiomeNoiseSampler undergroundCavesMiddle2(long seed, Noise2D heightNoise)
     {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(4).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(4).scaled(2, 26).spread(0.2f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(2).spread(0.05f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(4).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(4).scaled(2, 18).spread(0.05f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
 
         return new BiomeNoiseSampler()
         {
@@ -844,7 +1387,115 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesDeep1(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesDeep2(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesDeep3(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 3).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 6).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 9).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
             }
         };
     }

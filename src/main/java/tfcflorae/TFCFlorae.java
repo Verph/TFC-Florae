@@ -1,6 +1,5 @@
 package tfcflorae;
 
-import net.dries007.tfc.util.Helpers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -12,18 +11,23 @@ import com.mojang.logging.LogUtils;
 
 import org.slf4j.Logger;
 
+import net.dries007.tfc.util.Helpers;
+
 import tfcflorae.client.*;
+import tfcflorae.client.particle.TFCFParticles;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.commands.TFCFCommands;
 import tfcflorae.common.container.TFCFContainerTypes;
-import tfcflorae.common.entities.TFCFEntities;
-import tfcflorae.common.entities.ai.TFCFPoiType;
+import tfcflorae.common.entities.*;
+import tfcflorae.common.entities.ai.TFCFBrain;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
 import tfcflorae.util.TFCFDispenserBehaviors;
 import tfcflorae.util.TFCFInteractionManager;
+import tfcflorae.world.ContinentalWorldType;
 import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
 
@@ -34,11 +38,10 @@ public class TFCFlorae
     public static final String MOD_NAME = "TFCFlorae";
     public static final String MOD_VERSION = "${version}";
     public static final Logger LOGGER = LogUtils.getLogger();
-    //public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(TFCFHelpers.identifier(MOD_ID), () -> MOD_VERSION, MOD_VERSION::equals, MOD_VERSION::equals);
 
     public TFCFlorae()
     {
-        LOGGER.info("Initializing TFC-Florae");
+        LOGGER.info("Initializing TFC Florae");
         LOGGER.info("Options: Assertions Enabled = {}, Boostrap = {}, Test = {}, Debug Logging = {}", Helpers.ASSERTIONS_ENABLED, Helpers.BOOTSTRAP_ENVIRONMENT, Helpers.TEST_ENVIRONMENT, LOGGER.isDebugEnabled());
 
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -53,13 +56,15 @@ public class TFCFlorae
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFSounds.SOUNDS.register(bus);
+        TFCFParticles.PARTICLE_TYPES.register(bus);
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
+        ContinentalWorldType.WORLD_TYPES.register(bus);
 
         TFCFFeatures.FEATURES.register(bus);
         TFCFFeatures.TRUNK_DECOR.register(bus);
         TFCFFeatures.LEAF_DECOR.register(bus);
         TFCFCarvers.CARVERS.register(bus);
-        TFCFPoiType.registerAll(bus);
+        TFCFBrain.registerAll(bus);
 
         Config.init();
         TFCFForgeEventHandler.init();
@@ -77,25 +82,11 @@ public class TFCFlorae
         TFCFRock.registerDefaultRocks();
 
         event.enqueueWork(() -> {
+            TFCFCommands.registerSuggestionProviders();
             TFCFInteractionManager.init();
             TFCFDispenserBehaviors.registerDispenserBehaviors();
             TFCFBlocks.registerFlowerPotFlowers();
+            TFCFFaunas.registerSpawnPlacements();
         });
     }
-
-    /*private static <T> void register(int id, Class<T> cls, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, NetworkEvent.Context> handler)
-    {
-        CHANNEL.registerMessage(id, cls, encoder, decoder, (packet, context) -> {
-            context.get().setPacketHandled(true);
-            handler.accept(packet, context.get());
-        });
-    }
-
-    private static <T> void register(int id, Class<T> cls, Supplier<T> factory, BiConsumer<T, NetworkEvent.Context> handler)
-    {
-        CHANNEL.registerMessage(id, cls, (packet, buffer) -> {}, buffer -> factory.get(), (packet, context) -> {
-            context.get().setPacketHandled(true);
-            handler.accept(packet, context.get());
-        });
-    }*/
 }

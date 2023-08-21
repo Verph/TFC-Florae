@@ -25,7 +25,6 @@
   },
   "carvers": {
     "air": [
-      "tfc:caverns",
       "tfc:canyon_caverns",
       "tfc:cave_caverns",
       "tfc:crack_caverns",
@@ -71,6 +70,14 @@
   ],
   "starts": [],
   "spawners": {
+    "creature": [
+      {
+        "type": "tfc:turtle",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 5
+      }
+    ],
     "ambient": [
       {
         "type": "minecraft:bat",

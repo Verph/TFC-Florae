@@ -12,12 +12,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
 import net.dries007.tfc.common.blocks.DirectionPropertyBlock;
+import net.dries007.tfc.common.blocks.GroundcoverBlockType;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.util.BlockItemPlacement;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.InteractionManager;
 
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.TFCFGroundcoverBlockType;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
 import tfcflorae.common.container.TFCFContainerProviders;
 
@@ -86,5 +89,14 @@ public final class TFCFInteractionManager
             }
             return InteractionResult.PASS;
         });
+
+        // BlockItem mechanics for vanilla items that match groundcover types
+        for (TFCFGroundcoverBlockType type : TFCFGroundcoverBlockType.values())
+        {
+            if (type.getVanillaItem() != null)
+            {
+                InteractionManager.register(new BlockItemPlacement(type.getVanillaItem(), TFCFBlocks.GROUNDCOVER.get(type)));
+            }
+        }
     }
 }

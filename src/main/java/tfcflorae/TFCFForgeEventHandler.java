@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.event.AddPackFindersEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -25,9 +26,11 @@ import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.LooseFlintBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.common.commands.TFCFCommands;
 import tfcflorae.common.items.TFCFItems;
 
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -43,14 +46,21 @@ import java.nio.file.Path;
 
 import javax.annotation.Nonnull;
 
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+
 public class TFCFForgeEventHandler
 {
+    private static final Logger LOGGER = LogUtils.getLogger();
+
     public static void init()
     {
         final IEventBus bus = MinecraftForge.EVENT_BUS;
         IEventBus busMod = FMLJavaModLoadingContext.get().getModEventBus();
 
         bus.addListener(TFCFForgeEventHandler::onPlayerRightClickBlock);
+        bus.addListener(TFCFForgeEventHandler::registerCommands);
         busMod.addListener(TFCFForgeEventHandler::onPackFinder);
     }
 
@@ -85,6 +95,12 @@ public class TFCFForgeEventHandler
         {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void registerCommands(RegisterCommandsEvent event)
+    {
+        LOGGER.debug("Registering TFC Florae Commands");
+        TFCFCommands.registerCommands(event.getDispatcher());
     }
 
     public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event)
@@ -214,12 +230,15 @@ public class TFCFForgeEventHandler
                         break;
                     }
                 }
-                if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+            }
+            for (Colors sandColor : Colors.values())
+            {
+                if (sandColor.hasSandTFC() && block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
-                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SAND_PILE_TFC.get(sandColor).get()))
+                    if (Helpers.isItem(event.getItemStack(), TFCFBlocks.SAND_LAYERS.get(sandColor).get().asItem()))
                     {
                         event.getItemStack().shrink(1);
-                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFC).get().defaultBlockState();
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor.toSandTFC(true)).get(rockTFC).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);
@@ -300,12 +319,15 @@ public class TFCFForgeEventHandler
                         break;
                     }
                 }
-                if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+            }
+            for (Colors sandColor : Colors.values())
+            {
+                if (sandColor.hasSandTFC() && block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
-                    if (Helpers.isItem(event.getItemStack(), TFCFItems.SAND_PILE_TFC.get(sandColor).get()))
+                    if (Helpers.isItem(event.getItemStack(), TFCFBlocks.SAND_LAYERS.get(sandColor).get().asItem()))
                     {
                         event.getItemStack().shrink(1);
-                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFCF).get().defaultBlockState();
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColor.toSandTFC(true)).get(rockTFCF).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);

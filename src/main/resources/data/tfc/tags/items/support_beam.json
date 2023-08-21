@@ -8,6 +8,7 @@
     "tfcflorae:wood/support/argyle_eucalyptus",
     "tfcflorae:wood/support/bald_cypress",
     "tfcflorae:wood/support/baobab",
+    "tfcflorae:wood/support/bamboo",
     "tfcflorae:wood/support/beech",
     "tfcflorae:wood/support/black_walnut",
     "tfcflorae:wood/support/black_willow",
@@ -84,6 +85,6 @@
     "tfcflorae:wood/support/yellow_meranti",
     "tfcflorae:wood/support/yew",
     "tfcflorae:wood/support/zebrawood",
-    "tfcflorae:wood/support/bamboo"
+    "tfcflorae:wood/support/persimmon"
   ]
 }

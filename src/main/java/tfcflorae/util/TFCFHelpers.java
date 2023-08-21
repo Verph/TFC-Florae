@@ -1,18 +1,24 @@
 package tfcflorae.util;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.function.Consumer;
 
+import org.apache.commons.lang3.StringUtils;
+
 import net.minecraft.Util;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
@@ -23,38 +29,48 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.RandomSource;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.levelgen.LegacyRandomSource;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.server.ServerLifecycleHooks;
 
+import net.dries007.tfc.common.blocks.Gem;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.fruit.FruitBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
+import net.dries007.tfc.common.items.Food;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.util.climate.OverworldClimateModel;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
-import net.dries007.tfc.world.chunkdata.ChunkGeneratorExtension;
 import net.dries007.tfc.world.chunkdata.LerpFloatLayer;
 import net.dries007.tfc.world.noise.Noise2D;
 import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.settings.ClimateSettings;
 import net.dries007.tfc.world.settings.RockSettings;
 
+import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.Colors;
 
 public class TFCFHelpers
 {
     public static final Random RANDOM = new Random();
     public static Direction[] NOT_DOWN = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP};
     public static final Direction[] DIRECTIONS = Direction.values();
+    public static final Direction[] DIRECTIONS_HORIZONTAL_FIRST = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP, Direction.DOWN};
     public static final Direction[] DIRECTIONS_HORIZONTAL = Arrays.stream(DIRECTIONS).filter(d -> d != Direction.DOWN && d != Direction.UP).toArray(Direction[]::new);
+    public static final Direction[] DIRECTIONS_VERTICAL = Arrays.stream(DIRECTIONS).filter(d -> d == Direction.DOWN || d == Direction.UP).toArray(Direction[]::new);
 
     public static Random randomSeed(long seed)
     {
@@ -284,78 +300,280 @@ public class TFCFHelpers
 
     public static RegistryRock rockType(ServerLevel level, BlockPos pos)
     {
+        Rock defaultRock = Rock.GRANITE;
         ChunkDataProvider provider = ChunkDataProvider.get(level);
-        RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
-
-        Rock rockTFC = null;
-        TFCFRock rockTFCF = null;
-
-        if (surfaceRock != null)
+        if (provider != null)
         {
-            for (Rock r : Rock.values())
+            RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
+
+            Rock rockTFC = null;
+            TFCFRock rockTFCF = null;
+
+            if (surfaceRock != null)
             {
-                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                for (Rock r : Rock.values())
                 {
-                    rockTFC = r;
-                    break;
-                }
-                else
-                {
-                    for (TFCFRock r2 : TFCFRock.values())
+                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
                     {
-                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                        rockTFC = r;
+                        break;
+                    }
+                    else
+                    {
+                        for (TFCFRock r2 : TFCFRock.values())
                         {
-                            rockTFCF = r2;
-                            break;
+                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                            {
+                                rockTFCF = r2;
+                                break;
+                            }
                         }
                     }
                 }
             }
+            if (rockTFC != null)
+                return rockTFC;
+            else if (rockTFCF != null)
+                return rockTFCF;
+            else
+                return defaultRock;
         }
-        if (rockTFC != null)
-            return rockTFC;
-        else if (rockTFCF != null)
-            return rockTFCF;
-        else
-            return Rock.GRANITE;
+        return defaultRock;
     }
 
     public static RegistryRock rockType(WorldGenLevel level, BlockPos pos)
     {
+        Rock defaultRock = Rock.GRANITE;
         ChunkDataProvider provider = ChunkDataProvider.get(level);
-        RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
-
-        Rock rockTFC = null;
-        TFCFRock rockTFCF = null;
-
-        if (surfaceRock != null)
+        if (provider != null)
         {
-            for (Rock r : Rock.values())
+            RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
+
+            Rock rockTFC = null;
+            TFCFRock rockTFCF = null;
+
+            if (surfaceRock != null)
             {
-                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                for (Rock r : Rock.values())
                 {
-                    rockTFC = r;
-                    break;
-                }
-                else
-                {
-                    for (TFCFRock r2 : TFCFRock.values())
+                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
                     {
-                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                        rockTFC = r;
+                        break;
+                    }
+                    else
+                    {
+                        for (TFCFRock r2 : TFCFRock.values())
                         {
-                            rockTFCF = r2;
-                            break;
+                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                            {
+                                rockTFCF = r2;
+                                break;
+                            }
                         }
                     }
                 }
             }
+            if (rockTFC != null)
+                return rockTFC;
+            else if (rockTFCF != null)
+                return rockTFCF;
+            else
+                return defaultRock;
         }
-        if (rockTFC != null)
-            return rockTFC;
-        else if (rockTFCF != null)
-            return rockTFCF;
+        return defaultRock;
+    }
+
+    public static Block getSandBlock(WorldGenLevel level, BlockPos pos, boolean cheap)
+    {
+        Colors color = getSandColorTFCF(level, pos, cheap);
+        if (color.hasSandNew())
+        {
+            return TFCFBlocks.SAND.get(color).get();
+        }
         else
-            return Rock.GRANITE;
+        {
+            return TFCBlocks.SAND.get(color.toSandTFC(true)).get();
+        }
+    }
+
+	public static SandBlockType getSandColor(WorldGenLevel level, BlockPos pos, boolean cheap)
+	{
+        boolean foundColour = false;
+        if (!cheap)
+        {
+            for (Direction direction : TFCFHelpers.DIRECTIONS_HORIZONTAL_FIRST)
+            {
+                SandBlockType colour = Colors.toSandTFC(Colors.fromMaterialColour(level.getBlockState(pos.relative(direction)).getBlock().defaultMaterialColor()), true);
+                if (colour != null)
+                {
+                    foundColour = true;
+                    return colour;
+                }
+                else
+                {
+                    foundColour = false;
+                }
+            }
+        }
+        else if (cheap)
+        {
+            SandBlockType colour = Colors.toSandTFC(Colors.fromMaterialColour(level.getBlockState(pos.below()).getBlock().defaultMaterialColor()), true);
+            if (colour != null)
+            {
+                foundColour = true;
+                return colour;
+            }
+            else
+            {
+                foundColour = false;
+            }
+        }
+        else if (!foundColour)
+        {
+            final ChunkDataProvider provider = ChunkDataProvider.get(level);
+            if (provider != null)
+            {
+                final ChunkData data = provider.get(level, pos);
+                final Block sand = data.getRockData().getRock(pos).sand();
+
+                for (Colors sandColors : Colors.values())
+                {
+                    if (sand != null && (sand == TFCBlocks.SAND.get(Colors.toSandTFC(sandColors, true)).get() || sand == TFCFBlocks.SAND.get(Colors.nonTFC(sandColors)).get()))
+                    {
+                        return Colors.toSandTFC(sandColors, true);
+                    }
+                }
+            }
+        }
+		return SandBlockType.YELLOW;
+	}
+
+	public static Colors getSandColorTFCF(WorldGenLevel level, BlockPos pos, boolean cheap)
+	{
+        boolean foundColour = false;
+        if (!cheap)
+        {
+            for (Direction direction : TFCFHelpers.DIRECTIONS_HORIZONTAL_FIRST)
+            {
+                Colors colour = Colors.fromMaterialColour(level.getBlockState(pos.relative(direction)).getBlock().defaultMaterialColor());
+                if (colour != null)
+                {
+                    foundColour = true;
+                    return colour;
+                }
+                else
+                {
+                    foundColour = false;
+                }
+            }
+        }
+        else if (cheap)
+        {
+            Colors colour = Colors.fromMaterialColour(level.getBlockState(pos.below()).getBlock().defaultMaterialColor());
+            if (colour != null)
+            {
+                foundColour = true;
+                return colour;
+            }
+            else
+            {
+                foundColour = false;
+            }
+        }
+        else if (!foundColour)
+        {
+            final ChunkDataProvider provider = ChunkDataProvider.get(level);
+            if (provider != null)
+            {
+                final ChunkData data = provider.get(level, pos);
+                final Block sand = data.getRockData().getRock(pos).sand();
+
+                for (Colors sandColors : Colors.values())
+                {
+                    if (sand != null && (sand == TFCBlocks.SAND.get(Colors.toSandTFC(sandColors, true)).get() || sand == TFCFBlocks.SAND.get(Colors.nonTFC(sandColors)).get()))
+                    {
+                        return sandColors;
+                    }
+                }
+            }
+        }
+		return Colors.ORANGE;
+	}
+
+    public static MaterialColor gemColor(Gem gem)
+    {
+        switch (gem)
+        {
+            case AMETHYST:
+                return MaterialColor.COLOR_PURPLE;
+            case DIAMOND:
+                return MaterialColor.DIAMOND;
+            case EMERALD:
+                return MaterialColor.EMERALD;
+            case LAPIS_LAZULI:
+                return MaterialColor.LAPIS;
+            case OPAL:
+                return MaterialColor.COLOR_LIGHT_BLUE;
+            case PYRITE:
+                return MaterialColor.GOLD;
+            case RUBY:
+                return MaterialColor.COLOR_RED;
+            case SAPPHIRE:
+                return MaterialColor.COLOR_BLUE;
+            case TOPAZ:
+                return MaterialColor.COLOR_ORANGE;
+            default:
+                return MaterialColor.QUARTZ;
+        }
+    }
+
+    public static int getFlowerColor(FruitBlocks.Tree tree)
+    {
+        switch (tree)
+        {
+            case CHERRY:
+                return new Color(251, 135, 255).getRGB();
+            case GREEN_APPLE:
+                return new Color(252, 171, 255).getRGB();
+            case LEMON:
+                return new Color(215, 137, 217).getRGB();
+            case OLIVE:
+                return new Color(206, 198, 207).getRGB();
+            case ORANGE:
+                return new Color(251, 242, 252).getRGB();
+            case PEACH:
+                return new Color(230, 126, 188).getRGB();
+            case PLUM:
+                return new Color(165, 70, 189).getRGB();
+            case RED_APPLE:
+                return new Color(252, 171, 255).getRGB();
+            default:
+                return -1;
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    public static Color getAverageColor(Level level, BlockState state)
+    {
+        TextureAtlasSprite sprite = Minecraft.getInstance().getBlockRenderer().getBlockModel(state).getQuads(state, Direction.NORTH, level.getRandom()).get(0).getSprite();
+        int x0 = sprite.getX();
+        int y0 = sprite.getY();
+        int x1 = x0 + sprite.getWidth();
+        int y1 = y0 + sprite.getHeight();
+        long sumr = 0, sumg = 0, sumb = 0;
+        for (int xs = x0; xs < x1; xs++)
+        {
+            for (int ys = y0; ys < y1; ys++)
+            {
+                Color pixel = new Color(sprite.getPixelRGBA(0, xs, ys));
+                sumr += pixel.getRed();
+                sumg += pixel.getGreen();
+                sumb += pixel.getBlue();
+            }
+        }
+        int num = sprite.getWidth() * sprite.getHeight();
+        return new Color(sumr / num, sumg / num, sumb / num);
     }
 
     public static ResourceLocation animalTexture(String name)
@@ -367,5 +585,63 @@ public class TFCFHelpers
     {
         long i = Mth.getSeed(posX, posY, posZ);
         return new LegacyRandomSource(i);
+    }
+
+    public static BlockPos getNearestBlock(WorldGenLevel level, BlockPos sourcePos, int radius, Block targetBlock)
+    {      
+        BlockPos closestPos = null;
+        BlockPos checkPos = sourcePos;
+
+        for (int x = sourcePos.getX() - radius; x < sourcePos.getX() + radius; x++)
+        {
+            for (int z = sourcePos.getZ() - radius; z < sourcePos.getZ() + radius; z++)
+            {
+                checkPos = new BlockPos(x, sourcePos.getY(), z);
+                if (level.getBlockState(checkPos).getBlock() == targetBlock)
+                {
+                    // check if it is closer than any previously found position
+                    if (closestPos == null || 
+                            distanceToSqr(sourcePos, sourcePos.getX() - checkPos.getX(), 
+                                                sourcePos.getY() - checkPos.getY(),
+                                                sourcePos.getZ() - checkPos.getZ())
+                            < distanceToSqr(sourcePos, sourcePos.getX() - closestPos.getX(), 
+                                                sourcePos.getY() - closestPos.getY(),
+                                                sourcePos.getZ() - closestPos.getZ()))
+                    {
+                        closestPos = checkPos;
+                    }
+                }
+            }
+        }
+        return closestPos;
+    }
+
+    public static int distanceToSqr(BlockPos sourcePos, int x, int y, int z)
+    {
+        int d0 = sourcePos.getX() - x;
+        int d1 = sourcePos.getY() - y;
+        int d2 = sourcePos.getZ() - z;
+        return d0 * d0 + d1 * d1 + d2 * d2;
+    }
+
+    public static int distanceToNearestBlock(BlockPos sourcePos, BlockPos nearestBlockPos)
+    {
+        int d0 = sourcePos.getX() - nearestBlockPos.getX();
+        int d1 = sourcePos.getY() - nearestBlockPos.getY();
+        int d2 = sourcePos.getZ() - nearestBlockPos.getZ();
+        return d0 * d0 + d1 * d1 + d2 * d2;
+    }
+
+    public static float catmullrom(float delta, float startPoint, float start, float end, float endPoint)
+    {
+        return 0.5F * (2.0F * start + (end - startPoint) * delta + (2.0F * startPoint - 5.0F * start + 4.0F * end - endPoint) * delta * delta + (3.0F * start - startPoint - 3.0F * end + endPoint) * delta * delta * delta);
+    }
+
+    public static void spawnParticleBelow(Level level, BlockPos pos, Random random, ParticleOptions options)
+    {
+        double d0 = (double)pos.getX() + random.nextDouble();
+        double d1 = (double)pos.getY() - 0.05D;
+        double d2 = (double)pos.getZ() + random.nextDouble();
+        level.addParticle(options, d0, d1, d2, 0.0D, 0.0D, 0.0D);
     }
 }

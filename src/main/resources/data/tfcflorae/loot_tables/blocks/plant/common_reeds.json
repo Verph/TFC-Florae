@@ -7,21 +7,38 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "tfcflorae:plant/common_reeds",
-          "conditions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "tag": "tfc:sharp_tools"
-              }
+              "type": "minecraft:item",
+              "name": "tfcflorae:plant/common_reeds",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "tag": "forge:shears"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "tfcflorae:plant/common_reeds",
+                  "properties": {
+                    "part": "lower"
+                  }
+                }
+              ]
             },
             {
-              "condition": "minecraft:block_state_property",
-              "block": "tfcflorae:plant/common_reeds",
-              "properties": {
-                "part": "lower"
-              }
+              "type": "minecraft:item",
+              "name": "tfc:straw",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "tag": "tfc:sharp_tools"
+                  }
+                }
+              ]
             }
           ]
         }

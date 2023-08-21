@@ -5,6 +5,7 @@
     "tfc:bamboo",
     "tfc:cave_vegetation",
     "tfcflorae:charred_forest",
-    "tfcflorae:jungle"
+    "tfcflorae:jungle",
+	"tfc:frogspawn_patch"
   ]
 }

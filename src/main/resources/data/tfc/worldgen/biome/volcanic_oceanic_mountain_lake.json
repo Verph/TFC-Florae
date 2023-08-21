@@ -26,8 +26,8 @@
   },
   "carvers": {
     "air": [
+      "tfc:deep_caves",
       "tfc:caverns_upper",
-      "tfc:caverns",
       "tfc:canyon_caverns",
       "tfc:cave_caverns",
       "tfc:crack_caverns",
@@ -92,10 +92,22 @@
     ],
     "water_ambient": [
       {
-        "type": "tfc:salmon",
+        "type": "tfcflorae:crappie",
         "weight": 10,
         "minCount": 2,
-        "maxCount": 6
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:largemouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:smallmouth_bass",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
       },
       {
         "type": "tfc:bluegill",
@@ -104,10 +116,22 @@
         "maxCount": 4
       },
       {
+        "type": "tfc:salmon",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
         "type": "tfc:crayfish",
-        "weight": 3,
+        "weight": 5,
         "minCount": 1,
         "maxCount": 4
+      },
+      {
+        "type": "tfcflorae:tadpole",
+        "weight": 2,
+        "minCount": 2,
+        "maxCount": 8
       }
     ],
     "water_creature": [
@@ -159,6 +183,18 @@
       }
     ],
     "creature": [
+      {
+        "type": "tfc:direwolf",
+        "weight": 1,
+        "minCount": 3,
+        "maxCount": 7
+      },
+      {
+        "type": "tfc:moose",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
       {
         "type": "tfc:pig",
         "weight": 1,

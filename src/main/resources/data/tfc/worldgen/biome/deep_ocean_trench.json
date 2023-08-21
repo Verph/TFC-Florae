@@ -27,7 +27,6 @@
     "air": [
       "tfc:canyon_ocean",
       "tfc:caves_ocean",
-      "tfc:caverns",
       "tfc:canyon_caverns",
       "tfc:cave_caverns",
       "tfc:crack_caverns",
@@ -163,6 +162,12 @@
       }
     ],
     "monster": [
+      {
+        "type": "minecraft:drowned",
+        "weight": 95,
+        "minCount": 1,
+        "maxCount": 4
+      },
       {
         "type": "minecraft:spider",
         "weight": 100,

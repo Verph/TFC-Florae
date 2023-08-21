@@ -6,6 +6,7 @@ import com.google.common.collect.Sets;
 
 import com.mojang.serialization.Codec;
 
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.util.EnvironmentHelpers;
@@ -99,7 +100,7 @@ public class RootedTreeFeature extends Feature<RootedTreeConfig>
                 for (int z = -size; z <= size; ++z)
                 {
                     mutable.setWithOffset(pos, x, y, z);
-                    boolean isValid = TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> isEmptyOrWater(state)) || level.isStateAtPosition(pos, state -> state.is(BlockTags.LOGS)) || (config.trunkPlacer instanceof UpwardBranchingTrunk trunk && level.isStateAtPosition(pos, state -> state.is(trunk.canGrowThrough)));
+                    boolean isValid = TreeFeature.validTreePos(level, pos) || level.isStateAtPosition(pos, state -> isEmptyOrWater(state)) || level.isStateAtPosition(pos, state -> state.is(BlockTags.LOGS)) || (config.trunkPlacer instanceof UpwardBranchingTrunk trunk && (level.isStateAtPosition(pos, state -> state.is(trunk.canGrowThrough)) || level.isStateAtPosition(pos, state -> isEmptyOrWater(state))));
                     if (!isValid || (!config.ignoreVines && TreeFeatureAccessor.isVine(level, mutable))) return y - 2;
                 }
             }
@@ -109,7 +110,7 @@ public class RootedTreeFeature extends Feature<RootedTreeConfig>
 
     public static boolean isEmptyOrWater(BlockState state)
     {
-        return state.isAir() || state.is(Blocks.WATER) || state.is(TFCBlocks.SALT_WATER.get()) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
+        return EnvironmentHelpers.isWorldgenReplaceable(state) || state.is(Blocks.WATER) || state.is(TFCBlocks.SALT_WATER.get()) || EnvironmentHelpers.isWater(state) || FluidHelpers.isAirOrEmptyFluid(state);
     }
 
     @Override

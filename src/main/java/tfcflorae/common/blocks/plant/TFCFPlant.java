@@ -22,6 +22,7 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.plant.*;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.fluids.TFCFluids;
@@ -236,7 +237,14 @@ public enum TFCFPlant implements RegistryPlant
     RED_SEA_WHIP(BlockType.WATER, 0.7F, false, false, false),
     SEA_ANEMONE(BlockType.WATER, 0.7F, false, false, false),
     SEAGRASS(BlockType.GROWING_PLANT_WATER, 0.6F, false, false, false),
-    SEAWEED(BlockType.WATER, 0.7F, false, false, false);
+    SEAWEED(BlockType.WATER, 0.7F, false, false, false),
+
+    // 1.20 Flora
+    BEACHGRASS(BlockType.BEACH_GRASS, 0.8f, false, false, false),
+    SEA_PALM(BlockType.DRY, 0.8f, false, false, false),
+    COBBLESTONE_LICHEN(BlockType.CREEPING_STONE, 1f, false, false, false),
+    FLOATING_GREEN_ALGAE(BlockType.FLOATING_FRESH, 0.9F, false, false, false),
+    FLOATING_RED_ALGAE(BlockType.FLOATING, 0.7F, false, false, false);
 
     //public static final EnumSet<TFCFPlant> SPECIAL_POTTED_PLANTS = EnumSet.of(GLOW_LICHEN);
     public static final EnumSet<TFCFPlant> ITEM_TINTED_PLANTS = EnumSet.of(SHIELD_FERN, LICORICE_FERN, LEAF_LITTER, CAT_GRASS, CROWNGRASS, GOOSEGRASS, WHEATGRASS, SAWGRASS, CINNAMON_FERN, ELEPHANT_GRASS, LEAF_LITTER, MONSTERA, MONSTERA_EPIPHYTE, POND_GRASS, PRAIRIE_GRASS, WOOLLY_BUSH, CONIFEROUS_SHRUB, DECIDUOUS_SHRUB, HORNWORT);
@@ -520,7 +528,11 @@ public enum TFCFPlant implements RegistryPlant
 
         // Custom Water
         TALL_WATER_SMALL_DRIPLEAF((plant, type) -> SmallDripleafPlantBlock.create(plant, TFCBlockStateProperties.SALT_WATER, nonSolid(plant))),
-        TALL_WATER_FRESH_SMALL_DRIPLEAF((plant, type) -> SmallDripleafPlantBlock.create(plant, TFCBlockStateProperties.FRESH_WATER, nonSolid(plant)));
+        TALL_WATER_FRESH_SMALL_DRIPLEAF((plant, type) -> SmallDripleafPlantBlock.create(plant, TFCBlockStateProperties.FRESH_WATER, nonSolid(plant))),
+
+        // 1.20
+        BEACH_GRASS((plant, type) -> DesertShortGrassBlock.createBeachGrass(plant, fire(nonSolid(plant)))),
+        CREEPING_STONE((plant, type) -> CreepingStonePlantBlock.createStone(plant, fire(nonSolid(plant).hasPostProcess(TFCBlocks::always))));
 
         public static final EnumSet<BlockType> NO_ITEM_TYPES = EnumSet.of(WEEPING, TWISTING_SOLID, KELP, KELP_TREE, TWISTING);
         public static final EnumSet<BlockType> FOLIAGE_TYPES = EnumSet.of(WEEPING, WEEPING_TOP, FLOATING_FRESH, FLOATING, WATER_FRESH, GRASS_WATER_FRESH, GRASS_WATER);

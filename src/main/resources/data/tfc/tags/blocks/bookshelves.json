@@ -8,6 +8,7 @@
     "tfcflorae:wood/bookshelf/argyle_eucalyptus",
     "tfcflorae:wood/bookshelf/bald_cypress",
     "tfcflorae:wood/bookshelf/baobab",
+    "tfcflorae:wood/bookshelf/bamboo",
     "tfcflorae:wood/bookshelf/beech",
     "tfcflorae:wood/bookshelf/black_walnut",
     "tfcflorae:wood/bookshelf/black_willow",
@@ -84,7 +85,6 @@
     "tfcflorae:wood/bookshelf/yellow_meranti",
     "tfcflorae:wood/bookshelf/yew",
     "tfcflorae:wood/bookshelf/zebrawood",
-    "tfcflorae:wood/bookshelf/persimmon",
-    "tfcflorae:wood/bookshelf/bamboo"
+    "tfcflorae:wood/bookshelf/persimmon"
   ]
 }

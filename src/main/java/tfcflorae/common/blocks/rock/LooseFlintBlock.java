@@ -33,7 +33,7 @@ import tfcflorae.common.TFCFTags;
 
 public class LooseFlintBlock extends GroundcoverBlock implements IFluidLoggable
 {
-    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, Fluids.LAVA));
+    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.FLOWING_WATER, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, TFCFluids.RIVER_WATER, Fluids.LAVA, Fluids.FLOWING_LAVA));
     public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
 
     public static final IntegerProperty COUNT = TFCBlockStateProperties.COUNT_1_3;

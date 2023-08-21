@@ -64,6 +64,17 @@
     "tfcflorae:food/roasted_turkey_tail",
     "tfcflorae:food/roasted_weeping_milk_cap",
     "tfcflorae:food/roasted_wood_blewit",
-    "tfcflorae:food/roasted_woolly_gomphus"
+    "tfcflorae:food/roasted_woolly_gomphus",
+    "tfcflorae:food/fresh_seaweed",
+    "tfcflorae:food/crappie",
+    "tfcflorae:food/lake_trout",
+    "tfcflorae:food/largemouth_bass",
+    "tfcflorae:food/rainbow_trout",
+    "tfcflorae:food/smallmouth_bass",
+    "tfcflorae:food/cooked_crappie",
+    "tfcflorae:food/cooked_lake_trout",
+    "tfcflorae:food/cooked_largemouth_bass",
+    "tfcflorae:food/cooked_rainbow_trout",
+    "tfcflorae:food/cooked_smallmouth_bass"
   ]
 }

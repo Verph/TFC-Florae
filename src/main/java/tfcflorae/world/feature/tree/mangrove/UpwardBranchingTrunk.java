@@ -80,7 +80,7 @@ public class UpwardBranchingTrunk extends TrunkPlacer
         int x = mutable.getX();
         int z = mutable.getZ();
 
-        for(int l = length; l < height && steps > 0; --steps)
+        for (int l = length; l < height && steps > 0; --steps)
         {
             if (l >= 1)
             {

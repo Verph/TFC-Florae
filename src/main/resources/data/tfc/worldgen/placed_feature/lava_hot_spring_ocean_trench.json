@@ -14,7 +14,7 @@
       "height": {
         "type": "biased_to_bottom",
         "min_inclusive": {
-          "absolute": -32
+          "absolute": -255
         },
         "max_inclusive": {
           "absolute": 20

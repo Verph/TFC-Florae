@@ -2,7 +2,6 @@ package tfcflorae.client;
 
 import java.util.Arrays;
 import java.util.Locale;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 import net.minecraft.client.Minecraft;
@@ -12,6 +11,8 @@ import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.CodModel;
+import net.minecraft.client.model.SalmonModel;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.particle.ParticleEngine;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -19,22 +20,20 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.LecternRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.BeeRenderer;
+import net.minecraft.client.renderer.entity.CodRenderer;
+import net.minecraft.client.renderer.entity.SalmonRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.ClientRegistry;
 import net.minecraftforge.client.event.*;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.dries007.tfc.client.*;
-import net.dries007.tfc.client.model.ContainedFluidModel;
+import net.dries007.tfc.client.model.entity.BluegillModel;
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.BarrelBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
@@ -43,19 +42,18 @@ import net.dries007.tfc.client.screen.KnappingScreen;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.config.TFCConfig;
+import net.dries007.tfc.common.entities.TFCEntities;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.Metal;
 
-import tfcflorae.Config;
-import tfcflorae.client.model.entity.SilkmothModel;
+import tfcflorae.client.model.entity.*;
+import tfcflorae.client.particle.FallingLeafParticle;
+import tfcflorae.client.particle.TFCFParticles;
+import tfcflorae.client.particle.WaterFlowParticle;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFSignBlockEntityRenderer;
 import tfcflorae.client.render.blockentity.TFCFToolRackBlockEntityRenderer;
-import tfcflorae.client.render.entity.SilkmothRenderer;
-import tfcflorae.client.render.entity.TFCFBoatRenderer;
-import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
+import tfcflorae.client.render.entity.*;
 import tfcflorae.client.screen.TFCFAnvilPlanScreen;
 import tfcflorae.client.screen.TFCFAnvilScreen;
 import tfcflorae.client.screen.TFCFBarrelScreen;
@@ -67,6 +65,7 @@ import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.common.container.TFCFContainerTypes;
+import tfcflorae.common.entities.Fish;
 import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
 import tfcflorae.common.items.TFCFItems;
@@ -278,6 +277,13 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MINERAL_SHEET.get(), cutout);
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SILKMOTH_NEST.get(), cutout);
+    
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.OCHRE_FROGLIGHT.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.VERDANT_FROGLIGHT.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.PEARLESCENT_FROGLIGHT.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.FROGSPAWN.get(), cutout);
+
+        TFCFBlocks.GROUNDCOVER.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
     }
 
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
@@ -285,10 +291,19 @@ public class ClientEventHandler
         // Entities
         for (TFCFWood wood : TFCFWood.VALUES)
         {
-            event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName()));
+            event.registerEntityRenderer(TFCFEntities.BOATS.get(wood).get(), ctx -> new TFCFBoatRenderer(ctx, wood.getSerializedName(), wood == TFCFWood.BAMBOO ? true : false));
         }
 
         event.registerEntityRenderer(TFCFEntities.SILKMOTH.get(), ctx -> new TFCFSimpleMobRenderer.Builder<>(ctx, SilkmothModel::new, "silk_moth").texture(Silkmoth::getTextureLocation).build());
+        event.registerEntityRenderer(TFCFEntities.FROG.get(), FrogRenderer::new);
+        event.registerEntityRenderer(TFCFEntities.TADPOLE.get(), TadpoleRenderer::new);
+        event.registerEntityRenderer(TFCFEntities.PARROT.get(), TFCFParrotRenderer::new);
+        event.registerEntityRenderer(TFCFEntities.FRESHWATER_FISH.get(Fish.LARGEMOUTH_BASS).get(), ctx -> new SalmonLikeRenderer(ctx, "largemouth_bass"));
+        event.registerEntityRenderer(TFCFEntities.FRESHWATER_FISH.get(Fish.SMALLMOUTH_BASS).get(), ctx -> new SalmonLikeRenderer(ctx, "smallmouth_bass"));
+        event.registerEntityRenderer(TFCFEntities.FRESHWATER_FISH.get(Fish.LAKE_TROUT).get(), ctx -> new SalmonLikeRenderer(ctx, "lake_trout"));
+        event.registerEntityRenderer(TFCFEntities.FRESHWATER_FISH.get(Fish.RAINBOW_TROUT).get(), ctx -> new SalmonLikeRenderer(ctx, "rainbow_trout"));
+        event.registerEntityRenderer(TFCFEntities.FRESHWATER_COD_FISH.get(Fish.CRAPPIE).get(), ctx -> new CodLikeRenderer(ctx, "crappie"));
+        //event.registerEntityRenderer(TFCFEntities.FRESHWATER_FISH.get(Fish.CRAPPIE).get(), ctx -> new TFCFSimpleMobRenderer.Builder<>(ctx, CodModel::new, "crappie").flops().build());
 
         // BEs
         event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);
@@ -305,13 +320,22 @@ public class ClientEventHandler
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
     {
         LayerDefinition boatLayer = BoatModel.createBodyModel();
+        LayerDefinition raftLayer = RaftModel.createBodyModel();
         LayerDefinition signLayer = SignRenderer.createSignLayer();
         for (TFCFWood wood : TFCFWood.VALUES)
         {
-            event.registerLayerDefinition(TFCFBoatRenderer.boatName(wood.getSerializedName()), () -> boatLayer);
+            event.registerLayerDefinition(TFCFBoatRenderer.boatName(wood.getSerializedName()), wood == TFCFWood.BAMBOO ? () -> raftLayer : () -> boatLayer);
             event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("sign/" + wood.name().toLowerCase(Locale.ROOT)), () -> signLayer);
         }
         event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("silk_moth"), SilkmothModel::createBodyLayer);
+        event.registerLayerDefinition(FrogRenderer.MODEL_LAYER, FrogModel::createBodyLayer);
+        event.registerLayerDefinition(TadpoleRenderer.MODEL_LAYER, TadpoleModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFParrotRenderer.MODEL_LAYER, TFCFParrotModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("largemouth_bass"), SalmonModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("smallmouth_bass"), SalmonModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("lake_trout"), SalmonModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("rainbow_trout"), SalmonModel::createBodyLayer);
+        event.registerLayerDefinition(TFCFRenderHelpers.modelIdentifier("crappie"), CodModel::createBodyLayer);
     }
 
     public static void onConfigReload(ModConfigEvent.Reloading event)
@@ -442,7 +466,9 @@ public class ClientEventHandler
 
     public static void registerParticleFactories(ParticleFactoryRegisterEvent event)
     {
-        //ParticleEngine particleEngine = Minecraft.getInstance().particleEngine;
+        ParticleEngine particleEngine = Minecraft.getInstance().particleEngine;
+        particleEngine.register(TFCFParticles.WATER_FLOW.get(), WaterFlowParticle.Provider::new);
+        particleEngine.register(TFCFParticles.FALLING_LEAF.get(), set -> new FallingLeafParticle.Provider(set, true));
     }
 
     public static void onTextureStitch(TextureStitchEvent.Pre event)

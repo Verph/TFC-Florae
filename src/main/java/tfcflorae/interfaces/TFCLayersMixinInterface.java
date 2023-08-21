@@ -1,5 +1,7 @@
 package tfcflorae.interfaces;
 
+import net.dries007.tfc.world.biome.BiomeExtension;
+
 public interface TFCLayersMixinInterface
 {
     int getStaticGrasslands();
@@ -80,6 +82,10 @@ public interface TFCLayersMixinInterface
 
     int getStaticAtoll();
 
+    int getStaticBarrierReef();
+
+    int getStaticLagoon();
+
     int getStaticPelagicZoneMarker();
 
     int getStaticSeamountsMarker();
@@ -87,4 +93,20 @@ public interface TFCLayersMixinInterface
     int getStaticGuyotsMarker();
 
     int getStaticAtollMarker();
+
+    int getStaticBarrierReefMarker();
+
+    int getStaticBarrierReefShoreMarker();
+
+    int getStaticBarrierReefOceanMarker();
+
+    int getStaticLagoonMarker();
+
+    int getStaticSawtoothCliffs();
+
+    int getStaticTablelands();
+
+    int getStaticPitlands();
+
+    int getStaticFracturedMistyPeaks();
 }
