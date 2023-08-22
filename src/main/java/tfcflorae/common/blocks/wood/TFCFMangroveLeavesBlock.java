@@ -25,29 +25,21 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.dries007.tfc.common.blocks.soil.HoeOverlayBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
-import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidProperty;
-import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
@@ -58,7 +50,6 @@ import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.registry.RegistryWood;
 
 import tfcflorae.Config;
-import tfcflorae.common.blocks.TFCFBlocks;
 
 public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock
 {
@@ -73,10 +64,10 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
 
     public final RegistryWood wood;
 
-    public static TFCFMangroveLeavesBlock create(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
+    public static TFCFMangroveLeavesBlock create(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, @Nullable Supplier<? extends Block> sapling)
     {
         final IntegerProperty distanceProperty = getDistanceProperty(maxDecayDistance);
-        return new TFCFMangroveLeavesBlock(properties, wood, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig)
+        return new TFCFMangroveLeavesBlock(properties, wood, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig, sapling)
         {
             @Override
             protected IntegerProperty getDistanceProperty()
@@ -103,9 +94,10 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
     private final Lifecycle[] lifecycle;
     @Nullable private final Supplier<? extends Block> fallenLeaves;
     @Nullable private final Supplier<? extends Block> fallenTwig;
+    @Nullable private final Supplier<? extends Block> sapling;
     private long lastUpdateTick;
 
-    public TFCFMangroveLeavesBlock(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
+    public TFCFMangroveLeavesBlock(ExtendedProperties properties, RegistryWood wood, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, @Nullable Supplier<? extends Block> sapling)
     {
         super(properties, maxDecayDistance, fallenLeaves, fallenTwig);
 
@@ -119,6 +111,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
         this.productItem = productItem;
         this.fallenLeaves = fallenLeaves;
         this.fallenTwig = fallenTwig;
+        this.sapling = sapling;
 
         lastUpdateTick = Calendars.SERVER.getTicks();
 
@@ -190,12 +183,12 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             }
             else
             {
-                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), 3);
+                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), Block.UPDATE_ALL);
             }
         }
         else
         {
-            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), 3);
+            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), Block.UPDATE_ALL);
         }
     }
 
@@ -293,10 +286,9 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             }
             else
             {
-                final int chance = level.random.nextInt(6);
-                if (chance == 0 && level.isEmptyBlock(pos.below()) && !state.getValue(PERSISTENT) && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
+                if (level.getBlockState(pos.below()).isAir() && level.getRandom().nextInt(6) == 0 && !state.getValue(PERSISTENT) && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
                 {
-                    level.setBlock(pos.below(), TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.SAPLING).get().defaultBlockState().setValue(TFCFMangrovePropaguleBlock.STAGE, 0).setValue(TFCFMangrovePropaguleBlock.AGE, 0).setValue(TFCFMangrovePropaguleBlock.WATERLOGGED, false).setValue(TFCFMangrovePropaguleBlock.HANGING, true).setValue(TFCFMangrovePropaguleBlock.FLUID, TFCFMangrovePropaguleBlock.FLUID.keyFor(Fluids.EMPTY)), 2);
+                    level.setBlock(pos.below(), sapling.get().defaultBlockState().setValue(TFCFMangrovePropaguleBlock.HANGING, true), Block.UPDATE_ALL);
                     newState = state.setValue(LIFECYCLE, currentLifecycle);
                 }
                 else
@@ -308,7 +300,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             // And update the block
             if (state != newState)
             {
-                level.setBlock(pos, newState, 3);
+                level.setBlock(pos, newState, Block.UPDATE_ALL);
             }
         }
     }

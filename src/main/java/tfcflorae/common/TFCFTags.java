@@ -27,6 +27,7 @@ public class TFCFTags
         public static final TagKey<Block> FROGS_SPAWNABLE_ON = create("frogs_spawnable_on");
         public static final TagKey<Block> TIDE_POOL_BLOCKS = create("tide_pool_blocks"); // groundcover blocks that spawn in tide pools
         public static final TagKey<Block> CREEPING_STONE_PLANTABLE_ON = create("creeping_stone_plantable_on");
+        public static final TagKey<Block> SAPLING_CAN_REPLACE = create("sapling_can_replace");
 
         private static TagKey<Block> create(String id)
         {
@@ -47,6 +48,7 @@ public class TFCFTags
         public static final TagKey<Item> FROG_TEMPTATION_ITEMS = create("frog_temptation_items");
         public static final TagKey<Item> PARROT_FOOD = create("parrot_food");
         public static final TagKey<Item> POISONOUS_PARROT_FOOD = create("poisonous_parrot_food");
+        public static final TagKey<Item> SAPLINGS = create("saplings");
 
         private static TagKey<Item> create(String id)
         {

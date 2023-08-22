@@ -18,11 +18,11 @@ import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.items.*;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryWood;
-import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.items.TFCFFood;
 import tfcflorae.common.items.TFCFItems;
+import tfcflorae.world.feature.tree.TFCFTreeGrower;
 
 import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
 
@@ -133,7 +133,7 @@ public enum TFCFWood implements RegistryWood
     public final boolean fruitingLog;
     public final MaterialColor woodColor;
     public final MaterialColor barkColor;
-    public final TFCTreeGrower tree;
+    public final TFCFTreeGrower tree;
     public final int maxDecayDistance;
     public final int daysToGrow;
     public int floweringLeavesColor;
@@ -174,7 +174,7 @@ public enum TFCFWood implements RegistryWood
         this.fruitingLog = fruitingLog;
         this.woodColor = woodColor;
         this.barkColor = barkColor;
-        this.tree = new TFCTreeGrower(Helpers.identifier("tree/" + serializedName), Helpers.identifier("tree/" + serializedName + "_large"));
+        this.tree = new TFCFTreeGrower(this, Helpers.identifier("tree/" + serializedName), Helpers.identifier("tree/" + serializedName + "_large"));
         this.maxDecayDistance = maxDecayDistance;
         this.daysToGrow = daysToGrow;
         this.isFruitTree = false;
@@ -225,7 +225,7 @@ public enum TFCFWood implements RegistryWood
     }
 
     @Override
-    public TFCTreeGrower tree()
+    public TFCFTreeGrower tree()
     {
         return tree;
     }

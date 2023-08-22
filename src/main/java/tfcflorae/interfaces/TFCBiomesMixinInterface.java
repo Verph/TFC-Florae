@@ -1,7 +1,5 @@
 package tfcflorae.interfaces;
 
-import org.spongepowered.asm.mixin.Unique;
-
 import net.dries007.tfc.world.biome.BiomeExtension;
 
 public interface TFCBiomesMixinInterface

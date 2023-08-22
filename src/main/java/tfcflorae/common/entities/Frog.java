@@ -56,7 +56,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.AmphibiousNodeEvaluator;
@@ -92,8 +91,8 @@ public class Frog extends Animal
     private static final EntityDataAccessor<OptionalInt> TARGET = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.OPTIONAL_UNSIGNED_INT);
 
     public static final EntityDataAccessor<Integer> ID_SIZE = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.INT);
-    public static final int MAX_SIZE = 16;
-    public static final int MIN_SIZE = 6;
+    public static final int MAX_SIZE = 20;
+    public static final int MIN_SIZE = 9;
 
     private static final Predicate<LivingEntity> SCARY_MOB = (entity) -> {
         if (entity instanceof Player && ((Player)entity).isCreative())

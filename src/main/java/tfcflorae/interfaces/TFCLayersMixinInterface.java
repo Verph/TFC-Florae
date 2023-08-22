@@ -1,7 +1,5 @@
 package tfcflorae.interfaces;
 
-import net.dries007.tfc.world.biome.BiomeExtension;
-
 public interface TFCLayersMixinInterface
 {
     int getStaticGrasslands();

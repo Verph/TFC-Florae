@@ -19,24 +19,23 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.event.ForgeEventFactory;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
-import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
-import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
+import tfcflorae.world.feature.tree.TFCFTreeGrower;
 
-public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable, IForgeBlockExtension, EntityBlockExtension
+public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
 {
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
@@ -44,7 +43,7 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable,
     private final ExtendedProperties properties;
     private final int daysToGrow;
 
-    public TFCFSaplingBlock(TFCFWood wood, TFCTreeGrower tree, ExtendedProperties properties, int days)
+    public TFCFSaplingBlock(TFCFWood wood, TFCFTreeGrower tree, ExtendedProperties properties, int days)
     {
         super(tree, properties, days);
         this.properties = properties;
@@ -89,13 +88,17 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable,
             {
                 return;
             }
-            level.getBlockEntity(pos, TFCFBlockEntities.TICK_COUNTER.get()).ifPresent(counter -> {
-                long days = counter.getTicksSinceUpdate() / ICalendar.TICKS_IN_DAY;
-                if (days > daysToGrow)
+            if (level.getBlockEntity(pos) instanceof TFCFTickCounterBlockEntity counter)
+            {
+                if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY *  getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
+                    if (ForgeEventFactory.saplingGrowTree(level, random, pos))
+                    {
+                        level.destroyBlock(pos, false);
+                    }
                 }
-            });
+            }
         }
     }
 

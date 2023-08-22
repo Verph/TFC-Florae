@@ -30,15 +30,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import tfcflorae.Config;
-import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
-import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.entities.Silkmoth;
-import tfcflorae.common.entities.TFCFEntities;
-
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.IBushBlock;
@@ -49,13 +45,22 @@ import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.config.TFCConfig;
+import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Month;
 import net.dries007.tfc.util.calendar.Season;
 import net.dries007.tfc.util.climate.Climate;
+import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.util.climate.ClimateRange;
+import net.dries007.tfc.world.chunkdata.ChunkData;
+import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
+import tfcflorae.Config;
+import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
+import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.entities.Silkmoth;
+import tfcflorae.common.entities.TFCFEntities;
 
 public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock
 {
@@ -68,10 +73,15 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
-    public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
+    public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange)
+    {
+        return create(properties, productItem, lifecycle, maxDecayDistance, climateRange, null, null, null);
+    }
+
+    public static TFCFLeavesBlock create(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, @Nullable Supplier<? extends Block> sapling)
     {
         final IntegerProperty distanceProperty = getDistanceProperty(maxDecayDistance);
-        return new TFCFLeavesBlock(properties, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig)
+        return new TFCFLeavesBlock(properties, productItem, lifecycle, maxDecayDistance, climateRange, fallenLeaves, fallenTwig, sapling)
         {
             @Override
             protected IntegerProperty getDistanceProperty()
@@ -98,9 +108,10 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     private final Lifecycle[] lifecycle;
     @Nullable private final Supplier<? extends Block> fallenLeaves;
     @Nullable private final Supplier<? extends Block> fallenTwig;
+    @Nullable private final Supplier<? extends Block> sapling;
     private long lastUpdateTick;
 
-    public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
+    public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, @Nullable Supplier<? extends Block> sapling)
     {
         super(properties, maxDecayDistance, fallenLeaves, fallenTwig);
 
@@ -113,6 +124,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         this.productItem = productItem;
         this.fallenLeaves = fallenLeaves;
         this.fallenTwig = fallenTwig;
+        this.sapling = sapling;
 
         lastUpdateTick = Calendars.SERVER.getTicks();
 
@@ -185,12 +197,12 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             }
             else
             {
-                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), 3);
+                level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance), Block.UPDATE_ALL);
             }
         }
         else
         {
-            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), 3);
+            level.setBlock(pos, state.setValue(getDistanceProperty(), distance), Block.UPDATE_ALL);
         }
     }
 
@@ -217,7 +229,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
                     onUpdate(level, pos, state);
                     lastUpdateTick = Calendars.SERVER.getTicks();
                 }
-                if (state.getBlock() == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && Calendars.SERVER.getCalendarDayTime() != level.getDayTime() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
+                if (this == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && !level.isDay() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
                 {
                     Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
                     Season season = currentMonth.getSeason();
@@ -244,6 +256,38 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
                             level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
                             level.addFreshEntity(entity);
                         }
+                    }
+                }
+            }
+        }
+
+        if (Config.COMMON.leavesSaplingPlacementChance.get() > 0)
+        {
+            Season currentSeason = Calendars.get(level).getCalendarMonthOfYear().getSeason();
+            if ((currentSeason == Season.FALL || currentSeason == Season.SPRING) && level.getBlockState(pos.below()).isAir())
+            {
+                final ChunkDataProvider provider = ChunkDataProvider.get(level);
+                final ChunkData data = provider.get(level, pos);
+
+                final float rainfall = data.getRainfall(pos);
+                final float rainfallInverted = ((ClimateModel.MAXIMUM_RAINFALL - rainfall) * 0.25F) + 1F;
+
+                final float actualForestDensity = data.getForestDensity();
+                final float forestDensity = actualForestDensity == 0 ? 0.001F : actualForestDensity; // Cannot divide by 0.
+
+                if (random.nextFloat((Config.COMMON.leavesSaplingPlacementChance.get() / forestDensity) * rainfallInverted) == 0)
+                {
+                    int x = pos.getX() + (int) Math.round(random.nextGaussian() * Config.COMMON.leavesSaplingSpreadDistance.get());
+                    int z = pos.getZ() + (int) Math.round(random.nextGaussian() * Config.COMMON.leavesSaplingSpreadDistance.get());
+                    int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
+
+                    BlockPos placementPos = new BlockPos(x, y, z);
+                    BlockState placementState = level.getBlockState(placementPos);
+                    final BlockState saplingState = sapling.get().defaultBlockState();
+
+                    if ((Helpers.isBlock(placementState, TFCTags.Blocks.PLANTS) || EnvironmentHelpers.isWorldgenReplaceable(placementState)) && level.getMaxLocalRawBrightness(placementPos) >= 11 && saplingState.canSurvive(level, placementPos))
+                    {
+                        level.setBlock(placementPos, saplingState, Block.UPDATE_ALL);
                     }
                 }
             }
@@ -331,8 +375,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             // And update the block
             if (state != newState)
             {
-                level.setBlock(pos, newState, 3);
-                //leaves.markForSync();
+                level.setBlock(pos, newState, Block.UPDATE_ALL);
             }
         }
     }

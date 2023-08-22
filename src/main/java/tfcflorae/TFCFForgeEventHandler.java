@@ -8,14 +8,19 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.item.ItemExpireEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -30,6 +35,7 @@ import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.common.blocks.wood.TFCFSaplingBlock;
 import tfcflorae.common.commands.TFCFCommands;
 import tfcflorae.common.items.TFCFItems;
 
@@ -38,6 +44,7 @@ import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
+import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 
@@ -59,6 +66,7 @@ public class TFCFForgeEventHandler
         final IEventBus bus = MinecraftForge.EVENT_BUS;
         IEventBus busMod = FMLJavaModLoadingContext.get().getModEventBus();
 
+        bus.addListener(TFCFForgeEventHandler::onItemExpireEvent);
         bus.addListener(TFCFForgeEventHandler::onPlayerRightClickBlock);
         bus.addListener(TFCFForgeEventHandler::registerCommands);
         busMod.addListener(TFCFForgeEventHandler::onPackFinder);
@@ -101,6 +109,38 @@ public class TFCFForgeEventHandler
     {
         LOGGER.debug("Registering TFC Florae Commands");
         TFCFCommands.registerCommands(event.getDispatcher());
+    }
+
+    public static void onItemExpireEvent(ItemExpireEvent event)
+    {
+        if (!event.getEntityItem().isAlive()) return;
+
+        ItemEntity item = event.getEntityItem();
+        ItemStack itemStack = item.getItem();
+        Level level = item.getLevel();
+        BlockPos pos = item.blockPosition();
+
+        if (level.isEmptyBlock(pos) || Helpers.isBlock(level.getBlockState(pos), TFCFTags.Blocks.SAPLING_CAN_REPLACE))
+        {
+            if (Helpers.isItem(itemStack, TFCFTags.Items.SAPLINGS) || Block.byItem(itemStack.getItem()) instanceof TFCFSaplingBlock || Block.byItem(itemStack.getItem()) instanceof TFCSaplingBlock)
+            {
+                Block block = Block.byItem(itemStack.getItem());
+                if (block != null && block != Blocks.AIR && block.defaultBlockState().canSurvive((LevelReader)level, pos) && level.setBlockAndUpdate(pos, block.defaultBlockState()))
+                {
+                    itemStack.shrink(1);
+                    event.getEntityItem().setItem(itemStack);
+                    if (event.getEntityItem().getItem().isEmpty())
+                    {
+                        event.getEntity().remove(Entity.RemovalReason.KILLED);
+                    }
+                    else
+                    {
+                        event.setExtraLife(3000);
+                        event.setCanceled(true);
+                    } 
+                } 
+            } 
+        }
     }
 
     public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event)

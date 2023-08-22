@@ -533,7 +533,7 @@ public final class TFCFBlocks
                     else if (type == BlockType.LEAVES)
                     {
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            TFCLeavesBlock.create(ExtendedProperties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7, null, null), WOOD));
+                            TFCFLeavesBlockExt.create(ExtendedProperties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7, null, null, WOODS.get(wood).get(Wood.BlockType.SAPLING)), WOOD));
                     }
                     else if (type == BlockType.TRAPPED_CHEST)
                     {
@@ -613,6 +613,11 @@ public final class TFCFBlocks
                             new TFCFSaplingBlock(wood, wood.tree(), ExtendedProperties.of(Material.PLANT, wood.woodColor()).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
                     }
                 }
+                else if (type == BlockType.LEAVES && !(wood.isFruitTree() || wood.isMangrove()))
+                {
+                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                        TFCFLeavesBlockExt.create(ExtendedProperties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7, WOODS.get(wood).get(Wood.BlockType.FALLEN_LEAVES), WOODS.get(wood).get(Wood.BlockType.TWIG), WOODS.get(wood).get(Wood.BlockType.SAPLING)), WOOD));
+                }
                 else if (type == BlockType.TRAPPED_CHEST)
                 {
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
@@ -663,7 +668,7 @@ public final class TFCFBlocks
                     subMap.put(type, register(("wood/tool_rack/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         new TFCFToolRackBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.TOOL_RACK)), WOOD));
                 }
-                else if (!(wood == TFCFWood.BAMBOO && (type == BlockType.PLANKS || type == BlockType.LOG || type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD || type == BlockType.STRIPPED_LOG || type == BlockType.SAPLING || type == BlockType.LEAVES)))
+                else if (!(wood == TFCFWood.BAMBOO && (type == BlockType.PLANKS || type == BlockType.LOG || type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD || type == BlockType.STRIPPED_LOG || type == BlockType.SAPLING)))
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
             }
             Map.put(wood, subMap);
@@ -720,7 +725,7 @@ public final class TFCFBlocks
 
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                 TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), 
-                wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.FALLEN_LEAVES), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.TWIG)), blockItem));
+                wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.FALLEN_LEAVES), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.TWIG), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.SAPLING)), blockItem));
         }
         return Map;
     }
@@ -742,13 +747,13 @@ public final class TFCFBlocks
                 {
                     Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), 
-                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG)), blockItem));
+                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG), WOODS.get(wood).get(BlockType.SAPLING)), blockItem));
                 }
                 else if (wood.isMangrove())
                 {
                     Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                         TFCFMangroveLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), wood,
-                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG)), blockItem));
+                        wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), WOODS.get(wood).get(BlockType.FALLEN_LEAVES), WOODS.get(wood).get(BlockType.TWIG), WOODS.get(wood).get(BlockType.SAPLING)), blockItem));
                 }
             }
             else continue;

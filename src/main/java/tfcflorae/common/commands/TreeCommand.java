@@ -12,9 +12,8 @@ import net.minecraftforge.server.command.EnumArgument;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
-import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
-
 import tfcflorae.common.blocks.wood.TFCFWood;
+import tfcflorae.world.feature.tree.TFCFTreeGrower;
 
 public final class TreeCommand
 {
@@ -34,7 +33,7 @@ public final class TreeCommand
 
     private static int placeTree(ServerLevel world, BlockPos pos, TFCFWood wood, Variant variant)
     {
-        TFCTreeGrower tree = wood.tree();
+        TFCFTreeGrower tree = wood.tree();
         Registry<ConfiguredFeature<?, ?>> registry = world.registryAccess().registryOrThrow(Registry.CONFIGURED_FEATURE_REGISTRY);
         ConfiguredFeature<?, ?> feature = variant == Variant.NORMAL ? tree.getNormalFeature(registry) : tree.getOldGrowthFeature(registry);
         feature.place(world, world.getChunkSource().getGenerator(), world.getRandom(), pos);

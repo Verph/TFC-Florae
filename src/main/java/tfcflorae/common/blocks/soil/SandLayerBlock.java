@@ -251,7 +251,7 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       {
          FluidHelpers.tickFluid(level, pos, state);
       }
-      level.scheduleTick(pos, this, 1);
+      //level.scheduleTick(pos, this, 1);
       super.neighborChanged(state, level, fromPos, blockIn, fromPos, isMoving);
    }
 
