@@ -21,7 +21,6 @@ public enum OceanEdgeBiomeLayer implements AdjacentTransformLayer
     static final int SHRUBLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShrublands();
     static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
     static final int SHORE_DUNES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShoreDunes();
-    static final int PLATEAU_CLIFFS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPlateauCliffs();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -31,25 +30,25 @@ public enum OceanEdgeBiomeLayer implements AdjacentTransformLayer
         {
             if (matcher.test(TFCLayers::isMountains))
             {
-                return PLATEAU_CLIFFS;
+                return OLD_MOUNTAINS;
             }
-            else if (matcher.test(i -> i == PLATEAU_CLIFFS))
+            if (matcher.test(i -> i == OLD_MOUNTAINS))
             {
                 return SHRUBLANDS;
             }
-            else if (matcher.test(i -> i == SHRUBLANDS))
+            if (matcher.test(i -> i == SHRUBLANDS))
             {
                 return SHORE_DUNES;
             }
-            else if (matcher.test(i -> i == SHORE_DUNES))
+            if (matcher.test(i -> i == SHORE_DUNES))
             {
                 return GRAVEL_SHORE;
             }
-            else if (matcher.test(i -> i == GRAVEL_SHORE))
+            if (matcher.test(i -> i == GRAVEL_SHORE))
             {
                 return NEAR_SHORE;
             }
-            else if (matcher.test(i -> i == NEAR_SHORE))
+            if (matcher.test(i -> i == NEAR_SHORE))
             {
                 return OCEAN;
             }

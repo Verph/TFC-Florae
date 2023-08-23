@@ -71,11 +71,11 @@ public class TFCFTreeGrower extends TFCTreeGrower
             feature = random.nextFloat(rainfallInverted * 1.2F) == 0 ? largeTree : smallTree;
         }
 
-        if (!mayPlaceOn(level.getBlockState(pos.below())))
+        /*if (!mayPlaceOn(level.getBlockState(pos.below())))
         {
             pos = pos.below().below();
-        }
-        //level.setBlock(pos, Blocks.AIR.defaultBlockState(), 4);
+        }*/
+        level.setBlock(pos, Blocks.AIR.defaultBlockState(), 4);
 
         if (feature.place(level, generator, random, pos))
         {

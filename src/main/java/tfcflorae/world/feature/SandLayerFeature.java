@@ -22,15 +22,11 @@ import net.dries007.tfc.common.blocks.GroundcoverBlock;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.TFCChunkGenerator;
-import net.dries007.tfc.world.biome.BiomeExtension;
-import net.dries007.tfc.world.biome.TFCBiomes;
-import net.dries007.tfc.world.biome.BiomeExtension.Group;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.surface.SoilSurfaceState;
 
 import tfcflorae.Config;
-import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.MossGrowingBoulderBlock;
 import tfcflorae.common.blocks.rock.MossSpreadingBoulderBlock;
@@ -64,41 +60,30 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
             {
                 int x = pos.getX() + i;
                 int z = pos.getZ() + j;
-                int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
+                int y = pos.getY() <= 63 ? level.getHeight(Heightmap.Types.OCEAN_FLOOR, x, z) : level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z); // Culprit as to why it cannot place at Y = 63?
                 mutablePos.set(x, y, z);
 
                 if (context.chunkGenerator() instanceof TFCChunkGenerator chunkGen && y >= SEA_LEVEL_Y - 3 && !(level.getBlockState(mutablePos).getBlock() instanceof SandLayerBlock))
                 {
                     Colors sandColor = TFCFHelpers.getSandColorTFCF(level, mutablePos, Config.COMMON.toggleCheapSandColourCalculations.get());
                     BlockState sandLayer = TFCFBlocks.SAND_LAYERS.get(sandColor).get().defaultBlockState();
-                    //BiomeExtension biome = TFCBiomes.getExtension(level, level.getBiome(mutablePos).value());
 
                     for (Direction facing : Direction.Plane.HORIZONTAL)
                     {
                         if (level.getBlockState(mutablePos.below()).getMaterial().isSolid() && (level.isEmptyBlock(mutablePos.above()) || level.getBlockState(mutablePos.above()).getMaterial().isLiquid()) && canReplace(level, mutablePos, random, sandLayer))
                         {
-                            //final boolean biomeStuff = biome.getGroup() == Group.RIVER || biome.getGroup() == Group.LAKE || biome.getGroup() == Group.OCEAN;
                             final boolean shouldWaterLog = mutablePos.getY() < SEA_LEVEL_Y;
                             final boolean isLiquid = level.getBlockState(mutablePos).getMaterial().isLiquid();
                             final boolean canPlaceInLiquidIfBelowSeaLevel = y <= SEA_LEVEL_Y ? isLiquid || !isLiquid : !isLiquid;
 
-                            if (/*!biomeStuff && y > SEA_LEVEL_Y &&*/ hasNearbySandOrIsDryEnough(level, mutablePos, random, false) && level.getBlockState(mutablePos.relative(facing).below()).isFaceSturdy(level, mutablePos.relative(facing).below(), Direction.UP) && canPlaceInLiquidIfBelowSeaLevel)
+                            if (hasNearbySandOrIsDryEnough(level, mutablePos, random, false) && level.getBlockState(mutablePos.relative(facing).below()).isFaceSturdy(level, mutablePos.relative(facing).below(), Direction.UP) && canPlaceInLiquidIfBelowSeaLevel)
                             {
                                 int sandLayerHeight = sandLayerHeight(chunkGen, mutablePos, random, false);
-                                //TFCFlorae.LOGGER.info("TFCFlorea debug: sandLayerHeight: " + sandLayerHeight);
                                 if (sandLayerHeight > 0)
                                 {
                                     SandLayerBlock.placeSandPileStatic(level, sandLayer, mutablePos, level.getBlockState(mutablePos), sandLayerHeight, false, shouldWaterLog);
                                 }
                             }
-                            /*else if (biomeStuff && hasNearbySandOrIsDryEnough(level, mutablePos, random, true) && y <= SEA_LEVEL_Y + 1 && level.getBlockState(mutablePos.relative(facing)).isFaceSturdy(level, mutablePos.relative(facing), Direction.UP) && canPlaceInLiquidIfBelowSeaLevel)
-                            {
-                                int sandLayerHeight = Mth.nextInt(random, 1, 5);
-                                if (sandLayerHeight > 0)
-                                {
-                                    SandLayerBlock.placeSandPileStatic(level, sandLayer, mutablePos, level.getBlockState(mutablePos), sandLayerHeight, false, shouldWaterLog);
-                                }
-                            }*/
                         }
                     }
                 }

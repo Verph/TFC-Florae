@@ -801,10 +801,9 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         }
         layerArtist.draw("biomes", 7, mainLayer);
 
-        mainLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        layerArtist.draw("biomes", 8, mainLayer);
-
         mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer); // Make mountain biome transition to oceans smoother
+        layerArtist.draw("biomes", 8, mainLayer);
+        mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 9, mainLayer);
         mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 10, mainLayer);
@@ -814,7 +813,8 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         layerArtist.draw("biomes", 12, mainLayer);
         mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 13, mainLayer);
-        mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+
+        mainLayer = EdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 14, mainLayer);
 
         for (int i = 0; i < Config.COMMON.midBiomeSizes.get(); i++) // Default is 1
