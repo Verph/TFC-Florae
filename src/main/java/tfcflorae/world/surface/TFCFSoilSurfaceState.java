@@ -20,7 +20,7 @@ import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
-import tfcflorae.Config;
+
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.*;

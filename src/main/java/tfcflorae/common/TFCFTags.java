@@ -28,6 +28,7 @@ public class TFCFTags
         public static final TagKey<Block> TIDE_POOL_BLOCKS = create("tide_pool_blocks"); // groundcover blocks that spawn in tide pools
         public static final TagKey<Block> CREEPING_STONE_PLANTABLE_ON = create("creeping_stone_plantable_on");
         public static final TagKey<Block> SAPLING_CAN_REPLACE = create("sapling_can_replace");
+        public static final TagKey<Block> FUNGI_ON_FALLEN_LOGS = create("fungi_on_fallen_logs");
 
         private static TagKey<Block> create(String id)
         {

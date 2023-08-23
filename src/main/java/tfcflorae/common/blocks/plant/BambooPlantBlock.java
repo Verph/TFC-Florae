@@ -237,7 +237,8 @@ public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLog
         {
             level.setBlock(currentPos, state.cycle(AGE), 2);
         }
-        return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+        return state;
+        //return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
     }
 
     @Override

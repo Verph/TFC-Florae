@@ -20,6 +20,7 @@ public final class TFCFParticles
 
     public static final RegistryObject<SimpleParticleType> WATER_FLOW = register("water_flow");
     public static final RegistryObject<ParticleType<BlockParticleOption>> FALLING_LEAF = register("falling_leaf", BlockParticleOption.DESERIALIZER, BlockParticleOption::codec);
+    public static final RegistryObject<ParticleType<BlockParticleOption>> FALLING_SPORE = register("falling_spore", BlockParticleOption.DESERIALIZER, BlockParticleOption::codec);
 
     @SuppressWarnings("deprecation")
     private static <T extends ParticleOptions> RegistryObject<ParticleType<T>> register(String name, ParticleOptions.Deserializer<T> deserializer, final Function<ParticleType<T>, Codec<T>> codec)

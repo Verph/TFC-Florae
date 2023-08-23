@@ -44,11 +44,12 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.plant.fruit.FruitBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
-import net.dries007.tfc.common.items.Food;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.util.climate.OverworldClimateModel;
 import net.dries007.tfc.util.registry.RegistryRock;
+import net.dries007.tfc.util.registry.RegistrySoilVariant;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.chunkdata.LerpFloatLayer;
@@ -57,11 +58,11 @@ import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.settings.ClimateSettings;
 import net.dries007.tfc.world.settings.RockSettings;
 
-import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
+import tfcflorae.common.blocks.soil.TFCFSoil;
 
 public class TFCFHelpers
 {
@@ -382,6 +383,42 @@ public class TFCFHelpers
                 return defaultRock;
         }
         return defaultRock;
+    }
+
+    public static RegistrySoilVariant getSoilVariant(WorldGenLevel level, BlockPos pos)
+    {
+        RegistrySoilVariant defaultSoil = SoilBlockType.Variant.LOAM;
+
+        for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+        {
+            if (level.getBlockState(pos).getBlock().getName().toString().toLowerCase(Locale.ROOT).contains(soilVariant.name().toLowerCase(Locale.ROOT)))
+            {
+                return soilVariant;
+            }
+            else
+            {
+                for (TFCFSoil.TFCFVariant soilVariant2 : TFCFSoil.TFCFVariant.values())
+                {
+                    if (level.getBlockState(pos).getBlock().getName().toString().toLowerCase(Locale.ROOT).contains(soilVariant2.name().toLowerCase(Locale.ROOT)))
+                    {
+                        return soilVariant2;
+                    }
+                }
+            }
+        }
+        return defaultSoil;
+    }
+
+    public static boolean isVanillaSoilVariant(WorldGenLevel level, BlockPos pos)
+    {
+        for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+        {
+            if (TFCFHelpers.getSoilVariant(level, pos).toString().toLowerCase(Locale.ROOT).contains(soilVariant.name().toLowerCase(Locale.ROOT)))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static Block getSandBlock(WorldGenLevel level, BlockPos pos, boolean cheap)

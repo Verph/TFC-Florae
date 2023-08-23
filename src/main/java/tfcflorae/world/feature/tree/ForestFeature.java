@@ -3,12 +3,16 @@ package tfcflorae.world.feature.tree;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.chunk.ChunkGenerator;
@@ -16,10 +20,12 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import com.mojang.serialization.Codec;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.util.EnvironmentHelpers;
@@ -33,7 +39,11 @@ import net.dries007.tfc.world.feature.tree.ForestConfig;
 
 import org.jetbrains.annotations.Nullable;
 
+import tfcflorae.common.TFCFTags;
+import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.interfaces.TFCBiomesMixinInterface;
+import tfcflorae.util.TFCFHelpers;
 
 public class ForestFeature extends Feature<ForestConfig>
 {
@@ -288,11 +298,63 @@ public class ForestFeature extends Feature<ForestConfig>
                             mutablePos.set(start);
                             for (int i = 0; i < length; i++)
                             {
-                                level.setBlock(mutablePos, log, 2);
+                                level.setBlock(mutablePos, log, Block.UPDATE_ALL);
+                                if (random.nextInt(10) == 0)
+                                {
+                                    BlockState fungiState = Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState();
+                                    if (fungiState.canSurvive(level, mutablePos.above()))
+                                    {
+                                        level.setBlock(mutablePos.above(), Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState(), Block.UPDATE_ALL);
+                                    }
+                                }
+
+                                final int radius = Mth.nextInt(random, 1, 5); // Within 1 to 5 (inclusive)
+                                final int radiusSquared = radius * radius;
+
+                                for (int x = mutablePos.getX() - radius; x <= mutablePos.getX() + radius; ++x)
+                                {
+                                    for (int z = mutablePos.getZ() - radius; z <= mutablePos.getZ() + radius; ++z)
+                                    {
+                                        final int relX = x - mutablePos.getX();
+                                        final int relZ = z - mutablePos.getZ();
+
+                                        if (relX * relX + relZ * relZ <= radiusSquared)
+                                        {
+                                            int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
+                                            mutablePos.set(x, y, z);
+
+                                            final BlockState stateAt = level.getBlockState(mutablePos);
+
+                                            if (Helpers.isBlock(stateAt, BlockTags.DIRT) && level.getBlockState(mutablePos.above()).isAir())
+                                            {
+                                                if (stateAt.getBlock().getName().toString().toLowerCase(Locale.ROOT).contains("bog_iron"))
+                                                {
+                                                    level.setBlock(mutablePos, TFCFBlocks.MYCELIUM_BOG_IRON.get().defaultBlockState(), Block.UPDATE_ALL);
+                                                }
+                                                else if (TFCFHelpers.isVanillaSoilVariant(level, mutablePos))
+                                                {
+                                                    level.setBlock(mutablePos, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(TFCFHelpers.getSoilVariant(level, mutablePos)).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                }
+                                                else
+                                                {
+                                                    level.setBlock(mutablePos, TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(TFCFHelpers.getSoilVariant(level, mutablePos)).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                }
+
+                                                if (random.nextInt(10) == 0)
+                                                {
+                                                    BlockState fungiState = Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState();
+                                                    if (fungiState.canSurvive(level, mutablePos))
+                                                    {
+                                                        level.setBlock(mutablePos, Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }   
                                 mutablePos.move(axis);
                             }
                         }
-
                     }
                 }
             }

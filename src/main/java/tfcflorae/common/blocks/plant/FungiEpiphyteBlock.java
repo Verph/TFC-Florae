@@ -6,18 +6,26 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.Tags;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
+import net.minecraftforge.common.Tags;
+
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.EpiphytePlantBlock;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.calendar.Calendars;
+import net.dries007.tfc.util.calendar.Season;
 import net.dries007.tfc.util.registry.RegistryPlant;
+
+import tfcflorae.client.particle.TFCFParticles;
 
 public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
 {
@@ -43,6 +51,31 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
 
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
+    {
+        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.isDay() && level.getSkyDarken() < 2 && (Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.FALL))
+        {
+            int i = pos.getX();
+            int j = pos.getY();
+            int k = pos.getZ();
+            BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+
+            for (int l = 0; l < 14; ++l)
+            {
+                int sporeSpread = plantTFCF.getSporeSpread();
+                blockpos$mutableblockpos.set(i + Mth.nextInt(random, -sporeSpread, sporeSpread), j - random.nextInt(sporeSpread), k + Mth.nextInt(random, -sporeSpread, sporeSpread));
+                BlockState blockstate = level.getBlockState(blockpos$mutableblockpos);
+
+                if (!blockstate.isCollisionShapeFullBlock(level, blockpos$mutableblockpos))
+                {
+                    level.addParticle(new BlockParticleOption(TFCFParticles.FALLING_SPORE.get(), state), (double)blockpos$mutableblockpos.getX() + random.nextDouble(), (double)blockpos$mutableblockpos.getY() + random.nextDouble(), (double)blockpos$mutableblockpos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
+                }
+            }
+        }
+    }
+
 
     @Override
     @SuppressWarnings("deprecation")

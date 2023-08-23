@@ -1,6 +1,8 @@
 package tfcflorae.common.blocks.plant;
 
 import org.jetbrains.annotations.Nullable;
+
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.function.BiFunction;
@@ -168,33 +170,33 @@ public enum TFCFPlant implements RegistryPlant
     RED_BAMBOO_SAPLING(BlockType.BAMBOO_SAPLING, 0.5F, false, false, false),
 
     // Fungi
-    AMANITA(BlockType.FUNGI, 0.9F, false, false, false),
+    AMANITA(BlockType.FUNGI, 0.9F, false, false, false, new Color(196, 29, 38).getRGB(), 2),
     ARTISTS_CONK(BlockType.FUNGI_EPIPHYTE_SOLID, 0F, false, false, false),
     BEEFSTEAK_FUNGUS(BlockType.FUNGI_EPIPHYTE, 0.9F, false, false, false),
     BIRCH_POLYPORE(BlockType.FUNGI_EPIPHYTE, 0.9F, false, false, false),
     BITTER_OYSTER(BlockType.FUNGI_EPIPHYTE, 0.9F, false, false, false),
-    BLACK_POWDERPUFF(BlockType.FUNGI, 0.9F, false, false, false),
+    BLACK_POWDERPUFF(BlockType.FUNGI, 0.9F, false, false, false, new Color(194, 183, 160).getRGB(), 3),
     BOLETUS(BlockType.FUNGI, 0.9F, false, false, false),
-    BRIDAL_VEIL_STINKHORN(BlockType.FUNGI, 0.9F, false, false, false),
+    BRIDAL_VEIL_STINKHORN(BlockType.FUNGI, 0.9F, false, false, false, new Color(209, 204, 185).getRGB(), 3),
     CHANTERELLE(BlockType.FUNGI, 0.9F, false, false, false),
     CHLOROPHOS_FOXFIRE(BlockType.FUNGI, 0.9F, false, false, false),
-    DEATH_CAP(BlockType.FUNGI, 0.9F, false, false, false),
-    DEVILS_FINGERS(BlockType.FUNGI, 0.9F, false, false, false),
+    DEATH_CAP(BlockType.FUNGI, 0.9F, false, false, false, new Color(105, 109, 41).getRGB(), 2),
+    DEVILS_FINGERS(BlockType.FUNGI, 0.9F, false, false, false, new Color(191, 54, 44).getRGB(), 4),
     DRYADS_SADDLE(BlockType.FUNGI_EPIPHYTE_SOLID, 0.9F, false, false, false),
     ENTOLOMA(BlockType.FUNGI, 0.9F, false, false, false),
-    GIANT_CLUB(BlockType.FUNGI, 0.9F, false, false, false),
-    INDIGO_MILK_CAP(BlockType.FUNGI, 0.9F, false, false, false),
-    LIONS_MANE(BlockType.FUNGI_EPIPHYTE_HANGING, 0.9F, false, false, false),
+    GIANT_CLUB(BlockType.FUNGI, 0.9F, false, false, false, new Color(189, 183, 119).getRGB(), 2),
+    INDIGO_MILK_CAP(BlockType.FUNGI, 0.9F, false, false, false, new Color(83, 97, 157).getRGB(), 3),
+    LIONS_MANE(BlockType.FUNGI_EPIPHYTE_HANGING, 0.9F, false, false, false, new Color(218, 213, 183).getRGB(), 6),
     PARASOL_MUSHROOM(BlockType.FUNGI, 0.9F, false, false, false),
     PORCINI(BlockType.FUNGI, 0.9F, false, false, false),
     REISHI(BlockType.FUNGI_EPIPHYTE, 0.9F, false, false, false),
     SHAGGY_BRACKET(BlockType.FUNGI_EPIPHYTE, 0.9F, false, false, false),
     SHIITAKE(BlockType.FUNGI, 0.9F, false, false, false),
-    STINKHORN(BlockType.FUNGI, 0.9F, false, false, false),
-    SULPHUR_SHELF(BlockType.FUNGI_EPIPHYTE_SOLID, 0F, false, false, false),
+    STINKHORN(BlockType.FUNGI, 0.9F, false, false, false, new Color(193, 72, 58).getRGB(), 2),
+    SULPHUR_SHELF(BlockType.FUNGI_EPIPHYTE_SOLID, 0F, false, false, false, new Color(242, 233, 148).getRGB(), 5),
     TURKEY_TAIL(BlockType.FUNGI_EPIPHYTE_SOLID, 0F, false, false, false),
     WEEPING_MILK_CAP(BlockType.FUNGI, 0.9F, false, false, false),
-    WOOD_BLEWIT(BlockType.FUNGI, 0.9F, false, false, false),
+    WOOD_BLEWIT(BlockType.FUNGI, 0.9F, false, false, false, new Color(115, 57, 105).getRGB(), 2),
     WOOLLY_GOMPHUS(BlockType.FUNGI, 0.9F, false, false, false),
 
     // Vines
@@ -259,12 +261,25 @@ public enum TFCFPlant implements RegistryPlant
     public final boolean conifer;
     public final boolean vine;
     public boolean isSeasonal;
+    public int sporeColor;
+    public int sporeSpread;
 
     TFCFPlant(BlockType type, float speedFactor, boolean conifer, boolean vine, boolean isSeasonal)
     {
         this(type, speedFactor, null, conifer, vine, isSeasonal);
         this.isSeasonalFruitPlant = false;
         this.isSeasonal = isSeasonal;
+        this.sporeColor = -1;
+        this.sporeSpread = 0;
+    }
+
+    TFCFPlant(BlockType type, float speedFactor, boolean conifer, boolean vine, boolean isSeasonal, int sporeColor, int sporeSpread)
+    {
+        this(type, speedFactor, null, conifer, vine, isSeasonal);
+        this.isSeasonalFruitPlant = false;
+        this.isSeasonal = isSeasonal;
+        this.sporeColor = sporeColor;
+        this.sporeSpread = sporeSpread;
     }
 
     TFCFPlant(BlockType type, float speedFactor, int @Nullable[] stagesByMonth, boolean conifer, boolean vine, boolean isSeasonal)
@@ -276,6 +291,8 @@ public enum TFCFPlant implements RegistryPlant
         this.isSeasonal = isSeasonal;
         this.conifer = conifer;
         this.vine = vine;
+        this.sporeColor = -1;
+        this.sporeSpread = 0;
 
         int maxStage = 0;
         if (stagesByMonth != null)
@@ -297,6 +314,8 @@ public enum TFCFPlant implements RegistryPlant
         this.productItem = productItem;
         this.stages = stages;
         this.vine = vine;
+        this.sporeColor = -1;
+        this.sporeSpread = 0;
 
         int maxStage = 0;
         if (stagesByMonth != null)
@@ -391,6 +410,16 @@ public enum TFCFPlant implements RegistryPlant
     public boolean isVine()
     {
         return vine;
+    }
+
+    public int getSporeColor()
+    {
+        return sporeColor;
+    }
+
+    public int getSporeSpread()
+    {
+        return sporeSpread;
     }
 
     /**

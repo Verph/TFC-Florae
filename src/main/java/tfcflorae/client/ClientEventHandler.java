@@ -47,6 +47,7 @@ import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.client.model.entity.*;
 import tfcflorae.client.particle.FallingLeafParticle;
+import tfcflorae.client.particle.SporeParticle;
 import tfcflorae.client.particle.TFCFParticles;
 import tfcflorae.client.particle.WaterFlowParticle;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
@@ -469,6 +470,7 @@ public class ClientEventHandler
         ParticleEngine particleEngine = Minecraft.getInstance().particleEngine;
         particleEngine.register(TFCFParticles.WATER_FLOW.get(), WaterFlowParticle.Provider::new);
         particleEngine.register(TFCFParticles.FALLING_LEAF.get(), set -> new FallingLeafParticle.Provider(set, true));
+        particleEngine.register(TFCFParticles.FALLING_SPORE.get(), set -> new SporeParticle.Provider(set, true));
     }
 
     public static void onTextureStitch(TextureStitchEvent.Pre event)

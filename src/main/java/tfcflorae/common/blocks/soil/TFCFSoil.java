@@ -13,7 +13,7 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.soil.*;
-
+import net.dries007.tfc.util.registry.RegistrySoilVariant;
 import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -38,8 +38,8 @@ public enum TFCFSoil
                 
     LOOSE_MUD((self, variant) -> new LooseMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.3F, 0.3F).sound(TFCFSounds.MUD)), 
                 (self, variant) -> new LooseMudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.3F, 0.3F).sound(TFCFSounds.MUD))),
-    /*MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant)), 
-        (self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCSOIL.get(PACKED_MUD).get(variant))),*/
+    MYCELIUM_DIRT((self, variant) -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.ROOTED_DIRT), TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)),
+                    (self, variant) -> new TFCRootedDirtBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(0.5F).sound(SoundType.ROOTED_DIRT), TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(variant))),
 
     MUD((self, variant) -> new TFCFMudBlock(mudProperties(), TFCFBlocks.TFCFSOIL.get(PACKED_MUD).get(variant))),
     MUD_BRICKS((self, variant) -> new Block(mudBrickProperties())),
@@ -181,6 +181,14 @@ public enum TFCFSoil
             case DRYING_BRICKS:
             case COMPACT_DIRT:
             case COARSE_DIRT:
+            case MYCELIUM_DIRT:
+            case PODZOL:
+            case DRY_GRASS:
+            case DRY_GRASS_PATH:
+            case DENSE_GRASS:
+            case DENSE_GRASS_PATH:
+            case SPARSE_GRASS:
+            case SPARSE_GRASS_PATH:
                 return DIRT;
             case CLAY:
                 return CLAY_GRASS;
@@ -210,20 +218,12 @@ public enum TFCFSoil
             case DENSE_STONEWARE_CLAY_GRASS:
             case SPARSE_STONEWARE_CLAY_GRASS:
                 return STONEWARE_CLAY;
-            case PODZOL:
-            case DRY_GRASS:
-            case DRY_GRASS_PATH:
-            case DENSE_GRASS:
-            case DENSE_GRASS_PATH:
-            case SPARSE_GRASS:
-            case SPARSE_GRASS_PATH:
-                return DIRT;
             default:
                 return this;
         }
     }
 
-    public enum TFCFVariant
+    public enum TFCFVariant implements RegistrySoilVariant
     {
         HUMUS;
 
@@ -241,6 +241,12 @@ public enum TFCFSoil
                 case HUMUS -> TFCFItems.HUMUS_MUD_BRICK;
                 default -> null;
             };
+        }
+
+        @Override
+        public Supplier<? extends Block> getBlock(SoilBlockType type)
+        {
+            return null;
         }
     }
 }
