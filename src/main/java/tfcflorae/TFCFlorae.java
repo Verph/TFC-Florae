@@ -22,6 +22,7 @@ import tfcflorae.common.commands.TFCFCommands;
 import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.*;
 import tfcflorae.common.entities.ai.TFCFBrain;
+import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
@@ -53,6 +54,7 @@ public class TFCFlorae
         TFCFBlocks.BLOCKS.register(bus);
         TFCFContainerTypes.CONTAINERS.register(bus);
         TFCFEntities.ENTITIES.register(bus);
+        TFCFFluids.FLUIDS.register(bus);
         TFCFRecipeTypes.RECIPE_TYPES.register(bus);
         TFCFRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
         TFCFSounds.SOUNDS.register(bus);

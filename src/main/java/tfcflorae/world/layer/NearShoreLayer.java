@@ -19,6 +19,7 @@ public enum NearShoreLayer implements AdjacentTransformLayer
 
     static final int GRAVEL_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGravelShores();
     static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
+    static final int MANGROVES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMangroves();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -26,7 +27,7 @@ public enum NearShoreLayer implements AdjacentTransformLayer
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
         if (isOcean(center))
         {
-            if (matcher.test(i -> i == SHORE || i == GRAVEL_SHORE))
+            if (matcher.test(i -> i == SHORE || i == GRAVEL_SHORE || i == MANGROVES))
             {
                 return NEAR_SHORE;
             }

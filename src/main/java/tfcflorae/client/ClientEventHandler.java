@@ -43,6 +43,7 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.entities.TFCEntities;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.client.model.entity.*;
@@ -69,6 +70,7 @@ import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.Fish;
 import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
+import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
@@ -101,12 +103,7 @@ public class ClientEventHandler
             MenuScreens.register(TFCFContainerTypes.KAOLINITE_CLAY_KNAPPING.get(), KnappingScreen::new);
             MenuScreens.register(TFCFContainerTypes.STONEWARE_CLAY_KNAPPING.get(), KnappingScreen::new);
             MenuScreens.register(TFCFContainerTypes.FLINT_KNAPPING.get(), KnappingScreen::new);
-
             MenuScreens.register(TFCFContainerTypes.LARGE_VESSEL.get(), LargeVesselScreen::new);
-            /*MenuScreens.register(TFCFContainerTypes.LARGE_EARTHENWARE_VESSEL.get(), LargeEarthenwareVesselScreen::new);
-            MenuScreens.register(TFCFContainerTypes.LARGE_KAOLINITE_VESSEL.get(), LargeKaoliniteVesselScreen::new);
-            MenuScreens.register(TFCFContainerTypes.LARGE_STONEWARE_VESSEL.get(), LargeStonewareVesselScreen::new);*/
-
             MenuScreens.register(TFCFContainerTypes.BARREL.get(), TFCFBarrelScreen::new);
             MenuScreens.register(TFCFContainerTypes.ANVIL.get(), TFCFAnvilScreen::new);
             MenuScreens.register(TFCFContainerTypes.ANVIL_PLAN.get(), TFCFAnvilPlanScreen::new);
@@ -148,17 +145,11 @@ public class ClientEventHandler
 
         TFCFBlocks.CLAY_LARGE_VESSELS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
-        /*ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_EARTHENWARE_VESSEL.get(), cutout);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_KAOLINITE_VESSEL.get(), cutout);
-        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.LARGE_STONEWARE_VESSEL.get(), cutout);*/
-
         // Grasses and such
-        //TFCFBlocks.TFCSOIL.get(TFCFSoil.GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.PODZOL).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
-        //TFCFBlocks.TFCSOIL.get(TFCFSoil.CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
@@ -200,6 +191,12 @@ public class ClientEventHandler
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.SPARSE_BOG_IRON_GRASS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.DENSE_BOG_IRON_GRASS.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.BOG_IRON_GRASS.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.ROOTED_BOG_IRON.get(), cutout);
+        ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.MYCELIUM_BOG_IRON.get(), cutout);
+
+        TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.TFCFSOIL.get(TFCFSoil.ROOTED_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+        TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
         TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
@@ -238,6 +235,11 @@ public class ClientEventHandler
         TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         TFCFBlocks.GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
         TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+
+        TFCFBlocks.ORES_TFC_ROCK.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+        TFCFBlocks.GRADED_ORES_TFC_ROCK.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        TFCFBlocks.ORES_TFCF_ROCK.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+        TFCFBlocks.GRADED_ORES_TFCF_ROCK.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
 
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE.get(), cutout);
         ItemBlockRenderTypes.setRenderLayer(TFCFBlocks.GLOWSTONE_BUDDING.get(), cutout);

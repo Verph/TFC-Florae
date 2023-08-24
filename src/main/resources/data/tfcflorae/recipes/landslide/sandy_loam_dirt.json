@@ -8,7 +8,8 @@
     "tfcflorae:dry_grass_path/sandy_loam",
     "tfcflorae:sparse_grass_path/sandy_loam",
     "tfcflorae:dense_grass_path/sandy_loam",
-    "tfcflorae:podzol/sandy_loam"
+    "tfcflorae:podzol/sandy_loam",
+    "tfcflorae:mycelium_dirt/sandy_loam"
   ],
   "result": "tfc:dirt/sandy_loam"
 }

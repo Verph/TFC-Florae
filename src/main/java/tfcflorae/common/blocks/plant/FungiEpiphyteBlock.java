@@ -55,7 +55,7 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
     {
-        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.isDay() && level.getSkyDarken() < 2 && (Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.FALL))
+        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
         {
             int i = pos.getX();
             int j = pos.getY();
@@ -85,37 +85,31 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
         {
             state = state.setValue(AGE, Math.min(state.getValue(AGE) + 1, 3));
 
-            if (random.nextInt(25) < TFCConfig.SERVER.plantGrowthChance.get())
+            int i = 5;
+            int j = 4;
+
+            for(BlockPos blockpos : BlockPos.betweenClosed(pos.offset(-4, -1, -4), pos.offset(4, 1, 4)))
             {
-                int i = 5;
-                int j = 4;
-
-                for(BlockPos blockpos : BlockPos.betweenClosed(pos.offset(-4, -1, -4), pos.offset(4, 1, 4)))
+                if (level.getBlockState(blockpos).is(this))
                 {
-                    if (level.getBlockState(blockpos).is(this))
-                    {
-                        --i;
-                        if (i <= 0) {
-                            return;
-                        }
+                    --i;
+                    if (i <= 0) {
+                        return;
                     }
                 }
-
-                BlockPos blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
-                for(int k = 0; k < 4; ++k)
-                {
-                    if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
-                    {
-                        pos = blockpos1;
-                    }
-
-                    blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
-                }
-
+            }
+            BlockPos blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            for(int k = 0; k < 4; ++k)
+            {
                 if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
                 {
-                    level.setBlock(blockpos1, state, 2);
+                    pos = blockpos1;
                 }
+                blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            }
+            if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
+            {
+                level.setBlock(blockpos1, state, 2);
             }
         }
         level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
@@ -126,6 +120,6 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
         BlockState attachedState = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
-        return ((Helpers.isBlock(attachedState, Tags.Blocks.STONE) || Helpers.isBlock(attachedState, BlockTags.LOGS) || attachedState.is(BlockTags.MUSHROOM_GROW_BLOCK) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON)) && level.getRawBrightness(pos, 0) < 13);
+        return ((Helpers.isBlock(attachedState, Tags.Blocks.STONE) || Helpers.isBlock(attachedState, BlockTags.LOGS) || attachedState.is(BlockTags.MUSHROOM_GROW_BLOCK) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(attachedState.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON)) && level.getRawBrightness(pos, 0) < 14);
     }
 }

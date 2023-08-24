@@ -8,7 +8,8 @@
     "tfcflorae:dry_grass_path/silty_loam",
     "tfcflorae:sparse_grass_path/silty_loam",
     "tfcflorae:dense_grass_path/silty_loam",
-    "tfcflorae:podzol/silty_loam"
+    "tfcflorae:podzol/silty_loam",
+    "tfcflorae:mycelium_dirt/silty_loam"
   ],
   "result": "tfc:dirt/silty_loam"
 }

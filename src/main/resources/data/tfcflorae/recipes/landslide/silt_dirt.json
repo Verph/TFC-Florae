@@ -8,7 +8,8 @@
     "tfcflorae:dry_grass_path/silt",
     "tfcflorae:sparse_grass_path/silt",
     "tfcflorae:dense_grass_path/silt",
-    "tfcflorae:podzol/silt"
+    "tfcflorae:podzol/silt",
+    "tfcflorae:mycelium_dirt/silt"
   ],
   "result": "tfc:dirt/silt"
 }

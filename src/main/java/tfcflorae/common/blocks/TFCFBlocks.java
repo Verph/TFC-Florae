@@ -59,10 +59,13 @@ import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
+import net.dries007.tfc.common.fluids.SimpleFluid;
+import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.common.items.BarrelBlockItem;
 import net.dries007.tfc.common.items.ChestBlockItem;
 import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 
 import tfcflorae.Config;
@@ -80,6 +83,8 @@ import tfcflorae.common.blocks.spidercave.EggBlock;
 import tfcflorae.common.blocks.spidercave.WebbedBlock;
 import tfcflorae.common.blocks.spidercave.WebbedChestBlock;
 import tfcflorae.common.blocks.wood.*;
+import tfcflorae.common.fluid.SimpleFluids;
+import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFBarrelBlockItem;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
@@ -168,6 +173,34 @@ public final class TFCFBlocks
     public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(TFCFRock.class, rock ->
         Helpers.mapOfKeys(OreDeposit.class, ore ->
             register("deposit/" + ore.name() + "/" + rock.name(), () -> new TFCFOreDepositBlock(Block.Properties.of(Material.SAND, rock.color()).sound(SoundType.GRAVEL).strength(rock.category().hardness(2.0f)), rock, ore), TFCItemGroup.ORES) // Same hardness as gravel
+        )
+    );
+
+    // Florae Ores
+
+    public static final Map<Rock, Map<TFCFOre, RegistryObject<Block>>> ORES_TFC_ROCK = Helpers.mapOfKeys(Rock.class, rock ->
+        Helpers.mapOfKeys(TFCFOre.class, ore -> !ore.isGraded(), ore ->
+            register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+        )
+    );
+    public static final Map<Rock, Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Block>>>> GRADED_ORES_TFC_ROCK = Helpers.mapOfKeys(Rock.class, rock ->
+        Helpers.mapOfKeys(TFCFOre.class, TFCFOre::isGraded, ore ->
+            Helpers.mapOfKeys(TFCFOre.Grade.class, grade ->
+                register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+            )
+        )
+    );
+
+    public static final Map<TFCFRock, Map<TFCFOre, RegistryObject<Block>>> ORES_TFCF_ROCK = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(TFCFOre.class, ore -> !ore.isGraded(), ore ->
+            register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+        )
+    );
+    public static final Map<TFCFRock, Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Block>>>> GRADED_ORES_TFCF_ROCK = Helpers.mapOfKeys(TFCFRock.class, rock ->
+        Helpers.mapOfKeys(TFCFOre.class, TFCFOre::isGraded, ore ->
+            Helpers.mapOfKeys(TFCFOre.Grade.class, grade ->
+                register(("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name()), () -> ore.create(rock), TFCItemGroup.ORES)
+            )
         )
     );
 
@@ -365,6 +398,12 @@ public final class TFCFBlocks
     public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO = TFCFRockSoilDecoMapper(TFCFRockSoil.class);
     public static final Map<TFCFRockSoil, Map<SoilBlockType.Variant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCROCKSOILDECO2 = TFCRockSoilDeco2Mapper(TFCFRockSoil.class);
     public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO2 = TFCFRockSoilDeco2Mapper(TFCFRockSoil.class);
+
+    // Fluids
+
+    public static final Map<SimpleFluids, RegistryObject<LiquidBlock>> SIMPLE_FLUIDS = Helpers.mapOfKeys(SimpleFluids.class, fluid ->
+        register("fluid/ore/" + fluid.getId(), () -> new LiquidBlock(TFCFFluids.SIMPLE_FLUIDS.get(fluid).source(), Properties.of(TFCMaterials.MOLTEN_METAL).noCollission().strength(100f).lightLevel(state -> 15).noDrops()))
+    );
 
     public static boolean always(BlockState state, BlockGetter level, BlockPos pos)
     {

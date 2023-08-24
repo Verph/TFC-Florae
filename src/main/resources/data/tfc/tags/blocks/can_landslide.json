@@ -2,6 +2,12 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfcflorae:mycelium_dirt/silt",
+    "tfcflorae:mycelium_dirt/loam",
+    "tfcflorae:mycelium_dirt/sandy_loam",
+    "tfcflorae:mycelium_dirt/silty_loam",
+    "tfcflorae:mycelium_dirt/humus",
+    "tfcflorae:mycelium_dirt/bog_iron",
     "tfcflorae:loose_mud/silt",
     "tfcflorae:loose_mud/loam",
     "tfcflorae:loose_mud/sandy_loam",

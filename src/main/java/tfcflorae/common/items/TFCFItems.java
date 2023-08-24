@@ -24,6 +24,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import net.dries007.tfc.common.*;
 import net.dries007.tfc.common.blocks.*;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
@@ -40,6 +41,7 @@ import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.ceramics.Clay;
 import tfcflorae.common.blocks.rock.Mineral;
+import tfcflorae.common.blocks.rock.TFCFOre;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFSoil;
@@ -62,6 +64,20 @@ public final class TFCFItems
     );
 
     // Ores
+
+    public static final RegistryObject<Item> COKE = register("ore/coke", TFCItemGroup.ORES);
+    public static final Map<TFCFOre, RegistryObject<Item>> ORES = Helpers.mapOfKeys(TFCFOre.class, ore -> !ore.isGraded(), type ->
+        register("ore/" + type.name(), TFCItemGroup.ORES)
+    );
+    public static final Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Item>>> GRADED_ORES = Helpers.mapOfKeys(TFCFOre.class, TFCFOre::isGraded, ore ->
+        Helpers.mapOfKeys(TFCFOre.Grade.class, grade ->
+            register("ore/" + grade.name() + '_' + ore.name(), TFCItemGroup.ORES)
+        )
+    );
+
+    public static final Map<TFCFPowder, RegistryObject<Item>> POWDERS = Helpers.mapOfKeys(TFCFPowder.class, powder ->
+        register("powder/" + powder.name(), MISC)
+    );
 
     public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCItemGroup.ORES);
 
@@ -133,7 +149,6 @@ public final class TFCFItems
 
     public static final RegistryObject<Item> TADPOLE_BUCKET = register("bucket/tadpole", () -> new MobBucketItem(TFCFEntities.TADPOLE, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(MISC)));
     public static final Map<Fish, RegistryObject<MobBucketItem>> FRESHWATER_FISH_BUCKETS = Helpers.mapOfKeys(Fish.class, fish -> register("bucket/" + fish.getSerializedName(), () -> new MobBucketItem(TFCFEntities.FRESHWATER_FISH.get(fish), () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))));
-
 
     public static final RegistryObject<Item> SILKMOTH_EGG = registerSpawnEgg(TFCFEntities.SILKMOTH, 0xd78ed7, 0xd9fff9);
     public static final RegistryObject<Item> FROG_EGG = registerSpawnEgg(TFCFEntities.FROG, 0xD07444, 0xFFC77C);

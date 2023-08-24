@@ -3,6 +3,10 @@
   "feature": "tfc:plant/bearded_moss_creeping_cover_patch",
   "placement": [
     {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
       "type": "tfc:climate",
       "min_temperature": -10,
       "max_temperature": 22,

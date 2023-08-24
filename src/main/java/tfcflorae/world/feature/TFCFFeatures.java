@@ -93,6 +93,7 @@ public class TFCFFeatures
     public static final RegistryObject<SandLayerFeature> SAND_LAYER = register("sand_layer", SandLayerFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<TidePoolFeature> TIDE_POOL = register("tide_pool", TidePoolFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<SubTerraneanRiver> UNDERGROUND_RIVER = register("underground_river", SubTerraneanRiver::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<TFCBambooFeature> BAMBOO = register("bamboo", TFCBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(String name, Function<Codec<C>, F> factory, Codec<C> codec)
     {

@@ -10,11 +10,7 @@ import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
-
 import tfcflorae.common.blocks.plant.TFCFPlant;
-import tfcflorae.common.blocks.wood.TFCFLeavesBlock;
-import tfcflorae.common.blocks.wood.TFCFMangroveLeavesBlock;
 
 public class SporeParticle extends TextureSheetParticle
 {
@@ -32,11 +28,6 @@ public class SporeParticle extends TextureSheetParticle
         {
             setColor(((color >> 16) & 0xFF) / 255F, ((color >> 8) & 0xFF) / 255F, (color & 0xFF) / 255F);
         }
-    }
-
-    public static boolean isAcceptedLeaves(BlockState state)
-    {
-        return (state.getBlock() instanceof TFCFLeavesBlock && state.getValue(TFCFLeavesBlock.LIFECYCLE) == Lifecycle.FLOWERING) || (state.getBlock() instanceof TFCFMangroveLeavesBlock && state.getValue(TFCFMangroveLeavesBlock.LIFECYCLE) == Lifecycle.FLOWERING);
     }
 
     public record Provider(SpriteSet set, boolean tinted) implements ParticleProvider<BlockParticleOption>

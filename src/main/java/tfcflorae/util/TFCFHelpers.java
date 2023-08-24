@@ -387,26 +387,21 @@ public class TFCFHelpers
 
     public static RegistrySoilVariant getSoilVariant(WorldGenLevel level, BlockPos pos)
     {
-        RegistrySoilVariant defaultSoil = SoilBlockType.Variant.LOAM;
-
         for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
         {
             if (level.getBlockState(pos).getBlock().getName().toString().toLowerCase(Locale.ROOT).contains(soilVariant.name().toLowerCase(Locale.ROOT)))
             {
                 return soilVariant;
             }
-            else
+        }
+        for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+        {
+            if (level.getBlockState(pos).getBlock().getName().toString().toLowerCase(Locale.ROOT).contains(soilVariant.name().toLowerCase(Locale.ROOT)))
             {
-                for (TFCFSoil.TFCFVariant soilVariant2 : TFCFSoil.TFCFVariant.values())
-                {
-                    if (level.getBlockState(pos).getBlock().getName().toString().toLowerCase(Locale.ROOT).contains(soilVariant2.name().toLowerCase(Locale.ROOT)))
-                    {
-                        return soilVariant2;
-                    }
-                }
+                return soilVariant;
             }
         }
-        return defaultSoil;
+        return SoilBlockType.Variant.LOAM;
     }
 
     public static boolean isVanillaSoilVariant(WorldGenLevel level, BlockPos pos)

@@ -3,6 +3,12 @@
   "replace": false,
   "values": [
     "#minecraft:dirt",
+    "tfcflorae:mycelium_dirt/silt",
+    "tfcflorae:mycelium_dirt/loam",
+    "tfcflorae:mycelium_dirt/sandy_loam",
+    "tfcflorae:mycelium_dirt/silty_loam",
+    "tfcflorae:mycelium_dirt/humus",
+    "tfcflorae:mycelium_dirt/bog_iron",
     "minecraft:calcite",
     "minecraft:netherrack",
     "tfcflorae:dirt/bog_iron",

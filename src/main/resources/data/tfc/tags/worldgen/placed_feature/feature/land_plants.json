@@ -162,6 +162,7 @@
     "tfc:plant/shield_fern_patch",
     "tfc:plant/licorice_fern_ground_patch",
     "tfc:plant/floating_green_algae_patch",
-    "tfc:plant/cobblestone_lichen_patch"
+    "tfc:plant/cobblestone_lichen_patch",
+    "tfc:plant/moss_wood_patch"
   ]
 }

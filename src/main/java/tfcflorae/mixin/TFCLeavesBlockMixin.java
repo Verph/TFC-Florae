@@ -55,7 +55,7 @@ public abstract class TFCLeavesBlockMixin extends Block
     {
         if (!state.getValue(TFCLeavesBlock.PERSISTENT))
         {
-            if ((random.nextInt(30) == 0 && (pos.getY() > 110 || Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.FALL)) || (FallingLeafParticle.isAcceptedLeaves(state) && random.nextInt(10) == 0))
+            if ((random.nextInt(30) == 0 && (pos.getY() > 110 || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL)) || (FallingLeafParticle.isAcceptedLeaves(state) && random.nextInt(10) == 0))
             {
                 final BlockPos belowPos = pos.below();
                 final BlockState belowState = level.getBlockState(belowPos);

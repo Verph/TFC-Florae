@@ -30,6 +30,7 @@ import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.world.biome.BiomeExtension;
 import net.dries007.tfc.world.biome.TFCBiomes;
 import net.dries007.tfc.world.chunkdata.ChunkData;
@@ -41,6 +42,7 @@ import org.jetbrains.annotations.Nullable;
 
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 import tfcflorae.interfaces.TFCBiomesMixinInterface;
 import tfcflorae.util.TFCFHelpers;
@@ -299,59 +301,93 @@ public class ForestFeature extends Feature<ForestConfig>
                             for (int i = 0; i < length; i++)
                             {
                                 level.setBlock(mutablePos, log, Block.UPDATE_ALL);
-                                if (random.nextInt(10) == 0)
+
+                                BlockPos.MutableBlockPos mutablePosMycelium = new BlockPos.MutableBlockPos(mutablePos.getX(), mutablePos.getY(), mutablePos.getZ());
+
+                                final ChunkDataProvider provider = ChunkDataProvider.get(level);
+                                final ChunkData dataNew = provider.get(level, mutablePosMycelium);
+
+                                final float rainfall = dataNew.getRainfall(mutablePosMycelium);
+                                final float rainfallInverted = ((ClimateModel.MAXIMUM_RAINFALL - rainfall) + 10F) * 0.1F;
+
+                                final float actualForestDensity = dataNew.getForestDensity();
+                                final float forestDensity = actualForestDensity == 0 ? 0.001F : actualForestDensity; // Cannot divide by 0.
+
+                                final ForestType forestType = data.getForestType();
+                                final BlockState fungiState = Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.FUNGI_ON_FALLEN_LOGS, random).map(Block::defaultBlockState).orElse(TFCFBlocks.PLANTS.get(TFCFPlant.PORCINI).get().defaultBlockState());
+
+                                if (random.nextFloat(1F - actualForestDensity) <= forestType.ordinal())
                                 {
-                                    BlockState fungiState = Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState();
-                                    if (fungiState.canSurvive(level, mutablePos.above()))
+                                    if (fungiState != null && fungiState.canSurvive(level, mutablePosMycelium.above()))
                                     {
-                                        level.setBlock(mutablePos.above(), Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState(), Block.UPDATE_ALL);
+                                        level.setBlock(mutablePosMycelium.above(), fungiState, Block.UPDATE_ALL);
                                     }
                                 }
 
-                                final int radius = Mth.nextInt(random, 1, 5); // Within 1 to 5 (inclusive)
-                                final int radiusSquared = radius * radius;
-
-                                for (int x = mutablePos.getX() - radius; x <= mutablePos.getX() + radius; ++x)
+                                final int radius = Math.round((forestDensity * 1.5F) * forestType.ordinal());
+                                if (radius > 0 && random.nextInt(Math.round(((rainfallInverted * 1.2F) / forestDensity) * (5 - forestType.ordinal()) * 0.75F)) <= forestType.ordinal())
                                 {
-                                    for (int z = mutablePos.getZ() - radius; z <= mutablePos.getZ() + radius; ++z)
+                                    final int radiusSquared = radius * radius;
+
+                                    final int posX = mutablePosMycelium.getX();
+                                    final int posZ = mutablePosMycelium.getZ();
+                                    final int posY = mutablePosMycelium.getY();
+
+                                    for (int x = posX - radius; x <= posX + radius; ++x)
                                     {
-                                        final int relX = x - mutablePos.getX();
-                                        final int relZ = z - mutablePos.getZ();
-
-                                        if (relX * relX + relZ * relZ <= radiusSquared)
+                                        for (int z = posZ - radius; z <= posZ + radius; ++z)
                                         {
-                                            int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z) - 1;
-                                            mutablePos.set(x, y, z);
+                                            final int relX = x - posX;
+                                            final int relZ = z - posZ;
 
-                                            final BlockState stateAt = level.getBlockState(mutablePos);
-
-                                            if (Helpers.isBlock(stateAt, BlockTags.DIRT) && level.getBlockState(mutablePos.above()).isAir())
+                                            if (relX * relX + relZ * relZ <= radiusSquared)
                                             {
-                                                if (stateAt.getBlock().getName().toString().toLowerCase(Locale.ROOT).contains("bog_iron"))
+                                                for (int y = posY - radius; y <= posY; ++y)
                                                 {
-                                                    level.setBlock(mutablePos, TFCFBlocks.MYCELIUM_BOG_IRON.get().defaultBlockState(), Block.UPDATE_ALL);
-                                                }
-                                                else if (TFCFHelpers.isVanillaSoilVariant(level, mutablePos))
-                                                {
-                                                    level.setBlock(mutablePos, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(TFCFHelpers.getSoilVariant(level, mutablePos)).get().defaultBlockState(), Block.UPDATE_ALL);
-                                                }
-                                                else
-                                                {
-                                                    level.setBlock(mutablePos, TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(TFCFHelpers.getSoilVariant(level, mutablePos)).get().defaultBlockState(), Block.UPDATE_ALL);
-                                                }
+                                                    mutablePosMycelium.set(x, y, z);
 
-                                                if (random.nextInt(10) == 0)
-                                                {
-                                                    BlockState fungiState = Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState();
-                                                    if (fungiState.canSurvive(level, mutablePos))
+                                                    if (level.getBlockState(mutablePosMycelium.above()).isAir())
                                                     {
-                                                        level.setBlock(mutablePos, Helpers.getRandomElement(ForgeRegistries.BLOCKS, TFCFTags.Blocks.MAGMA_BLOCKS, random).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        final BlockState stateAt = level.getBlockState(mutablePosMycelium);
+
+                                                        if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_BOG_IRON))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.MYCELIUM_BOG_IRON.get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+                                                        else if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_LOAM))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(SoilBlockType.Variant.LOAM).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+                                                        else if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_SANDY_LOAM))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(SoilBlockType.Variant.SANDY_LOAM).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+                                                        else if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_SILT))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(SoilBlockType.Variant.SILT).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+                                                        else if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_SILTY_LOAM))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(SoilBlockType.Variant.SILTY_LOAM).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+                                                        else if (Helpers.isBlock(stateAt, TFCFTags.Blocks.IS_HUMUS))
+                                                        {
+                                                            level.setBlock(mutablePosMycelium, TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(TFCFSoil.TFCFVariant.HUMUS).get().defaultBlockState(), Block.UPDATE_ALL);
+                                                        }
+
+                                                        if (random.nextFloat(1F - actualForestDensity) <= forestType.ordinal())
+                                                        {
+                                                            if (fungiState != null && fungiState.canSurvive(level, mutablePosMycelium.above()))
+                                                            {
+                                                                level.setBlock(mutablePosMycelium.above(), fungiState, Block.UPDATE_ALL);
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
                                         }
-                                    }
-                                }   
+                                    } 
+                                }
                                 mutablePos.move(axis);
                             }
                         }

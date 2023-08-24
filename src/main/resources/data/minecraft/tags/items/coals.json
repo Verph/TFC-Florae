@@ -6,6 +6,8 @@
     "tfcflorae:wood/wood/charred_tree",
     "tfcflorae:wood/stripped_log/charred_tree",
     "tfcflorae:wood/stripped_wood/charred_tree",
-	"tfcflorae:wood/twig/charred_tree"
+	"tfcflorae:wood/twig/charred_tree",
+    "tfcflorae:ore/anthracite",
+    "tfcflorae:ore/coke"
   ]
 }

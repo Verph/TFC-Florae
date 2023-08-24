@@ -8,7 +8,8 @@
     "tfcflorae:dry_grass_path/loam",
     "tfcflorae:sparse_grass_path/loam",
     "tfcflorae:dense_grass_path/loam",
-    "tfcflorae:podzol/loam"
+    "tfcflorae:podzol/loam",
+    "tfcflorae:mycelium_dirt/loam"
   ],
   "result": "tfc:dirt/loam"
 }

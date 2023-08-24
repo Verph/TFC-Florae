@@ -13,7 +13,8 @@
     "tfcflorae:dry_grass_path/humus",
     "tfcflorae:sparse_grass_path/humus",
     "tfcflorae:dense_grass_path/humus",
-    "tfcflorae:podzol/humus"
+    "tfcflorae:podzol/humus",
+    "tfcflorae:mycelium_dirt/humus"
   ],
   "result": "tfcflorae:dirt/humus"
 }

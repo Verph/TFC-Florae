@@ -22,7 +22,9 @@ import net.minecraftforge.common.Tags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.plant.TFCBushBlock;
+import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
@@ -30,6 +32,8 @@ import net.dries007.tfc.util.calendar.Season;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
 import tfcflorae.client.particle.TFCFParticles;
+import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.soil.TFCFSoil;
 
 public abstract class FungiBlock extends TFCBushBlock
 {
@@ -64,7 +68,7 @@ public abstract class FungiBlock extends TFCBushBlock
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
     {
-        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.isDay() && level.getSkyDarken() < 2 && (Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.FALL))
+        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
         {
             int i = pos.getX();
             int j = pos.getY();
@@ -112,36 +116,60 @@ public abstract class FungiBlock extends TFCBushBlock
         {
             state = state.setValue(AGE, Math.min(state.getValue(AGE) + 1, 3));
 
-            if (random.nextInt(25) < TFCConfig.SERVER.plantGrowthChance.get())
+            int i = 5;
+            int j = 4;
+
+            for(BlockPos blockpos : BlockPos.betweenClosed(pos.offset(-4, -1, -4), pos.offset(4, 1, 4)))
             {
-                int i = 5;
-                int j = 4;
-
-                for(BlockPos blockpos : BlockPos.betweenClosed(pos.offset(-4, -1, -4), pos.offset(4, 1, 4)))
+                if (level.getBlockState(blockpos).is(this))
                 {
-                    if (level.getBlockState(blockpos).is(this))
-                    {
-                        --i;
-                        if (i <= 0) {
-                            return;
-                        }
+                    --i;
+                    if (i <= 0) {
+                        return;
                     }
                 }
-
-                BlockPos blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
-                for(int k = 0; k < 4; ++k)
-                {
-                    if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
-                    {
-                        pos = blockpos1;
-                    }
-
-                    blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
-                }
-
+            }
+            BlockPos blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            for(int k = 0; k < 4; ++k)
+            {
                 if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
                 {
-                    level.setBlock(blockpos1, state, 2);
+                    pos = blockpos1;
+                }
+                blockpos1 = pos.offset(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            }
+            if (level.isEmptyBlock(blockpos1) && state.canSurvive(level, blockpos1))
+            {
+                level.setBlock(blockpos1, state, 2);
+            }
+
+            final BlockPos posBelow = pos.below();
+            final Block blockBelow = level.getBlockState(posBelow).getBlock();
+            if (blockBelow == TFCFBlocks.ROOTED_BOG_IRON.get() || blockBelow == TFCFBlocks.BOG_IRON.get())
+            {
+                level.setBlock(posBelow, TFCFBlocks.MYCELIUM_BOG_IRON.get().defaultBlockState(), Block.UPDATE_ALL);
+                level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
+                return;
+            }
+            else
+            {
+                for (SoilBlockType.Variant soilVariant : SoilBlockType.Variant.values())
+                {
+                    if (blockBelow == TFCBlocks.SOIL.get(SoilBlockType.ROOTED_DIRT).get(soilVariant).get() || blockBelow == TFCBlocks.SOIL.get(SoilBlockType.DIRT).get(soilVariant).get())
+                    {
+                        level.setBlock(posBelow, TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(soilVariant).get().defaultBlockState(), Block.UPDATE_ALL);
+                        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
+                        return;
+                    }
+                }
+                for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values())
+                {
+                    if (blockBelow == TFCFBlocks.TFCFSOIL.get(TFCFSoil.ROOTED_DIRT).get(soilVariant).get() || blockBelow == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(soilVariant).get())
+                    {
+                        level.setBlock(posBelow, TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(soilVariant).get().defaultBlockState(), Block.UPDATE_ALL);
+                        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
+                        return;
+                    }
                 }
             }
         }
@@ -155,7 +183,7 @@ public abstract class FungiBlock extends TFCBushBlock
         BlockPos blockpos = pos.below();
         BlockState blockstate = level.getBlockState(blockpos);
 
-        return (mayPlaceOn(blockstate, level, pos) && level.getRawBrightness(pos, 0) < 13);
+        return (mayPlaceOn(blockstate, level, pos) && level.getRawBrightness(pos, 0) < 14);
     }
 
     /**

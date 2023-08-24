@@ -29,6 +29,12 @@ public class TFCFTags
         public static final TagKey<Block> CREEPING_STONE_PLANTABLE_ON = create("creeping_stone_plantable_on");
         public static final TagKey<Block> SAPLING_CAN_REPLACE = create("sapling_can_replace");
         public static final TagKey<Block> FUNGI_ON_FALLEN_LOGS = create("fungi_on_fallen_logs");
+        public static final TagKey<Block> IS_LOAM = create("loam_soil");
+        public static final TagKey<Block> IS_SANDY_LOAM = create("sandy_loam_soil");
+        public static final TagKey<Block> IS_SILT = create("silt_soil");
+        public static final TagKey<Block> IS_SILTY_LOAM = create("silty_loam_soil");
+        public static final TagKey<Block> IS_HUMUS = create("humus_soil");
+        public static final TagKey<Block> IS_BOG_IRON = create("bog_iron_soil");
 
         private static TagKey<Block> create(String id)
         {

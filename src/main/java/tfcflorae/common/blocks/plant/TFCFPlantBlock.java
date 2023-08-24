@@ -72,7 +72,7 @@ public abstract class TFCFPlantBlock extends TFCBushBlock
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
     {
-        if (random.nextInt(400) == 0 && Helpers.isBlock(state, BlockTags.FLOWERS) && Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.SPRING)
+        if (random.nextInt(400) == 0 && Helpers.isBlock(state, BlockTags.FLOWERS) && Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SPRING)
         {
             level.addParticle(TFCParticles.BUTTERFLY.get(), pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 0, 0, 0);
         }
