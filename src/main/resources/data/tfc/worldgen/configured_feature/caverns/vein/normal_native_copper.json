@@ -185,7 +185,7 @@
       }
     ],
     "indicator": {
-      "rarity": 12,
+      "rarity": 10,
       "blocks": [
         {
           "block": "tfc:ore/small_native_copper"

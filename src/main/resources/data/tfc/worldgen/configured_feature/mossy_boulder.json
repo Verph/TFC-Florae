@@ -1,7 +1,8 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "tfc:boulder",
+  "type": "tfcflorae:boulder",
   "config": {
+    "minimum_size": 2,
+    "extra_random_radius": 10,
     "states": [
       {
         "rock": "tfc:rock/raw/granite",

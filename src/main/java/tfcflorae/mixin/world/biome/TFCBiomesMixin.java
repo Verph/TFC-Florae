@@ -141,7 +141,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
     private static final BiomeExtension LAKE_SHORE = register("lake_shore", builder().heightmap(seed -> TFCFBiomeNoise.lakeShore(seed, -8, 2)).surface(LakeShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.LAKE).spawnable());
     // Fix biome noises. Inverted somehow, wtf?
     @Unique @Final
-    private static final BiomeExtension SAWTOOTH_CLIFFS = register("sawtooth_cliffs", builder().heightmap(seed -> TFCFBiomeNoise.sawtoothCliffs(seed, 2, 18)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCavesUpper1).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle1).carving(TFCFBiomeNoise::undergroundCavesDeep1).carving(TFCFBiomeNoise::undergroundCavesDeep2).carving(TFCFBiomeNoise::undergroundCavesDeep3).spawnable());
+    private static final BiomeExtension SAWTOOTH_CLIFFS = register("sawtooth_cliffs", builder().heightmap(TFCFBiomeNoise::sharpHills).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(TFCFNormalSurfaceBuilder.ROCKY))))).carving(TFCFBiomeNoise::undergroundCavesUpper1).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle1).carving(TFCFBiomeNoise::undergroundCavesDeep1).carving(TFCFBiomeNoise::undergroundCavesDeep2).carving(TFCFBiomeNoise::undergroundCavesDeep3).spawnable());
     @Unique @Final
     private static final BiomeExtension TABLELANDS = register("tablelands", builder().heightmap(seed -> TFCFBiomeNoise.tablelands(seed, 1, 30)).surface(SubSoilSurfaceBuilder.create(RockyDirtSurfaceBuilder.create(ForestSurfaceBuilder.create(GrassSurfaceBuilder.create(MountainSurfaceBuilder.INSTANCE))))).carving(TFCFBiomeNoise::undergroundCavesUpper1).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCaves).carving(TFCFBiomeNoise::undergroundCavesMiddle1).carving(TFCFBiomeNoise::undergroundCavesDeep1).carving(TFCFBiomeNoise::undergroundCavesDeep2).carving(TFCFBiomeNoise::undergroundCavesDeep3).spawnable());
     @Unique @Final
@@ -177,7 +177,7 @@ public final class TFCBiomesMixin implements TFCBiomesMixinInterface
 
     // Shores
     @Shadow @Mutable @Final
-    public static final BiomeExtension SHORE = register("shore", builder().heightmap(BiomeNoise::shore).surface(ShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty().spawnable()); // Standard shore / beach. Material will vary based on location
+    public static final BiomeExtension SHORE = register("shore", builder().heightmap(BiomeNoise::shore).surface(ShoreSurfaceBuilder.INSTANCE).aquiferHeightOffset(-16).group(BiomeExtension.Group.OCEAN).salty()); // Standard shore / beach. Material will vary based on location
 
     // Water
     @Shadow @Mutable @Final

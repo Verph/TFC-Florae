@@ -69,7 +69,7 @@ public enum OceanBorderLayerTFCF implements AdjacentTransformLayer
         else if (center == DEEP_OCEAN)
         {
             // Add ocean to land - deep ocean borders
-            if (matcher.test(TFCLayers::isOceanOrMarker))
+            if (matcher.test(i -> i == SEAMOUNTS) || matcher.test(i -> i == GUYOTS) || matcher.test(i -> i == PELAGIC_ZONE))
             {
                 return PELAGIC_ZONE;
             }

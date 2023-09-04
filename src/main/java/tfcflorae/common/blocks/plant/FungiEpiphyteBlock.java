@@ -30,12 +30,12 @@ import tfcflorae.client.particle.TFCFParticles;
 public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
 {
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_3;
-
     protected static final VoxelShape PLANT_SHAPE = box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
+    public final TFCFPlant plantTFCF;
 
-    public static FungiEpiphyteBlock create(RegistryPlant plant, ExtendedProperties properties)
+    public static FungiEpiphyteBlock create(RegistryPlant plant, TFCFPlant plantTFCF, ExtendedProperties properties)
     {
-        return new FungiEpiphyteBlock(properties)
+        return new FungiEpiphyteBlock(properties, plantTFCF)
         {
             @Override
             public RegistryPlant getPlant()
@@ -45,9 +45,10 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
         };
     }
 
-    protected FungiEpiphyteBlock(ExtendedProperties properties)
+    protected FungiEpiphyteBlock(ExtendedProperties properties, TFCFPlant plantTFCF)
     {
         super(properties);
+        this.plantTFCF = plantTFCF;
 
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
@@ -55,22 +56,22 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
     {
-        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
+        if (plantTFCF.getSporeColor() != -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
         {
             int i = pos.getX();
             int j = pos.getY();
             int k = pos.getZ();
-            BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+            BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
 
-            for (int l = 0; l < 14; ++l)
+            int sporeSpread = plantTFCF.getSporeSpread();
+            for (int l = 0; l <= sporeSpread + random.nextInt(3); ++l)
             {
-                int sporeSpread = plantTFCF.getSporeSpread();
-                blockpos$mutableblockpos.set(i + Mth.nextInt(random, -sporeSpread, sporeSpread), j - random.nextInt(sporeSpread), k + Mth.nextInt(random, -sporeSpread, sporeSpread));
-                BlockState blockstate = level.getBlockState(blockpos$mutableblockpos);
+                mutablePos.set(i + Mth.nextInt(random, -sporeSpread, sporeSpread), j - random.nextInt(sporeSpread), k + Mth.nextInt(random, -sporeSpread, sporeSpread));
+                BlockState blockstate = level.getBlockState(mutablePos);
 
-                if (!blockstate.isCollisionShapeFullBlock(level, blockpos$mutableblockpos))
+                if (!blockstate.isCollisionShapeFullBlock(level, mutablePos))
                 {
-                    level.addParticle(new BlockParticleOption(TFCFParticles.FALLING_SPORE.get(), state), (double)blockpos$mutableblockpos.getX() + random.nextDouble(), (double)blockpos$mutableblockpos.getY() + random.nextDouble(), (double)blockpos$mutableblockpos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
+                    level.addParticle(new BlockParticleOption(TFCFParticles.FALLING_SPORE.get(), state), mutablePos.getX() + random.nextDouble(), mutablePos.getY() + random.nextDouble(), mutablePos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
                 }
             }
         }

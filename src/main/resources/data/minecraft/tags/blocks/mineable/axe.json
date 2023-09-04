@@ -334,6 +334,7 @@
     "tfcflorae:wood/barrel/persimmon",
     "tfcflorae:wood/lectern/persimmon",
     "tfcflorae:wood/scribing_table/persimmon",
+    "tfcflorae:wood/trunks/joshua",
     "tfcflorae:wood/log/african_padauk",
     "tfcflorae:wood/log/alder",
     "tfcflorae:wood/log/angelim",
@@ -2588,6 +2589,8 @@
     "tfcflorae:wood/trapped_chest/bamboo",
     "tfcflorae:wood/wall_sign/bamboo",
     "tfcflorae:wood/workbench/bamboo",
-    "tfcflorae:wood/twig/bamboo"
+    "tfcflorae:wood/twig/bamboo",
+    "tfcflorae:wood/roots/white_mangrove",
+    "tfcflorae:wood/roots/red_mangrove"
   ]
 }

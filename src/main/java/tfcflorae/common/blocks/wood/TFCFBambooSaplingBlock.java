@@ -22,7 +22,6 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraftforge.common.Tags;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blockentities.TickCounterBlockEntity;
 import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
@@ -34,6 +33,7 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
 
+import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
 import tfcflorae.world.feature.tree.TFCFBambooTreeGrower;
 
 public class TFCFBambooSaplingBlock extends SaplingBlock implements IFluidLoggable, IForgeBlockExtension, EntityBlockExtension
@@ -66,9 +66,9 @@ public class TFCFBambooSaplingBlock extends SaplingBlock implements IFluidLoggab
             {
                 return;
             }
-            if (level.getBlockEntity(pos) instanceof TickCounterBlockEntity counter)
+            if (level.getBlockEntity(pos) instanceof TFCFTickCounterBlockEntity counter)
             {
-                if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY *  getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
+                if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY * getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
                 }
@@ -99,7 +99,7 @@ public class TFCFBambooSaplingBlock extends SaplingBlock implements IFluidLoggab
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
     {
-        TickCounterBlockEntity.reset(level, pos);
+        TFCFTickCounterBlockEntity.reset(level, pos);
         super.setPlacedBy(level, pos, state, placer, stack);
     }
 

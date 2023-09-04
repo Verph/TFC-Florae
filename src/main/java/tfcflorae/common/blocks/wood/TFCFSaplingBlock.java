@@ -25,6 +25,7 @@ import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
@@ -33,6 +34,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
 
 import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
+import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.world.feature.tree.TFCFTreeGrower;
 
 public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
@@ -90,12 +92,13 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
             }
             if (level.getBlockEntity(pos) instanceof TFCFTickCounterBlockEntity counter)
             {
-                if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY *  getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
+                if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY * getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
                     if (ForgeEventFactory.saplingGrowTree(level, random, pos))
                     {
-                        level.destroyBlock(pos, false);
+                        level.setBlock(pos, TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState(), Block.UPDATE_ALL);
+                        //level.destroyBlock(pos, false);
                     }
                 }
             }

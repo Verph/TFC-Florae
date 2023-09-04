@@ -4,6 +4,7 @@
 	"package": "tfcflorae.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"BookshelfBlockMixin",
 		"FirepitBlockMixin",
 		"ForestFeatureMixin",
 		"LiquidBlockMixin",

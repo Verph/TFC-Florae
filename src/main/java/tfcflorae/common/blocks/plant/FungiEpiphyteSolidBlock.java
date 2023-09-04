@@ -37,6 +37,7 @@ import tfcflorae.client.particle.TFCFParticles;
 public abstract class FungiEpiphyteSolidBlock extends EpiphytePlantBlock
 {
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_3;
+    public final TFCFPlant plantTFCF;
 
     protected static final VoxelShape NORTH_SHAPE_COLLISION = box(0.0, 6.0, 4.0, 16.0, 10.0, 16.0);
     protected static final VoxelShape SOUTH_SHAPE_COLLISION = box(0.0, 6.0, 0.0, 16.0, 10.0, 12.0);
@@ -45,9 +46,9 @@ public abstract class FungiEpiphyteSolidBlock extends EpiphytePlantBlock
 
     protected static final Map<Direction, VoxelShape> SHAPES_COLLISION = ImmutableMap.of(Direction.NORTH, NORTH_SHAPE_COLLISION, Direction.SOUTH, SOUTH_SHAPE_COLLISION, Direction.WEST, WEST_SHAPE_COLLISION, Direction.EAST, EAST_SHAPE_COLLISION);
 
-    public static FungiEpiphyteSolidBlock create(RegistryPlant plant, ExtendedProperties properties)
+    public static FungiEpiphyteSolidBlock create(RegistryPlant plant, TFCFPlant plantTFCF, ExtendedProperties properties)
     {
-        return new FungiEpiphyteSolidBlock(properties)
+        return new FungiEpiphyteSolidBlock(properties, plantTFCF)
         {
             @Override
             public RegistryPlant getPlant()
@@ -57,9 +58,10 @@ public abstract class FungiEpiphyteSolidBlock extends EpiphytePlantBlock
         };
     }
 
-    protected FungiEpiphyteSolidBlock(ExtendedProperties properties)
+    protected FungiEpiphyteSolidBlock(ExtendedProperties properties, TFCFPlant plantTFCF)
     {
         super(properties);
+        this.plantTFCF = plantTFCF;
 
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
     }
@@ -67,22 +69,22 @@ public abstract class FungiEpiphyteSolidBlock extends EpiphytePlantBlock
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random)
     {
-        if (getPlant() instanceof TFCFPlant plantTFCF && plantTFCF.getSporeColor() > -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
+        if (plantTFCF.getSporeColor() != -1 && level.getRawBrightness(pos, 0) > 9 && (Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.SUMMER || Calendars.get(level).getCalendarMonthOfYear().getSeason() == Season.FALL))
         {
             int i = pos.getX();
             int j = pos.getY();
             int k = pos.getZ();
-            BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+            BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
 
-            for (int l = 0; l < 14; ++l)
+            int sporeSpread = plantTFCF.getSporeSpread();
+            for (int l = 0; l <= sporeSpread + random.nextInt(3); ++l)
             {
-                int sporeSpread = plantTFCF.getSporeSpread();
-                blockpos$mutableblockpos.set(i + Mth.nextInt(random, -sporeSpread, sporeSpread), j - random.nextInt(sporeSpread), k + Mth.nextInt(random, -sporeSpread, sporeSpread));
-                BlockState blockstate = level.getBlockState(blockpos$mutableblockpos);
+                mutablePos.set(i + Mth.nextInt(random, -sporeSpread, sporeSpread), j - random.nextInt(sporeSpread), k + Mth.nextInt(random, -sporeSpread, sporeSpread));
+                BlockState blockstate = level.getBlockState(mutablePos);
 
-                if (!blockstate.isCollisionShapeFullBlock(level, blockpos$mutableblockpos))
+                if (!blockstate.isCollisionShapeFullBlock(level, mutablePos))
                 {
-                    level.addParticle(new BlockParticleOption(TFCFParticles.FALLING_SPORE.get(), state), (double)blockpos$mutableblockpos.getX() + random.nextDouble(), (double)blockpos$mutableblockpos.getY() + random.nextDouble(), (double)blockpos$mutableblockpos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
+                    level.addParticle(new BlockParticleOption(TFCFParticles.FALLING_SPORE.get(), state), mutablePos.getX() + random.nextDouble(), mutablePos.getY() + random.nextDouble(), mutablePos.getZ() + random.nextDouble(), 0.0D, 0.0D, 0.0D);
                 }
             }
         }

@@ -61,7 +61,7 @@ public class Config
         mineralGenFrequency = builder.apply("mineralGenFrequency").comment("How often minerals can generate near hot springs and lava.").defineInRange("mineralGenFrequency", 32, 0, Integer.MAX_VALUE);
         fruitingLeavesUpdateChance = builder.apply("fruitingLeavesUpdateChance").comment("How often seasonal/fruiting leaves should check for updates. Higher values --> slower updates.").defineInRange("fruitingLeavesUpdateChance", 70, 0, Integer.MAX_VALUE);
 
-        leavesSaplingPlacementChance = builder.apply("leavesSaplingPlacementChance").comment("The chance for the tree leaves to drop saplings. Set to \"0\" to disable entirely.").defineInRange("leavesSaplingPlacementChance", 200, 0, Integer.MAX_VALUE);
+        leavesSaplingPlacementChance = builder.apply("leavesSaplingPlacementChance").comment("The chance for the tree leaves to spread and place saplings. Set to \"0\" to disable entirely.").defineInRange("leavesSaplingPlacementChance", 200, 0, Integer.MAX_VALUE);
         leavesSaplingSpreadDistance = builder.apply("leavesSaplingSpreadDistance").comment("Distance multiplication factor of which leaves will randomly spread and place saplings, for natural regrowth of the forests, during fall and spring seasons.").defineInRange("leavesSaplingSpreadDistance", 12, 0, 16);
 
         landBiomeSizes = builder.apply("landBiomeSizes").comment(

@@ -65,7 +65,6 @@ public class BambooLogBlock extends LogBlock implements IFluidLoggable
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context)
     {
-        //return SHAPE;
         switch (state.getValue(AXIS))
         {
             case X:

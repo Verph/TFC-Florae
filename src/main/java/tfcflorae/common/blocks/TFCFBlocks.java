@@ -603,7 +603,7 @@ public final class TFCFBlocks
                     else if (type == BlockType.BOOKSHELF)
                     {
                         subMap.put(type, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
+                            new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).enchantmentPower(1).flammableLikePlanks()), WOOD));
                     }
                     else if (type == BlockType.BARREL)
                     {
@@ -747,7 +747,7 @@ public final class TFCFBlocks
         for (Wood wood : enumClass.getEnumConstants())
         {
             Map.put(wood, register(("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
+                new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F, 3.0F)).enchantmentPower(1).flammableLikePlanks()), WOOD));
         }
         return Map;
     }

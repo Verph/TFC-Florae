@@ -785,6 +785,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         // Biome level features - ocean borders, lakes, island chains, edge biomes, shores
         // Apply lakes back to biomes
         mainLayer = OceanBorderLayerTFCF.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = OceanBorderLayerTFCF.INSTANCE.apply(random.nextLong(), mainLayer);
         layerArtist.draw("biomes", 3, mainLayer);
 
         mainLayer = ZoomLayer.NORMAL.apply(1001, mainLayer);
@@ -990,7 +991,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
     @Overwrite(remap = false)
     public static boolean hasShore(int value)
     {
-        return value != LOW_CANYONS && value != CANYONS && value != OCEANIC_MOUNTAINS && value != VOLCANIC_OCEANIC_MOUNTAINS && value != MANGROVES;
+        return value != LOW_CANYONS && value != CANYONS && value != MANGROVES && value != RIVER_EDGE && value != RIVERBANK && value != RIVER;
     }
 
     @Overwrite(remap = false)
@@ -1019,6 +1020,18 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         if (value == LOWLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS)
         {
             return MANGROVES;
+        }
+        if (value == SEAMOUNTS || value == PELAGIC_ZONE)
+        {
+            return DEEP_OCEAN_TRENCH;
+        }
+        if (value == GUYOTS)
+        {
+            return DEEP_OCEAN;
+        }
+        if (value == OCEANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAINS)
+        {
+            return GRAVEL_SHORE;
         }
         return SHORE;
     }
@@ -1103,6 +1116,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         if (value == VOLCANIC_OCEANIC_MOUNTAINS || value == VOLCANIC_OCEANIC_MOUNTAIN_RIVER)
         {
             return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+        }
+        else if (isOceanOrMarker(value))
+        {
+            return value;
         }
         return RIVER;
     }

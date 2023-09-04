@@ -21,7 +21,11 @@ public class SporeParticle extends TextureSheetParticle
         int color = -1;
         for (TFCFPlant plant : TFCFPlant.values())
         {
-            color = plant.getSporeColor();
+            if (plant.getSporeColor() != -1)
+            {
+                color = plant.getSporeColor();
+                break;
+            }
         }
 
         if (color != -1)
@@ -36,7 +40,7 @@ public class SporeParticle extends TextureSheetParticle
         public Particle createParticle(BlockParticleOption type, ClientLevel level, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed)
         {
             SporeParticle particle = new SporeParticle(level, x, y, z, set, tinted, type.getState());
-            particle.lifetime = Mth.randomBetweenInclusive(level.getRandom(), 500, 1000);
+            particle.setLifetime(Mth.randomBetweenInclusive(level.getRandom(), 500, 1000));
             particle.gravity = 0.01F;
             particle.pickSprite(set);
             return particle;
