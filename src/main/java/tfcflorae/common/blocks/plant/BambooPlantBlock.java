@@ -24,7 +24,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -238,13 +237,28 @@ public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLog
             level.setBlock(currentPos, state.cycle(AGE), 2);
         }
         return state;
-        //return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
     }
 
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos)
     {
-        return player.getMainHandItem().canPerformAction(ToolActions.SWORD_DIG) ? 1.0F : super.getDestroyProgress(state, player, level, pos);
+        if (!player.getMainHandItem().canPerformAction(ToolActions.SWORD_DIG))
+        {
+            final float baseSpeed = state.getDestroySpeed(level, pos);
+            if (baseSpeed == -1.0F)
+            {
+                return 0.0F;
+            }
+            else
+            {
+                final int toolModifier = ForgeHooks.isCorrectToolForDrops(state, player) ? 30 : 100;
+                return player.getDigSpeed(state, pos) / baseSpeed / (float) toolModifier;
+            }
+        }
+        else
+        {
+            return 1.0F;
+        }
     }
 
     public void growBamboo(BlockState state, Level level, BlockPos pos, Random random, int pMaxTotalSize)
@@ -280,14 +294,14 @@ public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLog
     public int getHeightAboveUpToMax(BlockGetter level, BlockPos pos)
     {
         int i;
-        for(i = 0; i < 16 && level.getBlockState(pos.above(i + 1)).is(bambooStem.get()); ++i) {}
+        for (i = 0; i < 16 && level.getBlockState(pos.above(i + 1)).is(bambooStem.get()); ++i) {}
         return i;
     }
 
     public int getHeightBelowUpToMax(BlockGetter level, BlockPos pos)
     {
         int i;
-        for(i = 0; i < 16 && level.getBlockState(pos.below(i + 1)).is(bambooStem.get()); ++i) {}
+        for (i = 0; i < 16 && level.getBlockState(pos.below(i + 1)).is(bambooStem.get()); ++i) {}
         return i;
     }
 

@@ -8,14 +8,14 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import net.minecraft.server.network.ServerLoginPacketListenerImpl;
 import net.minecraftforge.fml.ModList;
 
-@Mixin(value = ServerLoginPacketListenerImpl.class, priority = 999999)
+@Mixin(value = ServerLoginPacketListenerImpl.class, priority = 1)
 public abstract class ServerLoginPacketListenerImplMixin implements IMixinConfigPlugin
 {
-    @ModifyConstant(method = "tick", constant = @Constant(intValue = 600))
-    private int injected(int value)
+    /*@ModifyConstant(method = "tick", constant = @Constant(intValue = 600))
+    private int modifyConstant(int value)
     {
         return Integer.MAX_VALUE;
-    }
+    }*/
 
 	@Override
 	public boolean shouldApplyMixin(String targetClassName, String mixinClassName)

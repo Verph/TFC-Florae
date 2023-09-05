@@ -11,6 +11,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
@@ -122,7 +123,6 @@ public class BambooLogBlock extends LogBlock implements IFluidLoggable
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos)
     {
-        // Modified from the super() method, including the Forge patch, to add the 2x hardness in natural state modifier.
         final float baseSpeed = (state.getValue(NATURAL) ? 2 : 1) * state.getDestroySpeed(level, pos);
         if (baseSpeed == -1.0F)
         {
@@ -146,12 +146,14 @@ public class BambooLogBlock extends LogBlock implements IFluidLoggable
         return null;
     }
 
-    /*@Override
+    @Override
     @SuppressWarnings("deprecation")
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
     {
-        return super.canSurvive(state, level, pos) || level.getBlockState(pos.below()).is(BlockTags.BAMBOO_PLANTABLE_ON) || level.getBlockState(pos.below()).is(this) || level.getBlockState(pos.below()).getBlock() instanceof BambooLogBlock;
-    }*/
+        final BlockPos posBelow = pos.below();
+        final BlockState stateBelow = level.getBlockState(posBelow);
+        return !FluidHelpers.isAirOrEmptyFluid(stateBelow) && (stateBelow.getMaterial().isSolid() || stateBelow.isFaceSturdy(level, posBelow, Direction.UP));
+    }
 
     @Override
     @SuppressWarnings("deprecation")
