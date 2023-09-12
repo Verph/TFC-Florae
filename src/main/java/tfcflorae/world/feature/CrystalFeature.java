@@ -10,9 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
-import net.minecraftforge.common.Tags;
-
-import net.dries007.tfc.util.Helpers;
+import net.minecraft.world.level.material.Material;
 
 public class CrystalFeature extends Feature<BlockStateConfiguration>
 {
@@ -41,7 +39,7 @@ public class CrystalFeature extends Feature<BlockStateConfiguration>
         else
         {
             BlockState blockstate = worldgenlevel.getBlockState(blockpos.above());
-            if (!Helpers.isBlock(blockstate, Tags.Blocks.STONE) || blockstate != state)
+            if (blockstate.getMaterial() != Material.STONE || blockstate != state)
             {
                 return false;
             }

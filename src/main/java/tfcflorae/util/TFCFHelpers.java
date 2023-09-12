@@ -7,8 +7,6 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.function.Consumer;
 
-import org.apache.commons.lang3.StringUtils;
-
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -24,6 +22,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
@@ -59,6 +60,7 @@ import net.dries007.tfc.world.settings.ClimateSettings;
 import net.dries007.tfc.world.settings.RockSettings;
 
 import tfcflorae.TFCFlorae;
+import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
@@ -676,4 +678,16 @@ public class TFCFHelpers
         double d2 = (double)pos.getZ() + random.nextDouble();
         level.addParticle(options, d0, d1, d2, 0.0D, 0.0D, 0.0D);
     }
+
+    public static boolean canWalkThroughEffortlessly(Entity entity)
+    {
+        if (entity instanceof LivingEntity livingEntity)
+        {
+            for (EquipmentSlot slotType : EquipmentSlot.values())
+            {
+                return livingEntity.getItemBySlot(slotType).canWalkOnPowderedSnow(livingEntity) || Helpers.isItem(livingEntity.getItemBySlot(slotType).getItem(), TFCFTags.Items.BYPASS_SLOWDOWN);
+            }
+        }
+		return false;
+	}
 }

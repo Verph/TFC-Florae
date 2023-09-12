@@ -3,22 +3,81 @@
   "feature": "tfc:plant/pitahaya",
   "placement": [
     {
-      "type": "block_predicate_filter",
+      "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "tfc:air_or_empty_fluid"
       }
     },
     {
-      "type": "block_predicate_filter",
+      "type": "minecraft:block_predicate_filter",
       "predicate": {
-        "type": "would_survive",
-        "state": {
-          "Name": "tfcflorae:plant/pitahaya",
-          "Properties": {
-            "age": "1",
-            "facing": "north"
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "tag": "minecraft:logs"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "tag": "minecraft:logs"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "tag": "minecraft:logs"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "tag": "minecraft:logs"
           }
-        }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+			"blocks": [
+			  "tfcflorae:plant/pitahaya"
+			]
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "tag": "tfc:bush_plantable_on"
+          }
+        ]
       }
     }
   ]

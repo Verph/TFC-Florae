@@ -13,6 +13,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.RandomSource;
 
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
@@ -22,6 +23,7 @@ import net.dries007.tfc.world.noise.OpenSimplex2D;
 import net.dries007.tfc.world.surface.SoilSurfaceState;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
+
 import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
@@ -54,10 +56,11 @@ public class SoilSurfaceStateMixin implements SurfaceState
     {
         return context -> {
             final BlockPos pos = context.pos();
-            final Random random = new Random();
+            final RandomSource random = context.random();
+            float rainfall = context.rainfall();
             float noise = PATCH_NOISE.noise(pos.getX(), pos.getZ());
             float noiseGauss = noise + (2 * (float) random.nextGaussian());
-            float noiseRainfall = context.rainfall() + (10 * (float) random.nextGaussian());
+            float noiseRainfall = rainfall + (10 * (float) random.nextGaussian());
 
             if (first != buildType(SoilBlockType.DIRT))
             {
@@ -76,18 +79,7 @@ public class SoilSurfaceStateMixin implements SurfaceState
                         else
                         {
                             SandBlockType sandColor = context.level() instanceof WorldGenLevel level ? TFCFHelpers.getSandColor(level, pos, Config.COMMON.toggleCheapSandColourCalculations.get()) : SandBlockType.YELLOW;
-                            /*if (context.getRock().sand() != null)
-                            {
-                                for (SandBlockType sandColors : SandBlockType.values())
-                                {
-                                    if (context.getRock().sand() == TFCBlocks.SAND.get(sandColors).get())
-                                    {
-                                        sandColor = sandColors;
-                                        break;
-                                    }
-                                }
-                            }*/
-                            float randomRainfall = random.nextFloat(context.rainfall()) * 0.01F;
+                            float randomRainfall = random.nextInt(Math.round(rainfall)) * 0.01F;
                             if (randomRainfall <= Mth.abs(noiseGauss))
                             {
                                 return TFCFBlocks.SPARSE_SAND_GRASS.get(sandColor).get().defaultBlockState();

@@ -10,8 +10,10 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LeavesBlock;
@@ -23,6 +25,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
@@ -31,6 +34,8 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.registry.RegistryPlant;
+
+import tfcflorae.util.TFCFHelpers;
 
 public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExtension
 {
@@ -43,6 +48,8 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     public final Map<BlockState, VoxelShape> shapesCache;
 
     public final ExtendedProperties properties;
+
+    public boolean canWalkThroughEffortlessly;
 
     public static TFCFVineBlock create(RegistryPlant plant, ExtendedProperties properties)
     {
@@ -119,7 +126,7 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
         boolean flag = blockstate.is(this);
         BlockState blockstate1 = flag ? blockstate : this.defaultBlockState();
 
-        for(Direction direction : context.getNearestLookingDirections())
+        for (Direction direction : context.getNearestLookingDirections())
         {
             if (direction != Direction.DOWN)
             {
@@ -152,11 +159,27 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
         }
     }
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 
     protected BlockState updateStateWithCurrentMonth(BlockState state)

@@ -23,16 +23,16 @@ public enum ExtraDunesShoreLayer implements AdjacentTransformLayer
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
     {
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
-        if (!TFCLayers.isOcean(center) && (center == SHORE_DUNES))// || center == COASTAL_CLIFFS))
+        if (center == SHORE_DUNES)
         {
             if (matcher.test(TFCLayers::isOcean))
             {
                 return TFCLayers.shoreFor(center);
             }
         }
-        else if (!TFCLayers.isOcean(center) && center == GRAVEL_SHORE)
+        else if (center == GRAVEL_SHORE)
         {
-            if (matcher.test(TFCLayers::isOcean))
+            if (matcher.test(TFCLayers::isOcean) || matcher.test(TFCLayers::isMountains))
             {
                 return GRAVEL_SHORE;
             }

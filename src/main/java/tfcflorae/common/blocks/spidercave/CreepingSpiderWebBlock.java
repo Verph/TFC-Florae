@@ -5,6 +5,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -25,6 +26,8 @@ import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.plant.TFCBushBlock;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
+
+import tfcflorae.util.TFCFHelpers;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -47,6 +50,7 @@ public class CreepingSpiderWebBlock extends TFCBushBlock implements DirectionPro
         .build();
 
     protected final Map<BlockState, VoxelShape> shapeCache;
+    public boolean canWalkThroughEffortlessly;
 
     public CreepingSpiderWebBlock(ExtendedProperties properties)
     {
@@ -133,10 +137,26 @@ public class CreepingSpiderWebBlock extends TFCBushBlock implements DirectionPro
         return true;
     }
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 }

@@ -10,10 +10,8 @@ import static net.dries007.tfc.world.layer.TFCLayers.*;
 
 public enum AddSeamountsLayer implements CenterTransformLayer
 {
-    //SMALL(70),
-    //LARGE(200);
-    SMALL(1),
-    LARGE(6);
+    SMALL(60),
+    LARGE(200);
 
     private final int chance;
 
@@ -21,7 +19,6 @@ public enum AddSeamountsLayer implements CenterTransformLayer
 
     static final int SEAMOUNTS_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamountsMarker();
     static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
-    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
 
     AddSeamountsLayer(int chance)
     {
@@ -31,28 +28,9 @@ public enum AddSeamountsLayer implements CenterTransformLayer
     @Override
     public int apply(AreaContext context, int value)
     {
-        //if ((isOceanOrMarker(value) || value != INLAND_MARKER) && !(value == OCEAN || value == OCEAN_REEF || value == NEAR_SHORE || value == SHORE) && context.random().nextInt(chance) == 0)
-        /*if (isOceanOrMarker(value) && !(value == OCEAN || value == OCEAN_REEF || value == NEAR_SHORE || value == SHORE) && context.random().nextInt(chance) == 0)
+        if ((value == DEEP_OCEAN || value == DEEP_OCEAN_TRENCH || value == PELAGIC_ZONE) && context.random().nextInt(chance) == 0)
         {
             return SEAMOUNTS_MARKER;
-        }
-        return value;*/
-
-        if (value == OCEAN_OCEAN_DIVERGING_MARKER)
-        {
-            final int r = context.random().nextInt(10);
-            if (r <= chance)
-            {
-                return SEAMOUNTS_MARKER;
-            }
-        }
-        else if (value == DEEP_OCEAN)
-        {
-            final int r = context.random().nextInt(20);
-            if (r <= chance)
-            {
-                return SEAMOUNTS_MARKER;
-            }
         }
         return value;
     }

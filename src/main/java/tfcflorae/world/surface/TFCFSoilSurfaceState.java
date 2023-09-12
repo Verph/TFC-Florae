@@ -1,12 +1,16 @@
 package tfcflorae.world.surface;
 
 import java.util.List;
+import java.util.Random;
 import java.util.function.Supplier;
+
+import org.jetbrains.annotations.Nullable;
 
 import com.google.common.collect.ImmutableList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -14,16 +18,19 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
+import net.dries007.tfc.world.chunkdata.ChunkData;
+import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.settings.RockSettings;
 import net.dries007.tfc.world.surface.SoilSurfaceState;
 import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
-
+import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.*;
+import tfcflorae.util.TFCFHelpers;
 
 public class TFCFSoilSurfaceState implements SurfaceState
 {
@@ -487,5 +494,46 @@ public class TFCFSoilSurfaceState implements SurfaceState
             context.chunk().setBlockState(context.pos(), getState(context), false);
             context.chunk().markPosForPostprocessing(context.pos());
         }
+    }
+
+    public static RegistrySoilVariant getSoilVariant(WorldGenLevel level, BlockPos pos)
+    {
+        final Random random = level.getRandom();
+        final ChunkDataProvider provider = ChunkDataProvider.get(level);
+        final ChunkData data = provider.get(level, pos);
+
+        // Adjust rainfall to bias a little bit towards sand regions
+        // Without: pure sand < 55mm, mixed sand < 105mm. With: pure sand < 75mm, mixed sand < 136mm
+        final float rainfall = data.getRainfall(pos) + 20f;
+        final int index = Mth.clamp((int) Mth.clampedMap(rainfall, 0, 500, 0, 9 - 0.01f), 0, 9 - 1);
+
+        switch (index)
+        {
+            case 1:
+                return transitionSoil(SoilBlockType.Variant.SANDY_LOAM, SoilBlockType.Variant.SANDY_LOAM, pos, random);
+            case 2:
+                return SoilBlockType.Variant.SANDY_LOAM;
+            case 3:
+                return transitionSoil(SoilBlockType.Variant.SANDY_LOAM, SoilBlockType.Variant.LOAM, pos, random);
+            case 4:
+                return SoilBlockType.Variant.LOAM;
+            case 5:
+                return transitionSoil(SoilBlockType.Variant.LOAM, SoilBlockType.Variant.SILTY_LOAM, pos, random);
+            case 6:
+                return SoilBlockType.Variant.SILTY_LOAM;
+            case 7:
+                return transitionSoil(SoilBlockType.Variant.SILTY_LOAM, SoilBlockType.Variant.SILT, pos, random);
+            case 8:
+                return SoilBlockType.Variant.SILT;
+            default:
+                return SoilBlockType.Variant.SANDY_LOAM;
+        }
+    }
+
+    public static RegistrySoilVariant transitionSoil(RegistrySoilVariant first, RegistrySoilVariant second, BlockPos pos, Random random)
+    {
+        float noise = SoilSurfaceState.PATCH_NOISE.noise(pos.getX(), pos.getZ());
+        float noiseGauss = noise + (2 * (float) random.nextGaussian());
+        return noiseGauss > 0 ? first : second;
     }
 }

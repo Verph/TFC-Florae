@@ -31,7 +31,6 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
     static final int THERMAL_CANYONS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticThermalCanyons();
     static final int MESA_PLATEAU = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMesaPlateau();
     static final int PEAT_BOG = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPeatBog();
-    static final int GRAVEL_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGravelShores();
     static final int STEPPES = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSteppes();
     static final int SHRUBLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticShrublands();
     static final int MOORLANDS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticMoorlands();
@@ -68,10 +67,6 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
             {
                 return MESA_HILLS;
             }
-            /*else if (matcher.test(i -> i == PLAINS || i == HILLS || i == GRASSLANDS || i == LOW_CANYONS || i == LOWLANDS || i == WETLANDS || i == MARSHES || i == SWAMPS || i == ALPINE_HIGHLANDS))
-            {
-                return MESA_HILLS;
-            }*/
         }
         else if (center == MESA_HILLS)
         {
@@ -112,20 +107,27 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return ALPINE_HIGHLANDS;
             }
         }
+        else if (center != ALPINE_MOUNTAINS && !TFCLayers.isMountains(center) && !TFCLayers.isOcean(center))
+        {
+            if (matcher.test(i -> i == ALPINE_MOUNTAINS))
+            {
+                return ALPINE_HIGHLANDS;
+            }
+        }
         else if (center == ALPINE_MOUNTAINS)
         {
             if (matcher.test(i -> i != ALPINE_MOUNTAINS))
             {
                 return ALPINE_HIGHLANDS;
             }
-            /*else if (matcher.test(i -> i == PLAINS || i == HILLS || i == GRASSLANDS || i == LOW_CANYONS || i == LOWLANDS || i == WETLANDS || i == MARSHES || i == SWAMPS || i == MESA_HILLS))
-            {
-                return ALPINE_HIGHLANDS;
-            }*/
         }
         else if (center == ALPINE_HIGHLANDS)
         {
-            if (matcher.test(i -> i != ALPINE_MOUNTAINS))
+            if (matcher.test(i -> i == ALPINE_MOUNTAINS))
+            {
+                return ALPINE_HIGHLANDS;
+            }
+            else if (matcher.test(i -> i != ALPINE_MOUNTAINS))
             {
                 return ROLLING_HIGHLANDS;
             }
@@ -172,25 +174,11 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return PITLANDS;
             }
         }
-        else if (center == SAWTOOTH_CLIFFS)
-        {
-            if (matcher.test(i -> i != SAWTOOTH_CLIFFS))
-            {
-                return TABLELANDS;
-            }
-        }
         else if (TFCLayers.isMountains(center))
         {
             if (matcher.test(TFCLayers::isLow))
             {
                 return ROLLING_HILLS;
-            }
-        }
-        else if (center == LAKE)
-        {
-            if (matcher.test(i -> i != LAKE))
-            {
-                return GRAVEL_SHORE;
             }
         }
         // Inverses of above conditions
@@ -216,30 +204,7 @@ public enum EdgeBiomeLayer implements AdjacentTransformLayer
                 return ROLLING_HILLS;
             }
         }
-        else if (center == PELAGIC_ZONE)
-        {
-            if (matcher.test(i -> i == SEAMOUNTS))
-            {
-                return SEAMOUNTS;
-            }
-            else if (matcher.test(i -> i == GUYOTS))
-            {
-                return GUYOTS;
-            }
-            else if (matcher.test(i -> i == DEEP_OCEAN))
-            {
-                return DEEP_OCEAN_TRENCH;
-            }
-            else if (matcher.test(i -> i == OCEAN))
-            {
-                return DEEP_OCEAN;
-            }
-            else if (matcher.test(i -> !isOcean(i)))
-            {
-                return DEEP_OCEAN;
-            }
-        }
-        else if (center == DEEP_OCEAN_TRENCH)
+        else if (center == DEEP_OCEAN || center == DEEP_OCEAN_TRENCH || center == PELAGIC_ZONE || center == SEAMOUNTS || center == GUYOTS)
         {
             if (matcher.test(i -> !isOcean(i)))
             {

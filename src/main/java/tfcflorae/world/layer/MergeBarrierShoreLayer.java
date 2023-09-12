@@ -6,21 +6,22 @@ import net.dries007.tfc.world.layer.framework.CenterMergeLayer;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
-public enum MergeAtollLayer implements CenterMergeLayer
+import static net.dries007.tfc.world.layer.TFCLayers.*;
+
+public enum MergeBarrierShoreLayer implements CenterMergeLayer
 {
     INSTANCE;
 
     public static TFCLayers staticBiomes = new TFCLayers();
 
-    static final int LAGOON_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticLagoonMarker();
-    static final int LAGOON = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticLagoon();
+    static final int BARRIER_REEF_SHORE_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBarrierReefShoreMarker();
 
     @Override
     public int apply(AreaContext context, int center, int layer)
     {
-        if (layer == LAGOON_MARKER)
+        if (layer == BARRIER_REEF_SHORE_MARKER)
         {
-            return LAGOON;
+            return SHORE;
         }
         return center;
     }

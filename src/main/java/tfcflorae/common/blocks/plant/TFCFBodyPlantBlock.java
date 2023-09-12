@@ -6,11 +6,13 @@ import java.util.function.Supplier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import tfcflorae.util.TFCFHelpers;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
@@ -41,6 +43,8 @@ public abstract class TFCFBodyPlantBlock extends GrowingPlantBodyBlock implement
 
     private final Supplier<? extends Block> headBlock;
     private final ExtendedProperties properties;
+
+    public boolean canWalkThroughEffortlessly;
 
     public static TFCFBodyPlantBlock create(RegistryPlant plant, ExtendedProperties properties, Supplier<? extends Block> headBlock, VoxelShape shape, Direction direction)
     {
@@ -94,11 +98,27 @@ public abstract class TFCFBodyPlantBlock extends GrowingPlantBodyBlock implement
         }
     }
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 
     protected BlockState updateStateWithCurrentMonth(BlockState state)

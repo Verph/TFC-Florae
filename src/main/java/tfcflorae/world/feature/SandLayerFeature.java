@@ -19,7 +19,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 import net.minecraft.world.level.material.Material;
 
 import net.dries007.tfc.common.blocks.GroundcoverBlock;
-import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.TFCChunkGenerator;
@@ -147,7 +147,7 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
     {
         BlockState state = level.getBlockState(pos);
 
-        return SandLayerBlock.canPlaceSandPileStatic(level, pos, state, sandLayer) || (EnvironmentHelpers.isWorldgenReplaceable(level, pos) || state.getBlock() instanceof GroundcoverBlock || state.getBlock() instanceof MossGrowingBoulderBlock || state.getBlock() instanceof MossSpreadingBoulderBlock || state.getMaterial() == Material.PLANT || state.getMaterial() == Material.REPLACEABLE_PLANT);
+        return SandLayerBlock.canPlaceSandPileStatic(level, pos, state, sandLayer) || (FluidHelpers.isAirOrEmptyFluid(state) || EnvironmentHelpers.isWorldgenReplaceable(level, pos) || state.getBlock() instanceof GroundcoverBlock || state.getBlock() instanceof MossGrowingBoulderBlock || state.getBlock() instanceof MossSpreadingBoulderBlock || state.getMaterial() == Material.PLANT || state.getMaterial() == Material.REPLACEABLE_PLANT);
     }
 
     public boolean isSmallerThanNew(WorldGenLevel level, BlockPos pos, int height)

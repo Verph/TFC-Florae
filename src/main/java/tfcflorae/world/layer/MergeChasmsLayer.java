@@ -48,6 +48,6 @@ public class MergeChasmsLayer implements TransformLayer
 
     public boolean currentBiome(int value)
     {
-        return TFCLayers.isOceanOrMarker(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value) || value == ATOLL || value == NEAR_SHORE || value == SHORE || value == SHORE_DUNES || value == NULL_MARKER || value == LAKE_MARKER;
+        return TFCLayers.isOcean(value) || TFCLayers.isLake(value) || TFCLayers.isRiver(value) || TFCLayers.isLow(value) || value == ATOLL || value == NEAR_SHORE || value == SHORE || value == SHORE_DUNES || value == NULL_MARKER || value == LAKE_MARKER;
     }
 }

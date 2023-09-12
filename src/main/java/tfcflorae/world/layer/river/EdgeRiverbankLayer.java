@@ -39,125 +39,126 @@ public enum EdgeRiverbankLayer implements AdjacentTransformLayer
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
     {
         Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
-        if (center == RIVER_EDGE)
+        if (matcher.test(i -> !isOceanOrMarker(i)))
         {
-            if (matcher.test(i -> i == CALDERAS))
+            if (center == RIVER_EDGE)
             {
-                return CANYON_RIVER;
-            }
-            else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
-            {
-                return ALPINE_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == MOUNTAINS))
-            {
-                return MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
-            {
-                return VOLCANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == OLD_MOUNTAINS))
-            {
-                return OLD_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
-            {
-                return OCEANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
-            {
-                return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == SHORE))
-            {
-                return SHORE;
-            }
-            else if (matcher.test(i -> i == GRAVEL_SHORE))
-            {
-                return GRAVEL_SHORE;
-            }
-            else if (matcher.test(i -> isOcean(i)))
-            {
-                return OCEAN;
-            }
-            else if (matcher.test(i -> i == LOWLANDS))
-            {
-                return LOWLANDS;
-            }
-            else if (matcher.test(i -> i == THERMAL_CANYONS))
-            {
-                return THERMAL_CANYONS;
-            }
-            else if (matcher.test(i -> i == LOW_CANYONS))
-            {
-                return LOW_CANYONS;
-            }
-            else if (matcher.test(i -> i == WETLANDS))
-            {
-                return WETLANDS;
-            }
-            else if (matcher.test(i -> i == MARSHES))
-            {
-                return MARSHES;
-            }
-            else if (matcher.test(i -> i == SWAMPS))
-            {
-                return SWAMPS;
-            }
-            else if (matcher.test(i -> i == LAKE || i == LAKE_SHORE))
-            {
-                return LAKE;
-            }
-            else if (matcher.test(i -> !isRiver(i) && hasRiver(i) && riverFor(i) == RIVER && !isLowlands(i)))
-            {
-                if (matcher.test(i -> i == SHORE || i == NEAR_SHORE || i == GRAVEL_SHORE))
+                if (matcher.test(i -> i == CALDERAS))
                 {
-                    return NEAR_SHORE;
+                    return CANYON_RIVER;
                 }
-                else if (matcher.test(i -> i == SHORE_DUNES))
+                else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
                 {
-                    return SHORE_DUNES;
+                    return ALPINE_MOUNTAIN_RIVER;
                 }
-                return RIVERBANK;
+                else if (matcher.test(i -> i == MOUNTAINS))
+                {
+                    return MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
+                {
+                    return VOLCANIC_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == OLD_MOUNTAINS))
+                {
+                    return OLD_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
+                {
+                    return OCEANIC_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
+                {
+                    return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == SHORE))
+                {
+                    return SHORE;
+                }
+                else if (matcher.test(i -> i == GRAVEL_SHORE))
+                {
+                    return GRAVEL_SHORE;
+                }
+                else if (matcher.test(i -> isOcean(i)))
+                {
+                    return OCEAN;
+                }
+                else if (matcher.test(i -> i == LOWLANDS))
+                {
+                    return LOWLANDS;
+                }
+                else if (matcher.test(i -> i == THERMAL_CANYONS))
+                {
+                    return THERMAL_CANYONS;
+                }
+                else if (matcher.test(i -> i == LOW_CANYONS))
+                {
+                    return LOW_CANYONS;
+                }
+                else if (matcher.test(i -> i == WETLANDS))
+                {
+                    return WETLANDS;
+                }
+                else if (matcher.test(i -> i == MARSHES))
+                {
+                    return MARSHES;
+                }
+                else if (matcher.test(i -> i == SWAMPS))
+                {
+                    return SWAMPS;
+                }
+                else if (matcher.test(i -> i == LAKE || i == LAKE_SHORE))
+                {
+                    return LAKE;
+                }
+                else if (matcher.test(i -> !isRiver(i) && hasRiver(i) && riverFor(i) == RIVER && !isLowlands(i)))
+                {
+                    if (matcher.test(i -> i == SHORE || i == NEAR_SHORE || i == GRAVEL_SHORE))
+                    {
+                        return NEAR_SHORE;
+                    }
+                    else if (matcher.test(i -> i == SHORE_DUNES))
+                    {
+                        return SHORE_DUNES;
+                    }
+                    return RIVERBANK;
+                }
+                else if (matcher.test(i -> i == RIVER))
+                {
+                    return RIVER;
+                }
             }
-            else if (matcher.test(i -> i == RIVER))
+            else if (center == RIVER)
             {
-                return RIVER;
+                if (matcher.test(i -> i == CALDERAS))
+                {
+                    return CANYON_RIVER;
+                }
+                else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
+                {
+                    return ALPINE_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == MOUNTAINS))
+                {
+                    return MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
+                {
+                    return VOLCANIC_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == OLD_MOUNTAINS))
+                {
+                    return OLD_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
+                {
+                    return OCEANIC_MOUNTAIN_RIVER;
+                }
+                else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
+                {
+                    return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
+                }
             }
-            //return RIVER;
-        }
-        else if (center == RIVER)
-        {
-            if (matcher.test(i -> i == CALDERAS))
-            {
-                return CANYON_RIVER;
-            }
-            else if (matcher.test(i -> i == ALPINE_MOUNTAINS))
-            {
-                return ALPINE_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == MOUNTAINS))
-            {
-                return MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_MOUNTAINS))
-            {
-                return VOLCANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == OLD_MOUNTAINS))
-            {
-                return OLD_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == OCEANIC_MOUNTAINS))
-            {
-                return OCEANIC_MOUNTAIN_RIVER;
-            }
-            else if (matcher.test(i -> i == VOLCANIC_OCEANIC_MOUNTAINS))
-            {
-                return VOLCANIC_OCEANIC_MOUNTAIN_RIVER;
-            }
-            //return RIVER;
         }
         return center;
     }

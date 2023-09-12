@@ -7,33 +7,39 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.ForgeHooks;
-
-import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.IForgeBlockExtension;
-import net.dries007.tfc.config.TFCConfig;
-import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.calendar.Calendars;
-import net.dries007.tfc.util.registry.RegistryPlant;
-
-import org.jetbrains.annotations.Nullable;
-
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.NetherVines;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraftforge.common.ForgeHooks;
+
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.IForgeBlockExtension;
+import net.dries007.tfc.common.blocks.plant.PlantBlock;
+import net.dries007.tfc.config.TFCConfig;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.calendar.Calendars;
+import net.dries007.tfc.util.registry.RegistryPlant;
+
+import tfcflorae.util.TFCFHelpers;
+
+import org.jetbrains.annotations.Nullable;
 
 public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements IForgeBlockExtension
 {
     private final Supplier<? extends Block> bodyBlock;
     private final ExtendedProperties properties;
+
+    public boolean canWalkThroughEffortlessly;
 
     public static TFCFTopPlantBlock create(RegistryPlant plant, ExtendedProperties properties, Supplier<? extends Block> bodyBlock, Direction direction, VoxelShape shape)
     {
@@ -81,11 +87,27 @@ public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements
         }
     }
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 
     protected BlockState updateStateWithCurrentMonth(BlockState state)

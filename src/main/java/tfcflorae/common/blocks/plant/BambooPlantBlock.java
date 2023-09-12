@@ -9,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -44,6 +45,8 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
+import tfcflorae.util.TFCFHelpers;
+
 public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLoggable
 {
     protected static final float SMALL_LEAVES_AABB_OFFSET = 3.0F;
@@ -65,6 +68,8 @@ public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLog
 
     private final Supplier<? extends Block> bambooStem;
     private final Supplier<? extends Block> bambooSapling;
+
+    public boolean canWalkThroughEffortlessly;
 
     public static BambooPlantBlock create(RegistryPlant plant, ExtendedProperties properties, Supplier<? extends Block> bambooStem, Supplier<? extends Block> bambooSapling)
     {
@@ -322,11 +327,27 @@ public abstract class BambooPlantBlock extends TFCBushBlock implements IFluidLog
      */
     public abstract RegistryPlant getPlant();
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 
     protected BlockState updateStateWithCurrentMonth(BlockState state)

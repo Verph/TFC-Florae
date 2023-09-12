@@ -10,15 +10,14 @@ import static net.dries007.tfc.world.layer.TFCLayers.*;
 
 public enum AddAtollLayer implements CenterTransformLayer
 {
-    SMALL(1),
-    LARGE(6);
+    SMALL(40),
+    LARGE(160);
 
     private final int chance;
 
     public static TFCLayers staticBiomes = new TFCLayers();
 
     static final int LAGOON_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticLagoonMarker();
-    static final int NEAR_SHORE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticNearShore();
 
     AddAtollLayer(int chance)
     {
@@ -28,44 +27,9 @@ public enum AddAtollLayer implements CenterTransformLayer
     @Override
     public int apply(AreaContext context, int value)
     {
-        //if ((isOceanOrMarker(value) || value != INLAND_MARKER) && !(value == SHORE || value == NEAR_SHORE) && context.random().nextInt(chance) == 0)
-        /*if (isOceanOrMarker(value) && !(value == SHORE || value == NEAR_SHORE) && context.random().nextInt(chance) == 0)
+        if ((value == DEEP_OCEAN || value == OCEAN || value == OCEAN_REEF) && context.random().nextInt(chance) == 0)
         {
             return LAGOON_MARKER;
-        }
-        return value;*/
-
-        if (value == OCEAN_OCEAN_CONVERGING_MARKER)
-        {
-            final int r = context.random().nextInt(15);
-            if (r <= chance)
-            {
-                return LAGOON_MARKER;
-            }
-        }
-        else if (value == OCEAN_OCEAN_DIVERGING_MARKER)
-        {
-            final int r = context.random().nextInt(30);
-            if (r <= chance)
-            {
-                return LAGOON_MARKER;
-            }
-        }
-        else if (value == DEEP_OCEAN)
-        {
-            final int r = context.random().nextInt(50);
-            if (r <= chance)
-            {
-                return LAGOON_MARKER;
-            }
-        }
-        else if (value == OCEAN)
-        {
-            final int r = context.random().nextInt(30);
-            if (r <= chance)
-            {
-                return LAGOON_MARKER;
-            }
         }
         return value;
     }

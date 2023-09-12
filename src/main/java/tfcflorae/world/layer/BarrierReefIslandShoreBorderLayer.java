@@ -9,14 +9,15 @@ import net.dries007.tfc.world.layer.framework.AreaContext;
 
 import tfcflorae.interfaces.TFCLayersMixinInterface;
 
-public enum BarrierReefOceanBorderLayer implements AdjacentTransformLayer
+public enum BarrierReefIslandShoreBorderLayer implements AdjacentTransformLayer
 {
     INSTANCE;
 
     public static TFCLayers staticBiomes = new TFCLayers();
 
+    static final int BARRIER_REEF_SHORE_MARKER = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBarrierReefShoreMarker();
     static final int BARRIER_REEF = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBarrierReef();
-    static final int LAGOON = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticLagoon();
+    static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
 
     @Override
     public int apply(AreaContext context, int north, int east, int south, int west, int center)
@@ -26,7 +27,7 @@ public enum BarrierReefOceanBorderLayer implements AdjacentTransformLayer
         {
             if (matcher.test(i -> i != center))
             {
-                return LAGOON;
+                return BARRIER_REEF_SHORE_MARKER;
             }
         }
         return center;

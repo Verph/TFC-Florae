@@ -30,25 +30,17 @@ public enum OceanEdgeBiomeLayer implements AdjacentTransformLayer
         {
             if (matcher.test(TFCLayers::isMountains))
             {
-                return OLD_MOUNTAINS;
-            }
-            if (matcher.test(i -> i == OLD_MOUNTAINS))
-            {
                 return SHRUBLANDS;
             }
-            if (matcher.test(i -> i == SHRUBLANDS))
-            {
-                return SHORE_DUNES;
-            }
-            if (matcher.test(i -> i == SHORE_DUNES))
+            else if (matcher.test(i -> i == SHRUBLANDS))
             {
                 return GRAVEL_SHORE;
             }
-            if (matcher.test(i -> i == GRAVEL_SHORE))
+            else if (matcher.test(i -> i == GRAVEL_SHORE))
             {
                 return NEAR_SHORE;
             }
-            if (matcher.test(i -> i == NEAR_SHORE))
+            else if (matcher.test(i -> i == NEAR_SHORE))
             {
                 return OCEAN;
             }

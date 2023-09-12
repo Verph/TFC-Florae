@@ -50,29 +50,13 @@ public enum ArchipelagoLayerTFCF implements CenterTransformLayer
             }
             return OCEAN;
         }
-        else if (value == DEEP_OCEAN)
+        else if (value == DEEP_OCEAN || value == PELAGIC_ZONE || value == GUYOTS || value == SEAMOUNTS)
         {
             // Deep Oceans have a chance for a volcanic hotspot
             final int r = context.random().nextInt(250);
             if (r == 0)
             {
                 return VOLCANIC_OCEANIC_MOUNTAINS;
-            }
-            else if (r > 0 && r <= 21)
-            {
-                return PELAGIC_ZONE;
-            }
-        }
-        else if (value == PELAGIC_ZONE)
-        {
-            final int r = context.random().nextInt(250);
-            if (r >= 0 && r <= 10)
-            {
-                return GUYOTS;
-            }
-            else if (r >= 11 && r <= 21)
-            {
-                return SEAMOUNTS;
             }
         }
         else if (value == OCEAN)

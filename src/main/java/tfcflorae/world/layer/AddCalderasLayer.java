@@ -10,7 +10,7 @@ import static net.dries007.tfc.world.layer.TFCLayers.*;
 
 public enum AddCalderasLayer implements CenterTransformLayer
 {
-    SMALL(30),
+    SMALL(16),
     LARGE(80);
 
     private final int chance;

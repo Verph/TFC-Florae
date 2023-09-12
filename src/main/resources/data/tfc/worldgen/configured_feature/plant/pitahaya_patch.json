@@ -2,9 +2,9 @@
   "__comment__": "This file was automatically created by mcresources",
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 32,
-    "xz_spread": 3,
-    "y_spread": 8,
+    "tries": 200,
+    "xz_spread": 10,
+    "y_spread": 16,
     "feature": "tfc:plant/pitahaya"
   }
 }

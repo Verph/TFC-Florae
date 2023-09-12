@@ -111,7 +111,7 @@ public class MergeRiverBanksLayer implements TransformLayer
                 }
             }
         }
-        else if (!isRiver(value) && hasRiver(value) && !hasRiverCave(value) && !isLowlands(value) && !isOcean(value) && !isLake(value) && value != LAKE_SHORE)
+        else if (!isRiver(value) && hasRiver(value) && !hasRiverCave(value) && !isLowlands(value) && !isOcean(value) && !isLake(value) && value != LAKE_SHORE && !isOceanOrMarker(value))
         {
             final float scale = 1f / (1 << 7);
             final float x0 = x * scale, z0 = z * scale;

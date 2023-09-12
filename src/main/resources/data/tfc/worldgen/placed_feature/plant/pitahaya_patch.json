@@ -3,6 +3,21 @@
   "feature": "tfc:plant/pitahaya_patch",
   "placement": [
     {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
       "type": "tfc:climate",
       "min_temperature": 16,
       "max_temperature": 50,
@@ -10,29 +25,6 @@
       "max_rainfall": 500,
       "min_forest": "edge",
       "fuzzy": true
-    },
-    {
-      "type": "minecraft:rarity_filter",
-      "chance": 4
-    },
-    {
-      "type": "minecraft:count",
-      "count": 20
-    },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:height_range",
-      "height": {
-        "type": "uniform",
-        "min_inclusive": {
-          "absolute": 64
-        },
-        "max_inclusive": {
-          "absolute": 128
-        }
-      }
     }
   ]
 }

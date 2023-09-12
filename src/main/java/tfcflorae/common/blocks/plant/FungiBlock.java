@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -34,12 +35,15 @@ import net.dries007.tfc.util.registry.RegistryPlant;
 import tfcflorae.client.particle.TFCFParticles;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
+import tfcflorae.util.TFCFHelpers;
 
 public abstract class FungiBlock extends TFCBushBlock
 {
     public static final IntegerProperty AGE = TFCBlockStateProperties.AGE_3;
     protected static final VoxelShape PLANT_SHAPE = box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
     public final TFCFPlant plantTFCF;
+
+    public boolean canWalkThroughEffortlessly;
 
     public static FungiBlock create(RegistryPlant plant, TFCFPlant plantTFCF, ExtendedProperties properties)
     {
@@ -213,11 +217,27 @@ public abstract class FungiBlock extends TFCBushBlock
         builder.add(AGE);
     }
 
+	@Override
+	public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity)
+    {
+        if (entity != null)
+        {
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            {
+                canWalkThroughEffortlessly = true;
+            }
+            else
+            {
+                canWalkThroughEffortlessly = false;
+            }
+        }
+	}
+
     @Override
     public float getSpeedFactor()
     {
         final float modifier = TFCConfig.SERVER.plantsMovementModifier.get().floatValue(); // 0.0 = full speed factor, 1.0 = no modifier
-        return Helpers.lerp(modifier, speedFactor, 1.0f);
+        return canWalkThroughEffortlessly ? 1.0F : Helpers.lerp(modifier, speedFactor, 1.0f);
     }
 
     protected BlockState updateStateWithCurrentMonth(BlockState state)

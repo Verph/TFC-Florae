@@ -35,7 +35,7 @@ public enum EdgeDunesShoreLayer implements AdjacentTransformLayer
         }
         else if (TFCLayers.isMountains(center))// || center == COASTAL_CLIFFS)
         {
-            if (matcher.test(TFCLayers::isOceanOrMarker))
+            if (matcher.test(TFCLayers::isOcean))
             {
                 return GRAVEL_SHORE;
             }

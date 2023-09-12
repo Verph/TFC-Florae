@@ -1240,7 +1240,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1258,7 +1258,7 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
@@ -1266,8 +1266,8 @@ public final class TFCFBiomeNoise
     public static BiomeNoiseSampler undergroundCavesUpper2(long seed, Noise2D heightNoise)
     {
         final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(4).spread(0.016f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(4).scaled(0, 18).spread(0.02f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 3).octaves(4).scaled(0, 18).spread(0.02f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 4).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
 
         return new BiomeNoiseSampler()
         {
@@ -1276,7 +1276,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1294,7 +1294,7 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
@@ -1302,8 +1302,8 @@ public final class TFCFBiomeNoise
     public static BiomeNoiseSampler undergroundCavesUpper3(long seed, Noise2D heightNoise)
     {
         final Noise2D blobsNoise = new OpenSimplex2D(seed + 3).octaves(4).spread(0.016f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 6).octaves(4).scaled(0, 18).spread(0.02f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 9).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(4).scaled(0, 18).spread(0.02f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 5).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 50, SEA_LEVEL_Y - 20);
 
         return new BiomeNoiseSampler()
         {
@@ -1312,7 +1312,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1330,16 +1330,16 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 20);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
 
     public static BiomeNoiseSampler undergroundCaves(long seed, Noise2D heightNoise)
     {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(4).spread(0.016f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(4).scaled(2, 18).spread(0.02f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 93, SEA_LEVEL_Y - 53);
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 4).octaves(4).spread(0.016f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 5).octaves(4).scaled(2, 18).spread(0.02f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(2).spread(0.01f).scaled(SEA_LEVEL_Y - 93, SEA_LEVEL_Y - 53);
 
         return new BiomeNoiseSampler()
         {
@@ -1348,7 +1348,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.5f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1366,16 +1366,16 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
 
     public static BiomeNoiseSampler undergroundCavesMiddle1(long seed, Noise2D heightNoise)
     {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(4).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(4).scaled(2, 18).spread(0.05f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 5).octaves(4).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 6).octaves(4).scaled(2, 18).spread(0.05f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 7).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
 
         return new BiomeNoiseSampler()
         {
@@ -1384,7 +1384,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1402,16 +1402,16 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
 
     public static BiomeNoiseSampler undergroundCavesMiddle2(long seed, Noise2D heightNoise)
     {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(4).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(4).scaled(2, 18).spread(0.05f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 6).octaves(4).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 7).octaves(4).scaled(2, 18).spread(0.05f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 8).octaves(3).spread(0.08f).scaled(SEA_LEVEL_Y - 183, SEA_LEVEL_Y - 163);
 
         return new BiomeNoiseSampler()
         {
@@ -1420,7 +1420,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1438,87 +1438,15 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 32);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }
 
     public static BiomeNoiseSampler undergroundCavesDeep1(long seed, Noise2D heightNoise)
     {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 1).octaves(5).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 2).octaves(5).scaled(2, 26).spread(0.2f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 3).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
-
-        return new BiomeNoiseSampler()
-        {
-            private float surfaceHeight, center, height;
-
-            @Override
-            public void setColumn(int x, int z)
-            {
-                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
-                float h1 = depthNoise.noise(x, z);
-
-                surfaceHeight = heightNoise.noise(x, z);
-                center = centerNoise.noise(x, z);
-                height = h0 * h1;
-            }
-
-            @Override
-            public double height()
-            {
-                return surfaceHeight;
-            }
-
-            @Override
-            public double noise(int y)
-            {
-                float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
-            }
-        };
-    }
-
-    public static BiomeNoiseSampler undergroundCavesDeep2(long seed, Noise2D heightNoise)
-    {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 2).octaves(5).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 4).octaves(5).scaled(2, 26).spread(0.2f);
-        final Noise2D centerNoise = new OpenSimplex2D(seed + 6).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
-
-        return new BiomeNoiseSampler()
-        {
-            private float surfaceHeight, center, height;
-
-            @Override
-            public void setColumn(int x, int z)
-            {
-                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
-                float h1 = depthNoise.noise(x, z);
-
-                surfaceHeight = heightNoise.noise(x, z);
-                center = centerNoise.noise(x, z);
-                height = h0 * h1;
-            }
-
-            @Override
-            public double height()
-            {
-                return surfaceHeight;
-            }
-
-            @Override
-            public double noise(int y)
-            {
-                float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
-            }
-        };
-    }
-
-    public static BiomeNoiseSampler undergroundCavesDeep3(long seed, Noise2D heightNoise)
-    {
-        final Noise2D blobsNoise = new OpenSimplex2D(seed + 3).octaves(5).spread(0.018f).abs();
-        final Noise2D depthNoise = new OpenSimplex2D(seed + 6).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 7).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 8).octaves(5).scaled(2, 26).spread(0.2f);
         final Noise2D centerNoise = new OpenSimplex2D(seed + 9).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
 
         return new BiomeNoiseSampler()
@@ -1528,7 +1456,7 @@ public final class TFCFBiomeNoise
             @Override
             public void setColumn(int x, int z)
             {
-                float h0 = Mth.clamp((0.3f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 20);
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
                 float h1 = depthNoise.noise(x, z);
 
                 surfaceHeight = heightNoise.noise(x, z);
@@ -1546,7 +1474,79 @@ public final class TFCFBiomeNoise
             public double noise(int y)
             {
                 float delta = Math.abs(center - y);
-                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 64);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesDeep2(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 8).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 9).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 10).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
+            }
+        };
+    }
+
+    public static BiomeNoiseSampler undergroundCavesDeep3(long seed, Noise2D heightNoise)
+    {
+        final Noise2D blobsNoise = new OpenSimplex2D(seed + 9).octaves(5).spread(0.018f).abs();
+        final Noise2D depthNoise = new OpenSimplex2D(seed + 10).octaves(5).scaled(2, 26).spread(0.2f);
+        final Noise2D centerNoise = new OpenSimplex2D(seed + 11).octaves(5).spread(0.25f).scaled(SEA_LEVEL_Y - 273, SEA_LEVEL_Y - 253);
+
+        return new BiomeNoiseSampler()
+        {
+            private float surfaceHeight, center, height;
+
+            @Override
+            public void setColumn(int x, int z)
+            {
+                float h0 = Mth.clamp((0.7f - blobsNoise.noise(x, z)) * (1 / 0.3f), 0, 1);
+                float h1 = depthNoise.noise(x, z);
+
+                surfaceHeight = heightNoise.noise(x, z);
+                center = centerNoise.noise(x, z);
+                height = h0 * h1;
+            }
+
+            @Override
+            public double height()
+            {
+                return surfaceHeight;
+            }
+
+            @Override
+            public double noise(int y)
+            {
+                float delta = Math.abs(center - y);
+                return Mth.clamp(0.4f + 0.05f * (height - delta), 0, 1);
             }
         };
     }

@@ -31,6 +31,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.ITallPlant.Part;
+import net.dries007.tfc.common.blocks.plant.PlantRegrowth;
 import net.dries007.tfc.common.blocks.plant.WaterPlantBlock;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
@@ -244,6 +245,18 @@ public abstract class TFCFSeagrassBlock extends WaterPlantBlock
                 if (getFluidProperty().canContain(fluidState.getType()))
                 {
                     level.setBlockAndUpdate(pos, state.setValue(AGE, j + 1).setValue(PART, state.getValue(PART)).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType())));
+                }
+            }
+        }
+        if (PlantRegrowth.canSpread(level, random))
+        {
+            final BlockPos newPos = PlantRegrowth.spreadSelf(state, level, pos, random, 2, 2, 4);
+            if (newPos != null)
+            {
+                FluidState fluidState = level.getFluidState(newPos);
+                if (getFluidProperty().canContain(fluidState.getType()))
+                {
+                    level.setBlockAndUpdate(newPos, updateStateWithCurrentMonth(state.setValue(AGE, 0).setValue(PART, Part.LOWER).setValue(SINGLE, true).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()))));
                 }
             }
         }
