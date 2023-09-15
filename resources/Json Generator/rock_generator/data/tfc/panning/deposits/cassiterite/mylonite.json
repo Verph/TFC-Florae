@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/mylonite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/mylonite",
+    "tfcflorae:item/pan/half/mylonite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/mylonite"
+}

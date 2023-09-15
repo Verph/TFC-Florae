@@ -1,0 +1,8 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/flower_pot_cross_large_tint_flower",
+  "textures": {
+    "plant": "tfcflorae:block/plant/pieris/japanese_pieris_single_1",
+    "flower": "tfcflorae:block/plant/pieris/japanese_pieris_single_1b"
+  }
+}

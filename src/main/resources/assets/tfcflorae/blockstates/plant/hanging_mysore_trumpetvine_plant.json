@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/mysore_trumpetvine/hanging_mysore_trumpetvine_plant_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/mysore_trumpetvine/hanging_mysore_trumpetvine_plant_1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/gneiss",
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/gneiss",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slab/gneiss"
+  }
+}

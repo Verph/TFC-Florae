@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/black"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/black",
+    "count": 1
+  }
+}

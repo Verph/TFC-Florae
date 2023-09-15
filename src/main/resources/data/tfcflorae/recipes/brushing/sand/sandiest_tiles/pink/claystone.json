@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/pink/claystone",
+  "result": "tfcflorae:sand/sandier_tiles/pink/claystone",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/pink"
+  }
+}

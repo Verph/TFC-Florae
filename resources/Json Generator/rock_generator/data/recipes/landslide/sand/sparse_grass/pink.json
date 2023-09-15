@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/sparse_grass/pink"
+  ],
+  "result": "tfc:sand/pink"
+}

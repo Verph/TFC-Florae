@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/rainbow_eucalyptus",
+    "planks": "tfcflorae:block/wood/planks/rainbow_eucalyptus",
+    "sheet": "tfcflorae:block/wood/sheet/rainbow_eucalyptus"
+  }
+}

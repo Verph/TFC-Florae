@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/glowstone/crystal_geode_start",
+    "tfc:caverns/crystals/glowstone/crystal_growth",
+    "tfc:caverns/crystals/glowstone/buds/crystal_up",
+    "tfc:caverns/crystals/glowstone/buds/crystal_down",
+    "tfc:caverns/crystals/glowstone/buds/crystal_north",
+    "tfc:caverns/crystals/glowstone/buds/crystal_south",
+    "tfc:caverns/crystals/glowstone/buds/crystal_east",
+    "tfc:caverns/crystals/glowstone/buds/crystal_west",
+    "tfc:caverns/crystals/glowstone/mega_geode",
+    "tfc:caverns/crystals/glowstone/mega_geode_extra"
+  ]
+}

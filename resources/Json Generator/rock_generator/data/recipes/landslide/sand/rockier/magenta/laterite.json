@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockier/magenta/laterite"
+  ],
+  "result": "tfcflorae:sand/rockier/magenta/laterite"
+}

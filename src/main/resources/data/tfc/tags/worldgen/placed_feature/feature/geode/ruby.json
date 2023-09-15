@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/ruby/crystal_geode_start",
+    "tfc:caverns/crystals/ruby/crystal_growth",
+    "tfc:caverns/crystals/ruby/buds/crystal_up",
+    "tfc:caverns/crystals/ruby/buds/crystal_down",
+    "tfc:caverns/crystals/ruby/buds/crystal_north",
+    "tfc:caverns/crystals/ruby/buds/crystal_south",
+    "tfc:caverns/crystals/ruby/buds/crystal_east",
+    "tfc:caverns/crystals/ruby/buds/crystal_west",
+    "tfc:caverns/crystals/ruby/mega_geode",
+    "tfc:caverns/crystals/ruby/mega_geode_extra"
+  ]
+}

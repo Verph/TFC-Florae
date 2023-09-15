@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/scythe_blade"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/titanium",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/scythe_blade/titanium"
+  },
+  "break_chance": 1
+}

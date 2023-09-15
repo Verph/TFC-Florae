@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/shale",
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/shale",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slab/shale"
+  }
+}

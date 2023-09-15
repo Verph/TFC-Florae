@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/pink/novaculite",
+  "result": "tfcflorae:rock/stone_tiles/novaculite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/pink"
+  }
+}

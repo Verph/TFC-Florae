@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/red"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/red",
+    "count": 1
+  }
+}

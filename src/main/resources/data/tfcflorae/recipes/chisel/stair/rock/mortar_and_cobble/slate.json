@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/slate",
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/slate",
+  "mode": "stair"
+}

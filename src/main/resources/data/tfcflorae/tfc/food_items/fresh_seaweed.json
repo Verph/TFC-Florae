@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:food/fresh_seaweed"
+  },
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 2.5
+}

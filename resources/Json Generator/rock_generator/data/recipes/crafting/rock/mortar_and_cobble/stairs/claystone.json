@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mortar_and_cobble/claystone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mortar_and_cobble/stairs/claystone",
+    "count": 8
+  }
+}

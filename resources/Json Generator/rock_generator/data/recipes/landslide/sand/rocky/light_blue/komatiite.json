@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rocky/light_blue/komatiite"
+  ],
+  "result": "tfcflorae:sand/rocky/light_blue/komatiite"
+}

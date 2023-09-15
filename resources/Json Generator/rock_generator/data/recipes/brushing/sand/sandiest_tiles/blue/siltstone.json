@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/blue/siltstone",
+  "result": "tfcflorae:sand/sandier_tiles/blue/siltstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/blue"
+  }
+}

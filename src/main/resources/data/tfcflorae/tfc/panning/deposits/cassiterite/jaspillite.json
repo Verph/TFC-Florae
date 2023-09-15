@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/jaspillite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/jaspillite",
+    "tfcflorae:item/pan/half/jaspillite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/jaspillite"
+}

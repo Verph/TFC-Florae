@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/andesite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/wall/andesite",
+    "count": 6
+  }
+}

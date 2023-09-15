@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/laterite"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/laterite",
+  "count": 2
+}

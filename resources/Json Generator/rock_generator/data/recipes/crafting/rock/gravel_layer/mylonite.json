@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/mylonite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/mylonite",
+    "count": 1
+  }
+}

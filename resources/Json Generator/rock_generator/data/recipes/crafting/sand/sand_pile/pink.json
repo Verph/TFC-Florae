@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:sand/pink"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/pink",
+    "count": 8
+  }
+}

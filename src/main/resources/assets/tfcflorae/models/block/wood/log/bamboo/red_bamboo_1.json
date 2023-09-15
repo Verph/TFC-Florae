@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/wood/bamboo_log_noleaf",
+  "textures": {
+    "all": "tfcflorae:block/wood/log/bamboo/red_bamboo_1",
+    "particle": "tfcflorae:block/wood/log/bamboo/red_bamboo_1",
+    "0": "tfcflorae:block/wood/log/bamboo/red_bamboo_1"
+  }
+}

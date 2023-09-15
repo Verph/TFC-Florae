@@ -1,0 +1,7 @@
+{
+  "type": "tfc:if_then",
+  "config": {
+    "if": "tfc:mycelium_disc",
+    "then": "tfc:mycelium_indicator"
+  }
+}

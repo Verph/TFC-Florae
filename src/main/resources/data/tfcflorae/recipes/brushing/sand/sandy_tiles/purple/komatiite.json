@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/purple/komatiite",
+  "result": "tfcflorae:rock/stone_tiles/komatiite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/purple"
+  }
+}

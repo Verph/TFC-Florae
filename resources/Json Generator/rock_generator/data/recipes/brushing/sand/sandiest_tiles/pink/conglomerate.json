@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/pink/conglomerate",
+  "result": "tfcflorae:sand/sandier_tiles/pink/conglomerate",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/pink"
+  }
+}

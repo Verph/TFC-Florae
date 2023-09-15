@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/bamboo",
+  "result": "tfcflorae:wood/slab/bamboo",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/bamboo"
+  }
+}

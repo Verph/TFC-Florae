@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/siltstone",
+  "model_stages": [
+    "tfcflorae:item/pan/full/siltstone",
+    "tfcflorae:item/pan/half/siltstone",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/siltstone"
+}

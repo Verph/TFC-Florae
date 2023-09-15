@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/artists_conk",
+    "tfcflorae:plant/birch_polypore",
+    "tfcflorae:plant/bitter_oyster",
+    "tfcflorae:plant/black_powderpuff",
+    "tfcflorae:plant/boletus",
+    "tfcflorae:plant/bridal_veil_stinkhorn",
+    "tfcflorae:plant/chlorophos_foxfire",
+    "tfcflorae:plant/death_cap",
+    "tfcflorae:plant/dryads_saddle",
+    "tfcflorae:plant/giant_club",
+    "tfcflorae:plant/lions_mane",
+    "tfcflorae:plant/parasol_mushroom",
+    "tfcflorae:plant/porcini",
+    "tfcflorae:plant/shiitake",
+    "tfcflorae:plant/turkey_tail",
+    "tfcflorae:plant/weeping_milk_cap"
+  ]
+}

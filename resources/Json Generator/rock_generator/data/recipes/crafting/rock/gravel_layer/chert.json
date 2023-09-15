@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/chert"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/chert",
+    "count": 1
+  }
+}

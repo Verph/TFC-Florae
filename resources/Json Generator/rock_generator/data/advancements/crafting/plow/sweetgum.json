@@ -1,0 +1,31 @@
+{
+  "rewards": {
+    "recipes": [
+      "astikorcarts:crafting/plow/sweetgum"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "astikorcarts:crafting/plow/sweetgum"
+      }
+    },
+    "has_wheel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "astikorcarts:wheel/sweetgum"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wheel"
+    ]
+  ]
+}

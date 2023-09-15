@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/quartzite"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/wall/quartzite",
+  "count": 1
+}

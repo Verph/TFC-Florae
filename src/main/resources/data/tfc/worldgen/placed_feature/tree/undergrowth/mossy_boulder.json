@@ -1,0 +1,36 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:tree/undergrowth/mossy_boulder",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 35,
+      "noise_factor": 100,
+      "noise_offset": 0.01
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "tfc:climate",
+      "max_forest": "normal",
+	  "min_rainfall": 220,
+	  "max_rainfall": 310,
+	  "min_temperature": 4,
+	  "max_temperature": 10,
+      "fuzzy": true
+    },
+    {
+      "type": "tfc:flat_enough",
+      "flatness": 0.2
+    }
+  ]
+}

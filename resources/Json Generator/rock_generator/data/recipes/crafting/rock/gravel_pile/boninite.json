@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/boninite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/boninite",
+    "count": 8
+  }
+}

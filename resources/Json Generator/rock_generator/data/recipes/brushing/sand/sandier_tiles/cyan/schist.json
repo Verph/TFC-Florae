@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/cyan/schist",
+  "result": "tfcflorae:sand/sandy_tiles/cyan/schist",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/cyan"
+  }
+}

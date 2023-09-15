@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/blaimorite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blaimorite",
+    "tfcflorae:item/pan/half/blaimorite",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/blaimorite"
+}

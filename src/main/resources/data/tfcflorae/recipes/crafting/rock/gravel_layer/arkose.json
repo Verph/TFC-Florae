@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/arkose"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/arkose",
+    "count": 1
+  }
+}

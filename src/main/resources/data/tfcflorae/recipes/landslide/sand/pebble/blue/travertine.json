@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/pebble/blue/travertine"
+  ],
+  "result": "tfcflorae:sand/pebble/blue/travertine"
+}

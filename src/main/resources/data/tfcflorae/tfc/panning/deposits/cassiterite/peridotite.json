@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/peridotite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/peridotite",
+    "tfcflorae:item/pan/half/peridotite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/peridotite"
+}

@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/amanita",
+    "tfcflorae:plant/black_powderpuff",
+    "tfcflorae:plant/boletus",
+    "tfcflorae:plant/bridal_veil_stinkhorn",
+    "tfcflorae:plant/chanterelle",
+    "tfcflorae:plant/chlorophos_foxfire",
+    "tfcflorae:plant/death_cap",
+    "tfcflorae:plant/devils_fingers",
+    "tfcflorae:plant/entoloma",
+    "tfcflorae:plant/giant_club",
+    "tfcflorae:plant/indigo_milk_cap",
+    "tfcflorae:plant/parasol_mushroom",
+    "tfcflorae:plant/porcini",
+    "tfcflorae:plant/shiitake",
+    "tfcflorae:plant/stinkhorn",
+    "tfcflorae:plant/weeping_milk_cap",
+    "tfcflorae:plant/wood_blewit",
+    "tfcflorae:plant/woolly_gomphus"
+  ]
+}

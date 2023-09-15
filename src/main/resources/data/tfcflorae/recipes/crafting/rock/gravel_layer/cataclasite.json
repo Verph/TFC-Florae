@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/cataclasite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/cataclasite",
+    "count": 1
+  }
+}

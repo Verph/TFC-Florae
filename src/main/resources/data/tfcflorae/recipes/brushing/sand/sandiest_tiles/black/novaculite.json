@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/novaculite",
+  "result": "tfcflorae:sand/sandier_tiles/black/novaculite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/black"
+  }
+}

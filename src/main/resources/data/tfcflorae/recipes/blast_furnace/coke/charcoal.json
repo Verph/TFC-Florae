@@ -1,0 +1,14 @@
+{
+  "type": "tfc:blast_furnace",
+  "fluid": {
+    "ingredient": "tfcflorae:ore/charcoal",
+    "amount": 1
+  },
+  "result": {
+    "fluid": "tfcflorae:ore/coke",
+    "amount": 1
+  },
+  "catalyst": {
+    "tag": "tfcflorae:empty"
+  }
+}

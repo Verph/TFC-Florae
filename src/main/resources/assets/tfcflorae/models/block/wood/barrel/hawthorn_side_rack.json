@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/hawthorn",
+    "planks": "tfcflorae:block/wood/planks/hawthorn",
+    "sheet": "tfcflorae:block/wood/sheet/hawthorn"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/bamboo",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/bamboo",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/0/bamboo",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/bamboo",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/bamboo",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/bamboo",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/bamboo"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/pear",
+    "planks": "tfcflorae:block/wood/planks/pear",
+    "sheet": "tfcflorae:block/wood/sheet/pear"
+  }
+}

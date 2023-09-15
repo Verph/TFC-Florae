@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/pink_ipe"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/pink_ipe"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:plow/pink_ipe"
+  }
+}

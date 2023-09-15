@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/javelin_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/cobalt",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/javelin_head/cobalt"
+  },
+  "break_chance": 1
+}

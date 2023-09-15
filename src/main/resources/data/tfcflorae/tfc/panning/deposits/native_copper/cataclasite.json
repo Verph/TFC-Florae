@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/cataclasite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/cataclasite",
+    "tfcflorae:item/pan/half/cataclasite",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/cataclasite"
+}

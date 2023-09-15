@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/axe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/refined_glowstone",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/axe_head/refined_glowstone"
+  },
+  "break_chance": 1
+}

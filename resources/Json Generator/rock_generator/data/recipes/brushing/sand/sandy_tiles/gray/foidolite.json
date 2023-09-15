@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/gray/foidolite",
+  "result": "tfcflorae:rock/stone_tiles/foidolite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/gray"
+  }
+}

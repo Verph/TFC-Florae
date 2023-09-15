@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/foidolite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/foidolite",
+    "count": 1
+  }
+}

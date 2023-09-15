@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand/cyan"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/cyan",
+    "count": 8
+  }
+}

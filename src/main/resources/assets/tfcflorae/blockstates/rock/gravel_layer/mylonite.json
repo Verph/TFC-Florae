@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/mylonite"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/mylonite"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/mylonite"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/mylonite"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/mylonite"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/mylonite"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/mylonite"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/mylonite"
+    }
+  }
+}

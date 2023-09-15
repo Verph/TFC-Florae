@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/catlinite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/catlinite",
+    "count": 1
+  }
+}

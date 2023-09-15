@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/travertine",
+  "result": "tfcflorae:sand/sandier_tiles/black/travertine",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/black"
+  }
+}

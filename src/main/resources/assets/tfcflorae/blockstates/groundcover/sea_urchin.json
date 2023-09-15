@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/groundcover/sea_urchin",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/groundcover/sea_urchin"
+      },
+      {
+        "model": "tfcflorae:block/groundcover/sea_urchin",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/groundcover/sea_urchin",
+        "y": 270
+      }
+    ]
+  }
+}

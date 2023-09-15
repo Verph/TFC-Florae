@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/soapstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/soapstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "feature": "tfc:bee_nest_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 10,
+      "noise_factor": 40,
+      "noise_offset": 0.1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 68
+        },
+        "max_inclusive": {
+          "absolute": 110
+        }
+      }
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -6,
+      "min_rainfall": 120,
+      "min_forest": "sparse",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": "minecraft:air"
+        }
+      }
+    }
+  ]
+}

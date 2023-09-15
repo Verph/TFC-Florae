@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/amethyst/crystal_geode_start",
+    "tfc:caverns/crystals/amethyst/crystal_growth",
+    "tfc:caverns/crystals/amethyst/buds/crystal_up",
+    "tfc:caverns/crystals/amethyst/buds/crystal_down",
+    "tfc:caverns/crystals/amethyst/buds/crystal_north",
+    "tfc:caverns/crystals/amethyst/buds/crystal_south",
+    "tfc:caverns/crystals/amethyst/buds/crystal_east",
+    "tfc:caverns/crystals/amethyst/buds/crystal_west",
+    "tfc:caverns/crystals/amethyst/mega_geode",
+    "tfc:caverns/crystals/amethyst/mega_geode_extra"
+  ]
+}

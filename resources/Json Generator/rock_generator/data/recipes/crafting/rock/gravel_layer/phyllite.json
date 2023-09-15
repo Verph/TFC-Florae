@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/phyllite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/phyllite",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/komatiite",
+    "particle": "tfcflorae:block/rock/raw/komatiite",
+    "overlay": "tfc_metallum:block/ore/poor_monazite"
+  }
+}

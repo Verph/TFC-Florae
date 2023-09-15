@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/snow_gum_eucalyptus"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/snow_gum_eucalyptus"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:plow/snow_gum_eucalyptus"
+  }
+}

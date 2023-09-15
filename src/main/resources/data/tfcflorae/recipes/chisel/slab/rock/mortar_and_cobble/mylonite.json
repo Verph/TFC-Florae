@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/mylonite",
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/mylonite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slab/mylonite"
+  }
+}

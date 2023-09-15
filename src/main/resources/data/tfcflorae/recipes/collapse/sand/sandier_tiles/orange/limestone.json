@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/sandier_tiles/orange/limestone"
+  ],
+  "result": "tfcflorae:sand/sandier_tiles/orange/limestone"
+}

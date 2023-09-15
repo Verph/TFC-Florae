@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/emerald/crystal_geode_start",
+    "tfc:caverns/crystals/emerald/crystal_growth",
+    "tfc:caverns/crystals/emerald/buds/crystal_up",
+    "tfc:caverns/crystals/emerald/buds/crystal_down",
+    "tfc:caverns/crystals/emerald/buds/crystal_north",
+    "tfc:caverns/crystals/emerald/buds/crystal_south",
+    "tfc:caverns/crystals/emerald/buds/crystal_east",
+    "tfc:caverns/crystals/emerald/buds/crystal_west",
+    "tfc:caverns/crystals/emerald/mega_geode",
+    "tfc:caverns/crystals/emerald/mega_geode_extra"
+  ]
+}

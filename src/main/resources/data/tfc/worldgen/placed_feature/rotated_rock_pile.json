@@ -1,0 +1,35 @@
+{
+  "feature": "tfc:rotated_rock_pile",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 255
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive":
+		{
+          "absolute": -250
+        },
+        "max_inclusive":
+		{
+          "absolute": 128
+        }
+      }
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 20,
+      "noise_factor": 80,
+      "noise_offset": 0.01
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

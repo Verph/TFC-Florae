@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/peridotite",
+  "result": "tfcflorae:sand/sandier_tiles/black/peridotite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/black"
+  }
+}

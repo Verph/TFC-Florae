@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfc:plant/morning_glory_cave_patch",
+	"tfc:plant/spore_blossom",
+	"tfc:plant/hanging_vines",
+	"tfc:plant/hanging_vines_cave",
+	"tfc:plant/spanish_moss",
+	"tfc:plant/ivy",
+	"tfc:plant/jungle_vines",
+	"tfc:plant/liana"
+  ]
+}

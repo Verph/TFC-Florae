@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/locust"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/locust"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/locust"
+  }
+}

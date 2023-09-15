@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/wood/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",
+    "planks": "tfcflorae:block/wood/planks/snow_gum_eucalyptus",
+    "sheet": "tfcflorae:block/wood/sheet/snow_gum_eucalyptus",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

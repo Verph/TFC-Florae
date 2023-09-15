@@ -1,0 +1,5 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": "tfc:rock/cobble/granite_wall",
+  "result": "tfc:rock/cobble/granite_wall"
+}

@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/greenschist",
+  "model_stages": [
+    "tfcflorae:item/pan/full/greenschist",
+    "tfcflorae:item/pan/half/greenschist",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold/greenschist"
+}

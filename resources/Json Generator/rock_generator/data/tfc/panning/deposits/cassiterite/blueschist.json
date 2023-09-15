@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/blueschist",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blueschist",
+    "tfcflorae:item/pan/half/blueschist",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/blueschist"
+}

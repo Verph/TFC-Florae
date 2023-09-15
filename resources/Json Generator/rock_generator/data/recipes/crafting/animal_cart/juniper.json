@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/juniper"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/juniper"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/juniper"
+  }
+}

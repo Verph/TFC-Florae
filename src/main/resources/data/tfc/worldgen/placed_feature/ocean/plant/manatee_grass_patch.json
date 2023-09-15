@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/manatee_grass_patch",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 30,
+      "noise_factor": 50.0,
+      "noise_offset": 0.01
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 12,
+      "max_temperature": 40,
+      "min_rainfall": 250,
+      "max_rainfall": 500
+    }
+  ]
+}

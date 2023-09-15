@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/orange"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand/orange",
+    "count": 1
+  }
+}

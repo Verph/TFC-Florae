@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/stone_tiles/gneiss"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/stone_tiles/stairs/gneiss",
+    "count": 8
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/light_green/arkose",
+  "result": "tfcflorae:rock/stone_tiles/arkose",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/light_green"
+  }
+}

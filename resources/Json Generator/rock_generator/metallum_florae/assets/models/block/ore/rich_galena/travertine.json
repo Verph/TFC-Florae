@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/travertine",
+    "particle": "tfcflorae:block/rock/raw/travertine",
+    "overlay": "tfc_metallum:block/ore/rich_galena"
+  }
+}

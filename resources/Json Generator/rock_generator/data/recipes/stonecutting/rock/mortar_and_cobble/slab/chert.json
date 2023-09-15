@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/chert"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/chert",
+  "count": 2
+}

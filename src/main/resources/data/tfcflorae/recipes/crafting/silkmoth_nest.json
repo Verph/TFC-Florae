@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "MXM",
+    " X "
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "M": {
+      "item": "tfcflorae:wood/leaf/mulberry"
+    },
+    "X": {
+      "tag": "tfc:wattle_sticks"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:devices/silkmoth_nest",
+    "count": 1
+  }
+}

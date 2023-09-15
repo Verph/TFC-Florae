@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/conglomerate"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/conglomerate"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/conglomerate"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/conglomerate"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/conglomerate"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/conglomerate"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/conglomerate"
+    },
+    "layers=8": {
+      "model": "tfc:block/rock/gravel/conglomerate"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/claystone"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/claystone",
+  "count": 1
+}

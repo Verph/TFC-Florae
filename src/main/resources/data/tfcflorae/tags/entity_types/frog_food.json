@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:slime",
+    "minecraft:magma_cube",
+    {
+      "id": "betteranimalsplus:butterfly",
+      "required": false
+    },
+    {
+      "id": "betteranimalsplus:dragonfly",
+      "required": false
+    },
+    {
+      "id": "naturalist:butterfly",
+      "required": false
+    },
+    {
+      "id": "naturalist:firefly",
+      "required": false
+    },
+    {
+      "id": "alexamobs:fly",
+      "required": false
+    }
+  ]
+}

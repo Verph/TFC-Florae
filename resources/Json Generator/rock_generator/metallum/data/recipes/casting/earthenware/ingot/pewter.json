@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/ingot"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/pewter",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/ingot/pewter"
+  },
+  "break_chance": 0.1
+}

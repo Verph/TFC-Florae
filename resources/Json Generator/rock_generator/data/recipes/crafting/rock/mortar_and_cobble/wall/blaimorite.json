@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mortar_and_cobble/blaimorite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mortar_and_cobble/wall/blaimorite",
+    "count": 6
+  }
+}

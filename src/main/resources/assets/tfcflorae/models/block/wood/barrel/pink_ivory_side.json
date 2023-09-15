@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/pink_ivory",
+    "planks": "tfcflorae:block/wood/planks/pink_ivory",
+    "sheet": "tfcflorae:block/wood/sheet/pink_ivory"
+  }
+}

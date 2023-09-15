@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/komatiite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/komatiite",
+    "count": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/arkose"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/arkose"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/arkose"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/arkose"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/arkose"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/arkose"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/arkose"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/arkose"
+    }
+  }
+}

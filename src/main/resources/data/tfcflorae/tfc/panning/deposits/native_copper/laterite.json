@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/laterite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/laterite",
+    "tfcflorae:item/pan/half/laterite",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/laterite"
+}

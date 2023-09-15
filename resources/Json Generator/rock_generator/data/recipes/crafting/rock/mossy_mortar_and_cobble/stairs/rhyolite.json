@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mossy_mortar_and_cobble/rhyolite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/rhyolite",
+    "count": 8
+  }
+}

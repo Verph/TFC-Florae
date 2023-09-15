@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:dirt/humus",
+    "tfcflorae:grass/humus",
+    "tfcflorae:rooted_dirt/humus",
+    "tfcflorae:dry_grass/humus",
+    "tfcflorae:sparse_grass/humus",
+    "tfcflorae:dense_grass/humus",
+    "tfcflorae:podzol/humus",
+    "tfcflorae:mycelium_dirt/humus"
+  ]
+}

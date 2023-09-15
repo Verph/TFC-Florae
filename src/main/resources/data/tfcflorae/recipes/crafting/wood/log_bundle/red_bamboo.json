@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/red_bamboo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_bundle/red_bamboo",
+    "count": 3
+  }
+}

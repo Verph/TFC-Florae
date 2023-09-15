@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobble/blaimorite",
+    "top": "tfcflorae:block/rock/cobble/blaimorite",
+    "side": "tfcflorae:block/rock/cobble/blaimorite"
+  }
+}

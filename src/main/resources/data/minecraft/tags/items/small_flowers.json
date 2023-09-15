@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/bluebell",
+    "tfcflorae:plant/bonatea",
+    "tfcflorae:plant/camas",
+    "tfcflorae:plant/chives",
+    "tfcflorae:plant/clover",
+    "tfcflorae:plant/creeping_charlie",
+    "tfcflorae:plant/daffodil",
+    "tfcflorae:plant/egyptian_autumn_crocus",
+    "tfcflorae:plant/european_bedstraw",
+    "tfcflorae:plant/freesia",
+    "tfcflorae:plant/pink_heather",
+    "tfcflorae:plant/white_heather",
+    "tfcflorae:plant/jack_in_the_pulpit",
+    "tfcflorae:plant/orchid",
+    "tfcflorae:plant/blue_lupine",
+    "tfcflorae:plant/purple_lupine",
+    "tfcflorae:plant/red_lupine",
+    "tfcflorae:plant/yellow_lupine",
+    "tfcflorae:plant/narbon_vetch",
+    "tfcflorae:plant/periwinkle",
+    "tfcflorae:plant/water_hyacinth",
+    "tfcflorae:plant/wood_bitter_vetch",
+    "tfcflorae:plant/yarrow",
+    "tfcflorae:plant/thistle",
+    "tfcflorae:plant/albanian_spurge"
+  ]
+}

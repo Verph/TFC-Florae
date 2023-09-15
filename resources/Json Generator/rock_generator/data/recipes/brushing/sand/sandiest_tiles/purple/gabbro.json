@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/purple/gabbro",
+  "result": "tfcflorae:sand/sandier_tiles/purple/gabbro",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/purple"
+  }
+}

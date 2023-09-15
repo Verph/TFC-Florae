@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/saw_blade"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/invar",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/saw_blade/invar"
+  },
+  "break_chance": 1
+}

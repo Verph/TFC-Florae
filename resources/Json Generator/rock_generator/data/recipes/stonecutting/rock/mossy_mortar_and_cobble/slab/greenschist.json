@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/greenschist"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/slab/greenschist",
+  "count": 2
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/sweetgum",
+    "planks": "tfcflorae:block/wood/planks/sweetgum",
+    "sheet": "tfcflorae:block/wood/sheet/sweetgum"
+  }
+}

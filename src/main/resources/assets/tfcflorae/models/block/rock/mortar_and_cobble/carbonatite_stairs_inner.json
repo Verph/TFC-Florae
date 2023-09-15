@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobble/carbonatite",
+    "top": "tfcflorae:block/rock/cobble/carbonatite",
+    "side": "tfcflorae:block/rock/cobble/carbonatite"
+  }
+}

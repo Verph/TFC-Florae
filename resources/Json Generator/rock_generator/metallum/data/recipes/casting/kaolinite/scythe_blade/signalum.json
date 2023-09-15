@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/scythe_blade"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/signalum",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/scythe_blade/signalum"
+  },
+  "break_chance": 1
+}

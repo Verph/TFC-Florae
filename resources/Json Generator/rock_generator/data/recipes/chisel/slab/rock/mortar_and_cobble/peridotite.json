@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/peridotite",
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/peridotite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slab/peridotite"
+  }
+}

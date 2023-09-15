@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/porphyry",
+  "model_stages": [
+    "tfcflorae:item/pan/full/porphyry",
+    "tfcflorae:item/pan/half/porphyry",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/porphyry"
+}

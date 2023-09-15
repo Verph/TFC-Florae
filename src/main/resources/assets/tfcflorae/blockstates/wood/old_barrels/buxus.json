@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/buxus"
+    },
+    "sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/buxus"
+    }
+  }
+}

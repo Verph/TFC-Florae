@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/catlinite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/catlinite",
+    "tfcflorae:item/pan/half/catlinite",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/catlinite"
+}

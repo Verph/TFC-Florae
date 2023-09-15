@@ -1,0 +1,7 @@
+{
+  "type": "tfc:multiple",
+  "config": {
+    "features": "#tfc:feature/mycelium_indicators",
+    "biome_check": false
+  }
+}

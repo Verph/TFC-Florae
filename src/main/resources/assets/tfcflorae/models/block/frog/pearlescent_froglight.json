@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tfcflorae:block/frog/pearlescent_froglight_top",
+    "side": "tfcflorae:block/frog/pearlescent_froglight_side"
+  }
+}

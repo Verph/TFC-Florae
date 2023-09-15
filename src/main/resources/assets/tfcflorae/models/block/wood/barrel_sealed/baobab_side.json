@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/baobab",
+    "planks": "tfcflorae:block/wood/planks/baobab",
+    "sheet": "tfcflorae:block/wood/sheet/baobab"
+  }
+}

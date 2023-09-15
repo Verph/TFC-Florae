@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:tree/bamboo/bamboo",
+    "tfc:tree/bamboo/blue_bamboo",
+    "tfc:tree/bamboo/dragon_bamboo",
+    "tfc:tree/bamboo/golden_bamboo",
+    "tfc:tree/bamboo/red_bamboo",
+    "tfc:tree/bamboo/small/bamboo",
+    "tfc:tree/bamboo/small/blue_bamboo",
+    "tfc:tree/bamboo/small/dragon_bamboo",
+    "tfc:tree/bamboo/small/golden_bamboo",
+    "tfc:tree/bamboo/small/red_bamboo",
+    "tfc:tree/bamboo/bamboo_forest_surface"
+  ]
+}

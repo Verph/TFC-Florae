@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "c": {
+      "tag": "forge:chests/wooden"
+    },
+    "p": {
+      "item": "tfc:wood/lumber/oak"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/oak"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:supply_cart/oak"
+  }
+}

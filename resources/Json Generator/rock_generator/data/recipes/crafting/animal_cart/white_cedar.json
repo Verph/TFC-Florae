@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfc:wood/lumber/white_cedar"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/white_cedar"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/white_cedar"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/dacite",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/dacite",
+  "mode": "stair"
+}

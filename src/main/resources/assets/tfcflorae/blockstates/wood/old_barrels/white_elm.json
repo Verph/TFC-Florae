@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sealed=true": {
+      "model": "tfcflorae:block/wood/barrel_sealed/white_elm"
+    },
+    "sealed=false": {
+      "model": "tfcflorae:block/wood/barrel/white_elm"
+    }
+  }
+}

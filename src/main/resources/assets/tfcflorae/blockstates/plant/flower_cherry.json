@@ -1,0 +1,220 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0",
+        "age": "0|1|2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_1",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_1",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_1",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "1|2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_2",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_2",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_2",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_3",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_3",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_3",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "0",
+        "age": "3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_4",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_4",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_4",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_dead_4",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "0|1|2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_1",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_1",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_1",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "1|2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_2",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_2",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_2",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "2|3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_3",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_3",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_3",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_3",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    },
+    {
+      "when": {
+        "stage": "1",
+        "age": "3"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_4",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_4",
+		  "weight": 1,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_4",
+		  "weight": 1,
+		  "y": 180
+		},
+		{
+          "model": "tfcflorae:block/plant/flower_cherry/pink_petals_4",
+		  "weight": 1,
+		  "y": 270
+		}
+	  ]
+    }
+  ]
+}

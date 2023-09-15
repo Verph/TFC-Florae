@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed",
+    "particle": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed"
+  }
+}

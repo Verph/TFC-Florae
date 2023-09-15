@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/blaimorite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blaimorite",
+    "tfcflorae:item/pan/half/blaimorite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/blaimorite"
+}

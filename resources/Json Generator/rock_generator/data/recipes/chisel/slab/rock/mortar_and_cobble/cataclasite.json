@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/cataclasite",
+  "result": "tfcflorae:rock/mortar_and_cobble/slab/cataclasite",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slab/cataclasite"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/marble"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/marble",
+    "count": 8
+  }
+}

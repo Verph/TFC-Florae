@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/shale"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/shale",
+    "count": 1
+  }
+}

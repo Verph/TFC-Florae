@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/rock/geyser/down_base",
+  "textures": {
+    "side": "tfcflorae:block/rock/geyser_side/marble",
+    "top": "tfcflorae:block/rock/geyser_top/marble",
+    "bottom": "tfcflorae:block/rock/geyser_bottom/marble",
+    "particle": "tfcflorae:block/rock/geyser_side/marble"
+  }
+}

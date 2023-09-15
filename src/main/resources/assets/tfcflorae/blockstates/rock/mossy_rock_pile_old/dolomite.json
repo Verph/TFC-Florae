@@ -1,0 +1,411 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_none"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_none",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_none",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_none",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_nse"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_nse",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_nse",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_2_nse",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_n"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_n",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_n",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_n",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_none"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_none",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_none",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_3_none",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_4"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_4",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_4",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_4",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_none"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_none",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_none",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_none",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_nse"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_nse",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_nse",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_5_nse",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_n"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_n",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_n",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_n",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_nse"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_nse",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_nse",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_6_nse",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_n"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_n",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_n",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_n",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_none"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_none",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_none",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_none",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ns"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ns",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ns",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_ns",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_nse"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_nse",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_nse",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_7_nse",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_n"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_n",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_n",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_n",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_ne"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_ne",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_ne",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_ne",
+        "y": 270
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_none"
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_none",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_none",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/rock/mossy_rock_pile/dolomite/rock_8_none",
+        "y": 270
+      }
+    ]
+  }
+}

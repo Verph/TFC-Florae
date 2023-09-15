@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/cobble/mudstone",
+    "top": "tfcflorae:block/rock/cobble/mudstone",
+    "side": "tfcflorae:block/rock/cobble/mudstone"
+  }
+}

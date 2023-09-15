@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/chisel_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/beryllium_copper",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/chisel_head/beryllium_copper"
+  },
+  "break_chance": 1
+}

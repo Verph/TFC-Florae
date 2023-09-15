@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/alder",
+    "planks": "tfcflorae:block/wood/planks/alder",
+    "sheet": "tfcflorae:block/wood/sheet/alder"
+  }
+}

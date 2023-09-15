@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/red_cedar",
+    "planks": "tfcflorae:block/wood/planks/red_cedar",
+    "sheet": "tfcflorae:block/wood/sheet/red_cedar"
+  }
+}

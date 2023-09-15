@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/greenschist",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/greenschist",
+  "mode": "stair"
+}

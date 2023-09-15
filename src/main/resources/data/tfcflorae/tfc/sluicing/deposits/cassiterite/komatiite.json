@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/komatiite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/komatiite"
+}

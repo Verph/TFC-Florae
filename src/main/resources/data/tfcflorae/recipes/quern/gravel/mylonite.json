@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/mylonite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/mylonite",
+    "count": 1
+  }
+}

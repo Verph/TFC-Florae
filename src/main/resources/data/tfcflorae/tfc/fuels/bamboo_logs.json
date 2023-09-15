@@ -1,0 +1,37 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/log/blue_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/log/dragon_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/log/golden_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/log/red_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/blue_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/dragon_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/golden_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/red_bamboo"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 669
+}

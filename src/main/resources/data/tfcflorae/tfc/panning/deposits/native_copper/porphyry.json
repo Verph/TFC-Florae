@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/porphyry",
+  "model_stages": [
+    "tfcflorae:item/pan/full/porphyry",
+    "tfcflorae:item/pan/half/porphyry",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/porphyry"
+}

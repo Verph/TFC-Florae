@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/sandy_tiles/light_gray/claystone"
+  ],
+  "result": "tfcflorae:sand/sandy_tiles/light_gray/claystone"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/wood/barrel_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/juniper",
+    "planks": "tfcflorae:block/wood/planks/juniper",
+    "sheet": "tfcflorae:block/wood/sheet/juniper",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

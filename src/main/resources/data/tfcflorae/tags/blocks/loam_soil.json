@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:dirt/loam",
+    "tfc:grass/loam",
+    "tfc:rooted_dirt/loam",
+    "tfcflorae:dry_grass/loam",
+    "tfcflorae:sparse_grass/loam",
+    "tfcflorae:dense_grass/loam",
+    "tfcflorae:podzol/loam",
+    "tfcflorae:mycelium_dirt/loam"
+  ]
+}

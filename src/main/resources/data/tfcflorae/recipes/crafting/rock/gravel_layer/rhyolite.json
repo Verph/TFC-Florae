@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/rhyolite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/rhyolite",
+    "count": 1
+  }
+}

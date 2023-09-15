@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/jaspillite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/jaspillite",
+    "tfcflorae:item/pan/half/jaspillite",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold/jaspillite"
+}

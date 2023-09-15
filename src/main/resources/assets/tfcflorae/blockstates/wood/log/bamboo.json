@@ -1,0 +1,55 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo_leaves",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo_leaves",
+		  "weight": 1,
+		  "x": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/bamboo_leaves",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		}
+      ]
+    }
+  ]
+}

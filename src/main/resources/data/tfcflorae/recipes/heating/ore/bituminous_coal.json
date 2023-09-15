@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfc:ore/bituminous_coal"
+  },
+  "result_fluid": {
+    "fluid": "tfcflorae:ore/bituminous_coal",
+    "amount": 1
+  },
+  "temperature": 1100
+}

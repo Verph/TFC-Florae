@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/mudstone",
+  "result": "tfcflorae:sand/sandier_tiles/white/mudstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/white"
+  }
+}

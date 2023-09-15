@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:plant/amanita_patch",
+    "tfc:plant/black_powderpuff_patch",
+    "tfc:plant/boletus_patch",
+    "tfc:plant/bridal_veil_stinkhorn_patch",
+    "tfc:plant/chanterelle_patch",
+    "tfc:plant/chlorophos_foxfire_patch",
+    "tfc:plant/death_cap_patch",
+    "tfc:plant/devils_fingers_patch",
+    "tfc:plant/entoloma_patch",
+    "tfc:plant/giant_club_patch",
+    "tfc:plant/indigo_milk_cap_patch",
+    "tfc:plant/parasol_mushroom_patch",
+    "tfc:plant/porcini_patch",
+    "tfc:plant/shiitake_patch",
+    "tfc:plant/stinkhorn_patch",
+    "tfc:plant/weeping_milk_cap_patch",
+    "tfc:plant/wood_blewit_patch",
+    "tfc:plant/woolly_gomphus_patch"
+  ]
+}

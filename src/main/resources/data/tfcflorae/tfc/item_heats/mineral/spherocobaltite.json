@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:mineral/spherocobaltite"
+  },
+  "heat_capacity": 1.143,
+  "forging_temperature": 900,
+  "welding_temperature": 1200
+}

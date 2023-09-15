@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/sapphire/crystal_geode_start",
+    "tfc:caverns/crystals/sapphire/crystal_growth",
+    "tfc:caverns/crystals/sapphire/buds/crystal_up",
+    "tfc:caverns/crystals/sapphire/buds/crystal_down",
+    "tfc:caverns/crystals/sapphire/buds/crystal_north",
+    "tfc:caverns/crystals/sapphire/buds/crystal_south",
+    "tfc:caverns/crystals/sapphire/buds/crystal_east",
+    "tfc:caverns/crystals/sapphire/buds/crystal_west",
+    "tfc:caverns/crystals/sapphire/mega_geode",
+    "tfc:caverns/crystals/sapphire/mega_geode_extra"
+  ]
+}

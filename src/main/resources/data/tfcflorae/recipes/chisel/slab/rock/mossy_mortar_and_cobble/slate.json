@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/slate",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/slab/slate",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/slab/slate"
+  }
+}

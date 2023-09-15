@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/novaculite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/novaculite",
+    "tfcflorae:item/pan/half/novaculite",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/novaculite"
+}

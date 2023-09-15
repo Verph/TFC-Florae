@@ -1,0 +1,22 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/pieris_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 6,
+      "max_temperature": 25,
+      "min_rainfall": 220,
+      "max_rainfall": 480,
+      "min_forest": "sparse",
+      "fuzzy": true
+    }
+  ]
+}

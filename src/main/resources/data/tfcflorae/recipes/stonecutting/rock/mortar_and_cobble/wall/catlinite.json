@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/catlinite"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/wall/catlinite",
+  "count": 1
+}

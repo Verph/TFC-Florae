@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "MXM",
+    " M "
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:rock/cobble/chalk"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mortar_and_cobble/chalk",
+    "count": 1
+  }
+}

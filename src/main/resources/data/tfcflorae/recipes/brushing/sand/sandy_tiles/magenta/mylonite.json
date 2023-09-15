@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/magenta/mylonite",
+  "result": "tfcflorae:rock/stone_tiles/mylonite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/magenta"
+  }
+}

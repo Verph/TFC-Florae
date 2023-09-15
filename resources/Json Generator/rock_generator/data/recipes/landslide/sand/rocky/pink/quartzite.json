@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rocky/pink/quartzite"
+  ],
+  "result": "tfcflorae:sand/rocky/pink/quartzite"
+}

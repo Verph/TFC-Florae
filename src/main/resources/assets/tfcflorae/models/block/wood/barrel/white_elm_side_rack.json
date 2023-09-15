@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/white_elm",
+    "planks": "tfcflorae:block/wood/planks/white_elm",
+    "sheet": "tfcflorae:block/wood/sheet/white_elm"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:ore/coke"
+  },
+  "result": {
+    "item": "tfc:powder/coke",
+    "count": 4
+  }
+}

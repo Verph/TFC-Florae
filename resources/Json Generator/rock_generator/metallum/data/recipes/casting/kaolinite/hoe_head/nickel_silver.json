@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/hoe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/nickel_silver",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/hoe_head/nickel_silver"
+  },
+  "break_chance": 1
+}

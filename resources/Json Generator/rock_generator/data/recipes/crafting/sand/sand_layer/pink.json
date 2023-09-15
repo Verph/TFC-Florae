@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/pink"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/pink",
+    "count": 1
+  }
+}

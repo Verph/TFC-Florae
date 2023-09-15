@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/blue/basalt"
+  ],
+  "result": "tfcflorae:sand/rockiest/blue/basalt"
+}

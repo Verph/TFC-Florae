@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/magenta/siltstone",
+  "result": "tfcflorae:sand/sandy_tiles/magenta/siltstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/magenta"
+  }
+}

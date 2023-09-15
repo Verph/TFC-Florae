@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/pink/jaspillite",
+  "result": "tfcflorae:sand/sandy_tiles/pink/jaspillite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/pink"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/red_sea_whip/red_sea_whip"
+        },
+        {
+          "model": "tfcflorae:block/plant/red_sea_whip/red_sea_whip",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/red_sea_whip/red_sea_whip",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/red_sea_whip/red_sea_whip",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

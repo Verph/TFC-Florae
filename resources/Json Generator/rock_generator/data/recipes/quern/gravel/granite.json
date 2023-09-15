@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/granite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/granite",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/bamboo",
+    "tfcflorae:wood/stripped_log/bamboo",
+    "tfcflorae:wood/log_bundle/bamboo",
+    "tfcflorae:wood/wood_bundle/bamboo",
+    "tfcflorae:wood/stripped_log_bundle/bamboo",
+    "tfcflorae:wood/stripped_wood_bundle/bamboo"
+  ]
+}

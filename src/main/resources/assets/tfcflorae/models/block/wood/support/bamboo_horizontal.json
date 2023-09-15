@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/horizontal",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/bamboo",
+    "particle": "tfcflorae:block/wood/sheet/bamboo"
+  }
+}

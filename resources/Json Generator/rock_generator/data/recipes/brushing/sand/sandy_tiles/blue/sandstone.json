@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/blue/sandstone",
+  "result": "tfcflorae:rock/stone_tiles/sandstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/blue"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/light_gray/basalt",
+  "result": "tfcflorae:rock/stone_tiles/basalt",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/light_gray"
+  }
+}

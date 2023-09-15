@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/gneiss"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/wall/gneiss",
+  "count": 1
+}

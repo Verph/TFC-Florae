@@ -1,0 +1,24 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "tfcflorae:food/crappie"
+    },
+    {
+      "item": "tfcflorae:food/lake_trout"
+    },
+    {
+      "item": "tfcflorae:food/largemouth_bass"
+    },
+    {
+      "item": "tfcflorae:food/rainbow_trout"
+    },
+    {
+      "item": "tfcflorae:food/smallmouth_bass"
+    },
+    {
+      "item": "tfcflorae:food/frog_legs"
+    }
+  ],
+  "heat_capacity": 1.0
+}

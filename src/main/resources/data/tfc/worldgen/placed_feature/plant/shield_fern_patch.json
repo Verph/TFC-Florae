@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/shield_fern_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -15,
+      "max_temperature": 40,
+      "min_rainfall": 100,
+      "max_rainfall": 500,
+      "min_forest": "sparse"
+    }
+  ]
+}

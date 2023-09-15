@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/black/gabbro",
+  "result": "tfcflorae:sand/sandy_tiles/black/gabbro",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/black"
+  }
+}

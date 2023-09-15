@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/aqueduct/cataclasite",
+    "tfcflorae:rock/aqueduct/porphyry",
+    "tfcflorae:rock/aqueduct/red_granite",
+    "tfcflorae:rock/aqueduct/laterite",
+    "tfcflorae:rock/aqueduct/breccia",
+    "tfcflorae:rock/aqueduct/foidolite",
+    "tfcflorae:rock/aqueduct/peridotite",
+    "tfcflorae:rock/aqueduct/blaimorite",
+    "tfcflorae:rock/aqueduct/boninite",
+    "tfcflorae:rock/aqueduct/carbonatite",
+    "tfcflorae:rock/aqueduct/mudstone",
+    "tfcflorae:rock/aqueduct/sandstone",
+    "tfcflorae:rock/aqueduct/siltstone",
+    "tfcflorae:rock/aqueduct/arkose",
+    "tfcflorae:rock/aqueduct/jaspillite",
+    "tfcflorae:rock/aqueduct/travertine",
+    "tfcflorae:rock/aqueduct/wackestone",
+    "tfcflorae:rock/aqueduct/blackband_ironstone",
+    "tfcflorae:rock/aqueduct/blueschist",
+    "tfcflorae:rock/aqueduct/catlinite",
+    "tfcflorae:rock/aqueduct/greenschist",
+    "tfcflorae:rock/aqueduct/novaculite",
+    "tfcflorae:rock/aqueduct/soapstone",
+    "tfcflorae:rock/aqueduct/komatiite",
+    "tfcflorae:rock/aqueduct/mylonite"
+  ]
+}

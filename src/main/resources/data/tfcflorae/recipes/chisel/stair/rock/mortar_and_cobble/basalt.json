@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/basalt",
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/basalt",
+  "mode": "stair"
+}

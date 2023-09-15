@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/red/rhyolite",
+  "result": "tfcflorae:sand/sandy_tiles/red/rhyolite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/red"
+  }
+}

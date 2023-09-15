@@ -1,0 +1,14 @@
+{
+  "type": "tfc:bloomery",
+  "result": {
+    "item": "tfcflorae:ore/coke"
+  },
+  "fluid": {
+    "ingredient": "tfcflorae:ore/lignite",
+    "amount": 1
+  },
+  "catalyst": {
+    "item": "minecraft:charcoal"
+  },
+  "duration": 15000
+}

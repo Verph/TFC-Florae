@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/mudstone",
+    "particle": "tfcflorae:block/rock/raw/mudstone",
+    "overlay": "tfc_metallum:block/ore/normal_bauxite"
+  }
+}

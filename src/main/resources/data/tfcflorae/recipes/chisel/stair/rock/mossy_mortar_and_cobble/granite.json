@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/granite",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/granite",
+  "mode": "stair"
+}

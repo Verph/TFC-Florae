@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/komatiite",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/komatiite",
+  "mode": "stair"
+}

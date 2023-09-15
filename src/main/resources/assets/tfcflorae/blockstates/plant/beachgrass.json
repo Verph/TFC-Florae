@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/beachgrass/beachgrass_shortest"
+      }
+    },
+    {
+      "when": {
+        "age": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/beachgrass/beachgrass_shorter"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/beachgrass/beachgrass_short"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/beachgrass/beachgrass"
+      }
+    }
+  ]
+}

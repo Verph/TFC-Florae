@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/marram_grass_sand_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -15,
+      "max_temperature": 50,
+      "min_rainfall": 47,
+      "max_rainfall": 130,
+      "fuzzy": true
+    }
+  ]
+}

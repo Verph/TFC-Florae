@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/peridotite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/peridotite",
+    "tfcflorae:item/pan/half/peridotite",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/peridotite"
+}

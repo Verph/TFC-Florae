@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/light_blue"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand/light_blue",
+    "count": 1
+  }
+}

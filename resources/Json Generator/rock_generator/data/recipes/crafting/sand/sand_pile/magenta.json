@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand/magenta"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/magenta",
+    "count": 8
+  }
+}

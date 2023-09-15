@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mossy_mortar_and_cobble/soapstone"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/wall/soapstone",
+    "count": 6
+  }
+}

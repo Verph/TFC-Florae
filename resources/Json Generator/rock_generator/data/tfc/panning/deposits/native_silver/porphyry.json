@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/porphyry",
+  "model_stages": [
+    "tfcflorae:item/pan/full/porphyry",
+    "tfcflorae:item/pan/half/porphyry",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/porphyry"
+}

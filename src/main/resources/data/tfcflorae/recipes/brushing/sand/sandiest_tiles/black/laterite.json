@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/laterite",
+  "result": "tfcflorae:sand/sandier_tiles/black/laterite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/black"
+  }
+}

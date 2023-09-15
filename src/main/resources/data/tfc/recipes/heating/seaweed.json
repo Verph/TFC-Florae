@@ -1,0 +1,10 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:food/fresh_seaweed"
+  },
+  "result_item": {
+    "item": "tfc:food/dried_seaweed"
+  },
+  "temperature": 200
+}

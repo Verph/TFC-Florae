@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfc:ceramic/ingot_mold"
+  },
+  "fluid": {
+    "ingredient": "tfcflorae:ore/bituminous_coal",
+    "amount": 1
+  },
+  "result": {
+    "item": "tfc:ore/bituminous_coal"
+  },
+  "break_chance": 0.1
+}

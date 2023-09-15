@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:rock/gravel_layer/porphyry"
+  ],
+  "result": "tfcflorae:rock/gravel_layer/porphyry"
+}

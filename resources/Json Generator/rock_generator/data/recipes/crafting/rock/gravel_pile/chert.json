@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/chert"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/chert",
+    "count": 8
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/yellow/slate",
+  "result": "tfcflorae:sand/sandy_tiles/yellow/slate",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/yellow"
+  }
+}

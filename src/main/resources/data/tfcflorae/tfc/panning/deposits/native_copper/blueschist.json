@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/blueschist",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blueschist",
+    "tfcflorae:item/pan/half/blueschist",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/blueschist"
+}

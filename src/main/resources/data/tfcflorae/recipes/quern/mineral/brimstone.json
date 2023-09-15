@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:mineral/brimstone"
+  },
+  "result": {
+    "item": "tfc:powder/sulfur",
+    "count": 2
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:barrel_sealed",
+  "input_item": {
+    "ingredient": {
+      "item": "tfcflorae:wood/wood/logwood"
+    }
+  },
+  "input_fluid": {
+    "ingredient": "tfc:spring_water",
+    "amount": 1000
+  },
+  "output_fluid": {
+    "fluid": "tfc:red_dye",
+    "amount": 1000
+  },
+  "duration": 1000
+}

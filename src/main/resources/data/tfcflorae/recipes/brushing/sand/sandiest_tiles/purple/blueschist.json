@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/purple/blueschist",
+  "result": "tfcflorae:sand/sandier_tiles/purple/blueschist",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/purple"
+  }
+}

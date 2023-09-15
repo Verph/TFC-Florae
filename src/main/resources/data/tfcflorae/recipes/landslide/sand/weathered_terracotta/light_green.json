@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/weathered_terracotta/light_green"
+  ],
+  "result": "tfcflorae:sand/weathered_terracotta/light_green"
+}

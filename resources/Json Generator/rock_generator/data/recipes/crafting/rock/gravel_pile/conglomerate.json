@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/conglomerate"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/conglomerate",
+    "count": 8
+  }
+}

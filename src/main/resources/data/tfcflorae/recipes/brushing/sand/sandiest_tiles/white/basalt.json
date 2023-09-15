@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/basalt",
+  "result": "tfcflorae:sand/sandier_tiles/white/basalt",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/white"
+  }
+}

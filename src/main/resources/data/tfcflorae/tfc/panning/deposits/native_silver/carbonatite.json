@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/carbonatite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/carbonatite",
+    "tfcflorae:item/pan/half/carbonatite",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/carbonatite"
+}

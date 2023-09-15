@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/gabbro"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/black",
+    "count": 1
+  }
+}

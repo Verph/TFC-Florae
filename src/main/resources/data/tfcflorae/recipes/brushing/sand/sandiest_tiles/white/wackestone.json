@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/wackestone",
+  "result": "tfcflorae:sand/sandier_tiles/white/wackestone",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/white"
+  }
+}

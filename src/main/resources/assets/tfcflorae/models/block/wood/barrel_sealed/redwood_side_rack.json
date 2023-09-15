@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/redwood",
+    "planks": "tfcflorae:block/wood/planks/redwood",
+    "sheet": "tfcflorae:block/wood/sheet/redwood"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/siltstone",
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/siltstone",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:stone/greenschist"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/greenschist",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:mineral/apatite"
+  },
+  "result": {
+    "item": "tfc:pure_phosphorus",
+    "count": 1
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "true"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_single"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "true"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_single"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "true"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_single"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "true"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_single"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "false",
+        "part": "lower"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_lower"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "false",
+        "part": "lower"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_lower"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "false",
+        "part": "lower"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_lower"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+		"single": "false",
+        "part": "lower"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_lower"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "part": "upper"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_upper"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "part": "upper"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_upper"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "part": "upper"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_upper"
+      }
+    },
+    {
+      "when": {
+		"age": "0|1|2|3",
+        "part": "upper"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/seagrass/seagrass_upper"
+      }
+    }
+  ]
+}

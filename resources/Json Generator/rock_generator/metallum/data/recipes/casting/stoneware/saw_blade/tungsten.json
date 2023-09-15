@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/saw_blade"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/tungsten",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/saw_blade/tungsten"
+  },
+  "break_chance": 1
+}

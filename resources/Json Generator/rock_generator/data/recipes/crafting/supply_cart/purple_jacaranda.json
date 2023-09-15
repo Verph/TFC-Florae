@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "c": {
+      "tag": "forge:chests/wooden"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/purple_jacaranda"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/purple_jacaranda"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:supply_cart/purple_jacaranda"
+  }
+}

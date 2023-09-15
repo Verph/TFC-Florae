@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:mineral/greigite"
+  },
+  "heat_capacity": 1.143,
+  "forging_temperature": 921,
+  "welding_temperature": 1228
+}

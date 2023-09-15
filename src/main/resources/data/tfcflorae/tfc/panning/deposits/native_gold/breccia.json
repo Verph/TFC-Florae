@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/breccia",
+  "model_stages": [
+    "tfcflorae:item/pan/full/breccia",
+    "tfcflorae:item/pan/half/breccia",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold/breccia"
+}

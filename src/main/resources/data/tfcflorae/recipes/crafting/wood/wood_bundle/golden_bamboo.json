@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/log_bundle/golden_bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/log/golden_bamboo"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/wood_bundle/bamboo",
+    "count": 1
+  }
+}

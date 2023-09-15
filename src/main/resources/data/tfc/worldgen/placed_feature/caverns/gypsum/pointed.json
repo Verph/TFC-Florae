@@ -1,0 +1,80 @@
+{
+  "feature": "tfc:caverns/gypsum/pointed",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 300,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 90
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 30
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -128
+        },
+        "max_inclusive": {
+          "absolute": -64
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 10
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "xz_spread": {
+        "type": "minecraft:clamped_normal",
+        "value": {
+          "mean": 0.0,
+          "deviation": 3.0,
+          "min_inclusive": -10,
+          "max_inclusive": 10
+        }
+      },
+      "y_spread": {
+        "type": "minecraft:clamped_normal",
+        "value": {
+          "mean": 0.0,
+          "deviation": 0.6,
+          "min_inclusive": -2,
+          "max_inclusive": 2
+        }
+      },
+      "type": "minecraft:random_offset"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

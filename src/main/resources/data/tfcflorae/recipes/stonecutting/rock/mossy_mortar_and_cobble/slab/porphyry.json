@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/porphyry"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/slab/porphyry",
+  "count": 2
+}

@@ -1,0 +1,29 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 220,
+    "max_rain": 310,
+    "min_temp": 4,
+    "max_temp": 10,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/redwood"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/redwood"
+      }
+    ],
+    "normal_tree": "tfc:tree/redwood",
+    "dead_tree": "tfc:tree/redwood_dead",
+    "fallen_log": "tfcflorae:wood/log/redwood",
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/redwood",
+      "Properties": {
+        "natural": "true",
+        "axis": "y"
+      }
+    },
+    "bush_leaves": "tfcflorae:wood/leaves/redwood",
+    "old_growth_tree": "tfc:tree/redwood_large"
+  }
+}

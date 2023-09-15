@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/native_silver/laterite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_silver/laterite"
+}

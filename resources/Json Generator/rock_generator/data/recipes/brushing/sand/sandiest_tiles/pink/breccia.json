@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/pink/breccia",
+  "result": "tfcflorae:sand/sandier_tiles/pink/breccia",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/pink"
+  }
+}

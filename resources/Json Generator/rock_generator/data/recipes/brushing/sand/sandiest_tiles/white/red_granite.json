@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/red_granite",
+  "result": "tfcflorae:sand/sandier_tiles/white/red_granite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/white"
+  }
+}

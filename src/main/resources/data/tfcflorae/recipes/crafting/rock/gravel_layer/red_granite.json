@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/red_granite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/red_granite",
+    "count": 1
+  }
+}

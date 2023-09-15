@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/dense_grass/light_blue"
+  ],
+  "result": "tfcflorae:sand/sand/light_blue"
+}

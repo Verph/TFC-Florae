@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:stone/laterite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/laterite",
+    "count": 1
+  }
+}

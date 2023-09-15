@@ -1,0 +1,27 @@
+{
+  "ambient.cave": {
+	"replace": false,
+    "sounds": [
+      "ambient/cave/cave20",
+      "ambient/cave/cave21",
+      "ambient/cave/cave22",
+      "ambient/cave/cave23",
+      "ambient/cave/cave24",
+      "ambient/cave/cave25",
+      "ambient/cave/cave26",
+      "ambient/cave/cave27",
+      "ambient/cave/cave28",
+      "ambient/cave/cave29",
+      "ambient/cave/cave30",
+      "ambient/cave/cave31",
+      "ambient/cave/cave32",
+      "ambient/cave/cave33",
+      "ambient/cave/cave34",
+      "ambient/cave/cave35",
+      "ambient/cave/cave36",
+      "ambient/cave/cave37",
+      "ambient/cave/cave38"
+    ],
+    "subtitle": "subtitles.ambient.cave"
+  }
+}

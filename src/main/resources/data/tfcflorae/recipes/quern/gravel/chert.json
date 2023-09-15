@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:rock/loose/chert"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/chert",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/dacite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/dacite",
+    "count": 8
+  }
+}

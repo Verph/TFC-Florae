@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/purple/arkose",
+  "result": "tfcflorae:sand/sandier_tiles/purple/arkose",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/purple"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/schist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/schist",
+    "count": 8
+  }
+}

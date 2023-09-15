@@ -1,0 +1,19 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 16, 11],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [7, 0, 13, 16], "rotation": 180, "texture": "#side"},
+				"east": {"uv": [3, 0, 9, 16], "rotation": 180, "texture": "#side"},
+				"south": {"uv": [0, 0, 6, 16], "rotation": 180, "texture": "#side"},
+				"west": {"uv": [10, 0, 16, 16], "rotation": 180, "texture": "#side"},
+				"up": {"uv": [0, 3, 6, 9], "texture": "#bottom", "cullface": "down"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#top", "cullface": "up"}
+			}
+		}
+	]
+}

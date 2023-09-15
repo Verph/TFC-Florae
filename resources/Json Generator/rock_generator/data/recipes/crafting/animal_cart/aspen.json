@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfc:wood/lumber/aspen"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/aspen"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/aspen"
+  }
+}

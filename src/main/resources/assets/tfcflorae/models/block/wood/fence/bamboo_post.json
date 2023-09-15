@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/custom_fence_post",
+  "textures": {
+    "particle": "tfcflorae:block/wood/sheet/bamboo",
+    "texture": "tfcflorae:block/wood/fence/bamboo"
+  }
+}

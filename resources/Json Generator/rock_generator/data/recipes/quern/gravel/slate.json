@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/slate"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/slate",
+    "count": 1
+  }
+}

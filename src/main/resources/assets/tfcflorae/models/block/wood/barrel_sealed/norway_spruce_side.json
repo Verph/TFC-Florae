@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/norway_spruce",
+    "planks": "tfcflorae:block/wood/planks/norway_spruce",
+    "sheet": "tfcflorae:block/wood/sheet/norway_spruce"
+  }
+}

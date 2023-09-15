@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/bamboo"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/bamboo_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/bamboo"
+    }
+  }
+}

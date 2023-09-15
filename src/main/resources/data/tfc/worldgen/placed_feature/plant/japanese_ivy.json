@@ -1,0 +1,53 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/japanese_ivy",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 127
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": 63
+        },
+        "max_inclusive": {
+          "absolute": 170
+        }
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 8
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:replaceable"
+      }
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 2,
+      "max_temperature": 23,
+      "min_rainfall": 150,
+      "max_rainfall": 385,
+      "min_forest": "sparse",
+      "fuzzy": true
+    }
+  ]
+}

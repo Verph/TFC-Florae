@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/native_copper/wackestone"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_copper/wackestone"
+}

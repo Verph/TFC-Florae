@@ -1,0 +1,161 @@
+{
+  "type": "tfc:forest",
+  "config": {
+    "entries": "#tfcflorae:jungle_trees",
+    "types": {
+      "old_growth": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          }
+        },
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 5
+          }
+        },
+        "old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 3,
+            "max_inclusive": 8
+          }
+        },
+        "spoiler_old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 3,
+            "max_inclusive": 8
+          }
+        },
+        "groundcover_count": 8,
+        "has_spoiler_old_growth": true,
+        "allows_old_growth": true
+      },
+      "normal": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 3
+          }
+        },
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 6
+          }
+        },
+        "old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 2,
+            "max_inclusive": 6
+          }
+        },
+        "spoiler_old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 2,
+            "max_inclusive": 6
+          }
+        },
+        "groundcover_count": 15,
+        "has_spoiler_old_growth": true,
+        "allows_old_growth": true
+      },
+      "edge": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 5
+          }
+        },
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 6
+          }
+        },
+        "old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 4
+          }
+        },
+        "spoiler_old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 4
+          }
+        },
+        "groundcover_count": 20,
+        "has_spoiler_old_growth": true,
+        "allows_old_growth": true
+      },
+      "sparse": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 6
+          }
+        },
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 4
+          }
+        },
+        "old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 2
+          }
+        },
+        "spoiler_old_growth_chance": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 2
+          }
+        },
+        "groundcover_count": 30,
+        "has_spoiler_old_growth": true,
+        "allows_old_growth": true
+      },
+      "none": {
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 5
+          }
+        },
+        "bush_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 2
+          }
+        },
+        "old_growth_chance": 1,
+        "spoiler_old_growth_chance": 1,
+        "groundcover_count": 40,
+        "has_spoiler_old_growth": true,
+        "allows_old_growth": true
+      }
+    }
+  }
+}

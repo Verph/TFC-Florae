@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/native_gold/soapstone"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_gold/soapstone"
+}

@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:kelp",
+  "config": {
+    "body": "tfcflorae:plant/pondweed_plant",
+    "head": "tfcflorae:plant/pondweed",
+    "tries": 64,
+    "radius": 12,
+    "min_height": 1,
+    "max_height": 6
+  }
+}

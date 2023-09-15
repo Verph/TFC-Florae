@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/logwood",
+    "planks": "tfcflorae:block/wood/planks/logwood",
+    "sheet": "tfcflorae:block/wood/sheet/logwood"
+  }
+}

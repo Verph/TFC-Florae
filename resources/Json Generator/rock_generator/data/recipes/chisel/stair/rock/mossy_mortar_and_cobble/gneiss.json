@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/gneiss",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/gneiss",
+  "mode": "stair"
+}

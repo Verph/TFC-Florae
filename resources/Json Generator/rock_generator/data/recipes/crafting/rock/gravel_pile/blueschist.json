@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/blueschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/blueschist",
+    "count": 8
+  }
+}

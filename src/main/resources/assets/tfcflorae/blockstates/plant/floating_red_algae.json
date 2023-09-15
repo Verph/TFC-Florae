@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/floating_red_algae/floating_red_algae"
+        },
+        {
+          "model": "tfcflorae:block/plant/floating_red_algae/floating_red_algae",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/floating_red_algae/floating_red_algae",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/floating_red_algae/floating_red_algae",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

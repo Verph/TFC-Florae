@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/sandstone"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/yellow",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/magenta/foidolite",
+  "result": "tfcflorae:sand/sandier_tiles/magenta/foidolite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/magenta"
+  }
+}

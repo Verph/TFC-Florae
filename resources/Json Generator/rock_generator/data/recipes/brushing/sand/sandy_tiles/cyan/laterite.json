@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/cyan/laterite",
+  "result": "tfcflorae:rock/stone_tiles/laterite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/cyan"
+  }
+}

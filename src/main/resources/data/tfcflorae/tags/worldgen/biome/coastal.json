@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:shore",
+    "tfc:near_shore",
+    "tfc:lagoon",
+    "tfc:atoll",
+    "tfc:barrier_reef",
+    "tfc:gravel_shore",
+    "tfc:coastal_cliffs",
+    "tfc:oceanic_mountains",
+    "tfc:volcanic_oceanic_mountains",
+    "tfc:oceanic_mountain_river",
+    "tfc:volcanic_oceanic_mountain_river",
+    "tfc:oceanic_mountain_lake",
+    "tfc:volcanic_oceanic_mountain_lake"
+  ]
+}

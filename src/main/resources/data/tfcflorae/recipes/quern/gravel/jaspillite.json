@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/jaspillite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/jaspillite",
+    "count": 1
+  }
+}

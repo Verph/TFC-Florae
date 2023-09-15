@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:redwood_forest",
+    "tfc:tree/undergrowth/floor",
+    "tfc:tree/undergrowth/mossy_boulder"
+  ]
+}

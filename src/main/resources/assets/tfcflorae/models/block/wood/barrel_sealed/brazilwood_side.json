@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/brazilwood",
+    "planks": "tfcflorae:block/wood/planks/brazilwood",
+    "sheet": "tfcflorae:block/wood/sheet/brazilwood"
+  }
+}

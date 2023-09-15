@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/sea_anemone/sea_anemone"
+        },
+        {
+          "model": "tfcflorae:block/plant/sea_anemone/sea_anemone",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/sea_anemone/sea_anemone",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/sea_anemone/sea_anemone",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

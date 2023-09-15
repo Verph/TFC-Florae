@@ -1,0 +1,7 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfcflorae:block/wood/spike/red_mangrove/down_base",
+  "textures": {
+    "layer0": "tfcflorae:block/wood/log/red_mangrove"
+  }
+}

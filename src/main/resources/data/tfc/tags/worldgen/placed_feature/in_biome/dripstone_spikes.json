@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:caverns/large_dripstone",
+    "tfc:caverns/dripstone_cluster",
+    "tfc:caverns/pointed_dripstone",
+    "tfc:large_dripstone",
+    "tfc:dripstone_cluster",
+    "tfc:pointed_dripstone"
+  ]
+}

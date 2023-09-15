@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tfcflorae:block/sand/rocky/yellow/gneiss"
+  }
+}

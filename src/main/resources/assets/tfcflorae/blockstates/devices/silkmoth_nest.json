@@ -1,0 +1,493 @@
+{
+	"multipart":
+	[
+		{
+			"when": {
+				"silk_level": "0|1|2|3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_0"
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0|1|2|3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_0",
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0|1|2|3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_0",
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0|1|2|3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_0",
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_1"
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_1",
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_1",
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_1",
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_2"
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_2",
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_2",
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_2",
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_3"
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_3",
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_3",
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "lower",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_bottom_3",
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_0",
+					"x": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_0", 
+					"x": 180,
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_0", 
+					"x": 180,
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "0",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_0", 
+					"x": 180,
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_1",
+					"x": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_1", 
+					"x": 180,
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_1", 
+					"x": 180,
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "1",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_1", 
+					"x": 180,
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_2",
+					"x": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_2", 
+					"x": 180,
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_2", 
+					"x": 180,
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "2",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_2", 
+					"x": 180,
+					"y": 270
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "north"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_3",
+					"x": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "east"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_3", 
+					"x": 180,
+					"y": 90
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "south"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_3", 
+					"x": 180,
+					"y": 180
+				}
+			]
+		},
+		{
+			"when": {
+				"silk_level": "3",
+				"silk_worm_eggs": "0|1|2|3|4|5|6|7|8",
+				"mulberry_leaves": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16",
+				"part": "upper",
+				"facing": "west"
+			},
+			"apply": [
+				{
+					"model": "tfcflorae:block/devices/silkmoth_nest_top_3", 
+					"x": 180,
+					"y": 270
+				}
+			]
+		}
+	]
+}

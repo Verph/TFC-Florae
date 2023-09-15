@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:dirt/silt",
+    "tfc:grass/silt",
+    "tfc:rooted_dirt/silt",
+    "tfcflorae:dry_grass/silt",
+    "tfcflorae:sparse_grass/silt",
+    "tfcflorae:dense_grass/silt",
+    "tfcflorae:podzol/silt",
+    "tfcflorae:mycelium_dirt/silt"
+  ]
+}

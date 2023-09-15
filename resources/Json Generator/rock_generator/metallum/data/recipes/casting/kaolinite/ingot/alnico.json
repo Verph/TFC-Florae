@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/ingot"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/alnico",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/ingot/alnico"
+  },
+  "break_chance": 0.1
+}

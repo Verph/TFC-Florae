@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/medlar",
+    "planks": "tfcflorae:block/wood/planks/medlar",
+    "sheet": "tfcflorae:block/wood/sheet/medlar"
+  }
+}

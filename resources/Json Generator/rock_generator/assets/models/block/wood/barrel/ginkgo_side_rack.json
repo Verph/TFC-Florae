@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/ginkgo",
+    "planks": "tfcflorae:block/wood/planks/ginkgo",
+    "sheet": "tfcflorae:block/wood/sheet/ginkgo"
+  }
+}

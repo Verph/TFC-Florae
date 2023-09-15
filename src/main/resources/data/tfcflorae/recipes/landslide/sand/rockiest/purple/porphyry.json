@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/purple/porphyry"
+  ],
+  "result": "tfcflorae:sand/rockiest/purple/porphyry"
+}

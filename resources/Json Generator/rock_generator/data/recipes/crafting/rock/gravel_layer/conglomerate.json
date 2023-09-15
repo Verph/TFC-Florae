@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/conglomerate"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/conglomerate",
+    "count": 1
+  }
+}

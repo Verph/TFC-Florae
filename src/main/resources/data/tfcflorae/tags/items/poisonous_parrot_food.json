@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "minecraft:cookie",
+    {
+      "id": "#firmalife:foods/chocolate",
+      "required": false
+    },
+    {
+      "id": "#firmalife:chocolate_blends",
+      "required": false
+    }
+  ]
+}

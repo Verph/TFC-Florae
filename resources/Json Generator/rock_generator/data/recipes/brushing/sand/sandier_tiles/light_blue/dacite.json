@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/light_blue/dacite",
+  "result": "tfcflorae:sand/sandy_tiles/light_blue/dacite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/light_blue"
+  }
+}

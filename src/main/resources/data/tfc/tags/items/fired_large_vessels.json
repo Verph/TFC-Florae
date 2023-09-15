@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/fired/large_vessel",
+    "tfcflorae:ceramic/kaolinite/fired/large_vessel",
+    "tfcflorae:ceramic/stoneware/fired/large_vessel"
+  ]
+}

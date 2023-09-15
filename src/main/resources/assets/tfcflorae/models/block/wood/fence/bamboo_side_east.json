@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/wood/custom_fence_side_east",
+  "textures": {
+    "texture": "tfcflorae:block/wood/fence/bamboo"
+  }
+}

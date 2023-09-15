@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/limestone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/limestone",
+    "count": 8
+  }
+}

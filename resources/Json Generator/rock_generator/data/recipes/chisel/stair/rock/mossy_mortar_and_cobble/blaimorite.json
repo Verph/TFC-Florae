@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/blaimorite",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/blaimorite",
+  "mode": "stair"
+}

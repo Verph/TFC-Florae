@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/cyan/boninite",
+  "result": "tfcflorae:sand/sandier_tiles/cyan/boninite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/cyan"
+  }
+}

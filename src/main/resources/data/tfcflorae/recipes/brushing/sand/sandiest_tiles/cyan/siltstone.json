@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/cyan/siltstone",
+  "result": "tfcflorae:sand/sandier_tiles/cyan/siltstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/cyan"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/cyan/quartzite",
+  "result": "tfcflorae:sand/sandier_tiles/cyan/quartzite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/cyan"
+  }
+}

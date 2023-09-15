@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/greenheart",
+    "planks": "tfcflorae:block/wood/planks/greenheart",
+    "sheet": "tfcflorae:block/wood/sheet/greenheart"
+  }
+}

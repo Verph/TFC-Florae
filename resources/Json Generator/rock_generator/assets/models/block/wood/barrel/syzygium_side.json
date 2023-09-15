@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/syzygium",
+    "planks": "tfcflorae:block/wood/planks/syzygium",
+    "sheet": "tfcflorae:block/wood/sheet/syzygium"
+  }
+}

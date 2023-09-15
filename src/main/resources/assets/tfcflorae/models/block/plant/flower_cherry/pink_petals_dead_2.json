@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/plant/flowerbed_dead_2",
+  "textures": {
+    "stem": "tfcflorae:block/plant/flower_cherry/pink_petals_stem"
+  }
+}

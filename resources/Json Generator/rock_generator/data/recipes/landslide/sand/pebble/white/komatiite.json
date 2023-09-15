@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/pebble/white/komatiite"
+  ],
+  "result": "tfcflorae:sand/pebble/white/komatiite"
+}

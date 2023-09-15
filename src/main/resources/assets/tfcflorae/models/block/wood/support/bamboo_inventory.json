@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/wood/inventory",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/bamboo"
+  }
+}

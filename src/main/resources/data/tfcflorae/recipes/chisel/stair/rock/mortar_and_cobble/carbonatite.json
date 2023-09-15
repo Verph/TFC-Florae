@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/carbonatite",
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/carbonatite",
+  "mode": "stair"
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+	"#minecraft:logs",
+    "tfcflorae:wood/log/charred_tree",
+    "tfcflorae:wood/wood/charred_tree",
+    "tfcflorae:wood/stripped_log/charred_tree",
+    "tfcflorae:wood/stripped_wood/charred_tree"
+  ]
+}

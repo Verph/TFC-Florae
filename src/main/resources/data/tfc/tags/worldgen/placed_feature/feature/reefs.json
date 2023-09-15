@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:ocean/plant/badderlocks_patch",
+    "tfc:ocean/plant/giant_kelp_patch",
+    "tfc:ocean/plant/manatee_grass_patch",
+    "tfc:ocean/plant/star_grass_patch",
+    "tfc:ocean/plant/turtle_grass_patch",
+    "tfc:ocean/plant/winged_kelp",
+    "tfc:ocean/plant/red_algae_patch",
+    "tfc:ocean/plant/red_sea_whip_patch",
+    "tfc:ocean/plant/sea_anemone_patch",
+    "tfc:ocean/plant/seagrass_patch",
+    "tfc:ocean/plant/seaweed_patch"
+  ]
+}

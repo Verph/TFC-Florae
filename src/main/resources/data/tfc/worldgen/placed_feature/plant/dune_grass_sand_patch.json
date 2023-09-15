@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/dune_grass_sand_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -20,
+      "max_temperature": 50,
+      "min_rainfall": 35,
+      "max_rainfall": 115,
+      "fuzzy": true
+    }
+  ]
+}

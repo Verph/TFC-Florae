@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/orange/red_granite"
+  ],
+  "result": "tfcflorae:sand/rockiest/orange/red_granite"
+}

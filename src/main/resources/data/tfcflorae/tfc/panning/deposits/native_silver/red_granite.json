@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/red_granite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/red_granite",
+    "tfcflorae:item/pan/half/red_granite",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/red_granite"
+}

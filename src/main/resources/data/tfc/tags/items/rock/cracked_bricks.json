@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/cracked_bricks/red_granite",
+    "tfcflorae:rock/cracked_bricks/breccia",
+    "tfcflorae:rock/cracked_bricks/foidolite",
+    "tfcflorae:rock/cracked_bricks/porphyry",
+    "tfcflorae:rock/cracked_bricks/peridotite",
+    "tfcflorae:rock/cracked_bricks/blaimorite",
+    "tfcflorae:rock/cracked_bricks/boninite",
+    "tfcflorae:rock/cracked_bricks/carbonatite",
+    "tfcflorae:rock/cracked_bricks/laterite",
+    "tfcflorae:rock/cracked_bricks/mudstone",
+    "tfcflorae:rock/cracked_bricks/sandstone",
+    "tfcflorae:rock/cracked_bricks/siltstone",
+    "tfcflorae:rock/cracked_bricks/arkose",
+    "tfcflorae:rock/cracked_bricks/jaspillite",
+    "tfcflorae:rock/cracked_bricks/travertine",
+    "tfcflorae:rock/cracked_bricks/wackestone",
+    "tfcflorae:rock/cracked_bricks/blackband_ironstone",
+    "tfcflorae:rock/cracked_bricks/cataclasite",
+    "tfcflorae:rock/cracked_bricks/blueschist",
+    "tfcflorae:rock/cracked_bricks/catlinite",
+    "tfcflorae:rock/cracked_bricks/greenschist",
+    "tfcflorae:rock/cracked_bricks/novaculite",
+    "tfcflorae:rock/cracked_bricks/soapstone",
+    "tfcflorae:rock/cracked_bricks/komatiite",
+    "tfcflorae:rock/cracked_bricks/mylonite"
+  ]
+}

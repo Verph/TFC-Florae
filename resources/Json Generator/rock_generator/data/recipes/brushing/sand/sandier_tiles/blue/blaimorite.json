@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/blue/blaimorite",
+  "result": "tfcflorae:sand/sandy_tiles/blue/blaimorite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/blue"
+  }
+}

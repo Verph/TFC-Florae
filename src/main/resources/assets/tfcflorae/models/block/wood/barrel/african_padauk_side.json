@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/african_padauk",
+    "planks": "tfcflorae:block/wood/planks/african_padauk",
+    "sheet": "tfcflorae:block/wood/sheet/african_padauk"
+  }
+}

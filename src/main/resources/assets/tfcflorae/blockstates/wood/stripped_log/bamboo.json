@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/stripped_log/bamboo/bamboo"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/stripped_log/bamboo/bamboo",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/stripped_log/bamboo/bamboo",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

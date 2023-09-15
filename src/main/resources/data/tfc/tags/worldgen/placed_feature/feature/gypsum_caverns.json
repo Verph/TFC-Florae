@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/gypsum/floor",
+    "tfc:caverns/gypsum/ceiling",
+    "tfc:caverns/gypsum/cluster",
+    "tfc:caverns/gypsum/large",
+    "tfc:caverns/gypsum/pointed",
+    "tfc:caverns/gypsum/common/floor",
+    "tfc:caverns/gypsum/common/ceiling",
+    "tfc:caverns/gypsum/common/cluster",
+    "tfc:caverns/gypsum/common/large",
+    "tfc:caverns/gypsum/common/pointed"
+  ]
+}

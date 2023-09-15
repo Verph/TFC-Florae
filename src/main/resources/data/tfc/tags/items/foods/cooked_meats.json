@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:food/cooked_crappie",
+    "tfcflorae:food/cooked_lake_trout",
+    "tfcflorae:food/cooked_largemouth_bass",
+    "tfcflorae:food/cooked_rainbow_trout",
+    "tfcflorae:food/cooked_smallmouth_bass"
+  ]
+}

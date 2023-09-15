@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/mossy_bricks/red_granite",
+    "tfcflorae:rock/mossy_bricks/breccia",
+    "tfcflorae:rock/mossy_bricks/foidolite",
+    "tfcflorae:rock/mossy_bricks/porphyry",
+    "tfcflorae:rock/mossy_bricks/peridotite",
+    "tfcflorae:rock/mossy_bricks/blaimorite",
+    "tfcflorae:rock/mossy_bricks/boninite",
+    "tfcflorae:rock/mossy_bricks/carbonatite",
+    "tfcflorae:rock/mossy_bricks/laterite",
+    "tfcflorae:rock/mossy_bricks/mudstone",
+    "tfcflorae:rock/mossy_bricks/sandstone",
+    "tfcflorae:rock/mossy_bricks/siltstone",
+    "tfcflorae:rock/mossy_bricks/arkose",
+    "tfcflorae:rock/mossy_bricks/jaspillite",
+    "tfcflorae:rock/mossy_bricks/travertine",
+    "tfcflorae:rock/mossy_bricks/wackestone",
+    "tfcflorae:rock/mossy_bricks/blackband_ironstone",
+    "tfcflorae:rock/mossy_bricks/cataclasite",
+    "tfcflorae:rock/mossy_bricks/blueschist",
+    "tfcflorae:rock/mossy_bricks/catlinite",
+    "tfcflorae:rock/mossy_bricks/greenschist",
+    "tfcflorae:rock/mossy_bricks/novaculite",
+    "tfcflorae:rock/mossy_bricks/soapstone",
+    "tfcflorae:rock/mossy_bricks/komatiite",
+    "tfcflorae:rock/mossy_bricks/mylonite"
+  ]
+}

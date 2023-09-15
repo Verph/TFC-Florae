@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/novaculite"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/novaculite"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/novaculite"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/novaculite"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/novaculite"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/novaculite"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/novaculite"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/novaculite"
+    }
+  }
+}

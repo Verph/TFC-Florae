@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/bamboo",
+  "result": "tfcflorae:wood/stairs/bamboo",
+  "mode": "stair"
+}

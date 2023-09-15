@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/mace_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/uranium",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/mace_head/uranium"
+  },
+  "break_chance": 1
+}

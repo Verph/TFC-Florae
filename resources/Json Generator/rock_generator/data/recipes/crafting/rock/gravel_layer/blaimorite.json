@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blaimorite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/blaimorite",
+    "count": 1
+  }
+}

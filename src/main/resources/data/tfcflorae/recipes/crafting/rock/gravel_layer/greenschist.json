@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/greenschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/greenschist",
+    "count": 1
+  }
+}

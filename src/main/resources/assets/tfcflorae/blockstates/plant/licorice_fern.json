@@ -1,0 +1,28 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0|1|2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/licorice_fern/licorice_fern_0"
+      }
+    },
+    {
+      "when": {
+        "age": "2|3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/licorice_fern/licorice_fern_1"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+		"model": "tfcflorae:block/plant/licorice_fern/licorice_fern_2"
+      }
+    }
+  ]
+}

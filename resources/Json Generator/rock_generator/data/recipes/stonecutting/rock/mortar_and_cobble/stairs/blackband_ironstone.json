@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/blackband_ironstone"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/blackband_ironstone",
+  "count": 1
+}

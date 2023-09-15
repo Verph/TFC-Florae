@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/foidolite",
+    "particle": "tfcflorae:block/rock/raw/foidolite",
+    "overlay": "tfc_metallum:block/ore/normal_uraninite"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:feature/boulders",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation",
+    "#tfc:feature/glaciers",
+    "#tfc:feature/bamboo_forest",
+    "#tfc:feature/redwood_forest",
+    "tfcflorae:jungle",
+    "tfc:ocean/large_dripstone"
+  ]
+}

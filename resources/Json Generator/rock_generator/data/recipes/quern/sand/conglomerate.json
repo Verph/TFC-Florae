@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/conglomerate"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/green",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/moss_cover_patch",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "min_temperature": -2,
+      "max_temperature": 35,
+      "min_rainfall": 280,
+      "max_rainfall": 500,
+      "min_forest": "normal",
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

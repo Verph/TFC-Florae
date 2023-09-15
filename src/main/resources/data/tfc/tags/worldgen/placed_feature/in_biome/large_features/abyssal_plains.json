@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	  "#tfc:feature/geode/diamond",
+    "tfc:lava_hot_spring_ocean_trench",
+    "tfc:ocean/mossy_boulder",
+    "tfc:small_rock_columns_deep"
+  ]
+}

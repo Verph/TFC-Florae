@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/limestone"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/limestone",
+    "count": 1
+  }
+}

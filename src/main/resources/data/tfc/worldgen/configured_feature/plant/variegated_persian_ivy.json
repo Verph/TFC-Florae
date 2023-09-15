@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:vines",
+  "config": {
+    "state": {
+      "Name": "tfcflorae:plant/variegated_persian_ivy",
+      "Properties": {
+        "up": "false",
+        "north": "false",
+        "east": "false",
+        "south": "false",
+        "west": "false"
+      }
+    }
+  }
+}

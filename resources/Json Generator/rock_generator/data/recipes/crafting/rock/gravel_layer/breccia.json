@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/breccia"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/breccia",
+    "count": 1
+  }
+}

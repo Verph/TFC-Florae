@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:tree/kapok_entry",
+    "tfc:tree/african_padauk_entry",
+    "tfc:tree/angelim_entry",
+    "tfc:tree/cocobolo_entry",
+    "tfc:tree/greenheart_entry",
+    "tfc:tree/iroko_entry",
+    "tfc:tree/kauri_entry",
+    "tfc:tree/mahogany_entry",
+    "tfc:tree/marblewood_entry",
+    "tfc:tree/purpleheart_entry",
+    "tfc:tree/wenge_entry",
+    "tfc:tree/yellow_meranti_entry",
+    "tfc:tree/zebrawood_entry"
+  ]
+}

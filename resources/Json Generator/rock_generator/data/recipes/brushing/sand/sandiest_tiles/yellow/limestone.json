@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/yellow/limestone",
+  "result": "tfcflorae:sand/sandier_tiles/yellow/limestone",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/yellow"
+  }
+}

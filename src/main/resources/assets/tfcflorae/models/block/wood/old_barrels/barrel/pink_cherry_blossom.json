@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/wood/barrel",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/pink_cherry_blossom",
+    "planks": "tfcflorae:block/wood/planks/pink_cherry_blossom",
+    "sheet": "tfcflorae:block/wood/sheet/pink_cherry_blossom",
+    "hoop": "tfc:block/barrel_hoop"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/mycelium_dirt/silt",
+        "y": 0
+      },
+      {
+        "model": "tfcflorae:block/mycelium_dirt/silt",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/mycelium_dirt/silt",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/mycelium_dirt/silt",
+        "y": 270
+      }
+    ]
+  }
+}

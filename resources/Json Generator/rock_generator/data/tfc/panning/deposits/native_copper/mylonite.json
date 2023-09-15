@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/mylonite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/mylonite",
+    "tfcflorae:item/pan/half/mylonite",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/mylonite"
+}

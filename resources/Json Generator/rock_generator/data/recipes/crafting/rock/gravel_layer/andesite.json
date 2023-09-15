@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/andesite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/andesite",
+    "count": 1
+  }
+}

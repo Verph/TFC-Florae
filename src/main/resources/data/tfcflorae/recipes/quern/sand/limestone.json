@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/limestone"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/white",
+    "count": 1
+  }
+}

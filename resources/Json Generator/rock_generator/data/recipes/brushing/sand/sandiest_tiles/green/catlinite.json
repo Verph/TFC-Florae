@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/green/catlinite",
+  "result": "tfcflorae:sand/sandier_tiles/green/catlinite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/green"
+  }
+}

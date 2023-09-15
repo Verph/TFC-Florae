@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mossy_mortar_and_cobble/chalk"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/wall/chalk",
+    "count": 6
+  }
+}

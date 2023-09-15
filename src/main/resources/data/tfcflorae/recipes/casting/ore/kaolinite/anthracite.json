@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/kaolinite/fired/mold/ingot"
+  },
+  "fluid": {
+    "ingredient": "tfcflorae:ore/anthracite",
+    "amount": 1
+  },
+  "result": {
+    "item": "tfcflorae:ore/anthracite"
+  },
+  "break_chance": 0.1
+}

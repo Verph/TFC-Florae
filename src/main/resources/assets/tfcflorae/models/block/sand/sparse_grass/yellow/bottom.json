@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/sparse_grass_bottom",
+  "textures": {
+    "texture": "tfc:block/sand/yellow"
+  }
+}

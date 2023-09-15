@@ -1,0 +1,65 @@
+{
+  "feature": "tfc:tree/roots/white_mangrove",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 1
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 40,
+      "noise_factor": 10,
+      "noise_offset": 0.1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "min_inclusive": {
+          "absolute": 57
+        },
+        "max_inclusive": {
+          "absolute": 63
+        },
+        "type": "minecraft:uniform"
+      }
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "OCEAN_FLOOR",
+      "min_inclusive": 57,
+	  "max_inclusive": 63
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:replaceable"
+          },
+          {
+            "type": "tfc:air_or_empty_fluid"
+          },
+          {
+            "type": "tfc:replaceable"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 8,
+      "max_temperature": 41,
+      "min_rainfall": 230,
+      "max_rainfall": 500,
+      "min_forest": "sparse",
+      "fuzzy": true
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

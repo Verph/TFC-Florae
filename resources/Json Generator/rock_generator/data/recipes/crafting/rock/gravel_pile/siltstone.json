@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/siltstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/siltstone",
+    "count": 8
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/yellow"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/yellow",
+    "count": 1
+  }
+}

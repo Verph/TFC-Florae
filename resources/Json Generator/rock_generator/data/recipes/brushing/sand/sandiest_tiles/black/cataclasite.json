@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/cataclasite",
+  "result": "tfcflorae:sand/sandier_tiles/black/cataclasite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/black"
+  }
+}

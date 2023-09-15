@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+		"model": "tfcflorae:block/plant/shield_fern/shield_fern_1"
+      }
+    }
+  ]
+}

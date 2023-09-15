@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:feature/boulders",
+    "tfc:forest",
+    "tfc:bamboo",
+    "tfc:cave_vegetation",
+    "tfc:random_active_hot_spring",
+    "#tfc:feature/geode/sapphire",
+    "tfc:small_rock_columns_rare",
+    "tfcflorae:charred_forest",
+    "tfcflorae:fruit_forest",
+    "tfcflorae:jungle"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/purple/carbonatite",
+  "result": "tfcflorae:sand/sandy_tiles/purple/carbonatite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/purple"
+  }
+}

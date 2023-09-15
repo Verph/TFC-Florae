@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:mineral/salt"
+  },
+  "result": {
+    "item": "tfc:powder/salt",
+    "count": 1
+  }
+}

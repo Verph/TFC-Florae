@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed"
+        },
+        {
+          "model": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/whitestem_pondweed/whitestem_pondweed",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

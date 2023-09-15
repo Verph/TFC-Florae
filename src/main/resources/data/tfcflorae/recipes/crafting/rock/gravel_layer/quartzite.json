@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/quartzite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/quartzite",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/orange/granite",
+  "result": "tfcflorae:sand/sandier_tiles/orange/granite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/orange"
+  }
+}

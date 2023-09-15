@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/rock/geyser/down_frustum",
+  "textures": {
+    "side": "tfcflorae:block/rock/geyser_side/porphyry",
+    "top": "tfcflorae:block/rock/geyser_top/porphyry",
+    "bottom": "tfcflorae:block/rock/geyser_bottom/porphyry",
+    "particle": "tfcflorae:block/rock/geyser_side/porphyry"
+  }
+}

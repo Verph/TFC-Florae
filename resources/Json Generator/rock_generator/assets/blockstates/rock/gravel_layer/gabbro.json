@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/gabbro"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/gabbro"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/gabbro"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/gabbro"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/gabbro"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/gabbro"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/gabbro"
+    },
+    "layers=8": {
+      "model": "tfc:block/rock/gravel/gabbro"
+    }
+  }
+}

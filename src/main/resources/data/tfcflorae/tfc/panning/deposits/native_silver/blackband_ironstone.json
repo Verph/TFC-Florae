@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/blackband_ironstone",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blackband_ironstone",
+    "tfcflorae:item/pan/half/blackband_ironstone",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/blackband_ironstone"
+}

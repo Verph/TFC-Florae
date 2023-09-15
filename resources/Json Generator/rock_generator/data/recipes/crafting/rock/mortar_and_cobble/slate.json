@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "MXM",
+    " M "
+  ],
+  "key": {
+    "X": {
+      "item": "tfc:rock/cobble/slate"
+    },
+    "M": {
+      "tag": "tfc:mortar"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mortar_and_cobble/slate",
+    "count": 1
+  }
+}

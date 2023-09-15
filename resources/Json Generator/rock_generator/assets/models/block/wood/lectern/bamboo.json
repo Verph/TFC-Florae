@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/bamboo",
+    "base": "tfcflorae:block/wood/lectern/base/bamboo",
+    "front": "tfcflorae:block/wood/lectern/front/bamboo",
+    "sides": "tfcflorae:block/wood/lectern/sides/bamboo",
+    "top": "tfcflorae:block/wood/lectern/top/bamboo",
+    "particle": "tfcflorae:block/wood/lectern/sides/bamboo"
+  }
+}

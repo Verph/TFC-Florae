@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:caverns/gypsum/floor",
+    "tfc:caverns/gypsum/ceiling",
+    "tfc:caverns/gypsum/cluster",
+    "tfc:caverns/gypsum/large",
+    "tfc:caverns/gypsum/pointed"
+  ]
+}

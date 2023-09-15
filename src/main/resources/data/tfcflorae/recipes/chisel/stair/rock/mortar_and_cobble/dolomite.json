@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mortar_and_cobble/dolomite",
+  "result": "tfcflorae:rock/mortar_and_cobble/stairs/dolomite",
+  "mode": "stair"
+}

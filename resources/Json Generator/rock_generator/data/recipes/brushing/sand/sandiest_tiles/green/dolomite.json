@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/green/dolomite",
+  "result": "tfcflorae:sand/sandier_tiles/green/dolomite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/green"
+  }
+}

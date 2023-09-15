@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/arkose"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/arkose"
+}

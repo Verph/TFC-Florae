@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/arkose"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/slab/arkose",
+  "count": 2
+}

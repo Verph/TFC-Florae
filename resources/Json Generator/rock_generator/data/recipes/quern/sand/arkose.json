@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/arkose"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/brown",
+    "count": 1
+  }
+}

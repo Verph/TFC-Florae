@@ -1,0 +1,120 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state": {
+      "Name": "tfcflorae:sand/weathered_terracotta/black"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_inclusive": 8
+      }
+    },
+    "half_height": 4,
+    "targets": [
+	  {
+        "Name": "tfcflorae:sand/weathered_terracotta/light_gray"
+	  },
+	  {
+        "Name": "tfcflorae:grass/humus"
+	  },
+	  {
+        "Name": "tfc:grass/loam"
+	  },
+	  {
+        "Name": "tfc:grass/sandy_loam"
+	  },
+	  {
+        "Name": "tfc:grass/silty_loam"
+	  },
+	  {
+        "Name": "tfc:grass/silt"
+	  },
+	  {
+        "Name": "tfcflorae:dense_grass/humus"
+	  },
+	  {
+        "Name": "tfcflorae:dense_grass/loam"
+	  },
+	  {
+        "Name": "tfcflorae:dense_grass/sandy_loam"
+	  },
+	  {
+        "Name": "tfcflorae:dense_grass/silty_loam"
+	  },
+	  {
+        "Name": "tfcflorae:dense_grass/silt"
+	  },
+	  {
+        "Name": "tfcflorae:sparse_grass/humus"
+	  },
+	  {
+        "Name": "tfcflorae:sparse_grass/loam"
+	  },
+	  {
+        "Name": "tfcflorae:sparse_grass/sandy_loam"
+	  },
+	  {
+        "Name": "tfcflorae:sparse_grass/silty_loam"
+	  },
+	  {
+        "Name": "tfcflorae:sparse_grass/silt"
+	  },
+	  {
+        "Name": "tfcflorae:dirt/humus"
+	  },
+	  {
+        "Name": "tfc:dirt/loam"
+	  },
+	  {
+        "Name": "tfc:dirt/sandy_loam"
+	  },
+	  {
+        "Name": "tfc:dirt/silty_loam"
+	  },
+	  {
+        "Name": "tfc:dirt/silt"
+	  },
+	  {
+		"Name": "tfc:sand/brown"
+	  },
+	  {
+		"Name": "tfc:sand/white"
+	  },
+	  {
+		"Name": "tfc:sand/black"
+	  },
+	  {
+		"Name": "tfc:sand/red"
+	  },
+	  {
+		"Name": "tfc:sand/yellow"
+	  },
+	  {
+		"Name": "tfc:sand/green"
+	  },
+	  {
+		"Name": "tfc:sand/pink"
+	  },
+      {
+        "Name": "minecraft:sand"
+      },
+      {
+        "Name": "minecraft:coarse_dirt"
+      },
+      {
+        "Name": "minecraft:dirt"
+      },
+      {
+        "Name": "minecraft:grass_block",
+        "Properties": {
+          "snowy": "false"
+        }
+      },
+      {
+        "Name": "minecraft:calcite"
+      }
+    ]
+  }
+}

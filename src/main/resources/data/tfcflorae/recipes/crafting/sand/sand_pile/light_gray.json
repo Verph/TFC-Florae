@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand/light_gray"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/light_gray",
+    "count": 8
+  }
+}

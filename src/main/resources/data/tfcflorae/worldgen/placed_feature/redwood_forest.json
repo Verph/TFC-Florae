@@ -1,0 +1,14 @@
+{
+  "feature": "tfcflorae:redwood_forest",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 24,
+      "noise_factor": 100,
+      "noise_offset": 0.25
+    },
+    {
+      "type": "minecraft:in_square"
+    }
+  ]
+}

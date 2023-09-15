@@ -1,0 +1,17 @@
+{
+  "type": "tfc:barrel_sealed",
+  "input_item": {
+    "ingredient": {
+      "item": "minecraft:cyan_terracotta"
+    }
+  },
+  "input_fluid": {
+    "ingredient": "minecraft:water",
+    "amount": 250
+  },
+  "output_item": {
+    "item": "tfcflorae:sand/weathered_terracotta/cyan",
+    "count": 1
+  },
+  "duration": 1000
+}

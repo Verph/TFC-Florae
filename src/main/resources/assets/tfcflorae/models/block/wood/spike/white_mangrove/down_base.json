@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/spike_base",
+  "textures": {
+    "texture": "tfcflorae:block/wood/log/white_mangrove",
+    "particle": "tfcflorae:block/wood/log/white_mangrove"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:feature/boulders",
+    "tfc:cave_vegetation",
+    "#tfc:feature/volcanoes",
+    "tfc:random_empty_hot_spring",
+    "tfc:random_active_hot_spring",
+    "#tfc:feature/geode/opal",
+    "#tfc:feature/glaciers",
+    "tfc:small_rock_columns",
+    "tfcflorae:steppe",
+    "#tfc:feature/gypsum_caverns"
+  ]
+}

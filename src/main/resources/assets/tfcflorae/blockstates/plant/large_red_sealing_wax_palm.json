@@ -1,0 +1,24 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "part": "lower"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/large_red_sealing_wax_palm/large_red_sealing_wax_palm"
+        }
+      ]
+    },
+    {
+      "when": {
+        "part": "upper"
+      },
+      "apply": [
+        {
+          "model": "tfcflorae:block/empty"
+        }
+      ]
+    }
+  ]
+}

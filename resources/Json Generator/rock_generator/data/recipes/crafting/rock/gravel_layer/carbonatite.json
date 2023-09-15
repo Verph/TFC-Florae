@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/carbonatite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/carbonatite",
+    "count": 1
+  }
+}

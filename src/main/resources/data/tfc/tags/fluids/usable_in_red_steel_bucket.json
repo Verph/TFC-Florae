@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/anthracite",
+    "tfcflorae:ore/bituminous_coal",
+    "tfcflorae:ore/charcoal",
+    "tfcflorae:ore/lignite",
+    "tfcflorae:ore/coke"
+  ]
+}

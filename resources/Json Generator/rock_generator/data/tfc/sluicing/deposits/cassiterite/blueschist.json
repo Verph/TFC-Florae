@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/blueschist"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/blueschist"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/light_gray/siltstone"
+  ],
+  "result": "tfcflorae:sand/rockiest/light_gray/siltstone"
+}

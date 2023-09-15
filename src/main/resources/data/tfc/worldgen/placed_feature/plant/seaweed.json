@@ -1,0 +1,35 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/seaweed",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "tfc:shallow_water",
+      "max_depth": 24
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:would_survive_with_fluid",
+        "state": {
+          "Name": "tfcflorae:plant/seaweed",
+          "Properties": {
+            "age": "1",
+            "single": "true",
+            "part": "lower",
+            "fluid": "empty"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/sand/sand_layer/2/blue"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/sand/sand_layer/4/blue"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/sand/sand_layer/6/blue"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/sand/sand_layer/8/blue"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/sand/sand_layer/10/blue"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/sand/sand_layer/12/blue"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/sand/sand_layer/14/blue"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/sand/sand/blue"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/komatiite"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/komatiite"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/komatiite"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/komatiite"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/komatiite"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/komatiite"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/komatiite"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/komatiite"
+    }
+  }
+}

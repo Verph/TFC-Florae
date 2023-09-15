@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/soapstone",
+  "model_stages": [
+    "tfcflorae:item/pan/full/soapstone",
+    "tfcflorae:item/pan/half/soapstone",
+    "tfc:item/pan/native_copper/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper/soapstone"
+}

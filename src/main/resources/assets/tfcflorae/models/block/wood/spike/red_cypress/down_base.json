@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/spike_base",
+  "textures": {
+    "texture": "tfcflorae:block/wood/log/red_cypress",
+    "particle": "tfcflorae:block/wood/log/red_cypress"
+  }
+}

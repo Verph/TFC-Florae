@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/peridotite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/peridotite",
+    "count": 1
+  }
+}

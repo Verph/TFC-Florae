@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/light_gray/greenschist",
+  "result": "tfcflorae:sand/sandier_tiles/light_gray/greenschist",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/light_gray"
+  }
+}

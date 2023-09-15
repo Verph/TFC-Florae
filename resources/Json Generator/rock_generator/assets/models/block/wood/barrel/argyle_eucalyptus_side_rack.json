@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/argyle_eucalyptus",
+    "planks": "tfcflorae:block/wood/planks/argyle_eucalyptus",
+    "sheet": "tfcflorae:block/wood/sheet/argyle_eucalyptus"
+  }
+}

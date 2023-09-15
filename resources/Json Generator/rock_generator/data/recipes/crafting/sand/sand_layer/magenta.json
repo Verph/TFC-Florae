@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/magenta"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:sand/sand/magenta",
+    "count": 1
+  }
+}

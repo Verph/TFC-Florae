@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "c": {
+      "tag": "forge:chests/wooden"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/zebrawood"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/zebrawood"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:supply_cart/zebrawood"
+  }
+}

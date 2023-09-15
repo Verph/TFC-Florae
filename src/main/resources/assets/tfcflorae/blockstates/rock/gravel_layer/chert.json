@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/chert"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/chert"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/chert"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/chert"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/chert"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/chert"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/chert"
+    },
+    "layers=8": {
+      "model": "tfc:block/rock/gravel/chert"
+    }
+  }
+}

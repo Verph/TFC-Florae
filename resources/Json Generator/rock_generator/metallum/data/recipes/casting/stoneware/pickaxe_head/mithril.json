@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/pickaxe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/mithril",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/pickaxe_head/mithril"
+  },
+  "break_chance": 1
+}

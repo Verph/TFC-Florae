@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/schist"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/schist",
+    "count": 1
+  }
+}

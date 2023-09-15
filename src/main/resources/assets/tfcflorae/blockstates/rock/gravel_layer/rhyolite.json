@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/rhyolite"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/rhyolite"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/rhyolite"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/rhyolite"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/rhyolite"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/rhyolite"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/rhyolite"
+    },
+    "layers=8": {
+      "model": "tfc:block/rock/gravel/rhyolite"
+    }
+  }
+}

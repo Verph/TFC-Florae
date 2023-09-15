@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/wackestone"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/wackestone"
+}

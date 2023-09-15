@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/basalt"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/basalt",
+    "count": 8
+  }
+}

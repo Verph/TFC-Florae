@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/sandy_tiles/pink/dolomite"
+  ],
+  "result": "tfcflorae:sand/sandy_tiles/pink/dolomite"
+}

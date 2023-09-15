@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/blueschist"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/blueschist"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/blueschist"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/blueschist"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/blueschist"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/blueschist"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/blueschist"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/blueschist"
+    }
+  }
+}

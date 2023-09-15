@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/brown"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/brown",
+    "count": 1
+  }
+}

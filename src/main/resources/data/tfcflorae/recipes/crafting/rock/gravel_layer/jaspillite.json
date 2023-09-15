@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/jaspillite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/jaspillite",
+    "count": 1
+  }
+}

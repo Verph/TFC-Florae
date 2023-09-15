@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/axe_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/aluminum",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/axe_head/aluminum"
+  },
+  "break_chance": 1
+}

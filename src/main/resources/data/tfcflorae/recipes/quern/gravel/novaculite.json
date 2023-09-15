@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/novaculite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/novaculite",
+    "count": 1
+  }
+}

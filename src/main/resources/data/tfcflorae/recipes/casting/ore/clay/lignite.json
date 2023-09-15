@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfc:ceramic/ingot_mold"
+  },
+  "fluid": {
+    "ingredient": "tfcflorae:ore/lignite",
+    "amount": 1
+  },
+  "result": {
+    "item": "tfc:ore/lignite"
+  },
+  "break_chance": 0.1
+}

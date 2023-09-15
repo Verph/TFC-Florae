@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/sandier_tiles/white/soapstone"
+  ],
+  "result": "tfcflorae:sand/sandier_tiles/white/soapstone"
+}

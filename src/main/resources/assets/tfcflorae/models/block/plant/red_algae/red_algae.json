@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tfcflorae:block/plant/red_algae/red_algae",
+    "particle": "tfcflorae:block/plant/red_algae/red_algae"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:mineral/calcite",
+    "tfcflorae:rock/loose/carbonatite",
+    "tfcflorae:rock/loose/mylonite",
+    "tfcflorae:rock/loose/novaculite",
+    "tfcflorae:rock/loose/peridotite",
+    "tfcflorae:rock/loose/soapstone",
+    "tfcflorae:rock/loose/travertine",
+    "tfc:groundcover/mussel",
+    "tfcflorae:groundcover/sea_urchin"
+  ]
+}

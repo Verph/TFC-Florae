@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/laterite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/laterite",
+    "count": 8
+  }
+}

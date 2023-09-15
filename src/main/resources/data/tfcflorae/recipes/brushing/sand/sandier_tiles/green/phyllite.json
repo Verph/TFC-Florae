@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/green/phyllite",
+  "result": "tfcflorae:sand/sandy_tiles/green/phyllite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/green"
+  }
+}

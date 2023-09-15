@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/yellow_meranti"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/yellow_meranti"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/yellow_meranti"
+  }
+}

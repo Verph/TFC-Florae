@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/porphyry"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/porphyry"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/porphyry"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/porphyry"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/porphyry"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/porphyry"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/porphyry"
+    },
+    "layers=8": {
+      "model": "tfcflorae:block/rock/gravel/porphyry"
+    }
+  }
+}

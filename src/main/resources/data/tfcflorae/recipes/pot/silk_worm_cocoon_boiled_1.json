@@ -1,0 +1,20 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:pot",
+  "ingredients": [
+    {
+      "item": "tfcflorae:animal/product/silk_worm_cocoon"
+    }
+  ],
+  "fluid_ingredient": {
+    "ingredient": "minecraft:water",
+    "amount": 100
+  },
+  "duration": 1000,
+  "temperature": 300,
+  "item_output": [
+    {
+      "item": "tfcflorae:animal/product/silk_worm_cocoon_boiled"
+    }
+  ]
+}

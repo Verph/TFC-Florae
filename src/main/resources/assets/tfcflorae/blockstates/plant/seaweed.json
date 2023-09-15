@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/seaweed/seaweed"
+        },
+        {
+          "model": "tfcflorae:block/plant/seaweed/seaweed",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/seaweed/seaweed",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/seaweed/seaweed",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

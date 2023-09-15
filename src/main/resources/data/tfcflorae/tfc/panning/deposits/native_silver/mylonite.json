@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/mylonite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/mylonite",
+    "tfcflorae:item/pan/half/mylonite",
+    "tfc:item/pan/native_silver/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver/mylonite"
+}

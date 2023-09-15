@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/purple/conglomerate",
+  "result": "tfcflorae:sand/sandy_tiles/purple/conglomerate",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/purple"
+  }
+}

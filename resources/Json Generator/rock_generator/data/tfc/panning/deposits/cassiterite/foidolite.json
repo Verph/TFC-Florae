@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/foidolite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/foidolite",
+    "tfcflorae:item/pan/half/foidolite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/foidolite"
+}

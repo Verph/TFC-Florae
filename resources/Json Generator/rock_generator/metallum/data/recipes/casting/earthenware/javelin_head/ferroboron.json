@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/earthenware/fired/mold/javelin_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/ferroboron",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/javelin_head/ferroboron"
+  },
+  "break_chance": 1
+}

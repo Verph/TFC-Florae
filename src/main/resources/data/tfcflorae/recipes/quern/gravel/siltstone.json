@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/siltstone"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/siltstone",
+    "count": 1
+  }
+}

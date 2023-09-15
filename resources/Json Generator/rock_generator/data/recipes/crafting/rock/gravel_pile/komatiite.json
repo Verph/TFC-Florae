@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/komatiite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/komatiite",
+    "count": 8
+  }
+}

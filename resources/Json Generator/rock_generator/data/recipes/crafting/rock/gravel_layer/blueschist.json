@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/blueschist"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/blueschist",
+    "count": 1
+  }
+}

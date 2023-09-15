@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:near_shore",
+    "tfc:lagoon",
+    "tfc:atoll",
+    "tfc:barrier_reef",
+    "tfc:oceanic_mountains",
+    "tfc:volcanic_oceanic_mountains",
+    "tfc:ocean",
+    "tfc:ocean_reef",
+    "tfc:deep_ocean",
+    "tfc:deep_ocean_trench",
+    "tfc:abyssal_plains",
+    "tfc:seamounts",
+    "tfc:guyots"
+  ]
+}

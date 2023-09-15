@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:tadpole",
+    "tfcflorae:crappie",
+    "tfcflorae:lake_trout",
+    "tfcflorae:largemouth_bass",
+    "tfcflorae:rainbow_trout",
+    "tfcflorae:smallmouth_bass"
+  ]
+}

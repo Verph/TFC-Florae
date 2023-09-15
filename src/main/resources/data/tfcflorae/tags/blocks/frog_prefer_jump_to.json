@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lily_pad",
+    "minecraft:big_dripleaf",
+    "tfcflorae:plant/water_hyacinth",
+    "tfc:plant/water_lily",
+    "#tfc:mud"
+  ]
+}

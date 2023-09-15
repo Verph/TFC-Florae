@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockier/orange/dolomite"
+  ],
+  "result": "tfcflorae:sand/rockier/orange/dolomite"
+}

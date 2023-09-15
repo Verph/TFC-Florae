@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/knife_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/invar",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/knife_head/invar"
+  },
+  "break_chance": 1
+}

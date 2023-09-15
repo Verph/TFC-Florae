@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    },
+    {
+      "item": "tfcflorae:sand/sand_layer/green"
+    }
+  ],
+  "result": {
+    "item": "tfc:sand/green",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/marble"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/marble",
+    "count": 1
+  }
+}

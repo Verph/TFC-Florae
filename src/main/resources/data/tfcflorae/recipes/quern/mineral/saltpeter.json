@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:mineral/saltpeter"
+  },
+  "result": {
+    "item": "tfc:powder/saltpeter",
+    "count": 1
+  }
+}

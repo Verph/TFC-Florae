@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfcflorae:mineral/alabandite",
+    "tfcflorae:mineral/apatite",
+    "tfcflorae:mineral/bastnasite",
+    "tfcflorae:mineral/brimstone",
+    "tfcflorae:mineral/calcite",
+    "tfcflorae:mineral/greigite",
+    "tfcflorae:mineral/magnesite",
+    "tfcflorae:mineral/salmiak",
+    "tfcflorae:mineral/salt",
+    "tfcflorae:mineral/saltpeter",
+    "tfcflorae:mineral/smithsonite",
+    "tfcflorae:mineral/spherocobaltite",
+    "tfcflorae:mineral/zabuyelite"
+  ]
+}

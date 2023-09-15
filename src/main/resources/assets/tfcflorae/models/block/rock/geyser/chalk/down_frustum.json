@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/rock/geyser/down_frustum",
+  "textures": {
+    "side": "tfcflorae:block/rock/geyser_side/chalk",
+    "top": "tfcflorae:block/rock/geyser_top/chalk",
+    "bottom": "tfcflorae:block/rock/geyser_bottom/chalk",
+    "particle": "tfcflorae:block/rock/geyser_side/chalk"
+  }
+}

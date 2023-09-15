@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/hammer_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/lumium",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/hammer_head/lumium"
+  },
+  "break_chance": 1
+}

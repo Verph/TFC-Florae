@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/grass_grass_top",
+  "textures": {
+    "texture": "tfc:block/sand/brown"
+  }
+}

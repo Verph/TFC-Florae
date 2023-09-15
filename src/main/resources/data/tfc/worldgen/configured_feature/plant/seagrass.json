@@ -1,0 +1,6 @@
+{
+  "type": "tfcflorae:tall_seagrass",
+  "config": {
+    "block": "tfcflorae:plant/seagrass"
+  }
+}

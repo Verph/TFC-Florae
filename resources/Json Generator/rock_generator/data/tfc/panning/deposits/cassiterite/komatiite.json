@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/komatiite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/komatiite",
+    "tfcflorae:item/pan/half/komatiite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/komatiite"
+}

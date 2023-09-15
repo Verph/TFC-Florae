@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/breccia",
+  "result": "tfcflorae:sand/sandier_tiles/white/breccia",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/white"
+  }
+}

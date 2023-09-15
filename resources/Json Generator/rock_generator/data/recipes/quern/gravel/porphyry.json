@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:stone/porphyry"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/porphyry",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "stage": "0"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/madeira_vine/hanging_madeira_vine_0"
+      }
+    },
+    {
+      "when": {
+        "stage": "1"
+      },
+      "apply": {
+        "model": "tfcflorae:block/plant/madeira_vine/hanging_madeira_vine_1"
+      }
+    }
+  ]
+}

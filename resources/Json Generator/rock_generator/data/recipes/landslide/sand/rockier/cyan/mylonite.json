@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockier/cyan/mylonite"
+  ],
+  "result": "tfcflorae:sand/rockier/cyan/mylonite"
+}

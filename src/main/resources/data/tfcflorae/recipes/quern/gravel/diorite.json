@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:rock/loose/diorite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/diorite",
+    "count": 1
+  }
+}

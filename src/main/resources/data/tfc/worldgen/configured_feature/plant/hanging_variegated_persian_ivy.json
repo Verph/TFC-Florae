@@ -1,0 +1,12 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:weeping_vines",
+  "config": {
+    "body": "tfcflorae:plant/hanging_variegated_persian_ivy_plant",
+    "head": "tfcflorae:plant/hanging_variegated_persian_ivy",
+    "tries": 90,
+    "radius": 10,
+    "min_height": 14,
+    "max_height": 21
+  }
+}

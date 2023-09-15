@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/opal/crystal_geode_start",
+    "tfc:caverns/crystals/opal/crystal_growth",
+    "tfc:caverns/crystals/opal/buds/crystal_up",
+    "tfc:caverns/crystals/opal/buds/crystal_down",
+    "tfc:caverns/crystals/opal/buds/crystal_north",
+    "tfc:caverns/crystals/opal/buds/crystal_south",
+    "tfc:caverns/crystals/opal/buds/crystal_east",
+    "tfc:caverns/crystals/opal/buds/crystal_west",
+    "tfc:caverns/crystals/opal/mega_geode",
+    "tfc:caverns/crystals/opal/mega_geode_extra"
+  ]
+}

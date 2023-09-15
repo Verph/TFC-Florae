@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/conglomerate"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/wall/conglomerate",
+  "count": 1
+}

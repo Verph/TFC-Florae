@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfc:wood/lumber/birch"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/birch"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:animal_cart/birch"
+  }
+}

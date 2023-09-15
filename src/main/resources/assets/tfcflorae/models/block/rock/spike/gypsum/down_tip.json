@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/rock/spike_tip_down",
+  "textures": {
+    "texture": "tfcflorae:block/rock/raw/gypsum",
+    "particle": "tfcflorae:block/rock/raw/gypsum"
+  }
+}

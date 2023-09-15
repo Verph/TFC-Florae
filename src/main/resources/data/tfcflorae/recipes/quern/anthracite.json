@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:ore/anthracite"
+  },
+  "result": {
+    "item": "tfcflorae:powder/anthracite",
+    "count": 4
+  }
+}

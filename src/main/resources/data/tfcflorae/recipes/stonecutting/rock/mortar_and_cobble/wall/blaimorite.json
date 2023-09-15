@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mortar_and_cobble/blaimorite"
+  },
+  "result": "tfcflorae:rock/mortar_and_cobble/wall/blaimorite",
+  "count": 1
+}

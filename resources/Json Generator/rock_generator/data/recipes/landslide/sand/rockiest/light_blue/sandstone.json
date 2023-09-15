@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/light_blue/sandstone"
+  ],
+  "result": "tfcflorae:sand/rockiest/light_blue/sandstone"
+}

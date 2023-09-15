@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/rock/geyser/down_tip_merge",
+  "textures": {
+    "side": "tfcflorae:block/rock/geyser_side/soapstone",
+    "top": "tfcflorae:block/rock/geyser_top/soapstone",
+    "bottom": "tfcflorae:block/rock/geyser_bottom/soapstone",
+    "particle": "tfcflorae:block/rock/geyser_side/soapstone"
+  }
+}

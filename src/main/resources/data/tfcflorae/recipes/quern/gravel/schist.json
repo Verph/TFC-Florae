@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:rock/loose/schist"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/schist",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/andesite"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/red",
+    "count": 1
+  }
+}

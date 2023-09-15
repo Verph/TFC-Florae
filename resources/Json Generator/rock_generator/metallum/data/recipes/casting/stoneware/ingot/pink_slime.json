@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/ingot"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/pink_slime",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/ingot/pink_slime"
+  },
+  "break_chance": 0.1
+}

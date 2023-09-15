@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/green/porphyry",
+  "result": "tfcflorae:sand/sandier_tiles/green/porphyry",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/green"
+  }
+}

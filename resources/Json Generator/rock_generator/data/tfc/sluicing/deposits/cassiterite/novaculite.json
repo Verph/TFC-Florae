@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/novaculite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/novaculite"
+}

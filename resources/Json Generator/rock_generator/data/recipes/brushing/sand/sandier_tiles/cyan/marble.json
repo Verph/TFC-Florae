@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/cyan/marble",
+  "result": "tfcflorae:sand/sandy_tiles/cyan/marble",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/cyan"
+  }
+}

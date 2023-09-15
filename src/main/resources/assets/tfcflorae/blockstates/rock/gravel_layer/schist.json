@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/rock/gravel_layer/2/schist"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/rock/gravel_layer/4/schist"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/rock/gravel_layer/6/schist"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/rock/gravel_layer/8/schist"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/rock/gravel_layer/10/schist"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/rock/gravel_layer/12/schist"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/rock/gravel_layer/14/schist"
+    },
+    "layers=8": {
+      "model": "tfc:block/rock/gravel/schist"
+    }
+  }
+}

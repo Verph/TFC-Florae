@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:caverns/crystals/lapis_lazuli/crystal_geode_start",
+    "tfc:caverns/crystals/lapis_lazuli/crystal_growth",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_up",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_down",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_north",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_south",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_east",
+    "tfc:caverns/crystals/lapis_lazuli/buds/crystal_west",
+    "tfc:caverns/crystals/lapis_lazuli/mega_geode",
+    "tfc:caverns/crystals/lapis_lazuli/mega_geode_extra"
+  ]
+}

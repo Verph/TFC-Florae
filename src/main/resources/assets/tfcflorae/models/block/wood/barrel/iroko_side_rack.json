@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/iroko",
+    "planks": "tfcflorae:block/wood/planks/iroko",
+    "sheet": "tfcflorae:block/wood/sheet/iroko"
+  }
+}

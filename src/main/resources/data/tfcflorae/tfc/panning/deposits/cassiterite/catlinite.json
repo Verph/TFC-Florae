@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/catlinite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/catlinite",
+    "tfcflorae:item/pan/half/catlinite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/catlinite"
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "tfcflorae:block/wood/wood_bundle/red_bamboo"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/wood_bundle/red_bamboo",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "tfcflorae:block/wood/wood_bundle/red_bamboo",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

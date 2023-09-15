@@ -1,0 +1,27 @@
+{
+	"credit": "Made with Blockbench",
+    "parent": "block/block",
+	"textures": {
+		"all": "tfcflorae:block/plant/silvervein_creeper/silvervein_creeper_0",
+		"particle": "tfcflorae:block/plant/silvervein_creeper/silvervein_creeper_0",
+		"overlay": "tfcflorae:block/plant/silvervein_creeper/silvervein_creeper_0b"
+	},
+	"elements": [
+		{
+			"from": [0, 0.5, 0],
+			"to": [16, 0.5, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#all", "tintindex": 0},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#all", "tintindex": 0}
+			}
+		},
+		{
+			"from": [0, 0.5, 0],
+			"to": [16, 0.5, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#overlay"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#overlay"}
+			}
+		}
+	]
+}

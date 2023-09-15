@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/sandstone"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/sandstone",
+    "count": 8
+  }
+}

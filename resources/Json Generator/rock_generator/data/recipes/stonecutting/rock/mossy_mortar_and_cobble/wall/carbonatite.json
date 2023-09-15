@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/carbonatite"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/wall/carbonatite",
+  "count": 1
+}

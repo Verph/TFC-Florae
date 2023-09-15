@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/bamboo",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/bamboo"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/bamboo",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/bamboo",
+        "y": 270
+      }
+    ]
+  }
+}

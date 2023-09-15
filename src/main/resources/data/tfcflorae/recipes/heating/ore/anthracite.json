@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:ore/anthracite"
+  },
+  "result_fluid": {
+    "fluid": "tfcflorae:ore/anthracite",
+    "amount": 1
+  },
+  "temperature": 1100
+}

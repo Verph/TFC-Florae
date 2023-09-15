@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandier_tiles/black/komatiite",
+  "result": "tfcflorae:sand/sandy_tiles/black/komatiite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/black"
+  }
+}

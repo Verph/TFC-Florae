@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/pebble/yellow/blackband_ironstone"
+  ],
+  "result": "tfcflorae:sand/pebble/yellow/blackband_ironstone"
+}

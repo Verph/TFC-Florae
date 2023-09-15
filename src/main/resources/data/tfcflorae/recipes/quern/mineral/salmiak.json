@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:mineral/salmiak"
+  },
+  "result": {
+    "item": "tfc:pure_nitrogen",
+    "count": 1
+  }
+}

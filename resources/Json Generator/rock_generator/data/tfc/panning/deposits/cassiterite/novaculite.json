@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/novaculite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/novaculite",
+    "tfcflorae:item/pan/half/novaculite",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/novaculite"
+}

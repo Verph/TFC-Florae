@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mossy_mortar_and_cobble/quartzite"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/slab/quartzite",
+    "count": 6
+  }
+}

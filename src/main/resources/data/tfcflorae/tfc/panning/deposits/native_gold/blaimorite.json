@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/blaimorite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/blaimorite",
+    "tfcflorae:item/pan/half/blaimorite",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold/blaimorite"
+}

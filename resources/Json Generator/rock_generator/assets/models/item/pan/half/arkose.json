@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:item/pan/half",
+  "textures": {
+    "material": "tfcflorae:block/rock/gravel/arkose"
+  }
+}

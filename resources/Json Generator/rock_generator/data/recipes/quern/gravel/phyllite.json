@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/phyllite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/phyllite",
+    "count": 1
+  }
+}

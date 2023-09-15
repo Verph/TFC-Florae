@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/novaculite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel/novaculite",
+    "count": 1
+  }
+}

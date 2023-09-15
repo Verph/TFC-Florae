@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/sandstone",
+  "model_stages": [
+    "tfcflorae:item/pan/full/sandstone",
+    "tfcflorae:item/pan/half/sandstone",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/sandstone"
+}

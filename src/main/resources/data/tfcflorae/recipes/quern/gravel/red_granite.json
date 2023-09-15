@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/red_granite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/red_granite",
+    "count": 1
+  }
+}

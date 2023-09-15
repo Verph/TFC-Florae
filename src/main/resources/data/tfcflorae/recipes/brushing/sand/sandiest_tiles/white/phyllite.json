@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/white/phyllite",
+  "result": "tfcflorae:sand/sandier_tiles/white/phyllite",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/white"
+  }
+}

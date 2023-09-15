@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/grass/purple"
+  ],
+  "result": "tfcflorae:sand/sand/purple"
+}

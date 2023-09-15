@@ -1,0 +1,48 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:tree/bamboo/small/red_bamboo",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 42,
+      "noise_factor": 300,
+      "noise_offset": 0.02
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 19,
+      "max_temperature": 30,
+      "min_rainfall": 290,
+      "max_rainfall": 500,
+      "fuzzy": true
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "tag": "tfc:bush_plantable_on"
+      }
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

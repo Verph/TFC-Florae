@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/arkose",
+  "model_stages": [
+    "tfcflorae:item/pan/full/arkose",
+    "tfcflorae:item/pan/half/arkose",
+    "tfc:item/pan/cassiterite/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/arkose"
+}

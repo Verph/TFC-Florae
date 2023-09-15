@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    },
+    {
+      "item": "tfcflorae:rock/gravel_layer/dolomite"
+    }
+  ],
+  "result": {
+    "item": "tfc:rock/gravel/dolomite",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "tfcflorae:sand/sandiest_tiles/green/greenschist"
+  ],
+  "result": "tfcflorae:sand/sandiest_tiles/green/greenschist"
+}

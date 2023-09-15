@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/blackband_ironstone",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/blackband_ironstone",
+  "mode": "stair"
+}

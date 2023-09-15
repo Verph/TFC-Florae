@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock/gravel/diorite"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/diorite",
+    "count": 8
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/native_silver/cataclasite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_silver/cataclasite"
+}

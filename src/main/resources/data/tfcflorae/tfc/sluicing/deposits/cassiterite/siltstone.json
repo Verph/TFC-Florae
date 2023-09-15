@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/siltstone"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/siltstone"
+}

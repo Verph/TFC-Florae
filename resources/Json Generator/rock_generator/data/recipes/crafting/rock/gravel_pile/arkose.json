@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:rock/gravel/arkose"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/arkose",
+    "count": 8
+  }
+}

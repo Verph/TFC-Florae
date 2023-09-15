@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/black/soapstone",
+  "result": "tfcflorae:sand/sandier_tiles/black/soapstone",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/black"
+  }
+}

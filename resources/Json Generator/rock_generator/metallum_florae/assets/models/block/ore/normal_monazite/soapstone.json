@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/raw/soapstone",
+    "particle": "tfcflorae:block/rock/raw/soapstone",
+    "overlay": "tfc_metallum:block/ore/normal_monazite"
+  }
+}

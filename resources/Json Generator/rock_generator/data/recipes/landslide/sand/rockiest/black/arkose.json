@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/rockiest/black/arkose"
+  ],
+  "result": "tfcflorae:sand/rockiest/black/arkose"
+}

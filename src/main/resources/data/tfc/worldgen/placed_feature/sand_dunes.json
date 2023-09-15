@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:sand_dunes",
+  "placement": [
+    {
+      "type": "tfc:climate",
+      "max_rainfall": 75
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "tfc:biome"
+    }
+  ]
+}

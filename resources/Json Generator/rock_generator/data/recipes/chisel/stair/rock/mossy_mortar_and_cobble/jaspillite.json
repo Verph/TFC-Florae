@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/mossy_mortar_and_cobble/jaspillite",
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/jaspillite",
+  "mode": "stair"
+}

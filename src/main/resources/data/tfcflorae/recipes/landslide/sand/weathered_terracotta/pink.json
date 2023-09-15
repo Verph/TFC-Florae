@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:sand/weathered_terracotta/pink"
+  ],
+  "result": "tfcflorae:sand/weathered_terracotta/pink"
+}

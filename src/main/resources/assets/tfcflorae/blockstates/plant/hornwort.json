@@ -1,0 +1,23 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "tfcflorae:block/plant/hornwort/hornwort"
+        },
+        {
+          "model": "tfcflorae:block/plant/hornwort/hornwort",
+          "y": 90
+        },
+        {
+          "model": "tfcflorae:block/plant/hornwort/hornwort",
+          "y": 180
+        },
+        {
+          "model": "tfcflorae:block/plant/hornwort/hornwort",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

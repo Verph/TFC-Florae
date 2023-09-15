@@ -1,0 +1,31 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+	"tfcflorae:rock/chiseled/red_granite",
+    "tfcflorae:rock/chiseled/breccia",
+    "tfcflorae:rock/chiseled/foidolite",
+    "tfcflorae:rock/chiseled/porphyry",
+    "tfcflorae:rock/chiseled/peridotite",
+    "tfcflorae:rock/chiseled/blaimorite",
+    "tfcflorae:rock/chiseled/boninite",
+    "tfcflorae:rock/chiseled/carbonatite",
+    "tfcflorae:rock/chiseled/laterite",
+    "tfcflorae:rock/chiseled/mudstone",
+    "tfcflorae:rock/chiseled/sandstone",
+    "tfcflorae:rock/chiseled/siltstone",
+    "tfcflorae:rock/chiseled/arkose",
+    "tfcflorae:rock/chiseled/jaspillite",
+    "tfcflorae:rock/chiseled/travertine",
+    "tfcflorae:rock/chiseled/wackestone",
+    "tfcflorae:rock/chiseled/blackband_ironstone",
+    "tfcflorae:rock/chiseled/cataclasite",
+    "tfcflorae:rock/chiseled/blueschist",
+    "tfcflorae:rock/chiseled/catlinite",
+    "tfcflorae:rock/chiseled/greenschist",
+    "tfcflorae:rock/chiseled/novaculite",
+    "tfcflorae:rock/chiseled/soapstone",
+    "tfcflorae:rock/chiseled/komatiite",
+    "tfcflorae:rock/chiseled/mylonite"
+  ]
+}

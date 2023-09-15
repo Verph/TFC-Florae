@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/foidolite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/foidolite"
+}

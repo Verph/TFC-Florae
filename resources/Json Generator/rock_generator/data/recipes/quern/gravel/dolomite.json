@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfc:stone/dolomite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/dolomite",
+    "count": 1
+  }
+}

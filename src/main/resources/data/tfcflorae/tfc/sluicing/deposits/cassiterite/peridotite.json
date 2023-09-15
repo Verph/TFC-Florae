@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/peridotite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/peridotite"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##S",
+    "SSS"
+  ],
+  "key": {
+    "#": {
+      "item": "tfcflorae:wood/lumber/red_mangrove"
+    },
+    "S": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "tfcsleghs:sled/red_mangrove"
+  }
+}

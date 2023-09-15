@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tfcflorae:rock/mossy_mortar_and_cobble/foidolite"
+  },
+  "result": "tfcflorae:rock/mossy_mortar_and_cobble/slab/foidolite",
+  "count": 2
+}

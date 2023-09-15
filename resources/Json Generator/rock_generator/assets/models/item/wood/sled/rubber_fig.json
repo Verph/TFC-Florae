@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tfcsleghs:items/wood/sled/rubber_fig"
+  }
+}

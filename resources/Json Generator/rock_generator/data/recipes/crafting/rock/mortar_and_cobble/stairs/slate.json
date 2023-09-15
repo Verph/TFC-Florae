@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:rock/mortar_and_cobble/slate"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:rock/mortar_and_cobble/stairs/slate",
+    "count": 8
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:sand/weathered_terracotta_shard/pink"
+    }
+  },
+  "result": {
+    "item": "minecraft:pink_terracotta"
+  }
+}

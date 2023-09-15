@@ -1,0 +1,17 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "feature": "tfc:plant/hornwort_patch",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -16,
+      "max_temperature": 22,
+      "min_rainfall": 150,
+      "max_rainfall": 500,
+      "fuzzy": true
+    }
+  ]
+}

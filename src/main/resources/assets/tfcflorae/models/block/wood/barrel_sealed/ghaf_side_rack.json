@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/ghaf",
+    "planks": "tfcflorae:block/wood/planks/ghaf",
+    "sheet": "tfcflorae:block/wood/sheet/ghaf"
+  }
+}

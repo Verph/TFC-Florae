@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/blackband_ironstone"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/blackband_ironstone"
+}

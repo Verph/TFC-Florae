@@ -1,0 +1,23 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "tfcflorae:ore/anthracite"
+    },
+    {
+      "item": "tfcflorae:ore/coke"
+    },
+    {
+      "item": "tfc:ore/bituminous_coal"
+    },
+    {
+      "item": "tfc:ore/lignite"
+    }
+  ],
+  "heat_capacity": 14.730,
+  "forging_temperature": 0,
+  "welding_temperature": 1
+}

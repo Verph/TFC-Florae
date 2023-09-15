@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandiest_tiles/green/carbonatite",
+  "result": "tfcflorae:sand/sandier_tiles/green/carbonatite",
+  "extra_drop": {
+    "item": "tfcflorae:sand_pile/green"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/travertine"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite/travertine"
+}

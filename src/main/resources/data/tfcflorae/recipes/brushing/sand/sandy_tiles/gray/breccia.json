@@ -1,0 +1,8 @@
+{
+  "type": "tfcflorae:brushing",
+  "ingredient": "tfcflorae:sand/sandy_tiles/gray/breccia",
+  "result": "tfcflorae:rock/stone_tiles/breccia",
+  "extra_drop": {
+    "item": "tfcflorae:sand/sand_layer/gray"
+  }
+}

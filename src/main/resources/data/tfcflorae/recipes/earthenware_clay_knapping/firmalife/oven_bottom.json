@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfcflorae:earthenware_clay_knapping",
+  "pattern": [
+    "XX XX",
+    "X   X",
+    "X   X",
+    "XX XX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "firmalife:oven_bottom"
+  }
+}

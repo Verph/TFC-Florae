@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/ingot"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/tungsten",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/ingot/tungsten"
+  },
+  "break_chance": 0.1
+}

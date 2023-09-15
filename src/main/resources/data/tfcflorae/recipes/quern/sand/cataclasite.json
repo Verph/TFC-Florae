@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/gravel_layer/cataclasite"
+  },
+  "result": {
+    "item": "tfcflorae:sand/sand_layer/gray",
+    "count": 1
+  }
+}

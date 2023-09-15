@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfcflorae:ceramic/stoneware/fired/mold/shovel_head"
+  },
+  "fluid": {
+    "ingredient": "tfc_metallum:metal/nickel_silver",
+    "amount": 100
+  },
+  "result": {
+    "item": "tfc_metallum:metal/shovel_head/nickel_silver"
+  },
+  "break_chance": 1
+}

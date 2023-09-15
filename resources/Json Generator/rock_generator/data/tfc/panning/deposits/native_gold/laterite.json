@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/laterite",
+  "model_stages": [
+    "tfcflorae:item/pan/full/laterite",
+    "tfcflorae:item/pan/half/laterite",
+    "tfc:item/pan/native_gold/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold/laterite"
+}

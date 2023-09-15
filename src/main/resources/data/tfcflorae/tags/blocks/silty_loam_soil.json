@@ -1,0 +1,14 @@
+
+{
+  "replace": false,
+  "values": [
+    "tfc:dirt/silty_loam",
+    "tfc:grass/silty_loam",
+    "tfc:rooted_dirt/silty_loam",
+    "tfcflorae:dry_grass/silty_loam",
+    "tfcflorae:sparse_grass/silty_loam",
+    "tfcflorae:dense_grass/silty_loam",
+    "tfcflorae:podzol/silty_loam",
+    "tfcflorae:mycelium_dirt/silty_loam"
+  ]
+}

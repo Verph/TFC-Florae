@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_sealed_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/yellow_meranti",
+    "planks": "tfcflorae:block/wood/planks/yellow_meranti",
+    "sheet": "tfcflorae:block/wood/sheet/yellow_meranti"
+  }
+}

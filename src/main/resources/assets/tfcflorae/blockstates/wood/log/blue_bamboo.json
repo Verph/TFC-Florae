@@ -1,0 +1,115 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "axis": "y"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_2",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_0",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_1",
+		  "weight": 1
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_2",
+		  "weight": 1
+		}
+      ]
+    },
+    {
+      "when": {
+        "axis": "z"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_0",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_1",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_2",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_0",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_1",
+		  "weight": 1,
+		  "x": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_2",
+		  "weight": 1,
+		  "x": 90
+		}
+      ]
+    },
+    {
+      "when": {
+        "axis": "x"
+      },
+      "apply": [
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_0",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_1",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_2",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_0",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_1",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		},
+		{
+          "model": "tfcflorae:block/wood/log/bamboo/blue_bamboo_leaves_2",
+		  "weight": 1,
+		  "x": 90,
+		  "y": 90
+		}
+      ]
+    }
+  ]
+}

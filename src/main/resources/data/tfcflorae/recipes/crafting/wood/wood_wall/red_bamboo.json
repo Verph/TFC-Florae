@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood_bundle/red_bamboo"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/bamboo"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/bamboo",
+    "count": 8
+  }
+}

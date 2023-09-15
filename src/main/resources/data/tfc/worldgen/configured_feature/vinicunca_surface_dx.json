@@ -1,0 +1,544 @@
+{
+  "type": "minecraft:vegetation_patch",
+  "config": {
+    "surface": "floor",
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 10,
+        "max_inclusive": 12
+      }
+    },
+    "vertical_range": 12,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 0,
+    "xz_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "replaceable": "#tfc:can_carve",
+    "ground_state": {
+      "type": "minecraft:noise_provider",
+      "seed": 1,
+      "variety": {
+        "min_inclusive": 1,
+        "max_inclusive": 2
+      },
+      "noise": {
+        "firstOctave": -9,
+        "amplitudes": [
+          1,
+          1,
+          0.75,
+          0.5,
+          1,
+          1
+        ]
+      },
+      "scale": 1,
+      "states": [
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/magenta"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/purple"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/cyan"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/cyan"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/purple"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/magenta"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/purple"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/cyan"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/cyan"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/purple"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/black"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/brown"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/cyan"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/gray"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_blue"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_gray"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/light_green"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/magenta"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/orange"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/pink"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/purple"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/red"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/white"
+        },
+        {
+          "Name": "tfcflorae:sand/weathered_terracotta/yellow"
+        }
+      ]
+    },
+    "vegetation_feature":{
+      "placement":[],"feature": {
+      "type": "minecraft:random_selector",
+      "config": {
+        "features": [],
+        "default": {
+          "feature": {
+            "type": "minecraft:no_op",
+            "config": {}
+          },
+          "placement": []
+        }
+      }
+    }}
+  }
+}

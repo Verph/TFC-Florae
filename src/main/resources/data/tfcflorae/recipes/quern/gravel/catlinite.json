@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "item": "tfcflorae:rock/loose/catlinite"
+  },
+  "result": {
+    "item": "tfcflorae:rock/gravel_layer/catlinite",
+    "count": 1
+  }
+}

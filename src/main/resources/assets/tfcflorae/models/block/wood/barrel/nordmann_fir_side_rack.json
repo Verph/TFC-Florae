@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/barrel_side_rack",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/nordmann_fir",
+    "planks": "tfcflorae:block/wood/planks/nordmann_fir",
+    "sheet": "tfcflorae:block/wood/sheet/nordmann_fir"
+  }
+}
