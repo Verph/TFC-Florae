@@ -11,5 +11,5 @@
   "result": {
     "item": "tfc:metal/mace_head/black_bronze"
   },
-  "break_chance": 1
+  "break_chance": 0.33
 }

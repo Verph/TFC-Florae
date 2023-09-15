@@ -11,5 +11,5 @@
   "result": {
     "item": "tfc:metal/sword_blade/copper"
   },
-  "break_chance": 1
+  "break_chance": 0.33
 }

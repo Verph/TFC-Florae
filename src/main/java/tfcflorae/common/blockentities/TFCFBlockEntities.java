@@ -21,6 +21,7 @@ import net.dries007.tfc.util.registry.RegistrationHelpers;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 
 @SuppressWarnings("RedundantTypeArguments")
@@ -29,7 +30,9 @@ public class TFCFBlockEntities
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFCFlorae.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<SandPileBlockEntity>> SAND_PILE = register("sand_pile", SandPileBlockEntity::new, Stream.of(
-            TFCFBlocks.SAND_LAYERS.values().stream()
+            //TFCFBlocks.SAND_LAYERS.values().stream(),
+            //TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.values().stream().map(map -> map.get(TFCFRock.TFCFBlockType.GRAVEL_LAYER)),
+            //TFCFBlocks.ROCK_BLOCKS.values().stream().map(map -> map.get(TFCFRock.TFCFBlockType.GRAVEL_LAYER))
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
 

@@ -56,6 +56,7 @@ import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
+
 import tfcflorae.Config;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -167,7 +168,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             if (!level.isClientSide())
             {
                 ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
-                level.setBlockAndUpdate(pos, stateAfterPicking(state));
+                level.setBlock(pos, stateAfterPicking(state), Block.UPDATE_ALL);
             }
             return InteractionResult.SUCCESS;
         }
@@ -192,7 +193,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
                 else
                 {
                     // max + 1 means it must decay next random tick
-                    level.setBlockAndUpdate(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1));
+                    level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1), Block.UPDATE_ALL);
                 }
             }
             else
@@ -224,7 +225,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
 
             if (!state.getValue(PERSISTENT))
             {
-                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
+                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
                 {
                     onUpdate(level, pos, state);
                     lastUpdateTick = Calendars.SERVER.getTicks();
@@ -376,6 +377,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             if (state != newState)
             {
                 level.setBlock(pos, newState, Block.UPDATE_ALL);
+                level.blockUpdated(pos, newState.getBlock());
             }
         }
     }
@@ -428,7 +430,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             // When we're in dormant time, no matter what conditions, or time since appearance, the bush will be dormant.
             if (expected != current)
             {
-                level.setBlockAndUpdate(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT));
+                level.setBlock(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT), Block.UPDATE_ALL);
             }
             return true;
         }

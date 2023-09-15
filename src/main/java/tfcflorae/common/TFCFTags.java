@@ -14,6 +14,7 @@ public class TFCFTags
     public static class Blocks
     {
         public static final TagKey<Block> CLAY = create("clay");
+        public static final TagKey<Block> GRAVEL = create("gravel");
         public static final TagKey<Block> MAGMA_BLOCKS = create("magma_blocks");
         public static final TagKey<Block> PODZOL = create("podzol");
         public static final TagKey<Block> ROOTED_DIRT = create("rooted_dirt");

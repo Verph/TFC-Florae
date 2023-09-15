@@ -91,6 +91,7 @@ public class TFCFFeatures
     public static final RegistryObject<RivuletFeature> RIVULET = register("rivulet", RivuletFeature::new, Codecs.BLOCK_STATE_CONFIG);
     public static final RegistryObject<SandDunesFeature> SAND_DUNES = register("sand_dunes", SandDunesFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<SandLayerFeature> SAND_LAYER = register("sand_layer", SandLayerFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<GravelLayerFeature> GRAVEL_LAYER = register("gravel_layer", GravelLayerFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<TidePoolFeature> TIDE_POOL = register("tide_pool", TidePoolFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<SubTerraneanRiver> UNDERGROUND_RIVER = register("underground_river", SubTerraneanRiver::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<TFCBambooFeature> BAMBOO = register("bamboo", TFCBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);

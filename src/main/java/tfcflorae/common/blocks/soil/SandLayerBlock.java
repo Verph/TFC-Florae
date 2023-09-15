@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -36,7 +37,6 @@ import net.minecraft.util.Mth;
 
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.soil.TFCSandBlock;
@@ -50,10 +50,11 @@ import net.dries007.tfc.world.TFCChunkGenerator;
 
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 
-public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IForgeBlockExtension, EntityBlockExtension
+public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IForgeBlockExtension//, EntityBlockExtension
 {
    public static final FluidProperty ALL_WATER_AND_LAVA = FluidProperty.create("fluid", Stream.of(Fluids.EMPTY, Fluids.FLOWING_WATER, Fluids.WATER, TFCFluids.SALT_WATER, TFCFluids.SPRING_WATER, TFCFluids.RIVER_WATER, Fluids.LAVA, Fluids.FLOWING_LAVA));
    public static final FluidProperty FLUID = ALL_WATER_AND_LAVA;
+   public static final Boolean SNOWY = false;
 
    public static final IntegerProperty LAYERS = BlockStateProperties.LAYERS;
    protected static final VoxelShape[] SHAPES = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
@@ -73,6 +74,26 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
    public ExtendedProperties getExtendedProperties()
    {
       return properties;
+   }
+
+   @Override
+   public boolean canPlaceLiquid(BlockGetter level, BlockPos pos, BlockState state, Fluid fluid)
+   {
+      if (fluid instanceof FlowingFluid && !getFluidProperty().canContain(fluid))
+      {
+         return true;
+      }
+      return IFluidLoggable.super.canPlaceLiquid(level, pos, state, fluid);
+   }
+
+   @Override
+   public boolean placeLiquid(LevelAccessor level, BlockPos pos, BlockState state, FluidState fluidStateIn)
+   {
+      if (fluidStateIn.getType() instanceof FlowingFluid && !getFluidProperty().canContain(fluidStateIn.getType()))
+      {
+         return true;
+      }
+      return IFluidLoggable.super.placeLiquid(level, pos, state, fluidStateIn);
    }
 
    @Override
@@ -129,7 +150,7 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       {
          if (!blockstate.is(Blocks.HONEY_BLOCK) && !blockstate.is(Blocks.SOUL_SAND))
          {
-            return Block.isFaceFull(blockstate.getCollisionShape(worldIn, pos.below()), Direction.UP) || (blockstate.getBlock() == this && blockstate.getValue(LAYERS) == 8);
+            return Block.isFaceFull(blockstate.getCollisionShape(worldIn, pos.below()), Direction.UP) || (blockstate.getBlock() instanceof SandLayerBlock && blockstate.getValue(LAYERS) == 8);
          }
          else
          {
@@ -143,59 +164,15 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
    }
 
    @Override
-   public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
+   public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
    {
-      if (currentPos.getY() < TFCChunkGenerator.SEA_LEVEL_Y)
+      FluidHelpers.tickFluid(level, currentPos, state);
+      if (state.getValue(LAYERS) > 7 && transformsInto != null)
       {
-         FluidHelpers.tickFluid(worldIn, currentPos, stateIn);
+         level.setBlock(currentPos, transformsInto.get().defaultBlockState(), Block.UPDATE_ALL);
       }
-      if (stateIn.getValue(LAYERS) > 7 && transformsInto != null)
-      {
-         worldIn.setBlock(currentPos, transformsInto.get().defaultBlockState(), 2);
-      }
-
-      FluidState fluidState = worldIn.getFluidState(currentPos.relative(facing));
-      if (getFluidProperty().canContain(fluidState.getType()))
-      {
-         return !stateIn.canSurvive(worldIn, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos).setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
-      }
-      else
-      {
-         return !stateIn.canSurvive(worldIn, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
-      }
+      return state.canSurvive(level, currentPos) ? super.updateShape(state, facing, facingState, level, currentPos, facingPos) : state.getFluidState().createLegacyBlock();
    }
-
-   /*@Override
-   public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random)
-   {
-      if (worldIn.getBrightness(LightLayer.BLOCK, pos) > 11)
-      {
-         dropResources(state, worldIn, pos);
-         worldIn.removeBlock(pos, false);
-      }
-   }*/
-
-   /*@Override
-   public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random)
-   {
-      FluidHelpers.tickFluid(level, pos, state);
-      if (state.canSurvive(level, pos))
-      {
-         for (Direction direction : TFCFHelpers.DIRECTIONS)
-         {
-            FluidState fluidState = level.getFluidState(pos.relative(direction));
-            if (getFluidProperty().canContain(fluidState.getType()))
-            {
-               state.setValue(getFluidProperty(), getFluidProperty().keyFor(fluidState.getType()));
-               break;
-            }
-            else
-            {
-               state.setValue(getFluidProperty(), getFluidProperty().keyFor(Fluids.EMPTY));
-            }
-         }
-      }
-   }*/
 
    @Override
    public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext)
@@ -247,7 +224,7 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
    @SuppressWarnings("deprecation")
    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving)
    {
-      if (pos.getY() < TFCChunkGenerator.SEA_LEVEL_Y)
+      if (pos.getY() <= TFCChunkGenerator.SEA_LEVEL_Y)
       {
          FluidHelpers.tickFluid(level, pos, state);
       }
@@ -322,14 +299,16 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       final BlockState sandPile = defaultBlockState();
 
       FluidState fluidState = level.getFluidState(pos);
-      FluidKey fluidKey = getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY);
+      level.setBlock(pos, sandPile.setValue(getFluidProperty(), getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY)), Block.UPDATE_ALL);
 
-      level.setBlock(pos, sandPile.setValue(getFluidProperty(), fluidKey), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
-      level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      if (state.hasBlockEntity())
+      {
+         level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      }
 
       if (savedAboveState != null)
       {
-         Helpers.removeBlock(level, posAbove, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         Helpers.removeBlock(level, posAbove, Block.UPDATE_ALL);
       }
 
       // Then cause block updates
@@ -349,14 +328,16 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       final BlockState sandPile = defaultBlockState();
 
       FluidState fluidState = level.getFluidState(pos);
-      FluidKey fluidKey = getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY);
+      level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers).setValue(getFluidProperty(), getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY)), Block.UPDATE_ALL);
 
-      level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers).setValue(getFluidProperty(), fluidKey), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
-      level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      if (state.hasBlockEntity())
+      {
+         level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      }
 
       if (savedAboveState != null)
       {
-         Helpers.removeBlock(level, posAbove, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         Helpers.removeBlock(level, posAbove, Block.UPDATE_ALL);
       }
 
       // Then cause block updates
@@ -376,14 +357,16 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       final BlockState sandPile = defaultBlockState();
 
       FluidState fluidState = level.getFluidState(pos);
-      FluidKey fluidKey = getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY);
+      level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers).setValue(getFluidProperty(), getFluidProperty().canContain(fluidState.getType()) ? getFluidProperty().keyFor(fluidState.getType()) : getFluidProperty().keyFor(Fluids.EMPTY)), Block.UPDATE_ALL);
 
-      level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers).setValue(getFluidProperty(), fluidKey), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
-      level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      if (state.hasBlockEntity())
+      {
+         level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      }
 
       if (savedAboveState != null)
       {
-         Helpers.removeBlock(level, posAbove, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         Helpers.removeBlock(level, posAbove, Block.UPDATE_ALL);
       }
 
       // Then cause block updates
@@ -403,19 +386,20 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
 
       if (shouldFluidLog)
       {
-         Fluid fluid = level.getFluidState(pos).getType();
-         BlockState sandPileFilled = FluidHelpers.fillWithFluid(sandPile, fluid);
-         level.setBlock(pos, sandPileFilled.setValue(SandLayerBlock.LAYERS, layers), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         level.setBlock(pos, FluidHelpers.fillWithFluid(sandPile, level.getFluidState(pos).getType()).setValue(SandLayerBlock.LAYERS, layers), Block.UPDATE_ALL);
       }
       else if (!shouldFluidLog)
       {
-         level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         level.setBlock(pos, sandPile.setValue(SandLayerBlock.LAYERS, layers), Block.UPDATE_ALL);
       }
-      level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      if (sandPile.hasBlockEntity())
+      {
+         level.getBlockEntity(pos, TFCFBlockEntities.SAND_PILE.get()).ifPresent(entity -> entity.setHiddenStates(state, savedAboveState, byPlayer));
+      }
 
       if (savedAboveState != null)
       {
-         Helpers.removeBlock(level, posAbove, Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+         Helpers.removeBlock(level, posAbove, Block.UPDATE_ALL);
       }
 
       // Then cause block updates
@@ -454,17 +438,17 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
          // Remove a single sand layer block
          level.removeBlock(pos, false);
       }
-      else
+      else if (state.hasBlockEntity())
       {
          // Otherwise, remove a sand pile, restoring the internal states
          level.getBlockEntity(pos, TFCBlockEntities.PILE.get()).ifPresent(pile ->{
             if (!level.isClientSide())
             {
                final BlockPos above = pos.above();
-               level.setBlock(pos, pile.getInternalState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+               level.setBlock(pos, pile.getInternalState(), Block.UPDATE_ALL);
                if (pile.getAboveState() != null && level.isEmptyBlock(above))
                {
-                  level.setBlock(above, pile.getAboveState(), Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+                  level.setBlock(above, pile.getAboveState(), Block.UPDATE_ALL);
                }
 
                // Update neighbors shapes from the bottom block (this is important to get grass blocks to adjust to sandy/non-sandy states)

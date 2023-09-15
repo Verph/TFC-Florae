@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
-import org.jetbrains.annotations.Nullable;
-
 import com.google.common.collect.ImmutableList;
 
 import net.minecraft.core.BlockPos;
@@ -16,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
@@ -26,11 +23,10 @@ import net.dries007.tfc.world.surface.SurfaceBuilderContext;
 import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
-import tfcflorae.Config;
+
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.*;
-import tfcflorae.util.TFCFHelpers;
 
 public class TFCFSoilSurfaceState implements SurfaceState
 {
@@ -241,8 +237,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
 
     public static SurfaceState rockRareSandGrass()
     {
-        final Supplier<Block> pinkSand = TFCFBlocks.SAND_GRASS.get(SandBlockType.PINK);
-        final Supplier<Block> blackSand =  TFCFBlocks.SAND_GRASS.get(SandBlockType.BLACK);
+        final Supplier<Block> pinkSand = TFCFBlocks.SAND_GRASS.get(Colors.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.SAND_GRASS.get(Colors.BLACK);
 
         return context -> {
             if (context.rainfall() > 300f && context.averageTemperature() > 15f)
@@ -262,8 +258,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
 
     public static SurfaceState rockRareSandSparseGrass()
     {
-        final Supplier<Block> pinkSand = TFCFBlocks.SPARSE_SAND_GRASS.get(SandBlockType.PINK);
-        final Supplier<Block> blackSand =  TFCFBlocks.SPARSE_SAND_GRASS.get(SandBlockType.BLACK);
+        final Supplier<Block> pinkSand = TFCFBlocks.SPARSE_SAND_GRASS.get(Colors.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.SPARSE_SAND_GRASS.get(Colors.BLACK);
 
         return context -> {
             if (context.rainfall() > 300f && context.averageTemperature() > 15f)
@@ -283,8 +279,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
 
     public static SurfaceState rockRareSandDenseGrass()
     {
-        final Supplier<Block> pinkSand = TFCFBlocks.DENSE_SAND_GRASS.get(SandBlockType.PINK);
-        final Supplier<Block> blackSand =  TFCFBlocks.DENSE_SAND_GRASS.get(SandBlockType.BLACK);
+        final Supplier<Block> pinkSand = TFCFBlocks.DENSE_SAND_GRASS.get(Colors.PINK);
+        final Supplier<Block> blackSand =  TFCFBlocks.DENSE_SAND_GRASS.get(Colors.BLACK);
 
         return context -> {
             if (context.rainfall() > 300f && context.averageTemperature() > 15f)
@@ -305,8 +301,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
     /*public static SurfaceState rockRareSandTFC(TFCFRockSand type)
     {
         return context -> {
-            final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.PINK).get(rockType(context));
-            final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.BLACK).get(rockType(context));
+            final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFC.get(type).get(Colors.PINK).get(rockType(context));
+            final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFC.get(type).get(Colors.BLACK).get(rockType(context));
 
             if (context.rainfall() > 300f && context.averageTemperature() > 15f)
             {
@@ -328,8 +324,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
         return context -> {
             if (isTFCFRock(context))
             {
-                final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(SandBlockType.PINK).get(rockType(context));
-                final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(SandBlockType.BLACK).get(rockType(context));
+                final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(Colors.PINK).get(rockType(context));
+                final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFCF.get(type).get(Colors.BLACK).get(rockType(context));
 
                 if (context.rainfall() > 300f && context.averageTemperature() > 15f)
                 {
@@ -346,8 +342,8 @@ public class TFCFSoilSurfaceState implements SurfaceState
             }
             else
             {
-                final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.PINK).get(rockType(context));
-                final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFC.get(type).get(SandBlockType.BLACK).get(rockType(context));
+                final Supplier<Block> pinkSand = TFCFBlocks.ROCKY_SAND_TFC.get(type).get(Colors.PINK).get(rockType(context));
+                final Supplier<Block> blackSand =  TFCFBlocks.ROCKY_SAND_TFC.get(type).get(Colors.BLACK).get(rockType(context));
 
                 if (context.rainfall() > 300f && context.averageTemperature() > 15f)
                 {
@@ -365,56 +361,52 @@ public class TFCFSoilSurfaceState implements SurfaceState
         };
     }
 
-    public static SandBlockType sandColor(SurfaceBuilderContext context)
+    public static Colors sandColor(SurfaceBuilderContext context)
     {
-        SandBlockType sandColor = SandBlockType.YELLOW;
         if (context.getBottomRock().sand() != null)
         {
-            for (SandBlockType sandColors : SandBlockType.values())
+            for (Colors sandColors : Colors.values())
             {
-                if (context.getBottomRock().sand() == TFCBlocks.SAND.get(sandColors).get())
+                if (context.getBottomRock().sand() == TFCBlocks.SAND.get(sandColors.toSandTFC(true)).get())
                 {
-                    sandColor = sandColors;
-                    break;
+                    return sandColors;
+                }
+                else if (context.getBottomRock().sand() == TFCFBlocks.SAND.get(sandColors.nonTFC()).get())
+                {
+                    return sandColors;
                 }
             }
         }
-        return sandColor;
+        else if (Colors.fromMaterialColour(context.getBottomRock().sand().defaultBlockState().getBlock().defaultMaterialColor()) != null)
+        {
+            return Colors.fromMaterialColour(context.getBottomRock().sand().defaultBlockState().getBlock().defaultMaterialColor());
+        }
+        return Colors.YELLOW;
     }
 
     public static RegistryRock rockType(SurfaceBuilderContext context)
     {
-        Rock rockTFC = null;
-        TFCFRock rockTFCF = null;
-
         if (surfaceRock(context) != null)
         {
-            for (Rock r : Rock.values())
+            for (Rock rockTFC : Rock.values())
             {
-                if (surfaceRock(context).raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                if (surfaceRock(context).raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
                 {
-                    rockTFC = r;
-                    break;
+                    return rockTFC;
                 }
                 else
                 {
-                    for (TFCFRock r2 : TFCFRock.values())
+                    for (TFCFRock rockTFCF : TFCFRock.values())
                     {
-                        if (surfaceRock(context).raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                        if (surfaceRock(context).raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
                         {
-                            rockTFCF = r2;
-                            break;
+                            return rockTFCF;
                         }
                     }
                 }
             }
         }
-        if (rockTFC != null)
-            return rockTFC;
-        else if (rockTFCF != null)
-            return rockTFCF;
-        else
-            return Rock.GRANITE;
+        return Rock.GRANITE;
     }
 
     public static boolean isTFCFRock(SurfaceBuilderContext context)
@@ -439,23 +431,17 @@ public class TFCFSoilSurfaceState implements SurfaceState
 
     public static RegistrySoilVariant currentSoilVariant(SurfaceBuilderContext context)
     {
-        SoilBlockType.Variant variantTFC = null;
-
         for (SoilBlockType type : SoilBlockType.values())
         {
-            for (SoilBlockType.Variant r : SoilBlockType.Variant.values())
+            for (SoilBlockType.Variant variantTFC : SoilBlockType.Variant.values())
             {
-                if (SoilSurfaceState.buildType(type).getState(context).getBlock() == TFCBlocks.SOIL.get(type).get(r).get())
+                if (SoilSurfaceState.buildType(type).getState(context).getBlock() == TFCBlocks.SOIL.get(type).get(variantTFC).get())
                 {
-                    variantTFC = r;
-                    break;
+                    return variantTFC;
                 }
             }
         }
-        if (variantTFC != null)
-            return variantTFC;
-        else
-            return SoilBlockType.Variant.LOAM;
+        return SoilBlockType.Variant.LOAM;
     }
 
     public static RockSettings surfaceRock(SurfaceBuilderContext context)

@@ -25,6 +25,7 @@ import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.settings.RockSettings;
 
 import tfcflorae.common.TFCFTags;
+import tfcflorae.common.blocks.soil.SandLayerBlock;
 
 public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
 {
@@ -39,9 +40,16 @@ public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
         boolean placedAny = false;
         final Random random = context.random();
         final WorldGenLevel level = context.level();
-        final BlockPos origin = context.origin();
+        BlockPos origin = context.origin();
+
+        if (level.getBlockState(origin).getBlock() instanceof SandLayerBlock)
+        {
+            origin = origin.below();
+        }
+
         if (origin.getY() > 67 || origin.getY() < 62)
             return false;
+
         final boolean hasRim = random.nextDouble() < 0.9D;
         final int rimOffsetX = hasRim ? Mth.nextInt(random, 0, 2) : 0;
         final int rimOffsetZ = hasRim ? Mth.nextInt(random, 0, 2) : 0;
@@ -66,7 +74,7 @@ public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
 
             if (isClear(level, pos, test))
             {
-                if (willPlaceRim)
+                if (willPlaceRim || hasSandLayerAround(level, pos))
                 {
                     placedAny = true;
                     this.setBlock(level, pos, raw);
@@ -95,13 +103,20 @@ public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
                         }
                     }
                     this.setBlock(level, offsetPos, toPlace);
+                    for (Direction direction : Direction.Plane.HORIZONTAL)
+                    {
+                        if (level.getBlockState(offsetPos.relative(direction)).getBlock() instanceof SandLayerBlock && pos.distManhattan(origin) >= maxLength - random.nextInt(3))
+                        {
+                            this.setBlock(level, offsetPos.relative(direction), cobble);
+                        }
+                    }
                 }
             }
         }
         return placedAny;
     }
 
-    private static boolean isClear(LevelAccessor level, BlockPos pos, Predicate<BlockState> contentsTest)
+    public static boolean isClear(LevelAccessor level, BlockPos pos, Predicate<BlockState> contentsTest)
     {
         if (contentsTest.test(level.getBlockState(pos)))
         {
@@ -119,5 +134,14 @@ public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
             }
             return true;
         }
+    }
+
+    public static boolean hasSandLayerAround(LevelAccessor level, BlockPos pos)
+    {
+        for (Direction direction : Direction.Plane.HORIZONTAL)
+        {
+            return level.getBlockState(pos.relative(direction)).getBlock() instanceof SandLayerBlock;
+        }
+        return false;
     }
 }

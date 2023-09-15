@@ -129,6 +129,55 @@ let ROCK_NAMESPACES = {
   'mylonite': 'tfcflorae'
 }
 
+let GRAVEL_TO_SAND = {
+  'granite': 'brown',
+  'diorite': 'white',
+  'gabbro': 'black',
+  'shale': 'black',
+  'claystone': 'brown',
+  'limestone': 'white',
+  'conglomerate': 'green',
+  'dolomite': 'black',
+  'chert': 'yellow',
+  'chalk': 'white',
+  'rhyolite': 'red',
+  'basalt': 'red',
+  'andesite': 'red',
+  'dacite': 'red',
+  'quartzite': 'yellow',
+  'slate': 'brown',
+  'phyllite': 'brown',
+  'schist': 'green',
+  'gneiss': 'green',
+  'marble': 'white',
+  'cataclasite': 'gray',
+  'porphyry': 'red',
+  'red_granite': 'red',
+  'laterite': 'orange',
+  'dripstone': 'brown',
+  'breccia': 'white',
+  'foidolite': 'blue',
+  'peridotite': 'cyan',
+  'blaimorite': 'light_green',
+  'boninite': 'gray',
+  'carbonatite': 'yellow',
+  'mudstone': 'light_gray',
+  'sandstone': 'yellow',
+  'siltstone': 'light_gray',
+  'arkose': 'brown',
+  'jaspillite': 'red',
+  'travertine': 'white',
+  'wackestone': 'black',
+  'blackband_ironstone': 'purple',
+  'blueschist': 'light_blue',
+  'catlinite': 'pink',
+  'greenschist': 'green',
+  'novaculite': 'white',
+  'soapstone': 'cyan',
+  'komatiite': 'light_blue',
+  'mylonite': 'light_gray'
+}
+
 let GEM_FOR_ROCK = {
   'granite': 'tfc:gem/topaz',
   'diorite': 'tfc:gem/emerald',
@@ -314,6 +363,54 @@ let depositTypes = {
   'native_copper': 'native_copper',
   'native_gold': 'native_gold',
   'native_silver': 'native_silver'
+}
+
+let SAND_NAMESPACES = {
+  'black': 'tfc',
+  'blue': 'tfcflorae',
+  'brown': 'tfc',
+  'cyan': 'tfcflorae',
+  'gray': 'tfcflorae',
+  'green': 'tfc',
+  'light_blue': 'tfcflorae',
+  'light_gray': 'tfcflorae',
+  'light_green': 'tfcflorae',
+  'magenta': 'tfcflorae',
+  'orange': 'tfcflorae',
+  'pink': 'tfc',
+  'purple': 'tfcflorae',
+  'red': 'tfc',
+  'white': 'tfc',
+  'yellow': 'tfc'
+}
+
+let numbers = {
+  '2': '2',
+  '4': '4',
+  '6': '6',
+  '8': '8',
+  '10': '10',
+  '12': '12',
+  '14': '14'
+}
+
+let allColors = {
+  'black': 'black',
+  'blue': 'blue',
+  'brown': 'brown',
+  'cyan': 'cyan',
+  'gray': 'gray',
+  'green': 'green',
+  'light_blue': 'light_blue',
+  'light_gray': 'light_gray',
+  'light_green': 'light_green',
+  'magenta': 'magenta',
+  'orange': 'orange',
+  'pink': 'pink',
+  'purple': 'purple',
+  'red': 'red',
+  'white': 'white',
+  'yellow': 'yellow'
 }
 
 for(let rockType of Object.keys(ROCK_TYPES))
@@ -6750,6 +6847,143 @@ function generateJSON(rockType)
         fs.writeFileSync(`./assets/models/item/pan/${panType}/${rockTypeTFCF}.json`, JSON.stringify(panItemModelDeposit, null, 2))
       }
     }
+
+    let quernRecipeGravel = {
+      "type": "tfc:quern",
+      "ingredient": {
+        "item": `${ROCK_NAMESPACES[rockType]}:stone/${rockType}`
+      },
+      "result": {
+        "item": `tfcflorae:rock/gravel_layer/${rockType}`,
+        "count": 1
+      }
+    }
+    fs.writeFileSync(`./data/recipes/quern/gravel/${rockType}.json`, JSON.stringify(quernRecipeGravel, null, 2))
+
+    let quernRecipeSand = {
+      "type": "tfc:quern",
+      "ingredient": {
+        "item": `tfcflorae:rock/gravel_layer/${rockType}`
+      },
+      "result": {
+        "item": `tfcflorae:sand/sand_layer/${GRAVEL_TO_SAND[rockType]}`,
+        "count": 1
+      }
+    }
+    fs.writeFileSync(`./data/recipes/quern/sand/${rockType}.json`, JSON.stringify(quernRecipeSand, null, 2))
+
+    let blockstateGravelLayer = {
+      "variants": {
+          "layers=1":  { "model": `tfcflorae:block/rock/gravel_layer/2/${rockType}` },
+          "layers=2":  { "model": `tfcflorae:block/rock/gravel_layer/4/${rockType}` },
+          "layers=3":  { "model": `tfcflorae:block/rock/gravel_layer/6/${rockType}` },
+          "layers=4":  { "model": `tfcflorae:block/rock/gravel_layer/8/${rockType}` },
+          "layers=5":  { "model": `tfcflorae:block/rock/gravel_layer/10/${rockType}` },
+          "layers=6":  { "model": `tfcflorae:block/rock/gravel_layer/12/${rockType}` },
+          "layers=7":  { "model": `tfcflorae:block/rock/gravel_layer/14/${rockType}` },
+          "layers=8":  { "model": `${ROCK_NAMESPACES[rockType]}:block/rock/gravel/${rockType}` }
+      }
+    }
+    fs.writeFileSync(`./assets/blockstates/rock/gravel_layer/${rockType}.json`, JSON.stringify(blockstateGravelLayer, null, 2))
+
+    for(let number in numbers)
+    {
+      let modelGravelLayer = {
+        "parent": `tfcflorae:block/sand/sand_height${number}`,
+        "textures": {
+          "sand": `${ROCK_NAMESPACES[rockType]}:block/rock/gravel/${rockType}`
+        }
+      }
+      fs.writeFileSync(`./assets/models/block/rock/gravel_layer/${number}/${rockType}.json`, JSON.stringify(modelGravelLayer, null, 2))
+    }
+
+    let modelItemGravelLayer = {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": `tfcflorae:item/rock/gravel_layer/${rockType}`
+      }
+    }
+    fs.writeFileSync(`./assets/models/item/rock/gravel_layer/${rockType}.json`, JSON.stringify(modelItemGravelLayer, null, 2))
+
+    let lootableGravelLayer = {
+      "type": "minecraft:block",
+      "pools": [
+        {
+          "name": "loot_pool",
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:item",
+              "name": `tfcflorae:rock/gravel_layer/${rockType}`
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ]
+        }
+      ]
+    }
+    fs.writeFileSync(`./data/loot_tables/blocks/rock/gravel_layer/${rockType}.json`, JSON.stringify(lootableGravelLayer, null, 2))
+
+    let landslideGravelLayer = {
+      "type": "tfc:landslide",
+      "ingredient": [
+        `tfcflorae:rock/gravel_layer/${rockType}`
+      ],
+      "result": `tfcflorae:rock/gravel_layer/${rockType}`
+    }
+    fs.writeFileSync(`./data/recipes/landslide/rock/gravel_layer/${rockType}.json`, JSON.stringify(landslideGravelLayer, null, 2))
+
+    let craftingGravelLayer = {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        },
+        {
+          "item": `tfcflorae:rock/gravel_layer/${rockType}`
+        }
+      ],
+      "result": {
+        "item": `${ROCK_NAMESPACES[rockType]}:rock/gravel/${rockType}`,
+        "count": 1
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/gravel_layer/${rockType}.json`, JSON.stringify(craftingGravelLayer, null, 2))
+
+    let craftingSandPile = {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": `${ROCK_NAMESPACES[rockType]}:rock/gravel/${rockType}`
+        }
+      ],
+      "result": {
+        "item": `tfcflorae:rock/gravel_layer/${rockType}`,
+        "count": 8
+      }
+    }
+    fs.writeFileSync(`./data/recipes/crafting/rock/gravel_pile/${rockType}.json`, JSON.stringify(craftingSandPile, null, 2))
   }
 
   fs.writeFileSync(`./loot_tables/blocks/deposit/cassiterite/${rockType}.json`, JSON.stringify(deposit_cassiterite, null, 2))

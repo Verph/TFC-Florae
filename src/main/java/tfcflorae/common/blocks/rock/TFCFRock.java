@@ -15,6 +15,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.RegistryObject;
 
+import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.SandstoneBlockType;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.*;
@@ -26,6 +27,7 @@ import net.dries007.tfc.world.settings.RockSettings;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.Colors;
+import tfcflorae.common.blocks.soil.SandLayerBlock;
 import tfcflorae.util.registry.TFCFRegistryRock;
 
 public enum TFCFRock implements TFCFRegistryRock
@@ -320,7 +322,9 @@ public enum TFCFRock implements TFCFRegistryRock
         MORTAR_AND_COBBLE((rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5f), 10).requiresCorrectToolForDrops(), TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())),
                         (rock, self) -> new MossGrowingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5f), 10).requiresCorrectToolForDrops(), TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())), true),
         MOSSY_MORTAR_AND_COBBLE((rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5f), 10).requiresCorrectToolForDrops()),
-                                (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5f), 10).requiresCorrectToolForDrops()), true);
+                                (rock, self) -> new MossSpreadingBlock(Block.Properties.of(Material.STONE, rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5f), 10).requiresCorrectToolForDrops()), true),
+        GRAVEL_LAYER((rock, self) -> new SandLayerBlock(rock.color().col, ExtendedProperties.of(Material.SAND, rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL)),
+                    (rock, self) -> new SandLayerBlock(rock.color().col, ExtendedProperties.of(Material.SAND, rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL), TFCBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL)), false);
 
         public static final TFCFBlockType[] VALUES = TFCFBlockType.values();
 

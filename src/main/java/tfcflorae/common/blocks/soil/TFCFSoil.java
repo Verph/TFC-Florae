@@ -14,6 +14,7 @@ import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.soil.*;
 import net.dries007.tfc.util.registry.RegistrySoilVariant;
+
 import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -172,8 +173,6 @@ public enum TFCFSoil
                 return MUD;
             case DIRT:
                 return GRASS;
-            case GRASS:
-            case GRASS_PATH:
             case FARMLAND:
             case ROOTED_DIRT:
             case MUD:
@@ -183,40 +182,54 @@ public enum TFCFSoil
             case COARSE_DIRT:
             case MYCELIUM_DIRT:
             case PODZOL:
-            case DRY_GRASS:
-            case DRY_GRASS_PATH:
-            case DENSE_GRASS:
-            case DENSE_GRASS_PATH:
             case SPARSE_GRASS:
             case SPARSE_GRASS_PATH:
+            case DRY_GRASS:
+            case DRY_GRASS_PATH:
                 return DIRT;
+            case GRASS:
+                return DENSE_GRASS;
+            case GRASS_PATH:
+                return DENSE_GRASS_PATH;
+            case DENSE_GRASS:
+                return SPARSE_GRASS;
+            case DENSE_GRASS_PATH:
+                return SPARSE_GRASS_PATH;
             case CLAY:
                 return CLAY_GRASS;
             case CLAY_GRASS:
-            case DRY_CLAY_GRASS:
+                return DENSE_CLAY_GRASS;
             case DENSE_CLAY_GRASS:
+                return SPARSE_CLAY_GRASS;
+            case DRY_CLAY_GRASS:
             case SPARSE_CLAY_GRASS:
                 return CLAY;
             case EARTHENWARE_CLAY:
                 return EARTHENWARE_CLAY_GRASS;
             case EARTHENWARE_CLAY_GRASS:
-            case DRY_EARTHENWARE_CLAY_GRASS:
+                return DENSE_EARTHENWARE_CLAY_GRASS;
             case DENSE_EARTHENWARE_CLAY_GRASS:
+                return SPARSE_EARTHENWARE_CLAY_GRASS;
             case SPARSE_EARTHENWARE_CLAY_GRASS:
+            case DRY_EARTHENWARE_CLAY_GRASS:
                 return EARTHENWARE_CLAY;
             case KAOLINITE_CLAY:
                 return KAOLINITE_CLAY_GRASS;
             case KAOLINITE_CLAY_GRASS:
-            case DRY_KAOLINITE_CLAY_GRASS:
+                return DENSE_KAOLINITE_CLAY_GRASS;
             case DENSE_KAOLINITE_CLAY_GRASS:
+                return SPARSE_KAOLINITE_CLAY_GRASS;
             case SPARSE_KAOLINITE_CLAY_GRASS:
+            case DRY_KAOLINITE_CLAY_GRASS:
                 return KAOLINITE_CLAY;
             case STONEWARE_CLAY:
                 return STONEWARE_CLAY_GRASS;
             case STONEWARE_CLAY_GRASS:
-            case DRY_STONEWARE_CLAY_GRASS:
+                return DENSE_STONEWARE_CLAY_GRASS;
             case DENSE_STONEWARE_CLAY_GRASS:
+                return SPARSE_STONEWARE_CLAY_GRASS;
             case SPARSE_STONEWARE_CLAY_GRASS:
+            case DRY_STONEWARE_CLAY_GRASS:
                 return STONEWARE_CLAY;
             default:
                 return this;

@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+    "tfc:gravel_layer",
+    "tfc:sand_layer",
     "tfc:caverns/ceiling",
     "tfc:caverns/floor",
     "tfc:caverns/calcite",

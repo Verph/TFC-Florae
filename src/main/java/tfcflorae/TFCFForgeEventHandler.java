@@ -42,7 +42,6 @@ import tfcflorae.common.items.TFCFItems;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.util.EnvironmentHelpers;
@@ -256,9 +255,9 @@ public class TFCFForgeEventHandler
             }
 
             // Sand
-            for (SandBlockType sandColor : SandBlockType.values())
+            for (Colors sandColor : Colors.values())
             {
-                if (block == TFCBlocks.SAND.get(sandColor).get())
+                if (block == TFCBlocks.SAND.get(sandColor.toSandTFC(true)).get() || block == TFCFBlocks.SAND.get(sandColor.nonTFC()).get())
                 {
                     if (Helpers.isItem(event.getItemStack(), TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.LOOSE).get().asItem()))
                     {
@@ -270,15 +269,12 @@ public class TFCFForgeEventHandler
                         break;
                     }
                 }
-            }
-            for (Colors sandColor : Colors.values())
-            {
-                if (sandColor.hasSandTFC() && block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                else if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
                     if (Helpers.isItem(event.getItemStack(), TFCFBlocks.SAND_LAYERS.get(sandColor).get().asItem()))
                     {
                         event.getItemStack().shrink(1);
-                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor.toSandTFC(true)).get(rockTFC).get().defaultBlockState();
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFC).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);
@@ -345,9 +341,9 @@ public class TFCFForgeEventHandler
             }
 
             // Sand
-            for (SandBlockType sandColor : SandBlockType.values())
+            for (Colors sandColor : Colors.values())
             {
-                if (block == TFCBlocks.SAND.get(sandColor).get())
+                if (block == TFCBlocks.SAND.get(sandColor.toSandTFC(true)).get() || block == TFCFBlocks.SAND.get(sandColor.nonTFC()).get())
                 {
                     if (Helpers.isItem(event.getItemStack(), TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.LOOSE).get().asItem()))
                     {
@@ -359,15 +355,12 @@ public class TFCFForgeEventHandler
                         break;
                     }
                 }
-            }
-            for (Colors sandColor : Colors.values())
-            {
-                if (sandColor.hasSandTFC() && block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
+                else if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get())
                 {
                     if (Helpers.isItem(event.getItemStack(), TFCFBlocks.SAND_LAYERS.get(sandColor).get().asItem()))
                     {
                         event.getItemStack().shrink(1);
-                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColor.toSandTFC(true)).get(rockTFCF).get().defaultBlockState();
+                        final BlockState placedBlock = TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFCF).get().defaultBlockState();
                         level.setBlockAndUpdate(pos, placedBlock);
                         Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                         event.setCancellationResult(InteractionResult.SUCCESS);

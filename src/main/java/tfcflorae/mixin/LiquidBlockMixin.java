@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -49,11 +50,11 @@ public abstract class LiquidBlockMixin
                 Mineral mineral = null;
                 if (type == Fluids.LAVA.getSource() || state.getBlock() == Blocks.LAVA)
                 {
-                    mineral = lavaMineral(level, pos, random, mineral);
+                    mineral = lavaMineral((WorldGenLevel) level, pos, random, mineral);
                 }
                 if (type == TFCFluids.SPRING_WATER.getSource() || state.getBlock() == TFCBlocks.SPRING_WATER.get())
                 {
-                    mineral = waterMineral(level, pos, random, mineral);
+                    mineral = waterMineral((WorldGenLevel) level, pos, random, mineral);
                 }
 
                 if (mineral != null && type != null)
@@ -92,7 +93,7 @@ public abstract class LiquidBlockMixin
     }
 
     @Unique
-	private Mineral lavaMineral(ServerLevel level, BlockPos pos, Random random, Mineral mineral)
+	private Mineral lavaMineral(WorldGenLevel level, BlockPos pos, Random random, Mineral mineral)
 	{
         float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
         Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;
@@ -161,7 +162,7 @@ public abstract class LiquidBlockMixin
 	}
 
     @Unique
-	private Mineral waterMineral(ServerLevel level, BlockPos pos, Random random, Mineral mineral)
+	private Mineral waterMineral(WorldGenLevel level, BlockPos pos, Random random, Mineral mineral)
 	{
         float variantNoiseValue = new OpenSimplex2D(level.getSeed()).octaves(2).spread(0.01f).abs().noise(pos.getX(), pos.getZ()) * 0.9f + random.nextFloat() * 0.1f;
         Boolean categoryIgneousExtrusive = TFCFHelpers.rockType(level, pos).category() == IGNEOUS_EXTRUSIVE;

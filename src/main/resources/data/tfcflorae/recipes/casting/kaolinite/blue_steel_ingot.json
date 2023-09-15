@@ -11,5 +11,5 @@
   "result": {
     "item": "tfc:metal/ingot/blue_steel"
   },
-  "break_chance": 0.1
+  "break_chance": 1
 }

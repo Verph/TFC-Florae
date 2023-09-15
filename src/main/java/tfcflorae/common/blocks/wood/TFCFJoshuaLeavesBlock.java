@@ -369,7 +369,7 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
             else
             {
                 // Revert the original state
-                level.setBlock(pos, originalState, 2);
+                level.setBlock(pos, originalState, Block.UPDATE_ALL);
             }
         }
         return false;
@@ -643,7 +643,8 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
             // And update the block
             if (state != newState)
             {
-                level.setBlock(pos, newState, 3);
+                level.setBlock(pos, newState, Block.UPDATE_ALL);
+                level.blockUpdated(pos, newState.getBlock());
             }
         }
     }

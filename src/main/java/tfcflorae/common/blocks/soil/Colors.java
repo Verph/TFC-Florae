@@ -1,8 +1,11 @@
 package tfcflorae.common.blocks.soil;
 
 import java.awt.*;
+import java.util.Locale;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
@@ -13,7 +16,7 @@ import net.dries007.tfc.common.blocks.soil.TFCSandBlock;
 
 import static net.minecraft.world.level.material.MaterialColor.*;
 
-public enum Colors
+public enum Colors implements StringRepresentable
 {
     BLACK(new Color(56, 56, 56).getRGB(), MaterialColor.TERRACOTTA_BLACK, true, false, true),
     BLUE(new Color(50, 68, 255).getRGB(), MaterialColor.TERRACOTTA_BLUE, false, true, true),
@@ -44,6 +47,7 @@ public enum Colors
     public final boolean hasSand;
     public final boolean hasSandNew;
     public final boolean hasLayered;
+    private final String serializedName;
 
     Colors(int dustColor, MaterialColor materialColor, boolean hasSand, boolean hasSandNew, boolean hasLayered)
     {
@@ -52,6 +56,19 @@ public enum Colors
         this.hasSand = hasSand;
         this.hasSandNew = hasSandNew;
         this.hasLayered = hasLayered;
+        this.serializedName = name().toLowerCase(Locale.ROOT);
+    }
+
+    @Override
+    public String toString()
+    {
+        return serializedName;
+    }
+
+    @Override
+    public String getSerializedName()
+    {
+        return serializedName;
     }
 
     public int getDustColor()
@@ -229,6 +246,23 @@ public enum Colors
         }
     }
 
+    public Colors nonTFC()
+    {
+        switch (this)
+        {
+            case BROWN:
+            case WHITE:
+            case BLACK:
+            case RED:
+            case YELLOW:
+            case GREEN:
+            case PINK:
+                return Colors.ORANGE;
+            default:
+                return this;
+        }
+    }
+
     public static SandBlockType toSandTFC(Colors sandColor, boolean withDefault)
     {
         switch (sandColor)
@@ -272,6 +306,47 @@ public enum Colors
                 return SandBlockType.PINK;
             default:
                 return defaults ? SandBlockType.YELLOW : null;
+        }
+    }
+
+    public static Colors fromDyeColor(DyeColor dyeColor, boolean withDefault)
+    {
+        switch (dyeColor)
+        {
+            case WHITE:
+                return Colors.WHITE;
+            case ORANGE:
+                return Colors.ORANGE;
+            case MAGENTA:
+                return Colors.MAGENTA;
+            case LIGHT_BLUE:
+                return Colors.LIGHT_BLUE;
+            case YELLOW:
+                return Colors.YELLOW;
+            case LIME:
+                return Colors.LIGHT_GREEN;
+            case PINK:
+                return Colors.PINK;
+            case GRAY:
+                return Colors.GRAY;
+            case LIGHT_GRAY:
+                return Colors.LIGHT_GRAY;
+            case CYAN:
+                return Colors.CYAN;
+            case PURPLE:
+                return Colors.PURPLE;
+            case BLUE:
+                return Colors.BLUE;
+            case BROWN:
+                return Colors.BROWN;
+            case GREEN:
+                return Colors.GREEN;
+            case RED:
+                return Colors.RED;
+            case BLACK:
+                return Colors.BLACK;
+            default:
+                return withDefault ? Colors.YELLOW : null;
         }
     }
 }

@@ -33,11 +33,11 @@ import net.dries007.tfc.util.Helpers;
 
 public class ConnectedDryGrassBlock extends ConnectedGrassBlock
 {
-    private static final Map<Direction, BooleanProperty> PROPERTIES = ImmutableMap.of(Direction.NORTH, NORTH, Direction.EAST, EAST, Direction.WEST, WEST, Direction.SOUTH, SOUTH);
+    public static final Map<Direction, BooleanProperty> PROPERTIES = ImmutableMap.of(Direction.NORTH, NORTH, Direction.EAST, EAST, Direction.WEST, WEST, Direction.SOUTH, SOUTH);
 
-    private final Supplier<? extends Block> dirt;
-    @Nullable private final Supplier<? extends Block> path;
-    @Nullable private final Supplier<? extends Block> farmland;
+    public final Supplier<? extends Block> dirt;
+    @Nullable public final Supplier<? extends Block> path;
+    @Nullable public final Supplier<? extends Block> farmland;
 
     public ConnectedDryGrassBlock(Properties properties, SoilBlockType dirtType, SoilBlockType.Variant variant)
     {
@@ -187,6 +187,7 @@ public class ConnectedDryGrassBlock extends ConnectedGrassBlock
      * @param state   The initial state
      * @return The updated state
      */
+    @Override
     protected BlockState updateStateFromNeighbors(BlockGetter worldIn, BlockPos pos, BlockState state)
     {
         for (Direction direction : Direction.Plane.HORIZONTAL)
@@ -205,6 +206,7 @@ public class ConnectedDryGrassBlock extends ConnectedGrassBlock
      * @param direction The direction in which to look for adjacent, diagonal grass blocks
      * @return The updated state
      */
+    @Override
     protected BlockState updateStateFromDirection(BlockGetter worldIn, BlockPos pos, BlockState stateIn, Direction direction)
     {
         return stateIn.setValue(PROPERTIES.get(direction), worldIn.getBlockState(pos.relative(direction).below()).getBlock() instanceof IGrassBlock);

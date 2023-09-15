@@ -154,7 +154,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             if (!level.isClientSide())
             {
                 ItemHandlerHelper.giveItemToPlayer(player, getProductItem(level.random));
-                level.setBlockAndUpdate(pos, stateAfterPicking(state));
+                level.setBlock(pos, stateAfterPicking(state), Block.UPDATE_ALL);
             }
             return InteractionResult.SUCCESS;
         }
@@ -178,7 +178,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
                 else
                 {
                     // max + 1 means it must decay next random tick
-                    level.setBlockAndUpdate(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1));
+                    level.setBlock(pos, state.setValue(getDistanceProperty(), maxDecayDistance + 1), Block.UPDATE_ALL);
                 }
             }
             else
@@ -210,7 +210,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
 
             if (!state.getValue(PERSISTENT))
             {
-                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || Calendars.SERVER.getCalendarDayTime() == level.getDayTime()))
+                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
                 {
                     onUpdate(level, pos, state);
                     lastUpdateTick = Calendars.SERVER.getTicks();
@@ -301,6 +301,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             if (state != newState)
             {
                 level.setBlock(pos, newState, Block.UPDATE_ALL);
+                level.blockUpdated(pos, newState.getBlock());
             }
         }
     }
@@ -353,7 +354,7 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             // When we're in dormant time, no matter what conditions, or time since appearance, the bush will be dormant.
             if (expected != current)
             {
-                level.setBlockAndUpdate(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT));
+                level.setBlock(pos, state.setValue(LIFECYCLE, Lifecycle.DORMANT), Block.UPDATE_ALL);
             }
             return true;
         }

@@ -16,6 +16,7 @@
 		"TFCLeavesBlockMixin",
 		"TFCSeaPickleBlockMixin",
 		"TFCTreeGrowerMixin",
+		"TFCVineBlockMixin",
 		"VineBlockMixin",
 		"world.features.CoralHelpersMixin",
 		"world.features.NetherFortressFeatureMixin",

@@ -90,6 +90,10 @@ public final class TFCFItems
         register("mineral/" + mineral.name(), TFCItemGroup.ORES)
     );
 
+    public static final Map<Clay, RegistryObject<Item>> CLAY_MINERALS = Helpers.mapOfKeys(Clay.class, Clay::hasRock, mineral ->
+        register("mineral/" + mineral.name(), TFCItemGroup.ORES)
+    );
+
     // Rock Stuff
 
     public static final Map<TFCFRock, RegistryObject<Item>> BRICKS = Helpers.mapOfKeys(TFCFRock.class, type ->
@@ -120,10 +124,6 @@ public final class TFCFItems
     public static final Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> CLAY_MOLDS = clayMoldMapper();
 
     // Soil stuff
-
-    /*public static final Map<SandBlockType, RegistryObject<Item>> SAND_PILE_TFC = Helpers.mapOfKeys(SandBlockType.class, type ->
-        register("sand_pile/" + type.name(), EARTH)
-    );*/
 
     public static final Map<SoilBlockType.Variant, RegistryObject<Item>> SOIL_PILE_TFC = Helpers.mapOfKeys(SoilBlockType.Variant.class, variant ->
         register("soil_pile/" + variant.name(), EARTH)
@@ -164,6 +164,8 @@ public final class TFCFItems
         Map<Clay,  RegistryObject<Item>> Map = new HashMap<>();
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
+
             String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
 
             Map.put(clay, register("ceramic/" + clayName + "/clay", MISC));
@@ -176,6 +178,7 @@ public final class TFCFItems
         Map<Clay,  RegistryObject<Item>> Map = new HashMap<>();
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             String clayName = clay.getSerializedName().toLowerCase(Locale.ROOT);
 
             Map.put(clay, register("ceramic/" + clayName + "/unfired_brick", MISC));
@@ -202,6 +205,7 @@ public final class TFCFItems
         Map<Clay, Map<DyeColor, RegistryObject<Item>>> Map = new HashMap<>();
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map<DyeColor, RegistryObject<Item>> subMap = new HashMap<>();
             for (DyeColor color : DyeColor.values())
             {
@@ -221,6 +225,7 @@ public final class TFCFItems
         Map<Clay, Map<Metal.ItemType, RegistryObject<Item>>> Map = new HashMap<>();
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map<Metal.ItemType, RegistryObject<Item>> subMap = new HashMap<>();
             for (Metal.ItemType type : Metal.ItemType.values())
             {

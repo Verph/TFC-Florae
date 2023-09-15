@@ -47,6 +47,9 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.common.blocks.soil.SoilBlockType;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.calendar.Calendars;
+import net.dries007.tfc.util.calendar.ICalendar;
+import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.ClimateModel;
 import net.dries007.tfc.util.climate.OverworldClimateModel;
 import net.dries007.tfc.util.registry.RegistryRock;
@@ -303,88 +306,64 @@ public class TFCFHelpers
 
     public static RegistryRock rockType(ServerLevel level, BlockPos pos)
     {
-        Rock defaultRock = Rock.GRANITE;
         ChunkDataProvider provider = ChunkDataProvider.get(level);
-        if (provider != null)
+        if (provider != null && provider.get(level, pos).getRockData().getRock(pos) != null)
         {
             RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
 
-            Rock rockTFC = null;
-            TFCFRock rockTFCF = null;
-
             if (surfaceRock != null)
             {
-                for (Rock r : Rock.values())
+                for (Rock rockTFC : Rock.values())
                 {
-                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
                     {
-                        rockTFC = r;
-                        break;
+                        return rockTFC;
                     }
                     else
                     {
-                        for (TFCFRock r2 : TFCFRock.values())
+                        for (TFCFRock rockTFCF : TFCFRock.values())
                         {
-                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
                             {
-                                rockTFCF = r2;
-                                break;
+                                return rockTFCF;
                             }
                         }
                     }
                 }
             }
-            if (rockTFC != null)
-                return rockTFC;
-            else if (rockTFCF != null)
-                return rockTFCF;
-            else
-                return defaultRock;
         }
-        return defaultRock;
+        return Rock.GRANITE;
     }
 
     public static RegistryRock rockType(WorldGenLevel level, BlockPos pos)
     {
-        Rock defaultRock = Rock.GRANITE;
         ChunkDataProvider provider = ChunkDataProvider.get(level);
-        if (provider != null)
+        if (provider != null && provider.get(level, pos).getRockData().getRock(pos) != null)
         {
             RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
 
-            Rock rockTFC = null;
-            TFCFRock rockTFCF = null;
-
             if (surfaceRock != null)
             {
-                for (Rock r : Rock.values())
+                for (Rock rockTFC : Rock.values())
                 {
-                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(r).get(Rock.BlockType.RAW).get())
+                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
                     {
-                        rockTFC = r;
-                        break;
+                        return rockTFC;
                     }
                     else
                     {
-                        for (TFCFRock r2 : TFCFRock.values())
+                        for (TFCFRock rockTFCF : TFCFRock.values())
                         {
-                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(r2).get(Rock.BlockType.RAW).get())
+                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
                             {
-                                rockTFCF = r2;
-                                break;
+                                return rockTFCF;
                             }
                         }
                     }
                 }
             }
-            if (rockTFC != null)
-                return rockTFC;
-            else if (rockTFCF != null)
-                return rockTFCF;
-            else
-                return defaultRock;
         }
-        return defaultRock;
+        return Rock.GRANITE;
     }
 
     public static RegistrySoilVariant getSoilVariant(WorldGenLevel level, BlockPos pos)
@@ -690,4 +669,14 @@ public class TFCFHelpers
         }
 		return false;
 	}
+
+    public static float getAverageDailyTemperature(Level level, BlockPos pos)
+    {
+        float sum = 0;
+        for (int hour = 0; hour < ICalendar.HOURS_IN_DAY * 2; hour++) // hour 0 = now
+        {
+            sum += Climate.getTemperature(level, pos, Calendars.get(level).getCalendarTicks() - (hour * 1000), Calendars.get(level).getCalendarDaysInMonth());
+        }
+        return sum / ICalendar.HOURS_IN_DAY;
+    }
 }

@@ -1,5 +1,7 @@
 package tfcflorae.common.blocks.plant;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.function.Function;
@@ -11,17 +13,20 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -33,8 +38,11 @@ import net.dries007.tfc.common.blocks.plant.PlantBlock;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
+import net.dries007.tfc.util.calendar.ICalendar;
+import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
+import tfcflorae.Config;
 import tfcflorae.util.TFCFHelpers;
 
 public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExtension
@@ -50,6 +58,8 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     public final ExtendedProperties properties;
 
     public boolean canWalkThroughEffortlessly;
+    public boolean isDead;
+    public long cooldown;
 
     public static TFCFVineBlock create(RegistryPlant plant, ExtendedProperties properties)
     {
@@ -67,6 +77,8 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     {
         super(properties.properties());
         this.properties = properties;
+        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.isDead = false;
 
         BlockState stateDefinition = getStateDefinition().any().setValue(UP, Boolean.valueOf(false)).setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false));
         IntegerProperty stageProperty = getPlant().getStageProperty();
@@ -164,7 +176,7 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     {
         if (entity != null)
         {
-            if (TFCFHelpers.canWalkThroughEffortlessly(entity))
+            if (TFCFHelpers.canWalkThroughEffortlessly(entity) || isDead)
             {
                 canWalkThroughEffortlessly = true;
             }
@@ -190,7 +202,30 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        super.randomTick(state, level, pos, random);
+        double tempThreshold = Config.COMMON.foliageDecayThreshold.get();
+        boolean check = isDead;
+
+        if (!isDead)
+        {
+            if (Climate.getTemperature(level, pos) < tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) < tempThreshold) // Cold, thus leaves should wilt/die.
+            {
+                isDead = true;
+                level.blockUpdated(pos, state.getBlock());
+            }
+            else
+            {
+                super.randomTick(state, level, pos, random);
+            }
+        }
+        else if (isDead && check && --cooldown <= 0)
+        {
+            if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
+            {
+                cooldown = ICalendar.HOURS_IN_DAY * 10;
+                isDead = false;
+                level.blockUpdated(pos, state.getBlock());
+            }
+        }
         level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
     }
 
@@ -293,5 +328,41 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
             }
         }
         return state;
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState state)
+    {
+        return isDead ? RenderShape.INVISIBLE : super.getRenderShape(state); // Invisible when "dead"
+    }
+
+    /*@Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
+    {
+        return isDead ? Shapes.empty() : super.getShape(state, level, pos, context); // Invisible when "dead"
+    }*/
+
+    @Override
+    protected boolean isAir(BlockState state)
+    {
+        return isDead ? true : super.isAir(state); // Invisible when "dead"
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder)
+    {
+        return isDead ? Collections.emptyList() : super.getDrops(state, builder);
+    }
+
+    @Override
+    public boolean canBeReplaced(BlockState state, BlockPlaceContext context)
+    {
+        return isDead ? true : super.canBeReplaced(state, context);
+    }
+
+    @Override
+    public float getShadeBrightness(BlockState state, BlockGetter level, BlockPos pos)
+    {
+        return isDead ? 1.0F : super.getShadeBrightness(state, level, pos);
     }
 }

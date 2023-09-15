@@ -49,6 +49,7 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
     {
         if (!Config.COMMON.enableSandLayers.get()) return false; // Stop early.
 
+        boolean placedAny = false;
         final WorldGenLevel level = context.level();
         final BlockPos pos = context.origin();
         final Random random = context.random();
@@ -64,7 +65,7 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
                 int y = level.getHeight(Heightmap.Types.OCEAN_FLOOR, x, z);
                 mutablePos.set(x, y, z);
 
-                if (context.chunkGenerator() instanceof TFCChunkGenerator chunkGen && y >= SEA_LEVEL_Y - 3 && !(level.getBlockState(mutablePos).getBlock() instanceof SandLayerBlock))
+                if (context.chunkGenerator() instanceof TFCChunkGenerator chunkGen && y >= SEA_LEVEL_Y - 1 && !(level.getBlockState(mutablePos).getBlock() instanceof SandLayerBlock))
                 {
                     Colors sandColor = TFCFHelpers.getSandColorTFCF(level, mutablePos, Config.COMMON.toggleCheapSandColourCalculations.get());
                     BlockState sandLayer = TFCFBlocks.SAND_LAYERS.get(sandColor).get().defaultBlockState();
@@ -83,7 +84,9 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
                                 int sandLayerHeight = sandLayerHeight(chunkGen, mutablePos, random, false);
                                 if (sandLayerHeight > 0)
                                 {
+                                    sandLayer = FluidHelpers.fillWithFluid(sandLayer, level.getBlockState(mutablePos).getFluidState().getType());
                                     SandLayerBlock.placeSandPileStatic(level, sandLayer, mutablePos, level.getBlockState(mutablePos), sandLayerHeight, false, shouldWaterLog);
+                                    placedAny = true;
                                 }
                             }
                         }
@@ -91,20 +94,18 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
                 }
             }
         }
-        return false;
+        return placedAny;
     }
 
     public static int sandLayerHeight(TFCChunkGenerator chunkGen, BlockPos inputPos, Random random, boolean isShort)
     {
         BlockPos pos = new BlockPos(inputPos.getX(), inputPos.getY() - 1, inputPos.getZ());
+        int y1 = pos.getY();
         ChunkPos chunkPos = new ChunkPos(pos);
         double actualHeight = chunkGen.createHeightFillerForChunk(chunkPos).sampleHeight(pos.getX(), pos.getZ());
-        //actualHeight = pos.getY() <= SEA_LEVEL_Y ? actualHeight - 1 : actualHeight;
         double actualHeightToInt = (double) Mth.floor(actualHeight);
-            //TFCFlorae.LOGGER.info("TFCFlorea debug: x: " + pos.getX() + ", y: " + pos.getY() + ", z: " + pos.getZ());
-            //TFCFlorae.LOGGER.info("TFCFlorea debug: actual height: " + actualHeight + ", actualheightint: " + actualHeightToInt);
 
-        if (actualHeightToInt < pos.getY()) return 0;
+        if (actualHeightToInt < y1 && y1 > 62) return 0;
 
         int sandLayerHeight = 0;
         if (isShort)
@@ -116,9 +117,8 @@ public class SandLayerFeature extends Feature<NoneFeatureConfiguration>
         {
             double adjustedSandLayerHeight = ((actualHeight - actualHeightToInt) * 8) + (random.nextGaussian() * 0.2F);
             sandLayerHeight = Mth.clamp(Mth.floor((Math.pow(0.75D, -adjustedSandLayerHeight * 1.1D) - 1D)), 0, 7);
-            //TFCFlorae.LOGGER.info("TFCFlorea debug: adjustedSandLayerHeight: " + adjustedSandLayerHeight + ", actualheightint: " + sandLayerHeight);
         }
-        return sandLayerHeight;
+        return y1 > 62 ? sandLayerHeight - 1 : sandLayerHeight;
     }
 
     public boolean hasNearbySandOrIsDryEnough(WorldGenLevel level, BlockPos pos, Random random, boolean isPicky)

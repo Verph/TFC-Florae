@@ -510,9 +510,9 @@ public enum TFCFPlant implements RegistryPlant
         TWISTING_SOLID_TOP((plant, type) -> new TopPlantBlock(fire(solidTallPlant()), plant.transform(), Direction.UP, BodyPlantBlock.TWISTING_SHAPE)),
 
         // Custom
-        VINE_TFCF((plant, type) -> TFCFVineBlock.create(plant, fire(nonSolid(plant)))),
-        WEEPING_TFCF((plant, type) -> TFCFBodyPlantBlock.create(plant, fire(nonSolidTallPlant(plant)), plant.transform(), BodyPlantBlock.BODY_SHAPE, Direction.DOWN)),
-        WEEPING_TOP_TFCF((plant, type) -> TFCFTopPlantBlock.create(plant, fire(nonSolidTallPlant(plant)), plant.transform(), Direction.DOWN, BodyPlantBlock.WEEPING_SHAPE)),
+        VINE_TFCF((plant, type) -> TFCFVineBlock.create(plant, fire(nonSolid(plant)).randomTicks())),
+        WEEPING_TFCF((plant, type) -> TFCFBodyPlantBlock.create(plant, fire(nonSolidTallPlant(plant)).randomTicks(), plant.transform(), BodyPlantBlock.BODY_SHAPE, Direction.DOWN)),
+        WEEPING_TOP_TFCF((plant, type) -> TFCFTopPlantBlock.create(plant, fire(nonSolidTallPlant(plant)).randomTicks(), plant.transform(), Direction.DOWN, BodyPlantBlock.WEEPING_SHAPE)),
         TFCF_STANDARD((plant, type) -> TFCFPlantBlock.create(plant, fire(nonSolid(plant)))),
         CREEPING_WATER((plant, type) -> CreepingWaterPlantBlock.create(plant, fire(nonSolid(plant).hasPostProcess(TFCFBlocks::always)))),
         SPORE_BLOSSOM((plant, type) -> SporeBlossomPlantBlock.create(plant, fire(nonSolid(plant).hasPostProcess(TFCFBlocks::always)).sound(SoundType.SPORE_BLOSSOM))),

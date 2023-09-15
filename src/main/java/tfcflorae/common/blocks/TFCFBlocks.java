@@ -124,12 +124,12 @@ public final class TFCFBlocks
     public static final RegistryObject<Block> ROOTED_BOG_IRON = register("rooted_dirt/bog_iron", () -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.TERRACOTTA_BROWN).strength(3.5F).sound(SoundType.ROOTED_DIRT), BOG_IRON), EARTH);
     public static final RegistryObject<Block> MYCELIUM_BOG_IRON = register("mycelium_dirt/bog_iron", () -> new TFCRootedDirtBlock(Block.Properties.of(Material.DIRT, MaterialColor.TERRACOTTA_BROWN).strength(3.5F).sound(SoundType.ROOTED_DIRT), BOG_IRON), EARTH);
 
-    public static final Map<SandBlockType, RegistryObject<Block>> SPARSE_SAND_GRASS = Helpers.mapOfKeys(SandBlockType.class, type -> register(("sand/sparse_grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.SAND).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), TFCBlocks.SAND.get(type), null, null), EARTH));
-    public static final Map<SandBlockType, RegistryObject<Block>> DENSE_SAND_GRASS = Helpers.mapOfKeys(SandBlockType.class, type -> register(("sand/dense_grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.GRASS).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), SPARSE_SAND_GRASS.get(type), null, null), EARTH));
-    public static final Map<SandBlockType, RegistryObject<Block>> SAND_GRASS = Helpers.mapOfKeys(SandBlockType.class, type -> register(("sand/grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.GRASS).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), DENSE_SAND_GRASS.get(type), null, null), EARTH));
+    public static final Map<Colors, RegistryObject<Block>> SPARSE_SAND_GRASS = Helpers.mapOfKeys(Colors.class, type -> register(("sand/sparse_grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.SAND).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), type.hasSandTFC() ? TFCBlocks.SAND.get(type.toSandTFC(true)) : TFCFBlocks.SAND.get(type), null, null), EARTH));
+    public static final Map<Colors, RegistryObject<Block>> DENSE_SAND_GRASS = Helpers.mapOfKeys(Colors.class, type -> register(("sand/dense_grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.GRASS).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), SPARSE_SAND_GRASS.get(type), null, null), EARTH));
+    public static final Map<Colors, RegistryObject<Block>> SAND_GRASS = Helpers.mapOfKeys(Colors.class, type -> register(("sand/grass/" + type.name()), () -> new ConnectedGrassBlock(Properties.of(Material.GRASS, MaterialColor.GRASS).randomTicks().strength(3.0F).sound(SoundType.BIG_DRIPLEAF), DENSE_SAND_GRASS.get(type), null, null), EARTH));
 
-    public static final Map<TFCFRockSand, Map<SandBlockType, Map<Rock, RegistryObject<Block>>>> ROCKY_SAND_TFC = TFCRockSandMapper(TFCFRockSand.class);
-    public static final Map<TFCFRockSand, Map<SandBlockType, Map<TFCFRock, RegistryObject<Block>>>> ROCKY_SAND_TFCF = TFCFRockSandMapper(TFCFRockSand.class);
+    public static final Map<TFCFRockSand, Map<Colors, Map<Rock, RegistryObject<Block>>>> ROCKY_SAND_TFC = TFCRockSandMapper(TFCFRockSand.class);
+    public static final Map<TFCFRockSand, Map<Colors, Map<TFCFRock, RegistryObject<Block>>>> ROCKY_SAND_TFCF = TFCFRockSandMapper(TFCFRockSand.class);
 
     public static final Map<Colors, Map<TFCFSandstoneBlockType, RegistryObject<Block>>> SANDSTONE = Helpers.mapOfKeys(Colors.class, color -> color.hasLayered(), color ->
         Helpers.mapOfKeys(TFCFSandstoneBlockType.class, type ->
@@ -431,6 +431,7 @@ public final class TFCFBlocks
 
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/clay_block", () -> 
                 new Block(Properties.of(Material.CLAY, clay.getMaterialColor()).strength(0.6F).sound(TFCFSounds.MUD)), DECORATIONS));
         }
@@ -443,6 +444,7 @@ public final class TFCFBlocks
 
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map.put(clay, register(("ceramic/" + clay.getSerializedName() + "/bricks").toLowerCase(Locale.ROOT), () -> 
                 new Block(Properties.of(Material.STONE, clay.getMaterialColor()).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS));
         }
@@ -455,6 +457,7 @@ public final class TFCFBlocks
 
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map.put(clay, new DecorationBlockRegistryObject(
                 register(("ceramic/" + clay.getSerializedName() + "/brick_slab").toLowerCase(Locale.ROOT), () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, clay.getMaterialColor()).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS),
                 register(("ceramic/" + clay.getSerializedName() + "/brick_stairs").toLowerCase(Locale.ROOT), () -> new StairBlock(() -> CLAY_BRICKS.get(clay).get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, clay.getMaterialColor()).requiresCorrectToolForDrops().strength(2.0F, 6.0F)), DECORATIONS),
@@ -470,6 +473,7 @@ public final class TFCFBlocks
 
         for (Clay clay : Clay.values())
         {
+            if (clay.hasRock()) continue;
             Map.put(clay, register(("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/fired/large_vessel", () -> 
                 new LargeVesselBlock(ExtendedProperties.of(Properties.of(Material.CLAY, clay.getMaterialColor()).strength(2.5F).noOcclusion()).blockEntity(TFCFBlockEntities.LARGE_VESSEL)), MISC));
         }
@@ -498,11 +502,11 @@ public final class TFCFBlocks
         {
             if (type.hasSandNew())
             {
-                Map.put(type, register(("sand/sand_layer/" + type.name()), () -> new SandLayerBlock(type.getDustColor(), ExtendedProperties.of(Material.SAND, type.getMaterialColor()).randomTicks().strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND).hasPostProcess(TFCFBlocks::always).blockEntity(TFCFBlockEntities.SAND_PILE), SAND.get(type)), EARTH));
+                Map.put(type, register(("sand/sand_layer/" + type.name()), () -> new SandLayerBlock(type.getDustColor(), ExtendedProperties.of(Material.SAND, type.getMaterialColor()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND), SAND.get(type)), EARTH));
             }
             else
             {
-                Map.put(type, register(("sand/sand_layer/" + type.name()), () -> new SandLayerBlock(type.getDustColor(), ExtendedProperties.of(Material.SAND, type.getMaterialColor()).randomTicks().strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND).hasPostProcess(TFCFBlocks::always).blockEntity(TFCFBlockEntities.SAND_PILE), TFCBlocks.SAND.get(type.toSandTFC(false))), EARTH));
+                Map.put(type, register(("sand/sand_layer/" + type.name()), () -> new SandLayerBlock(type.getDustColor(), ExtendedProperties.of(Material.SAND, type.getMaterialColor()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND), TFCBlocks.SAND.get(type.toSandTFC(false))), EARTH));
             }
         }
         return Map;
@@ -1194,16 +1198,16 @@ public final class TFCFBlocks
         return Map;
     }
 
-    private static Map<TFCFRockSand, Map<SandBlockType, Map<Rock, RegistryObject<Block>>>> TFCRockSandMapper(Class<TFCFRockSand> enumClass)
+    private static Map<TFCFRockSand, Map<Colors, Map<Rock, RegistryObject<Block>>>> TFCRockSandMapper(Class<TFCFRockSand> enumClass)
     {
-        Map<TFCFRockSand, Map<SandBlockType, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
+        Map<TFCFRockSand, Map<Colors, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
         for (TFCFRockSand soilBlockType : enumClass.getEnumConstants())
         {
             if (soilBlockType.getTFCFactory() == null)
                 continue;
 
-            Map<SandBlockType, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
-            for (SandBlockType sandColor : SandBlockType.values())
+            Map<Colors, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
+            for (Colors sandColor : Colors.values())
             {
                 Map<Rock, RegistryObject<Block>> rockMap = new HashMap<>();
                 for (Rock rock : Rock.values())
@@ -1217,16 +1221,16 @@ public final class TFCFBlocks
         return Map;
     }
 
-    private static Map<TFCFRockSand, Map<SandBlockType, Map<TFCFRock, RegistryObject<Block>>>> TFCFRockSandMapper(Class<TFCFRockSand> enumClass)
+    private static Map<TFCFRockSand, Map<Colors, Map<TFCFRock, RegistryObject<Block>>>> TFCFRockSandMapper(Class<TFCFRockSand> enumClass)
     {
-        Map<TFCFRockSand, Map<SandBlockType, Map<TFCFRock, RegistryObject<Block>>>> Map = new HashMap<>();
+        Map<TFCFRockSand, Map<Colors, Map<TFCFRock, RegistryObject<Block>>>> Map = new HashMap<>();
         for (TFCFRockSand soilBlockType : enumClass.getEnumConstants())
         {
             if (soilBlockType.getTFCFFactory() == null)
                 continue;
 
-            Map<SandBlockType, Map<TFCFRock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
-            for (SandBlockType sandColor : SandBlockType.values())
+            Map<Colors, Map<TFCFRock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
+            for (Colors sandColor : Colors.values())
             {
                 Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
                 for (TFCFRock rock : TFCFRock.values())
