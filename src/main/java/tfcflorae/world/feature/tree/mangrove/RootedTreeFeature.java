@@ -6,10 +6,6 @@ import com.google.common.collect.Sets;
 
 import com.mojang.serialization.Codec;
 
-import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.fluids.FluidHelpers;
-import net.dries007.tfc.util.EnvironmentHelpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
@@ -38,6 +34,10 @@ import java.util.OptionalInt;
 import java.util.Random;
 import java.util.Set;
 import java.util.function.BiConsumer;
+
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.fluids.FluidHelpers;
+import net.dries007.tfc.util.EnvironmentHelpers;
 
 import tfcflorae.mixin.accessor.TreeFeatureAccessor;
 import tfcflorae.world.feature.tree.RootedTreeConfig;

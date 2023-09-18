@@ -572,7 +572,7 @@ public final class TFCFBlocks
                     else if (type == BlockType.SAPLING)
                     {
                         subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                            new VanillaBambooSaplingBlock(new BambooTreeGrower(wood), ExtendedProperties.of(Material.PLANT, wood.woodColor()).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), 6), WOOD));
+                            new VanillaBambooSaplingBlock(new BambooTreeGrower(wood), ExtendedProperties.of(Material.PLANT, wood.woodColor()).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), WOOD));
                     }
                     else if (type == BlockType.LEAVES)
                     {
@@ -1042,7 +1042,7 @@ public final class TFCFBlocks
             if (!(plant == TFCFPlant.BLUE_BAMBOO || plant == TFCFPlant.DRAGON_BAMBOO || plant == TFCFPlant.GOLDEN_BAMBOO || plant == TFCFPlant.RED_BAMBOO))
                 continue;
 
-            Map.put(plant, register(("wood/sapling/" + plant.name()).toLowerCase(Locale.ROOT), () -> new TFCFBambooSaplingBlock(new TFCFBambooTreeGrower(plant), ExtendedProperties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), 6), plant.createBlockItem(new Item.Properties().tab(WOOD))));
+            Map.put(plant, register(("wood/sapling/" + plant.name()).toLowerCase(Locale.ROOT), () -> new TFCFBambooSaplingBlock(new TFCFBambooTreeGrower(plant), ExtendedProperties.of(Material.PLANT).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), TFCFWood.BAMBOO.daysToGrow()), plant.createBlockItem(new Item.Properties().tab(WOOD))));
         }
         return Map;
     }

@@ -6,11 +6,14 @@ import java.util.Random;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+
+import tfcflorae.TFCFlorae;
 
 public class PointedDripstoneFeature extends Feature<PointedDripstoneConfig>
 {
@@ -40,13 +43,17 @@ public class PointedDripstoneFeature extends Feature<PointedDripstoneConfig>
       {
          BlockPos pos1 = pos.relative(optional.get().getOpposite());
          createPatchOfDripstoneBlocks(inputSurfaceState, hasSurface, level, random, pos1, config);
-         int i = random.nextFloat() < config.chanceOfTallerDripstone && DripstoneUtils.isEmptyOrWater(level.getBlockState(pos.relative(optional.get()))) ? 2 : 1;
+         int i = random.nextFloat() < config.chanceOfTallerDripstone && DripstoneUtils.isEmptyOrWater(level.getBlockState(pos.relative(optional.get()))) ? Mth.randomBetweenInclusive(random, 2, config.height) : 1;
          DripstoneUtils.growPointedDripstone(inputState, hasSurface, level, pos, optional.get(), i, false);
+         if (pos.getY() > 55)
+         {
+            TFCFlorae.LOGGER.debug("Attempted to place spike at XYZ: " + pos.getX() + " " + pos.getY() + " " + pos.getZ());
+         }
          return true;
       }
    }
 
-   private static Optional<Direction> getTipDirection(BlockState inputState, LevelAccessor level, BlockPos blockPos, Random random)
+   public static Optional<Direction> getTipDirection(BlockState inputState, LevelAccessor level, BlockPos blockPos, Random random)
    {
       boolean flag = DripstoneUtils.isDripstoneBase(level.getBlockState(blockPos.above()), inputState);
       boolean flag1 = DripstoneUtils.isDripstoneBase(level.getBlockState(blockPos.below()), inputState);
@@ -65,11 +72,11 @@ public class PointedDripstoneFeature extends Feature<PointedDripstoneConfig>
       return Optional.empty();
    }
 
-   private static void createPatchOfDripstoneBlocks(BlockState inputSurfaceState, Boolean hasSurface, LevelAccessor level, Random random, BlockPos blockPos, PointedDripstoneConfig config)
+   public static void createPatchOfDripstoneBlocks(BlockState inputSurfaceState, Boolean hasSurface, LevelAccessor level, Random random, BlockPos blockPos, PointedDripstoneConfig config)
    {
       DripstoneUtils.placeDripstoneBlockIfPossible(inputSurfaceState, level, blockPos, hasSurface);
 
-      for(Direction direction : Direction.Plane.HORIZONTAL)
+      for (Direction direction : Direction.Plane.HORIZONTAL)
       {
          if (!(random.nextFloat() > config.chanceOfDirectionalSpread))
          {

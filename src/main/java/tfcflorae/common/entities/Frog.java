@@ -20,7 +20,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.Mth;
 import net.minecraft.util.Unit;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -28,7 +31,6 @@ import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
@@ -53,7 +55,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -72,9 +73,15 @@ import java.util.OptionalInt;
 import java.util.Random;
 import java.util.function.Predicate;
 
+import net.dries007.tfc.common.capabilities.food.FoodCapability;
+import net.dries007.tfc.common.capabilities.food.IFood;
+import net.dries007.tfc.common.entities.EntityHelpers;
+import net.dries007.tfc.common.entities.livestock.TFCAnimalProperties;
+import net.dries007.tfc.util.calendar.Calendars;
+import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.OverworldClimateModel;
 import net.dries007.tfc.world.chunkdata.ChunkData;
-import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
+
 import tfcflorae.client.TFCFSounds;
 import tfcflorae.client.model.entity.animation.api.TFCFAnimationState;
 import tfcflorae.common.TFCFTags;
@@ -85,16 +92,21 @@ import tfcflorae.common.entities.ai.TFCFBrain;
 public class Frog extends Animal
 {
     public static final Ingredient FOOD = Ingredient.of(TFCFTags.Items.FROG_TEMPTATION_ITEMS);
-    protected static final ImmutableList<? extends SensorType<? extends Sensor<? super Frog>>> SENSORS = ImmutableList.of(SensorType.NEAREST_LIVING_ENTITIES, SensorType.HURT_BY, TFCFBrain.FROG_ATTACKABLES.get(), TFCFBrain.FROG_TEMPTATIONS.get(), TFCFBrain.IS_IN_WATER_SENSOR.get());
-    protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORIES = ImmutableList.of(MemoryModuleType.LOOK_TARGET, MemoryModuleType.NEAREST_LIVING_ENTITIES, MemoryModuleType.NEAREST_VISIBLE_LIVING_ENTITIES, MemoryModuleType.WALK_TARGET, MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE, MemoryModuleType.PATH, MemoryModuleType.BREED_TARGET, MemoryModuleType.LONG_JUMP_COOLDOWN_TICKS, MemoryModuleType.LONG_JUMP_MID_JUMP, MemoryModuleType.ATTACK_TARGET, MemoryModuleType.TEMPTING_PLAYER, MemoryModuleType.TEMPTATION_COOLDOWN_TICKS, MemoryModuleType.IS_TEMPTED, MemoryModuleType.HURT_BY, MemoryModuleType.HURT_BY_ENTITY, MemoryModuleType.NEAREST_ATTACKABLE, TFCFBrain.IS_IN_WATER_MEMORY.get(), TFCFBrain.IS_PREGNANT.get(), TFCFBrain.UNREACHABLE_TONGUE_TARGETS.get());
-    private static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.INT);
-    private static final EntityDataAccessor<OptionalInt> TARGET = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.OPTIONAL_UNSIGNED_INT);
+    public static final ImmutableList<? extends SensorType<? extends Sensor<? super Frog>>> SENSORS = ImmutableList.of(SensorType.NEAREST_LIVING_ENTITIES, SensorType.HURT_BY, TFCFBrain.FROG_ATTACKABLES.get(), TFCFBrain.FROG_TEMPTATIONS.get(), TFCFBrain.IS_IN_WATER_SENSOR.get());
+    public static final ImmutableList<? extends MemoryModuleType<?>> MEMORIES = ImmutableList.of(MemoryModuleType.LOOK_TARGET, MemoryModuleType.NEAREST_LIVING_ENTITIES, MemoryModuleType.NEAREST_VISIBLE_LIVING_ENTITIES, MemoryModuleType.WALK_TARGET, MemoryModuleType.CANT_REACH_WALK_TARGET_SINCE, MemoryModuleType.PATH, MemoryModuleType.BREED_TARGET, MemoryModuleType.LONG_JUMP_COOLDOWN_TICKS, MemoryModuleType.LONG_JUMP_MID_JUMP, MemoryModuleType.ATTACK_TARGET, MemoryModuleType.TEMPTING_PLAYER, MemoryModuleType.TEMPTATION_COOLDOWN_TICKS, MemoryModuleType.IS_TEMPTED, MemoryModuleType.HURT_BY, MemoryModuleType.HURT_BY_ENTITY, MemoryModuleType.NEAREST_ATTACKABLE, TFCFBrain.IS_IN_WATER_MEMORY.get(), TFCFBrain.IS_PREGNANT.get(), TFCFBrain.UNREACHABLE_TONGUE_TARGETS.get());
+    public static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.INT);
+    public static final EntityDataAccessor<OptionalInt> TARGET = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.OPTIONAL_UNSIGNED_INT);
+
+    public static final EntityDataAccessor<Boolean> DATA_IS_MALE = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<Float> DATA_FAMILIARITY = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.FLOAT);
 
     public static final EntityDataAccessor<Integer> ID_SIZE = SynchedEntityData.defineId(Frog.class, EntityDataSerializers.INT);
     public static final int MAX_SIZE = 20;
     public static final int MIN_SIZE = 9;
+    public long lastMated = Long.MIN_VALUE;
+    public long nextFeedTime = Long.MIN_VALUE;
 
-    private static final Predicate<LivingEntity> SCARY_MOB = (entity) -> {
+    public static final Predicate<LivingEntity> SCARY_MOB = (entity) -> {
         if (entity instanceof Player && ((Player)entity).isCreative())
         {
             return false;
@@ -104,7 +116,7 @@ public class Frog extends Animal
             return entity.getType() == EntityType.AXOLOTL || entity.getMobType() != MobType.WATER;
         }
     };
-    static final TargetingConditions targetingConditions = TargetingConditions.forNonCombat().ignoreInvisibilityTesting().ignoreLineOfSight().selector(SCARY_MOB);
+    public static final TargetingConditions targetingConditions = TargetingConditions.forNonCombat().ignoreInvisibilityTesting().ignoreLineOfSight().selector(SCARY_MOB);
     public final TFCFAnimationState longJumpingAnimationState = new TFCFAnimationState();
     public final TFCFAnimationState croakingAnimationState = new TFCFAnimationState();
     public final TFCFAnimationState usingTongueAnimationState = new TFCFAnimationState();
@@ -147,6 +159,8 @@ public class Frog extends Animal
         this.entityData.define(VARIANT, 0);
         this.entityData.define(TARGET, OptionalInt.empty());
         this.entityData.define(ID_SIZE, MIN_SIZE);
+        this.entityData.define(DATA_IS_MALE, true);
+        this.entityData.define(DATA_FAMILIARITY, 0f);
     }
 
     public void clearFrogTarget()
@@ -192,6 +206,10 @@ public class Frog extends Animal
         super.addAdditionalSaveData(tag);
         tag.putInt("variant", this.getVariant().getId());
         tag.putInt("size", getSize() - 1);
+        tag.putBoolean("male", isMale());
+        tag.putFloat("familiarity", getFamiliarity());
+        tag.putLong("lastMated", lastMated);
+        tag.putLong("nextFeed", nextFeedTime);
     }
 
     @Override
@@ -200,6 +218,51 @@ public class Frog extends Animal
         super.readAdditionalSaveData(tag);
         this.setVariant(Variant.byId(tag.getInt("variant")));
         this.setSize(tag.getInt("size") + 1, false);
+        this.setIsMale(tag.getBoolean("male"));
+        this.setFamiliarity(tag.getFloat("familiarity"));
+        this.lastMated = tag.getLong("lastMated");
+        this.nextFeedTime = tag.getLong("nextFeed");
+    }
+
+    public float getFamiliarity()
+    {
+        return entityData.get(DATA_FAMILIARITY);
+    }
+
+    public void setFamiliarity(float familiarity)
+    {
+        entityData.set(DATA_FAMILIARITY, familiarity);
+    }
+
+    public void setIsMale(boolean male)
+    {
+        entityData.set(DATA_IS_MALE, male);
+    }
+
+    public boolean isMale()
+    {
+        return entityData.get(DATA_IS_MALE);
+    }
+
+    public void setMated(long ticks)
+    {
+        lastMated = ticks;
+    }
+
+    @Override
+    public boolean canMate(Animal animal)
+    {
+        if (animal != this && animal instanceof Frog other)
+        {
+            final float min = TFCAnimalProperties.READY_TO_MATE_FAMILIARITY;
+            return other.isMale() != isMale() && beenLongEnoughToMate() && other.beenLongEnoughToMate() && getFamiliarity() > min && other.getFamiliarity() > min && fedRecently() && other.fedRecently();
+        }
+        return false;
+    }
+
+    public boolean beenLongEnoughToMate()
+    {
+        return Calendars.get(level).getTicks() > lastMated + (ICalendar.TICKS_IN_DAY * 12);
     }
 
     @Override
@@ -208,12 +271,12 @@ public class Frog extends Animal
         return true;
     }
 
-    private boolean shouldWalk()
+    public boolean shouldWalk()
     {
         return this.onGround && this.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D && !this.isInWaterOrBubble();
     }
 
-    private boolean shouldSwim()
+    public boolean shouldSwim()
     {
         return this.getDeltaMovement().horizontalDistanceSqr() > 1.0E-6D && this.isInWaterOrBubble();
     }
@@ -349,12 +412,24 @@ public class Frog extends Animal
         return this.getPose() == pose;
     }
 
-    @Nullable @Override
+    @Override
+    @Nullable
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob mob)
     {
-        Frog frog = TFCFEntities.FROG.get().create(level);
-        if (frog != null) FrogAi.coolDownLongJump(frog, level.getRandom());
-        return frog;
+        if (mob == this)
+        {
+            Frog frog = TFCFEntities.FROG.get().create(level);
+            if (frog != null)
+            {
+                frog.getBrain().setMemory(MemoryModuleType.LONG_JUMP_COOLDOWN_TICKS, UniformInt.of(100, 140).sample(random));
+            }
+            return frog;
+        }
+        if (mob instanceof Frog animal)
+        {
+            spawnChildFromBreeding(level, animal);
+        }
+        return null;
     }
 
     @Override
@@ -369,36 +444,22 @@ public class Frog extends Animal
     @Override
     public void spawnChildFromBreeding(ServerLevel level, Animal partner)
     {
-        ServerPlayer player = this.getLoveCause();
-        if (player == null) player = partner.getLoveCause();
-
-        if (player != null)
-        {
+        Optional.ofNullable(this.getLoveCause()).or(() -> Optional.ofNullable(partner.getLoveCause())).ifPresent((player) -> {
             player.awardStat(Stats.ANIMALS_BRED);
             CriteriaTriggers.BRED_ANIMALS.trigger(player, this, partner, null);
-        }
+        });
 
-        this.setAge(6000);
-        partner.setAge(6000);
         this.resetLove();
         partner.resetLove();
-        this.getBrain().setMemory(TFCFBrain.IS_PREGNANT.get(), Unit.INSTANCE);
         level.broadcastEntityEvent(this, (byte)18);
-        if (level.getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT)) level.addFreshEntity(new ExperienceOrb(level, this.getX(), this.getY(), this.getZ(), this.getRandom().nextInt(7) + 1));
     }
-
-    /*@Override
-    public boolean checkSpawnObstruction(LevelReader level)
-    {
-        return level.isUnobstructed(this);
-    }*/
 
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor accessor, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData groupData, @Nullable CompoundTag tag)
     {
-        final var spawn = super.finalizeSpawn(accessor, difficulty, spawnType, groupData, tag);
+        final SpawnGroupData spawn = super.finalizeSpawn(accessor, difficulty, spawnType, groupData, tag);
 
-        var pair = getSizeRangeForSpawning();
+        Pair<Integer, Integer> pair = getSizeRangeForSpawning();
         setSize(Mth.nextInt(random, pair.getFirst(), pair.getSecond()), true);
 
         BlockPos pos = this.blockPosition();
@@ -407,7 +468,7 @@ public class Frog extends Animal
         float temperature = 10;
         if (level != null && pos != null && level.isLoaded(pos) && level.getChunkSource().hasChunk(pos.getX(), pos.getZ()))
         {
-            ChunkData data = ChunkDataProvider.get(level).get(level, pos);
+            final ChunkData data = EntityHelpers.getChunkDataForSpawning(level, pos);
             temperature = data.getAverageTemp(pos);
         }
         else if (level == null || pos == null)
@@ -420,15 +481,7 @@ public class Frog extends Animal
 
         FrogAi.coolDownLongJump(this, accessor.getRandom());
 
-        /*while (!checkSpawnObstruction(level))
-        {
-            setSize((int) (getSize() * 0.8), true);
-            if (getSize() < pair.getFirst())
-            {
-                discard();
-                return spawn;
-            }
-        }*/
+        setIsMale(random.nextBoolean());
         return spawn;
     }
 
@@ -602,7 +655,38 @@ public class Frog extends Animal
     @Override
     public boolean isFood(ItemStack stack)
     {
+        if (stack.getCapability(FoodCapability.CAPABILITY).filter(IFood::isRotten).isPresent())
+        {
+            return false;
+        }
         return FOOD.test(stack);
+    }
+
+    public boolean fedRecently()
+    {
+        return Calendars.get(level).getTicks() < nextFeedTime;
+    }
+
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand)
+    {
+        final ItemStack held = player.getItemInHand(hand);
+        if (isFood(held))
+        {
+            if (!level.isClientSide)
+            {
+                final long ticks = Calendars.SERVER.getTicks();
+                if (ticks > nextFeedTime)
+                {
+                    setFamiliarity(getFamiliarity() + 0.1f);
+                    nextFeedTime = ticks + ICalendar.TICKS_IN_DAY;
+                    usePlayerItem(player, hand, held);
+                    playSound(TFCFSounds.FROG_EAT.get(), 1.0F, 1.0F);
+                }
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return super.mobInteract(player, hand);
     }
 
     @Override
@@ -688,7 +772,7 @@ public class Frog extends Animal
 
     static class FrogNodeEvaluator extends AmphibiousNodeEvaluator
     {
-        private final BlockPos.MutableBlockPos preferredBlock = new BlockPos.MutableBlockPos();
+        public final BlockPos.MutableBlockPos preferredBlock = new BlockPos.MutableBlockPos();
 
         public FrogNodeEvaluator(boolean penalizeDeepWater)
         {
@@ -750,9 +834,9 @@ public class Frog extends Animal
         MINI_MUM(13, "mini_mum"),
         BUSHVELD_RAIN(14, "bushveld_rain");
 
-        private static final Variant[] VARIANTS = Arrays.stream(Variant.values()).sorted(Comparator.comparingInt(Variant::getId)).toArray(Variant[]::new);
-        private final int id;
-        private final String name;
+        public static final Variant[] VARIANTS = Arrays.stream(Variant.values()).sorted(Comparator.comparingInt(Variant::getId)).toArray(Variant[]::new);
+        public final int id;
+        public final String name;
 
         Variant(int id, String name)
         {

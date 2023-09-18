@@ -903,7 +903,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         {
             return VOLCANIC_OCEANIC_MOUNTAINS;
         }
-        if (value == LOWLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS)
+        if (value == LOWLANDS || value == WETLANDS || value == MARSHES || value == SWAMPS || value == PEAT_BOG)
         {
             return MANGROVES;
         }

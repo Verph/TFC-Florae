@@ -3,6 +3,7 @@
   "replace": false,
   "values": [
     "tfc:plant/beachgrass_patch",
-    "tfc:plant/sea_palm_patch"
+    "tfc:plant/sea_palm_patch",
+    "tfcflorae:palm_trees"
   ]
 }

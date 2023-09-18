@@ -22,7 +22,7 @@ import net.dries007.tfc.world.feature.FissureConfig;
 import net.dries007.tfc.world.feature.HotSpringConfig;
 import net.dries007.tfc.world.feature.tree.ForestConfig;
 import net.dries007.tfc.world.feature.tree.RandomTreeConfig;
-
+import net.dries007.tfc.world.feature.tree.RandomTreeFeature;
 import tfcflorae.mixin.accessor.TreeDecoratorTypeAccessor;
 import tfcflorae.mixin.accessor.TrunkPlacerTypeAccessor;
 import tfcflorae.world.feature.plant.*;
@@ -52,6 +52,7 @@ public class TFCFFeatures
     public static final RegistryObject<JoshuaTreeFeature> JOSHUA_TREE = register("joshua_tree", JoshuaTreeFeature::new, JoshuaTreeFeature.CODEC);
     public static final RegistryObject<BaobabTreeFeature> BAOBAB_TREE = register("baobab_tree", BaobabTreeFeature::new, DynamicTreeConfig.CODEC);
     public static final RegistryObject<TFCFRandomTreeFeature> RANDOM_TREE = register("random_tree", TFCFRandomTreeFeature::new, RandomTreeConfig.CODEC);
+    public static final RegistryObject<RandomBeachTreeFeature> RANDOM_BEACH_TREE = register("random_beach_tree", RandomBeachTreeFeature::new, RandomTreeConfig.CODEC);
 
     public static final RegistryObject<PoisonTallPlantFeature> POISON_TALL_PLANT = register("poison_tall_plant", PoisonTallPlantFeature::new, PoisonTallPlantFeature.CODEC);
     public static final RegistryObject<LandEmergentPlantFeature> LAND_EMERGENT_PLANT = register("land_emergent_plant", LandEmergentPlantFeature::new, LandEmergentPlantFeature.CODEC);
@@ -95,6 +96,7 @@ public class TFCFFeatures
     public static final RegistryObject<TidePoolFeature> TIDE_POOL = register("tide_pool", TidePoolFeature::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<SubTerraneanRiver> UNDERGROUND_RIVER = register("underground_river", SubTerraneanRiver::new, NoneFeatureConfiguration.CODEC);
     public static final RegistryObject<TFCBambooFeature> BAMBOO = register("bamboo", TFCBambooFeature::new, ProbabilityFeatureConfiguration.CODEC);
+    public static final RegistryObject<RootSpikeFeature> ROOT_SPIKE = register("root_spike", RootSpikeFeature::new, BlockStateConfiguration.CODEC);
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(String name, Function<Codec<C>, F> factory, Codec<C> codec)
     {

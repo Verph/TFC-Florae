@@ -16,9 +16,10 @@ import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.items.*;
+import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryWood;
-
+import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.items.TFCFFood;
 import tfcflorae.common.items.TFCFItems;
@@ -238,6 +239,11 @@ public enum TFCFWood implements RegistryWood
 
     @Override
     public int daysToGrow()
+    {
+        return Config.COMMON.saplingGrowthDays.get(this).get();
+    }
+
+    public int defaultDaysToGrow()
     {
         return daysToGrow;
     }

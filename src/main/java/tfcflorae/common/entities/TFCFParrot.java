@@ -291,7 +291,7 @@ public class TFCFParrot extends Parrot
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor accessor, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData groupData, @Nullable CompoundTag tag)
     {
         final int colour = accessor.getRandom().nextInt(6);
-        /*Holder<Biome> biome = accessor.getBiome(this.blockPosition());
+        Holder<Biome> biome = accessor.getBiome(this.blockPosition());
 
         BlockPos pos = this.blockPosition();
         ServerLevel level = accessor.getLevel();
@@ -299,13 +299,13 @@ public class TFCFParrot extends Parrot
         float temperature = 10;
         if (level != null && pos != null && level.isLoaded(pos) && level.getChunkSource().hasChunk(pos.getX(), pos.getZ()))
         {
-            ChunkData data = ChunkDataProvider.get(level).get(level, pos);
+            final ChunkData data = EntityHelpers.getChunkDataForSpawning(level, pos);
             temperature = data.getAverageTemp(pos);
         }
         else if (level == null || pos == null)
         {
             temperature = random.nextInt(23);
-        }*/
+        }
 
         if (colour == 0)
         {

@@ -13,10 +13,6 @@
       }
     },
     {
-      "type": "tfc:shallow_water",
-      "max_depth": 16
-    },
-    {
       "type": "block_predicate_filter",
       "predicate": {
         "type": "would_survive",

@@ -14,7 +14,7 @@
     },
     {
       "type": "tfc:shallow_water",
-      "max_depth": 24
+      "max_depth": 32
     },
     {
       "type": "block_predicate_filter",

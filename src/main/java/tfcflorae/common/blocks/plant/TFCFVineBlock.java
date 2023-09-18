@@ -43,9 +43,10 @@ import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
 import tfcflorae.Config;
+import tfcflorae.common.blocks.ICooldown;
 import tfcflorae.util.TFCFHelpers;
 
-public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExtension
+public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExtension, ICooldown
 {
     public static final float AABB_OFFSET = 1.0F;
     public static final VoxelShape UP_AABB = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
@@ -77,7 +78,7 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     {
         super(properties.properties());
         this.properties = properties;
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
 
         BlockState stateDefinition = getStateDefinition().any().setValue(UP, Boolean.valueOf(false)).setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false));
@@ -202,8 +203,8 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
+        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
         double tempThreshold = Config.COMMON.foliageDecayThreshold.get();
-        boolean check = isDead;
 
         if (!isDead)
         {
@@ -211,22 +212,23 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
             {
                 isDead = true;
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
             else
             {
                 super.randomTick(state, level, pos, random);
             }
         }
-        else if (isDead && check && --cooldown <= 0)
+        else if (isDead && getCooldown(level, cooldown))
         {
             if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
             {
-                cooldown = ICalendar.HOURS_IN_DAY * 10;
+                setCooldown(level, ICalendar.TICKS_IN_DAY * 3, cooldown);
                 isDead = false;
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
         }
-        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
     }
 
     @Override

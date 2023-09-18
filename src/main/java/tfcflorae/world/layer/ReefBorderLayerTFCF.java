@@ -40,7 +40,7 @@ public enum ReefBorderLayerTFCF implements AdjacentTransformLayer
         }
         else if (isOceanOrMarker(center) && matcher.test(i -> i == OCEAN_REEF_MARKER))
         {
-            return OCEAN;
+            return OCEAN_REEF;
         }
         return center;
     }

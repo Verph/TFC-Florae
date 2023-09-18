@@ -26,10 +26,11 @@ import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.Climate;
 
 import tfcflorae.Config;
+import tfcflorae.common.blocks.ICooldown;
 import tfcflorae.util.TFCFHelpers;
 
 @Mixin(TFCVineBlock.class)
-public abstract class TFCVineBlockMixin extends VineBlock
+public abstract class TFCVineBlockMixin extends VineBlock implements ICooldown
 {
     @Unique private boolean isDead;
     @Unique private long cooldown;
@@ -37,14 +38,14 @@ public abstract class TFCVineBlockMixin extends VineBlock
     public TFCVineBlockMixin(ExtendedProperties properties)
     {
         super(properties.properties());
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
     }
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void inject$init(CallbackInfo ci)
     {
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
     }
 
@@ -52,7 +53,6 @@ public abstract class TFCVineBlockMixin extends VineBlock
     private void inject$randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random, CallbackInfo ci)
     {
         double tempThreshold = Config.COMMON.foliageDecayThreshold.get();
-        boolean check = isDead;
 
         if (!isDead)
         {
@@ -60,24 +60,22 @@ public abstract class TFCVineBlockMixin extends VineBlock
             {
                 isDead = true;
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
             else if (Climate.getTemperature(level, pos) > 0.0F)
             {
                 super.randomTick(state, level, pos, random);
             }
         }
-        else if (isDead && check && --cooldown <= 0)
+        else if (isDead && getCooldown(level, cooldown))
         {
             if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
             {
-                cooldown = ICalendar.HOURS_IN_DAY * 10;
+                setCooldown(level, ICalendar.TICKS_IN_DAY * 3, cooldown);
                 isDead = false;
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
-        }
-        else
-        {
-            ci.cancel();
         }
     }
 

@@ -38,11 +38,12 @@ import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.registry.RegistryPlant;
 
 import tfcflorae.Config;
+import tfcflorae.common.blocks.ICooldown;
 import tfcflorae.util.TFCFHelpers;
 
 import org.jetbrains.annotations.Nullable;
 
-public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements IForgeBlockExtension
+public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements IForgeBlockExtension, ICooldown
 {
     private final Supplier<? extends Block> bodyBlock;
     private final ExtendedProperties properties;
@@ -68,7 +69,7 @@ public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements
         super(properties.properties(), direction, shape, false, 0);
         this.bodyBlock = bodyBlock;
         this.properties = properties;
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
 
         BlockState stateDefinition = getStateDefinition().any();
@@ -130,8 +131,8 @@ public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
+        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
         double tempThreshold = Config.COMMON.foliageDecayThreshold.get();
-        boolean check = isDead;
 
         if (!isDead)
         {
@@ -139,6 +140,7 @@ public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements
             {
                 isDead = true;
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
             else if (state.getValue(AGE) < 25 && ForgeHooks.onCropsGrowPre(level, pos.relative(growthDirection), level.getBlockState(pos.relative(growthDirection)), random.nextDouble() < TFCConfig.SERVER.plantGrowthChance.get()))
             {
@@ -150,16 +152,15 @@ public abstract class TFCFTopPlantBlock extends GrowingPlantHeadBlock implements
                 }
             }
         }
-        else if (isDead && check && --cooldown <= 0)
+        else if (isDead && getCooldown(level, cooldown))
         {
             if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
             {
-                cooldown = ICalendar.HOURS_IN_DAY * 10;
-                isDead = false;
+                setCooldown(level, ICalendar.TICKS_IN_DAY * 3, cooldown);
                 level.blockUpdated(pos, state.getBlock());
+                return;
             }
         }
-        level.setBlockAndUpdate(pos, updateStateWithCurrentMonth(state));
     }
 
     @Override

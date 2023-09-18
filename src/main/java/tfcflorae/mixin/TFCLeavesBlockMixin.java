@@ -51,12 +51,13 @@ import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import tfcflorae.Config;
 import tfcflorae.client.particle.FallingLeafParticle;
 import tfcflorae.client.particle.TFCFParticles;
+import tfcflorae.common.blocks.ICooldown;
 import tfcflorae.common.blocks.wood.TFCFLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFMangroveLeavesBlock;
 import tfcflorae.util.TFCFHelpers;
 
 @Mixin(TFCLeavesBlock.class)
-public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock, IForgeBlockExtension, IFluidLoggable
+public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock, IForgeBlockExtension, IFluidLoggable, ICooldown
 {
     @Unique private boolean isDead;
     @Unique private long cooldown;
@@ -64,22 +65,16 @@ public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock,
     public TFCLeavesBlockMixin(ExtendedProperties properties)
     {
         super(properties.properties());
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
     }
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void inject$init(CallbackInfo ci)
     {
-        this.cooldown = ICalendar.HOURS_IN_DAY * 10;
+        this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
     }
-
-    /*@Inject(method = "<init>", at = @At("TAIL"))
-    private void inject$init(ExtendedProperties properties, int maxDecayDistance, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, CallbackInfo ci)
-    {
-        registerDefaultState(stateDefinition.any().setValue(getDistanceProperty(), 1).setValue(TFCLeavesBlock.PERSISTENT, false).setValue(DEAD, Calendars.CLIENT.getCalendarMonthOfYear().getSeason() == Season.WINTER && Helpers.isBlock(stateDefinition.any().getBlock(), TFCTags.Blocks.SEASONAL_LEAVES) ? true : false));
-    }*/
 
     @Overwrite(remap = false)
     public static void doParticles(ServerLevel level, double x, double y, double z, int count)
@@ -159,37 +154,35 @@ public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock,
         }
 
         double tempThreshold = Config.COMMON.foliageDecayThreshold.get();
-        boolean check = isDead;
+        int check = random.nextInt(Config.COMMON.fruitingLeavesUpdateChance.get());
 
-        if (!(state.getBlock() instanceof FruitTreeLeavesBlock) && Helpers.isBlock(state, TFCTags.Blocks.SEASONAL_LEAVES) && !isDead)
+        if (!(state.getBlock() instanceof FruitTreeLeavesBlock) && Helpers.isBlock(state, TFCTags.Blocks.SEASONAL_LEAVES))
         {
-            if (Climate.getTemperature(level, pos) < tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) < tempThreshold) // Cold, thus leaves should wilt/die.
+            if (!isDead && check == 0)
             {
-                isDead = true;
-                level.blockUpdated(pos, state.getBlock());
-                if (level.getBlockState(pos.above()).getBlock() instanceof SnowLayerBlock)
+                if (Climate.getTemperature(level, pos) < tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) < tempThreshold) // Cold, thus leaves should wilt/die.
                 {
-                    level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL);
+                    isDead = true;
+                    level.blockUpdated(pos, state.getBlock());
+                    if (level.getBlockState(pos.above()).getBlock() instanceof SnowLayerBlock)
+                    {
+                        level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL);
+                    }
+                    return;
+                }
+            }
+            else if (isDead && getCooldown(level, cooldown) && check == 1)
+            {
+                if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
+                {
+                    setCooldown(level, ICalendar.TICKS_IN_DAY * 3, cooldown);
+                    isDead = false;
+                    level.blockUpdated(pos, state.getBlock());
+                    return;
                 }
             }
         }
-        else if (!(state.getBlock() instanceof FruitTreeLeavesBlock) && isDead && check && --cooldown <= 0)
-        {
-            if (Climate.getTemperature(level, pos) >= tempThreshold && TFCFHelpers.getAverageDailyTemperature(level, pos) >= tempThreshold) // It's warming up again.
-            {
-                cooldown = ICalendar.HOURS_IN_DAY * 10;
-                isDead = false;
-                level.blockUpdated(pos, state.getBlock());
-            }
-        }
     }
-
-    /*@Overwrite(remap = false)
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
-    {
-        builder.add(TFCLeavesBlock.PERSISTENT, getDistanceProperty(), getFluidProperty(), DEAD);
-    }*/
 
     @Inject(method = "entityInside", at = @At("HEAD"), cancellable = true, remap = true)
     private void inject$entityInside(BlockState state, Level level, BlockPos pos, Entity entity, CallbackInfo ci)

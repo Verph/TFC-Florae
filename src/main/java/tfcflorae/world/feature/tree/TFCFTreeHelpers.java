@@ -2,7 +2,6 @@ package tfcflorae.world.feature.tree;
 
 import java.util.List;
 import java.util.Random;
-import java.util.function.Predicate;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -11,23 +10,20 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.Tags;
+
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.RiverWaterBlock;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.fluids.FluidHelpers;
-import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.mixin.accessor.StructureTemplateAccessor;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;

@@ -19,6 +19,7 @@
 	"#tfc:feature/redwood_forest",
 	"tfcflorae:charred_forest",
 	"tfcflorae:fruit_forest",
-	"tfcflorae:jungle"
+	"tfcflorae:jungle",
+	"tfc:frogspawn_patch"
   ]
 }

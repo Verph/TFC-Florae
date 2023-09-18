@@ -105,7 +105,7 @@ public class TidePoolFeature extends Feature<NoneFeatureConfiguration>
                     this.setBlock(level, offsetPos, toPlace);
                     for (Direction direction : Direction.Plane.HORIZONTAL)
                     {
-                        if (level.getBlockState(offsetPos.relative(direction)).getBlock() instanceof SandLayerBlock && pos.distManhattan(origin) >= maxLength - random.nextInt(3))
+                        if (level.getBlockState(offsetPos.relative(direction)).getBlock() instanceof SandLayerBlock && pos.distManhattan(origin) >= maxLength - random.nextInt(2))
                         {
                             this.setBlock(level, offsetPos.relative(direction), cobble);
                         }

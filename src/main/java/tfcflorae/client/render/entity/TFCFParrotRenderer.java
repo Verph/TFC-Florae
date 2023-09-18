@@ -35,6 +35,7 @@ public class TFCFParrotRenderer extends TFCFSimpleMobRenderer<TFCFParrot, TFCFPa
         return TEXTURES.get(parrot.getParrotVariant());
     }
 
+    @Override
     public float getBob(TFCFParrot parrot, float delta)
     {
         float f = Mth.lerp(delta, parrot.oFlap, parrot.flap);

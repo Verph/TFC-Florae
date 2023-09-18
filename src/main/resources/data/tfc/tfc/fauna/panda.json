@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "climate": {
+    "min_temperature": 8,
+    "max_temperature": 35,
+    "min_rainfall": 250,
+    "max_rainfall": 500,
+    "min_forest": "edge",
+    "fuzzy": true
+  }
+}

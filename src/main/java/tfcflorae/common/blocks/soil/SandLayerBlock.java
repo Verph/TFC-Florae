@@ -163,6 +163,25 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       }
    }
 
+   public void addSandLayer(Level level, BlockState state, BlockPos pos, int extraLayer)
+   {
+      if (state.getValue(LAYERS) + extraLayer >= 8)
+      {
+         if (state.getValue(LAYERS) + extraLayer > 8)
+         {
+            level.setBlock(pos.above(), this.defaultBlockState().setValue(LAYERS, extraLayer), Block.UPDATE_ALL);
+         }
+         else
+         {
+            level.setBlock(pos, transformsInto.get().defaultBlockState(), Block.UPDATE_ALL);
+         }
+      }
+      else
+      {
+         level.setBlock(pos, state.setValue(LAYERS, state.getValue(LAYERS) + extraLayer), Block.UPDATE_ALL);
+      }
+   }
+
    @Override
    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos)
    {

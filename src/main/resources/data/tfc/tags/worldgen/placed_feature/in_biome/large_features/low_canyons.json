@@ -10,7 +10,6 @@
     "tfcflorae:fruit_forest",
 	  "tfcflorae:jungle",
     "tfcflorae:fresh_water_forest",
-    "tfc:in_biome/fresh_water_roots",
-    "tfc:in_biome/salt_water_roots"
+    "#tfc:feature/fresh_water_roots"
   ]
 }

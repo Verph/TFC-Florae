@@ -31,6 +31,7 @@ import tfcflorae.util.TFCFInteractionManager;
 import tfcflorae.world.ContinentalWorldType;
 import tfcflorae.world.carver.TFCFCarvers;
 import tfcflorae.world.feature.TFCFFeatures;
+import tfcflorae.world.placement.TFCFPlacements;
 
 @Mod(TFCFlorae.MOD_ID)
 public class TFCFlorae
@@ -62,6 +63,7 @@ public class TFCFlorae
         TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
         ContinentalWorldType.WORLD_TYPES.register(bus);
 
+        TFCFPlacements.PLACEMENT_MODIFIERS.register(bus);
         TFCFFeatures.FEATURES.register(bus);
         TFCFFeatures.TRUNK_DECOR.register(bus);
         TFCFFeatures.LEAF_DECOR.register(bus);

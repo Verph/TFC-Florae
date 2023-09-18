@@ -1,5 +1,6 @@
 package tfcflorae;
 
+import java.util.EnumMap;
 import java.util.function.Function;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -9,6 +10,8 @@ import net.minecraftforge.fml.config.ModConfig;
 
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.climate.OverworldClimateModel;
+
+import tfcflorae.common.blocks.wood.TFCFWood;
 
 import static tfcflorae.TFCFlorae.*;
 
@@ -39,6 +42,7 @@ public class Config
     public final ForgeConfigSpec.IntValue fruitingLeavesUpdateChance;
     public final ForgeConfigSpec.IntValue leavesSaplingPlacementChance;
     public final ForgeConfigSpec.IntValue leavesSaplingSpreadDistance;
+    public final EnumMap<TFCFWood, ForgeConfigSpec.IntValue> saplingGrowthDays;
 
     public final ForgeConfigSpec.IntValue landBiomeSizes;
     public final ForgeConfigSpec.IntValue earlyBiomeSizes;
@@ -68,6 +72,12 @@ public class Config
 
         leavesSaplingPlacementChance = builder.apply("leavesSaplingPlacementChance").comment("The chance for the tree leaves to spread and place saplings. Set to \"0\" to disable entirely.").defineInRange("leavesSaplingPlacementChance", 200, 0, Integer.MAX_VALUE);
         leavesSaplingSpreadDistance = builder.apply("leavesSaplingSpreadDistance").comment("Distance multiplication factor of which leaves will randomly spread and place saplings, for natural regrowth of the forests, during fall and spring seasons.").defineInRange("leavesSaplingSpreadDistance", 12, 0, 16);
+        saplingGrowthDays = new EnumMap<>(TFCFWood.class);
+        for (TFCFWood wood : TFCFWood.VALUES)
+        {
+            final String valueName = String.format("%sSaplingGrowthDays", wood.getSerializedName());
+            saplingGrowthDays.put(wood, builder.apply(valueName).comment(String.format("Days for a %s tree sapling to be ready to grow into a full tree.", wood.getSerializedName())).defineInRange(valueName, wood.defaultDaysToGrow(), 0, Integer.MAX_VALUE));
+        }
 
         landBiomeSizes = builder.apply("landBiomeSizes").comment(
             "The amount of times to increase land biome sizes. Setting to 0 equates to regular TFC-sized land biomes.",

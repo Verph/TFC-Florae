@@ -1,6 +1,0 @@
-{
-  "type": "tfc:multiple",
-  "config": {
-    "features": "#tfc:in_biome/fresh_water_roots"
-  }
-}

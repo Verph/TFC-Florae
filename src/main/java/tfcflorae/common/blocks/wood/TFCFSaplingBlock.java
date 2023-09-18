@@ -32,7 +32,7 @@ import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
-
+import net.dries007.tfc.util.climate.Climate;
 import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.world.feature.tree.TFCFTreeGrower;
@@ -84,7 +84,7 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
     @SuppressWarnings("deprecation")
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random)
     {
-        if (level.getMaxLocalRawBrightness(pos.above()) >= 9 && random.nextInt(7) == 0)
+        if (level.getMaxLocalRawBrightness(pos.above()) >= 9 && random.nextInt(7) == 0 && Climate.getTemperature(level, pos) >= 0)
         {
             if (!level.isAreaLoaded(pos, 1))
             {
@@ -98,7 +98,6 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
                     if (ForgeEventFactory.saplingGrowTree(level, random, pos))
                     {
                         level.setBlock(pos, TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState(), Block.UPDATE_ALL);
-                        //level.destroyBlock(pos, false);
                     }
                 }
             }

@@ -15,7 +15,7 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 0,
-            "max_inclusive": 5
+            "max_inclusive": 3
           }
         },
         "old_growth_chance": {
@@ -48,7 +48,7 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 0,
-            "max_inclusive": 6
+            "max_inclusive": 3
           }
         },
         "old_growth_chance": {
@@ -80,8 +80,8 @@
         "bush_count": {
           "type": "uniform",
           "value": {
-            "min_inclusive": 1,
-            "max_inclusive": 6
+            "min_inclusive": 0,
+            "max_inclusive": 3
           }
         },
         "old_growth_chance": {
@@ -113,8 +113,8 @@
         "bush_count": {
           "type": "uniform",
           "value": {
-            "min_inclusive": 1,
-            "max_inclusive": 4
+            "min_inclusive": 0,
+            "max_inclusive": 3
           }
         },
         "old_growth_chance": {
@@ -146,8 +146,8 @@
         "bush_count": {
           "type": "uniform",
           "value": {
-            "min_inclusive": 1,
-            "max_inclusive": 2
+            "min_inclusive": 0,
+            "max_inclusive": 3
           }
         },
         "old_growth_chance": 1,

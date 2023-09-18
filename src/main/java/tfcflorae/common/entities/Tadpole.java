@@ -245,6 +245,7 @@ public class Tadpole extends AbstractFish
             Frog frog = TFCFEntities.FROG.get().create(this.level);
             if (frog == null) return;
 
+            frog.setIsMale(random.nextBoolean());
             frog.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
             frog.finalizeSpawn(server, this.level.getCurrentDifficultyAt(frog.blockPosition()), MobSpawnType.CONVERSION, null, null);
             frog.setNoAi(this.isNoAi());
