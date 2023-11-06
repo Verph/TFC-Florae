@@ -22,7 +22,7 @@ import net.dries007.tfc.world.feature.FissureConfig;
 import net.dries007.tfc.world.feature.HotSpringConfig;
 import net.dries007.tfc.world.feature.tree.ForestConfig;
 import net.dries007.tfc.world.feature.tree.RandomTreeConfig;
-import net.dries007.tfc.world.feature.tree.RandomTreeFeature;
+
 import tfcflorae.mixin.accessor.TreeDecoratorTypeAccessor;
 import tfcflorae.mixin.accessor.TrunkPlacerTypeAccessor;
 import tfcflorae.world.feature.plant.*;
@@ -30,6 +30,9 @@ import tfcflorae.world.feature.tree.*;
 import tfcflorae.world.feature.tree.baobab.*;
 import tfcflorae.world.feature.tree.joshua.*;
 import tfcflorae.world.feature.tree.mangrove.*;
+import tfcflorae.world.feature.tree.palm.CoconutPalmTreeFeature;
+import tfcflorae.world.feature.tree.palm.DatePalmTreeFeature;
+import tfcflorae.world.feature.tree.palm.PalmTreeFeature;
 
 import static tfcflorae.TFCFlorae.MOD_ID;
 
@@ -44,15 +47,17 @@ public class TFCFFeatures
     public static final Supplier<TreeDecoratorType<WeightedLeaveVineDecorator>> WEIGHTED_LEAVE_VINE = LEAF_DECOR.register("leave_vine", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(WeightedLeaveVineDecorator.CODEC));
     public static final Supplier<TreeDecoratorType<AttachedToLeavesDecorator>> ATTACHED_TO_LEAVES = LEAF_DECOR.register("attached_to_leaves", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(AttachedToLeavesDecorator.CODEC));
     public static final RegistryObject<Feature<RootedTreeConfig>> VANILLA_MANGROVE_TREE = register("vanilla_mangrove_tree", RootedTreeFeature::new, RootedTreeConfig.CODEC);
-    
+
     public static final RegistryObject<Feature<TreeConfiguration>> BAMBOO_TREE = register("bamboo_tree", TreeFeature::new, TreeConfiguration.CODEC);
     public static final RegistryObject<Feature<TreeConfiguration>> VANILLA_BAMBOO_TREE = register("vanilla_bamboo_tree", TreeFeature::new, TreeConfiguration.CODEC);
     public static final Supplier<TreeDecoratorType<BambooLeavesDecorator>> BAMBOO_LEAVES = LEAF_DECOR.register("bamboo_leaves", () -> TreeDecoratorTypeAccessor.createTreeDecoratorType(BambooLeavesDecorator.CODEC));
-
     public static final RegistryObject<JoshuaTreeFeature> JOSHUA_TREE = register("joshua_tree", JoshuaTreeFeature::new, JoshuaTreeFeature.CODEC);
     public static final RegistryObject<BaobabTreeFeature> BAOBAB_TREE = register("baobab_tree", BaobabTreeFeature::new, DynamicTreeConfig.CODEC);
     public static final RegistryObject<TFCFRandomTreeFeature> RANDOM_TREE = register("random_tree", TFCFRandomTreeFeature::new, RandomTreeConfig.CODEC);
     public static final RegistryObject<RandomBeachTreeFeature> RANDOM_BEACH_TREE = register("random_beach_tree", RandomBeachTreeFeature::new, RandomTreeConfig.CODEC);
+    public static final RegistryObject<PalmTreeFeature> PALM_TREE = register("palm_tree", PalmTreeFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<CoconutPalmTreeFeature> COCONUT_PALM_TREE = register("coconut_palm_tree", CoconutPalmTreeFeature::new, NoneFeatureConfiguration.CODEC);
+    public static final RegistryObject<DatePalmTreeFeature> DATE_PALM_TREE = register("date_palm_tree", DatePalmTreeFeature::new, NoneFeatureConfiguration.CODEC);
 
     public static final RegistryObject<PoisonTallPlantFeature> POISON_TALL_PLANT = register("poison_tall_plant", PoisonTallPlantFeature::new, PoisonTallPlantFeature.CODEC);
     public static final RegistryObject<LandEmergentPlantFeature> LAND_EMERGENT_PLANT = register("land_emergent_plant", LandEmergentPlantFeature::new, LandEmergentPlantFeature.CODEC);

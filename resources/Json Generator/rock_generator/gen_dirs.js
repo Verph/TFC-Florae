@@ -335,6 +335,16 @@ let clayTypes = {
   'stoneware': 'stoneware'
 }
 
+let numbers = {
+  '2': '2',
+  '4': '4',
+  '6': '6',
+  '8': '8',
+  '10': '10',
+  '12': '12',
+  '14': '14'
+}
+
 fs.ensureDir(`./loot_tables/blocks/deposit/cassiterite`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_copper`)
 fs.ensureDir(`./loot_tables/blocks/deposit/native_gold`)
@@ -654,3 +664,11 @@ for(let moldType in moldTypes)
     fs.ensureDir(`./metallum/data/recipes/casting/${clayType}/${moldType}`)
   }
 }
+
+fs.ensureDir(`./assets/blockstates/wood/fallen_leaves/layered_tfc`)
+fs.ensureDir(`./assets/blockstates/wood/fallen_leaves/layered_tfcf`)
+for(let number in numbers)
+{
+  fs.ensureDir(`./assets/models/block/wood/fallen_leaves/layered/${number}`)
+}
+fs.ensureDir(`./data/recipes/landslide/wood/fallen_leaves/layered`)

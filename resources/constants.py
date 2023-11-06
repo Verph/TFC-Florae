@@ -450,7 +450,9 @@ WOODS: Dict[str, Wood] = {
     'whitebeam': Wood(728, 1750),
     'yellow_meranti': Wood(837, 1200),
     'yew': Wood(813, 2150),
-    'zebrawood': Wood(822, 1570)
+    'zebrawood': Wood(822, 1570),
+    'coconut_palm': Wood(822, 1570),
+    'date_palm': Wood(822, 1570)
 }
 
 CROPS: Dict[str, Crop] = {

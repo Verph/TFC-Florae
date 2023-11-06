@@ -21,7 +21,6 @@ import net.dries007.tfc.util.registry.RegistrationHelpers;
 import tfcflorae.TFCFlorae;
 import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 
 @SuppressWarnings("RedundantTypeArguments")
@@ -39,19 +38,10 @@ public class TFCFBlockEntities
     public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register("tfcf_tick_counter", TFCFTickCounterBlockEntity::new, Stream.of(
             TFCFBlocks.WOODS.values().stream().map(map -> map.get(Wood.BlockType.SAPLING)),
             TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRYING_BRICKS).values(),
-            TFCFBlocks.BAMBOO_SAPLINGS.values().stream()
+            TFCFBlocks.BAMBOO_SAPLINGS.values().stream(),
+            TFCFBlocks.TFC_PALM_SAPLINGS.values().stream()
         ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
     );
-
-    /*public static final RegistryObject<BlockEntityType<FruitTreeBlockEntity>> BERRY_BUSH = register("tfcf_berry_bush", FruitTreeBlockEntity::new, Stream.of(
-            TFCFBlocks.WOODS_SEASONAL_LEAVES.values().stream(),
-            TFCFBlocks.WOODS_SEASONAL_LOGS.values().stream(),
-            TFCFBlocks.WOODS_SEASONAL_WOOD.values().stream(),
-            TFCFBlocks.LEAVES_ONLY.values().stream(),
-            TFCFBlocks.JOSHUA_LEAVES.values().stream(),
-            TFCFBlocks.FRUITING_PLANTS.values().stream()
-        ).<Supplier<? extends Block>>flatMap(Helpers::flatten)
-    );*/
 
     public static final RegistryObject<BlockEntityType<ChiseledBookshelfBlockEntity>> CHISELED_BOOKSHELF = register("chiseled_bookshelf", ChiseledBookshelfBlockEntity::new, Stream.of(
             TFCFBlocks.CHISELED_BOOKSHELF_TFCF.values().stream()

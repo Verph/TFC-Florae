@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/2/ash"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/4/ash"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/6/ash"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/8/ash"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/10/ash"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/12/ash"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/14/ash"
+    },
+    "layers=8": {
+      "model": "tfc:block/wood/leaves/ash"
+    }
+  }
+}

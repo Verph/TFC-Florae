@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/2/white_cedar"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/4/white_cedar"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/6/white_cedar"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/8/white_cedar"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/10/white_cedar"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/12/white_cedar"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/14/white_cedar"
+    },
+    "layers=8": {
+      "model": "tfc:block/wood/leaves/white_cedar"
+    }
+  }
+}

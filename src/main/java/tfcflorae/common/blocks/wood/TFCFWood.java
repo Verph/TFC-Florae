@@ -121,6 +121,9 @@ public enum TFCFWood implements RegistryWood
     YEW(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 10, 19, TFCFItems.FOOD.get(TFCFFood.YEW_BERRY), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, new Color(244, 205, 205).getRGB()),
     ZEBRAWOOD(false, true, false, false, false, MaterialColor.COLOR_GREEN, MaterialColor.COLOR_GREEN, 10, 29),
 
+    DATE_PALM(true, false, false, false, MaterialColor.TERRACOTTA_BROWN, MaterialColor.COLOR_GREEN, 7, 17, TFCFItems.FOOD.get(TFCFFood.DATE), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, new Color(244, 205, 205).getRGB(), true),
+    COCONUT_PALM(true, false, false, false, MaterialColor.TERRACOTTA_WHITE, MaterialColor.COLOR_GREEN, 7, 17, TFCFItems.COCONUT, new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, new Color(244, 205, 205).getRGB(), true),
+
     // Add fruit leaves to TFC trees
     WHITE_CEDAR(true, true, false, false, false, MaterialColor.TERRACOTTA_WHITE, MaterialColor.TERRACOTTA_LIGHT_GRAY, 10, 7, TFCFItems.FOOD.get(TFCFFood.JUNIPER), new Lifecycle[] {DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, new Color(255, 255, 249).getRGB());
 
@@ -139,6 +142,7 @@ public enum TFCFWood implements RegistryWood
     public final int daysToGrow;
     public int floweringLeavesColor;
     public Boolean isFruitTree;
+    public Boolean isPalmTree;
 
     public Supplier<? extends Item> productItem;
     public Lifecycle[] stages;
@@ -148,27 +152,44 @@ public enum TFCFWood implements RegistryWood
         this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
         this.hasLeavesOnly = hasLeavesOnly;
         this.floweringLeavesColor = -1;
+        this.isPalmTree = false;
     }
 
     TFCFWood(boolean hasLeavesOnly, boolean conifer, boolean mangrove, boolean joshua, boolean fruitingLog, MaterialColor woodColor, MaterialColor barkColor, int maxDecayDistance, int daysToGrow, Supplier<? extends Item> productItem, Lifecycle[] stages, int floweringLeavesColor)
     {
         this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow, productItem, stages, floweringLeavesColor);
-        this.hasLeavesOnly = hasLeavesOnly;
         this.floweringLeavesColor = floweringLeavesColor;
+        this.hasLeavesOnly = hasLeavesOnly;
+        this.isPalmTree = false;
     }
 
     TFCFWood(boolean conifer, boolean mangrove, boolean joshua, boolean fruitingLog, MaterialColor woodColor, MaterialColor barkColor, int maxDecayDistance, int daysToGrow, Supplier<? extends Item> productItem, Lifecycle[] stages, int floweringLeavesColor)
     {
         this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
+        this.hasLeavesOnly = false;
         this.productItem = productItem;
         this.stages = stages;
         this.isFruitTree = true;
         this.floweringLeavesColor = floweringLeavesColor;
+        this.isPalmTree = false;
+    }
+
+    TFCFWood(boolean conifer, boolean mangrove, boolean joshua, boolean fruitingLog, MaterialColor woodColor, MaterialColor barkColor, int maxDecayDistance, int daysToGrow, Supplier<? extends Item> productItem, Lifecycle[] stages, int floweringLeavesColor, boolean isPalmTree)
+    {
+        this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
+        this.hasLeavesOnly = false;
+        this.productItem = productItem;
+        this.stages = stages;
+        this.isFruitTree = false;
+        this.floweringLeavesColor = floweringLeavesColor;
+        this.isPalmTree = isPalmTree;
+        this.hasLeavesOnly = false;
     }
 
     TFCFWood(boolean conifer, boolean mangrove, boolean joshua, boolean fruitingLog, MaterialColor woodColor, MaterialColor barkColor, int maxDecayDistance, int daysToGrow)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
+        this.hasLeavesOnly = false;
         this.conifer = conifer;
         this.mangrove = mangrove;
         this.joshua = joshua;
@@ -251,6 +272,11 @@ public enum TFCFWood implements RegistryWood
     public Boolean isFruitTree()
     {
         return isFruitTree;
+    }
+
+    public Boolean isPalmTree()
+    {
+        return isPalmTree;
     }
 
     public int getFloweringLeavesColor()

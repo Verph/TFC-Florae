@@ -1,0 +1,9 @@
+{
+  "parent": "tfcflorae:block/wood/palm_head",
+  "textures": {
+  	"side": "tfcflorae:block/wood/log/date_palm",
+  	"shag": "tfcflorae:block/wood/trunk/palm_shag",
+  	"palm_shag": "tfcflorae:block/wood/trunk/palm_shag1",
+  	"palm_frond": "tfcflorae:block/wood/trunk/palm_frond"
+  }
+}

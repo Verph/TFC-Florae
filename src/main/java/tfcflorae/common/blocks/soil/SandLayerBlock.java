@@ -57,10 +57,10 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
    public static final Boolean SNOWY = false;
 
    public static final IntegerProperty LAYERS = BlockStateProperties.LAYERS;
-   protected static final VoxelShape[] SHAPES = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
+   public static final VoxelShape[] SHAPES = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-   private final Supplier<? extends Block> transformsInto;
-   private final ExtendedProperties properties;
+   public final Supplier<? extends Block> transformsInto;
+   public final ExtendedProperties properties;
 
    public SandLayerBlock(int dustColorIn, ExtendedProperties properties, Supplier<? extends Block> transformsInto)
    {
@@ -74,6 +74,11 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
    public ExtendedProperties getExtendedProperties()
    {
       return properties;
+   }
+
+   public BlockState transformsInto()
+   {
+      return transformsInto.get().defaultBlockState();
    }
 
    @Override
@@ -222,7 +227,7 @@ public class SandLayerBlock extends TFCSandBlock implements IFluidLoggable, IFor
       if (Helpers.isItem(stack, this.asItem()) && transformsInto != null)
       {
          int sandLayers = state.getValue(LAYERS);
-         if (sandLayers >= 8)
+         if (sandLayers >= 8 && level.getBlockState(pos.above()).isAir())
             level.setBlockAndUpdate(pos.above(), this.defaultBlockState());
          else if (sandLayers == 7)
             level.setBlockAndUpdate(pos, transformsInto.get().defaultBlockState());

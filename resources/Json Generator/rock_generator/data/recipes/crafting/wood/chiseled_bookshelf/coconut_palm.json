@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    },
+    "1": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    },
+    "2": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    },
+    "3": {
+      "item": "tfcflorae:wood/slab/coconut_palm"
+    },
+    "4": {
+      "item": "tfcflorae:wood/slab/coconut_palm"
+    },
+    "5": {
+      "item": "tfcflorae:wood/slab/coconut_palm"
+    },
+    "6": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    },
+    "7": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    },
+    "8": {
+      "item": "tfcflorae:wood/planks/coconut_palm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chiseled_bookshelf/coconut_palm",
+    "count": 1
+  }
+}

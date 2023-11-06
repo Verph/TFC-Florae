@@ -39,6 +39,7 @@ import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
@@ -91,6 +92,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
         return EntityBlockExtension.super.newBlockEntity(pos, state);
     }
 
+    @Override
     public ExtendedProperties getExtendedProperties()
     {
         return properties;
@@ -108,7 +110,8 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
         return super.mayPlaceOn(state, block, pos) || Helpers.isBlock(state.getBlock(), BlockTags.SAND) || Helpers.isBlock(state.getBlock(), Tags.Blocks.SAND) || Helpers.isBlock(state.getBlock(), TFCFTags.Blocks.CLAY) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(state, TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.TREE_GROWS_ON);
     }
 
-    @Override @Nullable @SuppressWarnings("ConstantConditions")
+    @Override
+    @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context)
     {
         final FluidState fluid = context.getLevel().getFluidState(context.getClickedPos());
@@ -195,7 +198,7 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
 
                 Season currentSeason = Calendars.get(level).getCalendarMonthOfYear().getSeason();
 
-                if ((currentSeason == Season.FALL || currentSeason == Season.SPRING) && level.getBlockState(pos.below()).isAir() && biomeStuff)
+                if ((currentSeason == Season.FALL || currentSeason == Season.SPRING) && ageAtMax(state) && level.getBlockState(pos.below()).isAir() && biomeStuff)
                 {
                     final ChunkDataProvider provider = ChunkDataProvider.get(level);
                     final ChunkData data = provider.get(level, pos);

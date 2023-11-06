@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/purple_ipe"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/purple_ipe"
+}

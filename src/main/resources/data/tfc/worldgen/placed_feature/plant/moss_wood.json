@@ -84,7 +84,7 @@
                 0,
                 0
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             },
             {
               "type": "minecraft:matching_block_tag",
@@ -93,7 +93,7 @@
                 0,
                 0
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             },
             {
               "type": "minecraft:matching_block_tag",
@@ -102,7 +102,7 @@
                 1,
                 0
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             },
             {
               "type": "minecraft:matching_block_tag",
@@ -111,7 +111,7 @@
                 -1,
                 0
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             },
             {
               "type": "minecraft:matching_block_tag",
@@ -120,7 +120,7 @@
                 0,
                 1
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             },
             {
               "type": "minecraft:matching_block_tag",
@@ -129,7 +129,7 @@
                 0,
                 -1
               ],
-              "tag": "tfc:all_bamboo_logs"
+              "tag": "tfc:no_moss_logs"
             }
           ]
         }

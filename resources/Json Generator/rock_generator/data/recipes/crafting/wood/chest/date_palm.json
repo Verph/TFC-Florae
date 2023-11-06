@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/lumber/date_palm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/chest/date_palm"
+  }
+}

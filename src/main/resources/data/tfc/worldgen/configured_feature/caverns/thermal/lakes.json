@@ -13,7 +13,7 @@
         "Properties": {
           "level": "0"
         },
-        "Name": "minecraft:water"
+        "Name": "tfc:fluid/spring_water"
       }
     }
   }

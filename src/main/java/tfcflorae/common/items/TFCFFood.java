@@ -1,9 +1,7 @@
 package tfcflorae.common.items;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.food.FoodProperties.Builder;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
 
 import net.dries007.tfc.common.TFCItemGroup;
 
@@ -39,6 +37,10 @@ public enum TFCFFood
     SLOE(false, true),
     SORB_APPLE(false, false),
     YEW_BERRY(false, true),
+    CRACKED_COCONUT(false, false),
+    COCONUT_MEAT(false, false),
+    DATE(false, true),
+    DRIED_DATE(false, true),
 
     ACORN_SQUASH(false, false),
     AEHOBAK(false, false),

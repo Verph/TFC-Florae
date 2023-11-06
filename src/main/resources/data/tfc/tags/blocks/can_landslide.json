@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
+	"#tfc:fallen_leaves",
     "tfcflorae:mycelium_dirt/silt",
     "tfcflorae:mycelium_dirt/loam",
     "tfcflorae:mycelium_dirt/sandy_loam",

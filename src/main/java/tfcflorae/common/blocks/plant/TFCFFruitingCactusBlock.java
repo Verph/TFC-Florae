@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -15,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -23,7 +22,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 
@@ -96,37 +94,13 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
 
         lastUpdateTick = Calendars.SERVER.getTicks();
 
-        registerDefaultState(getStateDefinition().any().setValue(PART, Part.LOWER).setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, false));
+        registerDefaultState(getStateDefinition().any().setValue(PART, Part.LOWER).setValue(LIFECYCLE, Lifecycle.HEALTHY).setValue(NATURAL, true));
     }
 
     @Override
-    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos)
+    public BlockState getStateForPlacement(BlockPlaceContext context)
     {
-        final BlockPos.MutableBlockPos mutable = new BlockPos.MutableBlockPos();
-        for (Direction direction : Direction.Plane.HORIZONTAL)
-        {
-            mutable.setWithOffset(pos, direction);
-            BlockState stateAt = level.getBlockState(mutable);
-            if (stateAt.getMaterial().isSolid() || Helpers.isFluid(level.getFluidState(mutable), FluidTags.LAVA))
-            {
-                return false;
-            }
-        }
-
-        mutable.setWithOffset(pos, 0, -1, 0);
-        BlockState belowState = level.getBlockState(mutable);
-        if (state.getValue(PART) == Part.LOWER)
-        {
-            return Helpers.isBlock(belowState, BlockTags.SAND) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON);
-        }
-        else
-        {
-            if (state.getBlock() != this)
-            {
-                return Helpers.isBlock(belowState, BlockTags.SAND) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.GRASS_PLANTABLE_ON) || Helpers.isBlock(state.getBlock(), TFCTags.Blocks.BUSH_PLANTABLE_ON);
-            }
-            return belowState.getBlock() == this && belowState.getValue(PART) == Part.LOWER;
-        }
+        return this.defaultBlockState().setValue(NATURAL, context.getPlayer() == null);
     }
 
     @Override
@@ -266,7 +240,7 @@ public abstract class TFCFFruitingCactusBlock extends TFCCactusBlock implements 
                 // And update the block
                 if (state != newState)
                 {
-                    level.setBlock(pos, newState, 3);
+                    level.setBlock(pos, newState, Block.UPDATE_ALL);
                 }
             }
         }

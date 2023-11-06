@@ -1,5 +1,5 @@
 {
-  "parent": "tfcflorae:block/grass_side",
+  "parent": "tfc:block/grass_side",
   "textures": {
     "texture": "tfc:block/sand/black"
   }

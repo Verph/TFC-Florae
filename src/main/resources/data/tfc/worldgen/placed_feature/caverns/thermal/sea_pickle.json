@@ -15,42 +15,42 @@
         "scale": 1,
         "states": [
           {
-            "Name": "minecraft:water",
+            "Name": "tfc:fluid/spring_water",
             "Properties": {
               "level": "0"
             }
           },
           {
-            "Name": "minecraft:water",
+            "Name": "tfc:fluid/spring_water",
             "Properties": {
               "level": "0"
             }
           },
           {
-            "Name": "minecraft:sea_pickle",
+            "Name": "tfc:sea_pickle",
             "Properties": {
-              "waterlogged": "true",
+              "fluid": "spring_water",
               "pickles": "1"
             }
           },
           {
-            "Name": "minecraft:sea_pickle",
+            "Name": "tfc:sea_pickle",
             "Properties": {
-              "waterlogged": "true",
+              "fluid": "spring_water",
               "pickles": "2"
             }
           },
           {
-            "Name": "minecraft:sea_pickle",
+            "Name": "tfc:sea_pickle",
             "Properties": {
-              "waterlogged": "true",
+              "fluid": "spring_water",
               "pickles": "3"
             }
           },
           {
-            "Name": "minecraft:sea_pickle",
+            "Name": "tfc:sea_pickle",
             "Properties": {
-              "waterlogged": "true",
+              "fluid": "spring_water",
               "pickles": "4"
             }
           }

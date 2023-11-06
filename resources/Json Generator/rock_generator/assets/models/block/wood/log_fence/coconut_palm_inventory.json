@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/log_fence_inventory",
+  "textures": {
+    "log": "tfcflorae:block/wood/log/coconut_palm",
+    "planks": "tfcflorae:block/wood/planks/coconut_palm"
+  }
+}

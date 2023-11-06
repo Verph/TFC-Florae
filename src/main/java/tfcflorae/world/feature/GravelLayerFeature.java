@@ -23,6 +23,8 @@ import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.dries007.tfc.world.TFCChunkGenerator;
+import net.dries007.tfc.world.biome.BiomeExtension;
+import net.dries007.tfc.world.biome.TFCBiomes;
 import net.dries007.tfc.world.chunkdata.ChunkData;
 import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.dries007.tfc.world.surface.SoilSurfaceState;
@@ -33,7 +35,9 @@ import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.MossGrowingBoulderBlock;
 import tfcflorae.common.blocks.rock.MossSpreadingBoulderBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
+import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.SandLayerBlock;
+import tfcflorae.interfaces.TFCBiomesMixinInterface;
 import tfcflorae.util.TFCFHelpers;
 
 import static net.dries007.tfc.world.TFCChunkGenerator.SEA_LEVEL_Y;
@@ -79,6 +83,10 @@ public class GravelLayerFeature extends Feature<NoneFeatureConfiguration>
                     {
                         sandLayer = TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(TFCFRock.TFCFBlockType.GRAVEL_LAYER).get().defaultBlockState();
                     }
+                    if (y <= 62 && level.canSeeSky(mutablePos) && isShoreBiome(level, mutablePos))
+                    {
+                        sandLayer = TFCFBlocks.SAND_LAYERS.get(Colors.fromMaterialColour(ChunkDataProvider.get(level).get(level, mutablePos).getRockData().getRock(mutablePos).sand().defaultMaterialColor())).get().defaultBlockState();
+                    }
 
                     if (sandLayer != null)
                     {
@@ -108,6 +116,15 @@ public class GravelLayerFeature extends Feature<NoneFeatureConfiguration>
             }
         }
         return placedAny;
+    }
+
+    public boolean isShoreBiome(WorldGenLevel level, BlockPos pos)
+    {
+        BiomeExtension biome = TFCBiomes.getExtension(level, level.getBiome(pos).value());
+        TFCBiomes staticBiomes = new TFCBiomes();
+        final BiomeExtension NEAR_SHORE = ((TFCBiomesMixinInterface) (Object) staticBiomes).getStaticNearShore();
+
+        return biome == TFCBiomes.SHORE || biome == NEAR_SHORE;
     }
 
     public static int sandLayerHeight(TFCChunkGenerator chunkGen, BlockPos inputPos, Random random, boolean isShort)

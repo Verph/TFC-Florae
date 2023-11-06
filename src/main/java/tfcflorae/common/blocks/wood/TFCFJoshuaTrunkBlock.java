@@ -19,19 +19,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.Tags;
 
 import net.dries007.tfc.common.TFCTags;
-import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.registry.RegistryWood;
 
 import tfcflorae.common.blocks.TFCFBlocks;
 
@@ -39,10 +38,10 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable
 {
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
     public static final BooleanProperty NATURAL = TFCBlockStateProperties.NATURAL;
-    public final TFCFWood wood;
+    public final RegistryWood wood;
     private final ExtendedProperties properties;
 
-    public static TFCFJoshuaTrunkBlock create(TFCFWood wood, BlockBehaviour.Properties builder, ExtendedProperties properties, FluidProperty fluid)
+    public static TFCFJoshuaTrunkBlock create(RegistryWood wood, BlockBehaviour.Properties builder, ExtendedProperties properties, FluidProperty fluid)
     {
         return new TFCFJoshuaTrunkBlock(wood, properties.properties(), properties)
         {
@@ -54,7 +53,7 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable
         };
     }
 
-    public TFCFJoshuaTrunkBlock(TFCFWood wood, BlockBehaviour.Properties builder, ExtendedProperties properties)
+    public TFCFJoshuaTrunkBlock(RegistryWood wood, BlockBehaviour.Properties builder, ExtendedProperties properties)
     {
         super(0.3125F, properties.properties());
         this.properties = properties;
@@ -144,7 +143,7 @@ public class TFCFJoshuaTrunkBlock extends PipeBlock implements IFluidLoggable
         return Helpers.isBlock(state, TFCFBlocks.JOSHUA_LEAVES.get(wood).get());
     }
 
-    public static boolean canConnectTo(BlockState state)
+    public boolean canConnectTo(BlockState state)
     {
         return (Helpers.isBlock(state, TFCTags.Blocks.BUSH_PLANTABLE_ON) || Helpers.isBlock(state, TFCTags.Blocks.TREE_GROWS_ON) || Helpers.isBlock(state, BlockTags.SAND) || Helpers.isBlock(state, Tags.Blocks.GRAVEL) || state.getMaterial().isSolid());
     }

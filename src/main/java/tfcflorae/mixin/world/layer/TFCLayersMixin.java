@@ -692,7 +692,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         guyotsLayer = ZoomLayer.NORMAL.apply(1003, guyotsLayer);*/
 
         // Atoll
-        atollLayer = AddAtollLayer.LARGE.apply(random.nextLong(), oceanLayer);
+        /*atollLayer = AddAtollLayer.LARGE.apply(random.nextLong(), oceanLayer);
         atollLayer = ZoomLayer.NORMAL.apply(1002, atollLayer);
         atollLayer = AddAtollLayer.SMALL.apply(random.nextLong(), atollLayer);
         atollLayer = ZoomLayer.NORMAL.apply(1003, atollLayer);
@@ -701,7 +701,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         barrierReefLayer = AddBarrierReefLayer.LARGE.apply(random.nextLong(), oceanLayer);
         barrierReefLayer = ZoomLayer.NORMAL.apply(1002, barrierReefLayer);
         barrierReefLayer = AddBarrierReefLayer.SMALL.apply(random.nextLong(), barrierReefLayer);
-        barrierReefLayer = ZoomLayer.NORMAL.apply(1003, barrierReefLayer);
+        barrierReefLayer = ZoomLayer.NORMAL.apply(1003, barrierReefLayer);*/
 
         // Biome level features - ocean borders, lakes, island chains, edge biomes, shores
         // Apply lakes back to biomes
@@ -741,13 +741,13 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         mainLayer = MergePuyMountainsLayer.INSTANCE.apply(random.nextLong(), mainLayer, puyMountainsLayer);
         mainLayer = MergeMesaPlateauLayer.INSTANCE.apply(random.nextLong(), mainLayer, mesaPlateauLayer);
 
-        mainLayer = MergeAtollLayer.INSTANCE.apply(random.nextLong(), mainLayer, atollLayer);
-        mainLayer = MergeBarrierReefLayer.INSTANCE.apply(random.nextLong(), mainLayer, barrierReefLayer);
+        /*mainLayer = MergeAtollLayer.INSTANCE.apply(random.nextLong(), mainLayer, atollLayer);
+        mainLayer = MergeBarrierReefLayer.INSTANCE.apply(random.nextLong(), mainLayer, barrierReefLayer);*/
 
         // Paints from the edge towards the center i.e. backwards! For Atolls and Barrier Reefs.
-        mainLayer = BarrierReefAtollBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        /*mainLayer = BarrierReefAtollBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
         mainLayer = BarrierReefOceanBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
-        mainLayer = BarrierReefOceanBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);
+        mainLayer = BarrierReefOceanBorderLayer.INSTANCE.apply(random.nextLong(), mainLayer);*/
 
         mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer); // Make mountain biome transition to oceans smoother
         mainLayer = OceanEdgeBiomeLayer.INSTANCE.apply(random.nextLong(), mainLayer);
@@ -922,7 +922,7 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return SHORE;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean hasLake(int value)
     {
         return !isOcean(value) && value != BADLANDS && value != CALDERAS && value != NEAR_SHORE && value != ATOLL;
@@ -966,10 +966,10 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return LAKE;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean hasRiver(int value)
     {
-        return !isOcean(value) && !isLake(value) && value != RIVERBANK && value != RIVER_EDGE;
+        return !isOcean(value) && !isLake(value)/* && value != RIVERBANK && value != RIVER_EDGE */;
     }
 
     @Overwrite(remap = false)
@@ -1010,13 +1010,13 @@ public class TFCLayersMixin implements TFCLayersMixinInterface
         return RIVER;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean isOcean(int value)
     {
         return value == OCEAN || value == DEEP_OCEAN || value == DEEP_OCEAN_TRENCH || value == OCEAN_REEF || value == PELAGIC_ZONE || value == SEAMOUNTS || value == GUYOTS || value == NEAR_SHORE;
     }
 
-    @Shadow
+    @Overwrite(remap = false)
     public static boolean isOceanOrMarker(int value)
     {
         return isOcean(value) || value == OCEAN_OCEAN_CONVERGING_MARKER || value == OCEAN_OCEAN_DIVERGING_MARKER || value == OCEAN_REEF_MARKER || value == PELAGIC_ZONE_MARKER || value == SEAMOUNTS_MARKER || value == GUYOTS_MARKER;

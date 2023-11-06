@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/twig/date_palm",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/date_palm"
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/date_palm",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/twig/date_palm",
+        "y": 270
+      }
+    ]
+  }
+}

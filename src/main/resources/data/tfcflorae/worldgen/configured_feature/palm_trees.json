@@ -5,9 +5,14 @@
     "entries": "#tfcflorae:palm_trees",
     "types": {
       "none": {
-        "tree_count": 0,
+        "tree_count": {
+          "type": "uniform",
+          "value": {
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          }
+        },
         "groundcover_count": 10,
-        "per_chunk_chance": 0.05,
         "bush_count": 0,
         "has_spoiler_old_growth": true
       },
@@ -20,7 +25,6 @@
           }
         },
         "groundcover_count": 10,
-        "per_chunk_chance": 0.15,
         "bush_count": 0,
         "has_spoiler_old_growth": true
       },
@@ -33,6 +37,7 @@
           }
         },
         "groundcover_count": 15,
+        "bush_count": 0,
         "has_spoiler_old_growth": true
       },
       "normal": {
@@ -44,17 +49,13 @@
           }
         },
         "groundcover_count": 30,
+        "bush_count": 0,
         "has_spoiler_old_growth": true
       },
       "old_growth": {
-        "tree_count": {
-          "type": "uniform",
-          "value": {
-            "min_inclusive": 1,
-            "max_inclusive": 4
-          }
-        },
+        "tree_count": 2,
         "groundcover_count": 40,
+        "bush_count": 0,
         "allows_old_growth": true
       }
     }

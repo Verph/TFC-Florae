@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/coconut_palm",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/coconut_palm",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/4/coconut_palm",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/coconut_palm",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/coconut_palm",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/coconut_palm",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/coconut_palm"
+  },
+  "render_type": "solid"
+}

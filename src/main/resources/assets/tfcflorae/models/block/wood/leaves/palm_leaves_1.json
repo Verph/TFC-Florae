@@ -1,0 +1,8 @@
+{
+    "loader": "forge:obj",
+    "model": "tfcflorae:models/block/obj/palm_straight_1.obj",
+    "emissive_ambient": true,
+    "textures": {
+        "particle": "tfcflorae:block/wood/leaves/palm_leaves_old"
+    }
+}

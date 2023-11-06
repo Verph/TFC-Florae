@@ -1,0 +1,19 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 100,
+    "max_rain": 500,
+    "min_temp": 14,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfc:wood/twig/palm"
+      },
+      {
+        "block": "tfc:wood/fallen_leaves/palm"
+      }
+    ],
+    "normal_tree": "tfc:tree/palm_trees/palm",
+    "dead_tree": "tfc:tree/palm_trees/palm"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/date_palm",
+    "north": "tfcflorae:block/wood/workbench/front/date_palm",
+    "south": "tfcflorae:block/wood/workbench/side/date_palm",
+    "east": "tfcflorae:block/wood/workbench/side/date_palm",
+    "west": "tfcflorae:block/wood/workbench/front/date_palm",
+    "up": "tfcflorae:block/wood/workbench/top/date_palm",
+    "down": "tfcflorae:block/wood/planks/date_palm"
+  }
+}

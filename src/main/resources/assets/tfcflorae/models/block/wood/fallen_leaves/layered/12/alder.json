@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/wood/fallen_leaves_height12",
+  "textures": {
+    "sand": "tfcflorae:block/wood/leaves/alder"
+  }
+}

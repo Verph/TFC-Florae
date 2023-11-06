@@ -79,7 +79,10 @@ public class TFCFTreeGrower extends TFCTreeGrower
 
         if (feature.place(level, generator, random, pos))
         {
-            level.setBlock(pos, wood == TFCFWood.WHITE_CEDAR ? TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(Wood.BlockType.WOOD).get().defaultBlockState() : TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState(), Block.UPDATE_ALL);
+            if (wood instanceof TFCFWood woodTFCF && !woodTFCF.isPalmTree() || wood != Wood.PALM)
+            {
+                level.setBlock(pos, wood == TFCFWood.WHITE_CEDAR ? TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(Wood.BlockType.WOOD).get().defaultBlockState() : TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState(), Block.UPDATE_ALL);
+            }
             return true;
         }
         else

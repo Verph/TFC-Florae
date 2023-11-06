@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bookshelf",
+  "textures": {
+    "end": "tfcflorae:block/wood/planks/coconut_palm",
+    "side": "tfcflorae:block/wood/bookshelf/coconut_palm"
+  }
+}

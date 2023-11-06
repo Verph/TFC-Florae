@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/log/coconut_palm"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/coconut_palm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/log_wall/coconut_palm",
+    "count": 8
+  }
+}

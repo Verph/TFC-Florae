@@ -90,6 +90,9 @@
     "#tfc:blue_bamboo_logs",
     "#tfc:dragon_bamboo_logs",
     "#tfc:golden_bamboo_logs",
-    "#tfc:red_bamboo_logs"
+    "#tfc:red_bamboo_logs",
+    "#tfc:coconut_palm_logs",
+    "#tfc:date_palm_logs",
+    "#tfc:palm_logs"
   ]
 }

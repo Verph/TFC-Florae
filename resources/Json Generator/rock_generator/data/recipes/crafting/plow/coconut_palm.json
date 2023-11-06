@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "pbp",
+    "wrw"
+  ],
+  "key": {
+    "b": {
+      "item": "tfc:brass_mechanisms"
+    },
+    "r": {
+      "tag": "forge:rods"
+    },
+    "p": {
+      "item": "tfcflorae:wood/lumber/coconut_palm"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    },
+    "w": {
+      "item": "astikorcarts:wheel/coconut_palm"
+    }
+  },
+  "result": {
+    "item": "astikorcarts:plow/coconut_palm"
+  }
+}

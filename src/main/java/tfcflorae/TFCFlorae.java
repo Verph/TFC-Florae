@@ -26,6 +26,7 @@ import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.common.recipes.TFCFRecipeSerializers;
 import tfcflorae.common.recipes.TFCFRecipeTypes;
+import tfcflorae.common.recipes.ingredients.TFCFIngredients;
 import tfcflorae.util.TFCFDispenserBehaviors;
 import tfcflorae.util.TFCFInteractionManager;
 import tfcflorae.world.ContinentalWorldType;
@@ -86,6 +87,7 @@ public class TFCFlorae
         TFCFRock.registerDefaultRocks();
 
         event.enqueueWork(() -> {
+            TFCFIngredients.registerIngredientTypes();
             TFCFCommands.registerSuggestionProviders();
             TFCFInteractionManager.init();
             TFCFDispenserBehaviors.registerDispenserBehaviors();

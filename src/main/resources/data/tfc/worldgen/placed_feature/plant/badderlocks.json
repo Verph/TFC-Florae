@@ -7,10 +7,9 @@
       "heightmap": "OCEAN_FLOOR_WG"
     },
     {
-      "type": "minecraft:surface_relative_threshold_filter",
-      "heightmap": "OCEAN_FLOOR_WG",
-      "min_inclusive": -32,
-	  "max_inclusive": 59
+      "type": "tfc:shallow_water",
+      "min_depth": 2,
+      "max_depth": 32
     },
     {
       "type": "block_predicate_filter",

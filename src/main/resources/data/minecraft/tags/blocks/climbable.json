@@ -38,6 +38,9 @@
     "tfcflorae:spider_cave/webbed_chest",
     "tfcflorae:spider_cave/creeping_webs",
     "tfcflorae:spider_cave/hanging_spider_web_slender",
-    "tfcflorae:spider_cave/hanging_spider_web_thick"
+    "tfcflorae:spider_cave/hanging_spider_web_thick",
+    "tfcflorae:wood/trunks/coconut_palm",
+    "tfcflorae:wood/trunks/date_palm",
+    "tfcflorae:wood/trunks/palm"
   ]
 }

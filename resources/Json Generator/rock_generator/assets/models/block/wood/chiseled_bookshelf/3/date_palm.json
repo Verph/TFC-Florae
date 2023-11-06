@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tfcflorae:block/wood/chiseled_bookshelf/top/date_palm",
+    "up": "tfcflorae:block/wood/chiseled_bookshelf/top/date_palm",
+    "north": "tfcflorae:block/wood/chiseled_bookshelf/3/date_palm",
+    "east": "tfcflorae:block/wood/chiseled_bookshelf/side/date_palm",
+    "south": "tfcflorae:block/wood/chiseled_bookshelf/back/date_palm",
+    "west": "tfcflorae:block/wood/chiseled_bookshelf/side/date_palm",
+    "particle": "tfcflorae:block/wood/chiseled_bookshelf/top/date_palm"
+  },
+  "render_type": "solid"
+}

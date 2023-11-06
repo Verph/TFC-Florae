@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahogany",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahogany"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahogany",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahogany",
+        "y": 270
+      }
+    ]
+  }
+}

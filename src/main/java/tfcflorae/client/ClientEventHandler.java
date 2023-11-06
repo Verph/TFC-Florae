@@ -20,30 +20,26 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.LecternRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.CodRenderer;
-import net.minecraft.client.renderer.entity.SalmonRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.event.*;
+import net.minecraftforge.client.model.ForgeModelBakery;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.dries007.tfc.client.*;
-import net.dries007.tfc.client.model.entity.BluegillModel;
 import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.BarrelBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
-import net.dries007.tfc.client.render.entity.SimpleMobRenderer;
 import net.dries007.tfc.client.screen.KnappingScreen;
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
 import net.dries007.tfc.common.blocks.wood.Wood;
-import net.dries007.tfc.common.entities.TFCEntities;
-import net.dries007.tfc.common.fluids.TFCFluids;
 import net.dries007.tfc.util.Helpers;
 
 import tfcflorae.client.model.entity.*;
@@ -70,7 +66,6 @@ import tfcflorae.common.container.TFCFContainerTypes;
 import tfcflorae.common.entities.Fish;
 import tfcflorae.common.entities.Silkmoth;
 import tfcflorae.common.entities.TFCFEntities;
-import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 
@@ -202,6 +197,12 @@ public class ClientEventHandler
         TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
         TFCFBlocks.ROOT_SPIKES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.PALM_TRUNKS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.PALM_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.PALM_FRUITS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.TFC_PALM_TRUNKS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.TFC_PALM_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
+        TFCFBlocks.TFC_PALM_SAPLINGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutoutMipped));
 
         // Plants
         TFCFBlocks.PLANTS.forEach((key, reg) -> {
@@ -347,6 +348,28 @@ public class ClientEventHandler
 
     public static void registerModelLoaders(ModelRegistryEvent event)
     {
+        for (TFCFWood wood : TFCFWood.VALUES)
+        {
+            if (wood.isPalmTree())
+            {
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_1"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_2"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_corner_1"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_corner_2"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_top_1"));
+            }
+        }
+        for (Wood wood : Wood.VALUES)
+        {
+            if (wood == Wood.PALM)
+            {
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_1"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_2"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_corner_1"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_corner_2"));
+                ForgeModelBakery.addSpecialModel(TFCFHelpers.identifier("block/wood/leaves/" + wood.getSerializedName() + "_leaves_top_1"));
+            }
+        }
     }
 
     public static void registerColorHandlerBlocks(ColorHandlerEvent.Block event)
@@ -411,10 +434,11 @@ public class ClientEventHandler
             else
                 registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.FALLEN_LEAVES).get());
         });
-        //TFCFBlocks.WOODS.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(Wood.BlockType.LEAVES).get(), reg.get(Wood.BlockType.FALLEN_LEAVES).get()));
         TFCFBlocks.LEAVES_ONLY.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
         TFCFBlocks.JOSHUA_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
         TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
+        TFCFBlocks.PALM_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
+        TFCFBlocks.TFC_PALM_LEAVES.forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, reg.get(), reg.get()));
 
         // Plants
         TFCFBlocks.PLANTS.forEach((plant, reg) -> registry.register(plant.isConifer() ? foliageColor : plant.isTallGrass() ? tallGrassColor : plant.isSeasonal() ? seasonalFoliageColor : plant.isFoliage() ? foliageColor : grassColor, reg.get()));
@@ -432,17 +456,18 @@ public class ClientEventHandler
     {
         final ItemColors registry = event.getItemColors();
         final ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
-        final ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
+        final ItemColor foliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
+        final ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getSeasonalFoliageColor(null, tintIndex);
 
-        TFCFBlocks.WOODS.forEach((key, value) -> {
-            if (!key.isFruitTree() && !key.isMangrove())
-                registry.register(seasonalFoliageColor, value.get(LEAVES).get());
-            else
-                registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
-        });
-        TFCFBlocks.WOODS.forEach((key, value) -> {
-            if (key.isFruitTree() || key.isMangrove())
-                registry.register(seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
+        TFCFBlocks.WOODS.forEach((wood, value) -> {
+            if (value.get(FALLEN_LEAVES).get() != null)
+            {
+                registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, value.get(FALLEN_LEAVES).get());
+            }
+            if (!wood.isFruitTree() && value.get(LEAVES).get() != null)
+            {
+                registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, value.get(LEAVES).get());
+            }
         });
 
         TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(seasonalFoliageColor, value.get(), value.get()));
@@ -464,7 +489,7 @@ public class ClientEventHandler
 
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event)
     {
-        // Color maps
+        // Colormaps
     }
 
     public static void registerParticleFactories(ParticleFactoryRegisterEvent event)
@@ -526,16 +551,4 @@ public class ClientEventHandler
             Arrays.stream(TFCFWood.VALUES).map(TFCFWood::getSerializedName).forEach(name -> event.addSprite(TFCFHelpers.identifier("entity/signs/" + name)));
         }
     }
-
-    /*static final Boolean hasLeavesOnly()
-    {
-        for (TFCFWood wood : TFCFWood.class.getEnumConstants())
-        {
-            if (!wood.hasLeavesOnly())
-            {
-                return true;
-            }
-        }
-        return false;
-    }*/
 }

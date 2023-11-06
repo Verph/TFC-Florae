@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/palm_vertical",
+  "textures": {
+  	"side": "tfcflorae:block/wood/log/date_palm",
+  	"end": "tfcflorae:block/wood/log_top/date_palm"
+  }
+}

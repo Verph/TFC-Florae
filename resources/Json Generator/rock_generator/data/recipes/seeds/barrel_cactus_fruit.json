@@ -1,0 +1,21 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tfc:knives"
+      },
+      {
+        "type": "tfcflorae:is_rotten",
+        "ingredient": {
+          "item": "tfcflorae:food/barrel_cactus_fruit"
+        }
+      }
+    ],
+    "result": {
+      "item": "tfc:rotten_compost",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tfcflorae:block/wood/workbench/front/coconut_palm",
+    "north": "tfcflorae:block/wood/workbench/front/coconut_palm",
+    "south": "tfcflorae:block/wood/workbench/side/coconut_palm",
+    "east": "tfcflorae:block/wood/workbench/side/coconut_palm",
+    "west": "tfcflorae:block/wood/workbench/front/coconut_palm",
+    "up": "tfcflorae:block/wood/workbench/top/coconut_palm",
+    "down": "tfcflorae:block/wood/planks/coconut_palm"
+  }
+}

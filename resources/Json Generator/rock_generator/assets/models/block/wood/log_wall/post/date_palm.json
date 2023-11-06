@@ -1,0 +1,8 @@
+{
+  "parent": "tfcflorae:block/template_wall_post_log",
+  "textures": {
+    "top": "tfcflorae:block/wood/log_top/date_palm",
+    "wall": "tfcflorae:block/wood/log/date_palm",
+    "particle": "tfcflorae:block/wood/log/date_palm"
+  }
+}

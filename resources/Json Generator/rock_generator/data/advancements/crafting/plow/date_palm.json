@@ -1,0 +1,31 @@
+{
+  "rewards": {
+    "recipes": [
+      "astikorcarts:crafting/plow/date_palm"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "astikorcarts:crafting/plow/date_palm"
+      }
+    },
+    "has_wheel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "astikorcarts:wheel/date_palm"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wheel"
+    ]
+  ]
+}

@@ -2,86 +2,22 @@
   "feature": "tfc:tree/roots/white_mangrove",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 2
-    },
-    {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:uniform",
-        "value": {
-          "min_inclusive": 3,
-          "max_inclusive": 24
-        }
-      }
-    },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
       "type": "minecraft:heightmap",
       "heightmap": "OCEAN_FLOOR_WG"
     },
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
-        "type": "tfc:air_or_empty_fluid"
+        "type": "tfc:replaceable"
       }
     },
     {
-      "type": "tfcflorae:shallow_water",
-      "min_depth": 1,
-      "max_depth": 7
+      "type": "tfc:shallow_water",
+      "max_depth": 3
     },
     {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:any_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_block_tag",
-            "offset": [
-              0,
-              -1,
-              0
-            ],
-            "tag": "tfc:sea_bush_plantable_on"
-          },
-          {
-            "type": "minecraft:matching_blocks",
-            "offset": [
-              0,
-              -1,
-              0
-            ],
-            "blocks": "tfcflorae:wood/spike/white_mangrove"
-          }
-        ]
-      }
-    },
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:would_survive",
-        "state": {
-          "Name": "tfcflorae:wood/spike/white_mangrove",
-          "Properties": {
-            "vertical_direction": "up"
-          }
-        }
-      }
-    },
-    {
-      "type": "tfc:climate",
-      "min_temperature": 8,
-      "max_temperature": 41,
-      "min_rainfall": 230,
-      "max_rainfall": 500,
-      "min_forest": "sparse",
-      "fuzzy": true
-    },
-    {
-      "type": "tfc:biome"
+      "type": "tfc:near_water",
+      "radius": 7
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "item": "tfcflorae:wood/wood/date_palm"
+    },
+    "Y": {
+      "item": "tfcflorae:wood/lumber/date_palm"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/wood_wall/date_palm",
+    "count": 8
+  }
+}

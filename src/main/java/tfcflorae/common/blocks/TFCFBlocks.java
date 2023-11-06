@@ -67,6 +67,7 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
+import net.dries007.tfc.util.registry.RegistryWood;
 
 import tfcflorae.Config;
 import tfcflorae.TFCFlorae;
@@ -91,6 +92,7 @@ import tfcflorae.util.TFCFHelpers;
 import tfcflorae.util.climate.TFCFClimateRanges;
 import tfcflorae.world.feature.tree.BambooTreeGrower;
 import tfcflorae.world.feature.tree.TFCFBambooTreeGrower;
+import tfcflorae.world.feature.tree.TFCFTreeGrower;
 
 import static tfcflorae.common.blocks.soil.TFCFSoil.TFCFVariant.*;
 import static net.dries007.tfc.common.TFCItemGroup.*;
@@ -338,6 +340,12 @@ public final class TFCFBlocks
     public static final Map<TFCFWood, RegistryObject<Block>> ROOT_SPIKES = woodSpikeMapper(TFCFWood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_TRUNK = joshuaTrunkMapper(TFCFWood.class);
     public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_LEAVES = joshuaLeavesMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> PALM_FRUITS = palmFruitsMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> PALM_LEAVES = palmLeavesMapper(TFCFWood.class);
+    public static final Map<TFCFWood, RegistryObject<Block>> PALM_TRUNKS = palmTrunksMapper(TFCFWood.class);
+    public static final Map<Wood, RegistryObject<Block>> TFC_PALM_LEAVES = palmLeavesTFCMapper(Wood.class);
+    public static final Map<Wood, RegistryObject<Block>> TFC_PALM_TRUNKS = palmTrunksTFCMapper(Wood.class);
+    public static final Map<RegistryWood, RegistryObject<Block>> TFC_PALM_SAPLINGS = palmSaplingMapper(RegistryWood.class);
 
     public static final Map<TFCFPlant, RegistryObject<Block>> BAMBOO_LOGS = bambooLogMapper(TFCFPlant.class);
     public static final Map<TFCFPlant, RegistryObject<Block>> STRIPPED_BAMBOO_LOGS = bambooStrippedLogMapper(TFCFPlant.class);
@@ -640,10 +648,6 @@ public final class TFCFBlocks
                 {
                     continue;
                 }
-                else if (type == BlockType.LEAVES && (wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
-                {
-                    continue;
-                }
                 else if (type == BlockType.SAPLING)
                 {
                     if (wood.isMangrove())
@@ -657,10 +661,17 @@ public final class TFCFBlocks
                             new TFCFSaplingBlock(wood, wood.tree(), ExtendedProperties.of(Material.PLANT, wood.woodColor()).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), type.createBlockItem(new Item.Properties().tab(WOOD))));
                     }
                 }
-                else if (type == BlockType.LEAVES && !(wood.isFruitTree() || wood.isMangrove()))
+                else if (type == BlockType.LEAVES)
                 {
-                    subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
-                        TFCFLeavesBlockExt.create(ExtendedProperties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7, WOODS.get(wood).get(Wood.BlockType.FALLEN_LEAVES), WOODS.get(wood).get(Wood.BlockType.TWIG), WOODS.get(wood).get(Wood.BlockType.SAPLING)), WOOD));
+                    if ((wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog())
+                    {
+                        continue;
+                    }
+                    else if (!(wood.isFruitTree() || wood.isMangrove()) || wood.isPalmTree())
+                    {
+                        subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                            TFCFLeavesBlockExt.create(ExtendedProperties.of(Material.LEAVES, wood.woodColor()).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 7, WOODS.get(wood).get(Wood.BlockType.FALLEN_LEAVES), WOODS.get(wood).get(Wood.BlockType.TWIG), WOODS.get(wood).get(Wood.BlockType.SAPLING)), WOOD));
+                    }
                 }
                 else if (type == BlockType.TRAPPED_CHEST)
                 {
@@ -713,7 +724,9 @@ public final class TFCFBlocks
                         new TFCFToolRackBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(2.0F).noOcclusion().flammableLikePlanks().blockEntity(TFCFBlockEntities.TOOL_RACK)), WOOD));
                 }
                 else if (!(wood == TFCFWood.BAMBOO && (type == BlockType.PLANKS || type == BlockType.LOG || type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD || type == BlockType.STRIPPED_LOG || type == BlockType.SAPLING)))
+                {
                     subMap.put(type, register(("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), type.create(wood), type.createBlockItem(new Item.Properties().tab(WOOD))));
+                }
             }
             Map.put(wood, subMap);
         }
@@ -770,6 +783,133 @@ public final class TFCFBlocks
             Map.put(wood, register(("wood/leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
                 TFCFLeavesBlock.create(ExtendedProperties.of(Block.Properties.of(Material.LEAVES).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().isViewBlocking(TFCFBlocks::never)).randomTicks().hasPostProcess(TFCFBlocks::always).flammableLikeLeaves(), 
                 wood.getProductItem(), wood.getStages(), wood.maxDecayDistance(), TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.FALLEN_LEAVES), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.TWIG), TFCBlocks.WOODS.get(Wood.WHITE_CEDAR).get(BlockType.SAPLING)), blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> palmFruitsMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (!wood.isPalmTree())
+                continue;
+
+            BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+            Map.put(wood, register(("wood/fruit/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                new PalmFruitBlock(ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(1.5f).flammableLikeLogs().noOcclusion().dynamicShape().isViewBlocking(TFCFBlocks::never).randomTicks().hasPostProcess(TFCFBlocks::always), PALM_TRUNKS.get(wood), wood.getProductItem()), blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> palmLeavesMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (!wood.isPalmTree())
+                continue;
+
+            Map.put(wood, register(("wood/palm_leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                PalmLeavesBlock.create(
+                    ExtendedProperties.of(Material.LEAVES, MaterialColor.COLOR_GREEN).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().dynamicShape().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 
+                    wood.getProductItem(), 
+                    wood.getStages(), 
+                    wood.maxDecayDistance(), 
+                    TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood), 
+                    WOODS.get(wood).get(Wood.BlockType.FALLEN_LEAVES), 
+                    WOODS.get(wood).get(Wood.BlockType.TWIG), 
+                    WOODS.get(wood).get(Wood.BlockType.SAPLING), 
+                    PALM_TRUNKS.get(wood)), 
+                    WOOD));
+        }
+        return Map;
+    }
+
+    private static Map<TFCFWood, RegistryObject<Block>> palmTrunksMapper(Class<TFCFWood> enumClass)
+    {
+        Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (TFCFWood wood : enumClass.getEnumConstants())
+        {
+            if (!wood.isPalmTree())
+                continue;
+
+            BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+            Map.put(wood, register(("wood/trunks/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                PalmTrunkBlock.create(
+                    wood, 
+                    ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs().noOcclusion().dynamicShape().isViewBlocking(TFCFBlocks::never).randomTicks().hasPostProcess(TFCFBlocks::always), 
+                    PALM_LEAVES.get(wood), 
+                    PALM_TRUNKS.get(wood), 
+                    PALM_FRUITS.get(wood), 
+                    wood.getProductItem(), 
+                    wood.getStages(), 
+                    TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)), 
+                    blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<Wood, RegistryObject<Block>> palmLeavesTFCMapper(Class<Wood> enumClass)
+    {
+        Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
+        for (Wood wood : enumClass.getEnumConstants())
+        {
+            if (wood != Wood.PALM)
+                continue;
+
+            Map.put(wood, register(("wood/palm_leaves/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                TFCPalmLeavesBlock.create(
+                    ExtendedProperties.of(Material.LEAVES, MaterialColor.COLOR_GREEN).strength(0.5F).sound(SoundType.GRASS).randomTicks().noOcclusion().dynamicShape().isViewBlocking(TFCFBlocks::never).flammableLikeLeaves(), 
+                    wood.maxDecayDistance(),  
+                    TFCBlocks.WOODS.get(wood).get(Wood.BlockType.FALLEN_LEAVES), 
+                    TFCBlocks.WOODS.get(wood).get(Wood.BlockType.TWIG), 
+                    TFCBlocks.WOODS.get(wood).get(Wood.BlockType.SAPLING), 
+                    TFC_PALM_TRUNKS.get(wood)), 
+                    WOOD));
+        }
+        return Map;
+    }
+
+    private static Map<Wood, RegistryObject<Block>> palmTrunksTFCMapper(Class<Wood> enumClass)
+    {
+        Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
+        for (Wood wood : enumClass.getEnumConstants())
+        {
+            if (wood != Wood.PALM)
+                continue;
+
+            BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+            Map.put(wood, register(("wood/trunks/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                TFCPalmTrunkBlock.create(
+                    wood, 
+                    ExtendedProperties.of(Material.WOOD, wood.woodColor()).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs().noOcclusion().dynamicShape().isViewBlocking(TFCFBlocks::never).randomTicks().hasPostProcess(TFCFBlocks::always), 
+                    TFC_PALM_LEAVES.get(wood), 
+                    TFC_PALM_TRUNKS.get(wood)), 
+                    blockItem));
+        }
+        return Map;
+    }
+
+    private static Map<RegistryWood, RegistryObject<Block>> palmSaplingMapper(Class<RegistryWood> enumClass)
+    {
+        Map<RegistryWood, RegistryObject<Block>> Map = new HashMap<>();
+        for (Wood wood : Wood.values())
+        {
+            if (wood != Wood.PALM)
+                continue;
+
+            BiFunction<Block, Item.Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
+            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Item.Properties().tab(WOOD));
+
+            Map.put(wood, register(("wood/palm_sapling/" + wood.getSerializedName()).toLowerCase(Locale.ROOT), () -> 
+                new TFCFSaplingBlock(wood, new TFCFTreeGrower(wood, Helpers.identifier("tree/" + wood.getSerializedName()), Helpers.identifier("tree/" + wood.getSerializedName() + "_large")), ExtendedProperties.of(Material.PLANT, wood.woodColor()).noCollission().randomTicks().strength(0).sound(SoundType.GRASS).flammableLikeLeaves().blockEntity(TFCFBlockEntities.TICK_COUNTER), wood.daysToGrow()), blockItem));
         }
         return Map;
     }
@@ -1063,79 +1203,6 @@ public final class TFCFBlocks
         }
         return Map;
     }
-
-    /*private static Map<Wood.BlockType, RegistryObject<Block>> bambooWoodMapper(Class<Wood.BlockType> enumClass)
-    {
-        Map<Wood.BlockType, RegistryObject<Block>> Map = new HashMap<>();
-        for (Wood.BlockType type : Wood.BlockType.values())
-        {
-            if (type == BlockType.LEAVES)
-            {
-                continue;
-            }
-            else if (type == BlockType.LOG)
-            {
-                Map.put(type, register(("wood/" + type.name() + "_bundle/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs(), BAMBOO_BLOCKS.get(BlockType.STRIPPED_LOG)), WOOD));
-            }
-            else if (type == BlockType.STRIPPED_LOG)
-            {
-                Map.put(type, register(("wood/" + type.name() + "_bundle/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs(), null), WOOD));
-            }
-            else if (type == BlockType.SAPLING)
-            {
-                Map.put(type, register(("wood/mosaic/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new ExtendedBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(1.5f, 3.0F).flammableLikePlanks()), WOOD));
-            }
-            else if (type == BlockType.WOOD)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs(), BAMBOO_BLOCKS.get(BlockType.STRIPPED_WOOD)), WOOD));
-            }
-            else if (type == BlockType.STRIPPED_WOOD)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new LogBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(5.5f).requiresCorrectToolForDrops().flammableLikeLogs(), null), WOOD));
-            }
-            else if (type == BlockType.TRAPPED_CHEST)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new TFCFTrappedChestBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.TRAPPED_CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), "bamboo"), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            else if (type == BlockType.CHEST)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new TFCFChestBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.CHEST).clientTicks(ChestBlockEntity::lidAnimateTick), "bamboo"), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            else if (type == BlockType.SIGN)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new TFCStandingSignBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).noCollission().strength(1F).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            else if (type == BlockType.WALL_SIGN)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new TFCWallSignBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).noCollission().strength(1F).dropsLike(BAMBOO_BLOCKS.get(BlockType.SIGN)).flammableLikePlanks().blockEntity(TFCFBlockEntities.SIGN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            else if (type == BlockType.LECTERN)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new TFCLecternBlock(ExtendedProperties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).noCollission().strength(2.5F).flammableLikePlanks().blockEntity(TFCFBlockEntities.LECTERN)), type.createBlockItem(new Item.Properties().tab(WOOD))));
-            }
-            else if (type == BlockType.BOOKSHELF)
-            {
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new ExtendedBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(2.0F, 3.0F)).flammableLikePlanks()), WOOD));
-
-                Map.put(type, register(("wood/chiseled_" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), () -> 
-                    new ChiseledBookshelfBlock(ExtendedProperties.of(Block.Properties.of(Material.WOOD, MaterialColor.COLOR_LIGHT_GREEN).sound(SoundType.WOOD).strength(2.0F, 3.0F)).blockEntity(TFCFBlockEntities.CHISELED_BOOKSHELF).flammableLikePlanks()), WOOD));
-            }
-            else
-                Map.put(type, register(("wood/" + type.name() + "/bamboo").toLowerCase(Locale.ROOT), type.create(TFCFWood.ALDER), type.createBlockItem(new Item.Properties().tab(WOOD))));
-        }
-        return Map;
-    }*/
 
     private static Map<TFCFPlant, RegistryObject<Block>> normalPlantMapper(Class<TFCFPlant> enumClass)
     {

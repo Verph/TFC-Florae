@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/wood/palm_diagonal_down",
+  "textures": {
+  	"side": "tfc:block/wood/log/palm"
+  }
+}

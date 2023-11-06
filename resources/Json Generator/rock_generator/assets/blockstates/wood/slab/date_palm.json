@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tfcflorae:block/wood/slab/date_palm"
+    },
+    "type=top": {
+      "model": "tfcflorae:block/wood/slab/date_palm_top"
+    },
+    "type=double": {
+      "model": "tfcflorae:block/wood/planks/date_palm"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfc:wood/fallen_leaves/blackwood"
+  ],
+  "result": "tfc:wood/fallen_leaves/blackwood"
+}

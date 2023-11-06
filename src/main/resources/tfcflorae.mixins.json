@@ -5,6 +5,9 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"BookshelfBlockMixin",
+		"ConnectedGrassBlockkMixin",
+		"DirtBlockMixin",
+		"FallenLeavesBlockMixin",
 		"FirepitBlockMixin",
 		"ForestFeatureMixin",
 		"LandslideRecipeMixin",

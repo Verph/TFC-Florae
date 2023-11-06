@@ -1,0 +1,8 @@
+{
+    "loader": "forge:obj",
+    "model": "tfcflorae:models/block/obj/coconut_palm_corner_1.obj",
+    "emissive_ambient": true,
+    "textures": {
+        "particle": "tfcflorae:block/wood/leaves/coconut_palm_leaves_old"
+    }
+}

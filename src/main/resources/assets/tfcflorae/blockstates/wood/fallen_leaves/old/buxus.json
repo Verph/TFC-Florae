@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/buxus",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/buxus"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/buxus",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/buxus",
+        "y": 270
+      }
+    ]
+  }
+}

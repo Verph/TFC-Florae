@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/2/chestnut"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/4/chestnut"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/6/chestnut"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/8/chestnut"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/10/chestnut"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/12/chestnut"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/14/chestnut"
+    },
+    "layers=8": {
+      "model": "tfc:block/wood/leaves/chestnut"
+    }
+  }
+}

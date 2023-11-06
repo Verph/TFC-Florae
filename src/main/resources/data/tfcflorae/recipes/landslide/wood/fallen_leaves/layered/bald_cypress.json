@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/bald_cypress"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/bald_cypress"
+}

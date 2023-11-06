@@ -9,7 +9,7 @@
       "type":"minecraft:height_range",
       "height":{
         "min_inclusive":{
-          "absolute":-100
+          "absolute":-20
         },
         "max_inclusive":{
           "absolute":40

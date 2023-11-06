@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/coconut_palm",
+  "result": "tfcflorae:wood/stairs/coconut_palm",
+  "mode": "stair"
+}

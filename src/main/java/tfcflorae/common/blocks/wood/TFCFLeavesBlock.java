@@ -70,7 +70,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
      * Since most bushes have a 7 month non-dormant cycle, this means that it just needs to be in valid conditions for about 1 month a year in order to not die.
      * It won't produce (it needs more months to properly advance the cycle from dormant -> healthy -> flowering -> fruiting, requiring 4 months at least), but it won't outright die.
      */
-    private static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
+    public static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
     public static final EnumProperty<Lifecycle> LIFECYCLE = TFCBlockStateProperties.LIFECYCLE;
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
@@ -92,7 +92,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         };
     }
 
-    private static IntegerProperty getDistanceProperty(int maxDecayDistance)
+    public static IntegerProperty getDistanceProperty(int maxDecayDistance)
     {
         if (maxDecayDistance >= 7 && maxDecayDistance < 7 + TFCBlockStateProperties.DISTANCES.length)
         {
@@ -102,15 +102,15 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
     }
 
     /* The maximum value of the decay property. */
-    private final int maxDecayDistance;
-    private final ExtendedProperties properties;
-    protected final Supplier<? extends Item> productItem;
-    protected final Supplier<ClimateRange> climateRange;
-    private final Lifecycle[] lifecycle;
-    @Nullable private final Supplier<? extends Block> fallenLeaves;
-    @Nullable private final Supplier<? extends Block> fallenTwig;
-    @Nullable private final Supplier<? extends Block> sapling;
-    private long lastUpdateTick;
+    public final int maxDecayDistance;
+    public final ExtendedProperties properties;
+    public final Supplier<? extends Item> productItem;
+    public final Supplier<ClimateRange> climateRange;
+    public final Lifecycle[] lifecycle;
+    @Nullable public final Supplier<? extends Block> fallenLeaves;
+    @Nullable public final Supplier<? extends Block> fallenTwig;
+    @Nullable public final Supplier<? extends Block> sapling;
+    public long lastUpdateTick;
 
     public TFCFLeavesBlock(ExtendedProperties properties, Supplier<? extends Item> productItem, Lifecycle[] lifecycle, int maxDecayDistance, Supplier<ClimateRange> climateRange, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig, @Nullable Supplier<? extends Block> sapling)
     {
@@ -218,45 +218,42 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
         }
 
-        if (random.nextInt(Config.COMMON.fruitingLeavesUpdateChance.get()) == 0 && level.isAreaLoaded(pos, 3))
+        if (random.nextInt(Config.COMMON.fruitingLeavesUpdateChance.get()) == 0 && !state.getValue(PERSISTENT))
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
-            if (!state.getValue(PERSISTENT))
+            if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
             {
-                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
+                onUpdate(level, pos, state);
+                lastUpdateTick = Calendars.SERVER.getTicks();
+            }
+            if (this == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && !level.isDay() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
+            {
+                Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
+                Season season = currentMonth.getSeason();
+                if (random.nextInt(ICalendar.TICKS_IN_DAY + SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR) == 0 && season == Season.SUMMER && Climate.getTemperature(level, pos) >= 2)
                 {
-                    onUpdate(level, pos, state);
-                    lastUpdateTick = Calendars.SERVER.getTicks();
-                }
-                if (this == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && !level.isDay() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT)
-                {
-                    Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
-                    Season season = currentMonth.getSeason();
-                    if (random.nextInt(ICalendar.TICKS_IN_DAY + SilkmothNestBlockEntity.MIN_OCCUPATION_TICKS_NECTAR) == 0 && season == Season.SUMMER && Climate.getTemperature(level, pos) >= 2)
+                    boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
+                    Direction direction = Direction.getRandom(random);
+                    Entity entity = TFCFEntities.SILKMOTH.get().create(level);
+                    if (entity != null)
                     {
-                        boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
-                        Direction direction = Direction.getRandom(random);
-                        Entity entity = TFCFEntities.SILKMOTH.get().create(level);
-                        if (entity != null)
+                        if (entity instanceof Silkmoth moth)
                         {
-                            if (entity instanceof Silkmoth moth)
+                            if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F)
                             {
-                                if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F)
-                                {
-                                    moth.setSavedTargetPos(moth.getSavedTargetPos());
-                                }
-                                float f = entity.getBbWidth();
-                                double d3 = flag ? 0.0D : 0.55D + (double)(f / 2.0F);
-                                double d0 = (double)pos.getX() + 0.5D + d3 * (double)direction.getStepX();
-                                double d1 = (double)pos.getY() + 0.5D - (double)(entity.getBbHeight() / 2.0F);
-                                double d2 = (double)pos.getZ() + 0.5D + d3 * (double)direction.getStepZ();
-                                entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
+                                moth.setSavedTargetPos(moth.getSavedTargetPos());
                             }
-                            level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
-                            level.addFreshEntity(entity);
+                            float f = entity.getBbWidth();
+                            double d3 = flag ? 0.0D : 0.55D + (double)(f / 2.0F);
+                            double d0 = (double)pos.getX() + 0.5D + d3 * (double)direction.getStepX();
+                            double d1 = (double)pos.getY() + 0.5D - (double)(entity.getBbHeight() / 2.0F);
+                            double d2 = (double)pos.getZ() + 0.5D + d3 * (double)direction.getStepZ();
+                            entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
                         }
+                        level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        level.addFreshEntity(entity);
                     }
                 }
             }
@@ -265,7 +262,7 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
         if (Config.COMMON.leavesSaplingPlacementChance.get() > 0)
         {
             Season currentSeason = Calendars.get(level).getCalendarMonthOfYear().getSeason();
-            if ((currentSeason == Season.FALL || currentSeason == Season.SPRING) && level.getBlockState(pos.below()).isAir())
+            if ((currentSeason == Season.FALL || currentSeason == Season.SPRING || state.getValue(LIFECYCLE) == Lifecycle.FRUITING) && level.getBlockState(pos.below()).isAir())
             {
                 final ChunkDataProvider provider = ChunkDataProvider.get(level);
                 final ChunkData data = provider.get(level, pos);

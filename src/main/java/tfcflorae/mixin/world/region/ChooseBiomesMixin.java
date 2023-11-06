@@ -44,9 +44,6 @@ public class ChooseBiomesMixin
     @Unique private static final int PELAGIC_ZONE = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticPelagicZone();
     @Unique private static final int SEAMOUNTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticSeamounts();
     @Unique private static final int GUYOTS = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticGuyots();
-    @Unique private static final int ATOLL = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticAtoll();
-    @Unique private static final int BARRIER_REEF = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticBarrierReef();
-    @Unique private static final int LAGOON = ((TFCLayersMixinInterface) (Object) staticBiomes).getStaticLagoon();
 
     @Shadow @Mutable @Final private static final int[] MOUNTAIN_ALTITUDE_BIOMES = {MOUNTAINS, MOUNTAINS, MOUNTAINS, OLD_MOUNTAINS, OLD_MOUNTAINS, PLATEAU, MESA_PLATEAU, ALPINE_MOUNTAINS, ALPINE_HIGHLANDS, ROLLING_HIGHLANDS, THERMAL_CANYONS, THERMAL_CANYONS, MISTY_PEAKS, VINICUNCA_MOUNTAINS, FRACTURED_MISTY_PEAKS, PITLANDS, SAWTOOTH_CLIFFS};
     @Shadow @Mutable @Final private static final int[] OCEANIC_MOUNTAIN_ALTITUDE_BIOMES = {VOLCANIC_MOUNTAINS, VOLCANIC_OCEANIC_MOUNTAINS, VOLCANIC_OCEANIC_MOUNTAINS, OCEANIC_MOUNTAINS, OCEANIC_MOUNTAINS, ROLLING_HILLS, ROLLING_HIGHLANDS, MISTY_PEAKS, ALPINE_HIGHLANDS, FRACTURED_MISTY_PEAKS};

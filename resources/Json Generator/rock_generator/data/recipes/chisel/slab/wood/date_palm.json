@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/date_palm",
+  "result": "tfcflorae:wood/slab/date_palm",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/date_palm"
+  }
+}

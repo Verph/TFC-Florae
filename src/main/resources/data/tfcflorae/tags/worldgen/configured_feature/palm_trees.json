@@ -2,6 +2,8 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfcflorae:tree/palm_entry"
+    "tfc:tree/palm_trees/palm_entry",
+    "tfc:tree/palm_trees/coconut_palm_entry",
+    "tfc:tree/palm_trees/date_palm_entry"
   ]
 }

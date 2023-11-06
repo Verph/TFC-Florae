@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/2/rosewood"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/4/rosewood"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/6/rosewood"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/8/rosewood"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/10/rosewood"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/12/rosewood"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/14/rosewood"
+    },
+    "layers=8": {
+      "model": "tfc:block/wood/leaves/rosewood"
+    }
+  }
+}

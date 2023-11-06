@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ginkgo",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ginkgo"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ginkgo",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/ginkgo",
+        "y": 270
+      }
+    ]
+  }
+}

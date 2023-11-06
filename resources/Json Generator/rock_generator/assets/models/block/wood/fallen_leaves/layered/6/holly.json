@@ -1,0 +1,6 @@
+{
+  "parent": "tfcflorae:block/sand/sand_height6",
+  "textures": {
+    "sand": "tfcflorae:block/wood/leaves/holly"
+  }
+}

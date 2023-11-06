@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/2/kapok"
+    },
+    "layers=2": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/4/kapok"
+    },
+    "layers=3": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/6/kapok"
+    },
+    "layers=4": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/8/kapok"
+    },
+    "layers=5": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/10/kapok"
+    },
+    "layers=6": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/12/kapok"
+    },
+    "layers=7": {
+      "model": "tfcflorae:block/wood/fallen_leaves/layered/14/kapok"
+    },
+    "layers=8": {
+      "model": "tfc:block/wood/leaves/kapok"
+    }
+  }
+}

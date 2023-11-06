@@ -1,0 +1,176 @@
+{
+  "multipart": [
+    {
+      "when": {
+		"top_block": "true"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_head"
+      }
+    },
+    {
+      "when": {
+        "up": true,
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_vertical"
+      }
+    },
+    {
+      "when": {
+        "down": true,
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_vertical"
+      }
+    },
+    {
+      "when": {
+        "up": true,
+        "south": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_up"
+      }
+    },
+    {
+      "when": {
+        "up": true,
+        "west": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_up",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "up": true,
+        "north": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_up",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "up": true,
+        "east": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_up",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "down": true,
+        "north": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_down"
+      }
+    },
+    {
+      "when": {
+        "down": true,
+        "east": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_down",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "down": true,
+        "south": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_down",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "down": true,
+        "west": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_down",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "north": true,
+        "south": true,
+        "up": false,
+        "down": false
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_horizontal",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": true,
+        "west": true,
+        "up": false,
+        "down": false
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_horizontal"
+      }
+    },
+    {
+      "when": {
+        "north": true,
+        "east": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_horizontal"
+      }
+    },
+    {
+      "when": {
+        "east": true,
+        "south": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_horizontal",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": true,
+        "west": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_horizontal",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": true,
+        "north": true
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/trunks/palm_diagonal_horizontal",
+        "y": 270
+      }
+    }
+  ]
+}

@@ -74,7 +74,7 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 1,
-            "max_inclusive": 5
+            "max_inclusive": 3
           }
         },
         "bush_count": {
@@ -107,7 +107,7 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 1,
-            "max_inclusive": 6
+            "max_inclusive": 3
           }
         },
         "bush_count": {
@@ -139,8 +139,8 @@
         "tree_count": {
           "type": "uniform",
           "value": {
-            "min_inclusive": 1,
-            "max_inclusive": 5
+            "min_inclusive": 0,
+            "max_inclusive": 4
           }
         },
         "bush_count": {

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/red_cedar"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/red_cedar"
+}

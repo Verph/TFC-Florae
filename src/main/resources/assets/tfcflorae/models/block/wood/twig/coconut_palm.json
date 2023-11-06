@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "side": "tfcflorae:block/wood/log/coconut_palm",
+    "top": "tfcflorae:block/wood/log_top/coconut_palm"
+  }
+}

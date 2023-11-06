@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "tfcflorae:block/wood/pressure_plate/coconut_palm"
+    },
+    "powered=true": {
+      "model": "tfcflorae:block/wood/pressure_plate/coconut_palm_down"
+    }
+  }
+}

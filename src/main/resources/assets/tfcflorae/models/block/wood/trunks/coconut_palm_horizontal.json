@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/palm_horizontal",
+  "textures": {
+  	"side": "tfcflorae:block/wood/log/coconut_palm",
+  	"end": "tfcflorae:block/wood/log_top/coconut_palm"
+  }
+}

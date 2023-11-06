@@ -60,7 +60,7 @@ public final class TFCFItems
     // Sand
 
     public static final Map<Colors, RegistryObject<Item>> WEATHERED_TERRACOTTA = Helpers.mapOfKeys(Colors.class, type ->
-        register("sand/weathered_terracotta_shard/" + type.name(), EARTH)
+        register("sand/weathered_terracotta_shard/" + type.name(), TFCItemGroup.EARTH)
     );
 
     // Ores
@@ -76,7 +76,7 @@ public final class TFCFItems
     );
 
     public static final Map<TFCFPowder, RegistryObject<Item>> POWDERS = Helpers.mapOfKeys(TFCFPowder.class, powder ->
-        register("powder/" + powder.name(), MISC)
+        register("powder/" + powder.name(), TFCItemGroup.MISC)
     );
 
     public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCItemGroup.ORES);
@@ -102,6 +102,7 @@ public final class TFCFItems
 
     // Food
 
+    public static final RegistryObject<Item> COCONUT = register("food/coconut", TFCItemGroup.FOOD);
     public static final Map<TFCFFood, RegistryObject<Item>> FOOD = foodMapper();
 
     // Wood
@@ -114,7 +115,7 @@ public final class TFCFItems
 
     // Decorations
 
-    public static final RegistryObject<Item> HUMUS_MUD_BRICK = register("mud_brick/humus", DECORATIONS);
+    public static final RegistryObject<Item> HUMUS_MUD_BRICK = register("mud_brick/humus", TFCItemGroup.DECORATIONS);
 
     // Pottery
 

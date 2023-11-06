@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/white_cherry_blossom"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/white_cherry_blossom"
+}

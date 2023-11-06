@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "tfcflorae:block/wood/fruits/date",
+		"fruit": "tfcflorae:block/wood/fruits/date"
+	},
+	"elements": [
+		{
+			"name": "stub",
+			"from": [8, 11.2, -4],
+			"to": [8, 17.6, 4.8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.2, 9]},
+			"faces": {
+				"east": {"uv": [6.5, 0, 1, 4], "texture": "#fruit"},
+				"west": {"uv": [1, 0, 6.5, 4], "texture": "#fruit"}
+			}
+		},
+		{
+			"name": "fruit",
+			"from": [4, 0.8, 3.2],
+			"to": [12, 12, 3.2],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8.8, 3.2]},
+			"faces": {
+				"north": {"uv": [0, 9, 5, 16], "texture": "#fruit"},
+				"south": {"uv": [5, 9, 0, 16], "texture": "#fruit"}
+			}
+		},
+		{
+			"name": "fruit",
+			"from": [4, 0.8, 3.2],
+			"to": [12, 12, 3.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8.8, 3.2]},
+			"faces": {
+				"north": {"uv": [5, 9, 0, 16], "texture": "#fruit"},
+				"south": {"uv": [0, 9, 5, 16], "texture": "#fruit"}
+			}
+		}
+	],
+	"groups": [0,
+		{
+			"name": "date_age1",
+			"origin": [8, 8, 8],
+			"children": [1, 2]
+		},
+		{
+			"name": "date_age2",
+			"origin": [8, 8, 8],
+			"children": []
+		}
+	]
+}

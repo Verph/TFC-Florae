@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tfc:tree/roots/red_mangrove",
-    "tfc:tree/roots/white_mangrove"
+    "tfc:tree/roots/red_mangrove_patch",
+    "tfc:tree/roots/white_mangrove_patch"
   ]
 }

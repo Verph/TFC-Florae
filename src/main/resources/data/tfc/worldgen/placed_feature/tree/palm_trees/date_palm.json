@@ -1,0 +1,12 @@
+{
+  "feature": "tfc:tree/palm_trees/date_palm",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+	{
+	  "type": "tfc:biome"
+	}
+  ]
+}

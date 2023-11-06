@@ -76,13 +76,13 @@ public final class TFCFRenderHelpers
 
     /**
      * <pre>
-     *  Q------Q.  ^ y
-     *  |`.    | `.|
-     *  |  `Q--+---Q--> x = maxY
-     *  |   |  |   |
-     *  P---+--P.  |
-     *   `. |    `.|
-     *     `P------P = minY
+     *  Q---------Q.  ^ y
+     *  |`.       | `.|
+     *  |  `Q-----+---Q--> x = maxY
+     *  |   |     |   |
+     *  P---+-----P.  |
+     *   `. |       `.|
+     *     `P---------P = minY
      * </pre>
      *
      * Renders a fully textured, solid trapezoidal cuboid described by the plane P, the plane Q, minY, and maxY.

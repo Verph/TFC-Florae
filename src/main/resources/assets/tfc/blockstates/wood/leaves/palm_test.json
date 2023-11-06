@@ -1,0 +1,36 @@
+{
+  "multipart":[
+    {
+      "when":{
+        "persistent":"true"
+      },
+      "apply":{
+        "model":"tfc:block/wood/leaves/palm_frond"
+      }
+    },
+    {
+      "when":{
+        "persistent":"true"
+      },
+      "apply":{
+        "model":"tfc:block/wood/leaves/palm_core_top"
+      }
+    },
+    {
+      "when":{
+        "persistent":"true"
+      },
+      "apply":{
+        "model":"tfc:block/wood/leaves/palm_core_bottom"
+      }
+    },
+    {
+      "when":{
+        "persistent":"true"
+      },
+      "apply":{
+        "model":"tfc:block/wood/leaves/palm_frond_up"
+      }
+    }
+  ]
+}

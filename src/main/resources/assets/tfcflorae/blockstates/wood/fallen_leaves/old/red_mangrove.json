@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/red_mangrove",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/red_mangrove"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/red_mangrove",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/red_mangrove",
+        "y": 270
+      }
+    ]
+  }
+}

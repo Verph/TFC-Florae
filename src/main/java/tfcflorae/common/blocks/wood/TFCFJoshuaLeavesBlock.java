@@ -381,16 +381,16 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
     private boolean growTreeRecursive(LevelAccessor level, BlockPos branchPos, Random rand, BlockPos originalBranchPos, int maxHorizontalDistance, int iterations, Fluid fluid)
     {
         int status = 0;
-        status = GrowStep(level, branchPos, originalBranchPos, rand, maxHorizontalDistance, iterations, fluid);
+        status = growStep(level, branchPos, originalBranchPos, rand, maxHorizontalDistance, iterations, fluid);
         while (status == 0)
         {
             branchPos = branchPos.above();
-            status = GrowStep(level, branchPos, originalBranchPos, rand, maxHorizontalDistance, iterations, fluid);
+            status = growStep(level, branchPos, originalBranchPos, rand, maxHorizontalDistance, iterations, fluid);
         }
         return true;
     }
 
-    public int GrowStep(LevelAccessor level, BlockPos currentBlock, BlockPos originalBranchPos, Random random, int maxHorizontalDistance, int iterations, Fluid fluid)
+    public int growStep(LevelAccessor level, BlockPos currentBlock, BlockPos originalBranchPos, Random random, int maxHorizontalDistance, int iterations, Fluid fluid)
     {
         BlockPos blockpos = currentBlock.above();
 

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/beech",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/beech"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/beech",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/beech",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -40,6 +40,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.server.ServerLifecycleHooks;
 
+import net.dries007.tfc.common.blockentities.FarmlandBlockEntity.NutrientType;
 import net.dries007.tfc.common.blocks.Gem;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.plant.fruit.FruitBlocks;
@@ -72,7 +73,8 @@ import tfcflorae.common.blocks.soil.TFCFSoil;
 public class TFCFHelpers
 {
     public static final Random RANDOM = new Random();
-    public static Direction[] NOT_DOWN = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP};
+    public static final Direction[] NOT_DOWN = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP};
+    public static final Direction[] NOT_UP = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.DOWN};
     public static final Direction[] DIRECTIONS = Direction.values();
     public static final Direction[] DIRECTIONS_HORIZONTAL_FIRST = new Direction[] {Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.UP, Direction.DOWN};
     public static final Direction[] DIRECTIONS_HORIZONTAL = Arrays.stream(DIRECTIONS).filter(d -> d != Direction.DOWN && d != Direction.UP).toArray(Direction[]::new);
@@ -306,27 +308,22 @@ public class TFCFHelpers
 
     public static RegistryRock rockType(ServerLevel level, BlockPos pos)
     {
-        ChunkDataProvider provider = ChunkDataProvider.get(level);
-        if (provider != null && provider.get(level, pos).getRockData().getRock(pos) != null)
+        RockSettings surfaceRock = ChunkDataProvider.get(level).get(level, pos).getRockData().getRock(pos);
+        if (surfaceRock != null)
         {
-            RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
-
-            if (surfaceRock != null)
+            for (Rock rockTFC : Rock.values())
             {
-                for (Rock rockTFC : Rock.values())
+                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
                 {
-                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
+                    return rockTFC;
+                }
+                else
+                {
+                    for (TFCFRock rockTFCF : TFCFRock.values())
                     {
-                        return rockTFC;
-                    }
-                    else
-                    {
-                        for (TFCFRock rockTFCF : TFCFRock.values())
+                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
                         {
-                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
-                            {
-                                return rockTFCF;
-                            }
+                            return rockTFCF;
                         }
                     }
                 }
@@ -337,27 +334,22 @@ public class TFCFHelpers
 
     public static RegistryRock rockType(WorldGenLevel level, BlockPos pos)
     {
-        ChunkDataProvider provider = ChunkDataProvider.get(level);
-        if (provider != null && provider.get(level, pos).getRockData().getRock(pos) != null)
+        RockSettings surfaceRock = ChunkDataProvider.get(level).get(level, pos).getRockData().getRock(pos);
+        if (surfaceRock != null)
         {
-            RockSettings surfaceRock = provider.get(level, pos).getRockData().getRock(pos);
-
-            if (surfaceRock != null)
+            for (Rock rockTFC : Rock.values())
             {
-                for (Rock rockTFC : Rock.values())
+                if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
                 {
-                    if (surfaceRock.raw() == TFCBlocks.ROCK_BLOCKS.get(rockTFC).get(Rock.BlockType.RAW).get())
+                    return rockTFC;
+                }
+                else
+                {
+                    for (TFCFRock rockTFCF : TFCFRock.values())
                     {
-                        return rockTFC;
-                    }
-                    else
-                    {
-                        for (TFCFRock rockTFCF : TFCFRock.values())
+                        if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
                         {
-                            if (surfaceRock.raw() == TFCFBlocks.TFCF_ROCK_BLOCKS.get(rockTFCF).get(Rock.BlockType.RAW).get())
-                            {
-                                return rockTFCF;
-                            }
+                            return rockTFCF;
                         }
                     }
                 }
@@ -678,5 +670,73 @@ public class TFCFHelpers
             sum += Climate.getTemperature(level, pos, Calendars.get(level).getCalendarTicks() - (hour * 1000), Calendars.get(level).getCalendarDaysInMonth());
         }
         return sum / ICalendar.HOURS_IN_DAY;
+    }
+
+    public static Direction chooseOtherDirection(Direction direction, Random random)
+    {
+        final int age = random.nextInt(3);
+        switch (age)
+        {
+            case 0:
+                return direction.getClockWise();
+            case 1:
+                return direction.getCounterClockWise();
+            default:
+                return direction.getOpposite();
+        }
+    }
+
+    public static float getRockNutrient(RegistryRock rockType, NutrientType forType, Random random)
+    {
+        float gaussModifier = Mth.abs((float) random.nextGaussian()) * 0.09F;
+        if (forType == NutrientType.NITROGEN)
+        {
+            switch (rockType.category())
+            {
+                case IGNEOUS_EXTRUSIVE:
+                    return 0.005F + gaussModifier;
+                case IGNEOUS_INTRUSIVE:
+                    return 0.01F + gaussModifier;
+                case METAMORPHIC:
+                    return 0.025F + gaussModifier;
+                case SEDIMENTARY:
+                    return 0.04F + gaussModifier;
+                default:
+                    return 0.01F + gaussModifier;
+            }
+        }
+        else if (forType == NutrientType.PHOSPHOROUS)
+        {
+            switch (rockType.category())
+            {
+                case IGNEOUS_EXTRUSIVE:
+                    return 0.13F + gaussModifier;
+                case IGNEOUS_INTRUSIVE:
+                    return 0.09F + gaussModifier;
+                case METAMORPHIC:
+                    return 0.05F + gaussModifier;
+                case SEDIMENTARY:
+                    return 0.08F + gaussModifier;
+                default:
+                    return 0.04F + gaussModifier;
+            }
+        }
+        else if (forType == NutrientType.POTASSIUM)
+        {
+            switch (rockType.category())
+            {
+                case IGNEOUS_EXTRUSIVE:
+                    return 0.2F + gaussModifier;
+                case IGNEOUS_INTRUSIVE:
+                    return 0.125F + gaussModifier;
+                case METAMORPHIC:
+                    return 0.265F + gaussModifier;
+                case SEDIMENTARY:
+                    return 0.05F + gaussModifier;
+                default:
+                    return 0.04F + gaussModifier;
+            }
+        }
+        return 0F;
     }
 }

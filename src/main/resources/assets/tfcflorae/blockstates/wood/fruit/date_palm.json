@@ -1,0 +1,160 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0",
+        "direction":"north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age0",
+        "y":180
+      }
+    },
+    {
+      "when": {
+        "age": "1",
+        "direction":"north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age1",
+        "y":180
+      }
+    },
+    {
+      "when": {
+        "age": "2",
+        "direction":"north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age2",
+        "y":180
+      }
+    },
+    {
+      "when": {
+        "age": "3",
+        "direction":"north"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age3",
+        "y":180
+      }
+    },
+    {
+      "when": {
+        "age": "0",
+        "direction":"east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age0",
+        "y":270
+      }
+    },
+    {
+      "when": {
+        "age": "1",
+        "direction":"east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age1",
+        "y":270
+      }
+    },
+    {
+      "when": {
+        "age": "2",
+        "direction":"east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age2",
+        "y":270
+      }
+    },
+    {
+      "when": {
+        "age": "3",
+        "direction":"east"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age3",
+        "y":270
+      }
+    },
+    {
+      "when": {
+        "age": "0",
+        "direction":"south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age0"
+      }
+    },
+    {
+      "when": {
+        "age": "1",
+        "direction":"south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age1"
+      }
+    },
+    {
+      "when": {
+        "age": "2",
+        "direction":"south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age2"
+      }
+    },
+    {
+      "when": {
+        "age": "3",
+        "direction":"south"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age3"
+      }
+    },
+    {
+      "when": {
+        "age": "0",
+        "direction":"west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age0",
+        "y":90
+      }
+    },
+    {
+      "when": {
+        "age": "1",
+        "direction":"west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age1",
+        "y":90
+      }
+    },
+    {
+      "when": {
+        "age": "2",
+        "direction":"west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age2",
+        "y":90
+      }
+    },
+    {
+      "when": {
+        "age": "3",
+        "direction":"west"
+      },
+      "apply": {
+        "model": "tfcflorae:block/wood/fruits/date_age3",
+        "y":90
+      }
+    }
+  ]
+}

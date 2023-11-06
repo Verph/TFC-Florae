@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "top": "tfcflorae:block/wood/scribing_table/date_palm",
+    "leg": "tfcflorae:block/wood/log/date_palm",
+    "side": "tfcflorae:block/wood/planks/date_palm",
+    "misc": "tfc:block/wood/scribing_table/scribing_paraphernalia",
+    "particle": "tfcflorae:block/wood/planks/date_palm"
+  }
+}

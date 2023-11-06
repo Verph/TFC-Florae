@@ -171,6 +171,11 @@
     "tfcflorae:wood/leaves/blue_bamboo",
     "tfcflorae:wood/leaves/dragon_bamboo",
     "tfcflorae:wood/leaves/golden_bamboo",
-    "tfcflorae:wood/leaves/red_bamboo"
+    "tfcflorae:wood/leaves/red_bamboo",
+    "tfcflorae:wood/leaves/coconut_palm",
+    "tfcflorae:wood/leaves/date_palm",
+    "tfcflorae:wood/palm_leaves/coconut_palm",
+    "tfcflorae:wood/palm_leaves/date_palm",
+    "tfcflorae:wood/palm_leaves/palm"
   ]
 }

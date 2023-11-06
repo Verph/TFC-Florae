@@ -65,7 +65,7 @@ public class DeltaFeature extends Feature<DeltaConfig>
                     flag = true;
                     this.setBlock(level, blockpos2, config.contents());
                 }
-                if (isClear(level, blockpos2.below(), config))
+                if (isClear(level, blockpos2.below(), config) && !config.bottom().isAir())
                 {
                     flag = true;
                     this.setBlock(level, blockpos2.below(), config.bottom());

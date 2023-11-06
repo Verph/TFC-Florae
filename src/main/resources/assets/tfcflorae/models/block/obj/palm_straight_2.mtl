@@ -1,0 +1,35 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl 2.011
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000 
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd tfcflorae:block/wood/leaves/palm_leaves_dry
+
+newmtl 3.011
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000 
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd tfcflorae:block/wood/leaves/palm_leaves_young
+
+newmtl 4.008
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000 
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd tfcflorae:block/wood/leaves/palm_leaves_old

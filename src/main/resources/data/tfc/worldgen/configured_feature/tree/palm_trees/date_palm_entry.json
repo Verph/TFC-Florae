@@ -1,0 +1,19 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "min_rain": 15,
+    "max_rain": 500,
+    "min_temp": 10,
+    "max_temp": 50,
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/date_palm"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/date_palm"
+      }
+    ],
+    "normal_tree": "tfc:tree/palm_trees/date_palm",
+    "dead_tree": "tfc:tree/palm_trees/date_palm"
+  }
+}

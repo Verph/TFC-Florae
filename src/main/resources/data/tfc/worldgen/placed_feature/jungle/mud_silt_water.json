@@ -120,40 +120,40 @@
                 {
                   "weight": 1,
                   "data": {
-                    "Name": "minecraft:sea_pickle",
+                    "Name": "tfc:sea_pickle",
                     "Properties": {
                       "pickles": "4",
-                      "waterlogged": "true"
+					  "fluid": "water"
                     }
                   }
                 },
                 {
                   "weight": 2,
                   "data": {
-                    "Name": "minecraft:sea_pickle",
+                    "Name": "tfc:sea_pickle",
                     "Properties": {
                       "pickles": "3",
-                      "waterlogged": "true"
+					  "fluid": "water"
                     }
                   }
                 },
                 {
                   "weight": 4,
                   "data": {
-                    "Name": "minecraft:sea_pickle",
+                    "Name": "tfc:sea_pickle",
                     "Properties": {
                       "pickles": "2",
-                      "waterlogged": "true"
+					  "fluid": "water"
                     }
                   }
                 },
                 {
                   "weight": 8,
                   "data": {
-                    "Name": "minecraft:sea_pickle",
+                    "Name": "tfc:sea_pickle",
                     "Properties": {
                       "pickles": "1",
-                      "waterlogged": "true"
+					  "fluid": "water"
                     }
                   }
                 },
@@ -164,7 +164,7 @@
 					"Properties": {
 					  "age": "1",
 					  "stage": "1",
-					  "fluid": "empty"
+					  "fluid": "water"
 					}
                   }
                 }

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahoe",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahoe"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahoe",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/mahoe",
+        "y": 270
+      }
+    ]
+  }
+}

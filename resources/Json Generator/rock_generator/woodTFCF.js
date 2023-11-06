@@ -86,7 +86,9 @@ let WOOD_TYPES = {
     'yellow_jacaranda': 'yellow_jacaranda',
     'yellow_meranti': 'yellow_meranti',
     'yew': 'yew',
-    'zebrawood': 'zebrawood'
+    'zebrawood': 'zebrawood',
+    'coconut_palm': 'coconut_palm',
+    'date_palm': 'date_palm'
 }
 
 let WOOD_TYPES_TFC = {
@@ -110,6 +112,232 @@ let WOOD_TYPES_TFC = {
   'sycamore': 'sycamore',
   'white_cedar': 'white_cedar',
   'willow': 'willow'
+}
+
+let allWoodTypes = {
+  'acacia': 'acacia',
+  'ash': 'ash',
+  'aspen': 'aspen',
+  'birch': 'birch',
+  'blackwood': 'blackwood',
+  'chestnut': 'chestnut',
+  'douglas_fir': 'douglas_fir',
+  'hickory': 'hickory',
+  'kapok': 'kapok',
+  'maple': 'maple',
+  'oak': 'oak',
+  'palm': 'palm',
+  'pine': 'pine',
+  'rosewood': 'rosewood',
+  'sequoia': 'sequoia',
+  'spruce': 'spruce',
+  'sycamore': 'sycamore',
+  'white_cedar': 'white_cedar',
+  'willow': 'willow',
+  'african_padauk': 'african_padauk',
+  'alder': 'alder',
+  'angelim': 'angelim',
+  'argyle_eucalyptus': 'argyle_eucalyptus',
+  'bald_cypress': 'bald_cypress',
+  'baobab': 'baobab',
+  'bamboo': 'bamboo',
+  'beech': 'beech',
+  'black_walnut': 'black_walnut',
+  'black_willow': 'black_willow',
+  'brazilwood': 'brazilwood',
+  'butternut': 'butternut',
+  'buxus': 'buxus',
+  'cocobolo': 'cocobolo',
+  'common_oak': 'common_oak',
+  'cypress': 'cypress',
+  'ebony': 'ebony',
+  'fever': 'fever',
+  'ghaf': 'ghaf',
+  'ginkgo': 'ginkgo',
+  'greenheart': 'greenheart',
+  'hawthorn': 'hawthorn',
+  'hazel': 'hazel',
+  'hemlock': 'hemlock',
+  'holly': 'holly',
+  'hornbeam': 'hornbeam',
+  'iroko': 'iroko',
+  'ironwood': 'ironwood',
+  'jabuticabeira': 'jabuticabeira',
+  'joshua': 'joshua',
+  'juniper': 'juniper',
+  'kauri': 'kauri',
+  'laurel': 'laurel',
+  'larch': 'larch',
+  'limba': 'limba',
+  'locust': 'locust',
+  'logwood': 'logwood',
+  'maclura': 'maclura',
+  'mahoe': 'mahoe',
+  'mahogany': 'mahogany',
+  'marblewood': 'marblewood',
+  'medlar': 'medlar',
+  'messmate': 'messmate',
+  'mountain_ash': 'mountain_ash',
+  'mulberry': 'mulberry',
+  'nordmann_fir': 'nordmann_fir',
+  'norway_spruce': 'norway_spruce',
+  'pear': 'pear',
+  'persimmon': 'persimmon',
+  'pink_cherry_blossom': 'pink_cherry_blossom',
+  'pink_ipe': 'pink_ipe',
+  'pink_ivory': 'pink_ivory',
+  'poplar': 'poplar',
+  'purpleheart': 'purpleheart',
+  'purple_ipe': 'purple_ipe',
+  'purple_jacaranda': 'purple_jacaranda',
+  'quince': 'quince',
+  'rainbow_eucalyptus': 'rainbow_eucalyptus',
+  'redwood': 'redwood',
+  'red_cedar': 'red_cedar',
+  'red_cypress': 'red_cypress',
+  'red_elm': 'red_elm',
+  'red_mangrove': 'red_mangrove',
+  'rowan': 'rowan',
+  'rubber_fig': 'rubber_fig',
+  'sloe': 'sloe',
+  'snow_gum_eucalyptus': 'snow_gum_eucalyptus',
+  'sorb': 'sorb',
+  'sweetgum': 'sweetgum',
+  'syzygium': 'syzygium',
+  'teak': 'teak',
+  'walnut': 'walnut',
+  'wenge': 'wenge',
+  'whitebeam': 'whitebeam',
+  'white_cherry_blossom': 'white_cherry_blossom',
+  'white_elm': 'white_elm',
+  'white_ipe': 'white_ipe',
+  'white_jacaranda': 'white_jacaranda',
+  'white_mangrove': 'white_mangrove',
+  'yellow_ipe': 'yellow_ipe',
+  'yellow_jacaranda': 'yellow_jacaranda',
+  'yellow_meranti': 'yellow_meranti',
+  'yew': 'yew',
+  'zebrawood': 'zebrawood',
+  'coconut_palm': 'coconut_palm',
+  'date_palm': 'date_palm'
+}
+
+let namespaceWood = {
+  'acacia': 'tfc',
+  'ash': 'tfc',
+  'aspen': 'tfc',
+  'birch': 'tfc',
+  'blackwood': 'tfc',
+  'chestnut': 'tfc',
+  'douglas_fir': 'tfc',
+  'hickory': 'tfc',
+  'kapok': 'tfc',
+  'maple': 'tfc',
+  'oak': 'tfc',
+  'palm': 'tfc',
+  'pine': 'tfc',
+  'rosewood': 'tfc',
+  'sequoia': 'tfc',
+  'spruce': 'tfc',
+  'sycamore': 'tfc',
+  'white_cedar': 'tfc',
+  'willow': 'tfc',
+  'african_padauk': 'tfcflorae',
+  'alder': 'tfcflorae',
+  'angelim': 'tfcflorae',
+  'argyle_eucalyptus': 'tfcflorae',
+  'bald_cypress': 'tfcflorae',
+  'baobab': 'tfcflorae',
+  'bamboo': 'tfcflorae',
+  'beech': 'tfcflorae',
+  'black_walnut': 'tfcflorae',
+  'black_willow': 'tfcflorae',
+  'brazilwood': 'tfcflorae',
+  'butternut': 'tfcflorae',
+  'buxus': 'tfcflorae',
+  'cocobolo': 'tfcflorae',
+  'common_oak': 'tfcflorae',
+  'cypress': 'tfcflorae',
+  'ebony': 'tfcflorae',
+  'fever': 'tfcflorae',
+  'ghaf': 'tfcflorae',
+  'ginkgo': 'tfcflorae',
+  'greenheart': 'tfcflorae',
+  'hawthorn': 'tfcflorae',
+  'hazel': 'tfcflorae',
+  'hemlock': 'tfcflorae',
+  'holly': 'tfcflorae',
+  'hornbeam': 'tfcflorae',
+  'iroko': 'tfcflorae',
+  'ironwood': 'tfcflorae',
+  'jabuticabeira': 'tfcflorae',
+  'joshua': 'tfcflorae',
+  'juniper': 'tfcflorae',
+  'kauri': 'tfcflorae',
+  'laurel': 'tfcflorae',
+  'larch': 'tfcflorae',
+  'limba': 'tfcflorae',
+  'locust': 'tfcflorae',
+  'logwood': 'tfcflorae',
+  'maclura': 'tfcflorae',
+  'mahoe': 'tfcflorae',
+  'mahogany': 'tfcflorae',
+  'marblewood': 'tfcflorae',
+  'medlar': 'tfcflorae',
+  'messmate': 'tfcflorae',
+  'mountain_ash': 'tfcflorae',
+  'mulberry': 'tfcflorae',
+  'nordmann_fir': 'tfcflorae',
+  'norway_spruce': 'tfcflorae',
+  'pear': 'tfcflorae',
+  'persimmon': 'tfcflorae',
+  'pink_cherry_blossom': 'tfcflorae',
+  'pink_ipe': 'tfcflorae',
+  'pink_ivory': 'tfcflorae',
+  'poplar': 'tfcflorae',
+  'purpleheart': 'tfcflorae',
+  'purple_ipe': 'tfcflorae',
+  'purple_jacaranda': 'tfcflorae',
+  'quince': 'tfcflorae',
+  'rainbow_eucalyptus': 'tfcflorae',
+  'redwood': 'tfcflorae',
+  'red_cedar': 'tfcflorae',
+  'red_cypress': 'tfcflorae',
+  'red_elm': 'tfcflorae',
+  'red_mangrove': 'tfcflorae',
+  'rowan': 'tfcflorae',
+  'rubber_fig': 'tfcflorae',
+  'sloe': 'tfcflorae',
+  'snow_gum_eucalyptus': 'tfcflorae',
+  'sorb': 'tfcflorae',
+  'sweetgum': 'tfcflorae',
+  'syzygium': 'tfcflorae',
+  'teak': 'tfcflorae',
+  'walnut': 'tfcflorae',
+  'wenge': 'tfcflorae',
+  'whitebeam': 'tfcflorae',
+  'white_cherry_blossom': 'tfcflorae',
+  'white_elm': 'tfcflorae',
+  'white_ipe': 'tfcflorae',
+  'white_jacaranda': 'tfcflorae',
+  'white_mangrove': 'tfcflorae',
+  'yellow_ipe': 'tfcflorae',
+  'yellow_jacaranda': 'tfcflorae',
+  'yellow_meranti': 'tfcflorae',
+  'yew': 'tfcflorae',
+  'zebrawood': 'tfcflorae',
+  'coconut_palm': 'tfcflorae',
+  'date_palm': 'tfcflorae'
+}
+
+let numbers = {
+  '2': '2',
+  '4': '4',
+  '6': '6',
+  '8': '8',
+  '10': '10',
+  '12': '12',
+  '14': '14'
 }
 
 for(let woodType of Object.keys(WOOD_TYPES))
@@ -5711,4 +5939,65 @@ function generateJSONTFC(woodTypeTFC)
   fs.writeFileSync(`./data/advancements/crafting/plow/${woodTypeTFC}.json`, JSON.stringify(advancementPlowTFC, null, 2))
   fs.writeFileSync(`./data/advancements/crafting/supply_cart/${woodTypeTFC}.json`, JSON.stringify(advancementSupplyCartTFC, null, 2))
   fs.writeFileSync(`./data/advancements/crafting/wheel/${woodTypeTFC}.json`, JSON.stringify(advancementWheelTFC, null, 2))
+
+  for(let woodType in WOOD_TYPES_TFC)
+  {
+    let blockstateLayeredFallenLeavesTFC = {
+      "variants": {
+        "layers=1":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/2/${woodType}` },
+        "layers=2":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/4/${woodType}` },
+        "layers=3":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/6/${woodType}` },
+        "layers=4":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/8/${woodType}` },
+        "layers=5":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/10/${woodType}` },
+        "layers=6":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/12/${woodType}` },
+        "layers=7":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/14/${woodType}` },
+        "layers=8":  { "model": `${namespaceWood[woodType]}:block/wood/leaves/${woodType}` }
+      }
+    }
+    fse.ensureDir(`./assets/blockstates/wood/fallen_leaves/layered_tfc`)
+    fs.writeFileSync(`./assets/blockstates/wood/fallen_leaves/layered_tfc/${woodType}.json`, JSON.stringify(blockstateLayeredFallenLeavesTFC, null, 2))
+  }
+
+  for(let woodType in WOOD_TYPES)
+  {
+    let blockstateLayeredFallenLeavesTFCF = {
+      "variants": {
+        "layers=1":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/2/${woodType}` },
+        "layers=2":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/4/${woodType}` },
+        "layers=3":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/6/${woodType}` },
+        "layers=4":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/8/${woodType}` },
+        "layers=5":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/10/${woodType}` },
+        "layers=6":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/12/${woodType}` },
+        "layers=7":  { "model": `tfcflorae:block/wood/fallen_leaves/layered/14/${woodType}` },
+        "layers=8":  { "model": `${namespaceWood[woodType]}:block/wood/leaves/${woodType}` }
+      }
+    }
+    fse.ensureDir(`./assets/blockstates/wood/fallen_leaves/layered_tfcf`)
+    fs.writeFileSync(`./assets/blockstates/wood/fallen_leaves/layered_tfcf/${woodType}.json`, JSON.stringify(blockstateLayeredFallenLeavesTFCF, null, 2))
+  }
+
+  for(let woodTypeAll in allWoodTypes)
+  {
+    for(let number in numbers)
+    {
+      let modelLayeredFallenLeaves = {
+        "parent": `tfcflorae:block/sand/sand_height${number}`,
+        "textures": {
+          "sand": `${namespaceWood[woodTypeAll]}:block/wood/leaves/${woodTypeAll}`
+        }
+      }
+      fse.ensureDir(`./assets/models/block/wood/fallen_leaves/layered/${number}`)
+      fs.writeFileSync(`./assets/models/block/wood/fallen_leaves/layered/${number}/${woodTypeAll}.json`, JSON.stringify(modelLayeredFallenLeaves, null, 2))
+    }
+
+    let landslideLayeredFallenLeaves = {
+      "type": "tfc:landslide",
+      "ingredient": [
+        `${namespaceWood[woodTypeAll]}:wood/fallen_leaves/${woodTypeAll}`
+      ],
+      "result": `${namespaceWood[woodTypeAll]}:wood/fallen_leaves/${woodTypeAll}`
+    }
+    fse.ensureDir(`./data/recipes/landslide/wood/fallen_leaves/layered`)
+    fs.writeFileSync(`./data/recipes/landslide/wood/fallen_leaves/layered/${woodTypeAll}.json`, JSON.stringify(landslideLayeredFallenLeaves, null, 2))
+  }
 }

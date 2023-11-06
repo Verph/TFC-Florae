@@ -1,0 +1,10 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "#tfc:all_bamboo_logs",
+    "tfcflorae:wood/trunks/palm",
+    "tfcflorae:wood/trunks/coconut_palm",
+    "tfcflorae:wood/trunks/date_palm"
+  ]
+}

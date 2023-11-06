@@ -203,18 +203,15 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
             doParticles(level, pos.getX() + random.nextFloat(), pos.getY() + random.nextFloat(), pos.getZ() + random.nextFloat(), 1);
         }
 
-        if (random.nextInt(Config.COMMON.fruitingLeavesUpdateChance.get()) == 0 && level.isAreaLoaded(pos, 3))
+        if (random.nextInt(Config.COMMON.fruitingLeavesUpdateChance.get()) == 0 && !state.getValue(PERSISTENT))
         {
             Lifecycle currentLifecycle = state.getValue(LIFECYCLE);
             Lifecycle expectedLifecycle = getLifecycleForCurrentMonth();
 
-            if (!state.getValue(PERSISTENT))
+            if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
             {
-                if (currentLifecycle != expectedLifecycle && (level.getRawBrightness(pos, 0) >= 11 || level.isDay()))
-                {
-                    onUpdate(level, pos, state);
-                    lastUpdateTick = Calendars.SERVER.getTicks();
-                }
+                onUpdate(level, pos, state);
+                lastUpdateTick = Calendars.SERVER.getTicks();
             }
         }
     }

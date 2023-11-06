@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/coconut_palm",
+  "result": "tfcflorae:wood/slab/coconut_palm",
+  "mode": "slab",
+  "extra_drop": {
+    "item": "tfcflorae:wood/slab/coconut_palm"
+  }
+}

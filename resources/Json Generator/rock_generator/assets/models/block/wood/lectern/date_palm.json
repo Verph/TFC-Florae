@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "bottom": "tfcflorae:block/wood/planks/date_palm",
+    "base": "tfcflorae:block/wood/lectern/base/date_palm",
+    "front": "tfcflorae:block/wood/lectern/front/date_palm",
+    "sides": "tfcflorae:block/wood/lectern/sides/date_palm",
+    "top": "tfcflorae:block/wood/lectern/top/date_palm",
+    "particle": "tfcflorae:block/wood/lectern/sides/date_palm"
+  }
+}

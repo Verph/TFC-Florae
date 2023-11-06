@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/rubber_fig"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/rubber_fig"
+}

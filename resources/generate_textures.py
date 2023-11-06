@@ -3,7 +3,8 @@ from PIL.Image import Transpose
 
 from constants import *
 
-path = '../src/main/resources/assets/tfc/textures/'
+path = './src/main/resources/assets/tfc/textures/'
+templates = './resources/texture_templates/'
 
 
 def overlay_image(front_file_dir, back_file_dir, result_dir):
@@ -40,7 +41,7 @@ def create_chest(wood: str):
     blank.paste(shaded_square, (2, 2), shaded_square)
     cover = Image.alpha_composite(cover, blank)
 
-    handle = Image.open('texture_templates/chest/handle.png').convert('RGBA')
+    handle = Image.open(templates + 'chest/handle.png').convert('RGBA')
     normal = Image.new('RGBA', (64, 64), empty)
     normal.paste(handle, (0, 0), handle)
     normal.paste(cover, (14, 0), cover)
@@ -52,7 +53,7 @@ def create_chest(wood: str):
     normal.paste(underside, (28, 19), underside)
     normal.save(path + 'entity/chest/normal/%s' % wood + '.png')
     trapped = normal.copy()
-    trapped_overlay = Image.open('texture_templates/chest/trapped_overlay.png')
+    trapped_overlay = Image.open(templates + 'chest/trapped_overlay.png')
     trapped = Image.alpha_composite(trapped, trapped_overlay)
     trapped.save(path + 'entity/chest/trapped/%s' % wood + '.png')
 
@@ -112,7 +113,7 @@ def create_chest(wood: str):
     side_left.paste(log_section, (1, 13), log_section)
 
     normal_left = Image.new('RGBA', (64, 64), empty)
-    handle = Image.open('texture_templates/chest/handle_left.png')
+    handle = Image.open(templates + 'chest/handle_left.png')
     normal_left.paste(handle, (0, 0), handle)
     normal_left.paste(cover_right, (14, 0), cover_right)
     normal_left.paste(top_right, (29, 0), top_right)
@@ -125,12 +126,12 @@ def create_chest(wood: str):
     normal_left.paste(side_right, (14, 29), side_right)
     normal_left.paste(side_left, (43, 29), side_left)
     normal_left.save(path + 'entity/chest/normal_left/%s' % wood + '.png')
-    left_trapped_overlay = Image.open('texture_templates/chest/trapped_left_overlay.png')
+    left_trapped_overlay = Image.open(templates + 'chest/trapped_left_overlay.png')
     left_trapped = Image.alpha_composite(normal_left, left_trapped_overlay)
     left_trapped.save(path + 'entity/chest/trapped_left/%s' % wood + '.png')
 
     normal_right = Image.new('RGBA', (64, 64), empty)
-    handle = Image.open('texture_templates/chest/handle_right.png')
+    handle = Image.open(templates + 'chest/handle_right.png')
     normal_right.paste(handle, (0, 0), handle)
     normal_right.paste(cover_left, (14, 0), cover_left)
     normal_right.paste(top_left, (29, 0), top_left)
@@ -144,37 +145,9 @@ def create_chest(wood: str):
     normal_right.paste(side_left, (14, 29), side_right)
     normal_right.paste(side_right, (43, 29), side_left)
     normal_right.save(path + 'entity/chest/normal_right/%s' % wood + '.png')
-    right_trapped_overlay = Image.open('texture_templates/chest/trapped_right_overlay.png')
+    right_trapped_overlay = Image.open(templates + 'chest/trapped_right_overlay.png')
     right_trapped = Image.alpha_composite(normal_right, right_trapped_overlay)
     right_trapped.save(path + 'entity/chest/trapped_right/%s' % wood + '.png')
-
-def create_sign(wood: str):
-    log = Image.open(path + 'block/wood/log/%s' % wood + '.png').convert('RGBA')
-    planks = Image.open(path + 'block/wood/planks/%s' % wood + '.png').convert('RGBA')
-    image = Image.new('RGBA', (64, 32), (0, 0, 0, 0))
-    for coord in ((0, 0), (16, 0), (32, 0), (48, 0)):
-        image.paste(planks, coord)
-    image.paste(log, (0, 16))
-    image.save(path + 'entity/signs/%s.png' % wood)
-
-def create_sign_item(wood: str, plank_color, log_color):
-    head = Image.open('texture_templates/sign_head.png')
-    mast = Image.open('texture_templates/sign_mast.png')
-    head = put_on_all_pixels(head, plank_color)
-    mast = put_on_all_pixels(mast, log_color)
-    image = Image.alpha_composite(mast, head)
-    image = ImageEnhance.Color(image).enhance(2)
-    image.save(path + 'item/wood/sign/%s.png' % wood)
-
-def create_magma(rock: str):
-    magma = Image.new('RGBA', (16, 48), (0, 0, 0, 0))
-    raw = Image.open('texture_templates/raw/%s.png' % rock)
-    magma.paste(raw, (0, 0))
-    magma.paste(raw, (0, 16))
-    magma.paste(raw, (0, 32))
-    overlay = Image.open('texture_templates/magma.png')
-    magma = Image.alpha_composite(magma, overlay)
-    magma.save(path + 'block/rock/magma/%s.png' % rock)
 
 def get_wood_colors(wood_path: str):
     wood = Image.open(path + 'block/wood/%s.png' % wood_path)
@@ -202,28 +175,7 @@ def put_on_all_pixels(img: Image, color) -> Image:
 
 def main():
     for wood in WOODS.keys():
-        overlay_image('texture_templates/bookshelf', path + 'block/wood/planks/%s' % wood, path + 'block/wood/planks/%s_bookshelf' % wood)
-        overlay_image('texture_templates/log_top/%s' % wood, path + 'block/wood/log/%s' % wood, path + 'block/wood/log_top/%s' % wood)
-        overlay_image('texture_templates/log_top/%s' % wood, path + 'block/wood/stripped_log/%s' % wood, path + 'block/wood/stripped_log_top/%s' % wood)
-        for bench in ('workbench_front', 'workbench_side', 'workbench_top'):
-            overlay_image('texture_templates/' + bench, path + 'block/wood/planks/%s' % wood, path + 'block/wood/planks/%s_' % wood + bench)
         create_chest(wood)
-        create_sign(wood)
-        plank_color = get_wood_colors('planks/%s' % wood)
-        log_color = get_wood_colors('log/%s' % wood)
-        create_sign_item(wood, plank_color, log_color)
-        for item in ('twig', 'boat', 'lumber'):
-            easy_colorize(plank_color, 'texture_templates/%s' % item, path + 'item/wood/%s/%s' % (item, wood), 2)
-
-    for rock, data in ROCKS.items():
-        overlay_image('texture_templates/mossy_stone_bricks', path + 'block/rock/bricks/%s' % rock, path + 'block/rock/mossy_bricks/%s' % rock)
-        overlay_image('texture_templates/mossy_cobblestone', path + 'block/rock/cobble/%s' % rock, path + 'block/rock/mossy_cobble/%s' % rock)
-        if data.category == 'igneous_intrusive' or data.category == 'igneous_extrusive':
-            create_magma(rock)
-
-    for soil in SOIL_BLOCK_VARIANTS:
-        overlay_image('texture_templates/rooted_dirt', 'texture_templates/dirt/%s' % soil, path + 'block/rooted_dirt/%s' % soil)
-
 
 if __name__ == '__main__':
     main()

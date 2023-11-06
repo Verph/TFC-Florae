@@ -1,0 +1,6 @@
+{
+  "loader": "tfcflorae:palm_fronds",
+  "textures": {
+    "frond": "tfcflorae:block/wood/leaves/palm_frond"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/pink_ivory"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/pink_ivory"
+}

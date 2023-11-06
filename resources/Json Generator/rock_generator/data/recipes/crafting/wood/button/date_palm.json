@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfcflorae:wood/planks/date_palm"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:wood/button/date_palm"
+  }
+}

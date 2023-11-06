@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/alder",
+        "y": 90
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/alder"
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/alder",
+        "y": 180
+      },
+      {
+        "model": "tfcflorae:block/wood/fallen_leaves/alder",
+        "y": 270
+      }
+    ]
+  }
+}

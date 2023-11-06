@@ -3,9 +3,12 @@ package tfcflorae.mixin;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Supplier;
 
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,6 +28,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.storage.loot.LootContext;
 
@@ -34,12 +39,14 @@ import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
+import net.dries007.tfc.common.blocks.wood.FallenLeavesBlock;
 import net.dries007.tfc.common.blocks.wood.ILeavesBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.LegacyMaterials;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.calendar.Season;
@@ -59,14 +66,18 @@ import tfcflorae.util.TFCFHelpers;
 @Mixin(TFCLeavesBlock.class)
 public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock, IForgeBlockExtension, IFluidLoggable, ICooldown
 {
+    @Shadow private final Supplier<? extends Block> fallenLeaves;
+    @Shadow private final Supplier<? extends Block> fallenTwig;
     @Unique private boolean isDead;
     @Unique private long cooldown;
 
-    public TFCLeavesBlockMixin(ExtendedProperties properties)
+    public TFCLeavesBlockMixin(ExtendedProperties properties, @Nullable Supplier<? extends Block> fallenLeaves, @Nullable Supplier<? extends Block> fallenTwig)
     {
         super(properties.properties());
         this.cooldown = Long.MIN_VALUE;
         this.isDead = false;
+        this.fallenLeaves = fallenLeaves;
+        this.fallenTwig = fallenTwig;
     }
 
     @Inject(method = "<init>", at = @At("RETURN"))
@@ -228,5 +239,67 @@ public abstract class TFCLeavesBlockMixin extends Block implements ILeavesBlock,
         {
             cir.getReturnValue();
         }
+    }
+
+    @Overwrite(remap = false)
+    public void createDestructionEffects(BlockState state, ServerLevel level, BlockPos pos, Random random, boolean replaceOnlyAir)
+    {
+        final BlockState twig = getFallenTwig();
+        final BlockState leaf = getFallenLeaves();
+        if (twig == null && leaf == null)
+        {
+            return;
+        }
+        final BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
+        cursor.set(pos);
+        BlockState stateAt = Blocks.AIR.defaultBlockState();
+        while (stateAt.getBlock() instanceof ILeavesBlock || LegacyMaterials.isReplaceable(stateAt))
+        {
+            cursor.move(0, -1, 0);
+
+            stateAt = level.getBlockState(cursor);
+        }
+        cursor.move(0, 1, 0);
+        stateAt = level.getBlockState(cursor);
+
+        if (stateAt.getBlock() instanceof FallenLeavesBlock && twig != null)
+        {
+            if (stateAt.getValue(BlockStateProperties.LAYERS) == 8)
+            {
+                level.setBlock(cursor.above(), twig.setValue(BlockStateProperties.LAYERS, 1), Block.UPDATE_ALL);
+            }
+            else
+            {
+                stateAt.setValue(BlockStateProperties.LAYERS, stateAt.getValue(BlockStateProperties.LAYERS) + 1);
+            }
+        }
+        else if (LegacyMaterials.isReplaceable(stateAt))
+        {
+            BlockState placeState = twig == null ? leaf : twig;
+            if (leaf != null && twig != null && random.nextFloat() < 0.5f)
+            {
+                placeState = leaf;
+            }
+            if (placeState.canSurvive(level, cursor))
+            {
+                if (replaceOnlyAir && !stateAt.isAir())
+                {
+                    return;
+                }
+                level.setBlockAndUpdate(cursor, placeState);
+            }
+        }
+    }
+
+    @Shadow
+    public BlockState getFallenLeaves()
+    {
+        return fallenLeaves == null ? null : fallenLeaves.get().defaultBlockState();
+    }
+
+    @Shadow
+    public BlockState getFallenTwig()
+    {
+        return fallenTwig == null ? null : fallenTwig.get().defaultBlockState();
     }
 }

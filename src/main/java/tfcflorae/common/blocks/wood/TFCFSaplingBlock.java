@@ -33,6 +33,8 @@ import net.dries007.tfc.config.TFCConfig;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.ICalendar;
 import net.dries007.tfc.util.climate.Climate;
+import net.dries007.tfc.util.registry.RegistryWood;
+
 import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.world.feature.tree.TFCFTreeGrower;
@@ -41,11 +43,11 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
 {
     public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
 
-    public final TFCFWood wood;
+    public final RegistryWood wood;
     private final ExtendedProperties properties;
     private final int daysToGrow;
 
-    public TFCFSaplingBlock(TFCFWood wood, TFCFTreeGrower tree, ExtendedProperties properties, int days)
+    public TFCFSaplingBlock(RegistryWood wood, TFCFTreeGrower tree, ExtendedProperties properties, int days)
     {
         super(tree, properties, days);
         this.properties = properties;
@@ -95,7 +97,7 @@ public class TFCFSaplingBlock extends TFCSaplingBlock implements IFluidLoggable
                 if (counter.getTicksSinceUpdate() > ICalendar.TICKS_IN_DAY * getDaysToGrow() * TFCConfig.SERVER.globalSaplingGrowthModifier.get())
                 {
                     this.advanceTree(level, pos, state.setValue(STAGE, 1), random);
-                    if (ForgeEventFactory.saplingGrowTree(level, random, pos))
+                    if (ForgeEventFactory.saplingGrowTree(level, random, pos) && (wood instanceof TFCFWood woodTFCF && !woodTFCF.isPalmTree() || wood != Wood.PALM))
                     {
                         level.setBlock(pos, TFCFBlocks.WOODS.get(wood).get(Wood.BlockType.WOOD).get().defaultBlockState(), Block.UPDATE_ALL);
                     }

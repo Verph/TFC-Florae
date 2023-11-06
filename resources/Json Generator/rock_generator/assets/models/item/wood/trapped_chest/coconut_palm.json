@@ -1,0 +1,6 @@
+{
+  "parent": "item/chest",
+  "textures": {
+    "particle": "tfcflorae:block/wood/planks/coconut_palm"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:wood/fallen_leaves/black_walnut"
+  ],
+  "result": "tfcflorae:wood/fallen_leaves/black_walnut"
+}

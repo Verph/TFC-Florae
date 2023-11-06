@@ -1,0 +1,23 @@
+{
+  "feature": "tfc:tree/roots/red_mangrove_patch",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 3,
+      "noise_factor": 10,
+      "noise_offset": 0.5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 6,
+      "max_temperature": 38,
+      "min_rainfall": 230,
+      "max_rainfall": 500,
+      "min_forest": "sparse",
+      "fuzzy": true
+    }
+  ]
+}

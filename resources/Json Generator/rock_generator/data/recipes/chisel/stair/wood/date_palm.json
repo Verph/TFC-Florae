@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:wood/planks/date_palm",
+  "result": "tfcflorae:wood/stairs/date_palm",
+  "mode": "stair"
+}

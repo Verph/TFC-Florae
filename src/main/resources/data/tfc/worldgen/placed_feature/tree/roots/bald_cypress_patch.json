@@ -1,0 +1,23 @@
+{
+  "feature": "tfc:tree/roots/bald_cypress_patch",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 3,
+      "noise_factor": 10,
+      "noise_offset": 0.5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 4,
+      "max_temperature": 30,
+      "min_rainfall": 320,
+      "max_rainfall": 500,
+      "min_forest": "sparse",
+      "fuzzy": true
+    }
+  ]
+}
